@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -38,12 +36,10 @@
 
     const-string/jumbo p2, "receive ACTION_RESET_CAMERA_PREF action, reset camera settings!"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x1
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/settings/CameraPreferenceFragment;->resetPreferences(Z)V
 
     return-void

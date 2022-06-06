@@ -47,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->val$operator:Ljava8/util/function/DoubleBinaryOperator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,22 +59,18 @@
 .method public accept(D)V
     .locals 3
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->empty:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->empty:Z
 
-    .line 4
     iput-wide p1, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->state:D
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->val$operator:Ljava8/util/function/DoubleBinaryOperator;
 
@@ -94,7 +89,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 7
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -103,7 +97,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 8
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -112,7 +105,6 @@
 .method public accept(Ljava/lang/Double;)V
     .locals 0
 
-    .line 6
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfDouble;->accept(Ljava8/util/stream/Sink$OfDouble;Ljava/lang/Double;)V
 
     return-void
@@ -121,7 +113,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$12ReducingSink;->accept(Ljava/lang/Double;)V
@@ -134,12 +125,10 @@
 
     const/4 p1, 0x1
 
-    .line 1
     iput-boolean p1, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->empty:Z
 
     const-wide/16 p1, 0x0
 
-    .line 2
     iput-wide p1, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->state:D
 
     return-void
@@ -156,12 +145,10 @@
 .method public combine(Ljava8/util/stream/ReduceOps$12ReducingSink;)V
     .locals 2
 
-    .line 2
     iget-boolean v0, p1, Ljava8/util/stream/ReduceOps$12ReducingSink;->empty:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-wide v0, p1, Ljava8/util/stream/ReduceOps$12ReducingSink;->state:D
 
     invoke-virtual {p0, v0, v1}, Ljava8/util/stream/ReduceOps$12ReducingSink;->accept(D)V
@@ -173,7 +160,6 @@
 .method public bridge synthetic combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/stream/ReduceOps$12ReducingSink;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$12ReducingSink;->combine(Ljava8/util/stream/ReduceOps$12ReducingSink;)V
@@ -190,7 +176,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$12ReducingSink;->get()Ljava8/util/OptionalDouble;
 
     move-result-object v0
@@ -201,7 +186,6 @@
 .method public get()Ljava8/util/OptionalDouble;
     .locals 2
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/ReduceOps$12ReducingSink;->empty:Z
 
     if-eqz v0, :cond_0

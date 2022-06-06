@@ -63,23 +63,18 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->observable:Lio/reactivex/Observable;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
 
-    .line 4
     invoke-static {p2}, Lcom/android/camera/data/observeable/RxData$DataCheck;->access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-static {p2}, Lcom/android/camera/data/observeable/RxData$DataCheck;->access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object p1
@@ -94,7 +89,6 @@
 
     if-nez p1, :cond_0
 
-    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +117,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {p2}, Lcom/android/camera/data/observeable/RxData$DataCheck;->access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
 
     move-result-object p1
@@ -136,7 +129,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -188,7 +180,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/data/observeable/RxData$DataObservable$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/observeable/RxData$DataObservable$1;-><init>(Lcom/android/camera/data/observeable/RxData$DataCheck;)V
@@ -204,7 +195,6 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataObserver:Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     if-eqz v0, :cond_0
@@ -215,12 +205,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataObserver:Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData$DataObserver;->dispose()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
 
@@ -230,7 +218,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,7 +250,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
 
     invoke-static {v0}, Lcom/android/camera/data/observeable/RxData$DataCheck;->access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
@@ -290,19 +276,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     invoke-direct {v0, p1}, Lcom/android/camera/data/observeable/RxData$DataObserver;-><init>(Lio/reactivex/Observer;)V
 
     iput-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataObserver:Lcom/android/camera/data/observeable/RxData$DataObserver;
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->observable:Lio/reactivex/Observable;
 
     invoke-virtual {p1, v0}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/Observer;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
 
     invoke-static {p1}, Lcom/android/camera/data/observeable/RxData$DataCheck;->access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
@@ -317,7 +300,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataObserver:Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     if-eqz p1, :cond_0
@@ -328,7 +310,6 @@
 
     if-nez p1, :cond_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable;->dataObserver:Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     invoke-virtual {p1}, Lcom/android/camera/data/observeable/RxData$DataObserver;->dispose()V

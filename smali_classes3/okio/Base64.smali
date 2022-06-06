@@ -17,14 +17,12 @@
 
     new-array v1, v0, [B
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lokio/Base64;->MAP:[B
 
     new-array v0, v0, [B
 
-    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lokio/Base64;->URL_MAP:[B
@@ -173,7 +171,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -182,7 +179,6 @@
 .method public static decode(Ljava/lang/String;)[B
     .locals 15
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -200,7 +196,6 @@
 
     add-int/lit8 v5, v0, -0x1
 
-    .line 2
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -234,7 +229,6 @@
 
     const-wide/16 v7, 0x8
 
-    .line 3
     div-long/2addr v5, v7
 
     long-to-int v5, v5
@@ -256,7 +250,6 @@
 
     if-ge v8, v0, :cond_b
 
-    .line 4
     invoke-virtual {p0, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v13
@@ -354,7 +347,6 @@
 
     add-int/lit8 v9, v9, 0x1
 
-    .line 5
     rem-int/lit8 v12, v9, 0x4
 
     if-nez v12, :cond_a
@@ -365,7 +357,6 @@
 
     int-to-byte v13, v13
 
-    .line 6
     aput-byte v13, v6, v11
 
     add-int/lit8 v11, v12, 0x1
@@ -374,14 +365,12 @@
 
     int-to-byte v13, v13
 
-    .line 7
     aput-byte v13, v6, v12
 
     add-int/lit8 v12, v11, 0x1
 
     int-to-byte v13, v10
 
-    .line 8
     aput-byte v13, v6, v11
 
     move v11, v12
@@ -392,7 +381,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_b
     rem-int/lit8 v9, v9, 0x4
 
@@ -415,7 +403,6 @@
 
     int-to-byte p0, p0
 
-    .line 10
     aput-byte p0, v6, v11
 
     move v11, v0
@@ -435,7 +422,6 @@
 
     int-to-byte v1, v1
 
-    .line 11
     aput-byte v1, v6, v11
 
     add-int/lit8 v11, v0, 0x1
@@ -444,7 +430,6 @@
 
     int-to-byte p0, p0
 
-    .line 12
     aput-byte p0, v6, v0
 
     :cond_e
@@ -453,11 +438,9 @@
 
     return-object v6
 
-    .line 13
     :cond_f
     new-array p0, v11, [B
 
-    .line 14
     invoke-static {v6, v7, p0, v7, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object p0
@@ -466,7 +449,6 @@
 .method public static encode([B)Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lokio/Base64;->MAP:[B
 
     invoke-static {p0, v0}, Lokio/Base64;->encode([B[B)Ljava/lang/String;
@@ -479,7 +461,6 @@
 .method public static encode([B[B)Ljava/lang/String;
     .locals 9
 
-    .line 2
     array-length v0, p0
 
     const/4 v1, 0x2
@@ -490,10 +471,8 @@
 
     mul-int/lit8 v0, v0, 0x4
 
-    .line 3
     new-array v0, v0, [B
 
-    .line 4
     array-length v2, p0
 
     array-length v3, p0
@@ -511,7 +490,6 @@
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 5
     aget-byte v6, p0, v3
 
     and-int/lit16 v6, v6, 0xff
@@ -524,7 +502,6 @@
 
     add-int/lit8 v4, v5, 0x1
 
-    .line 6
     aget-byte v6, p0, v3
 
     and-int/lit8 v6, v6, 0x3
@@ -547,7 +524,6 @@
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 7
     aget-byte v6, p0, v7
 
     and-int/lit8 v6, v6, 0xf
@@ -570,7 +546,6 @@
 
     add-int/lit8 v4, v5, 0x1
 
-    .line 8
     aget-byte v6, p0, v7
 
     and-int/lit8 v6, v6, 0x3f
@@ -583,7 +558,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     array-length v3, p0
 
@@ -602,7 +576,6 @@
     :cond_1
     add-int/lit8 v3, v4, 0x1
 
-    .line 10
     aget-byte v7, p0, v2
 
     and-int/lit16 v7, v7, 0xff
@@ -615,7 +588,6 @@
 
     add-int/lit8 v4, v3, 0x1
 
-    .line 11
     aget-byte v7, p0, v2
 
     and-int/lit8 v7, v7, 0x3
@@ -638,7 +610,6 @@
 
     add-int/lit8 v3, v4, 0x1
 
-    .line 12
     aget-byte p0, p0, v2
 
     and-int/lit8 p0, p0, 0xf
@@ -649,7 +620,6 @@
 
     aput-byte p0, v0, v4
 
-    .line 13
     aput-byte v5, v0, v3
 
     goto :goto_1
@@ -657,7 +627,6 @@
     :cond_2
     add-int/lit8 v3, v4, 0x1
 
-    .line 14
     aget-byte v6, p0, v2
 
     and-int/lit16 v6, v6, 0xff
@@ -670,7 +639,6 @@
 
     add-int/lit8 v1, v3, 0x1
 
-    .line 15
     aget-byte p0, p0, v2
 
     and-int/lit8 p0, p0, 0x3
@@ -683,13 +651,10 @@
 
     add-int/lit8 p0, v1, 0x1
 
-    .line 16
     aput-byte v5, v0, v1
 
-    .line 17
     aput-byte v5, v0, p0
 
-    .line 18
     :goto_1
     :try_start_0
     new-instance p0, Ljava/lang/String;
@@ -705,7 +670,6 @@
     :catch_0
     move-exception p0
 
-    .line 19
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -716,7 +680,6 @@
 .method public static encodeUrl([B)Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lokio/Base64;->URL_MAP:[B
 
     invoke-static {p0, v0}, Lokio/Base64;->encode([B[B)Ljava/lang/String;

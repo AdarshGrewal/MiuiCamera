@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/module/LiveModuleSubVV;Ljava/lang/String;Landroid/net/Uri;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/LiveModuleSubVV$4;->this$0:Lcom/android/camera/module/LiveModuleSubVV;
 
     iput-object p2, p0, Lcom/android/camera/module/LiveModuleSubVV$4;->val$title:Ljava/lang/String;
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -63,7 +61,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;->getSaveContentValues()Landroid/content/ContentValues;
 
@@ -76,19 +73,16 @@
     :cond_1
     const-string/jumbo v2, "title"
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "_data"
 
-    .line 4
     invoke-virtual {v1, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/module/LiveModuleSubVV;->access$600()Ljava/lang/String;
 
     move-result-object v3
@@ -97,7 +91,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "newUri: "
+    const-string/jumbo v5, "newUri: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -117,7 +111,6 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v3, p0, Lcom/android/camera/module/LiveModuleSubVV$4;->val$title:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -128,7 +121,6 @@
 
     return-void
 
-    .line 7
     :cond_2
     iget-object v2, p0, Lcom/android/camera/module/LiveModuleSubVV$4;->val$uri:Landroid/net/Uri;
 

@@ -4,9 +4,7 @@
 
 
 # static fields
-.field public static final synthetic $assertionsDisabled:Z = false
-
-.field public static final MAX_SKIP_BUFFER_SIZE:I = 0x800
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
@@ -21,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/gallery3d/exif/CountedDataInputStream;
 
     return-void
@@ -30,22 +27,18 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     const/16 p1, 0x8
 
     new-array p1, p1, [B
 
-    .line 3
     iput-object p1, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteArray:[B
 
-    .line 4
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -60,7 +53,6 @@
 .method public getByteOrder()Ljava/nio/ByteOrder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
@@ -73,7 +65,6 @@
 .method public getReadByteCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     return v0
@@ -87,14 +78,12 @@
         }
     .end annotation
 
-    .line 5
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
     move-result v0
 
-    .line 6
     iget v1, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     if-ltz v0, :cond_0
@@ -122,14 +111,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->read([B)I
 
     move-result p1
 
-    .line 2
     iget v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     if-ltz p1, :cond_0
@@ -157,14 +144,12 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
     move-result p1
 
-    .line 4
     iget p2, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     if-ltz p1, :cond_0
@@ -192,7 +177,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteArray:[B
 
     const/4 v1, 0x0
@@ -201,12 +185,10 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readOrThrow([BII)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 3
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -224,7 +206,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteArray:[B
 
     const/4 v1, 0x0
@@ -233,12 +214,10 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readOrThrow([BII)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 3
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getLong()J
@@ -256,7 +235,6 @@
         }
     .end annotation
 
-    .line 3
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -274,7 +252,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/gallery3d/exif/CountedDataInputStream;->read([BII)I
 
     move-result p1
@@ -283,7 +260,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/io/EOFException;
 
@@ -300,7 +276,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteArray:[B
 
     const/4 v1, 0x0
@@ -309,12 +284,10 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readOrThrow([BII)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 3
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
@@ -332,13 +305,10 @@
         }
     .end annotation
 
-    .line 1
     new-array p1, p1, [B
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readOrThrow([B)V
 
-    .line 3
     new-instance v0, Ljava/lang/String;
 
     const-string v1, "UTF8"
@@ -356,13 +326,10 @@
         }
     .end annotation
 
-    .line 4
     new-array p1, p1, [B
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readOrThrow([B)V
 
-    .line 6
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
@@ -378,7 +345,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readInt()I
 
     move-result v0
@@ -400,7 +366,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/gallery3d/exif/CountedDataInputStream;->readShort()S
 
     move-result v0
@@ -415,7 +380,6 @@
 .method public setByteOrder(Ljava/nio/ByteOrder;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mByteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
@@ -424,74 +388,19 @@
 .end method
 
 .method public skip(J)J
-    .locals 10
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const-wide/16 v0, 0x0
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    cmp-long v2, p1, v0
+    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
-    if-gtz v2, :cond_0
+    move-result-wide p1
 
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v2, 0x800
-
-    .line 1
-    invoke-static {v2, v3, p1, p2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v2
-
-    long-to-int v2, v2
-
-    .line 2
-    new-array v3, v2, [B
-
-    move-wide v4, p1
-
-    :goto_0
-    cmp-long v6, v4, v0
-
-    if-lez v6, :cond_2
-
-    .line 3
-    iget-object v6, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    const/4 v7, 0x0
-
-    int-to-long v8, v2
-
-    invoke-static {v8, v9, v4, v5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v8
-
-    long-to-int v8, v8
-
-    invoke-virtual {v6, v3, v7, v8}, Ljava/io/InputStream;->read([BII)I
-
-    move-result v6
-
-    if-gez v6, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    int-to-long v6, v6
-
-    sub-long/2addr v4, v6
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    sub-long/2addr p1, v4
-
-    .line 4
     iget v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     int-to-long v0, v0
@@ -513,7 +422,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/gallery3d/exif/CountedDataInputStream;->skip(J)J
 
     move-result-wide v0
@@ -540,14 +448,12 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/exif/CountedDataInputStream;->mCount:I
 
     int-to-long v0, v0
 
     sub-long/2addr p1, v0
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/gallery3d/exif/CountedDataInputStream;->skipOrThrow(J)V
 
     return-void

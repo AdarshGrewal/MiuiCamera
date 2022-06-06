@@ -32,22 +32,16 @@
 .method public constructor <init>(JII[ILjava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mTimestamp:J
 
-    .line 3
     iput p3, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mWidth:I
 
-    .line 4
     iput p4, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mHeight:I
 
-    .line 5
     iput-object p5, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mStrides:[I
 
-    .line 6
     iput-object p6, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mFileName:Ljava/lang/String;
 
     return-void
@@ -58,7 +52,6 @@
 .method public setImage(Lcom/android/zxing/CacheImageDecoder$ImageWrapper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mImageWrapper:Lcom/android/zxing/CacheImageDecoder$ImageWrapper;
 
     return-void

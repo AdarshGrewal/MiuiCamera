@@ -34,10 +34,8 @@
 .method public constructor <init>(Ljava8/util/function/DoubleConsumer;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p2}, Ljava8/util/stream/ForEachOps$ForEachOp;-><init>(Z)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/ForEachOps$ForEachOp$OfDouble;->consumer:Ljava8/util/function/DoubleConsumer;
 
     return-void
@@ -48,7 +46,6 @@
 .method public accept(D)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/ForEachOps$ForEachOp$OfDouble;->consumer:Ljava8/util/function/DoubleConsumer;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/function/DoubleConsumer;->accept(D)V
@@ -59,7 +56,6 @@
 .method public accept(Ljava/lang/Double;)V
     .locals 0
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfDouble;->accept(Ljava8/util/stream/Sink$OfDouble;Ljava/lang/Double;)V
 
     return-void
@@ -68,7 +64,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ForEachOps$ForEachOp$OfDouble;->accept(Ljava/lang/Double;)V
@@ -79,7 +74,6 @@
 .method public bridge synthetic evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Ljava8/util/stream/ForEachOps$ForEachOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Void;
 
     move-result-object p1
@@ -90,7 +84,6 @@
 .method public bridge synthetic evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Ljava8/util/stream/ForEachOps$ForEachOp;->evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Void;
 
     move-result-object p1
@@ -101,7 +94,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/ForEachOps$ForEachOp;->get()Ljava/lang/Void;
 
     move-result-object v0
@@ -112,7 +104,6 @@
 .method public inputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
 
     return-object v0

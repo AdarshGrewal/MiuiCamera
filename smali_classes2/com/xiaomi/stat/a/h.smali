@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/a/c;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/a/h;->b:Lcom/xiaomi/stat/a/c;
 
     iput-object p2, p0, Lcom/xiaomi/stat/a/h;->a:Ljava/lang/String;
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 5
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/a/h;->b:Lcom/xiaomi/stat/a/c;
 
@@ -42,7 +40,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/stat/a/h;->a:Ljava/lang/String;
 
     invoke-static {}, Lcom/xiaomi/stat/ak;->b()Ljava/lang/String;
@@ -70,7 +67,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     iget-object v4, p0, Lcom/xiaomi/stat/a/h;->a:Ljava/lang/String;
 
     aput-object v4, v2, v3
@@ -78,7 +74,6 @@
     :goto_0
     const-string v3, "events"
 
-    .line 4
     invoke-virtual {v0, v3, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -88,7 +83,6 @@
     :catch_0
     move-exception v0
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

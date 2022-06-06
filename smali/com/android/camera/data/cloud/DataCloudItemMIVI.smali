@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public getData()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemMIVI;->mData:Ljava/lang/String;
 
     return-object v0
@@ -46,7 +44,6 @@
 .method public setData(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/cloud/DataCloudItemMIVI;->mData:Ljava/lang/String;
 
     return-void

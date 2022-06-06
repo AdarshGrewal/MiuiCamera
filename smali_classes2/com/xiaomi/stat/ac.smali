@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/ab;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/ac;->a:Lcom/xiaomi/stat/ab;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ac;->a:Lcom/xiaomi/stat/ab;
 
@@ -68,7 +66,6 @@
 
     const/4 v8, 0x0
 
-    .line 2
     invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
@@ -92,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/stat/ac;->a()Landroid/database/Cursor;
 
     move-result-object v0

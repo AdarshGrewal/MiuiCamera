@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->val$fuItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->getContext()Landroid/content/Context;
@@ -63,7 +61,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
@@ -72,7 +69,6 @@
 
     invoke-static {v1, v2, v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$1500(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;IZ)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;

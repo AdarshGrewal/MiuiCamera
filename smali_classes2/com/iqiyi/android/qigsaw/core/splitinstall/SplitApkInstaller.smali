@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -32,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public static getSplitInstallSupervisor()Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->sSplitApkInstallerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -67,7 +64,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->sSplitApkInstallerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -76,7 +72,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->sSplitApkInstallerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v7, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSupervisorImpl;
@@ -106,7 +101,6 @@
 .method public static startUninstallSplits(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->sSplitApkInstallerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -115,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->sSplitApkInstallerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -128,7 +121,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 

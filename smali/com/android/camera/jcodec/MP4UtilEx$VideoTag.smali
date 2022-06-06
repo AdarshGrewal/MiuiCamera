@@ -26,16 +26,12 @@
 .method public constructor <init>(Ljava/lang/String;[BLjava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->key:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->data:[B
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->boxType:Ljava/lang/String;
 
     return-void
@@ -46,7 +42,6 @@
 .method public getBoxType()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->boxType:Ljava/lang/String;
 
     return-object v0
@@ -55,7 +50,6 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->data:[B
 
     return-object v0
@@ -64,7 +58,6 @@
 .method public getKey()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->key:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +66,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

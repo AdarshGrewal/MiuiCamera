@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MiLiveRecorder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public OnNeedStopRecording()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1400(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Landroid/os/Handler;
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$800(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/lang/String;
@@ -58,22 +55,20 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1400(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/o00000o0/OooO00o/OoooOO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o00000OO/OooO00o/Oooo0;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/o00000o0/OooO00o/OoooOO0;-><init>(Lcom/android/camera/module/impl/component/MiLiveRecorder$1;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o00000OO/OooO00o/Oooo0;-><init>(Lcom/android/camera/module/impl/component/MiLiveRecorder$1;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
@@ -92,7 +87,6 @@
 .method public OnNotifyRender()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$800(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/lang/String;
@@ -109,7 +103,6 @@
 .method public OnRecordFailed()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$800(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/lang/String;
@@ -122,7 +115,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1000(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/util/Stack;
@@ -131,14 +123,12 @@
 
     invoke-virtual {v0}, Ljava/util/Stack;->clear()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     const/16 v1, 0x9
 
     invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1200(Lcom/android/camera/module/impl/component/MiLiveRecorder;I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1300(Lcom/android/camera/module/impl/component/MiLiveRecorder;)V
@@ -155,7 +145,6 @@
 .method public OnRecordFinish(Ljava/lang/String;JJ)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1000(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/util/Stack;
@@ -182,7 +171,6 @@
 
     invoke-virtual {v0, v8}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1000(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/util/Stack;
@@ -201,7 +189,6 @@
 
     if-gtz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1100(Lcom/android/camera/module/impl/component/MiLiveRecorder;)I
@@ -210,7 +197,6 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$800(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/lang/String;
@@ -237,7 +223,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->OnRecordFailed()V
 
     return-void
@@ -245,7 +230,6 @@
     :cond_0
     const/4 p1, 0x4
 
-    .line 6
     iget-object p3, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {p3}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$800(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Ljava/lang/String;
@@ -282,7 +266,6 @@
 
     invoke-static {p1, p3, p4}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1100(Lcom/android/camera/module/impl/component/MiLiveRecorder;)I
@@ -293,7 +276,6 @@
 
     if-ne p1, p3, :cond_1
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     const/4 p2, 0x3
@@ -302,7 +284,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
@@ -312,7 +293,6 @@
 
     if-ne p1, p2, :cond_2
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     const/16 p2, 0x8
@@ -327,7 +307,6 @@
 .method public synthetic OooO00o()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1500(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;
@@ -336,7 +315,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$1;->this$0:Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLiveRecorder;->access$1500(Lcom/android/camera/module/impl/component/MiLiveRecorder;)Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;

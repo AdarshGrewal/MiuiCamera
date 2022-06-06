@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$2;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -62,7 +60,6 @@
 .method public compare(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result p1

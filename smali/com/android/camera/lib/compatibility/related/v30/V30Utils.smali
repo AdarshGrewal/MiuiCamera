@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static applyExtendSceneMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
     .locals 1
 
-    .line 1
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_EXTENDED_SCENE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -35,7 +33,6 @@
 .method public static applySessionKey(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -68,7 +65,6 @@
 
     goto :goto_2
 
-    .line 2
     :cond_2
     check-cast p2, Ljava/lang/Integer;
 
@@ -85,7 +81,6 @@
 .method public static applyZoomRatio(Landroid/hardware/camera2/CaptureRequest$Builder;F)V
     .locals 1
 
-    .line 1
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -98,44 +93,31 @@
 .end method
 
 .method public static fileUnderSharedStorage(Ljava/lang/String;)Z
-    .locals 2
+    .locals 1
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    const/4 v1, 0x0
-
     if-eqz v0, :cond_0
 
-    return v1
+    const/4 p0, 0x0
 
-    .line 2
+    return p0
+
     :cond_0
-    invoke-static {p0}, Lcom/android/camera/storage/Storage;->isPrimaryPhoneStorage(Ljava/lang/String;)Z
+    sget-object v0, Lcom/android/camera/storage/Storage;->PRIMARY_STORAGE_PATH:Ljava/lang/String;
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p0}, Lcom/android/camera/storage/Storage;->isSecondPhoneStorage(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_2
-
-    :cond_1
-    const/4 v1, 0x1
-
-    :cond_2
-    return v1
+    return p0
 .end method
 
 .method public static getAppBounds(Landroid/app/Activity;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object p0
@@ -144,7 +126,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/WindowMetrics;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -159,7 +140,6 @@
 
     const-string v1, "getFrameAtTime"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-le p1, p3, :cond_0
@@ -170,12 +150,10 @@
 
     const/4 p3, 0x2
 
-    .line 2
     invoke-virtual {p0, p1, p2, p3, p5}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(JILandroid/media/MediaMetadataRetriever$BitmapParams;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -197,12 +175,10 @@
 
     move-object v6, p5
 
-    .line 4
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaMetadataRetriever;->getScaledFrameAtTime(JIIILandroid/media/MediaMetadataRetriever$BitmapParams;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 5
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -219,11 +195,10 @@
 
     const-string v2, "close file error "
 
-    const-string v3, "munmap file error "
+    const-string/jumbo v3, "munmap file error "
 
     const-string v4, "V30Utils"
 
-    .line 1
     new-instance v5, Ljava/io/FileDescriptor;
 
     invoke-direct {v5}, Ljava/io/FileDescriptor;-><init>()V
@@ -234,7 +209,6 @@
 
     const-wide/16 v9, -0x1
 
-    .line 2
     :try_start_0
     sget v0, Landroid/system/OsConstants;->O_RDONLY:I
 
@@ -244,7 +218,6 @@
 
     move-result-object v5
 
-    .line 3
     invoke-static {v5}, Landroid/system/Os;->fstat(Ljava/io/FileDescriptor;)Landroid/system/StructStat;
 
     move-result-object v0
@@ -256,7 +229,6 @@
 
     const-wide/16 v12, 0x0
 
-    .line 4
     :try_start_1
     sget v16, Landroid/system/OsConstants;->PROT_READ:I
 
@@ -281,16 +253,13 @@
 
     move-wide/from16 v11, v21
 
-    .line 5
     :try_start_3
     invoke-static {v9, v10, v11, v12}, Landroid/system/Os;->mlock(JJ)V
 
-    .line 6
     invoke-static/range {p0 .. p5}, Lcom/android/camera/Thumbnail;->getMiniKindThumbnailByP(Landroid/content/Context;JILjava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v8
 
-    .line 7
     invoke-static {v9, v10, v11, v12}, Landroid/system/Os;->munlock(JJ)V
     :try_end_3
     .catch Landroid/system/ErrnoException; {:try_start_3 .. :try_end_3} :catch_2
@@ -298,14 +267,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 8
     invoke-virtual {v5}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 9
     :try_start_4
     invoke-static {v5}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_4
@@ -318,7 +285,6 @@
 
     move-object v5, v0
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +305,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 11
     :try_start_5
     invoke-static {v9, v10, v11, v12}, Landroid/system/Os;->munmap(JJ)V
     :try_end_5
@@ -352,7 +317,6 @@
 
     move-object v2, v0
 
-    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +394,6 @@
 
     move-wide v14, v6
 
-    .line 13
     :goto_4
     :try_start_6
     new-instance v11, Ljava/lang/StringBuilder;
@@ -453,14 +416,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 14
     invoke-virtual {v5}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 15
     :try_start_7
     invoke-static {v5}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_7
@@ -473,7 +434,6 @@
 
     move-object v5, v0
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,7 +454,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 17
     :try_start_8
     invoke-static {v9, v10, v14, v15}, Landroid/system/Os;->munmap(JJ)V
     :try_end_8
@@ -507,7 +466,6 @@
 
     move-object v2, v0
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -527,14 +485,12 @@
     :goto_8
     if-eqz v5, :cond_3
 
-    .line 19
     invoke-virtual {v5}, Ljava/io/FileDescriptor;->valid()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 20
     :try_start_9
     invoke-static {v5}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_9
@@ -547,7 +503,6 @@
 
     move-object v5, v0
 
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -568,7 +523,6 @@
 
     if-ltz v0, :cond_4
 
-    .line 22
     :try_start_a
     invoke-static {v9, v10, v14, v15}, Landroid/system/Os;->munmap(JJ)V
     :try_end_a
@@ -581,7 +535,6 @@
 
     move-object v2, v0
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -596,7 +549,6 @@
 
     invoke-static {v4, v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 24
     :cond_4
     :goto_a
     throw v8
@@ -605,7 +557,6 @@
 .method public static getZoomRatio(Landroid/hardware/camera2/CaptureRequest;)F
     .locals 1
 
-    .line 3
     :try_start_0
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -628,7 +579,6 @@
 
     const-string v0, "getZoomRatio error"
 
-    .line 4
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -639,7 +589,6 @@
 .method public static getZoomRatio(Landroid/hardware/camera2/CaptureResult;)F
     .locals 1
 
-    .line 1
     :try_start_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -662,7 +611,6 @@
 
     const-string v0, "getZoomRatio error"
 
-    .line 2
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -673,7 +621,6 @@
 .method public static setCameraAudioRestriction(Landroid/hardware/camera2/CameraDevice;I)V
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraDevice;->setCameraAudioRestriction(I)V
     :try_end_0
@@ -687,7 +634,6 @@
 
     const-string/jumbo p1, "setCameraAudioRestriction: camera is closed."
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -695,26 +641,15 @@
     :catch_1
     move-exception p0
 
-    .line 3
     invoke-virtual {p0}, Landroid/hardware/camera2/CameraAccessException;->printStackTrace()V
 
     :goto_0
     return-void
 .end method
 
-.method public static setStateDescription(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setStateDescription(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
 .method public static useScopedStorage(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e

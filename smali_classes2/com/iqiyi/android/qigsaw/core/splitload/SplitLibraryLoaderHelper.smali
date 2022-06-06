@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static loadSplitLibrary(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->hasInstance()Z
 
     move-result v0
@@ -37,7 +35,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
 
@@ -53,13 +50,11 @@
 
     return v1
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {v0, p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;->getAllSplitInfo(Landroid/content/Context;)Ljava/util/Collection;
 
     move-result-object v0
@@ -68,7 +63,6 @@
 
     return v1
 
-    .line 5
     :cond_2
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -87,14 +81,12 @@
 
     check-cast v3, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 6
     invoke-virtual {v3}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasLibs()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 7
     invoke-virtual {v3}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getLibInfo()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
     move-result-object v4
@@ -103,7 +95,6 @@
 
     move-result-object v4
 
-    .line 8
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -121,7 +112,6 @@
 
     check-cast v5, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;
 
-    .line 9
     invoke-virtual {v5}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -136,12 +126,10 @@
 
     if-eqz v6, :cond_4
 
-    .line 10
     instance-of v4, p0, Landroid/app/Application;
 
     if-eqz v4, :cond_5
 
-    .line 11
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,7 +162,6 @@
 
     move-result-object p0
 
-    .line 12
     :try_start_0
     invoke-static {p0}, Ljava/lang/System;->load(Ljava/lang/String;)V
     :try_end_0
@@ -185,7 +172,6 @@
     :catch_0
     return v1
 
-    .line 13
     :cond_5
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;
 
@@ -201,7 +187,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 14
     invoke-virtual {v3}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
 
     move-result-object p0
@@ -221,7 +206,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -245,7 +229,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object p1
@@ -256,7 +239,6 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 3
     const-class v4, Ljava/lang/String;
 
     aput-object v4, v3, v0
@@ -269,7 +251,6 @@
 
     aput-object p2, v1, v0
 
-    .line 4
     invoke-virtual {p0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

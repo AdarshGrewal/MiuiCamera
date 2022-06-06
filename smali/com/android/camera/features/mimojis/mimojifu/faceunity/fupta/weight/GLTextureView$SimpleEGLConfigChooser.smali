@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;Z)V
     .locals 8
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$SimpleEGLConfigChooser;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;
 
     if-eqz p2, :cond_0
@@ -51,7 +50,6 @@
 
     move-object v1, p1
 
-    .line 2
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$ComponentSizeChooser;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;IIIIII)V
 
     return-void

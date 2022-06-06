@@ -22,12 +22,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a043c
+    const v0, 0x7f0a044e
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -44,7 +42,6 @@
 .method public synthetic OooO00o()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/16 v1, 0x80
@@ -62,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -77,24 +73,22 @@
 
     if-ne v1, v2, :cond_0
 
-    const v1, 0x7f0600e4
+    const v1, 0x7f0600e2
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0600e3
+    const v1, 0x7f0600e1
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->getText()Ljava/lang/String;
@@ -103,14 +97,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->getAlpha()I
 
     move-result v0
 
     if-ne v0, v2, :cond_1
 
-    .line 5
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -147,19 +139,17 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0o0/OooO00o/OooO00o;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0Oo/OooO00o/OooO00o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0o0/OooO00o/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0Oo/OooO00o/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;)V
 
     const-wide/16 v1, 0x64
 
@@ -167,7 +157,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -177,7 +166,6 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 9
     :cond_2
     :goto_1
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

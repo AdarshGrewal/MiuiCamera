@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/VideoBase;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public isWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
@@ -73,7 +71,6 @@
 .method public onDeviceBecomeStable()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onDeviceBecomeStable"
@@ -92,7 +89,6 @@
 .method public onDeviceKeepMoving(D)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
@@ -101,7 +97,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->isEvAdjusted(Z)Z
 
     move-result v0
@@ -114,7 +109,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -133,14 +127,12 @@
 
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/module/VideoBase;->is3ALocked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/module/VideoBase;->resetFocusState(D)V
@@ -164,7 +156,6 @@
 .method public onDeviceOrientationChanged(FZ)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,7 +174,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     if-nez p2, :cond_0
@@ -198,14 +188,12 @@
     :goto_0
     iput p1, v0, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/VideoBase$4;->this$0:Lcom/android/camera/module/VideoBase;
 
     iget-boolean p1, p1, Lcom/android/camera/module/BaseModule;->isGradienterOn:Z
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
     move-result-object p1
@@ -216,12 +204,10 @@
 
     iget v0, v0, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 5
     invoke-static {v1, v0}, Lcom/android/camera/Util;->getShootRotation(Landroid/app/Activity;F)F
 
     move-result v0
 
-    .line 6
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/effect/EffectController;->setDeviceRotation(ZF)V
 
     :cond_1

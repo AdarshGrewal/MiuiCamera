@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/widget/ClearableEditText;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
@@ -63,7 +61,6 @@
     :goto_0
     if-eq v0, p1, :cond_1
 
-    .line 2
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {p1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$000(Lmiuix/androidbasewidget/widget/ClearableEditText;)Z
@@ -74,12 +71,10 @@
 
     invoke-static {p1, v0}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$002(Lmiuix/androidbasewidget/widget/ClearableEditText;Z)Z
 
-    .line 3
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->refreshDrawableState()V
 
-    .line 4
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {p1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$100(Lmiuix/androidbasewidget/widget/ClearableEditText;)Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;
@@ -88,7 +83,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/ClearableEditText$1;->this$0:Lmiuix/androidbasewidget/widget/ClearableEditText;
 
     invoke-static {p1}, Lmiuix/androidbasewidget/widget/ClearableEditText;->access$100(Lmiuix/androidbasewidget/widget/ClearableEditText;)Lmiuix/androidbasewidget/widget/ClearableEditText$AccessHelper;

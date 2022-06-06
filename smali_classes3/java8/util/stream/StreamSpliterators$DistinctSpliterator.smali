@@ -69,7 +69,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -89,7 +88,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {}, Ljava8/util/concurrent/ForkJoinPool;->getCommonPoolParallelism()I
@@ -123,13 +121,10 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
-    .line 4
     iput-object p2, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->seen:Ljava/util/concurrent/ConcurrentMap;
 
     return-void
@@ -138,7 +133,6 @@
 .method public static synthetic lambda$forEachRemaining$153(Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;Ljava8/util/function/Consumer;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->seen:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->mapNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -153,7 +147,6 @@
 
     if-nez p0, :cond_0
 
-    .line 2
     invoke-interface {p1, p2}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :cond_0
@@ -172,7 +165,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object p1, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->NULL_VALUE:Ljava/lang/Object;
 
@@ -190,7 +182,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->tmpSlot:Ljava/lang/Object;
 
     return-void
@@ -199,7 +190,6 @@
 .method public characteristics()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->characteristics()I
@@ -216,7 +206,6 @@
 .method public estimateSize()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
@@ -236,7 +225,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-static {p0, p1}, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator$$Lambda$1;->lambdaFactory$(Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;Ljava8/util/function/Consumer;)Ljava8/util/function/Consumer;
@@ -258,7 +246,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->getComparator()Ljava/util/Comparator;
@@ -271,7 +258,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -282,7 +268,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -300,7 +285,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
@@ -310,7 +294,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->seen:Ljava/util/concurrent/ConcurrentMap;
 
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->tmpSlot:Ljava/lang/Object;
@@ -327,14 +310,12 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->tmpSlot:Ljava/lang/Object;
 
     invoke-interface {p1, v0}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     const/4 p1, 0x0
 
-    .line 4
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->tmpSlot:Ljava/lang/Object;
 
     const/4 p1, 0x1
@@ -357,7 +338,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
@@ -366,7 +346,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v1, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;
 
     iget-object v2, p0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;->seen:Ljava/util/concurrent/ConcurrentMap;

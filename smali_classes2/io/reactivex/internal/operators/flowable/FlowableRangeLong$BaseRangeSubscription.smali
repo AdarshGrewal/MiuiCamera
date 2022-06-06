@@ -38,13 +38,10 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/internal/subscriptions/BasicQueueSubscription;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->index:J
 
-    .line 3
     iput-wide p3, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->end:J
 
     return-void
@@ -57,7 +54,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->cancelled:Z
 
     return-void
@@ -66,7 +62,6 @@
 .method public final clear()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->end:J
 
     iput-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->index:J
@@ -80,7 +75,6 @@
 .method public final isEmpty()Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->index:J
 
     iget-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->end:J
@@ -103,10 +97,8 @@
 .method public final poll()Ljava/lang/Long;
     .locals 4
 
-    .line 2
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->index:J
 
-    .line 3
     iget-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->end:J
 
     cmp-long v2, v0, v2
@@ -122,10 +114,8 @@
 
     add-long/2addr v2, v0
 
-    .line 4
     iput-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->index:J
 
-    .line 5
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -141,7 +131,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->poll()Ljava/lang/Long;
 
     move-result-object v0
@@ -152,14 +141,12 @@
 .method public final request(J)V
     .locals 4
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->add(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     move-result-wide v0
@@ -176,12 +163,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->fastPath()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableRangeLong$BaseRangeSubscription;->slowPath(J)V
 

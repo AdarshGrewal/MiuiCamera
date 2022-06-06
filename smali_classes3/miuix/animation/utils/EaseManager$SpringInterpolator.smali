@@ -43,33 +43,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x3f733333    # 0.95f
 
-    .line 2
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->damping:F
 
     const v0, 0x3f19999a    # 0.6f
 
-    .line 3
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->response:F
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 4
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->initial:F
 
-    .line 5
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->c1:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 6
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->m:F
 
-    .line 7
     invoke-direct {p0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->updateParameters()V
 
     return-void
@@ -78,7 +71,6 @@
 .method private updateParameters()V
     .locals 7
 
-    .line 1
     iget v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->response:F
 
     float-to-double v0, v0
@@ -103,7 +95,6 @@
 
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->k:F
 
-    .line 2
     iget v1, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->damping:F
 
     float-to-double v3, v1
@@ -138,7 +129,6 @@
 
     float-to-double v0, v2
 
-    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -155,7 +145,6 @@
 
     iput v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->w:F
 
-    .line 4
     iget v3, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->c:F
 
     div-float/2addr v3, v2
@@ -166,7 +155,6 @@
 
     iput v1, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->r:F
 
-    .line 5
     iget v2, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->initial:F
 
     mul-float/2addr v1, v2
@@ -187,7 +175,6 @@
 .method public getDamping()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->damping:F
 
     return v0
@@ -196,7 +183,6 @@
 .method public getInterpolation(F)F
     .locals 8
 
-    .line 1
     iget v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->r:F
 
     mul-float/2addr v0, p1
@@ -205,7 +191,6 @@
 
     const-wide v2, 0x4005bf0a8b145769L    # Math.E
 
-    .line 2
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -258,7 +243,6 @@
 .method public getResponse()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->response:F
 
     return v0
@@ -267,10 +251,8 @@
 .method public setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->damping:F
 
-    .line 2
     invoke-direct {p0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->updateParameters()V
 
     return-object p0
@@ -279,10 +261,8 @@
 .method public setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->response:F
 
-    .line 2
     invoke-direct {p0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->updateParameters()V
 
     return-object p0

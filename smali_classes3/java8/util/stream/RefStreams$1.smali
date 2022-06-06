@@ -41,7 +41,6 @@
 .method public constructor <init>(JILjava8/util/function/UnaryOperator;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/RefStreams$1;->val$f:Ljava8/util/function/UnaryOperator;
 
     iput-object p5, p0, Ljava8/util/stream/RefStreams$1;->val$seed:Ljava/lang/Object;
@@ -63,17 +62,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/RefStreams$1;->started:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/RefStreams$1;->val$f:Ljava8/util/function/UnaryOperator;
 
     iget-object v2, p0, Ljava8/util/stream/RefStreams$1;->prev:Ljava/lang/Object;
@@ -84,14 +80,11 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/RefStreams$1;->val$seed:Ljava/lang/Object;
 
-    .line 5
     iput-boolean v1, p0, Ljava8/util/stream/RefStreams$1;->started:Z
 
-    .line 6
     :goto_0
     iput-object v0, p0, Ljava8/util/stream/RefStreams$1;->prev:Ljava/lang/Object;
 

@@ -43,10 +43,8 @@
         }
     .end annotation
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/WhileOps$1Op;->val$predicate:Ljava8/util/function/Predicate;
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/ReferencePipeline$StatefulOp;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V
 
     return-void
@@ -72,12 +70,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/WhileOps$DropWhileTask;
 
     invoke-direct {v0, p0, p1, p2, p3}, Ljava8/util/stream/WhileOps$DropWhileTask;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/function/IntFunction;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
     move-result-object p1
@@ -103,7 +99,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -116,7 +111,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/Nodes;->castingArray()Ljava8/util/function/IntFunction;
 
     move-result-object v0
@@ -125,18 +119,15 @@
 
     move-result-object p1
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/Node;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfRef$Dropping;
 
-    .line 5
     invoke-virtual {p1, p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object p1
@@ -164,7 +155,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-virtual {p0, p2, p1}, Ljava8/util/stream/WhileOps$1Op;->opWrapSink(Ljava8/util/stream/Sink;Z)Ljava8/util/stream/WhileOps$DropWhileSink;
 
     move-result-object p1
@@ -184,7 +174,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$1Op$1OpSink;
 
     invoke-direct {v0, p0, p1, p2}, Ljava8/util/stream/WhileOps$1Op$1OpSink;-><init>(Ljava8/util/stream/WhileOps$1Op;Ljava8/util/stream/Sink;Z)V

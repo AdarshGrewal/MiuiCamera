@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final ijkplayer_dummy:I = 0x7f120447
+.field public static final ijkplayer_dummy:I = 0x7f120425
 
 
 # direct methods

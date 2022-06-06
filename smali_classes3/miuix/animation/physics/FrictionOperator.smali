@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget p1, p1, v0
 
     float-to-double v1, p1
@@ -34,7 +32,6 @@
 
     const-wide v3, 0x4005bf0a8b145769L    # Math.E
 
-    .line 2
     invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -55,7 +52,6 @@
 
     sub-double/2addr p5, p3
 
-    .line 1
     invoke-static {p5, p6, p7, p8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide p3

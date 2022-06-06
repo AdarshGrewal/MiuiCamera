@@ -46,10 +46,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,7 +56,6 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->resources:Landroid/content/res/Resources;
 
-    .line 3
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -91,7 +88,6 @@
 
     return-object p0
 
-    .line 5
     :cond_0
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;
 
@@ -105,12 +101,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0}, Lcom/bumptech/glide/Glide;->get(Landroid/content/Context;)Lcom/bumptech/glide/Glide;
 
     move-result-object p0
@@ -123,7 +117,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-static {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->obtain(Landroid/content/res/Resources;Lcom/bumptech/glide/load/engine/Resource;)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object p0
@@ -138,7 +131,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 4
     invoke-static {p2, p1}, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->obtain(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
 
     move-result-object p1
@@ -157,7 +149,6 @@
 .method public get()Landroid/graphics/drawable/BitmapDrawable;
     .locals 3
 
-    .line 2
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->resources:Landroid/content/res/Resources;
@@ -178,7 +169,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->get()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v0
@@ -197,7 +187,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Landroid/graphics/drawable/BitmapDrawable;
 
     return-object v0
@@ -206,7 +195,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
@@ -219,14 +207,12 @@
 .method public initialize()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     instance-of v1, v0, Lcom/bumptech/glide/load/engine/Initializable;
 
     if-eqz v1, :cond_0
 
-    .line 2
     check-cast v0, Lcom/bumptech/glide/load/engine/Initializable;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Initializable;->initialize()V
@@ -238,7 +224,6 @@
 .method public recycle()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/LazyBitmapDrawableResource;->bitmapResource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V

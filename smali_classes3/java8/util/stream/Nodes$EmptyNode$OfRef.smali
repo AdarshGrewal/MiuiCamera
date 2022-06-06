@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava8/util/stream/Nodes$EmptyNode;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
 .method public synthetic constructor <init>(Ljava8/util/stream/Nodes$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/Nodes$EmptyNode$OfRef;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
 .method public bridge synthetic copyInto([Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Ljava8/util/stream/Nodes$EmptyNode;->copyInto(Ljava/lang/Object;I)V
 
     return-void
@@ -59,7 +56,6 @@
 .method public bridge synthetic forEach(Ljava8/util/function/Consumer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Nodes$EmptyNode;->forEach(Ljava/lang/Object;)V
 
     return-void
@@ -75,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/Spliterators;->emptySpliterator()Ljava8/util/Spliterator;
 
     move-result-object v0

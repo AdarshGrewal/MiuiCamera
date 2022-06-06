@@ -13,7 +13,6 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getState()[I
 
     move-result-object v0
@@ -26,22 +25,18 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;[I)V
     .locals 1
 
-    .line 2
     invoke-direct {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     const/4 p1, 0x0
 
     new-array v0, p1, [I
 
-    .line 3
     iput-object v0, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mTaggingState:[I
 
     new-array p1, p1, [I
 
-    .line 4
     iput-object p1, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mRawState:[I
 
-    .line 5
     invoke-virtual {p0, p2}, Lmiuix/internal/graphics/drawable/TaggingDrawable;->setTaggingState([I)Z
 
     return-void
@@ -50,7 +45,6 @@
 .method public static containsTagState(Landroid/graphics/drawable/StateListDrawable;[I)Z
     .locals 7
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/graphics/drawable/StateListDrawableReflect;->getStateCount(Landroid/graphics/drawable/StateListDrawable;)I
 
     move-result v0
@@ -62,12 +56,10 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 2
     invoke-static {p0, v2}, Lmiuix/internal/graphics/drawable/StateListDrawableReflect;->getStateSet(Landroid/graphics/drawable/StateListDrawable;I)[I
 
     move-result-object v3
 
-    .line 3
     array-length v4, v3
 
     move v5, v1
@@ -77,7 +69,6 @@
 
     aget v6, v3, v5
 
-    .line 4
     invoke-static {p1, v6}, Ljava/util/Arrays;->binarySearch([II)I
 
     move-result v6
@@ -105,7 +96,6 @@
 .method public static mergeSortTaggingState([I[I)[I
     .locals 3
 
-    .line 1
     array-length v0, p1
 
     array-length v1, p0
@@ -114,21 +104,18 @@
 
     new-array v0, v0, [I
 
-    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
 
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3
     array-length p0, p0
 
     array-length v1, p1
 
     invoke-static {p1, v2, v0, p0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 4
     invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
 
     return-object v0
@@ -137,7 +124,6 @@
 .method public static mergeTaggingState([I[I)[I
     .locals 3
 
-    .line 1
     array-length v0, p1
 
     array-length v1, p0
@@ -146,14 +132,12 @@
 
     new-array v0, v0, [I
 
-    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
 
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3
     array-length p0, p0
 
     array-length v1, p1
@@ -168,7 +152,6 @@
 .method public setState([I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mRawState:[I
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->equals([I[I)Z
@@ -177,10 +160,8 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mRawState:[I
 
-    .line 3
     iget-object v0, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mTaggingState:[I
 
     invoke-static {v0, p1}, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mergeTaggingState([I[I)[I
@@ -202,7 +183,6 @@
 .method public setTaggingState([I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mTaggingState:[I
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->equals([I[I)Z
@@ -211,10 +191,8 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mTaggingState:[I
 
-    .line 3
     iget-object v0, p0, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mRawState:[I
 
     invoke-static {p1, v0}, Lmiuix/internal/graphics/drawable/TaggingDrawable;->mergeTaggingState([I[I)[I

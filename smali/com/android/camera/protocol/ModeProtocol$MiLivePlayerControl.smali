@@ -25,9 +25,6 @@
 .method public abstract getSaveContentValues()Landroid/content/ContentValues;
 .end method
 
-.method public abstract hide()V
-.end method
-
 .method public abstract isShowing()Z
 .end method
 

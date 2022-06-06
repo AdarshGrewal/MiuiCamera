@@ -38,10 +38,8 @@
 .method public constructor <init>(Ljava8/util/stream/MatchOps$MatchKind;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/MatchOps$MatchKind;->access$100(Ljava8/util/stream/MatchOps$MatchKind;)Z
 
     move-result p1
@@ -58,7 +56,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -67,7 +64,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -76,7 +72,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -91,7 +86,6 @@
 .method public cancellationRequested()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/MatchOps$BooleanTerminalSink;->stop:Z
 
     return v0
@@ -106,7 +100,6 @@
 .method public getAndClearState()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/MatchOps$BooleanTerminalSink;->value:Z
 
     return v0

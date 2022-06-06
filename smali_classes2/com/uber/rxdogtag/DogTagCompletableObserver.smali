@@ -19,20 +19,16 @@
 .method public constructor <init>(Lcom/uber/rxdogtag/RxDogTag$Configuration;Lio/reactivex/CompletableObserver;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Throwable;
 
     invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
 
     iput-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->t:Ljava/lang/Throwable;
 
-    .line 3
     iput-object p1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
-    .line 4
     iput-object p2, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
     return-void
@@ -43,7 +39,6 @@
 .method public synthetic OooO00o(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
     invoke-interface {v0, p1}, Lio/reactivex/CompletableObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
@@ -54,7 +49,6 @@
 .method public synthetic OooO00o(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-object v1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->t:Ljava/lang/Throwable;
@@ -69,7 +63,6 @@
 .method public synthetic OooO0O0(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-object v1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->t:Ljava/lang/Throwable;
@@ -84,7 +77,6 @@
 .method public synthetic OooO0OO(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
     invoke-interface {v0, p1}, Lio/reactivex/CompletableObserver;->onError(Ljava/lang/Throwable;)V
@@ -95,7 +87,6 @@
 .method public synthetic OooO0Oo(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-object v1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->t:Ljava/lang/Throwable;
@@ -110,7 +101,6 @@
 .method public hasCustomOnError()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
     instance-of v1, v0, Lio/reactivex/observers/LambdaConsumerIntrospection;
@@ -119,7 +109,6 @@
 
     check-cast v0, Lio/reactivex/observers/LambdaConsumerIntrospection;
 
-    .line 2
     invoke-interface {v0}, Lio/reactivex/observers/LambdaConsumerIntrospection;->hasCustomOnError()Z
 
     move-result v0
@@ -140,14 +129,12 @@
 .method public onComplete()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-boolean v0, v0, Lcom/uber/rxdogtag/RxDogTag$Configuration;->guardObserverCallbacks:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/uber/rxdogtag/OooO0O0;
 
     invoke-direct {v0, p0}, Lcom/uber/rxdogtag/OooO0O0;-><init>(Lcom/uber/rxdogtag/DogTagCompletableObserver;)V
@@ -164,7 +151,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
@@ -177,7 +163,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 
     instance-of v1, v0, Lcom/uber/rxdogtag/RxDogTagErrorReceiver;
@@ -186,12 +171,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 2
     instance-of v1, v0, Lcom/uber/rxdogtag/RxDogTagTaggedExceptionReceiver;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-object v3, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->t:Ljava/lang/Throwable;
@@ -204,7 +187,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
@@ -212,7 +194,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     new-instance v0, Lcom/uber/rxdogtag/OooO0o0;
 
     invoke-direct {v0, p0}, Lcom/uber/rxdogtag/OooO0o0;-><init>(Lcom/uber/rxdogtag/DogTagCompletableObserver;)V
@@ -225,13 +206,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-interface {v0, p1}, Lio/reactivex/CompletableObserver;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
@@ -246,14 +225,12 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->config:Lcom/uber/rxdogtag/RxDogTag$Configuration;
 
     iget-boolean v0, v0, Lcom/uber/rxdogtag/RxDogTag$Configuration;->guardObserverCallbacks:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/uber/rxdogtag/OooO0OO;
 
     invoke-direct {v0, p0}, Lcom/uber/rxdogtag/OooO0OO;-><init>(Lcom/uber/rxdogtag/DogTagCompletableObserver;)V
@@ -266,7 +243,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/uber/rxdogtag/DogTagCompletableObserver;->delegate:Lio/reactivex/CompletableObserver;
 

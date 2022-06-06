@@ -11,7 +11,7 @@
 
 .field public static final FLAVOR:Ljava/lang/String; = ""
 
-.field public static final SDK_VERSION:Ljava/lang/String; = "1.2.7"
+.field public static final SDK_VERSION:Ljava/lang/String; = "1.2.2"
 
 .field public static final VERSION_CODE:I = 0x1
 
@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

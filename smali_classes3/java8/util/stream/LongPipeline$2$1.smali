@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljava8/util/stream/LongPipeline$2;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/LongPipeline$2$1;->this$1:Ljava8/util/stream/LongPipeline$2;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedLong;-><init>(Ljava8/util/stream/Sink;)V
@@ -43,7 +42,6 @@
 .method public accept(J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     long-to-double p1, p1

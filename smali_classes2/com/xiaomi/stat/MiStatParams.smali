@@ -14,10 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -30,17 +28,14 @@
 .method public constructor <init>(Lcom/xiaomi/stat/MiStatParams;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p1, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
@@ -49,7 +44,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance p1, Lorg/json/JSONObject;
 
@@ -66,7 +60,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/io/StringReader;
 
@@ -79,13 +72,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     :goto_0
     invoke-virtual {v1}, Ljava/io/Reader;->read()I
 
@@ -97,12 +88,10 @@
 
     int-to-char v2, v2
 
-    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 5
     :cond_0
     new-instance v2, Lorg/json/JSONObject;
 
@@ -115,7 +104,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6
     invoke-static {v1}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Reader;)V
 
     return-object v2
@@ -139,7 +127,6 @@
 
     move-object v0, v4
 
-    .line 7
     :goto_1
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -160,7 +147,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8
     invoke-static {v1}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Reader;)V
 
     return-object p1
@@ -179,7 +165,6 @@
 .method private c(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/stat/MiStatParams;->a()Z
 
     move-result v0
@@ -196,7 +181,6 @@
 
     iget-object p1, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
-    .line 2
     invoke-virtual {p1}, Lorg/json/JSONObject;->length()I
 
     move-result p1
@@ -228,7 +212,6 @@
 .method public a(Ljava/lang/String;)Z
     .locals 0
 
-    .line 9
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->a(Ljava/lang/String;)Z
 
     move-result p1
@@ -239,7 +222,6 @@
 .method public b(Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->b(Ljava/lang/String;)Z
 
     move-result p1
@@ -250,7 +232,6 @@
 .method public getParamsNumber()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->length()I
@@ -263,7 +244,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->length()I
@@ -286,19 +266,16 @@
 .method public putBoolean(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->e(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->c(Ljava/lang/String;)Z
 
@@ -306,12 +283,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/n;->a()V
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
@@ -325,7 +300,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,19 +325,16 @@
 .method public putDouble(Ljava/lang/String;D)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->e(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->c(Ljava/lang/String;)Z
 
@@ -371,12 +342,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/n;->a()V
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
@@ -390,7 +359,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,19 +384,16 @@
 .method public putInt(Ljava/lang/String;I)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->e(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->c(Ljava/lang/String;)Z
 
@@ -436,12 +401,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/n;->a()V
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
@@ -455,7 +418,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -481,19 +443,16 @@
 .method public putLong(Ljava/lang/String;J)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->e(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->c(Ljava/lang/String;)Z
 
@@ -501,12 +460,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/n;->a()V
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
@@ -520,7 +477,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,19 +502,16 @@
 .method public putString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/stat/d/n;->e(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p2}, Lcom/xiaomi/stat/MiStatParams;->b(Ljava/lang/String;)Z
 
@@ -566,12 +519,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-static {p2}, Lcom/xiaomi/stat/d/n;->f(Ljava/lang/String;)V
 
     return-void
 
-    .line 5
     :cond_1
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;->c(Ljava/lang/String;)Z
 
@@ -579,18 +530,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/stat/d/n;->a()V
 
     return-void
 
-    .line 7
     :cond_2
     invoke-static {p2}, Lcom/xiaomi/stat/d/n;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
@@ -603,7 +551,6 @@
     :catch_0
     move-exception p1
 
-    .line 9
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -629,7 +576,6 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/MiStatParams;->b:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;

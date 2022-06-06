@@ -15,26 +15,14 @@
 
 
 # virtual methods
-.method public onError(I)V
-    .locals 0
-
-    return-void
+.method public abstract onError(I)V
 .end method
 
-.method public onStop()V
-    .locals 0
-
-    return-void
+.method public abstract onStop()V
 .end method
 
-.method public save(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
-    .locals 0
-
-    return-void
+.method public abstract save(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
 .end method
 
-.method public save(Ljava/lang/String;Landroid/content/ContentValues;)V
-    .locals 0
-
-    return-void
+.method public abstract save(Ljava/lang/String;Landroid/content/ContentValues;)V
 .end method

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/ListPopupWindow;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/ListPopupWindow$2;->this$0:Lmiuix/popupwidget/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     if-eq p3, p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/popupwidget/widget/ListPopupWindow$2;->this$0:Lmiuix/popupwidget/widget/ListPopupWindow;
 
     invoke-static {p1}, Lmiuix/popupwidget/widget/ListPopupWindow;->access$700(Lmiuix/popupwidget/widget/ListPopupWindow;)Lmiuix/popupwidget/widget/ListPopupWindow$DropDownListView;
@@ -62,7 +60,6 @@
 
     const/4 p2, 0x0
 
-    .line 2
     invoke-static {p1, p2}, Lmiuix/popupwidget/widget/ListPopupWindow$DropDownListView;->access$502(Lmiuix/popupwidget/widget/ListPopupWindow$DropDownListView;Z)Z
 
     :cond_0

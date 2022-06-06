@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lokio/Timeout;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 .method public pop()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lokio/PushableTimeout;->pushed:Lokio/Timeout;
 
     iget-wide v1, p0, Lokio/PushableTimeout;->originalTimeoutNanos:J
@@ -37,12 +35,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lokio/Timeout;->timeout(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;
 
-    .line 2
     iget-boolean v0, p0, Lokio/PushableTimeout;->originalHasDeadline:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lokio/PushableTimeout;->pushed:Lokio/Timeout;
 
     iget-wide v1, p0, Lokio/PushableTimeout;->originalDeadlineNanoTime:J
@@ -51,7 +47,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lokio/PushableTimeout;->pushed:Lokio/Timeout;
 
@@ -64,10 +59,8 @@
 .method public push(Lokio/Timeout;)V
     .locals 4
 
-    .line 1
     iput-object p1, p0, Lokio/PushableTimeout;->pushed:Lokio/Timeout;
 
-    .line 2
     invoke-virtual {p1}, Lokio/Timeout;->hasDeadline()Z
 
     move-result v0
@@ -76,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lokio/Timeout;->deadlineNanoTime()J
 
     move-result-wide v0
@@ -89,14 +81,12 @@
     :goto_0
     iput-wide v0, p0, Lokio/PushableTimeout;->originalDeadlineNanoTime:J
 
-    .line 4
     invoke-virtual {p1}, Lokio/Timeout;->timeoutNanos()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lokio/PushableTimeout;->originalTimeoutNanos:J
 
-    .line 5
     invoke-virtual {p0}, Lokio/Timeout;->timeoutNanos()J
 
     move-result-wide v2
@@ -109,7 +99,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lokio/Timeout;->timeout(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;
 
-    .line 6
     iget-boolean v0, p0, Lokio/PushableTimeout;->originalHasDeadline:Z
 
     if-eqz v0, :cond_1
@@ -120,7 +109,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     invoke-virtual {p0}, Lokio/Timeout;->deadlineNanoTime()J
 
     move-result-wide v0
@@ -135,7 +123,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     invoke-virtual {p0}, Lokio/Timeout;->hasDeadline()Z
 
@@ -143,7 +130,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-virtual {p0}, Lokio/Timeout;->deadlineNanoTime()J
 
     move-result-wide v0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->startCount(III)V
+    value = Lcom/android/camera/module/Camera2Module;->tryRemoveCountDownMessage()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,25 +20,12 @@
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/module/Camera2Module;
 
-.field public final synthetic val$count:I
-
-.field public final synthetic val$mode:I
-
-.field public final synthetic val$repeatTimes:I
-
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/Camera2Module;III)V
+.method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$11;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    iput p2, p0, Lcom/android/camera/module/Camera2Module$11;->val$count:I
-
-    iput p3, p0, Lcom/android/camera/module/Camera2Module$11;->val$repeatTimes:I
-
-    iput p4, p0, Lcom/android/camera/module/Camera2Module$11;->val$mode:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,18 +35,21 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 2
 
-    .line 1
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "run: hide delay number in main thread"
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$11;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    iget v1, p0, Lcom/android/camera/module/Camera2Module$11;->val$count:I
+    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mTopAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    iget v2, p0, Lcom/android/camera/module/Camera2Module$11;->val$repeatTimes:I
-
-    iget v3, p0, Lcom/android/camera/module/Camera2Module$11;->val$mode:I
-
-    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/module/Camera2Module;->access$3800(Lcom/android/camera/module/Camera2Module;III)V
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideDelayNumber()V
 
     return-void
 .end method

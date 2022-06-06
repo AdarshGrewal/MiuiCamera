@@ -19,10 +19,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     return-void
@@ -38,7 +36,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
@@ -49,7 +46,6 @@
 .method public isOpen()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->isOpen()Z
@@ -67,7 +63,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->position()J
@@ -85,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
@@ -103,7 +97,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0, p1, p2}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
@@ -119,7 +112,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->size()J
@@ -137,7 +129,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0, p1, p2}, Ljava/nio/channels/FileChannel;->truncate(J)Ljava/nio/channels/FileChannel;
@@ -153,7 +144,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/common/io/FileChannelWrapper;->ch:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I

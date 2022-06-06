@@ -32,12 +32,10 @@
 .method public constructor <init>(Landroid/view/View;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a03e0
+    const v0, 0x7f0a03f6
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -46,7 +44,6 @@
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->name:Ljava/lang/String;
 
     return-void
@@ -57,7 +54,6 @@
 .method public synthetic OooO00o(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
@@ -68,7 +64,6 @@
 .method public setData(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V
     .locals 4
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
 
     const/16 v1, 0x12c
@@ -85,7 +80,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->thum:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -96,7 +90,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -119,7 +112,6 @@
 
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    .line 5
     invoke-virtual {v3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
@@ -138,7 +130,6 @@
 
     invoke-direct {v2, v3, v1}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;-><init>(II)V
 
-    .line 6
     invoke-static {v2}, Lcom/bumptech/glide/request/RequestOptions;->bitmapTransform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/RequestOptions;
 
     move-result-object v2
@@ -149,12 +140,10 @@
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    .line 7
     invoke-virtual {v0, v2}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     goto :goto_0
 
-    .line 8
     :cond_0
     const-class v0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;
 
@@ -169,7 +158,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 9
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter;->getSelectItem(I)F
@@ -191,7 +179,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 10
     :goto_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->imageView:Landroid/widget/ImageView;
 
@@ -203,7 +190,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0800ce
+    const v3, 0x7f0800d0
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -219,7 +206,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,24 +240,21 @@
 
     move-result-object p1
 
-    .line 12
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 14
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooOOoo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooOo0o;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooOOoo;-><init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooOo0o;-><init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;Ljava/lang/String;)V
 
     const-wide/16 v1, 0x64
 
@@ -279,7 +262,6 @@
 
     goto :goto_3
 
-    .line 15
     :cond_3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -309,7 +291,6 @@
 .method public bridge synthetic setData(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$ThumbnailViewViewHolder;->setData(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V

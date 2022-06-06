@@ -68,7 +68,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     const/4 v1, 0x0
@@ -79,7 +78,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_INVALID:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     const/4 v2, 0x1
@@ -90,7 +88,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_SERVER:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     const/4 v3, 0x2
@@ -101,7 +98,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_CLIENT:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     const/4 v4, 0x3
@@ -118,7 +114,6 @@
 
     new-array v5, v5, [Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
-    .line 5
     sget-object v6, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_INVALID:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     aput-object v6, v5, v1
@@ -135,7 +130,6 @@
 
     sput-object v5, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->$VALUES:[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType$1;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType$1;-><init>()V
@@ -153,10 +147,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->value:I
 
     return-void
@@ -179,19 +171,16 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_CLIENT:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     return-object p0
 
-    .line 2
     :cond_1
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_SERVER:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     return-object p0
 
-    .line 3
     :cond_2
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->MC_ROLE_TYPE_INVALID:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
@@ -209,7 +198,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -218,7 +206,6 @@
 .method public static internalGetVerifier()Lcom/google/protobuf/Internal$EnumVerifier;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType$RoleTypeVerifier;->INSTANCE:Lcom/google/protobuf/Internal$EnumVerifier;
 
     return-object v0
@@ -229,7 +216,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->forNumber(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     move-result-object p0
@@ -240,7 +226,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -255,7 +240,6 @@
 .method public static values()[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->$VALUES:[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->clone()Ljava/lang/Object;
@@ -272,17 +256,14 @@
 .method public final getNumber()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->UNRECOGNIZED:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     if-eq p0, v0, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->value:I
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

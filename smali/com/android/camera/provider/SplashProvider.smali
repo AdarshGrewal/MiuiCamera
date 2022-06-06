@@ -31,10 +31,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/ConditionVariable;
 
     invoke-direct {v0}, Landroid/os/ConditionVariable;-><init>()V
@@ -47,62 +45,56 @@
 .method private getDiffScreenDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080118
+    const v0, 0x7f08011a
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f08011a
+    const v0, 0x7f08011c
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 5
     :cond_1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f080119
+    const v0, 0x7f08011b
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -110,9 +102,8 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f080117
+    const v0, 0x7f080119
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -124,14 +115,13 @@
 .method private getFileName()Ljava/lang/String;
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result v0
 
@@ -141,9 +131,8 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result v0
 
@@ -163,7 +152,6 @@
 .method private getSplashFile(Landroid/content/Context;)Ljava/io/File;
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -176,8 +164,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v1
 
@@ -207,39 +194,35 @@
 
     return-object v0
 
-    .line 3
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OoooO()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Ooo00()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/camera/display/Display;->init(Landroid/content/Context;)V
+    invoke-static {v1}, Lcom/android/camera/Display;->init(Landroid/content/Context;)V
 
-    .line 5
     :cond_1
     iget-object v1, p0, Lcom/android/camera/provider/SplashProvider;->mConditionVariable:Landroid/os/ConditionVariable;
 
     invoke-virtual {v1}, Landroid/os/ConditionVariable;->close()V
 
-    .line 6
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooOoO/OooO00o;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/OoooOOo/OooO00o;
 
-    invoke-direct {v2, p0, p1, v0}, LOooO00o/OooO0O0/OooO00o/OoooOoO/OooO00o;-><init>(Lcom/android/camera/provider/SplashProvider;Landroid/content/Context;Ljava/io/File;)V
+    invoke-direct {v2, p0, p1, v0}, LOooO0O0/OooO0O0/OooO00o/OoooOOo/OooO00o;-><init>(Lcom/android/camera/provider/SplashProvider;Landroid/content/Context;Ljava/io/File;)V
 
     invoke-virtual {v1, v2}, Lio/reactivex/Scheduler;->scheduleDirect(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
@@ -247,10 +230,8 @@
 
     const-string v1, "getSplashFile: block E..."
 
-    .line 7
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/provider/SplashProvider;->mConditionVariable:Landroid/os/ConditionVariable;
 
     const-wide/16 v2, 0xbb8
@@ -259,7 +240,6 @@
 
     const-string v1, "getSplashFile: block X..."
 
-    .line 9
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -270,7 +250,6 @@
 .method public synthetic OooO00o(Landroid/content/Context;Ljava/io/File;)V
     .locals 10
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/provider/SplashProvider;->getDiffScreenDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -281,52 +260,44 @@
 
     const-string p1, "getSplashFile: bottom drawable is null!"
 
-    .line 2
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v1
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v2
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomMargin()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomMargin()I
 
     move-result v3
 
-    .line 6
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v2, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 7
     new-instance v5, Landroid/graphics/Canvas;
 
     invoke-direct {v5, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     const/high16 v6, -0x1000000
 
-    .line 8
     invoke-virtual {v5, v6}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result v6
 
@@ -342,8 +313,7 @@
     :goto_0
     sub-int v3, v2, v3
 
-    .line 10
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomBarHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomBarHeight()I
 
     move-result v7
 
@@ -357,7 +327,6 @@
 
     sub-int v6, v3, v6
 
-    .line 11
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -366,7 +335,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f070789
+    const v8, 0x7f070776
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -374,8 +343,7 @@
 
     sub-int v7, v1, v7
 
-    .line 12
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v8
 
@@ -383,34 +351,30 @@
 
     if-eqz v8, :cond_2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
     :cond_2
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
-    .line 13
     :cond_3
     invoke-virtual {p1, v7, v9, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     goto :goto_1
 
-    .line 14
     :cond_4
     invoke-virtual {p1, v9, v6, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 15
     :goto_1
     invoke-virtual {p1, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 16
     :try_start_0
     invoke-virtual {p2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -429,10 +393,8 @@
     :catch_0
     const-string p1, "getSplashFile: save splash bitmap failed!"
 
-    .line 17
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     :goto_2
     iget-object p1, p0, Lcom/android/camera/provider/SplashProvider;->mConditionVariable:Landroid/os/ConditionVariable;
 
@@ -444,12 +406,10 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 3
 
-    .line 1
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p3
@@ -482,7 +442,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -492,13 +451,11 @@
 
     return-object p2
 
-    .line 4
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/camera/provider/SplashProvider;->getSplashFile(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -509,7 +466,6 @@
 
     move-result-object p3
 
-    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -538,7 +494,6 @@
 
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -551,7 +506,6 @@
 
     invoke-virtual {p1, v1, p3, v2}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 8
     invoke-virtual {p2, v0, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :goto_2
@@ -589,7 +543,6 @@
 
     const-string/jumbo v1, "onCreate: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1

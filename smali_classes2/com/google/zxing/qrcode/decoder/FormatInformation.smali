@@ -27,7 +27,6 @@
 
     new-array v2, v1, [I
 
-    .line 1
     fill-array-data v2, :array_0
 
     const/4 v3, 0x0
@@ -482,14 +481,12 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     shr-int/lit8 v0, p1, 0x3
 
     and-int/lit8 v0, v0, 0x3
 
-    .line 2
     invoke-static {v0}, Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;->forBits(I)Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
     move-result-object v0
@@ -500,7 +497,6 @@
 
     int-to-byte p1, p1
 
-    .line 3
     iput-byte p1, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
     return-void
@@ -509,7 +505,6 @@
 .method public static decodeFormatInformation(II)Lcom/google/zxing/qrcode/decoder/FormatInformation;
     .locals 1
 
-    .line 1
     invoke-static {p0, p1}, Lcom/google/zxing/qrcode/decoder/FormatInformation;->doDecodeFormatInformation(II)Lcom/google/zxing/qrcode/decoder/FormatInformation;
 
     move-result-object v0
@@ -523,7 +518,6 @@
 
     xor-int/lit16 p1, p1, 0x5412
 
-    .line 2
     invoke-static {p0, p1}, Lcom/google/zxing/qrcode/decoder/FormatInformation;->doDecodeFormatInformation(II)Lcom/google/zxing/qrcode/decoder/FormatInformation;
 
     move-result-object p0
@@ -534,7 +528,6 @@
 .method public static doDecodeFormatInformation(II)Lcom/google/zxing/qrcode/decoder/FormatInformation;
     .locals 10
 
-    .line 1
     sget-object v0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->FORMAT_INFO_DECODE_LOOKUP:[[I
 
     array-length v1, v0
@@ -552,7 +545,6 @@
 
     aget-object v6, v0, v4
 
-    .line 2
     aget v7, v6, v2
 
     const/4 v8, 0x1
@@ -563,7 +555,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-static {p0, v7}, Lcom/google/zxing/qrcode/decoder/FormatInformation;->numBitsDiffering(II)I
 
@@ -571,7 +562,6 @@
 
     if-ge v9, v3, :cond_1
 
-    .line 4
     aget v5, v6, v8
 
     move v3, v9
@@ -579,14 +569,12 @@
     :cond_1
     if-eq p0, p1, :cond_2
 
-    .line 5
     invoke-static {p1, v7}, Lcom/google/zxing/qrcode/decoder/FormatInformation;->numBitsDiffering(II)I
 
     move-result v7
 
     if-ge v7, v3, :cond_2
 
-    .line 6
     aget v3, v6, v8
 
     move v5, v3
@@ -598,7 +586,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     :goto_1
     new-instance p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;
@@ -614,7 +601,6 @@
 
     if-gt v3, p0, :cond_5
 
-    .line 8
     new-instance p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;
 
     invoke-direct {p0, v5}, Lcom/google/zxing/qrcode/decoder/FormatInformation;-><init>(I)V
@@ -632,7 +618,6 @@
 
     xor-int/2addr p0, p1
 
-    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result p0
@@ -645,7 +630,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1
     instance-of v0, p1, Lcom/google/zxing/qrcode/decoder/FormatInformation;
 
     const/4 v1, 0x0
@@ -654,11 +638,9 @@
 
     return v1
 
-    .line 2
     :cond_0
     check-cast p1, Lcom/google/zxing/qrcode/decoder/FormatInformation;
 
-    .line 3
     iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
     iget-object v2, p1, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
@@ -682,7 +664,6 @@
 .method public getDataMask()B
     .locals 1
 
-    .line 1
     iget-byte v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->dataMask:B
 
     return v0
@@ -691,7 +672,6 @@
 .method public getErrorCorrectionLevel()Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
     return-object v0
@@ -700,7 +680,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/qrcode/decoder/FormatInformation;->errorCorrectionLevel:Lcom/google/zxing/qrcode/decoder/ErrorCorrectionLevel;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I

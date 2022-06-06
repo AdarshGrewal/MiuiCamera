@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
 
     add-int/2addr p1, v0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/lang/Integers;->compare(II)I
 
     move-result p0
@@ -56,7 +54,6 @@
 .method public static divideUnsigned(II)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/lang/Integers;->toUnsignedLong(I)J
 
     move-result-wide v0
@@ -81,7 +78,6 @@
 .method public static max(II)I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -92,7 +88,6 @@
 .method public static min(II)I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -103,7 +98,6 @@
 .method public static remainderUnsigned(II)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/lang/Integers;->toUnsignedLong(I)J
 
     move-result-wide v0

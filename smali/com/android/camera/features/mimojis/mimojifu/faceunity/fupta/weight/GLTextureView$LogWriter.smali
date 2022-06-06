@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -38,7 +36,6 @@
 .method private flushBuilder()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->builder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -47,7 +44,6 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->builder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -58,7 +54,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->builder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
@@ -78,7 +73,6 @@
 .method public close()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->flushBuilder()V
 
     return-void
@@ -87,7 +81,6 @@
 .method public flush()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->flushBuilder()V
 
     return-void
@@ -103,19 +96,16 @@
 
     add-int v1, p2, v0
 
-    .line 1
     aget-char v1, p1, v1
 
     const/16 v2, 0xa
 
     if-ne v1, v2, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->flushBuilder()V
 
     goto :goto_1
 
-    .line 3
     :cond_0
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$LogWriter;->builder:Ljava/lang/StringBuilder;
 

@@ -44,10 +44,8 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$100(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)[Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +60,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -72,7 +69,6 @@
 
     throw p1
 
-    .line 5
     :cond_1
     :goto_0
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$300(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)I
@@ -81,56 +77,48 @@
 
     iput v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->splitLoadMode:I
 
-    .line 6
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$100(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->forbiddenWorkProcesses:[Ljava/lang/String;
 
-    .line 7
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$400(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallReporter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->installReporter:Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallReporter;
 
-    .line 8
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$500(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitLoadReporter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->loadReporter:Lcom/iqiyi/android/qigsaw/core/splitreport/SplitLoadReporter;
 
-    .line 9
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$600(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUpdateReporter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->updateReporter:Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUpdateReporter;
 
-    .line 10
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$700(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUninstallReporter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->uninstallReporter:Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUninstallReporter;
 
-    .line 11
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$800(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->obtainUserConfirmationDialogClass:Ljava/lang/Class;
 
-    .line 12
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$200(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;->workProcesses:[Ljava/lang/String;
 
-    .line 13
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;->access$900(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)Z
 
     move-result p1
@@ -143,7 +131,6 @@
 .method public synthetic constructor <init>(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration;-><init>(Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;)V
 
     return-void
@@ -152,7 +139,6 @@
 .method public static newBuilder()Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/SplitConfiguration$Builder;
 
     const/4 v1, 0x0

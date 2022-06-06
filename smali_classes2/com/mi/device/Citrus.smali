@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Lime;-><init>()V
 
     return-void
@@ -15,7 +14,7 @@
 
 
 # virtual methods
-.method public o0000ooO()I
+.method public o0000OoO()I
     .locals 1
 
     const/4 v0, -0x1
@@ -23,7 +22,7 @@
     return v0
 .end method
 
-.method public o00Ooooo()Z
+.method public o00Ooo0o()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -31,7 +30,7 @@
     return v0
 .end method
 
-.method public o00oOOOo()Z
+.method public o00oO00o()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +38,7 @@
     return v0
 .end method
 
-.method public o0OO0O0O()Z
+.method public o0O0oooO()Z
     .locals 1
 
     const/4 v0, 0x1

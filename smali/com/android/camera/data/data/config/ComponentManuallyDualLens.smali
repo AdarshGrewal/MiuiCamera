@@ -21,7 +21,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -30,7 +29,6 @@
 .method private indexOf(Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->getItems()Ljava/util/List;
 
     move-result-object v0
@@ -39,7 +37,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -51,7 +48,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -59,14 +55,12 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 4
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 5
     iget-object v3, v3, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {v3, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -98,7 +92,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -107,37 +100,35 @@
 
     if-eq p1, v1, :cond_6
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0o0oO()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0Oooo()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0o0oo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0OoO0()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f080207
+    const v3, 0x7f080203
 
-    const v4, 0x7f080208
+    const v4, 0x7f080204
 
     const/4 v5, -0x1
 
-    const v6, 0x7f1207d9
+    const v6, 0x7f120799
 
     const-string v7, "macro"
 
@@ -147,28 +138,26 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0ooo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0Ooo()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 5
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f08020d
+    const v3, 0x7f080209
 
-    const v4, 0x7f08020e
+    const v4, 0x7f08020a
 
     const/4 v5, -0x1
 
-    const v6, 0x7f1207e2
+    const v6, 0x7f1207a2
 
     const-string/jumbo v7, "ultra"
 
@@ -178,17 +167,16 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_1
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v9, 0x7f08020f
+    const v9, 0x7f08020b
 
-    const v10, 0x7f080210
+    const v10, 0x7f08020c
 
     const/4 v11, -0x1
 
-    const v12, 0x7f1207e4
+    const v12, 0x7f1207a4
 
     const-string/jumbo v13, "wide"
 
@@ -198,7 +186,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraSettings;->isSupportedOpticalZoom()Z
 
     move-result v1
@@ -207,23 +194,21 @@
 
     if-eqz v1, :cond_4
 
-    .line 8
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0oo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0OoO()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 9
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oO0()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0oOO()Z
 
     move-result v1
 
@@ -242,16 +227,15 @@
 
     if-ltz v1, :cond_4
 
-    .line 10
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f080209
+    const v4, 0x7f080205
 
-    const v5, 0x7f08020a
+    const v5, 0x7f080206
 
     const/4 v6, -0x1
 
-    const v7, 0x7f1207dd
+    const v7, 0x7f12079d
 
     const-string/jumbo v8, "tele"
 
@@ -263,7 +247,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_3
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -275,16 +258,15 @@
 
     if-ltz v1, :cond_4
 
-    .line 12
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f080209
+    const v4, 0x7f080205
 
-    const v5, 0x7f08020a
+    const v5, 0x7f080206
 
     const/4 v6, -0x1
 
-    const v7, 0x7f1207df
+    const v7, 0x7f12079f
 
     const-string/jumbo v8, "tele"
 
@@ -294,14 +276,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 13
     :cond_4
     :goto_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0oo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0OoO()Z
 
     move-result v1
 
@@ -309,28 +290,26 @@
 
     if-ne p1, v2, :cond_5
 
-    .line 14
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oO0()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0oOO()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 15
     :cond_5
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08020b
+    const v2, 0x7f080207
 
-    const v3, 0x7f08020c
+    const v3, 0x7f080208
 
     const/4 v4, -0x1
 
-    const v5, 0x7f1207de
+    const v5, 0x7f12079e
 
     const-string v6, "Standalone"
 
@@ -342,17 +321,16 @@
 
     goto :goto_1
 
-    .line 16
     :cond_6
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v8, 0x7f08020f
+    const v8, 0x7f08020b
 
-    const v9, 0x7f080210
+    const v9, 0x7f08020c
 
     const/4 v10, -0x1
 
-    const v11, 0x7f1207e4
+    const v11, 0x7f1207a4
 
     const-string/jumbo v12, "wide"
 
@@ -362,27 +340,25 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 17
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0oo()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0OoO()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 18
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08020b
+    const v2, 0x7f080207
 
-    const v3, 0x7f08020c
+    const v3, 0x7f080208
 
     const/4 v4, -0x1
 
-    const v5, 0x7f1207de
+    const v5, 0x7f12079e
 
     const-string v6, "Standalone"
 
@@ -402,7 +378,6 @@
 .method public checkValueValid(ILjava/lang/String;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->getItems()Ljava/util/List;
 
     move-result-object p1
@@ -424,7 +399,6 @@
 
     check-cast v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 2
     iget-object v0, v0, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {p2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -437,7 +411,6 @@
 
     return p1
 
-    .line 3
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -465,7 +438,7 @@
 .method public getContentDescriptionString()I
     .locals 1
 
-    const v0, 0x7f1205e1
+    const v0, 0x7f1205ab
 
     return v0
 .end method
@@ -481,7 +454,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f1207e6
+    const v0, 0x7f1207a6
 
     return v0
 .end method
@@ -497,12 +470,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -511,14 +482,12 @@
 
     move-result v0
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->initItems(I)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -563,12 +532,10 @@
 .method public next(Ljava/lang/String;I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->indexOf(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->getItems()Ljava/util/List;
 
     move-result-object p2
@@ -579,7 +546,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -596,7 +562,6 @@
     :cond_1
     add-int/lit8 p1, p1, 0x1
 
-    .line 4
     :goto_0
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -620,14 +585,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->initItems(I)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object p1
@@ -636,14 +599,12 @@
 .method public resetComponentValue(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->initItems(I)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -658,21 +619,18 @@
 
     const/16 v0, 0xa7
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string/jumbo v2, "wide"
 
-    .line 2
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentManuallyDualLens;->getKey(I)Ljava/lang/String;
 
     move-result-object v3
@@ -681,14 +639,12 @@
 
     const-string/jumbo v2, "ultra"
 
-    .line 4
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {p1, v0}, Lcom/android/camera/data/data/config/ComponentConfigUltraWide;->getKey(I)Ljava/lang/String;
 
     move-result-object p1

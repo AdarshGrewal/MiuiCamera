@@ -59,13 +59,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeSwitchIfEmptySingle;->source:Lio/reactivex/MaybeSource;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/maybe/MaybeSwitchIfEmptySingle;->other:Lio/reactivex/SingleSource;
 
     return-void
@@ -83,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSwitchIfEmptySingle;->source:Lio/reactivex/MaybeSource;
 
     return-object v0
@@ -99,7 +95,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSwitchIfEmptySingle;->source:Lio/reactivex/MaybeSource;
 
     new-instance v1, Lio/reactivex/internal/operators/maybe/MaybeSwitchIfEmptySingle$SwitchIfEmptyMaybeObserver;

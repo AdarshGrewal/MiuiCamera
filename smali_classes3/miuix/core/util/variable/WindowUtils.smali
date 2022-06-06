@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static changeWindowBackground(Landroid/app/Activity;F)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -25,10 +23,8 @@
 
     move-result-object v0
 
-    .line 2
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->alpha:F
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -41,7 +37,6 @@
 .method public static setTranslucentStatus(Landroid/view/Window;I)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/core/util/variable/WindowWrapper;->setTranslucentStatus(Landroid/view/Window;I)Z
 
     return-void

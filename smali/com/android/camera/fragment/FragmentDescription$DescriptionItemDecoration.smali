@@ -22,10 +22,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;->mContext:Landroid/content/Context;
 
     return-void
@@ -36,7 +34,6 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 2
 
-    .line 1
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;->mContext:Landroid/content/Context;
 
     invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -49,7 +46,6 @@
 
     move-result p4
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/camera/Util;->isFullScreenNavBarHidden(Landroid/content/Context;)Z
@@ -60,7 +56,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
@@ -77,14 +72,13 @@
 
     if-ne p2, p3, :cond_0
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f0703d3
+    const p3, 0x7f0703d2
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -94,7 +88,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1, p4, v1, p4, v1}, Landroid/graphics/Rect;->set(IIII)V
 

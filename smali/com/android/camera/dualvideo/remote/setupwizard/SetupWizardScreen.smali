@@ -25,16 +25,12 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardFragment:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardView:Landroid/view/View;
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getAlertDialogTitle()I
 
     move-result p1
@@ -49,7 +45,6 @@
 .method public getAlertDialogButton(I)Landroid/widget/Button;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardFragment:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getAlertDialog()Lmiuix/appcompat/app/AlertDialog;
@@ -66,7 +61,6 @@
 .method public getContentView()Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardView:Landroid/view/View;
 
     return-object v0
@@ -75,7 +69,6 @@
 .method public getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardFragment:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -112,7 +105,6 @@
 .method public setAlertDialogTitle(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardFragment:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getAlertDialog()Lmiuix/appcompat/app/AlertDialog;
@@ -127,7 +119,6 @@
 .method public setVisibility(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mSetupWizardView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V

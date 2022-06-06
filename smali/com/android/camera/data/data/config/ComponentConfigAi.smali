@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -22,12 +21,10 @@
 .method public clearClosed()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->clear()V
 
     :cond_0
@@ -61,7 +58,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -78,7 +74,6 @@
 .method public isAiSceneOn(I)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/ComponentData;->isEmpty()Z
 
     move-result v0
@@ -89,7 +84,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigAi;->isClosed(I)Z
 
@@ -99,7 +93,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -107,16 +100,14 @@
 
     move-result-object p1
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooOoo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooOo0o()Z
 
     move-result v1
 
-    .line 5
     invoke-virtual {v0, p1, v1}, Lcom/android/camera/data/data/DataItemBase;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
@@ -127,19 +118,16 @@
 .method public isClosed(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
@@ -163,7 +151,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -182,13 +169,12 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0Oo()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0O0o0()Z
 
     move-result p1
 
@@ -196,7 +182,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->isSupportLightTripartite()Z
 
@@ -213,24 +198,22 @@
 
     const p3, 0x7f120021
 
-    const p4, 0x7f08033c
+    const p4, 0x7f08033a
 
-    const v1, 0x7f08033a
+    const v1, 0x7f080338
 
     if-nez p2, :cond_3
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p2
 
-    invoke-virtual {p2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0oOO()Z
+    invoke-virtual {p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0Oo()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 5
     new-instance p2, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {p2, v1, p4, p3, p1}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
@@ -239,26 +222,23 @@
 
     goto :goto_0
 
-    .line 6
     :cond_3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p2
 
-    invoke-virtual {p2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O00O0o()Z
+    invoke-virtual {p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 7
     new-instance p2, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {p2, v1, p4, p3, p1}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     :cond_4
     :goto_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -267,50 +247,27 @@
 
     iput-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object p1
 .end method
 
-.method public resetAiScene(ILcom/android/camera/data/provider/DataProvider$ProviderEditor;)V
-    .locals 2
+.method public setAiScene(IZ)V
+    .locals 1
 
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/config/ComponentConfigAi;->setClosed(ZI)V
-
-    .line 2
-    invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigAi;->getKey(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 3
-    iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
-
-    invoke-virtual {v1, p1, v0}, Lcom/android/camera/data/data/DataItemBase;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p0}, Lcom/android/camera/data/data/ComponentData;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
-    invoke-interface {p2, p1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->remove(Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
+    return-void
 
     :cond_0
-    return-void
-.end method
-
-.method public setAiScene(IZ)V
-    .locals 1
-
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/config/ComponentConfigAi;->setClosed(ZI)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
@@ -333,19 +290,16 @@
 .method public setClosed(ZI)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigAi;->mIsClosed:Landroid/util/SparseBooleanArray;
 

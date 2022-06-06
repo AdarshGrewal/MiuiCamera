@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/storage/ImageSaveRequest$Builder;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public bridge synthetic build()Lcom/android/camera/storage/AbstractSaveRequest;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/SimpleImageSaveRequest$Builder;->build()Lcom/android/camera/storage/SimpleImageSaveRequest;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 .method public bridge synthetic build()Lcom/android/camera/storage/ImageSaveRequest;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/storage/SimpleImageSaveRequest$Builder;->build()Lcom/android/camera/storage/SimpleImageSaveRequest;
 
     move-result-object v0
@@ -51,7 +48,6 @@
 .method public build()Lcom/android/camera/storage/SimpleImageSaveRequest;
     .locals 1
 
-    .line 3
     new-instance v0, Lcom/android/camera/storage/SimpleImageSaveRequest;
 
     invoke-direct {v0, p0}, Lcom/android/camera/storage/SimpleImageSaveRequest;-><init>(Lcom/android/camera/storage/SimpleImageSaveRequest$Builder;)V

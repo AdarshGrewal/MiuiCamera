@@ -44,24 +44,20 @@
 .method public constructor <init>(Lcom/facebook/rebound/SpringLooper;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
@@ -70,20 +66,16 @@
 
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mIdle:Z
 
     if-eqz p1, :cond_0
 
-    .line 6
     iput-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringLooper:Lcom/facebook/rebound/SpringLooper;
 
-    .line 7
     invoke-virtual {p1, p0}, Lcom/facebook/rebound/SpringLooper;->setSpringSystem(Lcom/facebook/rebound/BaseSpringSystem;)V
 
     return-void
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -99,7 +91,6 @@
 .method public activateSpring(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -110,12 +101,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 3
     invoke-virtual {p0}, Lcom/facebook/rebound/BaseSpringSystem;->getIsIdle()Z
 
     move-result p1
@@ -124,10 +113,8 @@
 
     const/4 p1, 0x0
 
-    .line 4
     iput-boolean p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mIdle:Z
 
-    .line 5
     iget-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringLooper:Lcom/facebook/rebound/SpringLooper;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/SpringLooper;->start()V
@@ -135,7 +122,6 @@
     :cond_0
     return-void
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -167,14 +153,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -188,7 +172,6 @@
 .method public advance(D)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -208,7 +191,6 @@
 
     check-cast v1, Lcom/facebook/rebound/Spring;
 
-    .line 2
     invoke-virtual {v1}, Lcom/facebook/rebound/Spring;->systemShouldAdvance()Z
 
     move-result v2
@@ -219,12 +201,10 @@
 
     div-double v2, p1, v2
 
-    .line 3
     invoke-virtual {v1, v2, v3}, Lcom/facebook/rebound/Spring;->advance(D)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v2, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
@@ -239,12 +219,10 @@
 .method public createSpring()Lcom/facebook/rebound/Spring;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/facebook/rebound/Spring;
 
     invoke-direct {v0, p0}, Lcom/facebook/rebound/Spring;-><init>(Lcom/facebook/rebound/BaseSpringSystem;)V
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/facebook/rebound/BaseSpringSystem;->registerSpring(Lcom/facebook/rebound/Spring;)V
 
     return-object v0
@@ -255,12 +233,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 2
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -271,7 +247,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -293,24 +268,20 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Ljava/util/List;
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -318,7 +289,6 @@
 
     move-object v0, v1
 
-    .line 5
     :goto_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -330,7 +300,6 @@
 .method public getIsIdle()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mIdle:Z
 
     return v0
@@ -341,7 +310,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -352,7 +320,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -366,7 +333,6 @@
 .method public loop(D)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -386,16 +352,13 @@
 
     check-cast v1, Lcom/facebook/rebound/SpringSystemListener;
 
-    .line 2
     invoke-interface {v1, p0}, Lcom/facebook/rebound/SpringSystemListener;->onBeforeIntegrate(Lcom/facebook/rebound/BaseSpringSystem;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/facebook/rebound/BaseSpringSystem;->advance(D)V
 
-    .line 4
     iget-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mActiveSprings:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
@@ -406,10 +369,8 @@
 
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mIdle:Z
 
-    .line 6
     :cond_1
     iget-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -430,18 +391,15 @@
 
     check-cast p2, Lcom/facebook/rebound/SpringSystemListener;
 
-    .line 7
     invoke-interface {p2, p0}, Lcom/facebook/rebound/SpringSystemListener;->onAfterIntegrate(Lcom/facebook/rebound/BaseSpringSystem;)V
 
     goto :goto_1
 
-    .line 8
     :cond_2
     iget-boolean p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mIdle:Z
 
     if-eqz p1, :cond_3
 
-    .line 9
     iget-object p1, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringLooper:Lcom/facebook/rebound/SpringLooper;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/SpringLooper;->stop()V
@@ -455,7 +413,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -468,7 +425,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mSpringRegistry:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -479,7 +435,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -489,7 +444,6 @@
 
     throw p1
 
-    .line 4
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -503,7 +457,6 @@
 .method public removeAllListeners()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
@@ -516,14 +469,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/BaseSpringSystem;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -17,16 +17,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
-    .line 4
     iput p3, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
     return-void
@@ -37,7 +33,6 @@
 .method public getCacheKey()Lcom/android/camera/effect/renders/CacheKey;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mCacheKey:Lcom/android/camera/effect/renders/CacheKey;
 
     return-object v0
@@ -55,7 +50,6 @@
 .method public getLeft()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getCenterX()I
 
     move-result v0
@@ -83,7 +77,6 @@
 .method public getTop()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getCenterY()I
 
     move-result v0
@@ -105,7 +98,6 @@
 .method public setCacheKey(Lcom/android/camera/effect/renders/CacheKey;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/renders/WaterMark;->mCacheKey:Lcom/android/camera/effect/renders/CacheKey;
 
     return-void

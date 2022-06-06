@@ -88,15 +88,13 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/camera/HybridZoomingSystem;->sZoomRatioHistory:Ljava/util/Map;
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o000000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000000()Z
 
     move-result v0
 
@@ -112,13 +110,11 @@
     :goto_0
     sput-object v0, Lcom/android/camera/HybridZoomingSystem;->DEFAULT_OPTICAL_ZOOM_RATIO_COMBINATION:Ljava/lang/String;
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o000000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000000()Z
 
     move-result v1
 
@@ -136,33 +132,31 @@
     move v1, v3
 
     :goto_1
-    invoke-virtual {v0, v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO00o(I)I
+    invoke-virtual {v0, v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO00o(I)I
 
     move-result v0
 
     sput v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
     sget-object v1, Lcom/android/camera/HybridZoomingSystem;->DEFAULT_OPTICAL_ZOOM_RATIO_COMBINATION:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO00o(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO00o(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/HybridZoomingSystem;->MACRO_OPTICAL_ZOOM_RATIO_COMBINATION:Ljava/lang/String;
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFakePartSAT()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o000000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000000()Z
 
     move-result v0
 
@@ -178,14 +172,13 @@
     :goto_2
     sput-object v0, Lcom/android/camera/HybridZoomingSystem;->ZOOM_INDEXS_DEFAULT:Ljava/lang/String;
 
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFakePartSAT()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o000000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000000()Z
 
     move-result v0
 
@@ -203,82 +196,73 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 8
     sput v0, Lcom/android/camera/HybridZoomingSystem;->sDefaultMacroOpticalZoomRatio:F
 
     const v1, 0x3f19999a    # 0.6f
 
-    .line 9
     sput v1, Lcom/android/camera/HybridZoomingSystem;->FLOAT_ZOOM_RATIO_ULTR:F
 
-    .line 10
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00000Oo()[F
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000000()[F
 
     move-result-object v1
 
     sput-object v1, Lcom/android/camera/HybridZoomingSystem;->SAT_ZOOM_RATIO_X:[F
 
-    .line 11
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00000o0()[F
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000000O()[F
 
     move-result-object v1
 
     sput-object v1, Lcom/android/camera/HybridZoomingSystem;->SAT_ZOOM_RATIO_Y:[F
 
-    .line 12
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000OOO()[F
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000oO()[F
 
     move-result-object v1
 
     sput-object v1, Lcom/android/camera/HybridZoomingSystem;->VIDEO_SAT_ZOOM_RATIO_X:[F
 
-    .line 13
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000OOo()[F
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000O0()[F
 
     move-result-object v1
 
     sput-object v1, Lcom/android/camera/HybridZoomingSystem;->VIDEO_SAT_ZOOM_RATIO_Y:[F
 
-    .line 14
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0O0Oo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0OoO00O()Z
 
     move-result v1
 
     sput-boolean v1, Lcom/android/camera/HybridZoomingSystem;->SUPPORT_PROGRESS_ZOOM_EFFECT:Z
 
-    .line 15
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 16
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v4
 
     const/16 v5, 0xa3
 
-    invoke-virtual {v4, v5}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(I)[F
+    invoke-virtual {v4, v5}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(I)[F
 
     move-result-object v4
 
@@ -286,20 +270,17 @@
 
     move v6, v5
 
-    .line 17
     :goto_4
     array-length v7, v4
 
     if-ge v6, v7, :cond_5
 
-    .line 18
     aget v7, v4, v6
 
     cmpg-float v7, v7, v0
 
     if-gez v7, :cond_4
 
-    .line 19
     aget v0, v4, v6
 
     sput v0, Lcom/android/camera/HybridZoomingSystem;->FLOAT_ZOOM_RATIO_ULTR:F
@@ -311,23 +292,20 @@
 
     goto :goto_4
 
-    .line 20
     :cond_5
     :goto_5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00Ooo00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OoO0o()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 21
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 22
     new-instance v0, Ljava/util/Scanner;
 
     sget-object v4, Lcom/android/camera/HybridZoomingSystem;->MACRO_OPTICAL_ZOOM_RATIO_COMBINATION:Ljava/lang/String;
@@ -337,12 +315,10 @@
     :try_start_0
     const-string v4, "\\s*[:,]\\s*"
 
-    .line 23
     invoke-virtual {v0, v4}, Ljava/util/Scanner;->useDelimiter(Ljava/lang/String;)Ljava/util/Scanner;
 
     const/4 v4, -0x1
 
-    .line 24
     :cond_6
     :goto_6
     invoke-virtual {v0}, Ljava/util/Scanner;->hasNext()Z
@@ -351,28 +327,24 @@
 
     if-eqz v6, :cond_7
 
-    .line 25
     invoke-virtual {v0}, Ljava/util/Scanner;->next()Ljava/lang/String;
 
     move-result-object v6
 
     if-eqz v6, :cond_6
 
-    .line 26
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v7
 
     if-lez v7, :cond_6
 
-    .line 27
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     if-nez v4, :cond_6
 
-    .line 28
     invoke-static {v6}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
     move-result-object v6
@@ -387,18 +359,15 @@
 
     goto :goto_6
 
-    .line 29
     :cond_7
     invoke-virtual {v0}, Ljava/util/Scanner;->close()V
 
-    .line 30
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-lt v0, v3, :cond_9
 
-    .line 31
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -407,7 +376,6 @@
 
     sput-object v0, Lcom/android/camera/HybridZoomingSystem;->sMacroSupportedOpticalZoomRatios:[F
 
-    .line 32
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -427,7 +395,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 33
     sget-object v6, Lcom/android/camera/HybridZoomingSystem;->sMacroSupportedOpticalZoomRatios:[F
 
     add-int/lit8 v7, v1, 0x1
@@ -442,7 +409,6 @@
 
     goto :goto_7
 
-    .line 34
     :cond_8
     sget-object v0, Lcom/android/camera/HybridZoomingSystem;->sMacroSupportedOpticalZoomRatios:[F
 
@@ -456,7 +422,6 @@
 
     goto :goto_9
 
-    .line 35
     :cond_9
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -469,7 +434,6 @@
     :catchall_0
     move-exception v1
 
-    .line 36
     :try_start_1
     throw v1
     :try_end_1
@@ -478,7 +442,6 @@
     :catchall_1
     move-exception v2
 
-    .line 37
     :try_start_2
     invoke-virtual {v0}, Ljava/util/Scanner;->close()V
     :try_end_2
@@ -494,7 +457,6 @@
     :goto_8
     throw v2
 
-    .line 38
     :cond_a
     :goto_9
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
@@ -511,7 +473,6 @@
     :goto_a
     sput-boolean v0, Lcom/android/camera/HybridZoomingSystem;->IS_2_SAT:Z
 
-    .line 39
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
     if-lt v0, v2, :cond_c
@@ -526,7 +487,6 @@
     :goto_b
     sput-boolean v0, Lcom/android/camera/HybridZoomingSystem;->IS_2_OR_MORE_SAT:Z
 
-    .line 40
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
     const/4 v1, 0x3
@@ -543,7 +503,6 @@
     :goto_c
     sput-boolean v0, Lcom/android/camera/HybridZoomingSystem;->IS_3_SAT:Z
 
-    .line 41
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
     if-lt v0, v1, :cond_e
@@ -558,7 +517,6 @@
     :goto_d
     sput-boolean v0, Lcom/android/camera/HybridZoomingSystem;->IS_3_OR_MORE_SAT:Z
 
-    .line 42
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
     const/4 v1, 0x4
@@ -575,7 +533,6 @@
     :goto_e
     sput-boolean v0, Lcom/android/camera/HybridZoomingSystem;->IS_4_SAT:Z
 
-    .line 43
     sget v0, Lcom/android/camera/HybridZoomingSystem;->OPTICAL_ZOOM_RATIO_COMBINATION:I
 
     if-lt v0, v1, :cond_10
@@ -594,7 +551,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -645,7 +601,6 @@
 .method public static getDefaultOpticalZoomRatioIndex(I)I
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
@@ -654,13 +609,11 @@
 
     move v1, v0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     aget v2, p0, v1
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -683,7 +636,6 @@
 .method public static getMaxMainZoomRatio()F
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -706,7 +658,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->getMaxZoomRatio()F
 
@@ -719,7 +670,6 @@
 .method public static getMaxMainZoomRatio(F)F
     .locals 2
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -742,13 +692,11 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->getMaxZoomRatio()F
 
     move-result v0
 
-    .line 5
     :goto_0
     invoke-static {v0, p0}, Ljava/lang/Math;->min(FF)F
 
@@ -760,14 +708,12 @@
 .method public static getMaximumMacroOpticalZoomRatio()F
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/HybridZoomingSystem;->sMacroSupportedOpticalZoomRatios:[F
 
     array-length v1, v0
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 2
     aget v0, v0, v1
 
     return v0
@@ -776,17 +722,14 @@
 .method public static getMaximumOpticalZoomRatio(I)F
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
 
-    .line 2
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 3
     aget p0, p0, v0
 
     return p0
@@ -795,7 +738,6 @@
 .method public static getMinimumMacroOpticalZoomRatio()F
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/HybridZoomingSystem;->sMacroSupportedOpticalZoomRatios:[F
 
     const/4 v1, 0x0
@@ -808,7 +750,6 @@
 .method public static getMinimumOpticalZoomRatio(I)F
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
@@ -823,12 +764,10 @@
 .method public static getOpticalZoomRatioAt(II)F
     .locals 5
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
 
-    .line 2
     array-length v0, p0
 
     const-string v1, ")   curIndex error : "
@@ -839,7 +778,6 @@
 
     if-gez p1, :cond_0
 
-    .line 3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -865,7 +803,6 @@
     :cond_0
     if-lt p1, v0, :cond_1
 
-    .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -886,7 +823,6 @@
 
     add-int/lit8 p1, v0, -0x1
 
-    .line 5
     :cond_1
     :goto_0
     aget p0, p0, p1
@@ -897,12 +833,10 @@
 .method public static getOpticalZoomRatioIndex(IF)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
 
-    .line 2
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
@@ -910,7 +844,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 3
     aget v1, p0, v0
 
     cmpl-float v1, p1, v1
@@ -924,7 +857,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -950,12 +882,11 @@
 .method public static getSupportedOpticalZoomRatios(I)[F
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(I)[F
+    invoke-virtual {v0, p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(I)[F
 
     move-result-object p0
 
@@ -965,7 +896,6 @@
 .method public static getTeleMinZoomRatio()F
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -982,7 +912,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -996,7 +925,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {v0, v1}, Lcom/android/camera2/CameraCapabilities;->getMinZoomRatio(F)F
 
@@ -1009,24 +937,20 @@
 .method public static getTeleZoomRatio(I)F
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getDefaultOpticalZoomRatioIndex(I)I
 
     move-result p0
 
     add-int/lit8 p0, p0, 0x1
 
-    .line 3
     array-length v1, v0
 
     if-ge p0, v1, :cond_0
 
-    .line 4
     aget p0, v0, p0
 
     goto :goto_0
@@ -1041,7 +965,6 @@
 .method public static getUltraTeleMinZoomRatio()F
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -1058,7 +981,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -1072,7 +994,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {v0, v1}, Lcom/android/camera2/CameraCapabilities;->getMinZoomRatio(F)F
 
@@ -1085,12 +1006,11 @@
 .method public static getZoomRatioNone(ZI)F
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0ooo()Z
 
     move-result v0
 
@@ -1104,13 +1024,12 @@
 
     if-ne p1, p0, :cond_1
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0oO()F
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00o()F
 
     move-result p0
 
@@ -1125,12 +1044,10 @@
 .method public static isOpticalZoomRatio(IF)Z
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->getSupportedOpticalZoomRatios(I)[F
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1}, Ljava/util/Arrays;->binarySearch([FF)I
 
     move-result p0
@@ -1151,12 +1068,11 @@
 .method public static isZoomRatioNone(FZ)Z
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0ooo()Z
 
     move-result v0
 
@@ -1174,12 +1090,11 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0oO()F
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00o()F
 
     move-result p1
 
@@ -1217,7 +1132,6 @@
 
     const-string/jumbo v1, "preload"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1256,21 +1170,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 2
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 3
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -1285,7 +1196,6 @@
 
     float-to-int v2, v2
 
-    .line 4
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
@@ -1296,7 +1206,6 @@
 
     float-to-int p1, p1
 
-    .line 5
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
@@ -1309,10 +1218,8 @@
 
     add-int/2addr v1, p1
 
-    .line 6
     invoke-virtual {v3, v4, v5, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1339,7 +1246,6 @@
 
     return-object v3
 
-    .line 8
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1349,7 +1255,6 @@
 
     throw p0
 
-    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1371,12 +1276,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v1
@@ -1387,14 +1290,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lcom/android/camera2/CameraCapabilities;->isZoomRatioSupported()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     iget v2, p1, Landroid/graphics/Rect;->top:I
@@ -1407,7 +1308,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
@@ -1415,14 +1315,12 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 6
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v2
 
     div-int/lit8 v2, v2, 0x2
 
-    .line 7
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -1437,7 +1335,6 @@
 
     float-to-int v3, v3
 
-    .line 8
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
@@ -1456,10 +1353,8 @@
 
     add-int/2addr v2, p1
 
-    .line 9
     invoke-virtual {v0, v4, v5, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 10
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1487,7 +1382,6 @@
 
     return-object v0
 
-    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1497,7 +1391,6 @@
 
     throw p0
 
-    .line 12
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1527,7 +1420,6 @@
 .method public static toFloat(Ljava/lang/String;F)F
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -1537,7 +1429,6 @@
 
     return p0
 
-    .line 2
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1571,7 +1462,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1580,14 +1470,12 @@
 
     div-int/2addr v0, v1
 
-    .line 2
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v2
 
     div-int/2addr v2, v1
 
-    .line 3
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -1602,7 +1490,6 @@
 
     float-to-int v3, v3
 
-    .line 4
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
@@ -1639,7 +1526,6 @@
 
     aput p1, v4, v2
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1680,7 +1566,6 @@
 
     move-result-object p1
 
-    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1707,7 +1592,6 @@
 
     return-object v4
 
-    .line 7
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1717,7 +1601,6 @@
 
     throw p0
 
-    .line 8
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1731,7 +1614,6 @@
 .method public static toString(F)Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget v0, Lcom/android/camera/HybridZoomingSystem;->FLOAT_ZOOM_RATIO_ULTR:F
 
     cmpl-float v0, v0, p0
@@ -1750,7 +1632,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/HybridZoomingSystem;->getTeleMinZoomRatio()F
 
     move-result v0
@@ -1759,7 +1640,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-static {}, Lcom/android/camera/HybridZoomingSystem;->getUltraTeleMinZoomRatio()F
 
     move-result v0
@@ -1781,13 +1661,11 @@
 
     return-object p0
 
-    .line 4
     :cond_1
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->toDecimal(F)F
 
     move-result p0
 
-    .line 5
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1804,7 +1682,6 @@
 
     return-object p0
 
-    .line 6
     :cond_2
     :goto_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -1831,7 +1708,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1846,7 +1722,6 @@
 
     div-float/2addr v0, v1
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1873,7 +1748,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

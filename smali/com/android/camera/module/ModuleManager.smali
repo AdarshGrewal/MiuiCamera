@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/ModuleManager;
 
     invoke-direct {v0}, Lcom/android/camera/module/ModuleManager;-><init>()V
@@ -28,7 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,13 +35,11 @@
 .method public static createModuleByAlias(Ljava/lang/String;)Lcom/android/camera/module/Module;
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object p0
@@ -59,7 +55,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/InstantiationException;->printStackTrace()V
 
     goto :goto_0
@@ -67,7 +62,6 @@
     :catch_1
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
@@ -75,7 +69,6 @@
     :catch_2
     move-exception p0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :goto_0
@@ -88,7 +81,6 @@
 .method public static getActiveModuleIndex()I
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     return v0
@@ -97,7 +89,6 @@
 .method public static getCameraByDevice()Lcom/android/camera/module/Module;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/Camera2Module;
 
     invoke-direct {v0}, Lcom/android/camera/module/Camera2Module;-><init>()V
@@ -108,7 +99,6 @@
 .method public static getModuleByIndex(I)Lcom/android/camera/module/entry/IModuleEntry;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/FeatureLoader;->getEntries()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -129,7 +119,6 @@
 .method public static instance()Lcom/android/camera/module/ModuleManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/ModuleManager;->sInstance:Lcom/android/camera/module/ModuleManager;
 
     return-object v0
@@ -155,7 +144,6 @@
 .method public static isCameraModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa3
@@ -176,7 +164,6 @@
 .method public static isCapture()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isCameraModule()Z
 
     move-result v0
@@ -225,7 +212,6 @@
 .method public static isCloneModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb9
@@ -246,7 +232,6 @@
 .method public static isDocumentMode()Z
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->isDocumentModeOn(I)Z
@@ -259,7 +244,6 @@
 .method public static isFastMotionModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa9
@@ -280,18 +264,17 @@
 .method public static isFastmotionModulePro()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isFastMotionModule()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OOO0O()Z
 
     move-result v0
 
@@ -311,7 +294,6 @@
 .method public static isFilmModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xd5
@@ -352,7 +334,6 @@
 .method public static isFunModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa1
@@ -373,7 +354,6 @@
 .method public static isIDCardMode()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb6
@@ -394,7 +374,6 @@
 .method public static isInVideoCategory()Z
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     invoke-static {v0}, Lcom/android/camera/module/ModuleManager;->isVideoCategory(I)Z
@@ -448,7 +427,6 @@
 .method public static isMiLiveModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb7
@@ -469,7 +447,6 @@
 .method public static isMimojiModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb8
@@ -490,7 +467,6 @@
 .method public static isPanoramaModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa6
@@ -511,7 +487,6 @@
 .method public static isPortraitModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xab
@@ -532,7 +507,6 @@
 .method public static isProModule()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isProPhotoModule()Z
 
     move-result v0
@@ -563,55 +537,11 @@
 .method public static isProPhotoModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa7
 
     if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public static isProPhotoSquareModule()Z
-    .locals 2
-
-    .line 1
-    sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
-
-    const/16 v1, 0xa7
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/config/DataItemConfig;->getComponentConfigRatio()Lcom/android/camera/data/data/config/ComponentConfigRatio;
-
-    move-result-object v0
-
-    .line 2
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/config/ComponentConfigRatio;->getPictureSizeRatioString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "1x1"
-
-    .line 3
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -627,7 +557,6 @@
 .method public static isProVideoModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb4
@@ -648,14 +577,12 @@
 .method public static isSquareModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa3
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -684,7 +611,6 @@
 .method public static isSuperMoonMode()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xbc
@@ -705,7 +631,6 @@
 .method public static isSuperNightScene()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xad
@@ -726,7 +651,6 @@
 .method public static isSuperNightVideoMode()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xd6
@@ -747,7 +671,6 @@
 .method public static isSupportCropFrontMode()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isCameraModule()Z
 
     move-result v0
@@ -790,7 +713,6 @@
 .method public static isSupportRealSquare()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -799,7 +721,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v2
@@ -814,14 +735,12 @@
 
     move-result v1
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getCapabilities(I)Lcom/android/camera2/CameraCapabilities;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->isSupportedRealSquare()Z
 
     move-result v0
@@ -842,7 +761,6 @@
 .method public static isUltraPixel()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xaf
@@ -905,7 +823,6 @@
 
     return v0
 
-    .line 1
     :pswitch_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -921,7 +838,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-interface {p0}, Lcom/android/camera/protocol/ModeProtocol$CloneProcess;->getMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     move-result-object p0
@@ -938,21 +854,16 @@
     :goto_0
     return v1
 
-    .line 3
     :pswitch_1
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object p0
 
-    const-class v0, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
+    invoke-virtual {p0}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiPhoto()Z
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPhoto()Z
 
     move-result p0
 
@@ -990,7 +901,6 @@
 .method public static isVideoModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xa2
@@ -1011,7 +921,6 @@
 .method public static isVideoNewSlowMotion()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xac
@@ -1032,7 +941,6 @@
 .method public static isWideSelfieModule()Z
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     const/16 v1, 0xb0
@@ -1053,7 +961,6 @@
 .method public static setActiveModuleIndex(I)V
     .locals 0
 
-    .line 1
     sput p0, Lcom/android/camera/module/ModuleManager;->sCurrentModuleIndex:I
 
     return-void

@@ -37,12 +37,10 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -51,15 +49,12 @@
 
     const-string v0, "ai_trigger"
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
     const-string/jumbo v0, "super_moon_reset"
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorCurrentKey:Ljava/lang/String;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -68,21 +63,16 @@
 
     const/4 v0, 0x1
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mIWatermarkEnable:Z
 
     const/4 v0, 0x0
 
-    .line 7
     iput-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 8
     iput-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 9
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mFrontEnable:Z
 
-    .line 10
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mBackEnable:Z
 
     return-void
@@ -100,18 +90,14 @@
         }
     .end annotation
 
-    .line 11
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;-><init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
 
-    .line 12
     iput-object p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mList:Ljava/util/ArrayList;
 
-    .line 13
     iput p3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/4 p1, 0x0
 
-    .line 14
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->resetAIWatermark(Z)V
 
     return-void
@@ -120,7 +106,6 @@
 .method private updateDualWatermarkItem(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-nez v0, :cond_0
@@ -129,12 +114,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -150,12 +133,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -171,16 +152,13 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 8
     :goto_0
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -202,15 +180,12 @@
 
     if-ge p1, v0, :cond_3
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     iput-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 11
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     :cond_3
@@ -222,7 +197,6 @@
 .method public getAIWatermarkEnable()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->needForceEnable()Z
 
     move-result v0
@@ -236,18 +210,15 @@
     :cond_0
     const/16 v0, 0xcd
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     :try_start_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -265,7 +236,6 @@
 .method public getAIWatermarkEnable(I)Z
     .locals 2
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->needForceEnable()Z
 
     move-result v0
@@ -276,7 +246,6 @@
 
     return v1
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
 
@@ -302,14 +271,12 @@
 .method public getCurrentKey()Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentType:Ljava/lang/String;
 
     const/16 v1, 0xb
@@ -324,18 +291,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
     return-object v0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorCurrentKey:Ljava/lang/String;
 
     return-object v0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
@@ -345,7 +309,6 @@
 .method public getCurrentType()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentType:Ljava/lang/String;
 
     return-object v0
@@ -380,13 +343,11 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mFrontEnable:Z
 
     return p1
 
-    .line 2
     :cond_1
     iget-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mBackEnable:Z
 
@@ -396,7 +357,6 @@
 .method public getIWatermarkEnable()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mIWatermarkEnable:Z
 
     return v0
@@ -413,7 +373,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mList:Ljava/util/ArrayList;
 
     return-object v0
@@ -430,14 +389,12 @@
 .method public getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     return-object v0
@@ -451,7 +408,6 @@
 .method public getMinorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
 
     move-result v0
@@ -464,7 +420,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     return-object v0
@@ -478,14 +433,12 @@
 .method public getSuperMoonTextEnable()Z
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     const/4 v1, 0x1
@@ -496,7 +449,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v0
@@ -505,7 +457,6 @@
 
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -518,13 +469,11 @@
 
     return v1
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v0
@@ -533,7 +482,6 @@
 
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 7
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -555,7 +503,6 @@
 .method public isDualWatermark()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
@@ -575,7 +522,6 @@
 .method public isFixedLocation()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
@@ -595,7 +541,6 @@
 .method public isFixedOrientation()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
@@ -615,7 +560,6 @@
 .method public isSwitchOn()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     const-string/jumbo v1, "super_moon_reset"
@@ -637,7 +581,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -663,12 +606,10 @@
 .method public needActive()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getIWatermarkEnable()Z
 
     move-result v1
@@ -691,7 +632,6 @@
 .method public needForceDisable(I)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->needForceEnable()Z
 
     move-result v0
@@ -702,7 +642,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -710,7 +649,6 @@
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->getComponentRunningAIWatermark()Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -725,12 +663,10 @@
 
     const-string v2, "4x3"
 
-    .line 4
     invoke-static {v2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMacroModeEnabled(I)Z
 
     move-result v2
@@ -758,7 +694,6 @@
 .method public needForceEnable()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
@@ -778,7 +713,6 @@
 .method public needMoveUp(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
 
     move-result v0
@@ -807,24 +741,19 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->setAIWatermarkEnable(Z)V
 
     const/4 p1, 0x1
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->setIWatermarkEnable(Z)V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 5
     iget p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentModule:I
 
     const/16 v1, 0xbc
@@ -833,15 +762,12 @@
 
     const-string/jumbo p1, "super_moon_reset"
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
-    .line 7
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorCurrentKey:Ljava/lang/String;
 
     const/16 p1, 0xb
 
-    .line 8
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -853,10 +779,8 @@
     :cond_1
     const-string p1, "ai_trigger"
 
-    .line 9
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
-    .line 10
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -870,7 +794,6 @@
 .method public setAIWatermarkEnable(Z)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -885,14 +808,12 @@
 .method public setCurrentKey(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentType:Ljava/lang/String;
 
     const/16 v1, 0xb
@@ -907,18 +828,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorCurrentKey:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorCurrentKey:Ljava/lang/String;
 
@@ -929,7 +847,6 @@
 .method public setCurrentType(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mCurrentType:Ljava/lang/String;
 
     return-void
@@ -946,13 +863,11 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mFrontEnable:Z
 
     goto :goto_0
 
-    .line 2
     :cond_1
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mBackEnable:Z
 
@@ -963,21 +878,17 @@
 .method public setHasMove(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setHasMove(Z)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setHasMove(Z)V
 
     :cond_1
@@ -987,7 +898,6 @@
 .method public setIWatermarkEnable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mIWatermarkEnable:Z
 
     return-void
@@ -1022,7 +932,6 @@
 .method public updateLocation([ILandroid/graphics/Rect;I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-eqz v0, :cond_1
@@ -1037,29 +946,24 @@
 
     if-ne p3, v0, :cond_1
 
-    .line 2
     :cond_0
     iget-object p3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {p3, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->updateCoordinate([I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setLimitArea(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object p3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     if-eqz p3, :cond_2
 
-    .line 5
     invoke-virtual {p3, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->updateCoordinate([I)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setLimitArea(Landroid/graphics/Rect;)V
@@ -1076,15 +980,12 @@
 
     const/4 p1, 0x0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMinorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
@@ -1092,12 +993,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->updateDualWatermarkItem(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->mMajorWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 

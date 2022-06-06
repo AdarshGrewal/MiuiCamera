@@ -25,13 +25,10 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/resource/SimpleNativeDecompressRequest;->mArchivePath:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/resource/SimpleNativeDecompressRequest;->mTargetPath:Ljava/lang/String;
 
     return-void
@@ -49,7 +46,6 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNativeDecompressRequest;->mArchivePath:Ljava/lang/String;
 
@@ -59,7 +55,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/Util;->verifySdcardZip(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNativeDecompressRequest;->mTargetPath:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -73,12 +68,10 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 v1, 0x3
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -90,7 +83,6 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 6
     invoke-interface {p1, p2, v0}, Lcom/android/camera/resource/ResponseListener;->onResponse(Ljava/lang/Object;Z)V
 
     return-void
@@ -99,7 +91,6 @@
 .method public bridge synthetic scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceItem;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleNativeDecompressRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Lcom/android/camera/resource/BaseResourceItem;)V

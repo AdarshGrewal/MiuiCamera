@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/module/video/AutoZoomController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/video/AutoZoomController$1;->this$0:Lcom/android/camera/module/video/AutoZoomController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/video/AutoZoomController$1;->this$0:Lcom/android/camera/module/video/AutoZoomController;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/AutoZoomController;->access$000(Lcom/android/camera/module/video/AutoZoomController;Lcom/android/camera2/autozoom/AutoZoomCaptureResult;)V
@@ -68,7 +66,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera2/autozoom/AutoZoomCaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/video/AutoZoomController$1;->accept(Lcom/android/camera2/autozoom/AutoZoomCaptureResult;)V

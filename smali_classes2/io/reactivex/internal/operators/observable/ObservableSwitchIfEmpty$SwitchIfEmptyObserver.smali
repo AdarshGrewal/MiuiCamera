@@ -65,21 +65,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->actual:Lio/reactivex/Observer;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->other:Lio/reactivex/ObservableSource;
 
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->empty:Z
 
-    .line 5
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-direct {p1}, Lio/reactivex/internal/disposables/SequentialDisposable;-><init>()V
@@ -94,24 +89,20 @@
 .method public onComplete()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->empty:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->empty:Z
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->other:Lio/reactivex/ObservableSource;
 
     invoke-interface {v0, p0}, Lio/reactivex/ObservableSource;->subscribe(Lio/reactivex/Observer;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->actual:Lio/reactivex/Observer;
 
@@ -124,7 +115,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->actual:Lio/reactivex/Observer;
 
     invoke-interface {v0, p1}, Lio/reactivex/Observer;->onError(Ljava/lang/Throwable;)V
@@ -140,17 +130,14 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->empty:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->empty:Z
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->actual:Lio/reactivex/Observer;
 
@@ -162,7 +149,6 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchIfEmpty$SwitchIfEmptyObserver;->arbiter:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->update(Lio/reactivex/disposables/Disposable;)Z

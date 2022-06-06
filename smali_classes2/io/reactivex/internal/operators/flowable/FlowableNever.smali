@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableNever;
 
     invoke-direct {v0}, Lio/reactivex/internal/operators/flowable/FlowableNever;-><init>()V
@@ -42,7 +41,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
     return-void
@@ -62,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->INSTANCE:Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     invoke-interface {p1, v0}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/settings/CameraPreferenceFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/CameraPreferenceFragment$1;->this$0:Lcom/android/camera/fragment/settings/CameraPreferenceFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -50,14 +48,12 @@
     :goto_0
     const-string v0, "com.xiaomi.camera.videocast.action.SERVICE_STATE_CHANGED"
 
-    .line 2
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/fragment/settings/CameraPreferenceFragment$1;->this$0:Lcom/android/camera/fragment/settings/CameraPreferenceFragment;
 
     const-string/jumbo v0, "pref_video_cast"
@@ -68,7 +64,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 4
     const-class v0, Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -81,12 +76,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-static {p1}, Lcom/xiaomi/camera/videocast/VideoCastService;->isServiceRunning(Landroid/content/Context;)Z
 
     move-result p1
 
-    .line 6
     check-cast p2, Landroidx/preference/CheckBoxPreference;
 
     invoke-virtual {p2, p1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V

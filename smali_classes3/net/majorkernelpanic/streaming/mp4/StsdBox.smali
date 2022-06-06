@@ -23,31 +23,24 @@
 .method public constructor <init>(Ljava/io/RandomAccessFile;J)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->buffer:[B
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->pos:J
 
-    .line 4
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
-    .line 5
     iput-wide p2, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->pos:J
 
-    .line 6
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->findBoxAvcc()Z
 
-    .line 7
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->findSPSandPPS()Z
 
     return-void
@@ -58,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
@@ -70,7 +62,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 2
     :cond_0
     :goto_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
@@ -85,7 +76,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
@@ -95,7 +85,6 @@
 
     invoke-virtual {v1, v2, v0, v3}, Ljava/io/RandomAccessFile;->read([BII)I
 
-    .line 4
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->buffer:[B
 
     aget-byte v1, v1, v0
@@ -137,7 +126,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
@@ -145,7 +133,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/RandomAccessFile;->skipBytes(I)I
 
-    .line 2
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->readByte()B
@@ -156,24 +143,20 @@
 
     iput v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->spsLength:I
 
-    .line 3
     new-array v2, v1, [B
 
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->sps:[B
 
-    .line 4
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v3, v2, v0, v1}, Ljava/io/RandomAccessFile;->read([BII)I
 
-    .line 5
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Ljava/io/RandomAccessFile;->skipBytes(I)I
 
-    .line 6
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->readByte()B
@@ -184,12 +167,10 @@
 
     iput v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->ppsLength:I
 
-    .line 7
     new-array v2, v1, [B
 
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->pps:[B
 
-    .line 8
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->fis:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v3, v2, v0, v1}, Ljava/io/RandomAccessFile;->read([BII)I
@@ -207,7 +188,6 @@
 .method public getB64PPS()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->pps:[B
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->ppsLength:I
@@ -226,7 +206,6 @@
 .method public getB64SPS()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->sps:[B
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->spsLength:I
@@ -245,7 +224,6 @@
 .method public getProfileLevel()Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;->sps:[B
 
     const/4 v1, 0x1

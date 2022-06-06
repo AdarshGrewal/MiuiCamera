@@ -35,7 +35,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->IS_ORDERED:I
@@ -73,7 +72,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -88,7 +86,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, p2, v0, p3}, Ljava8/util/stream/PipelineHelper;->evaluate(Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -98,24 +95,20 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p1, p2, v0, p3}, Ljava8/util/stream/PipelineHelper;->evaluate(Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
 
     check-cast p1, Ljava8/util/stream/Node$OfLong;
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Node$OfPrimitive;->asPrimitiveArray()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, [J
 
-    .line 5
     invoke-static {p1}, Ljava8/util/J8Arrays;->parallelSort([J)V
 
-    .line 6
     invoke-static {p1}, Ljava8/util/stream/Nodes;->node([J)Ljava8/util/stream/Node$OfLong;
 
     move-result-object p1
@@ -137,10 +130,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {v0, p1}, Ljava8/util/stream/StreamOpFlag;->isKnown(I)Z
@@ -151,7 +142,6 @@
 
     return-object p2
 
-    .line 3
     :cond_0
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
@@ -161,14 +151,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     new-instance p1, Ljava8/util/stream/SortedOps$SizedLongSortingSink;
 
     invoke-direct {p1, p2}, Ljava8/util/stream/SortedOps$SizedLongSortingSink;-><init>(Ljava8/util/stream/Sink;)V
 
     return-object p1
 
-    .line 5
     :cond_1
     new-instance p1, Ljava8/util/stream/SortedOps$LongSortingSink;
 

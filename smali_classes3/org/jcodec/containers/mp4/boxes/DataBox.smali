@@ -19,7 +19,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static createDataBox(II[B)Lorg/jcodec/containers/mp4/boxes/DataBox;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/DataBox;
 
     const-string v1, "data"
@@ -41,13 +39,10 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/DataBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/DataBox;->type:I
 
-    .line 3
     iput p1, v0, Lorg/jcodec/containers/mp4/boxes/DataBox;->locale:I
 
-    .line 4
     iput-object p2, v0, Lorg/jcodec/containers/mp4/boxes/DataBox;->data:[B
 
     return-object v0
@@ -66,17 +61,14 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->type:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->locale:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->data:[B
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
@@ -87,7 +79,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->data:[B
 
     array-length v0, v0
@@ -100,7 +91,6 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->data:[B
 
     return-object v0
@@ -109,7 +99,6 @@
 .method public getLocale()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->locale:I
 
     return v0
@@ -118,7 +107,6 @@
 .method public getType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->type:I
 
     return v0
@@ -127,21 +115,18 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->type:I
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/DataBox;->locale:I
 
-    .line 3
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->readBuf(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p1

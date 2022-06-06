@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/AbsActionBarView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$2;->this$0:Lmiuix/appcompat/internal/app/widget/AbsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$2;->this$0:Lmiuix/appcompat/internal/app/widget/AbsActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->showOverflowMenu()Z

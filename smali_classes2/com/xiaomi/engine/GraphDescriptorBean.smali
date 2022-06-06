@@ -32,7 +32,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/xiaomi/engine/GraphDescriptorBean$1;
 
     invoke-direct {v0}, Lcom/xiaomi/engine/GraphDescriptorBean$1;-><init>()V
@@ -45,23 +44,18 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
     const/4 v1, 0x1
 
-    .line 4
     iput-boolean v1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mCameraCombinationMode:I
 
     return-void
@@ -70,19 +64,14 @@
 .method public constructor <init>(IIZI)V
     .locals 0
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput p1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
-    .line 8
     iput p2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
-    .line 9
     iput-boolean p3, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
-    .line 10
     iput p4, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mCameraCombinationMode:I
 
     return-void
@@ -91,24 +80,20 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
-    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
-    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -125,7 +110,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
-    .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -154,7 +138,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     instance-of v1, p1, Lcom/xiaomi/engine/GraphDescriptorBean;
 
@@ -164,11 +147,9 @@
 
     return v2
 
-    .line 2
     :cond_1
     check-cast p1, Lcom/xiaomi/engine/GraphDescriptorBean;
 
-    .line 3
     iget v1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
     iget v3, p1, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
@@ -205,7 +186,6 @@
 .method public getCameraCombinationMode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mCameraCombinationMode:I
 
     return v0
@@ -214,7 +194,6 @@
 .method public getOperationModeID()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
     return v0
@@ -223,7 +202,6 @@
 .method public getStreamNumber()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
     return v0
@@ -236,7 +214,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget v1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -287,7 +264,6 @@
 .method public isSnapshot()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
     return v0
@@ -296,7 +272,6 @@
 .method public setCameraCombinationMode(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mCameraCombinationMode:I
 
     return-void
@@ -305,7 +280,6 @@
 .method public setOperationModeID(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
     return-void
@@ -314,7 +288,6 @@
 .method public setSnapshot(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
     return-void
@@ -323,7 +296,6 @@
 .method public setStreamNumber(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
     return-void
@@ -332,7 +304,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x4
@@ -341,7 +312,6 @@
 
     iget v2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -382,7 +352,6 @@
 
     const-string v2, "GraphDescriptorBean{mOperationModeID=%s, mStreamNumber=%s, mIsSnapshot=%s, mCameraCombinationMode=0x%x}"
 
-    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -393,22 +362,18 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     iget p2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mOperationModeID:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
     iget p2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mStreamNumber:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3
     iget-boolean p2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mIsSnapshot:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 4
     iget p2, p0, Lcom/xiaomi/engine/GraphDescriptorBean;->mCameraCombinationMode:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

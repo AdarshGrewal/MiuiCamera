@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/videoplayer/ui/ScalableTextureView$ScaleType;->values()[Lcom/android/camera/videoplayer/ui/ScalableTextureView$ScaleType;
 
     move-result-object v0

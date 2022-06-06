@@ -30,10 +30,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/xiaomi/idm/api/IDMService$Event;-><init>(Lcom/xiaomi/idm/api/IDMService;I)V
 
-    .line 2
     iput-object p2, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Events$HandoffEvent;->callback:Lcom/xiaomi/idm/service/handoff/HandoffService$Events$HandoffEvent$Callback;
 
     return-void
@@ -44,13 +42,11 @@
 .method public onEvent([B)V
     .locals 4
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent;->parseFrom([B)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent;
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Events$HandoffEvent;->callback:Lcom/xiaomi/idm/service/handoff/HandoffService$Events$HandoffEvent$Callback;
 
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent;->getIdHash()Ljava/lang/String;
@@ -82,7 +78,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v0

@@ -30,21 +30,18 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a0166
+    const v1, 0x7f0a016d
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f0a0168
+    const v0, 0x7f0a016f
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -53,9 +50,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;->mTextTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0167
+    const v0, 0x7f0a016e
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -66,19 +62,17 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a0169
+    const v1, 0x7f0a0170
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0a016b
+    const v0, 0x7f0a0172
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -87,9 +81,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;->mVideoDesc:Landroid/widget/TextView;
 
-    const v0, 0x7f0a016d
+    const v0, 0x7f0a0174
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -98,9 +91,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;->mVideoView:Lcom/android/camera/ui/FastmotionTextureVideoView;
 
-    const v0, 0x7f0a016a
+    const v0, 0x7f0a0171
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1

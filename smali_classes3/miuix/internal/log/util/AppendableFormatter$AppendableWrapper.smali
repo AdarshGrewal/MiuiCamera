@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 .method public synthetic constructor <init>(Lmiuix/internal/log/util/AppendableFormatter$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;->iAppendable:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
@@ -66,7 +63,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;->iAppendable:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
@@ -82,7 +78,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;->iAppendable:Ljava/lang/Appendable;
 
     invoke-interface {v0, p1, p2, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
@@ -93,7 +88,6 @@
 .method public setAppendable(Ljava/lang/Appendable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;->iAppendable:Ljava/lang/Appendable;
 
     return-void

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/clone/FragmentCloneProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneProcess$3;->this$0:Lcom/android/camera/fragment/clone/FragmentCloneProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
 
     const-string/jumbo v0, "showExitConfirm onClick negative"
 
-    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneProcess$3;->this$0:Lcom/android/camera/fragment/clone/FragmentCloneProcess;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/clone/FragmentCloneProcess;->hideExitDialog()Z

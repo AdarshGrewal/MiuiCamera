@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     iget-object v0, v0, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->TAG:Ljava/lang/String;
@@ -71,17 +69,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$400(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$500(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -96,7 +91,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/Util;->showFoldTips(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$700(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)I
@@ -107,7 +101,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1200(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Lcom/android/camera/module/impl/component/MiLivePlayer;
@@ -144,7 +137,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/camera/module/impl/component/MiLivePlayer;->init(IIIILjava/util/List;Ljava/lang/String;)V
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-virtual {p2, p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->startPlay(Landroid/graphics/SurfaceTexture;)V
@@ -156,7 +148,6 @@
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     iget-object v0, v0, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->TAG:Ljava/lang/String;
@@ -177,7 +168,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->release()V
@@ -190,7 +180,6 @@
 .method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     iget-object v0, v0, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->TAG:Ljava/lang/String;
@@ -229,7 +218,6 @@
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1300(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Z
@@ -238,7 +226,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     iget-object p1, p1, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->TAG:Ljava/lang/String;
@@ -247,7 +234,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1500(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Landroid/view/TextureView;
@@ -260,7 +246,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1402(Lcom/android/camera/fragment/dialog/FragmentLiveReview;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1600(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Landroid/widget/ImageView;
@@ -275,7 +260,6 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
@@ -299,7 +283,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
@@ -311,7 +294,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     const/4 v0, 0x0
@@ -320,7 +302,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$2;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;

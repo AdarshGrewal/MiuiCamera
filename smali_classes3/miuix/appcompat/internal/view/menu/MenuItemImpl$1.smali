@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl$1;->this$0:Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onActionProviderVisibilityChanged(Z)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl$1;->this$0:Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->access$000(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;

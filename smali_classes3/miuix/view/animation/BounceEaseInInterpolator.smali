@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
 .method public getInterpolation(F)F
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/view/animation/BounceEaseOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/BounceEaseOutInterpolator;-><init>()V

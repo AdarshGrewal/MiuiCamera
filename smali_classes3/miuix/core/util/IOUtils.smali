@@ -63,87 +63,72 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     sput-object v0, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_BYTE_BUFFER:Ljava/lang/ThreadLocal;
 
-    .line 2
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     sput-object v0, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_CHAR_BUFFER:Ljava/lang/ThreadLocal;
 
-    .line 3
     new-instance v0, Lmiuix/core/util/IOUtils$1;
 
     invoke-direct {v0}, Lmiuix/core/util/IOUtils$1;-><init>()V
 
     const/4 v1, 0x2
 
-    .line 4
     invoke-static {v0, v1}, Lmiuix/core/util/Pools;->createSoftReferencePool(Lmiuix/core/util/Pools$Manager;I)Lmiuix/core/util/Pools$SoftReferencePool;
 
     move-result-object v0
 
     sput-object v0, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
-    .line 5
     new-instance v0, Lmiuix/core/util/IOUtils$2;
 
     invoke-direct {v0}, Lmiuix/core/util/IOUtils$2;-><init>()V
 
-    .line 6
     invoke-static {v0, v1}, Lmiuix/core/util/Pools;->createSoftReferencePool(Lmiuix/core/util/Pools$Manager;I)Lmiuix/core/util/Pools$SoftReferencePool;
 
     move-result-object v0
 
     sput-object v0, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
-    .line 7
     new-instance v0, Lmiuix/core/util/IOUtils$3;
 
     invoke-direct {v0}, Lmiuix/core/util/IOUtils$3;-><init>()V
 
-    .line 8
     invoke-static {v0, v1}, Lmiuix/core/util/Pools;->createSoftReferencePool(Lmiuix/core/util/Pools$Manager;I)Lmiuix/core/util/Pools$SoftReferencePool;
 
     move-result-object v0
 
     sput-object v0, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
-    .line 9
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/io/StringWriter;
 
-    .line 10
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 11
     invoke-virtual {v1}, Ljava/io/PrintWriter;->println()V
 
-    .line 12
     invoke-virtual {v1}, Ljava/io/PrintWriter;->flush()V
 
-    .line 13
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     sput-object v2, Lmiuix/core/util/IOUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 14
     invoke-virtual {v1}, Ljava/io/PrintWriter;->close()V
 
-    .line 15
     sget-object v1, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -159,10 +144,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -177,7 +160,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -193,7 +175,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
@@ -209,13 +190,11 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     :try_start_0
     invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :catch_0
     :try_start_1
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
@@ -232,7 +211,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/Reader;->close()V
     :try_end_0
@@ -248,7 +226,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Ljava/io/Writer;->close()V
     :try_end_0
@@ -267,14 +244,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lmiuix/core/util/IOUtils;->getByteArrayBuffer()[B
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 2
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -286,7 +261,6 @@
 
     const/4 v4, 0x0
 
-    .line 3
     invoke-virtual {p1, v0, v4, v3}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v3, v3
@@ -295,7 +269,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
 
@@ -310,14 +283,12 @@
         }
     .end annotation
 
-    .line 13
     invoke-static {}, Lmiuix/core/util/IOUtils;->getCharArrayBuffer()[C
 
     move-result-object v0
 
     const-wide/16 v1, 0x0
 
-    .line 14
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/Reader;->read([C)I
 
@@ -329,7 +300,6 @@
 
     const/4 v4, 0x0
 
-    .line 15
     invoke-virtual {p1, v0, v4, v3}, Ljava/io/Writer;->write([CII)V
 
     int-to-long v3, v3
@@ -338,7 +308,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_0
     invoke-virtual {p1}, Ljava/io/Writer;->flush()V
 
@@ -353,12 +322,10 @@
         }
     .end annotation
 
-    .line 5
     new-instance v0, Ljava/io/InputStreamReader;
 
     invoke-direct {v0, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 6
     invoke-static {v0, p1}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
     return-void
@@ -374,7 +341,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 7
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -396,7 +362,6 @@
 
     invoke-direct {v0, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 8
     :goto_1
     invoke-static {v0, p1}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
@@ -411,12 +376,10 @@
         }
     .end annotation
 
-    .line 9
     new-instance v0, Ljava/io/OutputStreamWriter;
 
     invoke-direct {v0, p1}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 10
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
     return-void
@@ -432,7 +395,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 11
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -454,7 +416,6 @@
 
     invoke-direct {v0, p1}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 12
     :goto_1
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
@@ -464,7 +425,6 @@
 .method public static getByteArrayBuffer()[B
     .locals 3
 
-    .line 1
     sget-object v0, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_BYTE_BUFFER:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -475,7 +435,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -494,7 +453,6 @@
 
     new-array v0, v0, [B
 
-    .line 3
     sget-object v1, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_BYTE_BUFFER:Ljava/lang/ThreadLocal;
 
     new-instance v2, Ljava/lang/ref/SoftReference;
@@ -510,7 +468,6 @@
 .method public static getCharArrayBuffer()[C
     .locals 3
 
-    .line 1
     sget-object v0, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_CHAR_BUFFER:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -521,7 +478,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -540,7 +496,6 @@
 
     new-array v0, v0, [C
 
-    .line 3
     sget-object v1, Lmiuix/core/util/IOUtils;->THREAD_LOCAL_CHAR_BUFFER:Ljava/lang/ThreadLocal;
 
     new-instance v2, Ljava/lang/ref/SoftReference;
@@ -572,12 +527,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/InputStreamReader;
 
     invoke-direct {v0, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     invoke-static {v0}, Lmiuix/core/util/IOUtils;->readLines(Ljava/io/Reader;)Ljava/util/List;
 
     move-result-object p0
@@ -607,7 +560,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -629,7 +581,6 @@
 
     invoke-direct {v0, p0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 4
     :goto_1
     invoke-static {v0}, Lmiuix/core/util/IOUtils;->readLines(Ljava/io/Reader;)Ljava/util/List;
 
@@ -657,7 +608,6 @@
         }
     .end annotation
 
-    .line 5
     instance-of v0, p0, Ljava/io/BufferedReader;
 
     if-eqz v0, :cond_0
@@ -673,13 +623,11 @@
 
     move-object p0, v0
 
-    .line 6
     :goto_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     :goto_1
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -687,7 +635,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 8
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -704,7 +651,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -713,15 +659,12 @@
 
     check-cast v0, Ljava/io/ByteArrayOutputStream;
 
-    .line 2
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
-    .line 4
     sget-object v1, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -737,7 +680,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -746,15 +688,12 @@
 
     check-cast v0, Ljava/io/ByteArrayOutputStream;
 
-    .line 6
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/OutputStream;)V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
-    .line 8
     sget-object v1, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -770,7 +709,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -779,15 +717,12 @@
 
     check-cast v0, Ljava/io/ByteArrayOutputStream;
 
-    .line 10
     invoke-static {p0, v0, p1}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 11
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
-    .line 12
     sget-object p1, Lmiuix/core/util/IOUtils;->BYTE_ARRAY_OUTPUT_STREAM_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {p1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -803,7 +738,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -812,15 +746,12 @@
 
     check-cast v0, Ljava/io/CharArrayWriter;
 
-    .line 2
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/Writer;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/CharArrayWriter;->toCharArray()[C
 
     move-result-object p0
 
-    .line 4
     sget-object v1, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -836,7 +767,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -845,15 +775,12 @@
 
     check-cast v0, Ljava/io/CharArrayWriter;
 
-    .line 6
     invoke-static {p0, v0, p1}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/CharArrayWriter;->toCharArray()[C
 
     move-result-object p0
 
-    .line 8
     sget-object p1, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {p1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -869,7 +796,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -878,15 +804,12 @@
 
     check-cast v0, Ljava/io/CharArrayWriter;
 
-    .line 10
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
-    .line 11
     invoke-virtual {v0}, Ljava/io/CharArrayWriter;->toCharArray()[C
 
     move-result-object p0
 
-    .line 12
     sget-object v1, Lmiuix/core/util/IOUtils;->CHAR_ARRAY_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -897,7 +820,6 @@
 .method public static toInputStream(Ljava/lang/String;)Ljava/io/InputStream;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
@@ -917,7 +839,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     if-eqz p1, :cond_1
@@ -930,7 +851,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
@@ -958,7 +878,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -967,15 +886,12 @@
 
     check-cast v0, Ljava/io/StringWriter;
 
-    .line 2
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/Writer;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 4
     sget-object v1, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -991,7 +907,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -1000,15 +915,12 @@
 
     check-cast v0, Ljava/io/StringWriter;
 
-    .line 6
     invoke-static {p0, v0, p1}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/InputStream;Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 8
     sget-object p1, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {p1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -1024,7 +936,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v0}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -1033,15 +944,12 @@
 
     check-cast v0, Ljava/io/StringWriter;
 
-    .line 10
     invoke-static {p0, v0}, Lmiuix/core/util/IOUtils;->copy(Ljava/io/Reader;Ljava/io/Writer;)J
 
-    .line 11
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 12
     sget-object v1, Lmiuix/core/util/IOUtils;->STRING_WRITER_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v1, v0}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -1059,7 +967,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p1
@@ -1082,7 +989,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 11
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1121,7 +1027,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
 
     :cond_0
@@ -1138,7 +1043,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>([C)V
@@ -1165,7 +1069,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 6
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1179,14 +1082,12 @@
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>([C)V
 
-    .line 7
     invoke-virtual {v0, p2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p1
 
     goto :goto_1
 
-    .line 8
     :cond_1
     :goto_0
     new-instance p2, Ljava/lang/String;
@@ -1214,7 +1115,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 9
     invoke-virtual {p0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     :cond_0
@@ -1231,7 +1131,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1}, Ljava/lang/String;-><init>([B)V
@@ -1254,7 +1153,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 3
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1293,7 +1191,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/io/Writer;->write([C)V
 
     :cond_0
@@ -1327,10 +1224,8 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 1
     sget-object p2, Lmiuix/core/util/IOUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 2
     :cond_1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1349,7 +1244,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1360,7 +1254,6 @@
 
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 4
     :cond_2
     invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
@@ -1402,10 +1295,8 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 5
     sget-object p2, Lmiuix/core/util/IOUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 6
     :cond_1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1424,7 +1315,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1435,7 +1325,6 @@
 
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 8
     :cond_2
     invoke-virtual {p2, p3}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
@@ -1476,10 +1365,8 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 9
     sget-object p2, Lmiuix/core/util/IOUtils;->LINE_SEPARATOR:Ljava/lang/String;
 
-    .line 10
     :cond_1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1498,14 +1385,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 11
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 12
     :cond_2
     invoke-virtual {p0, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 

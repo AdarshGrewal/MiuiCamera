@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/video/H264Stream;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/video/H264Stream$1;->this$0:Lnet/majorkernelpanic/streaming/video/H264Stream;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     const-string p3, "MediaRecorder callback called !"
 
-    .line 1
     invoke-static {p1, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 p3, 0x320
@@ -51,7 +49,6 @@
 
     const-string p2, "MediaRecorder: MAX_DURATION_REACHED"
 
-    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -63,7 +60,6 @@
 
     const-string p2, "MediaRecorder: MAX_FILESIZE_REACHED"
 
-    .line 3
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -75,7 +71,6 @@
 
     const-string p2, "MediaRecorder: INFO_UNKNOWN"
 
-    .line 4
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -83,10 +78,8 @@
     :cond_2
     const-string p2, "WTF ?"
 
-    .line 5
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     :goto_0
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/video/H264Stream$1;->this$0:Lnet/majorkernelpanic/streaming/video/H264Stream;
 

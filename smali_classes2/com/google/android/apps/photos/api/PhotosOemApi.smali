@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,9 +31,8 @@
 .method public static getAuthority(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f1208b1
+    const v0, 0x7f120862
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -45,24 +43,20 @@
 .method public static getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getAuthority(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     const-string v1, "content"
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0, p0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
@@ -73,19 +67,16 @@
 .method public static getDeleteUri(Landroid/content/Context;J)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     const-string v0, "delete"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
@@ -94,7 +85,6 @@
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -105,7 +95,6 @@
 .method public static getMediaStoreIdFromQueryTypeUri(Landroid/net/Uri;)J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p0
@@ -124,19 +113,16 @@
 .method public static getQueryDataUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     const-string v0, "data"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -145,7 +131,6 @@
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -156,19 +141,16 @@
 .method public static getQueryProcessingUri(Landroid/content/Context;)Landroid/net/Uri;
     .locals 1
 
-    .line 5
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     const-string v0, "processing"
 
-    .line 6
     invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 7
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -179,19 +161,16 @@
 .method public static getQueryProcessingUri(Landroid/content/Context;J)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     const-string v0, "processing"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
@@ -200,7 +179,6 @@
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -211,19 +189,16 @@
 .method public static getQueryTypeUri(Landroid/content/Context;J)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getBaseBuilder(Landroid/content/Context;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
     const-string v0, "type"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
@@ -232,7 +207,6 @@
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -243,12 +217,10 @@
 .method public static getSpecialTypeId(Landroid/content/Context;J)Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getQueryTypeUri(Landroid/content/Context;J)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -267,7 +239,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 3
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -280,12 +251,10 @@
     :cond_0
     const-string p1, "special_type_id"
 
-    .line 4
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 5
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -294,7 +263,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 6
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_1
@@ -325,7 +293,6 @@
 .method public static getSpecialTypeIdFromQueryDataUri(Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p0
@@ -340,19 +307,16 @@
 .method public static getVersion(Landroid/content/Context;)I
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     const-string v1, "content"
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 3
     invoke-static {p0}, Lcom/google/android/apps/photos/api/PhotosOemApi;->getAuthority(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
@@ -361,12 +325,10 @@
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -375,7 +337,6 @@
 
     const-string v2, "version"
 
-    .line 6
     invoke-virtual {p0, v0, v2, v1, v1}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -386,7 +347,6 @@
 
     return p0
 
-    .line 7
     :cond_0
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 

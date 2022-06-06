@@ -29,14 +29,12 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     const-string v0, "OMX.google.h264.encoder"
 
-    .line 2
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -57,7 +55,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -102,9 +102,6 @@
 .method public abstract hasTeleCamera()Z
 .end method
 
-.method public abstract hasUWPortraitCamera()Z
-.end method
-
 .method public abstract init(Landroid/hardware/camera2/CameraManager;)V
 .end method
 

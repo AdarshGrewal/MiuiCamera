@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,12 +19,10 @@
 .method public static a(ILjava/lang/String;)I
     .locals 5
 
-    .line 1
     invoke-static {p0}, Lcom/arcsoft/avatar2/gl/ShaderManager;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result p0
@@ -36,7 +33,6 @@
 
     if-nez p0, :cond_0
 
-    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,11 +61,9 @@
 
     return v2
 
-    .line 4
     :cond_0
     invoke-static {p0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 5
     invoke-static {p0}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
     const/4 p1, 0x1
@@ -78,20 +72,16 @@
 
     const v3, 0x8b81
 
-    .line 6
     invoke-static {p0, v3, p1, v2}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    .line 7
     aget p1, p1, v2
 
     if-nez p1, :cond_1
 
-    .line 8
     invoke-static {p0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 9
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +104,6 @@
 
     invoke-static {v1, p1}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
     return v2
@@ -128,7 +117,6 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,7 +155,6 @@
 .method public static createProgram(Ljava/lang/String;Ljava/lang/String;)I
     .locals 6
 
-    .line 1
     invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
 
     move-result v0
@@ -178,7 +165,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,14 +190,12 @@
     :cond_0
     const v3, 0x8b31
 
-    .line 3
     invoke-static {v3, p0}, Lcom/arcsoft/avatar2/gl/ShaderManager;->a(ILjava/lang/String;)I
 
     move-result p0
 
     const v3, 0x8b30
 
-    .line 4
     invoke-static {v3, p1}, Lcom/arcsoft/avatar2/gl/ShaderManager;->a(ILjava/lang/String;)I
 
     move-result p1
@@ -222,14 +206,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {v0, p0}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 6
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 7
     invoke-static {v0}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
     const/4 v3, 0x1
@@ -238,20 +219,16 @@
 
     const v4, 0x8b82
 
-    .line 8
     invoke-static {v0, v4, v3, v2}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
-    .line 9
     aget v3, v3, v2
 
     if-nez v3, :cond_2
 
-    .line 10
     invoke-static {v0}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 11
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,13 +245,10 @@
 
     invoke-static {v1, v3}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 13
     invoke-static {p1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 14
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
     return v2
@@ -282,15 +256,12 @@
     :cond_2
     return v0
 
-    .line 15
     :cond_3
     :goto_0
     invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 16
     invoke-static {p1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 17
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
     return v2

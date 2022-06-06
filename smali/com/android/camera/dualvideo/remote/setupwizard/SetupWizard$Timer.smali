@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 13
 
-    .line 1
     new-instance v6, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     const-string v1, "TIMER_TYPE_CANCEL_DISCOVERY"
@@ -59,7 +58,6 @@
 
     sput-object v6, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->TIMER_TYPE_CANCEL_DISCOVERY:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
-    .line 2
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     const-string v8, "TIMER_TYPE_CANCEL_CONNECTION"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->TIMER_TYPE_CANCEL_CONNECTION:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
-    .line 3
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     const-string v2, "TIMER_TYPE_RESET_STATE"
@@ -97,7 +94,6 @@
 
     new-array v1, v1, [Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
-    .line 4
     sget-object v2, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->TIMER_TYPE_CANCEL_DISCOVERY:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     const/4 v3, 0x0
@@ -127,13 +123,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->type:I
 
-    .line 3
     iput-wide p4, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->delayMillis:J
 
     return-void
@@ -142,7 +135,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +149,6 @@
 .method public static values()[Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->$VALUES:[Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     invoke-virtual {v0}, [Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->clone()Ljava/lang/Object;

@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +55,6 @@
 
     const/4 v0, 0x3
 
-    .line 1
     invoke-static {v0, p0, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -68,7 +65,6 @@
 
     const/4 v0, 0x3
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -79,7 +75,6 @@
 
     const/4 v0, 0x6
 
-    .line 1
     invoke-static {v0, p0, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -90,7 +85,6 @@
 
     const/4 v0, 0x6
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -101,7 +95,6 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-static {v0, p0, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -112,7 +105,6 @@
 
     const/4 v0, 0x4
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -121,7 +113,6 @@
 .method public static println(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -130,7 +121,6 @@
 .method public static println(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +151,6 @@
 
     const/4 v0, 0x5
 
-    .line 1
     invoke-static {v0, p0, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -172,7 +161,6 @@
 
     const/4 v0, 0x5
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->println(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void

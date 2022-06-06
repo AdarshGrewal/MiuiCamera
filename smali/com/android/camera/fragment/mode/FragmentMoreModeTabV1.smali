@@ -14,7 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
 .method public createLayoutManager(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
     .locals 7
 
-    .line 1
     new-instance v6, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1$1;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1;->getCountPerLine()I
@@ -50,7 +48,6 @@
 .method public createModeItemDecoration(Landroid/content/Context;Lcom/android/camera/fragment/mode/IMoreMode;)Lcom/android/camera/fragment/mode/ModeItemDecoration;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/mode/ModeItemDecoration;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1;->getType()I
@@ -69,8 +66,7 @@
 
     const/4 v1, 0x0
 
-    .line 1
-    invoke-static {v0, v1}, Lcom/android/camera/display/Display;->getMoreModeTabCol(ZZ)I
+    invoke-static {v0, v1}, Lcom/android/camera/Display;->getMoreModeTabCol(ZZ)I
 
     move-result v0
 
@@ -80,9 +76,8 @@
 .method public getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    const v0, 0x7f0a02ac
+    const v0, 0x7f0a02bc
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1

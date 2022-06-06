@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask$1;->this$1:Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask$1;->this$1:Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;

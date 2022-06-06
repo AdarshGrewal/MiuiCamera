@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/panorama/ConvertFromYuv420;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;->this$0:Lcom/android/camera/panorama/ConvertFromYuv420;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/panorama/ConvertFromYuv420;Lcom/android/camera/panorama/ConvertFromYuv420$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;-><init>(Lcom/android/camera/panorama/ConvertFromYuv420;)V
 
     return-void
@@ -47,21 +45,18 @@
 .method public image2bytes(Landroid/media/Image;)[B
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/panorama/PanoramaGP3ImageFormat;->getImageFormat(Landroid/media/Image;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "YUV420_PLANAR"
 
-    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;->this$0:Lcom/android/camera/panorama/ConvertFromYuv420;
 
     new-instance v1, Lcom/android/camera/panorama/ConvertFromYuv420Planar;
@@ -75,14 +70,12 @@
     :cond_0
     const-string v1, "YUV420_SEMIPLANAR"
 
-    .line 4
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;->this$0:Lcom/android/camera/panorama/ConvertFromYuv420;
 
     new-instance v1, Lcom/android/camera/panorama/ConvertFromYuv420SemiPlanar;
@@ -96,14 +89,12 @@
     :cond_1
     const-string v1, "YVU420_SEMIPLANAR"
 
-    .line 6
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;->this$0:Lcom/android/camera/panorama/ConvertFromYuv420;
 
     new-instance v1, Lcom/android/camera/panorama/ConvertFromYvu420SemiPlanar;
@@ -112,7 +103,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/panorama/ConvertFromYuv420;->access$102(Lcom/android/camera/panorama/ConvertFromYuv420;Lcom/android/camera/panorama/IImage2BytesConverter;)Lcom/android/camera/panorama/IImage2BytesConverter;
 
-    .line 8
     :goto_0
     iget-object v0, p0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;->this$0:Lcom/android/camera/panorama/ConvertFromYuv420;
 

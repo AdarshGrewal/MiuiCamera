@@ -18,7 +18,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;-><init>(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;Ljava/util/List;Lcom/iqiyi/android/qigsaw/core/splitload/listener/OnSplitLoadListener;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public createSplitLoader()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoader;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoaderImpl2;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;->appContext:Landroid/content/Context;
@@ -64,10 +62,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1, p3, p4, p5}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoader;->loadCode2(Ljava/util/List;Ljava/io/File;Ljava/io/File;)V
 
-    .line 2
     const-class p1, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -80,7 +76,6 @@
 .method public onSplitActivateFailed(Ljava/lang/ClassLoader;)V
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatDexLoader;->unLoad(Ljava/lang/ClassLoader;)V
     :try_end_0

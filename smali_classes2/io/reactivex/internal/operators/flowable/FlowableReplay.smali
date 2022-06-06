@@ -90,7 +90,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$DefaultUnboundedFactory;
 
     invoke-direct {v0}, Lio/reactivex/internal/operators/flowable/FlowableReplay$DefaultUnboundedFactory;-><init>()V
@@ -119,19 +118,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/flowables/ConnectableFlowable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->onSubscribe:Lorg/reactivestreams/Publisher;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->source:Lio/reactivex/Flowable;
 
-    .line 4
     iput-object p3, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 5
     iput-object p4, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->bufferFactory:Ljava/util/concurrent/Callable;
 
     return-void
@@ -155,14 +149,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->createFrom(Lio/reactivex/Flowable;)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplayBufferTask;
 
@@ -202,7 +194,6 @@
 
     move-object v4, p4
 
-    .line 3
     invoke-static/range {v0 .. v5}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->create(Lio/reactivex/Flowable;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;I)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p0
@@ -227,7 +218,6 @@
         }
     .end annotation
 
-    .line 4
     new-instance v6, Lio/reactivex/internal/operators/flowable/FlowableReplay$ScheduledReplayBufferTask;
 
     move-object v0, v6
@@ -267,17 +257,14 @@
         }
     .end annotation
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 6
     new-instance v1, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplayPublisher;
 
     invoke-direct {v1, v0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplayPublisher;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;)V
 
-    .line 7
     new-instance v2, Lio/reactivex/internal/operators/flowable/FlowableReplay;
 
     invoke-direct {v2, v1, p0, v0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay;-><init>(Lorg/reactivestreams/Publisher;Lio/reactivex/Flowable;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;)V
@@ -303,7 +290,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->DEFAULT_UNBOUNDED_FACTORY:Ljava/util/concurrent/Callable;
 
     invoke-static {p0, v0}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->create(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;)Lio/reactivex/flowables/ConnectableFlowable;
@@ -337,7 +323,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher;-><init>(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)V
@@ -365,12 +350,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$ConnectableFlowableReplay;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay$ConnectableFlowableReplay;-><init>(Lio/reactivex/flowables/ConnectableFlowable;Lio/reactivex/Flowable;)V
@@ -396,7 +379,6 @@
         }
     .end annotation
 
-    .line 1
     :goto_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -408,14 +390,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplaySubscriber;->isDisposed()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 3
     :cond_0
     :try_start_0
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->bufferFactory:Ljava/util/concurrent/Callable;
@@ -428,12 +408,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4
     new-instance v2, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplaySubscriber;
 
     invoke-direct {v2, v1}, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplaySubscriber;-><init>(Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplayBuffer;)V
 
-    .line 5
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -447,7 +425,6 @@
     :cond_1
     move-object v0, v2
 
-    .line 6
     :cond_2
     iget-object v1, v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplaySubscriber;->shouldConnect:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -476,7 +453,6 @@
     :cond_3
     move v1, v3
 
-    .line 7
     :goto_1
     :try_start_1
     invoke-interface {p1, v0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
@@ -485,7 +461,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 8
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->source:Lio/reactivex/Flowable;
 
     invoke-virtual {p1, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
@@ -498,16 +473,13 @@
 
     if-eqz v1, :cond_5
 
-    .line 9
     iget-object v0, v0, Lio/reactivex/internal/operators/flowable/FlowableReplay$ReplaySubscriber;->shouldConnect:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    .line 10
     :cond_5
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 11
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -517,10 +489,8 @@
     :catchall_1
     move-exception p1
 
-    .line 12
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 13
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -531,7 +501,6 @@
 .method public dispose()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -544,7 +513,6 @@
 .method public isDisposed()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -555,7 +523,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v0
@@ -587,7 +554,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->source:Lio/reactivex/Flowable;
 
     return-object v0
@@ -603,7 +569,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay;->onSubscribe:Lorg/reactivestreams/Publisher;
 
     invoke-interface {v0, p1}, Lorg/reactivestreams/Publisher;->subscribe(Lorg/reactivestreams/Subscriber;)V

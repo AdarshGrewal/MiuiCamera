@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/SingleCameraProcessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$3;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onImageAvailable(Landroid/media/ImageReader;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object p1
@@ -47,10 +45,8 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-static {v0, v1}, Lcom/xiaomi/camera/base/PerformanceTracker;->trackAlgorithmProcess(Ljava/lang/String;I)V
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/camera/core/SingleCameraProcessor;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -75,7 +71,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$3;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     iget-object v0, v0, Lcom/xiaomi/camera/core/ImageProcessor;->mImageProcessorStatusCallback:Lcom/xiaomi/camera/core/ImageProcessor$ImageProcessorStatusCallback;
@@ -86,21 +81,17 @@
 
     const/4 v2, 0x0
 
-    .line 5
     invoke-interface {v0, p1, v1, v2}, Lcom/xiaomi/camera/core/ImageProcessor$ImageProcessorStatusCallback;->onImageProcessed(Landroid/media/Image;IZ)V
 
-    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
-    .line 7
     iget-object p1, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$3;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     iget-object p1, p1, Lcom/xiaomi/camera/core/ImageProcessor;->mNeedProcessDepthImageSize:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndDecrement()I
 
-    .line 8
     iget-object p1, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$3;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     invoke-virtual {p1}, Lcom/xiaomi/camera/core/ImageProcessor;->tryToStopWork()V

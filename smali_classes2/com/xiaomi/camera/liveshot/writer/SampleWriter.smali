@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public run()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/writer/SampleWriter;->writeSample()V
 
     return-void

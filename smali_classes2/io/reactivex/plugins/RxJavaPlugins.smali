@@ -326,10 +326,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No instances!"
@@ -355,7 +353,6 @@
         }
     .end annotation
 
-    .line 3
     :try_start_0
     invoke-interface {p0, p1, p2}, Lio/reactivex/functions/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -368,7 +365,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -390,7 +386,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-interface {p0, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -403,7 +398,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -430,7 +424,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -458,7 +451,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -479,7 +471,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -490,7 +481,6 @@
 .method public static createComputationScheduler(Ljava/util/concurrent/ThreadFactory;)Lio/reactivex/Scheduler;
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/ComputationScheduler;
 
     const-string v1, "threadFactory is null"
@@ -509,7 +499,6 @@
 .method public static createIoScheduler(Ljava/util/concurrent/ThreadFactory;)Lio/reactivex/Scheduler;
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/IoScheduler;
 
     const-string v1, "threadFactory is null"
@@ -528,7 +517,6 @@
 .method public static createNewThreadScheduler(Ljava/util/concurrent/ThreadFactory;)Lio/reactivex/Scheduler;
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/NewThreadScheduler;
 
     const-string v1, "threadFactory is null"
@@ -547,7 +535,6 @@
 .method public static createSingleScheduler(Ljava/util/concurrent/ThreadFactory;)Lio/reactivex/Scheduler;
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/SingleScheduler;
 
     const-string v1, "threadFactory is null"
@@ -577,7 +564,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onComputationHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -595,7 +581,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->errorHandler:Lio/reactivex/functions/Consumer;
 
     return-object v0
@@ -616,7 +601,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitComputationHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -637,7 +621,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitIoHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -658,7 +641,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitNewThreadHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -679,7 +661,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitSingleHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -699,7 +680,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onIoHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -719,7 +699,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onNewThreadHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -728,7 +707,6 @@
 .method public static getOnBeforeBlocking()Lio/reactivex/functions/BooleanSupplier;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onBeforeBlocking:Lio/reactivex/functions/BooleanSupplier;
 
     return-object v0
@@ -748,7 +726,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -770,7 +747,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-object v0
@@ -790,7 +766,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableFlowableAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -810,7 +785,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableObservableAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -830,7 +804,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -852,7 +825,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-object v0
@@ -872,7 +844,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -894,7 +865,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-object v0
@@ -914,7 +884,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -936,7 +905,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-object v0
@@ -956,7 +924,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onParallelAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -976,7 +943,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleAssembly:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -998,7 +964,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-object v0
@@ -1018,7 +983,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onScheduleHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -1038,7 +1002,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleHandler:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -1058,22 +1021,18 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitComputationHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -1096,22 +1055,18 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitIoHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -1134,22 +1089,18 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitNewThreadHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -1172,22 +1123,18 @@
 
     const-string v0, "Scheduler Callable can\'t be null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onInitSingleHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->callRequireNonNull(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->applyRequireNonNull(Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
@@ -1199,7 +1146,6 @@
 .method public static isBug(Ljava/lang/Throwable;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p0, Lio/reactivex/exceptions/OnErrorNotImplementedException;
 
     const/4 v1, 0x1
@@ -1208,7 +1154,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     instance-of v0, p0, Lio/reactivex/exceptions/MissingBackpressureException;
 
@@ -1216,7 +1161,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     instance-of v0, p0, Ljava/lang/IllegalStateException;
 
@@ -1224,7 +1168,6 @@
 
     return v1
 
-    .line 4
     :cond_2
     instance-of v0, p0, Ljava/lang/NullPointerException;
 
@@ -1232,7 +1175,6 @@
 
     return v1
 
-    .line 5
     :cond_3
     instance-of v0, p0, Ljava/lang/IllegalArgumentException;
 
@@ -1240,7 +1182,6 @@
 
     return v1
 
-    .line 6
     :cond_4
     instance-of p0, p0, Lio/reactivex/exceptions/CompositeException;
 
@@ -1257,7 +1198,6 @@
 .method public static isFailOnNonBlockingScheduler()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->failNonBlockingScheduler:Z
 
     return v0
@@ -1266,7 +1206,6 @@
 .method public static isLockdown()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     return v0
@@ -1277,7 +1216,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     sput-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     return-void
@@ -1286,12 +1224,10 @@
 .method public static onAssembly(Lio/reactivex/Completable;)Lio/reactivex/Completable;
     .locals 1
 
-    .line 13
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 14
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1316,12 +1252,10 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1346,12 +1280,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1376,12 +1308,10 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1406,12 +1336,10 @@
         }
     .end annotation
 
-    .line 11
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 12
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1436,12 +1364,10 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableFlowableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1466,12 +1392,10 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableObservableAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1496,12 +1420,10 @@
         }
     .end annotation
 
-    .line 15
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onParallelAssembly:Lio/reactivex/functions/Function;
 
     if-eqz v0, :cond_0
 
-    .line 16
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1515,12 +1437,10 @@
 .method public static onBeforeBlocking()Z
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onBeforeBlocking:Lio/reactivex/functions/BooleanSupplier;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-interface {v0}, Lio/reactivex/functions/BooleanSupplier;->getAsBoolean()Z
 
@@ -1533,7 +1453,6 @@
     :catchall_0
     move-exception v0
 
-    .line 3
     invoke-static {v0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -1549,14 +1468,12 @@
 .method public static onComputationScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onComputationHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1570,12 +1487,10 @@
 .method public static onError(Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->errorHandler:Lio/reactivex/functions/Consumer;
 
     if-nez p0, :cond_0
 
-    .line 2
     new-instance p0, Ljava/lang/NullPointerException;
 
     const-string v1, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -1584,7 +1499,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->isBug(Ljava/lang/Throwable;)Z
 
@@ -1592,7 +1506,6 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     new-instance v1, Lio/reactivex/exceptions/UndeliverableException;
 
     invoke-direct {v1, p0}, Lio/reactivex/exceptions/UndeliverableException;-><init>(Ljava/lang/Throwable;)V
@@ -1603,7 +1516,6 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 5
     :try_start_0
     invoke-interface {v0, p0}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
@@ -1614,17 +1526,13 @@
     :catchall_0
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 7
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->uncaught(Ljava/lang/Throwable;)V
 
-    .line 8
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 9
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->uncaught(Ljava/lang/Throwable;)V
 
     return-void
@@ -1633,14 +1541,12 @@
 .method public static onIoScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onIoHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1654,14 +1560,12 @@
 .method public static onNewThreadScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onNewThreadHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1677,17 +1581,14 @@
 
     const-string v0, "run is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onScheduleHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 3
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1701,14 +1602,12 @@
 .method public static onSingleScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleHandler:Lio/reactivex/functions/Function;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-static {v0, p0}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1722,12 +1621,10 @@
 .method public static onSubscribe(Lio/reactivex/Completable;Lio/reactivex/CompletableObserver;)Lio/reactivex/CompletableObserver;
     .locals 1
 
-    .line 7
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1756,12 +1653,10 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1790,12 +1685,10 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1824,12 +1717,10 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1858,12 +1749,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableSubscribe:Lio/reactivex/functions/BiFunction;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0, p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->apply(Lio/reactivex/functions/BiFunction;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1881,81 +1770,56 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setErrorHandler(Lio/reactivex/functions/Consumer;)V
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setScheduleHandler(Lio/reactivex/functions/Function;)V
 
-    .line 3
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setComputationSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 4
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setInitComputationSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 5
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setIoSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 6
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setInitIoSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 7
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setSingleSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 8
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setInitSingleSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 9
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setNewThreadSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 10
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setInitNewThreadSchedulerHandler(Lio/reactivex/functions/Function;)V
 
-    .line 11
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnFlowableAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 12
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnFlowableSubscribe(Lio/reactivex/functions/BiFunction;)V
 
-    .line 13
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnObservableAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 14
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnObservableSubscribe(Lio/reactivex/functions/BiFunction;)V
 
-    .line 15
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnSingleAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 16
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnSingleSubscribe(Lio/reactivex/functions/BiFunction;)V
 
-    .line 17
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnCompletableAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 18
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnCompletableSubscribe(Lio/reactivex/functions/BiFunction;)V
 
-    .line 19
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnConnectableFlowableAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 20
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnConnectableObservableAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 21
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnMaybeAssembly(Lio/reactivex/functions/Function;)V
 
-    .line 22
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnMaybeSubscribe(Lio/reactivex/functions/BiFunction;)V
 
-    .line 23
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnParallelAssembly(Lio/reactivex/functions/Function;)V
 
     const/4 v1, 0x0
 
-    .line 24
     invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->setFailOnNonBlockingScheduler(Z)V
 
-    .line 25
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->setOnBeforeBlocking(Lio/reactivex/functions/BooleanSupplier;)V
 
     return-void
@@ -1975,17 +1839,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onComputationHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2008,17 +1869,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->errorHandler:Lio/reactivex/functions/Consumer;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2032,17 +1890,14 @@
 .method public static setFailOnNonBlockingScheduler(Z)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-boolean p0, Lio/reactivex/plugins/RxJavaPlugins;->failNonBlockingScheduler:Z
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2068,17 +1923,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onInitComputationHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2104,17 +1956,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onInitIoHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2140,17 +1989,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onInitNewThreadHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2176,17 +2022,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onInitSingleHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2211,17 +2054,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onIoHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2246,17 +2086,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onNewThreadHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2270,17 +2107,14 @@
 .method public static setOnBeforeBlocking(Lio/reactivex/functions/BooleanSupplier;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onBeforeBlocking:Lio/reactivex/functions/BooleanSupplier;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2305,17 +2139,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2342,17 +2173,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onCompletableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2377,17 +2205,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableFlowableAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2412,17 +2237,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onConnectableObservableAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2447,17 +2269,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2484,17 +2303,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onFlowableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2519,17 +2335,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2555,17 +2368,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onMaybeSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2590,17 +2400,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2627,17 +2434,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onObservableSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2662,17 +2466,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onParallelAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2697,17 +2498,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleAssembly:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2734,17 +2532,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleSubscribe:Lio/reactivex/functions/BiFunction;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2769,17 +2564,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onScheduleHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2804,17 +2596,14 @@
         }
     .end annotation
 
-    .line 1
     sget-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     sput-object p0, Lio/reactivex/plugins/RxJavaPlugins;->onSingleHandler:Lio/reactivex/functions/Function;
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2828,17 +2617,14 @@
 .method public static uncaught(Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Thread;->getUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v1
 
-    .line 3
     invoke-interface {v1, v0, p0}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     return-void
@@ -2849,7 +2635,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     sput-boolean v0, Lio/reactivex/plugins/RxJavaPlugins;->lockdown:Z
 
     return-void

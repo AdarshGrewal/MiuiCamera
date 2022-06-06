@@ -36,12 +36,10 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/MatchOps$1MatchSink;->val$matchKind:Ljava8/util/stream/MatchOps$MatchKind;
 
     iput-object p2, p0, Ljava8/util/stream/MatchOps$1MatchSink;->val$predicate:Ljava8/util/function/Predicate;
 
-    .line 2
     invoke-direct {p0, p1}, Ljava8/util/stream/MatchOps$BooleanTerminalSink;-><init>(Ljava8/util/stream/MatchOps$MatchKind;)V
 
     return-void
@@ -57,7 +55,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/MatchOps$BooleanTerminalSink;->stop:Z
 
     if-nez v0, :cond_0
@@ -78,10 +75,8 @@
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/MatchOps$BooleanTerminalSink;->stop:Z
 
-    .line 3
     iget-object p1, p0, Ljava8/util/stream/MatchOps$1MatchSink;->val$matchKind:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1}, Ljava8/util/stream/MatchOps$MatchKind;->access$100(Ljava8/util/stream/MatchOps$MatchKind;)Z

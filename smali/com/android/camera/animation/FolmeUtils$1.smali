@@ -24,7 +24,6 @@
 .method public constructor <init>(Landroid/view/View$OnClickListener;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/animation/FolmeUtils$1;->val$click:Landroid/view/View$OnClickListener;
 
     iput-object p2, p0, Lcom/android/camera/animation/FolmeUtils$1;->val$view:Landroid/view/View;
@@ -39,15 +38,12 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 2
     sget-object v0, Lmiuix/animation/ITouchStyle$TouchType;->UP:Lmiuix/animation/ITouchStyle$TouchType;
 
     if-ne p1, v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/animation/FolmeUtils$1;->val$click:Landroid/view/View$OnClickListener;
 
     iget-object v0, p0, Lcom/android/camera/animation/FolmeUtils$1;->val$view:Landroid/view/View;

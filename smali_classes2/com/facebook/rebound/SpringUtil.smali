@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static clamp(DDD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide p0

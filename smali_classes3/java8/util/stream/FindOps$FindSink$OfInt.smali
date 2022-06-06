@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/FindOps$FindSink;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -55,7 +53,6 @@
 .method public bridge synthetic accept(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/FindOps$FindSink;->accept(Ljava/lang/Object;)V
 
     return-void
@@ -64,7 +61,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/FindOps$FindSink$OfInt;->get()Ljava8/util/OptionalInt;
 
     move-result-object v0
@@ -75,7 +71,6 @@
 .method public get()Ljava8/util/OptionalInt;
     .locals 1
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/FindOps$FindSink;->hasValue:Z
 
     if-eqz v0, :cond_0

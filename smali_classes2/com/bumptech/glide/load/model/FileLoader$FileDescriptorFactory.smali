@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/load/model/FileLoader$FileDescriptorFactory$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/model/FileLoader$FileDescriptorFactory$1;-><init>()V

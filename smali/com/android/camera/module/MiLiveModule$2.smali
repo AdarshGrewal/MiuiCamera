@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/MiLiveModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public isWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
@@ -75,7 +73,6 @@
 .method public onDeviceBecomeStable()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     invoke-static {v0}, Lcom/android/camera/module/MiLiveModule;->access$600(Lcom/android/camera/module/MiLiveModule;)Ljava/lang/String;
@@ -98,7 +95,6 @@
 .method public onDeviceKeepMoving(D)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
@@ -117,7 +113,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -138,14 +133,12 @@
 
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/MiLiveModule;->is3ALocked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -158,7 +151,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/MiLiveModule;->isRecording()Z
@@ -167,7 +159,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -193,7 +184,6 @@
 .method public onDeviceOrientationChanged(FZ)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     if-nez p2, :cond_0
@@ -210,7 +200,6 @@
     :goto_0
     iput v1, v0, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getCameraState()I
@@ -227,7 +216,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -239,15 +227,12 @@
 
     iget v1, v1, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 4
     invoke-static {v2, v1}, Lcom/android/camera/Util;->getShootRotation(Landroid/app/Activity;F)F
 
     move-result v1
 
-    .line 5
     invoke-virtual {v0, p2, v1}, Lcom/android/camera/effect/EffectController;->setDeviceRotation(ZF)V
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
@@ -257,7 +242,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-boolean v0, v0, Lcom/android/camera/module/BaseModule;->mPaused:Z
@@ -272,7 +256,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 8
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
@@ -285,7 +268,6 @@
 
     move-result p1
 
-    .line 9
     iget-object p2, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-object p2, p2, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -296,10 +278,8 @@
 
     add-int/2addr p2, p1
 
-    .line 10
     rem-int/lit16 p2, p2, 0x168
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/module/MiLiveModule$2;->this$0:Lcom/android/camera/module/MiLiveModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;

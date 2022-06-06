@@ -27,7 +27,6 @@
 .method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/RotateDialogController$1;->val$positive:Ljava/lang/Runnable;
 
     iput-object p2, p0, Lcom/android/camera/RotateDialogController$1;->val$negative:Ljava/lang/Runnable;
@@ -46,23 +45,19 @@
 
     if-eq p2, p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/RotateDialogController$1;->val$positive:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/RotateDialogController$1;->val$negative:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_1

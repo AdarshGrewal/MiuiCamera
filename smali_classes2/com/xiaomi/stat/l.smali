@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;ZLjava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/l;->c:Lcom/xiaomi/stat/e;
 
     iput-boolean p2, p0, Lcom/xiaomi/stat/l;->a:Z
@@ -34,19 +33,16 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/d/m;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/stat/l;->a:Z
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->c(Z)V
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/b/f;->a()Lcom/xiaomi/stat/b/f;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/stat/b/f;->a(Z)V
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/b;->e()Z
 
@@ -65,7 +60,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/stat/l;->b:Ljava/lang/String;
 
@@ -77,13 +71,11 @@
 
     return-void
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/stat/l;->b:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->a(Ljava/lang/String;)V
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/stat/b/f;->a()Lcom/xiaomi/stat/b/f;
 
     move-result-object v0

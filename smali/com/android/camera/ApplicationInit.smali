@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,18 +19,14 @@
 .method public static init(Landroid/content/Context;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
-    invoke-static {p0}, Lcom/android/camera/display/Display;->init(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/camera/Display;->init(Landroid/content/Context;)V
 
-    .line 3
     invoke-static {p0}, Lcom/android/camera/Util;->initialize(Landroid/content/Context;)V
 
-    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

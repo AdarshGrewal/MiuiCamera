@@ -56,10 +56,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->parent:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;
 
     return-void
@@ -70,7 +68,6 @@
 .method public onComplete()V
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
     const-wide/16 v2, 0x0
@@ -79,13 +76,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 2
     iput-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->produced(J)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->parent:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;
 
@@ -97,7 +91,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
     const-wide/16 v2, 0x0
@@ -106,13 +99,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 2
     iput-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->produced(J)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->parent:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;
 
@@ -129,7 +119,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
     const-wide/16 v2, 0x1
@@ -138,7 +127,6 @@
 
     iput-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->produced:J
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;->parent:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;
 
     invoke-interface {v0, p1}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;->innerNext(Ljava/lang/Object;)V
@@ -149,7 +137,6 @@
 .method public onSubscribe(Lorg/reactivestreams/Subscription;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->setSubscription(Lorg/reactivestreams/Subscription;)V
 
     return-void

@@ -40,38 +40,30 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     new-array v1, v0, [F
 
-    .line 2
     iput-object v1, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticValues:[F
 
     new-array v0, v0, [F
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mCostTime:J
 
     const/4 v0, 0x1
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticChanged:Z
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->resetMagneticInfo()V
 
-    .line 8
     sget-object v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     const-string v1, "init MagneticSensorDetectImp"
@@ -84,7 +76,6 @@
 .method public static create()Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;
 
     invoke-direct {v0}, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;-><init>()V
@@ -95,7 +86,6 @@
 .method private printMagnetInfo()V
     .locals 10
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -154,7 +144,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -211,12 +200,10 @@
 .method public isLockHDRChecker(Ljava/lang/String;)Z
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticChanged:Z
 
     xor-int/lit8 v0, v0, 0x1
 
-    .line 2
     sget-object v1, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -254,7 +241,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticValues:[F
 
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -274,7 +260,6 @@
 .method public recordMagneticInfo()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticValues:[F
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
@@ -285,17 +270,14 @@
 
     invoke-static {v0, v2, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mCostTime:J
 
-    .line 4
     iput-boolean v2, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticChanged:Z
 
     return-void
@@ -304,7 +286,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -319,7 +300,6 @@
 .method public resetMagneticInfo()V
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
     const-wide/16 v2, 0x0
@@ -338,7 +318,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
 
     const/4 v4, 0x0
@@ -349,16 +328,13 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iput-wide v2, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
-    .line 4
     iput-wide v2, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mCostTime:J
 
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticChanged:Z
 
     return-void
@@ -367,7 +343,6 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -382,10 +357,8 @@
 .method public updateMagneticDetection()V
     .locals 14
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->printMagnetInfo()V
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
     const-wide/16 v2, 0x0
@@ -394,12 +367,10 @@
 
     if-lez v0, :cond_7
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 4
     iget v2, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mAECLux:F
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -425,7 +396,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     :goto_0
     sget-object v2, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
@@ -436,7 +406,6 @@
 
     move v2, v5
 
-    .line 6
     :goto_1
     iget-wide v6, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
@@ -452,7 +421,6 @@
 
     if-lez v3, :cond_2
 
-    .line 7
     sget-object v2, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     const-string v3, "Timeout, no trigger"
@@ -464,7 +432,6 @@
     :cond_2
     if-eqz v2, :cond_6
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
 
     aget v2, v2, v5
@@ -479,7 +446,6 @@
 
     move-result v2
 
-    .line 9
     iget-object v3, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
 
     aget v3, v3, v4
@@ -494,7 +460,6 @@
 
     move-result v3
 
-    .line 10
     iget-object v6, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mPostMagneticValues:[F
 
     const/4 v7, 0x2
@@ -515,7 +480,6 @@
 
     add-float/2addr v8, v6
 
-    .line 11
     iget-wide v9, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mCostTime:J
 
     cmp-long v9, v0, v9
@@ -528,7 +492,6 @@
 
     if-ltz v9, :cond_4
 
-    .line 12
     :cond_3
     sget-object v9, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
@@ -638,7 +601,6 @@
 
     invoke-static {v9, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mCostTime:J
 
     const-wide/16 v2, 0x1f4
@@ -652,19 +614,16 @@
 
     if-gez v0, :cond_5
 
-    .line 14
     sget-object v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
     const-string v1, "Magnetic no changed"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iput-boolean v5, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mMagneticChanged:Z
 
     goto :goto_2
 
-    .line 16
     :cond_5
     sget-object v0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->TAG:Ljava/lang/String;
 
@@ -672,12 +631,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->resetMagneticInfo()V
 
     goto :goto_2
 
-    .line 18
     :cond_6
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->resetMagneticInfo()V
 
@@ -689,7 +646,6 @@
 .method public updatePreview(Landroid/hardware/camera2/CaptureResult;)V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MagneticSensorDetectImp;->mLastCaptureTime:J
 
     const-wide/16 v2, 0x0
@@ -698,7 +654,6 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera2/CaptureResultParser;->getAecLux(Landroid/hardware/camera2/CaptureResult;)F
 
     move-result p1

@@ -40,13 +40,10 @@
 .method public constructor <init>(Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/functions/Functions$TimestampFunction;->unit:Ljava/util/concurrent/TimeUnit;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/functions/Functions$TimestampFunction;->scheduler:Lio/reactivex/Scheduler;
 
     return-void
@@ -70,7 +67,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lio/reactivex/schedulers/Timed;
 
     iget-object v1, p0, Lio/reactivex/internal/functions/Functions$TimestampFunction;->scheduler:Lio/reactivex/Scheduler;
@@ -96,7 +92,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/internal/functions/Functions$TimestampFunction;->apply(Ljava/lang/Object;)Lio/reactivex/schedulers/Timed;
 
     move-result-object p1

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     move-object v0, p0
 
-    .line 1
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -51,7 +49,6 @@
 
     move-result v1
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getScrollY()I
 
     move-result v3
@@ -62,7 +59,6 @@
 
     move-result v2
 
-    .line 3
     iget-object v3, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v3}, Lmiuix/springback/trigger/CustomTrigger;->access$000(Lmiuix/springback/trigger/CustomTrigger;)Landroid/widget/RelativeLayout;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/widget/RelativeLayout;->measure(II)V
 
-    .line 4
     iget-object v3, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v3}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -80,7 +75,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 5
     iget-object v3, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v3}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -89,7 +83,6 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/view/View;->measure(II)V
 
-    .line 6
     :cond_0
     iget-object v3, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -99,7 +92,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 7
     iget-object v3, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v3}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateView()Landroid/view/View;
@@ -108,7 +100,6 @@
 
     invoke-virtual {v3, v1, v2}, Landroid/view/View;->measure(II)V
 
-    .line 8
     :cond_1
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -128,7 +119,6 @@
 
     invoke-virtual {v1, v4, v2, v3, v4}, Landroid/widget/RelativeLayout;->layout(IIII)V
 
-    .line 9
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v1}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -137,7 +127,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 10
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v1}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -172,7 +161,6 @@
 
     invoke-virtual {v1, v4, v2, v3, v5}, Landroid/view/View;->layout(IIII)V
 
-    .line 11
     :cond_2
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -182,7 +170,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 12
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v1}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateView()Landroid/view/View;
@@ -199,7 +186,6 @@
 
     invoke-virtual {v1, v4, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    .line 13
     :cond_3
     iget-object v5, v0, Lmiuix/springback/trigger/CustomTrigger$1;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 

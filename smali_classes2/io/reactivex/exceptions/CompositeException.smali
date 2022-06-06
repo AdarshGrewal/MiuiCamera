@@ -47,22 +47,18 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
-    .line 5
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 6
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p1, :cond_2
 
-    .line 7
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -80,12 +76,10 @@
 
     check-cast v2, Ljava/lang/Throwable;
 
-    .line 8
     instance-of v3, v2, Lio/reactivex/exceptions/CompositeException;
 
     if-eqz v3, :cond_0
 
-    .line 9
     check-cast v2, Lio/reactivex/exceptions/CompositeException;
 
     invoke-virtual {v2}, Lio/reactivex/exceptions/CompositeException;->getExceptions()Ljava/util/List;
@@ -99,12 +93,10 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 10
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 11
     :cond_1
     new-instance v2, Ljava/lang/NullPointerException;
 
@@ -116,7 +108,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_2
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -126,7 +117,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 13
     :cond_3
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
@@ -134,17 +124,14 @@
 
     if-nez p1, :cond_4
 
-    .line 14
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 15
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lio/reactivex/exceptions/CompositeException;->exceptions:Ljava/util/List;
 
-    .line 16
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,7 +156,6 @@
 
     return-void
 
-    .line 17
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -185,14 +171,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "exceptions was null"
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -204,7 +188,6 @@
 
     move-result-object p1
 
-    .line 3
     :goto_0
     invoke-direct {p0, p1}, Lio/reactivex/exceptions/CompositeException;-><init>(Ljava/lang/Iterable;)V
 
@@ -214,7 +197,6 @@
 .method private appendStackTrace(Ljava/lang/StringBuilder;Ljava/lang/Throwable;Ljava/lang/String;)V
     .locals 5
 
-    .line 1
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -223,7 +205,6 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p2}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v0
@@ -239,7 +220,6 @@
 
     const-string v4, "\t\tat "
 
-    .line 3
     invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -250,7 +230,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -260,10 +239,8 @@
 
     const-string p3, "\tCaused by: "
 
-    .line 5
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object p2
@@ -289,12 +266,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
@@ -305,12 +280,10 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     :goto_0
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -334,21 +307,18 @@
 .method private getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 2
     iget-object v1, p0, Lio/reactivex/exceptions/CompositeException;->cause:Ljava/lang/Throwable;
 
     if-ne v1, v0, :cond_0
 
     goto :goto_2
 
-    .line 3
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
@@ -378,21 +348,18 @@
 .method private printStackTrace(Lio/reactivex/exceptions/CompositeException$PrintStreamOrWriter;)V
     .locals 7
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/RuntimeException;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v2
@@ -408,7 +375,6 @@
 
     const-string v6, "\tat "
 
-    .line 7
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -419,7 +385,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v1, p0, Lio/reactivex/exceptions/CompositeException;->exceptions:Ljava/util/List;
 
@@ -446,7 +411,6 @@
 
     const-string v5, "  ComposedException "
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -457,14 +421,12 @@
 
     const-string v5, "\t"
 
-    .line 10
     invoke-direct {p0, v0, v4, v5}, Lio/reactivex/exceptions/CompositeException;->appendStackTrace(Ljava/lang/StringBuilder;Ljava/lang/Throwable;Ljava/lang/String;)V
 
     add-int/2addr v3, v2
 
     goto :goto_1
 
-    .line 11
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -482,23 +444,19 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lio/reactivex/exceptions/CompositeException;->cause:Ljava/lang/Throwable;
 
     if-nez v0, :cond_4
 
-    .line 2
     new-instance v0, Lio/reactivex/exceptions/CompositeException$CompositeExceptionCausalChain;
 
     invoke-direct {v0}, Lio/reactivex/exceptions/CompositeException$CompositeExceptionCausalChain;-><init>()V
 
-    .line 3
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 4
     iget-object v2, p0, Lio/reactivex/exceptions/CompositeException;->exceptions:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -520,7 +478,6 @@
 
     check-cast v4, Ljava/lang/Throwable;
 
-    .line 5
     invoke-interface {v1, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v5
@@ -529,16 +486,13 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-direct {p0, v4}, Lio/reactivex/exceptions/CompositeException;->getListOfCauses(Ljava/lang/Throwable;)Ljava/util/List;
 
     move-result-object v5
 
-    .line 8
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -556,14 +510,12 @@
 
     check-cast v6, Ljava/lang/Throwable;
 
-    .line 9
     invoke-interface {v1, v6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 10
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string v6, "Duplicate found in causal chain so cropping to prevent loop ..."
@@ -572,7 +524,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_1
     invoke-interface {v1, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -580,14 +531,12 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     :try_start_1
     invoke-virtual {v3, v4}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 13
     :catchall_0
     :try_start_2
     invoke-direct {p0, v3}, Lio/reactivex/exceptions/CompositeException;->getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
@@ -596,11 +545,9 @@
 
     goto :goto_0
 
-    .line 14
     :cond_3
     iput-object v0, p0, Lio/reactivex/exceptions/CompositeException;->cause:Ljava/lang/Throwable;
 
-    .line 15
     :cond_4
     iget-object v0, p0, Lio/reactivex/exceptions/CompositeException;->cause:Ljava/lang/Throwable;
     :try_end_2
@@ -629,7 +576,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/exceptions/CompositeException;->exceptions:Ljava/util/List;
 
     return-object v0
@@ -638,7 +584,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/exceptions/CompositeException;->message:Ljava/lang/String;
 
     return-object v0
@@ -647,7 +592,6 @@
 .method public printStackTrace()V
     .locals 1
 
-    .line 1
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {p0, v0}, Lio/reactivex/exceptions/CompositeException;->printStackTrace(Ljava/io/PrintStream;)V
@@ -658,7 +602,6 @@
 .method public printStackTrace(Ljava/io/PrintStream;)V
     .locals 1
 
-    .line 2
     new-instance v0, Lio/reactivex/exceptions/CompositeException$WrappedPrintStream;
 
     invoke-direct {v0, p1}, Lio/reactivex/exceptions/CompositeException$WrappedPrintStream;-><init>(Ljava/io/PrintStream;)V
@@ -671,7 +614,6 @@
 .method public printStackTrace(Ljava/io/PrintWriter;)V
     .locals 1
 
-    .line 3
     new-instance v0, Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;
 
     invoke-direct {v0, p1}, Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;-><init>(Ljava/io/PrintWriter;)V
@@ -684,7 +626,6 @@
 .method public size()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/exceptions/CompositeException;->exceptions:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

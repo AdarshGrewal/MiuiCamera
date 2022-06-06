@@ -55,7 +55,7 @@
 
 .field public final mLock:Ljava/lang/Object;
 
-.field public final mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+.field public final mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
 .field public refreshRow:I
 
@@ -72,73 +72,58 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->index:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshRow:I
 
     const/4 v1, 0x4
 
     new-array v1, v1, [D
 
-    .line 4
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->bgColor:[D
 
-    .line 5
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
-    .line 6
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->contextWeakReference:Ljava/lang/ref/WeakReference;
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->create(Landroid/content/Context;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
-    .line 8
     invoke-virtual {p1, p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setLoadCompleteListener(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$LoadCompleteListener;)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setItemTrigger()V
 
-    .line 10
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object p1
 
-    const-class v1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p1, v1}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
+    invoke-virtual {p1}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 11
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshRow:I
 
     return-void
@@ -155,23 +140,19 @@
 .method public static getInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -182,7 +163,6 @@
 
     sput-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -197,7 +177,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
@@ -208,7 +187,6 @@
 .method public static getJustInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     return-object v0
@@ -231,12 +209,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->CreateEmotionItem(Ljava/util/List;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance$CreateEmoticonListener;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
@@ -249,7 +225,6 @@
 .method public Render([BIIII)I
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     move-object v1, p1
@@ -272,52 +247,38 @@
 .method public clearAvatar()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
     const-string v1, "clearAvatar  x2"
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
-    if-eqz v0, :cond_0
-
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->clearAll()V
 
-    :cond_0
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
-    .line 5
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->clear()V
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     if-eqz v1, :cond_1
 
-    .line 7
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->clear()V
-
-    .line 8
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
-
-    .line 9
-    :cond_1
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
-
-    if-eqz v1, :cond_2
-
-    .line 10
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
-    .line 11
-    :cond_2
+    :cond_1
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     return-void
@@ -326,7 +287,6 @@
 .method public clearOfflineAll()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->clearOfflineAll()V
@@ -337,7 +297,6 @@
 .method public copyFuAvatar()Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     const/4 v1, 0x1
@@ -348,7 +307,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->copy()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     move-result-object v0
@@ -357,7 +315,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
@@ -422,7 +379,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->createIconItem(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Ljava/util/List;)Z
@@ -435,7 +391,6 @@
 .method public destroyEmotionItem()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->destroyEmotionItem()V
@@ -446,7 +401,6 @@
 .method public enterARTemp()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->copy()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
@@ -455,7 +409,6 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->createAvatarInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
@@ -464,19 +417,16 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarTempInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setAvatar(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarTempInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->addAvatarInstance(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
@@ -487,7 +437,6 @@
 .method public enterTheFrontDesk()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->enterTheFrontDesk()V
@@ -498,7 +447,6 @@
 .method public exitBackstage()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->exitBackstage()V
@@ -509,7 +457,6 @@
 .method public getDeviceOrientation()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getDeviceOrientation()I
@@ -533,7 +480,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     const/16 v1, 0x19
@@ -548,7 +494,6 @@
 .method public getExpressionData()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getExpressionData()[F
@@ -561,7 +506,6 @@
 .method public getFaceNum()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->isTracking()I
@@ -574,7 +518,6 @@
 .method public getFaceOcclusion()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getFaceOcclusion()I
@@ -587,7 +530,6 @@
 .method public getFaceRect()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getFaceRectData()[F
@@ -600,7 +542,6 @@
 .method public getFuAvatar()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     return-object v0
@@ -609,7 +550,6 @@
 .method public getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
@@ -622,7 +562,6 @@
 .method public getFuIconTexId()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getFuTexIconId()I
@@ -635,7 +574,6 @@
 .method public getFuScene()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     return-object v0
@@ -644,7 +582,6 @@
 .method public getIsInitItemFinish()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->getIsInitItemFinish()Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -661,7 +598,6 @@
 .method public getLandmarksData()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getLandmarksData()[F
@@ -674,7 +610,6 @@
 .method public getRefreshRow()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshRow:I
 
     return v0
@@ -683,7 +618,6 @@
 .method public getRotMode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getRotMode()I
@@ -696,7 +630,6 @@
 .method public getRotationData()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getRotationData()[F
@@ -709,7 +642,6 @@
 .method public getShowIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->index:I
 
     return v0
@@ -718,7 +650,6 @@
 .method public getTongueData()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->getTongueData()[F
@@ -733,7 +664,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;Z)V
 
     return-void
@@ -742,7 +672,6 @@
 .method public isCanRefresh()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->isCanRefresh()Z
@@ -755,7 +684,6 @@
 .method public isDif()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
@@ -770,7 +698,6 @@
 .method public isFuGLPrepared()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->fuIsGLPrepared()Z
@@ -783,7 +710,6 @@
 .method public isFuIsGLPrepared()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->isFuIsGLPrepared()Z
@@ -796,7 +722,6 @@
 .method public isNeedEnterFron()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->isNeedEnterFron()Z
@@ -809,23 +734,19 @@
 .method public onAvatarBindEnd()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     invoke-interface {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;->onAvatarBindEnd()V
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -844,7 +765,6 @@
 .method public onCameraChange(ZI)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->onCameraChange(ZI)V
@@ -855,23 +775,19 @@
 .method public onComplete()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     invoke-interface {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;->onLoadEnd()V
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -890,7 +806,6 @@
 .method public onItemTrigger(Ljava/lang/String;)V
     .locals 4
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -899,25 +814,22 @@
 
     if-eqz v0, :cond_0
 
-    const-string p1, "name: empty"
+    const-string/jumbo p1, "name: empty"
 
-    .line 2
     invoke-static {v1, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FileUtil;->getLastName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "name:"
+    const-string/jumbo v3, "name:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -942,23 +854,19 @@
 .method public onSceneBindEnd()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     invoke-interface {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;->onSceneBindEnd()V
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -977,7 +885,6 @@
 .method public onSurfaceCreated()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->onSurfaceCreated()Z
@@ -990,15 +897,9 @@
 .method public onSurfaceDestroy()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->onSurfaceDestroyed()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->instance:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     return-void
 .end method
@@ -1006,7 +907,6 @@
 .method public queueEvent(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->queueEvent(Ljava/lang/Runnable;)V
@@ -1017,7 +917,6 @@
 .method public queueIsEmpty()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->queueIsEmpty()Z
@@ -1030,7 +929,6 @@
 .method public queueNextEvent(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->queueNextEvent(Ljava/lang/Runnable;)V
@@ -1041,7 +939,6 @@
 .method public refresh()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->refresh()V
@@ -1052,7 +949,6 @@
 .method public refreshEditData()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->refreshEditData()V
@@ -1063,12 +959,10 @@
 .method public refreshFuScene()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;->getFuScene()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     move-result-object v0
@@ -1084,7 +978,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     return-void
@@ -1093,7 +986,6 @@
 .method public rendIconEnd(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->rendIconEnd(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
@@ -1104,10 +996,8 @@
 .method public rendIconStart(ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshRow:I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1, p2, p3, p4, p5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->rendIconStart(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;)V
@@ -1118,7 +1008,6 @@
 .method public renderIcon(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->renderIcon(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)Z
@@ -1131,7 +1020,6 @@
 .method public resetAllFront()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     if-eqz v0, :cond_0
@@ -1146,7 +1034,6 @@
 
     const/4 v9, 0x3
 
-    .line 2
     invoke-virtual/range {v0 .. v9}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setTargetPosition(DDDDI)V
 
     :cond_0
@@ -1156,7 +1043,6 @@
 .method public resetAllSide()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     const-wide/16 v1, 0x0
@@ -1177,7 +1063,6 @@
 .method public resetEditData()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->resetEditData()V
@@ -1188,21 +1073,18 @@
 .method public resetFuAvatar(Z)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     if-nez p1, :cond_0
 
-    .line 2
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
     const-string v0, "mimojifu tempFuAvatar null"
 
-    invoke-static {p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
@@ -1210,10 +1092,8 @@
 
     const/4 p1, 0x0
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->copy()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
@@ -1222,12 +1102,10 @@
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setAvatar(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
@@ -1238,25 +1116,20 @@
 .method public save()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->save(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->clear()V
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
-    .line 5
     :cond_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1277,7 +1150,6 @@
 .method public setColor(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setColor(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;)V
@@ -1288,19 +1160,16 @@
 .method public setDefultFuScene()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "test setDefultFuScene"
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
@@ -1308,31 +1177,26 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setBackground(Ljava/lang/String;)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     const-string v2, "light/light04.bundle"
 
     invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setLight(Ljava/lang/String;)V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     const-string v2, "camera/xiaomi_bg_cam.bundle"
 
     invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setCamera(Ljava/lang/String;)V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     invoke-virtual {p0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
 
-    .line 8
     monitor-exit v0
 
     return-void
@@ -1350,7 +1214,6 @@
 .method public setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     const-string v1, "  "
@@ -1367,7 +1230,6 @@
 
     goto :goto_2
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
@@ -1415,19 +1277,16 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
 
     return-void
 
-    .line 5
     :cond_3
     :goto_2
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
@@ -1480,7 +1339,6 @@
 .method public setFuAvatarColor(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->setColor(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;)V
@@ -1491,21 +1349,17 @@
 .method public setFuScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
 
-    .line 4
     monitor-exit v0
 
     return-void
@@ -1523,7 +1377,6 @@
 .method public setFuTexIconId(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->setFuTexIconId(I)V
@@ -1534,12 +1387,10 @@
 .method public setItem(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setItem(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
@@ -1550,7 +1401,6 @@
 .method public setListener(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->listener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     return-void
@@ -1559,7 +1409,6 @@
 .method public setNeedTrackFace(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setNeedTrackFace(Z)V
@@ -1570,7 +1419,6 @@
 .method public setRefreshRow(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshRow:I
 
     return-void
@@ -1579,7 +1427,6 @@
 .method public setRendIconCallBack(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$RendIconCallBack;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setRendIconCallBack(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$RendIconCallBack;)V
@@ -1590,12 +1437,10 @@
 .method public setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
     .locals 2
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     const/4 v1, 0x0
@@ -1610,7 +1455,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderModeEdit(IZ)V
 
     return-void
@@ -1619,7 +1463,6 @@
 .method public setRenderModeEdit(IZ)V
     .locals 4
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->bgColor:[D
 
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
@@ -1632,7 +1475,6 @@
 
     aput-wide v1, v0, v3
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->bgColor:[D
 
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
@@ -1645,7 +1487,6 @@
 
     aput-wide v1, v0, v3
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->bgColor:[D
 
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
@@ -1658,7 +1499,6 @@
 
     aput-wide v1, v0, v3
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->bgColor:[D
 
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
@@ -1671,14 +1511,26 @@
 
     aput-wide v1, v0, p1
 
-    .line 6
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x6
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x8
+
+    :goto_0
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Edit:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Edit:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
@@ -1693,7 +1545,6 @@
 .method public setRotDelta(F)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     float-to-double v1, p1
@@ -1706,7 +1557,6 @@
 .method public setRotMode(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->setRotMode(I)V
@@ -1717,12 +1567,10 @@
 .method public setScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->createSceneInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
@@ -1731,18 +1579,15 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setCurrentSceneInstance(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;->setScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     return-void
@@ -1753,7 +1598,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->tempFuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     return-void
@@ -1764,7 +1608,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;ZZ)V
 
     return-void
@@ -1773,18 +1616,15 @@
 .method public showAvatar(Ljava/lang/String;ZZ)V
     .locals 4
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     if-nez v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->createSceneInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
@@ -1793,18 +1633,15 @@
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
-    .line 5
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->setCurrentSceneInstance(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;)V
 
-    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     if-nez v1, :cond_1
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->createAvatarInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
@@ -1813,12 +1650,10 @@
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->addCurrentAvatarInstance(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;)V
 
-    .line 9
     :cond_1
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->avatar_dir:Ljava/lang/String;
 
@@ -1830,7 +1665,6 @@
 
     if-eqz p2, :cond_6
 
-    .line 10
     :cond_2
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
@@ -1854,9 +1688,8 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->load(Ljava/lang/String;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     move-result-object p2
@@ -1865,17 +1698,14 @@
 
     const-string p2, "cartoon"
 
-    .line 12
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
-    .line 13
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     if-nez v1, :cond_3
 
-    .line 14
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;-><init>()V
@@ -1885,21 +1715,18 @@
     :cond_3
     if-nez p3, :cond_4
 
-    .line 15
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     const-string v1, "default_bg.bundle"
 
     invoke-virtual {p3, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setBackground(Ljava/lang/String;)V
 
-    .line 16
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     const-string v1, "camera/xiaomi_bg_cam.bundle"
 
     invoke-virtual {p3, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setCamera(Ljava/lang/String;)V
 
-    .line 17
     :cond_4
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
 
@@ -1909,7 +1736,6 @@
 
     invoke-virtual {p3, v1}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpSwitchAvatar(I)V
 
-    .line 18
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     if-eqz p2, :cond_5
@@ -1924,29 +1750,24 @@
     :goto_0
     invoke-virtual {p3, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->setLight(Ljava/lang/String;)V
 
-    .line 19
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuSceneInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;
 
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->mFuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
 
     invoke-virtual {p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuSceneInstance;->setScene(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;)V
 
-    .line 20
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
 
     invoke-virtual {p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->setAvatar(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;)V
 
-    .line 21
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->avatar_dir:Ljava/lang/String;
 
-    .line 22
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->startTask()Z
 
-    .line 23
     :cond_6
     monitor-exit v0
 
@@ -1965,7 +1786,6 @@
 .method public showOrHideAvatar(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->showOrHideAvatar(Z)V
@@ -1976,10 +1796,7 @@
 .method public startRecordGif(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance$EmoticonPackListener;)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
-
-    if-eqz v0, :cond_0
 
     const/16 v4, 0x19
 
@@ -1991,17 +1808,14 @@
 
     move-object v5, p4
 
-    .line 2
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->generateEmoticonPack(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;IILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance$EmoticonPackListener;)V
 
-    :cond_0
     return-void
 .end method
 
 .method public stopIconThread()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->stopIconThread()V
@@ -2012,7 +1826,6 @@
 .method public takeBuffer()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->getIconByte()[B
@@ -2025,12 +1838,10 @@
 .method public updateConfig()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuController:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->updateConfig()V
 
     :cond_0
@@ -2040,21 +1851,18 @@
 .method public updateEmotion()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatarInstance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->TAG:Ljava/lang/String;
 
     const-string v1, "avatar is null "
 
-    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance;->updateEmotion()V
 

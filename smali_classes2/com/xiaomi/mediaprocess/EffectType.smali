@@ -65,7 +65,6 @@
 .method public static constructor <clinit>()V
     .locals 17
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v1, 0x0
@@ -76,7 +75,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->BasicTransitionFilter2:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v2, 0x1
@@ -87,7 +85,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->ExtractCoverFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v3, 0x2
@@ -98,7 +95,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->PhotoFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v4, 0x3
@@ -109,7 +105,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->PngTransformFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v5, 0x4
@@ -120,7 +115,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->ReverseFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v6, 0x5
@@ -131,7 +125,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->RotateFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v7, 0x6
@@ -142,7 +135,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->ScaleFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/4 v8, 0x7
@@ -153,7 +145,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->SetptsExtFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v9, 0x8
@@ -164,7 +155,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TrimFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v10, 0x9
@@ -175,7 +165,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TransitionFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 11
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v11, 0xa
@@ -186,7 +175,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TransitionOverlappFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 12
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v12, 0xb
@@ -197,7 +185,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TransitionEraseFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 13
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v13, 0xc
@@ -208,7 +195,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TransitionRotateFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 14
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v14, 0xd
@@ -219,7 +205,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->TransitionZoomFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 15
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v15, 0xe
@@ -230,7 +215,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->AF_Mp3MixFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 16
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v14, 0xf
@@ -241,7 +225,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->AF_SpeedFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 17
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v15, 0x10
@@ -252,7 +235,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->AudioMixerFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 18
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v14, 0x11
@@ -263,7 +245,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->BasicImageFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 19
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v15, 0x12
@@ -274,7 +255,6 @@
 
     sput-object v0, Lcom/xiaomi/mediaprocess/EffectType;->CropFilter:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 20
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     const/16 v14, 0x13
@@ -289,7 +269,6 @@
 
     new-array v15, v15, [Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 21
     sget-object v16, Lcom/xiaomi/mediaprocess/EffectType;->BasicTransitionFilter2:Lcom/xiaomi/mediaprocess/EffectType;
 
     aput-object v16, v15, v1
@@ -393,10 +372,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/mediaprocess/EffectType;->nCode:I
 
     return-void
@@ -405,10 +382,8 @@
 .method public static int2enum(I)Lcom/xiaomi/mediaprocess/EffectType;
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/EffectType;->BasicTransitionFilter2:Lcom/xiaomi/mediaprocess/EffectType;
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/EffectType;->values()[Lcom/xiaomi/mediaprocess/EffectType;
 
     move-result-object v1
@@ -422,7 +397,6 @@
 
     aget-object v4, v1, v3
 
-    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -443,7 +417,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/mediaprocess/EffectType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/mediaprocess/EffectType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -458,7 +431,6 @@
 .method public static values()[Lcom/xiaomi/mediaprocess/EffectType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/EffectType;->$VALUES:[Lcom/xiaomi/mediaprocess/EffectType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/mediaprocess/EffectType;->clone()Ljava/lang/Object;
@@ -475,7 +447,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mediaprocess/EffectType;->nCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

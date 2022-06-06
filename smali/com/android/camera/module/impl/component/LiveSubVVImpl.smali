@@ -75,7 +75,7 @@
 
 .field public mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
 
-.field public mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+.field public mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
 .field public mTempVideoPath:Ljava/lang/String;
 
@@ -88,7 +88,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,7 +106,6 @@
 
     sput-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->VV_DIR:Ljava/lang/String;
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +124,6 @@
 
     sput-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TEMPLATE_PATH:Ljava/lang/String;
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +142,6 @@
 
     sput-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->WORKSPACE_PATH:Ljava/lang/String;
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,28 +166,22 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentOrientation:I
 
     const/16 v0, 0x200
 
-    .line 3
     iput v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TABLESIZE:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mActivity:Lcom/android/camera/ActivityBase;
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCameraAppImpl()Lcom/android/camera/CameraAppImpl;
 
     move-result-object v0
@@ -202,14 +192,12 @@
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
-    .line 7
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    .line 8
     new-instance p1, Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mActivity:Lcom/android/camera/ActivityBase;
@@ -222,7 +210,6 @@
 
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mHandler:Landroid/os/Handler;
 
-    .line 9
     new-instance p1, Lcom/android/camera/module/AudioController;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mActivity:Lcom/android/camera/ActivityBase;
@@ -238,148 +225,139 @@
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ui/RenderEngineAdapter;
+.method public static synthetic access$000(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Z
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Z
-    .locals 0
-
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mFrameAvailable:Z
 
     return p0
 .end method
 
-.method public static synthetic access$1000(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
+.method public static synthetic access$002(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$102(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
-    .locals 0
-
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mFrameAvailable:Z
 
     return p1
 .end method
 
-.method public static synthetic access$1100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/data/observeable/VMProcessing;
+.method public static synthetic access$100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ActivityBase;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mActivity:Lcom/android/camera/ActivityBase;
 
     return-object p0
 .end method
 
-.method public static synthetic access$1200(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
+.method public static synthetic access$1002(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->closeFileDescriptor()V
-
-    return-void
-.end method
-
-.method public static synthetic access$200()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static synthetic access$300(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$400(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->notifyModuleRecordingFinish(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$502(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mNeedStop:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$602(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
-
-    return-object p1
-.end method
-
-.method public static synthetic access$700(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->updateRecordingTime(J)V
-
-    return-void
-.end method
-
-.method public static synthetic access$800(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/fragment/vv/VVItem;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$902(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
-    .locals 0
-
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mPlayFinished:Z
 
     return p1
 .end method
 
+.method public static synthetic access$1100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1200(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/data/observeable/VMProcessing;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1300(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->closeFileDescriptor()V
+
+    return-void
+.end method
+
+.method public static synthetic access$200(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ui/CameraRenderEngine;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$300()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static synthetic access$400(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$500(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->notifyModuleRecordingFinish(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic access$602(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mNeedStop:Z
+
+    return p1
+.end method
+
+.method public static synthetic access$702(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
+
+    return-object p1
+.end method
+
+.method public static synthetic access$800(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->updateRecordingTime(J)V
+
+    return-void
+.end method
+
+.method public static synthetic access$900(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/fragment/vv/VVItem;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
+
+    return-object p0
+.end method
+
 .method private closeFileDescriptor()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "close fd"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
@@ -392,7 +370,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -403,7 +380,6 @@
 .method public static create(Lcom/android/camera/ActivityBase;)Lcom/android/camera/module/impl/component/LiveSubVVImpl;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;-><init>(Lcom/android/camera/ActivityBase;)V
@@ -414,14 +390,12 @@
 .method private initFilter(Ljava/lang/String;)V
     .locals 13
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "initFilter"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -430,13 +404,11 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -450,24 +422,19 @@
 
     const/16 v1, 0x200
 
-    .line 5
     :try_start_0
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 6
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v3, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 7
     iput v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 8
     iput v1, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 9
     invoke-static {p1, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -479,7 +446,6 @@
     :catch_0
     move-exception p1
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
     move-object p1, v0
@@ -489,7 +455,6 @@
 
     return-void
 
-    .line 11
     :cond_2
     :try_start_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->hasAlpha()Z
@@ -518,19 +483,16 @@
 
     move-object v3, v11
 
-    .line 12
     invoke-virtual/range {v2 .. v9}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
     if-eqz p1, :cond_3
 
-    .line 13
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 14
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_3
@@ -550,12 +512,10 @@
 
     add-int/2addr v4, v3
 
-    .line 15
     aget v5, v11, v4
 
     if-eqz v10, :cond_4
 
-    .line 16
     invoke-static {v5}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v6
@@ -568,7 +528,6 @@
     :goto_3
     mul-int/lit16 v6, v6, 0x100
 
-    .line 17
     invoke-static {v5}, Landroid/graphics/Color;->blue(I)I
 
     move-result v7
@@ -591,7 +550,6 @@
 
     add-int/2addr v6, v5
 
-    .line 18
     aput v6, v12, v4
 
     add-int/lit8 v3, v3, 0x1
@@ -606,21 +564,18 @@
     :cond_6
     const/high16 v1, 0x800000
 
-    .line 19
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
-    .line 20
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 21
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
@@ -629,14 +584,12 @@
 
     invoke-virtual {v1, v12}, Ljava/nio/IntBuffer;->put([I)Ljava/nio/IntBuffer;
 
-    .line 22
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 23
     sget-object p1, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v0, "initFilter ok"
@@ -648,10 +601,8 @@
     :catch_1
     move-exception p1
 
-    .line 24
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
-    .line 25
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
     return-void
@@ -660,19 +611,16 @@
 .method private makeSureVVProcess()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xe6
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -688,7 +636,6 @@
 .method private notifyModuleRecordingFinish(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
     move-result v0
@@ -697,72 +644,60 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 3
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
     move-object p1, v1
 
-    .line 6
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->resetFlag()V
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->add(Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getTargetThumbPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getRawInfoPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 12
     invoke-static {p1}, Lio/reactivex/Single;->just(Ljava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object p1
 
     sget-object v2, Lcom/xiaomi/camera/rx/CameraSchedulers;->sCameraSetupScheduler:Lio/reactivex/Scheduler;
 
-    .line 13
     invoke-virtual {p1, v2}, Lio/reactivex/Single;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -771,7 +706,6 @@
 
     invoke-direct {v2, p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl$6;-><init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
 
-    .line 14
     invoke-virtual {p1, v2}, Lio/reactivex/Single;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -780,15 +714,12 @@
 
     invoke-direct {v2, p0, v0, v1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;-><init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     invoke-virtual {p1, v2}, Lio/reactivex/Single;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
 
-    .line 16
     invoke-virtual {p1}, Lio/reactivex/Single;->subscribe()Lio/reactivex/disposables/Disposable;
 
-    .line 17
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mActivity:Lcom/android/camera/ActivityBase;
 
@@ -796,8 +727,9 @@
 
     move-result-object p1
 
-    .line 18
-    invoke-interface {p1}, Lcom/android/camera/module/Module;->getModuleIndex()I
+    check-cast p1, Lcom/android/camera/module/BaseModule;
+
+    invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->getModuleIndex()I
 
     move-result v0
 
@@ -805,7 +737,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 19
     check-cast p1, Lcom/android/camera/module/LiveModuleSubVV;
 
     const/4 v0, 0x0
@@ -819,10 +750,8 @@
 .method private prepareEffectGraph(Lcom/android/camera/fragment/vv/VVItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
     .locals 6
 
-    .line 1
     iget-object v0, p1, Lcom/android/camera/fragment/vv/VVItem;->musicPath:Ljava/lang/String;
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getFragments()Ljava/util/List;
@@ -831,14 +760,12 @@
 
     invoke-direct {v1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 3
     new-instance p2, Ljava/io/File;
 
     sget-object v2, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->WATERMARK_PATH:Ljava/lang/String;
 
     invoke-direct {p2, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {p2}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -855,14 +782,12 @@
 
     if-lez p2, :cond_0
 
-    .line 5
     sget-object p2, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->WATERMARK_PATH:Ljava/lang/String;
 
     invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
     :cond_0
     sget-object p2, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
@@ -875,38 +800,32 @@
 
     new-array v2, p2, [Ljava/lang/String;
 
-    .line 7
     invoke-interface {v1, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 8
     new-instance v2, Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     invoke-direct {v2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
-    .line 9
     invoke-virtual {v2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->ConstructMediaEffectGraph()V
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->SetAudioMute(Z)V
 
-    .line 11
     iget-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     iget-object p1, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
 
     invoke-virtual {v2, v1, p1}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->AddSourceAndEffectByTemplate([Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     invoke-virtual {p1, v0, p2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->AddAudioTrack(Ljava/lang/String;Z)J
@@ -919,13 +838,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaRecorderRecording:Z
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mNeedRequestRender:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mNeedStop:Z
 
     return-void
@@ -948,10 +864,8 @@
 
     const-wide/16 v0, 0x64
 
-    .line 1
     div-long v4, p1, v0
 
-    .line 2
     sget-object v2, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -974,7 +888,6 @@
 
     sub-long/2addr p1, v0
 
-    .line 3
     sget-object v10, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x0
@@ -987,7 +900,6 @@
 
     move-result-object v0
 
-    .line 4
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -1000,7 +912,6 @@
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;-><init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
 
-    .line 5
     invoke-virtual {v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/Observer;)V
 
     return-void
@@ -1015,7 +926,6 @@
 
     div-float/2addr p1, p2
 
-    .line 1
     sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v0, 0x1
@@ -1040,7 +950,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
     invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;->updateRecordingTime(Ljava/lang/String;)V
@@ -1053,14 +962,12 @@
 .method public OnNeedStopRecording()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "OnNeedStopRecording"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/camera/module/impl/component/LiveSubVVImpl$3;
@@ -1075,7 +982,6 @@
 .method public OnNotifyRender()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "OnNotifyRender"
@@ -1084,13 +990,11 @@
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mNeedRequestRender:Z
 
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->requestRender()V
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
 
     return-void
 .end method
@@ -1098,7 +1002,6 @@
 .method public OnRecordFailed()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "OnRecordFailed"
@@ -1111,46 +1014,39 @@
 .method public OnRecordFinish(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mValidTime:J
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 3
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "OnRecordFinish abort"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 6
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
     return-void
 
-    .line 7
     :cond_1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
@@ -1184,10 +1080,8 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$2;
@@ -1202,28 +1096,23 @@
 .method public synthetic OooO00o()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     if-eqz v0, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "release render"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     invoke-virtual {v0}, Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;->release()V
@@ -1235,7 +1124,6 @@
 .method public canFinishRecording()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->completeSize()I
@@ -1264,22 +1152,18 @@
 .method public combineVideoAudio(Lcom/android/camera/storage/mediastore/VideoFile;)V
     .locals 5
 
-    .line 16
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v1, "combineVideoAudio: E"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 18
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StopPreView()V
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
@@ -1287,7 +1171,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->prepareEffectGraph(Lcom/android/camera/fragment/vv/VVItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
 
-    .line 20
     new-instance v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
@@ -1304,10 +1187,8 @@
 
     const/16 v4, 0x1e
 
-    .line 21
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->ConstructMediaComposeFile(IIII)Z
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     new-instance v1, Lcom/android/camera/module/impl/component/LiveSubVVImpl$9;
@@ -1316,7 +1197,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeNotify(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
 
-    .line 23
     invoke-virtual {p1}, Lcom/android/camera/storage/mediastore/VideoFile;->getCurrentFd()Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
@@ -1325,12 +1205,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 24
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p1
 
-    .line 25
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1353,17 +1231,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileFd(Ljava/io/FileDescriptor;)V
 
-    .line 27
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     invoke-virtual {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->BeginComposeFile()V
 
-    .line 28
     :cond_1
     sget-object p1, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
@@ -1377,15 +1252,12 @@
 .method public combineVideoAudio(Ljava/lang/String;)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StopPreView()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
@@ -1393,7 +1265,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->prepareEffectGraph(Lcom/android/camera/fragment/vv/VVItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
@@ -1410,10 +1281,8 @@
 
     const/16 v4, 0x1e
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->ConstructMediaComposeFile(IIII)Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     new-instance v1, Lcom/android/camera/module/impl/component/LiveSubVVImpl$8;
@@ -1426,7 +1295,6 @@
 
     const/16 v1, 0x9
 
-    .line 7
     :try_start_0
     invoke-static {p1, v0}, Lcom/android/camera/FileCompat;->getParcelFileDescriptor(Ljava/lang/String;Z)Landroid/os/ParcelFileDescriptor;
 
@@ -1438,7 +1306,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p1
@@ -1447,7 +1314,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
@@ -1459,14 +1325,12 @@
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileFd(Ljava/io/FileDescriptor;)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     invoke-virtual {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->BeginComposeFile()V
 
     return-void
 
-    .line 11
     :cond_2
     :goto_0
     sget-object p1, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
@@ -1475,7 +1339,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
 
     invoke-virtual {p1, v1}, Lcom/android/camera/data/observeable/VMProcessing;->updateState(I)V
@@ -1485,17 +1348,14 @@
     :catch_0
     move-exception p1
 
-    .line 13
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 14
     sget-object p1, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string v0, "ComposeCameraRecord fd error"
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
 
     invoke-virtual {p1, v1}, Lcom/android/camera/data/observeable/VMProcessing;->updateState(I)V
@@ -1506,7 +1366,6 @@
 .method public deleteLastFragment()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->isEmpty()Z
@@ -1517,7 +1376,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
@@ -1527,7 +1385,6 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->completeSize()I
@@ -1538,7 +1395,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->remove(I)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->completeSize()I
@@ -1547,10 +1403,8 @@
 
     iput v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->makeSureVVProcess()V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
     iget-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
@@ -1578,7 +1432,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->getPreviewRatio()F
 
     move-result v0
@@ -1589,7 +1442,6 @@
 
     const/16 v3, 0x90
 
-    .line 2
     invoke-static {p1, v0, v1, v2, v3}, Lcom/android/camera/Util;->getOptimalVideoSnapshotPictureSize(Ljava/util/List;DII)Lcom/android/camera/CameraSize;
 
     move-result-object p1
@@ -1608,7 +1460,6 @@
 .method public getInputSurfaceTexture()Landroid/graphics/SurfaceTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-object v0
@@ -1617,7 +1468,6 @@
 .method public getNextRecordStep()I
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
     move-result v0
@@ -1628,7 +1478,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mValidTime:J
 
@@ -1654,7 +1503,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->canFinishRecording()Z
 
@@ -1695,7 +1543,6 @@
 .method public getSegmentPath(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     if-eqz v0, :cond_0
@@ -1716,28 +1563,22 @@
 .method public initPreview(IIILcom/android/camera/CameraScreenNail;)V
     .locals 2
 
-    .line 1
     iput p3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCameraFacing:I
 
-    .line 2
     iget-object p3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz p3, :cond_0
 
-    .line 3
     invoke-virtual {p3}, Landroid/graphics/SurfaceTexture;->release()V
 
     const/4 p3, 0x0
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mOpenGlRender:Lcom/xiaomi/mediaprocess/OpenGlRender;
 
     const-wide/16 v0, 0x0
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mValidTime:J
 
-    .line 6
     :cond_0
     new-instance p3, Landroid/graphics/SurfaceTexture;
 
@@ -1747,10 +1588,8 @@
 
     iput-object p3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 7
     invoke-virtual {p3, p1, p2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     new-instance p2, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;
@@ -1759,7 +1598,6 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 9
     invoke-virtual {p4, p0}, Lcom/android/camera/CameraScreenNail;->setExternalFrameProcessor(Lcom/android/camera/SurfaceTextureScreenNail$ExternalFrameProcessor;)V
 
     return-void
@@ -1768,17 +1606,14 @@
 .method public initResource()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->VV_DIR:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/FileUtils;->makeDir(Ljava/lang/String;)Z
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
 
-    .line 3
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->WORKSPACE_PATH:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
@@ -1797,7 +1632,6 @@
 .method public isRecording()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaRecorderRecording:Z
 
     return v0
@@ -1806,7 +1640,6 @@
 .method public isRecordingPaused()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaRecorderRecordingPaused:Z
 
     return v0
@@ -1823,7 +1656,6 @@
 .method public onDrawFrame(Landroid/graphics/Rect;IIZ)Z
     .locals 4
 
-    .line 1
     iget-boolean p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mFrameAvailable:Z
 
     const/4 v0, 0x0
@@ -1832,7 +1664,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
@@ -1848,23 +1679,20 @@
 
     goto/16 :goto_1
 
-    .line 3
     :cond_1
     iget-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mOpenGlRender:Lcom/xiaomi/mediaprocess/OpenGlRender;
 
     if-nez p4, :cond_2
 
-    .line 4
     new-instance p4, Lcom/xiaomi/mediaprocess/OpenGlRender;
 
     invoke-direct {p4}, Lcom/xiaomi/mediaprocess/OpenGlRender;-><init>()V
 
     iput-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mOpenGlRender:Lcom/xiaomi/mediaprocess/OpenGlRender;
 
-    .line 5
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
@@ -1882,7 +1710,6 @@
 
     invoke-virtual {p4, v0, v1, v2, v3}, Lcom/xiaomi/mediaprocess/OpenGlRender;->SetWindowSize(IIII)V
 
-    .line 6
     new-instance p4, Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mOpenGlRender:Lcom/xiaomi/mediaprocess/OpenGlRender;
@@ -1891,19 +1718,16 @@
 
     iput-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->RGBColor:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p4, v0}, Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;->setFilterRGBColor(Ljava/nio/ByteBuffer;)V
 
-    .line 8
     iget-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {p4, v0}, Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;->init(Landroid/graphics/SurfaceTexture;)V
 
-    .line 9
     :cond_2
     iget-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
@@ -1913,15 +1737,12 @@
 
     const/4 v0, 0x0
 
-    .line 10
     invoke-static {v0, v0, v0, p4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 p4, 0x4000
 
-    .line 11
     invoke-static {p4}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 12
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mValidTime:J
 
     const-wide/16 v2, 0x0
@@ -1930,14 +1751,12 @@
 
     if-gtz p4, :cond_3
 
-    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mValidTime:J
 
-    .line 14
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
@@ -1953,18 +1772,15 @@
 
     goto :goto_0
 
-    .line 15
     :cond_4
     iget-object p4, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     invoke-virtual {p4, p1, p2, p3}, Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;->bind(Landroid/graphics/Rect;II)V
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
     if-eqz p1, :cond_5
 
-    .line 17
     iget-object p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mInputSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {p2}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
@@ -1977,7 +1793,6 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->NeedProcessTexture(J)V
 
-    .line 18
     :cond_5
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mOpenGlRender:Lcom/xiaomi/mediaprocess/OpenGlRender;
 
@@ -1985,14 +1800,13 @@
 
     return v0
 
-    .line 19
     :cond_6
     :goto_0
     iget-object p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMiGLSurfaceViewRender:Lcom/android/camera/module/impl/component/MiGLSurfaceViewRender;
 
     iget p3, p1, Landroid/graphics/Rect;->left:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result p4
 
@@ -2018,14 +1832,12 @@
 .method public onOrientationChanged(III)V
     .locals 0
 
-    .line 1
     iget p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentOrientation:I
 
     if-ne p1, p2, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
@@ -2039,7 +1851,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iput p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentOrientation:I
 
@@ -2059,23 +1870,18 @@
 .method public onRecordingNewFragmentFinished()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->makeSureVVProcess()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->resetFlag()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->stopRecording()V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2084,37 +1890,31 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "temp path exists"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 9
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mTempVideoPath:Ljava/lang/String;
 
-    .line 11
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
 
@@ -2126,12 +1926,10 @@
 
     if-nez v0, :cond_2
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 13
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
@@ -2141,7 +1939,6 @@
 
     iput v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
 
-    .line 14
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
     iget-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
@@ -2156,7 +1953,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
@@ -2177,12 +1973,10 @@
 .method public pausePlay()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->PausePreView()V
 
     :cond_0
@@ -2192,7 +1986,6 @@
 .method public prepare()V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -2203,18 +1996,16 @@
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string v1, "ffmpeg"
+    const-string/jumbo v1, "vvffmpeg"
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -2225,14 +2016,12 @@
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
     const/16 v1, 0x7b
 
     invoke-static {v0, v1}, Lcom/xiaomi/vlog/SystemUtil;->Init(Landroid/content/Context;I)V
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mContext:Landroid/content/Context;
 
@@ -2251,10 +2040,8 @@
     :catch_0
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 7
     :goto_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -2264,10 +2051,8 @@
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {p0, v0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->prepare(Lcom/android/camera/fragment/vv/VVItem;)V
 
-    .line 9
     new-instance v0, Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
     invoke-direct {v0}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;-><init>()V
@@ -2276,10 +2061,8 @@
 
     const/16 v1, 0x5a
 
-    .line 10
     invoke-virtual {v0, v1}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->SetOrientation(I)V
 
-    .line 11
     iget-object v2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
     const/16 v3, 0x780
@@ -2300,15 +2083,12 @@
 .method public prepare(Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 3
 
-    .line 12
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
 
     if-nez v0, :cond_0
 
-    .line 14
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -2323,7 +2103,6 @@
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
 
-    .line 15
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mVmProcessing:Lcom/android/camera/data/observeable/VMProcessing;
 
@@ -2339,7 +2118,6 @@
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    .line 16
     iget-object p1, p1, Lcom/android/camera/fragment/vv/VVItem;->filterPath:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->initFilter(Ljava/lang/String;)V
@@ -2350,7 +2128,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2365,20 +2142,16 @@
 .method public release()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->isRecording()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->resetFlag()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->stopRecording()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
@@ -2386,125 +2159,102 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "release mediaCamera"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->DestructMediaEffectCamera()V
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     if-eqz v0, :cond_2
 
-    .line 9
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "release mediaPlayer"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StopPreView()V
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->DestructMediaPlayer()V
 
-    .line 12
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
-    .line 13
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     if-eqz v0, :cond_3
 
-    .line 14
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "release composeFile"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->CancelComposeFile()V
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->DestructMediaComposeFile()V
 
-    .line 17
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mComposeFile:Lcom/xiaomi/mediaprocess/MediaComposeFile;
 
-    .line 18
     :cond_3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     if-eqz v0, :cond_4
 
-    .line 19
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "release mediaEffectGraph"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->DestructMediaEffectGraph()V
 
-    .line 21
     iput-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
-    .line 22
     :cond_4
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->saveWorkSpace()V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 24
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRecordingTimerDisposable:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_5
 
-    .line 25
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 26
     :cond_5
     invoke-static {}, Lcom/xiaomi/vlog/SystemUtil;->UnInit()V
 
-    .line 27
-    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/o00000o0/OooO00o/Oooo0o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o00000OO/OooO00o/OooOooo;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/o00000o0/OooO00o/Oooo0o;-><init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o00000OO/OooO00o/OooOooo;-><init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2520,7 +2270,6 @@
 .method public resumePlay()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->ResumePreView()Z
@@ -2531,14 +2280,12 @@
 .method public startPlay(Landroid/view/Surface;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
@@ -2546,10 +2293,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mPlayFinished:Z
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
@@ -2558,10 +2303,8 @@
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
-    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->ConstructMediaPlayer()Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     new-instance v1, Lcom/android/camera/module/impl/component/LiveSubVVImpl$7;
@@ -2570,12 +2313,10 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetPlayerNotify(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetViewSurface(Landroid/view/Surface;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     sget-object v0, Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;->SurfaceGravityResizeAspectFit:Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;
@@ -2586,19 +2327,16 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->setGravity(Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;II)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetPlayLoop(Z)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetGraphLoop(Z)V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StartPreView()V
@@ -2609,29 +2347,24 @@
 .method public startRecordingNewFragment()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->startRecordingNextFragment()V
 
     return-void
 .end method
 
 .method public startRecordingNextFragment()V
-    .locals 13
+    .locals 12
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaRecorderRecordingPaused:Z
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mAudioController:Lcom/android/camera/module/AudioController;
 
     invoke-virtual {v1}, Lcom/android/camera/module/AudioController;->stopAudio()V
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->makeSureVVProcess()V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {v1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->completeSize()I
@@ -2642,14 +2375,12 @@
 
     if-nez v1, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     iget-object v1, v1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mFolderPath:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
 
-    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
@@ -2659,72 +2390,55 @@
 
     move-result-wide v1
 
-    .line 7
     iget-object v3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     iget-object v4, v3, Lcom/android/camera/fragment/vv/VVItem;->musicPath:Ljava/lang/String;
 
-    .line 8
     iget-object v5, v3, Lcom/android/camera/fragment/vv/VVItem;->configJsonPath:Ljava/lang/String;
 
-    .line 9
-    iget-object v6, v3, Lcom/android/camera/fragment/vv/VVItem;->filterPath:Ljava/lang/String;
+    iget-object v3, v3, Lcom/android/camera/fragment/vv/VVItem;->filterPath:Ljava/lang/String;
 
-    .line 10
-    iget-wide v7, v3, Lcom/android/camera/fragment/vv/VVItem;->audioOffset:J
+    iget-object v6, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
 
-    .line 11
-    iget-object v3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mLiveVVProcess:Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;
+    iget v7, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
 
-    iget v9, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
+    iget-object v8, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    iget-object v10, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
+    invoke-interface {v6, v7, v1, v2, v8}, Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;->onRecordingNewFragmentStart(IJLcom/android/camera/fragment/vv/VVWorkspaceItem;)V
 
-    invoke-interface {v3, v9, v1, v2, v10}, Lcom/android/camera/protocol/ModeProtocol$LiveVVProcess;->onRecordingNewFragmentStart(IJLcom/android/camera/fragment/vv/VVWorkspaceItem;)V
+    const-wide/16 v6, 0x0
 
-    const-wide/16 v9, 0x0
+    move-wide v10, v6
 
-    cmp-long v3, v7, v9
-
-    if-eqz v3, :cond_1
-
-    add-long/2addr v9, v7
-
-    :cond_1
-    move-wide v11, v9
-
-    .line 12
     :goto_0
-    iget v3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
+    iget v6, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
 
-    if-ge v0, v3, :cond_3
+    if-ge v0, v6, :cond_2
 
-    .line 13
-    iget-object v3, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
+    iget-object v6, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
-    iget-object v3, v3, Lcom/android/camera/fragment/vv/VVItem;->speedList:Ljava/util/List;
+    iget-object v6, v6, Lcom/android/camera/fragment/vv/VVItem;->speedList:Ljava/util/List;
 
-    if-nez v3, :cond_2
+    if-nez v6, :cond_1
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    const/high16 v6, 0x3f800000    # 1.0f
 
     goto :goto_1
 
-    :cond_2
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :cond_1
+    invoke-interface {v6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v6
 
-    check-cast v3, Ljava/lang/Float;
+    check-cast v6, Ljava/lang/Float;
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v6}, Ljava/lang/Float;->floatValue()F
 
-    move-result v3
+    move-result v6
 
     :goto_1
-    long-to-float v7, v11
+    long-to-float v7, v10
 
-    .line 14
     iget-object v8, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     invoke-virtual {v8, v0}, Lcom/android/camera/fragment/vv/VVItem;->getDuration(I)J
@@ -2733,86 +2447,80 @@
 
     long-to-float v8, v8
 
-    div-float/2addr v8, v3
+    div-float/2addr v8, v6
 
     add-float/2addr v7, v8
 
-    float-to-long v11, v7
+    float-to-long v10, v7
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 15
-    :cond_3
+    :cond_2
     sget-object v0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v7, "start : "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v7, " | "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     const/16 v3, 0x5a
 
-    .line 17
     invoke-virtual {v0, v3}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->SetOrientation(I)V
 
-    .line 18
-    iget-object v7, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
+    iget-object v6, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
-    iget v8, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
+    iget v7, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentIndex:I
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    iget-object v9, v0, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mFolderPath:Ljava/lang/String;
+    iget-object v8, v0, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mFolderPath:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
-    iget-object v10, v0, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
+    iget-object v9, v0, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
 
-    invoke-virtual/range {v7 .. v12}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->StartRecording(ILjava/lang/String;Ljava/lang/String;J)V
+    invoke-virtual/range {v6 .. v11}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->StartRecording(ILjava/lang/String;Ljava/lang/String;J)V
 
-    :cond_4
+    :cond_3
     const/4 v0, 0x1
 
-    .line 19
     iput-boolean v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaRecorderRecording:Z
 
-    .line 20
     invoke-direct {p0, v1, v2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->startCountDown(J)V
 
     return-void
@@ -2821,12 +2529,10 @@
 .method public stopRecording()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mMediaCamera:Lcom/xiaomi/mediaprocess/MediaEffectCamera;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectCamera;->StopRecording()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mAudioController:Lcom/android/camera/module/AudioController;
 
     invoke-virtual {v0}, Lcom/android/camera/module/AudioController;->restoreAudio()V
@@ -2837,12 +2543,10 @@
 .method public trackVideoParams()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCurrentVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     iget-object v0, v0, Lcom/android/camera/fragment/vv/VVItem;->name:Ljava/lang/String;
 
-    .line 2
     iget v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->mCameraFacing:I
 
     const/4 v2, 0x1
@@ -2854,7 +2558,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3
     :goto_0
     invoke-static {v0, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVRecordingParams(Ljava/lang/String;Z)V
 
@@ -2864,7 +2567,6 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2873,7 +2575,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->release()V
 
     return-void

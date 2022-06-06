@@ -18,7 +18,6 @@
 .method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/schedulers/NewThreadWorker;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
     return-void

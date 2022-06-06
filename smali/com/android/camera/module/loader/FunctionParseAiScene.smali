@@ -42,24 +42,20 @@
 .method public constructor <init>(ILcom/android/camera2/CameraCapabilities;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mModuleIndex:I
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OooO()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OoOOo()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mSupportMoonMode:Z
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mCameraCapabilities:Lcom/android/camera2/CameraCapabilities;
 
     return-void
@@ -68,22 +64,18 @@
 .method private faceSceneFiltering(I)Z
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mLatestFaceScene:I
 
     const/4 v1, 0x0
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mLatestFaceScene:I
 
-    .line 3
     iput v1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mSameFaceSceneDetectedTimes:I
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mSameFaceSceneDetectedTimes:I
 
@@ -95,20 +87,16 @@
 
     add-int/2addr p1, v3
 
-    .line 5
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mSameFaceSceneDetectedTimes:I
 
     if-ne v2, p1, :cond_1
 
-    .line 6
     iget p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mCurrentFaceScene:I
 
     if-eq p1, v0, :cond_1
 
-    .line 7
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mLatestFaceScene:I
 
-    .line 8
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mCurrentFaceScene:I
 
     return v3
@@ -123,7 +111,6 @@
 .method public apply(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Integer;
     .locals 11
 
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -132,7 +119,6 @@
 
     check-cast v0, Landroid/graphics/Rect;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mCameraCapabilities:Lcom/android/camera2/CameraCapabilities;
 
     invoke-virtual {v1}, Lcom/android/camera2/CameraCapabilities;->getActiveArraySize()Landroid/graphics/Rect;
@@ -143,7 +129,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 4
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -158,7 +143,6 @@
 
     div-float/2addr v1, v0
 
-    .line 5
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -167,7 +151,6 @@
 
     check-cast v0, [Landroid/hardware/camera2/params/Face;
 
-    .line 6
     iget v2, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mModuleIndex:I
 
     const/16 v3, 0xab
@@ -192,7 +175,6 @@
 
     if-lez v2, :cond_1
 
-    .line 7
     array-length v2, v0
 
     move v7, v4
@@ -204,7 +186,6 @@
 
     aget-object v8, v0, v3
 
-    .line 8
     invoke-virtual {v8}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v9
@@ -223,12 +204,10 @@
 
     if-lez v9, :cond_0
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera2/CaptureResultParser;->getHdrDetectedScene(Landroid/hardware/camera2/CaptureResult;)I
 
     move-result v7
 
-    .line 10
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +224,6 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 11
     invoke-virtual {v8}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v8
@@ -266,7 +244,6 @@
 
     move-result-object v7
 
-    .line 12
     invoke-static {v5, v7}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 v7, 0x19
@@ -279,7 +256,6 @@
     :cond_1
     move v7, v4
 
-    .line 13
     :cond_2
     invoke-direct {p0, v7}, Lcom/android/camera/module/loader/FunctionParseAiScene;->faceSceneFiltering(I)Z
 
@@ -289,7 +265,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 14
     invoke-static {p1}, Lcom/android/camera2/CaptureResultParser;->getAsdDetectedModes(Landroid/hardware/camera2/CaptureResult;)I
 
     move-result p1
@@ -302,13 +277,11 @@
 
     goto :goto_1
 
-    .line 15
     :cond_3
     iput v7, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
     goto :goto_2
 
-    .line 16
     :cond_4
     :goto_1
     iget-boolean v0, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mSupportMoonMode:Z
@@ -319,7 +292,6 @@
 
     const-string p1, "detected moon mode on unsupported device, set scene negative"
 
-    .line 17
     invoke-static {v5, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move p1, v6
@@ -327,7 +299,6 @@
     :cond_5
     if-gez p1, :cond_6
 
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,16 +315,13 @@
 
     invoke-static {v5, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     iput v6, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
     goto :goto_2
 
-    .line 20
     :cond_6
     iput p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
-    .line 21
     :cond_7
     :goto_2
     iget p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mModuleIndex:I
@@ -376,11 +344,9 @@
 
     if-ne p1, v1, :cond_9
 
-    .line 22
     :cond_8
     iput v6, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
-    .line 23
     :cond_9
     iget p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
@@ -390,7 +356,6 @@
 
     return-object p1
 
-    .line 24
     :cond_a
     iget p1, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
@@ -409,7 +374,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/loader/FunctionParseAiScene;->apply(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Integer;
@@ -424,10 +388,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mLatestFaceScene:I
 
-    .line 2
     iput v0, p0, Lcom/android/camera/module/loader/FunctionParseAiScene;->mParsedAiScene:I
 
     return-void

@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/view/inputmethod/InputMethodHelper$1;
 
     invoke-direct {v0}, Lmiuix/view/inputmethod/InputMethodHelper$1;-><init>()V
@@ -36,10 +35,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -60,7 +57,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lmiuix/view/inputmethod/InputMethodHelper$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/view/inputmethod/InputMethodHelper;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -69,7 +65,6 @@
 .method public static getInstance(Landroid/content/Context;)Lmiuix/view/inputmethod/InputMethodHelper;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/view/inputmethod/InputMethodHelper;->INSTANCE:Lmiuix/core/util/SoftReferenceSingleton;
 
     invoke-virtual {v0, p0}, Lmiuix/core/util/SoftReferenceSingleton;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -86,7 +81,6 @@
 .method public getManager()Landroid/view/inputmethod/InputMethodManager;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/inputmethod/InputMethodHelper;->mManager:Landroid/view/inputmethod/InputMethodManager;
 
     return-object v0
@@ -95,7 +89,6 @@
 .method public hideKeyBoard(Landroid/widget/EditText;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/inputmethod/InputMethodHelper;->mManager:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
@@ -112,15 +105,12 @@
 .method public showKeyBoard(Landroid/widget/EditText;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 2
     iget-object v0, p0, Lmiuix/view/inputmethod/InputMethodHelper;->mManager:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v0, p1}, Landroid/view/inputmethod/InputMethodManager;->viewClicked(Landroid/view/View;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/view/inputmethod/InputMethodHelper;->mManager:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v1, 0x0

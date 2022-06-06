@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/MoreModeListAnimation;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$1;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
@@ -35,12 +34,10 @@
 .method public getValue(Landroid/view/View;)F
     .locals 1
 
-    .line 2
     instance-of v0, p1, Lcom/android/camera/ui/SmoothRoundLayout;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p1, Lcom/android/camera/ui/SmoothRoundLayout;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/SmoothRoundLayout;->getCornerRadius()F
@@ -49,15 +46,13 @@
 
     return p1
 
-    .line 4
     :cond_0
     instance-of v0, p1, Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0a029b
+    const v0, 0x7f0a02ac
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -66,7 +61,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/ui/NormalRoundView;->getCornerRadius()F
 
     move-result p1
@@ -82,7 +76,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$1;->getValue(Landroid/view/View;)F
@@ -95,27 +88,23 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 1
 
-    .line 2
     instance-of v0, p1, Lcom/android/camera/ui/SmoothRoundLayout;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p1, Lcom/android/camera/ui/SmoothRoundLayout;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/ui/SmoothRoundLayout;->setCornerRadius(F)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     instance-of v0, p1, Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0a029b
+    const v0, 0x7f0a02ac
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -124,7 +113,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6
     invoke-virtual {p1, p2}, Lcom/android/camera/ui/NormalRoundView;->setCornerRadius(F)V
 
     :cond_1
@@ -135,7 +123,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$1;->setValue(Landroid/view/View;F)V

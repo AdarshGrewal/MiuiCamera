@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +37,12 @@
 .method public onScrolled(Lmiuix/springback/view/SpringBackLayout;II)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget v1, v0, Lmiuix/springback/trigger/CustomTrigger;->mScrollDistance:I
 
     iput v1, v0, Lmiuix/springback/trigger/CustomTrigger;->mLastScrollDistance:I
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollY()I
 
     move-result v1
@@ -54,7 +51,6 @@
 
     iput v1, v0, Lmiuix/springback/trigger/CustomTrigger;->mScrollDistance:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$400(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/animation/utils/VelocityMonitor;
@@ -77,7 +73,6 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/utils/VelocityMonitor;->update([F)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$400(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/animation/utils/VelocityMonitor;
@@ -90,7 +85,6 @@
 
     invoke-static {v0, v2}, Lmiuix/springback/trigger/CustomTrigger;->access$502(Lmiuix/springback/trigger/CustomTrigger;F)F
 
-    .line 5
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$000(Lmiuix/springback/trigger/CustomTrigger;)Landroid/widget/RelativeLayout;
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setTop(I)V
 
-    .line 6
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -112,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {v0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -135,7 +127,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBottom(I)V
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -163,7 +154,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$600(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/BaseTrigger$Action;
@@ -174,7 +164,6 @@
 
     move-result v0
 
-    .line 10
     iget-object v2, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v2}, Lmiuix/springback/trigger/CustomTrigger;->access$200(Lmiuix/springback/trigger/CustomTrigger;)I
@@ -187,7 +176,6 @@
 
     iget v2, v2, Lmiuix/springback/trigger/CustomTrigger;->mLastScrollDistance:I
 
-    .line 11
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -215,7 +203,6 @@
     :cond_1
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
-    .line 12
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$100(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/TriggerState;
 
     move-result-object v0
@@ -226,12 +213,10 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 13
     iget-object v0, v2, Lmiuix/springback/trigger/CustomTrigger;->mTracking:Lmiuix/springback/trigger/CustomTrigger$Tracking;
 
     invoke-virtual {v2, v0}, Lmiuix/springback/trigger/CustomTrigger;->transition(Lmiuix/springback/trigger/TriggerState;)V
 
-    .line 14
     :cond_2
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -251,7 +236,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 15
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$600(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/BaseTrigger$Action;
@@ -262,7 +246,6 @@
 
     move-result v0
 
-    .line 16
     iget-object v2, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v2}, Lmiuix/springback/trigger/CustomTrigger;->access$200(Lmiuix/springback/trigger/CustomTrigger;)I
@@ -275,7 +258,6 @@
 
     iget v2, v2, Lmiuix/springback/trigger/CustomTrigger;->mLastScrollDistance:I
 
-    .line 17
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -303,7 +285,6 @@
     :cond_3
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
-    .line 18
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$100(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/TriggerState;
 
     move-result-object v0
@@ -314,12 +295,10 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 19
     iget-object v0, v2, Lmiuix/springback/trigger/CustomTrigger;->mTracking:Lmiuix/springback/trigger/CustomTrigger$Tracking;
 
     invoke-virtual {v2, v0}, Lmiuix/springback/trigger/CustomTrigger;->transition(Lmiuix/springback/trigger/TriggerState;)V
 
-    .line 20
     :cond_4
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -343,7 +322,6 @@
 
     iget v0, v1, Lmiuix/springback/trigger/CustomTrigger;->mLastScrollDistance:I
 
-    .line 21
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
@@ -358,14 +336,12 @@
 
     if-le v0, v1, :cond_5
 
-    .line 22
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget-object v1, v0, Lmiuix/springback/trigger/CustomTrigger;->mTracking:Lmiuix/springback/trigger/CustomTrigger$Tracking;
 
     invoke-virtual {v0, v1}, Lmiuix/springback/trigger/CustomTrigger;->transition(Lmiuix/springback/trigger/TriggerState;)V
 
-    .line 23
     :cond_5
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
@@ -379,7 +355,6 @@
 
     invoke-virtual {v0, p3, v1}, Lmiuix/springback/trigger/TriggerState;->handleScrolled(II)V
 
-    .line 24
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget v1, v0, Lmiuix/springback/trigger/CustomTrigger;->mScrollDistance:I
@@ -392,17 +367,14 @@
 .method public onStateChanged(IIZ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0, p2}, Lmiuix/springback/trigger/CustomTrigger;->access$202(Lmiuix/springback/trigger/CustomTrigger;I)I
 
-    .line 2
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0, p3}, Lmiuix/springback/trigger/CustomTrigger;->access$302(Lmiuix/springback/trigger/CustomTrigger;Z)Z
 
-    .line 3
     iget-object p3, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {p3}, Lmiuix/springback/trigger/CustomTrigger;->access$100(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/TriggerState;
@@ -411,7 +383,6 @@
 
     invoke-virtual {p3, p1, p2}, Lmiuix/springback/trigger/TriggerState;->handleScrollStateChange(II)V
 
-    .line 4
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {p1}, Lmiuix/springback/trigger/CustomTrigger;->access$100(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/TriggerState;
@@ -424,7 +395,6 @@
 
     if-eq p1, p3, :cond_0
 
-    .line 5
     invoke-static {p2}, Lmiuix/springback/trigger/CustomTrigger;->access$000(Lmiuix/springback/trigger/CustomTrigger;)Landroid/widget/RelativeLayout;
 
     move-result-object p1
@@ -433,7 +403,6 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 6
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {p1}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
@@ -442,7 +411,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 7
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$3;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-virtual {p1}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;

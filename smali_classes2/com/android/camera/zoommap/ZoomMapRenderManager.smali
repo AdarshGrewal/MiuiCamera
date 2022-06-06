@@ -33,24 +33,20 @@
 .method public constructor <init>(Landroid/graphics/SurfaceTexture;Lcom/android/gallery3d/ui/ExtTexture;Landroid/util/Size;Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mTextureTransformMatrix:[F
 
-    .line 3
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawRectAttribute;
 
     invoke-direct {v0}, Lcom/android/camera/effect/draw_mode/DrawRectAttribute;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mRectAttribute:Lcom/android/camera/effect/draw_mode/DrawRectAttribute;
 
-    .line 4
     new-instance v0, Lcom/android/gallery3d/ui/GLPaint;
 
     const/high16 v1, 0x40400000    # 3.0f
@@ -61,39 +57,32 @@
 
     iput-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mGlPaint:Lcom/android/gallery3d/ui/GLPaint;
 
-    .line 5
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mMapRect:Landroid/graphics/Rect;
 
-    .line 6
     new-instance v0, Lcom/android/gallery3d/ui/ResourceTexture;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f080103
+    const v2, 0x7f080105
 
     invoke-direct {v0, v1, v2}, Lcom/android/gallery3d/ui/ResourceTexture;-><init>(Landroid/content/Context;I)V
 
     iput-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mBorderTexture:Lcom/android/gallery3d/ui/ResourceTexture;
 
-    .line 7
     iput-object p1, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mZoomMapSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 8
     iput-object p2, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mZoomMapTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
-    .line 9
     iput-object p4, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mPreviewRatio:Ljava/lang/String;
 
-    .line 10
     iput-object p3, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mWindowSize:Landroid/util/Size;
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,19 +111,16 @@
 .method public drawZoomMap(Lcom/android/gallery3d/ui/GLCanvas;)Z
     .locals 13
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mZoomMapSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mZoomMapSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mTextureTransformMatrix:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mPreviewRatio:Ljava/lang/String;
 
     const-string v1, "1x1"
@@ -145,7 +131,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mTextureTransformMatrix:[F
 
     const/high16 v1, 0x3f400000    # 0.75f
@@ -154,7 +139,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mPreviewRatio:Ljava/lang/String;
 
@@ -166,14 +150,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mTextureTransformMatrix:[F
 
     const v1, 0x3f4ccccd    # 0.8f
 
     invoke-static {v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->centerCropVertical([FF)V
 
-    .line 7
     :cond_1
     :goto_0
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
@@ -186,7 +168,6 @@
 
     iget-object v4, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mWindowSize:Landroid/util/Size;
 
-    .line 8
     invoke-virtual {v4}, Landroid/util/Size;->getWidth()I
 
     move-result v4
@@ -203,20 +184,16 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)V
 
-    .line 9
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mMapRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mMapRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    .line 12
     iget-object v7, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mRectAttribute:Lcom/android/camera/effect/draw_mode/DrawRectAttribute;
 
     add-int/lit8 v0, v0, -0x3
@@ -229,7 +206,6 @@
 
     iget-object v0, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mMapRect:Landroid/graphics/Rect;
 
-    .line 13
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -250,40 +226,34 @@
 
     iget-object v12, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mGlPaint:Lcom/android/gallery3d/ui/GLPaint;
 
-    .line 14
     invoke-virtual/range {v7 .. v12}, Lcom/android/camera/effect/draw_mode/DrawRectAttribute;->init(FFFFLcom/android/gallery3d/ui/GLPaint;)Lcom/android/camera/effect/draw_mode/DrawRectAttribute;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 15
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     iget-object v1, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mBorderTexture:Lcom/android/gallery3d/ui/ResourceTexture;
 
     iget-object v2, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mWindowSize:Landroid/util/Size;
 
-    .line 16
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
 
     move-result v2
 
     iget-object v3, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mWindowSize:Landroid/util/Size;
 
-    .line 17
     invoke-virtual {v3}, Landroid/util/Size;->getHeight()I
 
     move-result v3
 
-    .line 18
     invoke-static {v2, v3}, Lcom/android/camera/dualvideo/render/RectUtil;->create(II)Landroid/graphics/Rect;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
 
-    .line 19
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
     return v6
@@ -292,7 +262,6 @@
 .method public updateZoomMapRect(Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/zoommap/ZoomMapRenderManager;->mMapRect:Landroid/graphics/Rect;
 
     return-void

@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;
 
     const/16 v1, 0xb0
@@ -44,21 +43,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->framerate:I
 
-    .line 3
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->bitrate:I
 
-    .line 4
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 5
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
 
     return-void
@@ -67,27 +61,20 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 7
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->framerate:I
 
-    .line 8
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->bitrate:I
 
-    .line 9
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 10
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
 
-    .line 11
     iput p1, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 12
     iput p2, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
 
     return-void
@@ -96,33 +83,24 @@
 .method public constructor <init>(IIII)V
     .locals 1
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 14
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->framerate:I
 
-    .line 15
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->bitrate:I
 
-    .line 16
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 17
     iput v0, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
 
-    .line 18
     iput p3, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->framerate:I
 
-    .line 19
     iput p4, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->bitrate:I
 
-    .line 20
     iput p1, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 21
     iput p2, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
 
     return-void
@@ -131,7 +109,6 @@
 .method public static copyOf(Lnet/majorkernelpanic/streaming/video/VideoQuality;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
     .locals 4
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
@@ -150,17 +127,14 @@
 .method public static determineClosestSupportedResolution(Landroid/hardware/Camera$Parameters;Lnet/majorkernelpanic/streaming/video/VideoQuality;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
     .locals 6
 
-    .line 1
     invoke-static {p1}, Lnet/majorkernelpanic/streaming/video/VideoQuality;->copyOf(Lnet/majorkernelpanic/streaming/video/VideoQuality;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -179,14 +153,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/hardware/Camera$Size;
 
-    .line 5
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,7 +195,6 @@
 
     move-result-object v2
 
-    .line 6
     iget v4, p1, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
     iget v5, v3, Landroid/hardware/Camera$Size;->width:I
@@ -236,12 +207,10 @@
 
     if-ge v4, v1, :cond_0
 
-    .line 7
     iget v1, v3, Landroid/hardware/Camera$Size;->width:I
 
     iput v1, v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
-    .line 8
     iget v1, v3, Landroid/hardware/Camera$Size;->height:I
 
     iput v1, v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resY:I
@@ -253,10 +222,8 @@
     :cond_2
     const-string p0, "VideoQuality"
 
-    .line 9
     invoke-static {p0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget v1, p1, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
     iget v2, v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
@@ -269,7 +236,6 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 11
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -320,15 +286,12 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewFpsRange()Ljava/util/List;
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -342,14 +305,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, [I
 
-    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,7 +361,6 @@
 
     move-result-object v3
 
-    .line 6
     aget v5, v2, v4
 
     aget v6, v0, v4
@@ -430,7 +390,6 @@
     :cond_3
     const-string p0, "VideoQuality"
 
-    .line 7
     invoke-static {p0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -447,7 +406,6 @@
 .method public static parseQuality(Ljava/lang/String;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
     .locals 2
 
-    .line 1
     sget-object v0, Lnet/majorkernelpanic/streaming/video/VideoQuality;->DEFAULT_VIDEO_QUALITY:Lnet/majorkernelpanic/streaming/video/VideoQuality;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/video/VideoQuality;->copyOf(Lnet/majorkernelpanic/streaming/video/VideoQuality;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
@@ -458,14 +416,12 @@
 
     const-string v1, "-"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     aget-object v1, p0, v1
 
@@ -479,7 +435,6 @@
 
     const/4 v1, 0x1
 
-    .line 4
     aget-object v1, p0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -490,7 +445,6 @@
 
     const/4 v1, 0x2
 
-    .line 5
     aget-object v1, p0, v1
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -501,7 +455,6 @@
 
     const/4 v1, 0x3
 
-    .line 6
     aget-object p0, p0, v1
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -528,7 +481,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget v1, p1, Lnet/majorkernelpanic/streaming/video/VideoQuality;->resX:I
 
@@ -563,7 +515,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

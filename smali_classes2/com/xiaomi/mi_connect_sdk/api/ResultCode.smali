@@ -351,7 +351,6 @@
 .method public static constructor <clinit>()V
     .locals 16
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v1, 0x0
@@ -362,7 +361,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->GENERAL_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v2, 0x1
@@ -373,7 +371,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v3, 0x2
@@ -384,7 +381,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_DISCOVERY_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v4, 0x3
@@ -395,7 +391,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v5, 0x4
@@ -406,7 +401,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_ADVERTISING_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v6, 0x5
@@ -417,7 +411,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->REQUEST_CONNECTION_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v7, 0x6
@@ -428,7 +421,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ACCEPT_CONNECTION_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/4 v8, 0x7
@@ -439,7 +431,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->REJECT_CONNECTION_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v9, 0x8
@@ -450,7 +441,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->DISCONNECT_FROM_END_POINT_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v10, 0x9
@@ -461,7 +451,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SEND_PAYLOAD_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 11
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v11, 0xa
@@ -472,7 +461,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->DISCOVERY_END:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 12
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v12, 0xb
@@ -483,7 +471,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->LINK_CONNECTION_BEGIN:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 13
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v13, 0xc
@@ -494,7 +481,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->LINK_CONNECTION_END:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 14
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v14, 0xd
@@ -505,7 +491,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->CONNECTION_TO_BE_CONFIRM:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 15
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v15, 0xe
@@ -516,7 +501,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->CONNECTION_INVITED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 16
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v14, 0xf
@@ -527,7 +511,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->PHYSICAL_LINK_CONNECTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 17
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v15, 0x10
@@ -538,7 +521,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->INVITE_CONNECTION_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 18
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const/16 v14, 0x11
@@ -549,7 +531,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ABORT_INVITATION_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 19
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v15, "WLAN_SERVER_STARTED"
@@ -562,7 +543,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->WLAN_SERVER_STARTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 20
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "WLAN_SERVER_STOPPED"
@@ -575,7 +555,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->WLAN_SERVER_STOPPED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 21
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "GENERAL_ERROR"
@@ -588,7 +567,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->GENERAL_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 22
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "APP_NOT_SUPPORT_ERROR"
@@ -601,7 +579,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->APP_NOT_SUPPORT_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 23
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "SERVICE_ERROR"
@@ -614,7 +591,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 24
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "ILLEGAL_ARGUMENT_ERROR"
@@ -627,7 +603,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ILLEGAL_ARGUMENT_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 25
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "ALREADY_ADVERTISING"
@@ -640,7 +615,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ALREADY_ADVERTISING:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 26
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "ALREADY_DISCOVERY"
@@ -653,7 +627,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ALREADY_DISCOVERY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 27
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "START_ADVERTISING_ERROR"
@@ -666,7 +639,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 28
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "STOP_ADVERTISING_ERROR"
@@ -679,7 +651,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_ADVERTISING_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 29
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "START_DISCOVERY_ERROR"
@@ -692,7 +663,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 30
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "STOP_DISCOVERY_ERROR"
@@ -705,7 +675,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_DISCOVERY_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 31
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "SEND_PAYLOAD_ERROR"
@@ -718,7 +687,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SEND_PAYLOAD_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 32
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "NOT_IN_ADVERTISING"
@@ -731,7 +699,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->NOT_IN_ADVERTISING:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 33
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "NOT_IN_DISCOVERY"
@@ -744,7 +711,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->NOT_IN_DISCOVERY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 34
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "ENDPOINT_ID_INVALID"
@@ -757,7 +723,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ENDPOINT_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 35
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "LOCALAPP_ID_INVALID"
@@ -770,7 +735,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->LOCALAPP_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 36
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "SERVICE_INCOMPATIBLE"
@@ -783,7 +747,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_INCOMPATIBLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 37
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "SERVER_OCCUPIED"
@@ -796,7 +759,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVER_OCCUPIED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 38
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "DISCOVERY_NOT_ALLOWED_IN_CONNECTION"
@@ -809,7 +771,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->DISCOVERY_NOT_ALLOWED_IN_CONNECTION:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 39
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "SERVER_NOT_EXIST"
@@ -822,7 +783,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVER_NOT_EXIST:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 40
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "REJECTED"
@@ -835,7 +795,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->REJECTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 41
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "COMMUNICATION_ERROR"
@@ -848,7 +807,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->COMMUNICATION_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 42
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "REMOTE_CLIENT_NOT_EXIST"
@@ -861,7 +819,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->REMOTE_CLIENT_NOT_EXIST:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 43
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v13, "permission deny"
@@ -876,7 +833,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SET_CALLBACK_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 44
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_START_ADVERTISING_PERMS"
@@ -889,7 +845,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_ADVERTISING_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 45
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_START_ADVERTISING_DISC_NONE"
@@ -904,7 +859,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_ADVERTISING_DISC_NONE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 46
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_START_DISC_NOT_SUPPORTED"
@@ -919,7 +873,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISC_NOT_SUPPORTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 47
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_COMMTYPE_NOT_SUPPORTED"
@@ -934,7 +887,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_COMMTYPE_NOT_SUPPORTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 48
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_APPID_ILLEGAL"
@@ -949,7 +901,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_APPID_ILLEGAL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 49
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "no server"
@@ -964,7 +915,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_ADVERTISING_NO_SERVER:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 50
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_STOP_ADVERTISING_PERMS"
@@ -977,7 +927,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_STOP_ADVERTISING_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 51
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_START_DISCOVERY_PERMS"
@@ -990,7 +939,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISCOVERY_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 52
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_START_DISCOVERY_DISC_NONE"
@@ -1005,7 +953,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISCOVERY_DISC_NONE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 53
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_STOP_DISCOVERY_PERMS"
@@ -1018,7 +965,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_STOP_DISCOVERY_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 54
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_GET_SERVICE_API_VERSION_PERMS"
@@ -1031,7 +977,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_GET_SERVICE_API_VERSION_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 55
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_REQUEST_CONNECT_PERMS"
@@ -1044,7 +989,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REQUEST_CONNECT_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 56
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "no client"
@@ -1059,7 +1003,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REQUEST_CONNECT_NO_CLIENT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 57
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_ACCEPT_CONNECT_PERMS"
@@ -1072,7 +1015,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ACCEPT_CONNECT_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 58
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_ACCEPT_CONNECT_NO_CLIENT"
@@ -1085,7 +1027,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ACCEPT_CONNECT_NO_CLIENT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 59
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_ACCEPT_CONNECT_NO_SERVER"
@@ -1098,7 +1039,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ACCEPT_CONNECT_NO_SERVER:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 60
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_REJECT_CONNECT_PERMS"
@@ -1111,7 +1051,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REJECT_CONNECT_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 61
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_REJECT_CONNECT_NO_CLIENT"
@@ -1124,7 +1063,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REJECT_CONNECT_NO_CLIENT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 62
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_REJECT_CONNECT_NO_SERVER"
@@ -1137,7 +1075,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REJECT_CONNECT_NO_SERVER:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 63
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_DISCONNECT_FROM_ENDPOINT_PERMS"
@@ -1150,7 +1087,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DISCONNECT_FROM_ENDPOINT_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 64
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_DISCONNECT_FROM_ENDPOINT_NO_CLIENT"
@@ -1163,7 +1099,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DISCONNECT_FROM_ENDPOINT_NO_CLIENT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 65
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_DISCONNECT_FROM_ENDPOINT_NO_SERVER"
@@ -1176,7 +1111,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DISCONNECT_FROM_ENDPOINT_NO_SERVER:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 66
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_SEND_PAYLOAD_PERMS"
@@ -1189,7 +1123,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SEND_PAYLOAD_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 67
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v12, "ERROR_CODE_SEND_PAYLOAD_NO_CLIENT"
@@ -1202,7 +1135,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SEND_PAYLOAD_NO_CLIENT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 68
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_SEND_PAYLOAD_NO_SERVER"
@@ -1215,7 +1147,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SEND_PAYLOAD_NO_SERVER:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 69
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_DESTROY_PERMS"
@@ -1228,7 +1159,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DESTROY_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 70
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_GET_ID_HASH_PERMS"
@@ -1241,7 +1171,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_GET_ID_HASH_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 71
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_SET_IPC_DATA_CALLBACK_PERMS"
@@ -1254,7 +1183,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SET_IPC_DATA_CALLBACK_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 72
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_SET_IPC_DATA_CALLBACK_GOVERNOR_NULL"
@@ -1269,7 +1197,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SET_IPC_DATA_CALLBACK_GOVERNOR_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 73
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_PUBLISH_PERMS"
@@ -1282,7 +1209,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_PUBLISH_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 74
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_PUBLISH_INTERNET_PERMS"
@@ -1295,7 +1221,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_PUBLISH_INTERNET_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 75
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_PUBLISH_CAMERA_NULL"
@@ -1310,7 +1235,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_PUBLISH_CAMERA_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 76
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_PUBLISH_CLIENT_NULL"
@@ -1325,7 +1249,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_PUBLISH_CLIENT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 77
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_SUBSCRIBE_PERMS"
@@ -1338,7 +1261,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SUBSCRIBE_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 78
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_SUBSCRIBE_INTERNET_PERMS"
@@ -1351,7 +1273,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SUBSCRIBE_INTERNET_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 79
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "appid deny"
@@ -1366,7 +1287,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_ADVERTISING_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 80
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_STOP_ADVERTISING_APP_ID_DENY"
@@ -1379,7 +1299,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_STOP_ADVERTISING_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 81
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_START_DISCOVERY_APP_ID_DENY"
@@ -1392,7 +1311,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISCOVERY_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 82
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_STOP_DISCOVERY_APP_ID_DENY"
@@ -1405,7 +1323,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_STOP_DISCOVERY_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 83
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_REQUEST_CONNECTION_APP_ID_DENY"
@@ -1418,7 +1335,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REQUEST_CONNECTION_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 84
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_ACCEPT_CONNECTION_APP_ID_DENY"
@@ -1431,7 +1347,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ACCEPT_CONNECTION_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 85
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_REJECT_CONNECTION_APP_ID_DENY"
@@ -1444,7 +1359,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_REJECT_CONNECTION_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 86
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_DISCONNECT_FROM_ENDPOINT_APP_ID_DENY"
@@ -1457,7 +1371,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DISCONNECT_FROM_ENDPOINT_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 87
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_SEND_PAYLOAD_APP_ID_DENY"
@@ -1470,7 +1383,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_SEND_PAYLOAD_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 88
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v11, "ERROR_CODE_DESTROY_APP_ID_DENY"
@@ -1483,7 +1395,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_DESTROY_APP_ID_DENY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 89
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_START_ADVERTING_REGISTER_APP"
@@ -1498,7 +1409,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_ADVERTING_REGISTER_APP:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 90
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_START_SERVICE_ADVERTISING_REGISTER_APP"
@@ -1513,7 +1423,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_SERVICE_ADVERTISING_REGISTER_APP:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 91
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_START_DISCOVERY_NOT_ALLOWED"
@@ -1528,7 +1437,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISCOVERY_NOT_ALLOWED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 92
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_START_DISCOVERY_REGISTER_APP"
@@ -1543,7 +1451,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_START_DISCOVERY_REGISTER_APP:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 93
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "SERVICE_API_VERSION_TOO_LOW"
@@ -1556,7 +1463,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 94
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "PERMISSION_DENNY"
@@ -1569,7 +1475,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->PERMISSION_DENNY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 95
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "SERVICE_NOT_INIT_YET"
@@ -1582,7 +1487,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_NOT_INIT_YET:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 96
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "BIND_SERVICE_FAILED"
@@ -1595,7 +1499,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->BIND_SERVICE_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 97
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_NFC_UNAVAILABLE"
@@ -1610,7 +1513,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_NFC_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 98
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_BLE_UNAVAILABLE"
@@ -1625,7 +1527,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_BLE_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 99
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_BT_CLASSIC_UNAVAILABLE"
@@ -1640,7 +1541,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_BT_CLASSIC_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 100
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_BT_UNAVAILABLE"
@@ -1655,7 +1555,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_BT_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 101
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_BONJOUR_UNAVAILABLE"
@@ -1670,7 +1569,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_BONJOUR_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 102
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_DISCOVERY_IDB_UNAVAILBLE"
@@ -1685,7 +1583,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_IDB_UNAVAILBLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 103
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_ADVERTISING_BLE_UNAVAILABLE"
@@ -1700,7 +1597,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_BLE_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 104
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_ADVERTISING_BT_CLASS_UNAVAILABLE"
@@ -1715,7 +1611,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_BT_CLASS_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 105
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_ADVERTISING_BT_UNAVAILABLE"
@@ -1730,7 +1625,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_BT_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 106
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_ADVERTISING_BONJOUR_UNAVAILABLE"
@@ -1745,7 +1639,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_BONJOUR_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 107
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "START_ADVERTISING_NFC_UNAVAILABLE"
@@ -1760,7 +1653,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_NFC_UNAVAILABLE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 108
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_GETVALUE_NULL"
@@ -1775,7 +1667,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_GETVALUE_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 109
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_VALUE_LEN_TOO_SHORT"
@@ -1790,7 +1681,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_VALUE_LEN_TOO_SHORT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 110
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_VALUE_LEN_TOO_LONG"
@@ -1805,7 +1695,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_VALUE_LEN_TOO_LONG:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 111
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ENDPOINT_DECRYPT_DATA_NULL"
@@ -1820,7 +1709,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ENDPOINT_DECRYPT_DATA_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 112
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ENDPOINT_DECRYPT_ERROR"
@@ -1835,7 +1723,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ENDPOINT_DECRYPT_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 113
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_GETVALUE_NULL_2"
@@ -1850,7 +1737,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_GETVALUE_NULL_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 114
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_VALUE_LEN_TOO_SHORT_2"
@@ -1865,7 +1751,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_VALUE_LEN_TOO_SHORT_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 115
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_VALUE_LEN_TOO_LONG_2"
@@ -1880,7 +1765,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_VALUE_LEN_TOO_LONG_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 116
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_NOTIFY_ENDPOINT_GOVERNOR_NULL"
@@ -1895,7 +1779,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_NOTIFY_ENDPOINT_GOVERNOR_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 117
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_NOTIFY_APPID_INVALID"
@@ -1910,7 +1793,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_NOTIFY_APPID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 118
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_NOTIFY_ID_INVALID"
@@ -1925,7 +1807,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_NOTIFY_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 119
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_NOTIFY_FAILED"
@@ -1940,7 +1821,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_NOTIFY_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 120
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_CONN_SERVICE_ENDPOINT_NULL"
@@ -1955,7 +1835,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_CONN_SERVICE_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 121
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_CONN_SERVICE_FAILED"
@@ -1970,7 +1849,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_CONN_SERVICE_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 122
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_DISCONNECT_SERVICE_ENDPOINT_NULL"
@@ -1985,7 +1863,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_DISCONNECT_SERVICE_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 123
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_DISCONNECT_SERVICE_FAILED"
@@ -2000,7 +1877,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_DISCONNECT_SERVICE_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 124
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_ENDPOINT_NULL"
@@ -2015,7 +1891,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 125
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_APPID_INVALID"
@@ -2030,7 +1905,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_APPID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 126
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_ID_INVALID"
@@ -2045,7 +1919,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 127
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_FAILED"
@@ -2060,7 +1933,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 128
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_ENDPOINT_NULL_2"
@@ -2075,7 +1947,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_ENDPOINT_NULL_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 129
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_ID_INVALID_2"
@@ -2090,7 +1961,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_ID_INVALID_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 130
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_READ_FAILED_2"
@@ -2105,7 +1975,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_READ_FAILED_2:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 131
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_WRITE_ENDPOINT_NULL"
@@ -2120,7 +1989,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_WRITE_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 132
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_WRITE_VALUE_NULL"
@@ -2135,7 +2003,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_WRITE_VALUE_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 133
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_WRITE_APPID_INVALID"
@@ -2150,7 +2017,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_WRITE_APPID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 134
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_WRITE_ID_INVALID"
@@ -2165,7 +2031,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_WRITE_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 135
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_WRITE_FAILED"
@@ -2180,7 +2045,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_WRITE_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 136
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_SETNOTI_ENDPOINT_NULL"
@@ -2195,7 +2059,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_SETNOTI_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 137
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_SETNOTI_APPID_INVALID"
@@ -2210,7 +2073,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_SETNOTI_APPID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 138
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_SETNOTI_ID_INVALID"
@@ -2225,7 +2087,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_SETNOTI_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 139
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_SETNOTI_FAILED"
@@ -2240,7 +2101,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_SETNOTI_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 140
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_UNSETNOTI_ENDPOINT_NULL"
@@ -2255,7 +2115,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_UNSETNOTI_ENDPOINT_NULL:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 141
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_UNSETNOTI_APPID_INVALID"
@@ -2270,7 +2129,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_UNSETNOTI_APPID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 142
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_UNSETNOTI_ID_INVALID"
@@ -2285,7 +2143,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_UNSETNOTI_ID_INVALID:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 143
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_ATTR_UNSETNOTI_FAILED"
@@ -2300,7 +2157,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_ATTR_UNSETNOTI_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 144
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "SA_NOT_VERIFIED"
@@ -2315,7 +2171,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SA_NOT_VERIFIED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 145
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "SA_VERIFIED_UNKNOWN"
@@ -2330,7 +2185,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SA_VERIFIED_UNKNOWN:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 146
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "SA_VERIFIED_FAILED"
@@ -2345,7 +2199,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SA_VERIFIED_FAILED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 147
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "PHYSICAL_LINK_ERROR"
@@ -2360,7 +2213,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->PHYSICAL_LINK_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 148
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "NOT_SAME_ACCOUNT"
@@ -2375,7 +2227,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->NOT_SAME_ACCOUNT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 149
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ENDPOINT_NOT_PAIRED"
@@ -2390,7 +2241,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ENDPOINT_NOT_PAIRED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 150
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "WLAN_SERVER_CREATE_ERROR"
@@ -2405,7 +2255,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->WLAN_SERVER_CREATE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 151
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "WLAN_CLIENT_DISCONNECTED"
@@ -2420,7 +2269,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->WLAN_CLIENT_DISCONNECTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 152
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "INVITE_CONNECTION_ERROR"
@@ -2435,7 +2283,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->INVITE_CONNECTION_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 153
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "INVITE_CONNECTION_TIMEOUT"
@@ -2450,7 +2297,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->INVITE_CONNECTION_TIMEOUT:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 154
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ABORT_INVITITION_ERROR"
@@ -2465,7 +2311,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ABORT_INVITITION_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 155
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "INVITE_BUSY"
@@ -2480,7 +2325,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->INVITE_BUSY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 156
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "NOT_IN_INVITING"
@@ -2495,7 +2339,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->NOT_IN_INVITING:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 157
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "DISCOVERY_INTERRUPTED"
@@ -2510,7 +2353,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->DISCOVERY_INTERRUPTED:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 158
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "INVITATION_LETTER_FORMAT_ERROR"
@@ -2525,7 +2367,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->INVITATION_LETTER_FORMAT_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 159
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "ERROR_CODE_UPDATE_COMM_CONFIG_PERMS"
@@ -2538,7 +2379,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->ERROR_CODE_UPDATE_COMM_CONFIG_PERMS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 160
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "EXTRA_ERROR_POSITIVE"
@@ -2551,7 +2391,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->EXTRA_ERROR_POSITIVE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 161
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "EXTRA_ERROR_NEGATIVE"
@@ -2564,7 +2403,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->EXTRA_ERROR_NEGATIVE:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 162
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     const-string v10, "UNKNOWN_ERROR"
@@ -2581,7 +2419,6 @@
 
     new-array v10, v10, [Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
-    .line 163
     sget-object v11, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->GENERAL_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     aput-object v11, v10, v1
@@ -3547,13 +3384,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->code:I
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
@@ -3573,13 +3407,10 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 5
     iput p3, p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->code:I
 
-    .line 6
     iput-object p4, p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->message:Ljava/lang/String;
 
     return-void
@@ -3588,7 +3419,6 @@
 .method public static fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->values()[Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
@@ -3602,7 +3432,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget v4, v3, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->code:I
 
     if-ne v4, p0, :cond_0
@@ -3614,7 +3443,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->UNKNOWN_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
@@ -3624,7 +3452,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -3639,7 +3466,6 @@
 .method public static values()[Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->$VALUES:[Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->clone()Ljava/lang/Object;
@@ -3656,7 +3482,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->code:I
 
     return v0
@@ -3665,7 +3490,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->message:Ljava/lang/String;
 
     return-object v0

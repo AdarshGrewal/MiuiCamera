@@ -25,10 +25,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     const/16 v1, 0x8
@@ -56,7 +54,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -65,7 +62,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     new-instance v0, Landroid/util/SparseArray;
 
@@ -77,7 +73,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -85,14 +80,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 4
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
-    .line 5
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
@@ -112,7 +105,6 @@
 
     const-string v0, "getCopy: no original values"
 
-    .line 6
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -136,7 +128,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 1
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -145,7 +136,6 @@
 
     goto :goto_2
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -157,7 +147,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -165,21 +154,18 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 4
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
-    .line 5
     invoke-virtual {v2}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->isNeedImageReader()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 6
     invoke-virtual {v2}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->getImageReader()Landroid/media/ImageReader;
 
     move-result-object v2
@@ -190,7 +176,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     invoke-virtual {v2}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
 
@@ -199,7 +184,6 @@
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 8
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_2
@@ -216,10 +200,8 @@
 
     const-string v0, "getSurfaceFromSparseArray: no original values"
 
-    .line 9
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -243,7 +225,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
@@ -252,7 +233,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -264,7 +244,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -272,12 +251,10 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 4
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -293,10 +270,8 @@
 
     const-string v0, "getValueFromSparseArray: no original values"
 
-    .line 6
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -309,7 +284,6 @@
 .method public addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -328,7 +302,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     return-object v0
@@ -345,19 +318,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
@@ -367,7 +337,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -401,19 +370,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
@@ -423,7 +389,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -457,19 +422,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
@@ -479,7 +441,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->mImageReaderSurfaces:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -509,7 +470,6 @@
 .method public isFromBinder()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->fromBinder:Z
 
     return v0
@@ -518,7 +478,6 @@
 .method public setFromBinder(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/imagereaders/ImageReaderSurface;->fromBinder:Z
 
     return-void

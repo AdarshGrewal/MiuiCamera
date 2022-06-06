@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/spring/view/SpringHelper;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/spring/view/SpringHelper$2;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-direct {p0, p1, p2}, Lmiuix/spring/view/SpringHelper$AxisHandler;-><init>(Lmiuix/spring/view/SpringHelper;I)V
@@ -35,7 +34,6 @@
 .method public canScroll()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/spring/view/SpringHelper$2;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {v0}, Lmiuix/spring/view/SpringHelper;->canScrollVertically()Z
@@ -48,7 +46,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/spring/view/SpringHelper$2;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {v0}, Lmiuix/spring/view/SpringHelper;->getHeight()I
@@ -61,7 +58,6 @@
 .method public onFlingReachEdge()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/spring/view/SpringHelper$2;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {v0}, Lmiuix/spring/view/SpringHelper;->vibrate()V

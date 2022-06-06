@@ -48,19 +48,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v1, v0, [Landroid/graphics/PointF;
 
-    .line 2
     iput-object v1, p0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-array v0, v0, [Landroid/graphics/PointF;
 
-    .line 3
     iput-object v0, p0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     return-void
@@ -87,32 +84,24 @@
 
     move/from16 v8, p8
 
-    .line 1
     iput v7, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
-    .line 2
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/RectF;->width()F
 
     move-result v7
 
-    .line 3
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/RectF;->height()F
 
     move-result v9
 
-    .line 4
     iget v10, v1, Landroid/graphics/RectF;->left:F
 
-    .line 5
     iget v11, v1, Landroid/graphics/RectF;->top:F
 
-    .line 6
     iget v12, v1, Landroid/graphics/RectF;->right:F
 
-    .line 7
     iget v1, v1, Landroid/graphics/RectF;->bottom:F
 
-    .line 8
     iget v13, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     invoke-static {v7, v13, v4, v5, v6}, Lmiuix/smooth/SmoothPathProvider;->access$000(FFDF)D
@@ -121,7 +110,6 @@
 
     iput-wide v13, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForHorizontal:D
 
-    .line 9
     iget v7, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     invoke-static {v9, v7, v4, v5, v6}, Lmiuix/smooth/SmoothPathProvider;->access$100(FFDF)D
@@ -130,7 +118,6 @@
 
     iput-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForVertical:D
 
-    .line 10
     iget-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForHorizontal:D
 
     invoke-static {v4, v5}, Lmiuix/smooth/SmoothPathProvider;->access$200(D)D
@@ -139,7 +126,6 @@
 
     iput-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForHorizontal:D
 
-    .line 11
     iget-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForVertical:D
 
     invoke-static {v4, v5}, Lmiuix/smooth/SmoothPathProvider;->access$300(D)D
@@ -152,7 +138,6 @@
 
     sub-double/2addr v13, v4
 
-    .line 12
     iget-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForHorizontal:D
 
     sub-double/2addr v13, v4
@@ -165,7 +150,6 @@
 
     iput v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->swapAngle:F
 
-    .line 13
     iget-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForHorizontal:D
 
     float-to-double v6, v6
@@ -178,7 +162,6 @@
 
     move-result-wide v4
 
-    .line 14
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     iget-wide v13, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForHorizontal:D
@@ -187,7 +170,6 @@
 
     move-result-wide v13
 
-    .line 15
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     move/from16 p1, v12
@@ -200,7 +182,6 @@
 
     move-result-wide v12
 
-    .line 16
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     iget-wide v14, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForHorizontal:D
@@ -209,7 +190,6 @@
 
     move-result-wide v14
 
-    .line 17
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     move-wide/from16 v16, v14
@@ -220,14 +200,12 @@
 
     move-result-wide v14
 
-    .line 18
     invoke-static {v4, v5, v14, v15}, Lmiuix/smooth/SmoothPathProvider;->access$1000(DD)D
 
     move-result-wide v4
 
     move-wide/from16 v18, v4
 
-    .line 19
     iget-wide v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForVertical:D
 
     mul-double/2addr v4, v6
@@ -238,7 +216,6 @@
 
     move-result-wide v4
 
-    .line 20
     iget v6, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     move-wide/from16 v20, v14
@@ -249,7 +226,6 @@
 
     move-result-wide v6
 
-    .line 21
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     iget-wide v14, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForVertical:D
@@ -258,7 +234,6 @@
 
     move-result-wide v14
 
-    .line 22
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     move-wide/from16 v22, v14
@@ -269,7 +244,6 @@
 
     move-result-wide v14
 
-    .line 23
     iget v9, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
 
     move-wide/from16 v24, v6
@@ -280,7 +254,6 @@
 
     move-result-wide v6
 
-    .line 24
     invoke-static {v4, v5, v6, v7}, Lmiuix/smooth/SmoothPathProvider;->access$1600(DD)D
 
     move-result-wide v4
@@ -293,7 +266,6 @@
 
     add-float/2addr v11, v3
 
-    .line 25
     new-instance v1, Landroid/graphics/RectF;
 
     iget v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
@@ -310,7 +282,6 @@
 
     iput-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
-    .line 26
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -337,7 +308,6 @@
 
     aput-object v2, v1, v8
 
-    .line 27
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -352,7 +322,6 @@
 
     aput-object v2, v1, v5
 
-    .line 28
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -371,7 +340,6 @@
 
     aput-object v2, v1, v5
 
-    .line 29
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -388,7 +356,6 @@
 
     aput-object v2, v1, v5
 
-    .line 30
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -409,7 +376,6 @@
 
     aput-object v2, v1, v5
 
-    .line 31
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -424,7 +390,6 @@
 
     aput-object v2, v1, v5
 
-    .line 32
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -439,7 +404,6 @@
 
     aput-object v2, v1, v5
 
-    .line 33
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -471,7 +435,6 @@
 
     add-float/2addr v11, v3
 
-    .line 34
     new-instance v1, Landroid/graphics/RectF;
 
     iget v3, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
@@ -492,7 +455,6 @@
 
     iput-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
-    .line 35
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -523,7 +485,6 @@
 
     aput-object v3, v1, v2
 
-    .line 36
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -538,7 +499,6 @@
 
     aput-object v2, v1, v3
 
-    .line 37
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -553,7 +513,6 @@
 
     aput-object v3, v2, v4
 
-    .line 38
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -576,7 +535,6 @@
 
     aput-object v3, v2, v4
 
-    .line 39
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -597,7 +555,6 @@
 
     aput-object v3, v2, v4
 
-    .line 40
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -614,7 +571,6 @@
 
     aput-object v3, v2, v1
 
-    .line 41
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -631,7 +587,6 @@
 
     aput-object v2, v1, v6
 
-    .line 42
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -659,7 +614,6 @@
 
     if-ne v8, v6, :cond_2
 
-    .line 43
     new-instance v6, Landroid/graphics/RectF;
 
     iget v7, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
@@ -684,7 +638,6 @@
 
     iput-object v6, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
-    .line 44
     iget-object v6, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v7, Landroid/graphics/PointF;
@@ -723,7 +676,6 @@
 
     aput-object v7, v8, v1
 
-    .line 45
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -742,7 +694,6 @@
 
     aput-object v2, v1, v3
 
-    .line 46
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -759,7 +710,6 @@
 
     aput-object v3, v2, v11
 
-    .line 47
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -776,7 +726,6 @@
 
     aput-object v3, v2, v6
 
-    .line 48
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -801,7 +750,6 @@
 
     aput-object v3, v8, v1
 
-    .line 49
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -816,7 +764,6 @@
 
     aput-object v3, v1, v8
 
-    .line 50
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v3, Landroid/graphics/PointF;
@@ -831,7 +778,6 @@
 
     aput-object v3, v1, v2
 
-    .line 51
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v2, Landroid/graphics/PointF;
@@ -863,7 +809,6 @@
 
     add-float/2addr v10, v2
 
-    .line 52
     new-instance v2, Landroid/graphics/RectF;
 
     iget v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->radius:F
@@ -884,7 +829,6 @@
 
     iput-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
-    .line 53
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v4, Landroid/graphics/PointF;
@@ -905,7 +849,6 @@
 
     aput-object v4, v2, v8
 
-    .line 54
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v4, Landroid/graphics/PointF;
@@ -920,7 +863,6 @@
 
     aput-object v4, v2, v8
 
-    .line 55
     iget-object v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v8, Landroid/graphics/PointF;
@@ -935,7 +877,6 @@
 
     aput-object v8, v4, v7
 
-    .line 56
     iget-object v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     new-instance v7, Landroid/graphics/PointF;
@@ -960,7 +901,6 @@
 
     aput-object v7, v4, v8
 
-    .line 57
     iget-object v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v7, Landroid/graphics/PointF;
@@ -981,7 +921,6 @@
 
     aput-object v7, v4, v5
 
-    .line 58
     iget-object v4, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v5, Landroid/graphics/PointF;
@@ -998,7 +937,6 @@
 
     aput-object v5, v4, v1
 
-    .line 59
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v4, Landroid/graphics/PointF;
@@ -1015,7 +953,6 @@
 
     aput-object v4, v1, v5
 
-    .line 60
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     new-instance v4, Landroid/graphics/PointF;

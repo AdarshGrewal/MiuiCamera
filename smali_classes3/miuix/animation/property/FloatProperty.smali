@@ -25,12 +25,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     const-class v0, Ljava/lang/Float;
 
     invoke-direct {p0, v0, p1}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2
     iput-object p1, p0, Lmiuix/animation/property/FloatProperty;->mPropertyName:Ljava/lang/String;
 
     return-void
@@ -51,14 +49,12 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Lmiuix/animation/property/FloatProperty;->getValue(Ljava/lang/Object;)F
 
@@ -74,7 +70,6 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/animation/property/FloatProperty;->get(Ljava/lang/Object;)Ljava/lang/Float;
 
     move-result-object p1
@@ -102,7 +97,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -116,7 +110,6 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p2, Ljava/lang/Float;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/FloatProperty;->set(Ljava/lang/Object;Ljava/lang/Float;)V
@@ -135,7 +128,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

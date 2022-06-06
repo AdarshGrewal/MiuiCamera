@@ -18,10 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitUpdateReporter;->context:Landroid/content/Context;
 
     return-void
@@ -44,7 +42,6 @@
 
     const-string v1, "Success to load new split info version "
 
-    .line 1
     invoke-static {p1, v1, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -65,7 +62,6 @@
 
     aput-object p2, v0, p1
 
-    .line 1
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -108,7 +104,6 @@
 
     aput-object p2, v0, p1
 
-    .line 1
     invoke-virtual {p3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1

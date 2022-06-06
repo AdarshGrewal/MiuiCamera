@@ -26,10 +26,8 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance p1, Ljava/util/Stack;
 
     invoke-direct {p1}, Ljava/util/Stack;-><init>()V
@@ -42,7 +40,6 @@
 .method public static create(Lcom/android/camera/ActivityBase;)Lcom/android/camera/module/impl/component/BackStackImpl;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/impl/component/BackStackImpl;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/impl/component/BackStackImpl;-><init>(Lcom/android/camera/ActivityBase;)V
@@ -53,7 +50,6 @@
 .method private final handleBackStack(I)Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
@@ -66,7 +62,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
@@ -74,7 +69,6 @@
 
     move-result-object v0
 
-    .line 3
     array-length v2, v0
 
     move v3, v1
@@ -84,18 +78,15 @@
 
     aget-object v4, v0, v3
 
-    .line 4
     instance-of v5, v4, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;
 
     if-nez v5, :cond_1
 
     goto :goto_1
 
-    .line 5
     :cond_1
     check-cast v4, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;
 
-    .line 6
     invoke-interface {v4}, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;->canProvide()Z
 
     move-result v5
@@ -104,7 +95,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     invoke-interface {v4, p1}, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;->onBackEvent(I)Z
 
@@ -112,7 +102,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +161,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p1}, Ljava/util/Stack;->isEmpty()Z
 
     move-result v0
@@ -181,13 +169,11 @@
 
     goto :goto_2
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/util/Stack;->toArray()[Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 3
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -197,18 +183,15 @@
 
     aget-object v2, p1, v1
 
-    .line 4
     instance-of v3, v2, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;
 
     if-nez v3, :cond_1
 
     goto :goto_1
 
-    .line 5
     :cond_1
     check-cast v2, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;
 
-    .line 6
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;->canProvide()Z
 
     move-result v3
@@ -217,7 +200,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     invoke-interface {v2, p2}, Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;->onBackEvent(I)Z
 
@@ -243,7 +225,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     invoke-virtual {v0, p1}, Ljava/util/Stack;->add(Ljava/lang/Object;)Z
@@ -256,7 +237,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/BackStackImpl;->handleBackStack(I)Z
 
     move-result v0
@@ -267,7 +247,6 @@
 .method public handleBackStackFromLongPressShutter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     const/16 v1, 0x8
@@ -280,7 +259,6 @@
 .method public handleBackStackFromShutter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     const/4 v1, 0x3
@@ -295,7 +273,6 @@
 
     const/4 p1, 0x2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/BackStackImpl;->handleBackStack(I)Z
 
     move-result p1
@@ -306,7 +283,6 @@
 .method public handleBackStackFromTimerBurstShutter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     const/16 v1, 0x9
@@ -319,7 +295,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -341,7 +316,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     invoke-virtual {v0, p1}, Ljava/util/Stack;->remove(Ljava/lang/Object;)Z
@@ -352,12 +326,10 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/BackStackImpl;->mStacks:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->clear()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0

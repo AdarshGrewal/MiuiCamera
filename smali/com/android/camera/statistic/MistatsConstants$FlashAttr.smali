@@ -15,15 +15,9 @@
 
 
 # static fields
-.field public static final FLASH_VALUE_AUTO_TRIGGER_SCREEN_HALO:Ljava/lang/String; = "auto_halo"
+.field public static final FLASH_VALUE_SCREEN_LIGHT_AUTO:Ljava/lang/String; = "screen-light-auto"
 
-.field public static final FLASH_VALUE_AUTO_TRIGGER_SCREEN_HALO_FLASH:Ljava/lang/String; = "auto_halo_flash"
-
-.field public static final FLASH_VALUE_SCREEN_HALO_AND_FLASH:Ljava/lang/String; = "halo_flash"
-
-.field public static final FLASH_VALUE_SCREEN_HALO_ON:Ljava/lang/String; = "halo"
-
-.field public static final FLASH_VALUE_SCREEN_LIGHT_ON:Ljava/lang/String; = "screen_light"
+.field public static final FLASH_VALUE_SCREEN_LIGHT_ON:Ljava/lang/String; = "screen-light-on"
 
 .field public static final PARAM_FLASH_MODE:Ljava/lang/String; = "attr_flash_mode"
 

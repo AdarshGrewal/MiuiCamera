@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,10 +20,8 @@
         }
     .end annotation
 
-    .line 1
     new-array v0, p1, [B
 
-    .line 2
     invoke-static {p0, v0, p1}, Lorg/jcodec/common/io/StringReader;->sureRead(Ljava/io/InputStream;[BI)I
 
     move-result p0
@@ -47,7 +44,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lorg/jcodec/common/io/StringReader;->_sureRead(Ljava/io/InputStream;I)[B
 
     move-result-object p0
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {p0}, Lorg/jcodec/platform/Platform;->stringFromBytes([B)Ljava/lang/String;
 
@@ -83,7 +78,6 @@
 
     sub-int v1, p2, v0
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Ljava/io/InputStream;->read([BII)I
 
     move-result v1
@@ -119,7 +113,6 @@
 
     if-lez v0, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
     move-result-wide v0

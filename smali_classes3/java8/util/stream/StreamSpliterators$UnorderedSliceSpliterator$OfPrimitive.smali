@@ -52,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct/range {p0 .. p5}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;-><init>(Ljava8/util/Spliterator;JJ)V
 
     return-void
@@ -71,7 +70,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;)V
 
     return-void
@@ -103,12 +101,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->permitStatus()Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$PermitStatus;
 
@@ -118,14 +114,12 @@
 
     if-eq v1, v2, :cond_5
 
-    .line 3
     sget-object v2, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$PermitStatus;->MAYBE_MORE:Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$PermitStatus;
 
     if-ne v1, v2, :cond_4
 
     if-nez v0, :cond_0
 
-    .line 4
     iget v0, p0, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->chunkSize:I
 
     invoke-virtual {p0, v0}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$OfPrimitive;->bufferCreate(I)Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;
@@ -134,7 +128,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     invoke-virtual {v0}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;->reset()V
 
@@ -143,7 +136,6 @@
 
     move-wide v3, v1
 
-    .line 6
     :cond_1
     iget-object v5, p0, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->s:Ljava8/util/Spliterator;
 
@@ -174,7 +166,6 @@
 
     return-void
 
-    .line 7
     :cond_3
     invoke-virtual {p0, v3, v4}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->acquirePermits(J)J
 
@@ -184,7 +175,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->s:Ljava8/util/Spliterator;
 
@@ -204,10 +194,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->permitStatus()Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$PermitStatus;
 
@@ -219,7 +207,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -235,7 +222,6 @@
     :cond_1
     const-wide/16 v0, 0x1
 
-    .line 4
     invoke-virtual {p0, v0, v1}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->acquirePermits(J)J
 
     move-result-wide v2
@@ -244,7 +230,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$OfPrimitive;->acceptConsumed(Ljava/lang/Object;)V
 
     const/4 p1, 0x1
@@ -258,7 +243,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

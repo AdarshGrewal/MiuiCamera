@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/DatePicker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onValueChange(Lmiuix/pickerwidget/widget/NumberPicker;II)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/DatePicker;->access$100(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
@@ -57,7 +55,6 @@
 
     invoke-virtual {v0, v1, v2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/DatePicker;->access$200(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/widget/NumberPicker;
@@ -72,7 +69,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/DatePicker;->access$100(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
@@ -101,7 +97,6 @@
 
     goto :goto_3
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
@@ -111,7 +106,6 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 5
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/DatePicker;->access$100(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
@@ -140,7 +134,6 @@
 
     goto :goto_3
 
-    .line 6
     :cond_3
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
@@ -150,7 +143,6 @@
 
     if-ne p1, p2, :cond_6
 
-    .line 7
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {p2}, Lmiuix/pickerwidget/widget/DatePicker;->access$100(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
@@ -175,7 +167,6 @@
     :goto_2
     invoke-virtual {p2, v0, p3}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 8
     :goto_3
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
@@ -209,7 +200,6 @@
 
     invoke-static {p2, p3, v0, v1}, Lmiuix/pickerwidget/widget/DatePicker;->access$600(Lmiuix/pickerwidget/widget/DatePicker;III)V
 
-    .line 9
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {p2}, Lmiuix/pickerwidget/widget/DatePicker;->access$500(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/widget/NumberPicker;
@@ -218,25 +208,21 @@
 
     if-ne p1, p2, :cond_5
 
-    .line 10
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/DatePicker;->access$700(Lmiuix/pickerwidget/widget/DatePicker;)V
 
-    .line 11
     :cond_5
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/DatePicker;->access$800(Lmiuix/pickerwidget/widget/DatePicker;)V
 
-    .line 12
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker$1;->this$0:Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/DatePicker;->access$900(Lmiuix/pickerwidget/widget/DatePicker;)V
 
     return-void
 
-    .line 13
     :cond_6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

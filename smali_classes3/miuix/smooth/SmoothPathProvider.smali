@@ -30,22 +30,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x3f4ccccd    # 0.8f
 
-    .line 2
     iput v0, p0, Lmiuix/smooth/SmoothPathProvider;->mSmooth:F
 
     const v0, 0x3eeb851f    # 0.46f
 
-    .line 3
     iput v0, p0, Lmiuix/smooth/SmoothPathProvider;->mKsi:F
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     return-void
@@ -54,7 +50,6 @@
 .method public static synthetic access$000(FFDF)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3, p4}, Lmiuix/smooth/SmoothPathProvider;->smoothForWidth(FFDF)D
 
     move-result-wide p0
@@ -65,7 +60,6 @@
 .method public static synthetic access$100(FFDF)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3, p4}, Lmiuix/smooth/SmoothPathProvider;->smoothForHeight(FFDF)D
 
     move-result-wide p0
@@ -76,7 +70,6 @@
 .method public static synthetic access$1000(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Lmiuix/smooth/SmoothPathProvider;->yForWidth(DD)D
 
     move-result-wide p0
@@ -87,7 +80,6 @@
 .method public static synthetic access$1100(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Lmiuix/smooth/SmoothPathProvider;->kForHeight(DD)D
 
     move-result-wide p0
@@ -98,7 +90,6 @@
 .method public static synthetic access$1200(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->mForHeight(FD)D
 
     move-result-wide p0
@@ -109,7 +100,6 @@
 .method public static synthetic access$1300(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->nForHeight(FD)D
 
     move-result-wide p0
@@ -120,7 +110,6 @@
 .method public static synthetic access$1400(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->pForHeight(FD)D
 
     move-result-wide p0
@@ -131,7 +120,6 @@
 .method public static synthetic access$1500(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->xForHeight(FD)D
 
     move-result-wide p0
@@ -142,7 +130,6 @@
 .method public static synthetic access$1600(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Lmiuix/smooth/SmoothPathProvider;->yForHeight(DD)D
 
     move-result-wide p0
@@ -153,7 +140,6 @@
 .method public static synthetic access$200(D)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/smooth/SmoothPathProvider;->thetaForWidth(D)D
 
     move-result-wide p0
@@ -164,7 +150,6 @@
 .method public static synthetic access$300(D)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/smooth/SmoothPathProvider;->thetaForHeight(D)D
 
     move-result-wide p0
@@ -175,7 +160,6 @@
 .method public static synthetic access$400(D)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide p0
@@ -186,7 +170,6 @@
 .method public static synthetic access$500(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Lmiuix/smooth/SmoothPathProvider;->kForWidth(DD)D
 
     move-result-wide p0
@@ -197,7 +180,6 @@
 .method public static synthetic access$600(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->mForWidth(FD)D
 
     move-result-wide p0
@@ -208,7 +190,6 @@
 .method public static synthetic access$700(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->nForWidth(FD)D
 
     move-result-wide p0
@@ -219,7 +200,6 @@
 .method public static synthetic access$800(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->pForWidth(FD)D
 
     move-result-wide p0
@@ -230,7 +210,6 @@
 .method public static synthetic access$900(FD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/smooth/SmoothPathProvider;->xForWidth(FD)D
 
     move-result-wide p0
@@ -241,21 +220,18 @@
 .method private ensureFourCornerData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
 
     if-nez v1, :cond_0
 
-    .line 2
     new-instance v1, Lmiuix/smooth/SmoothPathProvider$CornerData;
 
     invoke-direct {v1}, Lmiuix/smooth/SmoothPathProvider$CornerData;-><init>()V
 
     iput-object v1, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -263,14 +239,12 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     new-instance v1, Lmiuix/smooth/SmoothPathProvider$CornerData;
 
     invoke-direct {v1}, Lmiuix/smooth/SmoothPathProvider$CornerData;-><init>()V
 
     iput-object v1, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -278,14 +252,12 @@
 
     if-nez v1, :cond_2
 
-    .line 6
     new-instance v1, Lmiuix/smooth/SmoothPathProvider$CornerData;
 
     invoke-direct {v1}, Lmiuix/smooth/SmoothPathProvider$CornerData;-><init>()V
 
     iput-object v1, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -293,7 +265,6 @@
 
     if-nez v1, :cond_3
 
-    .line 8
     new-instance v1, Lmiuix/smooth/SmoothPathProvider$CornerData;
 
     invoke-direct {v1}, Lmiuix/smooth/SmoothPathProvider$CornerData;-><init>()V
@@ -307,7 +278,6 @@
 .method private isFourCornerDataValid()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -429,7 +399,6 @@
 
     div-double v2, p2, v0
 
-    .line 1
     invoke-static {v2, v3}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v4
@@ -483,7 +452,6 @@
 
     div-double v2, p2, v0
 
-    .line 1
     invoke-static {v2, v3}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v4
@@ -522,7 +490,6 @@
 
     float-to-double v0, p0
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide p0
@@ -541,7 +508,6 @@
 
     float-to-double v0, p0
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide p0
@@ -560,7 +526,6 @@
 
     float-to-double v0, p0
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide p0
@@ -579,7 +544,6 @@
 
     float-to-double v0, p0
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide p0
@@ -602,7 +566,6 @@
 
     div-double/2addr p1, v2
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide p0
@@ -625,7 +588,6 @@
 
     div-double/2addr p1, v2
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide p0
@@ -666,7 +628,6 @@
 
     move v5, p4
 
-    .line 1
     invoke-static/range {v0 .. v5}, Lmiuix/smooth/SmoothPathProvider;->isHeightCollapsed(FFFDF)Z
 
     move-result v0
@@ -685,7 +646,6 @@
 
     div-float/2addr p0, p4
 
-    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -717,7 +677,6 @@
 
     move v5, p4
 
-    .line 1
     invoke-static/range {v0 .. v5}, Lmiuix/smooth/SmoothPathProvider;->isWidthCollapsed(FFFDF)Z
 
     move-result v0
@@ -736,7 +695,6 @@
 
     div-float/2addr p0, p4
 
-    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -796,7 +754,6 @@
 
     div-double v2, p1, v2
 
-    .line 1
     invoke-static {v2, v3}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v2
@@ -829,7 +786,6 @@
 
     div-double v2, p1, v2
 
-    .line 1
     invoke-static {v2, v3}, Ljava/lang/Math;->tan(D)D
 
     move-result-wide v2
@@ -872,7 +828,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, p2, v0, v0}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;FFF)V
 
     return-void
@@ -917,7 +872,6 @@
 
     aput p2, v0, v1
 
-    .line 2
     invoke-virtual {p0, p1, v0, p3, p4}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;[FFF)V
 
     return-void
@@ -928,7 +882,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0, p1, p2, v0, v0}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;[FFF)V
 
     return-void
@@ -941,27 +894,22 @@
 
     move-object/from16 v1, p2
 
-    .line 4
     invoke-virtual/range {p0 .. p0}, Lmiuix/smooth/SmoothPathProvider;->getKsi()F
 
     move-result v10
 
-    .line 5
     invoke-virtual/range {p0 .. p0}, Lmiuix/smooth/SmoothPathProvider;->getSmooth()F
 
     move-result v2
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/RectF;->width()F
 
     move-result v8
 
-    .line 7
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/RectF;->height()F
 
     move-result v9
 
-    .line 8
     new-instance v11, Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     float-to-double v12, v2
@@ -989,14 +937,12 @@
 
     new-array v3, v2, [F
 
-    .line 9
     fill-array-data v3, :array_0
 
     const/4 v4, 0x0
 
     move v5, v4
 
-    .line 10
     :goto_0
     array-length v6, v1
 
@@ -1006,7 +952,6 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 11
     aget v6, v1, v5
 
     invoke-static {v6}, Ljava/lang/Float;->isNaN(F)Z
@@ -1015,7 +960,6 @@
 
     if-nez v6, :cond_1
 
-    .line 12
     aget v6, v1, v5
 
     aput v6, v3, v5
@@ -1025,43 +969,35 @@
 
     goto :goto_0
 
-    .line 13
     :cond_2
     aget v1, v3, v4
 
     const/4 v2, 0x1
 
-    .line 14
     aget v5, v3, v2
 
     const/4 v6, 0x2
 
-    .line 15
     aget v7, v3, v6
 
     const/4 v11, 0x3
 
-    .line 16
     aget v14, v3, v11
 
     const/4 v15, 0x4
 
-    .line 17
     aget v16, v3, v15
 
     const/16 v17, 0x5
 
-    .line 18
     aget v18, v3, v17
 
     const/16 v19, 0x6
 
-    .line 19
     aget v20, v3, v19
 
     const/16 v21, 0x7
 
-    .line 20
     aget v22, v3, v21
 
     add-float v23, v1, v7
@@ -1070,7 +1006,6 @@
 
     if-lez v23, :cond_3
 
-    .line 21
     aget v1, v3, v4
 
     mul-float/2addr v1, v8
@@ -1083,7 +1018,6 @@
 
     div-float/2addr v1, v7
 
-    .line 22
     aget v7, v3, v6
 
     mul-float/2addr v7, v8
@@ -1105,7 +1039,6 @@
 
     if-lez v4, :cond_4
 
-    .line 23
     aget v4, v3, v11
 
     mul-float/2addr v4, v9
@@ -1118,7 +1051,6 @@
 
     div-float v14, v4, v7
 
-    .line 24
     aget v4, v3, v17
 
     mul-float/2addr v4, v9
@@ -1140,7 +1072,6 @@
 
     if-lez v4, :cond_5
 
-    .line 25
     aget v4, v3, v15
 
     mul-float/2addr v4, v8
@@ -1153,7 +1084,6 @@
 
     div-float v16, v4, v7
 
-    .line 26
     aget v4, v3, v19
 
     mul-float/2addr v8, v4
@@ -1177,7 +1107,6 @@
 
     if-lez v4, :cond_6
 
-    .line 27
     aget v4, v3, v21
 
     mul-float/2addr v4, v9
@@ -1190,7 +1119,6 @@
 
     div-float v22, v4, v5
 
-    .line 28
     aget v4, v3, v2
 
     mul-float/2addr v9, v4
@@ -1206,10 +1134,8 @@
     :cond_6
     move/from16 v9, v22
 
-    .line 29
     invoke-direct/range {p0 .. p0}, Lmiuix/smooth/SmoothPathProvider;->ensureFourCornerData()V
 
-    .line 30
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1244,7 +1170,6 @@
 
     invoke-virtual/range {v1 .. v9}, Lmiuix/smooth/SmoothPathProvider$CornerData;->build(FLandroid/graphics/RectF;FFDFI)V
 
-    .line 31
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1261,7 +1186,6 @@
 
     invoke-virtual/range {v1 .. v9}, Lmiuix/smooth/SmoothPathProvider$CornerData;->build(FLandroid/graphics/RectF;FFDFI)V
 
-    .line 32
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1274,7 +1198,6 @@
 
     invoke-virtual/range {v1 .. v9}, Lmiuix/smooth/SmoothPathProvider$CornerData;->build(FLandroid/graphics/RectF;FFDFI)V
 
-    .line 33
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1321,17 +1244,14 @@
 
     move/from16 v10, p5
 
-    .line 1
     invoke-direct/range {p0 .. p0}, Lmiuix/smooth/SmoothPathProvider;->isFourCornerDataValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3
     new-instance v1, Landroid/graphics/RectF;
 
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
@@ -1348,16 +1268,13 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v11, Landroid/graphics/PointF;
 
     invoke-direct {v11}, Landroid/graphics/PointF;-><init>()V
 
-    .line 5
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 6
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1370,7 +1287,6 @@
 
     add-double/2addr v5, v3
 
-    .line 7
     invoke-static {v5, v6}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v3
@@ -1389,10 +1305,8 @@
 
     move-object/from16 v6, p2
 
-    .line 8
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 9
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1407,14 +1321,12 @@
 
     iput v3, v11, Landroid/graphics/PointF;->x:F
 
-    .line 10
     aget-object v2, v2, v12
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
     iput v2, v11, Landroid/graphics/PointF;->y:F
 
-    .line 11
     iget-wide v1, v1, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForHorizontal:D
 
     const-wide/16 v13, 0x0
@@ -1429,19 +1341,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 12
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 13
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 14
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1488,13 +1397,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 15
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 16
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 17
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1507,14 +1413,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 18
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 19
     :cond_1
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -1548,10 +1452,8 @@
 
     if-nez v1, :cond_2
 
-    .line 20
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 21
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
@@ -1576,7 +1478,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 22
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1589,14 +1490,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 23
     aget-object v1, v1, v12
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 24
     :cond_2
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -1608,19 +1507,16 @@
 
     if-eqz v1, :cond_3
 
-    .line 25
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 26
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 27
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1669,13 +1565,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 28
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 29
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 30
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1688,18 +1581,15 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 31
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 32
     :cond_3
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 33
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1712,7 +1602,6 @@
 
     add-double/2addr v5, v3
 
-    .line 34
     invoke-static {v5, v6}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v3
@@ -1731,10 +1620,8 @@
 
     move-object/from16 v6, p2
 
-    .line 35
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 36
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1747,33 +1634,28 @@
 
     iput v3, v11, Landroid/graphics/PointF;->x:F
 
-    .line 37
     aget-object v2, v2, v12
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
     iput v2, v11, Landroid/graphics/PointF;->y:F
 
-    .line 38
     iget-wide v1, v1, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForVertical:D
 
     cmpl-double v1, v1, v13
 
     if-eqz v1, :cond_4
 
-    .line 39
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 40
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 41
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1822,13 +1704,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 42
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 43
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 44
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1841,14 +1720,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 45
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 46
     :cond_4
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -1882,10 +1759,8 @@
 
     if-nez v1, :cond_5
 
-    .line 47
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 48
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
@@ -1910,7 +1785,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 49
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -1923,14 +1797,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 50
     aget-object v1, v1, v12
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 51
     :cond_5
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -1942,19 +1814,16 @@
 
     if-eqz v1, :cond_6
 
-    .line 52
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 53
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 54
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2003,13 +1872,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 55
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 56
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 57
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2022,18 +1888,15 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 58
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 59
     :cond_6
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 60
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2042,7 +1905,6 @@
 
     iget-wide v3, v1, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForVertical:D
 
-    .line 61
     invoke-static {v3, v4}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v3
@@ -2061,10 +1923,8 @@
 
     move-object/from16 v6, p2
 
-    .line 62
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 63
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2077,33 +1937,28 @@
 
     iput v3, v11, Landroid/graphics/PointF;->x:F
 
-    .line 64
     aget-object v2, v2, v12
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
     iput v2, v11, Landroid/graphics/PointF;->y:F
 
-    .line 65
     iget-wide v1, v1, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForHorizontal:D
 
     cmpl-double v1, v1, v13
 
     if-eqz v1, :cond_7
 
-    .line 66
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 67
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 68
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2152,13 +2007,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 69
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 70
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 71
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2171,14 +2023,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 72
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 73
     :cond_7
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2212,10 +2062,8 @@
 
     if-nez v1, :cond_8
 
-    .line 74
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 75
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
@@ -2240,7 +2088,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 76
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2253,14 +2100,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 77
     aget-object v1, v1, v12
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 78
     :cond_8
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2272,19 +2117,16 @@
 
     if-eqz v1, :cond_9
 
-    .line 79
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 80
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 81
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2333,13 +2175,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 82
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 83
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 84
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2352,18 +2191,15 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 85
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 86
     :cond_9
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 87
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2376,7 +2212,6 @@
 
     add-double/2addr v5, v3
 
-    .line 88
     invoke-static {v5, v6}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v3
@@ -2395,10 +2230,8 @@
 
     move-object/from16 v6, p2
 
-    .line 89
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 90
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2411,33 +2244,28 @@
 
     iput v3, v11, Landroid/graphics/PointF;->x:F
 
-    .line 91
     aget-object v2, v2, v12
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
     iput v2, v11, Landroid/graphics/PointF;->y:F
 
-    .line 92
     iget-wide v1, v1, Lmiuix/smooth/SmoothPathProvider$CornerData;->smoothForVertical:D
 
     cmpl-double v1, v1, v13
 
     if-eqz v1, :cond_a
 
-    .line 93
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 94
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 95
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2486,13 +2314,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 96
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 97
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 98
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2505,14 +2330,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 99
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 100
     :cond_a
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2546,10 +2369,8 @@
 
     if-nez v1, :cond_b
 
-    .line 101
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 102
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
@@ -2574,7 +2395,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 103
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2587,14 +2407,12 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 104
     aget-object v1, v1, v12
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     iput v1, v11, Landroid/graphics/PointF;->y:F
 
-    .line 105
     :cond_b
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2606,19 +2424,16 @@
 
     if-eqz v1, :cond_c
 
-    .line 106
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 107
     iget v2, v11, Landroid/graphics/PointF;->x:F
 
     iget v3, v11, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 108
     iget-object v2, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v2, v2, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2667,13 +2482,10 @@
 
     invoke-virtual/range {v18 .. v24}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 109
     invoke-virtual {v8, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 110
     invoke-virtual {v7, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 111
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v1, v1, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2686,7 +2498,6 @@
 
     iput v2, v11, Landroid/graphics/PointF;->x:F
 
-    .line 112
     aget-object v1, v1, v17
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
@@ -2700,7 +2511,6 @@
 .method public getKsi()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/SmoothPathProvider;->mKsi:F
 
     return v0
@@ -2709,7 +2519,6 @@
 .method public getSmooth()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/SmoothPathProvider;->mSmooth:F
 
     return v0
@@ -2720,16 +2529,13 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
-    .line 3
     invoke-direct {p0}, Lmiuix/smooth/SmoothPathProvider;->isFourCornerDataValid()Z
 
     move-result v0
@@ -2738,7 +2544,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     iget-object v1, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
@@ -2755,7 +2560,6 @@
 
     return-object p1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2769,7 +2573,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
     const-wide v2, 0x400921fb54442d18L    # Math.PI
@@ -2778,7 +2581,6 @@
 
     add-double/2addr v4, v2
 
-    .line 7
     invoke-static {v4, v5}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v2
@@ -2791,12 +2593,10 @@
 
     iget v2, v2, Lmiuix/smooth/SmoothPathProvider$CornerData;->swapAngle:F
 
-    .line 8
     invoke-virtual {p1, v1, v0, v2}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
@@ -2810,7 +2610,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 10
     :goto_0
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2830,7 +2629,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 11
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -2861,7 +2659,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 12
     :cond_3
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2885,7 +2682,6 @@
 
     if-nez v0, :cond_4
 
-    .line 13
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -2902,7 +2698,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 14
     :cond_4
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2914,7 +2709,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 15
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -2945,7 +2739,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 16
     :cond_5
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2957,7 +2750,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 17
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
     const-wide v2, 0x4012d97c7f3321d2L    # 4.71238898038469
@@ -2966,7 +2758,6 @@
 
     add-double/2addr v4, v2
 
-    .line 18
     invoke-static {v4, v5}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v2
@@ -2979,10 +2770,8 @@
 
     iget v2, v2, Lmiuix/smooth/SmoothPathProvider$CornerData;->swapAngle:F
 
-    .line 19
     invoke-virtual {p1, v1, v0, v2}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
 
-    .line 20
     :cond_6
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -2994,7 +2783,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 21
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3025,7 +2813,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 22
     :cond_7
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3049,7 +2836,6 @@
 
     if-nez v0, :cond_8
 
-    .line 23
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomRight:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -3066,7 +2852,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 24
     :cond_8
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3078,7 +2863,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 25
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3109,7 +2893,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 26
     :cond_9
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3121,12 +2904,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 27
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
     iget-wide v2, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->thetaForVertical:D
 
-    .line 28
     invoke-static {v2, v3}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v2
@@ -3139,10 +2920,8 @@
 
     iget v2, v2, Lmiuix/smooth/SmoothPathProvider$CornerData;->swapAngle:F
 
-    .line 29
     invoke-virtual {p1, v1, v0, v2}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
 
-    .line 30
     :cond_a
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3154,7 +2933,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 31
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3185,7 +2963,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 32
     :cond_b
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3209,7 +2986,6 @@
 
     if-nez v0, :cond_c
 
-    .line 33
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->bottomLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -3226,7 +3002,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 34
     :cond_c
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3238,7 +3013,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 35
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorHorizontal:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3269,7 +3043,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 36
     :cond_d
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3281,7 +3054,6 @@
 
     if-eqz v1, :cond_e
 
-    .line 37
     iget-object v1, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->rect:Landroid/graphics/RectF;
 
     const-wide v2, 0x3ff921fb54442d18L    # 1.5707963267948966
@@ -3290,7 +3062,6 @@
 
     add-double/2addr v4, v2
 
-    .line 38
     invoke-static {v4, v5}, Lmiuix/smooth/SmoothPathProvider;->radToAngle(D)D
 
     move-result-wide v2
@@ -3303,10 +3074,8 @@
 
     iget v2, v2, Lmiuix/smooth/SmoothPathProvider$CornerData;->swapAngle:F
 
-    .line 39
     invoke-virtual {p1, v1, v0, v2}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
 
-    .line 40
     :cond_e
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3318,7 +3087,6 @@
 
     if-eqz v1, :cond_f
 
-    .line 41
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3349,7 +3117,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 42
     :cond_f
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3373,7 +3140,6 @@
 
     if-nez v0, :cond_10
 
-    .line 43
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$SmoothData;->topLeft:Lmiuix/smooth/SmoothPathProvider$CornerData;
@@ -3390,7 +3156,6 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 44
     :cond_10
     iget-object v0, p0, Lmiuix/smooth/SmoothPathProvider;->mAllData:Lmiuix/smooth/SmoothPathProvider$SmoothData;
 
@@ -3402,7 +3167,6 @@
 
     if-eqz v1, :cond_11
 
-    .line 45
     iget-object v0, v0, Lmiuix/smooth/SmoothPathProvider$CornerData;->bezierAnchorVertical:[Landroid/graphics/PointF;
 
     aget-object v1, v0, v13
@@ -3433,7 +3197,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
 
-    .line 46
     :cond_11
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
@@ -3443,7 +3206,6 @@
 .method public setKsi(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/smooth/SmoothPathProvider;->mKsi:F
 
     return-void
@@ -3452,7 +3214,6 @@
 .method public setSmooth(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/smooth/SmoothPathProvider;->mSmooth:F
 
     return-void

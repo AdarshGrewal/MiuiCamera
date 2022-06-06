@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,14 +20,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p2}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v0
 
     invoke-interface {p1, v0, v1}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 2
     invoke-virtual {p2}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object p2
@@ -54,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/containers/mp4/MP4Util;->getRootAtoms(Lorg/jcodec/common/io/SeekableByteChannel;)Ljava/util/List;
 
     move-result-object p1
@@ -76,7 +72,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v1
@@ -104,12 +99,10 @@
 .method private parseBox(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->read(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lorg/jcodec/containers/mp4/BoxFactory;->getDefault()Lorg/jcodec/containers/mp4/IBoxFactory;
 
     move-result-object v1
@@ -131,7 +124,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/movtool/InplaceMP4Editor;
 
     invoke-direct {v0}, Lorg/jcodec/movtool/InplaceMP4Editor;-><init>()V
@@ -142,7 +134,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Lorg/jcodec/movtool/RelocateMP4Editor;->relocate(Ljava/io/File;Lorg/jcodec/movtool/MP4Edit;)V
 
     :cond_0
@@ -157,7 +148,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->rwChannel(Ljava/io/File;)Lorg/jcodec/common/io/FileChannelWrapper;
 
@@ -165,28 +155,23 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2
     :try_start_1
     invoke-direct {p0, p1}, Lorg/jcodec/movtool/RelocateMP4Editor;->getMoov(Lorg/jcodec/common/io/SeekableByteChannel;)Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
     move-result-object v0
 
-    .line 3
     invoke-direct {p0, p1, v0}, Lorg/jcodec/movtool/RelocateMP4Editor;->fetchBox(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/containers/mp4/MP4Util$Atom;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 4
     invoke-direct {p0, v1}, Lorg/jcodec/movtool/RelocateMP4Editor;->parseBox(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object v1
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
-    .line 5
     invoke-interface {p2, v1}, Lorg/jcodec/movtool/MP4Edit;->apply(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
 
-    .line 6
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v2
@@ -209,7 +194,6 @@
 
     if-gez p2, :cond_0
 
-    .line 7
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v2
@@ -220,7 +204,6 @@
 
     invoke-interface {p1, v2, v3}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 8
     sget-object p2, Lorg/jcodec/containers/mp4/boxes/Header;->FOURCC_FREE:[B
 
     invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -229,7 +212,6 @@
 
     invoke-interface {p1, p2}, Ljava/nio/channels/ByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
-    .line 9
     invoke-interface {p1}, Lorg/jcodec/common/io/SeekableByteChannel;->size()J
 
     move-result-wide v2
@@ -238,7 +220,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
@@ -246,13 +227,11 @@
 
     invoke-interface {p1, v2, v3}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 11
     :goto_0
     invoke-static {p1, v1}, Lorg/jcodec/containers/mp4/MP4Util;->writeMovie(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 12
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return-void

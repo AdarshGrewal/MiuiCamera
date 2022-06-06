@@ -39,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate$NoOverflowBaseAsyncEmitter;-><init>(Lorg/reactivestreams/Subscriber;)V
 
     return-void
@@ -50,7 +49,6 @@
 .method public onOverflow()V
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/exceptions/MissingBackpressureException;
 
     const-string v1, "create: could not emit value due to lack of requests"

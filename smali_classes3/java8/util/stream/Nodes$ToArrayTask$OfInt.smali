@@ -32,7 +32,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, p3, v0}, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;-><init>(Ljava8/util/stream/Node$OfPrimitive;Ljava/lang/Object;ILjava8/util/stream/Nodes$1;)V
 
     return-void
@@ -41,7 +40,6 @@
 .method public synthetic constructor <init>(Ljava8/util/stream/Node$OfInt;[IILjava8/util/stream/Nodes$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/Nodes$ToArrayTask$OfInt;-><init>(Ljava8/util/stream/Node$OfInt;[II)V
 
     return-void

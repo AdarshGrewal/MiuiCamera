@@ -25,12 +25,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/network/net/base/BaseRequest;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/network/net/base/VolleyRequest;->mSyncExecuteLock:Ljava/util/concurrent/CountDownLatch;
 
     return-void
@@ -39,17 +37,14 @@
 .method private releaseSyncExecuteLock()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/VolleyRequest;->mSyncExecuteLock:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/network/net/base/VolleyRequest;->mSyncExecuteLock:Ljava/util/concurrent/CountDownLatch;
 
     :cond_0
@@ -61,12 +56,10 @@
 .method public final cancel()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/network/net/base/VolleyRequest;->releaseSyncExecuteLock()V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/network/net/base/BaseRequest;->setOnResponseListener(Lcom/android/camera/network/net/base/ResponseListener;)Lcom/android/camera/network/net/base/BaseRequest;
 
     return-void
@@ -83,10 +76,8 @@
 
     const-wide/16 v0, -0x1
 
-    .line 1
     iput-wide v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mCacheExpires:J
 
-    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/network/net/base/BaseRequest;->onRequestError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void

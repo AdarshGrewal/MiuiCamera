@@ -15,10 +15,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudItemBase;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/data/cloud/DataCloudItemConfig;->mCameraId:I
 
     return-void
@@ -29,7 +27,6 @@
 .method public provideKey()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

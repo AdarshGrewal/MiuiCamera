@@ -58,10 +58,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ObservableMapper;->mapper:Lio/reactivex/functions/Function;
 
     return-void
@@ -85,12 +83,10 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleToObservable;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ObservableMapper;->mapper:Lio/reactivex/functions/Function;
 
-    .line 3
     invoke-interface {v1, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -105,7 +101,6 @@
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleToObservable;-><init>(Lio/reactivex/SingleSource;)V
 
-    .line 4
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object p1
@@ -121,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ObservableMapper;->apply(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1

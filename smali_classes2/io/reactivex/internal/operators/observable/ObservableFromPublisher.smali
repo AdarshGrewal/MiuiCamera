@@ -43,10 +43,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableFromPublisher;->source:Lorg/reactivestreams/Publisher;
 
     return-void
@@ -64,7 +62,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableFromPublisher;->source:Lorg/reactivestreams/Publisher;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableFromPublisher$PublisherSubscriber;

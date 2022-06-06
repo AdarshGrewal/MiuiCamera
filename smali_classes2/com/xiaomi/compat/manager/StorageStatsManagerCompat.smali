@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static isQuotaSupported(Landroid/app/usage/StorageStatsManager;Ljava/util/UUID;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/app/usage/StorageStatsManager;->isQuotaSupported(Ljava/util/UUID;)Z
 
     move-result p0

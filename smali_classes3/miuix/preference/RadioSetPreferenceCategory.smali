@@ -26,7 +26,6 @@
 
     const/4 v0, 0x0
 
-    .line 8
     invoke-direct {p0, p1, v0}, Lmiuix/preference/RadioSetPreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -35,7 +34,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 7
     sget v0, Lmiuix/preference/R$attr;->preferenceCategoryCheckableStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/preference/RadioSetPreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -48,7 +46,6 @@
 
     const/4 v0, 0x0
 
-    .line 6
     invoke-direct {p0, p1, p2, p3, v0}, Lmiuix/preference/RadioSetPreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -57,24 +54,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 2
     new-instance v0, Lmiuix/preference/RadioSetPreferenceCategory$1;
 
     invoke-direct {v0, p0}, Lmiuix/preference/RadioSetPreferenceCategory$1;-><init>(Lmiuix/preference/RadioSetPreferenceCategory;)V
 
     iput-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mInternalListenerProxy:Lmiuix/preference/OnPreferenceChangeInternalListener;
 
-    .line 3
     sget-object v0, Lmiuix/preference/R$styleable;->RadioSetPreferenceCategory:[I
 
     invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    .line 4
     sget p2, Lmiuix/preference/R$styleable;->RadioSetPreferenceCategory_primaryKey:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -83,7 +76,6 @@
 
     iput-object p2, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryKey:Ljava/lang/String;
 
-    .line 5
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -92,7 +84,6 @@
 .method public static synthetic access$000(Lmiuix/preference/RadioSetPreferenceCategory;)Lmiuix/preference/OnPreferenceChangeInternalListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mInternalListener:Lmiuix/preference/OnPreferenceChangeInternalListener;
 
     return-object p0
@@ -103,38 +94,32 @@
 .method public addPreference(Landroidx/preference/Preference;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryKey:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Landroidx/preference/PreferenceGroup;->getPreferenceCount()I
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 3
     instance-of v0, p1, Lmiuix/preference/RadioButtonPreference;
 
     if-eqz v0, :cond_0
 
-    .line 4
     move-object v0, p1
 
     check-cast v0, Lmiuix/preference/RadioButtonPreference;
 
     iput-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryPreference:Lmiuix/preference/RadioButtonPreference;
 
-    .line 5
     iget-object v1, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mInternalListenerProxy:Lmiuix/preference/OnPreferenceChangeInternalListener;
 
     invoke-virtual {v0, v1}, Lmiuix/preference/RadioButtonPreference;->setOnPreferenceChangeInternalListener(Lmiuix/preference/OnPreferenceChangeInternalListener;)V
 
     goto :goto_1
 
-    .line 6
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -144,7 +129,6 @@
 
     throw p1
 
-    .line 7
     :cond_1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -156,7 +140,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 8
     iget-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryPreference:Lmiuix/preference/RadioButtonPreference;
 
     if-eqz v0, :cond_3
@@ -165,7 +148,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -175,28 +157,24 @@
 
     throw p1
 
-    .line 10
     :cond_3
     :goto_0
     instance-of v0, p1, Lmiuix/preference/RadioButtonPreference;
 
     if-eqz v0, :cond_4
 
-    .line 11
     move-object v0, p1
 
     check-cast v0, Lmiuix/preference/RadioButtonPreference;
 
     iput-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryPreference:Lmiuix/preference/RadioButtonPreference;
 
-    .line 12
     iget-object v1, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mInternalListenerProxy:Lmiuix/preference/OnPreferenceChangeInternalListener;
 
     invoke-virtual {v0, v1}, Lmiuix/preference/RadioButtonPreference;->setOnPreferenceChangeInternalListener(Lmiuix/preference/OnPreferenceChangeInternalListener;)V
 
     goto :goto_1
 
-    .line 13
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -206,7 +184,6 @@
 
     throw p1
 
-    .line 14
     :cond_5
     :goto_1
     invoke-super {p0, p1}, Landroidx/preference/PreferenceGroup;->addPreference(Landroidx/preference/Preference;)Z
@@ -219,7 +196,6 @@
 .method public getPrimaryPreference()Lmiuix/preference/RadioButtonPreference;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mPrimaryPreference:Lmiuix/preference/RadioButtonPreference;
 
     return-object v0
@@ -228,7 +204,6 @@
 .method public isChecked()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mChecked:Z
 
     return v0
@@ -237,7 +212,6 @@
 .method public setChecked(Z)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mChecked:Z
 
     const/4 v1, 0x1
@@ -254,16 +228,13 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mCheckedSet:Z
 
     if-nez v0, :cond_2
 
-    .line 3
     :cond_1
     iput-boolean p1, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mChecked:Z
 
-    .line 4
     iput-boolean v1, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mCheckedSet:Z
 
     :cond_2
@@ -273,7 +244,6 @@
 .method public setOnPreferenceChangeInternalListener(Lmiuix/preference/OnPreferenceChangeInternalListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/RadioSetPreferenceCategory;->mInternalListener:Lmiuix/preference/OnPreferenceChangeInternalListener;
 
     return-void
@@ -282,7 +252,6 @@
 .method public toggle()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/preference/RadioSetPreferenceCategory;->isChecked()Z
 
     move-result v0

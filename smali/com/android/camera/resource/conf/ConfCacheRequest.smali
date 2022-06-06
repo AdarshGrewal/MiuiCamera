@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;-><init>()V
 
     return-void
@@ -28,19 +27,16 @@
 .method public isCacheValid(Lcom/android/camera/data/cloud/DataCloudItemFeature;)Z
     .locals 5
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "cache_info"
 
-    .line 3
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;->getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -51,13 +47,11 @@
 
     return v2
 
-    .line 5
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
 
-    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -83,7 +77,6 @@
 .method public bridge synthetic isCacheValid(Lcom/android/camera/resource/BaseResourceCacheable;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/data/cloud/DataCloudItemFeature;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->isCacheValid(Lcom/android/camera/data/cloud/DataCloudItemFeature;)Z
@@ -96,12 +89,10 @@
 .method public processRestore(Lcom/android/camera/data/cloud/DataCloudItemFeature;)V
     .locals 3
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 3
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -113,7 +104,6 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {p1, v1}, Lcom/android/camera/data/cloud/DataCloudItemFeature;->parseJson(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -123,7 +113,6 @@
     :catch_0
     move-exception p1
 
-    .line 5
     invoke-virtual {p1}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_0
@@ -133,7 +122,6 @@
 .method public bridge synthetic processRestore(Lcom/android/camera/resource/BaseResourceCacheable;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/data/cloud/DataCloudItemFeature;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->processRestore(Lcom/android/camera/data/cloud/DataCloudItemFeature;)V

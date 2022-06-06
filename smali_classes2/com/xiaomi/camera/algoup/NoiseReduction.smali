@@ -14,7 +14,6 @@
     :try_start_0
     const-string v0, "camera_chroma_nr.xiaomi"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -28,7 +27,6 @@
 
     const-string v2, "load libcamera_chroma_nr.xiaomi.so failed"
 
-    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -38,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,12 +44,10 @@
 .method public static doChromaNR(Landroid/media/Image;II)I
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,17 +72,14 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Landroid/media/Image;->getHardwareBuffer()Landroid/hardware/HardwareBuffer;
 
     move-result-object p0
 
-    .line 4
     invoke-static {p0, p1, p2}, Lcom/xiaomi/camera/algoup/NoiseReduction;->nativeDoChromaNR(Landroid/hardware/HardwareBuffer;II)I
 
     move-result p0
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

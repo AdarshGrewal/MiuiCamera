@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1
     const-class v0, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -23,15 +22,12 @@
     :try_start_0
     const-string v1, "start loading camera_algoup_jni.xiaomi"
 
-    .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "camera_algoup_jni.xiaomi"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 4
     sget-object v0, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->TAG:Ljava/lang/String;
 
     const-string v1, "static initializer: loadLibrary camera_algoup_jni.xiaomi"
@@ -45,7 +41,6 @@
     :catch_0
     move-exception v0
 
-    .line 5
     sget-object v1, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -75,7 +70,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -122,9 +116,6 @@
 .end method
 
 .method public static native init(Ljava/lang/String;)I
-.end method
-
-.method public static native preProcess(JLcom/xiaomi/engine/PreProcessData;)I
 .end method
 
 .method public static native processFrame(JLcom/xiaomi/engine/FrameData;Lcom/xiaomi/engine/TaskSession$FrameCallback;)I

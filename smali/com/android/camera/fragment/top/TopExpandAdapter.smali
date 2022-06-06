@@ -53,18 +53,14 @@
 .method public constructor <init>(Lcom/android/camera/data/data/ComponentData;Lcom/android/camera/fragment/top/TopExpandAdapter$ExpandListener;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mSelectPosition:I
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Lcom/android/camera/data/data/ComponentData;->getItems()Ljava/util/List;
@@ -75,10 +71,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
-    .line 5
     iput-object p2, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mExpandListener:Lcom/android/camera/fragment/top/TopExpandAdapter$ExpandListener;
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->provider()Lcom/android/camera/data/provider/DataProvider;
 
     move-result-object p1
@@ -89,14 +83,12 @@
 
     check-cast p1, Lcom/android/camera/data/data/global/DataItemGlobal;
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/data/data/global/DataItemGlobal;->getCurrentMode()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentMode:I
 
-    .line 8
     iget-object p2, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     invoke-virtual {p2, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
@@ -111,7 +103,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/fragment/top/LabelItemView;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,7 +123,6 @@
 
     const/16 p1, 0x80
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->sendAccessibilityEvent(I)V
 
     return-void
@@ -143,7 +133,6 @@
 .method public getAnchorViewX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mAnchorViewX:I
 
     return v0
@@ -152,7 +141,6 @@
 .method public getComponentData()Lcom/android/camera/data/data/ComponentData;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     return-object v0
@@ -161,7 +149,6 @@
 .method public getCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -182,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     return-object v0
@@ -191,7 +177,6 @@
 .method public getDefaultSelectPosition()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDefaultSelectPosition:I
 
     return v0
@@ -200,7 +185,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -221,7 +205,6 @@
 .method public getItemViewType(I)I
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     if-nez p1, :cond_0
@@ -230,7 +213,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
@@ -244,7 +226,6 @@
 .method public getSelectComponentDataItem()Lcom/android/camera/data/data/ComponentDataItem;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/TopExpandAdapter;->getSelectPosition()I
@@ -263,14 +244,12 @@
 .method public getSelectPosition()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mSelectPosition:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDefaultSelectPosition:I
 
     :cond_0
@@ -280,7 +259,6 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/CommonRecyclerViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/TopExpandAdapter;->onBindViewHolder(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
@@ -291,7 +269,6 @@
 .method public onBindViewHolder(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
     .locals 5
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDatas:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -300,12 +277,10 @@
 
     check-cast v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 3
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lcom/android/camera/fragment/top/LabelItemView;
 
-    .line 4
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -316,14 +291,12 @@
 
     move-result-object v2
 
-    .line 5
     iget-object v3, v0, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     const v4, 0x7f0b0022
 
     invoke-virtual {v1, v4, v3}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
 
-    .line 6
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -332,12 +305,10 @@
 
     invoke-virtual {v1, v4, v3}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
 
-    .line 7
     iget v3, v0, Lcom/android/camera/data/data/ComponentDataItem;->mIconRes:I
 
     invoke-virtual {v1, v3}, Lcom/android/camera/fragment/top/LabelItemView;->setMainImageResource(I)V
 
-    .line 8
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v3
@@ -352,23 +323,18 @@
 
     const/4 v3, 0x0
 
-    .line 9
     invoke-virtual {v1, v3}, Lcom/android/camera/fragment/top/LabelItemView;->setMainViewVisibility(I)V
 
-    .line 10
     iget v4, v0, Lcom/android/camera/data/data/ComponentDataItem;->mIconLabelRes:I
 
     if-lez v4, :cond_0
 
-    .line 11
     invoke-virtual {v1, v3}, Lcom/android/camera/fragment/top/LabelItemView;->setLabelViewVisibility(I)V
 
-    .line 12
     iget v3, v0, Lcom/android/camera/data/data/ComponentDataItem;->mIconLabelRes:I
 
     invoke-virtual {v1, v3}, Lcom/android/camera/fragment/top/LabelItemView;->setLabelImageResource(I)V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v3
@@ -386,17 +352,13 @@
     :cond_0
     const/16 v3, 0x8
 
-    .line 14
     invoke-virtual {v1, v3}, Lcom/android/camera/fragment/top/LabelItemView;->setLabelViewVisibility(I)V
 
-    .line 15
     :goto_0
     invoke-virtual {v1, p0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 16
     invoke-static {v1}, Lcom/android/camera/animation/FolmeUtils;->touchTint(Landroid/view/View;)V
 
-    .line 17
     iget-object v3, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentValue:Ljava/lang/String;
 
     iget-object v4, v0, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
@@ -407,10 +369,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 18
     iput p2, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mDefaultSelectPosition:I
 
-    .line 19
     :cond_1
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
@@ -418,7 +378,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 20
     iget-object p2, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentValue:Ljava/lang/String;
 
     iget-object v0, v0, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
@@ -429,7 +388,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 21
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -442,10 +400,9 @@
 
     move-result-object p1
 
-    .line 22
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/OoooO0/OooooOo/Oooo00o;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/OoooO00/Ooooo00/OooOoOO;
 
-    invoke-direct {p2, v1, v2, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooooOo/Oooo00o;-><init>(Lcom/android/camera/fragment/top/LabelItemView;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, v1, v2, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/Ooooo00/OooOoOO;-><init>(Lcom/android/camera/fragment/top/LabelItemView;Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v2, 0x64
 
@@ -453,11 +410,9 @@
 
     goto :goto_1
 
-    .line 23
     :cond_2
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 24
     :goto_1
     new-instance p1, Lcom/android/camera/fragment/top/TopExpandAdapter$1;
 
@@ -467,7 +422,6 @@
 
     goto :goto_2
 
-    .line 25
     :cond_3
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -480,7 +434,6 @@
 
     const v0, 0x7f0b0022
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -489,7 +442,6 @@
 
     const v1, 0x7f0b0021
 
-    .line 2
     invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -498,7 +450,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -508,7 +459,6 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentValue:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -517,20 +467,17 @@
 
     if-nez p1, :cond_1
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     iget v1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentMode:I
 
     invoke-virtual {p1, v1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
-    .line 6
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mExpandListener:Lcom/android/camera/fragment/top/TopExpandAdapter$ExpandListener;
 
     if-eqz p1, :cond_2
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     iget-object v2, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentValue:Ljava/lang/String;
@@ -539,14 +486,11 @@
 
     const/4 p1, 0x0
 
-    .line 8
     iput-object p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mExpandListener:Lcom/android/camera/fragment/top/TopExpandAdapter$ExpandListener;
 
-    .line 9
     :cond_2
     iput-object v0, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mCurrentValue:Ljava/lang/String;
 
-    .line 10
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
@@ -555,7 +499,6 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/TopExpandAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/CommonRecyclerViewHolder;
 
     move-result-object p1
@@ -566,7 +509,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/CommonRecyclerViewHolder;
     .locals 2
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -575,7 +517,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d0181
+    const v0, 0x7f0d0180
 
     const/4 v1, 0x0
 
@@ -583,7 +525,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance p2, Lcom/android/camera/fragment/CommonRecyclerViewHolder;
 
     invoke-direct {p2, p1}, Lcom/android/camera/fragment/CommonRecyclerViewHolder;-><init>(Landroid/view/View;)V
@@ -594,7 +535,6 @@
 .method public setAnchorViewX(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/top/TopExpandAdapter;->mAnchorViewX:I
 
     return-void

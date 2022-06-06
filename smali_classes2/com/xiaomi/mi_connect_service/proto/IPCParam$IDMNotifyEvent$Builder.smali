@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;->access$32700()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearIdmEvent()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
@@ -71,7 +67,6 @@
 .method public getIdmEvent()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
@@ -86,7 +81,6 @@
 .method public hasIdmEvent()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
@@ -101,10 +95,8 @@
 .method public mergeIdmEvent(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
@@ -117,10 +109,8 @@
 .method public setIdmEvent(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent$Builder;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;
     .locals 1
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->copyOnWrite()V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;
@@ -133,10 +123,8 @@
 .method public setIdmEvent(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMNotifyEvent;

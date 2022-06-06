@@ -35,24 +35,20 @@
 .method public constructor <init>(J)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
 
     iput-object v0, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
-    .line 3
     new-instance v0, Lokio/Pipe$PipeSink;
 
     invoke-direct {v0, p0}, Lokio/Pipe$PipeSink;-><init>(Lokio/Pipe;)V
 
     iput-object v0, p0, Lokio/Pipe;->sink:Lokio/Sink;
 
-    .line 4
     new-instance v0, Lokio/Pipe$PipeSource;
 
     invoke-direct {v0, p0}, Lokio/Pipe$PipeSource;-><init>(Lokio/Pipe;)V
@@ -65,12 +61,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 5
     iput-wide p1, p0, Lokio/Pipe;->maxBufferSize:J
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -96,7 +90,6 @@
 .method public static synthetic access$000(Lokio/Pipe;)Lokio/Sink;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lokio/Pipe;->foldedSink:Lokio/Sink;
 
     return-object p0
@@ -112,19 +105,16 @@
         }
     .end annotation
 
-    .line 1
     :goto_0
     iget-object v0, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lokio/Pipe;->foldedSink:Lokio/Sink;
 
     if-nez v1, :cond_2
 
-    .line 3
     iget-object v1, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     invoke-virtual {v1}, Lokio/Buffer;->exhausted()Z
@@ -135,27 +125,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     iput-boolean v2, p0, Lokio/Pipe;->sourceClosed:Z
 
-    .line 5
     iput-object p1, p0, Lokio/Pipe;->foldedSink:Lokio/Sink;
 
-    .line 6
     monitor-exit v0
 
     return-void
 
-    .line 7
     :cond_0
     iget-boolean v1, p0, Lokio/Pipe;->sinkClosed:Z
 
-    .line 8
     new-instance v3, Lokio/Buffer;
 
     invoke-direct {v3}, Lokio/Buffer;-><init>()V
 
-    .line 9
     iget-object v4, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     iget-object v5, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
@@ -164,17 +148,14 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lokio/Buffer;->write(Lokio/Buffer;J)V
 
-    .line 10
     iget-object v4, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     invoke-virtual {v4}, Ljava/lang/Object;->notifyAll()V
 
-    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 12
     :try_start_1
     iget-wide v4, v3, Lokio/Buffer;->size:J
 
@@ -182,12 +163,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 13
     invoke-interface {p1}, Lokio/Sink;->close()V
 
     goto :goto_0
 
-    .line 14
     :cond_1
     invoke-interface {p1}, Lokio/Sink;->flush()V
     :try_end_1
@@ -198,21 +177,17 @@
     :catchall_0
     move-exception p1
 
-    .line 15
     iget-object v1, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     monitor-enter v1
 
-    .line 16
     :try_start_2
     iput-boolean v2, p0, Lokio/Pipe;->sourceClosed:Z
 
-    .line 17
     iget-object v0, p0, Lokio/Pipe;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 18
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -229,7 +204,6 @@
 
     throw p1
 
-    .line 19
     :cond_2
     :try_start_4
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -243,7 +217,6 @@
     :catchall_2
     move-exception p1
 
-    .line 20
     monitor-exit v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
@@ -254,7 +227,6 @@
 .method public final sink()Lokio/Sink;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokio/Pipe;->sink:Lokio/Sink;
 
     return-object v0
@@ -263,7 +235,6 @@
 .method public final source()Lokio/Source;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokio/Pipe;->source:Lokio/Source;
 
     return-object v0

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/TopExpendView;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$5;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
     iput-object p2, p0, Lcom/android/camera/fragment/top/TopExpendView$5;->val$view:Landroid/view/View;
@@ -42,7 +41,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/TopExpendView$5;->val$view:Landroid/view/View;
 
     check-cast v0, Lcom/android/camera/fragment/top/LabelItemView;

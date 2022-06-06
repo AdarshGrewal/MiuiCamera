@@ -26,13 +26,10 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mInputStream:Ljava/io/InputStream;
 
-    .line 3
     new-instance p1, Ljava/io/PipedInputStream;
 
     const/16 v0, 0x1000
@@ -41,7 +38,6 @@
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedInputStream:Ljava/io/PipedInputStream;
 
-    .line 4
     :try_start_0
     new-instance p1, Ljava/io/PipedOutputStream;
 
@@ -58,10 +54,8 @@
 
     new-array p1, p1, [B
 
-    .line 5
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mBuffer:[B
 
-    .line 6
     new-instance p1, Ljava/lang/Thread;
 
     invoke-direct {p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
@@ -81,7 +75,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mInputStream:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
@@ -97,12 +90,10 @@
         }
     .end annotation
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mIOException:Ljava/io/IOException;
 
     if-nez v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedInputStream:Ljava/io/PipedInputStream;
 
     invoke-virtual {v0}, Ljava/io/PipedInputStream;->read()I
@@ -111,7 +102,6 @@
 
     return v0
 
-    .line 9
     :cond_0
     throw v0
 .end method
@@ -124,12 +114,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mIOException:Ljava/io/IOException;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedInputStream:Ljava/io/PipedInputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/PipedInputStream;->read([B)I
@@ -138,7 +126,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     throw v0
 .end method
@@ -151,12 +138,10 @@
         }
     .end annotation
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mIOException:Ljava/io/IOException;
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedInputStream:Ljava/io/PipedInputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/PipedInputStream;->read([BII)I
@@ -165,7 +150,6 @@
 
     return p1
 
-    .line 6
     :cond_0
     throw v0
 .end method
@@ -173,7 +157,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     :goto_0
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mInputStream:Ljava/io/InputStream;
@@ -192,7 +175,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedOutputStream:Ljava/io/PipedOutputStream;
 
@@ -207,7 +189,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     :try_start_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mPipedInputStream:Ljava/io/PipedInputStream;
 
@@ -215,7 +196,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 4
     :catch_1
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtcpDeinterleaver;->mIOException:Ljava/io/IOException;
 

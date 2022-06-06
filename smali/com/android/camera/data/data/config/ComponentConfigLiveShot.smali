@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -34,7 +33,6 @@
 .method public getDefaultValue(I)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -61,7 +59,6 @@
 .method public getDisplayTitleString()I
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -123,7 +119,6 @@
 .method public getKey(I)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -150,7 +145,6 @@
 .method public isClosed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mIsClosed:Z
 
     return v0
@@ -159,7 +153,6 @@
 .method public isSwitchOn(I)Z
     .locals 2
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mSupported:Z
 
     const/4 v0, 0x0
@@ -168,7 +161,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->isClosed()Z
 
@@ -178,7 +170,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -196,15 +187,13 @@
 
     const/4 p2, 0x0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mSupported:Z
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p3
 
-    invoke-virtual {p3}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OoOO0()Z
+    invoke-virtual {p3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Oo0o()Z
 
     move-result p3
 
@@ -217,7 +206,6 @@
 
     if-eq p1, p3, :cond_1
 
-    .line 3
     iput-boolean p2, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mSupported:Z
 
     goto :goto_0
@@ -225,43 +213,15 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mSupported:Z
 
     :goto_0
     return-void
 .end method
 
-.method public resetLiveShotOn(Lcom/android/camera/data/provider/DataProvider$ProviderEditor;)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->setClosed(Z)V
-
-    .line 2
-    iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
-
-    const-string/jumbo v2, "pref_live_shot_enabled"
-
-    invoke-virtual {v1, v2, v0}, Lcom/android/camera/data/data/DataItemBase;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-interface {p1, v2}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->remove(Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    :cond_0
-    return-void
-.end method
-
 .method public setClosed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->mIsClosed:Z
 
     return-void
@@ -272,10 +232,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigLiveShot;->setClosed(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;

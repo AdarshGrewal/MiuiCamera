@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/fenshen/VideoRecorder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +66,6 @@
 
     const-string p2, "Video onInputBufferAvailable"
 
-    .line 1
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -77,7 +74,6 @@
 .method public onOutputBufferAvailable(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/fenshen/VideoRecorder;->access$000()Z
 
     move-result v0
@@ -88,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +150,6 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget v0, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -167,10 +161,8 @@
 
     const-string p3, "Video got EOS"
 
-    .line 4
     invoke-static {v2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object p3, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {p3}, Lcom/xiaomi/fenshen/VideoRecorder;->access$100(Lcom/xiaomi/fenshen/VideoRecorder;)Landroid/os/Handler;
@@ -183,7 +175,6 @@
 
     move-result-object p3
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {v0}, Lcom/xiaomi/fenshen/VideoRecorder;->access$100(Lcom/xiaomi/fenshen/VideoRecorder;)Landroid/os/Handler;
@@ -192,7 +183,6 @@
 
     invoke-virtual {v0, p3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 7
     invoke-virtual {p1, p2, v4}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
     return-void
@@ -204,13 +194,10 @@
 
     const-string v0, "Video got BUFFER_FLAG_CODEC_CONFIG"
 
-    .line 8
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     iput v4, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 10
     :cond_2
     iget v0, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -220,21 +207,17 @@
 
     const-string v0, "Video got BUFFER_FLAG_KEY_FRAME"
 
-    .line 11
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     :cond_3
     invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 13
     iget v3, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
     if-lez v3, :cond_6
 
-    .line 14
     iget-object v3, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {v3}, Lcom/xiaomi/fenshen/VideoRecorder;->access$200(Lcom/xiaomi/fenshen/VideoRecorder;)Z
@@ -243,7 +226,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 15
     iget-object v3, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {v3}, Lcom/xiaomi/fenshen/VideoRecorder;->access$400(Lcom/xiaomi/fenshen/VideoRecorder;)Landroid/media/MediaMuxer;
@@ -258,14 +240,12 @@
 
     invoke-virtual {v3, v5, v0, p3}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 16
     invoke-static {}, Lcom/xiaomi/fenshen/VideoRecorder;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,7 +280,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_4
     new-instance v1, Lcom/xiaomi/fenshen/VideoRecorder$MediaFrame;
 
@@ -308,13 +287,10 @@
 
     invoke-direct {v1, v3}, Lcom/xiaomi/fenshen/VideoRecorder$MediaFrame;-><init>(Lcom/xiaomi/fenshen/VideoRecorder;)V
 
-    .line 19
     iput-object v0, v1, Lcom/xiaomi/fenshen/VideoRecorder$MediaFrame;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 20
     iput-object p3, v1, Lcom/xiaomi/fenshen/VideoRecorder$MediaFrame;->info:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 21
     iget-object v0, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {v0}, Lcom/xiaomi/fenshen/VideoRecorder;->access$500(Lcom/xiaomi/fenshen/VideoRecorder;)Ljava/util/Queue;
@@ -325,10 +301,8 @@
 
     const-string v0, "queue video"
 
-    .line 22
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
@@ -339,18 +313,15 @@
 
     iput v1, v0, Lcom/xiaomi/fenshen/VideoRecorder;->videoBufferCount:I
 
-    .line 24
     :cond_6
     invoke-virtual {p1, p2, v4}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
-    .line 25
     invoke-static {}, Lcom/xiaomi/fenshen/VideoRecorder;->access$000()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 26
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +353,6 @@
 .method public onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -405,7 +375,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-static {p1}, Lcom/xiaomi/fenshen/VideoRecorder;->access$300(Lcom/xiaomi/fenshen/VideoRecorder;)I
@@ -414,7 +383,6 @@
 
     if-gez p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/fenshen/VideoRecorder$1;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-virtual {p1, p2}, Lcom/xiaomi/fenshen/VideoRecorder;->addTrack(Landroid/media/MediaFormat;)V

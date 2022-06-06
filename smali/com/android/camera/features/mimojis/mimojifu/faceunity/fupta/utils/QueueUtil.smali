@@ -41,22 +41,18 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->size:I
 
-    .line 3
     new-instance v1, Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
     invoke-direct {v1}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->gifHardEncoder:Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
-    .line 4
     sget-object v5, Lcom/faceunity/pta_helper/gif/EncodingType;->ENCODING_TYPE_SIMPLE_FAST:Lcom/faceunity/pta_helper/gif/EncodingType;
 
     const/16 v2, 0x12c
@@ -69,7 +65,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->init(IILjava/lang/String;Lcom/faceunity/pta_helper/gif/EncodingType;I)V
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->size:I
@@ -78,7 +73,6 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -87,7 +81,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     :goto_0
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->size:I
 
@@ -97,7 +90,6 @@
 
     new-array v1, v1, [B
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->buffer:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -115,7 +107,6 @@
 .method public clear()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->clear()V
@@ -126,7 +117,6 @@
 .method public getBuffer()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->poll()Ljava/lang/Object;
@@ -141,7 +131,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->size()I
@@ -164,7 +153,6 @@
 .method public isFull()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->size()I
@@ -182,7 +170,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->TAG:Ljava/lang/String;
 
@@ -208,17 +195,14 @@
 .method public noUseFbo()V
     .locals 3
 
-    .line 1
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->size()I
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->buffer:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -229,7 +213,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->gifHardEncoder:Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
@@ -243,7 +226,6 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->readBufferV2([B)V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->arrayBlockingQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->buffer:Ljava/util/List;
@@ -254,7 +236,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->gifHardEncoder:Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->unUseFBO()V
@@ -265,15 +246,12 @@
 .method public release()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->gifHardEncoder:Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->close()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->clear()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->buffer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -284,7 +262,6 @@
 .method public useFbo()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/QueueUtil;->gifHardEncoder:Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->useFBO()Z

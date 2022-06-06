@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -40,17 +39,14 @@
 .method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->rootDir:Ljava/io/File;
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->qigsawId:Ljava/lang/String;
 
     return-void
@@ -63,17 +59,14 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
 
     move-result-object p0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     invoke-direct {v1, p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -84,7 +77,6 @@
 .method public static install(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->sSplitPathManagerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->create(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
@@ -101,7 +93,6 @@
 .method public static require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->sSplitPathManagerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -110,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->sSplitPathManagerRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -121,7 +111,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -137,26 +126,22 @@
 .method public clearCache()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->rootDir:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 3
     array-length v1, v0
 
     if-lez v1, :cond_1
 
-    .line 4
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -168,7 +153,6 @@
 
     aget-object v4, v0, v3
 
-    .line 5
     invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
 
     move-result v5
@@ -187,7 +171,6 @@
 
     if-nez v5, :cond_0
 
-    .line 6
     invoke-static {v4}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteDir(Ljava/io/File;)Z
 
     new-array v4, v2, [Ljava/lang/Object;
@@ -196,7 +179,6 @@
 
     const-string v6, "Success to delete all obsolete splits for current app version!"
 
-    .line 7
     invoke-static {v5, v6, v4}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
@@ -211,26 +193,22 @@
 .method public getSplitCodeCacheDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "code_cache"
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -240,7 +218,6 @@
 .method public getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitRootDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
@@ -253,14 +230,12 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -270,7 +245,6 @@
 .method public getSplitLibDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
@@ -305,14 +279,12 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -322,12 +294,10 @@
 .method public getSplitMarkFile(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getMd5()Ljava/lang/String;
@@ -342,26 +312,22 @@
 .method public getSplitOptDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "oat"
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result p1
@@ -370,10 +336,8 @@
 
     const/4 p1, 0x1
 
-    .line 5
     invoke-virtual {v0, p1}, Ljava/io/File;->setWritable(Z)Z
 
-    .line 6
     invoke-virtual {v0, p1}, Ljava/io/File;->setReadable(Z)Z
 
     :cond_0
@@ -383,7 +347,6 @@
 .method public getSplitRootDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->rootDir:Ljava/io/File;
@@ -394,14 +357,12 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -411,12 +372,10 @@
 .method public getSplitSpecialLockFile(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "ov.lock"
@@ -429,12 +388,10 @@
 .method public getSplitSpecialMarkFile(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
     .locals 3
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->getSplitDir(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -463,7 +420,6 @@
 .method public getSplitTmpDir()Ljava/io/File;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->rootDir:Ljava/io/File;
@@ -472,14 +428,12 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0
@@ -489,7 +443,6 @@
 .method public getUninstallSplitsDir()Ljava/io/File;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->rootDir:Ljava/io/File;
@@ -498,14 +451,12 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_0

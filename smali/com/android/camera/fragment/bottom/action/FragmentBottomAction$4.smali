@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;Lcom/android/camera/ui/AnimationView;Lcom/android/camera/ui/AdjustAnimationView;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     iput-object p2, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->val$animView:Lcom/android/camera/ui/AnimationView;
@@ -47,22 +46,18 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->val$animView:Lcom/android/camera/ui/AnimationView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->val$snapshotView:Lcom/android/camera/ui/AdjustAnimationView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/AdjustAnimationView;->clearBitmap()V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$4;->val$snapshotView:Lcom/android/camera/ui/AdjustAnimationView;

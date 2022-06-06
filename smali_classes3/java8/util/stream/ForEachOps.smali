@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +36,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachOp$OfDouble;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/ForEachOps$ForEachOp$OfDouble;-><init>(Ljava8/util/function/DoubleConsumer;Z)V
@@ -62,10 +59,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachOp$OfInt;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/ForEachOps$ForEachOp$OfInt;-><init>(Ljava8/util/function/IntConsumer;Z)V
@@ -87,10 +82,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachOp$OfLong;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/ForEachOps$ForEachOp$OfLong;-><init>(Ljava8/util/function/LongConsumer;Z)V
@@ -114,10 +107,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachOp$OfRef;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/ForEachOps$ForEachOp$OfRef;-><init>(Ljava8/util/function/Consumer;Z)V

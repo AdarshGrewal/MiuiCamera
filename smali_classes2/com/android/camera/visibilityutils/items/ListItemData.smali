@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final SHOW_LOGS:Z = false
+.field public static final SHOW_LOGS:Z
 
 .field public static final TAG:Ljava/lang/String;
 
@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Landroid/app/LauncherActivity$ListItem;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -36,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,14 +45,12 @@
 .method public fillWithData(ILandroid/view/View;)Lcom/android/camera/visibilityutils/items/ListItemData;
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mIndexInAdapter:Ljava/lang/Integer;
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mView:Landroid/view/View;
 
     return-object p0
@@ -63,7 +59,6 @@
 .method public getIndex()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mIndexInAdapter:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
@@ -84,7 +79,6 @@
 .method public getView()Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mView:Landroid/view/View;
 
     return-object v0
@@ -102,7 +96,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/visibilityutils/items/ListItemData;->isAvailable()Z
 
     move-result v0
@@ -113,7 +106,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/visibilityutils/items/ListItemData;->getIndex()I
 
@@ -139,7 +131,6 @@
 .method public isAvailable()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mIndexInAdapter:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
@@ -162,7 +153,6 @@
 .method public isMostVisibleItemChanged()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mIsMostVisibleItemChanged:Z
 
     return v0
@@ -171,7 +161,6 @@
 .method public setMostVisibleItemChanged(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/visibilityutils/items/ListItemData;->mIsMostVisibleItemChanged:Z
 
     return-void
@@ -180,7 +169,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

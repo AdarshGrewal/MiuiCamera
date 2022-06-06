@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/zoommap/RegionHelper;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$1;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     iput-object p2, p0, Lcom/android/camera/zoommap/RegionHelper$1;->val$hidden:Ljava/lang/Boolean;
@@ -48,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$1;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     const-string v0, "TARGET_X_TAG"
@@ -63,7 +61,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/zoommap/RegionHelper;->access$002(Lcom/android/camera/zoommap/RegionHelper;I)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$1;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     invoke-static {p1}, Lcom/android/camera/zoommap/RegionHelper;->access$100(Lcom/android/camera/zoommap/RegionHelper;)Landroid/view/View;
@@ -80,7 +77,6 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$1;->val$hidden:Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -101,10 +97,8 @@
 
     const-string p2, "hidden zoom map view"
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$1;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     invoke-static {p1}, Lcom/android/camera/zoommap/RegionHelper;->access$100(Lcom/android/camera/zoommap/RegionHelper;)Landroid/view/View;

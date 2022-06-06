@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/util/Singleton;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public create()Lcom/xiaomi/camera/device/CameraService;
     .locals 2
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/device/CameraService;
 
     const/4 v1, 0x0
@@ -50,7 +48,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/device/CameraService$1;->create()Lcom/xiaomi/camera/device/CameraService;
 
     move-result-object v0

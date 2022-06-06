@@ -80,48 +80,40 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BasePTAResDB;-><init>()V
 
     const-string v0, "animation"
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->animation:Ljava/lang/String;
 
     const-string v0, "bg_dongxiao"
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->bg_dongxiao:Ljava/lang/String;
 
-    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_colors:Ljava/util/Map;
 
-    .line 6
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_animation:Ljava/util/Map;
 
-    .line 7
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bg_dongxiao:Ljava/util/Map;
 
-    .line 8
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->initMaterialConfig()V
 
     return-void
@@ -130,12 +122,10 @@
 .method private createItem(Ljava/lang/String;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
     return-object v0
@@ -157,7 +147,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     move-result-object v0
@@ -172,7 +161,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 2
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -181,7 +169,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -201,19 +188,16 @@
 
     check-cast v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getLabel()[Ljava/lang/Integer;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 5
     array-length v2, v1
 
     if-lez v2, :cond_1
 
-    .line 6
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -223,14 +207,12 @@
 
     aget-object v4, v1, v3
 
-    .line 7
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     if-ne v4, p3, :cond_2
 
-    .line 8
     invoke-virtual {p4}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
@@ -252,30 +234,25 @@
 .method public static getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;-><init>()V
 
     sput-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -290,7 +267,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
@@ -312,7 +288,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_animation:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->animation:Ljava/lang/String;
@@ -337,7 +312,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bg_dongxiao:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->bg_dongxiao:Ljava/lang/String;
@@ -364,7 +338,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_colors:Ljava/util/Map;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -406,7 +379,6 @@
 
     move v2, v1
 
-    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -414,14 +386,12 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
-    .line 3
     invoke-virtual {p2, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -430,14 +400,12 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v3, v2}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->setSelect(Z)V
 
     move v2, v1
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-virtual {v3, v0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->setSelect(Z)V
 
@@ -457,19 +425,16 @@
 .method public getFuColorsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;I)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getColorForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-lt p2, v0, :cond_0
 
-    .line 3
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->TAG:Ljava/lang/String;
 
     const-string p2, "getFuItemsForUI: Out of bounds"
@@ -480,7 +445,6 @@
 
     return-object p1
 
-    .line 4
     :cond_0
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -503,7 +467,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     move-result-object v0
@@ -519,7 +482,6 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->skin_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     invoke-virtual {v4, v5}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
@@ -530,7 +492,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->hat_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
@@ -542,12 +503,10 @@
 
     const/4 v5, 0x2
 
-    .line 4
     invoke-virtual {p0, v4, v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getFuColorsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;I)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
     move-result-object v5
 
-    .line 5
     invoke-static {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
 
     move-result-object v4
@@ -556,13 +515,11 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {p0, v4, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getFuColorsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;I)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
     move-result-object v5
 
-    .line 7
     invoke-static {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
 
     move-result-object v4
@@ -592,17 +549,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     const-string/jumbo v1, "xiaomi_male.bundle"
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 3
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->head:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -611,17 +565,14 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     const-string v1, "makeup/xiaomi_liplash.bundle"
 
-    .line 5
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 6
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->liplash:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -630,17 +581,14 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getFace_label()I
 
     move-result v0
 
-    .line 8
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->face:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 9
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->face:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -653,17 +601,14 @@
 
     if-nez v0, :cond_0
 
-    .line 10
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     const-string v1, "face/D001.bundle"
 
-    .line 11
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 12
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->face:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -672,58 +617,47 @@
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getEye_label()I
 
     move-result v0
 
-    .line 14
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->eye:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 15
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getMouth_label()I
 
     move-result v0
 
-    .line 16
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->mouth:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 17
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getNose_label()I
 
     move-result v0
 
-    .line 18
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->nose:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 19
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getBrow_label()I
 
     move-result v0
 
-    .line 20
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->brow:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 21
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getHair_label()I
 
     move-result v0
 
-    .line 22
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
 
-    .line 23
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -736,14 +670,12 @@
 
     if-nez v1, :cond_3
 
-    .line 24
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     if-ltz v0, :cond_2
 
-    .line 25
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getGender()I
 
     move-result v0
@@ -754,7 +686,6 @@
 
     const-string v0, "hair/female/C001.bundle"
 
-    .line 26
     invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
     goto :goto_0
@@ -762,7 +693,6 @@
     :cond_1
     const-string v0, "hair/male/B001.bundle"
 
-    .line 27
     invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
     goto :goto_0
@@ -770,10 +700,8 @@
     :cond_2
     const-string v0, ""
 
-    .line 28
     invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 29
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
@@ -783,13 +711,11 @@
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     :cond_3
     invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;->getGlasses_label()I
 
     move-result v0
 
-    .line 31
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->glasses:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->fillServerData(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/ServiceInfoBean;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
@@ -800,19 +726,16 @@
 .method public getFuItemsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;II)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getItemsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)Ljava/util/List;
 
     move-result-object p1
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
 
     if-lt p3, p2, :cond_0
 
-    .line 3
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->TAG:Ljava/lang/String;
 
     const-string p2, "getFuItemsForUI: Out of bounds"
@@ -823,7 +746,6 @@
 
     return-object p1
 
-    .line 4
     :cond_0
     invoke-interface {p1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -837,12 +759,10 @@
 .method public getFuItemsForUISize(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getItemsForUI(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)Ljava/util/List;
 
     move-result-object p1
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -853,7 +773,6 @@
 .method public getItemForConfigIndex(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;ILcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getItemsForConfig(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)Ljava/util/List;
 
     move-result-object p1
@@ -869,7 +788,6 @@
     :cond_0
     move v0, p2
 
-    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -877,14 +795,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
 
     move-result-object v1
@@ -939,7 +855,6 @@
 
     move v2, v1
 
-    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -947,14 +862,12 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 3
     invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundlePath()Ljava/lang/String;
 
     move-result-object v4
@@ -971,14 +884,12 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v3, v2}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->setSelect(Z)V
 
     move v2, v1
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-virtual {v3, v0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->setSelect(Z)V
 
@@ -1010,7 +921,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1051,7 +961,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1078,12 +987,10 @@
 
     check-cast p1, Ljava/util/List;
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1102,7 +1009,6 @@
 
     check-cast v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getGender_match()I
 
     move-result v2
@@ -1117,7 +1023,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 5
     :cond_1
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1140,27 +1045,22 @@
         }
     .end annotation
 
-    .line 1
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setGender(I)V
 
     const-string v2, ""
 
-    .line 4
     invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 5
     sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB$1;->$SwitchMap$com$android$camera$features$mimojis$mimojifu$faceunity$fupta$base$entity$LabelCollection$ItemType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1173,13 +1073,11 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_0
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 7
     :pswitch_1
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
@@ -1207,12 +1105,10 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 8
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p2
 
-    .line 9
     :goto_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
@@ -1260,7 +1156,6 @@
 .method public initMaterialConfig()V
     .locals 9
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1271,15 +1166,12 @@
 
     const-string v1, "config.json"
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/JsonUtils;->readLocalJsonFile(Ljava/lang/String;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     move-result-object v1
 
-    .line 4
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -1291,7 +1183,6 @@
 
     aget-object v5, v1, v4
 
-    .line 5
     iget-object v6, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1316,7 +1207,6 @@
 
     invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     iget-object v6, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1347,7 +1237,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_animation:Ljava/util/Map;
 
@@ -1359,7 +1248,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bg_dongxiao:Ljava/util/Map;
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->bg_dongxiao:Ljava/lang/String;
@@ -1372,10 +1260,8 @@
 
     const-string/jumbo v1, "others/color.json"
 
-    .line 9
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/JsonUtils;->readJsonFile(Ljava/lang/String;)V
 
-    .line 10
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     move-result-object v1
@@ -1387,7 +1273,6 @@
 
     aget-object v4, v1, v3
 
-    .line 11
     iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_colors:Ljava/util/Map;
 
     invoke-static {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->getEnumName(Ljava/lang/Enum;)Ljava/lang/String;
@@ -1411,7 +1296,6 @@
 .method public recycleBitmap()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     if-nez v0, :cond_0
@@ -1423,7 +1307,6 @@
 
     move v1, v0
 
-    .line 2
     :goto_0
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
@@ -1433,14 +1316,12 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 3
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
     move-result-object v2
 
     aget-object v2, v2, v1
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->_bundles:Ljava/util/Map;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1467,7 +1348,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 5
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1489,7 +1369,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 6
     :try_start_0
     invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -1497,7 +1376,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 7
     invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v4
@@ -1506,7 +1384,6 @@
 
     const/4 v4, 0x0
 
-    .line 8
     invoke-virtual {v3, v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBitmap(Landroid/graphics/Bitmap;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

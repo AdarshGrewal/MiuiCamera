@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 
     const-string v3, "http://"
 
-    .line 1
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v2
@@ -37,13 +35,11 @@
 
     move-result-object v2
 
-    .line 2
     :try_start_0
     new-instance v3, Ljava/net/URL;
 
     invoke-direct {v3, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 3
     new-instance v2, Ljava/text/SimpleDateFormat;
 
     const-string v4, "EEE, dd MMM yyyy HH:mm:ss z"
@@ -54,14 +50,12 @@
 
     const-string v4, "GMT"
 
-    .line 4
     invoke-static {v4}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 5
     new-instance v4, Ljava/util/Date;
 
     invoke-direct {v4}, Ljava/util/Date;-><init>()V
@@ -70,12 +64,10 @@
 
     move-result-object v2
 
-    .line 6
     invoke-virtual {v3}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 7
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "host: "
@@ -88,7 +80,6 @@
 
     const-string v6, "date: "
 
-    .line 8
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -97,7 +88,6 @@
 
     const-string v1, "GET "
 
-    .line 9
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/net/URL;->getPath()Ljava/lang/String;
@@ -112,17 +102,14 @@
 
     const-string v1, "UTF-8"
 
-    .line 10
     invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v1
 
-    .line 11
     invoke-static {v0}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
 
     move-result-object v3
 
-    .line 12
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -131,7 +118,6 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 13
     new-instance v6, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -140,10 +126,8 @@
 
     invoke-direct {v6, p2, v0}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 14
     invoke-virtual {v3, v6}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 15
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -156,7 +140,6 @@
 
     move-result-object p2
 
-    .line 16
     invoke-static {}, Ljava/util/Base64;->getEncoder()Ljava/util/Base64$Encoder;
 
     move-result-object v0
@@ -191,12 +174,10 @@
 
     aput-object p2, v5, p1
 
-    .line 17
     invoke-static {v0, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 18
     invoke-static {}, Ljava/util/Base64;->getEncoder()Ljava/util/Base64$Encoder;
 
     move-result-object v0
@@ -215,7 +196,6 @@
 
     aput-object p0, v1, v6
 
-    .line 19
     invoke-static {p2}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -245,7 +225,6 @@
     :catch_0
     move-exception p0
 
-    .line 20
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

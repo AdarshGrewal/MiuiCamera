@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -51,7 +49,6 @@
 .method public static synthetic access$100(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
     return-object p0
@@ -60,7 +57,6 @@
 .method public static synthetic access$102(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
     return-object p1
@@ -69,30 +65,25 @@
 .method public static getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
 
     invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;-><init>()V
 
     sput-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -107,7 +98,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->instance:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;
@@ -118,7 +108,6 @@
 .method public static readInputStream(Ljava/io/InputStream;)[B
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -127,7 +116,6 @@
 
     new-array v1, v1, [B
 
-    .line 2
     :goto_0
     :try_start_0
     invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
@@ -140,12 +128,10 @@
 
     const/4 v3, 0x0
 
-    .line 3
     invoke-virtual {v0, v1, v3, v2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->flush()V
     :try_end_0
@@ -156,20 +142,16 @@
     :catch_0
     move-exception v1
 
-    .line 5
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 6
     :goto_1
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    .line 7
     :try_start_1
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
-    .line 8
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -179,7 +161,6 @@
     :catch_1
     move-exception p0
 
-    .line 9
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_2
@@ -191,13 +172,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/net/URL;
 
     invoke-direct {v1, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object p0
@@ -210,21 +189,17 @@
 
     const/4 v1, 0x1
 
-    .line 3
     :try_start_1
     invoke-virtual {p0, v1}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
     const-string v1, "GET"
 
-    .line 4
     invoke-virtual {p0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const/16 v1, 0x1770
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 6
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -233,7 +208,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 7
     :try_start_2
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
@@ -243,7 +217,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 8
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->readInputStream(Ljava/io/InputStream;)[B
 
     move-result-object v0
@@ -255,7 +228,6 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 9
     :try_start_3
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -266,11 +238,9 @@
     :catch_0
     move-exception v1
 
-    .line 10
     :goto_0
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 11
     :cond_1
     :goto_1
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
@@ -330,7 +300,6 @@
 
     move-object v1, p0
 
-    .line 12
     :goto_2
     :try_start_4
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
@@ -339,7 +308,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 13
     :try_start_5
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -359,7 +327,6 @@
 
     move-object v1, p0
 
-    .line 14
     :goto_3
     :try_start_6
     invoke-virtual {v2}, Ljava/net/MalformedURLException;->printStackTrace()V
@@ -368,7 +335,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 15
     :try_start_7
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_7
@@ -400,10 +366,8 @@
     :catch_9
     move-exception v1
 
-    .line 16
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 17
     :cond_2
     :goto_6
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
@@ -416,7 +380,6 @@
 .method public cancelAll()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->okHttpClient:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v0}, Lokhttp3/OkHttpClient;->dispatcher()Lokhttp3/Dispatcher;
@@ -444,12 +407,10 @@
 
     check-cast v1, Lokhttp3/Call;
 
-    .line 2
     invoke-interface {v1}, Lokhttp3/Call;->cancel()V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->okHttpClient:Lokhttp3/OkHttpClient;
 
@@ -478,7 +439,6 @@
 
     check-cast v1, Lokhttp3/Call;
 
-    .line 4
     invoke-interface {v1}, Lokhttp3/Call;->cancel()V
 
     goto :goto_1
@@ -492,7 +452,6 @@
 
     const-string v0, "android.permission.READ_PHONE_STATE"
 
-    .line 1
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
@@ -501,7 +460,6 @@
 
     const-string/jumbo v0, "phone"
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -520,7 +478,6 @@
     :goto_0
     const-string v0, "application/x-www-form-urlencoded;charset=utf-8"
 
-    .line 3
     invoke-static {v0}, Lokhttp3/MediaType;->parse(Ljava/lang/String;)Lokhttp3/MediaType;
 
     move-result-object v0
@@ -539,17 +496,14 @@
 
     const-string v5, "code=%s&device=%s"
 
-    .line 4
     invoke-static {v5, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 5
     invoke-static {v0, v2}, Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v0
 
-    .line 6
     sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -578,7 +532,6 @@
 
     invoke-static {v2, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     new-instance p1, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {p1}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -587,31 +540,26 @@
 
     const-wide/32 v1, 0xea60
 
-    .line 8
     invoke-virtual {p1, v1, v2, p2}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 9
     invoke-virtual {p1, v1, v2, p2}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 10
     invoke-virtual {p1, v1, v2, p2}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
     move-result-object p1
 
-    .line 12
     new-instance p2, Lokhttp3/Request$Builder;
 
     invoke-direct {p2}, Lokhttp3/Request$Builder;-><init>()V
@@ -648,7 +596,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -670,10 +617,8 @@
     :cond_0
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
-    .line 3
     new-instance v0, Lokhttp3/Request$Builder;
 
     invoke-direct {v0}, Lokhttp3/Request$Builder;-><init>()V
@@ -686,7 +631,6 @@
 
     move-result-object p1
 
-    .line 4
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -695,31 +639,26 @@
 
     const-wide/32 v2, 0xea60
 
-    .line 5
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 6
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 7
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {v0, p1}, Lokhttp3/OkHttpClient;->newCall(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
@@ -736,7 +675,6 @@
 .method public downloadAvatarRequest(Ljava/lang/String;Ljava/lang/String;Lokhttp3/Callback;)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,7 +693,6 @@
 
     move-result-object p1
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -774,21 +711,18 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     new-instance v0, Lokhttp3/MultipartBody$Builder;
 
     invoke-direct {v0}, Lokhttp3/MultipartBody$Builder;-><init>()V
 
     sget-object v1, Lokhttp3/MultipartBody;->FORM:Lokhttp3/MediaType;
 
-    .line 4
     invoke-virtual {v0, v1}, Lokhttp3/MultipartBody$Builder;->setType(Lokhttp3/MediaType;)Lokhttp3/MultipartBody$Builder;
 
     move-result-object v0
 
     const-string/jumbo v1, "taskid"
 
-    .line 5
     invoke-virtual {v0, v1, p2}, Lokhttp3/MultipartBody$Builder;->addFormDataPart(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/MultipartBody$Builder;
 
     move-result-object p2
@@ -797,22 +731,18 @@
 
     const-string/jumbo v1, "url"
 
-    .line 6
     invoke-virtual {p2, v0, v1}, Lokhttp3/MultipartBody$Builder;->addFormDataPart(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/MultipartBody$Builder;
 
     move-result-object p2
 
-    .line 7
     invoke-virtual {p2}, Lokhttp3/MultipartBody$Builder;->build()Lokhttp3/MultipartBody;
 
     move-result-object p2
 
     const-string v0, ""
 
-    .line 8
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->okHttpClient:Lokhttp3/OkHttpClient;
 
     new-instance v1, Lokhttp3/Request$Builder;
@@ -847,7 +777,6 @@
 .method public getAvatarToken(Lokhttp3/Callback;)V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,7 +797,6 @@
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -889,10 +817,8 @@
 
     const-string v1, ""
 
-    .line 3
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->okHttpClient:Lokhttp3/OkHttpClient;
 
     new-instance v2, Lokhttp3/Request$Builder;
@@ -927,7 +853,6 @@
 .method public getErrorMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
     return-object v0
@@ -938,7 +863,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->initOkHttpClient(Landroid/content/Context;Z)Lokhttp3/OkHttpClient;
 
     move-result-object p1
@@ -951,7 +875,6 @@
 .method public initOkHttpClient(Landroid/content/Context;Z)Lokhttp3/OkHttpClient;
     .locals 2
 
-    .line 1
     new-instance p1, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {p1}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -960,26 +883,22 @@
 
     const-wide/32 v0, 0xea60
 
-    .line 2
     invoke-virtual {p1, v0, v1, p2}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 3
     invoke-virtual {p1, v0, v1, p2}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
     sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 4
     invoke-virtual {p1, v0, v1, p2}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
     move-result-object p1
@@ -990,7 +909,6 @@
 .method public setErrorMsg(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
     return-void
@@ -999,7 +917,6 @@
 .method public updatePicRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILokhttp3/Callback;)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1018,7 +935,6 @@
 
     move-result-object p1
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1047,32 +963,26 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     invoke-static {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/BitmapUtil;->loadBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
-    .line 4
     invoke-static {p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FileUtil;->saveJPEGFile(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 5
     new-instance p2, Ljava/io/File;
 
     invoke-direct {p2, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6
     new-instance p3, Lokhttp3/MultipartBody$Builder;
 
     invoke-direct {p3}, Lokhttp3/MultipartBody$Builder;-><init>()V
 
     sget-object v0, Lokhttp3/MultipartBody;->FORM:Lokhttp3/MediaType;
 
-    .line 7
     invoke-virtual {p3, v0}, Lokhttp3/MultipartBody$Builder;->setType(Lokhttp3/MediaType;)Lokhttp3/MultipartBody$Builder;
 
     move-result-object p3
 
-    .line 8
     invoke-static {p4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p4
@@ -1087,14 +997,12 @@
 
     const-string/jumbo v0, "version"
 
-    .line 9
     invoke-virtual {p3, v0, p4}, Lokhttp3/MultipartBody$Builder;->addFormDataPart(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/MultipartBody$Builder;
 
     move-result-object p3
 
     const-string p4, "image/png"
 
-    .line 10
     invoke-static {p4}, Lokhttp3/MediaType;->parse(Ljava/lang/String;)Lokhttp3/MediaType;
 
     move-result-object p4
@@ -1111,17 +1019,14 @@
 
     move-result-object p2
 
-    .line 11
     invoke-virtual {p2}, Lokhttp3/MultipartBody$Builder;->build()Lokhttp3/MultipartBody;
 
     move-result-object p2
 
     const-string p3, ""
 
-    .line 12
     iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->errorMsg:Ljava/lang/String;
 
-    .line 13
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/web/OkHttpUtils;->okHttpClient:Lokhttp3/OkHttpClient;
 
     new-instance p4, Lokhttp3/Request$Builder;

@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,19 +41,16 @@
 .method public addFragmentInfo(II)V
     .locals 2
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
@@ -74,19 +70,16 @@
 .method public addFragmentInfo(IILjava/lang/String;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
@@ -106,19 +99,16 @@
 .method public addInterceptor(Lcom/android/camera/module/interceptor/BaseModuleInterceptor;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->interceptorList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->interceptorList:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->interceptorList:Ljava/util/List;
 
@@ -138,7 +128,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
     return-object v0
@@ -155,7 +144,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->interceptorList:Ljava/util/List;
 
     return-object v0
@@ -164,7 +152,6 @@
 .method public getTopConfigItems()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->topConfigItems:[I
 
     return-object v0
@@ -173,19 +160,16 @@
 .method public hideFragment(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
@@ -205,19 +189,16 @@
 .method public removeCurrentFragment(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->fragmentAlias:Ljava/util/List;
 
@@ -237,7 +218,6 @@
 .method public varargs setTopConfigItems([I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/loader/StartControlFeatureDetail;->topConfigItems:[I
 
     return-void

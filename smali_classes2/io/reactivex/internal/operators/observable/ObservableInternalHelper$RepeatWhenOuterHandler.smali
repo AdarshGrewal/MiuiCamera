@@ -62,10 +62,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RepeatWhenOuterHandler;->handler:Lio/reactivex/functions/Function;
 
     return-void
@@ -93,7 +91,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RepeatWhenOuterHandler;->handler:Lio/reactivex/functions/Function;
 
     sget-object v1, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$MapToInt;->INSTANCE:Lio/reactivex/internal/operators/observable/ObservableInternalHelper$MapToInt;
@@ -119,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/Observable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RepeatWhenOuterHandler;->apply(Lio/reactivex/Observable;)Lio/reactivex/ObservableSource;

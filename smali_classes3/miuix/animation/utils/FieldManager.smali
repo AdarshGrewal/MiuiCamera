@@ -46,17 +46,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/utils/FieldManager;->mMethodMap:Ljava/util/Map;
 
-    .line 3
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -83,7 +80,6 @@
         }
     .end annotation
 
-    .line 13
     invoke-interface {p3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -92,19 +88,16 @@
 
     if-nez v0, :cond_0
 
-    .line 14
     new-instance v0, Lmiuix/animation/utils/FieldManager$FieldInfo;
 
     invoke-direct {v0}, Lmiuix/animation/utils/FieldManager$FieldInfo;-><init>()V
 
-    .line 15
     invoke-static {p0, p1, p2}, Lmiuix/animation/utils/FieldManager;->getFieldByType(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
     iput-object p0, v0, Lmiuix/animation/utils/FieldManager$FieldInfo;->field:Ljava/lang/reflect/Field;
 
-    .line 16
     invoke-interface {p3, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -126,7 +119,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -140,7 +132,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     :try_start_1
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_1
@@ -151,7 +142,6 @@
     :catch_0
     move-object v1, v0
 
-    .line 3
     :catch_1
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -168,7 +158,6 @@
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object p0
@@ -200,7 +189,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -212,14 +200,12 @@
 
     const/4 v1, 0x1
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 7
     :catch_0
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -254,7 +240,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -263,19 +248,16 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/animation/utils/FieldManager$MethodInfo;
 
     invoke-direct {v0}, Lmiuix/animation/utils/FieldManager$MethodInfo;-><init>()V
 
-    .line 3
     invoke-static {p0, p1, p3}, Lmiuix/animation/utils/FieldManager;->getMethod(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
 
     iput-object p0, v0, Lmiuix/animation/utils/FieldManager$MethodInfo;->method:Ljava/lang/reflect/Method;
 
-    .line 4
     invoke-interface {p2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -285,7 +267,6 @@
 .method public static getMethodName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +313,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -365,7 +345,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -378,7 +357,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -387,7 +365,6 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -400,7 +377,6 @@
 
     const-string p2, "miuix_anim"
 
-    .line 4
     invoke-static {p2, p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -422,7 +398,6 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p0, Ljava/lang/Number;
 
     if-nez v0, :cond_0
@@ -431,11 +406,9 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     check-cast p0, Ljava/lang/Number;
 
-    .line 3
     const-class v0, Ljava/lang/Float;
 
     if-eq p1, v0, :cond_4
@@ -446,7 +419,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     const-class v0, Ljava/lang/Integer;
 
@@ -458,7 +430,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -480,7 +451,6 @@
 
     throw p0
 
-    .line 6
     :cond_3
     :goto_0
     invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
@@ -493,7 +463,6 @@
 
     return-object p0
 
-    .line 7
     :cond_4
     :goto_1
     invoke-virtual {p0}, Ljava/lang/Number;->floatValue()F
@@ -520,7 +489,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
@@ -554,7 +522,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 1
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -564,7 +531,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mMethodMap:Ljava/util/Map;
 
@@ -580,7 +546,6 @@
 
     const-string v1, "get"
 
-    .line 3
     invoke-static {p2, v1}, Lmiuix/animation/utils/FieldManager;->getMethodName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -593,13 +558,11 @@
 
     move-result-object v1
 
-    .line 4
     :cond_1
     iget-object v3, v1, Lmiuix/animation/utils/FieldManager$MethodInfo;->method:Ljava/lang/reflect/Method;
 
     if-eqz v3, :cond_2
 
-    .line 5
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$MethodInfo;->method:Ljava/lang/reflect/Method;
 
     new-array v0, v2, [Ljava/lang/Object;
@@ -608,7 +571,6 @@
 
     move-result-object p1
 
-    .line 6
     invoke-static {p1, p3}, Lmiuix/animation/utils/FieldManager;->retToClz(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
@@ -619,7 +581,6 @@
 
     return-object p1
 
-    .line 7
     :cond_2
     :try_start_1
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mFieldMap:Ljava/util/Map;
@@ -632,20 +593,17 @@
 
     if-nez v1, :cond_3
 
-    .line 8
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mFieldMap:Ljava/util/Map;
 
     invoke-static {p1, p2, p3, v1}, Lmiuix/animation/utils/FieldManager;->getField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Lmiuix/animation/utils/FieldManager$FieldInfo;
 
     move-result-object v1
 
-    .line 9
     :cond_3
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$FieldInfo;->field:Ljava/lang/reflect/Field;
 
     if-eqz p2, :cond_4
 
-    .line 10
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$FieldInfo;->field:Ljava/lang/reflect/Field;
 
     invoke-static {p1, p2}, Lmiuix/animation/utils/FieldManager;->getValueByField(Ljava/lang/Object;Ljava/lang/reflect/Field;)Ljava/lang/Object;
@@ -658,7 +616,6 @@
 
     return-object p1
 
-    .line 11
     :cond_4
     monitor-exit p0
 
@@ -671,7 +628,6 @@
 
     throw p1
 
-    .line 12
     :cond_5
     :goto_0
     monitor-exit p0
@@ -701,7 +657,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 1
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -711,7 +666,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mMethodMap:Ljava/util/Map;
 
@@ -727,7 +681,6 @@
 
     const-string v1, "set"
 
-    .line 3
     invoke-static {p2, v1}, Lmiuix/animation/utils/FieldManager;->getMethodName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -742,13 +695,11 @@
 
     move-result-object v1
 
-    .line 4
     :cond_1
     iget-object v3, v1, Lmiuix/animation/utils/FieldManager$MethodInfo;->method:Ljava/lang/reflect/Method;
 
     if-eqz v3, :cond_2
 
-    .line 5
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$MethodInfo;->method:Ljava/lang/reflect/Method;
 
     new-array p3, v2, [Ljava/lang/Object;
@@ -759,12 +710,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     monitor-exit p0
 
     return v2
 
-    .line 7
     :cond_2
     :try_start_1
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mFieldMap:Ljava/util/Map;
@@ -777,32 +726,27 @@
 
     if-nez v1, :cond_3
 
-    .line 8
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mFieldMap:Ljava/util/Map;
 
     invoke-static {p1, p2, p3, v1}, Lmiuix/animation/utils/FieldManager;->getField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Lmiuix/animation/utils/FieldManager$FieldInfo;
 
     move-result-object v1
 
-    .line 9
     :cond_3
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$FieldInfo;->field:Ljava/lang/reflect/Field;
 
     if-eqz p2, :cond_4
 
-    .line 10
     iget-object p2, v1, Lmiuix/animation/utils/FieldManager$FieldInfo;->field:Ljava/lang/reflect/Field;
 
     invoke-static {p1, p2, p4}, Lmiuix/animation/utils/FieldManager;->setValueByField(Ljava/lang/Object;Ljava/lang/reflect/Field;Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     monitor-exit p0
 
     return v2
 
-    .line 12
     :cond_4
     monitor-exit p0
 
@@ -815,7 +759,6 @@
 
     throw p1
 
-    .line 13
     :cond_5
     :goto_0
     monitor-exit p0

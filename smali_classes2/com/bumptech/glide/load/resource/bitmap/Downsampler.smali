@@ -128,38 +128,32 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/load/DecodeFormat;->DEFAULT:Lcom/bumptech/glide/load/DecodeFormat;
 
     const-string v1, "com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeFormat"
 
-    .line 2
     invoke-static {v1, v0}, Lcom/bumptech/glide/load/Option;->memory(Ljava/lang/String;Ljava/lang/Object;)Lcom/bumptech/glide/load/Option;
 
     move-result-object v0
 
     sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->DECODE_FORMAT:Lcom/bumptech/glide/load/Option;
 
-    .line 3
     sget-object v0, Lcom/bumptech/glide/load/PreferredColorSpace;->SRGB:Lcom/bumptech/glide/load/PreferredColorSpace;
 
     const-string v1, "com.bumptech.glide.load.resource.bitmap.Downsampler.PreferredColorSpace"
 
-    .line 4
     invoke-static {v1, v0}, Lcom/bumptech/glide/load/Option;->memory(Ljava/lang/String;Ljava/lang/Object;)Lcom/bumptech/glide/load/Option;
 
     move-result-object v0
 
     sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->PREFERRED_COLOR_SPACE:Lcom/bumptech/glide/load/Option;
 
-    .line 5
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->OPTION:Lcom/bumptech/glide/load/Option;
 
     sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->DOWNSAMPLE_STRATEGY:Lcom/bumptech/glide/load/Option;
 
     const/4 v0, 0x0
 
-    .line 6
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -174,14 +168,12 @@
 
     const-string v2, "com.bumptech.glide.load.resource.bitmap.Downsampler.AllowHardwareDecode"
 
-    .line 7
     invoke-static {v2, v1}, Lcom/bumptech/glide/load/Option;->memory(Ljava/lang/String;Ljava/lang/Object;)Lcom/bumptech/glide/load/Option;
 
     move-result-object v1
 
     sput-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->ALLOW_HARDWARE_CONFIG:Lcom/bumptech/glide/load/Option;
 
-    .line 8
     new-instance v1, Ljava/util/HashSet;
 
     const-string v2, "image/vnd.wap.wbmp"
@@ -192,7 +184,6 @@
 
     move-result-object v2
 
-    .line 9
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
@@ -205,33 +196,28 @@
 
     sput-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->NO_DOWNSAMPLE_PRE_N_MIME_TYPES:Ljava/util/Set;
 
-    .line 10
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler$1;
 
     invoke-direct {v1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler$1;-><init>()V
 
     sput-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->EMPTY_CALLBACKS:Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;
 
-    .line 11
     sget-object v1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->JPEG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     sget-object v2, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     sget-object v3, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    .line 12
     invoke-static {v1, v2, v3}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v1
 
-    .line 13
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v1
 
     sput-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->TYPES_THAT_USE_POOL_PRE_KITKAT:Ljava/util/Set;
 
-    .line 14
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->createQueue(I)Ljava/util/Queue;
 
     move-result-object v0
@@ -256,20 +242,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->getInstance()Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->hardwareConfigState:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
-    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->parsers:Ljava/util/List;
 
-    .line 4
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -278,7 +260,6 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->displayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 5
     invoke-static {p3}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -287,7 +268,6 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
-    .line 6
     invoke-static {p4}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -302,7 +282,6 @@
 .method public static adjustTargetDensityForError(D)I
     .locals 4
 
-    .line 1
     invoke-static {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getDensityMultiplier(D)I
 
     move-result v0
@@ -311,7 +290,6 @@
 
     mul-double/2addr v1, p0
 
-    .line 2
     invoke-static {v1, v2}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->round(D)I
 
     move-result v1
@@ -330,7 +308,6 @@
 
     mul-double/2addr p0, v0
 
-    .line 3
     invoke-static {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->round(D)I
 
     move-result p0
@@ -341,7 +318,6 @@
 .method private calculateConfig(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Lcom/bumptech/glide/load/DecodeFormat;ZZLandroid/graphics/BitmapFactory$Options;II)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->hardwareConfigState:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     move v1, p6
@@ -362,7 +338,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object p3, Lcom/bumptech/glide/load/DecodeFormat;->PREFER_ARGB_8888:Lcom/bumptech/glide/load/DecodeFormat;
 
@@ -379,7 +354,6 @@
     :cond_1
     const/4 p3, 0x0
 
-    .line 3
     :try_start_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/ImageReader;->getImageType()Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -400,14 +374,12 @@
 
     const-string p6, "Downsampler"
 
-    .line 4
     invoke-static {p6, p4}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p4
 
     if-eqz p4, :cond_2
 
-    .line 5
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -428,7 +400,6 @@
     :goto_0
     if-eqz p3, :cond_3
 
-    .line 6
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     goto :goto_1
@@ -439,20 +410,17 @@
     :goto_1
     iput-object p1, p5, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 7
     sget-object p2, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     if-ne p1, p2, :cond_4
 
     const/4 p1, 0x1
 
-    .line 8
     iput-boolean p1, p5, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
     :cond_4
     return-void
 
-    .line 9
     :cond_5
     :goto_2
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -496,7 +464,6 @@
 
     goto/16 :goto_9
 
-    .line 1
     :cond_0
     invoke-static/range {p5 .. p5}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->isRotationRequired(I)Z
 
@@ -515,7 +482,6 @@
 
     move v11, v3
 
-    .line 2
     :goto_0
     invoke-virtual {v1, v10, v11, v4, v5}, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->getScaleFactor(IIII)F
 
@@ -527,7 +493,6 @@
 
     if-lez v13, :cond_12
 
-    .line 3
     invoke-virtual {v1, v10, v11, v4, v5}, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->getSampleSizeRounding(IIII)Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
     move-result-object v7
@@ -540,7 +505,6 @@
 
     float-to-double v14, v14
 
-    .line 4
     invoke-static {v14, v15}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->round(D)I
 
     move-result v14
@@ -551,36 +515,29 @@
 
     float-to-double v2, v3
 
-    .line 5
     invoke-static {v2, v3}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->round(D)I
 
     move-result v2
 
-    .line 6
     div-int v3, v10, v14
 
-    .line 7
     div-int v2, v11, v2
 
-    .line 8
     sget-object v14, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;->MEMORY:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
     if-ne v7, v14, :cond_2
 
-    .line 9
     invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     goto :goto_1
 
-    .line 10
     :cond_2
     invoke-static {v3, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
-    .line 11
     :goto_1
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -596,7 +553,6 @@
 
     iget-object v14, v6, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    .line 12
     invoke-interface {v3, v14}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -607,7 +563,6 @@
 
     goto :goto_2
 
-    .line 13
     :cond_3
     invoke-static {v2}, Ljava/lang/Integer;->highestOneBit(I)I
 
@@ -617,7 +572,6 @@
 
     move-result v2
 
-    .line 14
     sget-object v3, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;->MEMORY:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
     if-ne v7, v3, :cond_4
@@ -634,12 +588,10 @@
 
     shl-int/lit8 v2, v2, 0x1
 
-    .line 15
     :cond_4
     :goto_2
     iput v2, v6, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 16
     sget-object v3, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->JPEG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const/4 v7, 0x0
@@ -648,7 +600,6 @@
 
     const/16 v0, 0x8
 
-    .line 17
     invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -659,7 +610,6 @@
 
     float-to-double v10, v13
 
-    .line 18
     invoke-static {v10, v11}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v10
@@ -670,27 +620,22 @@
 
     float-to-double v10, v15
 
-    .line 19
     invoke-static {v10, v11}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v10
 
     double-to-int v0, v10
 
-    .line 20
     div-int/lit8 v10, v2, 0x8
 
     if-lez v10, :cond_d
 
-    .line 21
     div-int/2addr v3, v10
 
-    .line 22
     div-int/2addr v0, v10
 
     goto :goto_7
 
-    .line 23
     :cond_5
     sget-object v3, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -702,7 +647,6 @@
 
     goto :goto_5
 
-    .line 24
     :cond_6
     sget-object v3, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -714,7 +658,6 @@
 
     goto :goto_4
 
-    .line 25
     :cond_7
     rem-int v0, v10, v2
 
@@ -726,11 +669,9 @@
 
     goto :goto_3
 
-    .line 26
     :cond_8
     div-int v3, v10, v2
 
-    .line 27
     div-int v0, v11, v2
 
     goto :goto_7
@@ -743,20 +684,16 @@
 
     move-object/from16 v10, p3
 
-    .line 28
     invoke-static {v0, v6, v3, v10}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getDimensions(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)[I
 
     move-result-object v0
 
-    .line 29
     aget v3, v0, v7
 
-    .line 30
     aget v0, v0, v9
 
     goto :goto_7
 
-    .line 31
     :cond_a
     :goto_4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -769,14 +706,12 @@
 
     div-float/2addr v13, v0
 
-    .line 32
     invoke-static {v13}, Ljava/lang/Math;->round(F)I
 
     move-result v3
 
     div-float/2addr v15, v0
 
-    .line 33
     invoke-static {v15}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -790,7 +725,6 @@
 
     float-to-double v10, v13
 
-    .line 34
     invoke-static {v10, v11}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v10
@@ -801,7 +735,6 @@
 
     float-to-double v10, v15
 
-    .line 35
     invoke-static {v10, v11}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v10
@@ -816,7 +749,6 @@
 
     float-to-double v10, v13
 
-    .line 36
     invoke-static {v10, v11}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v10
@@ -827,7 +759,6 @@
 
     float-to-double v10, v15
 
-    .line 37
     invoke-static {v10, v11}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v10
@@ -835,7 +766,6 @@
     :goto_6
     double-to-int v0, v10
 
-    .line 38
     :cond_d
     :goto_7
     invoke-virtual {v1, v3, v0, v4, v5}, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->getScaleFactor(IIII)F
@@ -844,28 +774,24 @@
 
     float-to-double v10, v1
 
-    .line 39
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v13, 0x13
 
     if-lt v1, v13, :cond_e
 
-    .line 40
     invoke-static {v10, v11}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->adjustTargetDensityForError(D)I
 
     move-result v1
 
     iput v1, v6, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
-    .line 41
     invoke-static {v10, v11}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getDensityMultiplier(D)I
 
     move-result v1
 
     iput v1, v6, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
-    .line 42
     :cond_e
     invoke-static/range {p10 .. p10}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->isScaling(Landroid/graphics/BitmapFactory$Options;)Z
 
@@ -873,12 +799,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 43
     iput-boolean v9, v6, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     goto :goto_8
 
-    .line 44
     :cond_f
     iput v7, v6, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
@@ -887,14 +811,12 @@
     :goto_8
     const/4 v1, 0x2
 
-    .line 45
     invoke-static {v8, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_10
 
-    .line 46
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -986,7 +908,6 @@
     :cond_10
     return-void
 
-    .line 47
     :cond_11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1003,7 +924,6 @@
 
     move v9, v2
 
-    .line 48
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1058,14 +978,12 @@
 
     const/4 v1, 0x3
 
-    .line 49
     invoke-static {v8, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_14
 
-    .line 50
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1124,7 +1042,6 @@
 
     move-object/from16 v0, p4
 
-    .line 4
     iget-object v1, v12, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     const-class v2, [B
@@ -1139,15 +1056,12 @@
 
     check-cast v13, [B
 
-    .line 5
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getDefaultOptions()Landroid/graphics/BitmapFactory$Options;
 
     move-result-object v14
 
-    .line 6
     iput-object v13, v14, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
-    .line 7
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->DECODE_FORMAT:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -1158,7 +1072,6 @@
 
     check-cast v5, Lcom/bumptech/glide/load/DecodeFormat;
 
-    .line 8
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->PREFERRED_COLOR_SPACE:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -1169,7 +1082,6 @@
 
     check-cast v6, Lcom/bumptech/glide/load/PreferredColorSpace;
 
-    .line 9
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->OPTION:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -1180,7 +1092,6 @@
 
     check-cast v4, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
-    .line 10
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->FIX_BITMAP_SIZE_TO_REQUESTED_DIMENSIONS:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -1193,10 +1104,8 @@
 
     move-result v10
 
-    .line 11
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->ALLOW_HARDWARE_CONFIG:Lcom/bumptech/glide/load/Option;
 
-    .line 12
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
 
     move-result-object v1
@@ -1239,13 +1148,11 @@
 
     move-object/from16 v11, p5
 
-    .line 13
     :try_start_0
     invoke-direct/range {v1 .. v11}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->decodeFromWrappedStreams(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;Lcom/bumptech/glide/load/DecodeFormat;Lcom/bumptech/glide/load/PreferredColorSpace;ZIIZLcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 14
     iget-object v1, v12, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-static {v0, v1}, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->obtain(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
@@ -1254,10 +1161,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     invoke-static {v14}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->releaseOptions(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 16
     iget-object v1, v12, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     invoke-interface {v1, v13}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->put(Ljava/lang/Object;)V
@@ -1267,15 +1172,12 @@
     :catchall_0
     move-exception v0
 
-    .line 17
     invoke-static {v14}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->releaseOptions(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 18
     iget-object v1, v12, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     invoke-interface {v1, v13}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;->put(Ljava/lang/Object;)V
 
-    .line 19
     throw v0
 .end method
 
@@ -1295,12 +1197,10 @@
 
     move-object/from16 v5, p10
 
-    .line 1
     invoke-static {}, Lcom/bumptech/glide/util/LogTime;->getLogTime()J
 
     move-result-wide v20
 
-    .line 2
     iget-object v0, v8, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-static {v7, v6, v5, v0}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getDimensions(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)[I
@@ -1309,15 +1209,12 @@
 
     const/16 v22, 0x0
 
-    .line 3
     aget v4, v0, v22
 
     const/4 v3, 0x1
 
-    .line 4
     aget v2, v0, v3
 
-    .line 5
     iget-object v1, v6, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
     const/4 v0, -0x1
@@ -1337,18 +1234,15 @@
     :goto_0
     move/from16 v23, v22
 
-    .line 6
     :goto_1
     invoke-interface/range {p1 .. p1}, Lcom/bumptech/glide/load/resource/bitmap/ImageReader;->getImageOrientation()I
 
     move-result v0
 
-    .line 7
     invoke-static {v0}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getExifOrientationDegrees(I)I
 
     move-result v14
 
-    .line 8
     invoke-static {v0}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->isExifOrientationRequired(I)Z
 
     move-result v24
@@ -1359,7 +1253,6 @@
 
     if-ne v15, v9, :cond_3
 
-    .line 9
     invoke-static {v14}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->isRotationRequired(I)Z
 
     move-result v10
@@ -1385,7 +1278,6 @@
     :goto_2
     if-ne v13, v9, :cond_5
 
-    .line 10
     invoke-static {v14}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->isRotationRequired(I)Z
 
     move-result v9
@@ -1404,13 +1296,11 @@
     :cond_5
     move/from16 v26, v13
 
-    .line 11
     :goto_3
     invoke-interface/range {p1 .. p1}, Lcom/bumptech/glide/load/resource/bitmap/ImageReader;->getImageType()Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object v12
 
-    .line 12
     iget-object v11, v8, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     move-object v9, v12
@@ -1469,10 +1359,8 @@
 
     move/from16 v7, v26
 
-    .line 13
     invoke-direct/range {v0 .. v7}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->calculateConfig(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Lcom/bumptech/glide/load/DecodeFormat;ZZLandroid/graphics/BitmapFactory$Options;II)V
 
-    .line 14
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -1486,7 +1374,6 @@
     :cond_6
     move/from16 v3, v22
 
-    .line 15
     :goto_4
     iget v0, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
@@ -1531,7 +1418,6 @@
 
     goto/16 :goto_7
 
-    .line 16
     :cond_9
     invoke-static/range {p2 .. p2}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->isScaling(Landroid/graphics/BitmapFactory$Options;)Z
 
@@ -1554,7 +1440,6 @@
     :cond_a
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 17
     :goto_6
     iget v4, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
@@ -1566,7 +1451,6 @@
 
     float-to-double v7, v5
 
-    .line 18
     invoke-static {v7, v8}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v7
@@ -1579,7 +1463,6 @@
 
     float-to-double v6, v7
 
-    .line 19
     invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v6
@@ -1590,7 +1473,6 @@
 
     mul-float/2addr v5, v3
 
-    .line 20
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v5
@@ -1599,19 +1481,16 @@
 
     mul-float/2addr v6, v3
 
-    .line 21
     invoke-static {v6}, Ljava/lang/Math;->round(F)I
 
     move-result v6
 
-    .line 22
     invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v7
 
     if-eqz v7, :cond_b
 
-    .line 23
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1678,12 +1557,10 @@
 
     if-lez v6, :cond_c
 
-    .line 24
     iget-object v3, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-static {v14, v3, v5, v6}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->setInBitmap(Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;II)V
 
-    .line 25
     :cond_c
     :goto_8
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1692,7 +1569,6 @@
 
     if-lt v3, v4, :cond_f
 
-    .line 26
     sget-object v3, Lcom/bumptech/glide/load/PreferredColorSpace;->DISPLAY_P3:Lcom/bumptech/glide/load/PreferredColorSpace;
 
     move-object/from16 v4, p5
@@ -1703,7 +1579,6 @@
 
     if-eqz v3, :cond_d
 
-    .line 27
     invoke-virtual {v3}, Landroid/graphics/ColorSpace;->isWideGamut()Z
 
     move-result v3
@@ -1715,7 +1590,6 @@
     :cond_d
     if-eqz v22, :cond_e
 
-    .line 28
     sget-object v3, Landroid/graphics/ColorSpace$Named;->DISPLAY_P3:Landroid/graphics/ColorSpace$Named;
 
     goto :goto_9
@@ -1723,7 +1597,6 @@
     :cond_e
     sget-object v3, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
 
-    .line 29
     :goto_9
     invoke-static {v3}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
 
@@ -1738,7 +1611,6 @@
 
     if-lt v3, v4, :cond_10
 
-    .line 30
     sget-object v3, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
 
     invoke-static {v3}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
@@ -1747,7 +1619,6 @@
 
     iput-object v3, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
 
-    .line 31
     :cond_10
     :goto_a
     iget-object v3, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
@@ -1758,12 +1629,10 @@
 
     move-result-object v3
 
-    .line 32
     iget-object v4, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-interface {v13, v4, v3}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;->onDecodeComplete(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;)V
 
-    .line 33
     invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v1
@@ -1784,7 +1653,6 @@
 
     move-wide/from16 v16, v20
 
-    .line 34
     invoke-static/range {v9 .. v17}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->logDecode(IILjava/lang/String;Landroid/graphics/BitmapFactory$Options;Landroid/graphics/Bitmap;IIJ)V
 
     goto :goto_b
@@ -1797,28 +1665,24 @@
 
     if-eqz v3, :cond_12
 
-    .line 35
     iget-object v2, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v2, v2, Landroid/util/DisplayMetrics;->densityDpi:I
 
     invoke-virtual {v3, v2}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 36
     iget-object v2, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-static {v2, v3, v1}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->rotateImageExif(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 37
     invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_12
 
-    .line 38
     iget-object v1, v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-interface {v1, v3}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;->put(Landroid/graphics/Bitmap;)V
@@ -1837,35 +1701,27 @@
 
     const-string v0, "Downsampler"
 
-    .line 1
     iget-boolean v1, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     if-nez v1, :cond_0
 
-    .line 2
     invoke-interface {p2}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;->onObtainBounds()V
 
-    .line 3
     invoke-interface {p0}, Lcom/bumptech/glide/load/resource/bitmap/ImageReader;->stopGrowingBuffers()V
 
-    .line 4
     :cond_0
     iget v1, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 5
     iget v2, p1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 6
     iget-object v3, p1, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    .line 7
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getBitmapDrawableLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object v4
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 8
     :try_start_0
     invoke-interface {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/ImageReader;->decodeBitmap(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -1874,7 +1730,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getBitmapDrawableLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p1
@@ -1891,7 +1746,6 @@
     :catch_0
     move-exception v4
 
-    .line 10
     :try_start_1
     invoke-static {v4, v1, v2, v3, p1}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->newIoExceptionForInBitmapAssertion(Ljava/lang/IllegalArgumentException;IILjava/lang/String;Landroid/graphics/BitmapFactory$Options;)Ljava/io/IOException;
 
@@ -1899,7 +1753,6 @@
 
     const/4 v2, 0x3
 
-    .line 11
     invoke-static {v0, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v2
@@ -1908,10 +1761,8 @@
 
     const-string v2, "Failed to decode with inBitmap, trying again without Bitmap re-use"
 
-    .line 12
     invoke-static {v0, v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 13
     :cond_1
     iget-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
     :try_end_1
@@ -1919,7 +1770,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 14
     :try_start_2
     iget-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
@@ -1927,10 +1777,8 @@
 
     const/4 v0, 0x0
 
-    .line 15
     iput-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 16
     invoke-static {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->decodeStream(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1938,7 +1786,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 17
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getBitmapDrawableLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p1
@@ -1947,18 +1794,15 @@
 
     return-object p0
 
-    .line 18
     :catch_1
     :try_start_3
     throw v1
 
-    .line 19
     :cond_2
     throw v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 20
     :goto_0
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils;->getBitmapDrawableLock()Ljava/util/concurrent/locks/Lock;
 
@@ -1966,7 +1810,6 @@
 
     invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 21
     throw p0
 .end method
 
@@ -1979,7 +1822,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1995,7 +1837,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
     move-result v1
@@ -2015,7 +1856,6 @@
     :cond_1
     const-string v0, ""
 
-    .line 3
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2025,7 +1865,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -2036,7 +1875,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
@@ -2047,7 +1885,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object p0
@@ -2070,7 +1907,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->OPTIONS_QUEUE:Ljava/util/Queue;
 
@@ -2078,7 +1914,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2
     :try_start_1
     sget-object v2, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->OPTIONS_QUEUE:Ljava/util/Queue;
 
@@ -2088,25 +1923,21 @@
 
     check-cast v2, Landroid/graphics/BitmapFactory$Options;
 
-    .line 3
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-nez v2, :cond_0
 
-    .line 4
     :try_start_2
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 5
     invoke-static {v2}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->resetOptions(Landroid/graphics/BitmapFactory$Options;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 6
     :cond_0
     monitor-exit v0
 
@@ -2115,7 +1946,6 @@
     :catchall_0
     move-exception v2
 
-    .line 7
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -2153,7 +1983,6 @@
 
     mul-double/2addr p0, v0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0
@@ -2173,22 +2002,18 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->decodeStream(Lcom/bumptech/glide/load/resource/bitmap/ImageReader;Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)Landroid/graphics/Bitmap;
 
     const/4 p0, 0x0
 
-    .line 3
     iput-boolean p0, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     const/4 p2, 0x2
 
     new-array p2, p2, [I
 
-    .line 4
     iget p3, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     aput p3, p2, p0
@@ -2203,7 +2028,6 @@
 .method public static getInBitmapString(Landroid/graphics/BitmapFactory$Options;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p0}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getBitmapString(Landroid/graphics/Bitmap;)Ljava/lang/String;
@@ -2242,7 +2066,6 @@
 .method public static isScaling(Landroid/graphics/BitmapFactory$Options;)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
     if-lez v0, :cond_0
@@ -2267,7 +2090,6 @@
 .method public static logDecode(IILjava/lang/String;Landroid/graphics/BitmapFactory$Options;Landroid/graphics/Bitmap;IIJ)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2276,7 +2098,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-static {p4}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getBitmapString(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object p4
@@ -2305,7 +2126,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-static {p3}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getInBitmapString(Landroid/graphics/BitmapFactory$Options;)Ljava/lang/String;
 
     move-result-object p1
@@ -2350,7 +2170,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -2365,7 +2184,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-static {p7, p8}, Lcom/bumptech/glide/util/LogTime;->getElapsedMillis(J)D
 
     move-result-wide p0
@@ -2378,7 +2196,6 @@
 
     const-string p1, "Downsampler"
 
-    .line 6
     invoke-static {p1, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2387,7 +2204,6 @@
 .method public static newIoExceptionForInBitmapAssertion(Ljava/lang/IllegalArgumentException;IILjava/lang/String;Landroid/graphics/BitmapFactory$Options;)Ljava/io/IOException;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2416,7 +2232,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-static {p4}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->getInBitmapString(Landroid/graphics/BitmapFactory$Options;)Ljava/lang/String;
 
     move-result-object p1
@@ -2435,21 +2250,17 @@
 .method public static releaseOptions(Landroid/graphics/BitmapFactory$Options;)V
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->resetOptions(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 2
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->OPTIONS_QUEUE:Ljava/util/Queue;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->OPTIONS_QUEUE:Ljava/util/Queue;
 
     invoke-interface {v1, p0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 4
     monitor-exit v0
 
     return-void
@@ -2469,64 +2280,47 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
     const/4 v1, 0x0
 
-    .line 2
     iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 3
     iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/4 v2, 0x1
 
-    .line 4
     iput v2, p0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 5
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 6
     iput-boolean v1, p0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 7
     iput v1, p0, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
-    .line 8
     iput v1, p0, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
-    .line 9
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x1a
 
     if-lt v3, v4, :cond_0
 
-    .line 10
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
 
-    .line 11
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->outColorSpace:Landroid/graphics/ColorSpace;
 
-    .line 12
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->outConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 13
     :cond_0
     iput v1, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 14
     iput v1, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 15
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    .line 16
     iput-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 17
     iput-boolean v2, p0, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
     return-void
@@ -2547,14 +2341,12 @@
 .method public static setInBitmap(Landroid/graphics/BitmapFactory$Options;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;II)V
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_1
 
-    .line 2
     iget-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
@@ -2563,7 +2355,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Landroid/graphics/BitmapFactory$Options;->outConfig:Landroid/graphics/Bitmap$Config;
 
@@ -2575,10 +2366,8 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 5
     :cond_2
     invoke-interface {p1, p2, p3, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;->getDirty(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
@@ -2592,7 +2381,6 @@
 .method private shouldUsePool(Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;)Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
@@ -2603,7 +2391,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->TYPES_THAT_USE_POOL_PRE_KITKAT:Ljava/util/Set;
 
@@ -2637,7 +2424,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/ImageReader$ParcelFileDescriptorImageReader;
 
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->parsers:Ljava/util/List;
@@ -2684,7 +2470,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v5, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->EMPTY_CALLBACKS:Lcom/bumptech/glide/load/resource/bitmap/Downsampler$DecodeCallbacks;
 
     move-object v0, p0
@@ -2726,7 +2511,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/ImageReader$InputStreamImageReader;
 
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->parsers:Ljava/util/List;
@@ -2755,7 +2539,6 @@
 .method public handles(Landroid/os/ParcelFileDescriptor;)Z
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;->isSupported()Z
 
     move-result p1

@@ -48,15 +48,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet;->keys:Ljava/util/Set;
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 3
     iput p2, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet;->size:I
 
     return-void
@@ -74,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;-><init>(Ljava8/util/stream/DistinctOps$KeysAndNullSet;)V
@@ -85,7 +81,6 @@
 .method public size()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet;->size:I
 
     return v0

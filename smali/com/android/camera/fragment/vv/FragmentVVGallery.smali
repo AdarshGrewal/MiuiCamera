@@ -60,15 +60,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BasePanelFragment;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
-    .line 3
     new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
@@ -86,17 +83,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/resource/SimpleNetworkRawRequest;
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/multi/PluginInfo;->getDownloadUrl()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-direct {v0, p0}, Lcom/android/camera/resource/SimpleNetworkRawRequest;-><init>(Ljava/lang/String;)V
 
-    .line 3
     const-class p0, Lcom/android/camera/resource/BaseResourceRaw;
 
     invoke-virtual {v0, p0}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Class;)Lio/reactivex/Observable;
@@ -114,7 +108,6 @@
         }
     .end annotation
 
-    .line 13
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
@@ -128,7 +121,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -146,10 +138,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/android/camera/resource/BaseResourceRaw;
 
@@ -161,7 +151,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/vv/FragmentVVGallery;Lcom/android/camera/fragment/vv/VVItem;)Lcom/android/camera/fragment/vv/VVItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     return-object p1
@@ -170,7 +159,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/vv/FragmentVVGallery;Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->handleSnapButton(Lcom/android/camera/fragment/vv/VVItem;)V
 
     return-void
@@ -179,7 +167,6 @@
 .method private downloadItem(Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +187,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -223,7 +209,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -237,7 +222,6 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/resource/BaseResourceItem;->getCurrentState()I
 
     move-result p1
@@ -252,12 +236,10 @@
 
     const/4 p1, 0x0
 
-    .line 3
     invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->updateResourceState(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-interface {v0, v2}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->updateResourceState(I)V
 
@@ -268,7 +250,6 @@
 .method private initList()V
     .locals 11
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -277,7 +258,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
@@ -287,12 +267,10 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -307,14 +285,12 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
-    .line 5
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0oO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0o;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0oO;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0o;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;)V
 
     invoke-virtual {v0, p0, v1}, Lcom/android/camera/data/observeable/VMResource;->startObservable(Landroidx/lifecycle/LifecycleOwner;Lio/reactivex/functions/Consumer;)V
 
-    .line 6
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -326,12 +302,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget v0, v0, Lcom/android/camera/fragment/vv/VVItem;->index:I
 
     iput v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
-    .line 8
     :cond_2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -343,17 +317,14 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/extra/DataItemLive;->setVVVersion(Ljava/lang/String;)V
 
-    .line 9
     new-instance v0, Lcom/android/camera/fragment/vv/FragmentVVGallery$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery$1;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;)V
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mResourceSelectedListener:Lcom/android/camera/fragment/vv/ResourceSelectedListener;
 
-    .line 10
     invoke-interface {v0}, Lcom/android/camera/fragment/vv/ResourceSelectedListener;->onResourceReady()V
 
-    .line 11
     iget v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     const/4 v1, 0x0
@@ -368,7 +339,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mResourceSelectedListener:Lcom/android/camera/fragment/vv/ResourceSelectedListener;
 
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
@@ -385,7 +355,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mResourceSelectedListener:Lcom/android/camera/fragment/vv/ResourceSelectedListener;
 
@@ -399,20 +368,17 @@
 
     invoke-interface {v0, v2}, Lcom/android/camera/fragment/vv/ResourceSelectedListener;->onResourceSelected(Lcom/android/camera/fragment/vv/VVItem;)V
 
-    .line 14
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerViewLayout:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressLayout:Landroid/view/View;
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 16
     new-instance v0, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -425,10 +391,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
-    .line 17
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 18
     new-instance v0, Lcom/android/camera/fragment/vv/FragmentVVGallery$EffectItemPadding;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -437,7 +401,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/camera/fragment/vv/FragmentVVGallery$EffectItemPadding;-><init>(Landroid/content/Context;)V
 
-    .line 19
     new-instance v1, Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
     iget-object v5, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
@@ -458,34 +421,28 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
-    .line 20
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 21
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 23
     iget v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     if-ltz v0, :cond_4
 
-    .line 24
     invoke-direct {p0, v0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->setItemInCenter(I)V
 
-    .line 25
     :cond_4
     new-instance v0, Lcom/android/camera/fragment/DefaultItemAnimator;
 
@@ -493,16 +450,12 @@
 
     const-wide/16 v1, 0x96
 
-    .line 26
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
 
-    .line 27
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setMoveDuration(J)V
 
-    .line 28
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setAddDuration(J)V
 
-    .line 29
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
@@ -513,7 +466,6 @@
 .method private initResource()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -530,7 +482,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -539,7 +490,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -548,18 +498,16 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOO0;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0o;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOO0;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;)V
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0Oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0Oo;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0Oo;
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -570,7 +518,6 @@
 .method private loadItemList()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -591,19 +538,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/resource/BaseResourceList;->isDeparted()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->initList()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerViewLayout:Landroid/view/View;
 
@@ -611,7 +555,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->onInstalled()V
 
     :goto_0
@@ -621,21 +564,18 @@
 .method private onInstalled()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressLayout:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressText:Landroid/widget/TextView;
 
-    const v1, 0x7f120494
+    const v1, 0x7f120472
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->pullNewList()V
 
     return-void
@@ -653,7 +593,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -662,7 +601,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -686,7 +624,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -695,7 +632,6 @@
 
     const-string/jumbo v2, "vv"
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -704,7 +640,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
@@ -714,7 +649,6 @@
 
     move v3, v2
 
-    .line 6
     :goto_1
     iget-object v4, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
@@ -724,14 +658,12 @@
 
     if-ge v3, v4, :cond_5
 
-    .line 7
     iget-object v4, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
     invoke-virtual {v4, v3}, Lcom/android/camera/fragment/vv/VVGalleryAdapter;->getItemAt(I)Lcom/android/camera/fragment/vv/VVItem;
 
     move-result-object v4
 
-    .line 8
     iget-object v4, v4, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -740,7 +672,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 9
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -755,18 +686,16 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v4, 0x7f120480
+    const v4, 0x7f12045e
 
     const/16 v5, 0x50
 
     invoke-static {v0, v4, v5}, Lcom/android/camera/ToastUtils;->showToast(Landroid/content/Context;II)V
 
-    .line 11
     :cond_3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mGalleryAdapter:Lcom/android/camera/fragment/vv/VVGalleryAdapter;
 
@@ -783,7 +712,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_5
     :goto_2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
@@ -798,7 +726,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     invoke-direct {p0, v0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->handleSnapButton(Lcom/android/camera/fragment/vv/VVItem;)V
@@ -812,7 +739,6 @@
 .method private pullNewList()V
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -829,19 +755,16 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -854,7 +777,6 @@
 
     if-nez v3, :cond_1
 
-    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->initResource()V
 
@@ -863,7 +785,6 @@
 
     return-void
 
-    .line 6
     :cond_2
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -889,7 +810,6 @@
 
     return-void
 
-    .line 7
     :cond_3
     new-instance v1, Ljava/io/File;
 
@@ -911,17 +831,14 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 9
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 10
     :cond_4
     new-instance v1, Lcom/android/camera/resource/SimpleCloudResourceListRequest;
 
@@ -933,19 +850,16 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 11
     invoke-virtual {v1, v3}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO;
 
-    .line 12
     invoke-virtual {v1, v3}, Lio/reactivex/Observable;->onErrorReturn(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
-    .line 13
     new-instance v3, Lcom/android/camera/multi/PluginInfoRequest;
 
     const-string v4, "14689487697936512"
@@ -958,21 +872,18 @@
 
     move-result-object v3
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOO0O;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOO0O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOO0O;
 
-    .line 14
     invoke-virtual {v3, v4}, Lio/reactivex/Observable;->flatMap(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v3
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0oo;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0o0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0o0;
 
-    .line 15
     invoke-virtual {v3, v4}, Lio/reactivex/Observable;->onErrorReturn(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v3
 
-    .line 16
     new-instance v4, Lcom/android/camera/fragment/vv/VVListBiFunction;
 
     invoke-direct {v4, v0}, Lcom/android/camera/fragment/vv/VVListBiFunction;-><init>(Ljava/lang/String;)V
@@ -985,29 +896,25 @@
 
     const-wide/16 v3, 0x5
 
-    .line 17
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v0, v3, v4, v1}, Lio/reactivex/Observable;->timeout(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    .line 18
     :cond_5
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0oO;
 
-    invoke-direct {v1, p0, v2}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOO0;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;Z)V
+    invoke-direct {v1, p0, v2}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0oO;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;Z)V
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0o0;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0oo;
 
-    invoke-direct {v3, p0, v2}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooO0o0;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;Z)V
+    invoke-direct {v3, p0, v2}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooO0oo;-><init>(Lcom/android/camera/fragment/vv/FragmentVVGallery;Z)V
 
-    .line 19
     invoke-virtual {v0, v1, v3}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    .line 20
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -1018,7 +925,6 @@
 .method private setItemInCenter(I)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mTotalWidth:I
 
     div-int/lit8 v0, v0, 0x2
@@ -1029,7 +935,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {v1, p1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
@@ -1038,9 +943,8 @@
 .end method
 
 .method private transformToPreview(ILandroid/view/View;)V
-    .locals 3
+    .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1059,35 +963,28 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/vv/FragmentVVPreview;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/vv/FragmentVVPreview;-><init>()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
     invoke-virtual {v0, p1, v1}, Lcom/android/camera/fragment/vv/FragmentVVPreview;->setPreviewData(ILcom/android/camera/fragment/vv/VVList;)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mResourceSelectedListener:Lcom/android/camera/fragment/vv/ResourceSelectedListener;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/vv/FragmentVVPreview;->setResourceSelectedListener(Lcom/android/camera/fragment/vv/ResourceSelectedListener;)V
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->registerProtocol()V
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 8
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v1
@@ -1096,38 +993,29 @@
 
     move-result-object p1
 
-    const/4 p2, 0x5
-
-    .line 9
-    invoke-static {p2}, Lcom/android/camera/fragment/BaseFragmentDelegate;->getViewContainer(I)I
-
-    move-result v1
-
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p2
 
-    invoke-virtual {p1, v1, v0, v2}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
+    const v1, 0x7f0a0094
+
+    invoke-virtual {p1, v1, v0, p2}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentTransaction;->hide(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 12
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
-    const/16 v1, 0xa0
+    const/16 p2, 0xa0
 
-    .line 13
-    invoke-virtual {p1, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+    invoke-virtual {p1, p2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
 
@@ -1135,18 +1023,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 14
-    invoke-static {p2}, Lcom/android/camera/fragment/BaseFragmentDelegate;->getViewContainer(I)I
+    invoke-virtual {v0}, Lcom/android/camera/fragment/vv/FragmentVVPreview;->getFragmentInto()I
 
     move-result p2
 
-    invoke-virtual {v0}, Lcom/android/camera/fragment/vv/FragmentVVPreview;->getFragmentInto()I
+    const/4 v0, 0x4
 
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-interface {p1, p2, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->updateCurrentFragments(III)V
+    invoke-interface {p1, v1, p2, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->updateCurrentFragments(III)V
 
     :cond_0
     return-void
@@ -1162,7 +1045,6 @@
         }
     .end annotation
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/data/observeable/RxData$DataWrap;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -1182,10 +1064,8 @@
         }
     .end annotation
 
-    .line 11
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
-    .line 12
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->initList()V
 
     return-void
@@ -1199,7 +1079,6 @@
         }
     .end annotation
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1220,14 +1099,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
     invoke-virtual {v0, p2}, Lcom/android/camera/resource/BaseResourceList;->compareAndMarkDeparted(Lcom/android/camera/resource/BaseResourceList;)V
 
     if-eqz p1, :cond_0
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->initResource()V
 
     :cond_0
@@ -1244,16 +1121,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 7
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->initResource()V
 
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 8
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1299,7 +1173,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d00be
+    const v0, 0x7f0d00bf
 
     return v0
 .end method
@@ -1307,7 +1181,6 @@
 .method public hide()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -1320,7 +1193,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/FragmentUtils;->removeFragmentByTag(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -1339,24 +1211,20 @@
 .method public initView(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRootView:Landroid/view/View;
 
-    const v0, 0x7f0a04c3
+    const v0, 0x7f0a04d6
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressLayout:Landroid/view/View;
 
-    const v1, 0x7f0a04c5
+    const v1, 0x7f0a04d8
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1365,10 +1233,9 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressText:Landroid/widget/TextView;
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressLayout:Landroid/view/View;
 
-    const v1, 0x7f0a04c4
+    const v1, 0x7f0a04d7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1378,18 +1245,16 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mProgressBar:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f0a04a3
+    const v0, 0x7f0a04b6
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRecyclerViewLayout:Landroid/view/View;
 
-    const v0, 0x7f0a04a2
+    const v0, 0x7f0a04b5
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1400,15 +1265,12 @@
 
     const/4 v0, 0x0
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1421,12 +1283,11 @@
 
     iput v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mTotalWidth:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f0707d4
+    const v0, 0x7f0707c0
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1434,7 +1295,6 @@
 
     iput p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mHolderWidth:I
 
-    .line 12
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->loadItemList()V
 
     return-void
@@ -1443,19 +1303,16 @@
 .method public isPreviewShow()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
     const v1, 0xfffc
 
-    .line 2
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/fragment/FragmentUtils;->getFragmentByTag(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -1464,7 +1321,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isVisible()Z
 
     move-result v0
@@ -1484,7 +1340,6 @@
 .method public isShow()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -1515,10 +1370,8 @@
 .method public notifyAfterFrameAvailable(I)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->notifyAfterFrameAvailable(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->handleSnapButton(Lcom/android/camera/fragment/vv/VVItem;)V
@@ -1529,7 +1382,6 @@
 .method public onBackEvent(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isVisible()Z
 
     move-result p1
@@ -1545,7 +1397,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1556,7 +1407,6 @@
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1575,7 +1425,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
     invoke-virtual {v1, v0}, Lcom/android/camera/resource/BaseResourceList;->getItem(I)Lcom/android/camera/resource/BaseResourceItem;
@@ -1584,7 +1433,6 @@
 
     check-cast v1, Lcom/android/camera/fragment/vv/VVItem;
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/resource/BaseResourceItem;->getCurrentState()I
 
     move-result v2
@@ -1598,19 +1446,16 @@
     return-void
 
     :cond_0
-    const v1, 0x7f0a049a
+    const v1, 0x7f0a04ad
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 6
     invoke-direct {p0, v0, p1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->transformToPreview(ILandroid/view/View;)V
 
     return-void
 
-    .line 7
     :cond_1
     invoke-direct {p0, v1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->downloadItem(Lcom/android/camera/fragment/vv/VVItem;)V
 
@@ -1620,10 +1465,8 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->clear()V
@@ -1634,12 +1477,10 @@
 .method public onHiddenChanged(Z)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onHiddenChanged(Z)V
 
     if-nez p1, :cond_0
 
-    .line 2
     iget p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     const/4 v0, -0x1
@@ -1654,15 +1495,12 @@
 
     const/4 v3, 0x0
 
-    .line 3
     invoke-virtual {v1, p1, v2, v3}, Lcom/android/camera/fragment/vv/VVGalleryAdapter;->onSelected(ILandroid/view/View;Z)V
 
-    .line 4
     iget p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->setItemInCenter(I)V
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     :cond_0
@@ -1680,14 +1518,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
     const/16 p2, 0xd1
 
     if-eq p1, p2, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->hide()V
 
     :cond_0
@@ -1705,15 +1541,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideOrientationChanged(ILjava/util/List;I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mRootView:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
     :cond_0
@@ -1723,15 +1556,12 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xe5
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -1740,7 +1570,6 @@
 .method public setPreviewData(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mPreviewIndex:I
 
     return-void
@@ -1755,7 +1584,6 @@
 .method public startShot()Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     const/4 v1, 0x0
@@ -1764,7 +1592,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -1782,7 +1609,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
@@ -1804,21 +1630,17 @@
 
     return v1
 
-    .line 4
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->isPreviewShow()Z
 
     move-result v2
 
-    .line 5
     iget-object v3, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     iget-object v3, v3, Lcom/android/camera/fragment/vv/VVItem;->name:Ljava/lang/String;
 
-    .line 6
     invoke-static {v3, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVStartClick(Ljava/lang/String;Z)V
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVVGallery;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     const/4 v3, 0x0
@@ -1833,15 +1655,12 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xe5
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

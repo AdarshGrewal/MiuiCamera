@@ -99,7 +99,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -108,7 +107,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->TAG:Ljava/lang/String;
 
-    .line 2
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThreadManager;
 
     const/4 v1, 0x0
@@ -123,24 +121,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
-    .line 2
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->mThisWeakRef:Ljava/lang/ref/WeakReference;
 
-    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->init()V
 
     return-void
@@ -149,24 +143,20 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 6
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->mThisWeakRef:Ljava/lang/ref/WeakReference;
 
-    .line 7
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
-    .line 8
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->init()V
 
     return-void
@@ -175,7 +165,6 @@
 .method public static synthetic access$200(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextClientVersion:I
 
     return p0
@@ -184,7 +173,6 @@
 .method public static synthetic access$300()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -193,7 +181,6 @@
 .method public static synthetic access$400(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglConfigChooser:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;
 
     return-object p0
@@ -202,7 +189,6 @@
 .method public static synthetic access$500(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;
 
     return-object p0
@@ -211,7 +197,6 @@
 .method public static synthetic access$600(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     return-object p0
@@ -220,7 +205,6 @@
 .method public static synthetic access$700()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThreadManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThreadManager:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThreadManager;
 
     return-object v0
@@ -229,7 +213,6 @@
 .method public static synthetic access$800(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return p0
@@ -238,7 +221,6 @@
 .method public static synthetic access$900(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$Renderer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->renderer:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$Renderer;
 
     return-object p0
@@ -247,14 +229,12 @@
 .method private checkRenderThreadState()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -268,7 +248,6 @@
 .method private init()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
     return-void
@@ -279,7 +258,6 @@
 .method public addSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -295,20 +273,17 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->requestExitAndWait()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
@@ -325,7 +300,6 @@
 .method public getDebugFlags()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->debugFlags:I
 
     return v0
@@ -334,7 +308,6 @@
 .method public getPreserveEGLContextOnPause()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return v0
@@ -343,7 +316,6 @@
 .method public getRenderMode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->getRenderMode()I
@@ -356,10 +328,8 @@
 .method public onAttachedToWindow()V
     .locals 4
 
-    .line 1
     invoke-super {p0}, Landroid/view/TextureView;->onAttachedToWindow()V
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->detached:Z
 
     if-eqz v0, :cond_2
@@ -368,14 +338,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->getRenderMode()I
 
     move-result v0
@@ -385,7 +353,6 @@
     :cond_0
     move v0, v1
 
-    .line 5
     :goto_0
     new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
@@ -397,10 +364,8 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 6
     invoke-virtual {v2, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->setRenderMode(I)V
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
@@ -409,7 +374,6 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 8
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->detached:Z
 
     return-void
@@ -418,21 +382,17 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->requestExitAndWait()V
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->detached:Z
 
-    .line 4
     invoke-super {p0}, Landroid/view/TextureView;->onDetachedFromWindow()V
 
     return-void
@@ -441,7 +401,6 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object p1
@@ -460,7 +419,6 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->onPause()V
@@ -471,7 +429,6 @@
 .method public onResume()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->onResume()V
@@ -482,15 +439,12 @@
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceCreated(Landroid/graphics/SurfaceTexture;)V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -510,7 +464,6 @@
 
     check-cast v1, Landroid/view/TextureView$SurfaceTextureListener;
 
-    .line 4
     invoke-interface {v1, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
 
     goto :goto_0
@@ -522,10 +475,8 @@
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceDestroyed(Landroid/graphics/SurfaceTexture;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -545,7 +496,6 @@
 
     check-cast v1, Landroid/view/TextureView$SurfaceTextureListener;
 
-    .line 3
     invoke-interface {v1, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
 
     goto :goto_0
@@ -561,10 +511,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -584,7 +532,6 @@
 
     check-cast v1, Landroid/view/TextureView$SurfaceTextureListener;
 
-    .line 3
     invoke-interface {v1, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
 
     goto :goto_0
@@ -596,10 +543,8 @@
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->requestRender()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -619,7 +564,6 @@
 
     check-cast v1, Landroid/view/TextureView$SurfaceTextureListener;
 
-    .line 3
     invoke-interface {v1, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
     goto :goto_0
@@ -631,7 +575,6 @@
 .method public queueEvent(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->queueEvent(Ljava/lang/Runnable;)V
@@ -642,7 +585,6 @@
 .method public requestRender()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->requestRender()V
@@ -653,7 +595,6 @@
 .method public setDebugFlags(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->debugFlags:I
 
     return-void
@@ -662,7 +603,6 @@
 .method public setEGLConfigChooser(IIIIII)V
     .locals 9
 
-    .line 4
     new-instance v8, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$ComponentSizeChooser;
 
     move-object v0, v8
@@ -691,10 +631,8 @@
 .method public setEGLConfigChooser(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->checkRenderThreadState()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglConfigChooser:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;
 
     return-void
@@ -703,7 +641,6 @@
 .method public setEGLConfigChooser(Z)V
     .locals 1
 
-    .line 3
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$SimpleEGLConfigChooser;
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$SimpleEGLConfigChooser;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;Z)V
@@ -716,10 +653,8 @@
 .method public setEGLContextClientVersion(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->checkRenderThreadState()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextClientVersion:I
 
     return-void
@@ -728,10 +663,8 @@
 .method public setEGLContextFactory(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->checkRenderThreadState()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;
 
     return-void
@@ -740,10 +673,8 @@
 .method public setEGLWindowSurfaceFactory(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->checkRenderThreadState()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     return-void
@@ -752,7 +683,6 @@
 .method public setPreserveEGLContextOnPause(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return-void
@@ -761,7 +691,6 @@
 .method public setRenderMode(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->setRenderMode(I)V
@@ -772,15 +701,12 @@
 .method public setRenderer(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$Renderer;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->checkRenderThreadState()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglConfigChooser:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$SimpleEGLConfigChooser;
 
     const/4 v1, 0x1
@@ -789,7 +715,6 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglConfigChooser:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLConfigChooser;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;
 
@@ -797,31 +722,26 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$DefaultContextFactory;
 
     invoke-direct {v0, p0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$DefaultContextFactory;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$1;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->EGLContextFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLContextFactory;
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     if-nez v0, :cond_2
 
-    .line 7
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$DefaultWindowSurfaceFactory;
 
     invoke-direct {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$DefaultWindowSurfaceFactory;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$1;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$EGLWindowSurfaceFactory;
 
-    .line 8
     :cond_2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->renderer:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$Renderer;
 
-    .line 9
     new-instance p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->mThisWeakRef:Ljava/lang/ref/WeakReference;
@@ -830,7 +750,6 @@
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -839,7 +758,6 @@
 .method public surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {p1, p3, p4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->onWindowResize(II)V
@@ -850,7 +768,6 @@
 .method public surfaceCreated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->surfaceCreated()V
@@ -861,7 +778,6 @@
 .method public surfaceDestroyed(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->glThread:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$GLThread;->surfaceDestroyed()V

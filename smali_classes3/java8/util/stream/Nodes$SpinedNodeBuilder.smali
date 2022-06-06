@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/SpinedBuffer;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -56,7 +54,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -65,7 +62,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -79,7 +75,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer;->accept(Ljava/lang/Object;)V
 
     return-void
@@ -95,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer;->asArray(Ljava8/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -106,10 +100,8 @@
 .method public begin(J)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/SpinedBuffer;->clear()V
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/SpinedBuffer;->ensureCapacity(J)V
 
     return-void
@@ -144,7 +136,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2}, Ljava8/util/stream/SpinedBuffer;->copyInto([Ljava/lang/Object;I)V
 
     return-void
@@ -166,7 +157,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer;->forEach(Ljava8/util/function/Consumer;)V
 
     return-void
@@ -182,7 +172,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChild()Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -193,7 +182,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChildCount()I
 
     move-result v0
@@ -204,7 +192,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0
@@ -222,7 +209,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/SpinedBuffer;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -242,7 +228,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes;->truncate(Ljava8/util/stream/Node;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1

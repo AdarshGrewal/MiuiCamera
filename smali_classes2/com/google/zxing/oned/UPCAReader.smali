@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/oned/UPCEANReader;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/google/zxing/oned/EAN13Reader;
 
     invoke-direct {v0}, Lcom/google/zxing/oned/EAN13Reader;-><init>()V
@@ -32,14 +30,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -48,7 +44,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 3
     new-instance v1, Lcom/google/zxing/Result;
 
     const/4 v2, 0x1
@@ -67,14 +62,12 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Lcom/google/zxing/Result;-><init>(Ljava/lang/String;[B[Lcom/google/zxing/ResultPoint;Lcom/google/zxing/BarcodeFormat;)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lcom/google/zxing/Result;->getResultMetadata()Ljava/util/Map;
 
     move-result-object p0
@@ -84,7 +77,6 @@
     :cond_0
     return-object v1
 
-    .line 6
     :cond_1
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -104,7 +96,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
     invoke-virtual {v0, p1}, Lcom/google/zxing/oned/OneDReader;->decode(Lcom/google/zxing/BinaryBitmap;)Lcom/google/zxing/Result;
@@ -138,7 +129,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/zxing/oned/OneDReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
@@ -160,7 +150,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeMiddle(Lcom/google/zxing/common/BitArray;[ILjava/lang/StringBuilder;)I
@@ -191,7 +180,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;Ljava/util/Map;)Lcom/google/zxing/Result;
@@ -227,7 +215,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/UPCAReader;->ean13Reader:Lcom/google/zxing/oned/UPCEANReader;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/zxing/oned/UPCEANReader;->decodeRow(ILcom/google/zxing/common/BitArray;[ILjava/util/Map;)Lcom/google/zxing/Result;
@@ -244,7 +231,6 @@
 .method public getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/BarcodeFormat;->UPC_A:Lcom/google/zxing/BarcodeFormat;
 
     return-object v0

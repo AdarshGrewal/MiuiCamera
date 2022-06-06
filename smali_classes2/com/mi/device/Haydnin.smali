@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Haydn;-><init>()V
 
     return-void
@@ -15,7 +14,7 @@
 
 
 # virtual methods
-.method public o00oO000()Z
+.method public o00o0oO0()Z
     .locals 1
 
     const/4 v0, 0x0

@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public getMobileFaces()[Lcom/sensetime/stmobile/model/STMobile106;
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/STHumanAction;->faceCount:I
 
     if-nez v0, :cond_0
@@ -41,19 +39,16 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-array v0, v0, [Lcom/sensetime/stmobile/model/STMobile106;
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     iget v2, p0, Lcom/sensetime/stmobile/STHumanAction;->faceCount:I
 
     if-ge v1, v2, :cond_1
 
-    .line 4
     iget-object v2, p0, Lcom/sensetime/stmobile/STHumanAction;->faces:[Lcom/sensetime/stmobile/model/STMobileFaceAction;
 
     aget-object v2, v2, v1
@@ -77,7 +72,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     array-length v1, p1
 
     if-eqz v1, :cond_2
@@ -94,14 +88,12 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/sensetime/stmobile/STHumanAction;->faces:[Lcom/sensetime/stmobile/model/STMobileFaceAction;
 
     aget-object v1, v1, v0

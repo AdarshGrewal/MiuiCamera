@@ -137,15 +137,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
-    .line 3
     const-class v1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -156,37 +153,28 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->macAddr_:Ljava/lang/String;
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pwd_:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ssid_:Ljava/lang/String;
 
-    .line 5
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->idHash_:Ljava/lang/String;
 
-    .line 6
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->name_:Ljava/lang/String;
 
-    .line 7
     sget-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->btAddr_:Lcom/google/protobuf/ByteString;
 
-    .line 8
     sget-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->swVersion_:Lcom/google/protobuf/ByteString;
 
-    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -199,7 +187,6 @@
 .method public static synthetic access$3500()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     return-object v0
@@ -208,7 +195,6 @@
 .method public static synthetic access$3600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setConnType(I)V
 
     return-void
@@ -217,7 +203,6 @@
 .method public static synthetic access$3700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearConnType()V
 
     return-void
@@ -226,7 +211,6 @@
 .method public static synthetic access$3800(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setChannel(I)V
 
     return-void
@@ -235,7 +219,6 @@
 .method public static synthetic access$3900(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearChannel()V
 
     return-void
@@ -244,7 +227,6 @@
 .method public static synthetic access$4000(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setMacAddr(Ljava/lang/String;)V
 
     return-void
@@ -253,7 +235,6 @@
 .method public static synthetic access$4100(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearMacAddr()V
 
     return-void
@@ -262,7 +243,6 @@
 .method public static synthetic access$4200(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setMacAddrBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -271,7 +251,6 @@
 .method public static synthetic access$4300(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setPwd(Ljava/lang/String;)V
 
     return-void
@@ -280,7 +259,6 @@
 .method public static synthetic access$4400(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearPwd()V
 
     return-void
@@ -289,7 +267,6 @@
 .method public static synthetic access$4500(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setPwdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -298,7 +275,6 @@
 .method public static synthetic access$4600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setSsid(Ljava/lang/String;)V
 
     return-void
@@ -307,7 +283,6 @@
 .method public static synthetic access$4700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearSsid()V
 
     return-void
@@ -316,7 +291,6 @@
 .method public static synthetic access$4800(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setSsidBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -325,7 +299,6 @@
 .method public static synthetic access$4900(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setIdHash(Ljava/lang/String;)V
 
     return-void
@@ -334,7 +307,6 @@
 .method public static synthetic access$5000(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearIdHash()V
 
     return-void
@@ -343,7 +315,6 @@
 .method public static synthetic access$5100(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setIdHashBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -352,7 +323,6 @@
 .method public static synthetic access$5200(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setName(Ljava/lang/String;)V
 
     return-void
@@ -361,7 +331,6 @@
 .method public static synthetic access$5300(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearName()V
 
     return-void
@@ -370,7 +339,6 @@
 .method public static synthetic access$5400(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setNameBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -379,7 +347,6 @@
 .method public static synthetic access$5500(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setBtAddr(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -388,7 +355,6 @@
 .method public static synthetic access$5600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearBtAddr()V
 
     return-void
@@ -397,7 +363,6 @@
 .method public static synthetic access$5700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setPbVersion(I)V
 
     return-void
@@ -406,7 +371,6 @@
 .method public static synthetic access$5800(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearPbVersion()V
 
     return-void
@@ -415,7 +379,6 @@
 .method public static synthetic access$5900(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setMcVersion(I)V
 
     return-void
@@ -424,7 +387,6 @@
 .method public static synthetic access$6000(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearMcVersion()V
 
     return-void
@@ -433,7 +395,6 @@
 .method public static synthetic access$6100(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setSwVersion(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -442,7 +403,6 @@
 .method public static synthetic access$6200(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearSwVersion()V
 
     return-void
@@ -451,7 +411,6 @@
 .method public static synthetic access$6300(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setRoleValue(I)V
 
     return-void
@@ -460,7 +419,6 @@
 .method public static synthetic access$6400(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setRole(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;)V
 
     return-void
@@ -469,7 +427,6 @@
 .method public static synthetic access$6500(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearRole()V
 
     return-void
@@ -478,7 +435,6 @@
 .method public static synthetic access$6600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
 
     return-void
@@ -487,7 +443,6 @@
 .method public static synthetic access$6700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
 
     return-void
@@ -496,7 +451,6 @@
 .method public static synthetic access$6800(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->addApps(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
 
     return-void
@@ -505,7 +459,6 @@
 .method public static synthetic access$6900(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->addApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;)V
 
     return-void
@@ -514,7 +467,6 @@
 .method public static synthetic access$7000(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->addApps(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
 
     return-void
@@ -523,7 +475,6 @@
 .method public static synthetic access$7100(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->addApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
 
     return-void
@@ -532,7 +483,6 @@
 .method public static synthetic access$7200(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Ljava/lang/Iterable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->addAllApps(Ljava/lang/Iterable;)V
 
     return-void
@@ -541,7 +491,6 @@
 .method public static synthetic access$7300(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearApps()V
 
     return-void
@@ -550,7 +499,6 @@
 .method public static synthetic access$7400(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->removeApps(I)V
 
     return-void
@@ -559,7 +507,6 @@
 .method public static synthetic access$7500(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setDeviceType(I)V
 
     return-void
@@ -568,7 +515,6 @@
 .method public static synthetic access$7600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearDeviceType()V
 
     return-void
@@ -577,7 +523,6 @@
 .method public static synthetic access$7700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setSecurityModeValue(I)V
 
     return-void
@@ -586,7 +531,6 @@
 .method public static synthetic access$7800(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setSecurityMode(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;)V
 
     return-void
@@ -595,7 +539,6 @@
 .method public static synthetic access$7900(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearSecurityMode()V
 
     return-void
@@ -604,7 +547,6 @@
 .method public static synthetic access$8000(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setInvitePort(I)V
 
     return-void
@@ -613,7 +555,6 @@
 .method public static synthetic access$8100(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearInvitePort()V
 
     return-void
@@ -622,7 +563,6 @@
 .method public static synthetic access$8200(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setInviteType(I)V
 
     return-void
@@ -631,7 +571,6 @@
 .method public static synthetic access$8300(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearInviteType()V
 
     return-void
@@ -640,7 +579,6 @@
 .method public static synthetic access$8400(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setDiscType(I)V
 
     return-void
@@ -649,7 +587,6 @@
 .method public static synthetic access$8500(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearDiscType()V
 
     return-void
@@ -658,7 +595,6 @@
 .method public static synthetic access$8600(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->setInviteKey(I)V
 
     return-void
@@ -667,7 +603,6 @@
 .method public static synthetic access$8700(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->clearInviteKey()V
 
     return-void
@@ -685,10 +620,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
@@ -699,10 +632,8 @@
 .method private addApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 1
 
-    .line 9
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 10
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -719,10 +650,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$ProtobufList;->add(ILjava/lang/Object;)V
@@ -732,17 +661,14 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 6
     throw p1
 .end method
 
 .method private addApps(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 1
 
-    .line 7
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 8
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -759,10 +685,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->add(Ljava/lang/Object;)Z
@@ -772,14 +696,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private clearApps()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -792,7 +714,6 @@
 .method private clearBtAddr()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -811,7 +732,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->channel_:I
 
     return-void
@@ -822,7 +742,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->connType_:I
 
     return-void
@@ -833,7 +752,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->deviceType_:I
 
     return-void
@@ -844,7 +762,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->discType_:I
 
     return-void
@@ -853,7 +770,6 @@
 .method private clearIdHash()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -872,7 +788,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteKey_:I
 
     return-void
@@ -883,7 +798,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->invitePort_:I
 
     return-void
@@ -894,7 +808,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteType_:I
 
     return-void
@@ -903,7 +816,6 @@
 .method private clearMacAddr()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -922,7 +834,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->mcVersion_:I
 
     return-void
@@ -931,7 +842,6 @@
 .method private clearName()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -950,7 +860,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pbVersion_:I
 
     return-void
@@ -959,7 +868,6 @@
 .method private clearPwd()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -978,7 +886,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->role_:I
 
     return-void
@@ -989,7 +896,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->securityMode_:I
 
     return-void
@@ -998,7 +904,6 @@
 .method private clearSsid()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -1015,7 +920,6 @@
 .method private clearSwVersion()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     move-result-object v0
@@ -1032,7 +936,6 @@
 .method private ensureAppsIsMutable()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->isModifiable()Z
@@ -1041,10 +944,8 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
-    .line 3
     invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageLite;->mutableCopy(Lcom/google/protobuf/Internal$ProtobufList;)Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -1058,7 +959,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     return-object v0
@@ -1067,7 +967,6 @@
 .method public static newBuilder()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -1082,7 +981,6 @@
 .method public static newBuilder(Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -1102,7 +1000,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1122,7 +1019,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1142,7 +1038,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1162,7 +1057,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1182,7 +1076,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1202,7 +1095,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1222,7 +1114,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1242,7 +1133,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1262,7 +1152,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1282,7 +1171,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1302,7 +1190,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1322,7 +1209,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -1345,7 +1231,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->getParserForType()Lcom/google/protobuf/Parser;
@@ -1358,10 +1243,8 @@
 .method private removeApps(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->remove(I)Ljava/lang/Object;
@@ -1372,10 +1255,8 @@
 .method private setApps(ILcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p2}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -1392,10 +1273,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ensureAppsIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$ProtobufList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1405,7 +1284,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1414,7 +1292,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->btAddr_:Lcom/google/protobuf/ByteString;
 
     return-void
@@ -1422,14 +1299,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
 .method private setChannel(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->channel_:I
 
     return-void
@@ -1438,7 +1313,6 @@
 .method private setConnType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->connType_:I
 
     return-void
@@ -1447,7 +1321,6 @@
 .method private setDeviceType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->deviceType_:I
 
     return-void
@@ -1456,7 +1329,6 @@
 .method private setDiscType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->discType_:I
 
     return-void
@@ -1467,7 +1339,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->idHash_:Ljava/lang/String;
 
     return-void
@@ -1475,7 +1346,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1484,10 +1354,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1499,14 +1367,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setInviteKey(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteKey_:I
 
     return-void
@@ -1515,7 +1381,6 @@
 .method private setInvitePort(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->invitePort_:I
 
     return-void
@@ -1524,7 +1389,6 @@
 .method private setInviteType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteType_:I
 
     return-void
@@ -1535,7 +1399,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->macAddr_:Ljava/lang/String;
 
     return-void
@@ -1543,7 +1406,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1552,10 +1414,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1567,14 +1427,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setMcVersion(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->mcVersion_:I
 
     return-void
@@ -1585,7 +1443,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->name_:Ljava/lang/String;
 
     return-void
@@ -1593,7 +1450,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1602,10 +1458,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1617,14 +1471,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setPbVersion(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pbVersion_:I
 
     return-void
@@ -1635,7 +1487,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pwd_:Ljava/lang/String;
 
     return-void
@@ -1643,7 +1494,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1652,10 +1502,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1667,7 +1515,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1676,7 +1523,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->getNumber()I
 
     move-result p1
@@ -1688,14 +1534,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
 .method private setRoleValue(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->role_:I
 
     return-void
@@ -1706,7 +1550,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->getNumber()I
 
     move-result p1
@@ -1718,14 +1561,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
 .method private setSecurityModeValue(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->securityMode_:I
 
     return-void
@@ -1736,7 +1577,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ssid_:Ljava/lang/String;
 
     return-void
@@ -1744,7 +1584,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1753,10 +1592,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1768,7 +1605,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1777,7 +1613,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->swVersion_:Lcom/google/protobuf/ByteString;
 
     return-void
@@ -1785,7 +1620,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1794,7 +1628,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -1809,7 +1642,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1819,7 +1651,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -1827,34 +1658,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -1873,7 +1698,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
@@ -1962,7 +1786,6 @@
 
     const/16 p2, 0xd
 
-    .line 11
     const-class p3, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;
 
     aput-object p3, p1, p2
@@ -2003,7 +1826,6 @@
 
     aput-object p3, p1, p2
 
-    .line 12
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
     const-string p3, "\u0000\u0013\u0000\u0000\u0001\u0013\u0013\u0000\u0001\u0000\u0001\u0004\u0002\u0004\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208\u0007\u0208\u0008\n\t\u000b\n\u000b\u000b\n\u000c\u000c\r\u001b\u000e\u000b\u000f\u000c\u0010\u000b\u0011\u000b\u0012\u000b\u0013\u000b"
@@ -2014,7 +1836,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_5
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter$Builder;
 
@@ -2022,7 +1843,6 @@
 
     return-object p1
 
-    .line 14
     :pswitch_6
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;
 
@@ -2045,7 +1865,6 @@
 .method public getApps(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$App;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->get(I)Ljava/lang/Object;
@@ -2060,7 +1879,6 @@
 .method public getAppsCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->size()I
@@ -2081,7 +1899,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object v0
@@ -2090,7 +1907,6 @@
 .method public getAppsOrBuilder(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$AppOrBuilder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->get(I)Ljava/lang/Object;
@@ -2114,7 +1930,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->apps_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object v0
@@ -2123,7 +1938,6 @@
 .method public getBtAddr()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->btAddr_:Lcom/google/protobuf/ByteString;
 
     return-object v0
@@ -2132,7 +1946,6 @@
 .method public getChannel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->channel_:I
 
     return v0
@@ -2141,7 +1954,6 @@
 .method public getConnType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->connType_:I
 
     return v0
@@ -2150,7 +1962,6 @@
 .method public getDeviceType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->deviceType_:I
 
     return v0
@@ -2159,7 +1970,6 @@
 .method public getDiscType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->discType_:I
 
     return v0
@@ -2168,7 +1978,6 @@
 .method public getIdHash()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->idHash_:Ljava/lang/String;
 
     return-object v0
@@ -2177,7 +1986,6 @@
 .method public getIdHashBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->idHash_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -2190,7 +1998,6 @@
 .method public getInviteKey()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteKey_:I
 
     return v0
@@ -2199,7 +2006,6 @@
 .method public getInvitePort()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->invitePort_:I
 
     return v0
@@ -2208,7 +2014,6 @@
 .method public getInviteType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->inviteType_:I
 
     return v0
@@ -2217,7 +2022,6 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->macAddr_:Ljava/lang/String;
 
     return-object v0
@@ -2226,7 +2030,6 @@
 .method public getMacAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->macAddr_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -2239,7 +2042,6 @@
 .method public getMcVersion()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->mcVersion_:I
 
     return v0
@@ -2248,7 +2050,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->name_:Ljava/lang/String;
 
     return-object v0
@@ -2257,7 +2058,6 @@
 .method public getNameBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->name_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -2270,7 +2070,6 @@
 .method public getPbVersion()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pbVersion_:I
 
     return v0
@@ -2279,7 +2078,6 @@
 .method public getPwd()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pwd_:Ljava/lang/String;
 
     return-object v0
@@ -2288,7 +2086,6 @@
 .method public getPwdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->pwd_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -2301,7 +2098,6 @@
 .method public getRole()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->role_:I
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->forNumber(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
@@ -2310,7 +2106,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;->UNRECOGNIZED:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$RoleType;
 
     :cond_0
@@ -2320,7 +2115,6 @@
 .method public getRoleValue()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->role_:I
 
     return v0
@@ -2329,7 +2123,6 @@
 .method public getSecurityMode()Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->securityMode_:I
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->forNumber(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
@@ -2338,7 +2131,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->UNRECOGNIZED:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     :cond_0
@@ -2348,7 +2140,6 @@
 .method public getSecurityModeValue()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->securityMode_:I
 
     return v0
@@ -2357,7 +2148,6 @@
 .method public getSsid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ssid_:Ljava/lang/String;
 
     return-object v0
@@ -2366,7 +2156,6 @@
 .method public getSsidBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->ssid_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -2379,7 +2168,6 @@
 .method public getSwVersion()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$InviteLetter;->swVersion_:Lcom/google/protobuf/ByteString;
 
     return-object v0

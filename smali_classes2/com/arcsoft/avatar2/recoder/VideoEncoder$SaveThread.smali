@@ -24,12 +24,10 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/recoder/VideoEncoder;Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/recoder/VideoEncoder$SaveThread;->a:Lcom/arcsoft/avatar2/recoder/VideoEncoder;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/arcsoft/avatar2/recoder/VideoEncoder$SaveThread;->b:Ljava/nio/ByteBuffer;
 
     return-void
@@ -40,10 +38,8 @@
 .method public run()V
     .locals 4
 
-    .line 1
     invoke-super {p0}, Ljava/lang/Thread;->run()V
 
-    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/VideoEncoder$SaveThread;->a:Lcom/arcsoft/avatar2/recoder/VideoEncoder;
 
     invoke-static {v0}, Lcom/arcsoft/avatar2/recoder/VideoEncoder;->d(Lcom/arcsoft/avatar2/recoder/VideoEncoder;)I
@@ -62,12 +58,10 @@
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/VideoEncoder$SaveThread;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,23 +84,19 @@
 
     move-result-object v1
 
-    .line 5
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 6
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v3, 0x64
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 7
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
-    .line 8
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
@@ -117,7 +107,6 @@
     :catch_0
     move-exception v0
 
-    .line 9
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
@@ -125,7 +114,6 @@
     :catch_1
     move-exception v0
 
-    .line 10
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     :goto_0

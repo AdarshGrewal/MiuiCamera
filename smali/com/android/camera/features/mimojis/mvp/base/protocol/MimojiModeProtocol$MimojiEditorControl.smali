@@ -64,7 +64,7 @@
     .end annotation
 .end method
 
-.method public abstract directlyEnterEditMode(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;I)V
+.method public abstract directlyEnterEditMode(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;I)V
 .end method
 
 .method public abstract getTextureViewMarginTopHeight()I

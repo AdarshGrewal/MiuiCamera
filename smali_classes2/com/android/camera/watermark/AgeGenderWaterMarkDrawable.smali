@@ -37,7 +37,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;-><init>(Ljava/util/List;)V
 
     return-void
@@ -48,14 +47,12 @@
 .method public getFaceRectPaint(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/Paint;
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/watermark/WaterMarkData;->isFemale()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     const v0, -0x11957f
@@ -64,7 +61,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
@@ -72,7 +68,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4
     :goto_0
     iget-object p1, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
@@ -82,7 +77,6 @@
 .method public getHonPadding(Lcom/android/camera/watermark/WaterMarkData;)I
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/watermark/WaterMarkData;->isFemale()Z
 
     move-result p1
@@ -103,7 +97,6 @@
 .method public getTopBackgroundDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/watermark/WaterMarkData;->isFemale()Z
 
     move-result p1
@@ -124,7 +117,6 @@
 .method public getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/watermark/WaterMarkData;->isFemale()Z
 
     move-result p1
@@ -145,14 +137,13 @@
 .method public initBeforeDraw()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080573
+    const v1, 0x7f080571
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -160,14 +151,13 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mMaleAgeInfoPop:Landroid/graphics/drawable/Drawable;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080185
+    const v1, 0x7f080182
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -175,14 +165,13 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFemaleAgeInfoPop:Landroid/graphics/drawable/Drawable;
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0803b3
+    const v1, 0x7f0803b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -190,14 +179,13 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mSexMaleIc:Landroid/graphics/drawable/Drawable;
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0803b2
+    const v1, 0x7f0803b0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -205,7 +193,6 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mSexFemaleIc:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -214,10 +201,8 @@
 
     const/4 v1, 0x1
 
-    .line 6
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
@@ -236,21 +221,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     const v1, -0x90480c
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -265,7 +247,6 @@
 
     iput v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mMaleHonPadding:I
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -280,7 +261,6 @@
 
     iput v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mFemaleHonPadding:I
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;->mMaleAgeInfoPop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I

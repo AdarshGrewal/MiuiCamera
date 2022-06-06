@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/FilmDreamImpl;JJLcom/android/camera/protocol/ModeProtocol$TopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$2;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
     iput-object p6, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$2;->val$topAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
@@ -39,8 +38,7 @@
 .method public onFinish()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$200()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
@@ -56,12 +54,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$2;->val$topAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
     invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V

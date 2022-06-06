@@ -27,7 +27,6 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureResult;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/log/CameraMetadataSerializer$2;->val$metadata:Landroid/hardware/camera2/CaptureResult;
 
     iput-object p2, p0, Lcom/android/camera/log/CameraMetadataSerializer$2;->val$title:Ljava/lang/String;
@@ -47,14 +46,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/log/CameraMetadataSerializer$2;->val$metadata:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureResult;->getKeys()Ljava/util/List;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -81,7 +78,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -103,7 +99,6 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -120,10 +115,8 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5
     iget-object v4, p0, Lcom/android/camera/log/CameraMetadataSerializer$2;->val$metadata:Landroid/hardware/camera2/CaptureResult;
 
-    .line 6
     invoke-virtual {v4, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v1
@@ -136,7 +129,6 @@
 
     const-string v1, "        %s\n"
 
-    .line 7
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

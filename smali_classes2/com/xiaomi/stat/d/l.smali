@@ -40,7 +40,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,13 +54,11 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-static {p0}, Lcom/xiaomi/stat/d/l;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -81,7 +78,6 @@
     :cond_1
     const-string v1, "2G"
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -95,7 +91,6 @@
     :cond_2
     const-string v1, "3G"
 
-    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -109,7 +104,6 @@
     :cond_3
     const-string v1, "4G"
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -123,7 +117,6 @@
     :cond_4
     const-string v1, "WIFI"
 
-    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -137,7 +130,6 @@
     :cond_5
     const-string v1, "ETHERNET"
 
-    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -156,7 +148,6 @@
 .method public static a()Z
     .locals 2
 
-    .line 8
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
@@ -166,21 +157,18 @@
     :try_start_0
     const-string v1, "connectivity"
 
-    .line 9
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 10
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 11
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
 
     move-result v0
@@ -192,7 +180,6 @@
     :catch_0
     const-string v0, "isNetworkConnected exception"
 
-    .line 12
     invoke-static {v0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;)V
 
     :cond_0
@@ -206,7 +193,6 @@
 
     const-string v0, "UNKNOWN"
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/xiaomi/stat/d/e;->w(Landroid/content/Context;)Z
 
@@ -214,7 +200,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/stat/d/l$a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -224,21 +209,18 @@
     :cond_0
     const-string v1, "connectivity"
 
-    .line 3
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/ConnectivityManager;
 
-    .line 4
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 5
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v1
@@ -247,7 +229,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -261,7 +242,6 @@
 
     return-object p0
 
-    .line 7
     :cond_2
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -269,7 +249,6 @@
 
     if-nez v1, :cond_4
 
-    .line 8
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getSubtype()I
 
     move-result p0
@@ -311,7 +290,6 @@
 
     const-string v2, "getNetworkState error"
 
-    .line 9
     invoke-static {v1, v2, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_4

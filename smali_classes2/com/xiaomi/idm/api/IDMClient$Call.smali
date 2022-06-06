@@ -60,18 +60,14 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$Call;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMClient$Call;->action:Lcom/xiaomi/idm/api/IDMService$Action;
 
-    .line 3
     iput-object p3, p0, Lcom/xiaomi/idm/api/IDMClient$Call;->request:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;
 
-    .line 4
     new-instance p1, Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-direct {p1}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V

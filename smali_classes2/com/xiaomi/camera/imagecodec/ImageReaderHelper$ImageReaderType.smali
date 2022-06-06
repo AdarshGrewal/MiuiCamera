@@ -46,7 +46,6 @@
 .method public static constructor <clinit>()V
     .locals 11
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v1, 0x0
@@ -57,7 +56,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->ORIGINAL:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v2, 0x1
@@ -68,7 +66,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->EFFECT:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v3, 0x2
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->IMAGEPOOL:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v4, 0x3
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->YUV:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v5, 0x4
@@ -101,7 +96,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->RAW:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v6, 0x5
@@ -112,7 +106,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->DEPTH:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v7, 0x6
@@ -123,7 +116,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->VIDEOSNAP:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     const/4 v8, 0x7
@@ -138,7 +130,6 @@
 
     new-array v9, v9, [Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
-    .line 9
     sget-object v10, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->ORIGINAL:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     aput-object v10, v9, v1
@@ -182,7 +173,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -191,7 +181,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -206,7 +195,6 @@
 .method public static values()[Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->$VALUES:[Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->clone()Ljava/lang/Object;

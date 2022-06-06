@@ -22,7 +22,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -33,7 +32,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;->data:Ljava/nio/ByteBuffer;
 
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->write(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
@@ -44,7 +42,6 @@
 .method public estimateSize()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -69,7 +66,6 @@
 .method public getData()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
@@ -82,7 +78,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J

@@ -46,12 +46,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mRank:I
 
     return-void
@@ -73,13 +71,11 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     if-eqz v1, :cond_0
 
-    .line 2
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -88,7 +84,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     :try_start_1
     new-instance v1, Ljava/util/TreeMap;
@@ -103,14 +98,12 @@
 
     const/16 v3, 0x320
 
-    .line 4
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Nvidia.h264.decode.secure"
@@ -123,7 +116,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Intel.hw_vd.h264"
@@ -136,7 +128,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Intel.VideoDecoder.AVC"
@@ -147,7 +138,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.qcom.video.decoder.avc"
@@ -158,7 +148,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.ittiam.video.decoder.avc"
@@ -171,7 +160,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.SEC.avc.dec"
@@ -182,7 +170,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.SEC.AVC.Decoder"
@@ -195,7 +182,6 @@
 
     invoke-interface {v1, v2, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.SEC.avcdec"
@@ -208,7 +194,6 @@
 
     invoke-interface {v1, v2, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.SEC.avc.sw.dec"
@@ -221,7 +206,6 @@
 
     invoke-interface {v1, v2, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Exynos.avc.dec"
@@ -232,7 +216,6 @@
 
     invoke-interface {v1, v2, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Exynos.AVC.Decoder"
@@ -243,7 +226,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.k3.video.decoder.avc"
@@ -254,7 +236,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.IMG.MSVDX.Decoder.AVC"
@@ -265,7 +246,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.TI.DUCATI1.VIDEO.DECODER"
@@ -276,7 +256,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.rk.video_decoder.avc"
@@ -287,7 +266,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.amlogic.avc.decoder.awesome"
@@ -298,7 +276,6 @@
 
     invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.MARVELL.VIDEO.HW.CODA7542DECODER"
@@ -309,7 +286,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.MARVELL.VIDEO.H264DECODER"
@@ -320,140 +296,120 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.Action.Video.Decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.allwinner.video.decoder.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.BRCM.vc4.decoder.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.brcm.video.h264.hw.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.brcm.video.h264.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.cosmo.video.decoder.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.duos.h264.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.hantro.81x0.video.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.hantro.G1.video.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.hisi.video.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.LG.decoder.video.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.MS.AVC.Decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.RENESAS.VIDEO.DECODER.H264"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.RTK.video.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.sprd.h264.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.ST.VFM.H264Dec"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.vpu.video_decoder.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.WMT.decoder.avc"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.bluestacks.hw.decoder"
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.google.h264.decoder"
@@ -464,7 +420,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.google.h264.lc.decoder"
@@ -475,7 +430,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.k3.ffmpeg.decoder"
@@ -486,7 +440,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.ffmpeg.video.decoder"
@@ -497,7 +450,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
 
     const-string v2, "OMX.sprd.soft.h264.decoder"
@@ -508,7 +460,6 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     sget-object v1, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->sKnownCodecList:Ljava/util/Map;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -652,14 +603,12 @@
 .method public static getProfileLevelName(II)Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v1, 0x4
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->getProfileName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -694,7 +643,6 @@
 
     const-string p0, " %s Profile Level %s (%d,%d)"
 
-    .line 3
     invoke-static {v0, p0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -780,7 +728,6 @@
 
     if-eqz p0, :cond_d
 
-    .line 1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x10
@@ -789,13 +736,11 @@
 
     goto/16 :goto_3
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -804,7 +749,6 @@
 
     return-object v0
 
-    .line 4
     :cond_1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -814,7 +758,6 @@
 
     const-string v1, "omx."
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -834,7 +777,6 @@
     :cond_2
     const-string v1, "omx.pv"
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -849,7 +791,6 @@
     :cond_3
     const-string v1, "omx.google."
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -861,7 +802,6 @@
     :cond_4
     const-string v1, "omx.ffmpeg."
 
-    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -873,7 +813,6 @@
     :cond_5
     const-string v1, "omx.k3.ffmpeg."
 
-    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -885,7 +824,6 @@
     :cond_6
     const-string v1, "omx.avcodec."
 
-    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -897,7 +835,6 @@
     :cond_7
     const-string v1, "omx.ittiam."
 
-    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -912,14 +849,12 @@
     :cond_8
     const-string v1, "omx.mtk."
 
-    .line 12
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
-    .line 13
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
@@ -933,7 +868,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_a
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->getKnownCodecList()Ljava/util/Map;
 
@@ -947,14 +881,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 15
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
     goto :goto_2
 
-    .line 16
     :cond_b
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
@@ -969,7 +901,6 @@
 
     move v2, v0
 
-    .line 17
     :catchall_0
     :cond_c
     :goto_2
@@ -977,13 +908,10 @@
 
     invoke-direct {v0}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;-><init>()V
 
-    .line 18
     iput-object p0, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mCodecInfo:Landroid/media/MediaCodecInfo;
 
-    .line 19
     iput v2, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mRank:I
 
-    .line 20
     iput-object p1, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mMimeType:Ljava/lang/String;
 
     :cond_d
@@ -998,7 +926,6 @@
 
     const-string v0, "IjkMediaCodecInfo"
 
-    .line 1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x10
@@ -1007,12 +934,10 @@
 
     return-void
 
-    .line 2
     :cond_0
     :try_start_0
     iget-object v1, p0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mCodecInfo:Landroid/media/MediaCodecInfo;
 
-    .line 3
     invoke-virtual {v1, p1}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object p1
@@ -1021,12 +946,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 4
     iget-object v2, p1, Landroid/media/MediaCodecInfo$CodecCapabilities;->profileLevels:[Landroid/media/MediaCodecInfo$CodecProfileLevel;
 
     if-eqz v2, :cond_2
 
-    .line 5
     iget-object p1, p1, Landroid/media/MediaCodecInfo$CodecCapabilities;->profileLevels:[Landroid/media/MediaCodecInfo$CodecProfileLevel;
 
     array-length v2, p1
@@ -1046,7 +969,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     iget v7, v6, Landroid/media/MediaCodecInfo$CodecProfileLevel;->profile:I
 
@@ -1054,7 +976,6 @@
 
     move-result v4
 
-    .line 7
     iget v6, v6, Landroid/media/MediaCodecInfo$CodecProfileLevel;->level:I
 
     invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
@@ -1071,7 +992,6 @@
 
     move v5, v4
 
-    .line 8
     :cond_3
     sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1081,19 +1001,16 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 9
     invoke-static {v4, v5}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->getProfileLevelName(II)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v3, v1
 
-    .line 10
     invoke-static {p1, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 11
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1103,7 +1020,6 @@
     :catchall_0
     const-string p1, "profile-level: exception"
 
-    .line 12
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2

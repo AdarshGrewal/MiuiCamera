@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;->this$0:Lcom/android/camera/fragment/settings/SmartGuideFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +41,18 @@
 
     const-string p2, "com.xiaomi.scanner"
 
-    .line 1
     invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;->this$0:Lcom/android/camera/fragment/settings/SmartGuideFragment;
 
     iget-object p1, p1, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
     const-string/jumbo p2, "pref_scan_qrcode_key"
 
-    .line 3
     invoke-virtual {p1, p2}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -65,7 +61,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;->this$0:Lcom/android/camera/fragment/settings/SmartGuideFragment;
 
     invoke-virtual {p2}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

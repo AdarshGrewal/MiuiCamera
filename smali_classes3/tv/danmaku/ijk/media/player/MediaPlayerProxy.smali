@@ -14,10 +14,8 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/IMediaPlayer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     return-void
@@ -28,7 +26,6 @@
 .method public getAudioSessionId()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getAudioSessionId()I
@@ -41,7 +38,6 @@
 .method public getCurrentPosition()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getCurrentPosition()J
@@ -54,7 +50,6 @@
 .method public getDataSource()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getDataSource()Ljava/lang/String;
@@ -67,7 +62,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getDuration()J
@@ -80,7 +74,6 @@
 .method public getInternalMediaPlayer()Ltv/danmaku/ijk/media/player/IMediaPlayer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     return-object v0
@@ -89,7 +82,6 @@
 .method public getMediaInfo()Ltv/danmaku/ijk/media/player/MediaInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getMediaInfo()Ltv/danmaku/ijk/media/player/MediaInfo;
@@ -102,7 +94,6 @@
 .method public getTrackInfo()[Ltv/danmaku/ijk/media/player/misc/ITrackInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getTrackInfo()[Ltv/danmaku/ijk/media/player/misc/ITrackInfo;
@@ -115,7 +106,6 @@
 .method public getVideoHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getVideoHeight()I
@@ -128,7 +118,6 @@
 .method public getVideoSarDen()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getVideoSarDen()I
@@ -141,7 +130,6 @@
 .method public getVideoSarNum()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getVideoSarNum()I
@@ -154,7 +142,6 @@
 .method public getVideoWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->getVideoWidth()I
@@ -167,7 +154,6 @@
 .method public isLooping()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->isLooping()Z
@@ -188,7 +174,6 @@
 .method public isPlaying()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->isPlaying()Z
@@ -206,7 +191,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->pause()V
@@ -222,7 +206,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->prepareAsync()V
@@ -233,7 +216,6 @@
 .method public release()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->release()V
@@ -244,7 +226,6 @@
 .method public reset()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->reset()V
@@ -260,7 +241,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1, p2}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->seekTo(J)V
@@ -271,7 +251,6 @@
 .method public setAudioStreamType(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setAudioStreamType(I)V
@@ -290,7 +269,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1, p2}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
@@ -321,7 +299,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1, p2, p3}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
@@ -339,7 +316,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDataSource(Ljava/io/FileDescriptor;)V
@@ -358,7 +334,6 @@
         }
     .end annotation
 
-    .line 4
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDataSource(Ljava/lang/String;)V
@@ -369,7 +344,6 @@
 .method public setDataSource(Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;)V
     .locals 1
 
-    .line 5
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDataSource(Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;)V
@@ -380,7 +354,6 @@
 .method public setDisplay(Landroid/view/SurfaceHolder;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setDisplay(Landroid/view/SurfaceHolder;)V
@@ -391,7 +364,6 @@
 .method public setKeepInBackground(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setKeepInBackground(Z)V
@@ -408,7 +380,6 @@
 .method public setLooping(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setLooping(Z)V
@@ -421,7 +392,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$3;
@@ -432,7 +402,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -449,7 +418,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$2;
@@ -460,7 +428,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -477,7 +444,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$6;
@@ -488,7 +454,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -505,7 +470,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$7;
@@ -516,7 +480,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -533,7 +496,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$1;
@@ -544,7 +506,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -561,7 +522,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$4;
@@ -572,7 +532,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -589,7 +548,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$8;
@@ -600,7 +558,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -617,7 +574,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$5;
@@ -628,7 +584,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
@@ -643,7 +598,6 @@
 .method public setScreenOnWhilePlaying(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setScreenOnWhilePlaying(Z)V
@@ -654,7 +608,6 @@
 .method public setSurface(Landroid/view/Surface;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setSurface(Landroid/view/Surface;)V
@@ -665,7 +618,6 @@
 .method public setVolume(FF)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1, p2}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setVolume(FF)V
@@ -676,7 +628,6 @@
 .method public setWakeMode(Landroid/content/Context;I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0, p1, p2}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->setWakeMode(Landroid/content/Context;I)V
@@ -692,7 +643,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->start()V
@@ -708,7 +658,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy;->mBackEndMediaPlayer:Ltv/danmaku/ijk/media/player/IMediaPlayer;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/IMediaPlayer;->stop()V

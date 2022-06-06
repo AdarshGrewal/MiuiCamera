@@ -49,7 +49,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +57,6 @@
 .method public static determineConsecutiveDigitCount(Ljava/lang/CharSequence;I)I
     .locals 4
 
-    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -67,12 +65,10 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 2
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
-    .line 3
     :cond_0
     :goto_0
     invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
@@ -89,7 +85,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 4
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -103,7 +98,6 @@
 .method public static encodeHighLevel(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_NONE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
     const/4 v1, 0x0
@@ -122,7 +116,6 @@
 
     new-array v0, v0, [Lcom/google/zxing/datamatrix/encoder/Encoder;
 
-    .line 2
     new-instance v1, Lcom/google/zxing/datamatrix/encoder/ASCIIEncoder;
 
     invoke-direct {v1}, Lcom/google/zxing/datamatrix/encoder/ASCIIEncoder;-><init>()V
@@ -171,20 +164,16 @@
 
     aput-object v1, v0, v6
 
-    .line 3
     new-instance v1, Lcom/google/zxing/datamatrix/encoder/EncoderContext;
 
     invoke-direct {v1, p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->setSymbolShape(Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;)V
 
-    .line 5
     invoke-virtual {v1, p2, p3}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->setSizeConstraints(Lcom/google/zxing/Dimension;Lcom/google/zxing/Dimension;)V
 
     const-string p1, "[)>\u001e05\u001d"
 
-    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -201,13 +190,10 @@
 
     const/16 p0, 0xec
 
-    .line 7
     invoke-virtual {v1, p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->writeCodeword(C)V
 
-    .line 8
     invoke-virtual {v1, v4}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->setSkipAtEnd(I)V
 
-    .line 9
     iget p0, v1, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
     add-int/lit8 p0, p0, 0x7
@@ -219,7 +205,6 @@
     :cond_0
     const-string p1, "[)>\u001e06\u001d"
 
-    .line 10
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -234,20 +219,16 @@
 
     const/16 p0, 0xed
 
-    .line 11
     invoke-virtual {v1, p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->writeCodeword(C)V
 
-    .line 12
     invoke-virtual {v1, v4}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->setSkipAtEnd(I)V
 
-    .line 13
     iget p0, v1, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
     add-int/lit8 p0, p0, 0x7
 
     iput p0, v1, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->pos:I
 
-    .line 14
     :cond_1
     :goto_0
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->hasMoreCharacters()Z
@@ -256,38 +237,31 @@
 
     if-eqz p0, :cond_2
 
-    .line 15
     aget-object p0, v0, v2
 
     invoke-interface {p0, v1}, Lcom/google/zxing/datamatrix/encoder/Encoder;->encode(Lcom/google/zxing/datamatrix/encoder/EncoderContext;)V
 
-    .line 16
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getNewEncoding()I
 
     move-result p0
 
     if-ltz p0, :cond_1
 
-    .line 17
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getNewEncoding()I
 
     move-result v2
 
-    .line 18
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->resetEncoderSignal()V
 
     goto :goto_0
 
-    .line 19
     :cond_2
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getCodewordCount()I
 
     move-result p0
 
-    .line 20
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->updateSymbolInfo()V
 
-    .line 21
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getSymbolInfo()Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     move-result-object p1
@@ -306,16 +280,13 @@
 
     const/16 p0, 0xfe
 
-    .line 22
     invoke-virtual {v1, p0}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->writeCodeword(C)V
 
-    .line 23
     :cond_3
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getCodewords()Ljava/lang/StringBuilder;
 
     move-result-object p0
 
-    .line 24
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p2
@@ -324,10 +295,8 @@
 
     const/16 p2, 0x81
 
-    .line 25
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 26
     :cond_4
     :goto_1
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
@@ -336,7 +305,6 @@
 
     if-ge p2, p1, :cond_5
 
-    .line 27
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p2
@@ -351,7 +319,6 @@
 
     goto :goto_1
 
-    .line 28
     :cond_5
     invoke-virtual {v1}, Lcom/google/zxing/datamatrix/encoder/EncoderContext;->getCodewords()Ljava/lang/StringBuilder;
 
@@ -369,7 +336,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p3, v0}, Ljava/util/Arrays;->fill([BB)V
 
     move v1, v0
@@ -379,7 +345,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 2
     aget v2, p0, v1
 
     float-to-double v2, v2
@@ -392,12 +357,10 @@
 
     aput v2, p1, v1
 
-    .line 3
     aget v2, p1, v1
 
     if-le p2, v2, :cond_0
 
-    .line 4
     invoke-static {p3, v0}, Ljava/util/Arrays;->fill([BB)V
 
     move p2, v2
@@ -405,7 +368,6 @@
     :cond_0
     if-ne p2, v2, :cond_1
 
-    .line 5
     aget-byte v2, p3, v1
 
     add-int/lit8 v2, v2, 0x1
@@ -435,7 +397,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1
     aget-byte v2, p0, v0
 
     add-int/2addr v1, v2
@@ -451,12 +412,10 @@
 .method public static illegalCharacter(C)V
     .locals 5
 
-    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,7 +442,6 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -655,7 +613,6 @@
 .method public static isNativeX12(C)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isX12TermSep(C)Z
 
     move-result v0
@@ -741,7 +698,6 @@
 
     move/from16 v1, p1
 
-    .line 1
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -757,7 +713,6 @@
 
     new-array v3, v2, [F
 
-    .line 2
     fill-array-data v3, :array_0
 
     goto :goto_0
@@ -765,12 +720,10 @@
     :cond_1
     new-array v3, v2, [F
 
-    .line 3
     fill-array-data v3, :array_1
 
     const/4 v4, 0x0
 
-    .line 4
     aput v4, v3, p2
 
     :goto_0
@@ -781,7 +734,6 @@
     :cond_2
     add-int v6, v1, v5
 
-    .line 5
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v7
@@ -804,17 +756,14 @@
 
     new-array v1, v2, [I
 
-    .line 6
     invoke-static {v3, v1, v8, v0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->findMinimums([F[II[B)I
 
     move-result v2
 
-    .line 7
     invoke-static {v0}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->getMinimumCount([B)I
 
     move-result v3
 
-    .line 8
     aget v1, v1, v4
 
     if-ne v1, v2, :cond_3
@@ -824,7 +773,6 @@
     :cond_3
     if-ne v3, v13, :cond_4
 
-    .line 9
     aget-byte v1, v0, v9
 
     if-lez v1, :cond_4
@@ -834,7 +782,6 @@
     :cond_4
     if-ne v3, v13, :cond_5
 
-    .line 10
     aget-byte v1, v0, v11
 
     if-lez v1, :cond_5
@@ -844,7 +791,6 @@
     :cond_5
     if-ne v3, v13, :cond_6
 
-    .line 11
     aget-byte v1, v0, v10
 
     if-lez v1, :cond_6
@@ -854,7 +800,6 @@
     :cond_6
     if-ne v3, v13, :cond_7
 
-    .line 12
     aget-byte v0, v0, v12
 
     if-lez v0, :cond_7
@@ -864,7 +809,6 @@
     :cond_7
     return v13
 
-    .line 13
     :cond_8
     invoke-interface {v0, v6}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -872,7 +816,6 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 14
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isDigit(C)Z
 
     move-result v7
@@ -881,7 +824,6 @@
 
     if-eqz v7, :cond_9
 
-    .line 15
     aget v7, v3, v4
 
     const/high16 v15, 0x3f000000    # 0.5f
@@ -892,7 +834,6 @@
 
     goto :goto_1
 
-    .line 16
     :cond_9
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isExtendedASCII(C)Z
 
@@ -900,7 +841,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 17
     aget v7, v3, v4
 
     float-to-double v8, v7
@@ -913,7 +853,6 @@
 
     aput v7, v3, v4
 
-    .line 18
     aget v7, v3, v4
 
     const/high16 v8, 0x40000000    # 2.0f
@@ -924,7 +863,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_a
     aget v7, v3, v4
 
@@ -938,14 +876,12 @@
 
     aput v7, v3, v4
 
-    .line 20
     aget v7, v3, v4
 
     add-float/2addr v7, v14
 
     aput v7, v3, v4
 
-    .line 21
     :goto_1
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isNativeC40(C)Z
 
@@ -959,7 +895,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 22
     aget v7, v3, v13
 
     add-float v7, v7, v16
@@ -968,7 +903,6 @@
 
     goto :goto_2
 
-    .line 23
     :cond_b
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isExtendedASCII(C)Z
 
@@ -976,7 +910,6 @@
 
     if-eqz v7, :cond_c
 
-    .line 24
     aget v7, v3, v13
 
     add-float/2addr v7, v8
@@ -985,7 +918,6 @@
 
     goto :goto_2
 
-    .line 25
     :cond_c
     aget v7, v3, v13
 
@@ -993,7 +925,6 @@
 
     aput v7, v3, v13
 
-    .line 26
     :goto_2
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isNativeText(C)Z
 
@@ -1001,7 +932,6 @@
 
     if-eqz v7, :cond_d
 
-    .line 27
     aget v7, v3, v10
 
     add-float v7, v7, v16
@@ -1010,7 +940,6 @@
 
     goto :goto_3
 
-    .line 28
     :cond_d
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isExtendedASCII(C)Z
 
@@ -1018,7 +947,6 @@
 
     if-eqz v7, :cond_e
 
-    .line 29
     aget v7, v3, v10
 
     add-float/2addr v7, v8
@@ -1027,7 +955,6 @@
 
     goto :goto_3
 
-    .line 30
     :cond_e
     aget v7, v3, v10
 
@@ -1035,7 +962,6 @@
 
     aput v7, v3, v10
 
-    .line 31
     :goto_3
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isNativeX12(C)Z
 
@@ -1043,7 +969,6 @@
 
     if-eqz v7, :cond_f
 
-    .line 32
     aget v7, v3, v12
 
     add-float v7, v7, v16
@@ -1052,7 +977,6 @@
 
     goto :goto_4
 
-    .line 33
     :cond_f
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isExtendedASCII(C)Z
 
@@ -1060,7 +984,6 @@
 
     if-eqz v7, :cond_10
 
-    .line 34
     aget v7, v3, v12
 
     const v8, 0x408aaaab
@@ -1071,7 +994,6 @@
 
     goto :goto_4
 
-    .line 35
     :cond_10
     aget v7, v3, v12
 
@@ -1081,7 +1003,6 @@
 
     aput v7, v3, v12
 
-    .line 36
     :goto_4
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isNativeEDIFACT(C)Z
 
@@ -1089,7 +1010,6 @@
 
     if-eqz v7, :cond_11
 
-    .line 37
     aget v7, v3, v11
 
     const/high16 v8, 0x3f400000    # 0.75f
@@ -1100,7 +1020,6 @@
 
     goto :goto_5
 
-    .line 38
     :cond_11
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isExtendedASCII(C)Z
 
@@ -1108,7 +1027,6 @@
 
     if-eqz v7, :cond_12
 
-    .line 39
     aget v7, v3, v11
 
     const/high16 v8, 0x40880000    # 4.25f
@@ -1119,7 +1037,6 @@
 
     goto :goto_5
 
-    .line 40
     :cond_12
     aget v7, v3, v11
 
@@ -1129,7 +1046,6 @@
 
     aput v7, v3, v11
 
-    .line 41
     :goto_5
     invoke-static {v6}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isSpecialB256(C)Z
 
@@ -1139,7 +1055,6 @@
 
     const/4 v6, 0x5
 
-    .line 42
     aget v7, v3, v6
 
     const/high16 v8, 0x40800000    # 4.0f
@@ -1153,7 +1068,6 @@
     :cond_13
     const/4 v6, 0x5
 
-    .line 43
     aget v7, v3, v6
 
     add-float/2addr v7, v14
@@ -1169,15 +1083,12 @@
 
     const v9, 0x7fffffff
 
-    .line 44
     invoke-static {v3, v7, v9, v8}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->findMinimums([F[II[B)I
 
-    .line 45
     invoke-static {v8}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->getMinimumCount([B)I
 
     move-result v9
 
-    .line 46
     aget v14, v7, v4
 
     aget v15, v7, v6
@@ -1215,7 +1126,6 @@
     :cond_14
     const/4 v6, 0x5
 
-    .line 47
     aget v14, v7, v6
 
     aget v6, v7, v4
@@ -1243,7 +1153,6 @@
     :cond_15
     if-ne v9, v13, :cond_16
 
-    .line 48
     aget-byte v6, v8, v11
 
     if-lez v6, :cond_16
@@ -1253,7 +1162,6 @@
     :cond_16
     if-ne v9, v13, :cond_17
 
-    .line 49
     aget-byte v6, v8, v10
 
     if-lez v6, :cond_17
@@ -1263,14 +1171,12 @@
     :cond_17
     if-ne v9, v13, :cond_18
 
-    .line 50
     aget-byte v6, v8, v12
 
     if-lez v6, :cond_18
 
     return v12
 
-    .line 51
     :cond_18
     aget v6, v7, v13
 
@@ -1306,7 +1212,6 @@
 
     if-ge v6, v8, :cond_2
 
-    .line 52
     aget v6, v7, v13
 
     aget v8, v7, v12
@@ -1315,7 +1220,6 @@
 
     return v13
 
-    .line 53
     :cond_19
     aget v6, v7, v13
 
@@ -1327,7 +1231,6 @@
 
     add-int/2addr v1, v13
 
-    .line 54
     :goto_7
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
@@ -1335,12 +1238,10 @@
 
     if-ge v1, v2, :cond_1b
 
-    .line 55
     invoke-interface {v0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
-    .line 56
     invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isX12TermSep(C)Z
 
     move-result v3
@@ -1349,7 +1250,6 @@
 
     return v12
 
-    .line 57
     :cond_1a
     invoke-static {v2}, Lcom/google/zxing/datamatrix/encoder/HighLevelEncoder;->isNativeX12(C)Z
 
@@ -1398,7 +1298,6 @@
 
     mul-int/lit16 p0, p0, 0x95
 
-    .line 1
     rem-int/lit16 p0, p0, 0xfd
 
     add-int/lit8 p0, p0, 0x1

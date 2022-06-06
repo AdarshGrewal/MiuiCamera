@@ -16,7 +16,6 @@
 
     const-string v0, "[0-9]+"
 
-    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -29,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
 .method public static appendPattern([ZI[IZ)I
     .locals 7
 
-    .line 1
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -59,7 +56,6 @@
 
     add-int/lit8 v6, p1, 0x1
 
-    .line 2
     aput-boolean p3, p0, p1
 
     add-int/lit8 v5, v5, 0x1
@@ -84,7 +80,6 @@
 .method public static checkNumeric(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->NUMERIC:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -99,7 +94,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -113,34 +107,28 @@
 .method public static renderResult([ZIII)Lcom/google/zxing/common/BitMatrix;
     .locals 5
 
-    .line 1
     array-length v0, p0
 
     add-int/2addr p3, v0
 
-    .line 2
     invoke-static {p1, p3}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-static {v1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
-    .line 4
     div-int p3, p1, p3
 
     mul-int v1, v0, p3
 
     sub-int v1, p1, v1
 
-    .line 5
     div-int/lit8 v1, v1, 0x2
 
-    .line 6
     new-instance v2, Lcom/google/zxing/common/BitMatrix;
 
     invoke-direct {v2, p1, p2}, Lcom/google/zxing/common/BitMatrix;-><init>(II)V
@@ -152,12 +140,10 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 7
     aget-boolean v4, p0, v3
 
     if-eqz v4, :cond_0
 
-    .line 8
     invoke-virtual {v2, v1, p1, p3, p2}, Lcom/google/zxing/common/BitMatrix;->setRegion(IIII)V
 
     :cond_0
@@ -188,7 +174,6 @@
 
     move v4, p4
 
-    .line 1
     invoke-virtual/range {v0 .. v5}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->encode(Ljava/lang/String;Lcom/google/zxing/BarcodeFormat;IILjava/util/Map;)Lcom/google/zxing/common/BitMatrix;
 
     move-result-object p1
@@ -211,7 +196,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -222,14 +206,12 @@
 
     if-ltz p4, :cond_3
 
-    .line 3
     invoke-virtual {p0}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->getSupportedWriteFormats()Ljava/util/Collection;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -238,7 +220,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -264,7 +245,6 @@
 
     throw p1
 
-    .line 6
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->getDefaultMargin()I
@@ -273,7 +253,6 @@
 
     if-eqz p5, :cond_2
 
-    .line 7
     sget-object v0, Lcom/google/zxing/EncodeHintType;->MARGIN:Lcom/google/zxing/EncodeHintType;
 
     invoke-interface {p5, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -282,7 +261,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     sget-object p2, Lcom/google/zxing/EncodeHintType;->MARGIN:Lcom/google/zxing/EncodeHintType;
 
     invoke-interface {p5, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -297,20 +275,17 @@
 
     move-result p2
 
-    .line 9
     :cond_2
     invoke-virtual {p0, p1}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->encode(Ljava/lang/String;)[Z
 
     move-result-object p1
 
-    .line 10
     invoke-static {p1, p3, p4, p2}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->renderResult([ZIII)Lcom/google/zxing/common/BitMatrix;
 
     move-result-object p1
 
     return-object p1
 
-    .line 11
     :cond_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -336,7 +311,6 @@
 
     throw p1
 
-    .line 12
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -66,7 +66,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x10
@@ -81,69 +80,54 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mType:I
 
     const/4 v1, 0x0
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mText:Ljava/lang/String;
 
     const/4 v2, -0x1
 
-    .line 5
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResId:I
 
-    .line 6
     iput v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocation:I
 
-    .line 7
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCountry:I
 
-    .line 8
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResRvItem:I
 
     const/4 v0, 0x4
 
     new-array v2, v0, [I
 
-    .line 9
     iput-object v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCoordinate:[I
 
     new-array v0, v0, [I
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCaptureCoordinate:[I
 
     const/4 v0, 0x0
 
-    .line 11
     iput-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasMove:Z
 
-    .line 12
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mBitmap:Landroid/graphics/Bitmap;
 
     const-string/jumbo v1, "timer"
 
-    .line 13
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TIMER:Ljava/lang/String;
 
     const-wide/32 v1, 0x2bf20
 
-    .line 14
     iput-wide v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TIMER_INTERVAL:J
 
-    .line 15
     new-instance v1, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -152,13 +136,10 @@
 
     const-string v1, "altitude"
 
-    .line 16
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->ALTITUDE:Ljava/lang/String;
 
-    .line 17
     iput-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasAltitude:Z
 
-    .line 18
     new-instance v0, Lcom/android/camera/aiwatermark/data/WatermarkItem$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem$1;-><init>(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
@@ -183,7 +164,6 @@
 
     move v5, p4
 
-    .line 46
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
     return-void
@@ -192,69 +172,54 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;II)V
     .locals 3
 
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 24
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 25
     iput v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mType:I
 
     const/4 v1, 0x0
 
-    .line 26
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mText:Ljava/lang/String;
 
     const/4 v2, -0x1
 
-    .line 27
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResId:I
 
-    .line 28
     iput v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocation:I
 
-    .line 29
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCountry:I
 
-    .line 30
     iput v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResRvItem:I
 
     const/4 v0, 0x4
 
     new-array v2, v0, [I
 
-    .line 31
     iput-object v2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCoordinate:[I
 
     new-array v0, v0, [I
 
-    .line 32
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCaptureCoordinate:[I
 
     const/4 v0, 0x0
 
-    .line 33
     iput-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasMove:Z
 
-    .line 34
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mBitmap:Landroid/graphics/Bitmap;
 
     const-string/jumbo v1, "timer"
 
-    .line 35
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TIMER:Ljava/lang/String;
 
     const-wide/32 v1, 0x2bf20
 
-    .line 36
     iput-wide v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TIMER_INTERVAL:J
 
-    .line 37
     new-instance v1, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
@@ -263,32 +228,24 @@
 
     const-string v1, "altitude"
 
-    .line 38
     iput-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->ALTITUDE:Ljava/lang/String;
 
-    .line 39
     iput-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasAltitude:Z
 
-    .line 40
     new-instance v0, Lcom/android/camera/aiwatermark/data/WatermarkItem$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem$1;-><init>(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationDataRunnable:Ljava/lang/Runnable;
 
-    .line 41
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
-    .line 42
     iput p2, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mType:I
 
-    .line 43
     iput-object p3, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mText:Ljava/lang/String;
 
-    .line 44
     iput p4, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResId:I
 
-    .line 45
     iput p5, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocation:I
 
     return-void
@@ -297,10 +254,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;III)V
     .locals 0
 
-    .line 21
     invoke-direct/range {p0 .. p5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;-><init>(Ljava/lang/String;ILjava/lang/String;II)V
 
-    .line 22
     iput p6, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCountry:I
 
     return-void
@@ -309,10 +264,8 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;IIII)V
     .locals 0
 
-    .line 19
     invoke-direct/range {p0 .. p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;-><init>(Ljava/lang/String;ILjava/lang/String;III)V
 
-    .line 20
     iput p7, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResRvItem:I
 
     return-void
@@ -321,7 +274,6 @@
 .method public static synthetic access$000(Lcom/android/camera/aiwatermark/data/WatermarkItem;Landroid/location/Location;Landroid/location/Geocoder;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getDataFromGeocoder(Landroid/location/Location;Landroid/location/Geocoder;)Ljava/util/ArrayList;
 
     move-result-object p0
@@ -332,7 +284,6 @@
 .method public static synthetic access$100()Ljava/util/ArrayList;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationList:Ljava/util/ArrayList;
 
     return-object v0
@@ -341,7 +292,6 @@
 .method private findAltitude(Landroid/location/Location;)Ljava/lang/String;
     .locals 5
 
-    .line 1
     invoke-virtual {p1}, Landroid/location/Location;->hasAltitude()Z
 
     move-result v0
@@ -356,7 +306,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
 
     move-result-wide v3
@@ -373,7 +322,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -386,7 +334,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -416,7 +363,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x4
@@ -425,20 +371,17 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v2, 0x10
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3
     :try_start_0
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v4
 
-    .line 4
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v6
@@ -447,14 +390,12 @@
 
     move-object v3, p2
 
-    .line 5
     invoke-virtual/range {v3 .. v8}, Landroid/location/Geocoder;->getFromLocation(DDI)Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 6
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -463,31 +404,26 @@
 
     const/4 p2, 0x0
 
-    .line 7
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/location/Address;
 
-    .line 8
     invoke-virtual {v2}, Landroid/location/Address;->getAdminArea()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {v2}, Landroid/location/Address;->getLocality()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 10
     invoke-direct {p0, v3, v2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -507,7 +443,6 @@
 
     move v3, p2
 
-    .line 12
     :goto_0
     invoke-virtual {v2}, Landroid/location/Address;->getMaxAddressLineIndex()I
 
@@ -515,12 +450,10 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 13
     invoke-virtual {v2, v3}, Landroid/location/Address;->getAddressLine(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 14
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -533,7 +466,6 @@
 
     if-nez v5, :cond_1
 
-    .line 15
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -546,7 +478,6 @@
     :catch_0
     move-exception p1
 
-    .line 16
     sget-object p2, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -569,7 +500,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     :cond_2
     sget-object p1, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TAG:Ljava/lang/String;
 
@@ -598,7 +528,6 @@
 .method private getLocationName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -611,7 +540,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -620,7 +548,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -636,7 +563,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -646,7 +572,6 @@
 
     return-object p2
 
-    .line 5
     :cond_2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -675,7 +600,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -688,7 +612,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 2
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -700,7 +623,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -708,14 +630,12 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 4
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 5
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -732,7 +652,6 @@
     :cond_2
     if-ltz p3, :cond_6
 
-    .line 6
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -745,21 +664,18 @@
     :goto_1
     if-ltz p3, :cond_5
 
-    .line 7
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     if-ge p3, v0, :cond_5
 
-    .line 8
     invoke-interface {p2, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 9
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -776,7 +692,6 @@
     :cond_5
     return-object p1
 
-    .line 10
     :cond_6
     :goto_2
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -801,7 +716,6 @@
 .method public clearCaptureCoordinate()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mQueueCoordinate:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
@@ -812,7 +726,6 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -821,7 +734,6 @@
 .method public getCaptureCoordinate()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mQueueCoordinate:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->isEmpty()Z
@@ -830,7 +742,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mQueueCoordinate:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -841,7 +752,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCaptureCoordinate:[I
 
@@ -851,7 +761,6 @@
 .method public getCoordinate()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCoordinate:[I
 
     return-object v0
@@ -860,7 +769,6 @@
 .method public getCountry()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCountry:I
 
     return v0
@@ -869,7 +777,6 @@
 .method public getKey()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -878,7 +785,6 @@
 .method public getLimitArea()Landroid/graphics/Rect;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLimitArea:Landroid/graphics/Rect;
 
     return-object v0
@@ -887,7 +793,6 @@
 .method public getLocation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocation:I
 
     return v0
@@ -904,7 +809,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationList:Ljava/util/ArrayList;
 
     return-object v0
@@ -913,7 +817,6 @@
 .method public getResId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResId:I
 
     return v0
@@ -922,7 +825,6 @@
 .method public getResRvItem()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResRvItem:I
 
     return v0
@@ -931,7 +833,6 @@
 .method public getText()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mText:Ljava/lang/String;
 
     return-object v0
@@ -940,7 +841,6 @@
 .method public getTimeWatermarkString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getTimeWatermarkType()I
 
     move-result v0
@@ -953,7 +853,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -964,7 +863,6 @@
 
     invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -979,7 +877,6 @@
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -991,7 +888,6 @@
 
     invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1006,7 +902,6 @@
 
     return-object v0
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -1018,7 +913,6 @@
 
     invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1037,7 +931,6 @@
 .method public getTimeWatermarkType()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     const-string/jumbo v1, "time"
@@ -1052,7 +945,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
@@ -1068,7 +960,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
@@ -1084,7 +975,6 @@
 
     return v0
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
@@ -1109,7 +999,6 @@
 .method public getType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mType:I
 
     return v0
@@ -1118,7 +1007,6 @@
 .method public getWatermarkText(Ljava/lang/String;Z)[Ljava/lang/String;
     .locals 10
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -1254,7 +1142,6 @@
 
     goto/16 :goto_6
 
-    .line 2
     :pswitch_0
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
@@ -1266,12 +1153,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->findAltitude(Landroid/location/Location;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 4
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1280,7 +1165,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setHasAltitude(Z)V
 
-    .line 5
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1294,7 +1178,6 @@
     :cond_1
     new-array v0, v2, [Ljava/lang/String;
 
-    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,7 +1196,6 @@
 
     move-object p2, v0
 
-    .line 7
     :goto_2
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
@@ -1332,7 +1214,6 @@
     :cond_2
     const-string/jumbo v5, "\u00b0W"
 
-    .line 8
     :goto_3
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 
@@ -1340,7 +1221,6 @@
 
     new-array v6, v4, [Ljava/lang/Object;
 
-    .line 9
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
@@ -1353,7 +1233,6 @@
 
     move-result-object v1
 
-    .line 10
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1368,7 +1247,6 @@
 
     aput-object v1, p2, v7
 
-    .line 11
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v5
@@ -1384,7 +1262,6 @@
     :cond_3
     const-string/jumbo p1, "\u00b0S"
 
-    .line 12
     :goto_4
     invoke-static {v5, v6}, Ljava/lang/Math;->abs(D)D
 
@@ -1392,7 +1269,6 @@
 
     new-array v3, v4, [Ljava/lang/Object;
 
-    .line 13
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -1403,7 +1279,6 @@
 
     move-result-object v0
 
-    .line 14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1423,19 +1298,16 @@
     :pswitch_1
     new-array v0, v3, [Ljava/lang/String;
 
-    .line 15
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->initLocationList()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 16
     invoke-direct {p0, p1, v1, v7, v4}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationText(Ljava/lang/String;Ljava/util/List;II)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v0, v7
 
-    .line 17
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1456,14 +1328,12 @@
 
     move-result-object p1
 
-    .line 18
     new-instance p2, Ljava/text/SimpleDateFormat;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-direct {p2, p1, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1483,7 +1353,6 @@
     :pswitch_2
     new-array v0, v2, [Ljava/lang/String;
 
-    .line 20
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1504,14 +1373,12 @@
 
     move-result-object p2
 
-    .line 21
     new-instance v2, Ljava/text/SimpleDateFormat;
 
     sget-object v5, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-direct {v2, p2, v5}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 22
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
@@ -1532,7 +1399,6 @@
 
     aput-object p2, v0, v7
 
-    .line 23
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
@@ -1553,12 +1419,10 @@
 
     aput-object p2, v0, v4
 
-    .line 24
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->initLocationList()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 25
     invoke-direct {p0, p1, p2, v3, v1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationText(Ljava/lang/String;Ljava/util/List;II)Ljava/lang/String;
 
     move-result-object p1
@@ -1573,12 +1437,10 @@
     :pswitch_3
     new-array p2, v4, [Ljava/lang/String;
 
-    .line 26
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->initLocationList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 27
     invoke-direct {p0, p1, v0, v4, v4}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationText(Ljava/lang/String;Ljava/util/List;II)Ljava/lang/String;
 
     move-result-object p1
@@ -1590,7 +1452,6 @@
     :pswitch_4
     new-array p2, v4, [Ljava/lang/String;
 
-    .line 28
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -1599,7 +1460,6 @@
 
     invoke-direct {p1, v1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 29
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1616,7 +1476,6 @@
 
     goto :goto_7
 
-    .line 30
     :pswitch_5
     new-instance p1, Ljava/text/SimpleDateFormat;
 
@@ -1626,7 +1485,6 @@
 
     invoke-direct {p1, v0, p2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 31
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1645,7 +1503,6 @@
 
     goto :goto_7
 
-    .line 32
     :pswitch_6
     new-instance p1, Ljava/text/SimpleDateFormat;
 
@@ -1655,7 +1512,6 @@
 
     invoke-direct {p1, v0, p2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 33
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1674,7 +1530,6 @@
 
     goto :goto_7
 
-    .line 34
     :pswitch_7
     new-instance p1, Ljava/text/SimpleDateFormat;
 
@@ -1684,7 +1539,6 @@
 
     invoke-direct {p1, v0, p2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 35
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1740,7 +1594,6 @@
 .method public hasAltitude()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasAltitude:Z
 
     return v0
@@ -1749,7 +1602,6 @@
 .method public hasMove()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasMove:Z
 
     return v0
@@ -1766,12 +1618,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v2
@@ -1792,7 +1642,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 3
     sget-object v2, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1803,7 +1652,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->TAG:Ljava/lang/String;
 
@@ -1813,7 +1661,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     :goto_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
@@ -1822,19 +1669,16 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->putLong(Ljava/lang/String;J)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/DataItemBase;->commit()Z
 
-    .line 7
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 8
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationDataRunnable:Ljava/lang/Runnable;
@@ -1843,7 +1687,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 9
     :goto_1
     sget-object v0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocationList:Ljava/util/ArrayList;
 
@@ -1853,7 +1696,6 @@
 .method public isLocationWatermark()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     const-string v1, "location"
@@ -1868,7 +1710,6 @@
 
     const-string v1, "location_time_1"
 
-    .line 2
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1879,7 +1720,6 @@
 
     const-string v1, "location_time_2"
 
-    .line 3
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1890,7 +1730,6 @@
 
     const-string v1, "longitude_latitude"
 
-    .line 4
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1915,7 +1754,6 @@
 .method public isTextWatermark()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     const-string/jumbo v1, "time"
@@ -1930,7 +1768,6 @@
 
     const-string/jumbo v1, "super_moon_text_1"
 
-    .line 2
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1941,7 +1778,6 @@
 
     const-string/jumbo v1, "super_moon_text_4"
 
-    .line 3
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1952,7 +1788,6 @@
 
     const-string/jumbo v1, "super_moon_text_6"
 
-    .line 4
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1963,7 +1798,6 @@
 
     const-string v1, "location"
 
-    .line 5
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1974,7 +1808,6 @@
 
     const-string v1, "location_time_1"
 
-    .line 6
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1985,7 +1818,6 @@
 
     const-string v1, "location_time_2"
 
-    .line 7
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1996,7 +1828,6 @@
 
     const-string v1, "longitude_latitude"
 
-    .line 8
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2021,7 +1852,6 @@
 .method public setCaptureCoordinate([I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -2034,12 +1864,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mQueueCoordinate:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 3
     :cond_0
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCaptureCoordinate:[I
 
@@ -2049,7 +1877,6 @@
 .method public setCountry(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCountry:I
 
     return-void
@@ -2058,7 +1885,6 @@
 .method public setHasAltitude(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasAltitude:Z
 
     return-void
@@ -2067,7 +1893,6 @@
 .method public setHasMove(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mHasMove:Z
 
     return-void
@@ -2076,7 +1901,6 @@
 .method public setKey(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mKey:Ljava/lang/String;
 
     return-void
@@ -2085,7 +1909,6 @@
 .method public setLimitArea(Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLimitArea:Landroid/graphics/Rect;
 
     return-void
@@ -2094,7 +1917,6 @@
 .method public setLocation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mLocation:I
 
     return-void
@@ -2103,7 +1925,6 @@
 .method public setResId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResId:I
 
     return-void
@@ -2112,7 +1933,6 @@
 .method public setResRvItem(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mResRvItem:I
 
     return-void
@@ -2121,7 +1941,6 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mText:Ljava/lang/String;
 
     return-void
@@ -2130,7 +1949,6 @@
 .method public setType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mType:I
 
     return-void
@@ -2139,7 +1957,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2178,7 +1995,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getResId()I
 
     move-result v1
@@ -2199,7 +2015,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getCountry()I
 
     move-result v1
@@ -2216,7 +2031,6 @@
 .method public updateCoordinate([I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mCoordinate:[I
 
     return-void
@@ -2227,7 +2041,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -2242,7 +2055,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -2258,23 +2070,17 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 4
     invoke-virtual {p1, v1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 5
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz p2, :cond_1
 
-    const/4 p1, 0x0
-
-    .line 6
-    invoke-static {v0, p2, p1}, Lcom/android/camera/Util;->rotate(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {v0, p2}, Lcom/android/camera/Util;->rotate(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -2287,7 +2093,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 7
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/WatermarkItem;->mBitmap:Landroid/graphics/Bitmap;
 
     return-void

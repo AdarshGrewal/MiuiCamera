@@ -38,7 +38,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;ZLjava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     iput-boolean p2, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->val$requestForPlayOrUse:Z
@@ -62,15 +61,12 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p1, Lcom/android/camera/fragment/music/LiveMusicInfo;->downloadState:I
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->val$requestForPlayOrUse:Z
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p1, Lcom/android/camera/fragment/music/LiveMusicInfo;->mPlayUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -79,14 +75,12 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$300(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;Lcom/android/camera/fragment/music/LiveMusicInfo;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
@@ -107,7 +101,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/music/LiveMusicInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$2;->accept(Lcom/android/camera/fragment/music/LiveMusicInfo;)V

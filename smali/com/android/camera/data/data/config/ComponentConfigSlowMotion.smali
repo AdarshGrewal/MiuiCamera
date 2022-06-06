@@ -39,12 +39,10 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     const-string p1, "5"
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->mCurrentQuality:Ljava/lang/String;
 
     return-void
@@ -53,7 +51,6 @@
 .method private getSupportMaxValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-eqz v0, :cond_2
@@ -68,7 +65,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -81,7 +77,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -94,7 +89,6 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -120,7 +114,6 @@
 .method private getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -129,7 +122,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -256,7 +248,6 @@
 
     const/16 v2, 0x780
 
-    .line 3
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -272,7 +263,6 @@
     :cond_2
     const p1, 0x7f12003d
 
-    .line 4
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -284,7 +274,6 @@
 
     const/16 v2, 0x1e0
 
-    .line 5
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -300,7 +289,6 @@
     :cond_4
     const p1, 0x7f12003c
 
-    .line 6
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -310,7 +298,6 @@
     :cond_5
     const p1, 0x7f12003b
 
-    .line 7
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -331,7 +318,6 @@
 .method private isDefaultValue(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -352,7 +338,6 @@
 .method public checkValueValid(ILjava/lang/String;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getItems()Ljava/util/List;
 
     move-result-object p1
@@ -374,7 +359,6 @@
 
     check-cast v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 2
     iget-object v1, v0, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {p2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -391,7 +375,6 @@
 
     return p1
 
-    .line 3
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -419,12 +402,10 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getKey(I)Ljava/lang/String;
@@ -437,14 +418,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->checkValueValid(ILjava/lang/String;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 4
     const-class p1, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -467,7 +446,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-direct {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getSupportMaxValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -479,7 +457,6 @@
 .method public getDefaultValue(I)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-eqz p1, :cond_1
@@ -526,7 +503,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -543,7 +519,6 @@
 .method public getValueSelectedStringIdIgnoreClose(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->isDefaultValue(I)Z
 
     move-result v0
@@ -554,13 +529,11 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -573,7 +546,6 @@
 
     const/16 v0, 0xac
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -592,7 +564,6 @@
 
     const/16 v0, 0xac
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -611,7 +582,6 @@
 
     const/16 v0, 0xac
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -632,7 +602,6 @@
 
     move/from16 v1, p1
 
-    .line 1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -643,7 +612,6 @@
 
     goto/16 :goto_2
 
-    .line 2
     :cond_0
     invoke-static/range {p4 .. p4}, Lcom/android/camera/CameraSettings;->getSupportedHfrSettings(Lcom/android/camera2/CameraCapabilities;)Ljava/util/ArrayList;
 
@@ -651,19 +619,16 @@
 
     move-object/from16 v4, p3
 
-    .line 3
     invoke-virtual {v4, v1}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotionQuality;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->mCurrentQuality:Ljava/lang/String;
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 5
     iget-object v4, v0, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->mCurrentQuality:Ljava/lang/String;
 
     const-string v5, "5"
@@ -678,7 +643,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v4, v0, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->mCurrentQuality:Ljava/lang/String;
 
@@ -694,7 +658,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-object v4, v0, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->mCurrentQuality:Ljava/lang/String;
 
@@ -722,16 +685,14 @@
 
     if-nez p2, :cond_a
 
-    .line 8
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v11
 
-    invoke-virtual {v11}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0O00()S
+    invoke-virtual {v11}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0ooOO0()S
 
     move-result v11
 
-    .line 9
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -768,28 +729,23 @@
 
     goto/16 :goto_1
 
-    .line 10
     :cond_4
     new-instance v13, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string/jumbo v14, "slow_motion_1920"
 
-    .line 11
     invoke-direct {v0, v14}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
 
-    const v7, 0x7f080371
+    const v7, 0x7f08036f
 
     invoke-direct {v13, v7, v7, v15, v14}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 13
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 14
     invoke-virtual {v1, v8}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -804,31 +760,25 @@
 
     iput-boolean v7, v13, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 15
     invoke-interface {v2, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 16
     :cond_5
     new-instance v7, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string/jumbo v13, "slow_motion_960"
 
-    .line 17
     invoke-direct {v0, v13}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    const v15, 0x7f080374
+    const v15, 0x7f080372
 
     invoke-direct {v7, v15, v15, v14, v13}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 18
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 19
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 20
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -843,33 +793,27 @@
 
     iput-boolean v13, v7, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 21
     invoke-interface {v2, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    const v7, 0x7f080373
+    const v7, 0x7f080371
 
     if-ne v11, v8, :cond_7
 
-    .line 22
     new-instance v13, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string/jumbo v14, "slow_motion_480"
 
-    .line 23
     invoke-direct {v0, v14}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
 
     invoke-direct {v13, v7, v7, v15, v14}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 25
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 26
     invoke-virtual {v1, v9}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -884,31 +828,25 @@
 
     iput-boolean v14, v13, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 27
     invoke-interface {v2, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_7
     if-ne v11, v12, :cond_8
 
-    .line 28
     new-instance v12, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string/jumbo v13, "slow_motion_480_direct"
 
-    .line 29
     invoke-direct {v0, v13}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
     invoke-direct {v12, v7, v7, v14, v13}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 31
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 32
     invoke-virtual {v1, v8}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -923,33 +861,27 @@
 
     iput-boolean v7, v12, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 33
     invoke-interface {v2, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_8
     if-eq v11, v8, :cond_9
 
-    .line 34
     new-instance v7, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string/jumbo v8, "slow_motion_240"
 
-    .line 35
     invoke-direct {v0, v8}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    const v12, 0x7f080372
+    const v12, 0x7f080370
 
     invoke-direct {v7, v12, v12, v11, v8}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 36
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 37
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 38
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -964,29 +896,23 @@
 
     iput-boolean v4, v7, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 39
     invoke-interface {v2, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 40
     :cond_9
     new-instance v4, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 41
     invoke-direct {v0, v6}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    const v8, 0x7f080370
+    const v8, 0x7f08036e
 
     invoke-direct {v4, v8, v8, v7, v6}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 43
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 44
     invoke-virtual {v1, v9}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1001,26 +927,22 @@
 
     iput-boolean v1, v4, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 45
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 46
     :goto_1
     invoke-static {v2}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
     goto :goto_2
 
-    .line 47
     :cond_a
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v7
 
-    invoke-virtual {v7}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooOoo()S
+    invoke-virtual {v7}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OoooO()S
 
     move-result v7
 
-    .line 48
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1043,7 +965,6 @@
 
     if-eq v7, v9, :cond_b
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1062,26 +983,21 @@
 
     goto :goto_2
 
-    .line 50
     :cond_b
     new-instance v4, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 51
     invoke-direct {v0, v6}, Lcom/android/camera/data/data/config/ComponentConfigSlowMotion;->getValueSelectedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    const v8, 0x7f080370
+    const v8, 0x7f08036e
 
     invoke-direct {v4, v8, v8, v7, v6}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     invoke-virtual {v1, v10}, Ljava/lang/StringBuffer;->setLength(I)V
 
-    .line 53
     invoke-virtual {v1, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 54
     invoke-virtual {v1, v9}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -1096,7 +1012,6 @@
 
     iput-boolean v1, v4, Lcom/android/camera/data/data/ComponentDataItem;->mIsDisabled:Z
 
-    .line 55
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -1104,10 +1019,8 @@
     :cond_c
     const-string v1, "Font camera do not support slow motion"
 
-    .line 56
     invoke-static {v4, v8, v1}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     :goto_2
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 

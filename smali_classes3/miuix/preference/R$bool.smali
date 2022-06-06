@@ -34,11 +34,11 @@
 
 .field public static final config_materialPreferenceIconSpaceReserved:I = 0x7f05000a
 
-.field public static final preference_item_bg_enable_variablePadding:I = 0x7f050057
+.field public static final preference_item_bg_enable_variablePadding:I = 0x7f050051
 
-.field public static final spinner_popup_item_bg_enable_variablePadding:I = 0x7f050059
+.field public static final spinner_popup_item_bg_enable_variablePadding:I = 0x7f050053
 
-.field public static final treat_as_land:I = 0x7f05005a
+.field public static final treat_as_land:I = 0x7f050054
 
 
 # direct methods

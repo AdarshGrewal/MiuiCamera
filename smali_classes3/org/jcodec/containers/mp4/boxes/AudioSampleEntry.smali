@@ -119,7 +119,6 @@
 
     new-array v1, v0, [Lorg/jcodec/common/model/Label;
 
-    .line 1
     sget-object v2, Lorg/jcodec/common/model/Label;->Mono:Lorg/jcodec/common/model/Label;
 
     const/4 v3, 0x0
@@ -136,7 +135,6 @@
 
     new-array v2, v1, [Lorg/jcodec/common/model/Label;
 
-    .line 2
     sget-object v4, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v4, v2, v3
@@ -153,7 +151,6 @@
 
     new-array v1, v1, [Lorg/jcodec/common/model/Label;
 
-    .line 3
     sget-object v2, Lorg/jcodec/common/model/Label;->LeftTotal:Lorg/jcodec/common/model/Label;
 
     aput-object v2, v1, v3
@@ -170,10 +167,8 @@
 
     new-array v0, v3, [Lorg/jcodec/common/model/Label;
 
-    .line 4
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->EMPTY:[Lorg/jcodec/common/model/Label;
 
-    .line 5
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -182,73 +177,62 @@
 
     const-string v1, "raw "
 
-    .line 6
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 7
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "twos"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 8
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "sowt"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 9
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "fl32"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 10
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "fl64"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 11
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "in24"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 12
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "in32"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 13
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     const-string v1, "lpcm"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
-    .line 15
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
-    .line 16
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
@@ -257,7 +241,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->Right:Lorg/jcodec/common/model/Label;
@@ -266,7 +249,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->HeadphonesLeft:Lorg/jcodec/common/model/Label;
@@ -275,7 +257,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->HeadphonesRight:Lorg/jcodec/common/model/Label;
@@ -284,7 +265,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftTotal:Lorg/jcodec/common/model/Label;
@@ -293,7 +273,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightTotal:Lorg/jcodec/common/model/Label;
@@ -302,7 +281,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftWide:Lorg/jcodec/common/model/Label;
@@ -311,7 +289,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightWide:Lorg/jcodec/common/model/Label;
@@ -320,7 +297,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
@@ -329,7 +305,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->Right:Lorg/jcodec/common/model/Label;
@@ -338,7 +313,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftCenter:Lorg/jcodec/common/model/Label;
@@ -347,7 +321,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightCenter:Lorg/jcodec/common/model/Label;
@@ -356,7 +329,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->Center:Lorg/jcodec/common/model/Label;
@@ -365,7 +337,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->CenterSurround:Lorg/jcodec/common/model/Label;
@@ -374,7 +345,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->CenterSurroundDirect:Lorg/jcodec/common/model/Label;
@@ -383,7 +353,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftSurround:Lorg/jcodec/common/model/Label;
@@ -392,7 +361,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftSurroundDirect:Lorg/jcodec/common/model/Label;
@@ -401,7 +369,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightSurround:Lorg/jcodec/common/model/Label;
@@ -410,7 +377,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightSurroundDirect:Lorg/jcodec/common/model/Label;
@@ -419,7 +385,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RearSurroundLeft:Lorg/jcodec/common/model/Label;
@@ -428,7 +393,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RearSurroundRight:Lorg/jcodec/common/model/Label;
@@ -437,7 +401,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LFE2:Lorg/jcodec/common/model/Label;
@@ -446,7 +409,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LFEScreen:Lorg/jcodec/common/model/Label;
@@ -455,7 +417,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftTotal:Lorg/jcodec/common/model/Label;
@@ -464,7 +425,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightTotal:Lorg/jcodec/common/model/Label;
@@ -473,7 +433,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->LeftWide:Lorg/jcodec/common/model/Label;
@@ -482,7 +441,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/model/Label;->RightWide:Lorg/jcodec/common/model/Label;
@@ -497,7 +455,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/SampleEntry;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -506,7 +463,6 @@
 .method public static _setLabels(Lorg/jcodec/containers/mp4/boxes/TrakBox;[Lorg/jcodec/common/model/Label;)V
     .locals 7
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;
 
     const-string v1, "mdia"
@@ -533,12 +489,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->createChannelBox()Lorg/jcodec/containers/mp4/boxes/ChannelBox;
 
     move-result-object v0
 
-    .line 3
     const-class v1, Lorg/jcodec/containers/mp4/boxes/SampleEntry;
 
     const/4 v2, 0x0
@@ -563,7 +517,6 @@
 
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 4
     :cond_0
     invoke-static {p1, v0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->setLabels([Lorg/jcodec/common/model/Label;Lorg/jcodec/containers/mp4/boxes/ChannelBox;)V
 
@@ -579,7 +532,6 @@
 
     move-object/from16 v3, p0
 
-    .line 1
     invoke-static {v3, v1, v2}, Lorg/jcodec/containers/mp4/boxes/Header;->createHeader(Ljava/lang/String;J)Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v4
@@ -616,7 +568,6 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     new-instance v2, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -627,24 +578,20 @@
 
     invoke-direct {v1, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 3
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 4
     invoke-static/range {p0 .. p0}, Lorg/jcodec/containers/mp4/boxes/FormatBox;->createFormatBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/FormatBox;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 5
     invoke-static/range {p5 .. p5}, Lorg/jcodec/containers/mp4/boxes/EndianBox;->createEndianBox(Ljava/nio/ByteOrder;)Lorg/jcodec/containers/mp4/boxes/EndianBox;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 6
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/Box;->terminatorAtom()Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object v2
@@ -657,7 +604,6 @@
 .method public static audioSampleEntryPCM(Lorg/jcodec/common/AudioFormat;)Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
     .locals 6
 
-    .line 1
     invoke-static {p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->lookupFourcc(Lorg/jcodec/common/AudioFormat;)Ljava/lang/String;
 
     move-result-object v0
@@ -668,7 +614,6 @@
 
     shr-int/lit8 v2, v1, 0x3
 
-    .line 2
     invoke-virtual {p0}, Lorg/jcodec/common/AudioFormat;->getChannels()I
 
     move-result v3
@@ -677,7 +622,6 @@
 
     move-result v4
 
-    .line 3
     invoke-virtual {p0}, Lorg/jcodec/common/AudioFormat;->isBigEndian()Z
 
     move-result p0
@@ -696,7 +640,6 @@
 
     const/4 v1, 0x1
 
-    .line 4
     invoke-static/range {v0 .. v5}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->audioSampleEntry(Ljava/lang/String;IIIILjava/nio/ByteOrder;)Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
 
     move-result-object p0
@@ -711,7 +654,6 @@
 
     move-object/from16 v2, p0
 
-    .line 1
     invoke-static {v2, v0, v1}, Lorg/jcodec/containers/mp4/boxes/Header;->createHeader(Ljava/lang/String;J)Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v2
@@ -756,50 +698,36 @@
 .method public static createAudioSampleEntry(Lorg/jcodec/containers/mp4/boxes/Header;SSSISIIIIIIIS)Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
 
     invoke-direct {v0, p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-short p1, v0, Lorg/jcodec/containers/mp4/boxes/SampleEntry;->drefInd:S
 
-    .line 3
     iput-short p2, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
-    .line 4
     iput-short p3, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
     int-to-float p0, p4
 
-    .line 5
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
-    .line 6
     iput-short p5, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->revision:S
 
-    .line 7
     iput p6, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->vendor:I
 
-    .line 8
     iput p7, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->compressionId:I
 
-    .line 9
     iput p8, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pktSize:I
 
-    .line 10
     iput p9, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->samplesPerPkt:I
 
-    .line 11
     iput p10, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerPkt:I
 
-    .line 12
     iput p11, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
-    .line 13
     iput p12, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerSample:I
 
-    .line 14
     iput-short p13, v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     return-object v0
@@ -808,20 +736,17 @@
 .method public static extractLabels([Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;)[Lorg/jcodec/common/model/Label;
     .locals 3
 
-    .line 1
     array-length v0, p0
 
     new-array v0, v0, [Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 3
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getLabel()Lorg/jcodec/common/model/Label;
@@ -841,12 +766,10 @@
 .method public static getLabelsByBitmap(J)[Lorg/jcodec/common/model/Label;
     .locals 9
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-static {}, Lorg/jcodec/common/model/Label;->values()[Lorg/jcodec/common/model/Label;
 
     move-result-object v1
@@ -855,16 +778,13 @@
 
     move v3, v2
 
-    .line 3
     :goto_0
     array-length v4, v1
 
     if-ge v3, v4, :cond_1
 
-    .line 4
     aget-object v4, v1, v3
 
-    .line 5
     iget-wide v5, v4, Lorg/jcodec/common/model/Label;->bitmapVal:J
 
     and-long/2addr v5, p0
@@ -875,7 +795,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 6
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -886,7 +805,6 @@
     :cond_1
     new-array p0, v2, [Lorg/jcodec/common/model/Label;
 
-    .line 7
     invoke-interface {v0, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -899,7 +817,6 @@
 .method public static getLabelsFromChan(Lorg/jcodec/containers/mp4/boxes/ChannelBox;)[Lorg/jcodec/common/model/Label;
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->getChannelLayout()I
 
     move-result v0
@@ -924,7 +841,6 @@
 
     and-int/2addr p0, v0
 
-    .line 2
     new-array v0, p0, [Lorg/jcodec/common/model/Label;
 
     :goto_0
@@ -934,7 +850,6 @@
 
     or-int/2addr v1, v3
 
-    .line 3
     invoke-static {v1}, Lorg/jcodec/common/model/Label;->getByVal(I)Lorg/jcodec/common/model/Label;
 
     move-result-object v1
@@ -948,22 +863,18 @@
     :cond_0
     return-object v0
 
-    .line 4
     :cond_1
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->values()[Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     move-result-object v2
 
-    .line 5
     :goto_1
     array-length v4, v2
 
     if-ge v3, v4, :cond_5
 
-    .line 6
     aget-object v4, v2, v3
 
-    .line 7
     invoke-virtual {v4}, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->getCode()I
 
     move-result v5
@@ -974,12 +885,10 @@
 
     if-nez v5, :cond_4
 
-    .line 8
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_UseChannelDescriptions:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     if-ne v4, v0, :cond_2
 
-    .line 9
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->getDescriptions()[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     move-result-object p0
@@ -990,13 +899,11 @@
 
     return-object p0
 
-    .line 10
     :cond_2
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_UseChannelBitmap:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     if-ne v4, v0, :cond_3
 
-    .line 11
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->getChannelBitmap()I
 
     move-result p0
@@ -1009,7 +916,6 @@
 
     return-object p0
 
-    .line 12
     :cond_3
     invoke-virtual {v4}, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->getLabels()[Lorg/jcodec/common/model/Label;
 
@@ -1022,7 +928,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_5
     sget-object p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->EMPTY:[Lorg/jcodec/common/model/Label;
 
@@ -1032,7 +937,6 @@
 .method public static getLabelsFromSampleEntry(Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;)[Lorg/jcodec/common/model/Label;
     .locals 7
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;
 
     const-string v1, "chan"
@@ -1045,14 +949,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->getLabelsFromChan(Lorg/jcodec/containers/mp4/boxes/ChannelBox;)[Lorg/jcodec/common/model/Label;
 
     move-result-object p0
 
     return-object p0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->getChannelCount()S
 
@@ -1072,10 +974,8 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 4
     new-array p0, p0, [Lorg/jcodec/common/model/Label;
 
-    .line 5
     sget-object v0, Lorg/jcodec/common/model/Label;->Mono:Lorg/jcodec/common/model/Label;
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
@@ -1087,7 +987,6 @@
 
     new-array p0, p0, [Lorg/jcodec/common/model/Label;
 
-    .line 6
     sget-object v6, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v6, p0, v4
@@ -1117,7 +1016,6 @@
     :pswitch_1
     new-array p0, v0, [Lorg/jcodec/common/model/Label;
 
-    .line 7
     sget-object v0, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v0, p0, v4
@@ -1143,7 +1041,6 @@
     :pswitch_2
     new-array p0, v1, [Lorg/jcodec/common/model/Label;
 
-    .line 8
     sget-object v0, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v0, p0, v4
@@ -1165,7 +1062,6 @@
     :pswitch_3
     new-array p0, v2, [Lorg/jcodec/common/model/Label;
 
-    .line 9
     sget-object v0, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v0, p0, v4
@@ -1183,7 +1079,6 @@
     :pswitch_4
     new-array p0, v3, [Lorg/jcodec/common/model/Label;
 
-    .line 10
     sget-object v0, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
     aput-object v0, p0, v4
@@ -1197,7 +1092,6 @@
     :pswitch_5
     new-array p0, v5, [Lorg/jcodec/common/model/Label;
 
-    .line 11
     sget-object v0, Lorg/jcodec/common/model/Label;->Mono:Lorg/jcodec/common/model/Label;
 
     aput-object v0, p0, v4
@@ -1220,7 +1114,6 @@
 .method public static getLabelsFromTrack(Lorg/jcodec/containers/mp4/boxes/TrakBox;)[Lorg/jcodec/common/model/Label;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getSampleEntries()[Lorg/jcodec/containers/mp4/boxes/SampleEntry;
 
     move-result-object p0
@@ -1241,7 +1134,6 @@
 .method public static lookupFourcc(Lorg/jcodec/common/AudioFormat;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/common/AudioFormat;->getSampleSizeInBits()I
 
     move-result v0
@@ -1260,7 +1152,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/jcodec/common/AudioFormat;->getSampleSizeInBits()I
 
@@ -1274,7 +1165,6 @@
 
     return-object p0
 
-    .line 3
     :cond_1
     new-instance v0, Lorg/jcodec/api/NotSupportedException;
 
@@ -1304,15 +1194,12 @@
 .method public static setLabel(Lorg/jcodec/containers/mp4/boxes/TrakBox;ILorg/jcodec/common/model/Label;)V
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->getLabelsFromTrack(Lorg/jcodec/containers/mp4/boxes/TrakBox;)[Lorg/jcodec/common/model/Label;
 
     move-result-object v0
 
-    .line 2
     aput-object p2, v0, p1
 
-    .line 3
     invoke-static {p0, v0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->_setLabels(Lorg/jcodec/containers/mp4/boxes/TrakBox;[Lorg/jcodec/common/model/Label;)V
 
     return-void
@@ -1321,7 +1208,6 @@
 .method public static setLabels([Lorg/jcodec/common/model/Label;Lorg/jcodec/containers/mp4/boxes/ChannelBox;)V
     .locals 6
 
-    .line 1
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_UseChannelDescriptions:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->getCode()I
@@ -1330,7 +1216,6 @@
 
     invoke-virtual {p1, v0}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->setChannelLayout(I)V
 
-    .line 2
     array-length v0, p0
 
     new-array v0, v0, [Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
@@ -1339,13 +1224,11 @@
 
     move v2, v1
 
-    .line 3
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_0
 
-    .line 4
     new-instance v3, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     aget-object v4, p0, v2
@@ -1368,7 +1251,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1, v0}, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->setDescriptions([Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;)V
 
@@ -1399,7 +1281,6 @@
         }
     .end annotation
 
-    .line 1
     array-length v0, p2
 
     new-array v0, v0, [Lorg/jcodec/common/model/ChannelLabel;
@@ -1408,18 +1289,15 @@
 
     move v2, v1
 
-    .line 2
     :goto_0
     array-length v3, p2
 
     if-ge v1, v3, :cond_0
 
-    .line 3
     aget-object v3, p2, v1
 
     add-int/lit8 v4, v2, 0x1
 
-    .line 4
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1443,7 +1321,6 @@
 .method public calcFrameSize()I
     .locals 2
 
-    .line 1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     if-eqz v0, :cond_1
@@ -1457,7 +1334,6 @@
     :cond_0
     return v0
 
-    .line 2
     :cond_1
     :goto_0
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
@@ -1474,7 +1350,6 @@
 .method public calcSampleSize()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->calcFrameSize()I
 
     move-result v0
@@ -1489,25 +1364,20 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/SampleEntry;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->revision:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->vendor:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     const/16 v1, 0x10
@@ -1516,28 +1386,23 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 6
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 7
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     if-nez v0, :cond_0
 
-    .line 8
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 10
     :goto_0
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->compressionId:I
 
@@ -1545,14 +1410,12 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 11
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pktSize:I
 
     int-to-short v0, v0
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 12
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
     float-to-double v0, v0
@@ -1569,29 +1432,24 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 13
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_2
 
-    .line 14
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->samplesPerPkt:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 15
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerPkt:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 16
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 17
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerSample:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
@@ -1603,33 +1461,26 @@
 
     const/4 v0, 0x3
 
-    .line 18
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 19
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     const/4 v0, -0x2
 
-    .line 20
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     const/4 v0, 0x0
 
-    .line 21
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     const/high16 v0, 0x10000
 
-    .line 22
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     const/16 v0, 0x48
 
-    .line 23
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 24
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
     float-to-double v0, v0
@@ -1640,37 +1491,30 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 25
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     const/high16 v0, 0x7f000000
 
-    .line 26
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 27
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 28
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->lpcmFlags:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 29
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 30
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->samplesPerPkt:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 31
     :cond_2
     :goto_1
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/SampleEntry;->writeExtensions(Ljava/nio/ByteBuffer;)V
@@ -1681,7 +1525,6 @@
 .method public getBytesPerFrame()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
     return v0
@@ -1690,7 +1533,6 @@
 .method public getBytesPerSample()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerSample:I
 
     return v0
@@ -1699,7 +1541,6 @@
 .method public getChannelCount()S
     .locals 1
 
-    .line 1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
     return v0
@@ -1708,7 +1549,6 @@
 .method public getEndian()Ljava/nio/ByteOrder;
     .locals 4
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/EndianBox;
 
     const/4 v1, 0x2
@@ -1739,7 +1579,6 @@
 
     if-nez v0, :cond_4
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
@@ -1754,12 +1593,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     return-object v0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -1775,7 +1612,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 5
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->lpcmFlags:I
 
     sget v1, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->kAudioFormatFlagIsBigEndian:I
@@ -1794,7 +1630,6 @@
     :goto_0
     return-object v0
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -1810,18 +1645,15 @@
 
     if-eqz v0, :cond_3
 
-    .line 7
     sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     return-object v0
 
-    .line 8
     :cond_3
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     return-object v0
 
-    .line 9
     :cond_4
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/EndianBox;->getEndian()Ljava/nio/ByteOrder;
 
@@ -1833,7 +1665,6 @@
 .method public getFormat()Lorg/jcodec/common/AudioFormat;
     .locals 7
 
-    .line 1
     new-instance v6, Lorg/jcodec/common/AudioFormat;
 
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
@@ -1848,7 +1679,6 @@
 
     iget-short v3, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
-    .line 2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->getEndian()Ljava/nio/ByteOrder;
 
     move-result-object v0
@@ -1879,7 +1709,6 @@
 .method public getLabels()[Lorg/jcodec/common/model/ChannelLabel;
     .locals 5
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;
 
     const-string v1, "chan"
@@ -1894,17 +1723,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {v0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->getLabelsFromChan(Lorg/jcodec/containers/mp4/boxes/ChannelBox;)[Lorg/jcodec/common/model/Label;
 
     move-result-object v0
 
-    .line 3
     iget-short v2, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
     if-ne v2, v1, :cond_0
 
-    .line 4
     sget-object v1, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationStereo:Ljava/util/Map;
 
     invoke-direct {p0, v1, v0}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translate(Ljava/util/Map;[Lorg/jcodec/common/model/Label;)[Lorg/jcodec/common/model/ChannelLabel;
@@ -1913,7 +1739,6 @@
 
     return-object v0
 
-    .line 5
     :cond_0
     sget-object v1, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->translationSurround:Ljava/util/Map;
 
@@ -1923,7 +1748,6 @@
 
     return-object v0
 
-    .line 6
     :cond_1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
@@ -1939,10 +1763,8 @@
 
     if-eq v0, v4, :cond_2
 
-    .line 7
     new-array v0, v0, [Lorg/jcodec/common/model/ChannelLabel;
 
-    .line 8
     sget-object v1, Lorg/jcodec/common/model/ChannelLabel;->MONO:Lorg/jcodec/common/model/ChannelLabel;
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
@@ -1952,7 +1774,6 @@
     :cond_2
     new-array v0, v4, [Lorg/jcodec/common/model/ChannelLabel;
 
-    .line 9
     sget-object v4, Lorg/jcodec/common/model/ChannelLabel;->FRONT_LEFT:Lorg/jcodec/common/model/ChannelLabel;
 
     aput-object v4, v0, v2
@@ -1988,7 +1809,6 @@
     :cond_3
     new-array v0, v1, [Lorg/jcodec/common/model/ChannelLabel;
 
-    .line 10
     sget-object v1, Lorg/jcodec/common/model/ChannelLabel;->STEREO_LEFT:Lorg/jcodec/common/model/ChannelLabel;
 
     aput-object v1, v0, v2
@@ -2002,7 +1822,6 @@
     :cond_4
     new-array v0, v3, [Lorg/jcodec/common/model/ChannelLabel;
 
-    .line 11
     sget-object v1, Lorg/jcodec/common/model/ChannelLabel;->MONO:Lorg/jcodec/common/model/ChannelLabel;
 
     aput-object v1, v0, v2
@@ -2013,7 +1832,6 @@
 .method public getSampleRate()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
     return v0
@@ -2022,7 +1840,6 @@
 .method public getSampleSize()S
     .locals 1
 
-    .line 1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
     return v0
@@ -2031,7 +1848,6 @@
 .method public getVersion()S
     .locals 1
 
-    .line 1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     return v0
@@ -2040,7 +1856,6 @@
 .method public isFloat()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
@@ -2071,7 +1886,6 @@
 
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
 
     move-result-object v0
@@ -2110,7 +1924,6 @@
 .method public isPCM()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pcms:Ljava/util/Set;
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
@@ -2129,59 +1942,50 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/SampleEntry;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->revision:S
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->vendor:I
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
-    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->compressionId:I
 
-    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->pktSize:I
 
-    .line 9
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -2196,38 +2000,32 @@
 
     div-float/2addr v0, v1
 
-    .line 10
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
-    .line 11
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->version:S
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 12
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->samplesPerPkt:I
 
-    .line 13
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerPkt:I
 
-    .line 14
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
-    .line 15
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -2241,10 +2039,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 16
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 17
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
@@ -2257,7 +2053,6 @@
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleRate:F
 
-    .line 18
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -2266,10 +2061,8 @@
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->channelCount:S
 
-    .line 19
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 20
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -2278,28 +2071,24 @@
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->sampleSize:S
 
-    .line 21
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->lpcmFlags:I
 
-    .line 22
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->bytesPerFrame:I
 
-    .line 23
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->samplesPerPkt:I
 
-    .line 24
     :cond_1
     :goto_0
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/SampleEntry;->parseExtensions(Ljava/nio/ByteBuffer;)V

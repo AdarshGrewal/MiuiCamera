@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public synthetic constructor <init>(Lcom/android/gallery3d/ui/UploadedTexture$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
 .method public clone()Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;
     .locals 2
 
-    .line 2
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -64,7 +61,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -80,7 +76,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;->clone()Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;
 
     move-result-object v0
@@ -91,7 +86,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1
     instance-of v0, p1, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;
 
     const/4 v1, 0x0
@@ -100,11 +94,9 @@
 
     return v1
 
-    .line 2
     :cond_0
     check-cast p1, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;->vertical:Z
 
     iget-boolean v2, p1, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;->vertical:Z
@@ -132,7 +124,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;->config:Landroid/graphics/Bitmap$Config;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap$Config;->hashCode()I
@@ -143,7 +134,6 @@
 
     xor-int/2addr v0, v1
 
-    .line 2
     iget-boolean v1, p0, Lcom/android/gallery3d/ui/UploadedTexture$BorderKey;->vertical:Z
 
     if-eqz v1, :cond_0

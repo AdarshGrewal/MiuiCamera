@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Landroid/text/method/NumberKeyListener;-><init>()V
@@ -35,7 +34,6 @@
 .method public filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$700(Lmiuix/pickerwidget/widget/NumberPicker;)[Ljava/lang/String;
@@ -48,19 +46,16 @@
 
     if-nez v0, :cond_4
 
-    .line 2
     invoke-super/range {p0 .. p6}, Landroid/text/method/NumberKeyListener;->filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -78,7 +73,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-interface {p4}, Landroid/text/Spanned;->length()I
 
     move-result p2
@@ -93,7 +87,6 @@
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -102,7 +95,6 @@
 
     return-object p1
 
-    .line 7
     :cond_1
     iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
@@ -110,7 +102,6 @@
 
     move-result p2
 
-    .line 8
     iget-object p3, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {p3}, Lmiuix/pickerwidget/widget/NumberPicker;->access$900(Lmiuix/pickerwidget/widget/NumberPicker;)I
@@ -148,7 +139,6 @@
     :goto_0
     return-object v2
 
-    .line 9
     :cond_4
     invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -158,7 +148,6 @@
 
     move-result-object p1
 
-    .line 10
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -167,7 +156,6 @@
 
     return-object v2
 
-    .line 11
     :cond_5
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -185,7 +173,6 @@
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 12
     invoke-interface {p4}, Landroid/text/Spanned;->length()I
 
     move-result p1
@@ -200,7 +187,6 @@
 
     move-result-object p1
 
-    .line 13
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -209,7 +195,6 @@
 
     move-result-object p2
 
-    .line 14
     iget-object p3, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {p3}, Lmiuix/pickerwidget/widget/NumberPicker;->access$700(Lmiuix/pickerwidget/widget/NumberPicker;)[Ljava/lang/String;
@@ -223,19 +208,16 @@
 
     aget-object p6, p3, v1
 
-    .line 15
     invoke-virtual {p6}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 17
     iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$InputTextFilter;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -248,7 +230,6 @@
 
     invoke-static {p2, p1, p3}, Lmiuix/pickerwidget/widget/NumberPicker;->access$1000(Lmiuix/pickerwidget/widget/NumberPicker;II)V
 
-    .line 18
     invoke-virtual {p6}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -271,7 +252,6 @@
 .method public getAcceptedChars()[C
     .locals 1
 
-    .line 1
     invoke-static {}, Lmiuix/pickerwidget/widget/NumberPicker;->access$600()[C
 
     move-result-object v0

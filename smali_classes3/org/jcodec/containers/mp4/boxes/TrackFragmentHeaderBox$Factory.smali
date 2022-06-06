@@ -22,10 +22,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     return-void
@@ -36,7 +34,6 @@
 .method public baseDataOffset(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -49,7 +46,6 @@
 
     int-to-long p1, p1
 
-    .line 2
     invoke-static {v0, p1, p2}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->access$002(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;J)J
 
     return-object p0
@@ -60,13 +56,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     return-object v1
@@ -82,7 +76,6 @@
 .method public defaultSampleDuration(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -93,7 +86,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->access$202(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
 
     return-object p0
@@ -102,7 +94,6 @@
 .method public defaultSampleFlags(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -113,7 +104,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->access$402(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
 
     return-object p0
@@ -122,7 +112,6 @@
 .method public defaultSampleSize(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -133,7 +122,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->access$302(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
 
     return-object p0
@@ -142,7 +130,6 @@
 .method public sampleDescriptionIndex(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -153,7 +140,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->access$102(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
 
     return-object p0

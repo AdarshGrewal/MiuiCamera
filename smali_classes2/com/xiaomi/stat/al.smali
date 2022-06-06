@@ -17,15 +17,12 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/stat/al;->c:Z
 
-    .line 3
     iput-object p1, p0, Lcom/xiaomi/stat/al;->a:Lcom/xiaomi/stat/e;
 
     return-void
@@ -36,23 +33,19 @@
 .method public a()V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Lcom/xiaomi/stat/al;
 
     if-eqz v1, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iput-object v0, p0, Lcom/xiaomi/stat/al;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    .line 4
     invoke-static {p0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
     return-void
@@ -61,7 +54,6 @@
 .method public a(Z)V
     .locals 0
 
-    .line 5
     iput-boolean p1, p0, Lcom/xiaomi/stat/al;->c:Z
 
     return-void
@@ -70,12 +62,10 @@
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/stat/al;->c:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/stat/al;->a:Lcom/xiaomi/stat/e;
 
     const/4 v1, 0x0
@@ -84,13 +74,11 @@
 
     invoke-virtual {v0, p2, v1, v2}, Lcom/xiaomi/stat/e;->a(Ljava/lang/Throwable;Ljava/lang/String;Z)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/stat/al;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     :cond_1

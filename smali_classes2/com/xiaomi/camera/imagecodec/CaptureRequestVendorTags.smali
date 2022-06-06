@@ -54,8 +54,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
-    sget-object v0, LOooO00o/OooO0o/OooO00o/OooO0OO/OooO0OO;->OooO00o:LOooO00o/OooO0o/OooO00o/OooO0OO/OooO0OO;
+    sget-object v0, LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO0OO;->OooO00o:LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO0OO;
 
     const-class v1, Ljava/lang/Integer;
 
@@ -65,8 +64,7 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags;->XIAOMI_JPEG_ORIENTATION:Lcom/xiaomi/camera/imagecodec/VendorTag;
 
-    .line 2
-    sget-object v0, LOooO00o/OooO0o/OooO00o/OooO0OO/OooO00o;->OooO00o:LOooO00o/OooO0o/OooO00o/OooO0OO/OooO00o;
+    sget-object v0, LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO00o;->OooO00o:LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO00o;
 
     const-class v1, Ljava/lang/String;
 
@@ -76,8 +74,7 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags;->XIAOMI_IMAGE_NAME:Lcom/xiaomi/camera/imagecodec/VendorTag;
 
-    .line 3
-    sget-object v0, LOooO00o/OooO0o/OooO00o/OooO0OO/OooO0O0;->OooO00o:LOooO00o/OooO0o/OooO00o/OooO0OO/OooO0O0;
+    sget-object v0, LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO0O0;->OooO00o:LOooO0O0/OooO0o/OooO00o/OooO0OO/OooO0O0;
 
     const-class v1, Ljava/lang/Byte;
 
@@ -93,7 +90,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -141,7 +137,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;
 
     invoke-direct {v0, p1, p0}, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;-><init>(Ljava/lang/Class;Ljava/util/function/Supplier;)V
@@ -164,7 +159,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags;->requestConstructor:Ljava/lang/reflect/Constructor;
 
@@ -176,7 +170,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/hardware/camera2/CaptureRequest$Key;
 
     new-array v4, v2, [Ljava/lang/Class;
@@ -197,10 +190,8 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags;->requestConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 3
     invoke-virtual {v0, v3}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 4
     :cond_0
     sget-object v0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags;->requestConstructor:Ljava/lang/reflect/Constructor;
 
@@ -241,7 +232,6 @@
     :catch_3
     move-exception p0
 
-    .line 5
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -290,7 +280,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -299,7 +288,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/VendorTag;->getKey()Ljava/lang/Object;
@@ -314,7 +302,6 @@
 
     goto :goto_0
 
-    .line 3
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -343,7 +330,6 @@
     :goto_1
     const-string p0, "caution: failed to update capture request: <NULL>"
 
-    .line 4
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

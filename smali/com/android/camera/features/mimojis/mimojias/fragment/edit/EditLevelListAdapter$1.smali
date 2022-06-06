@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -51,7 +49,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$000()Ljava/lang/String;
 
@@ -73,7 +70,6 @@
 
     invoke-static {p3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$100(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;)Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$ItfGvOnItemClickListener;
@@ -82,7 +78,6 @@
 
     invoke-interface {p3}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$ItfGvOnItemClickListener;->notifyUIChanged()V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
 
     move-result-object p3
@@ -91,14 +86,12 @@
 
     invoke-virtual {p3, v0, p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->setAllNeedUpdate(ZZ)V
 
-    .line 5
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
 
     move-result-object p3
 
     invoke-virtual {p3, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->addAvatarConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)Lcom/arcsoft/avatar2/AvatarEngine;
 
-    .line 6
     iget p3, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
     iget v1, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
@@ -113,7 +106,6 @@
 
     invoke-static {p3, v1, v2}, Lcom/arcsoft/avatar2/util/AvatarConfigUtils;->updateConfigID(IILcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)V
 
-    .line 7
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$200(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;)Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;
@@ -124,7 +116,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$200(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;)Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;
@@ -137,7 +128,6 @@
 
     if-nez p1, :cond_1
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;->access$200(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;)Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;
@@ -150,7 +140,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 

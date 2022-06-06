@@ -18,10 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;->context:Landroid/content/Context;
 
     return-void
@@ -43,7 +41,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -61,7 +58,6 @@
 
     check-cast p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;
 
-    .line 2
     iget-object v0, p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;->cause:Ljava/lang/Throwable;
 
     const/4 v1, 0x3
@@ -78,7 +74,6 @@
 
     iget p2, p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;->errorCode:I
 
-    .line 3
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -97,7 +92,6 @@
 
     const-string v2, "Defer to install split %s failed with error code %d, cost time %d ms."
 
-    .line 4
     invoke-static {p2, v0, v2, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
@@ -121,7 +115,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -160,7 +153,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;->cause:Ljava/lang/Throwable;
 
     const/4 v0, 0x2
@@ -205,7 +197,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1

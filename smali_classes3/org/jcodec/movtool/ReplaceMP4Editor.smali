@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,24 +22,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/containers/mp4/MP4Util;->createRefFullMovieFromFile(Ljava/io/File;)Lorg/jcodec/containers/mp4/MP4Util$Movie;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/MP4Util$Movie;->getMoov()Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     move-result-object v0
 
     invoke-interface {p3, v0}, Lorg/jcodec/movtool/MP4Edit;->apply(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
 
-    .line 3
     new-instance p3, Lorg/jcodec/movtool/Flattern;
 
     invoke-direct {p3}, Lorg/jcodec/movtool/Flattern;-><init>()V
 
-    .line 4
     invoke-virtual {p3, p1, p2}, Lorg/jcodec/movtool/Flattern;->flattern(Lorg/jcodec/containers/mp4/MP4Util$Movie;Ljava/io/File;)V
 
     return-void
@@ -54,7 +49,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/movtool/InplaceMP4Editor;
 
     invoke-direct {v0}, Lorg/jcodec/movtool/InplaceMP4Editor;-><init>()V
@@ -65,7 +59,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Lorg/jcodec/movtool/ReplaceMP4Editor;->replace(Ljava/io/File;Lorg/jcodec/movtool/MP4Edit;)V
 
     :cond_0
@@ -80,7 +73,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -107,10 +99,8 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lorg/jcodec/movtool/ReplaceMP4Editor;->copy(Ljava/io/File;Ljava/io/File;Lorg/jcodec/movtool/MP4Edit;)V
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     return-void

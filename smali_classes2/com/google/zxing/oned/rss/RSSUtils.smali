@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 
     if-gt v2, v0, :cond_1
 
-    .line 1
     div-int/2addr v1, v2
 
     add-int/lit8 v2, v2, 0x1
@@ -52,7 +50,6 @@
     :goto_1
     if-gt v2, v0, :cond_3
 
-    .line 2
     div-int/2addr v1, v2
 
     add-int/lit8 v2, v2, 0x1
@@ -70,7 +67,6 @@
 
     move/from16 v1, p1
 
-    .line 1
     array-length v2, v0
 
     const/4 v4, 0x0
@@ -88,7 +84,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     array-length v2, v0
 
@@ -111,7 +106,6 @@
 
     move v11, v9
 
-    .line 3
     :goto_2
     aget v12, v0, v4
 
@@ -125,7 +119,6 @@
 
     add-int/lit8 v15, v14, -0x2
 
-    .line 4
     invoke-static {v13, v15}, Lcom/google/zxing/oned/rss/RSSUtils;->combins(II)I
 
     move-result v13
@@ -142,7 +135,6 @@
 
     sub-int v3, v12, v14
 
-    .line 5
     invoke-static {v3, v15}, Lcom/google/zxing/oned/rss/RSSUtils;->combins(II)I
 
     move-result v3
@@ -169,7 +161,6 @@
 
     add-int/lit8 v9, v14, -0x3
 
-    .line 6
     invoke-static {v0, v9}, Lcom/google/zxing/oned/rss/RSSUtils;->combins(II)I
 
     move-result v0

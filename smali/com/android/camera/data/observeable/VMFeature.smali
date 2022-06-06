@@ -55,15 +55,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/observeable/VMBase;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/observeable/RxData;
 
     invoke-direct {v1, v0}, Lcom/android/camera/data/observeable/RxData;-><init>(Ljava/lang/Object;)V
@@ -104,21 +101,18 @@
 
     if-eq p0, v0, :cond_7
 
-    const/4 v0, 0x2
-
     packed-switch p0, :pswitch_data_0
 
     packed-switch p0, :pswitch_data_1
 
     goto/16 :goto_0
 
-    .line 1
     :pswitch_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -127,17 +121,16 @@
     goto/16 :goto_0
 
     :cond_0
-    const-string p0, "movielens"
+    const-string/jumbo p0, "movielens"
 
     return-object p0
 
-    .line 2
     :pswitch_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -150,13 +143,12 @@
 
     return-object p0
 
-    .line 3
     :pswitch_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -164,29 +156,27 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO()I
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0OO()Z
 
     move-result p0
 
-    if-ne p0, v0, :cond_c
+    if-eqz p0, :cond_c
 
     const-string p0, "document"
 
     return-object p0
 
-    .line 5
     :pswitch_3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -199,15 +189,16 @@
 
     return-object p0
 
-    .line 6
     :pswitch_4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0OO()I
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00OoO()I
 
     move-result p0
+
+    const/4 v0, 0x2
 
     if-le p0, v0, :cond_4
 
@@ -215,13 +206,12 @@
 
     return-object p0
 
-    .line 7
     :cond_4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -234,13 +224,12 @@
 
     return-object p0
 
-    .line 8
     :pswitch_5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -264,19 +253,18 @@
 
     return-object p0
 
-    .line 9
     :cond_9
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOoO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOoO()Z
 
     move-result p0
 
     if-eqz p0, :cond_c
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -289,13 +277,12 @@
 
     return-object p0
 
-    .line 10
     :cond_b
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -311,8 +298,6 @@
     const-string/jumbo p0, "panorama"
 
     return-object p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xb7
@@ -332,16 +317,13 @@
 .end method
 
 .method public static final getLocalModeByFeatureName(Ljava/lang/String;)I
-    .locals 3
+    .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    const/4 v1, 0x2
-
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
     sparse-switch v0, :sswitch_data_0
 
@@ -361,7 +343,7 @@
     goto/16 :goto_1
 
     :sswitch_1
-    const-string v0, "movielens"
+    const-string/jumbo v0, "movielens"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -447,7 +429,7 @@
 
     if-eqz p0, :cond_0
 
-    move p0, v1
+    const/4 p0, 0x2
 
     goto :goto_1
 
@@ -492,7 +474,7 @@
 
     :cond_0
     :goto_0
-    move p0, v2
+    move p0, v1
 
     :goto_1
     const/16 v0, 0xb8
@@ -501,19 +483,18 @@
 
     goto/16 :goto_2
 
-    .line 2
     :pswitch_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOoO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOoO()Z
 
     move-result p0
 
     if-eqz p0, :cond_9
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -526,13 +507,12 @@
 
     return p0
 
-    .line 3
     :pswitch_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -550,13 +530,12 @@
 
     return p0
 
-    .line 4
     :pswitch_3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -572,13 +551,12 @@
     :pswitch_4
     return v0
 
-    .line 5
     :pswitch_5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -589,13 +567,12 @@
     :cond_4
     return v0
 
-    .line 6
     :pswitch_6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -608,13 +585,12 @@
 
     return p0
 
-    .line 7
     :pswitch_7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -622,29 +598,27 @@
 
     goto :goto_2
 
-    .line 8
     :cond_6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO()I
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0OO()Z
 
     move-result p0
 
-    if-ne p0, v1, :cond_9
+    if-eqz p0, :cond_9
 
     const/16 p0, 0xba
 
     return p0
 
-    .line 9
     :pswitch_8
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -657,13 +631,12 @@
 
     return p0
 
-    .line 10
     :pswitch_9
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOO0()Z
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
 
     move-result p0
 
@@ -683,7 +656,7 @@
 
     :cond_9
     :goto_2
-    return v2
+    return v1
 
     :sswitch_data_0
     .sparse-switch
@@ -772,7 +745,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -787,7 +759,6 @@
 .method public getWaitingFeature()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -817,7 +788,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -832,7 +802,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -850,7 +819,6 @@
 .method public inDownloadingOrWaiting()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -879,7 +847,6 @@
 .method public removeFeature(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -888,7 +855,6 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -915,7 +881,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/data/observeable/RxData;->observable(Landroidx/lifecycle/LifecycleOwner;)Lcom/android/camera/data/observeable/RxData$DataObservable;
@@ -930,7 +895,6 @@
 .method public updateState(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -939,15 +903,12 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 2
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/data/observeable/VMFeature;->mRxLoadingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {p1}, Lcom/android/camera/data/observeable/RxData;->notifyChanged()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/data/observeable/VMBase;->judge()V
 
     return-void

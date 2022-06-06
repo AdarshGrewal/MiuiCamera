@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;->access$3300()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearActionData()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;
@@ -71,7 +67,6 @@
 .method public getActionData()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;
@@ -86,10 +81,8 @@
 .method public setActionData(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;

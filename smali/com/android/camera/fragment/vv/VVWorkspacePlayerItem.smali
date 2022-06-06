@@ -35,20 +35,16 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspaceItem;Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     if-eqz p1, :cond_0
@@ -59,10 +55,8 @@
 
     const-string p2, "createFromRawInfo"
 
-    .line 5
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object p2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-virtual {p2}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getRawInfoPath()Ljava/lang/String;
@@ -79,7 +73,6 @@
 
     const-string p2, "create failed"
 
-    .line 7
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -89,7 +82,6 @@
 .method private isValid()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     if-eqz v0, :cond_0
@@ -122,7 +114,6 @@
 .method private prepare()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
@@ -137,7 +128,6 @@
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
@@ -148,11 +138,10 @@
 
     move-result-object v0
 
-    const-string v1, "ffmpeg"
+    const-string/jumbo v1, "vvffmpeg"
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
@@ -167,7 +156,6 @@
 
     invoke-static {v0, v1}, Lcom/google/android/play/core/splitinstall/SplitInstallHelper;->loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
@@ -184,10 +172,8 @@
 .method private prepareEffectGraph(Lcom/android/camera/fragment/vv/VVItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
     .locals 4
 
-    .line 1
     iget-object v0, p1, Lcom/android/camera/fragment/vv/VVItem;->musicPath:Ljava/lang/String;
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getFragments()Ljava/util/List;
@@ -200,38 +186,32 @@
 
     new-array v2, p2, [Ljava/lang/String;
 
-    .line 3
     invoke-interface {v1, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 4
     new-instance v2, Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     invoke-direct {v2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
-    .line 5
     invoke-virtual {v2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->ConstructMediaEffectGraph()V
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->SetAudioMute(Z)V
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     iget-object p1, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
 
     invoke-virtual {v2, v1, p1}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->AddSourceAndEffectByTemplate([Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     invoke-virtual {p1, v0, p2}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->AddAudioTrack(Ljava/lang/String;Z)J
@@ -242,25 +222,21 @@
 .method private startPlay(Landroid/view/Surface;)V
     .locals 3
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 9
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->prepare()V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->prepareEffectGraph(Lcom/android/camera/fragment/vv/VVItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
 
-    .line 11
     new-instance v0, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
@@ -269,10 +245,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
-    .line 12
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->ConstructMediaPlayer()Z
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     new-instance v1, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem$1;
@@ -281,12 +255,10 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetPlayerNotify(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetViewSurface(Landroid/view/Surface;)V
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     sget-object v0, Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;->SurfaceGravityResizeAspectFit:Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;
@@ -297,19 +269,16 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->setGravity(Lcom/xiaomi/mediaprocess/EffectMediaPlayer$SurfaceGravity;II)V
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetPlayLoop(Z)V
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->SetGraphLoop(Z)V
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StartPreView()V
@@ -320,7 +289,6 @@
 .method private viewIsPartiallyHiddenBottom(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -343,7 +311,6 @@
 .method private viewIsPartiallyHiddenTop()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -372,7 +339,6 @@
 .method public getVVItem()Lcom/android/camera/fragment/vv/VVItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     return-object v0
@@ -381,7 +347,6 @@
 .method public getVVWorkspaceItem()Lcom/android/camera/fragment/vv/VVWorkspaceItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVVWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     return-object v0
@@ -390,17 +355,14 @@
 .method public getVisibilityPercents(Landroid/view/View;)I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->viewIsPartiallyHiddenTop()Z
 
     move-result v0
@@ -409,7 +371,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -422,7 +383,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->viewIsPartiallyHiddenBottom(I)Z
 
@@ -430,7 +390,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -447,7 +406,6 @@
 .method public isPlaying()Z
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->isValid()Z
 
     move-result v0
@@ -458,7 +416,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mPlayView:Landroid/widget/ImageView;
 
@@ -511,17 +468,14 @@
 .method public onSurfaceReady(Landroid/view/Surface;)V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mWaitingResultSurfaceTexture:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mWaitingResultSurfaceTexture:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const/16 v1, 0x780
@@ -530,7 +484,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/TextureVideoView;->setVideoSpecifiedSize(II)V
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->startPlay(Landroid/view/Surface;)V
 
     :cond_0
@@ -540,7 +493,6 @@
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->stopPlay()V
 
     return-void
@@ -561,7 +513,6 @@
 .method public startPlay()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->isValid()Z
 
     move-result v0
@@ -570,13 +521,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0, p0}, Lcom/android/camera/ui/TextureVideoView;->setMediaPlayerCallback(Lcom/android/camera/ui/TextureVideoView$MediaPlayerCallback;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/TextureVideoView;->getPreviewSurface()Landroid/view/Surface;
@@ -585,7 +534,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/TextureVideoView;->getPreviewSurface()Landroid/view/Surface;
@@ -599,10 +547,8 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mWaitingResultSurfaceTexture:Z
 
-    .line 6
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCoverImageView:Landroid/widget/ImageView;
 
@@ -610,7 +556,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mPlayView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -621,7 +566,6 @@
 .method public stopPlay()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->isValid()Z
 
     move-result v0
@@ -630,7 +574,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mPlayView:Landroid/widget/ImageView;
 
@@ -642,12 +585,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mPlayView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCoverImageView:Landroid/widget/ImageView;
 
@@ -657,12 +598,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCoverImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
@@ -670,27 +609,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 7
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->StopPreView()V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/EffectMediaPlayer;->DestructMediaPlayer()V
 
-    .line 9
     iput-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mEffectMediaPlayer:Lcom/xiaomi/mediaprocess/EffectMediaPlayer;
 
-    .line 10
     :cond_3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     if-eqz v0, :cond_4
 
-    .line 11
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->DestructMediaEffectGraph()V
 
-    .line 12
     iput-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     :cond_4
@@ -700,16 +633,12 @@
 .method public updateTargetVideoView(Landroid/widget/ImageView;Lcom/android/camera/ui/TextureVideoView;Landroid/widget/ImageView;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->stopPlay()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mCoverImageView:Landroid/widget/ImageView;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mVideoView:Lcom/android/camera/ui/TextureVideoView;
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;->mPlayView:Landroid/widget/ImageView;
 
     return-void

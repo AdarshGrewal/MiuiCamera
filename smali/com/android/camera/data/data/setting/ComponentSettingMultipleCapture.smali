@@ -14,7 +14,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -25,7 +24,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f12025a
+    const v0, 0x7f120242
 
     return v0
 .end method
@@ -33,7 +32,6 @@
 .method public initTypeElements(Landroid/content/Context;ILcom/android/camera2/CameraCapabilities;I)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/setting/ComponentSettingMultipleCapture;->getDisplayTitleString()I
 
     move-result p2
@@ -42,31 +40,28 @@
 
     move-result-object p2
 
-    .line 2
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f120721
+    const p4, 0x7f1206e5
 
     invoke-virtual {p1, p4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const p4, 0x7f120725
+    const p4, 0x7f1206e9
 
     const-string/jumbo v0, "pref_camera_jpegquality_key"
 
     invoke-direct {p3, p4, p2, v0, p1}, Lcom/android/camera/data/data/TypeItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    const p1, 0x7f03002c
+    const p1, 0x7f03002b
 
-    .line 3
     invoke-virtual {p3, p1}, Lcom/android/camera/data/data/TypeItem;->setEntryArrayRes(I)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object p1
 
-    const p2, 0x7f03002d
+    const p2, 0x7f03002c
 
-    .line 4
     invoke-virtual {p1, p2}, Lcom/android/camera/data/data/TypeItem;->setValueArrayRes(I)Lcom/android/camera/data/data/TypeItem;
 
     const/4 p1, 0x1
@@ -77,7 +72,6 @@
 
     aput-object p3, p1, p2
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;->insert([Lcom/android/camera/data/data/TypeItem;)V
 
     return-void

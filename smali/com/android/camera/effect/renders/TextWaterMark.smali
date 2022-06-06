@@ -55,7 +55,6 @@
 
     move/from16 v3, p4
 
-    .line 1
     invoke-direct {v0, v1, v2, v3}, Lcom/android/camera/effect/renders/WaterMark;-><init>(III)V
 
     const/16 v3, 0xb
@@ -66,7 +65,6 @@
 
     new-array v6, v5, [I
 
-    .line 2
     fill-array-data v6, :array_0
 
     const/4 v7, 0x0
@@ -157,7 +155,6 @@
 
     new-array v4, v9, [I
 
-    .line 3
     fill-array-data v4, :array_b
 
     aput-object v4, v3, v7
@@ -226,7 +223,6 @@
 
     move-object/from16 v3, p1
 
-    .line 4
     iput-object v3, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterText:Ljava/lang/String;
 
     const/high16 v18, 0x43100000    # 144.0f
@@ -241,21 +237,18 @@
 
     move-object/from16 v17, p1
 
-    .line 5
     invoke-static/range {v17 .. v22}, Lcom/android/gallery3d/ui/StringTexture;->newInstance(Ljava/lang/String;FIFZI)Lcom/android/gallery3d/ui/StringTexture;
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
-    .line 6
     invoke-direct {v0, v1, v2}, Lcom/android/camera/effect/renders/TextWaterMark;->getFontIndex(II)I
 
     move-result v1
 
     iput v1, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mFontIndex:I
 
-    .line 7
     iget-object v2, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterText:Ljava/lang/String;
 
     invoke-direct {v0, v2, v1}, Lcom/android/camera/effect/renders/TextWaterMark;->getWaterMarkWidth(Ljava/lang/String;I)I
@@ -264,7 +257,6 @@
 
     iput v1, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterWidth:I
 
-    .line 8
     iget-object v1, v0, Lcom/android/camera/effect/renders/TextWaterMark;->WATERMARK_FONT_SIZES:[[I
 
     iget v2, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mFontIndex:I
@@ -283,7 +275,6 @@
 
     iput v3, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterHeight:I
 
-    .line 9
     aget-object v1, v1, v2
 
     aget v1, v1, v12
@@ -302,18 +293,14 @@
 
     float-to-int v1, v1
 
-    .line 10
     iput v1, v0, Lcom/android/camera/effect/renders/TextWaterMark;->mCharMargin:I
 
-    .line 11
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/effect/renders/TextWaterMark;->calcCenterAxis()V
 
-    .line 12
     sget-boolean v1, Lcom/android/camera/Util;->sIsDumpLog:Z
 
     if-eqz v1, :cond_0
 
-    .line 13
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/effect/renders/TextWaterMark;->print()V
 
     :cond_0
@@ -499,7 +486,6 @@
 .method private calcCenterAxis()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
     if-eqz v0, :cond_3
@@ -518,7 +504,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mPadding:I
 
@@ -534,7 +519,6 @@
 
     iput v1, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterX:I
 
-    .line 3
     iget v1, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     sub-int/2addr v1, v0
@@ -549,7 +533,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mPadding:I
 
@@ -561,7 +544,6 @@
 
     iput v1, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterX:I
 
-    .line 5
     iget v1, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterHeight:I
 
     div-int/lit8 v1, v1, 0x2
@@ -576,7 +558,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -596,7 +577,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterX:I
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterWidth:I
 
     div-int/lit8 v0, v0, 0x2
@@ -607,7 +587,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_3
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -623,7 +602,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterX:I
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     sub-int/2addr v0, v1
@@ -647,12 +625,10 @@
 .method private getFontIndex(II)I
     .locals 5
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/effect/renders/TextWaterMark;->WATERMARK_FONT_SIZES:[[I
 
     array-length p2, p2
@@ -665,7 +641,6 @@
 
     move v2, v1
 
-    .line 3
     :goto_0
     iget-object v3, p0, Lcom/android/camera/effect/renders/TextWaterMark;->PIC_WIDTHS:[[I
 
@@ -673,7 +648,6 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 4
     aget-object v4, v3, v2
 
     aget v4, v4, v1
@@ -703,7 +677,6 @@
 .method private getWaterMarkWidth(Ljava/lang/String;I)I
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->WATERMARK_FONT_SIZES:[[I
 
     aget-object v1, v0, p2
@@ -712,28 +685,24 @@
 
     aget v1, v1, v2
 
-    .line 2
     aget-object v2, v0, p2
 
     const/4 v3, 0x2
 
     aget v2, v2, v3
 
-    .line 3
     aget-object v3, v0, p2
 
     const/4 v4, 0x3
 
     aget v3, v3, v4
 
-    .line 4
     aget-object p2, v0, p2
 
     const/4 v0, 0x4
 
     aget p2, p2, v0
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p1
@@ -799,7 +768,6 @@
 .method private print()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/renders/TextWaterMark;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -892,7 +860,6 @@
 .method public getCenterX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterX:I
 
     return v0
@@ -901,7 +868,6 @@
 .method public getCenterY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mCenterY:I
 
     return v0
@@ -910,7 +876,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterHeight:I
 
     return v0
@@ -919,7 +884,6 @@
 .method public getPaddingX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mPadding:I
 
     return v0
@@ -928,7 +892,6 @@
 .method public getPaddingY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mPadding:I
 
     return v0
@@ -937,7 +900,6 @@
 .method public getTexture()Lcom/android/gallery3d/ui/BasicTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     return-object v0
@@ -946,7 +908,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TextWaterMark;->mWaterWidth:I
 
     return v0

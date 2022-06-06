@@ -37,10 +37,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;
 
     invoke-direct {v0, p1}, Lmiuix/core/util/DirectIndexedFile$DataInputStream;-><init>(Ljava/io/InputStream;)V
@@ -49,7 +47,6 @@
 
     const-string p1, "assets"
 
-    .line 5
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$Reader;->constructFromFile(Ljava/lang/String;)V
 
     return-void
@@ -63,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$Reader;-><init>(Ljava/io/InputStream;)V
 
     return-void
@@ -77,10 +73,8 @@
         }
     .end annotation
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;
 
     new-instance v1, Ljava/io/RandomAccessFile;
@@ -93,7 +87,6 @@
 
     iput-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
-    .line 8
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$Reader;->constructFromFile(Ljava/lang/String;)V
 
     return-void
@@ -107,7 +100,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$Reader;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -121,10 +113,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 2
     :try_start_0
     iget-object p1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -132,7 +122,6 @@
 
     invoke-interface {p1, v0, v1}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 3
     iget-object p1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     invoke-static {p1}, Lmiuix/core/util/DirectIndexedFile$FileHeader;->access$200(Ljava/io/DataInput;)Lmiuix/core/util/DirectIndexedFile$FileHeader;
@@ -141,7 +130,6 @@
 
     iput-object p1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mHeader:Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
-    .line 4
     invoke-static {p1}, Lmiuix/core/util/DirectIndexedFile$FileHeader;->access$300(Lmiuix/core/util/DirectIndexedFile$FileHeader;)[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
     move-result-object p1
@@ -156,7 +144,6 @@
 
     move v0, p1
 
-    .line 5
     :goto_0
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mHeader:Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
@@ -168,7 +155,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 6
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     new-instance v2, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
@@ -179,7 +165,6 @@
 
     aput-object v2, v1, v0
 
-    .line 7
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mHeader:Lmiuix/core/util/DirectIndexedFile$FileHeader;
@@ -196,14 +181,12 @@
 
     invoke-interface {v1, v2, v3}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 8
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     invoke-interface {v1}, Ljava/io/DataInput;->readInt()I
 
     move-result v1
 
-    .line 9
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v2, v2, v0
@@ -217,7 +200,6 @@
     :goto_1
     if-ge v2, v1, :cond_0
 
-    .line 10
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v3, v3, v0
@@ -238,7 +220,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_0
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -256,21 +237,18 @@
 
     invoke-interface {v1, v2, v3}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 12
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     invoke-interface {v1}, Ljava/io/DataInput;->readInt()I
 
     move-result v1
 
-    .line 13
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v2, v2, v0
 
     invoke-static {v2, p1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$902(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;I)I
 
-    .line 14
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v2, v2, v0
@@ -284,7 +262,6 @@
     :goto_2
     if-ge v2, v1, :cond_1
 
-    .line 15
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v3, v3, v0
@@ -301,7 +278,6 @@
 
     aput-object v4, v3, v2
 
-    .line 16
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v3, v3, v0
@@ -332,7 +308,6 @@
 
     goto :goto_2
 
-    .line 17
     :cond_1
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
@@ -347,7 +322,6 @@
     :goto_3
     if-ge v2, v1, :cond_2
 
-    .line 18
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     iget-object v4, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
@@ -366,7 +340,6 @@
 
     invoke-interface {v3, v4, v5}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 19
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v3, v3, v0
@@ -410,17 +383,14 @@
     :catch_0
     move-exception p1
 
-    .line 20
     invoke-virtual {p0}, Lmiuix/core/util/DirectIndexedFile$Reader;->close()V
 
-    .line 21
     throw p1
 .end method
 
 .method private offset(II)J
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v0, v0, p1
@@ -438,10 +408,8 @@
 
     add-int v2, v0, v1
 
-    .line 2
     div-int/lit8 v2, v2, 0x2
 
-    .line 3
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v3, v3, p1
@@ -460,7 +428,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
@@ -482,7 +449,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
@@ -504,7 +470,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 6
     iget-wide v1, v0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mOffset:J
 
     iget v0, v0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mMinIndex:I
@@ -537,7 +502,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v0, v0, p1
@@ -552,7 +516,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
@@ -575,7 +538,6 @@
 
     invoke-interface {v0, v1, v2}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v0, v0, p1
@@ -598,14 +560,12 @@
 
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
-    .line 4
     invoke-static {v1, v2, p3}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->access$1900(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;Lmiuix/core/util/DirectIndexedFile$InputFile;I)Ljava/lang/Object;
 
     move-result-object v1
 
     aput-object v1, v0, p3
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
@@ -629,7 +589,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
     :try_end_0
@@ -637,7 +596,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -650,19 +608,15 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     :try_start_2
     iput-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
-    .line 4
     iput-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mHeader:Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
-    .line 5
     iput-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 6
     monitor-exit p0
 
     return-void
@@ -680,7 +634,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -688,7 +641,6 @@
 
     if-ltz p1, :cond_4
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     array-length v0, v0
@@ -697,7 +649,6 @@
 
     if-ltz p3, :cond_3
 
-    .line 3
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v0, v0, p1
@@ -710,10 +661,8 @@
 
     if-ge p3, v0, :cond_3
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 5
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$Reader;->offset(II)J
 
     move-result-wide v0
@@ -728,7 +677,6 @@
 
     if-gez v2, :cond_0
 
-    .line 6
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object p1, p2, p1
@@ -745,7 +693,6 @@
 
     goto/16 :goto_3
 
-    .line 7
     :cond_0
     :try_start_1
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
@@ -755,7 +702,6 @@
     :goto_0
     if-gt v3, p3, :cond_2
 
-    .line 8
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
@@ -780,12 +726,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 9
     new-instance p2, Ljava/lang/IllegalStateException;
 
     goto :goto_2
 
-    .line 10
     :pswitch_0
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -799,7 +743,6 @@
 
     goto :goto_1
 
-    .line 11
     :pswitch_1
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -813,7 +756,6 @@
 
     goto :goto_1
 
-    .line 12
     :pswitch_2
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -827,7 +769,6 @@
 
     goto :goto_1
 
-    .line 13
     :pswitch_3
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -844,7 +785,6 @@
 
     goto :goto_1
 
-    .line 14
     :pswitch_4
     :try_start_2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
@@ -853,7 +793,6 @@
 
     aget-object v1, v1, p1
 
-    .line 15
     invoke-static {v1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$1000(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;)[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object v1
@@ -864,7 +803,6 @@
 
     move-result v1
 
-    .line 16
     invoke-static {v0, v1}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->access$1800(Ljava/io/DataInput;I)J
 
     move-result-wide v0
@@ -873,7 +811,6 @@
 
     if-ne v3, p3, :cond_1
 
-    .line 17
     invoke-direct {p0, p1, p3, v0}, Lmiuix/core/util/DirectIndexedFile$Reader;->readSingleDataItem(III)Ljava/lang/Object;
 
     move-result-object p2
@@ -890,7 +827,6 @@
     :catch_0
     move-exception p1
 
-    .line 18
     :try_start_3
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -900,7 +836,6 @@
 
     throw p2
 
-    .line 19
     :goto_2
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -914,7 +849,6 @@
 
     aget-object p1, v0, p1
 
-    .line 20
     invoke-static {p1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$1000(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;)[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object p1
@@ -941,7 +875,6 @@
     :cond_2
     move-object p1, p2
 
-    .line 21
     :goto_3
     monitor-exit p0
 
@@ -950,7 +883,6 @@
     :catch_1
     move-exception p1
 
-    .line 22
     :try_start_4
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -960,7 +892,6 @@
 
     throw p2
 
-    .line 23
     :cond_3
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -982,7 +913,6 @@
 
     aget-object p1, p3, p1
 
-    .line 24
     invoke-static {p1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$1000(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;)[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object p1
@@ -1003,7 +933,6 @@
 
     throw p2
 
-    .line 25
     :cond_4
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -1039,7 +968,6 @@
 
     throw p2
 
-    .line 26
     :cond_5
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1077,7 +1005,6 @@
 
     monitor-enter p0
 
-    .line 27
     :try_start_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -1085,22 +1012,18 @@
 
     if-ltz p1, :cond_3
 
-    .line 28
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     array-length v0, v0
 
     if-ge p1, v0, :cond_3
 
-    .line 29
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 30
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$Reader;->offset(II)J
 
     move-result-wide v0
 
-    .line 31
     iget-object p2, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object p2, p2, p1
@@ -1126,7 +1049,6 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 32
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
 
     aget-object v1, v1, p1
@@ -1147,13 +1069,11 @@
 
     goto :goto_0
 
-    .line 33
     :cond_0
     monitor-exit p0
 
     return-object v2
 
-    .line 34
     :cond_1
     :try_start_1
     iget-object v3, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
@@ -1163,7 +1083,6 @@
     :goto_1
     if-ge v4, p2, :cond_2
 
-    .line 35
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mIndexData:[Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;
@@ -1188,12 +1107,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 36
     new-instance p2, Ljava/lang/IllegalStateException;
 
     goto :goto_3
 
-    .line 37
     :pswitch_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -1209,7 +1126,6 @@
 
     goto :goto_2
 
-    .line 38
     :pswitch_1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -1225,7 +1141,6 @@
 
     goto :goto_2
 
-    .line 39
     :pswitch_2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -1241,7 +1156,6 @@
 
     goto :goto_2
 
-    .line 40
     :pswitch_3
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
@@ -1260,7 +1174,6 @@
 
     goto :goto_2
 
-    .line 41
     :pswitch_4
     :try_start_2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
@@ -1269,7 +1182,6 @@
 
     aget-object v1, v1, p1
 
-    .line 42
     invoke-static {v1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$1000(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;)[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object v1
@@ -1280,28 +1192,24 @@
 
     move-result v1
 
-    .line 43
     invoke-static {v0, v1}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->access$1800(Ljava/io/DataInput;I)J
 
     move-result-wide v0
 
     long-to-int v0, v0
 
-    .line 44
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     invoke-interface {v1}, Lmiuix/core/util/DirectIndexedFile$InputFile;->getFilePointer()J
 
     move-result-wide v5
 
-    .line 45
     invoke-direct {p0, p1, v4, v0}, Lmiuix/core/util/DirectIndexedFile$Reader;->readSingleDataItem(III)Ljava/lang/Object;
 
     move-result-object v0
 
     aput-object v0, v2, v4
 
-    .line 46
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mFile:Lmiuix/core/util/DirectIndexedFile$InputFile;
 
     invoke-interface {v0, v5, v6}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
@@ -1317,7 +1225,6 @@
     :catch_0
     move-exception p1
 
-    .line 47
     :try_start_3
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -1327,7 +1234,6 @@
 
     throw p2
 
-    .line 48
     :goto_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1341,7 +1247,6 @@
 
     aget-object p1, v1, p1
 
-    .line 49
     invoke-static {p1}, Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;->access$1000(Lmiuix/core/util/DirectIndexedFile$Reader$IndexData;)[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object p1
@@ -1365,7 +1270,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 50
     :cond_2
     monitor-exit p0
 
@@ -1374,7 +1278,6 @@
     :catch_1
     move-exception p1
 
-    .line 51
     :try_start_4
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -1384,7 +1287,6 @@
 
     throw p2
 
-    .line 52
     :cond_3
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -1406,7 +1308,6 @@
 
     throw p2
 
-    .line 53
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1442,7 +1343,6 @@
 .method public getDataVersion()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$Reader;->mHeader:Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
     if-nez v0, :cond_0
@@ -1451,7 +1351,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-static {v0}, Lmiuix/core/util/DirectIndexedFile$FileHeader;->access$1600(Lmiuix/core/util/DirectIndexedFile$FileHeader;)I
 

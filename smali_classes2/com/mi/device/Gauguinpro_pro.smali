@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Gauguin;-><init>()V
 
     return-void
@@ -15,7 +14,7 @@
 
 
 # virtual methods
-.method public OooOOo0()Ljava/lang/String;
+.method public OooOOO()Ljava/lang/String;
     .locals 1
 
     const-string v0, "notelemfnr:1;telesr:1"
@@ -23,23 +22,7 @@
     return-object v0
 .end method
 
-.method public o000000O()F
-    .locals 1
-
-    const v0, 0x3f70c341
-
-    return v0
-.end method
-
-.method public o000000o()I
-    .locals 1
-
-    const/16 v0, 0x13a
-
-    return v0
-.end method
-
-.method public o0000O00()Ljava/lang/String;
+.method public o00000O()Ljava/lang/String;
     .locals 1
 
     const-string v0, "3:12000x9000"
@@ -47,7 +30,15 @@
     return-object v0
 .end method
 
-.method public o0O00()I
+.method public o00o0ooo()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o0O00000()I
     .locals 1
 
     const/4 v0, 0x3
@@ -55,10 +46,18 @@
     return v0
 .end method
 
-.method public o0oOOo()Z
+.method public o0OOO0o()F
     .locals 1
 
-    const/4 v0, 0x1
+    const v0, 0x3f70c341
+
+    return v0
+.end method
+
+.method public o0Oo0oo()I
+    .locals 1
+
+    const/16 v0, 0x13a
 
     return v0
 .end method

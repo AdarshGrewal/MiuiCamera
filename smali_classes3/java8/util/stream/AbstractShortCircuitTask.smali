@@ -45,10 +45,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/AbstractTask;Ljava8/util/Spliterator;)V
 
-    .line 4
     iget-object p1, p1, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
 
     iput-object p1, p0, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
@@ -68,10 +66,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 p2, 0x0
@@ -90,7 +86,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Ljava8/util/stream/AbstractShortCircuitTask;->canceled:Z
 
     return-void
@@ -99,7 +94,6 @@
 .method public cancelLaterNodes()V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
     move-result-object v0
@@ -111,25 +105,20 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v2, v0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     if-ne v2, v1, :cond_0
 
-    .line 3
     iget-object v1, v0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v1, Ljava8/util/stream/AbstractShortCircuitTask;
 
-    .line 4
     iget-boolean v2, v1, Ljava8/util/stream/AbstractShortCircuitTask;->canceled:Z
 
     if-nez v2, :cond_0
 
-    .line 5
     invoke-virtual {v1}, Ljava8/util/stream/AbstractShortCircuitTask;->cancel()V
 
-    .line 6
     :cond_0
     invoke-virtual {v0}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
@@ -152,27 +141,22 @@
 .method public compute()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 2
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v1
 
-    .line 3
     invoke-virtual {p0, v1, v2}, Ljava8/util/stream/AbstractTask;->getTargetSize(J)J
 
     move-result-wide v3
 
-    .line 4
     iget-object v5, p0, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v6, 0x0
 
     move-object v7, p0
 
-    .line 5
     :goto_0
     invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
@@ -180,14 +164,12 @@
 
     if-nez v8, :cond_4
 
-    .line 6
     invoke-virtual {v7}, Ljava8/util/stream/AbstractShortCircuitTask;->taskCanceled()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 7
     invoke-virtual {v7}, Ljava8/util/stream/AbstractShortCircuitTask;->getEmptyResult()Ljava/lang/Object;
 
     move-result-object v8
@@ -199,7 +181,6 @@
 
     if-lez v1, :cond_3
 
-    .line 8
     invoke-interface {v0}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v1
@@ -208,7 +189,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_1
     invoke-virtual {v7, v1}, Ljava8/util/stream/AbstractTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
 
@@ -218,7 +198,6 @@
 
     iput-object v2, v7, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
-    .line 10
     invoke-virtual {v7, v0}, Ljava8/util/stream/AbstractTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
 
     move-result-object v8
@@ -229,7 +208,6 @@
 
     const/4 v9, 0x1
 
-    .line 11
     invoke-virtual {v7, v9}, Ljava8/util/concurrent/CountedCompleter;->setPendingCount(I)V
 
     if-eqz v6, :cond_2
@@ -248,29 +226,24 @@
     :goto_1
     xor-int/lit8 v6, v6, 0x1
 
-    .line 12
     invoke-virtual {v2}, Ljava8/util/concurrent/ForkJoinTask;->fork()Ljava8/util/concurrent/ForkJoinTask;
 
-    .line 13
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v1
 
     goto :goto_0
 
-    .line 14
     :cond_3
     :goto_2
     invoke-virtual {v7}, Ljava8/util/stream/AbstractTask;->doLeaf()Ljava/lang/Object;
 
     move-result-object v8
 
-    .line 15
     :cond_4
     :goto_3
     invoke-virtual {v7, v8}, Ljava8/util/stream/AbstractShortCircuitTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 16
     invoke-virtual {v7}, Ljava8/util/concurrent/CountedCompleter;->tryComplete()V
 
     return-void
@@ -292,14 +265,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isRoot()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -308,7 +279,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/AbstractShortCircuitTask;->getEmptyResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -316,7 +286,6 @@
     :cond_0
     return-object v0
 
-    .line 4
     :cond_1
     invoke-super {p0}, Ljava8/util/stream/AbstractTask;->getLocalResult()Ljava/lang/Object;
 
@@ -333,7 +302,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractShortCircuitTask;->getLocalResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -349,7 +317,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isRoot()Z
 
     move-result v0
@@ -358,7 +325,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -367,7 +333,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Ljava8/util/stream/AbstractTask;->setLocalResult(Ljava/lang/Object;)V
 
@@ -386,7 +351,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractShortCircuitTask;->sharedResult:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -400,12 +364,10 @@
 .method public taskCanceled()Z
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/AbstractShortCircuitTask;->canceled:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
     move-result-object v1
@@ -417,10 +379,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-boolean v0, v1, Ljava8/util/stream/AbstractShortCircuitTask;->canceled:Z
 
-    .line 4
     invoke-virtual {v1}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
     move-result-object v1

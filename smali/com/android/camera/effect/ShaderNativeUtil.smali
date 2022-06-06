@@ -14,7 +14,6 @@
     :try_start_0
     const-string v0, "CameraEffectJNI"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -28,7 +27,6 @@
 
     const-string v2, "ShaderNativeUtil load CameraEffectJNI.so failed."
 
-    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -38,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +47,6 @@
 .method public static compressPicture(III)[B
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/android/camera/effect/ShaderNativeUtil;->compressJpeg(III)[B
 
     move-result-object p0
@@ -64,7 +60,6 @@
 .method public static decompressPicture([BI)[I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/effect/ShaderNativeUtil;->decompressJpeg([BI)[I
 
     move-result-object p0
@@ -92,7 +87,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0, v0, p0, p1, p2}, Lcom/android/camera/effect/ShaderNativeUtil;->getJpegPicture(IIIII)[B
 
     move-result-object p0
@@ -103,7 +97,6 @@
 .method public static getPicture(IIIII)[B
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2, p3, p4}, Lcom/android/camera/effect/ShaderNativeUtil;->getJpegPicture(IIIII)[B
 
     move-result-object p0
@@ -122,7 +115,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, p1, v0}, Lcom/android/camera/effect/ShaderNativeUtil;->initJpegTexture([BII)[I
 
     move-result-object p0
@@ -133,7 +125,6 @@
 .method public static initTexture([BII)[I
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lcom/android/camera/effect/ShaderNativeUtil;->initJpegTexture([BII)[I
 
     move-result-object p0

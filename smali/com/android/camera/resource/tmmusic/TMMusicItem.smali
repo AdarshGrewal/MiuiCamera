@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseResourceItem;-><init>()V
 
     return-void
@@ -58,7 +57,6 @@
 .method public getDuration()J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/resource/tmmusic/TMMusicItem;->auditionEnd:J
 
     iget-wide v2, p0, Lcom/android/camera/resource/tmmusic/TMMusicItem;->auditionBegin:J
@@ -99,7 +97,6 @@
 
     const-string p2, "itemID"
 
-    .line 1
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -108,14 +105,12 @@
 
     const-string p2, "datainfo"
 
-    .line 2
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p2
 
-    const-string v0, "name"
+    const-string/jumbo v0, "name"
 
-    .line 3
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -124,7 +119,6 @@
 
     const-string/jumbo v0, "version"
 
-    .line 4
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -133,7 +127,6 @@
 
     const-string v0, "duration"
 
-    .line 5
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -142,7 +135,6 @@
 
     const-string v0, "auditionBegin"
 
-    .line 6
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -151,7 +143,6 @@
 
     const-string v0, "auditionEnd"
 
-    .line 7
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -160,14 +151,12 @@
 
     const-string p2, "album"
 
-    .line 8
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p2
 
     const-string v0, "albumName"
 
-    .line 9
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -176,14 +165,12 @@
 
     const-string v0, "imagePathMap"
 
-    .line 10
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p2
 
     const/4 v0, 0x1
 
-    .line 11
     invoke-virtual {p2, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object p2
@@ -198,14 +185,12 @@
 
     const-string p2, "artists"
 
-    .line 12
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 13
     invoke-virtual {p1, p2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object p1

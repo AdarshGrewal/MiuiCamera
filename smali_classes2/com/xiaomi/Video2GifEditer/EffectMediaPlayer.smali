@@ -31,10 +31,8 @@
 .method public constructor <init>(Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
     return-void
@@ -102,12 +100,10 @@
 .method public ConstructMediaPlayer(Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "effect graph is null, failed!"
@@ -118,7 +114,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->GetGraphLine()J
 
@@ -130,7 +125,6 @@
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->ConstructMediaPlayerJni(JI)Z
 
-    .line 4
     sget-object p1, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "construct EffectPlayer"
@@ -145,14 +139,12 @@
 .method public DestructMediaPlayer()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "desctruct EffectPlayer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->DestructMediaPlayerJni()V
 
     return-void
@@ -161,7 +153,6 @@
 .method public GetCurrentPlayingPosition()J
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->GetCurrentPlayingPositionJni()J
 
     move-result-wide v0
@@ -172,14 +163,12 @@
 .method public GetPreViewStatus()Lcom/xiaomi/Video2GifEditer/PreViewStatus;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "GetPreViewStatus "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->GetPreViewStatusJni()I
 
     move-result v0
@@ -194,7 +183,6 @@
 .method public GetStreamDuration(Z)J
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->GetStreamDurationJni(Z)J
 
     move-result-wide v0
@@ -205,14 +193,12 @@
 .method public PausePreView()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "pause preview "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->PausePreViewJni()V
 
     return-void
@@ -221,14 +207,12 @@
 .method public Reset()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "Reset: "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->ResetJni()V
 
     return-void
@@ -237,12 +221,10 @@
 .method public ResumePreView()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->ResumePreViewJni()Z
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -267,7 +249,6 @@
 .method public SeekTo(JLcom/xiaomi/Video2GifPlayer/enums/PlayerSeekingMode;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p3
@@ -282,7 +263,6 @@
 .method public SetAudioMute(Z)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -301,7 +281,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->SetAudioMuteJni(Z)V
 
     return-void
@@ -310,7 +289,6 @@
 .method public SetGraphLoop(Z)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->SetGraphLoopJni(Z)V
 
     return-void
@@ -319,10 +297,8 @@
 .method public SetMediaEffectGraph(Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
-    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->GetGraphLine()J
 
     move-result-wide v0
@@ -335,7 +311,6 @@
 .method public SetPlayLoop(Z)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->SetPlayLoopJni(Z)V
 
     return-void
@@ -344,7 +319,6 @@
 .method public SetPlayerNotify(Lcom/xiaomi/Video2GifEditer/EffectNotifier;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -363,7 +337,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->SetPlayerNotifyJni(Lcom/xiaomi/Video2GifEditer/EffectNotifier;)V
 
     return-void
@@ -372,14 +345,12 @@
 .method public SetViewSurface(Landroid/view/Surface;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "set view surface "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->SetViewSurfaceJni(Landroid/view/Surface;)V
 
     return-void
@@ -388,14 +359,12 @@
 .method public StartPreView()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "start preview "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->StartPreViewJni()V
 
     return-void
@@ -404,7 +373,6 @@
 .method public StartPreView(J)V
     .locals 3
 
-    .line 3
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -423,7 +391,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->StartPreViewSourceidJni(J)V
 
     return-void
@@ -432,14 +399,12 @@
 .method public StopPreView()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "stop preview "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer;->StopPreViewJni()V
 
     return-void
@@ -448,7 +413,6 @@
 .method public setGravity(Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer$SurfaceGravity;II)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/Video2GifEditer/EffectMediaPlayer$SurfaceGravity;->toInt()I
 
     move-result p1

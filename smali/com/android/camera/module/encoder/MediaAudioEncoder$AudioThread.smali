@@ -24,12 +24,10 @@
 .method public constructor <init>(Lcom/android/camera/module/encoder/MediaAudioEncoder;Landroid/media/AudioRecord;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
     return-void
@@ -42,10 +40,8 @@
 
     const/16 v0, -0x13
 
-    .line 1
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
@@ -53,7 +49,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/encoder/MediaAudioEncoder;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -64,7 +59,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 4
     :cond_0
     :goto_0
     :try_start_1
@@ -76,7 +70,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5
     :try_start_2
     iget-object v1, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
@@ -84,12 +77,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 6
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 7
     :try_start_3
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
@@ -99,7 +90,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     :try_start_4
     monitor-exit v0
@@ -111,7 +101,6 @@
     :try_start_5
     new-array v1, v0, [S
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
     const/4 v3, 0x0
@@ -122,7 +111,6 @@
 
     if-lez v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
     invoke-static {v0}, Lcom/android/camera/module/encoder/MediaAudioEncoder;->access$100(Lcom/android/camera/module/encoder/MediaAudioEncoder;)Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioEffectThread;
@@ -138,7 +126,6 @@
     :catchall_0
     move-exception v1
 
-    .line 11
     :try_start_6
     monitor-exit v0
     :try_end_6
@@ -152,7 +139,6 @@
     :catchall_1
     move-exception v0
 
-    .line 12
     :try_start_8
     iget-object v1, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
@@ -162,7 +148,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 13
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
@@ -173,12 +158,10 @@
 
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioEffectThread;->requestStop()V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v0}, Landroid/media/AudioRecord;->release()V
 
-    .line 15
     invoke-static {}, Lcom/android/camera/module/encoder/MediaAudioEncoder;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -192,7 +175,6 @@
     :catchall_2
     move-exception v0
 
-    .line 16
     iget-object v1, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->this$0:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
     invoke-static {v1}, Lcom/android/camera/module/encoder/MediaAudioEncoder;->access$100(Lcom/android/camera/module/encoder/MediaAudioEncoder;)Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioEffectThread;
@@ -201,7 +183,6 @@
 
     invoke-virtual {v1}, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioEffectThread;->requestStop()V
 
-    .line 17
     iget-object v1, p0, Lcom/android/camera/module/encoder/MediaAudioEncoder$AudioThread;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v1}, Landroid/media/AudioRecord;->release()V

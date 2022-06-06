@@ -105,7 +105,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;",
+            "Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;",
             ">;"
         }
     .end annotation
@@ -132,7 +132,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/effect/EffectController;->EFFECT_ALL_CHANGE_TYPES:[I
@@ -156,50 +155,38 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mOverrideEffectIndex:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mOverrideAiEffectIndex:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBlur:Z
 
     const/4 v1, 0x1
 
-    .line 6
     iput-boolean v1, p0, Lcom/android/camera/effect/EffectController;->mIsDrawMainFrame:Z
 
-    .line 7
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     iput v1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
-    .line 8
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBeautyEnable:Z
 
-    .line 9
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mNeedDestroyMakeup:Z
 
-    .line 10
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBeautyFrameReady:Z
 
     const-string v0, "0"
 
-    .line 11
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
-    .line 12
     new-instance v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     const/4 v1, 0x0
@@ -208,21 +195,18 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
-    .line 13
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
-    .line 14
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mLock:Ljava/lang/Object;
 
-    .line 15
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initialize()V
 
     return-void
@@ -255,42 +239,35 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->UNKNOWN:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->MI_LIVE:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 3
     :cond_1
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->LIGHTING:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 4
     :cond_2
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->AI:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 5
     :cond_3
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->STICKER:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 6
     :cond_4
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->BEAUTY:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     return-object p1
 
-    .line 7
     :cond_5
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->NORMAL:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
@@ -300,7 +277,6 @@
 .method public static createAiSceneEffectId(Lcom/miui/filtersdk/filter/helper/FilterType;)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
@@ -321,14 +297,12 @@
 
     const/4 p3, 0x5
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, p4, p5}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -346,14 +320,12 @@
 
     const/4 p3, 0x2
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, v0, p4}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -377,20 +349,17 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/effect/EffectController;->sInstance:Lcom/android/camera/effect/EffectController;
 
     if-nez v1, :cond_0
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/EffectController;
 
     invoke-direct {v1}, Lcom/android/camera/effect/EffectController;-><init>()V
 
     sput-object v1, Lcom/android/camera/effect/EffectController;->sInstance:Lcom/android/camera/effect/EffectController;
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera/effect/EffectController;->sInstance:Lcom/android/camera/effect/EffectController;
     :try_end_0
@@ -415,14 +384,12 @@
 
     const/4 p3, 0x6
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, p4, p5}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -434,17 +401,14 @@
 .method private getMakeupRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;)Lcom/android/camera/effect/renders/RenderGroup;
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/miui/filtersdk/filter/NewBeautificationFilter;
 
     invoke-direct {v0}, Lcom/miui/filtersdk/filter/NewBeautificationFilter;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/ArcsoftBeautyProcessor;
 
     invoke-direct {v1}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;-><init>()V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v2
@@ -461,33 +425,34 @@
     :goto_0
     invoke-virtual {v1, v2}, Lcom/miui/filtersdk/beauty/BeautyProcessor;->setRotation(I)V
 
-    .line 4
+    invoke-static {}, Lcom/android/camera/fragment/beauty/BeautyParameters;->getInstance()Lcom/android/camera/fragment/beauty/BeautyParameters;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lcom/android/camera/fragment/beauty/BeautyParameters;->setMakeupProcessor(Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;)V
+
     invoke-virtual {v0, v1}, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->setBeautyProcessor(Lcom/miui/filtersdk/beauty/BeautyProcessor;)V
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/filtersdk/filter/NewBeautificationFilter;->initBeautyProcessor(II)V
 
-    .line 6
     new-instance v1, Lcom/android/camera/effect/renders/BeautificationWrapperRender;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->RENDER_ID_MAKEUP:I
 
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v3
 
     invoke-direct {v1, p1, v2, v0, v3}, Lcom/android/camera/effect/renders/BeautificationWrapperRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/miui/filtersdk/filter/base/GPUImageFilter;Z)V
 
-    .line 8
     invoke-virtual {p2, v1}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     return-object p2
@@ -502,14 +467,12 @@
 
     const/16 p3, 0x8
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, v0, p4}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -525,14 +488,12 @@
 
     const/4 p3, 0x1
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, p4, p5}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -550,7 +511,6 @@
 
     move/from16 v8, p5
 
-    .line 1
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_BLUR:I
 
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
@@ -576,7 +536,6 @@
     :cond_0
     if-nez p3, :cond_3
 
-    .line 2
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_BLUR:I
 
     if-eq v8, v0, :cond_3
@@ -589,7 +548,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -597,7 +555,6 @@
 
     if-nez v0, :cond_2
 
-    .line 4
     new-instance v0, Lcom/android/camera/effect/renders/XBlurEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/XBlurEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -606,7 +563,6 @@
 
     goto/16 :goto_5
 
-    .line 5
     :cond_2
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -614,7 +570,6 @@
 
     if-nez v0, :cond_9
 
-    .line 6
     new-instance v0, Lcom/android/camera/effect/renders/YBlurEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/YBlurEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -623,7 +578,6 @@
 
     goto :goto_5
 
-    .line 7
     :cond_3
     :goto_0
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
@@ -632,7 +586,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 8
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -648,7 +601,6 @@
     :cond_4
     move v12, v10
 
-    .line 9
     :goto_1
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -656,7 +608,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 10
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -672,7 +623,6 @@
     :cond_5
     move v13, v10
 
-    .line 11
     :goto_2
     new-instance v14, Lcom/android/camera/effect/renders/PipeRenderPair;
 
@@ -680,7 +630,6 @@
 
     if-eqz v12, :cond_6
 
-    .line 12
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -697,7 +646,6 @@
 
     if-eqz v13, :cond_7
 
-    .line 13
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -720,14 +668,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/effect/renders/PipeRenderPair;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/android/camera/effect/renders/Render;Lcom/android/camera/effect/renders/Render;Z)V
 
-    .line 14
     invoke-virtual {v7, v14}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     if-nez v12, :cond_8
 
     if-eqz v13, :cond_9
 
-    .line 15
     :cond_8
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/effect/renders/RenderGroup;->clearPartRenders()V
 
@@ -740,7 +686,6 @@
     :cond_a
     move v0, v10
 
-    .line 16
     :goto_6
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GRADIENTER:I
 
@@ -763,7 +708,6 @@
     :cond_b
     if-eqz p4, :cond_c
 
-    .line 17
     new-instance v0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;
 
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GRADIENTER:I
@@ -784,7 +728,6 @@
 
     move v0, v11
 
-    .line 18
     :cond_d
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_CINEMATIC:I
 
@@ -804,7 +747,6 @@
 
     if-nez v0, :cond_f
 
-    .line 19
     :cond_e
     new-instance v0, Lcom/android/camera/effect/renders/CinematicRender;
 
@@ -816,7 +758,6 @@
 
     move v0, v11
 
-    .line 20
     :cond_f
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_TILTSHIFT:I
 
@@ -828,8 +769,7 @@
 
     if-nez v1, :cond_19
 
-    .line 21
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000o0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000Oo()Z
 
     move-result v1
 
@@ -848,7 +788,6 @@
     :cond_10
     if-nez p3, :cond_14
 
-    .line 22
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_TILTSHIFT:I
 
     if-eq v8, v0, :cond_14
@@ -861,7 +800,6 @@
 
     goto :goto_8
 
-    .line 23
     :cond_11
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -869,7 +807,6 @@
 
     if-nez v0, :cond_12
 
-    .line 24
     new-instance v0, Lcom/android/camera/effect/renders/XTiltShiftEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/XTiltShiftEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -878,7 +815,6 @@
 
     goto :goto_c
 
-    .line 25
     :cond_12
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -886,7 +822,6 @@
 
     if-nez v0, :cond_13
 
-    .line 26
     new-instance v0, Lcom/android/camera/effect/renders/YTiltShiftEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/YTiltShiftEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -895,7 +830,6 @@
 
     goto :goto_c
 
-    .line 27
     :cond_13
     invoke-virtual {v7, v9}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -903,7 +837,6 @@
 
     if-nez v0, :cond_18
 
-    .line 28
     new-instance v0, Lcom/android/camera/effect/renders/TiltShiftMaskEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/TiltShiftMaskEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -912,7 +845,6 @@
 
     goto :goto_c
 
-    .line 29
     :cond_14
     :goto_8
     new-instance v13, Lcom/android/camera/effect/renders/PipeRenderPair;
@@ -921,7 +853,6 @@
 
     new-instance v3, Lcom/android/camera/effect/renders/PipeRenderPair;
 
-    .line 30
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -939,7 +870,6 @@
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/XTiltShiftEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 31
     :goto_9
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -961,7 +891,6 @@
     :goto_a
     invoke-direct {v3, v6, v0, v1, v10}, Lcom/android/camera/effect/renders/PipeRenderPair;-><init>(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/Render;Lcom/android/camera/effect/renders/Render;Z)V
 
-    .line 32
     invoke-virtual {v7, v9}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -990,25 +919,21 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/effect/renders/PipeRenderPair;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/android/camera/effect/renders/Render;Lcom/android/camera/effect/renders/Render;Z)V
 
-    .line 33
     invoke-virtual {v7, v13}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
-    .line 34
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/effect/renders/RenderGroup;->clearPartRenders()V
 
     :cond_18
     :goto_c
     move v0, v11
 
-    .line 35
     :cond_19
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooOO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooooO0()Z
 
     move-result v1
 
     if-nez v1, :cond_22
 
-    .line 36
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GAUSSIAN:I
 
     invoke-virtual {v7, v1}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
@@ -1030,7 +955,6 @@
     :cond_1a
     if-nez p3, :cond_1e
 
-    .line 37
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GAUSSIAN:I
 
     if-eq v8, v0, :cond_1e
@@ -1043,7 +967,6 @@
 
     goto :goto_d
 
-    .line 38
     :cond_1b
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -1051,7 +974,6 @@
 
     if-nez v0, :cond_1c
 
-    .line 39
     new-instance v0, Lcom/android/camera/effect/renders/XGaussianEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/XGaussianEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -1060,7 +982,6 @@
 
     goto/16 :goto_11
 
-    .line 40
     :cond_1c
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -1068,7 +989,6 @@
 
     if-nez v0, :cond_1d
 
-    .line 41
     new-instance v0, Lcom/android/camera/effect/renders/YGaussianEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/YGaussianEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -1077,7 +997,6 @@
 
     goto :goto_11
 
-    .line 42
     :cond_1d
     invoke-virtual {v7, v9}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -1085,7 +1004,6 @@
 
     if-nez v0, :cond_23
 
-    .line 43
     new-instance v0, Lcom/android/camera/effect/renders/GaussianMaskEffectRender;
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/GaussianMaskEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
@@ -1094,7 +1012,6 @@
 
     goto :goto_11
 
-    .line 44
     :cond_1e
     :goto_d
     new-instance v12, Lcom/android/camera/effect/renders/PipeRenderPair;
@@ -1103,7 +1020,6 @@
 
     new-instance v3, Lcom/android/camera/effect/renders/PipeRenderPair;
 
-    .line 45
     invoke-virtual {v7, v10}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -1121,7 +1037,6 @@
 
     invoke-direct {v0, v6}, Lcom/android/camera/effect/renders/XGaussianEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 46
     :goto_e
     invoke-virtual {v7, v11}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
@@ -1143,7 +1058,6 @@
     :goto_f
     invoke-direct {v3, v6, v0, v1, v10}, Lcom/android/camera/effect/renders/PipeRenderPair;-><init>(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/Render;Lcom/android/camera/effect/renders/Render;Z)V
 
-    .line 47
     invoke-virtual {v7, v9}, Lcom/android/camera/effect/renders/RenderGroup;->getPartRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
@@ -1172,10 +1086,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/effect/renders/PipeRenderPair;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/android/camera/effect/renders/Render;Lcom/android/camera/effect/renders/Render;Z)V
 
-    .line 48
     invoke-virtual {v7, v12}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
-    .line 49
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/effect/renders/RenderGroup;->clearPartRenders()V
 
     goto :goto_11
@@ -1183,7 +1095,6 @@
     :cond_22
     move v11, v0
 
-    .line 50
     :cond_23
     :goto_11
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_PEAKINGMF:I
@@ -1194,8 +1105,7 @@
 
     if-nez v0, :cond_25
 
-    .line 51
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o000000o()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000000O()Z
 
     move-result v0
 
@@ -1213,7 +1123,6 @@
 
     if-nez v11, :cond_25
 
-    .line 52
     :cond_24
     new-instance v0, Lcom/android/camera/effect/renders/FocusPeakingRender;
 
@@ -1223,7 +1132,6 @@
 
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
-    .line 53
     :cond_25
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_KALEIDOSCOPE:I
 
@@ -1239,7 +1147,6 @@
 
     if-ne v8, v0, :cond_27
 
-    .line 54
     :cond_26
     new-instance v0, Lcom/android/camera/effect/renders/KaleidoscopeRender;
 
@@ -1253,7 +1160,6 @@
 
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
-    .line 55
     :cond_27
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_ZEBRA:I
 
@@ -1275,7 +1181,6 @@
 
     if-nez v11, :cond_29
 
-    .line 56
     :cond_28
     new-instance v0, Lcom/android/camera/effect/renders/ZebraRender;
 
@@ -1288,7 +1193,6 @@
     :cond_29
     if-nez p3, :cond_2a
 
-    .line 57
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_YUV2RGB:I
 
     if-eq v8, v0, :cond_2a
@@ -1300,25 +1204,21 @@
     :cond_2a
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_YUV2RGB:I
 
-    .line 58
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_2b
 
-    .line 59
     new-instance v0, Lcom/android/camera/effect/renders/YuvToRgbRender;
 
     invoke-direct {v0, v6, v8}, Lcom/android/camera/effect/renders/YuvToRgbRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 60
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_2b
     if-nez p3, :cond_2c
 
-    .line 61
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_YUV4442RGB:I
 
     if-eq v8, v0, :cond_2c
@@ -1330,25 +1230,21 @@
     :cond_2c
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_YUV4442RGB:I
 
-    .line 62
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_2d
 
-    .line 63
     new-instance v0, Lcom/android/camera/effect/renders/Yuv444ToRgbRender;
 
     invoke-direct {v0, v6, v8}, Lcom/android/camera/effect/renders/Yuv444ToRgbRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 64
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_2d
     if-nez p3, :cond_2e
 
-    .line 65
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_MIMOJI:I
 
     if-eq v8, v0, :cond_2e
@@ -1360,25 +1256,21 @@
     :cond_2e
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_MIMOJI:I
 
-    .line 66
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_2f
 
-    .line 67
     new-instance v0, Lcom/android/camera/features/mimojis/commen/widget/MimojiRender;
 
     invoke-direct {v0, v6, v8}, Lcom/android/camera/features/mimojis/commen/widget/MimojiRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 68
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_2f
     if-nez p3, :cond_30
 
-    .line 69
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_TRANSFORM:I
 
     if-eq v8, v0, :cond_30
@@ -1390,25 +1282,21 @@
     :cond_30
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_TRANSFORM:I
 
-    .line 70
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_31
 
-    .line 71
     new-instance v0, Lcom/android/camera/effect/renders/TransformRender;
 
     invoke-direct {v0, v6, v8}, Lcom/android/camera/effect/renders/TransformRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 72
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_31
     if-nez p3, :cond_32
 
-    .line 73
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_RGB2YUV:I
 
     if-eq v8, v0, :cond_32
@@ -1420,19 +1308,16 @@
     :cond_32
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_RGB2YUV:I
 
-    .line 74
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_33
 
-    .line 75
     new-instance v0, Lcom/android/camera/effect/renders/RgbToYuvRender;
 
     invoke-direct {v0, v6, v8}, Lcom/android/camera/effect/renders/RgbToYuvRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 76
     invoke-virtual {v7, v0}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_33
@@ -1442,19 +1327,16 @@
 .method private getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
     .locals 2
 
-    .line 1
     invoke-direct {p0, p3}, Lcom/android/camera/effect/EffectController;->convertToFilterCategory(I)Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->UNKNOWN:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     if-ne v0, v1, :cond_0
 
     return-object p2
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p3}, Lcom/android/camera/effect/EffectController;->getFilterInfo(I)Ljava/util/ArrayList;
 
@@ -1462,7 +1344,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 4
     invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -1480,12 +1361,10 @@
 
     check-cast v0, Lcom/android/camera/effect/FilterInfo;
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getId()I
 
     move-result v0
 
-    .line 6
     invoke-direct {p0, p1, p2, p4, v0}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
@@ -1501,7 +1380,6 @@
 
     return-object p2
 
-    .line 1
     :cond_0
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
@@ -1509,7 +1387,6 @@
 
     if-ne p4, v0, :cond_2
 
-    .line 2
     invoke-virtual {p2, v0}, Lcom/android/camera/effect/renders/RenderGroup;->isNeedInit(I)Z
 
     move-result v0
@@ -1518,7 +1395,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 3
     new-instance v1, Lcom/android/camera/effect/renders/NoneEffectRender;
 
     sget p3, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
@@ -1530,13 +1406,11 @@
 
     return-object p2
 
-    .line 4
     :cond_2
     sget v0, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
 
     if-ne p4, v0, :cond_4
 
-    .line 5
     invoke-virtual {p2, v0}, Lcom/android/camera/effect/renders/RenderGroup;->isNeedInit(I)Z
 
     move-result v0
@@ -1545,7 +1419,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 6
     new-instance v1, Lcom/android/camera/effect/renders/NoneEffectRender;
 
     sget p3, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
@@ -1557,7 +1430,6 @@
 
     return-object p2
 
-    .line 7
     :cond_4
     sget-object v0, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
@@ -1577,19 +1449,16 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-virtual {p2, p4}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
     if-nez v0, :cond_a
 
-    .line 9
     invoke-static {p4}, Lcom/android/camera/effect/FilterInfo;->getIndex(I)I
 
     move-result v0
 
-    .line 10
     sget-object v2, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1612,7 +1481,6 @@
 
     if-le v0, v2, :cond_a
 
-    .line 11
     invoke-static {}, Lcom/miui/filtersdk/filter/helper/FilterType;->values()[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v2
@@ -1621,14 +1489,12 @@
 
     if-ge v0, v2, :cond_a
 
-    .line 12
     invoke-static {}, Lcom/miui/filtersdk/filter/helper/FilterType;->values()[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v2
 
     aget-object v2, v2, v0
 
-    .line 13
     invoke-virtual {v2}, Lcom/miui/filtersdk/filter/helper/FilterType;->getFilterCategory()Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     move-result-object v3
@@ -1643,14 +1509,12 @@
 
     if-lt v3, v4, :cond_7
 
-    .line 14
     invoke-virtual {v2, v3}, Lcom/miui/filtersdk/filter/helper/FilterType;->isAiCCLookupTableSupported(I)Z
 
     move-result v3
 
     if-nez v3, :cond_7
 
-    .line 15
     sget-object v0, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1673,10 +1537,8 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     invoke-virtual {p2, p4}, Lcom/android/camera/effect/renders/RenderGroup;->removeRender(I)V
 
-    .line 17
     sget p4, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
 
     invoke-virtual {p2, p4}, Lcom/android/camera/effect/renders/RenderGroup;->isNeedInit(I)Z
@@ -1687,7 +1549,6 @@
 
     if-eqz p3, :cond_5
 
-    .line 18
     new-instance v1, Lcom/android/camera/effect/renders/NoneEffectRender;
 
     sget p3, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
@@ -1700,7 +1561,6 @@
     :cond_6
     return-object p2
 
-    .line 19
     :cond_7
     iget-boolean p3, p0, Lcom/android/camera/effect/EffectController;->mIsIndiaColorLookupTableAvailable:Z
 
@@ -1712,14 +1572,12 @@
 
     if-eqz p3, :cond_8
 
-    .line 20
     invoke-direct {p0, v2}, Lcom/android/camera/effect/EffectController;->getDegree(Lcom/miui/filtersdk/filter/helper/FilterType;)I
 
     move-result v1
 
     invoke-virtual {p3, v1}, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->setDegree(I)V
 
-    .line 21
     :cond_8
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->L_2_NEON:Lcom/miui/filtersdk/filter/helper/FilterType;
 
@@ -1737,7 +1595,6 @@
 
     if-gt v0, v1, :cond_9
 
-    .line 22
     new-instance v1, Lcom/android/camera/effect/renders/PipeRenderPair;
 
     new-instance v5, Lcom/android/camera/effect/renders/WrapperRender;
@@ -1746,7 +1603,6 @@
 
     new-instance v6, Lcom/android/camera/effect/renders/LightEffectRender;
 
-    .line 23
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result p3
@@ -1765,13 +1621,11 @@
 
     goto :goto_0
 
-    .line 24
     :cond_9
     new-instance v1, Lcom/android/camera/effect/renders/WrapperRender;
 
     invoke-direct {v1, p1, p4, p3}, Lcom/android/camera/effect/renders/WrapperRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/miui/filtersdk/filter/base/GPUImageFilter;)V
 
-    .line 25
     :goto_0
     invoke-virtual {p2, v1}, Lcom/android/camera/effect/renders/RenderGroup;->addRender(Lcom/android/camera/effect/renders/Render;)V
 
@@ -1788,14 +1642,12 @@
 
     const/4 p3, 0x3
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/camera/effect/EffectController;->getRenderByCategory(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;IZ)Lcom/android/camera/effect/renders/RenderGroup;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, v0, p4}, Lcom/android/camera/effect/EffectController;->getRenderById(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -1815,19 +1667,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->AI:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Lcom/android/camera/effect/FilterInfo;
 
     sget v3, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
@@ -1838,7 +1687,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     array-length v2, v1
 
     const/4 v3, 0x1
@@ -1848,14 +1696,12 @@
 
     aget-object v5, v1, v4
 
-    .line 5
     sget-object v6, Lcom/miui/filtersdk/filter/helper/FilterType;->A_COMMON:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     if-ne v5, v6, :cond_0
 
     goto :goto_1
 
-    .line 6
     :cond_0
     new-instance v6, Lcom/android/camera/effect/FilterInfo;
 
@@ -1891,35 +1737,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f08091b
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->VIDEO:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -1935,7 +1776,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -1956,7 +1796,7 @@
     :pswitch_0
     const/16 v7, 0x50
 
-    const v5, 0x7f1209d1
+    const v5, 0x7f120982
 
     const v6, 0x7f080920
 
@@ -1965,7 +1805,7 @@
     :pswitch_1
     const/16 v7, 0x48
 
-    const v5, 0x7f1202d5
+    const v5, 0x7f1202bd
 
     const v6, 0x7f080916
 
@@ -1974,7 +1814,7 @@
     :pswitch_2
     const/16 v7, 0x47
 
-    const v5, 0x7f1202ef
+    const v5, 0x7f1202d7
 
     const v6, 0x7f080919
 
@@ -1983,7 +1823,7 @@
     :pswitch_3
     const/16 v7, 0x46
 
-    const v5, 0x7f1209ce
+    const v5, 0x7f12097f
 
     const v6, 0x7f08091e
 
@@ -1992,7 +1832,7 @@
     :pswitch_4
     const/16 v7, 0x3c
 
-    const v5, 0x7f1209c4
+    const v5, 0x7f120975
 
     const v6, 0x7f080917
 
@@ -2001,7 +1841,7 @@
     :pswitch_5
     const/16 v7, 0x32
 
-    const v5, 0x7f1209cb
+    const v5, 0x7f12097c
 
     const v6, 0x7f08091c
 
@@ -2010,7 +1850,7 @@
     :pswitch_6
     const/16 v7, 0x28
 
-    const v5, 0x7f1209d5
+    const v5, 0x7f120986
 
     const v6, 0x7f080922
 
@@ -2019,7 +1859,7 @@
     :pswitch_7
     const/16 v7, 0x1e
 
-    const v5, 0x7f1209cc
+    const v5, 0x7f12097d
 
     const v6, 0x7f08091d
 
@@ -2028,7 +1868,7 @@
     :pswitch_8
     const/16 v7, 0x14
 
-    const v5, 0x7f1209c7
+    const v5, 0x7f120978
 
     const v6, 0x7f08091a
 
@@ -2037,7 +1877,7 @@
     :pswitch_9
     const/16 v7, 0xa
 
-    const v5, 0x7f1209d3
+    const v5, 0x7f120984
 
     const v6, 0x7f080921
 
@@ -2046,7 +1886,7 @@
     :pswitch_a
     const/16 v7, 0x8
 
-    const v5, 0x7f1202ec
+    const v5, 0x7f1202d4
 
     const v6, 0x7f08091f
 
@@ -2055,7 +1895,7 @@
     :pswitch_b
     const/4 v7, 0x7
 
-    const v5, 0x7f1202d3
+    const v5, 0x7f1202bb
 
     const v6, 0x7f080915
 
@@ -2066,12 +1906,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v10, 0x8
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -2082,7 +1920,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -2101,14 +1938,13 @@
 
     goto/16 :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x4f
+    .packed-switch 0x50
         :pswitch_b
         :pswitch_a
         :pswitch_9
@@ -2135,42 +1971,36 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f080149
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     sget-object v2, Lcom/miui/filtersdk/filter/helper/FilterCategory;->NORMAL:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v2}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v2
 
-    .line 6
     array-length v4, v1
 
     move v5, v3
@@ -2188,7 +2018,6 @@
 
     aget-object v10, v1, v5
 
-    .line 7
     sget-object v11, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v10}, Ljava/lang/Enum;->ordinal()I
@@ -2206,44 +2035,44 @@
     goto :goto_2
 
     :pswitch_0
-    const/16 v8, 0xb
+    const/4 v8, 0x6
 
-    const v6, 0x7f1204bb
+    const v6, 0x7f12048b
 
     goto :goto_1
 
     :pswitch_1
-    const/16 v8, 0xa
+    const/4 v8, 0x5
 
-    const v6, 0x7f1204c0
+    const v6, 0x7f120490
 
     goto :goto_1
 
     :pswitch_2
-    const/16 v8, 0x9
+    const/4 v8, 0x4
 
-    const v6, 0x7f1204bd
+    const v6, 0x7f12048d
 
     goto :goto_1
 
     :pswitch_3
-    const/16 v8, 0x8
+    const/4 v8, 0x3
 
-    const v6, 0x7f1204c3
+    const v6, 0x7f120493
 
     goto :goto_1
 
     :pswitch_4
-    const/4 v8, 0x7
+    const/4 v8, 0x2
 
-    const v6, 0x7f1204c4
+    const v6, 0x7f120494
 
     goto :goto_1
 
     :pswitch_5
-    const/4 v8, 0x6
+    const v6, 0x7f120489
 
-    const v6, 0x7f1204b9
+    const/4 v8, 0x1
 
     :goto_1
     move v14, v6
@@ -2255,12 +2084,10 @@
 
     if-eqz v15, :cond_0
 
-    .line 8
     new-instance v6, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v12, 0x2
 
-    .line 9
     invoke-virtual {v10}, Ljava/lang/Enum;->ordinal()I
 
     move-result v13
@@ -2271,7 +2098,6 @@
 
     invoke-direct/range {v11 .. v16}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 10
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v6, v3
@@ -2290,7 +2116,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     array-length v1, v2
 
@@ -2301,7 +2126,6 @@
 
     aget-object v5, v2, v4
 
-    .line 12
     sget-object v10, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
@@ -2312,98 +2136,141 @@
 
     packed-switch v10, :pswitch_data_1
 
-    :goto_5
+    :pswitch_6
     move v13, v6
 
     move v14, v7
-
-    goto/16 :goto_7
-
-    :pswitch_6
-    const/16 v6, 0x96
-
-    const v7, 0x7f1202d7
-
-    const v8, 0x7f080139
 
     goto/16 :goto_6
 
     :pswitch_7
     const/16 v6, 0x8c
 
-    const v7, 0x7f1202d6
+    const v7, 0x7f1202bf
 
-    const v8, 0x7f080138
+    const v8, 0x7f08013b
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :pswitch_8
     const/16 v6, 0x82
 
-    const v7, 0x7f1202d3
+    const v7, 0x7f1202be
 
-    const v8, 0x7f080136
+    const v8, 0x7f08013a
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_9
     const/16 v6, 0x78
 
-    const v7, 0x7f1202f2
+    const v7, 0x7f1202da
 
-    const v8, 0x7f080153
+    const v8, 0x7f080150
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_a
     const/16 v6, 0x6e
 
-    const v7, 0x7f1202db
+    const v7, 0x7f1202c3
 
-    const v8, 0x7f08013e
+    const v8, 0x7f080140
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_b
     const/16 v6, 0x64
 
-    const v7, 0x7f120606
+    const v7, 0x7f1205d2
 
-    const v8, 0x7f080145
+    const v8, 0x7f080147
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_c
     const/16 v6, 0x5a
 
-    const v7, 0x7f1202dc
+    const v7, 0x7f1205cf
 
-    const v8, 0x7f08013f
+    const v8, 0x7f080146
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_d
     const/16 v6, 0x50
 
-    const v7, 0x7f12060d
+    const v7, 0x7f1202d9
 
-    const v8, 0x7f08014d
+    const v8, 0x7f08014f
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_e
     const/16 v6, 0x46
 
-    const v7, 0x7f120605
+    const v7, 0x7f1202c4
 
-    const v8, 0x7f080142
+    const v8, 0x7f080141
 
-    goto :goto_6
+    goto :goto_5
 
     :pswitch_f
     const/16 v6, 0x3c
 
-    const v7, 0x7f12060a
+    const v7, 0x7f1202d8
+
+    const v8, 0x7f08014e
+
+    goto :goto_5
+
+    :pswitch_10
+    const/16 v6, 0x32
+
+    const v7, 0x7f1205cd
+
+    const v8, 0x7f08013f
+
+    goto :goto_5
+
+    :pswitch_11
+    const/16 v6, 0x28
+
+    const v7, 0x7f1205d4
+
+    const v8, 0x7f08014b
+
+    goto :goto_5
+
+    :pswitch_12
+    const/16 v6, 0x1e
+
+    const v7, 0x7f1202c6
+
+    const v8, 0x7f080144
+
+    goto :goto_5
+
+    :pswitch_13
+    const/16 v6, 0x14
+
+    const v7, 0x7f1205ce
+
+    const v8, 0x7f080143
+
+    :goto_5
+    move v13, v7
+
+    move v14, v8
+
+    move v8, v6
+
+    goto :goto_6
+
+    :pswitch_14
+    const/16 v6, 0xa
+
+    const v7, 0x7f1205d3
 
     move v8, v6
 
@@ -2411,71 +2278,15 @@
 
     move v14, v9
 
-    goto :goto_7
-
-    :pswitch_10
-    const/4 v6, 0x5
-
-    const v7, 0x7f12060e
-
-    const v8, 0x7f08014e
-
-    goto :goto_6
-
-    :pswitch_11
-    const/4 v6, 0x4
-
-    const v7, 0x7f120601
-
-    const v8, 0x7f080146
-
-    goto :goto_6
-
-    :pswitch_12
-    const/4 v6, 0x3
-
-    const v7, 0x7f12060c
-
-    const v8, 0x7f08014c
-
-    goto :goto_6
-
-    :pswitch_13
-    const/4 v6, 0x2
-
-    const v7, 0x7f120604
-
-    const v8, 0x7f080141
-
     :goto_6
-    move v13, v7
-
-    move v14, v8
-
-    move v8, v6
-
-    goto :goto_7
-
-    :pswitch_14
-    const v6, 0x7f12060b
-
-    const v7, 0x7f08014b
-
-    const/4 v8, 0x1
-
-    goto/16 :goto_5
-
-    :goto_7
     if-eqz v13, :cond_2
 
     if-eqz v14, :cond_2
 
-    .line 13
     new-instance v6, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v11, 0x2
 
-    .line 14
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v12
@@ -2486,33 +2297,33 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 15
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v6, v3
 
     move v7, v6
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_2
     move v6, v13
 
     move v7, v14
 
-    :goto_8
+    :goto_7
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_4
 
-    .line 16
     :cond_3
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
 
+    nop
+
     :pswitch_data_0
-    .packed-switch 0x39
+    .packed-switch 0x3a
         :pswitch_5
         :pswitch_4
         :pswitch_3
@@ -2535,9 +2346,10 @@
         :pswitch_b
         :pswitch_a
         :pswitch_9
+        :pswitch_6
+        :pswitch_6
         :pswitch_8
         :pswitch_7
-        :pswitch_6
     .end packed-switch
 .end method
 
@@ -2552,35 +2364,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
-    const v5, 0x7f0808ab
+    const v5, 0x7f0808a9
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->BEAUTY:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -2596,7 +2403,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -2617,108 +2423,108 @@
     :pswitch_0
     const/16 v7, 0x96
 
-    const v5, 0x7f120600
+    const v5, 0x7f1205ca
 
-    const v6, 0x7f0808a4
+    const v6, 0x7f0808a2
 
     goto :goto_1
 
     :pswitch_1
     const/16 v7, 0x8c
 
-    const v5, 0x7f120611
+    const v5, 0x7f1205d7
 
-    const v6, 0x7f0808a6
+    const v6, 0x7f0808a4
 
     goto :goto_1
 
     :pswitch_2
     const/16 v7, 0x82
 
-    const v5, 0x7f120606
+    const v5, 0x7f1205cf
 
-    const v6, 0x7f0808a5
+    const v6, 0x7f0808a3
 
     goto :goto_1
 
     :pswitch_3
     const/16 v7, 0x78
 
-    const v5, 0x7f120613
+    const v5, 0x7f1205d9
 
-    const v6, 0x7f0808a7
+    const v6, 0x7f0808a5
 
     goto :goto_1
 
     :pswitch_4
     const/16 v7, 0x6e
 
-    const v5, 0x7f120609
+    const v5, 0x7f1205d2
 
-    const v6, 0x7f0808a9
+    const v6, 0x7f0808a7
 
     goto :goto_1
 
     :pswitch_5
     const/16 v7, 0x64
 
-    const v5, 0x7f12060f
+    const v5, 0x7f1205d5
 
-    const v6, 0x7f0808ad
+    const v6, 0x7f0808ab
 
     goto :goto_1
 
     :pswitch_6
     const/16 v7, 0x50
 
-    const v5, 0x7f120607
+    const v5, 0x7f1205d0
 
-    const v6, 0x7f0808a8
+    const v6, 0x7f0808a6
 
     goto :goto_1
 
     :pswitch_7
     const/16 v7, 0x32
 
-    const v5, 0x7f120603
+    const v5, 0x7f1205cd
 
-    const v6, 0x7f0808a2
+    const v6, 0x7f0808a0
 
     goto :goto_1
 
     :pswitch_8
     const/16 v7, 0x28
 
-    const v5, 0x7f120612
+    const v5, 0x7f1205d8
 
-    const v6, 0x7f0808ae
+    const v6, 0x7f0808ac
 
     goto :goto_1
 
     :pswitch_9
     const/16 v7, 0x1e
 
-    const v5, 0x7f12060d
+    const v5, 0x7f1205d4
 
-    const v6, 0x7f0808ac
+    const v6, 0x7f0808aa
 
     goto :goto_1
 
     :pswitch_a
     const/16 v7, 0x14
 
-    const v5, 0x7f120605
+    const v5, 0x7f1205ce
 
-    const v6, 0x7f0808a3
+    const v6, 0x7f0808a1
 
     goto :goto_1
 
     :pswitch_b
     const/16 v7, 0xa
 
-    const v5, 0x7f12060a
+    const v5, 0x7f1205d3
 
-    const v6, 0x7f0808aa
+    const v6, 0x7f0808a8
 
     goto :goto_1
 
@@ -2727,12 +2533,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v10, 0x2
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -2743,7 +2547,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -2762,7 +2565,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
@@ -2796,35 +2598,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f080149
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->NORMAL:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -2840,7 +2637,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -2861,135 +2657,144 @@
     :pswitch_0
     const/16 v7, 0xa0
 
-    const v5, 0x7f1202d7
+    const v5, 0x7f1202bf
 
-    const v6, 0x7f080139
+    const v6, 0x7f08013b
 
     goto :goto_1
 
     :pswitch_1
     const/16 v7, 0x96
 
-    const v5, 0x7f1202d6
+    const v5, 0x7f1202be
 
-    const v6, 0x7f080138
+    const v6, 0x7f08013a
 
     goto :goto_1
 
     :pswitch_2
     const/16 v7, 0x8c
 
-    const v5, 0x7f1202d3
+    const v5, 0x7f1202d4
 
-    const v6, 0x7f080136
+    const v6, 0x7f08014a
 
     goto :goto_1
 
     :pswitch_3
     const/16 v7, 0x82
 
-    const v5, 0x7f1202f2
+    const v5, 0x7f1202bb
 
-    const v6, 0x7f080153
+    const v6, 0x7f080138
 
     goto :goto_1
 
     :pswitch_4
     const/16 v7, 0x78
 
-    const v5, 0x7f1202db
+    const v5, 0x7f1202da
 
-    const v6, 0x7f08013e
+    const v6, 0x7f080150
 
     goto :goto_1
 
     :pswitch_5
-    const/16 v7, 0x64
+    const/16 v7, 0x6e
 
-    const v5, 0x7f120606
+    const v5, 0x7f1202c3
 
-    const v6, 0x7f080145
+    const v6, 0x7f080140
 
     goto :goto_1
 
     :pswitch_6
-    const/16 v7, 0x5a
+    const/16 v7, 0x64
 
-    const v5, 0x7f1202dc
+    const v5, 0x7f1205d2
 
-    const v6, 0x7f08013f
+    const v6, 0x7f080147
 
     goto :goto_1
 
     :pswitch_7
-    const/16 v7, 0x50
+    const/16 v7, 0x5a
 
-    const v5, 0x7f12060d
+    const v5, 0x7f1205cf
 
-    const v6, 0x7f08014d
+    const v6, 0x7f080146
 
     goto :goto_1
 
     :pswitch_8
-    const/16 v7, 0x46
+    const/16 v7, 0x50
 
-    const v5, 0x7f120605
+    const v5, 0x7f1202d9
 
-    const v6, 0x7f080142
+    const v6, 0x7f08014f
 
     goto :goto_1
 
     :pswitch_9
-    const/16 v7, 0x3c
+    const/16 v7, 0x46
 
-    const v5, 0x7f12060a
+    const v5, 0x7f1202c4
 
-    const v6, 0x7f080148
+    const v6, 0x7f080141
 
     goto :goto_1
 
     :pswitch_a
-    const/16 v7, 0x32
+    const/16 v7, 0x3c
 
-    const v5, 0x7f12060e
+    const v5, 0x7f1202d8
 
     const v6, 0x7f08014e
 
     goto :goto_1
 
     :pswitch_b
-    const/16 v7, 0x28
+    const/16 v7, 0x32
 
-    const v5, 0x7f120601
+    const v5, 0x7f1205cd
 
-    const v6, 0x7f080146
+    const v6, 0x7f08013f
 
     goto :goto_1
 
     :pswitch_c
-    const/16 v7, 0x1e
+    const/16 v7, 0x28
 
-    const v5, 0x7f12060c
+    const v5, 0x7f1205d4
 
-    const v6, 0x7f08014c
+    const v6, 0x7f08014b
 
     goto :goto_1
 
     :pswitch_d
-    const/16 v7, 0x14
+    const/16 v7, 0x1e
 
-    const v5, 0x7f120604
+    const v5, 0x7f1202c6
 
-    const v6, 0x7f080141
+    const v6, 0x7f080144
 
     goto/16 :goto_1
 
     :pswitch_e
+    const/16 v7, 0x14
+
+    const v5, 0x7f1205ce
+
+    const v6, 0x7f080143
+
+    goto/16 :goto_1
+
+    :pswitch_f
     const/16 v7, 0xa
 
-    const v5, 0x7f12060b
+    const v5, 0x7f1205d3
 
-    const v6, 0x7f08014b
+    const v6, 0x7f080148
 
     goto/16 :goto_1
 
@@ -2998,12 +2803,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v10, 0x2
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -3014,7 +2817,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -3033,7 +2835,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
@@ -3043,6 +2844,7 @@
 
     :pswitch_data_0
     .packed-switch 0x2a
+        :pswitch_f
         :pswitch_e
         :pswitch_d
         :pswitch_c
@@ -3072,35 +2874,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
-    const v5, 0x7f0808b7
+    const v5, 0x7f0808b5
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->BEAUTY_INDIA:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -3116,7 +2913,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -3137,108 +2933,108 @@
     :pswitch_0
     const/16 v7, 0xa0
 
-    const v5, 0x7f120600
+    const v5, 0x7f1205ca
 
-    const v6, 0x7f0808b0
+    const v6, 0x7f0808ae
 
     goto :goto_1
 
     :pswitch_1
     const/16 v7, 0x96
 
-    const v5, 0x7f120611
+    const v5, 0x7f1205d7
 
-    const v6, 0x7f0808b3
+    const v6, 0x7f0808b1
 
     goto :goto_1
 
     :pswitch_2
     const/16 v7, 0x8c
 
-    const v5, 0x7f120613
+    const v5, 0x7f1205d9
 
-    const v6, 0x7f0808b4
+    const v6, 0x7f0808b2
 
     goto :goto_1
 
     :pswitch_3
     const/16 v7, 0x82
 
-    const v5, 0x7f120606
+    const v5, 0x7f1205cf
 
-    const v6, 0x7f0808b2
+    const v6, 0x7f0808b0
 
     goto :goto_1
 
     :pswitch_4
     const/16 v7, 0x78
 
-    const v5, 0x7f120602
+    const v5, 0x7f1205cc
 
-    const v6, 0x7f0808b1
+    const v6, 0x7f0808af
 
     goto :goto_1
 
     :pswitch_5
     const/16 v7, 0x64
 
-    const v5, 0x7f12061c
+    const v5, 0x7f1205e2
 
-    const v6, 0x7f0808bb
+    const v6, 0x7f0808b9
 
     goto :goto_1
 
     :pswitch_6
     const/16 v7, 0x50
 
-    const v5, 0x7f12061b
+    const v5, 0x7f1205e1
 
-    const v6, 0x7f0808ba
+    const v6, 0x7f0808b8
 
     goto :goto_1
 
     :pswitch_7
     const/16 v7, 0x32
 
-    const v5, 0x7f120620
+    const v5, 0x7f1205e6
 
-    const v6, 0x7f0808bf
+    const v6, 0x7f0808bd
 
     goto :goto_1
 
     :pswitch_8
     const/16 v7, 0x28
 
-    const v5, 0x7f12061d
+    const v5, 0x7f1205e3
 
-    const v6, 0x7f0808bc
+    const v6, 0x7f0808ba
 
     goto :goto_1
 
     :pswitch_9
     const/16 v7, 0x1e
 
-    const v5, 0x7f120617
+    const v5, 0x7f1205dd
 
-    const v6, 0x7f0808b5
+    const v6, 0x7f0808b3
 
     goto :goto_1
 
     :pswitch_a
     const/16 v7, 0x14
 
-    const v5, 0x7f120619
+    const v5, 0x7f1205df
 
-    const v6, 0x7f0808b8
+    const v6, 0x7f0808b6
 
     goto :goto_1
 
     :pswitch_b
     const/16 v7, 0xa
 
-    const v5, 0x7f12061e
+    const v5, 0x7f1205e4
 
-    const v6, 0x7f0808bd
+    const v6, 0x7f0808bb
 
     goto :goto_1
 
@@ -3247,12 +3043,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v10, 0x2
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -3263,7 +3057,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -3282,7 +3075,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
@@ -3316,19 +3108,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->LIGHTING:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Lcom/android/camera/effect/FilterInfo;
 
     sget v3, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
@@ -3339,7 +3128,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     array-length v2, v1
 
     const-string v3, "0"
@@ -3349,7 +3137,6 @@
 
     aget-object v5, v1, v4
 
-    .line 5
     sget-object v6, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
@@ -3445,7 +3232,6 @@
     :pswitch_10
     const-string v3, "1"
 
-    .line 6
     :goto_1
     new-instance v6, Lcom/android/camera/effect/FilterInfo;
 
@@ -3511,35 +3297,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f1202fa
+    const v4, 0x7f1202e2
 
-    const v5, 0x7f08015b
+    const v5, 0x7f080158
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->MI_LIVE:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -3555,7 +3336,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -3576,63 +3356,63 @@
     :pswitch_0
     const/16 v7, 0x46
 
-    const v5, 0x7f1202f6
+    const v5, 0x7f1202de
 
-    const v6, 0x7f080157
+    const v6, 0x7f080154
 
     goto :goto_1
 
     :pswitch_1
     const/16 v7, 0x3c
 
-    const v5, 0x7f1202fc
+    const v5, 0x7f1202e4
 
-    const v6, 0x7f08015d
+    const v6, 0x7f08015a
 
     goto :goto_1
 
     :pswitch_2
     const/16 v7, 0x32
 
-    const v5, 0x7f1202f5
+    const v5, 0x7f1202dd
 
-    const v6, 0x7f080156
+    const v6, 0x7f080153
 
     goto :goto_1
 
     :pswitch_3
     const/16 v7, 0x28
 
-    const v5, 0x7f1202f4
+    const v5, 0x7f1202dc
 
-    const v6, 0x7f080155
+    const v6, 0x7f080152
 
     goto :goto_1
 
     :pswitch_4
     const/16 v7, 0x1e
 
-    const v5, 0x7f1202fb
+    const v5, 0x7f1202e3
 
-    const v6, 0x7f08015c
+    const v6, 0x7f080159
 
     goto :goto_1
 
     :pswitch_5
     const/16 v7, 0x14
 
-    const v5, 0x7f1202f9
+    const v5, 0x7f1202e1
 
-    const v6, 0x7f08015a
+    const v6, 0x7f080157
 
     goto :goto_1
 
     :pswitch_6
     const/16 v7, 0xa
 
-    const v5, 0x7f1202f7
+    const v5, 0x7f1202df
 
-    const v6, 0x7f080158
+    const v6, 0x7f080155
 
     goto :goto_1
 
@@ -3641,12 +3421,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v10, 0x8
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -3657,7 +3435,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -3676,14 +3453,13 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x48
+    .packed-switch 0x49
         :pswitch_6
         :pswitch_5
         :pswitch_4
@@ -3705,35 +3481,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f080149
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->NORMAL:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -3749,7 +3520,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -3772,131 +3542,183 @@
     :pswitch_0
     const/16 v7, 0xaa
 
-    const v5, 0x7f1202d5
+    const v5, 0x7f1202bd
 
-    const v6, 0x7f080137
+    const v6, 0x7f080139
 
     goto :goto_1
 
     :pswitch_1
     const/16 v7, 0xa0
 
-    const v5, 0x7f1202ef
+    const v5, 0x7f1202d7
 
-    const v6, 0x7f080150
+    const v6, 0x7f08014d
 
     goto :goto_1
 
     :pswitch_2
     const/16 v7, 0x28
 
-    const v5, 0x7f1202d9
+    const v5, 0x7f1202c1
 
-    const v6, 0x7f08013b
+    const v6, 0x7f08013d
 
     goto :goto_1
 
     :pswitch_3
     const/16 v7, 0xbe
 
-    const v5, 0x7f1202d7
+    const v5, 0x7f1202bf
 
-    const v6, 0x7f080139
+    const v6, 0x7f08013b
 
     goto :goto_1
 
     :pswitch_4
     const/16 v7, 0xb4
 
-    const v5, 0x7f1202d6
+    const v5, 0x7f1202be
+
+    const v6, 0x7f08013a
+
+    goto :goto_1
+
+    :pswitch_5
+    const/16 v7, 0x1e
+
+    const v5, 0x7f1202d4
+
+    const v6, 0x7f08014a
+
+    goto :goto_1
+
+    :pswitch_6
+    const/16 v7, 0x14
+
+    const v5, 0x7f1202bb
 
     const v6, 0x7f080138
 
     goto :goto_1
 
-    :pswitch_5
-    const/16 v7, 0x14
-
-    const v5, 0x7f1202d3
-
-    const v6, 0x7f080136
-
-    goto :goto_1
-
-    :pswitch_6
+    :pswitch_7
     const/16 v7, 0xa
 
-    const v5, 0x7f1202f2
+    const v5, 0x7f1202da
 
-    const v6, 0x7f080153
-
-    goto :goto_1
-
-    :pswitch_7
-    const/16 v7, 0x32
-
-    const v5, 0x7f1202db
-
-    const v6, 0x7f08013e
+    const v6, 0x7f080150
 
     goto :goto_1
 
     :pswitch_8
-    const/16 v7, 0x82
+    const/16 v7, 0x32
 
-    const v5, 0x7f120606
+    const v5, 0x7f1202c3
 
-    const v6, 0x7f080145
+    const v6, 0x7f080140
 
     goto :goto_1
 
     :pswitch_9
-    const/16 v7, 0x96
+    const/16 v7, 0x46
 
-    const v5, 0x7f1202dc
+    const v5, 0x7f1205d2
 
-    const v6, 0x7f08013f
+    const v6, 0x7f080147
 
     goto :goto_1
 
     :pswitch_a
-    const/16 v7, 0x6e
+    const/16 v7, 0x82
 
-    const v5, 0x7f12060d
+    const v5, 0x7f1205cf
 
-    const v6, 0x7f08014d
+    const v6, 0x7f080146
 
     goto :goto_1
 
     :pswitch_b
-    const/16 v7, 0x5a
+    const/16 v7, 0x8c
 
-    const v5, 0x7f120605
+    const v5, 0x7f1202d9
 
-    const v6, 0x7f080142
+    const v6, 0x7f08014f
 
     goto :goto_1
 
     :pswitch_c
+    const/16 v7, 0x96
+
+    const v5, 0x7f1202c4
+
+    const v6, 0x7f080141
+
+    goto :goto_1
+
+    :pswitch_d
+    const/16 v7, 0x50
+
+    const v5, 0x7f1202d8
+
+    const v6, 0x7f08014e
+
+    goto/16 :goto_1
+
+    :pswitch_e
+    const/16 v7, 0x78
+
+    const v5, 0x7f1205cd
+
+    const v6, 0x7f08013f
+
+    goto/16 :goto_1
+
+    :pswitch_f
+    const/16 v7, 0x6e
+
+    const v5, 0x7f1205d4
+
+    const v6, 0x7f08014b
+
+    goto/16 :goto_1
+
+    :pswitch_10
+    const/16 v7, 0x3c
+
+    const v5, 0x7f1202c6
+
+    const v6, 0x7f080144
+
+    goto/16 :goto_1
+
+    :pswitch_11
+    const/16 v7, 0x5a
+
+    const v5, 0x7f1205ce
+
+    const v6, 0x7f080143
+
+    goto/16 :goto_1
+
+    :pswitch_12
     const/16 v7, 0x64
 
-    const v5, 0x7f12060a
+    const v5, 0x7f1205d3
 
     const v6, 0x7f080148
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :goto_2
     if-eqz v12, :cond_0
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v10, 0x1
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -3907,7 +3729,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -3926,14 +3747,19 @@
 
     goto/16 :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x2f
+    .packed-switch 0x2a
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
         :pswitch_c
         :pswitch_b
         :pswitch_a
@@ -3947,7 +3773,7 @@
     .end packed-switch
 
     :pswitch_data_1
-    .packed-switch 0x3f
+    .packed-switch 0x40
         :pswitch_2
         :pswitch_1
         :pswitch_0
@@ -3965,12 +3791,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_BLUR:I
@@ -3979,10 +3803,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GRADIENTER:I
@@ -3991,10 +3813,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_TILTSHIFT:I
@@ -4003,13 +3823,10 @@
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 7
     invoke-virtual {v1, v3}, Lcom/android/camera/effect/FilterInfo;->setNeedRect(Z)V
 
-    .line 8
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_GAUSSIAN:I
@@ -4018,13 +3835,10 @@
 
     invoke-direct {v1, v2, v4}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 10
     invoke-virtual {v1, v3}, Lcom/android/camera/effect/FilterInfo;->setNeedRect(Z)V
 
-    .line 11
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_PEAKINGMF:I
@@ -4033,10 +3847,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 13
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 14
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_ZEBRA:I
@@ -4045,10 +3857,8 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 15
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 16
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_CINEMATIC:I
@@ -4057,7 +3867,6 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(II)V
 
-    .line 17
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-object v0
@@ -4074,35 +3883,30 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f080913
 
     invoke-direct {v1, v2, v4, v5, v3}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterCategory;->STICKER:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     invoke-static {v1}, Lcom/miui/filtersdk/filter/helper/FilterFactory;->getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
 
-    .line 5
     array-length v2, v1
 
     move v4, v3
@@ -4118,7 +3922,6 @@
 
     aget-object v8, v1, v4
 
-    .line 6
     sget-object v9, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
@@ -4139,7 +3942,7 @@
     :pswitch_0
     const/16 v7, 0x32
 
-    const v5, 0x7f1209c2
+    const v5, 0x7f120973
 
     const v6, 0x7f08090e
 
@@ -4148,7 +3951,7 @@
     :pswitch_1
     const/16 v7, 0x2d
 
-    const v5, 0x7f1209c3
+    const v5, 0x7f120974
 
     const v6, 0x7f08090f
 
@@ -4157,7 +3960,7 @@
     :pswitch_2
     const/16 v7, 0x28
 
-    const v5, 0x7f1209c9
+    const v5, 0x7f12097a
 
     const v6, 0x7f080911
 
@@ -4166,7 +3969,7 @@
     :pswitch_3
     const/16 v7, 0x1e
 
-    const v5, 0x7f1209d0
+    const v5, 0x7f120981
 
     const v6, 0x7f080914
 
@@ -4175,7 +3978,7 @@
     :pswitch_4
     const/16 v7, 0x14
 
-    const v5, 0x7f1209ca
+    const v5, 0x7f12097b
 
     const v6, 0x7f080912
 
@@ -4184,7 +3987,7 @@
     :pswitch_5
     const/16 v7, 0xa
 
-    const v5, 0x7f1209c8
+    const v5, 0x7f120979
 
     const v6, 0x7f080910
 
@@ -4195,12 +3998,10 @@
 
     if-eqz v13, :cond_0
 
-    .line 7
     new-instance v5, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v10, 0x3
 
-    .line 8
     invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v11
@@ -4211,7 +4012,6 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/camera/effect/FilterInfo;-><init>(IIIII)V
 
-    .line 9
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v5, v3
@@ -4230,14 +4030,13 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x42
+    .packed-switch 0x43
         :pswitch_5
         :pswitch_4
         :pswitch_3
@@ -4258,17 +4057,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v7, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v6, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f08091b
 
@@ -4282,18 +4079,15 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v7, v1}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 4
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v13, 0x5
 
-    const v11, 0x7f1209c5
+    const v11, 0x7f120976
 
     const v12, 0x7f080918
 
@@ -4307,18 +4101,15 @@
 
     const/16 v2, 0xc8
 
-    .line 6
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 8
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v8, 0x6
 
-    const v6, 0x7f1202d3
+    const v6, 0x7f1202bb
 
     const v7, 0x7f080915
 
@@ -4332,18 +4123,15 @@
 
     const/16 v2, 0x6e
 
-    .line 9
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 10
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v8, 0x7
 
-    const v6, 0x7f1202ec
+    const v6, 0x7f1202d4
 
     const v7, 0x7f08091f
 
@@ -4355,18 +4143,15 @@
 
     const/16 v2, 0x6f
 
-    .line 12
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 13
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 14
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0xa
 
-    const v6, 0x7f1209d3
+    const v6, 0x7f120984
 
     const v7, 0x7f080921
 
@@ -4378,18 +4163,15 @@
 
     const/16 v2, 0x66
 
-    .line 15
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 16
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 17
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x14
 
-    const v6, 0x7f1209c7
+    const v6, 0x7f120978
 
     const v7, 0x7f08091a
 
@@ -4401,18 +4183,15 @@
 
     const/16 v2, 0x67
 
-    .line 18
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 19
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 20
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x1e
 
-    const v6, 0x7f1209cc
+    const v6, 0x7f12097d
 
     const v7, 0x7f08091d
 
@@ -4424,18 +4203,15 @@
 
     const/16 v2, 0x68
 
-    .line 21
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 22
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 23
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x28
 
-    const v6, 0x7f1209d5
+    const v6, 0x7f120986
 
     const v7, 0x7f080922
 
@@ -4447,18 +4223,15 @@
 
     const/16 v2, 0x69
 
-    .line 24
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 26
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x32
 
-    const v6, 0x7f1209cb
+    const v6, 0x7f12097c
 
     const v7, 0x7f08091c
 
@@ -4470,18 +4243,15 @@
 
     const/16 v2, 0x6a
 
-    .line 27
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 28
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 29
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x3c
 
-    const v6, 0x7f1209c4
+    const v6, 0x7f120975
 
     const v7, 0x7f080917
 
@@ -4493,18 +4263,15 @@
 
     const/16 v2, 0x6b
 
-    .line 30
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 31
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 32
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x46
 
-    const v6, 0x7f1209ce
+    const v6, 0x7f12097f
 
     const v7, 0x7f08091e
 
@@ -4516,18 +4283,15 @@
 
     const/16 v2, 0x6c
 
-    .line 33
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 34
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 35
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x47
 
-    const v6, 0x7f1202ef
+    const v6, 0x7f1202d7
 
     const v7, 0x7f080919
 
@@ -4539,18 +4303,15 @@
 
     const/16 v2, 0x70
 
-    .line 36
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 37
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 38
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x48
 
-    const v6, 0x7f1202d5
+    const v6, 0x7f1202bd
 
     const v7, 0x7f080916
 
@@ -4562,18 +4323,15 @@
 
     const/16 v2, 0x71
 
-    .line 39
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 40
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 41
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x50
 
-    const v6, 0x7f1209d1
+    const v6, 0x7f120982
 
     const v7, 0x7f080920
 
@@ -4585,13 +4343,10 @@
 
     const/16 v2, 0x6d
 
-    .line 42
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 43
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 44
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
@@ -4608,17 +4363,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v7, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v6, 0x0
 
-    const v4, 0x7f12066c
+    const v4, 0x7f120630
 
     const v5, 0x7f080928
 
@@ -4632,18 +4385,15 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v7, v1}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 4
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/4 v13, 0x5
 
-    const v11, 0x7f1209c5
+    const v11, 0x7f120976
 
     const v12, 0x7f080926
 
@@ -4657,18 +4407,15 @@
 
     const/16 v2, 0xc8
 
-    .line 6
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 8
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0xa
 
-    const v6, 0x7f1202ea
+    const v6, 0x7f1202d2
 
     const v7, 0x7f080923
 
@@ -4682,18 +4429,15 @@
 
     const/16 v2, 0x79
 
-    .line 9
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 10
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0xf
 
-    const v6, 0x7f1202e0
+    const v6, 0x7f1202c8
 
     const v7, 0x7f080930
 
@@ -4705,18 +4449,15 @@
 
     const/16 v2, 0x7a
 
-    .line 12
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 13
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 14
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x14
 
-    const v6, 0x7f1202ec
+    const v6, 0x7f1202d4
 
     const v7, 0x7f08092d
 
@@ -4728,18 +4469,15 @@
 
     const/16 v2, 0x7b
 
-    .line 15
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 16
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 17
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x1e
 
-    const v6, 0x7f1202e2
+    const v6, 0x7f1202ca
 
     const v7, 0x7f080927
 
@@ -4751,18 +4489,15 @@
 
     const/16 v2, 0x7d
 
-    .line 18
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 19
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 20
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x32
 
-    const v6, 0x7f1202e4
+    const v6, 0x7f1202cc
 
     const v7, 0x7f080929
 
@@ -4774,18 +4509,15 @@
 
     const/16 v2, 0x7e
 
-    .line 21
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 22
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 23
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x3c
 
-    const v6, 0x7f1202e6
+    const v6, 0x7f1202ce
 
     const v7, 0x7f08092b
 
@@ -4797,18 +4529,15 @@
 
     const/16 v2, 0x7f
 
-    .line 24
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 26
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x46
 
-    const v6, 0x7f1202e8
+    const v6, 0x7f1202d0
 
     const v7, 0x7f080925
 
@@ -4820,18 +4549,15 @@
 
     const/16 v2, 0x80
 
-    .line 27
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 28
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 29
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x4b
 
-    const v6, 0x7f1209d3
+    const v6, 0x7f120984
 
     const v7, 0x7f08092f
 
@@ -4843,18 +4569,15 @@
 
     const/16 v2, 0x7c
 
-    .line 30
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 31
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 32
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x50
 
-    const v6, 0x7f1202d3
+    const v6, 0x7f1202bb
 
     const v7, 0x7f080924
 
@@ -4866,18 +4589,15 @@
 
     const/16 v2, 0x6e
 
-    .line 33
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 34
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 35
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x5a
 
-    const v6, 0x7f1209cc
+    const v6, 0x7f12097d
 
     const v7, 0x7f08092a
 
@@ -4889,18 +4609,15 @@
 
     const/16 v2, 0x68
 
-    .line 36
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 37
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 38
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x64
 
-    const v6, 0x7f1209ce
+    const v6, 0x7f12097f
 
     const v7, 0x7f08092c
 
@@ -4912,18 +4629,15 @@
 
     const/16 v2, 0x6c
 
-    .line 39
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 40
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 41
     new-instance v1, Lcom/android/camera/effect/FilterInfo;
 
     const/16 v8, 0x6e
 
-    const v6, 0x7f1209d1
+    const v6, 0x7f120982
 
     const v7, 0x7f08092e
 
@@ -4935,13 +4649,10 @@
 
     const/16 v2, 0x6d
 
-    .line 42
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/FilterInfo;->setTagUniqueFilterId(I)V
 
-    .line 43
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 44
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     return-object v0
@@ -4950,14 +4661,12 @@
 .method private initialize()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/effect/EffectController;->isIndiaColorLookupTableAvailable()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mIsIndiaColorLookupTableAvailable:Z
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x6
@@ -4966,7 +4675,6 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initAiSceneFilterInfo()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -4975,7 +4683,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initPrivateFilterInfo()Ljava/util/ArrayList;
@@ -4986,7 +4693,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initNormalFilterInfoNew()Ljava/util/ArrayList;
@@ -4997,7 +4703,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initLightingFilterInfo()Ljava/util/ArrayList;
@@ -5006,14 +4711,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 7
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mIsIndiaColorLookupTableAvailable:Z
 
     const/4 v1, 0x2
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-static {}, Lcom/android/camera/effect/EffectController;->initIndiaBeautyFilterInfo()Ljava/util/ArrayList;
@@ -5024,23 +4727,21 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0o()Lcom/mi/device/Common;
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00O()Lcom/mi/device/Common;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/mi/device/Common;->o0O0o0oo()Z
+    invoke-virtual {v0}, Lcom/mi/device/Common;->o0O0OooO()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-direct {p0}, Lcom/android/camera/effect/EffectController;->initBeautyAndMakeupFilterInfo()Ljava/util/ArrayList;
@@ -5051,7 +4752,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
@@ -5061,7 +4761,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 12
     :goto_0
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
@@ -5073,7 +4772,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     const/4 v1, 0x7
@@ -5084,7 +4782,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x8
@@ -5095,7 +4792,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     const/16 v1, 0x9
@@ -5112,12 +4808,11 @@
 .method public static isIndiaColorLookupTableAvailable()Z
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00O0()Z
 
     move-result v0
 
@@ -5127,7 +4822,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -5148,7 +4842,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     array-length v0, v0
     :try_end_0
@@ -5156,7 +4849,6 @@
 
     goto :goto_1
 
-    .line 4
     :catch_0
     sget-object v0, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
@@ -5167,7 +4859,6 @@
     :goto_0
     move v0, v1
 
-    .line 5
     :goto_1
     sget-object v2, Lcom/miui/filtersdk/filter/helper/FilterCategory;->BEAUTY_INDIA:Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
@@ -5188,12 +4879,10 @@
 .method private varargs postNotifyEffectChanged([I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
@@ -5214,12 +4903,10 @@
 
     check-cast v2, Lcom/android/camera/effect/EffectController$EffectChangedListener;
 
-    .line 3
     invoke-interface {v2, p1}, Lcom/android/camera/effect/EffectController$EffectChangedListener;->onEffectChanged([I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -5242,7 +4929,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/effect/EffectController;->sInstance:Lcom/android/camera/effect/EffectController;
 
@@ -5260,12 +4946,10 @@
 
     const/4 v1, 0x0
 
-    .line 2
     sput-object v1, Lcom/android/camera/effect/EffectController;->sInstance:Lcom/android/camera/effect/EffectController;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     :cond_0
     monitor-exit v0
 
@@ -5284,21 +4968,17 @@
 .method public addChangeListener(Lcom/android/camera/effect/EffectController$EffectChangedListener;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/EffectChangedListenerController;->addEffectChangedListener(Lcom/android/camera/effect/EffectController$EffectChangedListener;)V
 
-    .line 4
     monitor-exit v0
 
     return-void
@@ -5316,7 +4996,6 @@
 .method public clearEffectAttribute()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v0, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mRectF:Landroid/graphics/RectF;
@@ -5325,21 +5004,18 @@
 
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v0, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint1:Landroid/graphics/PointF;
 
     invoke-virtual {v0, v1, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v0, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint2:Landroid/graphics/PointF;
 
     invoke-virtual {v0, v1, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iput v1, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mRangeWidth:F
@@ -5350,7 +5026,6 @@
 .method public copyEffectRectAttribute()Lcom/android/camera/effect/EffectController$EffectRectAttribute;
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
@@ -5365,14 +5040,12 @@
 .method public enableMakeup(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mBeautyEnable:Z
 
     const/4 v0, 0x1
 
     if-nez p1, :cond_0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mNeedDestroyMakeup:Z
 
     :cond_0
@@ -5384,16 +5057,14 @@
 
     aput v1, p1, v0
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
 .end method
 
-.method public findLiveFilter(Landroid/content/Context;I)Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;
+.method public findLiveFilter(Landroid/content/Context;I)Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;
     .locals 3
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/EffectController;->getLiveFilterList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p1
@@ -5404,7 +5075,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5421,10 +5091,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;
+    check-cast v1, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;
 
-    .line 3
-    iget v2, v1, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;->id:I
+    iget v2, v1, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;->id:I
 
     if-ne v2, p2, :cond_1
 
@@ -5437,7 +5106,6 @@
 .method public getAiColorCorrectionVersion()I
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5458,7 +5126,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mAiColorCorrectionVersion:I
 
     return v0
@@ -5467,7 +5134,6 @@
 .method public getBlurAnimationValue()I
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
     const/4 v1, -0x1
@@ -5478,7 +5144,6 @@
 
     if-gt v0, v2, :cond_2
 
-    .line 2
     iget-boolean v3, p0, Lcom/android/camera/effect/EffectController;->mBlur:Z
 
     if-eqz v3, :cond_0
@@ -5497,17 +5162,14 @@
 
     if-gt v2, v0, :cond_1
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBlur:Z
 
     if-eqz v0, :cond_1
 
-    .line 4
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_BLUR:I
 
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mOverrideEffectIndex:I
 
-    .line 5
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
@@ -5517,7 +5179,6 @@
 
     mul-int/lit16 v0, v0, 0xd4
 
-    .line 6
     div-int/2addr v0, v2
 
     return v0
@@ -5529,7 +5190,6 @@
 .method public getCurrentKaleidoscope()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
     return-object v0
@@ -5538,7 +5198,6 @@
 .method public getCurrentSticker()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mCurrentSticker:Ljava/lang/String;
 
     return-object v0
@@ -5547,7 +5206,6 @@
 .method public getDeviceRotation()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mDeviceRotation:F
 
     return v0
@@ -5556,7 +5214,6 @@
 .method public getEffectAttribute()Lcom/android/camera/effect/EffectController$EffectRectAttribute;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     return-object v0
@@ -5565,7 +5222,6 @@
 .method public getEffectCount(I)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -5580,7 +5236,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -5592,27 +5247,23 @@
 .method public getEffectForPreview(Z)I
     .locals 2
 
-    .line 1
     monitor-enter p0
 
     const/4 v0, -0x1
 
     if-eqz p1, :cond_0
 
-    .line 2
     :try_start_0
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mOverrideEffectIndex:I
 
     if-eq p1, v0, :cond_0
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mOverrideEffectIndex:I
 
     monitor-exit p0
 
     return p1
 
-    .line 4
     :cond_0
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
@@ -5624,14 +5275,12 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 5
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mOverrideAiEffectIndex:I
 
     monitor-exit p0
 
     return p1
 
-    .line 6
     :cond_1
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
@@ -5642,7 +5291,6 @@
     :catchall_0
     move-exception p1
 
-    .line 7
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -5653,7 +5301,6 @@
 .method public getEffectForSaving(Z)I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
@@ -5678,12 +5325,10 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 2
     sget p1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     return p1
 
-    .line 3
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mAiColorCorrectionVersion:I
 
@@ -5697,7 +5342,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
     move-result v0
@@ -5706,12 +5350,10 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 5
     sget p1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     return p1
 
-    .line 6
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/EffectController;->getEffectForPreview(Z)I
 
@@ -5723,8 +5365,7 @@
 .method public getEffectGroup(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZZI)Lcom/android/camera/effect/renders/RenderGroup;
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000O0()Z
 
     move-result v0
 
@@ -5737,7 +5378,6 @@
     :cond_0
     if-nez p3, :cond_1
 
-    .line 2
     invoke-virtual {p2, p5}, Lcom/android/camera/effect/renders/RenderGroup;->isNeedInit(I)Z
 
     move-result v0
@@ -5753,12 +5393,10 @@
 
     if-le p5, v1, :cond_2
 
-    .line 3
     invoke-static {p5}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
     move-result v0
 
-    .line 4
     :cond_2
     sget-object v1, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
@@ -5778,7 +5416,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     sget-object v1, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5799,7 +5436,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 6
     :pswitch_0
     sget-object p1, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
@@ -5825,49 +5461,41 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_1
     invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/camera/effect/EffectController;->getMiLiveRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 8
     :pswitch_2
     invoke-direct/range {p0 .. p5}, Lcom/android/camera/effect/EffectController;->getLightingRenderNew(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 9
     :pswitch_3
     invoke-direct/range {p0 .. p5}, Lcom/android/camera/effect/EffectController;->getAiSceneRenderNew(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 10
     :pswitch_4
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/EffectController;->getMakeupRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 11
     :pswitch_5
     invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/camera/effect/EffectController;->getStickerRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 12
     :pswitch_6
     invoke-direct {p0, p1, p2, p3, p5}, Lcom/android/camera/effect/EffectController;->getBeautyRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 13
     :pswitch_7
     invoke-direct/range {p0 .. p5}, Lcom/android/camera/effect/EffectController;->getNormalRenderNew(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZZI)Lcom/android/camera/effect/renders/RenderGroup;
 
     goto :goto_0
 
-    .line 14
     :pswitch_8
     invoke-direct/range {p0 .. p5}, Lcom/android/camera/effect/EffectController;->getPrivateRender(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/renders/RenderGroup;ZZI)Lcom/android/camera/effect/renders/RenderGroup;
 
@@ -5893,7 +5521,6 @@
 .method public getEffectRectF()Landroid/graphics/RectF;
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
@@ -5916,7 +5543,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -5931,7 +5557,6 @@
 .method public getInvertFlag()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget v0, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mInvertFlag:I
@@ -5947,17 +5572,15 @@
             "Landroid/content/Context;",
             ")",
             "Ljava/util/List<",
-            "Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;",
+            "Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;",
             ">;"
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mLiveFilters:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5968,7 +5591,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -5979,7 +5601,6 @@
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -5990,7 +5611,6 @@
 
     move-result-object p1
 
-    .line 5
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -5999,7 +5619,6 @@
 
     const/4 v2, 0x0
 
-    .line 6
     :goto_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->length()I
 
@@ -6007,32 +5626,26 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 7
-    new-instance v3, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;
+    new-instance v3, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;
 
-    invoke-direct {v3}, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;-><init>()V
+    invoke-direct {v3}, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;-><init>()V
 
-    .line 8
-    iput v2, v3, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;->id:I
+    iput v2, v3, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;->id:I
 
-    .line 9
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    iput-object v4, v3, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;->imageViewRes:Landroid/graphics/drawable/Drawable;
+    iput-object v4, v3, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;->imageViewRes:Landroid/graphics/drawable/Drawable;
 
-    .line 10
     aget-object v4, v1, v2
 
-    iput-object v4, v3, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;->name:Ljava/lang/String;
+    iput-object v4, v3, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;->name:Ljava/lang/String;
 
-    .line 11
     aget-object v4, p1, v2
 
-    iput-object v4, v3, Lcom/android/camera/fragment/FragmentFilter$LiveFilterItem;->directoryName:Ljava/lang/String;
+    iput-object v4, v3, Lcom/android/camera/fragment/beauty/LiveBeautyFilterFragment$LiveFilterItem;->directoryName:Ljava/lang/String;
 
-    .line 12
     iget-object v4, p0, Lcom/android/camera/effect/EffectController;->mLiveFilters:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -6041,11 +5654,9 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 14
     :cond_1
     iget-object p1, p0, Lcom/android/camera/effect/EffectController;->mLiveFilters:Ljava/util/List;
 
@@ -6055,7 +5666,6 @@
 .method public getOrientation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mOrientation:I
 
     return v0
@@ -6064,82 +5674,81 @@
 .method public getTiltShiftMaskAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mTiltShiftMaskAlpha:F
 
     return v0
 .end method
 
 .method public hasEffect()Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/effect/EffectController;->hasEffect(ZZ)Z
+    invoke-virtual {p0, v0}, Lcom/android/camera/effect/EffectController;->hasEffect(Z)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public hasEffect(ZZ)Z
-    .locals 11
+.method public hasEffect(Z)Z
+    .locals 12
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000O0()Z
 
     move-result v0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isSquareModule()Z
 
     move-result v1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->isTiltShiftOn()Z
 
     move-result v2
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v3
 
-    invoke-virtual {v3}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0Oo0()Z
+    invoke-virtual {v3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0oO0O0o()Z
 
     move-result v3
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->isDualCameraWaterMarkOpen()Z
 
     move-result v4
 
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCameraWaterMarkOpen()Z
 
     move-result v5
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraSettings;->isTimeWaterMarkOpen()Z
 
     move-result v6
 
-    .line 9
     invoke-static {}, Lcom/android/camera/CameraSettings;->showGenderAge()Z
 
     move-result v7
 
-    .line 10
     invoke-static {}, Lcom/android/camera/CameraSettings;->isMagicMirrorOn()Z
 
     move-result v8
 
-    const/4 v9, 0x1
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
-    const/4 v10, 0x0
+    move-result-object v9
+
+    invoke-virtual {v9}, Lcom/android/camera/data/data/global/DataItemGlobal;->getCurrentMode()I
+
+    move-result v9
+
+    invoke-static {v9}, Lcom/android/camera/CameraSettings;->isCinematicAspectRatioEnabled(I)Z
+
+    move-result v9
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
 
     if-nez v4, :cond_1
 
@@ -6154,33 +5763,31 @@
     goto :goto_0
 
     :cond_0
-    move v4, v10
+    move v4, v11
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    move v4, v9
+    move v4, v10
 
     :goto_1
     if-eqz v3, :cond_2
 
     if-eqz v4, :cond_2
 
-    move v3, v9
+    move v3, v10
 
     goto :goto_2
 
     :cond_2
-    move v3, v10
+    move v3, v11
 
     :goto_2
     if-eqz p1, :cond_4
 
-    .line 11
     monitor-enter p0
 
-    .line 12
     :try_start_0
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
@@ -6198,14 +5805,13 @@
 
     if-eq p1, v4, :cond_3
 
-    move p1, v9
+    move p1, v10
 
     goto :goto_3
 
     :cond_3
-    move p1, v10
+    move p1, v11
 
-    .line 13
     :goto_3
     monitor-exit p0
 
@@ -6221,7 +5827,7 @@
     throw p1
 
     :cond_4
-    move p1, v10
+    move p1, v11
 
     :goto_4
     if-eqz v0, :cond_5
@@ -6234,16 +5840,16 @@
 
     if-nez v3, :cond_6
 
-    if-eqz p2, :cond_5
+    if-eqz v9, :cond_5
 
     goto :goto_5
 
     :cond_5
-    move v9, v10
+    move v10, v11
 
     :cond_6
     :goto_5
-    return v9
+    return v10
 .end method
 
 .method public isBackGroundBlur()Z
@@ -6251,7 +5857,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/EffectController;->getEffectForPreview(Z)I
 
     move-result v1
@@ -6272,7 +5877,6 @@
 .method public isBeautyFrameReady()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBeautyFrameReady:Z
 
     return v0
@@ -6281,7 +5885,6 @@
 .method public isBlurAnimationDone()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
     const/16 v1, 0x8
@@ -6308,7 +5911,6 @@
 .method public isCinematicEnable()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawCinematic:Z
 
     return v0
@@ -6317,7 +5919,6 @@
 .method public isDrawGradienter()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawGradienter:Z
 
     return v0
@@ -6326,7 +5927,6 @@
 .method public isDrawTilt()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawTilt:Z
 
     return v0
@@ -6335,7 +5935,6 @@
 .method public isEffectPageSelected()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
@@ -6356,7 +5955,6 @@
 .method public isKaleidoscopeEnable()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6369,7 +5967,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
@@ -6387,7 +5984,6 @@
 .method public isMainFrameDisplay()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mIsDrawMainFrame:Z
 
     return v0
@@ -6396,7 +5992,6 @@
 .method public isMakeupEnable()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBeautyEnable:Z
 
     return v0
@@ -6405,7 +6000,6 @@
 .method public isNeedDrawExposure()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawExposure:Z
 
     return v0
@@ -6414,7 +6008,6 @@
 .method public isNeedDrawPeaking()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawPeaking:Z
 
     return v0
@@ -6423,12 +6016,10 @@
 .method public isNeedRect(I)Z
     .locals 3
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mFilterInfoMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -6439,7 +6030,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -6457,14 +6047,12 @@
 
     check-cast v1, Lcom/android/camera/effect/FilterInfo;
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getId()I
 
     move-result v2
 
     if-ne v2, p1, :cond_0
 
-    .line 5
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->isNeedRect()Z
 
     move-result p1
@@ -6480,7 +6068,6 @@
 .method public isStickerEnable()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mCurrentSticker:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6495,7 +6082,6 @@
 .method public needDestroyMakeup()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mNeedDestroyMakeup:Z
 
     return v0
@@ -6504,12 +6090,10 @@
 .method public notifyRealtimePreviewFilterChanged(I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
@@ -6530,12 +6114,10 @@
 
     check-cast v2, Lcom/android/camera/effect/EffectController$EffectChangedListener;
 
-    .line 3
     invoke-interface {v2, p1}, Lcom/android/camera/effect/EffectController$EffectChangedListener;->onRealtimePreviewFilterChanged(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -6554,12 +6136,10 @@
 .method public removeChangeListener(Lcom/android/camera/effect/EffectController$EffectChangedListener;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
@@ -6571,12 +6151,10 @@
 
     const/4 p1, 0x1
 
-    .line 3
     monitor-exit v0
 
     return p1
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/effect/EffectController;->mChangedListeners:Ljava/util/List;
 
@@ -6591,7 +6169,6 @@
     :catchall_0
     move-exception p1
 
-    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -6604,40 +6181,30 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBeautyEnable:Z
 
     const/4 v1, 0x1
 
-    .line 2
     iput-boolean v1, p0, Lcom/android/camera/effect/EffectController;->mNeedDestroyMakeup:Z
 
     const/4 v1, 0x0
 
-    .line 3
     iput-object v1, p0, Lcom/android/camera/effect/EffectController;->mCurrentSticker:Ljava/lang/String;
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawPeaking:Z
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawTilt:Z
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawGradienter:Z
 
-    .line 7
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawExposure:Z
 
-    .line 8
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mDrawCinematic:Z
 
     const-string v0, "0"
 
-    .line 9
     iput-object v0, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
-    .line 10
     sget-object v0, Lcom/android/camera/effect/EffectController;->EFFECT_ALL_CHANGE_TYPES:[I
 
     invoke-direct {p0, v0}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
@@ -6648,7 +6215,6 @@
 .method public setAiColorCorrectionVersion(I)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/EffectController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6667,7 +6233,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mAiColorCorrectionVersion:I
 
     return-void
@@ -6676,7 +6241,6 @@
 .method public setAiSceneEffect(IZ)V
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
     move-result v0
@@ -6685,15 +6249,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mOverrideAiEffectIndex:I
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/EffectController;->setEffect(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
@@ -6701,12 +6262,10 @@
 
     const/4 v0, -0x1
 
-    .line 5
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mOverrideAiEffectIndex:I
 
     if-eqz p2, :cond_1
 
-    .line 6
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/EffectController;->setEffect(I)V
 
     :cond_1
@@ -6717,7 +6276,6 @@
 .method public setBeautyFrameReady(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mBeautyFrameReady:Z
 
     const/4 p1, 0x1
@@ -6730,7 +6288,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6739,7 +6296,6 @@
 .method public setBlurEffect(Z)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mBlur:Z
 
     if-eq p1, v0, :cond_4
@@ -6748,10 +6304,8 @@
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/effect/EffectController;->mOverrideEffectIndex:I
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
@@ -6766,17 +6320,14 @@
 
     const/4 v1, 0x0
 
-    .line 4
     :cond_2
     iput v1, p0, Lcom/android/camera/effect/EffectController;->mBlurStep:I
 
     :cond_3
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/effect/EffectController;->mIsDrawMainFrame:Z
 
-    .line 6
     :cond_4
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mBlur:Z
 
@@ -6786,7 +6337,6 @@
 .method public setCinematicEnable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mDrawCinematic:Z
 
     return-void
@@ -6795,7 +6345,6 @@
 .method public setCurrentSticker(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/EffectController;->mCurrentSticker:Ljava/lang/String;
 
     const/4 p1, 0x1
@@ -6808,7 +6357,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6817,7 +6365,6 @@
 .method public setDestroyMakeup(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mNeedDestroyMakeup:Z
 
     return-void
@@ -6826,7 +6373,6 @@
 .method public setDeviceRotation(ZF)V
     .locals 0
 
-    .line 1
     iput p2, p0, Lcom/android/camera/effect/EffectController;->mDeviceRotation:F
 
     return-void
@@ -6835,7 +6381,6 @@
 .method public setDrawExposure(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mDrawExposure:Z
 
     const/4 p1, 0x1
@@ -6848,7 +6393,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6857,7 +6401,6 @@
 .method public setDrawGradienter(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mDrawGradienter:Z
 
     const/4 p1, 0x1
@@ -6870,7 +6413,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6879,7 +6421,6 @@
 .method public setDrawPeaking(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mDrawPeaking:Z
 
     const/4 p1, 0x1
@@ -6892,7 +6433,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6901,7 +6441,6 @@
 .method public setDrawTilt(Z)V
     .locals 2
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/EffectController;->mDrawTilt:Z
 
     const/4 p1, 0x1
@@ -6914,7 +6453,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -6923,10 +6461,8 @@
 .method public setEffect(I)V
     .locals 2
 
-    .line 1
     monitor-enter p0
 
-    .line 2
     :try_start_0
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
@@ -6938,14 +6474,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/EffectController;->mOverrideAiEffectIndex:I
 
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mEffectId:I
 
@@ -6958,10 +6492,8 @@
 
     aput p1, v0, v1
 
-    .line 5
     invoke-direct {p0, v0}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
-    .line 6
     monitor-exit p0
 
     return-void
@@ -6979,28 +6511,24 @@
 .method public setEffectAttribute(Landroid/graphics/RectF;Landroid/graphics/PointF;Landroid/graphics/PointF;F)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v0, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mRectF:Landroid/graphics/RectF;
 
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object p1, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint1:Landroid/graphics/PointF;
 
     invoke-virtual {p1, p2}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object p1, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint2:Landroid/graphics/PointF;
 
     invoke-virtual {p1, p3}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iput p4, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mRangeWidth:F
@@ -7011,7 +6539,6 @@
 .method public setInvertFlag(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/EffectController;->mEffectRectAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iput p1, v0, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mInvertFlag:I
@@ -7022,7 +6549,6 @@
 .method public setKaleidoscope(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/EffectController;->mDrawKaleidoscope:Ljava/lang/String;
 
     const/4 p1, 0x1
@@ -7035,7 +6561,6 @@
 
     aput v1, p1, v0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/effect/EffectController;->postNotifyEffectChanged([I)V
 
     return-void
@@ -7044,10 +6569,8 @@
 .method public setLightingEffect(I)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/EffectController;->setEffect(I)V
 
     return-void
@@ -7056,7 +6579,6 @@
 .method public setOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mOrientation:I
 
     return-void
@@ -7065,7 +6587,6 @@
 .method public setTiltShiftMaskAlpha(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/EffectController;->mTiltShiftMaskAlpha:F
 
     return-void

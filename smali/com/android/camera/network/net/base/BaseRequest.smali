@@ -53,28 +53,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mListenerDispatcher:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mTag:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mUseCache:Z
 
     const-wide/16 v0, -0x1
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mCacheExpires:J
 
-    .line 6
     iput-wide v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mCacheSoftTtl:J
 
     return-void
@@ -83,7 +77,6 @@
 .method public static setAppResponseErrorHandler(Lcom/android/camera/network/net/base/ResponseErrorHandler;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/android/camera/network/net/base/BaseRequest;->mAppResponseErrorHandler:Lcom/android/camera/network/net/base/ResponseErrorHandler;
 
     return-void
@@ -104,7 +97,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -113,13 +105,11 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mParams:Ljava/util/Map;
 
     if-nez v0, :cond_1
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -131,7 +121,6 @@
 
     const-string p2, ""
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mParams:Ljava/util/Map;
 
@@ -146,28 +135,23 @@
 .method public deliverError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/net/base/RequestError;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/camera/network/net/base/RequestError;-><init>(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mRequestError:Lcom/android/camera/network/net/base/RequestError;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mListenerDispatcher:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/network/net/base/ResponseDispatcher;->onResponseError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4
     :cond_0
     sget-object v0, Lcom/android/camera/network/net/base/BaseRequest;->mAppResponseErrorHandler:Lcom/android/camera/network/net/base/ResponseErrorHandler;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-interface {v0, p1, p2, p3}, Lcom/android/camera/network/net/base/ResponseErrorHandler;->onRequestError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_1
@@ -177,15 +161,12 @@
 .method public varargs deliverResponse([Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/net/base/BaseRequest;->mResponse:[Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mListenerDispatcher:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/network/net/base/ResponseDispatcher;->onResponse([Ljava/lang/Object;)V
 
     :cond_0
@@ -198,10 +179,8 @@
 .method public final execute(Lcom/android/camera/network/net/base/ResponseListener;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/network/net/base/BaseRequest;->setOnResponseListener(Lcom/android/camera/network/net/base/ResponseListener;)Lcom/android/camera/network/net/base/BaseRequest;
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/network/net/base/BaseRequest;->execute()V
 
     return-void
@@ -210,7 +189,6 @@
 .method public getRequestError()Lcom/android/camera/network/net/base/RequestError;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mRequestError:Lcom/android/camera/network/net/base/RequestError;
 
     return-object v0
@@ -219,7 +197,6 @@
 .method public getResponse()[Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mResponse:[Ljava/lang/Object;
 
     return-object v0
@@ -228,7 +205,6 @@
 .method public getTag()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mTag:Ljava/lang/Object;
 
     return-object v0
@@ -237,7 +213,6 @@
 .method public final isUseCache()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/network/net/base/BaseRequest;->mUseCache:Z
 
     return v0
@@ -270,7 +245,6 @@
         }
     .end annotation
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/network/net/base/BaseRequest;->mCacheExpires:J
 
     return-object p0
@@ -286,7 +260,6 @@
         }
     .end annotation
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/network/net/base/BaseRequest;->mCacheSoftTtl:J
 
     return-object p0
@@ -304,7 +277,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     invoke-direct {v0, p1}, Lcom/android/camera/network/net/base/ResponseDispatcher;-><init>(Lcom/android/camera/network/net/base/ResponseListener;)V
@@ -326,7 +298,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/net/base/BaseRequest;->mTag:Ljava/lang/Object;
 
     return-object p0
@@ -342,7 +313,6 @@
         }
     .end annotation
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/network/net/base/BaseRequest;->mUseCache:Z
 
     return-object p0

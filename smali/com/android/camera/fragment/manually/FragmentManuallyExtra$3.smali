@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/manually/FragmentManuallyExtra;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra$3;->this$0:Lcom/android/camera/fragment/manually/FragmentManuallyExtra;
 
     iput-object p2, p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra$3;->val$fromView:Landroid/view/View;
@@ -64,14 +63,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra$3;->val$fromView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra$3;->val$toView:Landroid/view/View;
 
     const/4 v0, 0x0

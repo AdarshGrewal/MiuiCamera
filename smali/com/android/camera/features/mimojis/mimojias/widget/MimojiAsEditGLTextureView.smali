@@ -56,7 +56,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -69,7 +68,6 @@
 
     new-array v0, v0, [F
 
-    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->BACKGROUND_COLOR:[F
@@ -92,7 +90,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -101,10 +98,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/ui/GLTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 3
     new-instance p1, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;
 
     const/4 p2, 0x0
@@ -115,47 +110,36 @@
 
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCount:I
 
     const-wide/16 v0, 0x0
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCountingStart:J
 
     const/16 p2, 0x5a
 
-    .line 6
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mDeviceRotation:I
 
-    .line 7
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRender:Z
 
-    .line 8
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRenderForce:Z
 
-    .line 9
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mSaveConfigThum:Z
 
     const/4 p2, 0x2
 
-    .line 10
     invoke-virtual {p0, p2}, Lcom/android/camera/ui/GLTextureView;->setEGLContextClientVersion(I)V
 
-    .line 11
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mEglConfigChooser:Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;
 
     invoke-virtual {p0, p2}, Lcom/android/camera/ui/GLTextureView;->setEGLConfigChooser(Lcom/android/camera/ui/GLTextureView$EGLConfigChooser;)V
 
-    .line 12
     invoke-virtual {p0, p0}, Lcom/android/camera/ui/GLTextureView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
-    .line 13
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/GLTextureView;->setRenderMode(I)V
 
     const/4 p1, 0x1
 
-    .line 14
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/GLTextureView;->setPreserveEGLContextOnPause(Z)V
 
     return-void
@@ -164,7 +148,6 @@
 .method public static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -173,12 +156,10 @@
 .method private outputFps()V
     .locals 8
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
-    .line 2
     iget-wide v2, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCountingStart:J
 
     const-wide/16 v4, 0x0
@@ -187,7 +168,6 @@
 
     if-nez v4, :cond_0
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCountingStart:J
 
     goto :goto_0
@@ -201,7 +181,6 @@
 
     if-lez v2, :cond_1
 
-    .line 4
     sget-object v2, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -236,15 +215,12 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCountingStart:J
 
     const/4 v0, 0x0
 
-    .line 6
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCount:I
 
-    .line 7
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mFrameCount:I
@@ -261,7 +237,6 @@
 .method public onDeviceRotationChange(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mDeviceRotation:I
 
     return-void
@@ -274,38 +249,31 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-static {p1, p1, p1, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 p1, 0xb71
 
-    .line 2
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnable(I)V
 
     const/16 p1, 0x4100
 
-    .line 3
     invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 4
     iget-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRender:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v2
 
-    .line 6
     invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
 
     move-result v3
 
-    .line 7
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
 
     move-result-object p1
@@ -318,7 +286,6 @@
 
     if-nez v0, :cond_1
 
-    .line 8
     sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onDrawFrame mAvatar  null"
@@ -327,7 +294,6 @@
 
     return-void
 
-    .line 9
     :cond_1
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mDeviceRotation:I
 
@@ -339,21 +305,18 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/arcsoft/avatar2/AvatarEngine;->avatarRender(IIIIZ[I)V
 
-    .line 10
     iget-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mSaveConfigThum:Z
 
     if-eqz p1, :cond_2
 
     const/4 p1, 0x0
 
-    .line 11
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mSaveConfigThum:Z
 
     const p1, 0x27100
 
     new-array p1, p1, [B
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mAvatar:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/16 v1, 0xf4
@@ -378,7 +341,6 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/arcsoft/avatar2/AvatarEngine;->renderThumb(IIII[BIII[FF)I
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
@@ -387,18 +349,14 @@
 
     const/4 v1, 0x4
 
-    .line 14
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 15
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mHandler:Landroid/os/Handler;
 
     if-eqz p1, :cond_2
 
-    .line 17
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_2
@@ -410,18 +368,14 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/ui/GLTextureView;->setPreserveEGLContextOnPause(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mAvatar:Lcom/arcsoft/avatar2/AvatarEngine;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/AvatarEngine;->releaseRender()V
 
-    .line 4
     :cond_0
     invoke-super {p0}, Lcom/android/camera/ui/GLTextureView;->onPause()V
 
@@ -433,7 +387,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     return-void
@@ -446,7 +399,6 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-static {p1, p1, p1, p2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     return-void
@@ -455,7 +407,6 @@
 .method public setHandler(Landroid/os/Handler;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -464,7 +415,6 @@
 .method public setIsStopRenderForce(Z)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -483,14 +433,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRenderForce:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->setStopRender(Z)V
 
     :cond_0
@@ -500,7 +448,6 @@
 .method public setSaveConfigThum(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mSaveConfigThum:Z
 
     return-void
@@ -509,14 +456,12 @@
 .method public setStopRender(Z)V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRenderForce:Z
 
     if-eqz v0, :cond_0
 
     const/4 p1, 0x1
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRender:Z
 
@@ -524,7 +469,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->TAG:Ljava/lang/String;
 
@@ -544,7 +488,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->mIsStopRender:Z
 
     return-void

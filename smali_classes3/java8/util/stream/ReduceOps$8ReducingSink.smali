@@ -47,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     iput-wide p1, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->val$identity:J
 
     iput-object p3, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->val$operator:Ljava8/util/function/LongBinaryOperator;
@@ -62,7 +61,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -71,7 +69,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -80,7 +77,6 @@
 .method public accept(J)V
     .locals 3
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->val$operator:Ljava8/util/function/LongBinaryOperator;
 
     iget-wide v1, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->state:J
@@ -97,7 +93,6 @@
 .method public accept(Ljava/lang/Long;)V
     .locals 0
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfLong;->accept(Ljava8/util/stream/Sink$OfLong;Ljava/lang/Long;)V
 
     return-void
@@ -106,7 +101,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$8ReducingSink;->accept(Ljava/lang/Long;)V
@@ -117,7 +111,6 @@
 .method public begin(J)V
     .locals 0
 
-    .line 1
     iget-wide p1, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->val$identity:J
 
     iput-wide p1, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->state:J
@@ -136,7 +129,6 @@
 .method public combine(Ljava8/util/stream/ReduceOps$8ReducingSink;)V
     .locals 2
 
-    .line 2
     iget-wide v0, p1, Ljava8/util/stream/ReduceOps$8ReducingSink;->state:J
 
     invoke-virtual {p0, v0, v1}, Ljava8/util/stream/ReduceOps$8ReducingSink;->accept(J)V
@@ -147,7 +139,6 @@
 .method public bridge synthetic combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/stream/ReduceOps$8ReducingSink;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$8ReducingSink;->combine(Ljava8/util/stream/ReduceOps$8ReducingSink;)V
@@ -164,7 +155,6 @@
 .method public get()Ljava/lang/Long;
     .locals 2
 
-    .line 2
     iget-wide v0, p0, Ljava8/util/stream/ReduceOps$8ReducingSink;->state:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -177,7 +167,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$8ReducingSink;->get()Ljava/lang/Long;
 
     move-result-object v0

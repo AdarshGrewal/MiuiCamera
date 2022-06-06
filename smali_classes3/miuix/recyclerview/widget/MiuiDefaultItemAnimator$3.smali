@@ -27,7 +27,6 @@
 .method public constructor <init>(Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$3;->this$0:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
     iput-object p2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$3;->val$holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$3;->this$0:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
     iget-object v1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$3;->val$holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;

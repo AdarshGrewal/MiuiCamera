@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createDataRefBox()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -47,10 +45,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -59,7 +55,6 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -68,7 +63,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->estimateSize()I
 
     move-result v0
@@ -81,13 +75,10 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 3
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->parse(Ljava/nio/ByteBuffer;)V
 
     return-void

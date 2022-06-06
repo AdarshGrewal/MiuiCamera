@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$1;->this$0:Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$1;->this$0:Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;
 
     invoke-static {v0}, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->access$000(Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;)V

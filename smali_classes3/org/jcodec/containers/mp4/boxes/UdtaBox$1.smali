@@ -27,7 +27,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/UdtaBox;Lorg/jcodec/containers/mp4/IBoxFactory;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;->this$0:Lorg/jcodec/containers/mp4/boxes/UdtaBox;
 
     iput-object p2, p0, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;->val$_factory:Lorg/jcodec/containers/mp4/IBoxFactory;
@@ -42,7 +41,6 @@
 .method public newBox(Lorg/jcodec/containers/mp4/boxes/Header;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
 
     move-result-object v0
@@ -57,19 +55,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/UdtaMetaBox;
 
     invoke-direct {v0, p1}, Lorg/jcodec/containers/mp4/boxes/UdtaMetaBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 3
     iget-object p1, p0, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;->val$_factory:Lorg/jcodec/containers/mp4/IBoxFactory;
 
     invoke-virtual {v0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->setFactory(Lorg/jcodec/containers/mp4/IBoxFactory;)V
 
     return-object v0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;->val$_factory:Lorg/jcodec/containers/mp4/IBoxFactory;
 

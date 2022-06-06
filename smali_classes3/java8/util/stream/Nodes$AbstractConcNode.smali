@@ -59,16 +59,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->left:Ljava8/util/stream/Node;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->right:Ljava8/util/stream/Node;
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -89,7 +85,6 @@
 .method public count()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->size:J
 
     return-wide v0
@@ -105,7 +100,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->left:Ljava8/util/stream/Node;
 
     return-object p1
@@ -115,12 +109,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2
     iget-object p1, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->right:Ljava8/util/stream/Node;
 
     return-object p1
 
-    .line 3
     :cond_1
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -140,7 +132,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0

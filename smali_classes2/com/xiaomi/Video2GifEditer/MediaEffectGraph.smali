@@ -21,10 +21,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string v1, " "
@@ -33,7 +31,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     return-void
@@ -95,7 +92,6 @@
 .method public AddAudioTrack(Ljava/lang/String;Z)J
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -120,7 +116,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -129,7 +124,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object p2, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -150,13 +144,11 @@
 
     return-wide v2
 
-    .line 4
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddAudioTrackJni(Ljava/lang/String;Z)J
 
     move-result-wide v0
 
-    .line 5
     sget-object p2, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -187,7 +179,6 @@
 .method public AddEffect(JJJ)Z
     .locals 4
 
-    .line 5
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -196,7 +187,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null, add effect failed! "
@@ -207,7 +197,6 @@
 
     return p1
 
-    .line 7
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -237,7 +226,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static/range {p1 .. p6}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddTransitionEffectJni(JJJ)Z
 
     move-result p1
@@ -248,7 +236,6 @@
 .method public AddEffect(JJZ)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -257,7 +244,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null, add effect failed!"
@@ -268,7 +254,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -294,7 +279,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2, p3, p4, p5}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddEffectJni(JJZ)Z
 
     move-result p1
@@ -305,7 +289,6 @@
 .method public AddSourceAndEffectByTemplate([Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddSourceAndEffectByTemplateJni([Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -314,7 +297,6 @@
 .method public AddVideoBackGroud(Ljava/lang/String;)Z
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -333,7 +315,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -342,7 +323,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -365,7 +345,6 @@
 
     return p1
 
-    .line 4
     :cond_0
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddVideoBackGroudJni(Ljava/lang/String;)Z
 
@@ -377,7 +356,6 @@
 .method public AddVideoSource(Ljava/lang/String;Z)J
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -396,7 +374,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v3, 0x0
@@ -405,7 +382,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object p2, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -426,13 +402,11 @@
 
     return-wide v3
 
-    .line 4
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->AddVideoSourceJni(Ljava/lang/String;Z)J
 
     move-result-wide v0
 
-    .line 5
     sget-object p2, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -461,14 +435,12 @@
 .method public ConstructMediaEffectGraph()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->ConstructMediaEffectGraphJni()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
-    .line 2
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string v1, "Construct: "
@@ -481,7 +453,6 @@
 .method public DestructMediaEffectGraph()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string v1, "Destruct"
@@ -490,10 +461,8 @@
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->DestructMediaEffectGraphJni()V
 
     return-void
@@ -502,7 +471,6 @@
 .method public GetGraphLine()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     return-wide v0
@@ -511,7 +479,6 @@
 .method public RemoveAudioTrack(J)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -520,7 +487,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null , failed remove video source!"
@@ -531,7 +497,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -551,7 +516,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->RemoveAudioTrackJni(J)Z
 
     move-result p1
@@ -562,7 +526,6 @@
 .method public RemoveEffect(JJJ)Z
     .locals 4
 
-    .line 5
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -571,7 +534,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null, remove effect failed!"
@@ -582,7 +544,6 @@
 
     return p1
 
-    .line 7
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -612,7 +573,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static/range {p1 .. p6}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->RemoveTransitionEffectJni(JJJ)Z
 
     move-result p1
@@ -623,7 +583,6 @@
 .method public RemoveEffect(JJZ)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -632,7 +591,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null, remove effect failed!"
@@ -643,7 +601,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -669,7 +626,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2, p3, p4, p5}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->RemoveEffectJni(JJZ)Z
 
     move-result p1
@@ -680,14 +636,12 @@
 .method public RemoveVideoBackGroud()Z
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string v1, "remove video backgroud"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -696,7 +650,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string v1, "GraphLine is null , failed remove video backgroud!"
@@ -707,7 +660,6 @@
 
     return v0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->RemoveVideoBackGroudJni()Z
 
@@ -719,7 +671,6 @@
 .method public RemoveVideoSource(J)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -728,7 +679,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null , failed remove video source!"
@@ -739,7 +689,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -759,7 +708,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->RemoveVideoSourceJni(J)Z
 
     move-result p1
@@ -770,7 +718,6 @@
 .method public SetAudioMute(Z)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -789,7 +736,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->SetAudioMuteJni(Z)V
 
     return-void
@@ -798,7 +744,6 @@
 .method public SetCurrentSource(J)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -817,7 +762,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->SetCurrentSourceJni(J)V
 
     return-void
@@ -835,7 +779,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -858,14 +801,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 2
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -874,7 +815,6 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 4
     invoke-interface {p3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -896,7 +836,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 5
     sget-object v4, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -933,7 +872,6 @@
 
     mul-int/lit8 v4, v0, 0x2
 
-    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -942,7 +880,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 7
     invoke-interface {p3, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -955,7 +892,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     sget-object p3, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -965,7 +901,6 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 9
     :cond_1
     invoke-static {p1, p2, v1}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->SetParamsForVideoSourceJni(J[Ljava/lang/String;)Z
 
@@ -977,7 +912,6 @@
 .method public SwapVideoSource(JJ)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->mGraphLine:J
 
     const-wide/16 v2, 0x0
@@ -986,7 +920,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
     const-string p2, "GraphLine is null , failed Swap video source!"
@@ -997,7 +930,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->TAG:Ljava/lang/String;
 
@@ -1023,7 +955,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2, p3, p4}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->SwapVideoSourceJni(JJ)Z
 
     move-result p1

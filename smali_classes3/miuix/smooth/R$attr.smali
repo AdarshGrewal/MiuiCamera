@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final miuix_strokeColor:I = 0x7f040243
+.field public static final miuix_strokeColor:I = 0x7f04023f
 
-.field public static final miuix_strokeWidth:I = 0x7f040244
+.field public static final miuix_strokeWidth:I = 0x7f040240
 
 
 # direct methods

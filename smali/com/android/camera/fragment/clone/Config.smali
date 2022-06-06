@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static getCloneMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/clone/Config;->sMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     return-object v0
@@ -46,7 +44,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 1
     sput-object p0, Lcom/android/camera/fragment/clone/Config;->sMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     :cond_1
@@ -57,7 +54,6 @@
 .method public static setCloneMode(Lcom/xiaomi/fenshen/FenShenCam$Mode;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/android/camera/fragment/clone/Config;->sMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     return-void

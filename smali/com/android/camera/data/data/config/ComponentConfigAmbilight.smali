@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getAmbilightModeIndex()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -42,7 +40,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -53,7 +50,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f1205c9
+    const v0, 0x7f120593
 
     return v0
 .end method
@@ -69,7 +66,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -144,7 +140,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -155,7 +150,6 @@
 
     iput-object p2, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 2
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -173,25 +167,20 @@
 
     check-cast p2, Lcom/android/camera/fragment/ambilight/AmbilightInfo;
 
-    .line 3
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 4
     invoke-virtual {p2}, Lcom/android/camera/fragment/ambilight/AmbilightInfo;->getIconResId()I
 
     move-result v1
 
-    .line 5
     invoke-virtual {p2}, Lcom/android/camera/fragment/ambilight/AmbilightInfo;->getIconResId()I
 
     move-result v2
 
-    .line 6
     invoke-virtual {p2}, Lcom/android/camera/fragment/ambilight/AmbilightInfo;->getNameResId()I
 
     move-result v3
 
-    .line 7
     invoke-virtual {p2}, Lcom/android/camera/fragment/ambilight/AmbilightInfo;->getSceneMode()I
 
     move-result p2
@@ -202,7 +191,6 @@
 
     invoke-direct {v0, v1, v2, v3, p2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
-    .line 8
     iget-object p2, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -216,7 +204,6 @@
 .method public setAmbilightModeValue(I)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0

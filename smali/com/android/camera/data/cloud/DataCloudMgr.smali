@@ -46,17 +46,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     invoke-direct {v0}, Lcom/android/camera/data/cloud/DataCloudItemGlobal;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
-    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x2
@@ -71,7 +68,6 @@
 .method public static synthetic access$000(Lcom/android/camera/data/cloud/DataCloudMgr;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->fillPreference()V
 
     return-void
@@ -82,7 +78,6 @@
 
     const-string v0, "cloud_data_last_update"
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataLastUpdateTime()J
     :try_end_0
@@ -95,10 +90,8 @@
 
     const-string v2, "get cloud_data_last_update long value failed, try String type"
 
-    .line 2
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :try_start_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -114,10 +107,8 @@
 
     const-string/jumbo v3, "try to convert the string value type to long for field [cloud_data_last_update]"
 
-    .line 4
     invoke-static {v1, v3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -133,7 +124,6 @@
 
     move-result-wide v1
 
-    .line 6
     :goto_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -143,17 +133,14 @@
 
     move-result-object v3
 
-    .line 7
     invoke-interface {v3, v0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->remove(Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v3
 
-    .line 8
     invoke-interface {v3, v0, v1, v2}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putLong(Ljava/lang/String;J)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
 
-    .line 9
     invoke-interface {v0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->commit()Z
 
     :goto_1
@@ -162,7 +149,6 @@
     :catch_1
     const-string v0, "get cloud_data_last_update string value failed"
 
-    .line 10
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -173,19 +159,16 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/cloud/DataCloudMgr;->provideDataCloudConfig(I)Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-virtual {p0, v2}, Lcom/android/camera/data/cloud/DataCloudMgr;->provideDataCloudConfig(I)Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     move-result-object v3
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudSensitiveWords()V
 
     const/4 v4, 0x0
@@ -194,17 +177,14 @@
 
     const-string v6, "camera_settings_v3"
 
-    .line 4
     invoke-static {v6, v5, v4}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 5
     invoke-static {}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataCommonVersion()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 6
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,37 +201,30 @@
 
     move-result-object v9
 
-    .line 7
     invoke-static {v9, v5, v4}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 8
     invoke-static {}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataDeviceVersion()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 9
     iget-object v9, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     invoke-virtual {v9, v2}, Lcom/android/camera/data/cloud/DataCloudItemBase;->setReady(Z)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
 
     move-result-object v9
 
     invoke-interface {v9, v2}, Lcom/android/camera/data/cloud/DataCloud$CloudFeature;->setReady(Z)V
 
-    .line 11
     invoke-interface {v1, v2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->setReady(Z)V
 
-    .line 12
     invoke-interface {v3, v2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->setReady(Z)V
 
     if-eqz v7, :cond_0
 
-    .line 13
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -261,14 +234,12 @@
     :cond_0
     if-eqz v4, :cond_2
 
-    .line 14
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 15
     :cond_1
     iget-object v2, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
@@ -282,7 +253,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 16
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
 
     move-result-object v2
@@ -297,7 +267,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 17
     invoke-interface {v1}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->editor()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -308,7 +277,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 18
     invoke-interface {v3}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->editor()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -319,7 +287,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 19
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,13 +311,10 @@
 
     invoke-static {v9, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     invoke-static {v7}, Lcom/android/camera/data/cloud/DataCloudMgr;->setCloudDataCommonVersion(Ljava/lang/String;)V
 
-    .line 21
     invoke-direct {p0, v6}, Lcom/android/camera/data/cloud/DataCloudMgr;->updateSettingsFromCloudData(Ljava/lang/String;)V
 
-    .line 22
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,10 +335,8 @@
 
     invoke-static {v9, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     invoke-static {v4}, Lcom/android/camera/data/cloud/DataCloudMgr;->setCloudDataDeviceVersion(Ljava/lang/String;)V
 
-    .line 24
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -391,23 +353,19 @@
 
     invoke-direct {p0, v2}, Lcom/android/camera/data/cloud/DataCloudMgr;->updateSettingsFromCloudData(Ljava/lang/String;)V
 
-    .line 25
     :cond_2
     iget-object v2, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     invoke-virtual {v2, v0}, Lcom/android/camera/data/cloud/DataCloudItemBase;->setReady(Z)V
 
-    .line 26
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
 
     move-result-object v2
 
     invoke-interface {v2, v0}, Lcom/android/camera/data/cloud/DataCloud$CloudFeature;->setReady(Z)V
 
-    .line 27
     invoke-interface {v1, v0}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->setReady(Z)V
 
-    .line 28
     invoke-interface {v3, v0}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->setReady(Z)V
 
     return-void
@@ -416,7 +374,6 @@
 .method public static getCloudDataCommonVersion()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -435,7 +392,6 @@
 .method public static getCloudDataDeviceVersion()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -454,7 +410,6 @@
 .method public static final getCloudDataInt(Ljava/lang/String;Ljava/lang/String;I)I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -463,7 +418,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/compat/miui/MiuiSettingsCompat$SettingsCloudData;->getCloudDataInt(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result p0
@@ -474,7 +428,6 @@
 .method public static getCloudDataLastUpdateTime()J
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -493,7 +446,6 @@
 .method public static final getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -502,7 +454,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/compat/miui/MiuiSettingsCompat$SettingsCloudData;->getCloudDataString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -519,12 +470,10 @@
 
     const-string v2, ""
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -533,7 +482,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
@@ -542,19 +490,16 @@
 
     const-string/jumbo v0, "value"
 
-    .line 4
     invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string/jumbo v2, "version"
 
-    .line 5
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 6
     invoke-direct {p0, v1, v0}, Lcom/android/camera/data/cloud/DataCloudMgr;->updateSensitiveWords(ILjava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -564,7 +509,6 @@
     :catch_0
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_0
@@ -574,7 +518,6 @@
 .method public static setCloudDataCommonVersion(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -597,7 +540,6 @@
 .method public static setCloudDataDeviceVersion(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -612,7 +554,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
 
     return-void
@@ -621,7 +562,6 @@
 .method public static setCloudDataLastUpdateTime(J)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -644,26 +584,22 @@
 .method private updateSensitiveWords(ILjava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {p2}, Lcom/android/camera/CameraSettings;->getKeyCloudSenstiveWordsPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/data/com.android.camera/sensi_words"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/CameraSettings;->getLocalWordsVersion()I
 
     move-result v1
 
     if-gt p1, v1, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -672,7 +608,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -682,7 +617,6 @@
 
     invoke-static {v0}, Lcom/android/camera/network/util/NetworkUtils;->bind(Landroid/app/Application;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/network/util/NetworkUtils;->isNetworkConnected()Z
 
     move-result v0
@@ -691,14 +625,12 @@
 
     const-string v0, "/data/data/com.android.camera/"
 
-    .line 7
-    invoke-static {p2, v0}, LOooO00o/OooO0Oo/OooO00o/OooOO0;->OooO00o(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p2, v0}, Lcom/android/camera/sensitive/SensitiveFilter;->loadSensitiveWords(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 8
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->setLocalWordsVersion(I)V
 
     :cond_1
@@ -717,12 +649,10 @@
 
     const/4 v3, 0x0
 
-    .line 1
     invoke-static {p1, v2, v3}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -737,7 +667,6 @@
 
     if-nez v4, :cond_7
 
-    .line 3
     :try_start_1
     new-instance v4, Lorg/json/JSONArray;
 
@@ -745,7 +674,6 @@
 
     move v2, v7
 
-    .line 4
     :goto_0
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -753,41 +681,34 @@
 
     if-ge v2, v8, :cond_7
 
-    .line 5
     iget-object v8, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
-    .line 6
     invoke-virtual {v4, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v9
 
-    .line 7
     invoke-virtual {v9, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 8
     invoke-virtual {v9, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     const-string v11, "front"
 
-    .line 9
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 10
     iget-object v8, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudItemConfigs:Landroid/util/SparseArray;
 
     const/4 v10, 0x1
 
-    .line 11
     invoke-virtual {v8, v10}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -799,46 +720,38 @@
     :cond_0
     const-string v11, "back"
 
-    .line 12
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 13
     iget-object v8, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudItemConfigs:Landroid/util/SparseArray;
 
-    .line 14
     invoke-virtual {v8, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/camera/data/cloud/DataCloudItemBase;
 
-    .line 15
     :cond_1
     :goto_1
     invoke-virtual {v9, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 16
     invoke-virtual {v8}, Lcom/android/camera/data/cloud/DataCloudItemBase;->editor()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v8
 
-    .line 17
     invoke-virtual {v9, v5}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v9
 
-    .line 18
     instance-of v11, v9, Ljava/lang/Boolean;
 
     if-eqz v11, :cond_2
 
-    .line 19
     check-cast v9, Ljava/lang/Boolean;
 
     invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
@@ -849,13 +762,11 @@
 
     goto :goto_2
 
-    .line 20
     :cond_2
     instance-of v11, v9, Ljava/lang/Integer;
 
     if-eqz v11, :cond_3
 
-    .line 21
     check-cast v9, Ljava/lang/Integer;
 
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
@@ -866,13 +777,11 @@
 
     goto :goto_2
 
-    .line 22
     :cond_3
     instance-of v11, v9, Ljava/lang/Long;
 
     if-eqz v11, :cond_4
 
-    .line 23
     check-cast v9, Ljava/lang/Long;
 
     invoke-virtual {v9}, Ljava/lang/Long;->longValue()J
@@ -883,13 +792,11 @@
 
     goto :goto_2
 
-    .line 24
     :cond_4
     instance-of v11, v9, Ljava/lang/Float;
 
     if-eqz v11, :cond_5
 
-    .line 25
     check-cast v9, Ljava/lang/Float;
 
     invoke-virtual {v9}, Ljava/lang/Float;->floatValue()F
@@ -900,20 +807,17 @@
 
     goto :goto_2
 
-    .line 26
     :cond_5
     instance-of v11, v9, Ljava/lang/String;
 
     if-eqz v11, :cond_6
 
-    .line 27
     check-cast v9, Ljava/lang/String;
 
     invoke-interface {v8, v10, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_2
 
-    .line 28
     :cond_6
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -937,7 +841,6 @@
 
     invoke-static {v1, v9}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :goto_2
     invoke-interface {v8}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -948,19 +851,16 @@
     :cond_7
     const-string v0, "feature"
 
-    .line 30
     invoke-static {p1, v0, v3}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 31
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    .line 32
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
 
     move-result-object v0
@@ -969,12 +869,10 @@
 
     move-result-object v0
 
-    .line 33
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2, p1}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
-    .line 34
     :goto_3
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -982,12 +880,10 @@
 
     if-ge v7, p1, :cond_8
 
-    .line 35
     invoke-virtual {v2, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object p1
 
-    .line 36
     invoke-virtual {p1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -1002,7 +898,6 @@
 
     goto :goto_3
 
-    .line 37
     :cond_8
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_1
@@ -1015,7 +910,6 @@
 
     const-string v0, "JSONException when get camera settings !"
 
-    .line 38
     invoke-static {v1, v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_9
@@ -1028,19 +922,16 @@
 .method public DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudFeatureController:Lcom/android/camera/data/cloud/DataCloudFeatureController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/cloud/DataCloudFeatureController;
 
     invoke-direct {v0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudFeatureController:Lcom/android/camera/data/cloud/DataCloudFeatureController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudFeatureController:Lcom/android/camera/data/cloud/DataCloudFeatureController;
 
@@ -1050,15 +941,12 @@
 .method public fillCloudValues()V
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/cloud/DataCloudMgr;->checkLastUpdateTimeFormat()V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/cloud/DataCloudMgr;->getCloudDataLastUpdateTime()J
 
     move-result-wide v2
@@ -1071,21 +959,18 @@
 
     if-gez v2, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/cloud/DataCloudItemBase;->setReady(Z)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudMgr;->DataCloudFeature()Lcom/android/camera/data/cloud/DataCloud$CloudFeature;
 
     move-result-object v0
 
     invoke-interface {v0, v1}, Lcom/android/camera/data/cloud/DataCloud$CloudFeature;->setReady(Z)V
 
-    .line 6
     invoke-virtual {p0, v1}, Lcom/android/camera/data/cloud/DataCloudMgr;->provideDataCloudConfig(I)Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     move-result-object v0
@@ -1094,7 +979,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     invoke-virtual {p0, v0}, Lcom/android/camera/data/cloud/DataCloudMgr;->provideDataCloudConfig(I)Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     move-result-object v0
@@ -1103,11 +987,9 @@
 
     return-void
 
-    .line 8
     :cond_0
     invoke-static {v0, v1}, Lcom/android/camera/data/cloud/DataCloudMgr;->setCloudDataLastUpdateTime(J)V
 
-    .line 9
     new-instance v0, Lcom/android/camera/data/cloud/DataCloudMgr$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/cloud/DataCloudMgr$1;-><init>(Lcom/android/camera/data/cloud/DataCloudMgr;)V
@@ -1116,7 +998,6 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -1125,7 +1006,6 @@
 
     move-result-object v0
 
-    .line 11
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -1134,7 +1014,6 @@
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
     return-void
@@ -1143,7 +1022,6 @@
 .method public provideDataCloudConfig(I)Lcom/android/camera/data/cloud/DataCloud$CloudItem;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudItemConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1154,12 +1032,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/cloud/DataCloudItemConfig;
 
     invoke-direct {v0, p1}, Lcom/android/camera/data/cloud/DataCloudItemConfig;-><init>(I)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudItemConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -1171,19 +1047,16 @@
 .method public provideDataCloudGlobal()Lcom/android/camera/data/cloud/DataCloud$CloudItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
     invoke-direct {v0}, Lcom/android/camera/data/cloud/DataCloudItemGlobal;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudMgr;->mDataCloudGlobal:Lcom/android/camera/data/cloud/DataCloudItemGlobal;
 

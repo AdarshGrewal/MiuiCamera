@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 
     const-string v0, "com.iqiyi.android.qigsaw.core.extension.ComponentInfo"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -46,7 +44,6 @@
 .method public static getSplitActivities(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,7 +60,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/ComponentInfoManager;->getComponentInfoClass()Ljava/lang/Class;
 
@@ -75,10 +71,8 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -89,7 +83,6 @@
 
     const-string v1, ","
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -103,7 +96,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :catch_1
@@ -114,7 +106,6 @@
 .method public static getSplitApplication(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -131,7 +122,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/ComponentInfoManager;->getComponentInfoClass()Ljava/lang/Class;
 
@@ -143,10 +133,8 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -162,7 +150,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :catch_1
@@ -172,7 +159,6 @@
 .method public static getSplitReceivers(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +175,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/ComponentInfoManager;->getComponentInfoClass()Ljava/lang/Class;
 
@@ -201,10 +186,8 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -215,7 +198,6 @@
 
     const-string v1, ","
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -229,7 +211,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :catch_1
@@ -240,7 +221,6 @@
 .method public static getSplitServices(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +237,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/ComponentInfoManager;->getComponentInfoClass()Ljava/lang/Class;
 
@@ -269,10 +248,8 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -283,7 +260,6 @@
 
     const-string v1, ","
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -297,7 +273,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :catch_1

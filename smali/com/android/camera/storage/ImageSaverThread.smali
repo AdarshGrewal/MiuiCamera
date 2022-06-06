@@ -30,10 +30,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/storage/ImageSaverThread;->mQueue:Ljava/util/concurrent/BlockingQueue;
 
     return-void
@@ -46,10 +44,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/storage/ImageSaverThread;->mQuit:Z
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaverThread;->mQueue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->isEmpty()Z
@@ -58,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_0
@@ -68,7 +63,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     :cond_0
     :goto_0
     :try_start_0
@@ -80,31 +74,25 @@
 
     check-cast v0, Lcom/android/camera/storage/SaveRequest;
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/storage/SaveRequest;->save()V
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/storage/SaveRequest;->onFinish()V
 
-    .line 4
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaverThread;->mQuit:Z
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 6
     :catch_0
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaverThread;->mQuit:Z
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaverThread;->mQueue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->clear()V

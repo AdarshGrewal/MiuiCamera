@@ -51,7 +51,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/MiStat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/MiStat$Event;->a:Lcom/xiaomi/stat/MiStat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Box;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v2
@@ -47,7 +45,6 @@
 
     check-cast p0, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;->getData()Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -65,7 +62,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -76,7 +72,6 @@
 .method public static containsBox(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/String;)Z
     .locals 4
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/Box;
 
     const/4 v1, 0x1
@@ -105,7 +100,6 @@
 .method public static containsBox2(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/Box;
 
     const/4 v1, 0x2
@@ -135,12 +129,10 @@
 .method public static parseBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/boxes/Header;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 4
 
-    .line 1
     invoke-interface {p2, p1}, Lorg/jcodec/containers/mp4/IBoxFactory;->newBox(Lorg/jcodec/containers/mp4/boxes/Header;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p2
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J
 
     move-result-wide v0
@@ -151,12 +143,10 @@
 
     if-gez p1, :cond_0
 
-    .line 3
     invoke-virtual {p2, p0}, Lorg/jcodec/containers/mp4/boxes/Box;->parse(Ljava/nio/ByteBuffer;)V
 
     return-object p2
 
-    .line 4
     :cond_0
     new-instance p0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;
 
@@ -176,12 +166,10 @@
 .method public static parseChildBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -197,12 +185,10 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -214,7 +200,6 @@
 
     return-object v1
 
-    .line 5
     :cond_1
     invoke-static {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->read(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -222,7 +207,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -237,7 +221,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 7
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J
 
     move-result-wide v1

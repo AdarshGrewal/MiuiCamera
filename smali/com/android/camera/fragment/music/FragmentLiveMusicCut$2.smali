@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +34,6 @@
 .method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 2
 
-    .line 1
     sget-object p1, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -58,7 +56,6 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->access$100(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;)I
@@ -69,7 +66,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->access$300(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;)Lcom/android/camera/fragment/music/FragmentLiveMusicCut$MusicCutListener;
@@ -89,7 +85,6 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->access$000(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;)Lcom/android/camera/fragment/music/MusicFrameAdapter;
@@ -100,7 +95,6 @@
 
     move-result-object p1
 
-    .line 5
     iget-object p1, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Float;
@@ -123,12 +117,10 @@
 
     float-to-long p1, p1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-static {v0, p1, p2}, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->access$402(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;J)J
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicCut$2;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicCut;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicCut;->access$300(Lcom/android/camera/fragment/music/FragmentLiveMusicCut;)Lcom/android/camera/fragment/music/FragmentLiveMusicCut$MusicCutListener;

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     const/4 v0, 0x1
@@ -49,7 +47,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
@@ -64,7 +61,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     const/4 v0, 0x0
@@ -78,7 +74,6 @@
 .method public onStopNestedScrollAccepted(I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     invoke-static {p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->access$200(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Z
@@ -89,7 +84,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 

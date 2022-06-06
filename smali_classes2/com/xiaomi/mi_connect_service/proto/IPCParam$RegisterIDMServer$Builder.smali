@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer;->access$4000()Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearSdkVersion()Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer;
@@ -71,7 +67,6 @@
 .method public getSdkVersion()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer;
@@ -86,10 +81,8 @@
 .method public setSdkVersion(I)Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterIDMServer;

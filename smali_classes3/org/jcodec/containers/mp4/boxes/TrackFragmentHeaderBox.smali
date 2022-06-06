@@ -41,7 +41,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -50,7 +49,6 @@
 .method public static synthetic access$002(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;J)J
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
 
     return-wide p1
@@ -59,7 +57,6 @@
 .method public static synthetic access$102(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->sampleDescriptionIndex:I
 
     return p1
@@ -68,7 +65,6 @@
 .method public static synthetic access$202(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleDuration:I
 
     return p1
@@ -77,7 +73,6 @@
 .method public static synthetic access$302(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleSize:I
 
     return p1
@@ -86,7 +81,6 @@
 .method public static synthetic access$402(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleFlags:I
 
     return p1
@@ -95,7 +89,6 @@
 .method public static copy(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 7
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
     iget-wide v1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
@@ -112,21 +105,18 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/FullBox;->getFlags()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->setFlags(I)V
 
-    .line 3
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/FullBox;->getVersion()B
 
     move-result p0
 
     invoke-virtual {v0, p0}, Lorg/jcodec/containers/mp4/boxes/FullBox;->setVersion(B)V
 
-    .line 4
     new-instance p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
 
     invoke-direct {p0, v0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;-><init>(Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;)V
@@ -137,7 +127,6 @@
 .method public static create(I)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox$Factory;
 
     invoke-static {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->createTrackFragmentHeaderBoxWithId(I)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
@@ -152,7 +141,6 @@
 .method public static createTrackFragmentHeaderBox()Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -171,7 +159,6 @@
 .method public static createTrackFragmentHeaderBoxWithId(I)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -184,7 +171,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
     return-object v0
@@ -201,7 +187,6 @@
 .method public static tfhd(IJIIII)Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -214,22 +199,16 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
-    .line 3
     iput-wide p1, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
 
-    .line 4
     iput p3, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->sampleDescriptionIndex:I
 
-    .line 5
     iput p4, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleDuration:I
 
-    .line 6
     iput p5, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleSize:I
 
-    .line 7
     iput p6, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleFlags:I
 
     return-object v0
@@ -240,27 +219,22 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isBaseDataOffsetAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isSampleDescriptionIndexAvailable()Z
 
@@ -268,12 +242,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->sampleDescriptionIndex:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 7
     :cond_1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleDurationAvailable()Z
 
@@ -281,12 +253,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleDuration:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 9
     :cond_2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleSizeAvailable()Z
 
@@ -294,12 +264,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 10
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleSize:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 11
     :cond_3
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleFlagsAvailable()Z
 
@@ -307,7 +275,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 12
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleFlags:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
@@ -327,7 +294,6 @@
 .method public getBaseDataOffset()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
 
     return-wide v0
@@ -336,7 +302,6 @@
 .method public getDefaultSampleDuration()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleDuration:I
 
     return v0
@@ -345,7 +310,6 @@
 .method public getDefaultSampleFlags()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleFlags:I
 
     return v0
@@ -354,7 +318,6 @@
 .method public getDefaultSampleSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleSize:I
 
     return v0
@@ -363,7 +326,6 @@
 .method public getSampleDescriptionIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->sampleDescriptionIndex:I
 
     return v0
@@ -372,7 +334,6 @@
 .method public getTrackId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
     return v0
@@ -381,7 +342,6 @@
 .method public isBaseDataOffsetAvailable()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     const/4 v1, 0x1
@@ -402,7 +362,6 @@
 .method public isDefaultSampleDurationAvailable()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -423,7 +382,6 @@
 .method public isDefaultSampleFlagsAvailable()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x20
@@ -444,7 +402,6 @@
 .method public isDefaultSampleSizeAvailable()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -465,7 +422,6 @@
 .method public isSampleDescriptionIndexAvailable()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -486,31 +442,26 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
-    .line 3
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isBaseDataOffsetAvailable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->baseDataOffset:J
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isSampleDescriptionIndexAvailable()Z
 
@@ -518,14 +469,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->sampleDescriptionIndex:I
 
-    .line 7
     :cond_1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleDurationAvailable()Z
 
@@ -533,14 +482,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleDuration:I
 
-    .line 9
     :cond_2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleSizeAvailable()Z
 
@@ -548,14 +495,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 10
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleSize:I
 
-    .line 11
     :cond_3
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->isDefaultSampleFlagsAvailable()Z
 
@@ -563,7 +508,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 12
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -577,7 +521,6 @@
 .method public setDefaultSampleFlags(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->defaultSampleFlags:I
 
     return-void
@@ -586,7 +529,6 @@
 .method public setTrackId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->trackId:I
 
     return-void

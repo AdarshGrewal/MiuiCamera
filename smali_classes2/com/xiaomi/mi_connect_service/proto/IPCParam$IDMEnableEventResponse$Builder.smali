@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse;->access$32300()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearSuccess()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse;
@@ -71,7 +67,6 @@
 .method public getSuccess()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse;
@@ -86,10 +81,8 @@
 .method public setSuccess(Z)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMEnableEventResponse;

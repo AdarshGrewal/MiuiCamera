@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/FunModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/FunModule$4;->this$0:Lcom/android/camera/module/FunModule;
 
     invoke-direct {p0}, Lcom/android/camera/module/interceptor/CaptureInterceptor;-><init>()V
@@ -43,7 +42,6 @@
 .method public intercept()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$LiveFilmChooser;->startShot()V
 
     :cond_0

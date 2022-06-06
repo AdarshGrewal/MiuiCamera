@@ -59,7 +59,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +69,6 @@
 .method public getAge()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->age:I
 
     return v0
@@ -79,7 +77,6 @@
 .method public getBeard()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->beard:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -88,7 +85,6 @@
 .method public getBrow()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->brow:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -97,7 +93,6 @@
 .method public getDir()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->dir:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +101,6 @@
 .method public getEar()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->ear:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -115,7 +109,6 @@
 .method public getEarring()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->earring:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -124,7 +117,6 @@
 .method public getEye()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eye:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -133,7 +125,6 @@
 .method public getEyelash()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eyelash:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -142,7 +133,6 @@
 .method public getEyelid()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eyelid:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -151,7 +141,6 @@
 .method public getFace()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->face:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -160,7 +149,6 @@
 .method public getFreckle()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->freckle:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -169,7 +157,6 @@
 .method public getGender()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->gender:I
 
     return v0
@@ -178,7 +165,6 @@
 .method public getGlasses()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->glasses:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -187,7 +173,6 @@
 .method public getHair()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->hair:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -196,7 +181,6 @@
 .method public getHead()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->head:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -205,7 +189,6 @@
 .method public getHeadwear()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->headwear:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -214,7 +197,6 @@
 .method public getLiplash()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->liplash:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -223,7 +205,6 @@
 .method public getMouth()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->mouth:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -232,7 +213,6 @@
 .method public getNevus()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->nevus:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -241,7 +221,6 @@
 .method public getNose()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->nose:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object v0
@@ -250,7 +229,6 @@
 .method public isEidted()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->isEidted:Z
 
     return v0
@@ -259,7 +237,6 @@
 .method public setAge(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->age:I
 
     return-void
@@ -268,7 +245,6 @@
 .method public setBeard(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->beard:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -277,7 +253,6 @@
 .method public setBrow(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->brow:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -286,7 +261,6 @@
 .method public setDir(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->dir:Ljava/lang/String;
 
     return-void
@@ -295,7 +269,6 @@
 .method public setEar(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->ear:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -304,7 +277,6 @@
 .method public setEarring(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->earring:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -313,7 +285,6 @@
 .method public setEidted(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->isEidted:Z
 
     return-void
@@ -322,7 +293,6 @@
 .method public setEye(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eye:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -331,7 +301,6 @@
 .method public setEyelash(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eyelash:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -340,7 +309,6 @@
 .method public setEyelid(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->eyelid:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -349,7 +317,6 @@
 .method public setFace(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->face:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -358,7 +325,6 @@
 .method public setFreckle(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->freckle:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -367,7 +333,6 @@
 .method public setGender(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->gender:I
 
     return-void
@@ -376,7 +341,6 @@
 .method public setGlasses(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->glasses:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -385,7 +349,6 @@
 .method public setHair(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->hair:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -394,7 +357,6 @@
 .method public setHead(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->head:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -403,7 +365,6 @@
 .method public setHeadwear(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->headwear:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -412,7 +373,6 @@
 .method public setLiplash(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->liplash:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -421,7 +381,6 @@
 .method public setMouth(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->mouth:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -430,7 +389,6 @@
 .method public setNevus(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->nevus:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -439,7 +397,6 @@
 .method public setNose(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->nose:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void

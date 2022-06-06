@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/util/StateMachine$SmHandler;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/util/StateMachine$SmHandler$HaltingState;->this$0:Lcom/xiaomi/camera/util/StateMachine$SmHandler;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/util/State;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/util/StateMachine$SmHandler;Lcom/xiaomi/camera/util/StateMachine$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/util/StateMachine$SmHandler$HaltingState;-><init>(Lcom/xiaomi/camera/util/StateMachine$SmHandler;)V
 
     return-void
@@ -44,7 +42,6 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$SmHandler$HaltingState;->this$0:Lcom/xiaomi/camera/util/StateMachine$SmHandler;
 
     invoke-static {v0}, Lcom/xiaomi/camera/util/StateMachine$SmHandler;->access$300(Lcom/xiaomi/camera/util/StateMachine$SmHandler;)Lcom/xiaomi/camera/util/StateMachine;

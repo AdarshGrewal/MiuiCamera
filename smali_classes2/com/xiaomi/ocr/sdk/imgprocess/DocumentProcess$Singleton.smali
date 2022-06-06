@@ -22,14 +22,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/xiaomi/ocr/sdk/imgprocess/DocumentProcess;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object v1
@@ -50,7 +48,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

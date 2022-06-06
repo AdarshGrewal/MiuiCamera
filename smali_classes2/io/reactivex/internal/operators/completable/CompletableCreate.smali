@@ -19,10 +19,8 @@
 .method public constructor <init>(Lio/reactivex/CompletableOnSubscribe;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate;->source:Lio/reactivex/CompletableOnSubscribe;
 
     return-void
@@ -33,15 +31,12 @@
 .method public subscribeActual(Lio/reactivex/CompletableObserver;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;-><init>(Lio/reactivex/CompletableObserver;)V
 
-    .line 2
     invoke-interface {p1, v0}, Lio/reactivex/CompletableObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
-    .line 3
     :try_start_0
     iget-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableCreate;->source:Lio/reactivex/CompletableOnSubscribe;
 
@@ -54,10 +49,8 @@
     :catchall_0
     move-exception p1
 
-    .line 4
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 5
     invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/completable/CompletableCreate$Emitter;->onError(Ljava/lang/Throwable;)V
 
     :goto_0

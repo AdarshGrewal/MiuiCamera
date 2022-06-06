@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;Lcom/android/camera/dualvideo/remote/RemoteOnlineController;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     iput-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->val$controller:Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
@@ -46,21 +45,18 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;->access$102(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;Z)Z
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->val$controller:Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->val$device:Lcom/android/camera/dualvideo/remote/RemoteDevice;
 
     invoke-virtual {p1, v1, v0}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->setConnectionSuspended(Lcom/android/camera/dualvideo/remote/RemoteDevice;Z)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$5;->val$device:Lcom/android/camera/dualvideo/remote/RemoteDevice;

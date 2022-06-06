@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterProc;->access$9100()Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterProc;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$RegisterProc$Builder;-><init>()V
 
     return-void

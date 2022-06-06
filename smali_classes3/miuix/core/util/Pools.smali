@@ -58,21 +58,18 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
-    .line 3
     new-instance v0, Lmiuix/core/util/Pools$1;
 
     invoke-direct {v0}, Lmiuix/core/util/Pools$1;-><init>()V
@@ -91,7 +88,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -100,7 +96,6 @@
 .method public static synthetic access$000()Ljava/util/HashMap;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
     return-object v0
@@ -109,7 +104,6 @@
 .method public static synthetic access$100()Ljava/util/HashMap;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
     return-object v0
@@ -129,7 +123,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lmiuix/core/util/Pools$SimplePool;
 
     invoke-direct {v0, p0, p1}, Lmiuix/core/util/Pools$SimplePool;-><init>(Lmiuix/core/util/Pools$Manager;I)V
@@ -151,7 +144,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lmiuix/core/util/Pools$SoftReferencePool;
 
     invoke-direct {v0, p0, p1}, Lmiuix/core/util/Pools$SoftReferencePool;-><init>(Lmiuix/core/util/Pools$Manager;I)V
@@ -170,7 +162,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mStringBuilderPool:Lmiuix/core/util/Pools$Pool;
 
     return-object v0
@@ -188,18 +179,15 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
     neg-int p1, p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p1}, Lmiuix/core/util/Pools$InstanceHolder;->resize(I)V
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -228,16 +216,13 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
-    .line 3
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -246,23 +231,19 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lmiuix/core/util/Pools$InstanceHolder;
 
     invoke-direct {v1, p0, p1}, Lmiuix/core/util/Pools$InstanceHolder;-><init>(Ljava/lang/Class;I)V
 
-    .line 5
     sget-object p1, Lmiuix/core/util/Pools;->mInstanceHolderMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v1, p1}, Lmiuix/core/util/Pools$InstanceHolder;->resize(I)V
 
-    .line 7
     :goto_0
     monitor-exit v0
 
@@ -271,7 +252,6 @@
     :catchall_0
     move-exception p0
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -291,18 +271,15 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
     neg-int p1, p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p1}, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;->resize(I)V
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -331,16 +308,13 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
-    .line 3
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -349,23 +323,19 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;
 
     invoke-direct {v1, p0, p1}, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;-><init>(Ljava/lang/Class;I)V
 
-    .line 5
     sget-object p1, Lmiuix/core/util/Pools;->mSoftReferenceInstanceHolderMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v1, p1}, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;->resize(I)V
 
-    .line 7
     :goto_0
     monitor-exit v0
 
@@ -374,7 +344,6 @@
     :catchall_0
     move-exception p0
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

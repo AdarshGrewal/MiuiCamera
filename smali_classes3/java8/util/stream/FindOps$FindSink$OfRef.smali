@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/FindOps$FindSink;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/FindOps$FindSink$OfRef;->get()Ljava8/util/Optional;
 
     move-result-object v0
@@ -59,7 +57,6 @@
         }
     .end annotation
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/FindOps$FindSink;->hasValue:Z
 
     if-eqz v0, :cond_0

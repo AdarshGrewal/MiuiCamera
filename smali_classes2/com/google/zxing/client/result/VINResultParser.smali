@@ -15,7 +15,6 @@
 
     const-string v0, "[IOQ]"
 
-    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -24,7 +23,6 @@
 
     const-string v0, "[A-Z0-9]{17}"
 
-    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/client/result/ResultParser;-><init>()V
 
     return-void
@@ -63,7 +60,6 @@
 
     return p0
 
-    .line 1
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -81,7 +77,6 @@
 
     move v2, v1
 
-    .line 1
     :goto_0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -91,7 +86,6 @@
 
     add-int/lit8 v3, v1, 0x1
 
-    .line 2
     invoke-static {v3}, Lcom/google/zxing/client/result/VINResultParser;->vinPositionWeight(I)I
 
     move-result v4
@@ -115,12 +109,10 @@
     :cond_0
     const/16 v1, 0x8
 
-    .line 3
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p0
 
-    .line 4
     rem-int/lit8 v2, v2, 0xb
 
     invoke-static {v2}, Lcom/google/zxing/client/result/VINResultParser;->checkChar(I)C
@@ -142,14 +134,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p0
@@ -454,7 +444,6 @@
 
     return p0
 
-    .line 1
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -523,7 +512,6 @@
 
     return p0
 
-    .line 1
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -574,7 +562,6 @@
 
     return p0
 
-    .line 1
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -588,7 +575,6 @@
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/VINResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/VINParsedResult;
 
     move-result-object p1
@@ -599,7 +585,6 @@
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/VINParsedResult;
     .locals 13
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
 
     move-result-object v0
@@ -612,13 +597,11 @@
 
     return-object v2
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4
     sget-object v0, Lcom/google/zxing/client/result/VINResultParser;->IOQ:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -635,7 +618,6 @@
 
     move-result-object v4
 
-    .line 5
     sget-object p1, Lcom/google/zxing/client/result/VINResultParser;->AZ09:Ljava/util/regex/Pattern;
 
     invoke-virtual {p1, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -650,7 +632,6 @@
 
     return-object v2
 
-    .line 6
     :cond_1
     :try_start_0
     invoke-static {v4}, Lcom/google/zxing/client/result/VINResultParser;->checkChecksum(Ljava/lang/CharSequence;)Z
@@ -666,41 +647,34 @@
 
     const/4 v0, 0x3
 
-    .line 7
     invoke-virtual {v4, p1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 8
     new-instance p1, Lcom/google/zxing/client/result/VINParsedResult;
 
     const/16 v1, 0x9
 
-    .line 9
     invoke-virtual {v4, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
     const/16 v3, 0x11
 
-    .line 10
     invoke-virtual {v4, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 11
     invoke-static {v5}, Lcom/google/zxing/client/result/VINResultParser;->countryCode(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v8
 
     const/16 v3, 0x8
 
-    .line 12
     invoke-virtual {v4, v0, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 13
     invoke-virtual {v4, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -711,14 +685,12 @@
 
     const/16 v0, 0xa
 
-    .line 14
     invoke-virtual {v4, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v11
 
     const/16 v0, 0xb
 
-    .line 15
     invoke-virtual {v4, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v12

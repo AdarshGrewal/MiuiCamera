@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/DropDownPreference$1;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     if-ltz p3, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/preference/DropDownPreference$1;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-static {p1}, Lmiuix/preference/DropDownPreference;->access$000(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
@@ -60,7 +58,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 2
     iget-object p2, p0, Lmiuix/preference/DropDownPreference$1;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-static {p2}, Lmiuix/preference/DropDownPreference;->access$100(Lmiuix/preference/DropDownPreference;)Landroid/os/Handler;

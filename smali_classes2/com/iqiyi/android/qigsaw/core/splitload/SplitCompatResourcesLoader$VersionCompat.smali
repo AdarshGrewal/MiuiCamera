@@ -90,7 +90,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -99,7 +98,6 @@
 .method public synthetic constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;-><init>()V
 
     return-void
@@ -116,12 +114,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThread:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -146,7 +142,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThread:Ljava/lang/Object;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThread:Ljava/lang/Object;
 
@@ -169,21 +164,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThreadClass:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
     const-string v0, "android.app.ActivityThread"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThreadClass:Ljava/lang/Class;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->activityThreadClass:Ljava/lang/Class;
 
@@ -198,12 +190,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->addAssetPathMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/content/res/AssetManager;
 
     const/4 v1, 0x1
@@ -224,7 +214,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->addAssetPathMethod:Ljava/lang/reflect/Method;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->addAssetPathMethod:Ljava/lang/reflect/Method;
 
@@ -247,21 +236,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->contextImplClass:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
     const-string v0, "android.app.ContextImpl"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->contextImplClass:Ljava/lang/Class;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->contextImplClass:Ljava/lang/Class;
 
@@ -276,12 +262,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getApkAssetsMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/content/res/AssetManager;
 
     const/4 v1, 0x0
@@ -296,7 +280,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getApkAssetsMethod:Ljava/lang/reflect/Method;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getApkAssetsMethod:Ljava/lang/reflect/Method;
 
@@ -312,14 +295,12 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getAssetPathMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
     const-string v0, "android.content.res.ApkAssets"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -330,14 +311,12 @@
 
     const-string v2, "getAssetPath"
 
-    .line 3
     invoke-static {v0, v2, v1}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getAssetPathMethod:Ljava/lang/reflect/Method;
 
-    .line 4
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getAssetPathMethod:Ljava/lang/reflect/Method;
 
@@ -352,12 +331,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getCookieNameMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/content/res/AssetManager;
 
     const/4 v1, 0x1
@@ -378,7 +355,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getCookieNameMethod:Ljava/lang/reflect/Method;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getCookieNameMethod:Ljava/lang/reflect/Method;
 
@@ -401,21 +377,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->loadedApkClass:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
     const-string v0, "android.app.LoadedApk"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->loadedApkClass:Ljava/lang/Class;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->loadedApkClass:Ljava/lang/Class;
 
@@ -433,12 +406,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getResourcesManagerClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -463,7 +434,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManager:Ljava/lang/Object;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManager:Ljava/lang/Object;
 
@@ -486,21 +456,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManagerClass:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
     const-string v0, "android.app.ResourcesManager"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManagerClass:Ljava/lang/Class;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->resourcesManagerClass:Ljava/lang/Class;
 
@@ -516,12 +483,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInActivityThread:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -534,7 +499,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInActivityThread:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInActivityThread:Ljava/lang/reflect/Field;
 
@@ -550,12 +514,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInResourcesManager:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getResourcesManagerClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -568,7 +530,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInResourcesManager:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInResourcesManager:Ljava/lang/reflect/Field;
 
@@ -584,12 +545,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActivitiesInActivityThread:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -602,7 +561,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActivitiesInActivityThread:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActivitiesInActivityThread:Ljava/lang/reflect/Field;
 
@@ -618,12 +576,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mPackagesInActivityThread:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -636,7 +592,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mPackagesInActivityThread:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mPackagesInActivityThread:Ljava/lang/reflect/Field;
 
@@ -652,12 +607,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcePackagesInActivityThread:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThreadClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -670,7 +623,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcePackagesInActivityThread:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcePackagesInActivityThread:Ljava/lang/reflect/Field;
 
@@ -686,12 +638,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getContextImplClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -704,7 +654,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl:Ljava/lang/reflect/Field;
 
@@ -719,12 +668,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextThemeWrapper:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/view/ContextThemeWrapper;
 
     const-string v1, "mResources"
@@ -735,7 +682,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextThemeWrapper:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextThemeWrapper:Ljava/lang/reflect/Field;
 
@@ -751,12 +697,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getLoadedApkClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -769,7 +713,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk:Ljava/lang/reflect/Field;
 
@@ -784,12 +727,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mStringBlocksField:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/content/res/AssetManager;
 
     const-string v1, "mStringBlocks"
@@ -800,7 +741,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mStringBlocksField:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mStringBlocksField:Ljava/lang/reflect/Field;
 
@@ -816,12 +756,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContentImpl:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getContextImplClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -834,7 +772,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContentImpl:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContentImpl:Ljava/lang/reflect/Field;
 
@@ -849,12 +786,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContextThemeWrapper:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 2
     const-class v0, Landroid/view/ContextThemeWrapper;
 
     const-string v1, "mTheme"
@@ -865,7 +800,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContextThemeWrapper:Ljava/lang/reflect/Field;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContextThemeWrapper:Ljava/lang/reflect/Field;
 

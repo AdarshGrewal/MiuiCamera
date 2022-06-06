@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,12 +38,10 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lmiuix/animation/utils/StyleComposer$1;
 
     invoke-direct {v0, p1, p2, p0}, Lmiuix/animation/utils/StyleComposer$1;-><init>(Lmiuix/animation/utils/StyleComposer$IInterceptor;[Ljava/lang/Object;Ljava/lang/Class;)V
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p1
@@ -61,14 +58,12 @@
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 5
     invoke-virtual {p0, p1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -95,7 +90,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0, p1}, Lmiuix/animation/utils/StyleComposer;->compose(Ljava/lang/Class;Lmiuix/animation/utils/StyleComposer$IInterceptor;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

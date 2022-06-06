@@ -27,12 +27,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return-void
@@ -46,7 +44,6 @@
 .method public getCurrentState()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return v0
@@ -55,7 +52,6 @@
 .method public getDownloadUrl()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +69,6 @@
 .method public onUpToDate(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,7 +87,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->createNewFile(Ljava/lang/String;)V
 
     return-void
@@ -104,7 +98,6 @@
 .method public setState(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return-void
@@ -116,7 +109,6 @@
 .method public versionVerification(Ljava/lang/String;)Z
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -137,7 +129,6 @@
 
     invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1

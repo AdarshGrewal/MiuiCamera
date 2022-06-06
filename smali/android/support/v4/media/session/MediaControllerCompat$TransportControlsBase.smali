@@ -22,10 +22,8 @@
 .method public constructor <init>(Landroid/support/v4/media/session/IMediaSession;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;-><init>()V
 
-    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
     return-void
@@ -36,7 +34,6 @@
 .method public fastForward()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -53,7 +50,6 @@
 
     const-string v2, "Dead object in fastForward."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -63,7 +59,6 @@
 .method public pause()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -80,7 +75,6 @@
 
     const-string v2, "Dead object in pause."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -90,7 +84,6 @@
 .method public play()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -107,7 +100,6 @@
 
     const-string v2, "Dead object in play."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -117,7 +109,6 @@
 .method public playFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -134,7 +125,6 @@
 
     const-string v0, "Dead object in playFromMediaId."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -144,7 +134,6 @@
 .method public playFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -161,7 +150,6 @@
 
     const-string v0, "Dead object in playFromSearch."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -171,7 +159,6 @@
 .method public playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -188,7 +175,6 @@
 
     const-string v0, "Dead object in playFromUri."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -198,7 +184,6 @@
 .method public prepare()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -215,7 +200,6 @@
 
     const-string v2, "Dead object in prepare."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -225,7 +209,6 @@
 .method public prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -242,7 +225,6 @@
 
     const-string v0, "Dead object in prepareFromMediaId."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -252,7 +234,6 @@
 .method public prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -269,7 +250,6 @@
 
     const-string v0, "Dead object in prepareFromSearch."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -279,7 +259,6 @@
 .method public prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -296,7 +275,6 @@
 
     const-string v0, "Dead object in prepareFromUri."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -306,7 +284,6 @@
 .method public rewind()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -323,7 +300,6 @@
 
     const-string v2, "Dead object in rewind."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -333,7 +309,6 @@
 .method public seekTo(J)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -350,7 +325,6 @@
 
     const-string v0, "Dead object in seekTo."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -360,7 +334,6 @@
 .method public sendCustomAction(Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -373,10 +346,8 @@
 .method public sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 2
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -393,7 +364,6 @@
 
     const-string v0, "Dead object in sendCustomAction."
 
-    .line 4
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -403,7 +373,6 @@
 .method public setCaptioningEnabled(Z)V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -420,7 +389,6 @@
 
     const-string v1, "Dead object in setCaptioningEnabled."
 
-    .line 2
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -430,7 +398,6 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;)V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -447,7 +414,6 @@
 
     const-string v1, "Dead object in setRating."
 
-    .line 2
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -457,7 +423,6 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -474,7 +439,6 @@
 
     const-string v0, "Dead object in setRating."
 
-    .line 4
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -484,7 +448,6 @@
 .method public setRepeatMode(I)V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -501,7 +464,6 @@
 
     const-string v1, "Dead object in setRepeatMode."
 
-    .line 2
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -511,7 +473,6 @@
 .method public setShuffleMode(I)V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -528,7 +489,6 @@
 
     const-string v1, "Dead object in setShuffleMode."
 
-    .line 2
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -538,7 +498,6 @@
 .method public skipToNext()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -555,7 +514,6 @@
 
     const-string v2, "Dead object in skipToNext."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -565,7 +523,6 @@
 .method public skipToPrevious()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -582,7 +539,6 @@
 
     const-string v2, "Dead object in skipToPrevious."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -592,7 +548,6 @@
 .method public skipToQueueItem(J)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -609,7 +564,6 @@
 
     const-string v0, "Dead object in skipToQueueItem."
 
-    .line 2
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -619,7 +573,6 @@
 .method public stop()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -636,7 +589,6 @@
 
     const-string v2, "Dead object in stop."
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

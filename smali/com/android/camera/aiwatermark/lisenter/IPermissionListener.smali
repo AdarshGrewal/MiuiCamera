@@ -6,6 +6,3 @@
 # virtual methods
 .method public abstract onPermissionResult(Z)V
 .end method
-
-.method public abstract toshowPermissionNotAskDialog()V
-.end method

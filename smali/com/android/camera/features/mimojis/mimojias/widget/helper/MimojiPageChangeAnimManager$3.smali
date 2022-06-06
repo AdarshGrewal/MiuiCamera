@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$3;->this$0:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$3;->this$0:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->access$200(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)Landroid/widget/LinearLayout;

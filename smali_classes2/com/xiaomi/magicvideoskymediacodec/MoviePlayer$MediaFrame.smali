@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$MediaFrame;->this$0:Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

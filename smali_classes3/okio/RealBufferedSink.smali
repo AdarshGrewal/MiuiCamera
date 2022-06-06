@@ -18,10 +18,8 @@
 .method public constructor <init>(Lokio/Sink;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -30,12 +28,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iput-object p1, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -51,7 +47,6 @@
 .method public buffer()Lokio/Buffer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     return-object v0
@@ -65,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-eqz v0, :cond_0
@@ -75,7 +69,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
@@ -87,7 +80,6 @@
 
     if-lez v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     iget-object v2, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
@@ -105,7 +97,6 @@
     :catchall_0
     move-exception v0
 
-    .line 4
     :cond_1
     :goto_0
     :try_start_1
@@ -128,12 +119,10 @@
     :goto_1
     const/4 v1, 0x1
 
-    .line 5
     iput-boolean v1, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-eqz v0, :cond_3
 
-    .line 6
     invoke-static {v0}, Lokio/Util;->sneakyRethrow(Ljava/lang/Throwable;)V
 
     :cond_3
@@ -148,12 +137,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -166,7 +153,6 @@
 
     if-lez v2, :cond_0
 
-    .line 3
     iget-object v2, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     iget-object v3, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
@@ -176,7 +162,6 @@
     :cond_0
     return-object p0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -195,12 +180,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->completeSegmentByteCount()J
@@ -213,7 +196,6 @@
 
     if-lez v2, :cond_0
 
-    .line 3
     iget-object v2, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     iget-object v3, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
@@ -223,7 +205,6 @@
     :cond_0
     return-object p0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -242,12 +223,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     iget-wide v1, v0, Lokio/Buffer;->size:J
@@ -258,12 +237,10 @@
 
     if-lez v3, :cond_0
 
-    .line 3
     iget-object v3, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     invoke-interface {v3, v0, v1, v2}, Lokio/Sink;->write(Lokio/Buffer;J)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
@@ -271,7 +248,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -285,7 +261,6 @@
 .method public isOpen()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -296,7 +271,6 @@
 .method public outputStream()Ljava/io/OutputStream;
     .locals 1
 
-    .line 1
     new-instance v0, Lokio/RealBufferedSink$1;
 
     invoke-direct {v0, p0}, Lokio/RealBufferedSink$1;-><init>(Lokio/RealBufferedSink;)V
@@ -307,7 +281,6 @@
 .method public timeout()Lokio/Timeout;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokio/RealBufferedSink;->sink:Lokio/Sink;
 
     invoke-interface {v0}, Lokio/Sink;->timeout()Lokio/Timeout;
@@ -320,7 +293,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,24 +324,20 @@
         }
     .end annotation
 
-    .line 17
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 18
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->write(Ljava/nio/ByteBuffer;)I
 
     move-result p1
 
-    .line 19
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     return p1
 
-    .line 20
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -388,24 +356,20 @@
         }
     .end annotation
 
-    .line 5
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->write(Lokio/ByteString;)Lokio/Buffer;
 
-    .line 7
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -431,7 +395,6 @@
 
     if-lez v0, :cond_1
 
-    .line 21
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-interface {p1, v0, p2, p3}, Lokio/Source;->read(Lokio/Buffer;J)J
@@ -446,12 +409,10 @@
 
     sub-long/2addr p2, v0
 
-    .line 22
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     goto :goto_0
 
-    .line 23
     :cond_0
     new-instance p1, Ljava/io/EOFException;
 
@@ -471,24 +432,20 @@
         }
     .end annotation
 
-    .line 9
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->write([B)Lokio/Buffer;
 
-    .line 11
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 12
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -507,24 +464,20 @@
         }
     .end annotation
 
-    .line 13
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 14
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2, p3}, Lokio/Buffer;->write([BII)Lokio/Buffer;
 
-    .line 15
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 16
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -543,22 +496,18 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2, p3}, Lokio/Buffer;->write(Lokio/Buffer;J)V
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -581,7 +530,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     :goto_0
     iget-object v2, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
@@ -599,7 +547,6 @@
 
     add-long/2addr v0, v2
 
-    .line 2
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     goto :goto_0
@@ -607,7 +554,6 @@
     :cond_0
     return-wide v0
 
-    .line 3
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -626,24 +572,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -662,24 +604,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2}, Lokio/Buffer;->writeDecimalLong(J)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -698,24 +636,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2}, Lokio/Buffer;->writeHexadecimalUnsignedLong(J)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -734,24 +668,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -770,24 +700,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeIntLe(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -806,24 +732,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2}, Lokio/Buffer;->writeLong(J)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -842,24 +764,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2}, Lokio/Buffer;->writeLongLe(J)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -878,24 +796,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeShort(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -914,24 +828,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeShortLe(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -950,24 +860,20 @@
         }
     .end annotation
 
-    .line 5
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lokio/Buffer;->writeString(Ljava/lang/String;IILjava/nio/charset/Charset;)Lokio/Buffer;
 
-    .line 7
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -986,24 +892,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2}, Lokio/Buffer;->writeString(Ljava/lang/String;Ljava/nio/charset/Charset;)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1022,24 +924,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1058,24 +956,20 @@
         }
     .end annotation
 
-    .line 5
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2, p3}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;II)Lokio/Buffer;
 
-    .line 7
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1094,24 +988,20 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSink;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lokio/RealBufferedSink;->buffer:Lokio/Buffer;
 
     invoke-virtual {v0, p1}, Lokio/Buffer;->writeUtf8CodePoint(I)Lokio/Buffer;
 
-    .line 3
     invoke-virtual {p0}, Lokio/RealBufferedSink;->emitCompleteSegments()Lokio/BufferedSink;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 

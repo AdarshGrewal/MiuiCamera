@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Apollo;-><init>()V
 
     return-void
@@ -15,7 +14,7 @@
 
 
 # virtual methods
-.method public OooOOo0()Ljava/lang/String;
+.method public OooOOO()Ljava/lang/String;
     .locals 1
 
     const-string v0, "notelemfnr:1;telesr:1"
@@ -23,34 +22,17 @@
     return-object v0
 .end method
 
-.method public o000()Ljava/lang/String;
+.method public o000()I
     .locals 1
 
-    const-string v0, "capture_inner:0.6:1:2:5:10:30;capture_ruler:4:10:10:5:10"
-
-    return-object v0
-.end method
-
-.method public o000000O()F
-    .locals 1
-
-    const v0, 0x3f6f6e7f
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public o000000o()I
+.method public o00000()S
     .locals 1
 
-    const/16 v0, 0x13b
-
-    return v0
-.end method
-
-.method public o00000oo()S
-    .locals 1
-
-    .line 1
     sget-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0OO:Lcom/mi/device/SlowMotionEnum;
 
     invoke-virtual {v0}, Lcom/mi/device/SlowMotionEnum;->OooO00o()S
@@ -60,7 +42,7 @@
     return v0
 .end method
 
-.method public o0000O00()Ljava/lang/String;
+.method public o00000O()Ljava/lang/String;
     .locals 1
 
     const-string v0, "3:12032x9024"
@@ -68,18 +50,34 @@
     return-object v0
 .end method
 
-.method public o000O0()I
+.method public o0000o0()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    const-string v0, "capture_inner:0.6:1:2:5:10:30;capture_ruler:4:10:10:5:10"
+
+    return-object v0
+.end method
+
+.method public o0O00000()I
+    .locals 1
+
+    const/4 v0, 0x3
 
     return v0
 .end method
 
-.method public o0O00()I
+.method public o0OOO0o()F
     .locals 1
 
-    const/4 v0, 0x3
+    const v0, 0x3f6f6e7f
+
+    return v0
+.end method
+
+.method public o0Oo0oo()I
+    .locals 1
+
+    const/16 v0, 0x13b
 
     return v0
 .end method

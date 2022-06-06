@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 
     if-gez v1, :cond_0
 
-    .line 1
     new-instance v1, Lmiuix/view/animation/BounceEaseInInterpolator;
 
     invoke-direct {v1}, Lmiuix/view/animation/BounceEaseInInterpolator;-><init>()V
@@ -44,7 +42,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     new-instance v1, Lmiuix/view/animation/BounceEaseOutInterpolator;
 

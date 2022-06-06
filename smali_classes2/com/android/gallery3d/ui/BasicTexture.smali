@@ -63,14 +63,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     sput-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
-    .line 2
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -87,7 +85,6 @@
 
     const/4 v1, 0x0
 
-    .line 11
     invoke-direct {p0, v1, v0, v0}, Lcom/android/gallery3d/ui/BasicTexture;-><init>(Lcom/android/gallery3d/ui/GLCanvas;II)V
 
     return-void
@@ -96,43 +93,33 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;II)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mWidth:I
 
-    .line 3
     iput v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mHeight:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mCanvasRef:Lcom/android/gallery3d/ui/GLCanvas;
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/android/gallery3d/ui/BasicTexture;->setAssociatedCanvas(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 6
     iput p2, p0, Lcom/android/gallery3d/ui/BasicTexture;->mId:I
 
-    .line 7
     iput p3, p0, Lcom/android/gallery3d/ui/BasicTexture;->mState:I
 
-    .line 8
     sget-object p1, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
     monitor-enter p1
 
-    .line 9
     :try_start_0
     sget-object p2, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
     invoke-virtual {p2, p0, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     monitor-exit p1
 
     return-void
@@ -150,30 +137,25 @@
 .method private freeResource()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mCanvasRef:Lcom/android/gallery3d/ui/GLCanvas;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/BasicTexture;->isLoaded()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {v0, p0}, Lcom/android/gallery3d/ui/GLCanvas;->deleteTexture(Lcom/android/gallery3d/ui/BasicTexture;)Z
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mState:I
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p0, v0}, Lcom/android/gallery3d/ui/BasicTexture;->setAssociatedCanvas(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -182,7 +164,6 @@
 .method public static inFinalizer()Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sInFinalizer:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -205,12 +186,10 @@
 .method public static invalidateAllTextures()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
@@ -237,17 +216,14 @@
 
     const/4 v3, 0x0
 
-    .line 3
     iput v3, v2, Lcom/android/gallery3d/ui/BasicTexture;->mState:I
 
     const/4 v3, 0x0
 
-    .line 4
     invoke-virtual {v2, v3}, Lcom/android/gallery3d/ui/BasicTexture;->setAssociatedCanvas(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -266,12 +242,10 @@
 .method public static invalidateAllTextures(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 4
 
-    .line 6
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
     monitor-enter v0
 
-    .line 7
     :try_start_0
     sget-object v1, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
@@ -297,24 +271,20 @@
 
     check-cast v2, Lcom/android/gallery3d/ui/BasicTexture;
 
-    .line 8
     iget-object v3, v2, Lcom/android/gallery3d/ui/BasicTexture;->mCanvasRef:Lcom/android/gallery3d/ui/GLCanvas;
 
     if-ne v3, p0, :cond_0
 
     const/4 v3, 0x0
 
-    .line 9
     iput v3, v2, Lcom/android/gallery3d/ui/BasicTexture;->mState:I
 
     const/4 v3, 0x0
 
-    .line 10
     invoke-virtual {v2, v3}, Lcom/android/gallery3d/ui/BasicTexture;->setAssociatedCanvas(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     goto :goto_0
 
-    .line 11
     :cond_1
     monitor-exit v0
 
@@ -333,12 +303,10 @@
 .method public static yieldAllTextures()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lcom/android/gallery3d/ui/BasicTexture;->sAllTextures:Ljava/util/WeakHashMap;
 
@@ -363,12 +331,10 @@
 
     check-cast v2, Lcom/android/gallery3d/ui/BasicTexture;
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/gallery3d/ui/BasicTexture;->yield()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -389,7 +355,6 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;II)V
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -414,7 +379,6 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-static {p2, p3, p4, p5}, Lcom/android/camera/dualvideo/render/RectUtil;->createLTWH(IIII)Landroid/graphics/Rect;
@@ -431,7 +395,6 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;IIIIIIII)V
     .locals 2
 
-    .line 3
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawRectFTexAttribute;
 
     new-instance v1, Landroid/graphics/RectF;
@@ -468,10 +431,8 @@
 .method public drawBlur(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
     .locals 7
 
-    .line 1
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->prepareBlurRenders()V
 
-    .line 2
     new-instance v6, Lcom/android/camera/effect/draw_mode/DrawBlurTexAttribute;
 
     move-object v0, v6
@@ -496,17 +457,14 @@
 .method public finalize()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sInFinalizer:Ljava/lang/ThreadLocal;
 
     const-class v1, Lcom/android/gallery3d/ui/BasicTexture;
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/BasicTexture;->recycle()V
 
-    .line 3
     sget-object v0, Lcom/android/gallery3d/ui/BasicTexture;->sInFinalizer:Ljava/lang/ThreadLocal;
 
     const/4 v1, 0x0
@@ -519,7 +477,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mHeight:I
 
     return v0
@@ -528,7 +485,6 @@
 .method public getId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mId:I
 
     return v0
@@ -537,7 +493,6 @@
 .method public getSize()Landroid/util/Size;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/util/Size;
 
     iget v1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mWidth:I
@@ -555,7 +510,6 @@
 .method public getTextureHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mTextureHeight:I
 
     return v0
@@ -564,7 +518,6 @@
 .method public getTextureWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mTextureWidth:I
 
     return v0
@@ -573,7 +526,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mWidth:I
 
     return v0
@@ -582,7 +534,6 @@
 .method public hasBorder()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mHasBorder:Z
 
     return v0
@@ -591,7 +542,6 @@
 .method public isLoaded()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/BasicTexture;->mState:I
 
     const/4 v1, 0x1
@@ -613,7 +563,6 @@
 .method public recycle()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/gallery3d/ui/BasicTexture;->freeResource()V
 
     return-void
@@ -622,7 +571,6 @@
 .method public setAssociatedCanvas(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mCanvasRef:Lcom/android/gallery3d/ui/GLCanvas;
 
     return-void
@@ -631,7 +579,6 @@
 .method public setBorder(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mHasBorder:Z
 
     return-void
@@ -640,16 +587,12 @@
 .method public setSize(II)V
     .locals 2
 
-    .line 1
     iput p1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mWidth:I
 
-    .line 2
     iput p2, p0, Lcom/android/gallery3d/ui/BasicTexture;->mHeight:I
 
-    .line 3
     iput p1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mTextureWidth:I
 
-    .line 4
     iput p2, p0, Lcom/android/gallery3d/ui/BasicTexture;->mTextureHeight:I
 
     const/16 v0, 0x1680
@@ -658,7 +601,6 @@
 
     if-le p2, v0, :cond_1
 
-    .line 5
     :cond_0
     sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -670,7 +612,6 @@
 
     iget v1, p0, Lcom/android/gallery3d/ui/BasicTexture;->mTextureWidth:I
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -689,7 +630,6 @@
 
     const-string v0, "texture is too large: %d x %d"
 
-    .line 7
     invoke-static {p1, v0, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -709,7 +649,6 @@
 .method public yield()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/gallery3d/ui/BasicTexture;->freeResource()V
 
     return-void

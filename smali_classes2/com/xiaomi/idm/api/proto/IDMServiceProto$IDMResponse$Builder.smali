@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->access$5700()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearClientId()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -71,10 +67,8 @@
 .method public clearCode()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -87,10 +81,8 @@
 .method public clearMsg()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -103,10 +95,8 @@
 .method public clearRequestId()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -119,10 +109,8 @@
 .method public clearResponse()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -135,10 +123,8 @@
 .method public clearUuid()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -151,7 +137,6 @@
 .method public getClientId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -166,7 +151,6 @@
 .method public getClientIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -181,7 +165,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -196,7 +179,6 @@
 .method public getMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -211,7 +193,6 @@
 .method public getMsgBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -226,7 +207,6 @@
 .method public getRequestId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -241,7 +221,6 @@
 .method public getRequestIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -256,7 +235,6 @@
 .method public getResponse()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -271,7 +249,6 @@
 .method public getUuid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -286,7 +263,6 @@
 .method public getUuidBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -301,10 +277,8 @@
 .method public setClientId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -317,10 +291,8 @@
 .method public setClientIdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -333,10 +305,8 @@
 .method public setCode(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -349,10 +319,8 @@
 .method public setMsg(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -365,10 +333,8 @@
 .method public setMsgBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -381,10 +347,8 @@
 .method public setRequestId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -397,10 +361,8 @@
 .method public setRequestIdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -413,10 +375,8 @@
 .method public setResponse(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -429,10 +389,8 @@
 .method public setUuid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
@@ -445,10 +403,8 @@
 .method public setUuidBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
     const-string v1, "alpha"
@@ -29,7 +27,6 @@
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     const/high16 v1, 0x3fc00000    # 1.5f
@@ -40,10 +37,8 @@
 
     const-wide/16 v0, 0xfa
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4
     invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->start()V
 
     return-void
@@ -64,7 +59,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
     const-string v1, "alpha"
@@ -73,7 +67,6 @@
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     const/high16 v1, 0x3fc00000    # 1.5f
@@ -84,10 +77,8 @@
 
     const-wide/16 v0, 0x12c
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 4
     invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->start()V
 
     return-void

@@ -85,7 +85,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/MiuiCameraSound;-><init>(Landroid/content/Context;Z)V
 
     return-void
@@ -94,22 +93,18 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/MiuiCameraSound;->mLastPlayTime:J
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mCompleteSampleList:Ljava/util/ArrayList;
 
-    .line 5
     new-instance v0, Lcom/android/camera/MiuiCameraSound$3;
 
     invoke-direct {v0, p0}, Lcom/android/camera/MiuiCameraSound$3;-><init>(Lcom/android/camera/MiuiCameraSound;)V
@@ -120,12 +115,10 @@
 
     const-string v1, "init SoundPool"
 
-    .line 6
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v0, "audio"
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -134,26 +127,21 @@
 
     iput-object p1, p0, Lcom/android/camera/MiuiCameraSound;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 8
     iput-boolean p2, p0, Lcom/android/camera/MiuiCameraSound;->mForceSound:Z
 
-    .line 9
     new-instance p1, Landroid/media/SoundPool$Builder;
 
     invoke-direct {p1}, Landroid/media/SoundPool$Builder;-><init>()V
 
     const/4 p2, 0x1
 
-    .line 10
     invoke-virtual {p1, p2}, Landroid/media/SoundPool$Builder;->setMaxStreams(I)Landroid/media/SoundPool$Builder;
 
-    .line 11
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    .line 12
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0O0O00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->oo0o0Oo()Z
 
     move-result v1
 
@@ -166,41 +154,33 @@
     :cond_0
     const/4 p2, 0x7
 
-    .line 13
     :cond_1
     invoke-static {v0, p2}, Lcom/xiaomi/compat/manager/AudioManagerCompat;->setInternalLegacyStreamType(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p2
 
-    .line 14
     invoke-virtual {p2}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
     move-result-object p2
 
-    .line 15
     invoke-virtual {p1, p2}, Landroid/media/SoundPool$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/SoundPool$Builder;
 
-    .line 16
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->release()V
 
-    .line 17
     invoke-virtual {p1}, Landroid/media/SoundPool$Builder;->build()Landroid/media/SoundPool;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
 
-    .line 18
     iget-object p2, p0, Lcom/android/camera/MiuiCameraSound;->mLoadCompleteListener:Landroid/media/SoundPool$OnLoadCompleteListener;
 
     invoke-virtual {p1, p2}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
     const/4 p1, -0x1
 
-    .line 19
     iput p1, p0, Lcom/android/camera/MiuiCameraSound;->mSoundIdToPlay:I
 
-    .line 20
     new-instance p1, Lcom/android/camera/MiuiCameraSound$2;
 
     invoke-direct {p1, p0}, Lcom/android/camera/MiuiCameraSound$2;-><init>(Lcom/android/camera/MiuiCameraSound;)V
@@ -211,7 +191,6 @@
 
     move-result-object p1
 
-    .line 21
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object p2
@@ -224,12 +203,10 @@
 
     invoke-direct {p2, p0}, Lcom/android/camera/MiuiCameraSound$1;-><init>(Lcom/android/camera/MiuiCameraSound;)V
 
-    .line 22
     invoke-virtual {p1, p2}, Lio/reactivex/Flowable;->onBackpressureDrop(Lio/reactivex/functions/Consumer;)Lio/reactivex/Flowable;
 
     move-result-object p1
 
-    .line 23
     invoke-virtual {p1, p0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
@@ -242,7 +219,6 @@
 .method public static synthetic access$002(Lcom/android/camera/MiuiCameraSound;Lio/reactivex/FlowableEmitter;)Lio/reactivex/FlowableEmitter;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/MiuiCameraSound;->mFlowableEmitter:Lio/reactivex/FlowableEmitter;
 
     return-object p1
@@ -251,7 +227,6 @@
 .method public static synthetic access$100(Lcom/android/camera/MiuiCameraSound;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundIdToPlay:I
 
     return p0
@@ -260,7 +235,6 @@
 .method public static synthetic access$102(Lcom/android/camera/MiuiCameraSound;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/MiuiCameraSound;->mSoundIdToPlay:I
 
     return p1
@@ -269,7 +243,6 @@
 .method public static synthetic access$200(Lcom/android/camera/MiuiCameraSound;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/MiuiCameraSound;->mCompleteSampleList:Ljava/util/ArrayList;
 
     return-object p0
@@ -282,20 +255,17 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/MiuiCameraSound;->instance:Lcom/android/camera/MiuiCameraSound;
 
     if-nez v1, :cond_0
 
-    .line 2
     new-instance v1, Lcom/android/camera/MiuiCameraSound;
 
     invoke-direct {v1, p0}, Lcom/android/camera/MiuiCameraSound;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/android/camera/MiuiCameraSound;->instance:Lcom/android/camera/MiuiCameraSound;
 
-    .line 3
     :cond_0
     sget-object p0, Lcom/android/camera/MiuiCameraSound;->instance:Lcom/android/camera/MiuiCameraSound;
     :try_end_0
@@ -324,7 +294,6 @@
 
     if-gt p1, v0, :cond_1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
 
@@ -338,12 +307,10 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/MiuiCameraSound;->mSoundIdToPlay:I
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -353,13 +320,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_1
     new-instance p2, Ljava/lang/RuntimeException;
@@ -395,8 +360,7 @@
 .method private playSound(IFI)V
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0O0O00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->oo0o0Oo()Z
 
     move-result v0
 
@@ -408,7 +372,6 @@
 
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
 
     move-result v0
@@ -417,7 +380,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/MiuiCameraSound;->play(IFI)V
 
@@ -435,7 +397,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -460,7 +421,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget v0, p1, Lcom/android/camera/MiuiCameraSound$PlayConfig;->soundId:I
 
     iget v3, p1, Lcom/android/camera/MiuiCameraSound$PlayConfig;->volume:F
@@ -469,7 +429,6 @@
 
     invoke-direct {p0, v0, v3, v4}, Lcom/android/camera/MiuiCameraSound;->playSound(IFI)V
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -501,7 +460,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/MiuiCameraSound$PlayConfig;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/MiuiCameraSound;->accept(Lcom/android/camera/MiuiCameraSound$PlayConfig;)V
@@ -512,7 +470,6 @@
 .method public getLastSoundPlayTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/MiuiCameraSound;->mLastPlayTime:J
 
     return-wide v0
@@ -529,7 +486,6 @@
 
     if-gt p1, v0, :cond_1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
 
@@ -539,17 +495,14 @@
 
     const-string v0, "mSoundPool has not been init, skip this time"
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
@@ -558,12 +511,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-void
 
-    .line 6
     :cond_1
     :try_start_2
     new-instance v0, Ljava/lang/RuntimeException;
@@ -601,7 +552,6 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 4
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/MiuiCameraSound;->playSound(IF)V
 
     return-void
@@ -610,7 +560,6 @@
 .method public playSound(IF)V
     .locals 1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mFlowableEmitter:Lio/reactivex/FlowableEmitter;
 
     invoke-interface {v0}, Lio/reactivex/FlowableEmitter;->isCancelled()Z
@@ -621,19 +570,15 @@
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v0, Lcom/android/camera/MiuiCameraSound$PlayConfig;
 
     invoke-direct {v0}, Lcom/android/camera/MiuiCameraSound$PlayConfig;-><init>()V
 
-    .line 7
     iput p1, v0, Lcom/android/camera/MiuiCameraSound$PlayConfig;->soundId:I
 
-    .line 8
     iput p2, v0, Lcom/android/camera/MiuiCameraSound$PlayConfig;->volume:F
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/MiuiCameraSound;->mFlowableEmitter:Lio/reactivex/FlowableEmitter;
 
     invoke-interface {p1, v0}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
@@ -644,10 +589,8 @@
 .method public release()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->release()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mDisposable:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
@@ -658,26 +601,21 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mDisposable:Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
     const/4 v0, 0x0
 
-    .line 6
     iput-object v0, p0, Lcom/android/camera/MiuiCameraSound;->mSoundPool:Landroid/media/SoundPool;
 
-    .line 7
     sput-object v0, Lcom/android/camera/MiuiCameraSound;->instance:Lcom/android/camera/MiuiCameraSound;
 
     :cond_1

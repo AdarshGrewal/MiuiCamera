@@ -33,30 +33,22 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->videoWidth:I
 
-    .line 3
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->videoHeight:I
 
-    .line 4
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->videoDegree:I
 
-    .line 5
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->stride:I
 
-    .line 6
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->topPaddingSize:I
 
-    .line 7
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->leftPaddingSize:I
 
-    .line 8
     iput v0, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->intervalPaddingSize:I
 
     return-void
@@ -69,7 +61,6 @@
 
     const-string v0, "stride"
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
@@ -78,7 +69,6 @@
 
     const-string v0, "crop-top"
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
@@ -87,14 +77,12 @@
 
     const-string v0, "crop-bottom"
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "crop-left"
 
-    .line 4
     invoke-virtual {p1, v1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v1
@@ -103,12 +91,10 @@
 
     const-string v1, "height"
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 6
     iget v1, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->topPaddingSize:I
 
     sub-int/2addr v0, v1
@@ -119,7 +105,6 @@
 
     sub-int/2addr p1, v1
 
-    .line 7
     iput p1, p0, Lcom/miui/extravideo/common/MediaParamsHolder;->intervalPaddingSize:I
 
     return-void

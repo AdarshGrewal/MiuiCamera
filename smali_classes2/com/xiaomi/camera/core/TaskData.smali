@@ -39,16 +39,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/camera/core/TaskData;->mDataBeans:Ljava/util/List;
 
-    .line 3
     iput-boolean p2, p0, Lcom/xiaomi/camera/core/TaskData;->mContainsFirstFrame:Z
 
-    .line 4
     iput-wide p3, p0, Lcom/xiaomi/camera/core/TaskData;->mFirstTimestamp:J
 
     return-void
@@ -59,7 +55,6 @@
 .method public containsFirstFrame()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/TaskData;->mContainsFirstFrame:Z
 
     return v0
@@ -76,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/TaskData;->mDataBeans:Ljava/util/List;
 
     return-object v0
@@ -85,7 +79,6 @@
 .method public getFirstTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/TaskData;->mFirstTimestamp:J
 
     return-wide v0
@@ -94,7 +87,6 @@
 .method public getProcessSessionType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/TaskData;->mTaskSessionType:I
 
     return v0
@@ -103,7 +95,6 @@
 .method public setProcessSessionType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/core/TaskData;->mTaskSessionType:I
 
     return-void

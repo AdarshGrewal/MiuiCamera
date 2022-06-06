@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/oned/UPCEANWriter;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public encode(Ljava/lang/String;)[Z
     .locals 8
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -35,7 +33,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/zxing/oned/UPCEANReader;->checkStandardUPCEANChecksum(Ljava/lang/CharSequence;)Z
 
@@ -45,7 +42,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -57,7 +53,6 @@
     :try_end_0
     .catch Lcom/google/zxing/FormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     :catch_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -67,7 +62,6 @@
 
     throw p1
 
-    .line 5
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -85,7 +79,6 @@
 
     throw p1
 
-    .line 6
     :cond_2
     :try_start_1
     invoke-static {p1}, Lcom/google/zxing/oned/UPCEANReader;->getStandardUPCEANChecksum(Ljava/lang/CharSequence;)I
@@ -94,7 +87,6 @@
     :try_end_1
     .catch Lcom/google/zxing/FormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 7
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,7 +99,6 @@
 
     move-result-object p1
 
-    .line 8
     :goto_0
     invoke-static {p1}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->checkNumeric(Ljava/lang/String;)V
 
@@ -115,7 +106,6 @@
 
     new-array v0, v0, [Z
 
-    .line 9
     sget-object v2, Lcom/google/zxing/oned/UPCEANReader;->START_END_PATTERN:[I
 
     const/4 v3, 0x1
@@ -137,7 +127,6 @@
 
     if-gt v5, v6, :cond_3
 
-    .line 10
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -146,7 +135,6 @@
 
     move-result v6
 
-    .line 11
     sget-object v7, Lcom/google/zxing/oned/UPCEANReader;->L_PATTERNS:[[I
 
     aget-object v6, v7, v6
@@ -161,7 +149,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_3
     sget-object v5, Lcom/google/zxing/oned/UPCEANReader;->MIDDLE_PATTERN:[I
 
@@ -176,7 +163,6 @@
     :goto_2
     if-gt v4, v1, :cond_4
 
-    .line 13
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -185,7 +171,6 @@
 
     move-result v5
 
-    .line 14
     sget-object v6, Lcom/google/zxing/oned/UPCEANReader;->L_PATTERNS:[[I
 
     aget-object v5, v6, v5
@@ -200,7 +185,6 @@
 
     goto :goto_2
 
-    .line 15
     :cond_4
     sget-object p1, Lcom/google/zxing/oned/UPCEANReader;->START_END_PATTERN:[I
 
@@ -211,7 +195,6 @@
     :catch_1
     move-exception p1
 
-    .line 16
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -230,7 +213,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/google/zxing/BarcodeFormat;->EAN_8:Lcom/google/zxing/BarcodeFormat;
 
     invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;

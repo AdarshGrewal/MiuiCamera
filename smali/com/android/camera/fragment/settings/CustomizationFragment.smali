@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 .method public addCurrentPreferences()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -45,53 +43,48 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o000O()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Ooo0o()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v1, 0x7f1207ee
+    const v1, 0x7f1207ac
 
     const-string/jumbo v2, "pref_custom_feature_layout"
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v1, 0x7f12081c
+    const v1, 0x7f1207d9
 
     const-string/jumbo v2, "pref_custom_more_mode"
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v1, 0x7f1207f0
+    const v1, 0x7f1207ae
 
     const-string v2, "custom_tint_key"
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v1, 0x7f1207ef
+    const v1, 0x7f1207ad
 
     const-string v2, "custom_shutter_sound_key"
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+    invoke-virtual {p0, v0, v2, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addValuePreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -99,7 +92,7 @@
 .method public getFragmentTitle()I
     .locals 1
 
-    const v0, 0x7f1207f2
+    const v0, 0x7f1207b0
 
     return v0
 .end method
@@ -107,7 +100,6 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -116,12 +108,10 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -132,7 +122,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -154,7 +143,6 @@
 
     const/4 v0, -0x1
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -231,11 +219,10 @@
 
     if-eq v0, v3, :cond_2
 
-    goto/16 :goto_5
+    goto :goto_4
 
-    .line 5
     :cond_2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
 
     if-eqz v0, :cond_3
 
@@ -253,17 +240,14 @@
 
     const-string v0, "edit_tint_outter_click"
 
-    .line 6
     invoke-static {p1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->settingClickEvent(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/statistic/MistatsWrapper;->customizeCameraSettingClick(Ljava/lang/String;)V
 
     return v1
 
-    .line 8
     :cond_4
-    sget-boolean p1, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
+    sget-boolean p1, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
 
     if-eqz p1, :cond_5
 
@@ -283,17 +267,14 @@
 
     const-string v0, "edit_sound_outter_click"
 
-    .line 9
     invoke-static {p1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->settingClickEvent(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 10
     invoke-static {p1}, Lcom/android/camera/statistic/MistatsWrapper;->customizeCameraSettingClick(Ljava/lang/String;)V
 
     return v1
 
-    .line 11
     :cond_6
-    sget-boolean p1, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
+    sget-boolean p1, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
 
     if-eqz p1, :cond_7
 
@@ -311,12 +292,10 @@
 
     const-string p1, "attr_more_mode"
 
-    .line 12
     invoke-static {p1}, Lcom/android/camera/statistic/MistatsWrapper;->customizeCameraSettingClick(Ljava/lang/String;)V
 
-    goto :goto_5
+    goto :goto_4
 
-    .line 13
     :cond_8
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
@@ -330,19 +309,17 @@
 
     check-cast v0, Lcom/android/camera/data/observeable/VMFeature;
 
-    .line 14
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/VMFeature;->inDownloadingOrWaiting()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 15
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v0, 0x7f120368
+    const v0, 0x7f120350
 
     const/16 v1, 0x50
 
@@ -350,28 +327,16 @@
 
     return v5
 
-    .line 16
     :cond_9
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0Oo:Z
-
-    if-eqz v0, :cond_a
-
-    const-class v0, Lcom/android/camera/ModeEditorPadActivity;
-
-    goto :goto_4
-
-    :cond_a
     const-class v0, Lcom/android/camera/ModeEditorActivity;
 
-    :goto_4
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->goToActivity(Ljava/lang/Class;Ljava/lang/String;)V
 
     const-string p1, "attr_edit_mode_setting"
 
-    .line 17
     invoke-static {p1}, Lcom/android/camera/statistic/MistatsWrapper;->customizeCameraSettingClick(Ljava/lang/String;)V
 
-    :goto_5
+    :goto_4
     return v5
 
     :sswitch_data_0
@@ -386,15 +351,12 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->onResume()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/settings/CustomizationFragment;->mCustomShutterSound:Lcom/android/camera/ui/ValuePreference;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -414,7 +376,6 @@
 
     const-string v0, "custom_shutter_sound_key"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -425,10 +386,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/settings/CustomizationFragment;->mCustomShutterSound:Lcom/android/camera/ui/ValuePreference;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -444,7 +403,6 @@
     :cond_0
     const-string v0, "custom_tint_key"
 
-    .line 4
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -453,33 +411,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_1
     const-string/jumbo v0, "pref_custom_feature_layout"
 
-    .line 6
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 7
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_2
     const-string/jumbo v0, "pref_custom_more_mode"
 
-    .line 8
     invoke-virtual {p0, v0}, Landroidx/preference/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 9
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_3

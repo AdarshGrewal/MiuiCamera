@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static getBytes(Landroid/content/res/AssetManager;Ljava/lang/String;)[B
     .locals 0
 
-    .line 5
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -33,7 +31,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -46,7 +43,6 @@
 .method public static getBytes(Ljava/io/InputStream;)[B
     .locals 1
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
 
@@ -54,10 +50,8 @@
 
     new-array v0, v0, [B
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
-    .line 3
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -67,7 +61,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -80,7 +73,6 @@
 .method public static readTextFileFromResource(Landroid/content/Context;I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

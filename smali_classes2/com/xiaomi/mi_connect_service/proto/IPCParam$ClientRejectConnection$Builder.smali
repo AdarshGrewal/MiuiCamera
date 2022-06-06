@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;->access$8600()Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearServiceId()Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;
@@ -71,7 +67,6 @@
 .method public getServiceId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;
@@ -86,7 +81,6 @@
 .method public getServiceIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;
@@ -101,10 +95,8 @@
 .method public setServiceId(Ljava/lang/String;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;
@@ -117,10 +109,8 @@
 .method public setServiceIdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$ClientRejectConnection;

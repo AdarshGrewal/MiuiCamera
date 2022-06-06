@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/android/camera/module/VideoSkyModule;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,16 +34,19 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x80
 
     const/4 v1, 0x2
 
-    if-eq p1, v1, :cond_5
+    if-eq p1, v1, :cond_6
 
     const/4 v2, 0x4
+
+    if-eq p1, v2, :cond_5
+
+    const/16 v2, 0x9
 
     if-eq p1, v2, :cond_4
 
@@ -65,9 +66,8 @@
 
     if-eq p1, v0, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
@@ -75,7 +75,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
@@ -85,21 +84,18 @@
 
     move-result p1
 
-    if-nez p1, :cond_6
+    if-nez p1, :cond_7
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/android/camera/module/BaseModule;->mOpenCameraFail:Z
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->onCameraException()V
 
     goto :goto_0
 
-    .line 6
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
@@ -107,7 +103,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
@@ -115,14 +110,12 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
@@ -131,7 +124,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object v0, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
@@ -146,13 +138,20 @@
 
     goto :goto_0
 
-    .line 11
     :cond_4
+    iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
+
+    iget-object v0, p1, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->initializeFocusView(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
+
+    goto :goto_0
+
+    :cond_5
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->checkActivityOrientation()V
 
-    .line 12
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -169,9 +168,8 @@
 
     cmp-long p1, v0, v3
 
-    if-gez p1, :cond_6
+    if-gez p1, :cond_7
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
@@ -182,8 +180,7 @@
 
     goto :goto_0
 
-    .line 14
-    :cond_5
+    :cond_6
     iget-object p1, p0, Lcom/android/camera/module/VideoSkyModule$MainHandler;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
@@ -192,7 +189,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->clearFlags(I)V
 
-    :cond_6
+    :cond_7
     :goto_0
     return-void
 .end method

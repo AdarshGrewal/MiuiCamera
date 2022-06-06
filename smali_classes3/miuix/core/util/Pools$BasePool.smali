@@ -63,10 +63,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/core/util/Pools$BasePool$1;
 
     invoke-direct {v0, p0}, Lmiuix/core/util/Pools$BasePool$1;-><init>(Lmiuix/core/util/Pools$BasePool;)V
@@ -79,37 +77,30 @@
 
     if-lt p2, v0, :cond_1
 
-    .line 3
     iput-object p1, p0, Lmiuix/core/util/Pools$BasePool;->mManager:Lmiuix/core/util/Pools$Manager;
 
-    .line 4
     iput p2, p0, Lmiuix/core/util/Pools$BasePool;->mSize:I
 
-    .line 5
     invoke-virtual {p1}, Lmiuix/core/util/Pools$Manager;->createInstance()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {p0, v0, p2}, Lmiuix/core/util/Pools$BasePool;->createInstanceHolder(Ljava/lang/Class;I)Lmiuix/core/util/Pools$IInstanceHolder;
 
     move-result-object p2
 
     iput-object p2, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
-    .line 8
     invoke-virtual {p0, p1}, Lmiuix/core/util/Pools$BasePool;->doRelease(Ljava/lang/Object;)V
 
     return-void
 
-    .line 9
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -119,7 +110,6 @@
 
     throw p1
 
-    .line 10
     :cond_1
     iget-object p1, p0, Lmiuix/core/util/Pools$BasePool;->mFinalizeGuardian:Ljava/lang/Object;
 
@@ -129,7 +119,6 @@
 
     iput p1, p0, Lmiuix/core/util/Pools$BasePool;->mSize:I
 
-    .line 11
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "manager cannot be null and size cannot less then 1"
@@ -149,7 +138,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/core/util/Pools$BasePool;->doAcquire()Ljava/lang/Object;
 
     move-result-object v0
@@ -160,19 +148,16 @@
 .method public close()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget v1, p0, Lmiuix/core/util/Pools$BasePool;->mSize:I
 
     invoke-virtual {p0, v0, v1}, Lmiuix/core/util/Pools$BasePool;->destroyInstanceHolder(Lmiuix/core/util/Pools$IInstanceHolder;I)V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     :cond_0
@@ -209,19 +194,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-interface {v0}, Lmiuix/core/util/Pools$IInstanceHolder;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mManager:Lmiuix/core/util/Pools$Manager;
 
     invoke-virtual {v0}, Lmiuix/core/util/Pools$Manager;->createInstance()Ljava/lang/Object;
@@ -232,7 +214,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -242,7 +223,6 @@
 
     throw v0
 
-    .line 5
     :cond_1
     :goto_0
     iget-object v1, p0, Lmiuix/core/util/Pools$BasePool;->mManager:Lmiuix/core/util/Pools$Manager;
@@ -251,7 +231,6 @@
 
     return-object v0
 
-    .line 6
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -270,7 +249,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     if-eqz v0, :cond_2
@@ -279,13 +257,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mManager:Lmiuix/core/util/Pools$Manager;
 
     invoke-virtual {v0, p1}, Lmiuix/core/util/Pools$Manager;->onRelease(Ljava/lang/Object;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     invoke-interface {v0, p1}, Lmiuix/core/util/Pools$IInstanceHolder;->put(Ljava/lang/Object;)Z
@@ -294,7 +270,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mManager:Lmiuix/core/util/Pools$Manager;
 
     invoke-virtual {v0, p1}, Lmiuix/core/util/Pools$Manager;->onDestroy(Ljava/lang/Object;)V
@@ -302,7 +277,6 @@
     :cond_1
     return-void
 
-    .line 5
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -316,7 +290,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/Pools$BasePool;->mInstanceHolder:Lmiuix/core/util/Pools$IInstanceHolder;
 
     if-nez v0, :cond_0
@@ -340,7 +313,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/core/util/Pools$BasePool;->doRelease(Ljava/lang/Object;)V
 
     return-void

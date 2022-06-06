@@ -16,7 +16,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lmiuix/view/animation/BackEaseInOutInterpolator;-><init>(F)V
 
     return-void
@@ -25,10 +24,8 @@
 .method public constructor <init>(F)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput p1, p0, Lmiuix/view/animation/BackEaseInOutInterpolator;->mOvershot:F
 
     return-void
@@ -39,7 +36,6 @@
 .method public getInterpolation(F)F
     .locals 9
 
-    .line 1
     iget v0, p0, Lmiuix/view/animation/BackEaseInOutInterpolator;->mOvershot:F
 
     const/4 v1, 0x0

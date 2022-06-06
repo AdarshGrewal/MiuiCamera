@@ -46,10 +46,8 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfLong;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;)V
 
-    .line 4
     iget-object p1, p2, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->p:Ljava8/util/function/LongPredicate;
 
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->p:Ljava8/util/function/LongPredicate;
@@ -60,10 +58,8 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfLong;ZLjava8/util/function/LongPredicate;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Z)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->p:Ljava8/util/function/LongPredicate;
 
     return-void
@@ -74,7 +70,6 @@
 .method public accept(J)V
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
     add-int/lit8 v0, v0, 0x1
@@ -83,7 +78,6 @@
 
     iput v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
-    .line 2
     iput-wide p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->t:J
 
     return-void
@@ -92,7 +86,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/LongConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->forEachRemaining(Ljava8/util/function/LongConsumer;)V
@@ -112,7 +105,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->forEachRemaining(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -121,7 +113,6 @@
 .method public forEachRemaining(Ljava8/util/function/LongConsumer;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->forEachRemaining(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/LongConsumer;)V
 
     return-void
@@ -130,7 +121,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -141,7 +131,6 @@
 .method public makeSpliterator(Ljava8/util/Spliterator$OfLong;)Ljava8/util/Spliterator$OfLong;
     .locals 1
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong$Dropping;
 
     invoke-direct {v0, p1, p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong$Dropping;-><init>(Ljava8/util/Spliterator$OfLong;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;)V
@@ -152,7 +141,6 @@
 .method public bridge synthetic makeSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/Spliterator$OfLong;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfLong;->makeSpliterator(Ljava8/util/Spliterator$OfLong;)Ljava8/util/Spliterator$OfLong;
@@ -174,7 +162,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->tryAdvance(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -185,7 +172,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfLong;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -198,7 +184,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 2
     invoke-super {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

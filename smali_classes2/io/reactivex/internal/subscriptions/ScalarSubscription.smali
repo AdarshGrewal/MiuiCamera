@@ -59,13 +59,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Lorg/reactivestreams/Subscriber;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->value:Ljava/lang/Object;
 
     return-void
@@ -78,7 +75,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     return-void
@@ -89,7 +85,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     return-void
@@ -98,7 +93,6 @@
 .method public isCancelled()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
@@ -121,7 +115,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
@@ -147,7 +140,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Should not be called!"
@@ -165,7 +157,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "Should not be called!"
@@ -183,7 +174,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
@@ -192,10 +182,8 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->value:Ljava/lang/Object;
 
     return-object v0
@@ -209,7 +197,6 @@
 .method public request(J)V
     .locals 1
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result p1
@@ -223,22 +210,18 @@
 
     const/4 p2, 0x1
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Lorg/reactivestreams/Subscriber;
 
-    .line 4
     iget-object p2, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->value:Ljava/lang/Object;
 
     invoke-interface {p1, p2}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
-    .line 5
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result p2
@@ -247,7 +230,6 @@
 
     if-eq p2, v0, :cond_1
 
-    .line 6
     invoke-interface {p1}, Lorg/reactivestreams/Subscriber;->onComplete()V
 
     :cond_1

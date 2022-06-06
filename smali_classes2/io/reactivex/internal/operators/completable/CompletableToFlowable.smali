@@ -23,10 +23,8 @@
 .method public constructor <init>(Lio/reactivex/CompletableSource;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableToFlowable;->source:Lio/reactivex/CompletableSource;
 
     return-void
@@ -44,12 +42,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/observers/SubscriberCompletableObserver;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/observers/SubscriberCompletableObserver;-><init>(Lorg/reactivestreams/Subscriber;)V
 
-    .line 2
     iget-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableToFlowable;->source:Lio/reactivex/CompletableSource;
 
     invoke-interface {p1, v0}, Lio/reactivex/CompletableSource;->subscribe(Lio/reactivex/CompletableObserver;)V

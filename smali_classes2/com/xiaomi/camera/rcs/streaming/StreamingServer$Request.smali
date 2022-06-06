@@ -47,7 +47,6 @@
 
     const-string v1, "(\\w+) (\\S+) RTSP"
 
-    .line 1
     invoke-static {v1, v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v1
@@ -56,7 +55,6 @@
 
     const-string v1, "(\\S+):(.+)"
 
-    .line 2
     invoke-static {v1, v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -69,10 +67,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -81,7 +77,6 @@
 
     const-string v0, ""
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->content:Ljava/lang/String;
 
     return-void
@@ -101,12 +96,10 @@
 
     const-string v1, " "
 
-    .line 1
     new-instance v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;
 
     invoke-direct {v2}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v3
@@ -115,7 +108,6 @@
 
     invoke-static {v3, v4}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
@@ -124,19 +116,16 @@
 
     if-eqz v3, :cond_4
 
-    .line 4
     sget-object v5, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->regexMethod:Ljava/util/regex/Pattern;
 
     invoke-virtual {v5, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
     const/4 v5, 0x1
 
-    .line 6
     invoke-virtual {v3, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -145,14 +134,12 @@
 
     const/4 v6, 0x2
 
-    .line 7
     invoke-virtual {v3, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->uri:Ljava/lang/String;
 
-    .line 8
     :goto_0
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -168,17 +155,14 @@
 
     if-le v7, v8, :cond_0
 
-    .line 9
     sget-object v7, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->rexegHeader:Ljava/util/regex/Pattern;
 
     invoke-virtual {v7, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
-    .line 10
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
-    .line 11
     iget-object v7, v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->headers:Ljava/util/HashMap;
 
     invoke-virtual {v3, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -202,7 +186,6 @@
     :cond_0
     if-eqz v3, :cond_3
 
-    .line 12
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v3
@@ -211,7 +194,6 @@
 
     invoke-static {v3, v4}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     :try_start_0
     iget-object v3, v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->headers:Ljava/util/HashMap;
 
@@ -233,7 +215,6 @@
 
     move-result v3
 
-    .line 14
     iget-object v4, v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->headers:Ljava/util/HashMap;
 
     const-string v5, "content-type"
@@ -254,14 +235,12 @@
 
     const-string v4, "application/json"
 
-    .line 15
     invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 16
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -270,24 +249,20 @@
 
     invoke-static {v0, v4}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     new-array v0, v3, [C
 
-    .line 18
     invoke-virtual {p0, v0}, Ljava/io/BufferedReader;->read([C)I
 
     move-result p0
 
     if-ne p0, v3, :cond_1
 
-    .line 19
     new-instance p0, Ljava/lang/String;
 
     invoke-direct {p0, v0}, Ljava/lang/String;-><init>([C)V
 
     iput-object p0, v2, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;->content:Ljava/lang/String;
 
-    .line 20
     :cond_1
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
@@ -311,7 +286,6 @@
 
     invoke-static {p0, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object p0
@@ -327,7 +301,6 @@
     :catch_0
     move-exception p0
 
-    .line 22
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -336,7 +309,6 @@
 
     invoke-static {v0, v3, p0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 23
     :cond_2
     :goto_1
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
@@ -365,7 +337,6 @@
 
     return-object v2
 
-    .line 24
     :cond_3
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
@@ -375,14 +346,12 @@
 
     invoke-static {p0, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     new-instance p0, Ljava/net/SocketException;
 
     invoke-direct {p0, v4}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    .line 26
     :cond_4
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
@@ -392,7 +361,6 @@
 
     invoke-static {p0, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     new-instance p0, Ljava/net/SocketException;
 
     invoke-direct {p0, v4}, Ljava/net/SocketException;-><init>(Ljava/lang/String;)V

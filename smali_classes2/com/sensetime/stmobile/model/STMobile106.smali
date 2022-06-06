@@ -27,43 +27,32 @@
 .method public constructor <init>(Lcom/sensetime/stmobile/model/STRect;F[Lcom/sensetime/stmobile/model/STPoint;FFFFI)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x6a
 
     new-array v1, v0, [Lcom/sensetime/stmobile/model/STPoint;
 
-    .line 2
     iput-object v1, p0, Lcom/sensetime/stmobile/model/STMobile106;->points_array:[Lcom/sensetime/stmobile/model/STPoint;
 
     new-array v0, v0, [F
 
-    .line 3
     iput-object v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->visibility_array:[F
 
-    .line 4
     iput-object p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->rect:Lcom/sensetime/stmobile/model/STRect;
 
-    .line 5
     iput p2, p0, Lcom/sensetime/stmobile/model/STMobile106;->score:F
 
-    .line 6
     iput-object p3, p0, Lcom/sensetime/stmobile/model/STMobile106;->points_array:[Lcom/sensetime/stmobile/model/STPoint;
 
-    .line 7
     iput p4, p0, Lcom/sensetime/stmobile/model/STMobile106;->yaw:F
 
-    .line 8
     iput p5, p0, Lcom/sensetime/stmobile/model/STMobile106;->pitch:F
 
-    .line 9
     iput p6, p0, Lcom/sensetime/stmobile/model/STMobile106;->roll:F
 
-    .line 10
     iput p7, p0, Lcom/sensetime/stmobile/model/STMobile106;->eye_dist:F
 
-    .line 11
     iput p8, p0, Lcom/sensetime/stmobile/model/STMobile106;->ID:I
 
     return-void
@@ -74,7 +63,6 @@
 .method public getEye_dist()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->eye_dist:F
 
     return v0
@@ -83,7 +71,6 @@
 .method public getID()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->ID:I
 
     return v0
@@ -92,7 +79,6 @@
 .method public getPitch()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->pitch:F
 
     return v0
@@ -101,7 +87,6 @@
 .method public getPoints_array()[Lcom/sensetime/stmobile/model/STPoint;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->points_array:[Lcom/sensetime/stmobile/model/STPoint;
 
     return-object v0
@@ -110,7 +95,6 @@
 .method public getRect()Lcom/sensetime/stmobile/model/STRect;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->rect:Lcom/sensetime/stmobile/model/STRect;
 
     return-object v0
@@ -119,7 +103,6 @@
 .method public getRoll()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->roll:F
 
     return v0
@@ -128,7 +111,6 @@
 .method public getScore()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->score:F
 
     return v0
@@ -137,7 +119,6 @@
 .method public getVisibilityArray()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->visibility_array:[F
 
     return-object v0
@@ -146,7 +127,6 @@
 .method public getYaw()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobile106;->yaw:F
 
     return v0
@@ -155,7 +135,6 @@
 .method public setEye_dist(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->eye_dist:F
 
     return-void
@@ -164,7 +143,6 @@
 .method public setID(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->ID:I
 
     return-void
@@ -173,7 +151,6 @@
 .method public setPitch(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->pitch:F
 
     return-void
@@ -182,7 +159,6 @@
 .method public setPoints_array([Lcom/sensetime/stmobile/model/STPoint;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->points_array:[Lcom/sensetime/stmobile/model/STPoint;
 
     return-void
@@ -191,7 +167,6 @@
 .method public setRect(Lcom/sensetime/stmobile/model/STRect;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->rect:Lcom/sensetime/stmobile/model/STRect;
 
     return-void
@@ -200,7 +175,6 @@
 .method public setRoll(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->roll:F
 
     return-void
@@ -209,7 +183,6 @@
 .method public setScore(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->score:F
 
     return-void
@@ -218,7 +191,6 @@
 .method public setYaw(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobile106;->yaw:F
 
     return-void

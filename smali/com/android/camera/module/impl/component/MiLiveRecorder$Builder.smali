@@ -50,16 +50,12 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    .line 3
     iput p2, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mVideoWidth:I
 
-    .line 4
     iput p3, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mVideoHeight:I
 
     return-void
@@ -68,7 +64,6 @@
 .method public static synthetic access$000(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Lcom/android/camera/ActivityBase;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mActivityBase:Lcom/android/camera/ActivityBase;
 
     return-object p0
@@ -77,7 +72,6 @@
 .method public static synthetic access$100(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mBitrate:I
 
     return p0
@@ -86,7 +80,6 @@
 .method public static synthetic access$200(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mFps:I
 
     return p0
@@ -95,7 +88,6 @@
 .method public static synthetic access$300(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mVideoSaveDirPath:Ljava/lang/String;
 
     return-object p0
@@ -104,7 +96,6 @@
 .method public static synthetic access$400(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Lcom/android/camera/module/impl/component/ILive$ILiveRecorderStateListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mStateListener:Lcom/android/camera/module/impl/component/ILive$ILiveRecorderStateListener;
 
     return-object p0
@@ -113,7 +104,6 @@
 .method public static synthetic access$500(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mRecordingTimeListener:Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;
 
     return-object p0
@@ -122,7 +112,6 @@
 .method public static synthetic access$600(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -131,7 +120,6 @@
 .method public static synthetic access$700(Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mSegmentData:Ljava/util/List;
 
     return-object p0
@@ -142,7 +130,6 @@
 .method public build()Lcom/android/camera/module/impl/component/MiLiveRecorder;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/impl/component/MiLiveRecorder;
 
     const/4 v1, 0x0
@@ -155,7 +142,6 @@
 .method public setBitrate(I)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mBitrate:I
 
     return-object p0
@@ -164,7 +150,6 @@
 .method public setFps(I)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mFps:I
 
     return-object p0
@@ -173,7 +158,6 @@
 .method public setHandler(Landroid/os/Handler;)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -182,7 +166,6 @@
 .method public setMaxDuration(J)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mMaxDuration:J
 
     return-object p0
@@ -191,7 +174,6 @@
 .method public setRecordingTimeListener(Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mRecordingTimeListener:Lcom/android/camera/module/impl/component/ILive$ILiveRecordingTimeListener;
 
     return-object p0
@@ -209,7 +191,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mSegmentData:Ljava/util/List;
 
     return-object p0
@@ -218,7 +199,6 @@
 .method public setStateListener(Lcom/android/camera/module/impl/component/ILive$ILiveRecorderStateListener;)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mStateListener:Lcom/android/camera/module/impl/component/ILive$ILiveRecorderStateListener;
 
     return-object p0
@@ -227,7 +207,6 @@
 .method public setVideoSaveDirPath(Ljava/lang/String;)Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$Builder;->mVideoSaveDirPath:Ljava/lang/String;
 
     return-object p0

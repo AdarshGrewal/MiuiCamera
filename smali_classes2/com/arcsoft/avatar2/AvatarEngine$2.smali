@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/AvatarEngine;Ljava/util/ArrayList;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iput-object p2, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->a:Ljava/util/ArrayList;
@@ -46,42 +45,30 @@
 .method public onGetConfig(IIIILjava/lang/String;Ljava/lang/String;IIZZZF)V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
     invoke-direct {v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;-><init>()V
 
-    .line 2
     iput p1, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
 
-    .line 3
     iput p3, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
-    .line 4
     iput p4, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->gender:I
 
-    .line 5
     iput-object p5, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->name:Ljava/lang/String;
 
-    .line 6
     iput-object p6, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configThumbPath:Ljava/lang/String;
 
-    .line 7
     iput-boolean p9, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->isDefault:Z
 
-    .line 8
     iput-boolean p10, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->isValid:Z
 
-    .line 9
     iput-boolean p11, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->isSupportContinuous:Z
 
-    .line 10
     iput p12, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->continuousValue:F
 
-    .line 11
     iput p7, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->startColorValue:I
 
-    .line 12
     iput p8, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->endColorValue:I
 
     const/4 p1, 0x5
@@ -92,7 +79,6 @@
 
     if-eq p2, p1, :cond_1
 
-    .line 13
     new-instance p1, Ljava/lang/Integer;
 
     invoke-direct {p1, p2}, Ljava/lang/Integer;-><init>(I)V
@@ -101,7 +87,6 @@
 
     move-result-object p1
 
-    .line 14
     iget-object p3, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-static {p3}, Lcom/arcsoft/avatar2/AvatarEngine;->a(Lcom/arcsoft/avatar2/AvatarEngine;)Ljava/util/TreeMap;
@@ -114,7 +99,6 @@
 
     if-nez p3, :cond_0
 
-    .line 15
     iget-object p3, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-static {p3}, Lcom/arcsoft/avatar2/AvatarEngine;->a(Lcom/arcsoft/avatar2/AvatarEngine;)Ljava/util/TreeMap;
@@ -123,7 +107,6 @@
 
     invoke-virtual {p3, p1, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
@@ -135,13 +118,11 @@
 
     return-void
 
-    .line 17
     :cond_1
     iget-object p1, p0, Lcom/arcsoft/avatar2/AvatarEngine$2;->a:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 18
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

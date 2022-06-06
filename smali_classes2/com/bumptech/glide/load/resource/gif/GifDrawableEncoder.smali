@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,14 +46,12 @@
         }
     .end annotation
 
-    .line 2
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
-    .line 3
     :try_start_0
     invoke-virtual {p1}, Lcom/bumptech/glide/load/resource/gif/GifDrawable;->getBuffer()Ljava/nio/ByteBuffer;
 
@@ -75,7 +72,6 @@
 
     const-string p3, "GifEncoder"
 
-    .line 4
     invoke-static {p3, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p2
@@ -84,7 +80,6 @@
 
     const-string p2, "Failed to encode GIF drawable data"
 
-    .line 5
     invoke-static {p3, p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -97,7 +92,6 @@
 .method public bridge synthetic encode(Ljava/lang/Object;Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/bumptech/glide/load/resource/gif/GifDrawableEncoder;->encode(Lcom/bumptech/glide/load/engine/Resource;Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z
@@ -110,7 +104,6 @@
 .method public getEncodeStrategy(Lcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/EncodeStrategy;
     .locals 0
 
-    .line 1
     sget-object p1, Lcom/bumptech/glide/load/EncodeStrategy;->SOURCE:Lcom/bumptech/glide/load/EncodeStrategy;
 
     return-object p1

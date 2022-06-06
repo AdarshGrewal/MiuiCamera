@@ -26,23 +26,18 @@
 .method public constructor <init>(II[F)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     new-array v0, v0, [F
 
-    .line 2
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->coordinates:[F
 
-    .line 3
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->channelLabel:I
 
-    .line 4
     iput p2, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->channelFlags:I
 
-    .line 5
     iput-object p3, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->coordinates:[F
 
     return-void
@@ -53,7 +48,6 @@
 .method public getChannelFlags()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->channelFlags:I
 
     return v0
@@ -62,7 +56,6 @@
 .method public getChannelLabel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->channelLabel:I
 
     return v0
@@ -71,7 +64,6 @@
 .method public getCoordinates()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->coordinates:[F
 
     return-object v0
@@ -80,7 +72,6 @@
 .method public getLabel()Lorg/jcodec/common/model/Label;
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->channelLabel:I
 
     invoke-static {v0}, Lorg/jcodec/common/model/Label;->getByVal(I)Lorg/jcodec/common/model/Label;

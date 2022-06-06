@@ -24,14 +24,12 @@
 .method public constructor <init>(Lokhttp3/RealCall;Lokhttp3/Callback;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 2
     invoke-virtual {p1}, Lokhttp3/RealCall;->redactedUrl()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +42,6 @@
 
     invoke-direct {p0, p1, v0}, Lokhttp3/internal/NamedRunnable;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     iput-object p2, p0, Lokhttp3/RealCall$AsyncCall;->responseCallback:Lokhttp3/Callback;
 
     return-void
@@ -59,7 +56,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     iget-object v2, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
@@ -67,7 +63,6 @@
 
     move-result-object v2
 
-    .line 2
     iget-object v3, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
     iget-object v3, v3, Lokhttp3/RealCall;->retryAndFollowUpInterceptor:Lokhttp3/internal/http/RetryAndFollowUpInterceptor;
@@ -81,7 +76,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     :try_start_1
     iget-object v1, p0, Lokhttp3/RealCall$AsyncCall;->responseCallback:Lokhttp3/Callback;
 
@@ -97,7 +91,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lokhttp3/RealCall$AsyncCall;->responseCallback:Lokhttp3/Callback;
 
@@ -108,7 +101,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5
     :goto_0
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
@@ -144,7 +136,6 @@
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 6
     :try_start_2
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
@@ -176,7 +167,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
@@ -188,7 +178,6 @@
 
     invoke-virtual {v0, v2, v1}, Lokhttp3/EventListener;->callFailed(Lokhttp3/Call;Ljava/io/IOException;)V
 
-    .line 8
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->responseCallback:Lokhttp3/Callback;
 
     iget-object v2, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
@@ -202,7 +191,6 @@
     :goto_2
     return-void
 
-    .line 9
     :goto_3
     iget-object v1, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
@@ -220,7 +208,6 @@
 .method public get()Lokhttp3/RealCall;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
     return-object v0
@@ -229,7 +216,6 @@
 .method public host()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
     iget-object v0, v0, Lokhttp3/RealCall;->originalRequest:Lokhttp3/Request;
@@ -248,7 +234,6 @@
 .method public request()Lokhttp3/Request;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/RealCall$AsyncCall;->this$0:Lokhttp3/RealCall;
 
     iget-object v0, v0, Lokhttp3/RealCall;->originalRequest:Lokhttp3/Request;

@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/DualVideoRecordModule;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -44,19 +43,16 @@
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mPauseClickTime:J
 
-    .line 3
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0OO00O;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0OO00O;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000o;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mRecorderListener:Lcom/android/camera/dualvideo/recorder/MiRecorder$MiRecorderListener;
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mIsStopKaraoke:Z
 
     return-void
@@ -65,7 +61,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;Lcom/android/camera/dualvideo/util/UserSelectData;)I
     .locals 0
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p0
@@ -92,8 +87,7 @@
 .method public static synthetic OooO00o(Lcom/android/camera/protocol/ModeProtocol$TopAlert;)V
     .locals 2
 
-    .line 7
-    invoke-static {}, Lcom/android/camera/dualvideo/DualVideoModuleUtil;->getTopTipRes()I
+    invoke-static {}, Lcom/android/camera/dualvideo/ModuleUtil;->getTopTipRes()I
 
     move-result v0
 
@@ -107,12 +101,10 @@
 .method public static synthetic OooO00o(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 0
 
-    .line 5
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, ":"
 
-    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
@@ -121,7 +113,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmRecordLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p0
@@ -148,7 +139,6 @@
 
     const-string v1, "abort"
 
-    .line 2
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -157,7 +147,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -184,7 +173,6 @@
 
     const-string/jumbo v1, "stop"
 
-    .line 1
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -193,7 +181,6 @@
 .method public static synthetic OooOO0(Lcom/android/camera/dualvideo/render/RenderManager;)Ljava/lang/Integer;
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/dualvideo/render/RenderManager;->mStatCaptureTimes:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -208,7 +195,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/RenderManager;->enableDrawBlur(Z)V
 
     return-void
@@ -217,7 +203,6 @@
 .method public static synthetic OooOO0o(Lcom/android/camera/dualvideo/render/RenderManager;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/RenderManager;->updateTextureId()V
 
     return-void
@@ -226,7 +211,6 @@
 .method public static synthetic access$000(Lcom/android/camera/dualvideo/DualVideoRecordModule;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/module/BaseModule;->mPaused:Z
 
     return p0
@@ -235,7 +219,6 @@
 .method public static synthetic access$100(Lcom/android/camera/dualvideo/DualVideoRecordModule;)Lcom/android/camera/Camera;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     return-object p0
@@ -244,7 +227,6 @@
 .method public static synthetic access$200(Lcom/android/camera/dualvideo/DualVideoRecordModule;)Lcom/android/camera/Camera;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     return-object p0
@@ -253,7 +235,6 @@
 .method public static synthetic access$300(Lcom/android/camera/dualvideo/DualVideoRecordModule;)Lcom/android/camera/Camera;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     return-object p0
@@ -262,7 +243,6 @@
 .method private getLocation()Landroid/location/Location;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraIntentManager()Lcom/android/camera/CameraIntentManager;
@@ -277,7 +257,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v0
@@ -298,7 +277,6 @@
 .method private getRecorderMaxFileSize(I)J
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/storage/Storage;->getLeftSpace()J
 
     move-result-wide v0
@@ -324,12 +302,11 @@
 
     if-lez p1, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0OOo()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->oo00o()Z
 
     move-result p1
 
@@ -337,7 +314,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-wide v2, Lcom/android/camera/module/video/VideoConfig;->VIDEO_MIN_SINGLE_FILE_SIZE:J
 
@@ -348,7 +324,6 @@
     :goto_0
     move-wide v0, v2
 
-    .line 4
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/VideoBase;->mUserRecordSetting:Lcom/android/camera/module/video/UserRecordSetting;
 
@@ -373,7 +348,6 @@
 .method private getRecorderOrientationHint()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/BaseModule;->mOrientation:I
 
     const/4 v1, -0x1
@@ -389,7 +363,6 @@
 .method private getZoomGroupForTrack()Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -402,17 +375,14 @@
 
     move-result-object v0
 
-    .line 2
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOoO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOoO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00oO0o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00oO0o;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->sort(Ljava/util/Comparator;)V
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -430,12 +400,10 @@
 
     check-cast v2, Lcom/android/camera/dualvideo/util/UserSelectData;
 
-    .line 5
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v3
 
-    .line 6
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v2
@@ -444,16 +412,14 @@
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0OOO0o;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0OOO0o;
 
-    invoke-direct {v3, v1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0OOO0o;-><init>(Ljava/lang/StringBuilder;)V
+    invoke-direct {v3, v1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0OOO0o;-><init>(Ljava/lang/StringBuilder;)V
 
-    .line 7
     invoke-virtual {v2, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -465,12 +431,11 @@
 .method private hideHint()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getTopAlert()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00ooo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00ooo;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -480,7 +445,6 @@
 .method private notifyRemoteDeviceLayoutType()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -493,9 +457,8 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000O;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOOo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOOo;
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     move-result v0
@@ -504,7 +467,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyLayoutTypeToRemoteDevice(I)V
 
     goto :goto_0
@@ -512,7 +474,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyLayoutTypeToRemoteDevice(I)V
 
     :goto_0
@@ -522,10 +483,8 @@
 .method private onMediaRecorderReleased()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->restoreOuterAudio()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     new-instance v1, Landroid/content/Intent;
@@ -538,13 +497,10 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->enableCameraControls(Z)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOnAwhile()V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/VideoBase;->doLaterReleaseIfNeed()V
 
     return-void
@@ -553,7 +509,6 @@
 .method private onStartRecorderSucceed()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     new-instance v1, Landroid/content/Intent;
@@ -564,7 +519,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-static {v0}, Lcom/android/camera/AutoLockManager;->getInstance(Landroid/content/Context;)Lcom/android/camera/AutoLockManager;
@@ -573,16 +527,12 @@
 
     invoke-virtual {v0}, Lcom/android/camera/AutoLockManager;->removeMessage()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->updateRecordingTime()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOn()V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/VideoBase;->keepPowerSave()V
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->hideHint()V
 
     return-void
@@ -591,15 +541,12 @@
 .method private pauseVideoRecording()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->pauseVideoRecording2()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->updateReselectButton()V
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyRecordingStateToRemoteDevice(I)V
 
     return-void
@@ -608,14 +555,12 @@
 .method private pauseVideoRecording2()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "pauseVideoRecording"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
@@ -632,13 +577,11 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->pauseRecorder()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     const/4 v1, 0x1
@@ -649,7 +592,6 @@
 
     goto :goto_0
 
-    .line 5
     :catch_0
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
@@ -657,7 +599,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     :goto_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
@@ -665,7 +606,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->updateRecordingTime()V
 
     :cond_0
@@ -675,15 +615,12 @@
 .method private resumeVideoRecording(Lcom/android/camera/protocol/ModeProtocol$RecordState;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->resumeVideoRecording2(Lcom/android/camera/protocol/ModeProtocol$RecordState;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->updateReselectButton()V
 
     const/4 p1, 0x3
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyRecordingStateToRemoteDevice(I)V
 
     return-void
@@ -694,26 +631,21 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->resume()V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/16 v2, 0x2a
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->updateRecordingTime()V
 
-    .line 4
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onResume()V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     iput-boolean v0, v1, Lcom/android/camera/module/video/RecordRuntimeInfo;->mRecordingPaused:Z
@@ -725,22 +657,18 @@
     :catch_0
     move-exception v1
 
-    .line 6
     sget-object v2, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string v3, "failed to resume media recorder"
 
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->release()V
 
-    .line 8
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onFailed()V
 
-    .line 9
     :goto_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
@@ -754,7 +682,6 @@
 
     if-nez p1, :cond_0
 
-    .line 10
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
     move-result-object p1
@@ -763,14 +690,12 @@
 
     invoke-static {v1, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonAttr(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
     move-result-object p1
 
     sput-object p1, Lcom/android/camera/statistic/CameraStatUtils;->mZoomPair:Ljava/lang/String;
 
-    .line 12
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->forceTrackLayoutType(Z)V
 
@@ -780,10 +705,8 @@
 .method private startRecordingRelate()V
     .locals 12
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->silenceOuterAudio()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getScreenHint()Lcom/android/camera/ui/ScreenHint;
@@ -796,7 +719,6 @@
 
     new-array v1, v0, [I
 
-    .line 3
     sget-object v2, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/util/RenderSourceType;->getIndex()I
@@ -807,12 +729,10 @@
 
     aput v2, v1, v3
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v2
 
-    .line 5
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->getRecordType()Lcom/android/camera/dualvideo/recorder/RecordType;
 
     move-result-object v2
@@ -821,7 +741,6 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getSubCamera2Device()Ljava/util/Optional;
 
     move-result-object v1
@@ -836,7 +755,6 @@
 
     new-array v1, v2, [I
 
-    .line 7
     sget-object v2, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/util/RenderSourceType;->getIndex()I
@@ -858,7 +776,6 @@
     :cond_0
     new-array v1, v2, [I
 
-    .line 8
     sget-object v2, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/util/RenderSourceType;->getIndex()I
@@ -879,7 +796,6 @@
     :goto_0
     move-object v5, v1
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v1
@@ -890,7 +806,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/camera/SoundSetting;->setNoiseReductionState(Landroid/content/Context;IZ)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v1
@@ -919,19 +834,16 @@
 
     if-eqz v1, :cond_4
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mAudioMonitorPlayer:Lcom/android/camera/AudioMonitorPlayer;
 
     if-nez v1, :cond_2
 
-    .line 12
     new-instance v1, Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-direct {v1}, Lcom/android/camera/AudioMonitorPlayer;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mAudioMonitorPlayer:Lcom/android/camera/AudioMonitorPlayer;
 
-    .line 13
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
@@ -943,7 +855,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/SoundSetting;->openKaraokeEquipment(Landroid/content/Context;I)V
 
-    .line 14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -974,18 +885,14 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mIsStopKaraoke:Z
 
-    .line 16
     iget-object v1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mAudioMonitorPlayer:Lcom/android/camera/AudioMonitorPlayer;
 
     if-eqz v1, :cond_3
 
-    .line 17
     invoke-virtual {v1}, Lcom/android/camera/AudioMonitorPlayer;->startPlay()V
 
-    .line 18
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
@@ -997,7 +904,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/SoundSetting;->openKaraokeState(Landroid/content/Context;I)V
 
-    .line 19
     :cond_4
     iget-object v4, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -1021,14 +927,12 @@
 
     invoke-virtual/range {v4 .. v11}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->startRecorder([ILandroid/location/Location;Lcom/android/camera/CameraSize;Lcom/android/camera/dualvideo/recorder/MiRecorder$MiRecorderListener;JI)V
 
-    .line 20
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v1
 
     const/16 v2, 0xd4
 
-    .line 21
     invoke-virtual {v1, v2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v1
@@ -1037,40 +941,32 @@
 
     if-eqz v1, :cond_6
 
-    .line 22
     invoke-static {}, Lcom/android/camera/storage/Storage;->isLowStorageAtLastPoint()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 23
     invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onFailed()V
 
     return-void
 
-    .line 24
     :cond_5
     invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPrepare()V
 
-    .line 25
     invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onStart()V
 
-    .line 26
     :cond_6
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->onStartRecorderSucceed()V
 
-    .line 27
     iget-object v1, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     iput-boolean v0, v1, Lcom/android/camera/module/video/RecordRuntimeInfo;->mMediaRecorderRecording:Z
 
-    .line 28
     iget-object v0, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     iput-boolean v3, v0, Lcom/android/camera/module/video/RecordRuntimeInfo;->mRecordingPaused:Z
 
-    .line 29
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->trackOnVideoStart()V
 
     return-void
@@ -1079,16 +975,14 @@
 .method private stopRecorder()V
     .locals 2
 
-    .line 1
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/oo0o0Oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/oo000o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/oo0o0Oo;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/oo000o;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
     invoke-static {v0}, Lio/reactivex/Single;->create(Lio/reactivex/SingleOnSubscribe;)Lio/reactivex/Single;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -1097,11 +991,10 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000OOo;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000o;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000OOo;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
-    .line 3
     invoke-virtual {v0, v1}, Lio/reactivex/Single;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
@@ -1110,7 +1003,6 @@
 .method private switchToGridWindow(I)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isMultiCameraMode()Z
 
     move-result v0
@@ -1145,7 +1037,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -1155,7 +1046,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->ismDrawGridWindow()Z
 
     move-result v1
@@ -1164,51 +1054,44 @@
 
     const/4 v1, 0x1
 
-    .line 4
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->switchThumbnailFunction(Z)V
 
-    .line 5
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->setmDrawGridWindow(Z)V
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/oo000o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/oo000o;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0O0O00;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0O0O00;
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000O0;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000O0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000O0;
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 8
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000OOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000OOo;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/oo0o0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/oo0o0Oo;
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->requestRender()V
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
@@ -1219,12 +1102,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-virtual {p0, v1, v2, p1}, Lcom/android/camera/module/BaseModule;->switchCameraLens(ZZI)V
 
     goto :goto_0
 
-    .line 12
     :cond_1
     invoke-virtual {p0, v2, v2, p1}, Lcom/android/camera/module/BaseModule;->switchCameraLens(ZZI)V
 
@@ -1236,7 +1117,6 @@
 .method private trackDualVideo()V
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
@@ -1247,26 +1127,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-wide v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mVideoRecordTime:J
 
-    .line 4
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v1
@@ -1293,12 +1169,10 @@
 
     iget v4, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mRenderCaptureTimes:I
 
-    .line 6
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/camera/statistic/CameraStatUtils;->trackMultiCameraDualVideo(Ljava/lang/String;Ljava/lang/String;III)V
 
     goto :goto_1
 
-    .line 7
     :cond_1
     iget-wide v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mVideoRecordTime:J
 
@@ -1318,7 +1192,6 @@
 .method private trackOnVideoStart()V
     .locals 8
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
     move-result-object v0
@@ -1327,7 +1200,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonAttr(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
     move-result-object v0
@@ -1336,15 +1208,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->forceTrackLayoutType(Z)V
 
-    .line 4
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 5
     iget-boolean v0, p0, Lcom/android/camera/module/VideoBase;->m3ALocked:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1355,10 +1224,7 @@
 
     invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
-    iget-object v0, p0, Lcom/android/camera/module/VideoBase;->mUserRecordSetting:Lcom/android/camera/module/video/UserRecordSetting;
-
-    iget-object v5, v0, Lcom/android/camera/module/video/UserRecordSetting;->mBeautyValues:Lcom/android/camera/fragment/beauty/BeautyValues;
+    iget-object v5, p0, Lcom/android/camera/module/VideoBase;->mBeautyValues:Lcom/android/camera/fragment/beauty/BeautyValues;
 
     const/4 v3, 0x1
 
@@ -1372,17 +1238,15 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/camera/module/BaseModule;->trackGeneralInfo(Ljava/util/Map;IZLcom/android/camera/fragment/beauty/BeautyValues;ZI)V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->hasRemoteCamera()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOO0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00oO0O;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOO0;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00oO0O;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineParams(Lcom/android/camera/statistic/CameraStatUtils$ParameterBuilder;)V
 
@@ -1397,7 +1261,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopVideoRecording(Z)V
 
     return-void
@@ -1406,18 +1269,16 @@
 .method public synthetic OooO(Lcom/android/camera/dualvideo/render/RenderManager;)V
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-static {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/RenderManager;->stopRecording()V
 
     return-void
@@ -1431,7 +1292,6 @@
         }
     .end annotation
 
-    .line 8
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->onMediaRecorderReleased()V
 
     return-void
@@ -1445,14 +1305,12 @@
         }
     .end annotation
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "releaseRemote: isAnimating, waiting!"
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->releaseRemote()V
 
     return-void
@@ -1466,7 +1324,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->stopRecorder(Lio/reactivex/SingleEmitter;)V
@@ -1481,10 +1338,8 @@
 
     const-string/jumbo v1, "start"
 
-    .line 1
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->getZoomGroupForTrack()Ljava/lang/String;
 
     move-result-object v0
@@ -1499,41 +1354,37 @@
 .method public synthetic OooO0oo(Lcom/android/camera/dualvideo/render/RenderManager;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/RenderManager;->isRecording()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-static {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->getRecorderSurface()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getEGLContext14()Landroid/opengl/EGLContext;
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getEGLContext14()Landroid/opengl/EGLContext;
 
     move-result-object v1
 
@@ -1546,7 +1397,6 @@
 .method public onBackPressed()Z
     .locals 9
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrameAvailable()Z
 
     move-result v0
@@ -1557,7 +1407,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/module/BaseModule;->mPaused:Z
 
@@ -1575,7 +1424,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -1591,12 +1439,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 5
     iget-wide v5, p0, Lcom/android/camera/module/BaseModule;->mLastBackPressedTime:J
 
     sub-long v5, v3, v5
@@ -1607,26 +1453,22 @@
 
     if-lez v0, :cond_2
 
-    .line 6
     iput-wide v3, p0, Lcom/android/camera/module/BaseModule;->mLastBackPressedTime:J
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    const v1, 0x7f1208b6
+    const v1, 0x7f120867
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/ToastUtils;->showToast(Landroid/content/Context;IZ)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopVideoRecording(Z)V
 
     :goto_0
     return v2
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -1644,17 +1486,14 @@
 
     const-string/jumbo v0, "value_back_select"
 
-    .line 10
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonClick(Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
-    .line 11
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchToGridWindow(I)V
 
     return v2
 
-    .line 12
     :cond_4
     invoke-super {p0}, Lcom/android/camera/module/VideoBase;->onBackPressed()Z
 
@@ -1670,17 +1509,14 @@
 .method public onCameraPickerClicked(Landroid/view/View;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->handleBackStack()Z
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onCameraPickerClicked: "
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
@@ -1691,7 +1527,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
@@ -1708,18 +1543,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {p1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooOO0O()V
+    invoke-virtual {p1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooOO0O()V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p1
@@ -1728,10 +1561,8 @@
 
     const p1, 0x7f120051
 
-    .line 7
-    invoke-static {p1}, Lcom/android/camera/module/common/ModuleUtil;->announceForAccessibility(I)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/module/BaseModule;->announceForAccessibility(I)V
 
-    .line 8
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -1743,7 +1574,6 @@
 
     const-string/jumbo p1, "value_pause_switch"
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonClick(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1751,10 +1581,8 @@
     :cond_1
     const-string/jumbo p1, "value_idle_switch"
 
-    .line 10
     invoke-static {p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonClick(Ljava/lang/String;)V
 
-    .line 11
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -1763,7 +1591,6 @@
 
     const/4 v0, 0x7
 
-    .line 12
     invoke-virtual {p1, v0}, Lcom/android/camera/module/loader/camera2/FocusManager2;->resetTouchFocus(I)V
 
     :cond_3
@@ -1775,10 +1602,8 @@
 .method public onPauseButtonClick()V
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->handleBackStack()Z
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1803,7 +1628,6 @@
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
 
     move-result v2
@@ -1814,15 +1638,12 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
@@ -1843,25 +1664,21 @@
 
     goto :goto_1
 
-    .line 7
     :cond_0
     iput-wide v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mPauseClickTime:J
 
-    .line 8
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xd4
 
-    .line 9
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$RecordState;
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecordingPaused()Z
@@ -1870,10 +1687,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 11
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->resumeVideoRecording(Lcom/android/camera/protocol/ModeProtocol$RecordState;)V
 
-    .line 12
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrontCamera()Z
 
     move-result v0
@@ -1884,11 +1699,9 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->pauseVideoRecording()V
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrontCamera()Z
 
     move-result v1
@@ -1897,10 +1710,8 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackPauseOrResumeVideoRecording(ZZ)V
 
-    .line 15
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPause()V
 
-    .line 16
     :goto_0
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
@@ -1916,10 +1727,8 @@
 .method public onResume()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->onResume()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isMultiCameraMode()Z
 
     move-result v0
@@ -1928,10 +1737,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->showModeSwitchLayout(Z)V
 
-    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->notifyRemoteDeviceLayoutType()V
 
@@ -1941,7 +1748,6 @@
 .method public onReviewCancelClicked()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isMultiCameraMode()Z
 
     move-result v0
@@ -1950,17 +1756,14 @@
 
     const-string/jumbo v0, "value_back_select"
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonClick(Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchToGridWindow(I)V
 
     return-void
 
-    .line 4
     :cond_0
     invoke-super {p0}, Lcom/android/camera/module/VideoBase;->onReviewCancelClicked()V
 
@@ -1970,14 +1773,12 @@
 .method public onShutterButtonClick(I)V
     .locals 1
 
-    .line 1
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onShutterButtonClick"
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
@@ -1986,7 +1787,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
@@ -2008,12 +1808,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopVideoRecording(Z)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-boolean p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMainFrameIsAvailable:Z
 
@@ -2027,10 +1825,8 @@
 
     const/4 p1, 0x2
 
-    .line 6
     invoke-virtual {p0, p1}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->startVideoRecording()V
 
     :cond_2
@@ -2041,7 +1837,6 @@
 .method public releaseRemote()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -2054,7 +1849,7 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00ooo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00ooo;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -2062,14 +1857,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 2
     iget-boolean v1, p0, Lcom/android/camera/module/BaseModule;->mPaused:Z
 
     if-eqz v1, :cond_0
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isMultiCameraMode()Z
 
@@ -2077,7 +1870,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v1
@@ -2096,7 +1888,6 @@
 
     const-wide/16 v0, 0x64
 
-    .line 5
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
@@ -2107,16 +1898,14 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o000000;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
-    .line 6
     invoke-virtual {v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
-    .line 7
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isRecording()Z
 
@@ -2128,28 +1917,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0ooOOo;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOoO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOoO;
 
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineParams(Lcom/android/camera/statistic/CameraStatUtils$ParameterBuilder;)V
 
-    .line 9
     :cond_2
     invoke-virtual {p0, v2}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->addOrDelRemoteConfig(Z)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchRenderRemoteItem()V
 
-    .line 11
     invoke-virtual {p0, v2}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopVideoRecording(Z)V
 
     return-void
 
-    .line 12
     :cond_3
     invoke-virtual {p0, v2}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->addOrDelRemoteConfig(Z)V
 
-    .line 13
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchRenderRemoteItem()V
 
     :cond_4
@@ -2162,10 +1945,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mKeepRecorderWhenSwitching:Z
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
     const/4 v1, 0x7
@@ -2174,20 +1955,16 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->showOrHideBottom(Z)V
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->showModeSwitchLayout(Z)V
 
     const-string/jumbo v0, "value_reselect"
 
-    .line 5
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDualVideoCommonClick(Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
-    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchToGridWindow(I)V
 
     return-void
@@ -2196,7 +1973,6 @@
 .method public shouldReleaseLater()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
@@ -2207,14 +1983,12 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopVideoRecording(Z)V
 
     const/4 v0, 0x0
 
     return v0
 
-    .line 3
     :cond_0
     invoke-super {p0}, Lcom/android/camera/module/VideoBase;->shouldReleaseLater()Z
 
@@ -2228,23 +2002,19 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setCameraAudioRestriction(Z)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->startRecordingRelate()V
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyRecordingStateToRemoteDevice(I)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0Oo0oo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000O;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0Oo0oo;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o000000O;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2254,14 +2024,12 @@
 .method public stopVideoRecording(Z)V
     .locals 6
 
-    .line 1
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "stopVideoRecording: "
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
@@ -2276,12 +2044,11 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000o0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000o0;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000o0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000o0;
 
     invoke-virtual {p1, v2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -2303,23 +2070,20 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isMultiCameraMode()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->switchThumbnailFunction(Z)V
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00oO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00oO0O;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0OO00O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0OO00O;
 
     invoke-virtual {p1, v2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -2341,22 +2105,19 @@
 
     iput p1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mRenderCaptureTimes:I
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0O0O00;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0Oo0oo;
 
-    invoke-direct {v2, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0O0O00;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
+    invoke-direct {v2, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0Oo0oo;-><init>(Lcom/android/camera/dualvideo/DualVideoRecordModule;)V
 
     invoke-virtual {p1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 8
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/camera/module/BaseModule;->setCameraAudioRestriction(Z)V
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object p1
@@ -2367,7 +2128,6 @@
 
     invoke-static {p1, v2, v1}, Lcom/android/camera/SoundSetting;->setNoiseReductionState(Landroid/content/Context;IZ)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object p1
@@ -2378,23 +2138,18 @@
 
     invoke-static {p1, v2}, Lcom/android/camera/SoundSetting;->closeKaraokeState(Landroid/content/Context;I)V
 
-    .line 11
     iget-boolean p1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mIsStopKaraoke:Z
 
     if-eqz p1, :cond_2
 
-    .line 12
     iput-boolean v1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mIsStopKaraoke:Z
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mAudioMonitorPlayer:Lcom/android/camera/AudioMonitorPlayer;
 
     if-eqz p1, :cond_2
 
-    .line 14
     invoke-virtual {p1}, Lcom/android/camera/AudioMonitorPlayer;->stopPlay()V
 
-    .line 15
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
@@ -2406,7 +2161,6 @@
 
     invoke-static {p1, v2}, Lcom/android/camera/SoundSetting;->closeKaraokeEquipment(Landroid/content/Context;I)V
 
-    .line 16
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2437,7 +2191,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
@@ -2451,34 +2204,27 @@
     :cond_3
     const/4 p1, 0x4
 
-    .line 18
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->notifyRecordingStateToRemoteDevice(I)V
 
-    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
     if-eqz p1, :cond_4
 
-    .line 21
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;->processingFinish()V
 
-    .line 22
     :cond_4
     invoke-virtual {p0, v1}, Lcom/android/camera/module/BaseModule;->enableCameraControls(Z)V
 
-    .line 23
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v0, 0xd4
 
-    .line 24
     invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
@@ -2487,10 +2233,8 @@
 
     if-eqz p1, :cond_5
 
-    .line 25
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onFinish()V
 
-    .line 26
     :cond_5
     iget-object p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -2498,46 +2242,37 @@
 
     iput v0, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mRecorderPausedTimes:I
 
-    .line 27
     iget p1, p1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatResumeTimes:I
 
     iput p1, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mRecorderResumeTimes:I
 
-    .line 28
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->trackDualVideo()V
 
     const-wide/16 v4, 0x0
 
-    .line 29
     iput-wide v4, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mVideoRecordTime:J
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->hasRemoteCamera()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 31
-    sget-object p1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00oO0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00oO0o;
+    sget-object p1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0ooOO0;
 
     invoke-static {p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineParams(Lcom/android/camera/statistic/CameraStatUtils$ParameterBuilder;)V
 
-    .line 32
     :cond_6
     invoke-direct {p0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->stopRecorder()V
 
-    .line 33
     iget-object p1, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     iput-boolean v1, p1, Lcom/android/camera/module/video/RecordRuntimeInfo;->mMediaRecorderRecording:Z
 
-    .line 34
     iget-object p1, p0, Lcom/android/camera/module/VideoBase;->mRecordRuntimeInfo:Lcom/android/camera/module/video/RecordRuntimeInfo;
 
     iput-boolean v1, p1, Lcom/android/camera/module/video/RecordRuntimeInfo;->mRecordingPaused:Z
 
-    .line 35
     iget-boolean p1, p0, Lcom/android/camera/module/BaseModule;->mPaused:Z
 
     if-nez p1, :cond_7
@@ -2552,10 +2287,8 @@
 
     const/4 p1, 0x3
 
-    .line 36
     invoke-virtual {p0, p1}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 37
     :cond_7
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -2565,10 +2298,8 @@
 
     invoke-virtual {p1}, Lcom/android/camera/AutoLockManager;->hibernateDelayed()V
 
-    .line 38
     invoke-virtual {p0}, Lcom/android/camera/module/VideoBase;->exitSavePowerMode()V
 
-    .line 39
     sget-object p1, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2595,10 +2326,8 @@
 
     const/4 p1, 0x2
 
-    .line 40
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchToGridWindow(I)V
 
-    .line 41
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getThumbnailUpdater()Lcom/android/camera/ThumbnailUpdater;
@@ -2613,50 +2342,44 @@
 .method public switchRenderRemoteItem()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "switchRemoteCamera"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->refreshSelectData()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000OO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o00000OO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000OO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o00000OO;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/OooO0oO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/OooO0oO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/OooO0oO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/OooO0oO;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O000o()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2681,27 +2404,23 @@
 
     aput v3, v1, v2
 
-    .line 7
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateConfigItem([I)V
 
-    .line 8
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->reStartCurrentModule()V
 
     goto :goto_0
 
-    .line 10
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->isRecording()Z
 
@@ -2711,7 +2430,6 @@
 
     const/4 v0, 0x2
 
-    .line 11
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/DualVideoRecordModule;->switchToGridWindow(I)V
 
     :cond_2
@@ -2722,14 +2440,12 @@
 .method public takeVideoSnapShot()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "takeVideoSnapShot"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v0
@@ -2740,7 +2456,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
@@ -2753,7 +2468,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/CameraScreenNail;->animateCapture(I)V
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
@@ -2765,7 +2479,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v0
@@ -2774,7 +2487,6 @@
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/DualVideoModuleBase;->getRenderManager()Ljava/util/Optional;
 
     move-result-object v1
@@ -2810,10 +2522,8 @@
 .method public updateRecordingTime()V
     .locals 7
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/VideoBase;->updateRecordingTime()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecording()Z
@@ -2824,7 +2534,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -2834,30 +2543,25 @@
 
     const-wide/16 v2, 0x3e8
 
-    .line 4
     div-long v4, v0, v2
 
     iput-wide v4, p0, Lcom/android/camera/dualvideo/DualVideoRecordModule;->mVideoRecordTime:J
 
     const/4 v4, 0x0
 
-    .line 5
     invoke-static {v0, v1, v4}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 6
     iget-object v5, p0, Lcom/android/camera/module/BaseModule;->mTopAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
     if-eqz v5, :cond_1
 
-    .line 7
     invoke-interface {v5, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
 
     :cond_1
     const-wide/16 v4, 0x1f4
 
-    .line 8
     iget-object v6, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase;->mMultiRecorderManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     invoke-virtual {v6}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->isRecordingPaused()Z
@@ -2866,12 +2570,10 @@
 
     if-nez v6, :cond_2
 
-    .line 9
     rem-long/2addr v0, v2
 
     sub-long v4, v2, v0
 
-    .line 10
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
@@ -2885,7 +2587,6 @@
 .method public updateReselectButton()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2900,7 +2601,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/VideoBase;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "topAlert is null"
@@ -2920,7 +2620,6 @@
 
     aput v3, v1, v2
 
-    .line 3
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateConfigItem([I)V
 
     return-void

@@ -20,17 +20,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;-><init>()V
 
-    .line 2
     new-instance v0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;
 
     invoke-direct {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;-><init>()V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->stats:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     const-wide/32 v1, 0x15f90
@@ -53,7 +50,6 @@
     :goto_0
     if-ge v0, p2, :cond_1
 
-    .line 1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
@@ -72,7 +68,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/io/IOException;
 
@@ -91,7 +86,6 @@
 .method public run()V
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->stats:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;->reset()V
@@ -108,7 +102,6 @@
 
     move v4, v3
 
-    .line 2
     :goto_0
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
@@ -119,7 +112,6 @@
 
     if-nez v4, :cond_0
 
-    .line 3
     iget-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v8}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->requestBuffer()[B
@@ -128,7 +120,6 @@
 
     iput-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
-    .line 4
     :cond_0
     iget-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
@@ -136,21 +127,18 @@
 
     invoke-virtual {v8, v9, v10}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->updateTimestamp(J)V
 
-    .line 5
     iget-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v9, 0x14
 
     aput-byte v3, v8, v9
 
-    .line 6
     iget-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v10, 0x15
 
     aput-byte v3, v8, v10
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v10
@@ -163,7 +151,6 @@
 
     add-int/lit8 v4, v4, -0x2
 
-    .line 8
     invoke-direct {p0, v8, v4}, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->fill(II)I
 
     move-result v4
@@ -172,7 +159,6 @@
 
     return-void
 
-    .line 9
     :cond_1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -191,7 +177,6 @@
 
     if-ge v8, v10, :cond_3
 
-    .line 10
     iget-object v10, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     aget-byte v10, v10, v8
@@ -230,7 +215,6 @@
     :cond_3
     move v10, v3
 
-    .line 11
     :goto_2
     iget-object v11, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
@@ -246,7 +230,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 12
     iget-object v7, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/4 v8, 0x4
@@ -257,7 +240,6 @@
 
     goto :goto_3
 
-    .line 13
     :cond_4
     iget-object v8, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
@@ -268,12 +250,10 @@
 
     if-lez v10, :cond_5
 
-    .line 14
     iget-object v7, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->stats:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;
 
     invoke-virtual {v7, v5, v6}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;->push(J)V
 
-    .line 15
     iget-wide v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
 
     iget-object v7, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->stats:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer$Statistics;
@@ -286,22 +266,18 @@
 
     iput-wide v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
 
-    .line 16
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v5}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->markNextPacket()V
 
-    .line 17
     invoke-virtual {p0, v10}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->send(I)V
 
-    .line 18
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v5}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->requestBuffer()[B
 
     move-result-object v5
 
-    .line 19
     iget-object v6, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     add-int/lit8 v7, v10, 0x2
@@ -312,7 +288,6 @@
 
     invoke-static {v6, v7, v5, v4, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 20
     iput-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     move-wide v5, v0
@@ -323,7 +298,6 @@
 
     goto/16 :goto_0
 
-    .line 21
     :cond_5
     invoke-virtual {p0, v8}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->send(I)V
     :try_end_0
@@ -340,7 +314,6 @@
 
     const-string v1, "H263 Packetizer stopped !"
 
-    .line 22
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -349,19 +322,16 @@
 .method public start()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -371,12 +341,10 @@
 .method public stop()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
@@ -384,13 +352,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :catch_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 4
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
@@ -401,7 +367,6 @@
     :catch_1
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;->t:Ljava/lang/Thread;
 
     :cond_0

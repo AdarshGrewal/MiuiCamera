@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static getProcessName(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/common/ProcessUtil;->getProcessNameClassical(Landroid/content/Context;)Ljava/lang/String;
 
@@ -33,7 +31,6 @@
     :catch_0
     const/4 p0, 0x0
 
-    .line 2
     :goto_0
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -41,7 +38,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/ProcessUtil;->getProcessNameSecure()Ljava/lang/String;
 
     move-result-object p0
@@ -58,7 +54,6 @@
 
     const-string v2, "Get process name: %s in secure mode."
 
-    .line 4
     invoke-static {v1, v2, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
@@ -68,14 +63,12 @@
 .method public static getProcessNameClassical(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     const-string v1, "activity"
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -88,7 +81,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
@@ -98,7 +90,6 @@
 
     return-object v1
 
-    .line 4
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -118,12 +109,10 @@
 
     check-cast v2, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 5
     iget v3, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v3, v0, :cond_2
 
-    .line 6
     iget-object v1, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     goto :goto_0
@@ -137,7 +126,6 @@
 
     const-string v0, ""
 
-    .line 1
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -164,7 +152,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -176,7 +163,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -188,7 +174,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -199,7 +184,6 @@
     :catchall_0
     move-exception v1
 
-    .line 5
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
@@ -228,7 +212,6 @@
 
     const-string v0, "activity"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -239,7 +222,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
@@ -249,7 +231,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -269,7 +250,6 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 4
     iget v1, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
     invoke-static {}, Landroid/os/Process;->myUid()I
@@ -286,7 +266,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 5
     iget v0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V

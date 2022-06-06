@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/settings/WatermarkFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/WatermarkFragment$1;->this$0:Lcom/android/camera/fragment/settings/WatermarkFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,15 +38,12 @@
 
     const-string p2, "mUserPresentReceiver, onReceive."
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/settings/WatermarkFragment$1;->this$0:Lcom/android/camera/fragment/settings/WatermarkFragment;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/settings/WatermarkFragment;->updatePreferenceEntries()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/settings/WatermarkFragment$1;->this$0:Lcom/android/camera/fragment/settings/WatermarkFragment;
 
     iget-object p2, p1, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;

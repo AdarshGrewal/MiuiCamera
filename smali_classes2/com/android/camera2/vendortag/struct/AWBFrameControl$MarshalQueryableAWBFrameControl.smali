@@ -40,7 +40,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,7 +61,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera2/vendortag/struct/AWBFrameControl$MarshalQueryableAWBFrameControl$MarshalerAWBFrameControl;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/camera2/vendortag/struct/AWBFrameControl$MarshalQueryableAWBFrameControl$MarshalerAWBFrameControl;-><init>(Lcom/android/camera2/vendortag/struct/AWBFrameControl$MarshalQueryableAWBFrameControl;Landroid/hardware/camera2/utils/TypeReference;I)V
@@ -83,7 +81,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     const-class p2, Lcom/android/camera2/vendortag/struct/AWBFrameControl;
 
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;

@@ -58,7 +58,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$EmptyNode$OfRef;
 
     const/4 v1, 0x0
@@ -67,21 +66,18 @@
 
     sput-object v0, Ljava8/util/stream/Nodes;->EMPTY_NODE:Ljava8/util/stream/Node;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/Nodes$EmptyNode$OfInt;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;-><init>()V
 
     sput-object v0, Ljava8/util/stream/Nodes;->EMPTY_INT_NODE:Ljava8/util/stream/Node$OfInt;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$EmptyNode$OfLong;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$EmptyNode$OfLong;-><init>()V
 
     sput-object v0, Ljava8/util/stream/Nodes;->EMPTY_LONG_NODE:Ljava8/util/stream/Node$OfLong;
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$EmptyNode$OfDouble;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$EmptyNode$OfDouble;-><init>()V
@@ -92,17 +88,14 @@
 
     new-array v1, v0, [I
 
-    .line 5
     sput-object v1, Ljava8/util/stream/Nodes;->EMPTY_INT_ARRAY:[I
 
     new-array v1, v0, [J
 
-    .line 6
     sput-object v1, Ljava8/util/stream/Nodes;->EMPTY_LONG_ARRAY:[J
 
     new-array v0, v0, [D
 
-    .line 7
     sput-object v0, Ljava8/util/stream/Nodes;->EMPTY_DOUBLE_ARRAY:[D
 
     return-void
@@ -111,10 +104,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Error;
 
     const-string v1, "no instances"
@@ -127,7 +118,6 @@
 .method public static synthetic access$500()[I
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Nodes;->EMPTY_INT_ARRAY:[I
 
     return-object v0
@@ -136,7 +126,6 @@
 .method public static synthetic access$600()[J
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Nodes;->EMPTY_LONG_ARRAY:[J
 
     return-object v0
@@ -145,7 +134,6 @@
 .method public static synthetic access$700()[D
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Nodes;->EMPTY_DOUBLE_ARRAY:[D
 
     return-object v0
@@ -163,7 +151,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$SpinedNodeBuilder;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$SpinedNodeBuilder;-><init>()V
@@ -197,14 +184,12 @@
 
     if-gez v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$FixedNodeBuilder;
 
     invoke-direct {v0, p0, p1, p2}, Ljava8/util/stream/Nodes$FixedNodeBuilder;-><init>(JLjava8/util/function/IntFunction;)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava8/util/stream/Nodes;->builder()Ljava8/util/stream/Node$Builder;
 
@@ -226,7 +211,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes$$Lambda$2;->lambdaFactory$()Ljava8/util/function/IntFunction;
 
     move-result-object v0
@@ -254,7 +238,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -267,7 +250,6 @@
 
     const/16 v2, 0x4000
 
-    .line 2
     invoke-interface {p1, v2}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v2
@@ -282,28 +264,24 @@
 
     long-to-int p2, v0
 
-    .line 3
     invoke-interface {p3, p2}, Ljava8/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, [Ljava/lang/Object;
 
-    .line 4
     new-instance p3, Ljava8/util/stream/Nodes$SizedCollectorTask$OfRef;
 
     invoke-direct {p3, p1, p0, p2}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfRef;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/PipelineHelper;[Ljava/lang/Object;)V
 
     invoke-virtual {p3}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava8/util/stream/Nodes;->node([Ljava/lang/Object;)Ljava8/util/stream/Node;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -313,7 +291,6 @@
 
     throw p0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava8/util/stream/Nodes$CollectorTask$OfRef;
 
@@ -327,7 +304,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     invoke-static {p0, p3}, Ljava8/util/stream/Nodes;->flatten(Ljava8/util/stream/Node;Ljava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p0
@@ -352,7 +328,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -365,7 +340,6 @@
 
     const/16 v2, 0x4000
 
-    .line 2
     invoke-interface {p1, v2}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v2
@@ -380,24 +354,20 @@
 
     long-to-int p2, v0
 
-    .line 3
     new-array p2, p2, [D
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfDouble;
 
     invoke-direct {v0, p1, p0, p2}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfDouble;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/PipelineHelper;[D)V
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava8/util/stream/Nodes;->node([D)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -407,7 +377,6 @@
 
     throw p0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava8/util/stream/Nodes$CollectorTask$OfDouble;
 
@@ -421,7 +390,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     invoke-static {p0}, Ljava8/util/stream/Nodes;->flattenDouble(Ljava8/util/stream/Node$OfDouble;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p0
@@ -446,7 +414,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -459,7 +426,6 @@
 
     const/16 v2, 0x4000
 
-    .line 2
     invoke-interface {p1, v2}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v2
@@ -474,24 +440,20 @@
 
     long-to-int p2, v0
 
-    .line 3
     new-array p2, p2, [I
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfInt;
 
     invoke-direct {v0, p1, p0, p2}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfInt;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/PipelineHelper;[I)V
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava8/util/stream/Nodes;->node([I)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -501,7 +463,6 @@
 
     throw p0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava8/util/stream/Nodes$CollectorTask$OfInt;
 
@@ -515,7 +476,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     invoke-static {p0}, Ljava8/util/stream/Nodes;->flattenInt(Ljava8/util/stream/Node$OfInt;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0
@@ -540,7 +500,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -553,7 +512,6 @@
 
     const/16 v2, 0x4000
 
-    .line 2
     invoke-interface {p1, v2}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v2
@@ -568,24 +526,20 @@
 
     long-to-int p2, v0
 
-    .line 3
     new-array p2, p2, [J
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;
 
     invoke-direct {v0, p1, p0, p2}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/PipelineHelper;[J)V
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava8/util/stream/Nodes;->node([J)Ljava8/util/stream/Node$OfLong;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -595,7 +549,6 @@
 
     throw p0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava8/util/stream/Nodes$CollectorTask$OfLong;
 
@@ -609,7 +562,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     invoke-static {p0}, Ljava8/util/stream/Nodes;->flattenLong(Ljava8/util/stream/Node$OfLong;)Ljava8/util/stream/Node$OfLong;
 
     move-result-object p0
@@ -635,7 +587,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Nodes$1;->$SwitchMap$java8$util$stream$StreamShape:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -660,7 +611,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     new-instance p0, Ljava8/util/stream/Nodes$ConcNode$OfDouble;
 
     check-cast p1, Ljava8/util/stream/Node$OfDouble;
@@ -671,7 +621,6 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -693,7 +642,6 @@
 
     throw p1
 
-    .line 4
     :cond_1
     new-instance p0, Ljava8/util/stream/Nodes$ConcNode$OfLong;
 
@@ -705,7 +653,6 @@
 
     return-object p0
 
-    .line 5
     :cond_2
     new-instance p0, Ljava8/util/stream/Nodes$ConcNode$OfInt;
 
@@ -717,7 +664,6 @@
 
     return-object p0
 
-    .line 6
     :cond_3
     new-instance p0, Ljava8/util/stream/Nodes$ConcNode;
 
@@ -729,7 +675,6 @@
 .method public static doubleBuilder()Ljava8/util/stream/Node$Builder$OfDouble;
     .locals 1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;-><init>()V
@@ -752,14 +697,12 @@
 
     if-gez v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$DoubleFixedNodeBuilder;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Nodes$DoubleFixedNodeBuilder;-><init>(J)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava8/util/stream/Nodes;->doubleBuilder()Ljava8/util/stream/Node$Builder$OfDouble;
 
@@ -783,7 +726,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Nodes$1;->$SwitchMap$java8$util$stream$StreamShape:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -808,12 +750,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object p0, Ljava8/util/stream/Nodes;->EMPTY_DOUBLE_NODE:Ljava8/util/stream/Node$OfDouble;
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -835,19 +775,16 @@
 
     throw v0
 
-    .line 4
     :cond_1
     sget-object p0, Ljava8/util/stream/Nodes;->EMPTY_LONG_NODE:Ljava8/util/stream/Node$OfLong;
 
     return-object p0
 
-    .line 5
     :cond_2
     sget-object p0, Ljava8/util/stream/Nodes;->EMPTY_INT_NODE:Ljava8/util/stream/Node$OfInt;
 
     return-object p0
 
-    .line 6
     :cond_3
     sget-object p0, Ljava8/util/stream/Nodes;->EMPTY_NODE:Ljava8/util/stream/Node;
 
@@ -870,14 +807,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -890,14 +825,12 @@
 
     long-to-int v0, v0
 
-    .line 3
     invoke-interface {p1, v0}, Ljava8/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, [Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$ToArrayTask$OfRef;
 
     const/4 v1, 0x0
@@ -908,14 +841,12 @@
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {p1}, Ljava8/util/stream/Nodes;->node([Ljava/lang/Object;)Ljava8/util/stream/Node;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -932,14 +863,12 @@
 .method public static flattenDouble(Ljava8/util/stream/Node$OfDouble;)Ljava8/util/stream/Node$OfDouble;
     .locals 4
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -952,10 +881,8 @@
 
     long-to-int v0, v0
 
-    .line 3
     new-array v0, v0, [D
 
-    .line 4
     new-instance v1, Ljava8/util/stream/Nodes$ToArrayTask$OfDouble;
 
     const/4 v2, 0x0
@@ -966,14 +893,12 @@
 
     invoke-virtual {v1}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {v0}, Ljava8/util/stream/Nodes;->node([D)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -990,14 +915,12 @@
 .method public static flattenInt(Ljava8/util/stream/Node$OfInt;)Ljava8/util/stream/Node$OfInt;
     .locals 4
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -1010,10 +933,8 @@
 
     long-to-int v0, v0
 
-    .line 3
     new-array v0, v0, [I
 
-    .line 4
     new-instance v1, Ljava8/util/stream/Nodes$ToArrayTask$OfInt;
 
     const/4 v2, 0x0
@@ -1024,14 +945,12 @@
 
     invoke-virtual {v1}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {v0}, Ljava8/util/stream/Nodes;->node([I)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1048,14 +967,12 @@
 .method public static flattenLong(Ljava8/util/stream/Node$OfLong;)Ljava8/util/stream/Node$OfLong;
     .locals 4
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -1068,10 +985,8 @@
 
     long-to-int v0, v0
 
-    .line 3
     new-array v0, v0, [J
 
-    .line 4
     new-instance v1, Ljava8/util/stream/Nodes$ToArrayTask$OfLong;
 
     const/4 v2, 0x0
@@ -1082,14 +997,12 @@
 
     invoke-virtual {v1}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
-    .line 5
     invoke-static {v0}, Ljava8/util/stream/Nodes;->node([J)Ljava8/util/stream/Node$OfLong;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1115,7 +1028,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
@@ -1149,7 +1061,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
     return-object v0
@@ -1158,7 +1069,6 @@
 .method public static intBuilder()Ljava8/util/stream/Node$Builder$OfInt;
     .locals 1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$IntSpinedNodeBuilder;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$IntSpinedNodeBuilder;-><init>()V
@@ -1181,14 +1091,12 @@
 
     if-gez v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$IntFixedNodeBuilder;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Nodes$IntFixedNodeBuilder;-><init>(J)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava8/util/stream/Nodes;->intBuilder()Ljava8/util/stream/Node$Builder$OfInt;
 
@@ -1201,7 +1109,6 @@
 .method public static synthetic lambda$castingArray$108(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     new-array p0, p0, [Ljava/lang/Object;
 
     return-object p0
@@ -1216,7 +1123,6 @@
 .method public static longBuilder()Ljava8/util/stream/Node$Builder$OfLong;
     .locals 1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$LongSpinedNodeBuilder;
 
     invoke-direct {v0}, Ljava8/util/stream/Nodes$LongSpinedNodeBuilder;-><init>()V
@@ -1239,14 +1145,12 @@
 
     if-gez v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$LongFixedNodeBuilder;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Nodes$LongFixedNodeBuilder;-><init>(J)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava8/util/stream/Nodes;->longBuilder()Ljava8/util/stream/Node$Builder$OfLong;
 
@@ -1259,7 +1163,6 @@
 .method public static node([D)Ljava8/util/stream/Node$OfDouble;
     .locals 1
 
-    .line 5
     new-instance v0, Ljava8/util/stream/Nodes$DoubleArrayNode;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$DoubleArrayNode;-><init>([D)V
@@ -1270,7 +1173,6 @@
 .method public static node([I)Ljava8/util/stream/Node$OfInt;
     .locals 1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$IntArrayNode;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$IntArrayNode;-><init>([I)V
@@ -1281,7 +1183,6 @@
 .method public static node([J)Ljava8/util/stream/Node$OfLong;
     .locals 1
 
-    .line 4
     new-instance v0, Ljava8/util/stream/Nodes$LongArrayNode;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$LongArrayNode;-><init>([J)V
@@ -1303,7 +1204,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/Nodes$CollectionNode;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$CollectionNode;-><init>(Ljava/util/Collection;)V
@@ -1323,7 +1223,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Nodes$ArrayNode;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$ArrayNode;-><init>([Ljava/lang/Object;)V
@@ -1353,7 +1252,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -1364,7 +1262,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-interface {p0}, Ljava8/util/stream/Node;->spliterator()Ljava8/util/Spliterator;
 
@@ -1372,12 +1269,10 @@
 
     sub-long v1, p3, p1
 
-    .line 3
     invoke-static {v1, v2, p5}, Ljava8/util/stream/Nodes;->builder(JLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$Builder;
 
     move-result-object p5
 
-    .line 4
     invoke-interface {p5, v1, v2}, Ljava8/util/stream/Sink;->begin(J)V
 
     const/4 v3, 0x0
@@ -1391,7 +1286,6 @@
 
     if-gez v5, :cond_1
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/Nodes$$Lambda$1;->lambdaFactory$()Ljava8/util/function/Consumer;
 
     move-result-object v5
@@ -1406,7 +1300,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
@@ -1416,7 +1309,6 @@
 
     if-nez p0, :cond_2
 
-    .line 7
     invoke-interface {v0, p5}, Ljava8/util/Spliterator;->forEachRemaining(Ljava8/util/function/Consumer;)V
 
     goto :goto_2
@@ -1429,7 +1321,6 @@
 
     if-gez p0, :cond_3
 
-    .line 8
     invoke-interface {v0, p5}, Ljava8/util/Spliterator;->tryAdvance(Ljava8/util/function/Consumer;)Z
 
     move-result p0
@@ -1440,12 +1331,10 @@
 
     goto :goto_1
 
-    .line 9
     :cond_3
     :goto_2
     invoke-interface {p5}, Ljava8/util/stream/Sink;->end()V
 
-    .line 10
     invoke-interface {p5}, Ljava8/util/stream/Node$Builder;->build()Ljava8/util/stream/Node;
 
     move-result-object p0

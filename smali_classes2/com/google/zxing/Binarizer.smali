@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/google/zxing/LuminanceSource;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
     return-void
@@ -44,7 +42,6 @@
 .method public final getHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
     invoke-virtual {v0}, Lcom/google/zxing/LuminanceSource;->getHeight()I
@@ -57,7 +54,6 @@
 .method public final getLuminanceSource()Lcom/google/zxing/LuminanceSource;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
     return-object v0
@@ -66,7 +62,6 @@
 .method public final getWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/Binarizer;->source:Lcom/google/zxing/LuminanceSource;
 
     invoke-virtual {v0}, Lcom/google/zxing/LuminanceSource;->getWidth()I

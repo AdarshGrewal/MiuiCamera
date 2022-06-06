@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;-><init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
 
     return-void
@@ -23,7 +22,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1, p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;->getSessionStates(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor$Callback;)V
 
     return-void
@@ -40,10 +38,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->onGetSessionStates(Ljava/util/List;)V
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->mCallback:Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;
 
@@ -56,7 +52,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0

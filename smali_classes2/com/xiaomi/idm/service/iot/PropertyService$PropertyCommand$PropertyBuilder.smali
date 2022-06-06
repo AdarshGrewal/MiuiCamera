@@ -31,10 +31,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -49,7 +47,6 @@
 .method public addProperty(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/PropertyService$PropertyCommand$PropertyBuilder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/PropertyService$PropertyCommand$PropertyBuilder;->mPropertyCommandMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -69,7 +66,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/PropertyService$PropertyCommand$PropertyBuilder;->mPropertyCommandMap:Ljava/util/HashMap;
 
     return-object v0

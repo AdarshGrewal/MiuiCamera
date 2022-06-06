@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static abortEnrollment()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -29,7 +27,6 @@
 .method public static cancelEnrollment()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -42,7 +39,6 @@
 .method public static commitEnrollment()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 .method public static generateModel()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -68,7 +63,6 @@
 .method public static getAllEnrollRegister()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -83,7 +77,6 @@
 .method public static init(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -96,7 +89,6 @@
 .method public static openLog(Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -109,7 +101,6 @@
 .method public static openVoicePrint(Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -122,7 +113,6 @@
 .method public static release()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -135,7 +125,6 @@
 .method public static removeAllEnrollRegister()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -148,7 +137,6 @@
 .method public static saveRecord(Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -161,7 +149,6 @@
 .method public static setDebugPath(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -174,7 +161,6 @@
 .method public static setListener(Lcom/xiaomi/asr/engine/WVPListener;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -187,7 +173,6 @@
 .method public static start(I)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -200,7 +185,6 @@
 .method public static startEnrollment(I)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0
@@ -213,7 +197,6 @@
 .method public static version()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0

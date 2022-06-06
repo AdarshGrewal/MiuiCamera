@@ -27,7 +27,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/MediaPlayerProxy;Ltv/danmaku/ijk/media/player/IMediaPlayer$OnErrorListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$6;->this$0:Ltv/danmaku/ijk/media/player/MediaPlayerProxy;
 
     iput-object p2, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$6;->val$finalListener:Ltv/danmaku/ijk/media/player/IMediaPlayer$OnErrorListener;
@@ -42,7 +41,6 @@
 .method public onError(Ltv/danmaku/ijk/media/player/IMediaPlayer;II)Z
     .locals 1
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$6;->val$finalListener:Ltv/danmaku/ijk/media/player/IMediaPlayer$OnErrorListener;
 
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/MediaPlayerProxy$6;->this$0:Ltv/danmaku/ijk/media/player/MediaPlayerProxy;

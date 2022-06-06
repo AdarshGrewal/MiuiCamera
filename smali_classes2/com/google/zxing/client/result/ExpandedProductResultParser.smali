@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/client/result/ResultParser;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static findAIvalue(ILjava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-virtual {p1, p0}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -32,19 +30,16 @@
     :cond_0
     add-int/lit8 p0, p0, 0x1
 
-    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -52,7 +47,6 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 5
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -61,7 +55,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -79,7 +72,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -91,7 +83,6 @@
     :goto_1
     return-object v1
 
-    .line 8
     :cond_4
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -103,19 +94,16 @@
 .method public static findValue(ILjava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -123,7 +111,6 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -132,19 +119,16 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 5
     invoke-static {p1, p0}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->findAIvalue(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 7
     :cond_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -153,7 +137,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -167,12 +150,10 @@
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ExpandedProductParsedResult;
     .locals 24
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/google/zxing/Result;->getBarcodeFormat()Lcom/google/zxing/BarcodeFormat;
 
     move-result-object v0
 
-    .line 3
     sget-object v1, Lcom/google/zxing/BarcodeFormat;->RSS_EXPANDED:Lcom/google/zxing/BarcodeFormat;
 
     const/4 v2, 0x0
@@ -181,13 +162,11 @@
 
     return-object v2
 
-    .line 4
     :cond_0
     invoke-static/range {p1 .. p1}, Lcom/google/zxing/client/result/ResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -220,7 +199,6 @@
 
     const/4 v3, 0x0
 
-    .line 6
     :goto_0
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -228,7 +206,6 @@
 
     if-ge v3, v1, :cond_b
 
-    .line 7
     invoke-static {v3, v4}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->findAIvalue(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -237,7 +214,6 @@
 
     return-object v2
 
-    .line 8
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -249,12 +225,10 @@
 
     add-int v3, v3, v18
 
-    .line 9
     invoke-static {v3, v4}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->findValue(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 10
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v20
@@ -265,7 +239,6 @@
 
     move/from16 v21, v3
 
-    .line 11
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v3
@@ -776,12 +749,10 @@
 
     const/4 v3, 0x0
 
-    .line 12
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_5
 
-    .line 13
     :pswitch_1c
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -798,19 +769,16 @@
     :cond_a
     const/4 v3, 0x0
 
-    .line 14
     invoke-virtual {v2, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v15
 
     const/4 v3, 0x0
 
-    .line 15
     invoke-virtual {v2, v3, v14}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 16
     invoke-virtual {v1, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v16
@@ -820,7 +788,6 @@
     :pswitch_1d
     const/4 v3, 0x0
 
-    .line 17
     invoke-virtual {v1, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v16
@@ -835,7 +802,6 @@
     :pswitch_1e
     const/4 v3, 0x0
 
-    .line 18
     invoke-virtual {v1, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v14
@@ -847,7 +813,6 @@
     :pswitch_1f
     const/4 v3, 0x0
 
-    .line 19
     invoke-virtual {v1, v14}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v14
@@ -914,7 +879,6 @@
 
     move-object/from16 v22, v15
 
-    .line 20
     new-instance v1, Lcom/google/zxing/client/result/ExpandedProductParsedResult;
 
     move-object v3, v1
@@ -1014,7 +978,6 @@
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/ExpandedProductResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ExpandedProductParsedResult;
 
     move-result-object p1

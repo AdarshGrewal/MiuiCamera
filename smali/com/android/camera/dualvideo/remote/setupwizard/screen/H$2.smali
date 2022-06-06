@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
 
     const-string/jumbo v0, "open"
 
-    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$000(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -56,7 +53,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$100(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -67,14 +63,12 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
-    const v0, 0x7f1208c2
+    const v0, 0x7f120873
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setAlertDialogTitle(I)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     const/4 v0, -0x2
@@ -83,7 +77,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120341
+    const v0, 0x7f120329
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 

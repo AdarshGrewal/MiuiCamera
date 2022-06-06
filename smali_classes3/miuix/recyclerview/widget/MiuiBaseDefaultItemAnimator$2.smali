@@ -27,7 +27,6 @@
 .method public constructor <init>(Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$2;->this$0:Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;
 
     iput-object p2, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$2;->val$addList:Ljava/util/List;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$2;->val$addList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -62,7 +60,6 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 2
     iget-object v2, p0, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator$2;->this$0:Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;
 
     invoke-virtual {v2, v1}, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->animateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V

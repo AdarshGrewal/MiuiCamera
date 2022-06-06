@@ -30,22 +30,16 @@
 .method public constructor <init>(IFFIF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;->nTongueStatus:I
 
-    .line 3
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;->fLevel:F
 
-    .line 4
     iput p3, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;->fBackSlowLevel:F
 
-    .line 5
     iput p4, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;->nTongueAnimationStatus:I
 
-    .line 6
     iput p5, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;->fMouthExpressionBak:F
 
     return-void

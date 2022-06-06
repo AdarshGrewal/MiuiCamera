@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -47,7 +45,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {p1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$100(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Lcom/android/camera/fragment/vv/VVItem;
@@ -60,7 +57,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -71,14 +67,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
     move-result-object v0
@@ -93,7 +87,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
@@ -101,17 +94,14 @@
 
     check-cast p1, Lcom/android/camera/module/LiveModuleSubVV;
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/module/LiveModuleSubVV;->doReverse()V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {p1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$200(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Z
 
     return-void
 
-    .line 9
     :cond_1
     :goto_0
     invoke-static {}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$000()Ljava/lang/String;

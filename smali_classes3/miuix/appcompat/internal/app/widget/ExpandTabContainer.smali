@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;-><init>(Landroid/content/Context;)V
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->getTabContainerHeight()I
 
     move-result v0
@@ -25,10 +23,8 @@
 
     new-array v0, v0, [I
 
-    .line 3
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->mTabSizeStages:[I
 
-    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -43,7 +39,6 @@
 
     aput v1, v0, v2
 
-    .line 5
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->mTabSizeStages:[I
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -60,7 +55,6 @@
 
     aput v1, v0, v2
 
-    .line 6
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->mTabSizeStages:[I
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -87,18 +81,15 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_3
 
-    .line 2
     aget v2, p1, v1
 
     move v3, v0
 
-    .line 3
     :goto_1
     iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
@@ -108,7 +99,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 4
     iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -125,7 +115,6 @@
 
     int-to-float v5, v2
 
-    .line 5
     invoke-virtual {v4, v0, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
     :cond_0
@@ -133,13 +122,11 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, p2, p3}, Landroid/widget/LinearLayout;->measure(II)V
 
-    .line 7
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
@@ -176,7 +163,6 @@
 .method public getTabBarLayoutRes()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$layout;->miuix_appcompat_action_bar_tabbar_expand:I
 
     return v0
@@ -193,7 +179,6 @@
 .method public getTabTextStyle()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$attr;->actionBarTabTextExpandStyle:I
 
     return v0
@@ -202,7 +187,6 @@
 .method public getTabViewLayoutRes()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$layout;->miuix_appcompat_action_bar_tab_expand:I
 
     return v0
@@ -211,7 +195,6 @@
 .method public getTabViewMarginHorizontal()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -232,7 +215,6 @@
 .method public onMeasure(II)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->mTabSizeStages:[I
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
@@ -247,7 +229,6 @@
 
     invoke-direct {p0, v0, v1, p2}, Lmiuix/appcompat/internal/app/widget/ExpandTabContainer;->measureTabViewSizeStage2([III)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
@@ -256,7 +237,6 @@
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setContentHeight(I)V
 
-    .line 3
     invoke-super {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->onMeasure(II)V
 
     return-void

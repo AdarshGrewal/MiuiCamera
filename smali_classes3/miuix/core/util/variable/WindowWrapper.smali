@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     :try_start_0
     const-class v0, Landroid/view/Window;
 
@@ -56,7 +55,6 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 2
     sput-object v0, Lmiuix/core/util/variable/WindowWrapper;->setExtraFlags:Ljava/lang/reflect/Method;
 
     :goto_0
@@ -66,7 +64,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,7 +72,6 @@
 .method public static setTranslucentStatus(Landroid/view/Window;I)Z
     .locals 5
 
-    .line 1
     sget-object v0, Lmiuix/core/util/variable/WindowWrapper;->setExtraFlags:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -84,7 +80,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -98,16 +93,13 @@
 
     if-nez p1, :cond_1
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/view/Window;->clearFlags(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p0, v0}, Landroid/view/Window;->addFlags(I)V
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
@@ -116,12 +108,10 @@
 
     const/16 v2, 0x2010
 
-    .line 6
     invoke-virtual {v0, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
 
@@ -133,7 +123,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 8
     :cond_3
     :goto_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -146,12 +135,10 @@
 
     if-nez p1, :cond_4
 
-    .line 9
     invoke-virtual {p0, v0}, Landroid/view/Window;->clearFlags(I)V
 
     goto :goto_1
 
-    .line 10
     :cond_4
     invoke-virtual {p0, v0, v0}, Landroid/view/Window;->setFlags(II)V
 
@@ -163,7 +150,6 @@
 
     if-nez p1, :cond_6
 
-    .line 11
     :try_start_0
     sget-object p1, Lmiuix/core/util/variable/WindowWrapper;->setExtraFlags:Ljava/lang/reflect/Method;
 
@@ -195,7 +181,6 @@
     :cond_7
     move p1, v3
 
-    .line 12
     :goto_2
     sget-object v4, Lmiuix/core/util/variable/WindowWrapper;->setExtraFlags:Ljava/lang/reflect/Method;
 

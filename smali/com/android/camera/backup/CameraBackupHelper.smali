@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -112,7 +110,6 @@
 
     if-eq v1, v4, :cond_2
 
-    .line 2
     sget-object v1, Lcom/android/camera/backup/CameraBackupHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -133,7 +130,6 @@
 
     return-object v0
 
-    .line 3
     :cond_2
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -141,7 +137,6 @@
 
     return-object p0
 
-    .line 4
     :cond_3
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -149,7 +144,6 @@
 
     return-object p0
 
-    .line 5
     :cond_4
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -157,7 +151,6 @@
 
     return-object p0
 
-    .line 6
     :cond_5
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -196,7 +189,6 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -305,7 +297,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 2
     sget-object v1, Lcom/android/camera/backup/CameraBackupHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -380,7 +371,6 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -505,7 +495,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_2
 
-    .line 2
     sget-object v1, Lcom/android/camera/backup/CameraBackupHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -568,7 +557,6 @@
 .method public static filterValue(Ljava/lang/String;I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -577,12 +565,10 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera/Util;->isSupported(Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p1
@@ -608,12 +594,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -624,12 +608,10 @@
 
     const/high16 v2, 0x7f150000
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v1
 
-    .line 4
     :try_start_0
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->getEventType()I
 
@@ -648,7 +630,6 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 5
     :cond_0
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
@@ -660,17 +641,14 @@
 
     const-string v3, "key"
 
-    .line 6
     invoke-interface {v1, v2, v3}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 7
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     :cond_1
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -689,7 +667,6 @@
     :catch_1
     move-exception v2
 
-    .line 9
     :goto_1
     sget-object v3, Lcom/android/camera/backup/CameraBackupHelper;->TAG:Ljava/lang/String;
 
@@ -699,7 +676,6 @@
 
     invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10
     :cond_2
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
 
@@ -711,17 +687,14 @@
 
     move-object/from16 v0, p2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/backup/CameraBackupHelper;->getSettingsKeys()Ljava/util/List;
 
     move-result-object v1
 
-    .line 2
     invoke-interface/range {p0 .. p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    .line 3
     array-length v3, v0
 
     const/4 v5, 0x0
@@ -731,7 +704,6 @@
 
     aget-object v6, v0, v5
 
-    .line 4
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -750,7 +722,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 5
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -766,7 +737,6 @@
     :cond_1
     if-nez p3, :cond_2
 
-    .line 6
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -779,7 +749,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     :try_start_0
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getCloudKey()Ljava/lang/String;
@@ -799,7 +768,6 @@
 
     if-eqz v7, :cond_d
 
-    .line 8
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v9
@@ -914,7 +882,6 @@
 
     if-eq v10, v12, :cond_4
 
-    .line 9
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -923,7 +890,6 @@
 
     goto :goto_3
 
-    .line 10
     :cond_4
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -931,7 +897,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    const v7, 0x7f03003a
+    const v7, 0x7f030039
 
     invoke-static {v4, v7}, Lcom/android/camera/backup/CameraBackupHelper;->filterValue(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -939,7 +905,6 @@
 
     goto :goto_3
 
-    .line 11
     :cond_5
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -953,7 +918,6 @@
 
     goto :goto_3
 
-    .line 12
     :cond_6
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -967,7 +931,6 @@
 
     goto :goto_3
 
-    .line 13
     :cond_7
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -981,7 +944,6 @@
 
     goto :goto_3
 
-    .line 14
     :cond_8
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -995,7 +957,6 @@
 
     goto :goto_3
 
-    .line 15
     :cond_9
     invoke-virtual {v7}, Lmiui/cloud/backup/data/KeyStringSettingItem;->getValue()Ljava/lang/Object;
 
@@ -1010,7 +971,6 @@
     :goto_3
     if-eqz v4, :cond_d
 
-    .line 16
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getValueClass()Ljava/lang/Class;
 
     move-result-object v7
@@ -1019,7 +979,6 @@
 
     if-ne v7, v9, :cond_a
 
-    .line 17
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -1032,7 +991,6 @@
 
     goto :goto_4
 
-    .line 18
     :cond_a
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getValueClass()Ljava/lang/Class;
 
@@ -1042,7 +1000,6 @@
 
     if-ne v7, v9, :cond_b
 
-    .line 19
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -1055,7 +1012,6 @@
 
     goto :goto_4
 
-    .line 20
     :cond_b
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getValueClass()Ljava/lang/Class;
 
@@ -1065,7 +1021,6 @@
 
     if-ne v7, v9, :cond_c
 
-    .line 21
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -1078,7 +1033,6 @@
 
     goto :goto_4
 
-    .line 22
     :cond_c
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getValueClass()Ljava/lang/Class;
 
@@ -1088,7 +1042,6 @@
 
     if-ne v7, v9, :cond_d
 
-    .line 23
     invoke-virtual {v6}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->getLocalKey()Ljava/lang/String;
 
     move-result-object v7
@@ -1102,7 +1055,6 @@
     :catch_0
     move-object/from16 v8, p1
 
-    .line 24
     :catch_1
     sget-object v4, Lcom/android/camera/backup/CameraBackupHelper;->TAG:Ljava/lang/String;
 
@@ -1136,7 +1088,6 @@
 
     goto/16 :goto_0
 
-    .line 25
     :cond_e
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 

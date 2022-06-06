@@ -60,10 +60,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     return-void
@@ -74,7 +72,6 @@
 .method public cancel()V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
     return-void
@@ -83,7 +80,6 @@
 .method public request(J)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result p1
@@ -92,7 +88,6 @@
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->requested:Z
 
     :cond_0
@@ -102,7 +97,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -111,12 +105,10 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->requested:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     const-wide/16 v1, 0x0
@@ -127,25 +119,21 @@
 
     invoke-interface {v0, v1}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
-    .line 4
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscriber;->onComplete()V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    .line 7
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableTimer$TimerSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     new-instance v1, Lio/reactivex/exceptions/MissingBackpressureException;
@@ -164,7 +152,6 @@
 .method public setResource(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->trySet(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void

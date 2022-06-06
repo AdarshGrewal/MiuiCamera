@@ -28,8 +28,6 @@
 
 .field public static final ICON_QUAD:I = 0x4
 
-.field public static final ICON_SINGLE:I = 0x3e8
-
 .field public static final ICON_TRIPLE:I = 0x3
 
 .field public static final TAG:Ljava/lang/String; = "WaterMarkUtil"
@@ -67,7 +65,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,7 +73,6 @@
 .method public static getBackIconName()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getBackIconType()I
 
     move-result v0
@@ -128,7 +124,6 @@
     :cond_4
     const-string v0, "cc_back"
 
-    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -154,14 +149,9 @@
 .method public static getBackIconNameGen2()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getBackIconType()I
 
     move-result v0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_3
 
     const/4 v1, 0x3
 
@@ -175,7 +165,7 @@
 
     if-eq v0, v1, :cond_0
 
-    const-string/jumbo v0, "single"
+    const-string v0, "dual"
 
     goto :goto_0
 
@@ -192,12 +182,6 @@
     :cond_2
     const-string/jumbo v0, "triple"
 
-    goto :goto_0
-
-    :cond_3
-    const-string v0, "dual"
-
-    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -223,7 +207,6 @@
 .method public static getBackIconType()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraBack()Ljava/util/List;
 
     move-result-object v0
@@ -236,7 +219,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -247,12 +229,11 @@
 .method public static getDescription()Ljava/lang/String;
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
@@ -260,12 +241,11 @@
 
     if-nez v0, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0oOOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0oOo()Z
 
     move-result v0
 
@@ -273,7 +253,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraBack()Ljava/util/List;
 
@@ -287,7 +266,6 @@
 
     if-le v0, v2, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraBack()Ljava/util/List;
 
     move-result-object v0
@@ -308,8 +286,7 @@
 .method public static getExtraSuffix()Ljava/lang/String;
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooO()Z
 
     move-result v0
 
@@ -319,14 +296,12 @@
 
     return-object v0
 
-    .line 2
     :cond_0
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO:Z
 
     if-eqz v0, :cond_2
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOoOO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOoOO()Z
 
     move-result v0
 
@@ -336,9 +311,8 @@
 
     return-object v0
 
-    .line 4
     :cond_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOoo0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOoo0()Z
 
     move-result v0
 
@@ -348,9 +322,8 @@
 
     return-object v0
 
-    .line 5
     :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOOo()Z
 
     move-result v0
 
@@ -360,9 +333,8 @@
 
     return-object v0
 
-    .line 6
     :cond_3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOo00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOo00()Z
 
     move-result v0
 
@@ -372,15 +344,14 @@
 
     return-object v0
 
-    .line 7
     :cond_4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Oooo0O0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Oooo0O0()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOoo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOoO()Z
 
     move-result v0
 
@@ -390,21 +361,8 @@
 
     return-object v0
 
-    .line 8
     :cond_5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOO0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const-string/jumbo v0, "tier"
-
-    return-object v0
-
-    .line 9
-    :cond_6
-    sget-object v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOOO:Ljava/lang/String;
+    sget-object v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOOO:Ljava/lang/String;
 
     const-string v1, " "
 
@@ -426,7 +384,6 @@
 .method public static getFrontIconName()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getFrontIconType()I
 
     move-result v0
@@ -451,7 +408,6 @@
     :cond_1
     const-string v0, "cc_front"
 
-    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -477,7 +433,6 @@
 .method public static getFrontIconType()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraFront()Ljava/util/List;
 
     move-result-object v0
@@ -490,7 +445,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -501,7 +455,6 @@
 .method public static getFrontTitle()Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraFront()Ljava/util/List;
 
     move-result-object v0
@@ -514,7 +467,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraFront()Ljava/util/List;
 
     move-result-object v0
@@ -541,7 +493,6 @@
 
     const-string v1, "com.android.camera"
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -552,7 +503,6 @@
 .method public static getTitle()Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraBack()Ljava/util/List;
 
     move-result-object v0
@@ -565,7 +515,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterCameraBack()Ljava/util/List;
 
     move-result-object v0
@@ -596,12 +545,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sWaterMarkList:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -614,19 +561,16 @@
 
     const-string v2, "back_common"
 
-    .line 3
     invoke-static {v0, v1, v2}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterMarkId(Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, ":"
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -637,12 +581,11 @@
 
     sput-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sWaterMarkList:Ljava/util/List;
 
-    .line 6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
@@ -660,7 +603,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     new-instance v0, Ljava/security/InvalidParameterException;
 
@@ -670,7 +612,6 @@
 
     throw v0
 
-    .line 8
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sWaterMarkList:Ljava/util/List;
@@ -689,12 +630,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sFrontWaterMarkList:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -707,19 +646,16 @@
 
     const-string v2, "front_common"
 
-    .line 3
     invoke-static {v0, v1, v2}, Lcom/android/camera/watermark/WaterMarkUtil;->getWaterMarkId(Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, ":"
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -730,7 +666,6 @@
 
     sput-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sFrontWaterMarkList:Ljava/util/List;
 
-    .line 6
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -741,7 +676,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     new-instance v0, Ljava/security/InvalidParameterException;
 
@@ -751,7 +685,6 @@
 
     throw v0
 
-    .line 8
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/watermark/WaterMarkUtil;->sFrontWaterMarkList:Ljava/util/List;
@@ -762,18 +695,17 @@
 .method public static getWaterMarkId(Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0OO()Ljava/lang/String;
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooOooo()Ljava/lang/String;
 
     move-result-object p1
 
@@ -783,18 +715,16 @@
 
     move-result-object p1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000o0oO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000o000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -811,7 +741,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/Util;->isGlobalVersion()Z
 
@@ -819,7 +748,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -839,7 +767,6 @@
     :cond_1
     move-object v0, p1
 
-    .line 6
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -861,7 +788,6 @@
 
     move-result-object v1
 
-    .line 7
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -880,14 +806,12 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static {p0, v1}, Lcom/android/camera/watermark/WaterMarkUtil;->getStringId(Landroid/content/res/Resources;Ljava/lang/String;)I
 
     move-result v2
 
     if-lez v2, :cond_2
 
-    .line 9
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -906,7 +830,6 @@
 
     return v2
 
-    .line 10
     :cond_2
     invoke-static {p0, v0}, Lcom/android/camera/watermark/WaterMarkUtil;->getStringId(Landroid/content/res/Resources;Ljava/lang/String;)I
 
@@ -914,7 +837,6 @@
 
     if-lez v1, :cond_3
 
-    .line 11
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -933,7 +855,6 @@
 
     return v1
 
-    .line 12
     :cond_3
     invoke-static {p0, p1}, Lcom/android/camera/watermark/WaterMarkUtil;->getStringId(Landroid/content/res/Resources;Ljava/lang/String;)I
 
@@ -941,7 +862,6 @@
 
     if-lez v0, :cond_4
 
-    .line 13
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -960,7 +880,6 @@
 
     return v0
 
-    .line 14
     :cond_4
     invoke-static {p0, p2}, Lcom/android/camera/watermark/WaterMarkUtil;->getStringId(Landroid/content/res/Resources;Ljava/lang/String;)I
 

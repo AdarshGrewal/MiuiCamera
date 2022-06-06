@@ -76,23 +76,18 @@
         }
     .end annotation
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 7
     iput-boolean v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->takeOrDrop:Z
 
-    .line 8
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->s:Ljava8/util/Spliterator;
 
-    .line 9
     iget-boolean p1, p2, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->noSplitting:Z
 
     iput-boolean p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->noSplitting:Z
 
-    .line 10
     iget-object p1, p2, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->cancel:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->cancel:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -110,21 +105,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->takeOrDrop:Z
 
-    .line 3
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->s:Ljava8/util/Spliterator;
 
-    .line 4
     iput-boolean p2, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->noSplitting:Z
 
-    .line 5
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
@@ -139,7 +129,6 @@
 .method public characteristics()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->characteristics()I
@@ -154,7 +143,6 @@
 .method public checkCancelOnCount()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
     if-nez v0, :cond_1
@@ -185,7 +173,6 @@
 .method public estimateSize()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
@@ -205,7 +192,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->s:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->getComparator()Ljava/util/Comparator;
@@ -243,7 +229,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->noSplitting:Z
 
     const/4 v1, 0x0
@@ -264,7 +249,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->makeSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object v1

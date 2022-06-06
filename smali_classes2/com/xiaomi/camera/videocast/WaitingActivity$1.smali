@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/WaitingActivity;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$1;->this$0:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$1;->this$0:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
@@ -47,7 +45,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$1;->this$0:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V

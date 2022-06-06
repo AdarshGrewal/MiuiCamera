@@ -27,7 +27,6 @@
 .method public constructor <init>(IF)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -40,7 +39,6 @@
 .method public constructor <init>(I[F)V
     .locals 0
 
-    .line 2
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -89,7 +87,6 @@
 
     aput p2, v0, v1
 
-    .line 3
     invoke-direct {p0, p1, v0}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;-><init>(Landroid/content/res/ColorStateList;[F)V
 
     return-void
@@ -98,17 +95,14 @@
 .method public constructor <init>(Landroid/content/res/ColorStateList;[F)V
     .locals 2
 
-    .line 4
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 5
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
     if-eqz p2, :cond_1
 
-    .line 6
     array-length v0, p2
 
     const/16 v1, 0x8
@@ -117,7 +111,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -127,12 +120,10 @@
 
     throw p1
 
-    .line 8
     :cond_1
     :goto_0
     iput-object p2, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
-    .line 9
     new-instance p2, Landroid/graphics/Paint;
 
     const/4 v0, 0x5
@@ -141,24 +132,20 @@
 
     iput-object p2, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 10
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->setBackground(Landroid/content/res/ColorStateList;)V
 
-    .line 11
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsF:Landroid/graphics/RectF;
 
-    .line 12
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsI:Landroid/graphics/Rect;
 
-    .line 13
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
@@ -177,7 +164,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
 
@@ -189,7 +175,6 @@
 
     move-result p1
 
-    .line 2
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     invoke-direct {v0, p1, p2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
@@ -210,7 +195,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -218,7 +202,6 @@
     :cond_0
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBackground:Landroid/content/res/ColorStateList;
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
@@ -245,12 +228,10 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsF:Landroid/graphics/RectF;
 
@@ -272,22 +253,18 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsI:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     if-eqz p1, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsF:Landroid/graphics/RectF;
@@ -298,7 +275,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPath:Landroid/graphics/Path;
 
@@ -317,10 +293,8 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
     if-eqz v1, :cond_0
@@ -331,7 +305,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
@@ -343,7 +316,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     :goto_0
     iget-object v2, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPath:Landroid/graphics/Path;
 
@@ -355,7 +327,6 @@
 
     const/4 p1, 0x0
 
-    .line 5
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     :cond_1
@@ -365,7 +336,6 @@
 .method public getColor()Landroid/content/res/ColorStateList;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBackground:Landroid/content/res/ColorStateList;
 
     return-object v0
@@ -382,14 +352,12 @@
 .method public getOutline(Landroid/graphics/Outline;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x0
 
-    .line 2
     aget v0, v0, v1
 
     const/4 v1, 0x1
@@ -399,7 +367,6 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 3
     iget-object v2, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     aget v2, v2, v1
@@ -408,7 +375,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
@@ -423,7 +389,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 5
     :cond_2
     iget-object v1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBoundsI:Landroid/graphics/Rect;
 
@@ -435,7 +400,6 @@
 .method public isStateful()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTint:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_0
@@ -451,7 +415,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
 
     move-result v0
@@ -480,10 +443,8 @@
 .method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->updateBounds(Landroid/graphics/Rect;)V
 
     return-void
@@ -492,7 +453,6 @@
 .method public onStateChange([I)Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mBackground:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
@@ -503,7 +463,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
@@ -524,12 +483,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v2, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4
     :cond_1
     iget-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTint:Landroid/content/res/ColorStateList;
 
@@ -539,7 +496,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 5
     invoke-direct {p0, p1, v2}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object p1
@@ -555,7 +511,6 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -566,10 +521,8 @@
 .method public setColor(Landroid/content/res/ColorStateList;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->setBackground(Landroid/content/res/ColorStateList;)V
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -578,7 +531,6 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
@@ -589,7 +541,6 @@
 .method public setRadius(F)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     const/16 v1, 0x8
@@ -630,7 +581,6 @@
 
     aput p1, v0, v1
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     goto :goto_1
@@ -643,7 +593,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v4, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     aget v4, v4, v2
@@ -654,7 +603,6 @@
 
     move v0, v3
 
-    .line 4
     :cond_1
     iget-object v4, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
@@ -675,10 +623,8 @@
     :cond_3
     const/4 p1, 0x0
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->updateBounds(Landroid/graphics/Rect;)V
 
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -691,14 +637,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 7
     array-length v1, p1
 
     if-lt v1, v0, :cond_0
 
     goto :goto_0
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -716,7 +660,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 9
     iget-object v3, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     if-nez v3, :cond_2
@@ -731,7 +674,6 @@
 
     if-nez v3, :cond_3
 
-    .line 10
     iget-object v4, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
     aget v4, v4, v2
@@ -744,7 +686,6 @@
 
     move v3, v1
 
-    .line 11
     :cond_3
     iget-object v4, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
@@ -756,7 +697,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_4
     :goto_2
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
@@ -768,7 +708,6 @@
     :cond_5
     move v1, v2
 
-    .line 13
     :goto_3
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mCornerRadii:[F
 
@@ -782,10 +721,8 @@
     :cond_7
     const/4 p1, 0x0
 
-    .line 14
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->updateBounds(Landroid/graphics/Rect;)V
 
-    .line 15
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -794,10 +731,8 @@
 .method public setTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTint:Landroid/content/res/ColorStateList;
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
     invoke-direct {p0, p1, v0}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
@@ -806,7 +741,6 @@
 
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -815,10 +749,8 @@
 .method public setTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTint:Landroid/content/res/ColorStateList;
 
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->createTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
@@ -827,7 +759,6 @@
 
     iput-object p1, p0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;->mTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void

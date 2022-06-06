@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/client/result/ResultParser;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 
     if-gt v2, v4, :cond_1
 
-    .line 1
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,12 +54,10 @@
 
     if-nez v3, :cond_0
 
-    .line 2
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3
     :cond_0
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -74,7 +70,6 @@
 
     return-object v0
 
-    .line 4
     :cond_2
     sget-object p0, Lcom/google/zxing/client/result/ResultParser;->EMPTY_STR_ARRAY:[Ljava/lang/String;
 
@@ -92,14 +87,12 @@
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/AddressBookParsedResult;
     .locals 23
 
-    .line 2
     invoke-static/range {p1 .. p1}, Lcom/google/zxing/client/result/ResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "MEMORY"
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -125,28 +118,24 @@
 
     const-string v4, "NAME1:"
 
-    .line 4
     invoke-static {v4, v0, v3, v1}, Lcom/google/zxing/client/result/ResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "NAME2:"
 
-    .line 5
     invoke-static {v5, v0, v3, v1}, Lcom/google/zxing/client/result/ResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v9
 
     const-string v5, "TEL"
 
-    .line 6
     invoke-static {v5, v0}, Lcom/google/zxing/client/result/AddressBookAUResultParser;->matchMultipleValuePrefix(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v10
 
     const-string v5, "MAIL"
 
-    .line 7
     invoke-static {v5, v0}, Lcom/google/zxing/client/result/AddressBookAUResultParser;->matchMultipleValuePrefix(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v12
@@ -155,14 +144,12 @@
 
     const-string v6, "MEMORY:"
 
-    .line 8
     invoke-static {v6, v0, v3, v5}, Lcom/google/zxing/client/result/ResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v15
 
     const-string v6, "ADD:"
 
-    .line 9
     invoke-static {v6, v0, v3, v1}, Lcom/google/zxing/client/result/ResultParser;->matchSinglePrefixedField(Ljava/lang/String;Ljava/lang/String;CZ)Ljava/lang/String;
 
     move-result-object v0
@@ -179,7 +166,6 @@
     :goto_0
     move-object/from16 v16, v2
 
-    .line 10
     new-instance v0, Lcom/google/zxing/client/result/AddressBookParsedResult;
 
     move-object v6, v0
@@ -220,7 +206,6 @@
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/AddressBookAUResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/AddressBookParsedResult;
 
     move-result-object p1

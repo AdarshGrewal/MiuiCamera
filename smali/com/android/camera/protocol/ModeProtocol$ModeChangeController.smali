@@ -25,6 +25,9 @@
 .method public abstract canSwipeChangeMode()Z
 .end method
 
+.method public abstract changeCamera(Landroid/view/View;)V
+.end method
+
 .method public abstract changeModeByGravity(II)V
 .end method
 

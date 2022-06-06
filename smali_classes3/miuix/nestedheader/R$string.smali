@@ -16,7 +16,7 @@
 # static fields
 .field public static final app_name:I = 0x7f120152
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f120914
+.field public static final status_bar_notification_info_overflow:I = 0x7f1208c5
 
 
 # direct methods

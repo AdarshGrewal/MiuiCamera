@@ -28,6 +28,9 @@
 .method public abstract getMinZoomRatio()F
 .end method
 
+.method public abstract getZoomRatio()F
+.end method
+
 .method public abstract notifyDualZoom(Z)V
 .end method
 
@@ -40,19 +43,10 @@
 .method public abstract onZoomSwitchCamera()V
 .end method
 
-.method public abstract onZoomingActionEnd(I)V
-.end method
-
 .method public abstract setMaxZoomRatio(F)V
 .end method
 
 .method public abstract setMinZoomRatio(F)V
-.end method
-
-.method public abstract setVideoMaxZoomRatioByTele()V
-.end method
-
-.method public abstract updateSATZooming(Z)V
 .end method
 
 .method public abstract updateZoomRatioByStabilizer()V

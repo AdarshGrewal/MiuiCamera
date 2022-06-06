@@ -16,10 +16,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -32,7 +30,6 @@
 .method public static getProcessNameByPid(I)Ljava/lang/String;
     .locals 3
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v1, 0x1
@@ -53,7 +50,6 @@
 
     move-result-object p0
 
-    .line 2
     :try_start_0
     invoke-static {p0}, Lmiuix/core/util/FileUtils;->readFileAsString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -61,14 +57,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
     if-ltz v1, :cond_0
 
-    .line 4
     invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
@@ -81,7 +75,6 @@
     :catch_0
     move-exception v0
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

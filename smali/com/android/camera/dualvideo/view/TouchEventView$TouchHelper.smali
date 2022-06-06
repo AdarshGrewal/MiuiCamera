@@ -34,13 +34,10 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/view/TouchEventView;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
-    .line 2
     invoke-direct {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
 
-    .line 3
     new-instance p1, Landroid/graphics/PointF;
 
     invoke-direct {p1}, Landroid/graphics/PointF;-><init>()V
@@ -53,21 +50,18 @@
 .method public static synthetic OooO00o(ILjava/util/ArrayList;)Lcom/android/camera/dualvideo/render/CameraItemInterface;
     .locals 1
 
-    .line 4
     invoke-virtual {p1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0;-><init>(I)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0o;-><init>(I)V
 
-    .line 5
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 6
     invoke-interface {p0}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p0
@@ -84,7 +78,6 @@
 .method public static synthetic OooO00o(FFLcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;)Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 0
 
-    .line 1
     invoke-interface {p2}, Lcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;->getRenderManager()Lcom/android/camera/dualvideo/render/RenderManager;
 
     move-result-object p2
@@ -99,45 +92,38 @@
 .method public static synthetic OooO00o(ILandroid/graphics/Rect;Lcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;)V
     .locals 1
 
-    .line 8
     invoke-interface {p2}, Lcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;->getRenderManager()Lcom/android/camera/dualvideo/render/RenderManager;
 
     move-result-object p2
 
-    .line 9
     invoke-virtual {p2}, Lcom/android/camera/dualvideo/render/RenderManager;->getCameraItemManager()Lcom/android/camera/dualvideo/render/CameraItemManager;
 
     move-result-object p2
 
-    .line 10
     invoke-virtual {p2}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getVisibleRenderList()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    .line 11
     invoke-virtual {p2}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p2
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0o;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0oO;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0o;-><init>(I)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0oO;-><init>(I)V
 
-    .line 12
     invoke-interface {p2, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 13
     invoke-interface {p0}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0o0;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO;
 
-    invoke-direct {p2, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0o0;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {p2, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO;-><init>(Landroid/graphics/Rect;)V
 
-    .line 14
     invoke-virtual {p0, p2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
@@ -146,7 +132,6 @@
 .method public static synthetic OooO00o(ILcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 0
 
-    .line 7
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -171,14 +156,12 @@
 .method public static synthetic OooO0O0(Landroid/graphics/Rect;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
 
     move-result-object p1
 
-    .line 3
     iget-object p1, p1, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -189,7 +172,6 @@
 .method public static synthetic OooO0O0(ILcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -220,7 +202,6 @@
 
     return-object v0
 
-    .line 1
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->isGridWindow()Z
 
@@ -228,7 +209,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getSelectDescription(I)Ljava/lang/String;
 
     move-result-object p1
@@ -246,7 +226,6 @@
 
     return-object v0
 
-    .line 3
     :cond_2
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
@@ -262,7 +241,6 @@
 
     return-object p1
 
-    .line 4
     :cond_3
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
@@ -282,12 +260,10 @@
 .method private getEventDown(Landroid/graphics/PointF;)Landroid/view/MotionEvent;
     .locals 8
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -296,7 +272,6 @@
 
     add-long/2addr v2, v4
 
-    .line 3
     iget v5, p1, Landroid/graphics/PointF;->x:F
 
     iget v6, p1, Landroid/graphics/PointF;->y:F
@@ -315,12 +290,10 @@
 .method private getEventUp(Landroid/graphics/PointF;)Landroid/view/MotionEvent;
     .locals 8
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -329,7 +302,6 @@
 
     add-long/2addr v2, v4
 
-    .line 3
     iget v5, p1, Landroid/graphics/PointF;->x:F
 
     iget v6, p1, Landroid/graphics/PointF;->y:F
@@ -348,21 +320,18 @@
 .method private getMiscTexManager()Lcom/android/camera/dualvideo/render/MiscTextureManager;
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderProtocol()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0OO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0OO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0OO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0OO;
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOOO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOOO;
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
@@ -379,19 +348,16 @@
 .method private getRect(I)Landroid/graphics/Rect;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     if-nez p1, :cond_0
 
     return-object v0
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->isGridWindow()Z
 
@@ -399,28 +365,26 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderProtocol()Ljava/util/Optional;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0O;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0o0;
 
-    invoke-direct {v2, p1, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOO0O;-><init>(ILandroid/graphics/Rect;)V
+    invoke-direct {v2, p1, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0o0;-><init>(ILandroid/graphics/Rect;)V
 
     invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderList()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOO0;
 
-    invoke-direct {v1, p0, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0o;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;Landroid/graphics/Rect;)V
+    invoke-direct {v1, p0, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOO0;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;Landroid/graphics/Rect;)V
 
     invoke-virtual {p1, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -440,28 +404,24 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderProtocol()Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0OO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0OO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0OO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0OO;
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO00o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO00o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO00o;
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0O0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0O0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0O0;
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
@@ -480,7 +440,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -493,7 +452,6 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;
 
-    .line 2
     invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object v0
@@ -504,7 +462,6 @@
 .method private getSelectDescription(I)Ljava/lang/String;
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UNDEFINED:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/render/LayoutType;->getIndex()I
@@ -517,21 +474,19 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderList()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0oO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0O;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0oO;-><init>(I)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0O;-><init>(I)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
     move-result v0
@@ -542,7 +497,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
@@ -562,7 +516,6 @@
 
     move-result v0
 
-    .line 5
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -577,7 +530,6 @@
 
     move-result v1
 
-    .line 6
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -588,12 +540,10 @@
 
     move-result-object p1
 
-    .line 7
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8
     sget-object v3, Lcom/android/camera/dualvideo/view/TouchEventView$1;->$SwitchMap$com$android$camera$dualvideo$render$FaceType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -618,7 +568,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
@@ -636,7 +585,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_3
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
@@ -652,7 +600,6 @@
 
     new-array v5, v4, [Ljava/lang/Object;
 
-    .line 11
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
@@ -663,12 +610,10 @@
 
     move-result-object p1
 
-    .line 12
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 13
     :cond_4
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
@@ -687,12 +632,10 @@
     :goto_0
     const-string p1, ", "
 
-    .line 14
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-eqz v1, :cond_5
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -707,7 +650,6 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
-    .line 16
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -718,10 +660,8 @@
 
     move-result-object p1
 
-    .line 17
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     :cond_5
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -733,7 +673,6 @@
 .method private isGridWindow()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -750,7 +689,6 @@
 .method public synthetic OooO00o(Landroid/graphics/Rect;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 1
 
-    .line 20
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getMiscTexManager()Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
     move-result-object v0
@@ -767,28 +705,25 @@
 .method public synthetic OooO00o(Landroid/graphics/Rect;Ljava/util/ArrayList;)V
     .locals 1
 
-    .line 15
     invoke-virtual {p2}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p2
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOO0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0oo;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOO0;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0oo;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;)V
 
-    .line 16
     invoke-interface {p2, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p2
 
-    .line 17
     invoke-interface {p2}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p2
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0o;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0oo;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;Landroid/graphics/Rect;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0o;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;Landroid/graphics/Rect;)V
 
     invoke-virtual {p2, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -798,7 +733,6 @@
 .method public synthetic OooO00o(FFLcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getMiscTexManager()Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
     move-result-object v0
@@ -818,7 +752,6 @@
 
     float-to-int p2, p2
 
-    .line 3
     invoke-virtual {p3, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result p1
@@ -829,7 +762,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 2
 
-    .line 18
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -842,7 +774,6 @@
 
     return p1
 
-    .line 19
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getMiscTexManager()Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
@@ -872,12 +803,10 @@
 .method public getVirtualViewAt(FF)I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mTouchPoint:Landroid/graphics/PointF;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->isGridWindow()Z
 
     move-result v0
@@ -886,14 +815,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderProtocol()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0;
 
-    invoke-direct {v2, p1, p2}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO;-><init>(FF)V
+    invoke-direct {v2, p1, p2}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOO0;-><init>(FF)V
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -907,12 +835,10 @@
 
     check-cast p1, Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 4
     sget-object p2, Lcom/android/camera/dualvideo/render/LayoutType;->UNDEFINED:Lcom/android/camera/dualvideo/render/LayoutType;
 
     if-eq p1, p2, :cond_0
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/LayoutType;->getIndex()I
 
     move-result p1
@@ -921,13 +847,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iput v1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRenderList()Ljava/util/Optional;
 
@@ -939,32 +863,28 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 8
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOO;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOO;
 
-    invoke-direct {v2, p0, p1, p2}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooOOO;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;FF)V
+    invoke-direct {v2, p0, p1, p2}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooOOO;-><init>(Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;FF)V
 
     invoke-interface {v0, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    .line 9
     invoke-interface {p1}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    .line 11
     sget-object p2, Lcom/android/camera/dualvideo/view/TouchEventView$1;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
@@ -991,28 +911,23 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 12
     iput v0, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
     goto :goto_0
 
-    .line 13
     :cond_2
     iput v1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
     goto :goto_0
 
-    .line 14
     :cond_3
     iput p2, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
     goto :goto_0
 
-    .line 15
     :cond_4
     iput v1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
-    .line 16
     :goto_0
     iget p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->mLayoutTypeIndex:I
 
@@ -1040,7 +955,6 @@
 
     if-ne p2, p3, :cond_0
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
     invoke-static {p2}, Lcom/android/camera/dualvideo/view/TouchEventView;->access$000(Lcom/android/camera/dualvideo/view/TouchEventView;)Lcom/android/camera/dualvideo/view/TouchEventView$TouchEventListener;
@@ -1055,7 +969,6 @@
 
     invoke-interface {p2, p3}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchEventListener;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
     invoke-static {p2}, Lcom/android/camera/dualvideo/view/TouchEventView;->access$000(Lcom/android/camera/dualvideo/view/TouchEventView;)Lcom/android/camera/dualvideo/view/TouchEventView$TouchEventListener;
@@ -1072,17 +985,14 @@
 
     const/high16 p2, 0x10000
 
-    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->sendEventForVirtualView(II)Z
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->isGridWindow()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -1097,7 +1007,6 @@
 
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->this$0:Lcom/android/camera/dualvideo/view/TouchEventView;
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1114,7 +1023,6 @@
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p2, p1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     :cond_0
@@ -1124,16 +1032,14 @@
 .end method
 
 .method public onPopulateNodeForVirtualView(ILandroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
-    .locals 3
+    .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getRect(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setBoundsInParent(Landroid/graphics/Rect;)V
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/view/TouchEventView$TouchHelper;->getDescription(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1142,68 +1048,11 @@
 
     const/16 p1, 0x10
 
-    .line 3
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setClickable(Z)V
 
-    .line 5
-    invoke-virtual {p2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p2}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getContentDescription()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    .line 6
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setText(Ljava/lang/CharSequence;)V
-
-    .line 7
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 8
-    :cond_0
-    new-instance p1, Landroid/graphics/Rect;
-
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    .line 9
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getBoundsInParent(Landroid/graphics/Rect;)V
-
-    .line 10
-    new-instance v0, Landroid/graphics/Rect;
-
-    const/high16 v1, -0x80000000
-
-    const v2, 0x7fffffff
-
-    invoke-direct {v0, v2, v2, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 11
-    new-instance p1, Landroid/graphics/Rect;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0, v0, v0, v0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-virtual {p2, p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setBoundsInParent(Landroid/graphics/Rect;)V
-
-    :cond_1
     return-void
 .end method

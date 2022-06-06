@@ -22,7 +22,6 @@
 .method public constructor <init>(ILjava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x20
@@ -41,7 +40,6 @@
 
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 2
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;->errorCode:I
 
     return-void
@@ -52,7 +50,6 @@
 .method public getErrorCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;->errorCode:I
 
     return v0

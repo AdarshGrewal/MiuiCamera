@@ -44,15 +44,11 @@
 
 .field public static final NORMAL_SINGLE_SHOT_JPEG_RAW:I = 0x1
 
-.field public static final NORMAL_SINGLE_SHOT_YUV_RAW:I = 0xe
-
 .field public static final PARALLEL_BURST:I = 0x8
 
 .field public static final PARALLEL_DUAL_PORTRAIT:I = 0x6
 
 .field public static final PARALLEL_DUAL_PORTRAIT_BURST:I = 0xb
-
-.field public static final PARALLEL_DUAL_PORTRAIT_MULTIPLE_RAW:I = 0xf
 
 .field public static final PARALLEL_REPEATING:I = 0x9
 

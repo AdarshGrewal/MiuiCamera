@@ -10,7 +10,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -21,12 +20,10 @@
 .method public getIntValue(Ljava/lang/Object;)I
     .locals 2
 
-    .line 1
     instance-of v0, p1, Lmiuix/animation/property/ValueTargetObject;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Lmiuix/animation/property/ValueTargetObject;
 
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
@@ -43,7 +40,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -59,12 +55,10 @@
 .method public setIntValue(Ljava/lang/Object;I)V
     .locals 2
 
-    .line 1
     instance-of v0, p1, Lmiuix/animation/property/ValueTargetObject;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Lmiuix/animation/property/ValueTargetObject;
 
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
@@ -86,7 +80,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +88,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
 
     move-result-object v1

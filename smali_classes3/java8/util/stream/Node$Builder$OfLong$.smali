@@ -23,7 +23,6 @@
 .method public static bridge synthetic build(Ljava8/util/stream/Node$Builder$OfLong;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node$Builder$OfLong;->build()Ljava8/util/stream/Node$OfLong;
 
     move-result-object p0

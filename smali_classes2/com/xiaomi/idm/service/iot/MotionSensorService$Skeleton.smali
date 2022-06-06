@@ -20,7 +20,6 @@
 
     const-string v0, "urn:aiot-spec-v3:service:motionsensor:00000001:1"
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/idm/service/iot/MotionSensorService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/MotionSensorService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

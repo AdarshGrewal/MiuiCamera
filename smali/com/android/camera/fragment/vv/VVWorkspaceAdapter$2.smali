@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$2;->this$0:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$2;->accept(Ljava/lang/Throwable;)V
@@ -68,7 +66,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void

@@ -135,7 +135,6 @@
 
     const-string v0, "DollyZoom"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -144,124 +143,96 @@
 .method public constructor <init>()V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "/sdcard/default_dz_video.mp4"
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_save_video_path:Ljava/lang/String;
 
     const/4 v0, -0x2
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_now_state:I
 
     const/4 v0, 0x3
 
-    .line 4
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_yuv_data_type:I
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_film_state:I
 
-    .line 6
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_run_state:I
 
-    .line 7
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_encode_type:I
 
-    .line 8
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_device_type:I
 
-    .line 9
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_pipeline_cfg:I
 
-    .line 10
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_rotate_angle:I
 
     const/16 v1, 0xf00
 
-    .line 11
     iput v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     const/16 v1, 0x870
 
-    .line 12
     iput v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
 
-    .line 13
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_moving_type:I
 
     const-wide/16 v1, 0x0
 
-    .line 14
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_zoom_rate:D
 
     const-wide v1, 0x3fc3333333333333L    # 0.15
 
-    .line 15
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_L:D
 
     const-wide/high16 v3, 0x3fe8000000000000L    # 0.75
 
-    .line 16
     iput-wide v3, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_R:D
 
-    .line 17
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_T:D
 
     const-wide v1, 0x3fe999999999999aL    # 0.8
 
-    .line 18
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_B:D
 
     const-wide v1, 0x3fcd70a3d70a3d71L    # 0.23
 
-    .line 19
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_L:D
 
     const-wide v1, 0x3fe8f5c28f5c28f6L    # 0.78
 
-    .line 20
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_R:D
 
     const-wide v1, 0x3fc999999999999aL    # 0.2
 
-    .line 21
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_T:D
 
     const-wide v1, 0x3feccccccccccccdL    # 0.9
 
-    .line 22
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_B:D
 
     const-wide v1, 0x3fd999999999999aL    # 0.4
 
-    .line 23
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_L:D
 
     const-wide v1, 0x3fe3333333333333L    # 0.6
 
-    .line 24
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_R:D
 
     const-wide v1, 0x3fc5c28f5c28f5c3L    # 0.17
 
-    .line 25
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_T:D
 
     const-wide v1, 0x3febd70a3d70a3d7L    # 0.87
 
-    .line 26
     iput-wide v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_B:D
 
-    .line 27
     iput-boolean v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
-    .line 28
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     const-string v1, "construct MediaEffectCamera"
@@ -270,10 +241,8 @@
 
     const-wide/16 v0, 0x0
 
-    .line 29
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 30
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mRender:J
 
     return-void
@@ -324,7 +293,6 @@
 .method private RefreshReferenceBox()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_rotate_angle:I
 
     if-eqz v0, :cond_2
@@ -344,47 +312,39 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 2
     :cond_1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_L:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_L:D
 
-    .line 3
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_R:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_R:D
 
-    .line 4
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_T:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_T:D
 
-    .line 5
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_port_ref_b_B:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_B:D
 
     goto :goto_1
 
-    .line 6
     :cond_2
     :goto_0
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_L:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_L:D
 
-    .line 7
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_R:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_R:D
 
-    .line 8
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_T:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_T:D
 
-    .line 9
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_land_ref_b_B:D
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_ref_box_B:D
@@ -417,21 +377,16 @@
 .method public ConstructMediaEffectCamera(II)V
     .locals 13
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
-    .line 2
     iput p2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
 
-    .line 3
     iget-boolean p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     if-nez p1, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RefreshReferenceBox()V
 
-    .line 5
     iget v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     iget v1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
@@ -456,7 +411,6 @@
 
     iput-wide p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 6
     sget-object p1, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -479,7 +433,6 @@
 
     const/4 p1, 0x1
 
-    .line 7
     iput-boolean p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     :cond_0
@@ -493,28 +446,22 @@
 
     move/from16 v1, p1
 
-    .line 8
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     move/from16 v1, p2
 
-    .line 9
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
 
     move/from16 v1, p3
 
-    .line 10
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_device_type:I
 
-    .line 11
     iget-boolean v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     if-nez v1, :cond_0
 
-    .line 12
     invoke-direct {p0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RefreshReferenceBox()V
 
-    .line 13
     iget v2, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     iget v3, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
@@ -539,7 +486,6 @@
 
     iput-wide v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 14
     sget-object v1, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -562,7 +508,6 @@
 
     const/4 v1, 0x1
 
-    .line 15
     iput-boolean v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     :cond_0
@@ -576,33 +521,26 @@
 
     move/from16 v1, p1
 
-    .line 16
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     move/from16 v1, p2
 
-    .line 17
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
 
     move/from16 v1, p3
 
-    .line 18
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_device_type:I
 
     move/from16 v1, p4
 
-    .line 19
     iput v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_pipeline_cfg:I
 
-    .line 20
     iget-boolean v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     if-nez v1, :cond_0
 
-    .line 21
     invoke-direct {p0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RefreshReferenceBox()V
 
-    .line 22
     iget v2, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_w:I
 
     iget v3, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_input_h:I
@@ -627,7 +565,6 @@
 
     iput-wide v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 23
     sget-object v1, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -650,7 +587,6 @@
 
     const/4 v1, 0x1
 
-    .line 24
     iput-boolean v1, v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     :cond_0
@@ -660,14 +596,12 @@
 .method public ConstructRender()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     const-string v1, "construct ConstructRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->ConstructRenderJni()J
 
     move-result-wide v0
@@ -680,7 +614,6 @@
 .method public DestructMediaEffectCamera()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -701,24 +634,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->DestructDollyZoomBlockJni(J)V
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     :cond_0
@@ -728,21 +657,18 @@
 .method public DestructRender()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     const-string v1, "construct DestructRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mRender:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->DestructRenderJni(J)V
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mRender:J
 
     return-void
@@ -751,7 +677,6 @@
 .method public GetBoxState()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowBoxStateJni(J)I
@@ -764,7 +689,6 @@
 .method public GetEncoderState()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowEncoderStateJni(J)I
@@ -777,7 +701,6 @@
 .method public GetNowScale()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowScaleJni(J)D
@@ -790,7 +713,6 @@
 .method public GetNowState()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowStateJni(J)I
@@ -803,14 +725,12 @@
 .method public InitRender(IIII)V
     .locals 8
 
-    .line 1
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     const-string v1, "construct InitRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mRender:J
 
     move v4, p1
@@ -829,7 +749,6 @@
 .method public PauseRunning()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->PausePipelineJni(J)J
@@ -844,31 +763,26 @@
 .method public PushExtraYAndUVFrame(Landroid/media/Image;)V
     .locals 12
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 2
     aget-object v2, v0, v1
 
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v7
 
-    .line 3
     iget-boolean v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_is_initialized:Z
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-wide v3, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     aget-object v1, v0, v1
 
-    .line 5
     invoke-virtual {v1}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v5
@@ -885,7 +799,6 @@
 
     move-result v8
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v0
@@ -896,7 +809,6 @@
 
     iget v11, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_run_state:I
 
-    .line 7
     invoke-static/range {v3 .. v11}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->PushExtraYAndUVFrameJni(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IIJI)J
 
     move-result-wide v0
@@ -910,7 +822,6 @@
 .method public RecoverRunning()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RecoverPipelineJni(J)J
@@ -925,7 +836,6 @@
 .method public RenderFrame()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mRender:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RenderFrameJni(J)V
@@ -936,10 +846,8 @@
 .method public SetEncodeType(I)Z
     .locals 4
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_encode_type:I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget-object v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_save_video_path:Ljava/lang/String;
@@ -952,7 +860,6 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -963,10 +870,8 @@
 .method public SetFilmSizeState(I)Z
     .locals 4
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_film_state:I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget-object v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_save_video_path:Ljava/lang/String;
@@ -979,7 +884,6 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -990,10 +894,8 @@
 .method public SetMovingMode(I)Z
     .locals 4
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_moving_type:I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget-wide v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_zoom_rate:D
@@ -1004,7 +906,6 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -1015,13 +916,10 @@
 .method public SetRotation(I)Z
     .locals 11
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_rotate_angle:I
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RefreshReferenceBox()V
 
-    .line 3
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_rotate_angle:I
@@ -1040,7 +938,6 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 4
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -1051,10 +948,8 @@
 .method public SetSavePath(Ljava/lang/String;)Z
     .locals 4
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_save_video_path:Ljava/lang/String;
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_encode_type:I
@@ -1067,7 +962,6 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -1080,7 +974,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     sget-object v0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1103,7 +996,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetDollyZoomOutputFDJni(JLjava/io/FileDescriptor;)J
@@ -1112,14 +1004,12 @@
 
     iput-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
 
     return p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1133,10 +1023,8 @@
 .method public SetZoomRate(D)Z
     .locals 3
 
-    .line 1
     iput-wide p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_zoom_rate:D
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     iget v2, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_moving_type:I
@@ -1147,7 +1035,6 @@
 
     iput-wide p1, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
-    .line 3
     invoke-static {p1, p2}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetLastSetOPIsOK(J)Z
 
     move-result p1
@@ -1158,7 +1045,6 @@
 .method public StartRecording()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->ResetDollyZoomStateJni(J)J
@@ -1169,7 +1055,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_run_state:I
 
     return-void
@@ -1178,7 +1063,6 @@
 .method public StopRecording()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->mDollyZoomBlock:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->DoSomethingAtStopJni(J)J
@@ -1189,7 +1073,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->m_flag_run_state:I
 
     return-void

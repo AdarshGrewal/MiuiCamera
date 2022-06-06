@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera/resource/BaseResourceList<",
-        "Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;",
+        "Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;",
         ">;"
     }
 .end annotation
@@ -33,12 +33,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseResourceList;-><init>()V
 
     const-string v0, "mimojilist"
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->currentListVersionTag:Ljava/lang/String;
 
     return-void
@@ -51,7 +49,6 @@
 
     const-string v0, "data"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
@@ -62,7 +59,6 @@
 .method public getListTag()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->currentListVersionTag:Ljava/lang/String;
 
     return-object v0
@@ -71,7 +67,6 @@
 .method public getLocalVersion(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/resource/BaseResourceList;->version:Ljava/lang/String;
 
     return-object p1
@@ -90,7 +85,6 @@
 
     const-string/jumbo v0, "version"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -99,7 +93,6 @@
 
     const-string v0, "material_version"
 
-    .line 2
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +101,6 @@
 
     const-string v0, "material_size"
 
-    .line 3
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -118,19 +110,16 @@
     return-void
 .end method
 
-.method public parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+.method public parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
     .locals 1
 
-    .line 2
-    new-instance v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;-><init>()V
+    invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;-><init>()V
 
-    .line 3
-    invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->parseSummaryData(Lorg/json/JSONObject;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->parseSummaryData(Lorg/json/JSONObject;I)V
 
-    .line 4
-    iget-boolean p1, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->isValid:Z
+    iget-boolean p1, v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->isValid:Z
 
     if-nez p1, :cond_0
 
@@ -145,8 +134,7 @@
 .method public bridge synthetic parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/BaseResourceItem;
     .locals 0
 
-    .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
     move-result-object p1
 
@@ -158,13 +146,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/resource/BaseResourceList;->departed:Z
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->currentListVersionTag:Ljava/lang/String;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -185,7 +170,6 @@
 .method public stateAllReady()Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object v0
@@ -205,10 +189,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast v1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 2
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->isCloudItem()Z
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->isCloudItem()Z
 
     move-result v2
 

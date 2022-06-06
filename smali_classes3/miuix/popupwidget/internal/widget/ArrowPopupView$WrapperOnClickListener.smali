@@ -27,7 +27,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$WrapperOnClickListener;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +39,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$WrapperOnClickListener;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$WrapperOnClickListener;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
@@ -66,7 +62,6 @@
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$WrapperOnClickListener;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-void

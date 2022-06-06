@@ -50,7 +50,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->createTag(Ljava/lang/Class;)Ljava/lang/String;
@@ -65,33 +64,26 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;IILandroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mSetupWizard:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->getActivity()Lcom/android/camera/ActivityBase;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->getRemoteDeviceList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mRemoteDeviceList:Ljava/util/List;
 
-    .line 5
     iput-object p4, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 6
     iput p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mIconWidth:I
 
-    .line 7
     iput p3, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mIconHeight:I
 
     return-void
@@ -102,7 +94,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mRemoteDeviceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -115,7 +106,6 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->onBindViewHolder(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;I)V
@@ -126,7 +116,6 @@
 .method public onBindViewHolder(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;I)V
     .locals 9
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -145,7 +134,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mRemoteDeviceList:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -156,38 +144,32 @@
 
     const/4 v0, -0x1
 
-    const v1, 0x7f0803a4
+    const v1, 0x7f0803a2
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    const v4, 0x7f060332
+    const v4, 0x7f060330
 
     if-nez p2, :cond_0
 
-    .line 4
     sget-object p2, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
     const-string/jumbo v5, "onBindViewHolder: null"
 
     invoke-static {p2, v5}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {p1, v3}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setEnabled(Z)V
 
     const-string p2, "UNKNOWN"
 
-    .line 6
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceName(Ljava/lang/String;)V
 
-    .line 7
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceId(I)V
 
-    .line 8
     invoke-virtual {p1, v2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 9
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v4}, Landroid/content/Context;->getColor(I)I
@@ -196,7 +178,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 10
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -205,12 +186,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 11
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     return-void
 
-    .line 12
     :cond_0
     iget-object v5, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mSetupWizard:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
@@ -218,7 +197,6 @@
 
     move-result v5
 
-    .line 13
     sget-object v6, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -239,7 +217,6 @@
 
     if-eq v5, v0, :cond_7
 
-    .line 14
     iget v0, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->id:I
 
     if-ne v0, v5, :cond_1
@@ -251,21 +228,17 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 15
     :goto_0
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setEnabled(Z)V
 
-    .line 16
     iget-object v5, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v5}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceName(Ljava/lang/String;)V
 
-    .line 17
     iget v5, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->id:I
 
     invoke-virtual {p1, v5}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceId(I)V
 
-    .line 18
     sget-object v5, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -286,23 +259,21 @@
 
     if-eqz v0, :cond_6
 
-    .line 19
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
     const-string/jumbo v5, "onBindViewHolder: selected state & selected item"
 
     invoke-static {v0, v5}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     iget p2, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->connectivity:I
 
     if-eq p2, v3, :cond_5
 
     const/4 v0, 0x7
 
-    const v3, 0x7f0803a0
+    const v3, 0x7f08039e
 
-    const v5, 0x7f060331
+    const v5, 0x7f06032f
 
     if-eq p2, v0, :cond_4
 
@@ -318,7 +289,6 @@
 
     if-eq p2, v0, :cond_2
 
-    .line 21
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v4}, Landroid/content/Context;->getColor(I)I
@@ -327,10 +297,8 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 22
     invoke-virtual {p1, v2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 23
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -339,12 +307,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 24
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     goto/16 :goto_1
 
-    .line 25
     :cond_2
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
@@ -352,7 +318,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f1205b3
+    const v0, 0x7f12057d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -360,7 +326,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 26
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v5}, Landroid/content/Context;->getColor(I)I
@@ -369,7 +334,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 27
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -378,12 +342,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 28
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     goto/16 :goto_1
 
-    .line 29
     :cond_3
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
@@ -391,7 +353,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f1205b2
+    const v0, 0x7f12057c
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -399,7 +361,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 30
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v5}, Landroid/content/Context;->getColor(I)I
@@ -408,7 +369,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 31
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -417,12 +377,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 32
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     goto :goto_1
 
-    .line 33
     :cond_4
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
@@ -430,7 +388,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f1205ae
+    const v0, 0x7f120578
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -438,7 +396,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 34
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v5}, Landroid/content/Context;->getColor(I)I
@@ -447,7 +404,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 35
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -456,12 +412,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 36
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     goto :goto_1
 
-    .line 37
     :cond_5
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
@@ -469,7 +423,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f1205af
+    const v0, 0x7f120579
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -477,7 +431,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 38
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v4}, Landroid/content/Context;->getColor(I)I
@@ -486,10 +439,9 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 39
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0803a1
+    const v0, 0x7f08039f
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -497,12 +449,10 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 40
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->startRotate()V
 
     goto :goto_1
 
-    .line 41
     :cond_6
     sget-object p2, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
@@ -510,10 +460,8 @@
 
     invoke-static {p2, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     invoke-virtual {p1, v2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 43
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v4}, Landroid/content/Context;->getColor(I)I
@@ -522,7 +470,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 44
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -531,13 +478,11 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 45
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     :goto_1
     return-void
 
-    .line 46
     :cond_7
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->TAG:Ljava/lang/String;
 
@@ -545,23 +490,18 @@
 
     invoke-static {v0, v5}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     invoke-virtual {p1, v3}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setEnabled(Z)V
 
-    .line 48
     iget-object v0, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceName(Ljava/lang/String;)V
 
-    .line 49
     iget p2, p2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->id:I
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceId(I)V
 
-    .line 50
     invoke-virtual {p1, v2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatus(Ljava/lang/String;)V
 
-    .line 51
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v4}, Landroid/content/Context;->getColor(I)I
@@ -570,7 +510,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceStatusTextColor(I)V
 
-    .line 52
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -579,7 +518,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->setDeviceIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 53
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->stopRotate()V
 
     return-void
@@ -588,7 +526,6 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
 
     move-result-object p1
@@ -599,14 +536,13 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
     .locals 2
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p2
 
-    const v0, 0x7f0d0170
+    const v0, 0x7f0d016f
 
     const/4 v1, 0x0
 
@@ -614,15 +550,12 @@
 
     move-result-object p1
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera/animation/FolmeUtils;->handleListItemTouch(Landroid/view/View;)V
 
-    .line 5
     new-instance p2, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
 
     iget v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter;->mIconWidth:I

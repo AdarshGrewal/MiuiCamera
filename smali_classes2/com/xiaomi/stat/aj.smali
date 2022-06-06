@@ -6,7 +6,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/stat/MiStatParams;-><init>()V
 
     return-void
@@ -15,7 +14,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/MiStatParams;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/MiStatParams;-><init>(Lcom/xiaomi/stat/MiStatParams;)V
 
     return-void

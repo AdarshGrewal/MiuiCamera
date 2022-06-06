@@ -53,13 +53,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream;-><init>(Lio/reactivex/Flowable;)V
 
-    .line 2
     iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;->mapper:Lio/reactivex/functions/Function;
 
-    .line 3
     iput p3, p0, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;->prefetch:I
 
     return-void
@@ -77,14 +74,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream;->source:Lio/reactivex/Flowable;
 
     instance-of v1, v0, Ljava/util/concurrent/Callable;
 
     if-eqz v1, :cond_1
 
-    .line 2
     :try_start_0
     check-cast v0, Ljava/util/concurrent/Callable;
 
@@ -96,12 +91,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->complete(Lorg/reactivestreams/Subscriber;)V
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_1
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;->mapper:Lio/reactivex/functions/Function;
@@ -112,14 +105,12 @@
 
     check-cast v0, Ljava/lang/Iterable;
 
-    .line 5
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/operators/flowable/FlowableFromIterable;->subscribe(Lorg/reactivestreams/Subscriber;Ljava/util/Iterator;)V
 
     return-void
@@ -127,10 +118,8 @@
     :catchall_0
     move-exception v0
 
-    .line 7
     invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 8
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->error(Ljava/lang/Throwable;Lorg/reactivestreams/Subscriber;)V
 
     return-void
@@ -138,15 +127,12 @@
     :catchall_1
     move-exception v0
 
-    .line 9
     invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 10
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->error(Ljava/lang/Throwable;Lorg/reactivestreams/Subscriber;)V
 
     return-void
 
-    .line 11
     :cond_1
     new-instance v1, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable$FlattenIterableSubscriber;
 

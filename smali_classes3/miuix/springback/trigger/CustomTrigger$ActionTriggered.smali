@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Lmiuix/springback/trigger/TriggerState;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lmiuix/springback/trigger/CustomTrigger;Lmiuix/springback/trigger/CustomTrigger$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;-><init>(Lmiuix/springback/trigger/CustomTrigger;)V
 
     return-void
@@ -46,7 +44,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget-object p2, p1, Lmiuix/springback/trigger/CustomTrigger;->mIdle:Lmiuix/springback/trigger/CustomTrigger$Idle;
@@ -60,7 +57,6 @@
 .method public handleScrolled(II)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {p1}, Lmiuix/springback/trigger/CustomTrigger;->access$600(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/BaseTrigger$Action;
@@ -79,7 +75,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget p2, p1, Lmiuix/springback/trigger/CustomTrigger;->mScrollDistance:I
@@ -102,14 +97,12 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 3
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     const/4 p2, -0x1
 
     invoke-static {p1, p2}, Lmiuix/springback/trigger/CustomTrigger;->access$2202(Lmiuix/springback/trigger/CustomTrigger;I)I
 
-    .line 4
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionTriggered;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget-object p2, p1, Lmiuix/springback/trigger/CustomTrigger;->mTracking:Lmiuix/springback/trigger/CustomTrigger$Tracking;

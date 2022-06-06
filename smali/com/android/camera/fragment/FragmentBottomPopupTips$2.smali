@@ -45,12 +45,10 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentBottomPopupTips;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -63,7 +61,6 @@
 .method private getKey(Landroid/view/View;)I
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -96,7 +92,6 @@
 .method public onComplete()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -105,7 +100,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$100(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -114,7 +108,6 @@
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$100(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -127,7 +120,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -145,7 +137,6 @@
 
     const/4 v1, 0x0
 
-    .line 5
     :goto_0
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
@@ -159,7 +150,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v2}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$100(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -170,12 +160,10 @@
 
     move-result-object v2
 
-    .line 7
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->getKey(Landroid/view/View;)I
 
     move-result v3
 
-    .line 8
     iget-object v4, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -190,12 +178,10 @@
 
     if-nez v4, :cond_1
 
-    .line 9
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 10
     :cond_1
     invoke-virtual {v4}, Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem;->getUpdateListener()Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem$UpdateListener;
 
@@ -203,14 +189,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 11
     invoke-virtual {v4}, Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem;->getUpdateListener()Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem$UpdateListener;
 
     move-result-object v4
 
     invoke-interface {v4, v2}, Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem$UpdateListener;->onUpdate(Landroid/view/View;)V
 
-    .line 12
     :cond_2
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
 
@@ -225,7 +209,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -244,7 +227,6 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 14
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v2}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$100(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -255,7 +237,6 @@
 
     goto :goto_2
 
-    .line 15
     :cond_4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
 
@@ -280,7 +261,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 16
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
@@ -308,7 +288,6 @@
 .method public onNext(Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem;)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$300(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -329,7 +308,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$300(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -338,7 +316,6 @@
 
     invoke-static {v0}, Lcom/android/camera/animation/folme/FolmeAlphaInOnSubscribe;->directSetResult(Landroid/view/View;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->addedViews:Ljava/util/Map;
 
@@ -358,7 +335,6 @@
 .method public bridge synthetic onNext(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->onNext(Lcom/android/camera/fragment/modeui/panelentrance/CustomViewEntranceItem;)V
@@ -369,7 +345,6 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$100(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/widget/FrameLayout;
@@ -380,7 +355,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$2;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$202(Lcom/android/camera/fragment/FragmentBottomPopupTips;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;

@@ -29,7 +29,6 @@
 
     const-string/jumbo v6, "\u661f\u671f\u516d"
 
-    .line 1
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 
     move-result-object v0
@@ -42,7 +41,6 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/aiwatermark/handler/TimeHandler;-><init>(Z)V
 
     return-void

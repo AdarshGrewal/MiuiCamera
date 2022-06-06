@@ -54,10 +54,8 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     const-string v1, "capacityHint"
@@ -83,12 +81,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget p1, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     add-int/lit8 p1, p1, 0x1
@@ -101,12 +97,10 @@
 .method public addFinal(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget p1, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     const/4 v0, 0x1
@@ -115,7 +109,6 @@
 
     iput p1, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
-    .line 3
     iput-boolean v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->done:Z
 
     return-void
@@ -129,24 +122,20 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_3
 
-    .line 2
     iget-object v2, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     add-int/lit8 v3, v0, -0x1
 
-    .line 3
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 4
     invoke-static {v3}, Lio/reactivex/internal/util/NotificationLite;->isComplete(Ljava/lang/Object;)Z
 
     move-result v4
@@ -175,7 +164,6 @@
     :cond_2
     add-int/lit8 v0, v0, -0x2
 
-    .line 5
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -194,7 +182,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     const/4 v1, 0x0
@@ -203,29 +190,24 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     array-length v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 3
     aput-object v1, p1, v2
 
     :cond_0
     return-object p1
 
-    .line 4
     :cond_1
     iget-object v3, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     add-int/lit8 v4, v0, -0x1
 
-    .line 5
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 6
     invoke-static {v4}, Lio/reactivex/internal/util/NotificationLite;->isComplete(Ljava/lang/Object;)Z
 
     move-result v5
@@ -243,24 +225,20 @@
 
     if-nez v0, :cond_4
 
-    .line 7
     array-length v0, p1
 
     if-eqz v0, :cond_3
 
-    .line 8
     aput-object v1, p1, v2
 
     :cond_3
     return-object p1
 
-    .line 9
     :cond_4
     array-length v4, p1
 
     if-ge v4, v0, :cond_5
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -279,7 +257,6 @@
     :goto_0
     if-ge v2, v0, :cond_6
 
-    .line 11
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -290,13 +267,11 @@
 
     goto :goto_0
 
-    .line 12
     :cond_6
     array-length v2, p1
 
     if-le v2, v0, :cond_7
 
-    .line 13
     aput-object v1, p1, v0
 
     :cond_7
@@ -313,7 +288,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
@@ -322,14 +296,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
-    .line 3
     iget-object v1, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->actual:Lio/reactivex/Observer;
 
-    .line 4
     iget-object v2, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->index:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -340,14 +311,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 5
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -358,7 +327,6 @@
     :goto_0
     move v2, v4
 
-    .line 7
     :cond_2
     :goto_1
     iget-boolean v5, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->cancelled:Z
@@ -367,35 +335,29 @@
 
     if-eqz v5, :cond_3
 
-    .line 8
     iput-object v6, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->index:Ljava/lang/Object;
 
     return-void
 
-    .line 9
     :cond_3
     iget v5, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     :goto_2
     if-eq v5, v3, :cond_7
 
-    .line 10
     iget-boolean v7, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->cancelled:Z
 
     if-eqz v7, :cond_4
 
-    .line 11
     iput-object v6, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->index:Ljava/lang/Object;
 
     return-void
 
-    .line 12
     :cond_4
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    .line 13
     iget-boolean v8, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->done:Z
 
     if-eqz v8, :cond_6
@@ -404,24 +366,20 @@
 
     if-ne v8, v5, :cond_6
 
-    .line 14
     iget v5, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     if-ne v8, v5, :cond_6
 
-    .line 15
     invoke-static {v7}, Lio/reactivex/internal/util/NotificationLite;->isComplete(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 16
     invoke-interface {v1}, Lio/reactivex/Observer;->onComplete()V
 
     goto :goto_3
 
-    .line 17
     :cond_5
     invoke-static {v7}, Lio/reactivex/internal/util/NotificationLite;->getError(Ljava/lang/Object;)Ljava/lang/Throwable;
 
@@ -429,16 +387,13 @@
 
     invoke-interface {v1, v0}, Lio/reactivex/Observer;->onError(Ljava/lang/Throwable;)V
 
-    .line 18
     :goto_3
     iput-object v6, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->index:Ljava/lang/Object;
 
-    .line 19
     iput-boolean v4, p1, Lio/reactivex/subjects/ReplaySubject$ReplayDisposable;->cancelled:Z
 
     return-void
 
-    .line 20
     :cond_6
     invoke-interface {v1, v7}, Lio/reactivex/Observer;->onNext(Ljava/lang/Object;)V
 
@@ -446,7 +401,6 @@
 
     goto :goto_2
 
-    .line 21
     :cond_7
     iget v5, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
@@ -454,7 +408,6 @@
 
     goto :goto_1
 
-    .line 22
     :cond_8
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -464,7 +417,6 @@
 
     neg-int v2, v2
 
-    .line 23
     invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
     move-result v2
@@ -477,12 +429,10 @@
 .method public size()I
     .locals 4
 
-    .line 1
     iget v0, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->size:I
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-object v1, p0, Lio/reactivex/subjects/ReplaySubject$UnboundedReplayBuffer;->buffer:Ljava/util/List;
 
     add-int/lit8 v2, v0, -0x1
@@ -491,7 +441,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Lio/reactivex/internal/util/NotificationLite;->isComplete(Ljava/lang/Object;)Z
 
     move-result v3

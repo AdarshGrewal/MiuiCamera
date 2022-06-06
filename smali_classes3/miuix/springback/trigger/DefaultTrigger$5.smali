@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/DefaultTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -82,7 +81,6 @@
 .method public onViewStart(I)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {p1}, Lmiuix/springback/trigger/DefaultTrigger;->access$700(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/ViewGroup;
@@ -93,7 +91,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-virtual {p1}, Lmiuix/springback/trigger/BaseTrigger;->getIndeterminateUpAction()Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;
@@ -102,14 +99,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->isNoData()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$500(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/View;
@@ -120,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$400(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
@@ -129,7 +123,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 6
     invoke-virtual {p1}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->getCountNoData()I
 
     move-result v0
@@ -138,7 +131,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 7
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$300(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
@@ -155,7 +147,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
@@ -174,7 +165,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 9
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v1}, Lmiuix/springback/trigger/DefaultTrigger;->access$500(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/View;
@@ -183,7 +173,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 10
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v1}, Lmiuix/springback/trigger/DefaultTrigger;->access$400(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
@@ -192,7 +181,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 11
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v1}, Lmiuix/springback/trigger/DefaultTrigger;->access$300(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
@@ -201,7 +189,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 12
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger$5;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v1}, Lmiuix/springback/trigger/DefaultTrigger;->access$300(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;

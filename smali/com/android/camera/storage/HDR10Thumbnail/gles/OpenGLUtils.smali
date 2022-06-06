@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static floatToBuffer([F)Ljava/nio/FloatBuffer;
     .locals 2
 
-    .line 1
     array-length v0, p0
 
     mul-int/lit8 v0, v0, 0x4
@@ -29,24 +27,20 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     const/4 p0, 0x0
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object v0
@@ -72,10 +66,8 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 2
     aget p1, v2, v3
 
     invoke-static {v4, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -84,36 +76,29 @@
 
     const v0, 0x46180400    # 9729.0f
 
-    .line 3
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2801
 
-    .line 4
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2802
 
     const v0, 0x47012f00    # 33071.0f
 
-    .line 5
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2803
 
-    .line 6
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 7
     invoke-static {v4, v3, p0, v3}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     goto :goto_0
 
-    .line 8
     :cond_1
     invoke-static {v4, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 9
     invoke-static {v4, v3, p0, v3}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     aput p1, v2, v3
@@ -121,10 +106,8 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 10
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 11
     :cond_2
     aget p0, v2, v3
 
@@ -138,10 +121,8 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/storage/HDR10Thumbnail/gles/OpenGLUtils;->floatToBuffer([F)Ljava/nio/FloatBuffer;
 
     move-result-object v9
@@ -152,10 +133,8 @@
 
     const/4 v11, 0x0
 
-    .line 3
     invoke-static {v0, v10, v11}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 4
     aget v0, v10, v11
 
     const/16 v12, 0xde1
@@ -178,37 +157,30 @@
 
     const/16 v8, 0x1406
 
-    .line 5
     invoke-static/range {v1 .. v9}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     const v0, 0x47012f00    # 33071.0f
 
     const/16 v1, 0x2802
 
-    .line 6
     invoke-static {v12, v1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v1, 0x2803
 
-    .line 7
     invoke-static {v12, v1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2601
 
     const/16 v1, 0x2801
 
-    .line 8
     invoke-static {v12, v1, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v1, 0x2800
 
-    .line 9
     invoke-static {v12, v1, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 10
     invoke-static {v12, v11}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 11
     aget v0, v10, v11
 
     return v0

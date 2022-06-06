@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender$1;->this$0:Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +55,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender$1;->this$0:Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender;->access$000(Lcom/android/camera/module/impl/component/MiFilmDreamGLSurfaceViewRender;)Landroid/opengl/GLSurfaceView;

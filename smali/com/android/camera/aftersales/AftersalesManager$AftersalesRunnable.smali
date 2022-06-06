@@ -31,18 +31,14 @@
 .method public constructor <init>(Lcom/android/camera/aftersales/AftersalesManager;JII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->this$0:Lcom/android/camera/aftersales/AftersalesManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p2, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->time:J
 
-    .line 3
     iput p4, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->id:I
 
-    .line 4
     iput p5, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->cameraId:I
 
     return-void
@@ -53,7 +49,6 @@
 .method public run()V
     .locals 5
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->id:I
 
     packed-switch v0, :pswitch_data_0
@@ -62,12 +57,10 @@
 
     const-string v1, "could not count this event"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3
     :pswitch_0
     iget-object v0, p0, Lcom/android/camera/aftersales/AftersalesManager$AftersalesRunnable;->this$0:Lcom/android/camera/aftersales/AftersalesManager;
 

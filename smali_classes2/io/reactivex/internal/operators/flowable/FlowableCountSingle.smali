@@ -50,10 +50,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCountSingle;->source:Lio/reactivex/Flowable;
 
     return-void
@@ -72,7 +70,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCount;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableCountSingle;->source:Lio/reactivex/Flowable;
@@ -98,7 +95,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCountSingle;->source:Lio/reactivex/Flowable;
 
     new-instance v1, Lio/reactivex/internal/operators/flowable/FlowableCountSingle$CountSubscriber;

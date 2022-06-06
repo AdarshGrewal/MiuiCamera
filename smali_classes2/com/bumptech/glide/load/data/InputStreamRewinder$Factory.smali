@@ -34,10 +34,8 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     return-void
@@ -58,7 +56,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/load/data/InputStreamRewinder;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
@@ -71,7 +68,6 @@
 .method public bridge synthetic build(Ljava/lang/Object;)Lcom/bumptech/glide/load/data/DataRewinder;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/InputStreamRewinder$Factory;->build(Ljava/io/InputStream;)Lcom/bumptech/glide/load/data/DataRewinder;
@@ -92,7 +88,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Ljava/io/InputStream;
 
     return-object v0

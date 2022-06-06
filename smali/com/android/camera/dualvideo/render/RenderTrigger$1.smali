@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/RenderTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RenderTrigger$1;->this$0:Lcom/android/camera/dualvideo/render/RenderTrigger;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -35,7 +34,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RenderTrigger$1;->this$0:Lcom/android/camera/dualvideo/render/RenderTrigger;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/RenderTrigger;->access$000(Lcom/android/camera/dualvideo/render/RenderTrigger;)Lio/reactivex/ObservableEmitter;
@@ -56,7 +54,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RenderTrigger$1;->this$0:Lcom/android/camera/dualvideo/render/RenderTrigger;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/RenderTrigger;->access$100(Lcom/android/camera/dualvideo/render/RenderTrigger;)Ljava/lang/Object;
@@ -65,7 +62,6 @@
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/RenderTrigger$1;->this$0:Lcom/android/camera/dualvideo/render/RenderTrigger;
 
@@ -81,7 +77,6 @@
 
     invoke-interface {v1, v2}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
-    .line 4
     monitor-exit v0
 
     goto :goto_0

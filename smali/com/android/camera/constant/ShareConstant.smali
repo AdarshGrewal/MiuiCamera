@@ -27,7 +27,6 @@
 
     const-string v5, "com.sina.weibo.composerinde.ComposerDispatchActivity"
 
-    .line 1
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -38,14 +37,12 @@
 
     new-array v1, v0, [I
 
-    .line 2
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/camera/constant/ShareConstant;->DEFAULT_SHARE_LIST_ICON:[I
 
     new-array v0, v0, [I
 
-    .line 3
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/camera/constant/ShareConstant;->DEFAULT_SHARE_LIST_NAME:[I
@@ -54,29 +51,28 @@
 
     :array_0
     .array-data 4
-        0x7f0802da
-        0x7f0802da
-        0x7f0802db
+        0x7f0802d6
+        0x7f0802d6
+        0x7f0802d7
+        0x7f0802d4
+        0x7f0802d5
         0x7f0802d8
-        0x7f0802d9
-        0x7f0802dc
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f120488
-        0x7f120488
-        0x7f120489
-        0x7f120486
-        0x7f120487
-        0x7f12048a
+        0x7f120466
+        0x7f120466
+        0x7f120467
+        0x7f120464
+        0x7f120465
+        0x7f120468
     .end array-data
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
 .method public d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 3
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -32,7 +30,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -44,7 +41,6 @@
 
     move-result-object p2
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -55,7 +51,6 @@
 .method public e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 3
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -66,7 +61,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -78,7 +72,6 @@
 
     move-result-object p2
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
@@ -89,7 +82,6 @@
 .method public i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 3
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -100,7 +92,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -112,7 +103,6 @@
 
     move-result-object p2
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -125,7 +115,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 1
     array-length v0, p4
 
     if-nez v0, :cond_0
@@ -143,7 +132,6 @@
 
     const-string p3, ""
 
-    .line 2
     :cond_2
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -165,7 +153,6 @@
 
     move-result-object p2
 
-    .line 3
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -174,7 +161,6 @@
 .method public v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 3
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -185,7 +171,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -197,7 +182,6 @@
 
     move-result-object p2
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
@@ -208,7 +192,6 @@
 .method public w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 3
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -219,7 +202,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -231,7 +213,6 @@
 
     move-result-object p2
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I

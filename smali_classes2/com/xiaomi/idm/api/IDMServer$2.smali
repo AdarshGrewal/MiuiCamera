@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMServer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$2;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onEvent(Lcom/xiaomi/idm/api/IDMService;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -61,7 +59,6 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$2;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
@@ -70,13 +67,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     :try_start_0
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event;->newBuilder()Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event$Builder;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/IDMService;->getIDMServiceProto()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object p1
@@ -85,19 +80,16 @@
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event$Builder;->setIdmEvent(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event$Builder;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 
     check-cast p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$Event;
 
-    .line 7
     iget-object p2, p0, Lcom/xiaomi/idm/api/IDMServer$2;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     iget-object p2, p2, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -121,7 +113,6 @@
     :catch_0
     move-exception p1
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
@@ -135,7 +126,6 @@
 
     const-string p2, "onEvent, but service unavailable"
 
-    .line 9
     invoke-static {v3, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0

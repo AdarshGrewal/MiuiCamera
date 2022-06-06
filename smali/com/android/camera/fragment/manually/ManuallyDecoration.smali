@@ -15,28 +15,22 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerWidth:I
 
-    .line 3
     iput p1, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerWidth:I
 
-    .line 4
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerPaint:Landroid/graphics/Paint;
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
@@ -49,7 +43,6 @@
 .method public getItemOffsets(Landroid/graphics/Rect;ILandroidx/recyclerview/widget/RecyclerView;)V
     .locals 3
 
-    .line 1
     iget p3, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mSpanCount:I
 
     add-int/lit8 v0, p3, -0x1
@@ -62,7 +55,6 @@
 
     sub-int v2, v1, v0
 
-    .line 2
     rem-int p3, p2, p3
 
     mul-int/2addr p3, v2
@@ -76,7 +68,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 3
     invoke-virtual {p1, p3, p2, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
@@ -87,7 +78,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
@@ -99,29 +89,24 @@
 
     move-object/from16 v3, p2
 
-    .line 2
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 3
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
     check-cast v5, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
-    .line 4
     invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
     move-result v6
 
-    .line 5
     invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
     move-result v7
 
-    .line 6
     invoke-virtual {v4}, Landroid/view/View;->getBottom()I
 
     move-result v8
@@ -130,12 +115,10 @@
 
     add-int/2addr v8, v9
 
-    .line 7
     iget v9, v0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerWidth:I
 
     add-int/2addr v9, v8
 
-    .line 8
     iget-object v15, v0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerPaint:Landroid/graphics/Paint;
 
     if-eqz v15, :cond_0
@@ -150,16 +133,13 @@
 
     move-object/from16 v10, p1
 
-    .line 9
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 10
     :cond_0
     invoke-virtual {v4}, Landroid/view/View;->getTop()I
 
     move-result v6
 
-    .line 11
     invoke-virtual {v4}, Landroid/view/View;->getBottom()I
 
     move-result v7
@@ -168,7 +148,6 @@
 
     add-int/2addr v7, v8
 
-    .line 12
     invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
     move-result v4
@@ -177,12 +156,10 @@
 
     add-int/2addr v4, v5
 
-    .line 13
     iget v5, v0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerWidth:I
 
     add-int/2addr v5, v4
 
-    .line 14
     iget-object v13, v0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mDividerPaint:Landroid/graphics/Paint;
 
     if-eqz v13, :cond_1
@@ -197,7 +174,6 @@
 
     move-object/from16 v8, p1
 
-    .line 15
     invoke-virtual/range {v8 .. v13}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     :cond_1
@@ -212,7 +188,6 @@
 .method public setStyle(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/manually/ManuallyDecoration;->mSpanCount:I
 
     return-void

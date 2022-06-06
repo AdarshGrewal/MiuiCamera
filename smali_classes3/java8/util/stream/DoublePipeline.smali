@@ -42,7 +42,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/Spliterator;IZ)V
 
     return-void
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/function/Supplier;IZ)V
 
     return-void
@@ -77,7 +75,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/stream/AbstractPipeline;I)V
 
     return-void
@@ -86,7 +83,6 @@
 .method public static synthetic access$000(Ljava8/util/Spliterator;)Ljava8/util/Spliterator$OfDouble;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/DoublePipeline;->adapt(Ljava8/util/Spliterator;)Ljava8/util/Spliterator$OfDouble;
 
     move-result-object p0
@@ -106,17 +102,14 @@
         }
     .end annotation
 
-    .line 4
     instance-of v0, p0, Ljava8/util/Spliterator$OfDouble;
 
     if-eqz v0, :cond_0
 
-    .line 5
     check-cast p0, Ljava8/util/Spliterator$OfDouble;
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -139,17 +132,14 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p0, Ljava8/util/function/DoubleConsumer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Ljava8/util/function/DoubleConsumer;
 
     return-object p0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -175,7 +165,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     aget-wide v1, p0, v0
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
@@ -184,12 +173,10 @@
 
     aput-wide v1, p0, v0
 
-    .line 2
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 v0, 0x3
 
-    .line 3
     aget-wide v1, p0, v0
 
     add-double/2addr v1, p1
@@ -204,14 +191,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p1, v0
 
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 v0, 0x1
 
-    .line 2
     aget-wide v0, p1, v0
 
     neg-double v0, v0
@@ -220,7 +205,6 @@
 
     const/4 v0, 0x2
 
-    .line 3
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -231,7 +215,6 @@
 
     const/4 v0, 0x3
 
-    .line 4
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -246,7 +229,6 @@
 .method public static synthetic lambda$collect$88(Ljava8/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1, p2}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object p1
@@ -255,7 +237,6 @@
 .method public static synthetic lambda$distinct$81(Ljava/lang/Double;)D
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -276,12 +257,10 @@
 .method public static synthetic lambda$sum$83([DD)V
     .locals 3
 
-    .line 1
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 v0, 0x2
 
-    .line 2
     aget-wide v1, p0, v0
 
     add-double/2addr v1, p1
@@ -296,14 +275,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p1, v0
 
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 v0, 0x1
 
-    .line 2
     aget-wide v0, p1, v0
 
     neg-double v0, v0
@@ -312,7 +289,6 @@
 
     const/4 v0, 0x2
 
-    .line 3
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -338,7 +314,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/DoublePipeline$1;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -363,7 +338,6 @@
 .method public final allMatch(Ljava8/util/function/DoublePredicate;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ALL:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeDouble(Ljava8/util/function/DoublePredicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -386,7 +360,6 @@
 .method public final anyMatch(Ljava8/util/function/DoublePredicate;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ANY:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeDouble(Ljava8/util/function/DoublePredicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -409,7 +382,6 @@
 .method public final average()Ljava8/util/OptionalDouble;
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$9;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -430,7 +402,6 @@
 
     const/4 v1, 0x2
 
-    .line 2
     aget-wide v2, v0, v1
 
     const-wide/16 v4, 0x0
@@ -439,7 +410,6 @@
 
     if-lez v2, :cond_0
 
-    .line 3
     invoke-static {v0}, Ljava8/util/stream/Collectors;->computeFinalSum([D)D
 
     move-result-wide v2
@@ -454,7 +424,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Ljava8/util/OptionalDouble;->empty()Ljava8/util/OptionalDouble;
 
@@ -475,7 +444,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$2;->lambdaFactory$()Ljava8/util/function/DoubleFunction;
 
     move-result-object v0
@@ -505,15 +473,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p3}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p3}, Ljava8/util/stream/DoublePipeline$$Lambda$14;->lambdaFactory$(Ljava8/util/function/BiConsumer;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p3
 
-    .line 3
     invoke-static {p1, p2, p3}, Ljava8/util/stream/ReduceOps;->makeDouble(Ljava8/util/function/Supplier;Ljava8/util/function/ObjDoubleConsumer;Ljava8/util/function/BinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -528,7 +493,6 @@
 .method public final count()J
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/ReduceOps;->makeDoubleCounting()Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -549,7 +513,6 @@
 .method public final distinct()Ljava8/util/stream/DoubleStream;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/DoublePipeline;->boxed()Ljava8/util/stream/Stream;
 
     move-result-object v0
@@ -572,7 +535,6 @@
 .method public final dropWhile(Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/WhileOps;->makeDropWhileDouble(Ljava8/util/stream/AbstractPipeline;Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
@@ -602,7 +564,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2, p3}, Ljava8/util/stream/Nodes;->collectDouble(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Z)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -613,10 +574,8 @@
 .method public final filter(Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$7;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -641,7 +600,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Ljava8/util/stream/FindOps;->makeDouble(Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -660,7 +618,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {v0}, Ljava8/util/stream/FindOps;->makeDouble(Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -687,10 +644,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$5;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -723,7 +678,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p1, v0}, Ljava8/util/stream/ForEachOps;->makeDouble(Ljava8/util/function/DoubleConsumer;Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -738,7 +692,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p1, v0}, Ljava8/util/stream/ForEachOps;->makeDouble(Ljava8/util/function/DoubleConsumer;Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -762,17 +715,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/stream/DoublePipeline;->adapt(Ljava8/util/Spliterator;)Ljava8/util/Spliterator$OfDouble;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p2}, Ljava8/util/stream/DoublePipeline;->adapt(Ljava8/util/stream/Sink;)Ljava8/util/function/DoubleConsumer;
 
     move-result-object v0
 
-    .line 3
     :cond_0
     invoke-interface {p2}, Ljava8/util/stream/Sink;->cancellationRequested()Z
 
@@ -793,7 +743,6 @@
 .method public final getOutputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
 
     return-object v0
@@ -802,7 +751,6 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/DoublePipeline;->iterator()Ljava8/util/PrimitiveIterator$OfDouble;
 
     move-result-object v0
@@ -813,7 +761,6 @@
 .method public final iterator()Ljava8/util/PrimitiveIterator$OfDouble;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/DoublePipeline;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -839,7 +786,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator$OfDouble;
 
     invoke-direct {v0, p1}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator$OfDouble;-><init>(Ljava8/util/function/Supplier;)V
@@ -850,7 +796,6 @@
 .method public bridge synthetic lazySpliterator(Ljava8/util/function/Supplier;)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/DoublePipeline;->lazySpliterator(Ljava8/util/function/Supplier;)Ljava8/util/Spliterator$OfDouble;
 
     move-result-object p1
@@ -867,14 +812,12 @@
 
     if-ltz v2, :cond_0
 
-    .line 1
     invoke-static {p0, v0, v1, p1, p2}, Ljava8/util/stream/SliceOps;->makeDouble(Ljava8/util/stream/AbstractPipeline;JJ)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -902,7 +845,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2}, Ljava8/util/stream/Nodes;->doubleBuilder(J)Ljava8/util/stream/Node$Builder$OfDouble;
 
     move-result-object p1
@@ -913,10 +855,8 @@
 .method public final map(Ljava8/util/function/DoubleUnaryOperator;)Ljava8/util/stream/DoubleStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$2;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -943,10 +883,8 @@
 .method public final mapToInt(Ljava8/util/function/DoubleToIntFunction;)Ljava8/util/stream/IntStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$3;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -973,10 +911,8 @@
 .method public final mapToLong(Ljava8/util/function/DoubleToLongFunction;)Ljava8/util/stream/LongStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$4;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -1014,10 +950,8 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     sget v0, Ljava8/util/stream/StreamOpFlag;->NOT_SORTED:I
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->NOT_DISTINCT:I
@@ -1034,7 +968,6 @@
 .method public final max()Ljava8/util/OptionalDouble;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$8;->lambdaFactory$()Ljava8/util/function/DoubleBinaryOperator;
 
     move-result-object v0
@@ -1049,7 +982,6 @@
 .method public final min()Ljava8/util/OptionalDouble;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$7;->lambdaFactory$()Ljava8/util/function/DoubleBinaryOperator;
 
     move-result-object v0
@@ -1064,7 +996,6 @@
 .method public final noneMatch(Ljava8/util/function/DoublePredicate;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->NONE:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeDouble(Ljava8/util/function/DoublePredicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -1087,7 +1018,6 @@
 .method public bridge synthetic parallel()Ljava8/util/stream/DoubleStream;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/AbstractPipeline;->parallel()Ljava8/util/stream/BaseStream;
 
     move-result-object v0
@@ -1100,10 +1030,8 @@
 .method public final peek(Ljava8/util/function/DoubleConsumer;)Ljava8/util/stream/DoubleStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/DoublePipeline$8;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -1126,7 +1054,6 @@
 .method public final reduce(DLjava8/util/function/DoubleBinaryOperator;)D
     .locals 0
 
-    .line 1
     invoke-static {p1, p2, p3}, Ljava8/util/stream/ReduceOps;->makeDouble(DLjava8/util/function/DoubleBinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -1147,7 +1074,6 @@
 .method public final reduce(Ljava8/util/function/DoubleBinaryOperator;)Ljava8/util/OptionalDouble;
     .locals 0
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/ReduceOps;->makeDouble(Ljava8/util/function/DoubleBinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -1164,7 +1090,6 @@
 .method public bridge synthetic sequential()Ljava8/util/stream/DoubleStream;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/AbstractPipeline;->sequential()Ljava8/util/stream/BaseStream;
 
     move-result-object v0
@@ -1190,14 +1115,12 @@
     :cond_0
     const-wide/16 v0, -0x1
 
-    .line 1
     invoke-static {p0, p1, p2, v0, v1}, Ljava8/util/stream/SliceOps;->makeDouble(Ljava8/util/stream/AbstractPipeline;JJ)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1213,7 +1136,6 @@
 .method public final sorted()Ljava8/util/stream/DoubleStream;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/SortedOps;->makeDouble(Ljava8/util/stream/AbstractPipeline;)Ljava8/util/stream/DoubleStream;
 
     move-result-object v0
@@ -1224,7 +1146,6 @@
 .method public final spliterator()Ljava8/util/Spliterator$OfDouble;
     .locals 1
 
-    .line 2
     invoke-super {p0}, Ljava8/util/stream/AbstractPipeline;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -1239,7 +1160,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/DoublePipeline;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -1250,7 +1170,6 @@
 .method public final sum()D
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$4;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1269,7 +1188,6 @@
 
     check-cast v0, [D
 
-    .line 2
     invoke-static {v0}, Ljava8/util/stream/Collectors;->computeFinalSum([D)D
 
     move-result-wide v0
@@ -1280,7 +1198,6 @@
 .method public final summaryStatistics()Ljava8/util/DoubleSummaryStatistics;
     .locals 3
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Collectors;->DBL_SUM_STATS:Ljava8/util/function/Supplier;
 
     invoke-static {}, Ljava8/util/stream/DoublePipeline$$Lambda$12;->lambdaFactory$()Ljava8/util/function/ObjDoubleConsumer;
@@ -1303,7 +1220,6 @@
 .method public final takeWhile(Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/WhileOps;->makeTakeWhileDouble(Ljava8/util/stream/AbstractPipeline;Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
@@ -1314,7 +1230,6 @@
 .method public final toArray()[D
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/WhileOps;->DOUBLE_ARR_GEN:Ljava8/util/function/IntFunction;
 
     invoke-virtual {p0, v0}, Ljava8/util/stream/AbstractPipeline;->evaluateToArrayNode(Ljava8/util/function/IntFunction;)Ljava8/util/stream/Node;
@@ -1327,7 +1242,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0}, Ljava8/util/stream/Node$OfPrimitive;->asPrimitiveArray()Ljava/lang/Object;
 
     move-result-object v0
@@ -1340,7 +1254,6 @@
 .method public bridge synthetic unordered()Ljava8/util/stream/BaseStream;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/DoublePipeline;->unordered()Ljava8/util/stream/DoubleStream;
 
     move-result-object v0
@@ -1351,7 +1264,6 @@
 .method public unordered()Ljava8/util/stream/DoubleStream;
     .locals 3
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/AbstractPipeline;->isOrdered()Z
 
     move-result v0
@@ -1360,7 +1272,6 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava8/util/stream/DoublePipeline$6;
 
@@ -1392,7 +1303,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;
 
     invoke-direct {v0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/function/Supplier;Z)V

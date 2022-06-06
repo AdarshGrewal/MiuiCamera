@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable$1;->this$0:Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +42,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;
 
     invoke-virtual {p0, p1}, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable$1;->getValue(Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;)F
@@ -56,7 +54,6 @@
 .method public getValue(Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;)F
     .locals 0
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;->getBlackAlpha()F
 
     move-result p1
@@ -67,7 +64,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable$1;->setValue(Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;F)V
@@ -78,7 +74,6 @@
 .method public setValue(Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;F)V
     .locals 0
 
-    .line 2
     invoke-virtual {p1, p2}, Lmiuix/androidbasewidget/internal/view/SeekBarBackGroundShapeDrawable;->setBlackAlpha(F)V
 
     return-void

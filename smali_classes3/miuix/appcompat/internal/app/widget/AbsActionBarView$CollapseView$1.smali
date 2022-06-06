@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView$1;->this$0:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView$1;->this$0:Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->access$000(Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;)Ljava/util/List;
@@ -76,7 +74,6 @@
 
     aput-object v0, v1, v2
 
-    .line 2
     invoke-static {v1}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     goto :goto_0

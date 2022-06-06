@@ -13,13 +13,10 @@
 .method public constructor <init>(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/network/net/base/RequestError;->mErrorCode:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 3
     iput-object p3, p0, Lcom/android/camera/network/net/base/RequestError;->mResponseData:Ljava/lang/Object;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getErrorCode()Lcom/android/camera/network/net/base/ErrorCode;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/RequestError;->mErrorCode:Lcom/android/camera/network/net/base/ErrorCode;
 
     return-object v0
@@ -39,7 +35,6 @@
 .method public getResponseData()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/RequestError;->mResponseData:Ljava/lang/Object;
 
     return-object v0
@@ -48,7 +43,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

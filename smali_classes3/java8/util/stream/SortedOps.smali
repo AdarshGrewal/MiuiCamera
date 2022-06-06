@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SortedOps$OfDouble;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/SortedOps$OfDouble;-><init>(Ljava8/util/stream/AbstractPipeline;)V
@@ -74,7 +72,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SortedOps$OfInt;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/SortedOps$OfInt;-><init>(Ljava8/util/stream/AbstractPipeline;)V
@@ -97,7 +94,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SortedOps$OfLong;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/SortedOps$OfLong;-><init>(Ljava8/util/stream/AbstractPipeline;)V
@@ -119,7 +115,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SortedOps$OfRef;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/SortedOps$OfRef;-><init>(Ljava8/util/stream/AbstractPipeline;)V
@@ -143,7 +138,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/SortedOps$OfRef;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/SortedOps$OfRef;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava/util/Comparator;)V

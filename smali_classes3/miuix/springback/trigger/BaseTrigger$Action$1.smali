@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/springback/trigger/BaseTrigger$Action;
 
     check-cast p2, Lmiuix/springback/trigger/BaseTrigger$Action;
@@ -56,7 +54,6 @@
 .method public compare(Lmiuix/springback/trigger/BaseTrigger$Action;Lmiuix/springback/trigger/BaseTrigger$Action;)I
     .locals 0
 
-    .line 2
     iget p1, p1, Lmiuix/springback/trigger/BaseTrigger$Action;->mEnterPoint:I
 
     iget p2, p2, Lmiuix/springback/trigger/BaseTrigger$Action;->mEnterPoint:I

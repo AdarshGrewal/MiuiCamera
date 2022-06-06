@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$id;->tag_spinner_dropdown_view_double_line:I
 
     sput v0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->TAG_VIEW:I
@@ -40,10 +39,8 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 
-    .line 2
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
@@ -58,16 +55,12 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;-><init>(Landroid/content/Context;I)V
 
-    .line 4
     iput-object p2, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
-    .line 5
     iput-object p3, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mSummaries:[Ljava/lang/CharSequence;
 
-    .line 6
     invoke-virtual {p0, p4}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->setEntryIcons([I)V
 
     return-void
@@ -76,7 +69,6 @@
 .method private getEntry(I)Ljava/lang/CharSequence;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
@@ -87,7 +79,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     aget-object p1, v0, p1
 
@@ -103,7 +94,6 @@
 .method private getIcon(I)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mIcons:[Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
@@ -114,7 +104,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     aget-object p1, v0, p1
 
@@ -130,7 +119,6 @@
 .method private getSummary(I)Ljava/lang/CharSequence;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mSummaries:[Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
@@ -141,7 +129,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     aget-object p1, v0, p1
 
@@ -159,7 +146,6 @@
 .method public getCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -182,7 +168,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     sget v1, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->TAG_VIEW:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -191,7 +176,6 @@
 
     if-nez v1, :cond_1
 
-    .line 2
     :cond_0
     iget-object p2, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -201,7 +185,6 @@
 
     move-result-object p2
 
-    .line 3
     new-instance p3, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;
 
     const/4 v1, 0x0
@@ -210,7 +193,6 @@
 
     const v1, 0x1020006
 
-    .line 4
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -221,7 +203,6 @@
 
     const v1, 0x1020016
 
-    .line 5
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -232,7 +213,6 @@
 
     const v1, 0x1020010
 
-    .line 6
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -241,28 +221,23 @@
 
     iput-object v1, p3, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->summary:Landroid/widget/TextView;
 
-    .line 7
     sget v1, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->TAG_VIEW:I
 
     invoke-virtual {p2, v1, p3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 8
     :cond_1
     invoke-direct {p0, p1}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->getEntry(I)Ljava/lang/CharSequence;
 
     move-result-object p3
 
-    .line 9
     invoke-direct {p0, p1}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->getSummary(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 10
     invoke-direct {p0, p1}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->getIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 11
     sget v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->TAG_VIEW:I
 
     invoke-virtual {p2, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -271,10 +246,8 @@
 
     if-eqz v2, :cond_5
 
-    .line 12
     check-cast v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;
 
-    .line 13
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -283,25 +256,21 @@
 
     if-nez v3, :cond_2
 
-    .line 14
     iget-object v3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {v3, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 15
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 16
     :cond_2
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 17
     :goto_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -309,19 +278,16 @@
 
     if-nez p3, :cond_3
 
-    .line 18
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 19
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 20
     :cond_3
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->summary:Landroid/widget/TextView;
 
@@ -330,19 +296,16 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    .line 21
     iget-object p3, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 22
     iget-object p1, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 23
     :cond_4
     iget-object p1, v2, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -356,7 +319,6 @@
 .method public getEntries()[Ljava/lang/CharSequence;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -365,7 +327,6 @@
 .method public getEntryIcons()[Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mIcons:[Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -374,7 +335,6 @@
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -401,7 +361,6 @@
 .method public getSummaries()[Ljava/lang/CharSequence;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mSummaries:[Ljava/lang/CharSequence;
 
     return-object v0
@@ -418,7 +377,6 @@
 .method public setEntries([Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mEntries:[Ljava/lang/CharSequence;
 
     return-void
@@ -431,18 +389,15 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-virtual {p0, v0}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->setEntryIcons([Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 
-    .line 2
     :cond_0
     array-length v1, p1
 
     new-array v1, v1, [Landroid/graphics/drawable/Drawable;
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -453,18 +408,15 @@
 
     const/4 v3, 0x0
 
-    .line 4
     :goto_0
     array-length v4, p1
 
     if-ge v3, v4, :cond_2
 
-    .line 5
     aget v4, p1, v3
 
     if-lez v4, :cond_1
 
-    .line 6
     aget v4, p1, v3
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -475,7 +427,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     aput-object v0, v1, v3
 
@@ -484,7 +435,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {p0, v1}, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->setEntryIcons([Landroid/graphics/drawable/Drawable;)V
 
@@ -495,7 +445,6 @@
 .method public setEntryIcons([Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 9
     iput-object p1, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mIcons:[Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -504,7 +453,6 @@
 .method public setSummaries([Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/adapter/SpinnerDoubleLineContentAdapter;->mSummaries:[Ljava/lang/CharSequence;
 
     return-void

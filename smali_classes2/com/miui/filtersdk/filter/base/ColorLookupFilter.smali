@@ -43,23 +43,18 @@
     :goto_0
     const-string v1, "attribute vec4 position;\nattribute vec4 inputTextureCoordinate;\n \nvarying vec2 textureCoordinate;\n \nvoid main()\n{\n    gl_Position = position;\n    textureCoordinate = inputTextureCoordinate.xy;\n}"
 
-    .line 1
     invoke-direct {p0, v1, v0}, Lcom/miui/filtersdk/filter/base/BaseOriginalFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2
     iput v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mStrength:F
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
-    .line 4
     iput p2, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mColorLookupTableSize:I
 
-    .line 5
     iput-object p1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mColorLookupTableName:Ljava/lang/String;
 
     return-void
@@ -68,7 +63,6 @@
 .method public static synthetic access$002(Lcom/miui/filtersdk/filter/base/ColorLookupFilter;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     return p1
@@ -77,7 +71,6 @@
 .method public static synthetic access$100(Lcom/miui/filtersdk/filter/base/ColorLookupFilter;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mColorLookupTableName:Ljava/lang/String;
 
     return-object p0
@@ -88,7 +81,6 @@
 .method public getColorLookupTableName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mColorLookupTableName:Ljava/lang/String;
 
     return-object v0
@@ -105,26 +97,22 @@
 .method public onDestroy()V
     .locals 4
 
-    .line 1
     invoke-super {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onDestroy()V
 
     const/4 v0, 0x1
 
     new-array v1, v0, [I
 
-    .line 2
     iget v2, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     const/4 v3, 0x0
 
     aput v2, v1, v3
 
-    .line 3
     invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     const/4 v0, -0x1
 
-    .line 4
     iput v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     return-void
@@ -133,7 +121,6 @@
 .method public onDrawArraysAfter()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     const/4 v1, -0x1
@@ -142,19 +129,16 @@
 
     const v0, 0x84c3
 
-    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     const v0, 0x84c0
 
-    .line 4
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     :cond_0
@@ -164,21 +148,18 @@
 .method public onDrawArraysPre()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glIsTexture(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Lcom/miui/filtersdk/BeautificationSDK;->sContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mColorLookupTableName:Ljava/lang/String;
@@ -189,7 +170,6 @@
 
     iput v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,24 +193,20 @@
     :cond_0
     const v0, 0x84c3
 
-    .line 5
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
-    .line 6
     iget v1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupSourceTexture:I
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 7
     iget v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupTextureUniform:I
 
     const/4 v1, 0x3
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 8
     :cond_1
     iget v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mGLStrengthLocation:I
 
@@ -244,10 +220,8 @@
 .method public onInit()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onInit()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->getProgram()I
 
     move-result v0
@@ -260,7 +234,6 @@
 
     iput v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mLookupTextureUniform:I
 
-    .line 3
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->getProgram()I
 
     move-result v0
@@ -279,10 +252,8 @@
 .method public onInitialized()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onInitialized()V
 
-    .line 2
     new-instance v0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter$1;
 
     invoke-direct {v0, p0}, Lcom/miui/filtersdk/filter/base/ColorLookupFilter$1;-><init>(Lcom/miui/filtersdk/filter/base/ColorLookupFilter;)V
@@ -301,7 +272,6 @@
 
     div-float/2addr p1, v0
 
-    .line 1
     iput p1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;->mStrength:F
 
     return-void
@@ -310,7 +280,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -56,10 +56,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mIndex:I
 
     return-void
@@ -70,7 +68,6 @@
 .method public getBitrateInline()Ljava/lang/String;
     .locals 7
 
-    .line 1
     iget-wide v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mBitrate:J
 
     const-wide/16 v2, 0x0
@@ -94,7 +91,6 @@
 
     if-gez v4, :cond_1
 
-    .line 2
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v3, v6, [Ljava/lang/Object;
@@ -113,7 +109,6 @@
 
     return-object v0
 
-    .line 3
     :cond_1
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -139,7 +134,6 @@
 .method public getChannelLayoutInline()Ljava/lang/String;
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mChannelLayout:J
 
     const-wide/16 v2, 0x0
@@ -174,7 +168,6 @@
 
     return-object v0
 
-    .line 2
     :cond_2
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -202,7 +195,6 @@
 .method public getCodecLongNameInline()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecLongName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -211,12 +203,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecLongName:Ljava/lang/String;
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecName:Ljava/lang/String;
 
@@ -226,7 +216,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecName:Ljava/lang/String;
 
     return-object v0
@@ -240,7 +229,6 @@
 .method public getCodecShortNameInline()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -249,7 +237,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecName:Ljava/lang/String;
 
     return-object v0
@@ -263,7 +250,6 @@
 .method public getFpsInline()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mFpsNum:I
 
     if-lez v0, :cond_1
@@ -281,7 +267,6 @@
 
     div-float/2addr v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object v0
@@ -300,7 +285,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -311,12 +295,10 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 2
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -325,7 +307,6 @@
 
     return p2
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -345,7 +326,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -356,12 +336,10 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 2
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -370,7 +348,6 @@
 
     return-wide p2
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -388,7 +365,6 @@
 .method public getResolutionInline()Ljava/lang/String;
     .locals 6
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mWidth:I
 
     if-lez v0, :cond_3
@@ -399,7 +375,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget v1, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mSarNum:I
 
@@ -417,7 +392,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -433,7 +407,6 @@
 
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mHeight:I
 
-    .line 4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -460,14 +433,12 @@
 
     const-string v0, "%d x %d [SAR %d:%d]"
 
-    .line 5
     invoke-static {v1, v0, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 6
     :cond_2
     :goto_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -508,7 +479,6 @@
 .method public getSampleRateInline()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mSampleRate:I
 
     if-gtz v0, :cond_0
@@ -517,7 +487,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -545,7 +514,6 @@
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mMeta:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;

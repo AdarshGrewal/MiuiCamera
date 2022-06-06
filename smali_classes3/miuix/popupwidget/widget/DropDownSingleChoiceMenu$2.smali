@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu;Landroid/content/Context;ILjava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu$2;->this$0:Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
@@ -41,30 +40,24 @@
 .method private getViewInner(Landroid/content/Context;IILandroid/view/View;)Landroid/view/View;
     .locals 3
 
-    .line 1
     invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .line 2
     invoke-virtual {p4}, Landroid/view/View;->getPaddingStart()I
 
     move-result v0
 
-    .line 3
     invoke-virtual {p4}, Landroid/view/View;->getPaddingTop()I
 
-    .line 4
     invoke-virtual {p4}, Landroid/view/View;->getPaddingEnd()I
 
     move-result v1
 
-    .line 5
     invoke-virtual {p4}, Landroid/view/View;->getPaddingBottom()I
 
     const/4 v2, 0x1
 
     if-ne p2, v2, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -75,7 +68,6 @@
 
     move-result p2
 
-    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -91,7 +83,6 @@
     :cond_0
     if-nez p3, :cond_1
 
-    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -102,7 +93,6 @@
 
     move-result p2
 
-    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -120,7 +110,6 @@
 
     if-ne p3, p2, :cond_2
 
-    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -131,7 +120,6 @@
 
     move-result p2
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -144,7 +132,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -156,7 +143,6 @@
 
     move-result p2
 
-    .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -167,7 +153,6 @@
 
     move-result p1
 
-    .line 14
     :goto_0
     invoke-virtual {p4, v0, p2, v1, p1}, Landroid/view/View;->setPaddingRelative(IIII)V
 
@@ -179,12 +164,10 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -205,7 +188,6 @@
 
     aput-object p1, p2, p3
 
-    .line 3
     invoke-static {p2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p2

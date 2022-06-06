@@ -23,16 +23,12 @@
 .method public constructor <init>(II[B)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;->type:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;->size:I
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;->data:[B
 
     return-void
@@ -43,7 +39,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

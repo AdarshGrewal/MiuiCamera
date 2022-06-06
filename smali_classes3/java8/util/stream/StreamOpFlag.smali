@@ -101,12 +101,10 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamOpFlag;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->SPLITERATOR:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 2
     invoke-static {v1}, Ljava8/util/stream/StreamOpFlag;->set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -131,12 +129,10 @@
 
     sput-object v0, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/StreamOpFlag;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->SPLITERATOR:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 4
     invoke-static {v1}, Ljava8/util/stream/StreamOpFlag;->set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -161,12 +157,10 @@
 
     sput-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
-    .line 5
     new-instance v0, Ljava8/util/stream/StreamOpFlag;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->SPLITERATOR:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 6
     invoke-static {v1}, Ljava8/util/stream/StreamOpFlag;->set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -191,7 +185,6 @@
 
     sget-object v4, Ljava8/util/stream/StreamOpFlag$Type;->UPSTREAM_TERMINAL_OP:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 7
     invoke-virtual {v1, v4}, Ljava8/util/stream/StreamOpFlag$MaskBuilder;->clear(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -204,12 +197,10 @@
 
     sput-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
-    .line 8
     new-instance v0, Ljava8/util/stream/StreamOpFlag;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->SPLITERATOR:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 9
     invoke-static {v1}, Ljava8/util/stream/StreamOpFlag;->set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -234,12 +225,10 @@
 
     sput-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
-    .line 10
     new-instance v0, Ljava8/util/stream/StreamOpFlag;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->OP:Ljava8/util/stream/StreamOpFlag$Type;
 
-    .line 11
     invoke-static {v1}, Ljava8/util/stream/StreamOpFlag;->set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     move-result-object v1
@@ -264,7 +253,6 @@
 
     new-array v1, v1, [Ljava8/util/stream/StreamOpFlag;
 
-    .line 12
     sget-object v7, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
     aput-object v7, v1, v2
@@ -285,7 +273,6 @@
 
     sput-object v1, Ljava8/util/stream/StreamOpFlag;->$VALUES:[Ljava8/util/stream/StreamOpFlag;
 
-    .line 13
     sget-object v0, Ljava8/util/stream/StreamOpFlag$Type;->SPLITERATOR:Ljava8/util/stream/StreamOpFlag$Type;
 
     invoke-static {v0}, Ljava8/util/stream/StreamOpFlag;->createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
@@ -294,7 +281,6 @@
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->SPLITERATOR_CHARACTERISTICS_MASK:I
 
-    .line 14
     sget-object v0, Ljava8/util/stream/StreamOpFlag$Type;->STREAM:Ljava8/util/stream/StreamOpFlag$Type;
 
     invoke-static {v0}, Ljava8/util/stream/StreamOpFlag;->createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
@@ -303,7 +289,6 @@
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->STREAM_MASK:I
 
-    .line 15
     sget-object v0, Ljava8/util/stream/StreamOpFlag$Type;->OP:Ljava8/util/stream/StreamOpFlag$Type;
 
     invoke-static {v0}, Ljava8/util/stream/StreamOpFlag;->createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
@@ -312,7 +297,6 @@
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->OP_MASK:I
 
-    .line 16
     sget-object v0, Ljava8/util/stream/StreamOpFlag$Type;->TERMINAL_OP:Ljava8/util/stream/StreamOpFlag$Type;
 
     invoke-static {v0}, Ljava8/util/stream/StreamOpFlag;->createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
@@ -321,7 +305,6 @@
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->TERMINAL_OP_MASK:I
 
-    .line 17
     sget-object v0, Ljava8/util/stream/StreamOpFlag$Type;->UPSTREAM_TERMINAL_OP:Ljava8/util/stream/StreamOpFlag$Type;
 
     invoke-static {v0}, Ljava8/util/stream/StreamOpFlag;->createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
@@ -330,77 +313,64 @@
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->UPSTREAM_TERMINAL_OP_MASK:I
 
-    .line 18
     invoke-static {}, Ljava8/util/stream/StreamOpFlag;->createFlagMask()I
 
     move-result v0
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->FLAG_MASK:I
 
-    .line 19
     sget v0, Ljava8/util/stream/StreamOpFlag;->STREAM_MASK:I
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->FLAG_MASK_IS:I
 
     shl-int/lit8 v1, v0, 0x1
 
-    .line 20
     sput v1, Ljava8/util/stream/StreamOpFlag;->FLAG_MASK_NOT:I
 
     or-int/2addr v0, v1
 
-    .line 21
     sput v0, Ljava8/util/stream/StreamOpFlag;->INITIAL_OPS_VALUE:I
 
-    .line 22
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
     iget v1, v0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     sput v1, Ljava8/util/stream/StreamOpFlag;->IS_DISTINCT:I
 
-    .line 23
     iget v0, v0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->NOT_DISTINCT:I
 
-    .line 24
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
     iget v1, v0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     sput v1, Ljava8/util/stream/StreamOpFlag;->IS_SORTED:I
 
-    .line 25
     iget v0, v0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->NOT_SORTED:I
 
-    .line 26
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
     iget v1, v0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     sput v1, Ljava8/util/stream/StreamOpFlag;->IS_ORDERED:I
 
-    .line 27
     iget v0, v0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->NOT_ORDERED:I
 
-    .line 28
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
     iget v1, v0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     sput v1, Ljava8/util/stream/StreamOpFlag;->IS_SIZED:I
 
-    .line 29
     iget v0, v0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     sput v0, Ljava8/util/stream/StreamOpFlag;->NOT_SIZED:I
 
-    .line 30
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SHORT_CIRCUIT:Ljava8/util/stream/StreamOpFlag;
 
     iget v0, v0, Ljava8/util/stream/StreamOpFlag;->set:I
@@ -420,10 +390,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     invoke-virtual {p4}, Ljava8/util/stream/StreamOpFlag$MaskBuilder;->build()Ljava/util/Map;
 
     move-result-object p1
@@ -434,26 +402,22 @@
 
     mul-int/2addr p3, p1
 
-    .line 3
     iput p3, p0, Ljava8/util/stream/StreamOpFlag;->bitPosition:I
 
     const/4 p2, 0x1
 
     shl-int/2addr p2, p3
 
-    .line 4
     iput p2, p0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     shl-int/2addr p1, p3
 
-    .line 5
     iput p1, p0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     const/4 p1, 0x3
 
     shl-int/2addr p1, p3
 
-    .line 6
     iput p1, p0, Ljava8/util/stream/StreamOpFlag;->preserve:I
 
     return-void
@@ -462,7 +426,6 @@
 .method public static combineOpFlags(II)I
     .locals 1
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/StreamOpFlag;->getMask(I)I
 
     move-result v0
@@ -477,7 +440,6 @@
 .method public static createFlagMask()I
     .locals 5
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/StreamOpFlag;->values()[Ljava8/util/stream/StreamOpFlag;
 
     move-result-object v0
@@ -493,7 +455,6 @@
 
     aget-object v4, v0, v2
 
-    .line 2
     iget v4, v4, Ljava8/util/stream/StreamOpFlag;->preserve:I
 
     or-int/2addr v3, v4
@@ -509,7 +470,6 @@
 .method public static createMask(Ljava8/util/stream/StreamOpFlag$Type;)I
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/StreamOpFlag;->values()[Ljava8/util/stream/StreamOpFlag;
 
     move-result-object v0
@@ -525,7 +485,6 @@
 
     aget-object v4, v0, v2
 
-    .line 2
     iget-object v5, v4, Ljava8/util/stream/StreamOpFlag;->maskTable:Ljava/util/Map;
 
     invoke-interface {v5, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -555,7 +514,6 @@
 .method public static fromCharacteristics(I)I
     .locals 1
 
-    .line 5
     sget v0, Ljava8/util/stream/StreamOpFlag;->SPLITERATOR_CHARACTERISTICS_MASK:I
 
     and-int/2addr p0, v0
@@ -573,7 +531,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/Spliterator;->characteristics()I
 
     move-result v0
@@ -582,14 +539,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/Spliterator;->getComparator()Ljava/util/Comparator;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 3
     sget p0, Ljava8/util/stream/StreamOpFlag;->SPLITERATOR_CHARACTERISTICS_MASK:I
 
     and-int/2addr p0, v0
@@ -598,7 +553,6 @@
 
     return p0
 
-    .line 4
     :cond_0
     sget p0, Ljava8/util/stream/StreamOpFlag;->SPLITERATOR_CHARACTERISTICS_MASK:I
 
@@ -612,7 +566,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget p0, Ljava8/util/stream/StreamOpFlag;->FLAG_MASK:I
 
     goto :goto_0
@@ -643,7 +596,6 @@
 .method public static set(Ljava8/util/stream/StreamOpFlag$Type;)Ljava8/util/stream/StreamOpFlag$MaskBuilder;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamOpFlag$MaskBuilder;
 
     new-instance v1, Ljava/util/EnumMap;
@@ -664,7 +616,6 @@
 .method public static toCharacteristics(I)I
     .locals 1
 
-    .line 1
     sget v0, Ljava8/util/stream/StreamOpFlag;->SPLITERATOR_CHARACTERISTICS_MASK:I
 
     and-int/2addr p0, v0
@@ -679,7 +630,6 @@
 
     shr-int/lit8 v0, v0, 0x1
 
-    .line 1
     sget v1, Ljava8/util/stream/StreamOpFlag;->FLAG_MASK_IS:I
 
     and-int/2addr v0, v1
@@ -692,7 +642,6 @@
 .method public static valueOf(Ljava/lang/String;)Ljava8/util/stream/StreamOpFlag;
     .locals 1
 
-    .line 1
     const-class v0, Ljava8/util/stream/StreamOpFlag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -707,7 +656,6 @@
 .method public static values()[Ljava8/util/stream/StreamOpFlag;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->$VALUES:[Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {v0}, [Ljava8/util/stream/StreamOpFlag;->clone()Ljava/lang/Object;
@@ -724,7 +672,6 @@
 .method public canSet(Ljava8/util/stream/StreamOpFlag$Type;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamOpFlag;->maskTable:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -755,7 +702,6 @@
 .method public clear()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/StreamOpFlag;->clear:I
 
     return v0
@@ -764,7 +710,6 @@
 .method public isCleared(I)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/StreamOpFlag;->preserve:I
 
     and-int/2addr p1, v0
@@ -787,7 +732,6 @@
 .method public isKnown(I)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/StreamOpFlag;->preserve:I
 
     and-int/2addr p1, v0
@@ -810,7 +754,6 @@
 .method public isPreserved(I)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/StreamOpFlag;->preserve:I
 
     and-int/2addr p1, v0
@@ -831,7 +774,6 @@
 .method public isStreamFlag()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamOpFlag;->maskTable:Ljava/util/Map;
 
     sget-object v1, Ljava8/util/stream/StreamOpFlag$Type;->STREAM:Ljava8/util/stream/StreamOpFlag$Type;
@@ -862,7 +804,6 @@
 .method public set()I
     .locals 1
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/StreamOpFlag;->set:I
 
     return v0

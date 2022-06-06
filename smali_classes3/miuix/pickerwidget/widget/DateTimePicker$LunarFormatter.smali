@@ -18,7 +18,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/pickerwidget/widget/DateTimePicker$DayFormatter;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public formatDay(III)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lmiuix/pickerwidget/widget/DateTimePicker;->access$100()Ljava/lang/ThreadLocal;
 
     move-result-object v0
@@ -42,12 +40,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    .line 3
     invoke-static {}, Lmiuix/pickerwidget/widget/DateTimePicker;->access$100()Ljava/lang/ThreadLocal;
 
     move-result-object v1
@@ -57,20 +53,16 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 4
     invoke-virtual {v0, v1, p1}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p1, 0x5
 
-    .line 5
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
     const/16 p1, 0x9
 
-    .line 6
     invoke-virtual {v0, p1, p3}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 7
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DateTimePicker$DayFormatter;->mContext:Landroid/content/Context;
 
     sget p2, Lmiuix/pickerwidget/R$string;->fmt_chinese_date:I

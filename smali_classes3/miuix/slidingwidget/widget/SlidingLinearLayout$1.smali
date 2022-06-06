@@ -24,7 +24,6 @@
 .method public constructor <init>(Lmiuix/slidingwidget/widget/SlidingLinearLayout;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$1;->this$0:Lmiuix/slidingwidget/widget/SlidingLinearLayout;
 
     iput-object p2, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$1;->val$view:Landroid/view/View;
@@ -39,7 +38,6 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$1;->this$0:Lmiuix/slidingwidget/widget/SlidingLinearLayout;
 
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$1;->val$view:Landroid/view/View;

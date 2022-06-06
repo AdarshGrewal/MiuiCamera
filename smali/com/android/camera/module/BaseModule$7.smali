@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/BaseModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/BaseModule$7;->this$0:Lcom/android/camera/module/BaseModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -63,7 +61,6 @@
 
     const-string v2, "auto_hibernation_desc"
 
-    .line 2
     invoke-interface/range {v1 .. v6}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAutoHibernationDescTip(Ljava/lang/String;IIJ)V
 
     :cond_0

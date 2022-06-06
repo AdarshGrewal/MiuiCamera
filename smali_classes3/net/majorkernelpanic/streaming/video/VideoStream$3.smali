@@ -29,7 +29,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/video/VideoStream;[Ljava/lang/RuntimeException;Ljava/util/concurrent/Semaphore;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     iput-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->val$exception:[Ljava/lang/RuntimeException;
@@ -46,10 +45,8 @@
 .method public run()V
     .locals 3
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -58,7 +55,6 @@
 
     iput-object v1, v0, Lnet/majorkernelpanic/streaming/video/VideoStream;->mCameraLooper:Landroid/os/Looper;
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
@@ -85,7 +81,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     :try_start_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->val$exception:[Ljava/lang/RuntimeException;
 
@@ -95,24 +90,20 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5
     :goto_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->val$lock:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 6
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void
 
-    .line 7
     :goto_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$3;->val$lock:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 8
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     throw v0

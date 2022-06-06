@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
 
     int-to-long p3, p3
 
-    .line 1
     invoke-interface {p2, p3, p4}, Lokio/BufferedSource;->skip(J)V
 
     const/4 p1, 0x1

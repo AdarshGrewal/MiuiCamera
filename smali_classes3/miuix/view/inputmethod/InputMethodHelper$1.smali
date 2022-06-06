@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/core/util/SoftReferenceSingleton;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public bridge synthetic createInstance(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/view/inputmethod/InputMethodHelper$1;->createInstance(Ljava/lang/Object;)Lmiuix/view/inputmethod/InputMethodHelper;
 
     move-result-object p1
@@ -48,7 +46,6 @@
 .method public createInstance(Ljava/lang/Object;)Lmiuix/view/inputmethod/InputMethodHelper;
     .locals 2
 
-    .line 2
     new-instance v0, Lmiuix/view/inputmethod/InputMethodHelper;
 
     check-cast p1, Landroid/content/Context;

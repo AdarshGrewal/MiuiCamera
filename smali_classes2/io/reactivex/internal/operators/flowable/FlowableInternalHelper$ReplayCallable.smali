@@ -51,10 +51,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$ReplayCallable;->parent:Lio/reactivex/Flowable;
 
     return-void
@@ -72,7 +70,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$ReplayCallable;->parent:Lio/reactivex/Flowable;
 
     invoke-virtual {v0}, Lio/reactivex/Flowable;->replay()Lio/reactivex/flowables/ConnectableFlowable;
@@ -90,7 +87,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$ReplayCallable;->call()Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object v0

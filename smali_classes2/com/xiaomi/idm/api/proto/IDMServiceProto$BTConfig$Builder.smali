@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;->access$19500()Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearRssi()Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -71,10 +67,8 @@
 .method public clearStaticBTAddress()Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -87,7 +81,6 @@
 .method public getRssi()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -102,7 +95,6 @@
 .method public getStaticBTAddress()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -117,7 +109,6 @@
 .method public getStaticBTAddressBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -132,10 +123,8 @@
 .method public setRssi(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -148,10 +137,8 @@
 .method public setStaticBTAddress(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;
@@ -164,10 +151,8 @@
 .method public setStaticBTAddressBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$BTConfig;

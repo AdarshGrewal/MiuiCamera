@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -30,7 +29,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -39,12 +37,11 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00Oo0O0()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OOOoO()Z
 
     move-result p1
 
@@ -58,12 +55,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 3
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v0, 0x7f1206e6
+    const v0, 0x7f1206aa
 
-    const v1, 0x7f080393
+    const v1, 0x7f080391
 
     const-string/jumbo v2, "off"
 
@@ -71,10 +67,9 @@
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v0, 0x7f1206e7
+    const v0, 0x7f1206ab
 
     const-string/jumbo v2, "on"
 
@@ -115,7 +110,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -124,7 +118,6 @@
 .method public getKey(I)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +138,6 @@
 .method public reInit(II)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/data/data/config/ComponentConfigBokeh;->createItems(II)Ljava/util/List;
 
     move-result-object p1
@@ -158,7 +150,6 @@
 .method public toggle(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -173,12 +164,10 @@
 
     const-string/jumbo v0, "off"
 
-    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 

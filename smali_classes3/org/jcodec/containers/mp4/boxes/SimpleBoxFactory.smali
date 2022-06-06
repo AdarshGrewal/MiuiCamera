@@ -14,10 +14,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/Boxes;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/SimpleBoxFactory;->boxes:Lorg/jcodec/containers/mp4/Boxes;
 
     return-void
@@ -28,7 +26,6 @@
 .method public newBox(Lorg/jcodec/containers/mp4/boxes/Header;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/SimpleBoxFactory;->boxes:Lorg/jcodec/containers/mp4/Boxes;
 
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
@@ -41,7 +38,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;
 
     invoke-direct {v0, p1}, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
@@ -57,7 +53,6 @@
 
     aput-object p1, v1, v2
 
-    .line 3
     invoke-static {v0, v1}, Lorg/jcodec/platform/Platform;->newInstance(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

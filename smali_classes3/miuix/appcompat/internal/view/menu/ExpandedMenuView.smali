@@ -18,10 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     invoke-virtual {p0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     return-void
@@ -40,7 +38,6 @@
 .method public getWindowAnimations()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/ExpandedMenuView;->mAnimations:I
 
     return v0
@@ -65,7 +62,6 @@
 .method public initialize(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/ExpandedMenuView;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     return-void
@@ -74,7 +70,6 @@
 .method public invokeItem(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/ExpandedMenuView;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v1, 0x0
@@ -89,12 +84,10 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/widget/ListView;->onDetachedFromWindow()V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/widget/ListView;->setChildrenDrawingCacheEnabled(Z)V
 
     return-void
@@ -103,7 +96,6 @@
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object p1

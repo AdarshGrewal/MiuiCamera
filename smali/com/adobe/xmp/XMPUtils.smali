@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, p2, p3, v0}, Lcom/adobe/xmp/XMPUtils;->appendProperties(Lcom/adobe/xmp/XMPMeta;Lcom/adobe/xmp/XMPMeta;ZZZ)V
 
     return-void
@@ -37,7 +35,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1, p2, p3, p4}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->appendProperties(Lcom/adobe/xmp/XMPMeta;Lcom/adobe/xmp/XMPMeta;ZZZ)V
 
     return-void
@@ -51,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->catenateArrayItems(Lcom/adobe/xmp/XMPMeta;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -78,7 +74,6 @@
 .method public static convertFromDate(Lcom/adobe/xmp/XMPDateTime;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/ISO8601Converter;->render(Lcom/adobe/xmp/XMPDateTime;)Ljava/lang/String;
 
     move-result-object p0
@@ -89,7 +84,6 @@
 .method public static convertFromDouble(D)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
     move-result-object p0
@@ -100,7 +94,6 @@
 .method public static convertFromInteger(I)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -111,7 +104,6 @@
 .method public static convertFromLong(J)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p0
@@ -129,14 +121,12 @@
 
     if-eqz p0, :cond_3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p0
@@ -145,7 +135,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -166,7 +155,6 @@
     :catch_0
     const-string/jumbo v2, "true"
 
-    .line 4
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -175,7 +163,6 @@
 
     const-string/jumbo v2, "t"
 
-    .line 5
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -184,7 +171,6 @@
 
     const-string/jumbo v2, "on"
 
-    .line 6
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -193,7 +179,6 @@
 
     const-string/jumbo v2, "yes"
 
-    .line 7
     invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -209,7 +194,6 @@
     :goto_1
     return v0
 
-    .line 8
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -232,21 +216,18 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0}, Lcom/adobe/xmp/impl/ISO8601Converter;->parse(Ljava/lang/String;)Lcom/adobe/xmp/XMPDateTime;
 
     move-result-object p0
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -271,7 +252,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -279,14 +259,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v0
 
     return-wide v0
 
-    .line 3
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -298,7 +276,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     :catch_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -321,7 +298,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -331,7 +307,6 @@
 
     const-string v1, "0x"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -340,7 +315,6 @@
 
     const/4 v1, 0x2
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -353,7 +327,6 @@
 
     return p0
 
-    .line 4
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -361,7 +334,6 @@
 
     return p0
 
-    .line 5
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -373,7 +345,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6
     :catch_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -396,7 +367,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -406,7 +376,6 @@
 
     const-string v1, "0x"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -415,7 +384,6 @@
 
     const/4 v1, 0x2
 
-    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -428,7 +396,6 @@
 
     return-wide v0
 
-    .line 4
     :cond_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -436,7 +403,6 @@
 
     return-wide v0
 
-    .line 5
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -448,7 +414,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6
     :catch_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -467,7 +432,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
@@ -484,7 +448,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const/4 v1, 0x5
@@ -499,7 +462,6 @@
 .method public static encodeBase64([B)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/adobe/xmp/impl/Base64;->encode([B)[B
@@ -519,7 +481,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2, p3, p4}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->removeProperties(Lcom/adobe/xmp/XMPMeta;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     return-void
@@ -533,7 +494,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->separateArrayItems(Lcom/adobe/xmp/XMPMeta;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;Z)V
 
     return-void

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/c/d;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/c/e;->b:Lcom/xiaomi/stat/c/d;
 
     iput-object p2, p0, Lcom/xiaomi/stat/c/e;->a:Landroid/os/IBinder;
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 7
 
-    .line 1
     const-class v0, Lcom/xiaomi/stat/c/i;
 
     iget-object v1, p0, Lcom/xiaomi/stat/c/e;->a:Landroid/os/IBinder;
@@ -43,7 +41,6 @@
 
     const/4 v3, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/xiaomi/stat/b;->e()Z
 
@@ -51,14 +48,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/b;->x()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 4
     iget-object v4, p0, Lcom/xiaomi/stat/c/e;->b:Lcom/xiaomi/stat/c/d;
 
     iget-object v4, v4, Lcom/xiaomi/stat/c/d;->a:[Ljava/lang/String;
@@ -79,7 +74,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/xiaomi/stat/c/e;->b:Lcom/xiaomi/stat/c/d;
 
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v4, p0, Lcom/xiaomi/stat/c/e;->b:Lcom/xiaomi/stat/c/d;
 
@@ -112,7 +105,6 @@
     :goto_0
     const-string v1, "UploadMode"
 
-    .line 7
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,12 +127,10 @@
 
     invoke-static {v1, v4}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     monitor-enter v0
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 9
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
     :try_end_1
@@ -157,11 +147,9 @@
     :catch_0
     move-exception v1
 
-    .line 10
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 11
     :goto_1
     monitor-exit v0
 
@@ -180,7 +168,6 @@
     :catch_1
     move-exception v0
 
-    .line 12
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,7 +190,6 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object v0, p0, Lcom/xiaomi/stat/c/e;->b:Lcom/xiaomi/stat/c/d;
 
     iget-object v0, v0, Lcom/xiaomi/stat/c/d;->a:[Ljava/lang/String;

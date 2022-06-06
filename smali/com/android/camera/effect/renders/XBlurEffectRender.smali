@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/RegionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -31,7 +29,6 @@
 .method public drawTexture(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getTextureWidth()I
 
     move-result v0
@@ -42,7 +39,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->setStep(II)V
 
-    .line 2
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/effect/renders/PixelEffectRender;->drawTexture(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;Z)V
 
     return-void

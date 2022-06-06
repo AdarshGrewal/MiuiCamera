@@ -27,12 +27,10 @@
 .method public constructor <init>(Lmiuix/preference/RadioButtonPreferenceCategory;Landroid/widget/Checkable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->mCheckable:Landroid/widget/Checkable;
 
     return-void
@@ -46,7 +44,6 @@
 .method public isChecked()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->mCheckable:Landroid/widget/Checkable;
 
     invoke-interface {v0}, Landroid/widget/Checkable;->isChecked()Z
@@ -59,7 +56,6 @@
 .method public setChecked(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->mCheckable:Landroid/widget/Checkable;
 
     invoke-interface {v0, p1}, Landroid/widget/Checkable;->setChecked(Z)V
@@ -73,7 +69,6 @@
 .method public toggle()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->isChecked()Z
 
     move-result v0

@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/miui/filtersdk/utils/Rotation;->values()[Lcom/miui/filtersdk/utils/Rotation;
 
     move-result-object v0

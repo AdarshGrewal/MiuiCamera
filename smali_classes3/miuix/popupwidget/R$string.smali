@@ -68,11 +68,11 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f12001a
 
-.field public static final clearable_edittext_clear_description:I = 0x7f1202ad
+.field public static final clearable_edittext_clear_description:I = 0x7f120295
 
-.field public static final search_menu_title:I = 0x7f1208d2
+.field public static final search_menu_title:I = 0x7f120883
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f120914
+.field public static final status_bar_notification_info_overflow:I = 0x7f1208c5
 
 
 # direct methods

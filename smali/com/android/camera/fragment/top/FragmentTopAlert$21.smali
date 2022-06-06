@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$21;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$21;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;

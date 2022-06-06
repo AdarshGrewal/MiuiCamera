@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     iput-boolean p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->val$isLocationPermissionGranted:Z
@@ -42,14 +41,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->val$isLocationPermissionGranted:Z
 
     const-string v0, "confirm"
 
     if-nez p1, :cond_1
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$200(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -64,10 +61,8 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-static {v1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -76,7 +71,6 @@
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->dismiss()V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$400(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)V
@@ -86,10 +80,8 @@
     :cond_0
     const-string/jumbo p1, "open"
 
-    .line 6
     invoke-static {v1, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$000(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -100,7 +92,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$100(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -109,7 +100,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$200(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -120,7 +110,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$500(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)I
@@ -129,7 +118,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setAlertDialogTitle(I)V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     const/4 v0, -0x1
@@ -138,7 +126,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120346
+    const v0, 0x7f12032e
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -147,10 +135,8 @@
     :cond_1
     const-string p1, "attr_rol_suw_home"
 
-    .line 12
     invoke-static {p1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$4;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;

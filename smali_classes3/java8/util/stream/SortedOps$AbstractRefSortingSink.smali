@@ -50,10 +50,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/Sink$ChainedReference;-><init>(Ljava8/util/stream/Sink;)V
 
-    .line 2
     iput-object p2, p0, Ljava8/util/stream/SortedOps$AbstractRefSortingSink;->comparator:Ljava/util/Comparator;
 
     return-void
@@ -66,7 +64,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Ljava8/util/stream/SortedOps$AbstractRefSortingSink;->cancellationRequestedCalled:Z
 
     const/4 v0, 0x0

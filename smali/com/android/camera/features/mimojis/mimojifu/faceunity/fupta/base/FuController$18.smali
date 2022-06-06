@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Ljava/util/List;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->val$itemList:Ljava/util/List;
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -77,42 +75,34 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "K005"
 
-    .line 3
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "K013"
 
-    .line 4
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "K014"
 
-    .line 5
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "K015"
 
-    .line 6
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "K016"
 
-    .line 7
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v1, "L007"
 
-    .line 8
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->val$itemList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -132,7 +122,6 @@
 
     check-cast v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 10
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-static {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$1400(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;)Z
@@ -143,15 +132,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-static {v1, v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$1402(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Z)Z
 
-    .line 12
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -162,7 +148,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_0
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
@@ -178,7 +163,6 @@
 
     move-result v3
 
-    .line 15
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$23;->$SwitchMap$com$android$camera$features$mimojis$mimojifu$faceunity$fupta$base$entity$LabelCollection$ItemType:[I
 
     iget-object v6, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->val$itemType:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
@@ -195,7 +179,6 @@
 
     goto :goto_1
 
-    .line 16
     :cond_1
     invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
 
@@ -221,7 +204,6 @@
 
     move v4, v6
 
-    .line 17
     :cond_2
     :goto_1
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$18;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;

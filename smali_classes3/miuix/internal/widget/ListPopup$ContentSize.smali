@@ -28,7 +28,6 @@
 .method public constructor <init>(Lmiuix/internal/widget/ListPopup;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/widget/ListPopup$ContentSize;->this$0:Lmiuix/internal/widget/ListPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +38,6 @@
 .method public synthetic constructor <init>(Lmiuix/internal/widget/ListPopup;Lmiuix/internal/widget/ListPopup$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/internal/widget/ListPopup$ContentSize;-><init>(Lmiuix/internal/widget/ListPopup;)V
 
     return-void
@@ -50,12 +48,10 @@
 .method public updateWidth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/internal/widget/ListPopup$ContentSize;->mWidth:I
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/internal/widget/ListPopup$ContentSize;->mHasContentWidth:Z
 
     return-void

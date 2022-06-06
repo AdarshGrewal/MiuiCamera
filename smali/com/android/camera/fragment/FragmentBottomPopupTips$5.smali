@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentBottomPopupTips;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$5;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public updateBg()I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -47,19 +45,18 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->popupSolidPattern()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0808ef
+    const v0, 0x7f0808ec
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800dc
+    const v0, 0x7f0800de
 
     :goto_0
     return v0
@@ -68,7 +65,6 @@
 .method public updateBgResourceColor()I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -77,19 +73,18 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->popupSolidPattern()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f060370
+    const v0, 0x7f06036f
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f060372
+    const v0, 0x7f060371
 
     :goto_0
     return v0

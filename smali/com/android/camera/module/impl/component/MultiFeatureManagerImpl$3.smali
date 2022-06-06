@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$3;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     iput-object p2, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$3;->val$featureName:Ljava/lang/String;
@@ -44,18 +43,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$3;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$3;->val$featureName:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$3;->val$cancelRunnable:Ljava/lang/Runnable;
 
-    const/4 v3, 0x1
-
-    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$900(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;Ljava/lang/Runnable;Z)V
+    invoke-static {v0, v1, v2}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$700(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;Ljava/lang/Runnable;)V
 
     return-void
 .end method

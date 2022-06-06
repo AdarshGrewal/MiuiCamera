@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/fragment/top/TopBarAnimationComponent;->addTopBarItemInAnimator(ILandroid/view/View;Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;)Landroid/animation/ObjectAnimator;
+    value = Lcom/android/camera/fragment/top/TopBarAnimationComponent;->addTopBarItemInAnimator(ILandroid/view/View;Lcom/android/camera/data/data/config/TopConfigItem;)Landroid/animation/ObjectAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/TopBarAnimationComponent;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/TopBarAnimationComponent$1;->this$0:Lcom/android/camera/fragment/top/TopBarAnimationComponent;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V

@@ -31,23 +31,18 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->segmentCount:I
 
     const-wide/16 v1, -0x1
 
-    .line 3
     iput-wide v1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileSize:J
 
-    .line 4
     iput-wide v1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->timestamp:J
 
-    .line 5
     iput v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->checksum:I
 
     return-void
@@ -58,7 +53,6 @@
 .method public getAddressee()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->addressee:Ljava/lang/String;
 
     return-object v0
@@ -67,7 +61,6 @@
 .method public getChecksum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->checksum:I
 
     return v0
@@ -76,7 +69,6 @@
 .method public getFileId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileId:Ljava/lang/String;
 
     return-object v0
@@ -85,7 +77,6 @@
 .method public getFileName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -94,7 +85,6 @@
 .method public getFileSize()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileSize:J
 
     return-wide v0
@@ -105,7 +95,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->optionalData:[I
 
     return-object v0
@@ -114,7 +103,6 @@
 .method public getSegmentCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->segmentCount:I
 
     return v0
@@ -123,7 +111,6 @@
 .method public getSegmentIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->segmentIndex:I
 
     return v0
@@ -132,7 +119,6 @@
 .method public getSender()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->sender:Ljava/lang/String;
 
     return-object v0
@@ -141,7 +127,6 @@
 .method public getTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->timestamp:J
 
     return-wide v0
@@ -150,7 +135,6 @@
 .method public isLastSegment()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->lastSegment:Z
 
     return v0
@@ -159,7 +143,6 @@
 .method public setAddressee(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->addressee:Ljava/lang/String;
 
     return-void
@@ -168,7 +151,6 @@
 .method public setChecksum(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->checksum:I
 
     return-void
@@ -177,7 +159,6 @@
 .method public setFileId(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileId:Ljava/lang/String;
 
     return-void
@@ -186,7 +167,6 @@
 .method public setFileName(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileName:Ljava/lang/String;
 
     return-void
@@ -195,7 +175,6 @@
 .method public setFileSize(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->fileSize:J
 
     return-void
@@ -204,7 +183,6 @@
 .method public setLastSegment(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->lastSegment:Z
 
     return-void
@@ -215,7 +193,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->optionalData:[I
 
     return-void
@@ -224,7 +201,6 @@
 .method public setSegmentCount(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->segmentCount:I
 
     return-void
@@ -233,7 +209,6 @@
 .method public setSegmentIndex(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->segmentIndex:I
 
     return-void
@@ -242,7 +217,6 @@
 .method public setSender(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->sender:Ljava/lang/String;
 
     return-void
@@ -251,7 +225,6 @@
 .method public setTimestamp(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/google/zxing/pdf417/PDF417ResultMetadata;->timestamp:J
 
     return-void

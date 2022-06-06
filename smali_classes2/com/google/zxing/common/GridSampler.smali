@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/google/zxing/common/DefaultGridSampler;
 
     invoke-direct {v0}, Lcom/google/zxing/common/DefaultGridSampler;-><init>()V
@@ -24,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,17 +36,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getWidth()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
 
     move-result p0
 
-    .line 3
     array-length v1, p1
 
     const/4 v2, 0x1
@@ -70,14 +65,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 4
     aget v5, p1, v4
 
     float-to-int v5, v5
 
     add-int/lit8 v8, v4, 0x1
 
-    .line 5
     aget v9, p1, v8
 
     float-to-int v9, v9
@@ -92,7 +85,6 @@
 
     if-ne v5, v7, :cond_0
 
-    .line 6
     aput v6, p1, v4
 
     :goto_1
@@ -107,7 +99,6 @@
 
     int-to-float v5, v5
 
-    .line 7
     aput v5, p1, v4
 
     goto :goto_1
@@ -118,7 +109,6 @@
     :goto_2
     if-ne v9, v7, :cond_2
 
-    .line 8
     aput v6, p1, v8
 
     :goto_3
@@ -133,7 +123,6 @@
 
     int-to-float v5, v5
 
-    .line 9
     aput v5, p1, v8
 
     goto :goto_3
@@ -144,7 +133,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_4
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -152,7 +140,6 @@
 
     throw p0
 
-    .line 11
     :cond_5
     array-length v1, p1
 
@@ -165,14 +152,12 @@
 
     if-eqz v4, :cond_b
 
-    .line 12
     aget v4, p1, v1
 
     float-to-int v4, v4
 
     add-int/lit8 v5, v1, 0x1
 
-    .line 13
     aget v8, p1, v5
 
     float-to-int v8, v8
@@ -187,7 +172,6 @@
 
     if-ne v4, v7, :cond_6
 
-    .line 14
     aput v6, p1, v1
 
     :goto_6
@@ -202,7 +186,6 @@
 
     int-to-float v4, v4
 
-    .line 15
     aput v4, p1, v1
 
     goto :goto_6
@@ -213,7 +196,6 @@
     :goto_7
     if-ne v8, v7, :cond_8
 
-    .line 16
     aput v6, p1, v5
 
     :goto_8
@@ -228,7 +210,6 @@
 
     int-to-float v4, v4
 
-    .line 17
     aput v4, p1, v5
 
     goto :goto_8
@@ -239,7 +220,6 @@
 
     goto :goto_5
 
-    .line 18
     :cond_a
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -254,7 +234,6 @@
 .method public static getInstance()Lcom/google/zxing/common/GridSampler;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/common/GridSampler;->gridSampler:Lcom/google/zxing/common/GridSampler;
 
     return-object v0
@@ -263,7 +242,6 @@
 .method public static setGridSampler(Lcom/google/zxing/common/GridSampler;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/google/zxing/common/GridSampler;->gridSampler:Lcom/google/zxing/common/GridSampler;
 
     return-void

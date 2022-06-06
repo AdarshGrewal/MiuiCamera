@@ -70,10 +70,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;)V
 
-    .line 4
     iget-object p1, p2, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfRef;->p:Ljava8/util/function/Predicate;
 
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfRef;->p:Ljava8/util/function/Predicate;
@@ -93,10 +91,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Z)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfRef;->p:Ljava8/util/function/Predicate;
 
     return-void
@@ -112,7 +108,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
     add-int/lit8 v0, v0, 0x1
@@ -121,7 +116,6 @@
 
     iput v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfRef;->t:Ljava/lang/Object;
 
     return-void
@@ -137,7 +131,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->forEachRemaining(Ljava8/util/Spliterator;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -146,7 +139,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1

@@ -29,17 +29,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -60,7 +57,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -69,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -86,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -97,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -119,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -130,7 +121,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -141,7 +131,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mChinaTraditionlist:Ljava/util/ArrayList;
 
@@ -159,7 +148,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -168,7 +156,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -185,7 +172,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -196,7 +182,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -207,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -218,7 +202,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->mInternationallist:Ljava/util/ArrayList;
 
@@ -238,7 +221,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -251,7 +233,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->getChinaTraditionWM()Ljava/util/ArrayList;
 
@@ -259,7 +240,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/FestivalWatermark;->getInternationalFestivalWM()Ljava/util/ArrayList;
 
@@ -282,7 +262,6 @@
 
     const/4 v0, 0x6
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -303,7 +282,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0

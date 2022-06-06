@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;->access$000()Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearStr()Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;
@@ -71,7 +67,6 @@
 .method public getStr()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;
@@ -86,7 +81,6 @@
 .method public getStrBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;
@@ -101,10 +95,8 @@
 .method public setStr(Ljava/lang/String;)Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;
@@ -117,10 +109,8 @@
 .method public setStrBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/test/localetestservice/proto/DataProto$Response;

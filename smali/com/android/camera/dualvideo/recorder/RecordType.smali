@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     new-instance v0, Lcom/android/camera/dualvideo/recorder/RecordType;
 
     const/4 v1, 0x0
@@ -56,7 +55,6 @@
 
     new-array v2, v2, [Lcom/android/camera/dualvideo/recorder/RecordType;
 
-    .line 2
     sget-object v4, Lcom/android/camera/dualvideo/recorder/RecordType;->MERGED:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     aput-object v4, v2, v1
@@ -78,13 +76,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput-object p3, p0, Lcom/android/camera/dualvideo/recorder/RecordType;->mName:Ljava/lang/String;
 
-    .line 3
     iput p4, p0, Lcom/android/camera/dualvideo/recorder/RecordType;->mIndex:I
 
     return-void
@@ -93,7 +88,6 @@
 .method public static synthetic OooO00o(Ljava/lang/String;Lcom/android/camera/dualvideo/recorder/RecordType;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/RecordType;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -108,7 +102,6 @@
 .method public static getTypeByName(Ljava/lang/String;)Lcom/android/camera/dualvideo/recorder/RecordType;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/recorder/RecordType;->values()[Lcom/android/camera/dualvideo/recorder/RecordType;
 
     move-result-object v0
@@ -117,23 +110,20 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p0}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -146,7 +136,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/dualvideo/recorder/RecordType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/recorder/RecordType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -161,7 +150,6 @@
 .method public static values()[Lcom/android/camera/dualvideo/recorder/RecordType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/recorder/RecordType;->$VALUES:[Lcom/android/camera/dualvideo/recorder/RecordType;
 
     invoke-virtual {v0}, [Lcom/android/camera/dualvideo/recorder/RecordType;->clone()Ljava/lang/Object;
@@ -178,7 +166,6 @@
 .method public getIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/recorder/RecordType;->mIndex:I
 
     return v0
@@ -187,7 +174,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/RecordType;->mName:Ljava/lang/String;
 
     return-object v0
@@ -196,7 +182,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

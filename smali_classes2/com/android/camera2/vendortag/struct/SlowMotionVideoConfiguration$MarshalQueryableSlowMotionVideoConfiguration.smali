@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +57,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration$SlowMotionVideoConfigurationMarshaler;
 
     const/4 v5, 0x0
@@ -93,7 +91,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 1
     const-class p2, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;
 
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;

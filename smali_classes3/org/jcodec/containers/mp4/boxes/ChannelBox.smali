@@ -23,7 +23,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static createChannelBox()Lorg/jcodec/containers/mp4/boxes/ChannelBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -61,20 +59,16 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelLayout:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelBitmap:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     array-length v0, v0
@@ -85,7 +79,6 @@
 
     move v1, v0
 
-    .line 5
     :goto_0
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
@@ -93,24 +86,20 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 6
     aget-object v2, v2, v1
 
-    .line 7
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getChannelLabel()I
 
     move-result v3
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 8
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getChannelFlags()I
 
     move-result v3
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 9
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getCoordinates()[F
 
     move-result-object v3
@@ -119,7 +108,6 @@
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 10
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getCoordinates()[F
 
     move-result-object v3
@@ -130,7 +118,6 @@
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 11
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;->getCoordinates()[F
 
     move-result-object v2
@@ -152,7 +139,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     array-length v0, v0
@@ -167,7 +153,6 @@
 .method public getChannelBitmap()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelBitmap:I
 
     return v0
@@ -176,7 +161,6 @@
 .method public getChannelLayout()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelLayout:I
 
     return v0
@@ -185,7 +169,6 @@
 .method public getDescriptions()[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     return-object v0
@@ -194,29 +177,24 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 10
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelLayout:I
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelBitmap:I
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 5
     new-array v1, v0, [Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
@@ -228,7 +206,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 6
     iget-object v3, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     new-instance v4, Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
@@ -245,7 +222,6 @@
 
     new-array v7, v7, [F
 
-    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v8
@@ -270,7 +246,6 @@
 
     const/4 v8, 0x2
 
-    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v9
@@ -296,7 +271,6 @@
 .method public setChannelLayout(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->channelLayout:I
 
     return-void
@@ -305,7 +279,6 @@
 .method public setDescriptions([Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/ChannelBox;->descriptions:[Lorg/jcodec/containers/mp4/boxes/ChannelBox$ChannelDescription;
 
     return-void

@@ -24,7 +24,6 @@
 .method public constructor <init>(JJLandroid/app/Activity;Landroid/widget/Button;)V
     .locals 0
 
-    .line 1
     iput-object p5, p0, Lcom/android/camera/Util$2;->val$activity:Landroid/app/Activity;
 
     iput-object p6, p0, Lcom/android/camera/Util$2;->val$btn:Landroid/widget/Button;
@@ -39,7 +38,6 @@
 .method public onFinish()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/Util$2;->val$activity:Landroid/app/Activity;
 
     check-cast v0, Lcom/android/camera/ActivityBase;
@@ -50,14 +48,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/Util$2;->val$btn:Landroid/widget/Button;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/Util$2;->val$btn:Landroid/widget/Button;
 
     iget-object v1, p0, Lcom/android/camera/Util$2;->val$activity:Landroid/app/Activity;
@@ -66,7 +62,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12034b
+    const v2, 0x7f120333
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -81,7 +77,6 @@
 .method public onTick(J)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/Util$2;->val$activity:Landroid/app/Activity;
 
     check-cast v0, Lcom/android/camera/ActivityBase;
@@ -92,7 +87,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/Util$2;->val$btn:Landroid/widget/Button;
 
     iget-object v1, p0, Lcom/android/camera/Util$2;->val$activity:Landroid/app/Activity;
@@ -101,7 +95,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12034c
+    const v2, 0x7f120334
 
     const/4 v3, 0x1
 

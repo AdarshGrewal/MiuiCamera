@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/WideSelfieModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/WideSelfieModule$3;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onPictureTakenFinished(ZJ)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object p2
@@ -67,7 +65,6 @@
 .method public onPictureTakenImageConsumed(Landroid/media/Image;Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object p2
@@ -92,7 +89,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/module/WideSelfieModule$3;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-static {p2}, Lcom/android/camera/module/WideSelfieModule;->access$500(Lcom/android/camera/module/WideSelfieModule;)[B
@@ -101,16 +97,14 @@
 
     if-nez p2, :cond_0
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/module/WideSelfieModule$3;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
-    invoke-static {p1, v1}, LOooO00o/OooO0OO/OooO00o/OooO00o/OooO0OO;->OooO00o(Landroid/media/Image;I)[B
+    invoke-static {p1, v1}, LOooO0O0/OooO0OO/OooO00o/OooO00o/OooO0OO;->OooO00o(Landroid/media/Image;I)[B
 
     move-result-object v0
 
     invoke-static {p2, v0}, Lcom/android/camera/module/WideSelfieModule;->access$502(Lcom/android/camera/module/WideSelfieModule;[B)[B
 
-    .line 4
     :cond_0
     iget-object p2, p0, Lcom/android/camera/module/WideSelfieModule$3;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
@@ -120,7 +114,6 @@
 
     invoke-virtual {p2, p1}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->onBurstCapture(Landroid/media/Image;)V
 
-    .line 5
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
     :cond_1

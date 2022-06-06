@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/miui/filtersdk/filter/base/ColorLookupFilter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter$1;->this$0:Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/ColorLookupFilter$1;->this$0:Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
     sget-object v1, Lcom/miui/filtersdk/BeautificationSDK;->sContext:Landroid/content/Context;

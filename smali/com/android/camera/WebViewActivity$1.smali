@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/WebViewActivity;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/WebViewActivity$1;->this$0:Lcom/android/camera/WebViewActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -35,14 +34,12 @@
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
     .locals 2
 
-    .line 1
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x15
 
     if-lt p1, v0, :cond_0
 
-    .line 2
     invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
     move-result-object p1
@@ -53,7 +50,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -62,14 +58,12 @@
     :goto_0
     const-string p2, "mailto:"
 
-    .line 4
     invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 5
     :try_start_0
     iget-object p2, p0, Lcom/android/camera/WebViewActivity$1;->this$0:Lcom/android/camera/WebViewActivity;
 
@@ -92,7 +86,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     invoke-virtual {p1}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     :goto_1

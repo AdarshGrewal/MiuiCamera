@@ -52,14 +52,12 @@
 
     const-wide/32 v2, 0xc800000
 
-    .line 1
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/camera/module/video/VideoConfig;->VIDEO_MIN_SINGLE_FILE_SIZE:J
 
-    .line 2
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x500
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/camera/module/video/VideoConfig;->SIZE_720:Landroid/util/Size;
 
-    .line 3
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0x780
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/android/camera/module/video/VideoConfig;->SIZE_1080:Landroid/util/Size;
 
-    .line 4
     new-instance v0, Landroid/util/Size;
 
     const/16 v1, 0xf00
@@ -92,7 +88,6 @@
 
     sput-object v0, Lcom/android/camera/module/video/VideoConfig;->SIZE_2160:Landroid/util/Size;
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -101,7 +96,6 @@
 
     const v1, 0x24b76a0
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -110,7 +104,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Lcom/android/camera/module/video/VideoConfig;->HEVC_VIDEO_ENCODER_BITRATE:Ljava/util/HashMap;
 
     const v1, 0xeafc40
@@ -123,7 +116,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     sget-object v0, Lcom/android/camera/module/video/VideoConfig;->HEVC_VIDEO_ENCODER_BITRATE:Ljava/util/HashMap;
 
     const v1, 0xa47d60
@@ -136,7 +128,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     sget-object v0, Lcom/android/camera/module/video/VideoConfig;->HEVC_VIDEO_ENCODER_BITRATE:Ljava/util/HashMap;
 
     const v1, 0x150e00
@@ -155,7 +146,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

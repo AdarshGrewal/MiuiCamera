@@ -29,10 +29,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -50,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/provider/ExtraSettings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     move-result p0
@@ -71,7 +68,6 @@
 .method public static getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lmiuix/provider/ExtraSettings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -97,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Landroid/provider/Settings$Secure;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;)F
 
     move-result p0
@@ -108,7 +103,6 @@
 .method public static getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
 
     move-result p0
@@ -124,7 +118,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     move-result p0
@@ -135,7 +128,6 @@
 .method public static getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -151,7 +143,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Landroid/provider/Settings$Secure;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;)J
 
     move-result-wide p0
@@ -162,7 +153,6 @@
 .method public static getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$Secure;->getLong(Landroid/content/ContentResolver;Ljava/lang/String;J)J
 
     move-result-wide p0
@@ -173,7 +163,6 @@
 .method public static getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -184,7 +173,6 @@
 .method public static getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -203,7 +191,6 @@
 .method public static getUriFor(Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -214,7 +201,6 @@
 .method public static putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/provider/ExtraSettings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result p0
@@ -225,7 +211,6 @@
 .method public static putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
     move-result p0
@@ -236,7 +221,6 @@
 .method public static putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result p0
@@ -247,7 +231,6 @@
 .method public static putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Landroid/provider/Settings$Secure;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
     move-result p0
@@ -258,7 +241,6 @@
 .method public static putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0

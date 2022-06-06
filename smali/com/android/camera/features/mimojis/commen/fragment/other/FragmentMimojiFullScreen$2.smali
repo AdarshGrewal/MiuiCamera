@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/fragment/other/FragmentMimojiFullScreen;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/fragment/other/FragmentMimojiFullScreen$2;->this$0:Lcom/android/camera/features/mimojis/commen/fragment/other/FragmentMimojiFullScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 .method public compare(Lcom/android/camera/fragment/fullscreen/ShareInfo;Lcom/android/camera/fragment/fullscreen/ShareInfo;)I
     .locals 0
 
-    .line 2
     iget p1, p1, Lcom/android/camera/fragment/fullscreen/ShareInfo;->index:I
 
     iget p2, p2, Lcom/android/camera/fragment/fullscreen/ShareInfo;->index:I
@@ -75,7 +73,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/fullscreen/ShareInfo;
 
     check-cast p2, Lcom/android/camera/fragment/fullscreen/ShareInfo;

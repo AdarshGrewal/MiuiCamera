@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/android/camera/fragment/beauty/BeautyLevelFragment;Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/beauty/BeautyLevelFragment$MyLayoutManager;->this$0:Lcom/android/camera/fragment/beauty/BeautyLevelFragment;
 
-    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void

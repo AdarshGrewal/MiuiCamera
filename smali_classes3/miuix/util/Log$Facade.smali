@@ -26,10 +26,8 @@
 .method public constructor <init>(Lmiuix/internal/log/Logger;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lmiuix/util/Log$Facade;->mLogger:Lmiuix/internal/log/Logger;
 
     return-void
@@ -38,7 +36,6 @@
 .method public synthetic constructor <init>(Lmiuix/internal/log/Logger;Lmiuix/util/Log$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/util/Log$Facade;-><init>(Lmiuix/internal/log/Logger;)V
 
     return-void
@@ -59,7 +56,6 @@
 
     move-object v4, p4
 
-    .line 1
     invoke-virtual/range {v0 .. v5}, Lmiuix/util/Log$Facade;->doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -68,7 +64,6 @@
 .method private varargs logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 6
 
-    .line 1
     invoke-static {}, Lmiuix/internal/log/message/StringFormattedMessage;->obtain()Lmiuix/internal/log/message/StringFormattedMessage;
 
     move-result-object v0
@@ -101,7 +96,6 @@
 .method public debug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->DEBUG:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -114,7 +108,6 @@
 .method public debug(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->DEBUG:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -125,7 +118,6 @@
 .method public varargs debug(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->DEBUG:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -136,7 +128,6 @@
 .method public doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/util/Log$Facade;->mLogger:Lmiuix/internal/log/Logger;
 
     if-nez v0, :cond_0
@@ -145,7 +136,6 @@
 
     const-string p2, "mLogger is null"
 
-    .line 2
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -153,16 +143,13 @@
     :cond_0
     if-nez p5, :cond_1
 
-    .line 3
     invoke-virtual {v0, p1, p2, p3, p4}, Lmiuix/internal/log/Logger;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {v0, p1, p2, p5}, Lmiuix/internal/log/Logger;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Lmiuix/internal/log/message/Message;)V
 
-    .line 5
     invoke-interface {p5}, Lmiuix/internal/log/message/Message;->recycle()V
 
     :goto_0
@@ -172,7 +159,6 @@
 .method public error(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->ERROR:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -185,7 +171,6 @@
 .method public error(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->ERROR:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -196,7 +181,6 @@
 .method public varargs error(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->ERROR:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -207,7 +191,6 @@
 .method public fatal(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->FATAL:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -220,7 +203,6 @@
 .method public fatal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->FATAL:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -231,7 +213,6 @@
 .method public varargs fatal(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->FATAL:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -242,7 +223,6 @@
 .method public info(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->INFO:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -255,7 +235,6 @@
 .method public info(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->INFO:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -266,7 +245,6 @@
 .method public varargs info(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->INFO:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -277,7 +255,6 @@
 .method public verbose(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -290,7 +267,6 @@
 .method public verbose(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -301,7 +277,6 @@
 .method public varargs verbose(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -312,7 +287,6 @@
 .method public warn(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/Level;->WARNING:Lmiuix/internal/log/Level;
 
     const/4 v1, 0x0
@@ -325,7 +299,6 @@
 .method public warn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/internal/log/Level;->WARNING:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->log(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -336,7 +309,6 @@
 .method public varargs warn(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/internal/log/Level;->WARNING:Lmiuix/internal/log/Level;
 
     invoke-direct {p0, v0, p1, p2, p3}, Lmiuix/util/Log$Facade;->logf(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V

@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     iput-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->val$holder:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
@@ -46,7 +45,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->current()Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     move-result-object p1
@@ -57,17 +55,14 @@
 
     const-string v0, "cancel"
 
-    .line 2
     invoke-static {p2, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
-    const v0, 0x7f1208b8
+    const v0, 0x7f120869
 
     invoke-virtual {p2, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setAlertDialogTitle(I)V
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     invoke-virtual {p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -78,7 +73,6 @@
 
     invoke-virtual {p2, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->stopTimer(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     invoke-virtual {p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -89,7 +83,6 @@
 
     invoke-virtual {p2, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->stopTimer(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
 
-    .line 6
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     invoke-virtual {p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -100,14 +93,12 @@
 
     invoke-virtual {p2, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->setSelectedRemoteDeviceId(I)V
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->val$holder:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;
 
     iget p2, p2, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardListAdapter$RemoteDeviceItemViewHolder;->mDeviceId:I
 
     invoke-virtual {p1, p2}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->disconnect(I)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$2;->val$device:Lcom/android/camera/dualvideo/remote/RemoteDevice;
 
     const/4 p2, 0x0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$200(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -55,10 +53,8 @@
 
     const-string p1, "attr_rol_suw_perm"
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -69,7 +65,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
@@ -85,10 +80,8 @@
 
     const-string p1, "attr_rol_suw_home"
 
-    .line 5
     invoke-static {p1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
@@ -111,7 +103,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$100(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -122,7 +113,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$200(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
@@ -131,7 +121,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->access$300(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)I
@@ -140,7 +129,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setAlertDialogTitle(I)V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
     const/4 v0, -0x2
@@ -149,7 +137,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f120342
+    const v0, 0x7f12032a
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 

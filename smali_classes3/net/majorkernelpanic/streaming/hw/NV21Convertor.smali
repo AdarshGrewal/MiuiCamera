@@ -29,12 +29,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPanesReversed:Z
 
     return-void
@@ -45,12 +43,10 @@
 .method public convert([BLjava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0, p1}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->convert([B)[B
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v1
@@ -71,7 +67,6 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p2, v0, v1, p1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     return-void
@@ -80,7 +75,6 @@
 .method public convert([B)[B
     .locals 6
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     if-eqz v0, :cond_0
@@ -103,7 +97,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 5
     :cond_0
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
@@ -123,7 +116,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
-    .line 6
     :cond_1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPlanar:Z
 
@@ -131,7 +123,6 @@
 
     if-nez v0, :cond_4
 
-    .line 7
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mHeight:I
@@ -144,12 +135,10 @@
 
     if-ne v0, v2, :cond_8
 
-    .line 8
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPanesReversed:Z
 
     if-nez v0, :cond_2
 
-    .line 9
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
     :goto_0
@@ -161,7 +150,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 10
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     add-int/lit8 v3, v0, 0x1
@@ -170,12 +158,10 @@
 
     aput-byte v4, v2, v1
 
-    .line 11
     aget-byte v4, p1, v0
 
     aput-byte v4, p1, v3
 
-    .line 12
     aget-byte v2, v2, v1
 
     aput-byte v2, p1, v0
@@ -184,20 +170,17 @@
 
     goto :goto_0
 
-    .line 13
     :cond_2
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mYPadding:I
 
     if-lez v0, :cond_3
 
-    .line 14
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
     invoke-static {p1, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 15
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
@@ -210,13 +193,11 @@
 
     invoke-static {p1, v0, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 16
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     :cond_3
     return-object p1
 
-    .line 17
     :cond_4
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
@@ -230,14 +211,12 @@
 
     if-ne v0, v2, :cond_8
 
-    .line 18
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPanesReversed:Z
 
     if-nez v0, :cond_5
 
     move v0, v1
 
-    .line 19
     :goto_1
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
@@ -245,7 +224,6 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 20
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     mul-int/lit8 v4, v0, 0x2
@@ -258,7 +236,6 @@
 
     aput-byte v5, v3, v0
 
-    .line 21
     div-int/lit8 v5, v2, 0x4
 
     add-int/2addr v5, v0
@@ -276,7 +253,6 @@
     :cond_5
     move v0, v1
 
-    .line 22
     :goto_2
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
@@ -284,7 +260,6 @@
 
     if-ge v0, v3, :cond_6
 
-    .line 23
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     mul-int/lit8 v4, v0, 0x2
@@ -295,7 +270,6 @@
 
     aput-byte v5, v3, v0
 
-    .line 24
     div-int/lit8 v5, v2, 0x4
 
     add-int/2addr v5, v0
@@ -312,13 +286,11 @@
 
     goto :goto_2
 
-    .line 25
     :cond_6
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mYPadding:I
 
     if-nez v0, :cond_7
 
-    .line 26
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
@@ -329,7 +301,6 @@
 
     return-object p1
 
-    .line 27
     :cond_7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
@@ -337,7 +308,6 @@
 
     invoke-static {p1, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 28
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
@@ -350,7 +320,6 @@
 
     invoke-static {p1, v1, p1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 29
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mBuffer:[B
 
     :cond_8
@@ -360,7 +329,6 @@
 .method public getBufferSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
     mul-int/lit8 v0, v0, 0x3
@@ -373,7 +341,6 @@
 .method public getPlanar()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPlanar:Z
 
     return v0
@@ -382,7 +349,6 @@
 .method public getSliceHeigth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
     return v0
@@ -391,7 +357,6 @@
 .method public getStride()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mStride:I
 
     return v0
@@ -400,7 +365,6 @@
 .method public getUVPanesReversed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPanesReversed:Z
 
     return v0
@@ -409,7 +373,6 @@
 .method public getYPadding()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mYPadding:I
 
     return v0
@@ -418,7 +381,6 @@
 .method public setColorPanesReversed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPanesReversed:Z
 
     return-void
@@ -442,7 +404,6 @@
     :pswitch_0
     const/4 p1, 0x1
 
-    .line 1
     invoke-virtual {p0, p1}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setPlanar(Z)V
 
     goto :goto_0
@@ -451,7 +412,6 @@
     :pswitch_1
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p0, p1}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setPlanar(Z)V
 
     :goto_0
@@ -470,7 +430,6 @@
 .method public setPlanar(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mPlanar:Z
 
     return-void
@@ -479,21 +438,16 @@
 .method public setSize(II)V
     .locals 0
 
-    .line 1
     iput p2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mHeight:I
 
-    .line 2
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mWidth:I
 
-    .line 3
     iput p2, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
-    .line 4
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mStride:I
 
     mul-int/2addr p1, p2
 
-    .line 5
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSize:I
 
     return-void
@@ -502,7 +456,6 @@
 .method public setSliceHeigth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mSliceHeight:I
 
     return-void
@@ -511,7 +464,6 @@
 .method public setStride(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mStride:I
 
     return-void
@@ -520,7 +472,6 @@
 .method public setYPadding(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->mYPadding:I
 
     return-void

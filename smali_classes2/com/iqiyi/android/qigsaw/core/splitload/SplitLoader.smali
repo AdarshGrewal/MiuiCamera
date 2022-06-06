@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoader;->context:Landroid/content/Context;
 
     return-void
@@ -82,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoader;->context:Landroid/content/Context;
 
@@ -101,7 +98,6 @@
     :catchall_0
     move-exception p1
 
-    .line 2
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadException;
 
     const/16 v1, -0x15

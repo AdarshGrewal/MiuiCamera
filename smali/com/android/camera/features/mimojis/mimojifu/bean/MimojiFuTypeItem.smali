@@ -52,33 +52,24 @@
         }
     .end annotation
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 14
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
-    .line 15
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
-    .line 16
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
-    .line 17
     iput p3, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
-    .line 18
     iput-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuColorList:Ljava/util/List;
 
-    .line 19
     iput p5, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
-    .line 20
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mMimojiFuType:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
 
-    .line 21
     iput p6, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mNameResource:I
 
     return-void
@@ -95,21 +86,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
-    .line 5
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
     return-void
@@ -129,27 +115,20 @@
         }
     .end annotation
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 7
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
-    .line 8
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
-    .line 9
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
-    .line 10
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
-    .line 11
     iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuColorList:Ljava/util/List;
 
-    .line 12
     iput p4, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
     return-void
@@ -160,7 +139,6 @@
 .method public getCount()I
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
     const/4 v1, 0x0
@@ -176,7 +154,6 @@
     :cond_0
     move v0, v2
 
-    .line 2
     :goto_0
     iget v3, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
@@ -204,7 +181,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuColorList:Ljava/util/List;
 
     return-object v0
@@ -221,7 +197,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
     return-object v0
@@ -230,7 +205,6 @@
 .method public getIndexFuColor()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
     return v0
@@ -239,7 +213,6 @@
 .method public getIndexFuItem()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
     return v0
@@ -248,7 +221,6 @@
 .method public getMimojiFuType()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mMimojiFuType:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
 
     return-object v0
@@ -257,7 +229,6 @@
 .method public getNameResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mNameResource:I
 
     return v0
@@ -266,7 +237,6 @@
 .method public isFull()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
     const/4 v1, 0x1
@@ -281,7 +251,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
@@ -302,7 +271,6 @@
 
     check-cast v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -338,7 +306,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuColorList:Ljava/util/List;
 
     return-void
@@ -355,7 +322,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mFuItemList:Ljava/util/List;
 
     return-void
@@ -364,7 +330,6 @@
 .method public setIndexFuColor(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuColor:I
 
     return-void
@@ -373,7 +338,6 @@
 .method public setIndexFuItem(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mIndexFuItem:I
 
     return-void
@@ -382,7 +346,6 @@
 .method public setMimojiFuType(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mMimojiFuType:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
 
     return-void
@@ -391,7 +354,6 @@
 .method public setNameResource(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuTypeItem;->mNameResource:I
 
     return-void

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1$3;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onShow(Landroid/content/DialogInterface;)V
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1$3;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;
 
     iget-object p1, p1, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
@@ -47,12 +45,10 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;->access$102(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;Z)Z
 
-    .line 2
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->current()Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     move-result-object p1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1$3;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;
 
     iget-object v1, v1, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
@@ -65,7 +61,6 @@
 
     move-result v1
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1$3;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;
 
     iget-object v2, v2, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$1;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
@@ -82,7 +77,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {p1, v1, v0}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->setConnectionSuspended(Lcom/android/camera/dualvideo/remote/RemoteDevice;Z)V
 
     :cond_0

@@ -98,7 +98,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -111,7 +110,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -120,7 +118,6 @@
 .method public static A()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -139,7 +136,6 @@
 .method public static B()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -158,7 +154,6 @@
 .method public static a(I)V
     .locals 0
 
-    .line 4
     sput p0, Lcom/xiaomi/stat/b;->J:I
 
     return-void
@@ -167,7 +162,6 @@
 .method public static a(J)V
     .locals 2
 
-    .line 9
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -182,7 +176,6 @@
 .method public static a(Ljava/lang/String;)V
     .locals 0
 
-    .line 3
     sput-object p0, Lcom/xiaomi/stat/b;->P:Ljava/lang/String;
 
     return-void
@@ -191,7 +184,6 @@
 .method public static a(Ljava/lang/String;I)V
     .locals 3
 
-    .line 7
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -200,7 +192,6 @@
 
     return-void
 
-    .line 8
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
@@ -228,7 +219,6 @@
 .method public static a(Ljava/lang/String;Z)V
     .locals 3
 
-    .line 5
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -237,7 +227,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
@@ -265,7 +254,6 @@
 .method public static a(Z)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -280,7 +268,6 @@
 .method public static a()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -314,7 +301,6 @@
 
     move p0, v0
 
-    .line 4
     :cond_1
     :goto_0
     sput p0, Lcom/xiaomi/stat/b;->K:I
@@ -325,7 +311,6 @@
 .method public static b(J)V
     .locals 2
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -340,7 +325,6 @@
 .method public static b(Ljava/lang/String;)V
     .locals 2
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -355,7 +339,6 @@
 .method public static b(Z)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -370,7 +353,6 @@
 .method public static b()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -389,7 +371,6 @@
 .method public static c()V
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -402,7 +383,6 @@
 
     const-wide/16 v0, 0x1388
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v2
@@ -417,7 +397,6 @@
 
     const-wide/16 v0, 0x3e8
 
-    .line 3
     :cond_0
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
@@ -427,7 +406,6 @@
     :catch_0
     return-void
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -441,7 +419,6 @@
 .method public static c(I)V
     .locals 2
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -456,7 +433,6 @@
 .method public static c(Ljava/lang/String;)V
     .locals 2
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -471,7 +447,6 @@
 .method public static c(Z)V
     .locals 0
 
-    .line 5
     sput-boolean p0, Lcom/xiaomi/stat/b;->O:Z
 
     return-void
@@ -480,18 +455,15 @@
 .method public static d()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/b;->R:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-boolean v1, Lcom/xiaomi/stat/b;->Q:Z
 
     if-eqz v1, :cond_0
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -499,24 +471,20 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 4
     sput-boolean v1, Lcom/xiaomi/stat/b;->Q:Z
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/stat/d/m;->i()Z
 
     move-result v2
 
     sput-boolean v2, Lcom/xiaomi/stat/b;->O:Z
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/stat/d/m;->g()Ljava/lang/String;
 
     move-result-object v2
 
     sput-object v2, Lcom/xiaomi/stat/b;->P:Ljava/lang/String;
 
-    .line 7
     sget-boolean v3, Lcom/xiaomi/stat/b;->O:Z
 
     if-nez v3, :cond_1
@@ -529,10 +497,8 @@
 
     if-nez v2, :cond_1
 
-    .line 8
     sput-boolean v1, Lcom/xiaomi/stat/b;->O:Z
 
-    .line 9
     :cond_1
     monitor-exit v0
 
@@ -551,7 +517,6 @@
 .method public static d(I)V
     .locals 2
 
-    .line 11
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -566,7 +531,6 @@
 .method public static d(Z)V
     .locals 0
 
-    .line 10
     sput-boolean p0, Lcom/xiaomi/stat/b;->S:Z
 
     return-void
@@ -575,7 +539,6 @@
 .method public static d(Ljava/lang/String;)Z
     .locals 4
 
-    .line 12
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -586,7 +549,6 @@
 
     return v1
 
-    .line 13
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
@@ -616,7 +578,6 @@
 .method public static e(Ljava/lang/String;)I
     .locals 4
 
-    .line 4
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -627,7 +588,6 @@
 
     return v1
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
@@ -661,7 +621,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
@@ -677,7 +636,6 @@
 .method public static e(Z)V
     .locals 2
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -692,15 +650,12 @@
 .method public static e()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/stat/b;->Q:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/b;->d()V
 
-    .line 3
     :cond_0
     sget-boolean v0, Lcom/xiaomi/stat/b;->O:Z
 
@@ -710,7 +665,6 @@
 .method public static f()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/b;->P:Ljava/lang/String;
 
     return-object v0
@@ -719,14 +673,12 @@
 .method public static f(Ljava/lang/String;)V
     .locals 5
 
-    .line 2
     sget-object v0, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 3
     array-length v2, v0
 
     move v3, v1
@@ -736,7 +688,6 @@
 
     aget-object v4, v0, v3
 
-    .line 4
     invoke-static {p0, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -750,7 +701,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object v0, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
 
@@ -758,7 +708,6 @@
 
     if-nez v0, :cond_2
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -767,20 +716,17 @@
 
     goto :goto_2
 
-    .line 7
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8
     sget-object v3, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
 
     aget-object v1, v3, v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 9
     sget-object v1, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
 
     array-length v1, v1
@@ -792,7 +738,6 @@
 
     if-ge v3, v1, :cond_3
 
-    .line 10
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     sget-object v4, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
@@ -805,13 +750,11 @@
 
     goto :goto_1
 
-    .line 11
     :cond_3
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 12
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object p0
@@ -829,7 +772,6 @@
 .method public static f(Z)V
     .locals 0
 
-    .line 13
     sput-boolean p0, Lcom/xiaomi/stat/b;->N:Z
 
     return-void
@@ -838,7 +780,6 @@
 .method public static g(Ljava/lang/String;)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -853,7 +794,6 @@
 .method public static g(Z)V
     .locals 2
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -868,7 +808,6 @@
 .method public static g()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/stat/b;->S:Z
 
     return v0
@@ -877,7 +816,6 @@
 .method public static h()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -896,7 +834,6 @@
 .method public static h(Ljava/lang/String;)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -911,7 +848,6 @@
 .method public static h(Z)V
     .locals 2
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -926,7 +862,6 @@
 .method public static i()I
     .locals 1
 
-    .line 1
     sget v0, Lcom/xiaomi/stat/b;->J:I
 
     return v0
@@ -935,7 +870,6 @@
 .method public static i(Ljava/lang/String;)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -950,7 +884,6 @@
 .method public static i(Z)V
     .locals 2
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -965,7 +898,6 @@
 .method public static j()I
     .locals 1
 
-    .line 1
     sget v0, Lcom/xiaomi/stat/b;->K:I
 
     return v0
@@ -974,7 +906,6 @@
 .method public static j(Z)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -989,7 +920,6 @@
 .method public static k()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1008,7 +938,6 @@
 .method public static k(Z)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1023,7 +952,6 @@
 .method public static l()I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1042,7 +970,6 @@
 .method public static m()I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1061,7 +988,6 @@
 .method public static n()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1074,7 +1000,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1083,7 +1008,6 @@
 
     const-string v1, ","
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -1097,7 +1021,6 @@
 .method public static o()[Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/b;->L:[Ljava/lang/String;
 
     return-object v0
@@ -1106,7 +1029,6 @@
 .method public static p()I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1125,7 +1047,6 @@
 .method public static q()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1144,7 +1065,6 @@
 .method public static r()J
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1163,7 +1083,6 @@
 .method public static s()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1182,7 +1101,6 @@
 .method public static t()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1201,7 +1119,6 @@
 .method public static u()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/stat/b;->N:Z
 
     return v0
@@ -1210,7 +1127,6 @@
 .method public static v()J
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1229,7 +1145,6 @@
 .method public static w()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1248,7 +1163,6 @@
 .method public static x()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1267,7 +1181,6 @@
 .method public static y()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0
@@ -1286,7 +1199,6 @@
 .method public static z()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ab;->a()Lcom/xiaomi/stat/ab;
 
     move-result-object v0

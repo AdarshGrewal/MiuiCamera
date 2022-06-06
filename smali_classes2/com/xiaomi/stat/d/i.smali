@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/i;->a(Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -83,14 +81,12 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-static {p2, p3}, Lcom/xiaomi/stat/d/i;->a(Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 5
     :goto_0
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -100,7 +96,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 6
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,7 +117,6 @@
     :cond_1
     move-object p3, p1
 
-    .line 7
     :goto_1
     new-instance v7, Ljava/net/URL;
 
@@ -139,16 +133,13 @@
 
     const/16 v7, 0x2710
 
-    .line 8
     :try_start_1
     invoke-virtual {p3, v7}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     const/16 v7, 0x3a98
 
-    .line 9
     invoke-virtual {p3, v7}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 10
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -160,13 +151,11 @@
 
     if-eqz v7, :cond_2
 
-    .line 11
     :try_start_2
     invoke-virtual {p3, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 12
     :cond_2
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -176,25 +165,20 @@
 
     if-eqz p2, :cond_3
 
-    .line 13
     invoke-virtual {p3, v0}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const-string v0, "Content-Type"
 
     const-string v1, "application/x-www-form-urlencoded"
 
-    .line 14
     invoke-virtual {p3, v0, v1}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     invoke-virtual {p3, v4}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 16
     invoke-virtual {p2, v8}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p2
 
-    .line 17
     invoke-virtual {p3}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v0
@@ -202,13 +186,11 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 18
     :try_start_3
     array-length v1, p2
 
     invoke-virtual {v0, p2, v5, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 19
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     goto :goto_3
@@ -217,13 +199,11 @@
     :goto_2
     move-object v0, v6
 
-    .line 20
     :goto_3
     invoke-virtual {p3}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result p2
 
-    .line 21
     invoke-virtual {p3}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -231,7 +211,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 22
     :try_start_4
     invoke-static {v1}, Lcom/xiaomi/stat/d/j;->b(Ljava/io/InputStream;)[B
 
@@ -245,7 +224,6 @@
 
     aput-object p1, v10, v4
 
-    .line 23
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -258,7 +236,6 @@
 
     invoke-static {p2}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;)V
 
-    .line 24
     new-instance p2, Ljava/lang/String;
 
     invoke-direct {p2, v7, v8}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
@@ -266,13 +243,10 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    .line 25
     invoke-static {v1}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/InputStream;)V
 
-    .line 26
     invoke-static {v0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/OutputStream;)V
 
-    .line 27
     invoke-static {p3}, Lcom/xiaomi/stat/d/j;->a(Ljava/net/HttpURLConnection;)V
 
     return-object p2
@@ -337,7 +311,6 @@
 
     aput-object p1, v3, v4
 
-    .line 28
     invoke-virtual {p2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -352,13 +325,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 29
     invoke-static {v1}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/InputStream;)V
 
-    .line 30
     invoke-static {v0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/OutputStream;)V
 
-    .line 31
     invoke-static {p3}, Lcom/xiaomi/stat/d/j;->a(Ljava/net/HttpURLConnection;)V
 
     return-object v6
@@ -368,14 +338,11 @@
 
     move-object v6, v1
 
-    .line 32
     :goto_6
     invoke-static {v6}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/InputStream;)V
 
-    .line 33
     invoke-static {v0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/OutputStream;)V
 
-    .line 34
     invoke-static {p3}, Lcom/xiaomi/stat/d/j;->a(Ljava/net/HttpURLConnection;)V
 
     throw p0
@@ -403,7 +370,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-static {p0, p1, v0}, Lcom/xiaomi/stat/d/i;->a(Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -433,7 +399,6 @@
 
     const-string v0, "GET"
 
-    .line 3
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/stat/d/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -454,14 +419,12 @@
         }
     .end annotation
 
-    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz p0, :cond_1
 
-    .line 54
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -470,10 +433,8 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 55
     invoke-static {v1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 56
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -491,7 +452,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 57
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -500,11 +460,9 @@
 
     goto :goto_0
 
-    .line 58
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 59
     invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -515,16 +473,13 @@
 
     goto :goto_0
 
-    .line 60
     :cond_1
     invoke-static {}, Lcom/xiaomi/stat/ak;->c()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 61
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 62
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -549,12 +504,10 @@
         }
     .end annotation
 
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 36
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -563,7 +516,6 @@
 
     move-result-object v1
 
-    .line 37
     :goto_0
     :try_start_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -580,7 +532,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 38
     :try_start_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -588,7 +539,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 39
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -603,7 +553,6 @@
 
     goto :goto_0
 
-    .line 40
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -611,10 +560,8 @@
 
     if-lez v6, :cond_1
 
-    .line 41
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 42
     :cond_1
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -628,10 +575,8 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 43
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -661,35 +606,29 @@
     :cond_3
     if-eqz p1, :cond_5
 
-    .line 45
     invoke-static {p0}, Lcom/xiaomi/stat/d/i;->a(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 46
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p1
 
     if-lez p1, :cond_4
 
-    .line 47
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
     const-string p1, "sn"
 
-    .line 48
     invoke-static {p1, v5}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 49
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 50
     invoke-static {p0, v5}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -703,10 +642,8 @@
     :catch_0
     const-string p0, "format params failed"
 
-    .line 51
     invoke-static {p0}, Lcom/xiaomi/stat/d/k;->e(Ljava/lang/String;)V
 
-    .line 52
     :cond_5
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -738,7 +675,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, p1, v0}, Lcom/xiaomi/stat/d/i;->b(Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -768,7 +704,6 @@
 
     const-string v0, "POST"
 
-    .line 2
     invoke-static {v0, p0, p1, p2}, Lcom/xiaomi/stat/d/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Z)Ljava/lang/String;
 
     move-result-object p0

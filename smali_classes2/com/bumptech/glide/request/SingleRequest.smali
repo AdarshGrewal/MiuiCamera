@@ -154,7 +154,6 @@
 
     const/4 v1, 0x2
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -196,15 +195,12 @@
 
     move-object v0, p0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-boolean v1, Lcom/bumptech/glide/request/SingleRequest;->IS_VERBOSE_LOGGABLE:Z
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
@@ -221,7 +217,6 @@
     :goto_0
     iput-object v1, v0, Lcom/bumptech/glide/request/SingleRequest;->tag:Ljava/lang/String;
 
-    .line 4
     invoke-static {}, Lcom/bumptech/glide/util/pool/StateVerifier;->newInstance()Lcom/bumptech/glide/util/pool/StateVerifier;
 
     move-result-object v1
@@ -230,90 +225,72 @@
 
     move-object v1, p3
 
-    .line 5
     iput-object v1, v0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     move-object v1, p1
 
-    .line 6
     iput-object v1, v0, Lcom/bumptech/glide/request/SingleRequest;->context:Landroid/content/Context;
 
     move-object v1, p2
 
-    .line 7
     iput-object v1, v0, Lcom/bumptech/glide/request/SingleRequest;->glideContext:Lcom/bumptech/glide/GlideContext;
 
     move-object v2, p4
 
-    .line 8
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
     move-object v2, p5
 
-    .line 9
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->transcodeClass:Ljava/lang/Class;
 
     move-object v2, p6
 
-    .line 10
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move v2, p7
 
-    .line 11
     iput v2, v0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
     move v2, p8
 
-    .line 12
     iput v2, v0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
 
     move-object v2, p9
 
-    .line 13
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->priority:Lcom/bumptech/glide/Priority;
 
     move-object v2, p10
 
-    .line 14
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     move-object v2, p11
 
-    .line 15
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->targetListener:Lcom/bumptech/glide/request/RequestListener;
 
     move-object v2, p12
 
-    .line 16
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     move-object/from16 v2, p13
 
-    .line 17
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     move-object/from16 v2, p14
 
-    .line 18
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     move-object/from16 v2, p15
 
-    .line 19
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->animationFactory:Lcom/bumptech/glide/request/transition/TransitionFactory;
 
     move-object/from16 v2, p16
 
-    .line 20
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->callbackExecutor:Ljava/util/concurrent/Executor;
 
-    .line 21
     sget-object v2, Lcom/bumptech/glide/request/SingleRequest$Status;->PENDING:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 22
     iget-object v2, v0, Lcom/bumptech/glide/request/SingleRequest;->requestOrigin:Ljava/lang/RuntimeException;
 
     if-nez v2, :cond_1
@@ -324,7 +301,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 23
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Glide request origin trace"
@@ -340,14 +316,12 @@
 .method private assertNotCallingCallbacks()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -361,7 +335,6 @@
 .method private canNotifyCleared()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_1
@@ -390,7 +363,6 @@
 .method private canNotifyStatusChanged()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_1
@@ -419,7 +391,6 @@
 .method private canSetResource()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_1
@@ -448,30 +419,24 @@
 .method private cancel()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->assertNotCallingCallbacks()V
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     invoke-interface {v0, p0}, Lcom/bumptech/glide/request/target/Target;->removeCallback(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/Engine$LoadStatus;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 6
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
     :cond_0
@@ -481,12 +446,10 @@
 .method private getErrorDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->errorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getErrorPlaceholder()Landroid/graphics/drawable/Drawable;
@@ -497,7 +460,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getErrorId()I
@@ -506,7 +468,6 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getErrorId()I
@@ -519,7 +480,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->errorDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->errorDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -529,12 +489,10 @@
 .method private getFallbackDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getFallbackDrawable()Landroid/graphics/drawable/Drawable;
@@ -545,7 +503,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getFallbackId()I
@@ -554,7 +511,6 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getFallbackId()I
@@ -567,7 +523,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -577,12 +532,10 @@
 .method private getPlaceholderDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getPlaceholderDrawable()Landroid/graphics/drawable/Drawable;
@@ -593,7 +546,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getPlaceholderId()I
@@ -602,7 +554,6 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getPlaceholderId()I
@@ -615,7 +566,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -625,7 +575,6 @@
 .method private isFirstReadyResource()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_1
@@ -658,10 +607,8 @@
 .method private loadDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 2
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -683,7 +630,6 @@
 
     move-result-object v0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->glideContext:Lcom/bumptech/glide/GlideContext;
 
@@ -697,7 +643,6 @@
 .method private logV(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -737,7 +682,6 @@
 
     mul-float/2addr p1, p0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p0
@@ -749,12 +693,10 @@
 .method private notifyLoadFailed()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/bumptech/glide/request/RequestCoordinator;->onRequestFailed(Lcom/bumptech/glide/request/Request;)V
 
     :cond_0
@@ -764,12 +706,10 @@
 .method private notifyLoadSuccess()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestCoordinator:Lcom/bumptech/glide/request/RequestCoordinator;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/bumptech/glide/request/RequestCoordinator;->onRequestSuccess(Lcom/bumptech/glide/request/Request;)V
 
     :cond_0
@@ -842,7 +782,6 @@
 
     move-object/from16 v16, p15
 
-    .line 1
     new-instance v17, Lcom/bumptech/glide/request/SingleRequest;
 
     move-object/from16 v0, v17
@@ -855,23 +794,19 @@
 .method private onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;I)V
     .locals 8
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->requestOrigin:Ljava/lang/RuntimeException;
 
     invoke-virtual {p1, v1}, Lcom/bumptech/glide/load/engine/GlideException;->setOrigin(Ljava/lang/Exception;)V
 
-    .line 5
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->glideContext:Lcom/bumptech/glide/GlideContext;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/GlideContext;->getLogLevel()I
@@ -882,7 +817,6 @@
 
     const-string p2, "Glide"
 
-    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -927,36 +861,30 @@
 
     const-string p2, "Glide"
 
-    .line 7
     invoke-virtual {p1, p2}, Lcom/bumptech/glide/load/engine/GlideException;->logRootCauses(Ljava/lang/String;)V
 
     :cond_0
     const/4 p2, 0x0
 
-    .line 8
     iput-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
-    .line 9
     sget-object p2, Lcom/bumptech/glide/request/SingleRequest$Status;->FAILED:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 p2, 0x1
 
-    .line 10
     iput-boolean p2, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     const/4 v1, 0x0
 
-    .line 11
     :try_start_1
     iget-object v2, p0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     if-eqz v2, :cond_1
 
-    .line 12
     iget-object v2, p0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -978,12 +906,10 @@
 
     check-cast v4, Lcom/bumptech/glide/request/RequestListener;
 
-    .line 13
     iget-object v5, p0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
     iget-object v6, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
-    .line 14
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->isFirstReadyResource()Z
 
     move-result v7
@@ -999,7 +925,6 @@
     :cond_1
     move v3, v1
 
-    .line 15
     :cond_2
     iget-object v2, p0, Lcom/bumptech/glide/request/SingleRequest;->targetListener:Lcom/bumptech/glide/request/RequestListener;
 
@@ -1011,7 +936,6 @@
 
     iget-object v5, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
-    .line 16
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->isFirstReadyResource()Z
 
     move-result v6
@@ -1032,20 +956,16 @@
 
     if-nez p1, :cond_4
 
-    .line 17
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->setErrorPlaceholder()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 18
     :cond_4
     :try_start_2
     iput-boolean v1, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
-    .line 19
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->notifyLoadFailed()V
 
-    .line 20
     monitor-exit v0
 
     return-void
@@ -1053,16 +973,13 @@
     :catchall_0
     move-exception p1
 
-    .line 21
     iput-boolean v1, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
-    .line 22
     throw p1
 
     :catchall_1
     move-exception p1
 
-    .line 23
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -1082,20 +999,16 @@
         }
     .end annotation
 
-    .line 25
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->isFirstReadyResource()Z
 
     move-result v6
 
-    .line 26
     sget-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->COMPLETE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 27
     iput-object p1, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
-    .line 28
     iget-object p1, p0, Lcom/bumptech/glide/request/SingleRequest;->glideContext:Lcom/bumptech/glide/GlideContext;
 
     invoke-virtual {p1}, Lcom/bumptech/glide/GlideContext;->getLogLevel()I
@@ -1106,7 +1019,6 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 29
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1115,7 +1027,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 30
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1162,7 +1073,6 @@
 
     iget-wide v0, p0, Lcom/bumptech/glide/request/SingleRequest;->startTime:J
 
-    .line 31
     invoke-static {v0, v1}, Lcom/bumptech/glide/util/LogTime;->getElapsedMillis(J)D
 
     move-result-wide v0
@@ -1179,24 +1089,20 @@
 
     const-string v0, "Glide"
 
-    .line 32
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     const/4 p1, 0x1
 
-    .line 33
     iput-boolean p1, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
     const/4 v7, 0x0
 
-    .line 34
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 35
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1218,7 +1124,6 @@
 
     check-cast v0, Lcom/bumptech/glide/request/RequestListener;
 
-    .line 36
     iget-object v2, p0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
     iget-object v3, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
@@ -1229,7 +1134,6 @@
 
     move v5, v6
 
-    .line 37
     invoke-interface/range {v0 .. v5}, Lcom/bumptech/glide/request/RequestListener;->onResourceReady(Ljava/lang/Object;Ljava/lang/Object;Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/load/DataSource;Z)Z
 
     move-result v0
@@ -1241,7 +1145,6 @@
     :cond_1
     move v9, v7
 
-    .line 38
     :cond_2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->targetListener:Lcom/bumptech/glide/request/RequestListener;
 
@@ -1259,7 +1162,6 @@
 
     move v5, v6
 
-    .line 39
     invoke-interface/range {v0 .. v5}, Lcom/bumptech/glide/request/RequestListener;->onResourceReady(Ljava/lang/Object;Ljava/lang/Object;Lcom/bumptech/glide/request/target/Target;Lcom/bumptech/glide/load/DataSource;Z)Z
 
     move-result v0
@@ -1276,25 +1178,21 @@
 
     if-nez p1, :cond_4
 
-    .line 40
     iget-object p1, p0, Lcom/bumptech/glide/request/SingleRequest;->animationFactory:Lcom/bumptech/glide/request/transition/TransitionFactory;
 
     invoke-interface {p1, p3, v6}, Lcom/bumptech/glide/request/transition/TransitionFactory;->build(Lcom/bumptech/glide/load/DataSource;Z)Lcom/bumptech/glide/request/transition/Transition;
 
     move-result-object p1
 
-    .line 41
     iget-object p3, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     invoke-interface {p3, p2, p1}, Lcom/bumptech/glide/request/target/Target;->onResourceReady(Ljava/lang/Object;Lcom/bumptech/glide/request/transition/Transition;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     :cond_4
     iput-boolean v7, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
-    .line 43
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->notifyLoadSuccess()V
 
     return-void
@@ -1302,17 +1200,14 @@
     :catchall_0
     move-exception p1
 
-    .line 44
     iput-boolean v7, p0, Lcom/bumptech/glide/request/SingleRequest;->isCallingCallbacks:Z
 
-    .line 45
     throw p1
 .end method
 
 .method private setErrorPlaceholder()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->canNotifyStatusChanged()Z
 
     move-result v0
@@ -1324,12 +1219,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
     if-nez v1, :cond_1
 
-    .line 3
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getFallbackDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1337,7 +1230,6 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 4
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getErrorDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -1345,12 +1237,10 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getPlaceholderDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 6
     :cond_3
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
@@ -1364,33 +1254,27 @@
 .method public begin()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->assertNotCallingCallbacks()V
 
-    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 4
     invoke-static {}, Lcom/bumptech/glide/util/LogTime;->getLogTime()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/bumptech/glide/request/SingleRequest;->startTime:J
 
-    .line 5
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
     if-nez v1, :cond_2
 
-    .line 6
     iget v1, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
     iget v2, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
@@ -1401,17 +1285,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 7
     iget v1, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
     iput v1, p0, Lcom/bumptech/glide/request/SingleRequest;->width:I
 
-    .line 8
     iget v1, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
 
     iput v1, p0, Lcom/bumptech/glide/request/SingleRequest;->height:I
 
-    .line 9
     :cond_0
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getFallbackDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -1426,7 +1307,6 @@
     :cond_1
     const/4 v1, 0x3
 
-    .line 10
     :goto_0
     new-instance v2, Lcom/bumptech/glide/load/engine/GlideException;
 
@@ -1436,12 +1316,10 @@
 
     invoke-direct {p0, v2, v1}, Lcom/bumptech/glide/request/SingleRequest;->onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;I)V
 
-    .line 11
     monitor-exit v0
 
     return-void
 
-    .line 12
     :cond_2
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -1449,32 +1327,27 @@
 
     if-eq v1, v2, :cond_8
 
-    .line 13
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     sget-object v2, Lcom/bumptech/glide/request/SingleRequest$Status;->COMPLETE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     if-ne v1, v2, :cond_3
 
-    .line 14
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     sget-object v2, Lcom/bumptech/glide/load/DataSource;->MEMORY_CACHE:Lcom/bumptech/glide/load/DataSource;
 
     invoke-virtual {p0, v1, v2}, Lcom/bumptech/glide/request/SingleRequest;->onResourceReady(Lcom/bumptech/glide/load/engine/Resource;Lcom/bumptech/glide/load/DataSource;)V
 
-    .line 15
     monitor-exit v0
 
     return-void
 
-    .line 16
     :cond_3
     sget-object v1, Lcom/bumptech/glide/request/SingleRequest$Status;->WAITING_FOR_SIZE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 17
     iget v1, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
     iget v2, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
@@ -1485,7 +1358,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 18
     iget v1, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
     iget v2, p0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
@@ -1494,13 +1366,11 @@
 
     goto :goto_1
 
-    .line 19
     :cond_4
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     invoke-interface {v1, p0}, Lcom/bumptech/glide/request/target/Target;->getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
 
-    .line 20
     :goto_1
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -1514,7 +1384,6 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 21
     :cond_5
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->canNotifyStatusChanged()Z
 
@@ -1522,7 +1391,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 22
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getPlaceholderDrawable()Landroid/graphics/drawable/Drawable;
@@ -1531,13 +1399,11 @@
 
     invoke-interface {v1, v2}, Lcom/bumptech/glide/request/target/Target;->onLoadStarted(Landroid/graphics/drawable/Drawable;)V
 
-    .line 23
     :cond_6
     sget-boolean v1, Lcom/bumptech/glide/request/SingleRequest;->IS_VERBOSE_LOGGABLE:Z
 
     if-eqz v1, :cond_7
 
-    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1560,13 +1426,11 @@
 
     invoke-direct {p0, v1}, Lcom/bumptech/glide/request/SingleRequest;->logV(Ljava/lang/String;)V
 
-    .line 25
     :cond_7
     monitor-exit v0
 
     return-void
 
-    .line 26
     :cond_8
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1579,7 +1443,6 @@
     :catchall_0
     move-exception v1
 
-    .line 27
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1590,52 +1453,42 @@
 .method public clear()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->assertNotCallingCallbacks()V
 
-    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 4
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     sget-object v2, Lcom/bumptech/glide/request/SingleRequest$Status;->CLEARED:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     if-ne v1, v2, :cond_0
 
-    .line 5
     monitor-exit v0
 
     return-void
 
-    .line 6
     :cond_0
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->cancel()V
 
-    .line 7
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    .line 8
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
-    .line 9
     iput-object v2, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     move-object v2, v1
 
-    .line 10
     :cond_1
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->canNotifyCleared()Z
 
@@ -1643,7 +1496,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 11
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->target:Lcom/bumptech/glide/request/target/Target;
 
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->getPlaceholderDrawable()Landroid/graphics/drawable/Drawable;
@@ -1652,20 +1504,17 @@
 
     invoke-interface {v1, v3}, Lcom/bumptech/glide/request/target/Target;->onLoadCleared(Landroid/graphics/drawable/Drawable;)V
 
-    .line 12
     :cond_2
     sget-object v1, Lcom/bumptech/glide/request/SingleRequest$Status;->CLEARED:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v2, :cond_3
 
-    .line 14
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     invoke-virtual {v0, v2}, Lcom/bumptech/glide/load/engine/Engine;->release(Lcom/bumptech/glide/load/engine/Resource;)V
@@ -1676,7 +1525,6 @@
     :catchall_0
     move-exception v1
 
-    .line 15
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1688,12 +1536,10 @@
 .method public getLock()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     return-object v0
@@ -1702,12 +1548,10 @@
 .method public isAnyResourceSet()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -1730,7 +1574,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1741,12 +1584,10 @@
 .method public isCleared()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -1769,7 +1610,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1780,12 +1620,10 @@
 .method public isComplete()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -1808,7 +1646,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1823,7 +1660,6 @@
 
     move-object/from16 v0, p1
 
-    .line 1
     instance-of v2, v0, Lcom/bumptech/glide/request/SingleRequest;
 
     const/4 v3, 0x0
@@ -1832,32 +1668,24 @@
 
     return v3
 
-    .line 2
     :cond_0
     iget-object v2, v1, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 3
     :try_start_0
     iget v4, v1, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
-    .line 4
     iget v5, v1, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
 
-    .line 5
     iget-object v6, v1, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
-    .line 6
     iget-object v7, v1, Lcom/bumptech/glide/request/SingleRequest;->transcodeClass:Ljava/lang/Class;
 
-    .line 7
     iget-object v8, v1, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 8
     iget-object v9, v1, Lcom/bumptech/glide/request/SingleRequest;->priority:Lcom/bumptech/glide/Priority;
 
-    .line 9
     iget-object v10, v1, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     if-eqz v10, :cond_1
@@ -1873,40 +1701,30 @@
     :cond_1
     move v10, v3
 
-    .line 10
     :goto_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 11
     check-cast v0, Lcom/bumptech/glide/request/SingleRequest;
 
-    .line 12
     iget-object v11, v0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 13
     :try_start_1
     iget v2, v0, Lcom/bumptech/glide/request/SingleRequest;->overrideWidth:I
 
-    .line 14
     iget v12, v0, Lcom/bumptech/glide/request/SingleRequest;->overrideHeight:I
 
-    .line 15
     iget-object v13, v0, Lcom/bumptech/glide/request/SingleRequest;->model:Ljava/lang/Object;
 
-    .line 16
     iget-object v14, v0, Lcom/bumptech/glide/request/SingleRequest;->transcodeClass:Ljava/lang/Class;
 
-    .line 17
     iget-object v15, v0, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 18
     iget-object v3, v0, Lcom/bumptech/glide/request/SingleRequest;->priority:Lcom/bumptech/glide/Priority;
 
-    .line 19
     iget-object v1, v0, Lcom/bumptech/glide/request/SingleRequest;->requestListeners:Ljava/util/List;
 
     if-eqz v1, :cond_2
@@ -1922,7 +1740,6 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 20
     :goto_1
     monitor-exit v11
     :try_end_1
@@ -1932,21 +1749,18 @@
 
     if-ne v5, v12, :cond_3
 
-    .line 21
     invoke-static {v6, v13}, Lcom/bumptech/glide/util/Util;->bothModelsNullEquivalentOrEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 22
     invoke-virtual {v7, v14}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 23
     invoke-virtual {v8, v15}, Lcom/bumptech/glide/request/BaseRequestOptions;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1970,7 +1784,6 @@
     :catchall_0
     move-exception v0
 
-    .line 24
     :try_start_2
     monitor-exit v11
     :try_end_2
@@ -1981,7 +1794,6 @@
     :catchall_1
     move-exception v0
 
-    .line 25
     :try_start_3
     monitor-exit v2
     :try_end_3
@@ -1993,12 +1805,10 @@
 .method public isRunning()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -2031,7 +1841,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2044,7 +1853,6 @@
 
     const/4 v0, 0x5
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/request/SingleRequest;->onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;I)V
 
     return-void
@@ -2062,14 +1870,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
@@ -2077,13 +1883,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 3
     :try_start_1
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
     if-nez p1, :cond_0
 
-    .line 4
     new-instance p1, Lcom/bumptech/glide/load/engine/GlideException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2108,15 +1912,12 @@
 
     invoke-direct {p1, p2}, Lcom/bumptech/glide/load/engine/GlideException;-><init>(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/SingleRequest;->onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;)V
 
-    .line 6
     monitor-exit v1
 
     return-void
 
-    .line 7
     :cond_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
 
@@ -2124,7 +1925,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 8
     iget-object v3, p0, Lcom/bumptech/glide/request/SingleRequest;->transcodeClass:Ljava/lang/Class;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -2139,7 +1939,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     invoke-direct {p0}, Lcom/bumptech/glide/request/SingleRequest;->canSetResource()Z
 
@@ -2149,23 +1948,19 @@
 
     if-nez v3, :cond_3
 
-    .line 10
     :try_start_2
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
-    .line 11
     sget-object p2, Lcom/bumptech/glide/request/SingleRequest$Status;->COMPLETE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 12
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     if-eqz p1, :cond_2
 
-    .line 13
     iget-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     invoke-virtual {p2, p1}, Lcom/bumptech/glide/load/engine/Engine;->release(Lcom/bumptech/glide/load/engine/Resource;)V
@@ -2173,25 +1968,21 @@
     :cond_2
     return-void
 
-    .line 14
     :cond_3
     :try_start_3
     invoke-direct {p0, p1, v2, p2}, Lcom/bumptech/glide/request/SingleRequest;->onResourceReady(Lcom/bumptech/glide/load/engine/Resource;Ljava/lang/Object;Lcom/bumptech/glide/load/DataSource;)V
 
-    .line 15
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     return-void
 
-    .line 16
     :cond_4
     :goto_0
     :try_start_4
     iput-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
-    .line 17
     new-instance p2, Lcom/bumptech/glide/load/engine/GlideException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2212,7 +2003,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 18
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -2259,17 +2049,14 @@
 
     invoke-direct {p2, v0}, Lcom/bumptech/glide/load/engine/GlideException;-><init>(Ljava/lang/String;)V
 
-    .line 19
     invoke-virtual {p0, p2}, Lcom/bumptech/glide/request/SingleRequest;->onLoadFailed(Lcom/bumptech/glide/load/engine/GlideException;)V
 
-    .line 20
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     if-eqz p1, :cond_7
 
-    .line 21
     iget-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     invoke-virtual {p2, p1}, Lcom/bumptech/glide/load/engine/Engine;->release(Lcom/bumptech/glide/load/engine/Resource;)V
@@ -2289,7 +2076,6 @@
     :catchall_1
     move-exception p1
 
-    .line 22
     :goto_3
     :try_start_5
     monitor-exit v1
@@ -2306,12 +2092,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 23
     iget-object p2, p0, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     invoke-virtual {p2, v0}, Lcom/bumptech/glide/load/engine/Engine;->release(Lcom/bumptech/glide/load/engine/Resource;)V
 
-    .line 24
     :cond_8
     throw p1
 .end method
@@ -2321,23 +2105,19 @@
 
     move-object/from16 v15, p0
 
-    .line 1
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 2
     iget-object v14, v15, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v14
 
-    .line 3
     :try_start_0
     sget-boolean v0, Lcom/bumptech/glide/request/SingleRequest;->IS_VERBOSE_LOGGABLE:Z
 
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2360,7 +2140,6 @@
 
     invoke-direct {v15, v0}, Lcom/bumptech/glide/request/SingleRequest;->logV(Ljava/lang/String;)V
 
-    .line 5
     :cond_0
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
@@ -2368,18 +2147,15 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 6
     monitor-exit v14
 
     return-void
 
-    .line 7
     :cond_1
     sget-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->RUNNING:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     iput-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 8
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getSizeMultiplier()F
@@ -2388,7 +2164,6 @@
 
     move/from16 v1, p1
 
-    .line 9
     invoke-static {v1, v0}, Lcom/bumptech/glide/request/SingleRequest;->maybeApplySizeMultiplier(IF)I
 
     move-result v1
@@ -2397,19 +2172,16 @@
 
     move/from16 v1, p2
 
-    .line 10
     invoke-static {v1, v0}, Lcom/bumptech/glide/request/SingleRequest;->maybeApplySizeMultiplier(IF)I
 
     move-result v0
 
     iput v0, v15, Lcom/bumptech/glide/request/SingleRequest;->height:I
 
-    .line 11
     sget-boolean v0, Lcom/bumptech/glide/request/SingleRequest;->IS_VERBOSE_LOGGABLE:Z
 
     if-eqz v0, :cond_2
 
-    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2432,7 +2204,6 @@
 
     invoke-direct {v15, v0}, Lcom/bumptech/glide/request/SingleRequest;->logV(Ljava/lang/String;)V
 
-    .line 13
     :cond_2
     iget-object v1, v15, Lcom/bumptech/glide/request/SingleRequest;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
@@ -2442,7 +2213,6 @@
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 14
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getSignature()Lcom/bumptech/glide/load/Key;
 
     move-result-object v4
@@ -2453,7 +2223,6 @@
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 15
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getResourceClass()Ljava/lang/Class;
 
     move-result-object v7
@@ -2464,35 +2233,30 @@
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 16
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getDiskCacheStrategy()Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     move-result-object v10
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 17
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getTransformations()Ljava/util/Map;
 
     move-result-object v11
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 18
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired()Z
 
     move-result v12
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 19
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform()Z
 
     move-result v13
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 20
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOptions()Lcom/bumptech/glide/load/Options;
 
     move-result-object v0
@@ -2501,7 +2265,6 @@
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 21
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isMemoryCacheable()Z
 
     move-result v0
@@ -2510,21 +2273,18 @@
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 22
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getUseUnlimitedSourceGeneratorsPool()Z
 
     move-result v16
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 23
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getUseAnimationPool()Z
 
     move-result v17
 
     iget-object v0, v15, Lcom/bumptech/glide/request/SingleRequest;->requestOptions:Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 24
     invoke-virtual {v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->getOnlyRetrieveFromCache()Z
 
     move-result v18
@@ -2543,7 +2303,6 @@
 
     move-object/from16 v20, v0
 
-    .line 25
     :try_start_1
     invoke-virtual/range {v1 .. v20}, Lcom/bumptech/glide/load/engine/Engine;->load(Lcom/bumptech/glide/GlideContext;Ljava/lang/Object;Lcom/bumptech/glide/load/Key;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/DiskCacheStrategy;Ljava/util/Map;ZZLcom/bumptech/glide/load/Options;ZZZZLcom/bumptech/glide/request/ResourceCallback;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
@@ -2556,7 +2315,6 @@
     :try_start_2
     iput-object v0, v1, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
-    .line 26
     iget-object v0, v1, Lcom/bumptech/glide/request/SingleRequest;->status:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     sget-object v2, Lcom/bumptech/glide/request/SingleRequest$Status;->RUNNING:Lcom/bumptech/glide/request/SingleRequest$Status;
@@ -2565,16 +2323,13 @@
 
     const/4 v0, 0x0
 
-    .line 27
     iput-object v0, v1, Lcom/bumptech/glide/request/SingleRequest;->loadStatus:Lcom/bumptech/glide/load/engine/Engine$LoadStatus;
 
-    .line 28
     :cond_3
     sget-boolean v0, Lcom/bumptech/glide/request/SingleRequest;->IS_VERBOSE_LOGGABLE:Z
 
     if-eqz v0, :cond_4
 
-    .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2597,7 +2352,6 @@
 
     invoke-direct {v1, v0}, Lcom/bumptech/glide/request/SingleRequest;->logV(Ljava/lang/String;)V
 
-    .line 30
     :cond_4
     monitor-exit v21
 
@@ -2633,12 +2387,10 @@
 .method public pause()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/SingleRequest;->requestLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/request/SingleRequest;->isRunning()Z
 
@@ -2646,10 +2398,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/bumptech/glide/request/SingleRequest;->clear()V
 
-    .line 4
     :cond_0
     monitor-exit v0
 

@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2, p0, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -39,14 +37,12 @@
 .method public static varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -60,14 +56,12 @@
 .method public static varargs d(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {p2, p3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -85,7 +79,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2, p0, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -94,14 +87,12 @@
 .method public static varargs e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -115,14 +106,12 @@
 .method public static varargs e(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {p2, p3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -136,7 +125,6 @@
 .method public static varargs formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
@@ -159,7 +147,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2, p0, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -168,14 +155,12 @@
 .method public static varargs i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -189,14 +174,12 @@
 .method public static varargs i(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {p2, p3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -210,7 +193,6 @@
 .method public static setDebug(Z)V
     .locals 0
 
-    .line 1
     sput-boolean p0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     return-void
@@ -223,7 +205,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2, p0, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->v(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -232,14 +213,12 @@
 .method public static varargs v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -253,14 +232,12 @@
 .method public static varargs v(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {p2, p3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -278,7 +255,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2, p0, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->w(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -287,14 +263,12 @@
 .method public static varargs w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -308,14 +282,12 @@
 .method public static varargs w(Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-boolean v0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {p2, p3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

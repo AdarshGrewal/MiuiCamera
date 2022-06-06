@@ -6,7 +6,7 @@
 # static fields
 .field public static final HANDLED:Z = true
 
-.field public static final NOT_HANDLED:Z = false
+.field public static final NOT_HANDLED:Z
 
 
 # virtual methods

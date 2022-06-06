@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
 .method public static checkGlError(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
     move-result v0
@@ -56,7 +53,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -80,10 +76,8 @@
 
     const-string v0, "OpenGlUtils"
 
-    .line 3
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
@@ -94,7 +88,6 @@
 .method public static getImageFromAssetsFile(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -105,7 +98,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -114,13 +106,11 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -128,7 +118,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 5
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -139,7 +128,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
@@ -172,7 +160,6 @@
 
     move-object p0, v0
 
-    .line 7
     :goto_0
     :try_start_3
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
@@ -181,7 +168,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     :try_start_4
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -192,7 +178,6 @@
     :catch_3
     move-exception p1
 
-    .line 9
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -206,7 +191,6 @@
     :goto_3
     if-eqz v0, :cond_2
 
-    .line 10
     :try_start_5
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -217,10 +201,8 @@
     :catch_4
     move-exception p0
 
-    .line 11
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 12
     :cond_2
     :goto_4
     throw p1
@@ -231,7 +213,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -240,7 +221,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     :try_start_1
     invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
@@ -249,7 +229,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -260,7 +239,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
@@ -280,7 +258,6 @@
 
     move-object v1, v0
 
-    .line 5
     :goto_0
     :try_start_3
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -289,7 +266,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -317,10 +293,8 @@
     :catch_3
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 8
     :cond_1
     :goto_3
     throw p0
@@ -333,7 +307,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 1
     array-length v1, p2
 
     const/4 v2, 0x1
@@ -345,15 +318,12 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 2
     aget v3, p2, v1
 
     if-ne v3, v0, :cond_1
 
-    .line 3
     invoke-static {v2, p2, v1}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 4
     aget v0, p2, v1
 
     invoke-static {p3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -362,24 +332,20 @@
 
     const v2, 0x46180400    # 9729.0f
 
-    .line 5
     invoke-static {p3, v0, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2801
 
-    .line 6
     invoke-static {p3, v0, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2802
 
     const v2, 0x47012f00    # 33071.0f
 
-    .line 7
     invoke-static {p3, v0, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2803
 
-    .line 8
     invoke-static {p3, v0, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/4 v4, 0x0
@@ -400,12 +366,10 @@
 
     move v7, p1
 
-    .line 9
     invoke-static/range {v3 .. v11}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     goto :goto_0
 
-    .line 10
     :cond_1
     aget v0, p2, v1
 
@@ -429,10 +393,8 @@
 
     move v6, p1
 
-    .line 11
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 12
     :goto_0
     aget p0, p2, v1
 
@@ -452,7 +414,6 @@
 
     const v1, 0x8b31
 
-    .line 1
     invoke-static {p0, v1}, Lcom/miui/filtersdk/utils/OpenGlUtils;->loadShader(Ljava/lang/String;I)I
 
     move-result p0
@@ -465,7 +426,6 @@
 
     const-string p0, "Vertex Shader Failed"
 
-    .line 2
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -473,7 +433,6 @@
     :cond_0
     const v3, 0x8b30
 
-    .line 3
     invoke-static {p1, v3}, Lcom/miui/filtersdk/utils/OpenGlUtils;->loadShader(Ljava/lang/String;I)I
 
     move-result p1
@@ -482,48 +441,38 @@
 
     const-string p0, "Fragment Shader Failed"
 
-    .line 4
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 5
     :cond_1
     invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
 
     move-result v3
 
-    .line 6
     invoke-static {v3, p0}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 7
     invoke-static {v3, p1}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 8
     invoke-static {v3}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
     const v4, 0x8b82
 
-    .line 9
     invoke-static {v3, v4, v0, v2}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
-    .line 10
     aget v0, v0, v2
 
     if-gtz v0, :cond_2
 
     const-string p0, "Linking Failed"
 
-    .line 11
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 12
     :cond_2
     invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
-    .line 13
     invoke-static {p1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
     return v3
@@ -536,30 +485,24 @@
 
     new-array v0, v0, [I
 
-    .line 1
     invoke-static {p1}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result p1
 
-    .line 2
     invoke-static {p1, p0}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 3
     invoke-static {p1}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
     const/4 p0, 0x0
 
     const v1, 0x8b81
 
-    .line 4
     invoke-static {p1, v1, v0, p0}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    .line 5
     aget v0, v0, p0
 
     if-nez v0, :cond_0
 
-    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -597,20 +540,16 @@
 
     const/4 v2, 0x0
 
-    .line 33
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 34
     aget v3, v1, v2
 
     if-eqz v3, :cond_0
 
-    .line 35
     invoke-static {p0, p1}, Lcom/miui/filtersdk/utils/OpenGlUtils;->getImageFromAssetsFile(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 36
     aget v3, v1, v2
 
     const/16 v4, 0xde1
@@ -621,33 +560,26 @@
 
     const/16 v5, 0x2601
 
-    .line 37
     invoke-static {v4, v3, v5}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v3, 0x2801
 
-    .line 38
     invoke-static {v4, v3, v5}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v3, 0x2802
 
     const v5, 0x812f
 
-    .line 39
     invoke-static {v4, v3, v5}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v3, 0x2803
 
-    .line 40
     invoke-static {v4, v3, v5}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 41
     invoke-static {v4, v2, p0, v2}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
-    .line 42
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 43
     :cond_0
     aget p0, v1, v2
 
@@ -659,7 +591,6 @@
 
     const-string p1, "loadTexture failed,path:%s"
 
-    .line 44
     invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -672,7 +603,6 @@
 
     return p0
 
-    .line 45
     :cond_1
     aget p0, v1, v2
 
@@ -684,7 +614,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, v0}, Lcom/miui/filtersdk/utils/OpenGlUtils;->loadTexture(Landroid/graphics/Bitmap;IZ)I
 
     move-result p0
@@ -712,10 +641,8 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 3
     aget p1, v2, v3
 
     invoke-static {v4, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -724,36 +651,29 @@
 
     const v0, 0x46180400    # 9729.0f
 
-    .line 4
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2801
 
-    .line 5
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2802
 
     const v0, 0x47012f00    # 33071.0f
 
-    .line 6
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 p1, 0x2803
 
-    .line 7
     invoke-static {v4, p1, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 8
     invoke-static {v4, v3, p0, v3}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     goto :goto_0
 
-    .line 9
     :cond_1
     invoke-static {v4, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 10
     invoke-static {v4, v3, p0, v3}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
     aput p1, v2, v3
@@ -761,10 +681,8 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 11
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 12
     :cond_2
     aget p0, v2, v3
 
@@ -793,10 +711,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 13
     invoke-static {v2, v11, v12}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 14
     aget v0, v11, v12
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -805,24 +721,20 @@
 
     const v1, 0x46180400    # 9729.0f
 
-    .line 15
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2801
 
-    .line 16
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2802
 
     const v1, 0x47012f00    # 33071.0f
 
-    .line 17
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2803
 
-    .line 18
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v2, 0xde1
@@ -843,12 +755,10 @@
 
     move-object v10, p0
 
-    .line 19
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     goto :goto_0
 
-    .line 20
     :cond_1
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
@@ -870,12 +780,10 @@
 
     move-object v10, p0
 
-    .line 21
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexSubImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     aput v0, v11, v12
 
-    .line 22
     :goto_0
     aget v0, v11, v12
 
@@ -904,10 +812,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 23
     invoke-static {v2, v11, v12}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 24
     aget v0, v11, v12
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -916,24 +822,20 @@
 
     const v1, 0x46180400    # 9729.0f
 
-    .line 25
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2801
 
-    .line 26
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2802
 
     const v1, 0x47012f00    # 33071.0f
 
-    .line 27
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2803
 
-    .line 28
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v2, 0xde1
@@ -954,12 +856,10 @@
 
     move-object v10, p0
 
-    .line 29
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     goto :goto_0
 
-    .line 30
     :cond_1
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
@@ -981,12 +881,10 @@
 
     move-object v10, p0
 
-    .line 31
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexSubImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     aput v0, v11, v12
 
-    .line 32
     :goto_0
     aget v0, v11, v12
 
@@ -1002,20 +900,16 @@
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 2
     aget v0, v1, v2
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lcom/miui/filtersdk/utils/OpenGlUtils;->getImageFromPath(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 4
     aget v0, v1, v2
 
     const/16 v3, 0xde1
@@ -1026,44 +920,35 @@
 
     const/16 v4, 0x2601
 
-    .line 5
     invoke-static {v3, v0, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2801
 
-    .line 6
     invoke-static {v3, v0, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2802
 
     const v4, 0x812f
 
-    .line 7
     invoke-static {v3, v0, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2803
 
-    .line 8
     invoke-static {v3, v0, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 9
     invoke-static {v3, v2, p0, v2}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
 
-    .line 10
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 11
     :cond_0
     aget p0, v1, v2
 
     if-eqz p0, :cond_1
 
-    .line 12
     aget p0, v1, v2
 
     return p0
 
-    .line 13
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -1088,7 +973,6 @@
     :cond_0
     if-eqz v9, :cond_4
 
-    .line 1
     array-length v0, v9
 
     const/4 v10, 0x2
@@ -1100,7 +984,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 2
     aget v1, v9, v0
 
     const/16 v12, 0x2802
@@ -1123,13 +1006,10 @@
 
     if-ne v1, v15, :cond_2
 
-    .line 3
     invoke-static {v6, v9, v0}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 4
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 5
     aget v0, v9, v0
 
     invoke-static {v5, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -1166,21 +1046,16 @@
 
     move-object/from16 v8, p0
 
-    .line 6
     invoke-static/range {v0 .. v8}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 7
     invoke-static {v10, v14, v15}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 8
     invoke-static {v10, v13, v15}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 9
     invoke-static {v10, v12, v11}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2803
 
-    .line 10
     invoke-static {v10, v0, v11}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     goto :goto_0
@@ -1192,10 +1067,8 @@
 
     move v11, v8
 
-    .line 11
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 12
     aget v0, v9, v0
 
     invoke-static {v10, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -1218,13 +1091,11 @@
 
     move-object/from16 v8, p0
 
-    .line 13
     invoke-static/range {v0 .. v8}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     :goto_0
     const/4 v0, 0x1
 
-    .line 14
     aget v1, v9, v0
 
     const v2, 0x84c1
@@ -1233,13 +1104,10 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 15
     invoke-static {v0, v9, v0}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 16
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 17
     aget v0, v9, v0
 
     invoke-static {v10, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -1252,7 +1120,6 @@
 
     const/4 v3, 0x2
 
-    .line 18
     div-int/lit8 v4, p2, 0x2
 
     div-int/lit8 v5, p3, 0x2
@@ -1277,29 +1144,23 @@
 
     invoke-static/range {v0 .. v8}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 19
     invoke-static {v10, v14, v15}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 20
     invoke-static {v10, v13, v15}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 21
     invoke-static {v10, v12, v11}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0x2803
 
-    .line 22
     invoke-static {v10, v0, v11}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     goto :goto_1
 
-    .line 23
     :cond_3
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/4 v0, 0x1
 
-    .line 24
     aget v0, v9, v0
 
     invoke-static {v10, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
@@ -1312,7 +1173,6 @@
 
     const/4 v3, 0x2
 
-    .line 25
     div-int/lit8 v4, p2, 0x2
 
     div-int/lit8 v5, p3, 0x2

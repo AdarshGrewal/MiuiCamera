@@ -30,10 +30,8 @@
 .method public constructor <init>(Landroid/os/Looper;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -54,10 +52,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x64
@@ -70,7 +66,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;->mBarTrack:Ljava/lang/ref/WeakReference;
 
@@ -82,7 +77,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -99,12 +93,11 @@
 
     if-nez v0, :cond_2
 
-    .line 5
     new-instance v0, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;
 
     invoke-direct {v0, p1}, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;-><init>(Landroid/view/View;)V
 
-    sget-object p1, LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOoO/OooO0Oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOoO/OooO0Oo;
+    sget-object p1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOOO/OooO0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOOO/OooO0Oo;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->setOnAnimationEnd(Ljava/lang/Runnable;)Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;
 
@@ -114,12 +107,10 @@
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;->mBarTrack:Ljava/lang/ref/WeakReference;
 
@@ -131,14 +122,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera/animation/folme/FolmeAlphaInOnSubscribe;->directSetResult(Landroid/view/View;)V
 
     :cond_2

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$15;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public OnItemTrigger(II)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$15;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$300(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;)Ljava/util/List;
@@ -51,7 +49,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$15;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$300(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;)Ljava/util/List;
@@ -72,7 +69,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
 
     move-result-object p1
@@ -82,7 +78,6 @@
     :cond_0
     const-string p1, ""
 
-    .line 4
     :goto_0
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$15;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
@@ -92,7 +87,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$15;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     invoke-static {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$800(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$LoadCompleteListener;

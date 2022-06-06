@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,13 +35,11 @@
 
     const/4 v3, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p2, v2}, Landroid/content/Context;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
 
     move-result-object v3
 
-    .line 3
     invoke-virtual {v3, p1}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
@@ -51,11 +48,9 @@
 
     const/4 v2, 0x1
 
-    .line 4
     :try_start_1
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 5
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -65,7 +60,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-static {v1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_2
@@ -81,16 +75,13 @@
     :try_start_2
     const-string p1, "saveCameraCalibrationToFile: IOException"
 
-    .line 7
     invoke-static {v1, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 8
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 9
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -103,28 +94,23 @@
     :try_start_4
     const-string p1, "saveCameraCalibrationToFile: FileNotFoundException"
 
-    .line 10
     invoke-static {v1, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 11
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 12
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
     goto :goto_2
 
-    .line 13
     :goto_0
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 14
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
@@ -134,10 +120,8 @@
     :catch_3
     move-exception p1
 
-    .line 15
     invoke-static {v1, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 16
     :goto_1
     throw p0
 
@@ -158,7 +142,6 @@
     :cond_0
     const-string p2, "back_dual_camera_caldata.bin"
 
-    .line 1
     :goto_0
     invoke-static {p0, p1, p2}, Lcom/xiaomi/camera/base/CommonUtil;->saveCameraCalibrationToFile(Landroid/content/Context;[BLjava/lang/String;)Z
 

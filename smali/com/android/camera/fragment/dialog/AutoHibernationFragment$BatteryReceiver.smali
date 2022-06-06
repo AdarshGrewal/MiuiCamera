@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$BatteryReceiver;->this$0:Lcom/android/camera/fragment/dialog/AutoHibernationFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;Lcom/android/camera/fragment/dialog/AutoHibernationFragment$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$BatteryReceiver;-><init>(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)V
 
     return-void
@@ -48,7 +46,6 @@
 
     const-string v0, "level"
 
-    .line 1
     invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
@@ -57,7 +54,6 @@
 
     const-string/jumbo v2, "scale"
 
-    .line 2
     invoke-virtual {p2, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
@@ -66,7 +62,6 @@
 
     const/4 v4, -0x1
 
-    .line 3
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
@@ -83,7 +78,6 @@
 
     float-to-int v0, v0
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$BatteryReceiver;->this$0:Lcom/android/camera/fragment/dialog/AutoHibernationFragment;
 
     invoke-static {v2}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->access$300(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)Lcom/android/camera/ui/AutoHibernationBatteryView;

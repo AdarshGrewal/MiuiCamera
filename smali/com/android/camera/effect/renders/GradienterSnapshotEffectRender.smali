@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -41,7 +39,6 @@
 .method private getRotation()F
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mShootRotation:F
 
     iget v1, p0, Lcom/android/camera/effect/renders/Render;->mOrientation:I
@@ -77,10 +74,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "sAngle"
@@ -91,7 +86,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformAngle:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTexSize"
@@ -102,7 +96,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTexSize:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTargetSize"
@@ -113,7 +106,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTargetSize:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTargetCenter"
@@ -124,7 +116,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTargetCenter:I
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -133,7 +124,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0706ee
+    const v1, 0x7f0706ea
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -147,10 +138,8 @@
 .method public initShaderValue(Z)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginWidth:I
 
     if-eqz p1, :cond_2
@@ -159,7 +148,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     iget v1, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTexSize:I
 
     int-to-float p1, p1
@@ -168,7 +156,6 @@
 
     invoke-static {v1, p1, v0}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 4
     iget p1, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginWidth:I
 
     int-to-float p1, p1
@@ -177,21 +164,18 @@
 
     mul-float/2addr p1, v0
 
-    .line 5
     iget v1, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginHeight:I
 
     int-to-float v1, v1
 
     mul-float/2addr v1, v0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isSquareModule()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginWidth:I
 
     iget v2, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginHeight:I
@@ -200,26 +184,23 @@
 
     move-result v0
 
-    .line 8
     iget v2, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTargetSize:I
 
     int-to-float v0, v0
 
     invoke-static {v2, v0, v0}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginWidth:I
 
     iget v2, p0, Lcom/android/camera/effect/renders/Render;->mSnapshotOriginHeight:I
 
     if-le v0, v2, :cond_0
 
-    .line 10
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mSquareModeExtraMargin:I
 
     mul-int/2addr v0, v2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v2
 
@@ -231,13 +212,12 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     iget v2, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mSquareModeExtraMargin:I
 
     mul-int/2addr v2, v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
@@ -249,7 +229,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTargetSize:I
 
@@ -263,13 +242,11 @@
 
     invoke-static {v0, v2, v3}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 13
     :goto_0
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformTargetCenter:I
 
     invoke-static {v0, p1, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 14
     iget p1, p0, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->mUniformAngle:I
 
     invoke-direct {p0}, Lcom/android/camera/effect/renders/GradienterSnapshotEffectRender;->getRotation()F

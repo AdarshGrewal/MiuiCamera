@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3$1;->this$1:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public error()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3$1;->this$1:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;
 
     iget-object v0, v0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
@@ -47,7 +45,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$302(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3$1;->this$1:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;
 
     iget-object v0, v0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
@@ -60,7 +57,6 @@
 .method public run(Lcom/android/camera/fragment/mode/ModeAdapter$ModeViewHolder;)V
     .locals 2
 
-    .line 1
     iget-object p1, p1, Lcom/android/camera/fragment/mode/ModeAdapter$ModeViewHolder;->mIconView:Landroid/widget/ImageView;
 
     check-cast p1, Lcom/android/camera/ui/InnerSpringImageView;

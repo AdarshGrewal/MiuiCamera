@@ -23,13 +23,10 @@
 .method public constructor <init>(I[I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->mSequenceNum:I
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->mValue:[I
 
     return-void
@@ -44,7 +41,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     array-length v1, p0
 
@@ -54,7 +50,6 @@
 
     int-to-long v0, v0
 
-    .line 2
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x1
@@ -75,7 +70,6 @@
 
     int-to-long v0, v0
 
-    .line 3
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x2
@@ -96,7 +90,6 @@
 
     int-to-long v0, v0
 
-    .line 4
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x3
@@ -117,7 +110,6 @@
 
     int-to-long v0, v0
 
-    .line 5
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x4
@@ -143,7 +135,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -152,24 +143,19 @@
 
     const-string p0, ","
 
-    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     array-length p1, p0
 
-    .line 4
     new-array v1, p1, [I
 
-    .line 5
     :goto_0
     array-length v2, p0
 
     if-ge v0, v2, :cond_0
 
-    .line 6
     :try_start_0
     aget-object v2, p0, v0
 
@@ -186,7 +172,6 @@
     :catch_0
     move-exception v2
 
-    .line 7
     invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     :goto_1
@@ -202,15 +187,12 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 8
     array-length p1, p0
 
     if-lez p1, :cond_2
 
-    .line 9
     aget-byte v0, p0, v0
 
-    .line 10
     new-array v1, v0, [I
 
     const/4 p1, 0x1
@@ -224,7 +206,6 @@
 
     mul-int/lit8 v3, p1, 0x4
 
-    .line 11
     aget-byte v3, p0, v3
 
     aput v3, v1, v2
@@ -240,26 +221,22 @@
     :goto_3
     if-nez v0, :cond_4
 
-    .line 12
     sget-object p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->TAG:Ljava/lang/String;
 
     const-string p1, "use default EV values"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO0Oo(Z)[I
+    invoke-virtual {p0, p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO0Oo(Z)[I
 
     move-result-object v1
 
-    .line 14
     array-length v0, v1
 
-    .line 15
     :cond_4
     new-instance p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;
 
@@ -273,7 +250,6 @@
 .method public getSequenceNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->mSequenceNum:I
 
     return v0
@@ -282,7 +258,6 @@
 .method public getValue()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->mValue:[I
 
     return-object v0
@@ -291,7 +266,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -310,7 +284,6 @@
 
     iget-object v1, p0, Lcom/android/camera2/vendortag/struct/SuperNightEvValue;->mValue:[I
 
-    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1

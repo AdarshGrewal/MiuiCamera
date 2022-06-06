@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -68,7 +65,6 @@
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->stop()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -80,14 +76,12 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$202(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;I)I
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$700(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V

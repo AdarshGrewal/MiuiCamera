@@ -47,16 +47,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/parallel/ParallelFlowable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->source:Lorg/reactivestreams/Publisher;
 
-    .line 3
     iput p2, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->parallelism:I
 
-    .line 4
     iput p3, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->prefetch:I
 
     return-void
@@ -67,7 +63,6 @@
 .method public parallelism()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->parallelism:I
 
     return v0
@@ -83,7 +78,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/parallel/ParallelFlowable;->validate([Lorg/reactivestreams/Subscriber;)Z
 
     move-result v0
@@ -92,7 +86,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->source:Lorg/reactivestreams/Publisher;
 

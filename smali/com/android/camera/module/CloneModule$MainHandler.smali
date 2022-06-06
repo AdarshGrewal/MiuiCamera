@@ -28,10 +28,8 @@
 .method public constructor <init>(Lcom/android/camera/module/CloneModule;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -42,7 +40,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x80
@@ -83,7 +80,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
@@ -91,16 +87,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 3
     iget v0, p1, Lcom/android/camera/module/CloneModule;->mFrameCount:I
 
     add-int/2addr v0, v1
 
     iput v0, p1, Lcom/android/camera/module/CloneModule;->mFrameCount:I
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 4
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
@@ -108,7 +102,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
@@ -120,17 +113,14 @@
 
     if-nez p1, :cond_8
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     iput-boolean v1, p1, Lcom/android/camera/module/BaseModule;->mOpenCameraFail:Z
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->onCameraException()V
 
     goto :goto_0
 
-    .line 8
     :cond_3
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
@@ -138,7 +128,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_4
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
@@ -146,14 +135,12 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
@@ -162,7 +149,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     iget-object v0, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
@@ -177,21 +163,24 @@
 
     goto :goto_0
 
-    .line 13
     :cond_5
+    iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
+
+    iget-object v0, p1, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->initializeFocusView(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
+
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-static {p1}, Lcom/android/camera/module/CloneModule;->access$100(Lcom/android/camera/module/CloneModule;)V
 
     goto :goto_0
 
-    .line 14
     :cond_6
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-virtual {p1}, Lcom/android/camera/module/BaseModule;->checkActivityOrientation()V
 
-    .line 15
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -208,7 +197,6 @@
 
     if-gez v0, :cond_8
 
-    .line 16
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v0, 0x64
@@ -217,7 +205,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_7
     iget-object p1, p0, Lcom/android/camera/module/CloneModule$MainHandler;->this$0:Lcom/android/camera/module/CloneModule;
 

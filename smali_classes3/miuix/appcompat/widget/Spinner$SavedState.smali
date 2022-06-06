@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/appcompat/widget/Spinner$SavedState$1;
 
     invoke-direct {v0}, Lmiuix/appcompat/widget/Spinner$SavedState$1;-><init>()V
@@ -47,10 +46,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -73,7 +70,6 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -84,10 +80,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2
     iget-boolean p2, p0, Lmiuix/appcompat/widget/Spinner$SavedState;->mShowDropdown:Z
 
     int-to-byte p2, p2

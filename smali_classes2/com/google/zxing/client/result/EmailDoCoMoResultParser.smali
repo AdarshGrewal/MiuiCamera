@@ -13,7 +13,6 @@
 
     const-string v0, "[a-zA-Z0-9@.!#$%&\'*+\\-/=?^_`{|}~]+"
 
-    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/client/result/AbstractDoCoMoResultParser;-><init>()V
 
     return-void
@@ -37,7 +35,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object v0, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->ATEXT_ALPHANUMERIC:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -73,14 +70,12 @@
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
     .locals 8
 
-    .line 2
     invoke-static {p1}, Lcom/google/zxing/client/result/ResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "MATMSG:"
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -94,7 +89,6 @@
     :cond_0
     const-string v0, "TO:"
 
-    .line 4
     invoke-static {v0, p1}, Lcom/google/zxing/client/result/AbstractDoCoMoResultParser;->matchDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
@@ -103,7 +97,6 @@
 
     return-object v1
 
-    .line 5
     :cond_1
     array-length v0, v3
 
@@ -116,7 +109,6 @@
 
     aget-object v5, v3, v4
 
-    .line 6
     invoke-static {v5}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->isBasicallyValidEmailAddress(Ljava/lang/String;)Z
 
     move-result v5
@@ -133,19 +125,16 @@
     :cond_3
     const-string v0, "SUB:"
 
-    .line 7
     invoke-static {v0, p1, v2}, Lcom/google/zxing/client/result/AbstractDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v6
 
     const-string v0, "BODY:"
 
-    .line 8
     invoke-static {v0, p1, v2}, Lcom/google/zxing/client/result/AbstractDoCoMoResultParser;->matchSingleDoCoMoPrefixedField(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 9
     new-instance p1, Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
     const/4 v4, 0x0
@@ -162,7 +151,6 @@
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/EmailDoCoMoResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/EmailAddressParsedResult;
 
     move-result-object p1

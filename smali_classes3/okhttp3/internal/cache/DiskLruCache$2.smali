@@ -26,7 +26,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lokhttp3/internal/cache/DiskLruCache;
 
     return-void
@@ -35,7 +34,6 @@
 .method public constructor <init>(Lokhttp3/internal/cache/DiskLruCache;Lokio/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/internal/cache/DiskLruCache$2;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     invoke-direct {p0, p2}, Lokhttp3/internal/cache/FaultHidingSink;-><init>(Lokio/Sink;)V
@@ -48,7 +46,6 @@
 .method public onException(Ljava/io/IOException;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lokhttp3/internal/cache/DiskLruCache$2;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     const/4 v0, 0x1

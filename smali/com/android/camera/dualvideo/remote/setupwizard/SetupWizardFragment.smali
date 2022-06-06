@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->createTag(Ljava/lang/Class;)Ljava/lang/String;
@@ -44,7 +43,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     return-void
@@ -53,10 +51,9 @@
 .method private setupScreens(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;
 
-    const v1, 0x7f0a036e
+    const v1, 0x7f0a0383
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -68,13 +65,11 @@
 
     const/16 v1, 0x8
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 3
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
-    const v2, 0x7f0a0373
+    const v2, 0x7f0a0388
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -84,13 +79,11 @@
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mScanScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
-    .line 4
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 5
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
-    const v2, 0x7f0a0371
+    const v2, 0x7f0a0386
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -100,7 +93,6 @@
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mListScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
-    .line 6
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
     return-void
@@ -111,12 +103,10 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onAvailabilityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
 
     :cond_0
@@ -126,12 +116,10 @@
 .method public synthetic OooO0O0(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onConnectivityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
 
     :cond_0
@@ -141,7 +129,6 @@
 .method public getAlertDialog()Lmiuix/appcompat/app/AlertDialog;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -154,7 +141,6 @@
 .method public getAlertDialogTitle()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mAlertDialogTitle:I
 
     return v0
@@ -163,7 +149,6 @@
 .method public getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mSetupWizard:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     return-object v0
@@ -172,14 +157,12 @@
 .method public onAvailabilityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onAvailabilityStateChanged"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     move-result-object v0
@@ -188,9 +171,9 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O00/OooO00o/OooO0O0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O00/OooO00o/OooO0O0;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O00/OooO00o/OooO0O0;-><init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O00/OooO00o/OooO0O0;-><init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -200,14 +183,12 @@
 .method public onConnectivityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onConnectivityStateChanged"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     move-result-object v0
@@ -216,9 +197,9 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O00/OooO00o/OooO00o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O00/OooO00o/OooO00o;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O00/OooO00o/OooO00o;-><init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O00/OooO00o/OooO00o;-><init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -228,10 +209,8 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
     sget-object p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onCreate"
@@ -244,14 +223,12 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 4
 
-    .line 1
     sget-object p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onCreateDialog"
 
     invoke-static {p1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mSetupWizard:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
@@ -264,28 +241,24 @@
 
     iget v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mAlertDialogTitle:I
 
-    .line 3
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    const v1, 0x7f120342
+    const v1, 0x7f12032a
 
-    .line 4
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v1, 0x7f120343
+    const v1, 0x7f12032b
 
-    .line 5
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -296,27 +269,22 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d0173
+    const v3, 0x7f0d0172
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 8
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->setupScreens(Landroid/view/View;)V
 
-    .line 9
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p0, v2}, Landroidx/fragment/app/DialogFragment;->setCancelable(Z)V
 
-    .line 11
     invoke-virtual {p1, v2}, Lmiuix/appcompat/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     return-object p1
@@ -325,27 +293,22 @@
 .method public onPause()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onPause"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onPause()V
 
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     :cond_0
@@ -355,32 +318,26 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onResume"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mHomeScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     const/4 v1, 0x0
 
-    .line 4
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setupViews()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onResume()V
@@ -391,10 +348,8 @@
 .method public onStart()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStart()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onStart"
@@ -407,19 +362,16 @@
 .method public onTimeReached(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onTimeReached"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onTimeReached(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
 
     :cond_0
@@ -429,7 +381,6 @@
 .method public setAlertDialogTitle(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mAlertDialogTitle:I
 
     return-void
@@ -438,7 +389,6 @@
 .method public setSetupWizard(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mSetupWizard:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     return-void
@@ -447,24 +397,20 @@
 .method public showListView()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "showListView"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x8
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mListScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
@@ -472,15 +418,12 @@
 
     const/4 v1, 0x0
 
-    .line 5
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setupViews()V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onResume()V
@@ -491,24 +434,20 @@
 .method public showScanView()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "showScanView"
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x8
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mScanScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
@@ -516,15 +455,12 @@
 
     const/4 v1, 0x0
 
-    .line 5
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setVisibility(I)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setupViews()V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->mCurrScreen:Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->onResume()V

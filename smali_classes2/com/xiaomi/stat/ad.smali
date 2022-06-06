@@ -10,7 +10,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/ab;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/ad;->a:Lcom/xiaomi/stat/ab;
 
     invoke-direct {p0, p2}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;)V
@@ -29,13 +28,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/stat/ad;->a:Lcom/xiaomi/stat/ab;
 
     invoke-static {p1}, Lcom/xiaomi/stat/ab;->b(Lcom/xiaomi/stat/ab;)V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/b;->n()V
 
     return-void

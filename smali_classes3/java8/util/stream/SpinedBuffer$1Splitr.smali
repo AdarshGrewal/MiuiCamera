@@ -49,24 +49,18 @@
 .method public constructor <init>(Ljava8/util/stream/SpinedBuffer;IIII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
-    .line 3
     iput p3, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
 
-    .line 4
     iput p4, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
-    .line 5
     iput p5, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineElementFence:I
 
-    .line 6
     iget-object p3, p1, Ljava8/util/stream/SpinedBuffer;->spine:[[Ljava/lang/Object;
 
     if-nez p3, :cond_0
@@ -97,7 +91,6 @@
 .method public estimateSize()J
     .locals 7
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     iget v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
@@ -153,10 +146,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     iget v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
@@ -171,11 +162,9 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 3
     :cond_0
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
-    .line 4
     iget v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     :goto_0
@@ -183,20 +172,17 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 5
     iget-object v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer;
 
     iget-object v2, v2, Ljava8/util/stream/SpinedBuffer;->spine:[[Ljava/lang/Object;
 
     aget-object v2, v2, v1
 
-    .line 6
     :goto_1
     array-length v3, v2
 
     if-ge v0, v3, :cond_1
 
-    .line 7
     aget-object v3, v2, v0
 
     invoke-interface {p1, v3}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -212,7 +198,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     iget v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
@@ -229,14 +214,12 @@
 
     aget-object v1, v1, v2
 
-    .line 9
     :goto_2
     iget v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineElementFence:I
 
     :goto_3
     if-ge v0, v2, :cond_4
 
-    .line 10
     aget-object v3, v1, v0
 
     invoke-interface {p1, v3}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -245,13 +228,11 @@
 
     goto :goto_3
 
-    .line 11
     :cond_4
     iget p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
 
     iput p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
-    .line 12
     iget p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineElementFence:I
 
     iput p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
@@ -270,7 +251,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getComparator(Ljava8/util/Spliterator;)Ljava/util/Comparator;
 
     move-result-object v0
@@ -281,7 +261,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -292,7 +271,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -310,10 +288,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     iget v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
@@ -335,7 +311,6 @@
     :cond_0
     return v2
 
-    .line 3
     :cond_1
     :goto_0
     iget-object v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splChunk:[Ljava/lang/Object;
@@ -350,7 +325,6 @@
 
     invoke-interface {p1, v0}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 4
     iget p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
     iget-object v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splChunk:[Ljava/lang/Object;
@@ -361,17 +335,14 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 5
     iput v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
-    .line 6
     iget p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     add-int/2addr p1, v1
 
     iput p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
-    .line 7
     iget-object v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer;
 
     iget-object v0, v0, Ljava8/util/stream/SpinedBuffer;->spine:[[Ljava/lang/Object;
@@ -382,7 +353,6 @@
 
     if-gt p1, v2, :cond_2
 
-    .line 8
     aget-object p1, v0, p1
 
     iput-object p1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splChunk:[Ljava/lang/Object;
@@ -401,14 +371,12 @@
         }
     .end annotation
 
-    .line 1
     iget v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
 
     if-ge v2, v0, :cond_0
 
-    .line 2
     new-instance v6, Ljava8/util/stream/SpinedBuffer$1Splitr;
 
     iget-object v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer;
@@ -429,17 +397,14 @@
 
     invoke-direct/range {v0 .. v5}, Ljava8/util/stream/SpinedBuffer$1Splitr;-><init>(Ljava8/util/stream/SpinedBuffer;IIII)V
 
-    .line 3
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineIndex:I
 
     iput v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splSpineIndex:I
 
     const/4 v1, 0x0
 
-    .line 4
     iput v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
-    .line 5
     iget-object v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer;
 
     iget-object v1, v1, Ljava8/util/stream/SpinedBuffer;->spine:[[Ljava/lang/Object;
@@ -455,7 +420,6 @@
 
     if-ne v2, v0, :cond_2
 
-    .line 6
     iget v0, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->lastSpineElementFence:I
 
     iget v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
@@ -468,7 +432,6 @@
 
     return-object v1
 
-    .line 7
     :cond_1
     iget-object v1, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splChunk:[Ljava/lang/Object;
 
@@ -478,7 +441,6 @@
 
     move-result-object v1
 
-    .line 8
     iget v2, p0, Ljava8/util/stream/SpinedBuffer$1Splitr;->splElementIndex:I
 
     add-int/2addr v2, v0

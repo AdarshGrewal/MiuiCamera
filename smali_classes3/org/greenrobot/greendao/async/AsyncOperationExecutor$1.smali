@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->values()[Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     move-result-object v0

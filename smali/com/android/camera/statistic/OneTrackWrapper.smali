@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string/jumbo v1, "ro.product.mod_device"
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
 .method public static init(Landroid/content/Context;)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/statistic/OneTrackWrapper;->sInitialized:Z
 
     if-nez v0, :cond_1
@@ -63,51 +60,42 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     sput-boolean v0, Lcom/android/camera/statistic/OneTrackWrapper;->sInitialized:Z
 
-    .line 3
     new-instance v1, Lcom/xiaomi/onetrack/Configuration$Builder;
 
     invoke-direct {v1}, Lcom/xiaomi/onetrack/Configuration$Builder;-><init>()V
 
     const-string v2, "31000000285"
 
-    .line 4
     invoke-virtual {v1, v2}, Lcom/xiaomi/onetrack/Configuration$Builder;->setAppId(Ljava/lang/String;)Lcom/xiaomi/onetrack/Configuration$Builder;
 
     move-result-object v1
 
     sget-object v2, Lcom/android/camera/statistic/OneTrackWrapper;->CHANNEL:Ljava/lang/String;
 
-    .line 5
     invoke-virtual {v1, v2}, Lcom/xiaomi/onetrack/Configuration$Builder;->setChannel(Ljava/lang/String;)Lcom/xiaomi/onetrack/Configuration$Builder;
 
     move-result-object v1
 
     sget-object v2, Lcom/xiaomi/onetrack/OneTrack$Mode;->APP:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
-    .line 6
     invoke-virtual {v1, v2}, Lcom/xiaomi/onetrack/Configuration$Builder;->setMode(Lcom/xiaomi/onetrack/OneTrack$Mode;)Lcom/xiaomi/onetrack/Configuration$Builder;
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {v1, v0}, Lcom/xiaomi/onetrack/Configuration$Builder;->setExceptionCatcherEnable(Z)Lcom/xiaomi/onetrack/Configuration$Builder;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {v1, v0}, Lcom/xiaomi/onetrack/Configuration$Builder;->setAutoTrackActivityAction(Z)Lcom/xiaomi/onetrack/Configuration$Builder;
 
     move-result-object v1
 
-    .line 9
     invoke-virtual {v1}, Lcom/xiaomi/onetrack/Configuration$Builder;->build()Lcom/xiaomi/onetrack/Configuration;
 
     move-result-object v1
 
-    .line 10
     invoke-static {p0, v1}, Lcom/xiaomi/onetrack/OneTrack;->createInstance(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)Lcom/xiaomi/onetrack/OneTrack;
 
     move-result-object p0
@@ -116,13 +104,10 @@
 
     const/4 p0, 0x0
 
-    .line 11
     invoke-static {p0}, Lcom/xiaomi/onetrack/OneTrack;->setDebugMode(Z)V
 
-    .line 12
     invoke-static {p0}, Lcom/xiaomi/onetrack/OneTrack;->setTestMode(Z)V
 
-    .line 13
     sput-boolean v0, Lcom/android/camera/statistic/OneTrackWrapper;->mIsInit:Z
 
     :cond_1
@@ -143,7 +128,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/statistic/OneTrackWrapper;->mOneTrack:Lcom/xiaomi/onetrack/OneTrack;
 
     if-nez v0, :cond_0
@@ -154,7 +138,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/statistic/OneTrackWrapper;->mOneTrack:Lcom/xiaomi/onetrack/OneTrack;
 

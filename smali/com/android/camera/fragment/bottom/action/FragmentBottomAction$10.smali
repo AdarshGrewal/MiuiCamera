@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$10;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$10;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {v0}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$400(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Lcom/android/camera/ui/CameraSnapView;
@@ -51,10 +49,8 @@
 
     const-string/jumbo v1, "showReverseConfirmDialog onClick positive"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$10;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -65,7 +61,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
     move-result-object v2
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
@@ -84,7 +78,6 @@
 
     check-cast v0, Lcom/android/camera/module/ILiveModule;
 
-    .line 6
     invoke-interface {v0}, Lcom/android/camera/module/ILiveModule;->doReverse()V
 
     return-void
@@ -93,7 +86,6 @@
     :goto_0
     const-string/jumbo v1, "showReverseConfirmDialog skip!!!"
 
-    .line 7
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

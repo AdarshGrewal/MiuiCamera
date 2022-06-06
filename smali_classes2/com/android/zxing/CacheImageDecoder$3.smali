@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/zxing/CacheImageDecoder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/CacheImageDecoder$3;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lcom/android/zxing/CacheImageDecoder$3;->accept(Ljava/lang/Throwable;)V
@@ -68,7 +66,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

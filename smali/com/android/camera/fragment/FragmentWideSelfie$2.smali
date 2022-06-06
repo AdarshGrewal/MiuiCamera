@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentWideSelfie;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentWideSelfie$2;->this$0:Lcom/android/camera/fragment/FragmentWideSelfie;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +34,8 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentWideSelfie$2;->this$0:Lcom/android/camera/fragment/FragmentWideSelfie;
 
     invoke-static {p1}, Lcom/android/camera/fragment/FragmentWideSelfie;->access$100(Lcom/android/camera/fragment/FragmentWideSelfie;)Lcom/airbnb/lottie/LottieAnimationView;
@@ -55,10 +52,8 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentWideSelfie$2;->this$0:Lcom/android/camera/fragment/FragmentWideSelfie;
 
     invoke-static {p1}, Lcom/android/camera/fragment/FragmentWideSelfie;->access$100(Lcom/android/camera/fragment/FragmentWideSelfie;)Lcom/airbnb/lottie/LottieAnimationView;

@@ -32,13 +32,10 @@
 .method public constructor <init>(Lcom/android/camera/module/FakerModule;Lcom/android/camera/module/FakerModule;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/FakerModule$MainHandler;->this$0:Lcom/android/camera/module/FakerModule;
 
-    .line 2
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -53,7 +50,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/FakerModule$MainHandler;->mModule:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -62,7 +58,6 @@
 
     check-cast v0, Lcom/android/camera/module/FakerModule;
 
-    .line 2
     iget v1, p1, Landroid/os/Message;->what:I
 
     const/16 v2, 0x2d
@@ -71,7 +66,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/FakerModule;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -80,12 +74,10 @@
 
     invoke-static {v1, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/module/FakerModule$MainHandler;->this$0:Lcom/android/camera/module/FakerModule;
 
     invoke-virtual {v1, v3}, Lcom/android/camera/module/BaseModule;->setActivity(Lcom/android/camera/Camera;)V
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/android/camera/module/FakerModule$MainHandler;->this$0:Lcom/android/camera/module/FakerModule;
 
@@ -95,12 +87,10 @@
 
     if-nez v1, :cond_1
 
-    .line 6
     invoke-virtual {p0, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     return-void
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/android/camera/module/FakerModule$MainHandler;->this$0:Lcom/android/camera/module/FakerModule;
 
@@ -112,7 +102,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -128,12 +117,10 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 9
     invoke-virtual {v0, v3}, Lcom/android/camera/module/BaseModule;->setActivity(Lcom/android/camera/Camera;)V
 
     goto :goto_0
 
-    .line 10
     :cond_3
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -141,7 +128,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "no consumer for this message: "
+    const-string/jumbo v2, "no consumer for this message: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -157,21 +144,17 @@
 
     throw v0
 
-    .line 11
     :cond_4
     invoke-virtual {p0, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 12
     invoke-virtual {p0, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 13
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     invoke-virtual {p1, v4}, Landroid/view/Window;->addFlags(I)V
 
-    .line 14
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getScreenDelay()I
 
     move-result p1
@@ -182,7 +165,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_5
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
 

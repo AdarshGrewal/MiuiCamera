@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension$2;->this$0:Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension$2;->this$0:Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;
 
     invoke-static {v0}, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;->access$200(Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;)Ljava/lang/Object;
@@ -47,7 +45,6 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension$2;->this$0:Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;
 
@@ -57,7 +54,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 3
     monitor-exit v0
 
     return-void

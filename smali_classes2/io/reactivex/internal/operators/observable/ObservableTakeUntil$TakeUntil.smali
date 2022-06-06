@@ -52,15 +52,12 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->this$0:Lio/reactivex/internal/operators/observable/ObservableTakeUntil;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->frc:Lio/reactivex/internal/disposables/ArrayCompositeDisposable;
 
-    .line 3
     iput-object p3, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->serial:Lio/reactivex/observers/SerializedObserver;
 
     return-void
@@ -71,12 +68,10 @@
 .method public onComplete()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->frc:Lio/reactivex/internal/disposables/ArrayCompositeDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/ArrayCompositeDisposable;->dispose()V
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->serial:Lio/reactivex/observers/SerializedObserver;
 
     invoke-virtual {v0}, Lio/reactivex/observers/SerializedObserver;->onComplete()V
@@ -87,12 +82,10 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->frc:Lio/reactivex/internal/disposables/ArrayCompositeDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/ArrayCompositeDisposable;->dispose()V
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->serial:Lio/reactivex/observers/SerializedObserver;
 
     invoke-virtual {v0, p1}, Lio/reactivex/observers/SerializedObserver;->onError(Ljava/lang/Throwable;)V
@@ -108,12 +101,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->frc:Lio/reactivex/internal/disposables/ArrayCompositeDisposable;
 
     invoke-virtual {p1}, Lio/reactivex/internal/disposables/ArrayCompositeDisposable;->dispose()V
 
-    .line 2
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->serial:Lio/reactivex/observers/SerializedObserver;
 
     invoke-virtual {p1}, Lio/reactivex/observers/SerializedObserver;->onComplete()V
@@ -124,7 +115,6 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableTakeUntil$TakeUntil;->frc:Lio/reactivex/internal/disposables/ArrayCompositeDisposable;
 
     const/4 v1, 0x1

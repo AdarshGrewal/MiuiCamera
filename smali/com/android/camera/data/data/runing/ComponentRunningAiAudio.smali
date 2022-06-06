@@ -15,39 +15,35 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f08025f
+    const v1, 0x7f08025b
 
-    const v2, 0x7f120767
+    const v2, 0x7f12072b
 
-    const-string v3, "normal"
+    const-string/jumbo v3, "normal"
 
     invoke-direct {v0, v1, v1, v2, v3}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f08025e
+    const v1, 0x7f08025a
 
-    const v2, 0x7f120766
+    const v2, 0x7f12072a
 
     const-string v3, "audio zoom"
 
@@ -55,14 +51,13 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f08025d
+    const v1, 0x7f080259
 
-    const v2, 0x7f120765
+    const v2, 0x7f120729
 
     const-string v3, "3d record"
 
@@ -80,7 +75,6 @@
 
     if-eqz p2, :cond_8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result p2
@@ -91,7 +85,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontDenoiseOn()Z
 
     move-result p2
@@ -111,7 +104,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAiAudio;->getCurrentRecType(I)I
 
@@ -152,20 +144,17 @@
     :cond_5
     const/4 p3, 0x4
 
-    .line 4
     :goto_1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isWindDenoiseOn()Z
 
     move-result v3
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->isWiredHeadsetOn()Z
 
     move-result v4
 
     if-nez v4, :cond_7
 
-    .line 6
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMacroLensOn(I)Z
 
     move-result p1
@@ -179,7 +168,6 @@
 
     move v0, v3
 
-    .line 7
     :cond_7
     :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
@@ -230,12 +218,10 @@
 .method public getCurrentRecType(I)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -272,7 +258,7 @@
     goto :goto_1
 
     :cond_1
-    const-string v0, "normal"
+    const-string/jumbo v0, "normal"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -324,12 +310,10 @@
 .method public getCurrentRecTypeStr(I)Ljava/lang/String;
     .locals 7
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -344,7 +328,7 @@
 
     const/4 v5, 0x1
 
-    const-string v6, "normal"
+    const-string/jumbo v6, "normal"
 
     if-eq v0, v1, :cond_2
 
@@ -418,7 +402,6 @@
 .method public getCurrentStringRes(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAiAudio;->getCurrentRecType(I)I
 
     move-result p1
@@ -436,12 +419,12 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f120765
+    const p1, 0x7f120729
 
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f120766
+    const p1, 0x7f12072a
 
     :goto_0
     return p1
@@ -450,7 +433,7 @@
 .method public getDefaultValue(I)Ljava/lang/String;
     .locals 0
 
-    const-string p1, "normal"
+    const-string/jumbo p1, "normal"
 
     return-object p1
 .end method
@@ -458,7 +441,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120637
+    const v0, 0x7f1205fb
 
     return v0
 .end method
@@ -474,7 +457,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -491,49 +473,45 @@
 .method public getValueSelectedDrawableIgnoreClose(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "normal"
+    const-string/jumbo v0, "normal"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f08025f
+    const p1, 0x7f08025b
 
     return p1
 
     :cond_0
     const-string v0, "audio zoom"
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const p1, 0x7f08025e
+    const p1, 0x7f08025a
 
     return p1
 
     :cond_1
     const-string v0, "3d record"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    const p1, 0x7f08025d
+    const p1, 0x7f080259
 
     return p1
 
@@ -546,49 +524,45 @@
 .method public getValueSelectedStringIdIgnoreClose(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "normal"
+    const-string/jumbo v0, "normal"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f120767
+    const p1, 0x7f12072b
 
     return p1
 
     :cond_0
     const-string v0, "audio zoom"
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const p1, 0x7f120766
+    const p1, 0x7f12072a
 
     return p1
 
     :cond_1
     const-string v0, "3d record"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    const p1, 0x7f120765
+    const p1, 0x7f120729
 
     return p1
 
@@ -601,7 +575,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-eqz v0, :cond_1

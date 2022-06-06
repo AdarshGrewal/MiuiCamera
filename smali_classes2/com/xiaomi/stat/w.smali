@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/w;->b:Lcom/xiaomi/stat/e;
 
     iput-boolean p2, p0, Lcom/xiaomi/stat/w;->a:Z
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/stat/w;->a:Z
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->b(Z)V

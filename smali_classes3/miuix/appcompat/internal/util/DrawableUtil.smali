@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static isPlaceholder(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    .line 1
     instance-of v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;
 
     if-nez v0, :cond_1
@@ -27,7 +25,6 @@
 
     check-cast p0, Landroid/graphics/drawable/ColorDrawable;
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
 
     move-result p0

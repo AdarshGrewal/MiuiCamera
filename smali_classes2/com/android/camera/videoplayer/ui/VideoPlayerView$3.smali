@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$3;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     iput p2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$3;->val$what:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$3;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$000(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$BackgroundThreadMediaPlayerListener;

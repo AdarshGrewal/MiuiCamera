@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/network/resource/ResourceDownloadManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/resource/ResourceDownloadManager$1;->this$0:Lcom/android/camera/network/resource/ResourceDownloadManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onRequestComplete(Lcom/android/camera/network/download/Request;I)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +55,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
 
     move-result-object p1
@@ -66,7 +63,6 @@
 
     move-result-wide v0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/network/resource/ResourceDownloadManager$1;->this$0:Lcom/android/camera/network/resource/ResourceDownloadManager;
 
     invoke-static {p1}, Lcom/android/camera/network/resource/ResourceDownloadManager;->access$000(Lcom/android/camera/network/resource/ResourceDownloadManager;)Ljava/lang/Object;
@@ -75,7 +71,6 @@
 
     monitor-enter p1
 
-    .line 4
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/network/resource/ResourceDownloadManager$1;->this$0:Lcom/android/camera/network/resource/ResourceDownloadManager;
 
@@ -85,14 +80,12 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/util/LongSparseArray;->remove(J)V
 
-    .line 5
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez p2, :cond_0
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/network/resource/ResourceDownloadManager$1;->this$0:Lcom/android/camera/network/resource/ResourceDownloadManager;
 
     const/4 p2, 0x3
@@ -101,7 +94,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iget-object p1, p0, Lcom/android/camera/network/resource/ResourceDownloadManager$1;->this$0:Lcom/android/camera/network/resource/ResourceDownloadManager;
 
@@ -115,7 +107,6 @@
     :catchall_0
     move-exception p2
 
-    .line 8
     :try_start_1
     monitor-exit p1
     :try_end_1

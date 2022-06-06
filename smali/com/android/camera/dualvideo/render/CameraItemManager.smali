@@ -54,26 +54,21 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderSource:Ljava/util/ArrayList;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
-    .line 5
     new-instance p1, Lcom/android/camera/dualvideo/render/RegionHelper;
 
-    invoke-static {}, Lcom/android/camera/dualvideo/DualVideoModuleUtil;->getUIStyle()I
+    invoke-static {}, Lcom/android/camera/dualvideo/ModuleUtil;->getUIStyle()I
 
     move-result p2
 
@@ -91,7 +86,6 @@
 .method public static synthetic OooO(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p0
@@ -114,7 +108,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/RenderSource;)Lcom/android/gallery3d/ui/ExtTexture;
     .locals 0
 
-    .line 11
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/RenderSource;->getTexture()Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object p0
@@ -132,7 +125,6 @@
 
     const/4 v0, 0x0
 
-    .line 40
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->enterOrExit(Lio/reactivex/SingleEmitter;)V
 
     return-void
@@ -141,28 +133,25 @@
 .method public static synthetic OooO00o(Ljava/util/ArrayList;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 1
 
-    .line 15
     invoke-virtual {p0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOoo;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOoo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
-    .line 16
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 17
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOooo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOoo;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOooo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOoo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -172,7 +161,6 @@
 .method public static synthetic OooO00o(IILcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 23
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p2, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -191,7 +179,6 @@
 .method public static synthetic OooO00o(ILcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 2
 
-    .line 19
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -200,7 +187,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 20
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -215,14 +201,12 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 21
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p0
 
     invoke-interface {p1, p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setLastRenderLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
-    .line 22
     sget-object p0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     const/4 v0, 0x1
@@ -240,7 +224,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 0
 
-    .line 13
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -265,7 +248,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItemInterface;Lcom/android/camera/dualvideo/render/RenderSource;)Z
     .locals 2
 
-    .line 26
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -274,7 +256,6 @@
 
     check-cast p0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 27
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/RenderSource;->getTexture()Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object v0
@@ -301,7 +282,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +304,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/RenderSource;->release()V
 
     :cond_1
@@ -334,7 +313,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItemInterface;Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 0
 
-    .line 30
     iget-object p1, p1, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -357,7 +335,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItemInterface;Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 0
 
-    .line 18
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p1
@@ -382,7 +359,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 0
 
-    .line 8
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -403,7 +379,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 0
 
-    .line 39
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -426,7 +401,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/RenderSourceType;Lcom/android/camera/dualvideo/render/RenderSource;)Z
     .locals 0
 
-    .line 10
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/RenderSource;->getSourceType()Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     move-result-object p1
@@ -447,7 +421,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/SelectIndex;Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 0
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p1
@@ -468,7 +441,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 1
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p1
@@ -483,7 +455,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/render/CameraItemInterface;Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 0
 
-    .line 6
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p0
@@ -496,7 +467,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/util/UserSelectData;Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 0
 
-    .line 3
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -521,7 +491,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/render/CameraItemInterface;Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 8
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -532,7 +501,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p1
@@ -548,7 +516,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -577,7 +544,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 1
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -600,7 +566,6 @@
 .method public static synthetic OooO0oO(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -613,11 +578,10 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOOO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOOO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->noneMatch(Ljava/util/function/Predicate;)Z
 
     move-result p0
@@ -628,7 +592,6 @@
 .method public static synthetic OooO0oo(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object v0
@@ -639,14 +602,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p0, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -656,7 +617,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p0, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
@@ -669,7 +629,6 @@
 .method public static synthetic OooOO0(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     const/4 v1, 0x1
@@ -682,7 +641,6 @@
 .method public static synthetic OooOO0O(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -691,14 +649,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
 
     invoke-interface {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setLastRenderLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
-    .line 3
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     const/4 v1, 0x1
@@ -712,7 +668,6 @@
 .method public static synthetic OooOO0o(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -721,7 +676,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     const/4 v1, 0x1
@@ -735,7 +689,6 @@
 .method public static synthetic OooOOO(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p0
@@ -758,7 +711,6 @@
 .method public static synthetic OooOOO0(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -769,21 +721,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
 
     invoke-interface {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setLastRenderLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
-    .line 3
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p0, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -793,7 +742,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 5
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p0, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
@@ -806,7 +754,6 @@
 .method public static synthetic OooOOOO(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 2
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -835,7 +782,6 @@
 .method public static synthetic OooOOOo(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -864,7 +810,6 @@
 .method public static synthetic OooOOo(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -887,7 +832,6 @@
 .method public static synthetic OooOOo0(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -898,7 +842,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-interface {p0, v2, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setVisibilityWithAnim(ZZ)V
 
     goto :goto_0
@@ -906,7 +849,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     invoke-interface {p0, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setVisibilityWithAnim(ZZ)V
 
     :goto_0
@@ -916,7 +858,6 @@
 .method public static synthetic OooOOoo(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -929,7 +870,6 @@
 .method public static synthetic OooOo00(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Z
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object p0
@@ -952,7 +892,6 @@
 .method public static synthetic access$000(Lcom/android/camera/dualvideo/render/CameraItemManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
     return-object p0
@@ -961,7 +900,6 @@
 .method public static synthetic access$100(Lcom/android/camera/dualvideo/render/CameraItemManager;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     return-object p0
@@ -970,7 +908,6 @@
 .method public static synthetic access$200(Lcom/android/camera/dualvideo/render/CameraItemManager;)Lcom/android/camera/dualvideo/render/RegionHelper;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     return-object p0
@@ -979,18 +916,16 @@
 .method private createCameraItem(Lcom/android/camera/dualvideo/render/LayoutType;)Lcom/android/camera/dualvideo/render/CameraItem;
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
@@ -1005,12 +940,10 @@
 
     const/4 p1, 0x1
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->alphaInGridWindowFlag(Z)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Lcom/android/camera/dualvideo/render/CameraItem;
 
@@ -1028,11 +961,9 @@
 
     invoke-direct {v0, p1, v1, v2}, Lcom/android/camera/dualvideo/render/CameraItem;-><init>(Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/FaceType;)V
 
-    .line 5
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->initCameraItemAttri(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
-    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->initSelected(Lcom/android/camera/dualvideo/render/CameraItem;)V
 
     return-object v0
@@ -1041,14 +972,12 @@
 .method private deleteRedundantCameraItem(Z)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0O0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOOO;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->updateRenderableList(Z)V
 
     return-void
@@ -1057,17 +986,14 @@
 .method private getFaceTypeByCameraTag(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/camera/dualvideo/render/FaceType;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/util/RenderSourceType;->REMOTE_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/android/camera/dualvideo/render/FaceType;->FACE_REMOTE:Lcom/android/camera/dualvideo/render/FaceType;
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -1097,7 +1023,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     sget-object p1, Lcom/android/camera/dualvideo/render/FaceType;->FACE_FRONT:Lcom/android/camera/dualvideo/render/FaceType;
 
     goto :goto_0
@@ -1112,7 +1037,6 @@
 .method private getIndexBySelelectType(Lcom/android/camera/dualvideo/render/LayoutType;)Lcom/android/camera/dualvideo/util/SelectIndex;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -1121,14 +1045,13 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo000;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0o;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo000;-><init>(Lcom/android/camera/dualvideo/render/LayoutType;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0o;-><init>(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
@@ -1138,9 +1061,8 @@
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO0O0;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO0O0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO0O0;
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p1
@@ -1159,7 +1081,6 @@
 .method private getRenderTypeBySelectIndex(Lcom/android/camera/dualvideo/util/SelectIndex;)Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -1172,23 +1093,20 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo00O;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooo00;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo00O;-><init>(Lcom/android/camera/dualvideo/util/SelectIndex;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooo00;-><init>(Lcom/android/camera/dualvideo/util/SelectIndex;)V
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0000ooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0000ooO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0000ooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0000ooO;
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    .line 4
     invoke-interface {p1}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
 
     move-result-object p1
@@ -1207,17 +1125,14 @@
 .method private getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderSource:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderSource:Ljava/util/ArrayList;
 
@@ -1225,37 +1140,32 @@
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0o0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooooO0;
 
-    invoke-direct {v2, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0o0;-><init>(Lcom/android/camera/dualvideo/util/RenderSourceType;)V
+    invoke-direct {v2, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooooO0;-><init>(Lcom/android/camera/dualvideo/util/RenderSourceType;)V
 
-    .line 4
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    .line 5
     invoke-interface {p1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p1
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoo0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoo0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOO0;
 
-    .line 6
     invoke-virtual {p1, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {p1, v1}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/gallery3d/ui/ExtTexture;
 
-    .line 8
     monitor-exit v0
 
     return-object p1
@@ -1269,7 +1179,6 @@
 
     throw p1
 
-    .line 9
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1283,7 +1192,6 @@
 .method private handleTouch(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 9
 
-    .line 1
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object v0
@@ -1301,7 +1209,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
@@ -1315,13 +1222,12 @@
 
     move-result-object v1
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoo;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo00;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo00;
 
     invoke-interface {v1, v3}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     move-result v1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v3
@@ -1334,7 +1240,6 @@
 
     move-result v3
 
-    .line 4
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object v4
@@ -1343,16 +1248,14 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOO0O;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0oO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0oO;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
 
-    .line 6
     :cond_1
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -1368,29 +1271,26 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOooO;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoo;
 
     invoke-interface {v1, v4}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOo0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOo0;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOo0;
 
     invoke-interface {v1, v4}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 8
     sget-object v1, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p1, v1, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
-    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1427,7 +1327,6 @@
 
     return-void
 
-    .line 10
     :cond_3
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -1439,21 +1338,18 @@
 
     if-eqz v1, :cond_4
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO0O;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO00;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO00;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 12
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p1, v0, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
     return-void
 
-    .line 13
     :cond_4
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
@@ -1467,16 +1363,15 @@
 
     move-result v1
 
-    .line 14
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v4
 
-    new-instance v5, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0O;
+    new-instance v5, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOooo;
 
-    invoke-direct {v5, v1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0O;-><init>(I)V
+    invoke-direct {v5, v1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOooo;-><init>(I)V
 
     invoke-interface {v4, v5}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -1484,30 +1379,26 @@
 
     if-eqz v1, :cond_5
 
-    .line 15
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0o;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoO0;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
     goto :goto_2
 
-    .line 16
     :cond_5
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 17
     :goto_2
     sget-object v1, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {p1, v1, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
-    .line 18
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1549,7 +1440,6 @@
 .method private initCameraItemAttri(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -1560,7 +1450,6 @@
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$render$FaceType:[I
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
@@ -1594,10 +1483,8 @@
     :cond_0
     const-string v1, "initCameraItemAttri: remote"
 
-    .line 3
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     sget-object v1, Lcom/android/camera/dualvideo/util/RenderSourceType;->REMOTE_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, v1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -1609,10 +1496,8 @@
     :cond_1
     const-string v1, "initCameraItemAttri: front"
 
-    .line 5
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     sget-object v1, Lcom/android/camera/dualvideo/util/RenderSourceType;->SUB_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, v1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -1624,17 +1509,14 @@
     :cond_2
     const-string v1, "initCameraItemAttri: back"
 
-    .line 7
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     sget-object v1, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, v1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object v1
 
-    .line 9
     :goto_0
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
@@ -1648,12 +1530,10 @@
 
     move-result-object v2
 
-    .line 10
     new-instance v3, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-direct {v3, v1, v2, v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)V
 
-    .line 11
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p1, v3, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setRenderAttri(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;Lcom/android/camera/dualvideo/render/ContentType;)V
@@ -1664,7 +1544,6 @@
 .method private initRenderableList()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1695,7 +1574,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1704,18 +1582,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -1728,16 +1604,14 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo00o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo00o;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
-    .line 5
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
@@ -1747,10 +1621,9 @@
 
     move-result-object v0
 
-    .line 7
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOoo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo000;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOoo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo000;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -1762,12 +1635,11 @@
 .method private initSelectIndexFromSelectData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO00;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOooO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO00;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOooO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -1777,7 +1649,6 @@
 .method private initSelected(Lcom/android/camera/dualvideo/render/CameraItem;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -1786,41 +1657,36 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->getSelectedData()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO0;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooO0;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO0;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {v0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOoo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0O0;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOoo;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0O0;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     const-string p1, "CameraItemManager"
 
     const-string v0, "initSelected: "
 
-    .line 6
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1829,16 +1695,15 @@
 .method private onTouched(II)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0;
 
-    invoke-direct {v1, p1, p2}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo0;-><init>(II)V
+    invoke-direct {v1, p1, p2}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0;-><init>(II)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
@@ -1848,10 +1713,9 @@
 
     move-result-object p1
 
-    .line 2
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOO0;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo00o;
 
-    invoke-direct {p2, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOO0;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {p2, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo00o;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {p1, p2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -1859,7 +1723,6 @@
 
     const/4 p2, 0x0
 
-    .line 3
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
@@ -1880,25 +1743,21 @@
 .method private removeRenderSource(Lcom/android/camera/dualvideo/render/CameraItemInterface;Z)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-direct {p0, p2}, Lcom/android/camera/dualvideo/render/CameraItemManager;->deleteRedundantCameraItem(Z)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderSource:Ljava/util/ArrayList;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0oO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOO0;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0oO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOO0;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 4
     monitor-exit v0
 
     return-void
@@ -1916,7 +1775,6 @@
 .method private saveSelectedStatus()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -1925,17 +1783,15 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->getSelectedData()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOo0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0O;
 
-    invoke-direct {v2, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOo0;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0O;-><init>(Ljava/util/ArrayList;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -1947,7 +1803,6 @@
 .method public synthetic OooO00o(FLjava/util/List;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p3, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1956,14 +1811,12 @@
 
     check-cast p3, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p3, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-direct {v0, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     iget-object v1, v1, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
@@ -1978,10 +1831,8 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 4
     invoke-static {v0, p1}, Lcom/android/camera/dualvideo/render/RectUtil;->scaleRect(Landroid/graphics/Rect;F)V
 
-    .line 5
     new-instance p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iget-object v1, p3, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
@@ -1990,7 +1841,6 @@
 
     invoke-direct {p1, v1, p3, v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)V
 
-    .line 6
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -1999,7 +1849,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 7
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -2023,7 +1872,6 @@
         }
     .end annotation
 
-    .line 24
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
@@ -2032,7 +1880,6 @@
 
     const/4 p2, 0x1
 
-    .line 25
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/CameraItemManager;->removeRenderSource(Lcom/android/camera/dualvideo/render/CameraItemInterface;Z)V
 
     :cond_0
@@ -2042,16 +1889,15 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
     .locals 3
 
-    .line 31
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooo0o;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo;-><init>(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooo0o;-><init>(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->noneMatch(Ljava/util/function/Predicate;)Z
 
@@ -2059,19 +1905,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
     iget-object p1, p1, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->createCameraItem(Lcom/android/camera/dualvideo/render/LayoutType;)Lcom/android/camera/dualvideo/render/CameraItem;
 
     move-result-object p1
 
-    .line 33
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 34
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -2084,19 +1927,16 @@
 
     const/4 v0, 0x0
 
-    .line 35
     invoke-virtual {p1, v0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->setVisibilityWithAnim(ZZ)V
 
     const-wide/16 v0, 0xc8
 
-    .line 36
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {v0, v1, v2}, Lio/reactivex/Completable;->timer(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Completable;
 
     move-result-object v0
 
-    .line 37
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -2105,11 +1945,10 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0oo;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoO0;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0oo;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
 
-    .line 38
     invoke-virtual {v0, v1}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/functions/Action;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
@@ -2119,7 +1958,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 1
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -2138,7 +1976,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 2
 
-    .line 14
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmRecordLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -2155,15 +1992,12 @@
 .method public synthetic OooO0O0(Lcom/android/camera/dualvideo/render/CameraItemInterface;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 7
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->handleTouch(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
-    .line 8
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->saveSelectedStatus()V
 
     const/4 p1, 0x1
 
-    .line 9
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -2174,7 +2008,6 @@
 .method public synthetic OooO0O0(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     iget-object p1, p1, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
@@ -2191,26 +2024,24 @@
 .method public synthetic OooO0O0(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOOo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO0O;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOOo;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooO0O;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0OO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0OO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;Lcom/android/camera/dualvideo/util/UserSelectData;)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;Lcom/android/camera/dualvideo/util/UserSelectData;)V
 
-    .line 5
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -2221,10 +2052,8 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->alphaInGridWindowFlag(Z)V
 
-    .line 3
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$util$SelectIndex:[I
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
@@ -2247,16 +2076,13 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 4
     invoke-interface {p1, v0, v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setVisibilityWithAnim(ZZ)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->alphaInSelectedFrame(Z)V
 
-    .line 6
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -2278,10 +2104,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->alphaInGridWindowFlag(Z)V
 
-    .line 2
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$util$SelectIndex:[I
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
@@ -2306,11 +2130,9 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->alphaInSelectedFrame(Z)V
 
-    .line 4
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v1
@@ -2321,7 +2143,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
@@ -2329,7 +2150,6 @@
 
     invoke-interface {p1, v1, v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->updateRenderAttri(Lcom/android/camera/dualvideo/render/RegionHelper;Z)V
 
-    .line 6
     :goto_0
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->isVisible()Z
 
@@ -2337,7 +2157,6 @@
 
     if-nez v1, :cond_2
 
-    .line 7
     invoke-interface {p1, v0, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setVisibilityWithAnim(ZZ)V
 
     :cond_2
@@ -2347,7 +2166,6 @@
 .method public synthetic OooO0o(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-interface {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -2356,7 +2174,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v1
@@ -2369,7 +2186,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 3
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$render$FaceType:[I
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
@@ -2394,7 +2210,6 @@
 
     goto/16 :goto_0
 
-    .line 4
     :cond_0
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->REMOTE_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
@@ -2406,7 +2221,6 @@
 
     goto/16 :goto_0
 
-    .line 5
     :cond_1
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->SUB_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
@@ -2418,7 +2232,6 @@
 
     goto/16 :goto_0
 
-    .line 6
     :cond_2
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
@@ -2430,7 +2243,6 @@
 
     goto/16 :goto_0
 
-    .line 7
     :cond_3
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
@@ -2444,7 +2256,6 @@
 
     move-result p1
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v1
@@ -2457,7 +2268,6 @@
 
     if-ne p1, v3, :cond_4
 
-    .line 9
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->REMOTE_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -2468,7 +2278,6 @@
 
     return-void
 
-    .line 10
     :cond_4
     invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
 
@@ -2476,7 +2285,6 @@
 
     if-ne v3, v2, :cond_5
 
-    .line 11
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -2487,7 +2295,6 @@
 
     return-void
 
-    .line 12
     :cond_5
     sget-object v2, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
@@ -2501,7 +2308,6 @@
 
     move-result v2
 
-    .line 13
     sget-object v3, Lcom/android/camera/dualvideo/util/RenderSourceType;->SUB_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2514,7 +2320,6 @@
 
     move-result v1
 
-    .line 14
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2547,7 +2352,6 @@
 
     if-ne p1, v2, :cond_6
 
-    .line 15
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -2561,7 +2365,6 @@
     :cond_6
     if-ne p1, v1, :cond_7
 
-    .line 16
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->SUB_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
@@ -2572,7 +2375,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_7
     sget-object p1, Lcom/android/camera/dualvideo/util/RenderSourceType;->REMOTE_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
@@ -2589,7 +2391,6 @@
 .method public synthetic OooO0o0(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
     .locals 3
 
-    .line 1
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -2606,7 +2407,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     :cond_0
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2625,7 +2425,6 @@
 .method public addCameraItem()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -2638,9 +2437,9 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooooOO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOOo;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooooOO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOOo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEachOrdered(Ljava/util/function/Consumer;)V
 
@@ -2652,22 +2451,20 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000O000;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000O000;
 
-    invoke-direct {p2, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000O000;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {p2, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000O000;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
     invoke-static {p2}, Lio/reactivex/Single;->create(Lio/reactivex/SingleOnSubscribe;)Lio/reactivex/Single;
 
     move-result-object p2
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOOO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0o;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOOO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0o;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
-    .line 2
     invoke-virtual {p2, v0}, Lio/reactivex/Single;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
@@ -2675,7 +2472,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/CameraItemManager;->removeRenderSource(Lcom/android/camera/dualvideo/render/CameraItemInterface;Z)V
 
     :goto_0
@@ -2689,10 +2485,8 @@
 
     const-string v1, "expandBottom: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->isAnimating()Z
 
     move-result v0
@@ -2701,7 +2495,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
@@ -2722,7 +2515,6 @@
 
     check-cast v1, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 4
     invoke-interface {v1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->isVisible()Z
 
     move-result v2
@@ -2731,7 +2523,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object v2, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
@@ -2763,7 +2554,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     sget-object v2, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2773,7 +2563,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     sget-object v2, Lcom/android/camera/dualvideo/render/LayoutType;->FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2794,10 +2583,8 @@
 
     const-string v1, "expandOrShrinkTop: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->isAnimating()Z
 
     move-result v0
@@ -2814,7 +2601,6 @@
 
     goto/16 :goto_4
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
@@ -2837,7 +2623,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 4
     :goto_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
@@ -2858,7 +2643,6 @@
 
     check-cast v3, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 5
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->isVisible()Z
 
     move-result v4
@@ -2867,13 +2651,11 @@
 
     goto :goto_1
 
-    .line 6
     :cond_2
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getLastRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v4
 
-    .line 7
     sget-object v5, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -2890,7 +2672,6 @@
 
     goto :goto_1
 
-    .line 8
     :pswitch_0
     sget-object v5, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2908,7 +2689,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_3
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
@@ -2920,7 +2700,6 @@
     :goto_2
     if-eqz v0, :cond_5
 
-    .line 10
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN:Lcom/android/camera/dualvideo/render/LayoutType;
 
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
@@ -2929,7 +2708,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_5
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2939,7 +2717,6 @@
 
     goto :goto_1
 
-    .line 12
     :pswitch_1
     sget-object v5, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2957,7 +2734,6 @@
 
     goto :goto_3
 
-    .line 13
     :cond_6
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
@@ -2969,7 +2745,6 @@
     :goto_3
     if-eqz v0, :cond_8
 
-    .line 14
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->UP:Lcom/android/camera/dualvideo/render/LayoutType;
 
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
@@ -2978,7 +2753,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_8
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->UP_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2988,7 +2762,6 @@
 
     goto :goto_1
 
-    .line 16
     :pswitch_2
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -2998,7 +2771,6 @@
 
     goto :goto_1
 
-    .line 17
     :pswitch_3
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3026,12 +2798,10 @@
 .method public getFullTypeRecordAttri(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/camera/effect/draw_mode/DrawAttribute;
     .locals 6
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getTexture(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Landroid/graphics/Rect;
 
     sget-object v2, Lcom/android/camera/dualvideo/render/RenderUtil;->OUTPUT_SIZE:Landroid/util/Size;
@@ -3050,10 +2820,8 @@
 
     invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 3
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getFaceTypeByCameraTag(Lcom/android/camera/dualvideo/util/RenderSourceType;)Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p1
@@ -3068,7 +2836,6 @@
 
     sget-object v3, Lcom/android/camera/dualvideo/render/RenderUtil;->OUTPUT_SIZE:Landroid/util/Size;
 
-    .line 5
     invoke-virtual {v3}, Landroid/util/Size;->getWidth()I
 
     move-result v3
@@ -3097,12 +2864,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
@@ -3114,16 +2879,13 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->initRenderableList()V
 
-    .line 4
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     return-object p1
@@ -3131,7 +2893,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -3153,7 +2914,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object v1
@@ -3162,7 +2922,6 @@
 
     move-result v1
 
-    .line 2
     sget-object v2, Lcom/android/camera/dualvideo/render/RenderUtil;->OUTPUT_SIZE:Landroid/util/Size;
 
     invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
@@ -3182,41 +2941,35 @@
     :cond_0
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 3
     :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getRenderableList(Z)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/ooOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/ooOO;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/ooOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/ooOO;
 
-    .line 6
     invoke-interface {v0, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000;
 
-    .line 7
     invoke-interface {v0, v3}, Ljava/util/stream/Stream;->sorted(Ljava/util/Comparator;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo00O;
 
-    invoke-direct {v3, p0, v2, v1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;FLjava/util/List;)V
+    invoke-direct {v3, p0, v2, v1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo00O;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;FLjava/util/List;)V
 
-    .line 8
     invoke-interface {v0, v3}, Ljava/util/stream/Stream;->forEachOrdered(Ljava/util/function/Consumer;)V
 
     return-object v1
@@ -3235,7 +2988,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getRenderableList(Z)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -3244,16 +2996,14 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/ooOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/ooOO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/ooOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/ooOO;
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o00O0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o00O0O;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o00O0O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o00O0O;
 
-    .line 3
     invoke-static {v1}, Ljava/util/stream/Collectors;->toCollection(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -3270,14 +3020,13 @@
 .method public hasMiniCameraItem()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooo0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooo0o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoO;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -3289,7 +3038,6 @@
 .method public isAnimating()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3298,14 +3046,13 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO00o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO00o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO00o;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -3322,14 +3069,13 @@
 .method public isGridWindow()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOOO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOO;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -3345,10 +3091,8 @@
 
     const-string/jumbo v1, "printRenderList: start"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3357,10 +3101,9 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo00;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOo00;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOo;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3371,7 +3114,6 @@
 .method public refreshSelectStatus()V
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -3380,7 +3122,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v1
@@ -3389,7 +3130,6 @@
 
     move-result v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3409,17 +3149,15 @@
 
     check-cast v3, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 4
     sget-object v4, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     const/4 v5, 0x0
 
     invoke-interface {v3, v4, v5}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
-    .line 5
-    new-instance v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoOO;
+    new-instance v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOOo;
 
-    invoke-direct {v4, v3}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoOO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
+    invoke-direct {v4, v3}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOOo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemInterface;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3428,10 +3166,9 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOoO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooooOO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooooOO;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3442,7 +3179,6 @@
 .method public selectItem(Landroid/view/MotionEvent;)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3465,7 +3201,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -3482,7 +3217,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -3498,26 +3232,24 @@
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->onTouched(II)Z
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0000oOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0000oOo;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0000oOo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0000oOo;
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooooo0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooooo0;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooooo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooooo0;
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEachOrdered(Ljava/util/function/Consumer;)V
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -3525,14 +3257,12 @@
 
     float-to-int v0, v0
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
 
     float-to-int p1, p1
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3553,7 +3283,6 @@
 
     check-cast v2, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 8
     iget-object v3, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-interface {v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -3564,14 +3293,12 @@
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {v3, v0, p1}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 10
     invoke-interface {v2}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->onKeyDown()V
 
     goto :goto_0
@@ -3584,7 +3311,6 @@
 .method public switchGridToRecordWindow()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->isAnimating()Z
 
     move-result v0
@@ -3593,14 +3319,12 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->printRenderList()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
-    invoke-static {}, Lcom/android/camera/dualvideo/DualVideoModuleUtil;->getUIStyle()I
+    invoke-static {}, Lcom/android/camera/dualvideo/ModuleUtil;->getUIStyle()I
 
     move-result v1
 
@@ -3610,7 +3334,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/render/RegionHelper;->setDrawRect(Landroid/graphics/Rect;)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -3619,19 +3342,17 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooo00;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooo00;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOo0;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->initSelectIndexFromSelectData()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoOO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0o;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoOO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3641,7 +3362,6 @@
 .method public switchRecordToGridWindow()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->isAnimating()Z
 
     move-result v0
@@ -3655,13 +3375,11 @@
 
     const-string/jumbo v1, "switchRecordToGridWindow: "
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
-    invoke-static {}, Lcom/android/camera/dualvideo/DualVideoModuleUtil;->getUIStyle()I
+    invoke-static {}, Lcom/android/camera/dualvideo/ModuleUtil;->getUIStyle()I
 
     move-result v1
 
@@ -3671,21 +3389,19 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/render/RegionHelper;->setDrawRect(Landroid/graphics/Rect;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOoO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0o0;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOoO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0o0;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0oo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000oOoO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooo0oo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000oOoO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3699,10 +3415,8 @@
 
     const-string/jumbo v1, "switchTopBottom "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->isAnimating()Z
 
     move-result v0
@@ -3713,7 +3427,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
@@ -3721,13 +3434,12 @@
 
     move-result-object v0
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOO0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOO0;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOo0;
 
     invoke-interface {v0, v2}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
     move-result v0
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3748,7 +3460,6 @@
 
     check-cast v3, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 5
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->isVisible()Z
 
     move-result v4
@@ -3757,7 +3468,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     sget-object v4, Lcom/android/camera/dualvideo/render/CameraItemManager$2;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
@@ -3775,7 +3485,6 @@
 
     goto :goto_1
 
-    .line 7
     :pswitch_0
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3785,7 +3494,6 @@
 
     goto :goto_1
 
-    .line 8
     :pswitch_1
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3795,7 +3503,6 @@
 
     goto :goto_1
 
-    .line 9
     :pswitch_2
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3805,7 +3512,6 @@
 
     goto :goto_1
 
-    .line 10
     :pswitch_3
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3815,7 +3521,6 @@
 
     goto :goto_1
 
-    .line 11
     :pswitch_4
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->UP_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3825,7 +3530,6 @@
 
     goto :goto_1
 
-    .line 12
     :pswitch_5
     sget-object v4, Lcom/android/camera/dualvideo/render/LayoutType;->UP:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3836,7 +3540,6 @@
     :goto_1
     if-nez v0, :cond_1
 
-    .line 13
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v4
@@ -3845,14 +3548,12 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 14
     sget-object v4, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {v3, v4, v1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
 
     goto :goto_0
 
-    .line 15
     :cond_3
     invoke-interface {v3}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -3862,7 +3563,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 16
     sget-object v4, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-interface {v3, v4, v1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
@@ -3888,7 +3588,6 @@
 .method public updateMiniWindowLocation(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -3911,7 +3610,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
@@ -3919,7 +3617,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -3932,7 +3629,6 @@
 
     float-to-int v0, v0
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -3945,7 +3641,6 @@
 
     float-to-int v1, v1
 
-    .line 5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
@@ -3956,7 +3651,6 @@
 
     invoke-virtual {v3, v4, p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->setStartPosition(FF)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RegionHelper;->updateMarginOffset(II)V
@@ -3966,7 +3660,6 @@
     :cond_1
     return v1
 
-    .line 7
     :cond_2
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
@@ -3974,10 +3667,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 8
     iput-boolean v1, p1, Lcom/android/camera/dualvideo/render/RegionHelper;->mIsHovering:Z
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->moveToEdge()V
 
     return v2
@@ -3985,18 +3676,15 @@
     :cond_3
     return v1
 
-    .line 10
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 11
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
 
-    .line 12
     new-instance v3, Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
@@ -4009,26 +3697,22 @@
 
     invoke-direct {v3, v4}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 13
     invoke-virtual {v3, v0, p1}, Landroid/graphics/RectF;->contains(FF)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 14
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     iput-boolean v2, v1, Lcom/android/camera/dualvideo/render/RegionHelper;->mIsHovering:Z
 
-    .line 15
     new-instance v3, Lcom/android/camera/dualvideo/render/CameraItemManager$1;
 
     invoke-direct {v3, p0}, Lcom/android/camera/dualvideo/render/CameraItemManager$1;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v1, v3}, Lcom/android/camera/dualvideo/render/RegionHelper;->setListener(Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;)V
 
-    .line 16
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-virtual {v1, v0, p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->setStartPosition(FF)V
@@ -4042,7 +3726,6 @@
 .method public updateRenderableList(Z)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -4051,7 +3734,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v1
@@ -4062,20 +3744,17 @@
 
     if-nez v1, :cond_0
 
-    .line 3
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOOo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0OO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooOOo;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooo0OO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderLocker:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->getVisibleRenderList()Ljava/util/ArrayList;
 
@@ -4098,14 +3777,12 @@
 
     check-cast v2, Lcom/android/camera/dualvideo/render/CameraItemInterface;
 
-    .line 6
     iget-object v3, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRegionHelper:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-interface {v2, v3, p1}, Lcom/android/camera/dualvideo/render/CameraItemInterface;->updateRenderAttri(Lcom/android/camera/dualvideo/render/RegionHelper;Z)V
 
     goto :goto_0
 
-    .line 7
     :cond_1
     monitor-exit v0
 
@@ -4124,16 +3801,13 @@
 .method public updateRenderlistAnyway(Z)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItemManager;->updateRenderableList(Z)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItemManager;->refreshSelectStatus()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooOOO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOoo0;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -4147,28 +3821,24 @@
 
     const-string/jumbo v1, "updateTextureId: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItemManager;->mRenderableList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooooO0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooooO0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooOOO0;
 
-    .line 3
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000oOoO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOoO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000oOoO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooOoO;-><init>(Lcom/android/camera/dualvideo/render/CameraItemManager;)V
 
-    .line 4
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void

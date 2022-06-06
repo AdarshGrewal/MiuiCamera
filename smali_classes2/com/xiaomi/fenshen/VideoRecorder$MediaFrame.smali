@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/xiaomi/fenshen/VideoRecorder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/fenshen/VideoRecorder$MediaFrame;->this$0:Lcom/xiaomi/fenshen/VideoRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

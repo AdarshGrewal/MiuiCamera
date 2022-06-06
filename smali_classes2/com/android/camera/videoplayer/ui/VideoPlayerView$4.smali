@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$100()Z
 
     move-result v0
@@ -55,7 +53,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
@@ -65,7 +62,6 @@
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     invoke-static {}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$100()Z
 
@@ -73,7 +69,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v1}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$200(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Ljava/lang/String;
@@ -102,7 +97,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_1
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
@@ -124,7 +118,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->setVideoSize(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v1}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$300(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;
@@ -137,7 +130,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 7
     invoke-static {}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$100()Z
 
     move-result v1
@@ -154,7 +146,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_2
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
@@ -164,7 +155,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 9
     :cond_3
     invoke-static {}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$100()Z
 
@@ -182,13 +172,11 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     :cond_4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$000(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$BackgroundThreadMediaPlayerListener;
@@ -197,7 +185,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$4;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$000(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$BackgroundThreadMediaPlayerListener;
@@ -232,7 +219,6 @@
     :catchall_0
     move-exception v1
 
-    .line 13
     :try_start_1
     monitor-exit v0
     :try_end_1

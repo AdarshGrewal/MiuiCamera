@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/panorama/ConvertFromYuv420$ConvertFromYuv420Null;
 
     const/4 v1, 0x0
@@ -40,7 +38,6 @@
 .method public static synthetic access$100(Lcom/android/camera/panorama/ConvertFromYuv420;)Lcom/android/camera/panorama/IImage2BytesConverter;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/ConvertFromYuv420;->mImage2BytesConverter:Lcom/android/camera/panorama/IImage2BytesConverter;
 
     return-object p0
@@ -49,7 +46,6 @@
 .method public static synthetic access$102(Lcom/android/camera/panorama/ConvertFromYuv420;Lcom/android/camera/panorama/IImage2BytesConverter;)Lcom/android/camera/panorama/IImage2BytesConverter;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/panorama/ConvertFromYuv420;->mImage2BytesConverter:Lcom/android/camera/panorama/IImage2BytesConverter;
 
     return-object p1
@@ -60,7 +56,6 @@
 .method public image2bytes(Landroid/media/Image;)[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/ConvertFromYuv420;->mImage2BytesConverter:Lcom/android/camera/panorama/IImage2BytesConverter;
 
     invoke-interface {v0, p1}, Lcom/android/camera/panorama/IImage2BytesConverter;->image2bytes(Landroid/media/Image;)[B

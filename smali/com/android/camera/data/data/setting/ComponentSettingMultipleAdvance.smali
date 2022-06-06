@@ -14,7 +14,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -25,7 +24,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f12025a
+    const v0, 0x7f120242
 
     return v0
 .end method
@@ -33,7 +32,6 @@
 .method public initTypeElements(Landroid/content/Context;ILcom/android/camera2/CameraCapabilities;I)V
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/setting/ComponentSettingMultipleAdvance;->getDisplayTitleString()I
 
     move-result p3
@@ -42,8 +40,7 @@
 
     move-result-object p3
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOOO0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOOO0()Z
 
     move-result p4
 
@@ -53,10 +50,9 @@
 
     if-eqz p4, :cond_0
 
-    .line 3
     new-instance p4, Lcom/android/camera/data/data/TypeItem;
 
-    const v2, 0x7f1207fa
+    const v2, 0x7f1207b8
 
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
@@ -68,7 +64,6 @@
 
     aput-object p4, v2, v0
 
-    .line 4
     invoke-virtual {p0, v2}, Lcom/android/camera/data/data/ComponentMultiple;->insert([Lcom/android/camera/data/data/TypeItem;)V
 
     :cond_0
@@ -82,14 +77,12 @@
 
     if-eq p2, v2, :cond_1
 
-    .line 5
     new-instance p4, Lcom/android/camera/data/data/TypeItem;
 
-    const p2, 0x7f1207ca
+    const p2, 0x7f12078a
 
-    const v2, 0x7f1207c3
+    const v2, 0x7f120783
 
-    .line 6
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -98,16 +91,14 @@
 
     invoke-direct {p4, p2, p3, v2, p1}, Lcom/android/camera/data/data/TypeItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    const p1, 0x7f030037
+    const p1, 0x7f030036
 
-    .line 7
     invoke-virtual {p4, p1}, Lcom/android/camera/data/data/TypeItem;->setEntryArrayRes(I)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object p1
 
-    const p2, 0x7f030038
+    const p2, 0x7f030037
 
-    .line 8
     invoke-virtual {p1, p2}, Lcom/android/camera/data/data/TypeItem;->setValueArrayRes(I)Lcom/android/camera/data/data/TypeItem;
 
     :cond_1
@@ -115,7 +106,6 @@
 
     aput-object p4, p1, v0
 
-    .line 9
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;->insert([Lcom/android/camera/data/data/TypeItem;)V
 
     return-void

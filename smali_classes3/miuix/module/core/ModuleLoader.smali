@@ -50,19 +50,14 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lmiuix/module/core/ModuleLoader;->mBaseContext:Landroid/content/Context;
 
-    .line 4
     iput-object p3, p0, Lmiuix/module/core/ModuleLoader;->mModuleContext:Landroid/content/Context;
 
-    .line 5
     iput-object p2, p0, Lmiuix/module/core/ModuleLoader;->mClasses:Ljava/util/Map;
 
-    .line 6
     new-instance v0, Lmiuix/module/core/DependencyLoader;
 
     invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -71,14 +66,12 @@
 
     invoke-direct {v0, v1}, Lmiuix/module/core/DependencyLoader;-><init>(Ljava/lang/ClassLoader;)V
 
-    .line 7
     invoke-virtual {p3}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p3
 
     invoke-virtual {v0, p3, p4}, Lmiuix/module/core/DependencyLoader;->add(Ljava/lang/ClassLoader;[Ljava/lang/String;)V
 
-    .line 8
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -100,7 +93,6 @@
 
     check-cast p3, Ljava/util/Map$Entry;
 
-    .line 9
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p3
@@ -111,7 +103,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-static {p1, v0}, Lmiuix/module/core/ContextHelper;->cloneClassLoader(Landroid/content/Context;Ljava/lang/ClassLoader;)Ljava/lang/ClassLoader;
 
@@ -125,7 +116,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Ljava/util/Map;Landroid/content/Context;[Ljava/lang/String;Lmiuix/module/core/ModuleLoader$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/module/core/ModuleLoader;-><init>(Landroid/content/Context;Ljava/util/Map;Landroid/content/Context;[Ljava/lang/String;)V
 
     return-void
@@ -136,7 +126,6 @@
 .method public getBaseContext()Landroid/content/Context;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader;->mBaseContext:Landroid/content/Context;
 
     return-object v0
@@ -145,7 +134,6 @@
 .method public getClassLoader()Ljava/lang/ClassLoader;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader;->mClassLoader:Ljava/lang/ClassLoader;
 
     return-object v0
@@ -154,7 +142,6 @@
 .method public getModuleContext()Landroid/content/Context;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader;->mModuleContext:Landroid/content/Context;
 
     return-object v0
@@ -178,7 +165,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p0, p1, v1, v0}, Lmiuix/module/core/ModuleLoader;->instantiate(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -202,7 +188,6 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader;->mClasses:Ljava/util/Map;
 
@@ -214,7 +199,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lmiuix/module/core/ModuleLoader;->mClassLoader:Ljava/lang/ClassLoader;
 
     invoke-virtual {v1, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -225,7 +209,6 @@
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -236,7 +219,6 @@
 
     return-object p1
 
-    .line 5
     :cond_0
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -287,7 +269,6 @@
     :catch_4
     move-exception p1
 
-    .line 6
     :goto_0
     new-instance p2, Ljava/lang/RuntimeException;
 

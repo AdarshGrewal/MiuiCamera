@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createTrackFragmentBox()Lorg/jcodec/containers/mp4/boxes/TrackFragmentBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -45,7 +43,6 @@
 .method public getTrackId()I
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->fourcc()Ljava/lang/String;
@@ -60,14 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentHeaderBox;->getTrackId()I
 
     move-result v0
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 

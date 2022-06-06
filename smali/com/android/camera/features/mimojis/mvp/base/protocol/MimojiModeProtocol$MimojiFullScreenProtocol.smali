@@ -34,9 +34,6 @@
 .method public abstract getMimojiVideoSaveUri()Landroid/net/Uri;
 .end method
 
-.method public abstract getPreviewCover()Landroid/graphics/Bitmap;
-.end method
-
 .method public abstract isMimojiRecordPreviewShowing()Z
 .end method
 
@@ -50,9 +47,6 @@
 .end method
 
 .method public abstract setPreviewCover(Landroid/graphics/Bitmap;)V
-.end method
-
-.method public abstract setRecordingTime(J)V
 .end method
 
 .method public abstract showPreviewCover(Z)V

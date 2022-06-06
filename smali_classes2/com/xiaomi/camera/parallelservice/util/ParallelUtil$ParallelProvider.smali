@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static deleteInProvider(Landroid/content/Context;J)V
     .locals 0
 
-    .line 4
     invoke-static {p1, p2}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->getResultUri(J)Landroid/net/Uri;
 
     move-result-object p1
@@ -49,13 +47,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$DEBUG;->doAssert(Z)V
 
     if-eqz p0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

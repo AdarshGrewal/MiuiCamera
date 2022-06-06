@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +33,8 @@
 .method public constructor <init>(Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/animation/FolmeUtils$PhyAnimatorListener;->mListener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     return-void
@@ -48,12 +45,10 @@
 .method public onCancel()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/FolmeUtils$PhyAnimatorListener;->mListener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;->onCancel()V
 
     :cond_0
@@ -63,12 +58,10 @@
 .method public onEnd()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/FolmeUtils$PhyAnimatorListener;->mListener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;->onEnd()V
 
     :cond_0
@@ -78,12 +71,10 @@
 .method public onStart()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/FolmeUtils$PhyAnimatorListener;->mListener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;->onStart()V
 
     :cond_0
@@ -93,12 +84,10 @@
 .method public onUpdate(F)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/FolmeUtils$PhyAnimatorListener;->mListener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1}, Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;->onUpdate(F)V
 
     :cond_0

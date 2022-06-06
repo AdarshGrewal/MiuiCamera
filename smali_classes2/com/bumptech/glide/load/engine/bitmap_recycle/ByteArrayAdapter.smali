@@ -24,7 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public bridge synthetic getArrayLength(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;->getArrayLength([B)I
@@ -48,7 +46,6 @@
 .method public getArrayLength([B)I
     .locals 0
 
-    .line 2
     array-length p1, p1
 
     return p1
@@ -73,7 +70,6 @@
 .method public bridge synthetic newArray(I)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/bitmap_recycle/ByteArrayAdapter;->newArray(I)[B
 
     move-result-object p1
@@ -84,7 +80,6 @@
 .method public newArray(I)[B
     .locals 0
 
-    .line 2
     new-array p1, p1, [B
 
     return-object p1

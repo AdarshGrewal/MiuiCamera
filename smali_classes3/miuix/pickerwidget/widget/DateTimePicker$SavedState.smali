@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/pickerwidget/widget/DateTimePicker$SavedState$1;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/widget/DateTimePicker$SavedState$1;-><init>()V
@@ -47,10 +46,8 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 3
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 4
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -63,10 +60,8 @@
 .method public constructor <init>(Landroid/os/Parcelable;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 2
     iput-wide p2, p0, Lmiuix/pickerwidget/widget/DateTimePicker$SavedState;->nTimeInMillis:J
 
     return-void
@@ -77,7 +72,6 @@
 .method public getTimeInMillis()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/pickerwidget/widget/DateTimePicker$SavedState;->nTimeInMillis:J
 
     return-wide v0
@@ -86,10 +80,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2
     iget-wide v0, p0, Lmiuix/pickerwidget/widget/DateTimePicker$SavedState;->nTimeInMillis:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

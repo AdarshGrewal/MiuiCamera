@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)I
@@ -52,17 +50,14 @@
 
     const-string v1, "Trying to reconnect..."
 
-    .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$500(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -74,7 +69,6 @@
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->start()V
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Landroid/os/Handler;
@@ -89,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 6
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     const/4 v1, 0x5
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 7
     :catch_0
     :try_start_2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
@@ -111,7 +103,6 @@
 
     goto :goto_0
 
-    .line 8
     :catch_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 

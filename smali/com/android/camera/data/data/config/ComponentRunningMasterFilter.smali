@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public IsSupportColorRentention()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;->mIsSupportColorRentention:Z
 
     return v0
@@ -43,7 +41,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     sget p1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -55,7 +52,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -66,7 +62,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f12074a
+    const v0, 0x7f12070e
 
     return v0
 .end method
@@ -82,7 +78,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -113,7 +108,6 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -125,7 +119,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -136,7 +129,6 @@
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -154,7 +146,6 @@
 
     check-cast v0, Lcom/android/camera/effect/FilterInfo;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getTagUniqueFilterId()I
 
     move-result v1
@@ -169,26 +160,21 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v2
 
-    .line 7
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v3
 
-    .line 8
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getNameResId()I
 
     move-result v4
 
-    .line 9
     invoke-virtual {v0}, Lcom/android/camera/effect/FilterInfo;->getTagUniqueFilterId()I
 
     move-result v0
@@ -199,7 +185,6 @@
 
     invoke-direct {v1, v2, v3, v4, v0}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -214,7 +199,6 @@
 .method public isSwitchOn(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -235,14 +219,12 @@
 .method public reInit(IILcom/android/camera2/CameraCapabilities;)V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 2
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoMasterFilter()Z
 
     move-result v0
@@ -254,14 +236,12 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 3
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoFilterColorRetentionBack()Z
 
     move-result p2
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoFilterColorRetentionFront()Z
 
@@ -270,7 +250,6 @@
     :goto_0
     iput-boolean p2, p0, Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;->mIsSupportColorRentention:Z
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;->initItems(I)V
 
     return-void

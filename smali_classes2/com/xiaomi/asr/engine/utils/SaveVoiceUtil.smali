@@ -35,10 +35,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "save_voice"
@@ -47,10 +45,8 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveThread:Landroid/os/HandlerThread;
 
-    .line 3
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 4
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveThread:Landroid/os/HandlerThread;
@@ -73,7 +69,6 @@
 .method public static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->RECORD_DIR:Ljava/lang/String;
 
     return-object v0
@@ -82,7 +77,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->checkAndCreateDir(Ljava/lang/String;)Z
 
     move-result p0
@@ -93,7 +87,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;)Ljava/io/FileOutputStream;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mOutputStream:Ljava/io/FileOutputStream;
 
     return-object p0
@@ -102,7 +95,6 @@
 .method public static synthetic access$202(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;Ljava/io/FileOutputStream;)Ljava/io/FileOutputStream;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mOutputStream:Ljava/io/FileOutputStream;
 
     return-object p1
@@ -111,7 +103,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->getCurrentTime()Ljava/lang/String;
 
     move-result-object p0
@@ -122,12 +113,10 @@
 .method private checkAndCreateDir(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -136,7 +125,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result p1
@@ -157,96 +145,76 @@
 .method private getCurrentTime()Ljava/lang/String;
     .locals 8
 
-    .line 1
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x2
 
-    .line 3
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v3
 
     const/4 v4, 0x5
 
-    .line 4
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
     const/16 v5, 0xb
 
-    .line 5
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v5
 
     const/16 v6, 0xc
 
-    .line 6
     invoke-virtual {v0, v6}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
     const/16 v7, 0xd
 
-    .line 7
     invoke-virtual {v0, v7}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 8
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 9
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     const-string v2, "-"
 
-    .line 10
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     add-int/2addr v3, v1
 
-    .line 11
     invoke-virtual {v7, v3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 12
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 13
     invoke-virtual {v7, v4}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 14
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 15
     invoke-virtual {v7, v5}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 16
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 17
     invoke-virtual {v7, v6}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 18
     invoke-virtual {v7, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 19
     invoke-virtual {v7, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 20
     invoke-virtual {v7}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -259,7 +227,6 @@
 .method public closeFile()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
     const/4 v1, 0x3
@@ -268,7 +235,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -279,7 +245,6 @@
 .method public createFile(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -288,10 +253,8 @@
 
     move-result-object v0
 
-    .line 2
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -302,7 +265,6 @@
 .method public setSaveDir(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     sput-object p1, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->RECORD_DIR:Ljava/lang/String;
 
     return-void
@@ -313,14 +275,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     array-length v0, p1
 
     if-gtz v0, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
@@ -330,20 +290,16 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "data"
 
-    .line 4
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->mSaveHandle:Landroid/os/Handler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z

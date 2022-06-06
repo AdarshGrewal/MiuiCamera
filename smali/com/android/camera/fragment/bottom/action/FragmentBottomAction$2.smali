@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$2;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$2;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {v0}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$100(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/view/ViewGroup;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$2;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {v0}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$200(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/graphics/Rect;

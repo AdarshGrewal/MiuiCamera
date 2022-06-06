@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final FROM_WHERE:Ljava/lang/String; = "from_where"
+
 .field public static final LOG_TAG:Ljava/lang/String;
 
 
@@ -17,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/customization/CustomTintActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -32,12 +33,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/customization/CustomTintActivity;->mLocked:Z
 
     return-void
@@ -48,7 +47,6 @@
 .method public onBackPressed()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/CustomTintActivity;->mCustomTint:Lcom/android/camera/customization/FragmentCustomTint;
 
     invoke-virtual {v0}, Lcom/android/camera/customization/FragmentCustomTint;->onBackPressed()Z
@@ -59,7 +57,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/customization/CustomTintActivity;->LOG_TAG:Ljava/lang/String;
 
@@ -67,7 +64,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-super {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
 
     return-void
@@ -76,30 +72,26 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OoooO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Ooo00()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->isInMultiWindowMode()Z
 
     move-result v0
 
-    invoke-static {p0, v0}, Lcom/android/camera/display/Display;->init(Landroid/content/Context;Z)V
+    invoke-static {p0, v0}, Lcom/android/camera/Display;->init(Landroid/content/Context;Z)V
 
-    .line 4
     :cond_0
-    invoke-static {p0}, Lcom/android/camera/display/Display;->checkMultiWindowSupport(Landroid/app/Activity;)Z
+    invoke-static {p0}, Lcom/android/camera/Display;->checkMultiWindowSupport(Landroid/app/Activity;)Z
 
     move-result v0
 
@@ -107,7 +99,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -123,31 +114,25 @@
 
     const/4 v0, 0x1
 
-    .line 6
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
     :cond_2
     const v0, 0x7f0d001e
 
-    .line 7
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    .line 8
     new-instance v0, Lcom/android/camera/customization/FragmentCustomTint;
 
     invoke-direct {v0}, Lcom/android/camera/customization/FragmentCustomTint;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/customization/CustomTintActivity;->mCustomTint:Lcom/android/camera/customization/FragmentCustomTint;
 
-    .line 9
     instance-of v1, p0, Lcom/android/camera/customization/CustomTintPadActivity;
 
     if-eqz v1, :cond_3
 
-    .line 10
     invoke-virtual {v0, p1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
-    .line 11
     :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -157,7 +142,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a0296
+    const v0, 0x7f0a02a7
 
     iget-object v1, p0, Lcom/android/camera/customization/CustomTintActivity;->mCustomTint:Lcom/android/camera/customization/FragmentCustomTint;
 
@@ -173,15 +158,12 @@
 .method public onStop()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onStop()V
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/customization/CustomTintActivity;->mLocked:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     :cond_0

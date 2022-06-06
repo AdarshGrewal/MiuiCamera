@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;Ljava/lang/Throwable;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/z;->d:Lcom/xiaomi/stat/e;
 
     iput-object p2, p0, Lcom/xiaomi/stat/z;->a:Ljava/lang/Throwable;
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b;->a()Z
 
     move-result v0
@@ -47,7 +45,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/stat/z;->d:Lcom/xiaomi/stat/e;
 
@@ -61,7 +58,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/stat/z;->d:Lcom/xiaomi/stat/e;
 

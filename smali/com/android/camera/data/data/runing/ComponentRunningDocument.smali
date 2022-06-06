@@ -21,10 +21,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mDataItemRunning:Lcom/android/camera/data/data/runing/DataItemRunning;
 
     return-void
@@ -59,12 +57,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v8, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v2, -0x1
@@ -73,7 +69,7 @@
 
     const/4 v4, -0x1
 
-    const v5, 0x7f120354
+    const v5, 0x7f12033c
 
     const v6, 0x7f12004d
 
@@ -85,7 +81,6 @@
 
     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v10, -0x1
@@ -94,7 +89,7 @@
 
     const/4 v12, -0x1
 
-    const v13, 0x7f120350
+    const v13, 0x7f120338
 
     const v14, 0x7f12004c
 
@@ -106,12 +101,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v5, -0x1
 
-    const v6, 0x7f120355
+    const v6, 0x7f12033d
 
     const v7, 0x7f12004e
 
@@ -123,7 +117,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -142,7 +135,6 @@
 .method public isSwitchOn(I)Z
     .locals 1
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mSupported:Z
 
     if-nez p1, :cond_0
@@ -151,7 +143,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mDataItemRunning:Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -169,34 +160,42 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mSupported:Z
 
-    if-eqz p3, :cond_0
+    if-eqz p3, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p3
 
-    invoke-virtual {p3}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO()I
+    invoke-virtual {p3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0O()Z
 
     move-result p3
 
-    if-eqz p3, :cond_0
+    if-nez p3, :cond_0
 
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0OO()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    :cond_0
     const/16 p3, 0xba
 
-    if-ne p1, p3, :cond_0
+    if-ne p1, p3, :cond_1
 
-    if-nez p2, :cond_0
+    if-nez p2, :cond_1
 
     const/4 p1, 0x1
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mSupported:Z
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
@@ -207,14 +206,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mDataItemRunning:Lcom/android/camera/data/data/runing/DataItemRunning;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->switchOn(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDocument;->mDataItemRunning:Lcom/android/camera/data/data/runing/DataItemRunning;
 

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/network/net/base/ResponseDispatcher;[Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$1;->this$0:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     iput-object p2, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$1;->val$response:[Ljava/lang/Object;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$1;->this$0:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
@@ -58,7 +56,6 @@
 
     goto :goto_0
 
-    .line 2
     :catch_0
     iget-object v0, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$1;->this$0:Lcom/android/camera/network/net/base/ResponseDispatcher;
 

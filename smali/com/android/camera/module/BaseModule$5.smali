@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/BaseModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/BaseModule$5;->this$0:Lcom/android/camera/module/BaseModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule$5;->this$0:Lcom/android/camera/module/BaseModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -49,10 +47,8 @@
 
     const-string v1, "enterAutoHibernation"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule$5;->this$0:Lcom/android/camera/module/BaseModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -61,7 +57,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/Camera;->setWindowBrightness(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule$5;->this$0:Lcom/android/camera/module/BaseModule;
 
     const/4 v1, 0x1

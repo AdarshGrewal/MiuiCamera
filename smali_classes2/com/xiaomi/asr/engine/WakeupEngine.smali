@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static init(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -29,7 +27,6 @@
 .method public static loadLibraryWrapper(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -42,7 +39,6 @@
 .method public static openLog(Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 .method public static release()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -68,7 +63,6 @@
 .method public static restart()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -81,7 +75,6 @@
 .method public static saveRecord(Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -94,7 +87,6 @@
 .method public static setListener(Lcom/xiaomi/asr/engine/WVPListener;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -107,7 +99,6 @@
 .method public static start()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -122,7 +113,6 @@
 .method public static stop()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -137,7 +127,6 @@
 .method public static stop(I)V
     .locals 3
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0
@@ -152,7 +141,6 @@
 .method public static wakeupVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     move-result-object v0

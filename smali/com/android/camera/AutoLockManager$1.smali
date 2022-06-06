@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/AutoLockManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/AutoLockManager$1;->this$0:Lcom/android/camera/AutoLockManager;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -35,12 +34,10 @@
 .method public dispatchMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/AutoLockManager$1;->this$0:Lcom/android/camera/AutoLockManager;
 
     invoke-static {p1}, Lcom/android/camera/AutoLockManager;->access$000(Lcom/android/camera/AutoLockManager;)V
@@ -52,7 +49,6 @@
 
     if-ne v0, p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/AutoLockManager$1;->this$0:Lcom/android/camera/AutoLockManager;
 
     invoke-static {p1}, Lcom/android/camera/AutoLockManager;->access$100(Lcom/android/camera/AutoLockManager;)V

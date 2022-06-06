@@ -53,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_RUNNABLE:Ljava/lang/Runnable;
@@ -64,7 +63,6 @@
 
     sput-object v0, Lio/reactivex/internal/schedulers/AbstractDirectTask;->FINISHED:Ljava/util/concurrent/FutureTask;
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_RUNNABLE:Ljava/lang/Runnable;
@@ -79,10 +77,8 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/schedulers/AbstractDirectTask;->runnable:Ljava/lang/Runnable;
 
     return-void
@@ -93,14 +89,12 @@
 .method public final dispose()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    .line 2
     sget-object v1, Lio/reactivex/internal/schedulers/AbstractDirectTask;->FINISHED:Ljava/util/concurrent/FutureTask;
 
     if-eq v0, v1, :cond_1
@@ -109,7 +103,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -118,7 +111,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v1, p0, Lio/reactivex/internal/schedulers/AbstractDirectTask;->runner:Ljava/lang/Thread;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -144,7 +136,6 @@
 .method public getWrappedRunnable()Ljava/lang/Runnable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/schedulers/AbstractDirectTask;->runnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -153,14 +144,12 @@
 .method public final isDisposed()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    .line 2
     sget-object v1, Lio/reactivex/internal/schedulers/AbstractDirectTask;->FINISHED:Ljava/util/concurrent/FutureTask;
 
     if-eq v0, v1, :cond_1
@@ -194,7 +183,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
@@ -202,20 +190,17 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    .line 2
     sget-object v1, Lio/reactivex/internal/schedulers/AbstractDirectTask;->FINISHED:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_1
 
     goto :goto_1
 
-    .line 3
     :cond_1
     sget-object v1, Lio/reactivex/internal/schedulers/AbstractDirectTask;->DISPOSED:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_3
 
-    .line 4
     iget-object v0, p0, Lio/reactivex/internal/schedulers/AbstractDirectTask;->runner:Ljava/lang/Thread;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -236,7 +221,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_3
     invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 

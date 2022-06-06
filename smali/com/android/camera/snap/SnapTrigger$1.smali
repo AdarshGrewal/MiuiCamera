@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/snap/SnapTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapTrigger;->access$000(Lcom/android/camera/snap/SnapTrigger;)Lcom/android/camera/snap/SnapCamera;
@@ -49,7 +47,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
@@ -71,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/snap/SnapTrigger;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +76,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapTrigger;->access$300(Lcom/android/camera/snap/SnapTrigger;)Landroid/os/Handler;
@@ -93,7 +88,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
@@ -105,7 +99,6 @@
 
     return-void
 
-    .line 6
     :cond_2
     invoke-static {}, Lcom/android/camera/storage/Storage;->getAvailableSpace()J
 
@@ -119,7 +112,6 @@
 
     return-void
 
-    .line 7
     :cond_3
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
@@ -127,7 +119,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/snap/SnapTrigger;->access$500(Lcom/android/camera/snap/SnapTrigger;Z)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapTrigger;->access$000(Lcom/android/camera/snap/SnapTrigger;)Lcom/android/camera/snap/SnapCamera;
@@ -136,12 +127,10 @@
 
     invoke-virtual {v0}, Lcom/android/camera/snap/SnapCamera;->takeSnap()V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/snap/SnapTrigger$1;->this$0:Lcom/android/camera/snap/SnapTrigger;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapTrigger;->access$608(Lcom/android/camera/snap/SnapTrigger;)I
 
-    .line 10
     invoke-static {}, Lcom/android/camera/snap/SnapTrigger;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -150,7 +139,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-static {v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackSnapInfo(Z)V
 
     return-void

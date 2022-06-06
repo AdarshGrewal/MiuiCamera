@@ -34,7 +34,6 @@
 .method public constructor <init>(Ljava8/util/stream/Node$OfInt;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/Nodes$InternalNodeSpliterator$OfPrimitive;-><init>(Ljava8/util/stream/Node$OfPrimitive;)V
 
     return-void
@@ -54,7 +53,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfInt;->forEachRemaining(Ljava8/util/Spliterator$OfInt;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -63,7 +61,6 @@
 .method public bridge synthetic forEachRemaining(Ljava8/util/function/IntConsumer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Nodes$InternalNodeSpliterator$OfPrimitive;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
@@ -81,7 +78,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfInt;->tryAdvance(Ljava8/util/Spliterator$OfInt;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -92,7 +88,6 @@
 .method public bridge synthetic tryAdvance(Ljava8/util/function/IntConsumer;)Z
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Nodes$InternalNodeSpliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
     move-result p1
@@ -103,7 +98,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfInt;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

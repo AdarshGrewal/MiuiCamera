@@ -38,7 +38,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "CameraLaunchTime"
@@ -47,7 +46,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sLaunchTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 2
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "CaptureTime"
@@ -56,7 +54,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sCaptureTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 3
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "ShotToGallery"
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToGalleryTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 4
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "ShotToView"
@@ -74,7 +70,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToViewTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 5
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "SwitchCameraTime"
@@ -83,7 +78,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchCameraTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 6
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "SwitchModeTime"
@@ -92,7 +86,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchModeTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 7
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "StartVideoRecordTime"
@@ -101,7 +94,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStartVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 8
     new-instance v0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     const-string v1, "StopVideoRecordTime"
@@ -110,7 +102,6 @@
 
     sput-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStopVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
-    .line 9
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioSettings;
 
@@ -120,10 +111,8 @@
 
     const/4 v1, 0x7
 
-    .line 10
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioSettings;->setStatisticsMode(I)V
 
-    .line 11
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->scenarioSettings:Landroid/os/statistics/E2EScenarioSettings;
 
     const/16 v1, 0xc8
@@ -139,7 +128,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -150,7 +138,6 @@
 
     const-string v0, ""
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->abortScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;)V
 
     return-void
@@ -159,13 +146,11 @@
 .method public static abortScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;)V
     .locals 2
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object p1, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -194,13 +179,11 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object p0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     invoke-static {p0, p1}, Landroid/os/statistics/E2EScenarioPerfTracer;->abortScenario(Landroid/os/statistics/E2EScenario;Ljava/lang/String;)V
@@ -215,7 +198,6 @@
 .method public static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -228,7 +210,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;Landroid/os/statistics/E2EScenarioPayload;)V
 
     return-void
@@ -239,7 +220,6 @@
 
     const-string v0, ""
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;Landroid/os/statistics/E2EScenarioPayload;)V
 
     return-void
@@ -252,13 +232,11 @@
 
     const-string/jumbo v1, "track "
 
-    .line 3
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     if-nez v2, :cond_0
 
-    .line 4
     sget-object p1, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -285,13 +263,11 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-boolean v2, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
 
     if-eqz v2, :cond_2
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -308,7 +284,6 @@
     :goto_0
     invoke-static {v2, v0}, Landroid/os/statistics/E2EScenarioPerfTracer;->abortScenario(Landroid/os/statistics/E2EScenario;Ljava/lang/String;)V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
@@ -318,7 +293,6 @@
 
     const/4 p1, 0x1
 
-    .line 8
     iput-boolean p1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -328,7 +302,6 @@
     :catchall_0
     move-exception p1
 
-    .line 9
     sget-object p2, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -368,7 +341,6 @@
 
     const-string v0, ""
 
-    .line 1
     invoke-static {p0, v0, p1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;Landroid/os/statistics/E2EScenarioPayload;)V
 
     return-void
@@ -379,13 +351,11 @@
 
     const-string/jumbo v0, "track "
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     if-nez v1, :cond_0
 
-    .line 3
     sget-object p1, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -412,13 +382,11 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-boolean v1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
 
     if-nez v1, :cond_1
 
-    .line 5
     sget-object p1, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -448,14 +416,12 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
     invoke-static {v1, p1, p2}, Landroid/os/statistics/E2EScenarioPerfTracer;->finishScenario(Landroid/os/statistics/E2EScenario;Ljava/lang/String;Landroid/os/statistics/E2EScenarioPayload;)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-object p1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
@@ -464,7 +430,6 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 8
     iput-boolean p1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -474,7 +439,6 @@
     :catchall_0
     move-exception p1
 
-    .line 9
     sget-object p2, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -514,7 +478,6 @@
 
     const-string/jumbo v0, "time"
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -526,7 +489,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance v1, Landroid/os/statistics/E2EScenarioPayload;
 
     invoke-direct {v1}, Landroid/os/statistics/E2EScenarioPayload;-><init>()V
@@ -537,17 +499,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 5
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
@@ -571,18 +530,15 @@
     :cond_0
     move p1, v3
 
-    .line 6
     :goto_0
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
 
     if-eqz p1, :cond_1
 
-    .line 7
     invoke-virtual {v4}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 8
     :goto_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -590,14 +546,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 10
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
@@ -606,33 +560,30 @@
 
     goto :goto_1
 
-    .line 11
     :cond_1
     invoke-virtual {v1, p0}, Landroid/os/statistics/E2EScenarioPayload;->putAll(Ljava/util/Map;)V
 
-    .line 12
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sLaunchTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 13
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
     const/4 p1, 0x2
 
-    new-array p1, p1, [Lcom/android/camera/performance/PerformanceManager$Event;
+    new-array p1, p1, [Lcom/android/camera/log/PerformanceManager$Event;
 
-    sget-object v0, Lcom/android/camera/performance/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v0, Lcom/android/camera/log/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v0, p1, v3
 
-    sget-object v0, Lcom/android/camera/performance/PerformanceManager$Event;->HOT_LAUNCH:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v0, Lcom/android/camera/log/PerformanceManager$Event;->HOT_LAUNCH:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v0, p1, v2
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->stopEvent([Lcom/android/camera/performance/PerformanceManager$Event;)J
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->stopEvent([Lcom/android/camera/log/PerformanceManager$Event;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -641,7 +592,6 @@
     :catchall_0
     move-exception p0
 
-    .line 14
     sget-object p1, Lcom/android/camera/statistic/ScenarioTrackUtil;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "trackAppLunchTimeEnd Exception"
@@ -655,7 +605,6 @@
 .method public static trackAppLunchTimeStart(Z)V
     .locals 3
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -672,46 +621,41 @@
     :cond_0
     const-string v2, "HOT"
 
-    .line 2
     :goto_0
     invoke-virtual {v0, v1, v2}, Landroid/os/statistics/E2EScenarioPayload;->put(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 3
     sget-object v1, Lcom/android/camera/statistic/ScenarioTrackUtil;->sLaunchTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {v1, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
     if-eqz p0, :cond_1
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object v0, Lcom/android/camera/performance/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v0, Lcom/android/camera/log/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
 
     goto :goto_1
 
-    .line 5
     :cond_1
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object v0, Lcom/android/camera/performance/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v0, Lcom/android/camera/log/PerformanceManager$Event;->COLD_LAUNCH:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/performance/PerformanceManager;->dropEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/log/PerformanceManager;->dropEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object v0, Lcom/android/camera/performance/PerformanceManager$Event;->HOT_LAUNCH:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v0, Lcom/android/camera/log/PerformanceManager$Event;->HOT_LAUNCH:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -723,7 +667,6 @@
 .method public static trackCaptureTimeEnd()V
     .locals 2
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sCaptureTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
@@ -731,12 +674,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/performance/PerformanceManager;->stopEvent()J
+    invoke-virtual {v0}, Lcom/android/camera/log/PerformanceManager;->stopEvent()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -747,7 +689,6 @@
 .method public static trackCaptureTimeStart(ZIZ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -765,7 +706,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object v3
@@ -780,34 +720,29 @@
 
     const/4 v2, 0x3
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 5
     sget-object v1, Lcom/android/camera/statistic/ScenarioTrackUtil;->sCaptureTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {v1, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
     if-nez p2, :cond_0
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p2
 
-    .line 7
-    invoke-virtual {p2, p0, p1}, Lcom/android/camera/performance/PerformanceManager;->getCaptureEvent(ZI)Lcom/android/camera/performance/PerformanceManager$Event;
+    invoke-virtual {p2, p0, p1}, Lcom/android/camera/log/PerformanceManager;->getCaptureEvent(ZI)Lcom/android/camera/log/PerformanceManager$Event;
 
     move-result-object p0
 
-    invoke-virtual {p2, p0}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p2, p0}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -819,7 +754,6 @@
 .method public static trackScenarioAbort(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;)V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->abortScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;)V
 
     return-void
@@ -828,7 +762,6 @@
 .method public static trackScenarioAbort(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->abortScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Ljava/lang/String;)V
 
     return-void
@@ -837,7 +770,6 @@
 .method public static trackShotToGalleryEnd(ZJ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -855,7 +787,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -864,7 +795,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 3
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToGalleryTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -882,7 +812,6 @@
 .method public static trackShotToGalleryStart(ZIJ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -900,7 +829,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -915,17 +843,14 @@
 
     const/4 p0, 0x3
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v1, p0
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 5
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToGalleryTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -943,7 +868,6 @@
 .method public static trackShotToViewEnd(ZJ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -961,7 +885,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -970,7 +893,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 3
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToViewTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -988,7 +910,6 @@
 .method public static trackShotToViewStart(ZIJ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -1006,7 +927,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -1021,17 +941,14 @@
 
     const/4 p0, 0x3
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v1, p0
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 5
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sShotToViewTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -1049,7 +966,6 @@
 .method public static trackStartVideoRecordEnd()V
     .locals 4
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStartVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
@@ -1057,28 +973,27 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lcom/android/camera/performance/PerformanceManager$Event;
+    new-array v1, v1, [Lcom/android/camera/log/PerformanceManager$Event;
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->FRONT_START_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->FRONT_START_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
     const/4 v2, 0x1
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->REAR_START_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->REAR_START_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/performance/PerformanceManager;->stopEvent([Lcom/android/camera/performance/PerformanceManager$Event;)J
+    invoke-virtual {v0, v1}, Lcom/android/camera/log/PerformanceManager;->stopEvent([Lcom/android/camera/log/PerformanceManager$Event;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1089,7 +1004,6 @@
 .method public static trackStartVideoRecordStart(Ljava/lang/String;Z)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -1101,7 +1015,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "mode"
+    const-string/jumbo v3, "mode"
 
     aput-object v3, v1, v2
 
@@ -1117,43 +1031,38 @@
 
     const/4 p0, 0x3
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, p0
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 4
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStartVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p0, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
     if-eqz p1, :cond_0
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->FRONT_START_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->FRONT_START_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->REAR_START_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->REAR_START_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1165,7 +1074,6 @@
 .method public static trackStopVideoRecordEnd()V
     .locals 4
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStopVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
@@ -1173,28 +1081,27 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lcom/android/camera/performance/PerformanceManager$Event;
+    new-array v1, v1, [Lcom/android/camera/log/PerformanceManager$Event;
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->FRONT_STOP_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->FRONT_STOP_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
     const/4 v2, 0x1
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->REAR_STOP_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->REAR_STOP_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/performance/PerformanceManager;->stopEvent([Lcom/android/camera/performance/PerformanceManager$Event;)J
+    invoke-virtual {v0, v1}, Lcom/android/camera/log/PerformanceManager;->stopEvent([Lcom/android/camera/log/PerformanceManager$Event;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1205,7 +1112,6 @@
 .method public static trackStopVideoRecordStart(Ljava/lang/String;Z)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -1217,7 +1123,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "mode"
+    const-string/jumbo v3, "mode"
 
     aput-object v3, v1, v2
 
@@ -1233,43 +1139,38 @@
 
     const/4 p0, 0x3
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, p0
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 4
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sStopVideoRecordTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p0, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
     if-eqz p1, :cond_0
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->FRONT_STOP_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->FRONT_STOP_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->REAR_STOP_RECORD:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->REAR_STOP_RECORD:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1281,7 +1182,6 @@
 .method public static trackSwitchCameraEnd()V
     .locals 4
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchCameraTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
@@ -1289,22 +1189,21 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lcom/android/camera/performance/PerformanceManager$Event;
+    new-array v1, v1, [Lcom/android/camera/log/PerformanceManager$Event;
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->SWITCH_LENS:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->SWITCH_LENS:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/performance/PerformanceManager;->stopEvent([Lcom/android/camera/performance/PerformanceManager$Event;)J
+    invoke-virtual {v0, v1}, Lcom/android/camera/log/PerformanceManager;->stopEvent([Lcom/android/camera/log/PerformanceManager$Event;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1315,7 +1214,6 @@
 .method public static trackSwitchCameraStart(ZZI)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -1333,7 +1231,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object p0
@@ -1348,7 +1245,6 @@
 
     const/4 p0, 0x3
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -1363,29 +1259,25 @@
 
     const/4 p0, 0x5
 
-    .line 4
     invoke-static {p2}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v1, p0
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 6
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchCameraTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p0, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 7
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->SWITCH_LENS:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->SWITCH_LENS:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1396,7 +1288,6 @@
 .method public static trackSwitchModeEnd()V
     .locals 4
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchModeTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
@@ -1404,22 +1295,21 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/statistic/ScenarioTrackUtil;->finishScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lcom/android/camera/performance/PerformanceManager$Event;
+    new-array v1, v1, [Lcom/android/camera/log/PerformanceManager$Event;
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/android/camera/performance/PerformanceManager$Event;->SWITCH_MODULE:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object v3, Lcom/android/camera/log/PerformanceManager$Event;->SWITCH_MODULE:Lcom/android/camera/log/PerformanceManager$Event;
 
     aput-object v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/performance/PerformanceManager;->stopEvent([Lcom/android/camera/performance/PerformanceManager$Event;)J
+    invoke-virtual {v0, v1}, Lcom/android/camera/log/PerformanceManager;->stopEvent([Lcom/android/camera/log/PerformanceManager$Event;)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1430,7 +1320,6 @@
 .method public static trackSwitchModeStart(IIZ)V
     .locals 4
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenarioPayload;
 
@@ -1448,7 +1337,6 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1463,7 +1351,6 @@
 
     const/4 p0, 0x3
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->modeIdToName(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1478,29 +1365,25 @@
 
     const/4 p0, 0x5
 
-    .line 4
     invoke-static {p2}, Lcom/android/camera/statistic/ScenarioTrackUtil$MapUtil;->cameraIdToName(Z)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v1, p0
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/os/statistics/E2EScenarioPayload;->putValues([Ljava/lang/Object;)V
 
-    .line 6
     sget-object p0, Lcom/android/camera/statistic/ScenarioTrackUtil;->sSwitchModeTimeScenario:Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;
 
     invoke-static {p0, v0}, Lcom/android/camera/statistic/ScenarioTrackUtil;->beginScenario(Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;Landroid/os/statistics/E2EScenarioPayload;)V
 
-    .line 7
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    sget-object p1, Lcom/android/camera/performance/PerformanceManager$Event;->SWITCH_MODULE:Lcom/android/camera/performance/PerformanceManager$Event;
+    sget-object p1, Lcom/android/camera/log/PerformanceManager$Event;->SWITCH_MODULE:Lcom/android/camera/log/PerformanceManager$Event;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/performance/PerformanceManager;->startEvent(Lcom/android/camera/performance/PerformanceManager$Event;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/log/PerformanceManager;->startEvent(Lcom/android/camera/log/PerformanceManager$Event;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

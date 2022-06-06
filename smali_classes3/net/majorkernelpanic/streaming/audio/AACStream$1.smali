@@ -29,7 +29,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/audio/AACStream;[Ljava/nio/ByteBuffer;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->this$0:Lnet/majorkernelpanic/streaming/audio/AACStream;
 
     iput-object p2, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->val$inputBuffers:[Ljava/nio/ByteBuffer;
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 10
 
-    .line 1
     :cond_0
     :goto_0
     :try_start_0
@@ -56,7 +54,6 @@
 
     if-nez v0, :cond_3
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->this$0:Lnet/majorkernelpanic/streaming/audio/AACStream;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AACStream;->access$000(Lnet/majorkernelpanic/streaming/audio/AACStream;)Landroid/media/MediaCodec;
@@ -71,14 +68,12 @@
 
     if-ltz v4, :cond_0
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->val$inputBuffers:[Ljava/nio/ByteBuffer;
 
     aget-object v0, v0, v4
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->this$0:Lnet/majorkernelpanic/streaming/audio/AACStream;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AACStream;->access$100(Lnet/majorkernelpanic/streaming/audio/AACStream;)Landroid/media/AudioRecord;
@@ -105,7 +100,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AACStream$1;->this$0:Lnet/majorkernelpanic/streaming/audio/AACStream;
 
@@ -135,7 +129,6 @@
 
     const-string v1, "An error occured with the AudioRecord API !"
 
-    .line 6
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -145,7 +138,6 @@
     :catch_0
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
     :cond_3

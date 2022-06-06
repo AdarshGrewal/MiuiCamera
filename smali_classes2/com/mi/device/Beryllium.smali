@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Common;-><init>()V
 
     return-void
@@ -23,15 +22,7 @@
     return v0
 .end method
 
-.method public Oooo()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "v1"
-
-    return-object v0
-.end method
-
-.method public Oooo0o0()I
+.method public Oooo0()I
     .locals 1
 
     const/16 v0, 0x64
@@ -39,7 +30,15 @@
     return v0
 .end method
 
-.method public OooooO0()Ljava/lang/String;
+.method public Oooo0o()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "v1"
+
+    return-object v0
+.end method
+
+.method public OoooOOO()Ljava/lang/String;
     .locals 1
 
     const-string v0, "uinput-fpc,uinput-goodix"
@@ -47,26 +46,9 @@
     return-object v0
 .end method
 
-.method public o00()Z
+.method public o00000()S
     .locals 1
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public o000000O()F
-    .locals 1
-
-    const v0, 0x3f552bd4    # 0.8327f
-
-    return v0
-.end method
-
-.method public o00000oo()S
-    .locals 1
-
-    .line 1
     sget-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0o:Lcom/mi/device/SlowMotionEnum;
 
     invoke-virtual {v0}, Lcom/mi/device/SlowMotionEnum;->OooO00o()S
@@ -76,7 +58,23 @@
     return v0
 .end method
 
-.method public o000O0oo()Z
+.method public o000OOO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o000OOoO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o000Oo0()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -84,18 +82,26 @@
     return v0
 .end method
 
-.method public o000o000()Z
+.method public o000o00()Z
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public o000o00o()Z
+.method public o000o0oo()Z
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public o000oOoo()Z
+    .locals 1
+
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -108,7 +114,23 @@
     return v0
 .end method
 
-.method public o000oooo()Z
+.method public o000oo0o()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o000ooOO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00O000o()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -116,23 +138,7 @@
     return v0
 .end method
 
-.method public o00O()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00O00()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00O0O00()Z
+.method public o00O0O0o()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -140,7 +146,7 @@
     return v0
 .end method
 
-.method public o00O0o0()Z
+.method public o00O0o0o()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -148,15 +154,7 @@
     return v0
 .end method
 
-.method public o00O0o00()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public o00OO00o()Z
+.method public o00OO0OO()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -164,15 +162,7 @@
     return v0
 .end method
 
-.method public o00OOO()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00OOOO()Z
+.method public o00OO0o()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -188,7 +178,7 @@
     return v0
 .end method
 
-.method public o00OoOo0()Z
+.method public o00Oo00()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -196,7 +186,7 @@
     return v0
 .end method
 
-.method public o00Ooo0O()Z
+.method public o00Oo00o()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -204,7 +194,7 @@
     return v0
 .end method
 
-.method public o00o0oO()Z
+.method public o00OoOO0()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -212,7 +202,7 @@
     return v0
 .end method
 
-.method public o00o0ooo()Z
+.method public o00o0Oo0()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -220,10 +210,82 @@
     return v0
 .end method
 
-.method public o00oOoo()Z
+.method public o00o0o0O()Z
     .locals 1
 
     const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOOo()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOOo0()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public o00oOo00()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public o00oOo0o()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOoO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOoO0()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOoOO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOoOo()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oOoo0()Z
+    .locals 1
+
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -236,23 +298,31 @@
     return v0
 .end method
 
-.method public o00oo()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public o00oo0()Z
     .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public o00oo0O()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oo0O0()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o00oo0OO()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -276,22 +346,6 @@
     return v0
 .end method
 
-.method public o00oo0o0()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00oo0oO()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
 .method public o00ooO()Z
     .locals 1
 
@@ -308,7 +362,7 @@
     return v0
 .end method
 
-.method public o00ooO0O()Z
+.method public o00ooO00()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -316,7 +370,7 @@
     return v0
 .end method
 
-.method public o00ooO0o()Z
+.method public o00ooO0O()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -332,7 +386,7 @@
     return v0
 .end method
 
-.method public o00ooOOo()Z
+.method public o00oooo0()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -340,47 +394,7 @@
     return v0
 .end method
 
-.method public o00ooOoo()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00ooo0()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00ooo00()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00ooo0o()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o00oooO()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0O00Ooo()I
+.method public o0O000oo()I
     .locals 1
 
     const/16 v0, 0xe
@@ -388,7 +402,47 @@
     return v0
 .end method
 
-.method public o0O0OOO()I
+.method public o0O0O0Oo()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o0O0OoO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o0OO0O0O()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o0OOO0o()F
+    .locals 1
+
+    const v0, 0x3f552bd4    # 0.8327f
+
+    return v0
+.end method
+
+.method public o0OoOoO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public o0oO0O0o()I
     .locals 1
 
     const/16 v0, 0xb
@@ -396,7 +450,7 @@
     return v0
 .end method
 
-.method public o0O0OOoO()Z
+.method public oo0OOoo()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -404,15 +458,7 @@
     return v0
 .end method
 
-.method public o0O0o()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public o0O0o0Oo()Z
+.method public oo0o0O0()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -420,39 +466,7 @@
     return v0
 .end method
 
-.method public o0O0o0o0()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0O0oo0()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0OO0oOO()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0OO0ooO()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0oOO()Z
+.method public oooOO0()Z
     .locals 1
 
     const/4 v0, 0x1

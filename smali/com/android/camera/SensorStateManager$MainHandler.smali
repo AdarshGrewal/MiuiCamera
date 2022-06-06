@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/android/camera/SensorStateManager;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/SensorStateManager$MainHandler;->this$0:Lcom/android/camera/SensorStateManager;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -49,7 +46,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/SensorStateManager$MainHandler;->this$0:Lcom/android/camera/SensorStateManager;
 
@@ -69,7 +65,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_2
     iget-object p1, p0, Lcom/android/camera/SensorStateManager$MainHandler;->this$0:Lcom/android/camera/SensorStateManager;
 

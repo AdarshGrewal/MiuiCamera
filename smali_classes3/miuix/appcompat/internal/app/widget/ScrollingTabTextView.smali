@@ -21,10 +21,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 2
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->setupColors()V
 
     return-void
@@ -33,7 +31,6 @@
 .method public static synthetic access$002(Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mClipPosition:I
 
     return p1
@@ -42,14 +39,12 @@
 .method private setupColors()V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mOriginColor:Landroid/content/res/ColorStateList;
 
-    .line 2
     sget-object v1, Landroid/widget/TextView;->ENABLED_STATE_SET:[I
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
@@ -68,7 +63,6 @@
 
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mNormalColor:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mOriginColor:Landroid/content/res/ColorStateList;
 
     sget-object v1, Landroid/widget/TextView;->ENABLED_SELECTED_STATE_SET:[I
@@ -97,7 +91,6 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_8
@@ -110,7 +103,6 @@
 
     goto/16 :goto_3
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mLeftToRight:Z
 
@@ -133,29 +125,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 3
     :cond_2
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mNormalColor:I
 
     goto :goto_0
 
-    .line 4
     :cond_3
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mSelectedColor:I
 
-    .line 5
     :goto_0
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 6
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v1
 
-    .line 7
     iget v2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mClipPosition:I
 
-    .line 8
     invoke-virtual {p0}, Landroid/widget/TextView;->getHeight()I
 
     move-result v3
@@ -164,14 +150,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 9
     invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
 
     move-result v5
 
     add-int/2addr v5, v4
 
-    .line 10
     invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
 
     move-result v6
@@ -183,30 +167,23 @@
     :cond_4
     move v5, v4
 
-    .line 11
     :goto_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 12
     invoke-virtual {p1, v5, v4, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 13
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 14
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 15
     iget v2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mNormalColor:I
 
     if-ne v0, v2, :cond_5
 
-    .line 16
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mSelectedColor:I
 
     goto :goto_2
 
-    .line 17
     :cond_5
     iget v5, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mSelectedColor:I
 
@@ -214,56 +191,45 @@
 
     move v0, v2
 
-    .line 18
     :cond_6
     :goto_2
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 19
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mClipPosition:I
 
-    .line 20
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
     move-result v2
 
     if-eqz v1, :cond_7
 
-    .line 21
     invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 22
     invoke-virtual {p0}, Landroid/widget/TextView;->getScrollX()I
 
     move-result v1
 
     add-int/2addr v2, v1
 
-    .line 23
     :cond_7
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 24
     invoke-virtual {p1, v0, v4, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 25
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 26
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 27
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mOriginColor:Landroid/content/res/ColorStateList;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
     return-void
 
-    .line 28
     :cond_8
     :goto_3
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
@@ -274,10 +240,8 @@
 .method public setTextColor(Landroid/content/res/ColorStateList;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 2
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->setupColors()V
 
     return-void
@@ -286,12 +250,10 @@
 .method public startScrollAnimation(Z)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
@@ -300,11 +262,9 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 4
     :goto_0
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mLeftToRight:Z
 
@@ -312,7 +272,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
     move-result p1
@@ -323,7 +282,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
@@ -331,7 +289,6 @@
 
     move v1, v0
 
-    .line 7
     :goto_1
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
@@ -347,14 +304,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    .line 8
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0xc8
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 9
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView$1;
@@ -363,7 +318,6 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 10
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView$2;
@@ -372,7 +326,6 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 11
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->mAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V

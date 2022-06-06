@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     :try_start_0
     const-class v0, Ljava/lang/Throwable;
 
@@ -42,7 +41,6 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     sput-object v0, Lokhttp3/internal/connection/RouteException;->addSuppressedExceptionMethod:Ljava/lang/reflect/Method;
 
@@ -52,10 +50,8 @@
 .method public constructor <init>(Ljava/io/IOException;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 2
     iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->lastException:Ljava/io/IOException;
 
     return-void
@@ -64,7 +60,6 @@
 .method private addSuppressedIfPossible(Ljava/io/IOException;Ljava/io/IOException;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lokhttp3/internal/connection/RouteException;->addSuppressedExceptionMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
@@ -78,7 +73,6 @@
 
     aput-object p2, v1, v2
 
-    .line 2
     invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
@@ -94,12 +88,10 @@
 .method public addConnectException(Ljava/io/IOException;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/connection/RouteException;->lastException:Ljava/io/IOException;
 
     invoke-direct {p0, p1, v0}, Lokhttp3/internal/connection/RouteException;->addSuppressedIfPossible(Ljava/io/IOException;Ljava/io/IOException;)V
 
-    .line 2
     iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->lastException:Ljava/io/IOException;
 
     return-void
@@ -108,7 +100,6 @@
 .method public getLastConnectException()Ljava/io/IOException;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/connection/RouteException;->lastException:Ljava/io/IOException;
 
     return-object v0

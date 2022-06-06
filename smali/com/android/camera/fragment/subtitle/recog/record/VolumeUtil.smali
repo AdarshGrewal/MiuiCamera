@@ -65,7 +65,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,7 +83,6 @@
 
     goto/16 :goto_2
 
-    .line 1
     :cond_0
     div-int/2addr p1, v1
 
@@ -103,7 +101,6 @@
 
     if-ge v4, v7, :cond_1
 
-    .line 2
     aget-byte v7, p0, v4
 
     add-int/lit8 v8, v4, 0x1
@@ -125,7 +122,6 @@
     :cond_1
     int-to-long v9, p1
 
-    .line 3
     div-long/2addr v5, v9
 
     move p1, v0
@@ -135,7 +131,6 @@
 
     if-ge p1, v7, :cond_2
 
-    .line 4
     aget-byte v11, p0, p1
 
     add-int/lit8 v12, p1, 0x1
@@ -164,7 +159,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     div-long/2addr v2, v9
 

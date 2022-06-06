@@ -30,7 +30,6 @@
 .method public varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;ZIILokhttp3/internal/http2/Ping;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iput-boolean p4, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$reply:Z
@@ -51,7 +50,6 @@
 .method public execute()V
     .locals 5
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
 

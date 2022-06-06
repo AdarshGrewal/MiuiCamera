@@ -42,20 +42,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->initUserSelectionDataIfNeed()V
 
-    .line 4
     sget-object p1, Lcom/android/camera/dualvideo/recorder/RecordType;->MERGED:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->setRecordType(Lcom/android/camera/dualvideo/recorder/RecordType;)V
@@ -66,21 +62,18 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 1
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_0
 
-    .line 7
     sget-object p0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_1:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     invoke-virtual {p1, p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->setSelectIndex(Lcom/android/camera/dualvideo/util/SelectIndex;)V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     sget-object p0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_2:Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -93,7 +86,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,7 +114,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/UserSelectData;Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
     .locals 0
 
-    .line 5
     iget-object p1, p1, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->setGridWindowLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
@@ -133,27 +124,24 @@
 .method public static synthetic OooO00o(Ljava/util/ArrayList;Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0Oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0Oo;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0Oo;
 
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p0}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0OO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOOO;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0OO;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOOO;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
@@ -162,10 +150,8 @@
 .method public static synthetic OooO00o(Ljava/util/concurrent/ConcurrentHashMap;Ljava/lang/Integer;)V
     .locals 1
 
-    .line 13
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 14
     sget-object v0, Lcom/android/camera/dualvideo/util/RenderSourceType;->MAIN_SOURCE:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -176,7 +162,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 0
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -199,7 +184,6 @@
 .method public static synthetic OooO00o(Ljava/lang/Integer;)Z
     .locals 1
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -222,7 +206,6 @@
 .method public static synthetic OooO00o(I)[Ljava/lang/Integer;
     .locals 0
 
-    .line 11
     new-array p0, p0, [Ljava/lang/Integer;
 
     return-object p0
@@ -231,7 +214,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -254,7 +236,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/util/UserSelectData;)Z
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -285,7 +266,6 @@
 .method public static synthetic OooO0O0(Lcom/android/camera/dualvideo/util/UserSelectData;Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 0
 
-    .line 1
     iget-object p1, p1, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -308,7 +288,6 @@
 .method public static synthetic OooO0O0(Ljava/lang/Integer;)Z
     .locals 1
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -331,7 +310,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 0
 
-    .line 5
     iget-object p0, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object p0
@@ -340,7 +318,6 @@
 .method public static synthetic OooO0OO(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -349,14 +326,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UP_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/util/UserSelectData;->setmRecordLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -366,7 +341,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/util/UserSelectData;->setmRecordLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
@@ -379,7 +353,6 @@
 .method public static synthetic OooO0Oo(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -388,14 +361,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UP:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/util/UserSelectData;->setmRecordLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/UserSelectData;->getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -405,7 +376,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN:Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/util/UserSelectData;->setmRecordLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
@@ -418,7 +388,6 @@
 .method public static synthetic OooO0Oo(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 1
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -441,7 +410,6 @@
 .method public static synthetic OooO0o0(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object p0
@@ -464,7 +432,6 @@
 .method private getLayoutForSelect()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -477,8 +444,7 @@
 
     move-result-object v0
 
-    .line 2
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOo00;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOo00;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOo00;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOo00;
 
     invoke-static {v1}, Ljava/util/stream/Collectors;->toCollection(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
 
@@ -490,40 +456,34 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 3
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0oO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0;-><init>(Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0oO;-><init>(Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOO;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0o;
 
-    .line 5
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    .line 6
     invoke-interface {v1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object v1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0o;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOO0;
 
-    .line 7
     invoke-virtual {v1, v2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 8
     invoke-virtual {v1, v2}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -537,7 +497,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 9
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -552,7 +511,6 @@
 .method private initUserSelectionDataIfNeed()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -561,12 +519,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
 
     move-result v0
 
@@ -574,10 +531,8 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->setmDrawGridWindow(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/util/UserSelectData;
@@ -592,7 +547,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/util/UserSelectData;
@@ -612,10 +566,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 6
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->setmDrawGridWindow(Z)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/util/UserSelectData;
@@ -630,7 +582,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/util/UserSelectData;
@@ -655,16 +606,15 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)Z
     .locals 2
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOo0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOo;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOo0;-><init>(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOo;-><init>(Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -676,7 +626,6 @@
 .method public getDefaultValue(I)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mRecordType:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/RecordType;->getName()Ljava/lang/String;
@@ -706,14 +655,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->ismDrawGridWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -724,7 +671,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
@@ -732,13 +678,13 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO00o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO00o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO00o;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOOo;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0oo;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;
 
@@ -746,7 +692,6 @@
 
     check-cast v0, [Ljava/lang/Integer;
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->sortId([Ljava/lang/Integer;)Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
@@ -765,17 +710,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v8, Lcom/android/camera/data/data/ComponentDataItem;
 
     sget-object v1, Lcom/android/camera/dualvideo/recorder/RecordType;->MERGED:Lcom/android/camera/dualvideo/recorder/RecordType;
 
-    .line 3
     invoke-virtual {v1}, Lcom/android/camera/dualvideo/recorder/RecordType;->getName()Ljava/lang/String;
 
     move-result-object v7
@@ -786,7 +728,7 @@
 
     const/4 v4, -0x1
 
-    const v5, 0x7f12037c
+    const v5, 0x7f12035b
 
     const v6, 0x7f120052
 
@@ -794,15 +736,12 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIIIILjava/lang/String;)V
 
-    .line 4
     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     sget-object v2, Lcom/android/camera/dualvideo/recorder/RecordType;->STANDALONE:Lcom/android/camera/dualvideo/recorder/RecordType;
 
-    .line 6
     invoke-virtual {v2}, Lcom/android/camera/dualvideo/recorder/RecordType;->getName()Ljava/lang/String;
 
     move-result-object v15
@@ -813,7 +752,7 @@
 
     const/4 v12, -0x1
 
-    const v13, 0x7f12037e
+    const v13, 0x7f12035d
 
     const v14, 0x7f120053
 
@@ -821,10 +760,8 @@
 
     invoke-direct/range {v9 .. v15}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIIIILjava/lang/String;)V
 
-    .line 7
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -852,22 +789,19 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->getIds()Ljava/util/concurrent/ConcurrentHashMap;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v2
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0O;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOoo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOoo;
 
     invoke-interface {v2, v3}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -875,12 +809,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOOO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOOO;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0OO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0OO;
 
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
@@ -890,10 +823,9 @@
 
     move-result-object v1
 
-    .line 5
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOo;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOO;
 
-    invoke-direct {v2, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOo;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
+    invoke-direct {v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOO;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
 
     invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -904,7 +836,6 @@
 .method public getRecordType()Lcom/android/camera/dualvideo/recorder/RecordType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mRecordType:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     return-object v0
@@ -921,7 +852,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     return-object v0
@@ -930,7 +860,6 @@
 .method public ismDrawGridWindow()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mDrawGridWindow:Z
 
     return v0
@@ -939,10 +868,9 @@
 .method public printSelectData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOO0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOO0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -952,17 +880,14 @@
 .method public reInit()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/recorder/RecordType;->MERGED:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->setRecordType(Lcom/android/camera/dualvideo/recorder/RecordType;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->initUserSelectionDataIfNeed()V
 
     return-void
@@ -971,7 +896,6 @@
 .method public refreshSelectData()V
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -980,7 +904,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1001,14 +924,13 @@
 
     check-cast v2, Lcom/android/camera/dualvideo/util/UserSelectData;
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v3
 
-    new-instance v4, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0O0;
+    new-instance v4, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0O0;
 
-    invoke-direct {v4, v2}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0O0;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
+    invoke-direct {v4, v2}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0O0;-><init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
 
     invoke-interface {v3, v4}, Ljava/util/stream/Stream;->noneMatch(Ljava/util/function/Predicate;)Z
 
@@ -1016,7 +938,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->getLayoutForSelect()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v3
@@ -1025,13 +946,12 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOoo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOOoo;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0O;
 
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -1039,32 +959,28 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    sget-object v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0oo;
+    sget-object v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0o0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooO0o0;
 
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    .line 7
     invoke-interface {v1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0o;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOOo;
 
-    invoke-direct {v2, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooOO0o;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOOo;-><init>(Ljava/util/ArrayList;)V
 
-    .line 8
     invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    .line 9
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -1075,12 +991,11 @@
 
     move-result-object v0
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0o0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0o;
 
-    invoke-direct {v2, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0o0;-><init>(Lcom/android/camera/dualvideo/render/LayoutType;)V
+    invoke-direct {v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0o;-><init>(Lcom/android/camera/dualvideo/render/LayoutType;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -1091,7 +1006,6 @@
 .method public setRecordType(Lcom/android/camera/dualvideo/recorder/RecordType;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1110,18 +1024,15 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mRecordType:Lcom/android/camera/dualvideo/recorder/RecordType;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mRecordType:Lcom/android/camera/dualvideo/recorder/RecordType;
 
-    .line 4
     sget-object v0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo$1;->$SwitchMap$com$android$camera$dualvideo$recorder$RecordType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -1140,7 +1051,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
@@ -1148,13 +1058,12 @@
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0oO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO0oO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOo0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOOo0;
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
-    .line 6
     :cond_2
     iget-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mUserSelectDataList:Ljava/util/ArrayList;
 
@@ -1162,7 +1071,7 @@
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oO/OooO00o/OooO0OO/OooO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0o/OooO00o/OooO0OO/OooOO0;
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
@@ -1173,7 +1082,6 @@
 .method public setmDrawGridWindow(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;->mDrawGridWindow:Z
 
     return-void

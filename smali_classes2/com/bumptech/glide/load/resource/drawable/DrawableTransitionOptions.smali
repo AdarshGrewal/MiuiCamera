@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/TransitionOptions;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;-><init>()V
@@ -53,7 +51,6 @@
 .method public static withCrossFade()Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;-><init>()V
@@ -68,7 +65,6 @@
 .method public static withCrossFade(I)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;-><init>()V
@@ -83,7 +79,6 @@
 .method public static withCrossFade(Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 4
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;-><init>()V
@@ -98,7 +93,6 @@
 .method public static withCrossFade(Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 3
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;-><init>()V
@@ -115,7 +109,6 @@
 .method public crossFade()Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;-><init>()V
@@ -130,7 +123,6 @@
 .method public crossFade(I)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;-><init>(I)V
@@ -145,7 +137,6 @@
 .method public crossFade(Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 0
 
-    .line 4
     invoke-virtual {p1}, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->build()Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;
 
     move-result-object p1
@@ -160,7 +151,6 @@
 .method public crossFade(Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;)Lcom/bumptech/glide/load/resource/drawable/DrawableTransitionOptions;
     .locals 0
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/TransitionOptions;->transition(Lcom/bumptech/glide/request/transition/TransitionFactory;)Lcom/bumptech/glide/TransitionOptions;
 
     move-result-object p1

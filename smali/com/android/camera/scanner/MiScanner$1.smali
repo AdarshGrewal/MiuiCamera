@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/scanner/MiScanner;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/scanner/MiScanner$1;->this$0:Lcom/android/camera/scanner/MiScanner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,21 +34,18 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "android.intent.action.USER_PRESENT"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/scanner/MiScanner$1;->this$0:Lcom/android/camera/scanner/MiScanner;
 
     invoke-static {p1}, Lcom/android/camera/scanner/MiScanner;->access$000(Lcom/android/camera/scanner/MiScanner;)Ljava/lang/String;
@@ -60,12 +56,10 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/scanner/MiScanner$1;->this$0:Lcom/android/camera/scanner/MiScanner;
 
     invoke-static {p1, p2}, Lcom/android/camera/scanner/MiScanner;->access$102(Lcom/android/camera/scanner/MiScanner;Landroid/content/Intent;)Landroid/content/Intent;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/scanner/MiScanner$1;->this$0:Lcom/android/camera/scanner/MiScanner;
 
     invoke-virtual {p1}, Lcom/android/camera/scanner/MiScanner;->startScanApp()V

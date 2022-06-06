@@ -24,7 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,19 +37,16 @@
 .method public getFrameCallback()Landroid/view/Choreographer$FrameCallback;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mFrameCallback:Landroid/view/Choreographer$FrameCallback;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$1;
 
     invoke-direct {v0, p0}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$1;-><init>(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
 
     iput-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mFrameCallback:Landroid/view/Choreographer$FrameCallback;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mFrameCallback:Landroid/view/Choreographer$FrameCallback;
 
@@ -60,19 +56,16 @@
 .method public getRunnable()Ljava/lang/Runnable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mRunnable:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$2;
 
     invoke-direct {v0, p0}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$2;-><init>(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
 
     iput-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mRunnable:Ljava/lang/Runnable;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->mRunnable:Ljava/lang/Runnable;
 

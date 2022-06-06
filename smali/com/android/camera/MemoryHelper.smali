@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/util/SparseIntArray;
 
     const/4 v1, 0x4
@@ -28,7 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,14 +35,12 @@
 .method public static addCapturedNumber(II)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p0}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
     add-int/2addr v0, p1
@@ -57,7 +53,6 @@
 .method public static clear()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
@@ -68,7 +63,6 @@
 .method public static resetCapturedNumber(I)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x0
@@ -81,7 +75,6 @@
 .method public static setTrimLevel(I)V
     .locals 0
 
-    .line 1
     sput p0, Lcom/android/camera/MemoryHelper;->sTrimLevel:I
 
     return-void
@@ -90,7 +83,6 @@
 .method public static shouldTrimMemory(I)Z
     .locals 5
 
-    .line 1
     sget v0, Lcom/android/camera/MemoryHelper;->sTrimLevel:I
 
     const/4 v1, 0x5
@@ -111,7 +103,6 @@
 
     return v3
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
@@ -129,7 +120,6 @@
     :goto_0
     return v2
 
-    .line 3
     :cond_2
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 
@@ -149,7 +139,6 @@
     :goto_1
     return v2
 
-    .line 4
     :cond_4
     sget-object v0, Lcom/android/camera/MemoryHelper;->sCapturedNumberArray:Landroid/util/SparseIntArray;
 

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/shottype/ShotTypeParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/shottype/ChainHandler;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -31,7 +30,6 @@
 .method public static final isBokehUltraWideBackCamera(I)Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 .method public static final isDualCamera(I)Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -67,7 +64,6 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -96,7 +92,6 @@
 .method public static final isDualFrontCamera(I)Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -107,7 +102,6 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -136,7 +130,6 @@
 .method public static needDual(I)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/module/shottype/ShotTypeHandler;->isDualFrontCamera(I)Z
 
     move-result v0

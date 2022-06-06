@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$2;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onSpringBack()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/CustomTrigger$2;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/CustomTrigger;->access$100(Lmiuix/springback/trigger/CustomTrigger;)Lmiuix/springback/trigger/TriggerState;

@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -63,7 +61,6 @@
 
     if-gez v0, :cond_0
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -78,12 +75,10 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-interface {p0, p1, v0}, Ljava8/util/stream/Node;->copyInto([Ljava/lang/Object;I)V
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -116,7 +111,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V

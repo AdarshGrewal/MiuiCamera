@@ -25,46 +25,36 @@
 .method public constructor <init>(Landroid/media/MediaCodec;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     const-string v0, "MediaCodecInputStream"
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
-    .line 4
     new-instance v1, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v1}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 5
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffers:[Ljava/nio/ByteBuffer;
 
-    .line 6
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
     const/4 v0, -0x1
 
-    .line 7
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mIndex:I
 
     const/4 v0, 0x0
 
-    .line 8
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mClosed:Z
 
-    .line 9
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
-    .line 10
     invoke-virtual {p1}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -79,12 +69,10 @@
 .method public available()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v1, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -108,7 +96,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mClosed:Z
 
     return-void
@@ -117,7 +104,6 @@
 .method public getLastBufferInfo()Landroid/media/MediaCodec$BufferInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     return-object v0
@@ -146,13 +132,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
     if-nez v1, :cond_4
 
-    .line 2
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -164,7 +148,6 @@
 
     if-nez v1, :cond_4
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
@@ -179,14 +162,12 @@
 
     if-ltz v1, :cond_0
 
-    .line 4
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffers:[Ljava/nio/ByteBuffer;
 
     aget-object v1, v2, v1
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
-    .line 5
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_1
@@ -196,7 +177,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 6
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -216,7 +196,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 7
     :try_start_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
@@ -226,7 +205,6 @@
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaFormat:Landroid/media/MediaFormat;
 
-    .line 8
     invoke-virtual {v1}, Landroid/media/MediaFormat;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -242,12 +220,10 @@
 
     const-string v1, "No buffer available..."
 
-    .line 9
     invoke-static {v3, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 10
     :cond_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -269,14 +245,12 @@
 
     goto :goto_0
 
-    .line 11
     :cond_4
     :goto_1
     iget-boolean v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mClosed:Z
 
     if-nez v1, :cond_6
 
-    .line 12
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v1, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -308,14 +282,12 @@
 
     sub-int/2addr p3, v1
 
-    .line 13
     :goto_2
     :try_start_2
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 14
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -328,7 +300,6 @@
 
     if-lt p1, p2, :cond_7
 
-    .line 15
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mMediaCodec:Landroid/media/MediaCodec;
 
     iget p2, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mIndex:I
@@ -337,7 +308,6 @@
 
     const/4 p1, 0x0
 
-    .line 16
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/MediaCodecInputStream;->mBuffer:Ljava/nio/ByteBuffer;
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
@@ -351,7 +321,6 @@
 
     goto :goto_3
 
-    .line 17
     :cond_6
     :try_start_3
     new-instance p1, Ljava/io/IOException;
@@ -367,7 +336,6 @@
     :catch_1
     move-exception p1
 
-    .line 18
     :goto_3
     invoke-virtual {p1}, Ljava/lang/RuntimeException;->printStackTrace()V
 

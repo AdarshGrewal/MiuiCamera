@@ -31,59 +31,48 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/TrakBox;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsInd:I
 
-    .line 3
     iput v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkTv:J
 
-    .line 5
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getStts()Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->getEntries()[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->tts:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
-    .line 7
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getStco()Lorg/jcodec/containers/mp4/boxes/ChunkOffsetsBox;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getCo64()Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;
 
     move-result-object v1
 
-    .line 9
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getStsz()Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
     move-result-object v2
 
     iput-object v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->stsz:Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
-    .line 10
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getStsc()Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox;
 
     move-result-object v2
 
     if-eqz v0, :cond_0
 
-    .line 11
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/ChunkOffsetsBox;->getChunkOffsets()[J
 
     move-result-object v0
@@ -92,7 +81,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->getChunkOffsets()[J
 
@@ -100,7 +88,6 @@
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkOffsets:[J
 
-    .line 13
     :goto_0
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox;->getSampleToChunk()[Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox$SampleToChunkEntry;
 
@@ -108,7 +95,6 @@
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->sampleToChunk:[Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox$SampleToChunkEntry;
 
-    .line 14
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getStsd()Lorg/jcodec/containers/mp4/boxes/SampleDescriptionBox;
 
     move-result-object p1
@@ -121,14 +107,12 @@
 .method private getFrameSize()I
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->stsz:Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;->getDefaultSize()I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->stsd:Lorg/jcodec/containers/mp4/boxes/SampleDescriptionBox;
 
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->getBoxes()Ljava/util/List;
@@ -153,12 +137,10 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 3
     instance-of v2, v1, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
 
     if-eqz v2, :cond_0
 
-    .line 4
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;
 
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/AudioSampleEntry;->calcFrameSize()I
@@ -174,7 +156,6 @@
 .method public hasNext()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->curChunk:I
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkOffsets:[J
@@ -197,7 +178,6 @@
 .method public next()Lorg/jcodec/containers/mp4/Chunk;
     .locals 14
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->curChunk:I
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkOffsets:[J
@@ -210,7 +190,6 @@
 
     return-object v2
 
-    .line 2
     :cond_0
     iget v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->s2cIndex:I
 
@@ -238,14 +217,12 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->s2cIndex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->s2cIndex:I
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->sampleToChunk:[Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox$SampleToChunkEntry;
 
@@ -257,7 +234,6 @@
 
     move-result v0
 
-    .line 5
     iget v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     add-int/2addr v1, v0
@@ -276,7 +252,6 @@
 
     if-gt v1, v3, :cond_2
 
-    .line 6
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->tts:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     iget v3, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsInd:I
@@ -287,7 +262,6 @@
 
     move-result v1
 
-    .line 7
     iget v3, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     add-int/2addr v3, v0
@@ -300,7 +274,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_2
     new-array v1, v0, [I
 
@@ -309,7 +282,6 @@
     :goto_0
     if-ge v3, v0, :cond_4
 
-    .line 9
     iget v5, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     iget-object v6, p0, Lorg/jcodec/containers/mp4/ChunkReader;->tts:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
@@ -334,15 +306,12 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 10
     iput v4, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 11
     iput v5, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsInd:I
 
-    .line 12
     :cond_3
     iget-object v5, p0, Lorg/jcodec/containers/mp4/ChunkReader;->tts:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
@@ -356,7 +325,6 @@
 
     aput v5, v1, v3
 
-    .line 13
     iget v5, p0, Lorg/jcodec/containers/mp4/ChunkReader;->ttsSubInd:I
 
     add-int/lit8 v5, v5, 0x1
@@ -372,7 +340,6 @@
 
     move v11, v4
 
-    .line 14
     :goto_1
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->stsz:Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
@@ -382,7 +349,6 @@
 
     if-lez v1, :cond_5
 
-    .line 15
     invoke-direct {p0}, Lorg/jcodec/containers/mp4/ChunkReader;->getFrameSize()I
 
     move-result v1
@@ -393,7 +359,6 @@
 
     goto :goto_2
 
-    .line 16
     :cond_5
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->stsz:Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
@@ -413,7 +378,6 @@
 
     move v9, v4
 
-    .line 17
     :goto_2
     iget-object v1, p0, Lorg/jcodec/containers/mp4/ChunkReader;->sampleToChunk:[Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox$SampleToChunkEntry;
 
@@ -425,7 +389,6 @@
 
     move-result v13
 
-    .line 18
     new-instance v1, Lorg/jcodec/containers/mp4/Chunk;
 
     iget-object v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkOffsets:[J
@@ -442,7 +405,6 @@
 
     invoke-direct/range {v3 .. v13}, Lorg/jcodec/containers/mp4/Chunk;-><init>(JJII[II[II)V
 
-    .line 19
     iget-wide v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkTv:J
 
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/Chunk;->getDuration()I
@@ -455,14 +417,12 @@
 
     iput-wide v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkTv:J
 
-    .line 20
     iget v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->sampleNo:I
 
     add-int/2addr v2, v0
 
     iput v2, p0, Lorg/jcodec/containers/mp4/ChunkReader;->sampleNo:I
 
-    .line 21
     iget v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->curChunk:I
 
     add-int/lit8 v0, v0, 0x1
@@ -475,7 +435,6 @@
 .method public size()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/ChunkReader;->chunkOffsets:[J
 
     array-length v0, v0

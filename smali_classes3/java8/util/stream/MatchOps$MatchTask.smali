@@ -55,10 +55,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2, p3}, Ljava8/util/stream/AbstractShortCircuitTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
 
     return-void
@@ -76,10 +74,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractShortCircuitTask;-><init>(Ljava8/util/stream/AbstractShortCircuitTask;Ljava8/util/Spliterator;)V
 
-    .line 4
     iget-object p1, p1, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
 
     iput-object p1, p0, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
@@ -92,7 +88,6 @@
 .method public doLeaf()Ljava/lang/Boolean;
     .locals 3
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iget-object v1, p0, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
@@ -117,7 +112,6 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
 
     iget-object v1, v1, Ljava8/util/stream/MatchOps$MatchOp;->matchKind:Ljava8/util/stream/MatchOps$MatchKind;
@@ -128,7 +122,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 4
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -144,7 +137,6 @@
 .method public bridge synthetic doLeaf()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/MatchOps$MatchTask;->doLeaf()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -155,7 +147,6 @@
 .method public getEmptyResult()Ljava/lang/Boolean;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/MatchOps$MatchTask;->op:Ljava8/util/stream/MatchOps$MatchOp;
 
     iget-object v0, v0, Ljava8/util/stream/MatchOps$MatchOp;->matchKind:Ljava8/util/stream/MatchOps$MatchKind;
@@ -176,7 +167,6 @@
 .method public bridge synthetic getEmptyResult()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/MatchOps$MatchTask;->getEmptyResult()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -187,7 +177,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/MatchOps$MatchTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/MatchOps$MatchTask;
 
     move-result-object p1
@@ -207,7 +196,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/MatchOps$MatchTask;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/MatchOps$MatchTask;-><init>(Ljava8/util/stream/MatchOps$MatchTask;Ljava8/util/Spliterator;)V

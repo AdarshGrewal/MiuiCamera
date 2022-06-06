@@ -20,7 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
 
     move-object v0, p0
 
-    .line 1
     iget-object v1, v0, Lmiuix/internal/log/appender/FileAppender;->mFormatter:Lmiuix/internal/log/format/Formatter;
 
     const-string v2, "FileAppender"
@@ -40,12 +38,10 @@
 
     const-string v1, "Fail to append log for formatter is null"
 
-    .line 2
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v9, v0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
@@ -53,7 +49,6 @@
 
     const-string v1, "Fail to append log for FileManager is null"
 
-    .line 4
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -71,7 +66,6 @@
 
     move-object/from16 v7, p8
 
-    .line 5
     invoke-interface/range {v1 .. v7}, Lmiuix/internal/log/format/Formatter;->format(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Lmiuix/internal/log/message/Message;)Ljava/lang/String;
 
     move-result-object v1
@@ -93,7 +87,6 @@
 
     move-object/from16 v8, p7
 
-    .line 6
     invoke-interface/range {v1 .. v8}, Lmiuix/internal/log/format/Formatter;->format(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
@@ -125,7 +118,6 @@
 
     move-object/from16 v7, p7
 
-    .line 1
     invoke-direct/range {v0 .. v8}, Lmiuix/internal/log/appender/FileAppender;->doAppend(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -150,7 +142,6 @@
 
     move-object v8, p6
 
-    .line 2
     invoke-direct/range {v0 .. v8}, Lmiuix/internal/log/appender/FileAppender;->doAppend(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -159,17 +150,14 @@
 .method public close()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lmiuix/internal/log/appender/FileManager;->close()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
     :cond_0
@@ -179,7 +167,6 @@
 .method public getFileManager()Lmiuix/internal/log/appender/FileManager;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
     return-object v0
@@ -188,7 +175,6 @@
 .method public getFormatter()Lmiuix/internal/log/format/Formatter;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/FileAppender;->mFormatter:Lmiuix/internal/log/format/Formatter;
 
     return-object v0
@@ -197,18 +183,15 @@
 .method public setFileManager(Lmiuix/internal/log/appender/FileManager;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lmiuix/internal/log/appender/FileAppender;->close()V
 
-    .line 3
     iput-object p1, p0, Lmiuix/internal/log/appender/FileAppender;->mFileManager:Lmiuix/internal/log/appender/FileManager;
 
     return-void
@@ -217,7 +200,6 @@
 .method public setFormatter(Lmiuix/internal/log/format/Formatter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/appender/FileAppender;->mFormatter:Lmiuix/internal/log/format/Formatter;
 
     return-void

@@ -26,7 +26,6 @@
 
     const-string v0, "^[a-zA-Z_][a-zA-Z0-9_]*"
 
-    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -39,7 +38,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
 
     const-string v0, "parameter number exceed limits"
 
-    .line 5
     invoke-static {v0}, Lcom/xiaomi/stat/d/k;->e(Ljava/lang/String;)V
 
     return-void
@@ -59,7 +56,6 @@
 .method public static a(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -76,7 +72,6 @@
 
     const-string v0, "mistat_"
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -93,7 +88,6 @@
 
     const-string v0, "abtest_"
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     sget-object v0, Lcom/xiaomi/stat/d/n;->h:Ljava/util/regex/Pattern;
 
@@ -128,7 +121,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -163,7 +155,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -185,7 +176,6 @@
 .method public static e(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,7 +198,6 @@
 .method public static f(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -40,17 +39,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f080307
+    const v2, 0x7f080305
 
-    const v3, 0x7f12044e
+    const v3, 0x7f12042c
 
     const-string v4, "0"
 
@@ -58,10 +55,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08046c
+    const v2, 0x7f080469
 
     const-string v4, "1"
 
@@ -69,10 +65,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08046d
+    const v2, 0x7f08046a
 
     const-string v4, "2"
 
@@ -80,10 +75,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08046e
+    const v2, 0x7f08046b
 
     const-string v4, "3"
 
@@ -91,10 +85,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f08046f
+    const v2, 0x7f08046c
 
     const-string v4, "4"
 
@@ -102,10 +95,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f080470
+    const v2, 0x7f08046d
 
     const-string v4, "5"
 
@@ -113,10 +105,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f080471
+    const v2, 0x7f08046e
 
     const-string v4, "6"
 
@@ -124,7 +115,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 9
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -145,7 +135,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f12044e
+    const v0, 0x7f12042c
 
     return v0
 .end method
@@ -161,19 +151,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningKaleidoscope;->initItems()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -183,7 +170,6 @@
 .method public getKaleidoscopeValue()Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -196,7 +182,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -210,7 +195,6 @@
     :cond_0
     const/16 v0, 0xa0
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -229,7 +213,6 @@
 .method public isSwitchOn()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningKaleidoscope;->getKaleidoscopeValue()Ljava/lang/String;
 
     move-result-object v0
@@ -248,7 +231,6 @@
 .method public setKaleidoscopeValue(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -261,7 +243,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -273,7 +254,6 @@
     :cond_0
     const/16 v0, 0xa0
 
-    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     :goto_0

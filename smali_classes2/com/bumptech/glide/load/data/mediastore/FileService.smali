@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public exists(Ljava/io/File;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -29,7 +27,6 @@
 .method public get(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -40,7 +37,6 @@
 .method public length(Ljava/io/File;)J
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v0

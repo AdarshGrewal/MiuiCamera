@@ -32,10 +32,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->getInstance()Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     move-result-object v0
@@ -87,7 +85,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->DECODE_FORMAT:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p4, v0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -98,7 +95,6 @@
 
     check-cast v6, Lcom/bumptech/glide/load/DecodeFormat;
 
-    .line 3
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->OPTION:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p4, v0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -109,10 +105,8 @@
 
     check-cast v7, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
-    .line 4
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->ALLOW_HARDWARE_CONFIG:Lcom/bumptech/glide/load/Option;
 
-    .line 5
     invoke-virtual {p4, v0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
 
     move-result-object v0
@@ -121,7 +115,6 @@
 
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->ALLOW_HARDWARE_CONFIG:Lcom/bumptech/glide/load/Option;
 
-    .line 6
     invoke-virtual {p4, v0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
 
     move-result-object v0
@@ -144,7 +137,6 @@
     :goto_0
     move v5, v0
 
-    .line 7
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->PREFERRED_COLOR_SPACE:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p4, v0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -155,7 +147,6 @@
 
     check-cast v8, Lcom/bumptech/glide/load/PreferredColorSpace;
 
-    .line 8
     new-instance p4, Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder$1;
 
     move-object v1, p4
@@ -183,7 +174,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/graphics/ImageDecoder$Source;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder;->decode(Landroid/graphics/ImageDecoder$Source;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -209,7 +199,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/graphics/ImageDecoder$Source;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder;->handles(Landroid/graphics/ImageDecoder$Source;Lcom/bumptech/glide/load/Options;)Z

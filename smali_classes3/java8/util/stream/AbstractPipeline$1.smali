@@ -35,7 +35,6 @@
 .method public constructor <init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/function/Consumer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/AbstractPipeline$1;->this$0:Ljava8/util/stream/AbstractPipeline;
 
     iput-object p2, p0, Ljava8/util/stream/AbstractPipeline$1;->val$sink:Ljava8/util/function/Consumer;
@@ -50,7 +49,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -59,7 +57,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -68,7 +65,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -82,7 +78,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractPipeline$1;->val$sink:Ljava8/util/function/Consumer;
 
     invoke-interface {v0, p1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V

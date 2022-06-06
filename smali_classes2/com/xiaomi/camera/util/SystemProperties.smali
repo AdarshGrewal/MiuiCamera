@@ -20,7 +20,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/util/SystemProperties;->getSystemPropertiesClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -33,7 +32,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/xiaomi/camera/util/SystemProperties;->SP:Ljava/lang/Class;
 
@@ -85,7 +82,6 @@
 
     const-string v2, "Exception while getting system property: "
 
-    .line 2
     invoke-static {v1, v2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -94,7 +90,6 @@
 .method public static get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .line 3
     const-class v0, Ljava/lang/String;
 
     :try_start_0
@@ -143,7 +138,6 @@
 
     const-string v1, "Exception while getting system property: "
 
-    .line 4
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object p1
@@ -152,7 +146,6 @@
 .method public static getBoolean(Ljava/lang/String;Z)Z
     .locals 7
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/xiaomi/camera/util/SystemProperties;->SP:Ljava/lang/Class;
 
@@ -211,7 +204,6 @@
 
     const-string v1, "Exception while getting system property: "
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return p1
@@ -220,7 +212,6 @@
 .method public static getFloat(Ljava/lang/String;F)F
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object p1
@@ -229,7 +220,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
     move-result-object p0
@@ -244,7 +234,6 @@
 .method public static getInt(Ljava/lang/String;I)I
     .locals 7
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/xiaomi/camera/util/SystemProperties;->SP:Ljava/lang/Class;
 
@@ -303,7 +292,6 @@
 
     const-string v1, "Exception while getting system property: "
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return p1
@@ -312,7 +300,6 @@
 .method public static getLong(Ljava/lang/String;J)J
     .locals 7
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/xiaomi/camera/util/SystemProperties;->SP:Ljava/lang/Class;
 
@@ -371,7 +358,6 @@
 
     const-string v1, "Exception while getting system property: "
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-wide p1
@@ -390,7 +376,6 @@
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -404,7 +389,6 @@
 
     const-string v1, "\'android.os.SystemProperties\' not found"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -415,7 +399,6 @@
 .method public static set(Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
 
-    .line 1
     const-class v0, Ljava/lang/String;
 
     :try_start_0
@@ -460,7 +443,6 @@
 
     const-string v0, "Exception while setting system property: "
 
-    .line 2
     invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

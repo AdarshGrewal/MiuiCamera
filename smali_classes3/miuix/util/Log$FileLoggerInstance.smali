@@ -24,10 +24,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/util/Log$Facade;
 
     invoke-static {p1}, Lmiuix/internal/log/LoggerFactory;->getFileLogger(Landroid/content/Context;)Lmiuix/internal/log/Logger;
@@ -46,30 +44,25 @@
 .method public static init(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$FileLoggerInstance;->singleton:Lmiuix/util/Log$FileLoggerInstance;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lmiuix/util/Log$FileLoggerInstance;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lmiuix/util/Log$FileLoggerInstance;->singleton:Lmiuix/util/Log$FileLoggerInstance;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lmiuix/util/Log$FileLoggerInstance;
 
     invoke-direct {v1, p0}, Lmiuix/util/Log$FileLoggerInstance;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lmiuix/util/Log$FileLoggerInstance;->singleton:Lmiuix/util/Log$FileLoggerInstance;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -92,7 +85,6 @@
 .method public static instance()Lmiuix/util/Log$Facade;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$FileLoggerInstance;->facade:Lmiuix/util/Log$Facade;
 
     return-object v0

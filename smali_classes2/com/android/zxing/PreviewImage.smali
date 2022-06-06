@@ -37,18 +37,14 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/zxing/PreviewImage;->mPreviewStatus:I
 
-    .line 3
     iput p1, p0, Lcom/android/zxing/PreviewImage;->mPreviewStatus:I
 
-    .line 4
     iput p2, p0, Lcom/android/zxing/PreviewImage;->mCameraId:I
 
     return-void
@@ -57,31 +53,24 @@
 .method public constructor <init>(Landroid/media/Image;I)V
     .locals 4
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 6
     iput v0, p0, Lcom/android/zxing/PreviewImage;->mPreviewStatus:I
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 8
     invoke-direct {p0, p1}, Lcom/android/zxing/PreviewImage;->convertYUV420ToNV21(Landroid/media/Image;)V
 
-    .line 9
     iput p2, p0, Lcom/android/zxing/PreviewImage;->mOrientation:I
 
     const/4 p1, 0x2
 
-    .line 10
     iput p1, p0, Lcom/android/zxing/PreviewImage;->mPreviewStatus:I
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,7 +109,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
@@ -133,7 +121,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
@@ -141,28 +128,24 @@
 
     iput-wide v0, p0, Lcom/android/zxing/PreviewImage;->mTimestamp:J
 
-    .line 3
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
-    .line 4
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
 
-    .line 5
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/zxing/PreviewImage;->mFormat:I
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
@@ -175,7 +158,6 @@
 
     move-result v0
 
-    .line 7
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v2
@@ -188,7 +170,6 @@
 
     move-result v2
 
-    .line 8
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v4
@@ -199,7 +180,6 @@
 
     move-result-object v4
 
-    .line 9
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p1
@@ -210,19 +190,16 @@
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v5
 
-    .line 11
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v6
 
     const-string v7, "PreviewImage"
 
-    .line 12
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,7 +238,6 @@
 
     invoke-static {v7, v8}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     iget v7, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     iget v8, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
@@ -282,17 +258,14 @@
 
     iput-object v7, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
-    .line 14
     invoke-virtual {v4, v7, v1, v5}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 15
     iget-object v4, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
     invoke-virtual {p1, v4, v5, v6}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 16
     iget p1, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     iget v4, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
@@ -303,7 +276,6 @@
 
     div-int/2addr p1, v3
 
-    .line 17
     new-array p1, p1, [B
 
     move v3, v1
@@ -312,27 +284,23 @@
 
     move v5, v4
 
-    .line 18
     :goto_0
     iget v6, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
 
     if-ge v3, v6, :cond_3
 
-    .line 19
     iget-object v6, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
     iget v7, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     invoke-static {v6, v4, p1, v5, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 20
     iget v6, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
 
     add-int/lit8 v6, v6, -0x1
 
     if-ne v3, v6, :cond_2
 
-    .line 21
     iget v6, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     add-int/2addr v4, v6
@@ -342,7 +310,6 @@
     :cond_2
     add-int/2addr v4, v0
 
-    .line 22
     :goto_1
     iget v6, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
@@ -352,7 +319,6 @@
 
     goto :goto_0
 
-    .line 23
     :cond_3
     :goto_2
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
@@ -361,14 +327,12 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 24
     div-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, -0x1
 
     if-ne v1, v0, :cond_4
 
-    .line 25
     iget-object v0, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
     iget v3, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
@@ -379,7 +343,6 @@
 
     goto :goto_3
 
-    .line 26
     :cond_4
     iget-object v0, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
@@ -390,7 +353,6 @@
     :goto_3
     add-int/2addr v4, v2
 
-    .line 27
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     add-int/2addr v5, v0
@@ -399,7 +361,6 @@
 
     goto :goto_2
 
-    .line 28
     :cond_5
     iput-object p1, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
@@ -412,7 +373,6 @@
 .method public getCameraId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mCameraId:I
 
     return v0
@@ -421,7 +381,6 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
     return-object v0
@@ -430,7 +389,6 @@
 .method public getFormat()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mFormat:I
 
     return v0
@@ -439,7 +397,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mHeight:I
 
     return v0
@@ -448,7 +405,6 @@
 .method public getOrientation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mOrientation:I
 
     return v0
@@ -457,7 +413,6 @@
 .method public getPreviewStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mPreviewStatus:I
 
     return v0
@@ -466,7 +421,6 @@
 .method public getTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/zxing/PreviewImage;->mTimestamp:J
 
     return-wide v0
@@ -475,7 +429,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/zxing/PreviewImage;->mWidth:I
 
     return v0
@@ -484,7 +437,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -495,7 +447,6 @@
 
     iget-object v1, p0, Lcom/android/zxing/PreviewImage;->mData:[B
 
-    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v1

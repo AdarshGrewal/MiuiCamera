@@ -81,7 +81,7 @@
 .method public abstract configHdr(Ljava/lang/String;)V
 .end method
 
-.method public abstract configLiveMusicSelect()V
+.method public abstract configLiveReview()V
 .end method
 
 .method public abstract configLiveShotSwitch(I)V
@@ -94,6 +94,12 @@
 .end method
 
 .method public abstract configMeter(Ljava/lang/String;)V
+.end method
+
+.method public abstract configModeEdit()V
+.end method
+
+.method public abstract configModeMore(Z)V
 .end method
 
 .method public abstract configNearRangeMode()V

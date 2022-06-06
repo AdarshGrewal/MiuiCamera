@@ -20,7 +20,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/device/CameraHandlerThread;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -31,7 +30,6 @@
 
     invoke-direct {p0, v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;
 
     const/4 v1, 0x0
@@ -48,7 +46,6 @@
 .method public getCookieStore()Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/device/CameraHandlerThread;->mCookieStore:Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;
 
     return-object v0

@@ -56,13 +56,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mFileMap:Ljava/util/LinkedHashMap;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mModelClass:Ljava/lang/Class;
 
     return-void
@@ -71,7 +68,6 @@
 .method private convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/Scanner;
 
     invoke-direct {v0, p1}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
@@ -82,7 +78,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/util/Scanner;->hasNext()Z
 
     move-result v0
@@ -110,7 +105,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p2, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
     const-string v1, "assets://"
@@ -125,10 +119,8 @@
 
     const v2, 0x8000
 
-    .line 2
     invoke-static {p1, v0, p3, v2}, Lcom/android/camera/Util;->verifyAssetZip(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 3
     invoke-virtual {p2, p3, v1}, Lcom/android/camera/resource/BaseResourceItem;->onDecompressFinished(Ljava/lang/String;Z)V
 
     return-void
@@ -137,7 +129,6 @@
 .method private getAssetCache(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -148,7 +139,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -158,7 +148,6 @@
 
     move-result-object p2
 
-    .line 3
     :try_start_0
     invoke-virtual {p2, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -166,7 +155,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p1
@@ -176,7 +164,6 @@
     :catch_0
     move-exception p1
 
-    .line 5
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     return-object v1
@@ -202,12 +189,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object p2
 
-    .line 2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -226,10 +211,8 @@
 
     check-cast v0, Lcom/android/camera/resource/BaseResourceItem;
 
-    .line 3
     iget-object v1, v0, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,19 +231,16 @@
 
     move-result-object v2
 
-    .line 5
     invoke-virtual {v0, v2}, Lcom/android/camera/resource/BaseResourceItem;->simpleVerification(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 6
     invoke-virtual {v0, v2}, Lcom/android/camera/resource/BaseResourceItem;->versionVerification(Ljava/lang/String;)Z
 
     move-result v3
 
-    .line 7
     invoke-virtual {v0, v2, v3}, Lcom/android/camera/resource/BaseResourceItem;->onDecompressFinished(Ljava/lang/String;Z)V
 
     if-eqz v3, :cond_1
@@ -270,14 +250,12 @@
     :cond_1
     const-string v3, "assets://"
 
-    .line 8
     invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 9
     invoke-direct {p0, p1, v0, v2}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->decompressNativeResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceItem;Ljava/lang/String;)V
 
     goto :goto_0
@@ -289,7 +267,6 @@
 .method public getWorkThread()Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -313,12 +290,10 @@
 
     if-nez p2, :cond_0
 
-    .line 2
     invoke-interface {p1, v0, v1, v1}, Lcom/android/camera/resource/ResponseListener;->onResponseError(ILjava/lang/String;Ljava/lang/Object;)V
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v2, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mFileMap:Ljava/util/LinkedHashMap;
 
@@ -345,7 +320,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 4
     iget-object v5, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mModelClass:Ljava/lang/Class;
 
     invoke-virtual {p0, v5}, Lcom/android/camera/resource/BaseObservableRequest;->create(Ljava/lang/Class;)Ljava/lang/Object;
@@ -354,59 +328,48 @@
 
     check-cast v5, Lcom/android/camera/resource/BaseResourceList;
 
-    .line 5
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/lang/String;
 
-    .line 6
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v7
 
-    .line 8
     invoke-direct {p0, v6, v7}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->getAssetCache(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 9
     :try_start_0
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8, v6}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v5, v8}, Lcom/android/camera/resource/BaseResourceList;->parseInitialData(Lorg/json/JSONObject;)V
 
-    .line 11
     invoke-virtual {v5, v8}, Lcom/android/camera/resource/BaseResourceList;->createResourcesList(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 12
     :try_start_1
     invoke-static {v3}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
 
-    .line 13
     invoke-virtual {p0, v7, v5, v3}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->decompressResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceList;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 14
     invoke-virtual {v5}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object v3
 
-    .line 15
     :goto_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -414,7 +377,6 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 16
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -433,7 +395,6 @@
 
     iput v6, v5, Lcom/android/camera/resource/BaseResourceItem;->index:I
 
-    .line 17
     invoke-virtual {p2}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object v5
@@ -451,12 +412,10 @@
     :catch_0
     move-exception p2
 
-    .line 18
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 v0, 0x3
 
-    .line 19
     invoke-virtual {p2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
@@ -468,10 +427,8 @@
     :catch_1
     move-exception p2
 
-    .line 20
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 21
     invoke-virtual {p2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p2
@@ -480,7 +437,6 @@
 
     return-void
 
-    .line 22
     :cond_2
     invoke-interface {p1, p2, v4}, Lcom/android/camera/resource/ResponseListener;->onResponse(Ljava/lang/Object;Z)V
 
@@ -490,7 +446,6 @@
 .method public bridge synthetic scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceList;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Lcom/android/camera/resource/BaseResourceList;)V

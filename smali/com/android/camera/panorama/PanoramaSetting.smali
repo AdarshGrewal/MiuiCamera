@@ -79,81 +79,62 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x40519999a0000000L    # 70.4000015258789
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aovx:D
 
     const-wide v0, 0x404bd999a0000000L    # 55.70000076293945
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aovy:D
 
     const/high16 p1, 0x40f00000    # 7.5f
 
-    .line 4
     iput p1, p0, Lcom/android/camera/panorama/PanoramaSetting;->shrink_ratio:F
 
     const/16 p1, 0x7e90
 
-    .line 5
     iput p1, p0, Lcom/android/camera/panorama/PanoramaSetting;->calcseam_pixnum:I
 
     const/4 p1, 0x0
 
-    .line 6
     iput-boolean p1, p0, Lcom/android/camera/panorama/PanoramaSetting;->use_deform:Z
 
     const/4 v0, 0x1
 
-    .line 7
     iput-boolean v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->use_luminance_correction:Z
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    .line 8
     iput-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->seamsearch_ratio:D
 
     const-wide v2, 0x3fee666666666666L    # 0.95
 
-    .line 9
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->zrotation_coeff:D
 
     const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
 
-    .line 10
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->draw_threshold:D
 
-    .line 11
     iput-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aov_gain:D
 
     const-wide/16 v2, 0x0
 
-    .line 12
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k1:D
 
-    .line 13
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k2:D
 
-    .line 14
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k3:D
 
-    .line 15
     iput-wide v2, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k4:D
 
-    .line 16
     iput-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->rotation_ratio:D
 
-    .line 17
     iput p1, p0, Lcom/android/camera/panorama/PanoramaSetting;->projection_mode:I
 
-    .line 18
     iput p1, p0, Lcom/android/camera/panorama/PanoramaSetting;->motion_detection_mode:I
 
-    .line 19
     invoke-virtual {p0}, Lcom/android/camera/panorama/PanoramaSetting;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -173,10 +154,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Landroid/util/JsonReader;->beginObject()V
 
-    .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -184,12 +163,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -210,7 +187,6 @@
 
     const/4 v1, -0x1
 
-    .line 5
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -417,12 +393,10 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/util/JsonReader;->skipValue()V
 
     goto/16 :goto_0
 
-    .line 7
     :pswitch_0
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -432,7 +406,6 @@
 
     goto/16 :goto_0
 
-    .line 8
     :pswitch_1
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -442,7 +415,6 @@
 
     goto/16 :goto_0
 
-    .line 9
     :pswitch_2
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -452,7 +424,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :pswitch_3
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -462,7 +433,6 @@
 
     goto/16 :goto_0
 
-    .line 11
     :pswitch_4
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -472,7 +442,6 @@
 
     goto/16 :goto_0
 
-    .line 12
     :pswitch_5
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -482,7 +451,6 @@
 
     goto/16 :goto_0
 
-    .line 13
     :pswitch_6
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -492,7 +460,6 @@
 
     goto/16 :goto_0
 
-    .line 14
     :pswitch_7
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -502,7 +469,6 @@
 
     goto/16 :goto_0
 
-    .line 15
     :pswitch_8
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -512,7 +478,6 @@
 
     goto/16 :goto_0
 
-    .line 16
     :pswitch_9
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -522,7 +487,6 @@
 
     goto/16 :goto_0
 
-    .line 17
     :pswitch_a
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextBoolean()Z
 
@@ -532,7 +496,6 @@
 
     goto/16 :goto_0
 
-    .line 18
     :pswitch_b
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextInt()I
 
@@ -542,7 +505,6 @@
 
     goto/16 :goto_0
 
-    .line 19
     :pswitch_c
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -554,7 +516,6 @@
 
     goto/16 :goto_0
 
-    .line 20
     :pswitch_d
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -564,7 +525,6 @@
 
     goto/16 :goto_0
 
-    .line 21
     :pswitch_e
     invoke-virtual {p1}, Landroid/util/JsonReader;->nextDouble()D
 
@@ -576,7 +536,6 @@
 
     goto/16 :goto_0
 
-    .line 22
     :catch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -596,7 +555,6 @@
 
     goto/16 :goto_0
 
-    .line 23
     :cond_1
     invoke-virtual {p1}, Landroid/util/JsonReader;->endObject()V
 
@@ -648,7 +606,6 @@
 .method public getAov_gain()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aov_gain:D
 
     return-wide v0
@@ -657,7 +614,6 @@
 .method public getAovx()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aovx:D
 
     return-wide v0
@@ -666,7 +622,6 @@
 .method public getAovy()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->aovy:D
 
     return-wide v0
@@ -675,7 +630,6 @@
 .method public getCalcseam_pixnum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->calcseam_pixnum:I
 
     return v0
@@ -684,7 +638,6 @@
 .method public getDistortion_k1()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k1:D
 
     return-wide v0
@@ -693,7 +646,6 @@
 .method public getDistortion_k2()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k2:D
 
     return-wide v0
@@ -702,7 +654,6 @@
 .method public getDistortion_k3()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k3:D
 
     return-wide v0
@@ -711,7 +662,6 @@
 .method public getDistortion_k4()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->distortion_k4:D
 
     return-wide v0
@@ -720,7 +670,6 @@
 .method public getDraw_threshold()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->draw_threshold:D
 
     return-wide v0
@@ -729,7 +678,6 @@
 .method public getMotion_detection_mode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->motion_detection_mode:I
 
     return v0
@@ -738,7 +686,6 @@
 .method public getProjection_mode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->projection_mode:I
 
     return v0
@@ -747,7 +694,6 @@
 .method public getRotation_ratio()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->rotation_ratio:D
 
     return-wide v0
@@ -756,7 +702,6 @@
 .method public getSeamsearch_ratio()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->seamsearch_ratio:D
 
     return-wide v0
@@ -765,7 +710,6 @@
 .method public getShrink_ratio()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->shrink_ratio:F
 
     return v0
@@ -774,7 +718,6 @@
 .method public getZrotation_coeff()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->zrotation_coeff:D
 
     return-wide v0
@@ -783,7 +726,6 @@
 .method public isUse_deform()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->use_deform:Z
 
     return v0
@@ -792,7 +734,6 @@
 .method public isUse_luminance_correction()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/panorama/PanoramaSetting;->use_luminance_correction:Z
 
     return v0
@@ -801,7 +742,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

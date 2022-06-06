@@ -15,17 +15,14 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 5
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
@@ -38,7 +35,6 @@
 
     aget v1, v1, v2
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getCenterWeighted()[I
 
     move-result-object v2
@@ -47,13 +43,12 @@
 
     aget v2, v2, v3
 
-    const v3, 0x7f12064e
+    const v3, 0x7f120612
 
     const-string v4, "1"
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
-    .line 5
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -66,7 +61,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     return-object v0
@@ -75,8 +69,8 @@
 
     :array_0
     .array-data 4
-        0x7f08035e
-        0x7f08035e
+        0x7f08035c
+        0x7f08035c
     .end array-data
 .end method
 
@@ -87,7 +81,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     return-object v0
@@ -96,8 +89,8 @@
 
     :array_0
     .array-data 4
-        0x7f080360
-        0x7f080360
+        0x7f08035e
+        0x7f08035e
     .end array-data
 .end method
 
@@ -108,7 +101,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     return-object v0
@@ -117,8 +109,8 @@
 
     :array_0
     .array-data 4
-        0x7f080362
-        0x7f080362
+        0x7f080360
+        0x7f080360
     .end array-data
 .end method
 
@@ -127,7 +119,6 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/ComponentData;->isEmpty()Z
 
     move-result v0
@@ -138,7 +129,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -158,7 +148,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120651
+    const v0, 0x7f120615
 
     return v0
 .end method
@@ -174,7 +164,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -209,14 +198,12 @@
 .method public getTrackValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "0"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -230,7 +217,6 @@
     :cond_0
     const-string v0, "1"
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -244,7 +230,6 @@
     :cond_1
     const-string v0, "2"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -264,14 +249,12 @@
 .method public getValueSelectedDrawableIgnoreClose(I)I
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "0"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -280,7 +263,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getFrameAverage()[I
 
     move-result-object p1
@@ -292,14 +274,12 @@
     :cond_0
     const-string v0, "1"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getCenterWeighted()[I
 
     move-result-object p1
@@ -311,14 +291,12 @@
     :cond_1
     const-string v0, "2"
 
-    .line 6
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 7
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getSpotMetering()[I
 
     move-result-object p1
@@ -327,7 +305,6 @@
 
     return p1
 
-    .line 8
     :cond_2
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getCenterWeighted()[I
 
@@ -341,49 +318,45 @@
 .method public getValueSelectedShadowDrawableId(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "0"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f080361
+    const p1, 0x7f08035f
 
     return p1
 
     :cond_0
     const-string v0, "1"
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const p1, 0x7f08035f
+    const p1, 0x7f08035d
 
     return p1
 
     :cond_1
     const-string v0, "2"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    const p1, 0x7f080363
+    const p1, 0x7f080361
 
     return p1
 
@@ -396,49 +369,45 @@
 .method public getValueSelectedStringIdIgnoreClose(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "0"
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f12064f
+    const p1, 0x7f120613
 
     return p1
 
     :cond_0
     const-string v0, "1"
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const p1, 0x7f12064e
+    const p1, 0x7f120612
 
     return p1
 
     :cond_1
     const-string v0, "2"
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    const p1, 0x7f120650
+    const p1, 0x7f120614
 
     return p1
 
@@ -451,12 +420,10 @@
 .method public reInit(IILcom/android/camera2/CameraCapabilities;)V
     .locals 16
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v7, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getCenterWeighted()[I
@@ -467,7 +434,6 @@
 
     aget v2, v1, v8
 
-    .line 3
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getCenterWeighted()[I
 
     move-result-object v1
@@ -476,9 +442,9 @@
 
     aget v4, v1, v9
 
-    const v3, 0x7f08035f
+    const v3, 0x7f08035d
 
-    const v5, 0x7f12064e
+    const v5, 0x7f120612
 
     const-string v6, "1"
 
@@ -486,10 +452,8 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIIILjava/lang/String;)V
 
-    .line 4
     invoke-interface {v0, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getFrameAverage()[I
@@ -498,16 +462,15 @@
 
     aget v11, v2, v8
 
-    .line 6
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getFrameAverage()[I
 
     move-result-object v2
 
     aget v13, v2, v9
 
-    const v12, 0x7f080361
+    const v12, 0x7f08035f
 
-    const v14, 0x7f12064f
+    const v14, 0x7f120613
 
     const-string v15, "0"
 
@@ -515,10 +478,8 @@
 
     invoke-direct/range {v10 .. v15}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIIILjava/lang/String;)V
 
-    .line 7
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getSpotMetering()[I
@@ -527,16 +488,15 @@
 
     aget v3, v2, v8
 
-    .line 9
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/data/data/config/ComponentConfigMeter;->getSpotMetering()[I
 
     move-result-object v2
 
     aget v5, v2, v9
 
-    const v4, 0x7f080363
+    const v4, 0x7f080361
 
-    const v6, 0x7f120650
+    const v6, 0x7f120614
 
     const-string v7, "2"
 
@@ -544,10 +504,8 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIIILjava/lang/String;)V
 
-    .line 10
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -562,7 +520,6 @@
 .method public setComponentValue(ILjava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void

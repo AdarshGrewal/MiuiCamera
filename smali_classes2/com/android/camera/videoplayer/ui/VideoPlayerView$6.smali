@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$6;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$6;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$300(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;
@@ -47,7 +45,6 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$6;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
@@ -59,7 +56,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->setSurfaceTextureAvailable(Z)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$6;->this$0:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-static {v1}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->access$300(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 4
     monitor-exit v0
 
     return-void

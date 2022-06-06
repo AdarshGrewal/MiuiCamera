@@ -57,7 +57,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -70,10 +69,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lmiuix/animation/utils/LinkNode;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/animation/internal/AnimStats;
 
     invoke-direct {v0}, Lmiuix/animation/internal/AnimStats;-><init>()V
@@ -109,7 +106,6 @@
 .method public getAnimCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v0, v0, Lmiuix/animation/internal/AnimStats;->animCount:I
@@ -127,14 +123,12 @@
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 1
     iget-object v2, v1, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v2, v2, Lmiuix/animation/internal/AnimStats;->animCount:I
 
     add-int/2addr v0, v2
 
-    .line 2
     iget-object v1, v1, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
     check-cast v1, Lmiuix/animation/internal/AnimTask;
@@ -148,7 +142,6 @@
 .method public run()V
     .locals 7
 
-    .line 1
     :try_start_0
     iget-wide v1, p0, Lmiuix/animation/internal/AnimTask;->totalT:J
 
@@ -173,10 +166,8 @@
 
     const-string v2, "doAnimationFrame failed"
 
-    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3
     :goto_0
     sget-object v0, Lmiuix/animation/internal/AnimTask;->sTaskCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -186,7 +177,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     const/4 v1, 0x2
@@ -200,17 +190,14 @@
 .method public setup(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     invoke-virtual {v0}, Lmiuix/animation/internal/AnimStats;->clear()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iput p2, v0, Lmiuix/animation/internal/AnimStats;->animCount:I
 
-    .line 3
     iput p1, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     return-void
@@ -219,16 +206,12 @@
 .method public start(JJZ)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/animation/internal/AnimTask;->totalT:J
 
-    .line 2
     iput-wide p3, p0, Lmiuix/animation/internal/AnimTask;->deltaT:J
 
-    .line 3
     iput-boolean p5, p0, Lmiuix/animation/internal/AnimTask;->toPage:Z
 
-    .line 4
     invoke-static {p0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
 
     return-void
@@ -237,7 +220,6 @@
 .method public updateAnimStats()V
     .locals 6
 
-    .line 1
     iget v0, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     iget v1, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
@@ -251,7 +233,6 @@
     :goto_0
     if-ge v0, v1, :cond_6
 
-    .line 2
     iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     iget-object v2, v2, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
@@ -266,7 +247,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_0
     iget-object v3, v2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
@@ -284,7 +264,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -294,7 +273,6 @@
 
     iput v5, v3, Lmiuix/animation/internal/AnimStats;->initCount:I
 
-    .line 5
     iget-object v2, v2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-byte v2, v2, Lmiuix/animation/internal/AnimInfo;->op:B
@@ -313,7 +291,6 @@
 
     goto :goto_2
 
-    .line 6
     :cond_2
     iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -325,7 +302,6 @@
 
     goto :goto_2
 
-    .line 7
     :cond_3
     iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -337,7 +313,6 @@
 
     goto :goto_2
 
-    .line 8
     :cond_4
     iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -349,7 +324,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_5
     :goto_1
     iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;

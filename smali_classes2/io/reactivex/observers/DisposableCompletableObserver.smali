@@ -23,10 +23,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -41,7 +39,6 @@
 .method public final dispose()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/observers/DisposableCompletableObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
@@ -52,7 +49,6 @@
 .method public final isDisposed()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/observers/DisposableCompletableObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -83,7 +79,6 @@
 .method public final onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/observers/DisposableCompletableObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     const-class v1, Lio/reactivex/observers/DisposableCompletableObserver;
@@ -94,7 +89,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/observers/DisposableCompletableObserver;->onStart()V
 
     :cond_0

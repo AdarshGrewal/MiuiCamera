@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,14 +25,12 @@
 
     const-string v0, "qemu.hw.mainkeys"
 
-    .line 1
     invoke-static {v0}, Lmiuix/core/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "1"
 
-    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -47,7 +44,6 @@
     :cond_0
     const-string v1, "0"
 
-    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -58,7 +54,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -70,14 +65,12 @@
 
     const-string v3, "android"
 
-    .line 5
     invoke-virtual {p0, v0, v1, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_2
 
-    .line 6
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v2
@@ -90,14 +83,12 @@
 .method public static checkMultiWindow(Landroid/app/Activity;)Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isInMultiWindowMode()Z
 
     move-result p0
@@ -113,7 +104,6 @@
 .method public static getNavigationBarHeight(Landroid/content/Context;)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->isShowNavigationHandle(Landroid/content/Context;)Z
 
     move-result v0
@@ -135,7 +125,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     :goto_0
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->getRealNavigationBarHeight(Landroid/content/Context;)I
@@ -150,7 +139,6 @@
     :cond_2
     move v1, p0
 
-    .line 3
     :goto_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -176,7 +164,6 @@
 .method public static getRealNavigationBarHeight(Landroid/content/Context;)I
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->checkDeviceHasNavigationBar(Landroid/content/Context;)Z
 
     move-result v0
@@ -187,7 +174,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -199,19 +185,16 @@
 
     const-string v3, "android"
 
-    .line 3
     invoke-virtual {p0, v0, v2, v3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 5
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -237,7 +220,6 @@
 .method public static getStatusBarHeight(Landroid/content/Context;)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -254,7 +236,6 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -275,7 +256,6 @@
 .method public static isEnableGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -299,12 +279,10 @@
 .method public static isInMultiWindowMode(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1
     instance-of v0, p0, Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Landroid/app/Activity;
 
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->checkMultiWindow(Landroid/app/Activity;)Z
@@ -313,25 +291,21 @@
 
     return p0
 
-    .line 3
     :cond_0
     instance-of v0, p0, Landroid/view/ContextThemeWrapper;
 
     if-eqz v0, :cond_1
 
-    .line 4
     check-cast p0, Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 5
     instance-of v0, p0, Landroid/app/Activity;
 
     if-eqz v0, :cond_1
 
-    .line 6
     check-cast p0, Landroid/app/Activity;
 
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->checkMultiWindow(Landroid/app/Activity;)Z
@@ -349,7 +323,6 @@
 .method public static isNavigationBarFullScreen(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -373,7 +346,6 @@
 .method public static isShowNavigationHandle(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/MiuixUIUtils;->isEnableGestureLine(Landroid/content/Context;)Z
 
     move-result v0
@@ -406,7 +378,6 @@
 .method public static isSupportGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

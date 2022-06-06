@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->values()[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     move-result-object v0

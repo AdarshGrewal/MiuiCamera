@@ -11,10 +11,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -29,14 +27,12 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->isClosed(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget p1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -50,7 +46,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object p1
@@ -61,7 +56,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -85,7 +79,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     sget p1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -97,7 +90,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -108,7 +100,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120672
+    const v0, 0x7f120636
 
     return v0
 .end method
@@ -124,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -141,12 +132,10 @@
 .method public isClosed(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->mIsClosed:Landroid/util/SparseBooleanArray;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -160,7 +149,6 @@
 
     const/16 p1, 0xa3
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->mIsClosed:Landroid/util/SparseBooleanArray;
 
@@ -182,7 +170,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -193,7 +180,6 @@
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -202,12 +188,10 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->supportColorRentention()Z
 
     move-result v0
 
-    .line 4
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -239,26 +223,21 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 6
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v3
 
-    .line 7
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v4
 
-    .line 8
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getNameResId()I
 
     move-result v5
 
-    .line 9
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getId()I
 
     move-result v1
@@ -271,7 +250,6 @@
 
     goto :goto_2
 
-    .line 10
     :cond_1
     :goto_1
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getTagUniqueFilterId()I
@@ -286,26 +264,21 @@
 
     goto :goto_0
 
-    .line 11
     :cond_2
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 12
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v3
 
-    .line 13
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getIconResId()I
 
     move-result v4
 
-    .line 14
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getNameResId()I
 
     move-result v5
 
-    .line 15
     invoke-virtual {v1}, Lcom/android/camera/effect/FilterInfo;->getTagUniqueFilterId()I
 
     move-result v1
@@ -316,7 +289,6 @@
 
     invoke-direct {v2, v3, v4, v5, v1}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
-    .line 16
     :goto_2
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -331,7 +303,6 @@
 .method public setClosed(ZI)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,19 +327,16 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->mIsClosed:Landroid/util/SparseBooleanArray;
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->mIsClosed:Landroid/util/SparseBooleanArray;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigFilterClassics;->mIsClosed:Landroid/util/SparseBooleanArray;
 
@@ -384,7 +352,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object p1
@@ -393,7 +360,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 

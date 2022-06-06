@@ -16,7 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
 .method private adjustViewSize(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -36,7 +34,6 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -47,12 +44,10 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    .line 4
     iget v2, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-ne v2, v0, :cond_0
@@ -61,11 +56,9 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 5
     :cond_0
     iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 6
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_1
@@ -75,7 +68,6 @@
 .method private resumeMode()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -88,10 +80,8 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$BackStack;
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->removeBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -100,7 +90,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -108,7 +97,6 @@
 
     check-cast v0, Lcom/android/camera/Camera;
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
 
     move-result v1
@@ -117,7 +105,6 @@
 
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isSwitchingModule()Z
 
@@ -127,7 +114,6 @@
 
     return-void
 
-    .line 7
     :cond_2
     invoke-virtual {v0}, Lcom/android/camera/Camera;->onAwaken()V
 
@@ -139,7 +125,6 @@
 .method public final canProvide()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -150,7 +135,6 @@
 .method public onActivityCreated(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -159,12 +143,11 @@
 
     move-result-object v0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000ooO()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000o0()Z
 
     move-result v1
 
@@ -172,26 +155,21 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 4
     :cond_0
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     const/4 p1, -0x1
 
-    .line 5
     invoke-virtual {v0, p1, p1}, Landroid/view/Window;->setLayout(II)V
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/display/Display;->isContentViewExtendToTopEdges()Z
+    invoke-static {}, Lcom/android/camera/Display;->isContentViewExtendToTopEdges()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 7
     invoke-static {v0}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->setCutoutModeShortEdges(Landroid/view/Window;)V
 
     :cond_1
@@ -201,10 +179,8 @@
 .method public onBackEvent(I)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/HibernationFragment;->resumeMode()V
 
     const/4 v0, 0x1
@@ -226,10 +202,8 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/HibernationFragment;->resumeMode()V
 
     return-void
@@ -238,12 +212,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    const v0, 0x7f0a01b2
+    const v0, 0x7f0a01ba
 
     if-eq p1, v0, :cond_0
 
@@ -252,7 +225,6 @@
     :cond_0
     const/4 p1, 0x5
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/dialog/HibernationFragment;->onBackEvent(I)Z
 
     :goto_0
@@ -262,19 +234,16 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     const/16 v1, 0x30
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
     return-object p1
@@ -283,27 +252,24 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0069
+    const p3, 0x7f0d0068
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    const p2, 0x7f0a01b2
+    const p2, 0x7f0a01ba
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0a01b3
+    const p2, 0x7f0a01bb
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -316,7 +282,6 @@
 .method public onDestroyView()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -331,10 +296,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->removeBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
-    .line 3
     :cond_0
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
 
@@ -344,7 +307,6 @@
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -364,7 +326,6 @@
     :cond_0
     const/4 p1, 0x5
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/dialog/HibernationFragment;->onBackEvent(I)Z
 
     return p3
@@ -378,10 +339,8 @@
 .method public onResume()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -394,10 +353,8 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -412,7 +369,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-interface {p1, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->addInBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     :cond_0

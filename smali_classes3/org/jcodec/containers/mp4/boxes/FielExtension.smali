@@ -13,7 +13,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -32,14 +31,12 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->type:I
 
     int-to-byte v0, v0
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->order:I
 
     int-to-byte v0, v0
@@ -60,14 +57,12 @@
 .method public getOrderInterpretation()Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/FielExtension;->isInterlaced()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->order:I
 
     const/4 v1, 0x1
@@ -118,7 +113,6 @@
 .method public isInterlaced()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->type:I
 
     const/4 v1, 0x2
@@ -139,7 +133,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v0
@@ -148,14 +141,12 @@
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->type:I
 
-    .line 2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/FielExtension;->isInterlaced()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p1
@@ -171,7 +162,6 @@
 .method public topFieldFirst()Z
     .locals 3
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FielExtension;->order:I
 
     const/4 v1, 0x1

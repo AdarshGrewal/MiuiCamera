@@ -24,7 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     return-void
@@ -33,9 +32,8 @@
 .method private adjustViewBackground(Landroid/view/View;I)V
     .locals 0
 
-    const p2, 0x7f06009e
+    const p2, 0x7f06009c
 
-    .line 1
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 
     return-void
@@ -44,18 +42,14 @@
 .method private initFragment(I)V
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/vv/FragmentVVGallery;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/vv/FragmentVVGallery;-><init>()V
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->registerProtocol()V
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/vv/FragmentVVGallery;->setPreviewData(I)V
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -64,7 +58,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a04a1
+    const v2, 0x7f0a04b4
 
     invoke-static {p1, v2, v0, v1}, Lcom/android/camera/fragment/FragmentUtils;->addFragmentWithTag(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
@@ -84,7 +78,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d00bb
+    const v0, 0x7f0d00bc
 
     return v0
 .end method
@@ -92,7 +86,6 @@
 .method public hide()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -105,7 +98,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/FragmentUtils;->removeFragmentByTag(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -118,7 +110,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/FragmentUtils;->removeFragmentByTag(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -133,7 +124,6 @@
 .method public initView(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -142,40 +132,35 @@
 
     const/4 v1, -0x2
 
-    .line 2
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/vv/FragmentVV;->adjustViewBackground(Landroid/view/View;I)V
 
-    const v0, 0x7f0a04c2
+    const v0, 0x7f0a04d5
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f070802
+    const v2, 0x7f0707ee
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomMargin()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomMargin()I
 
     move-result v2
 
@@ -183,9 +168,8 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    const v0, 0x7f0a04c1
+    const v0, 0x7f0a04d4
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -194,17 +178,14 @@
 
     const/4 v0, 0x4
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mShotView:Landroid/view/View;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const/4 p1, 0x0
 
-    .line 10
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/FragmentVV;->initFragment(I)V
 
     return-void
@@ -213,7 +194,6 @@
 .method public isPreviewShow()Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/FragmentVV;->isShow()Z
 
     move-result v0
@@ -224,7 +204,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -232,12 +211,10 @@
 
     const v2, 0xfffc
 
-    .line 3
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4
     invoke-static {v0, v2}, Lcom/android/camera/fragment/FragmentUtils;->getFragmentByTag(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -246,7 +223,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isVisible()Z
 
     move-result v0
@@ -264,7 +240,6 @@
 .method public isShow()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -303,7 +278,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->isEnableClick()Z
 
     move-result v0
@@ -312,19 +286,17 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    const v0, 0x7f0a04c1
+    const v0, 0x7f0a04d4
 
     if-eq p1, v0, :cond_1
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/FragmentVV;->startShot()Z
 
@@ -335,7 +307,6 @@
 .method public onResourceReady()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mShotView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -348,7 +319,6 @@
 .method public onResourceSelected(Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -373,7 +343,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     return-void
@@ -386,7 +355,6 @@
 
     new-array p1, p1, [I
 
-    .line 1
     fill-array-data p1, :array_0
 
     invoke-static {p1}, Lcom/android/camera/animation/FragmentAnimationFactory;->wrapperAnimation([I)Landroid/view/animation/Animation;
@@ -411,7 +379,6 @@
 
     new-array p1, p1, [I
 
-    .line 1
     fill-array-data p1, :array_0
 
     invoke-static {p1}, Lcom/android/camera/animation/FragmentAnimationFactory;->wrapperAnimation([I)Landroid/view/animation/Animation;
@@ -432,15 +399,12 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xe5
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -449,7 +413,6 @@
 .method public show(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -458,7 +421,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/vv/FragmentVV;->initFragment(I)V
 
     return-void
@@ -467,7 +429,6 @@
 .method public startShot()Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     const/4 v1, 0x0
@@ -476,7 +437,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -494,21 +454,17 @@
 
     return v1
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/vv/FragmentVV;->isPreviewShow()Z
 
     move-result v2
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     iget-object v3, v3, Lcom/android/camera/fragment/vv/VVItem;->name:Ljava/lang/String;
 
-    .line 5
     invoke-static {v3, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVStartClick(Ljava/lang/String;Z)V
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/vv/FragmentVV;->mSelectedItem:Lcom/android/camera/fragment/vv/VVItem;
 
     const/4 v3, 0x0
@@ -523,15 +479,12 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xe5
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

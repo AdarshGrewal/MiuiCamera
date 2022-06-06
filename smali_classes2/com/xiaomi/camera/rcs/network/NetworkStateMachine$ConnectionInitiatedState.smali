@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/util/State;-><init>()V
@@ -35,7 +34,6 @@
 .method public enter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     const-string v1, "entering connecting initiate state"
@@ -48,7 +46,6 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x102
@@ -93,7 +90,6 @@
 
     return p1
 
-    .line 2
     :pswitch_0
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -103,17 +99,14 @@
 
     if-ne p1, v2, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$2200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$800(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$900(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;
@@ -124,7 +117,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -137,7 +129,6 @@
     :goto_0
     return v3
 
-    .line 7
     :pswitch_1
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -149,7 +140,6 @@
 
     return v3
 
-    .line 8
     :pswitch_2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -159,7 +149,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 9
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -169,7 +158,6 @@
     :cond_1
     return v3
 
-    .line 10
     :pswitch_3
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -181,7 +169,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_2
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -195,7 +182,6 @@
     :goto_1
     return v3
 
-    .line 12
     :cond_4
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -205,26 +191,22 @@
 
     if-ne p1, v3, :cond_5
 
-    .line 13
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-virtual {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->stopAdvertising()V
 
     goto :goto_2
 
-    .line 14
     :cond_5
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$2200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
-    .line 15
     :goto_2
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$800(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
-    .line 16
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$900(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;
@@ -236,7 +218,6 @@
     :cond_6
     return v3
 
-    .line 17
     :cond_7
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -246,7 +227,6 @@
 
     if-ne v0, v3, :cond_8
 
-    .line 18
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -256,7 +236,6 @@
     :cond_8
     return v3
 
-    .line 19
     :cond_9
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -266,7 +245,6 @@
 
     if-ne v0, v3, :cond_a
 
-    .line 20
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -276,7 +254,6 @@
     :cond_a
     return v3
 
-    .line 21
     :cond_b
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -284,7 +261,6 @@
 
     invoke-static {v0, p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$2900(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;I)V
 
-    .line 22
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$2300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$EndpointFoundState;
@@ -295,7 +271,6 @@
 
     return v3
 
-    .line 23
     :cond_c
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -305,7 +280,6 @@
 
     if-ne v0, v2, :cond_d
 
-    .line 24
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -326,7 +300,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$3000(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;Ljava/lang/String;)V
 
-    .line 25
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$ConnectionInitiatedState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     iget p1, p1, Landroid/os/Message;->arg1:I

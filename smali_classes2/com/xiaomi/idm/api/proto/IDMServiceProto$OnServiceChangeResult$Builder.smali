@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;->access$13100()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearNewServiceId()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -71,10 +67,8 @@
 .method public clearOldServiceId()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -87,10 +81,8 @@
 .method public clearSubChangeType()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -103,7 +95,6 @@
 .method public getNewServiceId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -118,7 +109,6 @@
 .method public getNewServiceIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -133,7 +123,6 @@
 .method public getOldServiceId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -148,7 +137,6 @@
 .method public getOldServiceIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -163,7 +151,6 @@
 .method public getSubChangeType()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$SubChangeType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -178,7 +165,6 @@
 .method public getSubChangeTypeValue()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -193,10 +179,8 @@
 .method public setNewServiceId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -209,10 +193,8 @@
 .method public setNewServiceIdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -225,10 +207,8 @@
 .method public setOldServiceId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -241,10 +221,8 @@
 .method public setOldServiceIdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -257,10 +235,8 @@
 .method public setSubChangeType(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$SubChangeType;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
@@ -273,10 +249,8 @@
 .method public setSubChangeTypeValue(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;

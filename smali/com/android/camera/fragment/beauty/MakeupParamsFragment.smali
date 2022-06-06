@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public getClassString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -47,12 +45,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mAlphaElement:I
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mBetaElement:I
 
     return-void
@@ -61,14 +57,12 @@
 .method public onAdapterItemClick(Lcom/android/camera/data/data/TypeItem;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xb4
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -77,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p1, Lcom/android/camera/data/data/TypeItem;->mKeyOrType:Ljava/lang/String;
 
     iget v2, p1, Lcom/android/camera/data/data/TypeItem;->mDisplayNameRes:I
@@ -86,7 +79,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/android/camera/protocol/ModeProtocol$MakeupProtocol;->onMakeupItemSelected(Ljava/lang/String;IZ)V
 
-    .line 4
     iget-object p1, p1, Lcom/android/camera/data/data/TypeItem;->mKeyOrType:Ljava/lang/String;
 
     const-string v0, "3"
@@ -98,16 +90,19 @@
 .end method
 
 .method public onClearClick()V
-    .locals 0
+    .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->resetSkinColor()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/fragment/beauty/ShineHelper;->clearBeauty()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->selectFirstItem()V
+
+    const-string v0, "3"
+
+    const-string v1, "RESET"
+
+    invoke-static {v0, v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackBeautyClick(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -119,19 +114,14 @@
 
     const-string/jumbo v1, "onResetClick"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->resetSkinColor()V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/fragment/beauty/ShineHelper;->resetBeauty()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->selectFirstItem()V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
     if-eqz v0, :cond_1
@@ -142,7 +132,6 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -163,12 +152,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f120234
+    const v1, 0x7f120224
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -178,13 +166,12 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f12022f
+    const v1, 0x7f12021f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

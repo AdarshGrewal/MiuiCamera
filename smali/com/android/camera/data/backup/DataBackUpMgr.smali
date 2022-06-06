@@ -11,10 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/backup/DataActionBackUpImpl;
 
     invoke-direct {v0}, Lcom/android/camera/data/backup/DataActionBackUpImpl;-><init>()V
@@ -29,7 +27,6 @@
 .method public backUp()Lcom/android/camera/data/backup/DataBackUp;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/backup/DataBackUpMgr;->mDataBackUp:Lcom/android/camera/data/backup/DataBackUp;
 
     return-object v0

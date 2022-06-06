@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
     .locals 2
 
-    .line 2
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$1;->createFromParcel(Landroid/os/Parcel;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
     move-result-object p1
@@ -65,7 +62,6 @@
 .method public newArray(I)[Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
     .locals 0
 
-    .line 2
     new-array p1, p1, [Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
     return-object p1
@@ -74,7 +70,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$1;->newArray(I)[Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
     move-result-object p1

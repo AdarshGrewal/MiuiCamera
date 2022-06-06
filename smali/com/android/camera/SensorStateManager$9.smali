@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/SensorStateManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/SensorStateManager$9;->this$0:Lcom/android/camera/SensorStateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/SensorStateManager$9;->this$0:Lcom/android/camera/SensorStateManager;
 
     invoke-static {v0}, Lcom/android/camera/SensorStateManager;->access$000(Lcom/android/camera/SensorStateManager;)Lcom/android/camera/SensorStateManager$SensorStateListener;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/SensorStateManager$SensorStateListener;->isWorking()Z
 
     move-result v1
@@ -62,7 +59,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {v0, p1}, Lcom/android/camera/SensorStateManager$SensorStateListener;->onSensorChanged(Landroid/hardware/SensorEvent;)V
 

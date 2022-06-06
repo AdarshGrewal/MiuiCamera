@@ -24,27 +24,22 @@
 .method public constructor <init>(Lokio/BufferedSource;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lokio/PeekSource;->upstream:Lokio/BufferedSource;
 
-    .line 3
     invoke-interface {p1}, Lokio/BufferedSource;->buffer()Lokio/Buffer;
 
     move-result-object p1
 
     iput-object p1, p0, Lokio/PeekSource;->buffer:Lokio/Buffer;
 
-    .line 4
     iget-object p1, p1, Lokio/Buffer;->head:Lokio/Segment;
 
     iput-object p1, p0, Lokio/PeekSource;->expectedSegment:Lokio/Segment;
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget p1, p1, Lokio/Segment;->pos:I
 
     goto :goto_0
@@ -70,7 +65,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lokio/PeekSource;->closed:Z
 
     return-void
@@ -90,12 +84,10 @@
 
     if-ltz v2, :cond_6
 
-    .line 1
     iget-boolean v3, p0, Lokio/PeekSource;->closed:Z
 
     if-nez v3, :cond_5
 
-    .line 2
     iget-object v3, p0, Lokio/PeekSource;->expectedSegment:Lokio/Segment;
 
     if-eqz v3, :cond_1
@@ -114,7 +106,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -130,7 +121,6 @@
 
     return-wide v0
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lokio/PeekSource;->upstream:Lokio/BufferedSource;
 
@@ -150,7 +140,6 @@
 
     return-wide p1
 
-    .line 5
     :cond_3
     iget-object v0, p0, Lokio/PeekSource;->expectedSegment:Lokio/Segment;
 
@@ -162,15 +151,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 6
     iput-object v0, p0, Lokio/PeekSource;->expectedSegment:Lokio/Segment;
 
-    .line 7
     iget v0, v0, Lokio/Segment;->pos:I
 
     iput v0, p0, Lokio/PeekSource;->expectedPos:I
 
-    .line 8
     :cond_4
     iget-object v0, p0, Lokio/PeekSource;->buffer:Lokio/Buffer;
 
@@ -184,7 +170,6 @@
 
     move-result-wide p2
 
-    .line 9
     iget-object v2, p0, Lokio/PeekSource;->buffer:Lokio/Buffer;
 
     iget-wide v4, p0, Lokio/PeekSource;->pos:J
@@ -195,7 +180,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lokio/Buffer;->copyTo(Lokio/Buffer;JJ)Lokio/Buffer;
 
-    .line 10
     iget-wide v0, p0, Lokio/PeekSource;->pos:J
 
     add-long/2addr v0, p2
@@ -204,7 +188,6 @@
 
     return-wide p2
 
-    .line 11
     :cond_5
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -214,7 +197,6 @@
 
     throw p1
 
-    .line 12
     :cond_6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -240,7 +222,6 @@
 .method public timeout()Lokio/Timeout;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokio/PeekSource;->upstream:Lokio/BufferedSource;
 
     invoke-interface {v0}, Lokio/Source;->timeout()Lokio/Timeout;

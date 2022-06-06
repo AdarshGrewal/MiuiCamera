@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static synthetic access$100(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mExposureTime:J
 
     return-wide v0
@@ -46,7 +44,6 @@
 .method public static synthetic access$102(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;J)J
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mExposureTime:J
 
     return-wide p1
@@ -55,7 +52,6 @@
 .method public static synthetic access$200(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mLinearGain:F
 
     return p0
@@ -64,7 +60,6 @@
 .method public static synthetic access$202(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mLinearGain:F
 
     return p1
@@ -73,7 +68,6 @@
 .method public static synthetic access$300(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mSensitivity:F
 
     return p0
@@ -82,7 +76,6 @@
 .method public static synthetic access$302(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mSensitivity:F
 
     return p1
@@ -91,7 +84,6 @@
 .method public static synthetic access$400(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mDeltaEVFromTarget:F
 
     return p0
@@ -100,7 +92,6 @@
 .method public static synthetic access$402(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mDeltaEVFromTarget:F
 
     return p1
@@ -111,7 +102,6 @@
 .method public getDeltaEVFromTarget()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mDeltaEVFromTarget:F
 
     return v0
@@ -120,7 +110,6 @@
 .method public getExposureTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mExposureTime:J
 
     return-wide v0
@@ -129,7 +118,6 @@
 .method public getLinearGain()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mLinearGain:F
 
     return v0
@@ -138,7 +126,6 @@
 .method public getSensitivity()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->mSensitivity:F
 
     return v0

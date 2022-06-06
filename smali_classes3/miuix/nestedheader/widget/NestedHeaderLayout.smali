@@ -81,7 +81,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -92,7 +91,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -101,56 +99,40 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Lmiuix/nestedheader/widget/NestedScrollingLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p3, 0x0
 
-    .line 4
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderBottomMargin:I
 
-    .line 5
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderTopmMargin:I
 
-    .line 6
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerBottomMargin:I
 
-    .line 7
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerTopmMargin:I
 
-    .line 8
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderInitTop:I
 
-    .line 9
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentBottomMargin:I
 
-    .line 10
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentBottomMargin:I
 
-    .line 11
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderMeasuredHeight:I
 
-    .line 12
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerMeasuredHeight:I
 
-    .line 13
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mLastScrollingProgress:I
 
-    .line 14
     iput-boolean p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->isTouch:Z
 
     const/4 v0, 0x1
 
-    .line 15
     iput-boolean v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAutoAnim:Z
 
-    .line 16
     iput-boolean p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptTriggerRootViewAlpha:Z
 
-    .line 17
     iput-boolean p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptHeaderRootViewAlpha:Z
 
-    .line 18
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -161,21 +143,18 @@
 
     iput-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mValueTag:Ljava/lang/String;
 
-    .line 19
     new-instance p3, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;
 
     invoke-direct {p3, p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout$1;-><init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
 
     iput-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mOnNestedChangedListener:Lmiuix/nestedheader/widget/NestedScrollingLayout$OnNestedChangedListener;
 
-    .line 20
     sget-object p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    .line 21
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_headerView:I
 
     sget v0, Lmiuix/nestedheader/R$id;->header_view:I
@@ -186,7 +165,6 @@
 
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderViewId:I
 
-    .line 22
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_triggerView:I
 
     sget v0, Lmiuix/nestedheader/R$id;->trigger_view:I
@@ -197,7 +175,6 @@
 
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerViewId:I
 
-    .line 23
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_headerContentId:I
 
     sget v0, Lmiuix/nestedheader/R$id;->header_content_view:I
@@ -208,7 +185,6 @@
 
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentId:I
 
-    .line 24
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_triggerContentId:I
 
     sget v0, Lmiuix/nestedheader/R$id;->trigger_content_view:I
@@ -219,10 +195,8 @@
 
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentId:I
 
-    .line 25
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_headerContentMinHeight:I
 
-    .line 26
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -233,17 +207,14 @@
 
     move-result v0
 
-    .line 27
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p3
 
     iput p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentMinHeight:F
 
-    .line 28
     sget p3, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_triggerContentMinHeight:I
 
-    .line 29
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -254,14 +225,12 @@
 
     move-result p1
 
-    .line 30
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p1
 
     iput p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentMinHeight:F
 
-    .line 31
     sget p1, Lmiuix/nestedheader/R$styleable;->NestedHeaderLayout_rangeOffset:I
 
     const/4 p3, 0x0
@@ -272,10 +241,8 @@
 
     iput p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mRangeOffset:F
 
-    .line 32
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 33
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mOnNestedChangedListener:Lmiuix/nestedheader/widget/NestedScrollingLayout$OnNestedChangedListener;
 
     invoke-virtual {p0, p1}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->addOnScrollListener(Lmiuix/nestedheader/widget/NestedScrollingLayout$OnNestedChangedListener;)V
@@ -286,7 +253,6 @@
 .method public static synthetic access$000(Lmiuix/nestedheader/widget/NestedHeaderLayout;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateTouch(Z)V
 
     return-void
@@ -295,7 +261,6 @@
 .method public static synthetic access$100(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateTag()V
 
     return-void
@@ -304,7 +269,6 @@
 .method public static synthetic access$200(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAutoAnim:Z
 
     return p0
@@ -313,7 +277,6 @@
 .method public static synthetic access$300(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateAdsorption()V
 
     return-void
@@ -322,7 +285,6 @@
 .method public static synthetic access$400(Lmiuix/nestedheader/widget/NestedHeaderLayout;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->isScrolling(Ljava/lang/String;)Z
 
     move-result p0
@@ -333,7 +295,6 @@
 .method public static synthetic access$500(Lmiuix/nestedheader/widget/NestedHeaderLayout;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->syncScrollingProgress(I)V
 
     return-void
@@ -359,7 +320,6 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-static {v1, p2}, Ljava/lang/Math;->min(FF)F
 
     move-result p2
@@ -368,7 +328,6 @@
 
     move-result p2
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -386,7 +345,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -397,7 +355,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {v0, p2}, Landroid/view/View;->setAlpha(F)V
 
@@ -410,7 +367,6 @@
 .method private autoAdsorption(I)V
     .locals 7
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -419,14 +375,12 @@
 
     move-result-object v0
 
-    .line 2
     iput-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mValueTag:Ljava/lang/String;
 
     const/4 v1, 0x0
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 3
     invoke-static {v2}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v2
@@ -459,7 +413,6 @@
 
     aput-object v0, v4, v1
 
-    .line 4
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -492,7 +445,6 @@
 .method private checkSendHeaderChangeListener(IIZ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     if-nez v0, :cond_0
@@ -504,14 +456,12 @@
 
     if-nez p2, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
-    .line 3
     iget-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
@@ -520,7 +470,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
@@ -534,7 +483,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 5
     iget-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
@@ -547,14 +495,12 @@
 
     if-lez p2, :cond_8
 
-    .line 6
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 7
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
@@ -566,14 +512,12 @@
     :cond_3
     if-nez p2, :cond_4
 
-    .line 8
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
     move-result p3
 
     if-eqz p3, :cond_4
 
-    .line 9
     iget-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
@@ -582,7 +526,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_4
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
@@ -596,7 +539,6 @@
 
     if-eqz p3, :cond_5
 
-    .line 11
     iget-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
@@ -605,7 +547,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_5
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
@@ -619,14 +560,12 @@
 
     if-nez p3, :cond_6
 
-    .line 13
     iget-object p3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     invoke-interface {p3, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;->onTriggerClosed(Landroid/view/View;)V
 
-    .line 14
     :cond_6
     :goto_1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
@@ -639,7 +578,6 @@
 
     goto :goto_2
 
-    .line 15
     :cond_7
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
@@ -650,14 +588,12 @@
 
     if-ge p2, p3, :cond_8
 
-    .line 16
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 17
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     iget-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
@@ -672,7 +608,6 @@
 .method private isScrolling(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->isTouch:Z
 
     if-nez v0, :cond_0
@@ -721,7 +656,6 @@
 
     return-object p1
 
-    .line 1
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -729,17 +663,14 @@
 
     if-eqz p2, :cond_3
 
-    .line 2
     instance-of p2, p1, Landroid/view/ViewGroup;
 
     if-eqz p2, :cond_1
 
-    .line 3
     check-cast p1, Landroid/view/ViewGroup;
 
     const/4 p2, 0x0
 
-    .line 4
     :goto_0
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -747,7 +678,6 @@
 
     if-ge p2, v1, :cond_2
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -761,13 +691,11 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 6
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_2
     return-object v0
 
-    .line 7
     :cond_3
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -787,7 +715,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentId:I
 
     sget v1, Lmiuix/nestedheader/R$id;->header_content_view:I
@@ -830,7 +757,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentId:I
 
     sget v1, Lmiuix/nestedheader/R$id;->trigger_content_view:I
@@ -863,7 +789,6 @@
 .method private relayoutContent(Landroid/view/View;Landroid/view/View;IIZ)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -876,7 +801,6 @@
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -889,7 +813,6 @@
 
     if-eq p1, p2, :cond_1
 
-    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result p1
@@ -900,7 +823,6 @@
 
     move-result p1
 
-    .line 4
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result p3
@@ -922,7 +844,6 @@
 
     move-result p3
 
-    .line 5
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
 
     move-result p4
@@ -940,10 +861,8 @@
 .method private syncScrollingProgress(I)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->updateScrollingProgress(I)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->onScrollingProgressUpdated(I)V
 
     return-void
@@ -952,7 +871,6 @@
 .method private updateAdsorption()V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
     move-result v0
@@ -969,7 +887,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
     move-result v0
@@ -980,7 +897,6 @@
 
     if-le v0, v1, :cond_4
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
     move-result v0
@@ -1013,14 +929,12 @@
 
     if-gez v0, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result v2
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
@@ -1048,7 +962,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
@@ -1076,7 +989,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
@@ -1106,12 +1018,10 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 8
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
     move-result v2
 
-    .line 9
     :cond_3
     :goto_0
     invoke-direct {p0, v2}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->autoAdsorption(I)V
@@ -1123,7 +1033,6 @@
 .method private updateScrollingRange(ZZZ)V
     .locals 12
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -1140,7 +1049,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1149,17 +1057,14 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 3
     iget v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v4, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderBottomMargin:I
 
-    .line 4
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderTopmMargin:I
 
-    .line 5
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
@@ -1168,24 +1073,20 @@
 
     iput v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderMeasuredHeight:I
 
-    .line 6
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 8
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentBottomMargin:I
 
-    .line 9
     :cond_0
     iget v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderMeasuredHeight:I
 
@@ -1222,7 +1123,6 @@
 
     move v7, v0
 
-    .line 10
     :goto_0
     iget-object v4, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
@@ -1234,7 +1134,6 @@
 
     if-eq v4, v2, :cond_4
 
-    .line 11
     iget-object v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1243,17 +1142,14 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 12
     iget v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v4, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerBottomMargin:I
 
-    .line 13
     iget v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerTopmMargin:I
 
-    .line 14
     iget-object v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
@@ -1262,24 +1158,20 @@
 
     iput v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerMeasuredHeight:I
 
-    .line 15
     iget-object v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentView:Landroid/view/View;
 
     if-eqz v2, :cond_2
 
-    .line 16
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 17
     iget v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentBottomMargin:I
 
-    .line 18
     :cond_2
     iget v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerMeasuredHeight:I
 
@@ -1330,7 +1222,6 @@
 
     move v11, p3
 
-    .line 19
     invoke-virtual/range {v4 .. v11}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->setScrollingRange(IIZZZZZ)V
 
     return-void
@@ -1339,7 +1230,6 @@
 .method private updateTag()V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -1356,12 +1246,10 @@
 .method private updateTouch(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->isTouch:Z
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateTag()V
 
     :cond_0
@@ -1373,14 +1261,12 @@
 .method public getHeaderViewVisible()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -1396,14 +1282,12 @@
 .method public getTriggerViewVisible()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -1419,7 +1303,6 @@
 .method public isAcceptHeaderRootViewAlpha()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptHeaderRootViewAlpha:Z
 
     return v0
@@ -1428,7 +1311,6 @@
 .method public isAcceptTriggerRootViewAlpha()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptTriggerRootViewAlpha:Z
 
     return v0
@@ -1437,7 +1319,6 @@
 .method public isAutoAnim()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAutoAnim:Z
 
     return v0
@@ -1446,7 +1327,6 @@
 .method public isHeaderOpen()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
     move-result v0
@@ -1473,7 +1353,6 @@
 .method public isTriggerOpen()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
     move-result v0
@@ -1496,7 +1375,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
@@ -1525,10 +1403,8 @@
 .method public onFinishInflate()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->onFinishInflate()V
 
-    .line 2
     iget v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderViewId:I
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1537,7 +1413,6 @@
 
     iput-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
-    .line 3
     iget v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerViewId:I
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -1546,7 +1421,6 @@
 
     iput-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
-    .line 4
     iget-object v1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     if-nez v1, :cond_1
@@ -1555,7 +1429,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1565,7 +1438,6 @@
 
     throw v0
 
-    .line 6
     :cond_1
     :goto_0
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
@@ -1574,7 +1446,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentId:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1585,7 +1456,6 @@
 
     if-nez v0, :cond_2
 
-    .line 8
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1594,13 +1464,11 @@
 
     iput-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentView:Landroid/view/View;
 
-    .line 9
     :cond_2
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     if-eqz v0, :cond_3
 
-    .line 10
     iget v2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentId:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1611,7 +1479,6 @@
 
     if-nez v0, :cond_3
 
-    .line 11
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1627,14 +1494,12 @@
 .method public onLayout(ZIIII)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->onLayout(ZIIII)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
-    .line 2
     invoke-direct {p0, p2, p1, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateScrollingRange(ZZZ)V
 
     return-void
@@ -1647,10 +1512,8 @@
 
     move/from16 v7, p1
 
-    .line 1
     invoke-super/range {p0 .. p1}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->onScrollingProgressUpdated(I)V
 
-    .line 2
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     const/4 v8, 0x0
@@ -1669,7 +1532,6 @@
 
     if-eq v0, v9, :cond_6
 
-    .line 3
     invoke-virtual/range {p0 .. p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
     move-result v0
@@ -1684,7 +1546,6 @@
 
     sub-int v12, v7, v0
 
-    .line 4
     invoke-virtual/range {p0 .. p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result v0
@@ -1701,10 +1562,8 @@
 
     move-result v0
 
-    .line 5
     iget v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerTopmMargin:I
 
-    .line 6
     iget-object v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz v2, :cond_0
@@ -1715,7 +1574,6 @@
 
     if-eq v2, v9, :cond_0
 
-    .line 7
     iget v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderTopmMargin:I
 
     iget v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderMeasuredHeight:I
@@ -1738,7 +1596,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerTopmMargin:I
 
@@ -1758,7 +1615,6 @@
 
     move v14, v2
 
-    .line 9
     :goto_0
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentView:Landroid/view/View;
 
@@ -1769,7 +1625,6 @@
     :cond_1
     move-object v15, v0
 
-    .line 10
     iget-object v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     iget v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerBottomMargin:I
@@ -1792,7 +1647,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->relayoutContent(Landroid/view/View;Landroid/view/View;IIZ)V
 
-    .line 11
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerContentView:Landroid/view/View;
 
     if-nez v0, :cond_2
@@ -1813,7 +1667,6 @@
 
     div-float/2addr v0, v1
 
-    .line 12
     invoke-static {v10, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
@@ -1822,19 +1675,16 @@
 
     move-result v1
 
-    .line 13
     iget-boolean v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptTriggerRootViewAlpha:Z
 
     if-eqz v2, :cond_3
 
-    .line 14
     iget-object v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_4
 
-    .line 15
     :cond_3
     iget-object v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
@@ -1852,7 +1702,6 @@
 
     move v2, v11
 
-    .line 16
     :goto_2
     iget-object v3, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
@@ -1864,7 +1713,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 17
     iget-object v3, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     check-cast v3, Landroid/view/ViewGroup;
@@ -1873,7 +1721,6 @@
 
     move-result-object v3
 
-    .line 18
     invoke-virtual {v3}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -1884,7 +1731,6 @@
 
     goto :goto_3
 
-    .line 19
     :cond_4
     invoke-virtual {v3, v1}, Landroid/view/View;->setAlpha(F)V
 
@@ -1893,7 +1739,6 @@
 
     goto :goto_2
 
-    .line 20
     :cond_5
     :goto_4
     invoke-direct {v6, v15}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->makeTriggerContentViewList(Landroid/view/View;)Ljava/util/List;
@@ -1911,7 +1756,6 @@
 
     move v14, v11
 
-    .line 21
     :goto_5
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
@@ -1923,14 +1767,12 @@
 
     if-eq v0, v9, :cond_c
 
-    .line 22
     iget v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderInitTop:I
 
     iget v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderTopmMargin:I
 
     add-int v3, v0, v1
 
-    .line 23
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentView:Landroid/view/View;
 
     if-nez v0, :cond_7
@@ -1940,7 +1782,6 @@
     :cond_7
     move-object v9, v0
 
-    .line 24
     iget-object v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     const/4 v5, 0x0
@@ -1953,7 +1794,6 @@
 
     invoke-direct/range {v0 .. v5}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->relayoutContent(Landroid/view/View;Landroid/view/View;IIZ)V
 
-    .line 25
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderContentView:Landroid/view/View;
 
     if-nez v0, :cond_8
@@ -1978,7 +1818,6 @@
 
     add-float v1, v0, v10
 
-    .line 26
     invoke-static {v10, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
@@ -1987,19 +1826,16 @@
 
     move-result v1
 
-    .line 27
     iget-boolean v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptHeaderRootViewAlpha:Z
 
     if-eqz v2, :cond_9
 
-    .line 28
     iget-object v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_9
 
-    .line 29
     :cond_9
     iget-object v2, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
@@ -2017,7 +1853,6 @@
 
     move v2, v11
 
-    .line 30
     :goto_7
     iget-object v3, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
@@ -2029,7 +1864,6 @@
 
     if-ge v2, v3, :cond_b
 
-    .line 31
     iget-object v3, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     check-cast v3, Landroid/view/ViewGroup;
@@ -2038,7 +1872,6 @@
 
     move-result-object v3
 
-    .line 32
     invoke-virtual {v3}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -2049,7 +1882,6 @@
 
     goto :goto_8
 
-    .line 33
     :cond_a
     invoke-virtual {v3, v1}, Landroid/view/View;->setAlpha(F)V
 
@@ -2058,7 +1890,6 @@
 
     goto :goto_7
 
-    .line 34
     :cond_b
     :goto_9
     invoke-direct {v6, v9}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->makeHeaderContentViewList(Landroid/view/View;)Ljava/util/List;
@@ -2067,7 +1898,6 @@
 
     invoke-direct {v6, v1, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->applyContentAlpha(Ljava/util/List;F)V
 
-    .line 35
     iget v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderMeasuredHeight:I
 
     iget v1, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderTopmMargin:I
@@ -2078,7 +1908,6 @@
 
     add-int v14, v0, v1
 
-    .line 36
     :cond_c
     iget-object v0, v6, Lmiuix/nestedheader/widget/NestedScrollingLayout;->mScrollableView:Landroid/view/View;
 
@@ -2092,7 +1921,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    .line 37
     iget v0, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mLastScrollingProgress:I
 
     sub-int v1, v7, v0
@@ -2101,7 +1929,6 @@
 
     const/4 v1, 0x1
 
-    .line 38
     invoke-direct {v6, v0, v7, v1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->checkSendHeaderChangeListener(IIZ)V
 
     goto :goto_a
@@ -2111,15 +1938,12 @@
 
     if-gez v1, :cond_e
 
-    .line 39
     invoke-direct {v6, v0, v7, v11}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->checkSendHeaderChangeListener(IIZ)V
 
-    .line 40
     :cond_e
     :goto_a
     iput v7, v6, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mLastScrollingProgress:I
 
-    .line 41
     invoke-virtual/range {p0 .. p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->isHeaderOpen()Z
 
     move-result v0
@@ -2132,15 +1956,12 @@
 .method public onSizeChanged(IIII)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p1
@@ -2156,7 +1977,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     return-void
@@ -2165,7 +1985,6 @@
 .method public setAcceptTriggerRootViewAlpha(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptTriggerRootViewAlpha:Z
 
     return-void
@@ -2176,7 +1995,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
     move-result p1
@@ -2187,7 +2005,6 @@
 
     if-le p1, v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result p1
@@ -2196,7 +2013,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
@@ -2213,7 +2029,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
 
     move-result p1
@@ -2224,7 +2039,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
     move-result p1
@@ -2233,7 +2047,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
@@ -2248,7 +2061,6 @@
 .method public setAutoAnim(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAutoAnim:Z
 
     return-void
@@ -2257,7 +2069,6 @@
 .method public setAutoHeaderClose(Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
     move-result v0
@@ -2276,7 +2087,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result p1
@@ -2285,7 +2095,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
@@ -2293,7 +2102,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result p1
@@ -2308,7 +2116,6 @@
 .method public setAutoHeaderOpen(Z)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getHeaderViewVisible()Z
 
     move-result v0
@@ -2325,12 +2132,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-direct {p0, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->autoAdsorption(I)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->syncScrollingProgress(I)V
 
@@ -2342,7 +2147,6 @@
 .method public setAutoTriggerClose(Z)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
     move-result v0
@@ -2367,7 +2171,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
@@ -2391,7 +2194,6 @@
 
     if-le v0, v2, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingFrom()I
 
     move-result v0
@@ -2406,7 +2208,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 4
     invoke-direct {p0, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->autoAdsorption(I)V
 
     goto :goto_1
@@ -2414,7 +2215,6 @@
     :cond_2
     if-eq v0, v1, :cond_3
 
-    .line 5
     invoke-direct {p0, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->syncScrollingProgress(I)V
 
     :cond_3
@@ -2425,7 +2225,6 @@
 .method public setAutoTriggerOpen(Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->getTriggerViewVisible()Z
 
     move-result v0
@@ -2444,7 +2243,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
     move-result p1
@@ -2453,7 +2251,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingTo()I
 
@@ -2469,7 +2266,6 @@
 .method public setBlurBackgroupAcceptAlpha(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mAcceptHeaderRootViewAlpha:Z
 
     return-void
@@ -2478,7 +2274,6 @@
 .method public setHeaderViewVisible(Z)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mHeaderView:Landroid/view/View;
 
     if-eqz v0, :cond_1
@@ -2494,11 +2289,9 @@
     :cond_0
     const/16 v2, 0x8
 
-    .line 2
     :goto_0
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     invoke-direct {p0, v1, v1, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateScrollingRange(ZZZ)V
 
     :cond_1
@@ -2508,7 +2301,6 @@
 .method public setNestedHeaderChangedListener(Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mNestedHeaderChangedListener:Lmiuix/nestedheader/widget/NestedHeaderLayout$NestedHeaderChangedListener;
 
     return-void
@@ -2517,7 +2309,6 @@
 .method public setTriggerViewVisible(Z)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout;->mTriggerView:Landroid/view/View;
 
     if-eqz v0, :cond_1
@@ -2533,11 +2324,9 @@
     :cond_0
     const/16 v2, 0x8
 
-    .line 2
     :goto_0
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     invoke-direct {p0, v1, p1, v1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->updateScrollingRange(ZZZ)V
 
     :cond_1

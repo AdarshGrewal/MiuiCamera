@@ -40,17 +40,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/multi/SampleDownloader;->mDisposableList:Landroid/util/SparseArray;
 
-    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -68,10 +65,8 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
-    .line 2
     invoke-virtual {p2}, Lcom/android/camera/multi/PluginInfo;->getDownloadUrl()Ljava/lang/String;
 
     move-result-object v1
@@ -80,18 +75,16 @@
 
     const/16 p0, 0x78
 
-    .line 3
     invoke-virtual {v0, p0}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->observableProgress(I)Lio/reactivex/Observable;
 
     move-result-object p0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0Oo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0OO;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0Oo;-><init>(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0OO;-><init>(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
 
     invoke-virtual {p0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
-    .line 4
     invoke-virtual {v0, p2}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p0
@@ -107,7 +100,6 @@
         }
     .end annotation
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -125,7 +117,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -138,12 +129,10 @@
 .method private onFinish(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/multi/SampleDownloader;->mCallbackList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/multi/SampleDownloader;->mDisposableList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -154,10 +143,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/multi/SampleDownloader;->mDisposableList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
@@ -176,10 +163,8 @@
         }
     .end annotation
 
-    .line 6
     invoke-interface {p1}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;->onCompleted()V
 
-    .line 7
     invoke-direct {p0, p2}, Lcom/android/camera/multi/SampleDownloader;->onFinish(I)V
 
     return-void
@@ -193,7 +178,6 @@
         }
     .end annotation
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,10 +200,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-virtual {p3}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,10 +224,8 @@
 
     const/16 p3, 0x101
 
-    .line 11
     invoke-interface {p1, p3}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;->onError(I)V
 
-    .line 12
     invoke-direct {p0, p2}, Lcom/android/camera/multi/SampleDownloader;->onFinish(I)V
 
     return-void
@@ -254,7 +234,6 @@
 .method public cancelDownloadSync(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/multi/SampleDownloader;->mCallbackList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -265,10 +244,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;->onCanceled()V
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/multi/SampleDownloader;->onFinish(I)V
 
     const/4 p1, 0x1
@@ -294,10 +271,9 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string p2, "not supported yet"
+    const-string/jumbo p2, "not supported yet"
 
     invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -333,24 +309,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p3}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;->onStart()V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
-    .line 3
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -375,42 +347,36 @@
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;->getModuleName()Ljava/lang/String;
 
-    .line 6
     iget-object p2, p0, Lcom/android/camera/multi/SampleDownloader;->mCallbackList:Landroid/util/SparseArray;
 
     invoke-virtual {p2, p1, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     const-string p2, "http"
 
-    .line 7
     invoke-virtual {v0, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 8
     new-instance p2, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-direct {p2, v0, v1}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v1, 0x78
 
-    .line 9
     invoke-virtual {p2, v1}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->observableProgress(I)Lio/reactivex/Observable;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO00o;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0O0;
 
-    invoke-direct {v2, p3}, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO00o;-><init>(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
+    invoke-direct {v2, p3}, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0O0;-><init>(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
 
     invoke-virtual {v1, v2}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
-    .line 10
     new-instance v1, Lcom/android/camera/multi/PluginInfo;
 
     invoke-direct {v1, v0}, Lcom/android/camera/multi/PluginInfo;-><init>(Ljava/lang/String;)V
@@ -421,43 +387,38 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     new-instance p2, Lcom/android/camera/multi/PluginInfoRequest;
 
     invoke-direct {p2, v0}, Lcom/android/camera/multi/PluginInfoRequest;-><init>(Ljava/lang/String;)V
 
-    .line 12
     const-class v0, Lcom/android/camera/multi/PluginInfo;
 
     invoke-virtual {p2, v0}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object p2
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0o0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0o0;
 
-    invoke-direct {v0, v1, p3}, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0o0;-><init>(Ljava/lang/String;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
+    invoke-direct {v0, v1, p3}, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0o0;-><init>(Ljava/lang/String;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;)V
 
-    .line 13
     invoke-virtual {p2, v0}, Lio/reactivex/Observable;->flatMap(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p2
 
-    .line 14
     :goto_0
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0OO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO00o;
 
-    invoke-direct {v0, p0, p3, p1}, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0OO;-><init>(Lcom/android/camera/multi/SampleDownloader;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;I)V
+    invoke-direct {v0, p0, p3, p1}, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO00o;-><init>(Lcom/android/camera/multi/SampleDownloader;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;I)V
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0O0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0Oo;
 
-    invoke-direct {v1, p0, p3, p1}, LOooO00o/OooO0O0/OooO00o/OoooOOO/OooO0O0;-><init>(Lcom/android/camera/multi/SampleDownloader;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;I)V
+    invoke-direct {v1, p0, p3, p1}, LOooO0O0/OooO0O0/OooO00o/o000oOoO/OooO0Oo;-><init>(Lcom/android/camera/multi/SampleDownloader;Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadCallback;I)V
 
     invoke-virtual {p2, v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
-    .line 15
     iget-object p3, p0, Lcom/android/camera/multi/SampleDownloader;->mDisposableList:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p1, p2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V

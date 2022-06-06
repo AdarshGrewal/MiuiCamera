@@ -81,22 +81,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->sources:[Lorg/reactivestreams/Publisher;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->sourcesIterable:Ljava/lang/Iterable;
 
-    .line 4
     iput-object p3, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->zipper:Lio/reactivex/functions/Function;
 
-    .line 5
     iput p4, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->bufferSize:I
 
-    .line 6
     iput-boolean p5, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->delayError:Z
 
     return-void
@@ -114,7 +108,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->sources:[Lorg/reactivestreams/Publisher;
 
     if-nez v0, :cond_1
@@ -123,7 +116,6 @@
 
     new-array v0, v0, [Lorg/reactivestreams/Publisher;
 
-    .line 2
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableZip;->sourcesIterable:Ljava/lang/Iterable;
 
     invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -147,7 +139,6 @@
 
     check-cast v4, Lorg/reactivestreams/Publisher;
 
-    .line 3
     array-length v5, v0
 
     if-ne v3, v5, :cond_0
@@ -156,10 +147,8 @@
 
     add-int/2addr v5, v3
 
-    .line 4
     new-array v5, v5, [Lorg/reactivestreams/Publisher;
 
-    .line 5
     invoke-static {v0, v2, v5, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object v0, v5
@@ -167,14 +156,12 @@
     :cond_0
     add-int/lit8 v5, v3, 0x1
 
-    .line 6
     aput-object v4, v0, v3
 
     move v3, v5
 
     goto :goto_0
 
-    .line 7
     :cond_1
     array-length v3, v0
 
@@ -183,12 +170,10 @@
 
     if-nez v7, :cond_3
 
-    .line 8
     invoke-static {p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->complete(Lorg/reactivestreams/Subscriber;)V
 
     return-void
 
-    .line 9
     :cond_3
     new-instance v8, Lio/reactivex/internal/operators/flowable/FlowableZip$ZipCoordinator;
 
@@ -206,10 +191,8 @@
 
     invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/flowable/FlowableZip$ZipCoordinator;-><init>(Lorg/reactivestreams/Subscriber;Lio/reactivex/functions/Function;IIZ)V
 
-    .line 10
     invoke-interface {p1, v8}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V
 
-    .line 11
     invoke-virtual {v8, v0, v7}, Lio/reactivex/internal/operators/flowable/FlowableZip$ZipCoordinator;->subscribe([Lorg/reactivestreams/Publisher;I)V
 
     return-void

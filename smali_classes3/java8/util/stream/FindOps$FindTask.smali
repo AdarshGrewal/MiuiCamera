@@ -58,13 +58,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p3, p4}, Ljava8/util/stream/AbstractShortCircuitTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     iput-boolean p2, p0, Ljava8/util/stream/FindOps$FindTask;->mustFindFirst:Z
 
-    .line 3
     iput-object p1, p0, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
 
     return-void
@@ -82,15 +79,12 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractShortCircuitTask;-><init>(Ljava8/util/stream/AbstractShortCircuitTask;Ljava8/util/Spliterator;)V
 
-    .line 5
     iget-boolean p2, p1, Ljava8/util/stream/FindOps$FindTask;->mustFindFirst:Z
 
     iput-boolean p2, p0, Ljava8/util/stream/FindOps$FindTask;->mustFindFirst:Z
 
-    .line 6
     iget-object p1, p1, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
 
     iput-object p1, p0, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
@@ -106,19 +100,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isLeftmostNode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1}, Ljava8/util/stream/AbstractShortCircuitTask;->shortCircuit(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava8/util/stream/AbstractShortCircuitTask;->cancelLaterNodes()V
 
@@ -136,7 +127,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iget-object v1, p0, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
@@ -161,7 +151,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-boolean v1, p0, Ljava8/util/stream/FindOps$FindTask;->mustFindFirst:Z
 
     const/4 v2, 0x0
@@ -170,7 +159,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava8/util/stream/AbstractShortCircuitTask;->shortCircuit(Ljava/lang/Object;)V
 
     :cond_0
@@ -179,7 +167,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 4
     invoke-direct {p0, v0}, Ljava8/util/stream/FindOps$FindTask;->foundResult(Ljava/lang/Object;)V
 
     return-object v0
@@ -196,7 +183,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
 
     iget-object v0, v0, Ljava8/util/stream/FindOps$FindOp;->emptyValue:Ljava/lang/Object;
@@ -207,7 +193,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/FindOps$FindTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/FindOps$FindTask;
 
     move-result-object p1
@@ -227,7 +212,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/FindOps$FindTask;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/FindOps$FindTask;-><init>(Ljava8/util/stream/FindOps$FindTask;Ljava8/util/Spliterator;)V
@@ -245,12 +229,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/FindOps$FindTask;->mustFindFirst:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v0, Ljava8/util/stream/FindOps$FindTask;
@@ -260,14 +242,12 @@
     :goto_0
     if-eq v0, v1, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Ljava8/util/stream/AbstractShortCircuitTask;->getLocalResult()Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v2, p0, Ljava8/util/stream/FindOps$FindTask;->op:Ljava8/util/stream/FindOps$FindOp;
 
     iget-object v2, v2, Ljava8/util/stream/FindOps$FindOp;->presentPredicate:Ljava8/util/function/Predicate;
@@ -278,15 +258,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 5
     invoke-virtual {p0, v1}, Ljava8/util/stream/AbstractShortCircuitTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 6
     invoke-direct {p0, v1}, Ljava8/util/stream/FindOps$FindTask;->foundResult(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 7
     :cond_0
     iget-object v1, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
@@ -300,7 +277,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     :goto_1
     invoke-super {p0, p1}, Ljava8/util/stream/AbstractTask;->onCompletion(Ljava8/util/concurrent/CountedCompleter;)V

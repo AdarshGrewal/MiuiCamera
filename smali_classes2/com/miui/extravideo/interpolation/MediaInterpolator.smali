@@ -25,14 +25,12 @@
 .method public constructor <init>(III)V
     .locals 8
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v1, v0, [I
 
-    .line 2
     fill-array-data v1, :array_0
 
     const-class v2, Ljava/nio/ByteBuffer;
@@ -47,33 +45,26 @@
 
     new-array v0, v0, [I
 
-    .line 3
     iput-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mResultImageIndex:[I
 
     const/4 v0, 0x1
 
-    .line 4
     iput v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolationSize:I
 
     const/4 v1, 0x0
 
-    .line 5
     iput v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mCurrentInterpolationTimes:I
 
-    .line 6
     iput p1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mWidth:I
 
-    .line 7
     iput p2, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mHeight:I
 
-    .line 8
     new-instance v2, Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
     invoke-direct {v2}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;-><init>()V
 
     iput-object v2, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
-    .line 9
     iget v5, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mWidth:I
 
     iget v6, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mHeight:I
@@ -86,14 +77,12 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->initialize(IIIII)I
 
-    .line 10
     iget-object p1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
     invoke-virtual {p1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->start()I
 
     move p1, v1
 
-    .line 11
     :goto_0
     iget-object p2, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mBuffers:[[Ljava/nio/ByteBuffer;
 
@@ -101,7 +90,6 @@
 
     if-ge p1, p3, :cond_0
 
-    .line 12
     aget-object p2, p2, p1
 
     iget-object p3, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
@@ -112,7 +100,6 @@
 
     aput-object p3, p2, v1
 
-    .line 13
     iget-object p2, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mBuffers:[[Ljava/nio/ByteBuffer;
 
     aget-object p2, p2, p1
@@ -146,15 +133,12 @@
 .method public configInterpolationSize(I[B)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolationSize:I
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mCurrentInterpolationTimes:I
 
-    .line 3
     iput-object p2, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mSrc:[B
 
     return-void
@@ -163,7 +147,6 @@
 .method public hasNext()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mCurrentInterpolationTimes:I
 
     iget v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolationSize:I
@@ -184,7 +167,6 @@
 .method public nextByteBuffer([B)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
     iget v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mCurrentInterpolationTimes:I
@@ -207,14 +189,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->process([BIIZ)I
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
     iget-object v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mResultImageIndex:[I
 
     invoke-virtual {v0, v1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->getImageIndex([I)I
 
-    .line 3
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mBuffers:[[Ljava/nio/ByteBuffer;
 
     iget-object v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mResultImageIndex:[I
@@ -229,7 +209,6 @@
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mBuffers:[[Ljava/nio/ByteBuffer;
 
     iget-object v1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mResultImageIndex:[I
@@ -242,7 +221,6 @@
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget p1, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mCurrentInterpolationTimes:I
 
     add-int/2addr p1, v2
@@ -257,13 +235,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mSrc:[B
 
-    .line 2
     iput-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mBuffers:[[Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/MediaInterpolator;->mInterpolatorJNI:Lcom/miui/extravideo/interpolation/InterpolatorJNI;
 
     invoke-virtual {v0}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->finish()V

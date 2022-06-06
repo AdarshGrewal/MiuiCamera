@@ -22,15 +22,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x500000
 
-    .line 2
     iput v0, p0, Lcom/android/camera/network/imageloader/LruImageCache;->max:I
 
-    .line 3
     new-instance v0, Lcom/android/camera/network/imageloader/LruImageCache$1;
 
     iget v1, p0, Lcom/android/camera/network/imageloader/LruImageCache;->max:I

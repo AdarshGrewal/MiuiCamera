@@ -40,7 +40,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     return-void
@@ -51,17 +50,8 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    .line 2
-    :cond_0
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
 
     move-result v0
@@ -72,17 +62,8 @@
 .method public getChangingConfigurations()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    .line 2
-    :cond_0
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
 
     move-result v0
@@ -93,7 +74,6 @@
 .method public newAnimatedStateListDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable;
 
     invoke-direct {v0, p1, p2, p3}, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;)V
@@ -104,7 +84,6 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -113,7 +92,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, v1, v1, p0}, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->newAnimatedStateListDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;)Landroid/graphics/drawable/Drawable;
 
@@ -125,7 +103,6 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 3
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -134,7 +111,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     invoke-virtual {p0, p1, v1, p0}, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->newAnimatedStateListDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;)Landroid/graphics/drawable/Drawable;
 
@@ -146,7 +122,6 @@
 .method public newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 5
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     if-nez v0, :cond_0
@@ -155,7 +130,6 @@
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-virtual {p0, p1, p2, p0}, Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;->newAnimatedStateListDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/CheckWidgetAnimatedStateListDrawable$CheckWidgetConstantState;)Landroid/graphics/drawable/Drawable;
 

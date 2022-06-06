@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/fragment/music/LiveMusicActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -42,7 +41,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
@@ -51,7 +49,6 @@
 .method private init()V
     .locals 8
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v6
@@ -61,15 +58,12 @@
     return-void
 
     :cond_0
-    const v0, 0x7f120478
+    const v0, 0x7f120456
 
-    .line 2
     invoke-virtual {v6, v0}, Landroidx/appcompat/app/ActionBar;->setTitle(I)V
 
-    .line 3
     invoke-virtual {v6, p0}, Lmiuix/appcompat/app/ActionBar;->setFragmentViewPagerMode(Landroidx/fragment/app/FragmentActivity;)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/Util;->isGlobalVersion()Z
 
     move-result v0
@@ -78,12 +72,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000O0()I
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000Ooo()I
 
     move-result v1
 
@@ -91,7 +84,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemCloud()Lcom/android/camera/data/cloud/DataCloudItemFeature;
 
     move-result-object v0
@@ -100,7 +92,6 @@
 
     move-result v0
 
-    .line 7
     :cond_1
     new-instance v7, Ljava/util/ArrayList;
 
@@ -108,14 +99,12 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f12047e
+    const v0, 0x7f12045c
 
-    .line 8
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 9
     invoke-virtual {v6}, Landroidx/appcompat/app/ActionBar;->newTab()Landroidx/appcompat/app/ActionBar$Tab;
 
     move-result-object v0
@@ -124,10 +113,8 @@
 
     move-result-object v2
 
-    .line 10
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     const-class v3, Lcom/android/camera/fragment/music/FragmentLiveMusicOnline;
 
     const/4 v4, 0x0
@@ -139,14 +126,12 @@
     invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/app/ActionBar;->addFragmentTab(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
 
     :cond_2
-    const v0, 0x7f12047f
+    const v0, 0x7f12045d
 
-    .line 12
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 13
     invoke-virtual {v6}, Landroidx/appcompat/app/ActionBar;->newTab()Landroidx/appcompat/app/ActionBar$Tab;
 
     move-result-object v0
@@ -155,10 +140,8 @@
 
     move-result-object v2
 
-    .line 14
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 15
     const-class v3, Lcom/android/camera/fragment/music/FragmentLiveMusicLocal;
 
     const/4 v4, 0x0
@@ -169,7 +152,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/app/ActionBar;->addFragmentTab(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
 
-    .line 16
     new-instance v0, Lcom/android/camera/fragment/music/LiveMusicActivity$1;
 
     invoke-direct {v0, p0, v7}, Lcom/android/camera/fragment/music/LiveMusicActivity$1;-><init>(Lcom/android/camera/fragment/music/LiveMusicActivity;Ljava/util/ArrayList;)V
@@ -184,11 +166,9 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
-    invoke-static {p0}, Lcom/android/camera/display/Display;->checkMultiWindowSupport(Landroid/app/Activity;)Z
+    invoke-static {p0}, Lcom/android/camera/Display;->checkMultiWindowSupport(Landroid/app/Activity;)Z
 
     move-result p1
 
@@ -196,7 +176,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->getVolumeControlStream()I
 
@@ -206,10 +185,8 @@
 
     const/4 p1, 0x3
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -222,10 +199,8 @@
 
     const/4 p1, 0x1
 
-    .line 6
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
-    .line 7
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/music/LiveMusicActivity;->init()V
 
@@ -235,10 +210,8 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onDestroy()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/music/LiveMusicActivity;->mOldOriginVolumeStream:I
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setVolumeControlStream(I)V
@@ -249,10 +222,8 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0

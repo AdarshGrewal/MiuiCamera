@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$3;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,21 +37,18 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
 
     float-to-int p1, p1
 
-    .line 2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 3
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p2
@@ -63,7 +59,6 @@
 
     iget-object p2, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$3;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
-    .line 4
     invoke-static {p2}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$800(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Landroid/view/View;
 
     move-result-object p2
@@ -78,7 +73,6 @@
 
     iget-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$3;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
-    .line 5
     invoke-static {p1}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$800(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Landroid/view/View;
 
     move-result-object p1
@@ -89,7 +83,6 @@
 
     if-lt v0, p1, :cond_1
 
-    .line 6
     :cond_0
     iget-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$3;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 

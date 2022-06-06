@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/animation/internal/AnimManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/internal/AnimManager$1;->this$0:Lmiuix/animation/internal/AnimManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager$1;->this$0:Lmiuix/animation/internal/AnimManager;
 
     const/4 v1, 0x1

@@ -33,7 +33,6 @@
 .method public constructor <init>(Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/AliasOptions;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->this$0:Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl;
 
     iput-object p2, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->val$actualNS:Ljava/lang/String;
@@ -54,7 +53,6 @@
 .method public getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->val$aliasOpts:Lcom/adobe/xmp/options/AliasOptions;
 
     return-object v0
@@ -63,7 +61,6 @@
 .method public getNamespace()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->val$actualNS:Ljava/lang/String;
 
     return-object v0
@@ -72,7 +69,6 @@
 .method public getPrefix()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->val$actualPrefix:Ljava/lang/String;
 
     return-object v0
@@ -81,7 +77,6 @@
 .method public getPropName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->val$actualProp:Ljava/lang/String;
 
     return-object v0
@@ -90,7 +85,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +109,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPSchemaRegistryImpl$1;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
     move-result-object v1

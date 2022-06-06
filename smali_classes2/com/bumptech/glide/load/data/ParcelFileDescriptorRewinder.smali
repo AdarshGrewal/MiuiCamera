@@ -32,10 +32,8 @@
 .method public constructor <init>(Landroid/os/ParcelFileDescriptor;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder$InternalRewinder;
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder$InternalRewinder;-><init>(Landroid/os/ParcelFileDescriptor;)V
@@ -48,7 +46,6 @@
 .method public static isSupported()Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -82,7 +79,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;->rewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder$InternalRewinder;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder$InternalRewinder;->rewind()Landroid/os/ParcelFileDescriptor;
@@ -100,7 +96,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;->rewindAndGet()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0

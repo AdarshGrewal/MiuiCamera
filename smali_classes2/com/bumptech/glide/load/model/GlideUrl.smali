@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/bumptech/glide/load/model/Headers;->DEFAULT:Lcom/bumptech/glide/load/model/Headers;
 
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/model/GlideUrl;-><init>(Ljava/lang/String;Lcom/bumptech/glide/load/model/Headers;)V
@@ -41,22 +40,18 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/bumptech/glide/load/model/Headers;)V
     .locals 1
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 8
     iput-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->url:Ljava/net/URL;
 
-    .line 9
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/load/model/GlideUrl;->stringUrl:Ljava/lang/String;
 
-    .line 10
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -71,7 +66,6 @@
 .method public constructor <init>(Ljava/net/URL;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/load/model/Headers;->DEFAULT:Lcom/bumptech/glide/load/model/Headers;
 
     invoke-direct {p0, p1, v0}, Lcom/bumptech/glide/load/model/GlideUrl;-><init>(Ljava/net/URL;Lcom/bumptech/glide/load/model/Headers;)V
@@ -82,10 +76,8 @@
 .method public constructor <init>(Ljava/net/URL;Lcom/bumptech/glide/load/model/Headers;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -96,10 +88,8 @@
 
     const/4 p1, 0x0
 
-    .line 5
     iput-object p1, p0, Lcom/bumptech/glide/load/model/GlideUrl;->stringUrl:Ljava/lang/String;
 
-    .line 6
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -114,12 +104,10 @@
 .method private getCacheKeyBytes()[B
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->cacheKeyBytes:[B
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
@@ -132,7 +120,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->cacheKeyBytes:[B
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->cacheKeyBytes:[B
 
@@ -142,7 +129,6 @@
 .method private getSafeStringUrl()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeStringUrl:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -151,17 +137,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->stringUrl:Ljava/lang/String;
 
-    .line 3
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->url:Ljava/net/URL;
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -177,14 +160,12 @@
     :cond_0
     const-string v1, "@#&=*+-_.,:!?()/~\'%;$"
 
-    .line 5
     invoke-static {v0, v1}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeStringUrl:Ljava/lang/String;
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeStringUrl:Ljava/lang/String;
 
@@ -199,12 +180,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeUrl:Ljava/net/URL;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/net/URL;
 
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getSafeStringUrl()Ljava/lang/String;
@@ -215,7 +194,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeUrl:Ljava/net/URL;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->safeUrl:Ljava/net/URL;
 
@@ -227,17 +205,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/load/model/GlideUrl;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Lcom/bumptech/glide/load/model/GlideUrl;
 
-    .line 3
     invoke-virtual {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
@@ -271,7 +246,6 @@
 .method public getCacheKey()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->stringUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -307,7 +281,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->headers:Lcom/bumptech/glide/load/model/Headers;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/model/Headers;->getHeaders()Ljava/util/Map;
@@ -320,12 +293,10 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->hashCode:I
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
@@ -338,7 +309,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/load/model/GlideUrl;->headers:Lcom/bumptech/glide/load/model/Headers;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
@@ -349,7 +319,6 @@
 
     iput v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->hashCode:I
 
-    .line 4
     :cond_0
     iget v0, p0, Lcom/bumptech/glide/load/model/GlideUrl;->hashCode:I
 
@@ -359,7 +328,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
@@ -370,7 +338,6 @@
 .method public toStringUrl()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getSafeStringUrl()Ljava/lang/String;
 
     move-result-object v0
@@ -386,7 +353,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getSafeUrl()Ljava/net/URL;
 
     move-result-object v0
@@ -397,7 +363,6 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/GlideUrl;->getCacheKeyBytes()[B
 
     move-result-object v0

@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/google/android/play/core/splitcompat/SplitCompat;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitcompat/LoadedSplitFetcherImpl;->mSplitCompat:Lcom/google/android/play/core/splitcompat/SplitCompat;
 
     return-void
@@ -36,7 +34,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitcompat/LoadedSplitFetcherImpl;->mSplitCompat:Lcom/google/android/play/core/splitcompat/SplitCompat;
 
     invoke-virtual {v0}, Lcom/google/android/play/core/splitcompat/SplitCompat;->getLoadedSplits()Ljava/util/Set;

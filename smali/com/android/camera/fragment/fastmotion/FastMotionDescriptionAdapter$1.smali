@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter;Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$1;->this$0:Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter;
 
     iput-object p2, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$1;->val$holder:Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;
@@ -66,7 +65,6 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$1;->val$holder:Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;
 
     iget-object p1, p1, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;->mCoverView:Landroid/view/View;
@@ -102,7 +100,6 @@
 .method public stop()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$1;->val$holder:Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;
 
     iget-object v0, v0, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter$FastMotionViewHolder;->mCoverView:Landroid/view/View;

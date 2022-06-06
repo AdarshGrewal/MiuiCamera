@@ -33,13 +33,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/google/android/play/core/remote/RemoteTask;-><init>(Lcom/google/android/play/core/tasks/TaskWrapper;)V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/GetSessionStatesTask;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
-    .line 3
     iput-object p3, p0, Lcom/google/android/play/core/splitinstall/GetSessionStatesTask;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     return-void
@@ -50,7 +47,6 @@
 .method public execute()V
     .locals 5
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/GetSessionStatesTask;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
@@ -83,7 +79,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     sget-object v1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v2, 0x0
@@ -94,7 +89,6 @@
 
     invoke-virtual {v1, v0, v3, v2}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->error(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/splitinstall/GetSessionStatesTask;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     new-instance v2, Ljava/lang/RuntimeException;

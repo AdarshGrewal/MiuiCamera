@@ -49,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 17
 
-    .line 1
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v1, 0x0
@@ -60,7 +59,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->CONTRAST_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 2
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v2, 0x1
@@ -71,7 +69,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->SMOOTH_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 3
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v3, 0x2
@@ -82,7 +79,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->WHITEN_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 4
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v4, 0x3
@@ -93,7 +89,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->ENLARGE_EYE_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 5
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v5, 0x4
@@ -104,7 +99,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->SHRINK_FACE_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 6
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v6, 0x5
@@ -115,7 +109,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->SHRINK_JAW_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 7
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v7, 0x6
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->RUDDY_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 8
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v8, 0x7
@@ -137,7 +129,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->BRIGHT_EYE_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 9
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v9, 0x8
@@ -148,7 +139,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->IRIS_SHINE_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 10
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v10, 0x9
@@ -159,7 +149,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->DEBLEMISH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 11
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v11, 0xa
@@ -170,7 +159,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->DEPOUCH_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 12
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v12, 0xb
@@ -181,7 +169,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->RELIGHTING_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 13
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v13, 0xc
@@ -192,7 +179,6 @@
 
     sput-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->LIP_BEAUTY_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 14
     new-instance v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/16 v14, 0xd
@@ -207,7 +193,6 @@
 
     new-array v15, v15, [Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 15
     sget-object v16, Lcom/miui/filtersdk/beauty/BeautyParameterType;->CONTRAST_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     aput-object v16, v15, v1
@@ -275,7 +260,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -284,7 +268,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/filtersdk/beauty/BeautyParameterType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -299,7 +282,6 @@
 .method public static values()[Lcom/miui/filtersdk/beauty/BeautyParameterType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/beauty/BeautyParameterType;->$VALUES:[Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     invoke-virtual {v0}, [Lcom/miui/filtersdk/beauty/BeautyParameterType;->clone()Ljava/lang/Object;

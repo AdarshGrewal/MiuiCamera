@@ -54,7 +54,6 @@
 .method public static constructor <clinit>()V
     .locals 14
 
-    .line 1
     const-class v0, [I
 
     new-instance v1, Lcom/google/zxing/DecodeHintType;
@@ -69,7 +68,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->OTHER:Lcom/google/zxing/DecodeHintType;
 
-    .line 2
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v2, Ljava/lang/Void;
@@ -82,7 +80,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->PURE_BARCODE:Lcom/google/zxing/DecodeHintType;
 
-    .line 3
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v2, Ljava/util/List;
@@ -95,7 +92,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->POSSIBLE_FORMATS:Lcom/google/zxing/DecodeHintType;
 
-    .line 4
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v2, Ljava/lang/Void;
@@ -108,7 +104,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->TRY_HARDER:Lcom/google/zxing/DecodeHintType;
 
-    .line 5
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v2, Ljava/lang/String;
@@ -121,7 +116,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->CHARACTER_SET:Lcom/google/zxing/DecodeHintType;
 
-    .line 6
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const/4 v2, 0x5
@@ -132,7 +126,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->ALLOWED_LENGTHS:Lcom/google/zxing/DecodeHintType;
 
-    .line 7
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v8, Ljava/lang/Void;
@@ -145,7 +138,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->ASSUME_CODE_39_CHECK_DIGIT:Lcom/google/zxing/DecodeHintType;
 
-    .line 8
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v8, Ljava/lang/Void;
@@ -158,7 +150,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->ASSUME_GS1:Lcom/google/zxing/DecodeHintType;
 
-    .line 9
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v8, Ljava/lang/Void;
@@ -171,7 +162,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->RETURN_CODABAR_START_END:Lcom/google/zxing/DecodeHintType;
 
-    .line 10
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const-class v8, Lcom/google/zxing/ResultPointCallback;
@@ -184,7 +174,6 @@
 
     sput-object v1, Lcom/google/zxing/DecodeHintType;->NEED_RESULT_POINT_CALLBACK:Lcom/google/zxing/DecodeHintType;
 
-    .line 11
     new-instance v1, Lcom/google/zxing/DecodeHintType;
 
     const/16 v8, 0xa
@@ -199,7 +188,6 @@
 
     new-array v0, v0, [Lcom/google/zxing/DecodeHintType;
 
-    .line 12
     sget-object v13, Lcom/google/zxing/DecodeHintType;->OTHER:Lcom/google/zxing/DecodeHintType;
 
     aput-object v13, v0, v3
@@ -257,10 +245,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput-object p3, p0, Lcom/google/zxing/DecodeHintType;->valueType:Ljava/lang/Class;
 
     return-void
@@ -269,7 +255,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/zxing/DecodeHintType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/google/zxing/DecodeHintType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -284,7 +269,6 @@
 .method public static values()[Lcom/google/zxing/DecodeHintType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/DecodeHintType;->$VALUES:[Lcom/google/zxing/DecodeHintType;
 
     invoke-virtual {v0}, [Lcom/google/zxing/DecodeHintType;->clone()Ljava/lang/Object;
@@ -308,7 +292,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/DecodeHintType;->valueType:Ljava/lang/Class;
 
     return-object v0

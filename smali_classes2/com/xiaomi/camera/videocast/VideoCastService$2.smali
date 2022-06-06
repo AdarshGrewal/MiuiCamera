@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/VideoCastService;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$2;->this$0:Lcom/xiaomi/camera/videocast/VideoCastService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +60,6 @@
 .method public onUnavailable()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->access$000()Ljava/lang/String;
 
     move-result-object v0

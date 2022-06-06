@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->this$0:Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra;
 
     iput-object p2, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$fromView:Landroid/view/View;
@@ -46,28 +45,24 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$fromView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$toView:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$toView:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$toView:Landroid/view/View;
 
     const/4 v0, 0x0
@@ -80,14 +75,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$fromView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$toView:Landroid/view/View;
 
     const/4 v0, 0x0
@@ -106,14 +99,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$fromView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$3;->val$toView:Landroid/view/View;
 
     const/4 v0, 0x0

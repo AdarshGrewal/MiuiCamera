@@ -22,8 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/OoooOoo/OooO0Oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooOoo/OooO0Oo;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/OoooOo0/OooO0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooOo0/OooO0Oo;
 
     sput-object v0, Lcom/android/camera/resource/LoggingInterceptor$Logger;->DEFAULT:Lcom/android/camera/resource/LoggingInterceptor$Logger;
 
@@ -33,7 +32,6 @@
 .method public static synthetic OooO00o(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lokhttp3/internal/platform/Platform;->get()Lokhttp3/internal/platform/Platform;
 
     move-result-object v0

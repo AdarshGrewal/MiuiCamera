@@ -43,15 +43,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2
     iput v0, p0, Lcom/android/camera/SwitchAnimManager;->mExtScale:F
 
-    .line 3
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
@@ -60,7 +57,6 @@
 
     const/high16 v0, 0x43960000    # 300.0f
 
-    .line 4
     iput v0, p0, Lcom/android/camera/SwitchAnimManager;->mTimeOut:F
 
     return-void
@@ -69,15 +65,12 @@
 .method public constructor <init>(F)V
     .locals 1
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 6
     iput v0, p0, Lcom/android/camera/SwitchAnimManager;->mExtScale:F
 
-    .line 7
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
@@ -86,10 +79,8 @@
 
     const/high16 v0, 0x43960000    # 300.0f
 
-    .line 8
     iput v0, p0, Lcom/android/camera/SwitchAnimManager;->mTimeOut:F
 
-    .line 9
     iput p1, p0, Lcom/android/camera/SwitchAnimManager;->mTimeOut:F
 
     return-void
@@ -100,7 +91,6 @@
 
     move-object v8, p0
 
-    .line 1
     iget-boolean v0, v8, Lcom/android/camera/SwitchAnimManager;->mNewPreview:Z
 
     const/4 v1, 0x0
@@ -112,7 +102,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -123,7 +112,6 @@
 
     long-to-float v4, v2
 
-    .line 3
     iget v5, v8, Lcom/android/camera/SwitchAnimManager;->mTimeOut:F
 
     cmpl-float v4, v4, v5
@@ -142,15 +130,12 @@
     :goto_0
     if-nez v9, :cond_2
 
-    .line 4
     iget-boolean v0, v8, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
     if-eqz v0, :cond_2
 
-    .line 5
     iput-boolean v1, v8, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
-    .line 6
     :cond_2
     iget-object v0, v8, Lcom/android/camera/SwitchAnimManager;->mInterpolator:Landroid/view/animation/Interpolator;
 
@@ -178,7 +163,6 @@
 
     move-object/from16 v6, p6
 
-    .line 7
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/SwitchAnimManager;->drawBlurTexture(Lcom/android/gallery3d/ui/GLCanvas;IIIILcom/android/camera/CameraScreenNail;F)V
 
     return v9
@@ -187,15 +171,12 @@
 .method private drawBlurTexture(Lcom/android/gallery3d/ui/GLCanvas;IIIILcom/android/camera/CameraScreenNail;F)V
     .locals 0
 
-    .line 1
     iget-boolean p2, p0, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
     if-eqz p2, :cond_0
 
-    .line 2
     invoke-virtual {p6, p1}, Lcom/android/camera/CameraScreenNail;->renderBlurTexture(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 3
     :cond_0
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -203,12 +184,10 @@
 
     invoke-virtual {p2}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 4
     iget-boolean p2, p0, Lcom/android/camera/SwitchAnimManager;->mAlphaAnimation:Z
 
     if-eqz p2, :cond_1
 
-    .line 5
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p2
@@ -223,7 +202,6 @@
 
     invoke-virtual {p2, p3}, Lcom/android/camera/effect/GLCanvasState;->setBlendAlpha(F)V
 
-    .line 6
     :cond_1
     iget p2, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingX:I
 
@@ -241,7 +219,6 @@
 
     invoke-virtual {p6, p1, p2, p3}, Lcom/android/camera/CameraScreenNail;->drawBlurTexture(Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;[F)V
 
-    .line 7
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p1
@@ -256,7 +233,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-boolean v1, v0, Lcom/android/camera/SwitchAnimManager;->mMoveBack:Z
 
     const v2, 0x3e4ccccd    # 0.2f
@@ -267,7 +243,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget v1, v0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingX:I
 
     int-to-float v1, v1
@@ -280,7 +255,6 @@
 
     add-float/2addr v1, v6
 
-    .line 3
     iget v6, v0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingY:I
 
     int-to-float v6, v6
@@ -309,7 +283,6 @@
 
     sub-float/2addr v1, v3
 
-    .line 4
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v9
@@ -318,17 +291,14 @@
 
     sub-float/2addr v6, v1
 
-    .line 5
     invoke-static {v6}, Ljava/lang/Math;->round(F)I
 
     move-result v10
 
-    .line 6
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result v11
 
-    .line 7
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v12
@@ -337,18 +307,15 @@
 
     move-object/from16 v8, p1
 
-    .line 8
     invoke-virtual/range {v7 .. v12}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-virtual/range {p4 .. p4}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result v1
 
-    .line 10
     invoke-virtual/range {p4 .. p4}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result v5
@@ -373,7 +340,6 @@
 
     sub-float/2addr v6, v2
 
-    .line 11
     invoke-static {v6}, Ljava/lang/Math;->round(F)I
 
     move-result v10
@@ -382,17 +348,14 @@
 
     sub-float/2addr v7, v2
 
-    .line 12
     invoke-static {v7}, Ljava/lang/Math;->round(F)I
 
     move-result v11
 
-    .line 13
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v12
 
-    .line 14
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v13
@@ -413,7 +376,6 @@
 
     move/from16 v17, v2
 
-    .line 15
     invoke-virtual/range {v8 .. v17}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;IIIIIIII)V
 
     :goto_0
@@ -423,14 +385,12 @@
 .method private drawRealTimeTexture(Lcom/android/gallery3d/ui/GLCanvas;IIIILcom/android/camera/CameraScreenNail;F)V
     .locals 6
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mNewPreview:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -438,7 +398,6 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 3
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v0
@@ -457,10 +416,8 @@
 
     move v5, p5
 
-    .line 4
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/CameraScreenNail;->directDraw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
 
-    .line 5
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p1
@@ -477,15 +434,12 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     iput-wide v0, p0, Lcom/android/camera/SwitchAnimManager;->mAnimStartTime:J
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mAlphaAnimation:Z
 
     return-void
@@ -494,7 +448,6 @@
 .method public drawAnimation(Lcom/android/gallery3d/ui/GLCanvas;IIIILcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/RawTexture;)Z
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p7}, Lcom/android/camera/SwitchAnimManager;->drawAnimationBlend(Lcom/android/gallery3d/ui/GLCanvas;IIIILcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/RawTexture;)Z
 
     move-result p1
@@ -523,7 +476,6 @@
 
     add-float/2addr p3, p5
 
-    .line 1
     iget p5, p0, Lcom/android/camera/SwitchAnimManager;->mPreviewFrameLayoutWidth:I
 
     if-eqz p5, :cond_0
@@ -539,12 +491,10 @@
 
     const-string/jumbo p5, "previewFrameLayoutWidth=0"
 
-    .line 2
     invoke-static {p4, p5}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/high16 p4, 0x3f800000    # 1.0f
 
-    .line 3
     :goto_0
     iget p5, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingWidth:I
 
@@ -552,7 +502,6 @@
 
     mul-float/2addr p5, p4
 
-    .line 4
     iget v1, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingHeight:I
 
     int-to-float v1, v1
@@ -563,7 +512,6 @@
 
     sub-float/2addr p2, p4
 
-    .line 5
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result v4
@@ -572,12 +520,10 @@
 
     sub-float/2addr p3, p2
 
-    .line 6
     invoke-static {p3}, Ljava/lang/Math;->round(F)I
 
     move-result v5
 
-    .line 7
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p2
@@ -586,7 +532,6 @@
 
     move-result p2
 
-    .line 8
     invoke-static {p5}, Ljava/lang/Math;->round(F)I
 
     move-result v6
@@ -601,7 +546,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
 
-    .line 9
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p1
@@ -616,7 +560,6 @@
 .method public getExtScaleX()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SwitchAnimManager;->mExtScale:F
 
     return v0
@@ -625,7 +568,6 @@
 .method public getExtScaleY()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SwitchAnimManager;->mExtScale:F
 
     return v0
@@ -634,12 +576,10 @@
 .method public setPreviewFrameLayoutSize(II)V
     .locals 1
 
-    .line 1
     iput p1, p0, Lcom/android/camera/SwitchAnimManager;->mPreviewFrameLayoutWidth:I
 
     if-nez p1, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
@@ -657,19 +597,14 @@
 .method public setReviewDrawingSize(IIII)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingX:I
 
-    .line 2
     iput p2, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingY:I
 
-    .line 3
     iput p3, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingWidth:I
 
-    .line 4
     iput p4, p0, Lcom/android/camera/SwitchAnimManager;->mReviewDrawingHeight:I
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraSettings;->isBackCamera()Z
 
     move-result p1
@@ -678,7 +613,6 @@
 
     const/4 p1, 0x0
 
-    .line 6
     iput-boolean p1, p0, Lcom/android/camera/SwitchAnimManager;->mNewPreview:Z
 
     return-void
@@ -693,7 +627,6 @@
 
     const-string/jumbo v1, "startAnimation with alpha animation"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -701,10 +634,8 @@
     :cond_0
     const-string/jumbo v1, "startAnimation"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -714,10 +645,8 @@
 
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
-    .line 5
     iput-boolean p1, p0, Lcom/android/camera/SwitchAnimManager;->mAlphaAnimation:Z
 
     return-void
@@ -730,17 +659,14 @@
 
     const-string/jumbo v1, "startResume"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mNewPreview:Z
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/SwitchAnimManager;->mRecurBlur:Z
 
     return-void

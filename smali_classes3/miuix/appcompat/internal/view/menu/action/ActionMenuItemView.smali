@@ -24,7 +24,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0, v1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -35,7 +34,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -44,10 +42,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
     new-instance p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;
 
     invoke-direct {p1, p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;-><init>(Landroid/widget/LinearLayout;)V
@@ -62,7 +58,6 @@
 .method public getItemData()Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mItemData:Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     return-object v0
@@ -71,43 +66,36 @@
 .method public initialize(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mItemData:Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     const/4 p2, 0x0
 
-    .line 2
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setSelected(Z)V
 
-    .line 3
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 4
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->isCheckable()Z
 
     move-result p2
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->setCheckable(Z)V
 
-    .line 6
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->isChecked()Z
 
     move-result p2
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->setChecked(Z)V
 
-    .line 7
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->isEnabled()Z
 
     move-result p1
@@ -116,7 +104,6 @@
 
     const/4 p1, 0x1
 
-    .line 8
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     return-void
@@ -125,10 +112,8 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mChildren:Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -145,7 +130,6 @@
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -156,7 +140,6 @@
 
     move-result p1
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -167,7 +150,6 @@
 
     move-result v0
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingStart()I
 
     move-result v1
@@ -184,7 +166,6 @@
 .method public performClick()Z
     .locals 4
 
-    .line 1
     invoke-super {p0}, Landroid/widget/LinearLayout;->performClick()Z
 
     move-result v0
@@ -195,7 +176,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mItemInvoker:Lmiuix/appcompat/internal/view/menu/MenuBuilder$ItemInvoker;
 
@@ -211,7 +191,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->playSoundEffect(I)V
 
     return v1
@@ -231,7 +210,6 @@
 .method public setCheckable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mIsCheckable:Z
 
     return-void
@@ -240,12 +218,10 @@
 .method public setChecked(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mIsCheckable:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setSelected(Z)V
 
     :cond_0
@@ -255,10 +231,8 @@
 .method public setEnabled(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mChildren:Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->setEnabled(Z)V
@@ -269,7 +243,6 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mChildren:Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->setIcon(Landroid/graphics/drawable/Drawable;)V
@@ -280,7 +253,6 @@
 .method public setItemInvoker(Lmiuix/appcompat/internal/view/menu/MenuBuilder$ItemInvoker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mItemInvoker:Lmiuix/appcompat/internal/view/menu/MenuBuilder$ItemInvoker;
 
     return-void
@@ -295,7 +267,6 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemView;->mChildren:Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->setText(Ljava/lang/CharSequence;)V

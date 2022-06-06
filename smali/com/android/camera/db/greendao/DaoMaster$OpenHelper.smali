@@ -20,7 +20,6 @@
 
     const/4 v0, 0x3
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
 
     return-void
@@ -31,7 +30,6 @@
 
     const/4 v0, 0x3
 
-    .line 2
     invoke-direct {p0, p1, p2, p3, v0}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
@@ -46,12 +44,10 @@
 
     const-string v1, "Creating tables for schema version 3"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/db/greendao/DaoMaster;->createAllTables(Lorg/greenrobot/greendao/database/Database;Z)V
 
     return-void

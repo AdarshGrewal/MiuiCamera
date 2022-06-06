@@ -22,7 +22,6 @@
 
     new-array v0, v0, [Lcom/google/zxing/ResultPoint;
 
-    .line 1
     sput-object v0, Lcom/google/zxing/qrcode/QRCodeReader;->NO_POINTS:[Lcom/google/zxing/ResultPoint;
 
     return-void
@@ -31,10 +30,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/google/zxing/qrcode/decoder/Decoder;
 
     invoke-direct {v0}, Lcom/google/zxing/qrcode/decoder/Decoder;-><init>()V
@@ -52,12 +49,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getTopLeftOnBit()[I
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getBottomRightOnBit()[I
 
     move-result-object v1
@@ -66,25 +61,20 @@
 
     if-eqz v1, :cond_c
 
-    .line 3
     invoke-static {v0, p0}, Lcom/google/zxing/qrcode/QRCodeReader;->moduleSize([ILcom/google/zxing/common/BitMatrix;)F
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 4
     aget v4, v0, v3
 
-    .line 5
     aget v5, v1, v3
 
     const/4 v6, 0x0
 
-    .line 6
     aget v0, v0, v6
 
-    .line 7
     aget v1, v1, v6
 
     if-ge v0, v1, :cond_b
@@ -99,7 +89,6 @@
 
     add-int v1, v0, v7
 
-    .line 8
     invoke-virtual {p0}, Lcom/google/zxing/common/BitMatrix;->getWidth()I
 
     move-result v8
@@ -108,7 +97,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -126,7 +114,6 @@
 
     div-float/2addr v8, v2
 
-    .line 10
     invoke-static {v8}, Ljava/lang/Math;->round(F)I
 
     move-result v8
@@ -137,7 +124,6 @@
 
     div-float/2addr v3, v2
 
-    .line 11
     invoke-static {v3}, Ljava/lang/Math;->round(F)I
 
     move-result v3
@@ -178,7 +164,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -208,7 +193,6 @@
 
     goto :goto_2
 
-    .line 13
     :cond_4
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -216,7 +200,6 @@
 
     throw p0
 
-    .line 14
     :cond_5
     :goto_2
     new-instance v1, Lcom/google/zxing/common/BitMatrix;
@@ -249,14 +232,12 @@
 
     add-int/2addr v10, v0
 
-    .line 15
     invoke-virtual {p0, v10, v7}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
     move-result v10
 
     if-eqz v10, :cond_6
 
-    .line 16
     invoke-virtual {v1, v9, v5}, Lcom/google/zxing/common/BitMatrix;->set(II)V
 
     :cond_6
@@ -272,7 +253,6 @@
     :cond_8
     return-object v1
 
-    .line 17
     :cond_9
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -280,7 +260,6 @@
 
     throw p0
 
-    .line 18
     :cond_a
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -288,7 +267,6 @@
 
     throw p0
 
-    .line 19
     :cond_b
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -296,7 +274,6 @@
 
     throw p0
 
-    .line 20
     :cond_c
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -313,24 +290,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Lcom/google/zxing/common/BitMatrix;->getHeight()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/zxing/common/BitMatrix;->getWidth()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    .line 3
     aget v3, p0, v2
 
     const/4 v4, 0x1
 
-    .line 4
     aget v5, p0, v4
 
     move v6, v2
@@ -340,7 +313,6 @@
 
     if-ge v5, v0, :cond_1
 
-    .line 5
     invoke-virtual {p1, v3, v5}, Lcom/google/zxing/common/BitMatrix;->get(II)Z
 
     move-result v7
@@ -367,7 +339,6 @@
 
     if-eq v5, v0, :cond_2
 
-    .line 6
     aget p0, p0, v2
 
     sub-int/2addr v3, p0
@@ -380,7 +351,6 @@
 
     return p0
 
-    .line 7
     :cond_2
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -403,7 +373,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/zxing/qrcode/QRCodeReader;->decode(Lcom/google/zxing/BinaryBitmap;Ljava/util/Map;)Lcom/google/zxing/Result;
 
     move-result-object p1
@@ -434,7 +403,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 2
     sget-object v0, Lcom/google/zxing/DecodeHintType;->PURE_BARCODE:Lcom/google/zxing/DecodeHintType;
 
     invoke-interface {p2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -443,7 +411,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/zxing/BinaryBitmap;->getBlackMatrix()Lcom/google/zxing/common/BitMatrix;
 
     move-result-object p1
@@ -452,19 +419,16 @@
 
     move-result-object p1
 
-    .line 4
     iget-object v0, p0, Lcom/google/zxing/qrcode/QRCodeReader;->decoder:Lcom/google/zxing/qrcode/decoder/Decoder;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/zxing/qrcode/decoder/Decoder;->decode(Lcom/google/zxing/common/BitMatrix;Ljava/util/Map;)Lcom/google/zxing/common/DecoderResult;
 
     move-result-object p1
 
-    .line 5
     sget-object p2, Lcom/google/zxing/qrcode/QRCodeReader;->NO_POINTS:[Lcom/google/zxing/ResultPoint;
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance v0, Lcom/google/zxing/qrcode/detector/Detector;
 
@@ -478,7 +442,6 @@
 
     move-result-object p1
 
-    .line 7
     iget-object v0, p0, Lcom/google/zxing/qrcode/QRCodeReader;->decoder:Lcom/google/zxing/qrcode/decoder/Decoder;
 
     invoke-virtual {p1}, Lcom/google/zxing/common/DetectorResult;->getBits()Lcom/google/zxing/common/BitMatrix;
@@ -489,7 +452,6 @@
 
     move-result-object p2
 
-    .line 8
     invoke-virtual {p1}, Lcom/google/zxing/common/DetectorResult;->getPoints()[Lcom/google/zxing/ResultPoint;
 
     move-result-object p1
@@ -500,7 +462,6 @@
 
     move-object p1, v4
 
-    .line 9
     :goto_0
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getOther()Ljava/lang/Object;
 
@@ -510,7 +471,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 10
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getOther()Ljava/lang/Object;
 
     move-result-object v0
@@ -519,7 +479,6 @@
 
     invoke-virtual {v0, p2}, Lcom/google/zxing/qrcode/decoder/QRCodeDecoderMetaData;->applyMirroredCorrection([Lcom/google/zxing/ResultPoint;)V
 
-    .line 11
     :cond_1
     new-instance v0, Lcom/google/zxing/Result;
 
@@ -535,19 +494,16 @@
 
     invoke-direct {v0, v1, v2, p2, v3}, Lcom/google/zxing/Result;-><init>(Ljava/lang/String;[B[Lcom/google/zxing/ResultPoint;Lcom/google/zxing/BarcodeFormat;)V
 
-    .line 12
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getByteSegments()Ljava/util/List;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    .line 13
     sget-object v1, Lcom/google/zxing/ResultMetadataType;->BYTE_SEGMENTS:Lcom/google/zxing/ResultMetadataType;
 
     invoke-virtual {v0, v1, p2}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
 
-    .line 14
     :cond_2
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getECLevel()Ljava/lang/String;
 
@@ -555,12 +511,10 @@
 
     if-eqz p2, :cond_3
 
-    .line 15
     sget-object v1, Lcom/google/zxing/ResultMetadataType;->ERROR_CORRECTION_LEVEL:Lcom/google/zxing/ResultMetadataType;
 
     invoke-virtual {v0, v1, p2}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
 
-    .line 16
     :cond_3
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->hasStructuredAppend()Z
 
@@ -568,10 +522,8 @@
 
     if-eqz p2, :cond_4
 
-    .line 17
     sget-object p2, Lcom/google/zxing/ResultMetadataType;->STRUCTURED_APPEND_SEQUENCE:Lcom/google/zxing/ResultMetadataType;
 
-    .line 18
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getStructuredAppendSequenceNumber()I
 
     move-result v1
@@ -580,13 +532,10 @@
 
     move-result-object v1
 
-    .line 19
     invoke-virtual {v0, p2, v1}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
 
-    .line 20
     sget-object p2, Lcom/google/zxing/ResultMetadataType;->STRUCTURED_APPEND_PARITY:Lcom/google/zxing/ResultMetadataType;
 
-    .line 21
     invoke-virtual {p1}, Lcom/google/zxing/common/DecoderResult;->getStructuredAppendParity()I
 
     move-result p1
@@ -595,7 +544,6 @@
 
     move-result-object p1
 
-    .line 22
     invoke-virtual {v0, p2, p1}, Lcom/google/zxing/Result;->putMetadata(Lcom/google/zxing/ResultMetadataType;Ljava/lang/Object;)V
 
     :cond_4
@@ -605,7 +553,6 @@
 .method public final getDecoder()Lcom/google/zxing/qrcode/decoder/Decoder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/qrcode/QRCodeReader;->decoder:Lcom/google/zxing/qrcode/decoder/Decoder;
 
     return-object v0

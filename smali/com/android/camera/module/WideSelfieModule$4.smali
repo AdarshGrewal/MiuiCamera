@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/WideSelfieModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/WideSelfieModule$4;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onSaveCompleted()V
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/WideSelfieModule$4;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-static {v0}, Lcom/android/camera/module/WideSelfieModule;->access$600(Lcom/android/camera/module/WideSelfieModule;)Z
@@ -58,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -67,13 +63,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f1209f6
+    const v1, 0x7f1209a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/module/WideSelfieModule$4;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     iget-object v2, v1, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -88,7 +83,6 @@
 
     invoke-static {v2, v0, v3, v4, v1}, Lcom/android/camera/ToastUtils;->showToast(Landroid/content/Context;Ljava/lang/String;III)V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/WideSelfieModule$4;->this$0:Lcom/android/camera/module/WideSelfieModule;
 

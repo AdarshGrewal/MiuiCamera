@@ -38,7 +38,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
 .method public getRequest()Lcom/bumptech/glide/request/Request;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-object v0
@@ -58,7 +56,6 @@
 .method public getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoWidth:I
 
     iget v1, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoHeight:I
@@ -129,7 +126,6 @@
 .method public setRequest(Lcom/bumptech/glide/request/Request;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-void

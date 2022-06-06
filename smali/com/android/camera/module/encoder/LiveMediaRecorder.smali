@@ -64,10 +64,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-direct {v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>()V
@@ -76,28 +74,32 @@
 
     const-string/jumbo v0, "video/avc"
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMimeType:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static synthetic access$000()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method private cleanupEmptyFile()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -106,14 +108,13 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "no video file: "
+    const-string/jumbo v3, "no video file: "
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -127,12 +128,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iput-object v2, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
@@ -144,25 +143,21 @@
 
     if-nez v1, :cond_2
 
-    .line 7
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 8
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 9
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/FileCompat;->deleteFile(Ljava/lang/String;)Z
 
-    .line 10
     :goto_0
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
@@ -184,7 +179,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iput-object v2, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     :cond_2
@@ -195,7 +189,6 @@
 .method private releaseLastMediaRecorder()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -226,17 +219,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mLastMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->join()V
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mLastMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     :cond_1
@@ -246,22 +236,18 @@
 .method private releaseMediaRecorder()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "releaseMediaRecorder"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mLastMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->cleanupEmptyFile()V
 
     :cond_0
@@ -273,7 +259,6 @@
 .method public deleteVideoFile(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -292,19 +277,16 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -330,10 +312,8 @@
 .method public handleVideoFile(Z)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->releaseMediaRecorder()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -352,7 +332,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->deleteVideoFile(Ljava/lang/String;)V
@@ -362,29 +341,24 @@
     :cond_1
     move v1, v0
 
-    .line 4
     :goto_1
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     if-eqz p1, :cond_2
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->closeFd()V
 
     :cond_2
     if-nez v1, :cond_4
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz p1, :cond_4
 
-    .line 7
     iget-boolean v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mScopedStorage:Z
 
     if-eqz v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-virtual {v0}, Lcom/android/camera/storage/mediastore/VideoFile;->getCurrentFileUri()Landroid/net/Uri;
@@ -399,7 +373,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
@@ -431,7 +404,6 @@
 
     move-object v5, p4
 
-    .line 1
     invoke-virtual/range {v0 .. v7}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->init(Landroid/content/ContentValues;ILandroid/opengl/EGLContext;Ljava/lang/String;Lcom/android/camera/module/encoder/LiveMediaRecorder$EncoderListener;ZF)Z
 
     move-result p1
@@ -460,7 +432,6 @@
 
     move/from16 v7, p7
 
-    .line 2
     invoke-virtual/range {v0 .. v8}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->init(Landroid/content/ContentValues;ILandroid/opengl/EGLContext;Ljava/lang/String;Lcom/android/camera/module/encoder/LiveMediaRecorder$EncoderListener;ZFI)Z
 
     move-result v0
@@ -481,35 +452,28 @@
 
     move/from16 v11, p7
 
-    .line 3
     iput-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoValues:Landroid/content/ContentValues;
 
     move-object/from16 v5, p4
 
-    .line 4
     iput-object v5, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMimeType:Ljava/lang/String;
 
-    .line 5
     iput v2, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mOrientationCompensation:I
 
-    .line 6
     iput-object v10, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     move/from16 v3, p6
 
-    .line 7
     iput-boolean v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mEnableAudio:Z
 
     const-string v3, "_data"
 
-    .line 8
     invoke-virtual {p1, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera/Util;->getResolution(Landroid/content/ContentValues;)Lcom/android/camera/CameraSize;
 
     move-result-object v3
@@ -520,18 +484,15 @@
 
     if-nez v3, :cond_1
 
-    .line 10
     iget-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz v0, :cond_0
 
-    .line 11
     invoke-interface {v0, v12}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onError(I)V
 
     :cond_0
     return v12
 
-    .line 12
     :cond_1
     iget-object v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mCurrentVideoFilename:Ljava/lang/String;
 
@@ -543,7 +504,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 13
     new-instance v3, Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -556,10 +516,8 @@
 
     const/4 v4, 0x0
 
-    .line 14
     invoke-virtual {v3, v12, v4}, Lcom/android/camera/storage/mediastore/VideoFile;->initialize(ZLandroid/content/Intent;)V
 
-    .line 15
     iget-object v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-virtual {v3, p1}, Lcom/android/camera/storage/mediastore/VideoFile;->setContentValues(Landroid/content/ContentValues;)V
@@ -567,16 +525,13 @@
     :cond_2
     const/4 v13, 0x1
 
-    .line 16
     :try_start_0
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->releaseLastMediaRecorder()V
 
-    .line 17
     iget-boolean v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mScopedStorage:Z
 
     if-eqz v0, :cond_3
 
-    .line 18
     new-instance v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     iget-object v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
@@ -591,7 +546,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_3
     new-instance v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
@@ -601,7 +555,6 @@
 
     iput-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
-    .line 20
     :goto_0
     new-instance v0, Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
@@ -627,22 +580,18 @@
 
     iput-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMediaVideoEncoder:Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
-    .line 21
     invoke-virtual {v0, v11}, Lcom/android/camera/module/encoder/MediaEncoder;->setRecordSpeed(F)V
 
-    .line 22
     iget-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMediaVideoEncoder:Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
     move/from16 v3, p8
 
     invoke-virtual {v0, v3}, Lcom/android/camera/module/encoder/MediaEncoder;->setRecordFps(I)V
 
-    .line 23
     iget-boolean v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mEnableAudio:Z
 
     if-eqz v0, :cond_4
 
-    .line 24
     new-instance v0, Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
     iget-object v3, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
@@ -651,16 +600,13 @@
 
     iput-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMediaAudioEncoder:Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
-    .line 25
     invoke-virtual {v0, v11}, Lcom/android/camera/module/encoder/MediaEncoder;->setRecordSpeed(F)V
 
-    .line 26
     :cond_4
     iget-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->prepare()V
 
-    .line 27
     sget-object v0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -679,7 +625,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     iget-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     iget v2, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mOrientationCompensation:I
@@ -693,19 +638,16 @@
     :catch_0
     move-exception v0
 
-    .line 29
     sget-object v2, Lcom/android/camera/module/encoder/LiveMediaRecorder;->TAG:Ljava/lang/String;
 
     const-string v3, "initializeRecorder: "
 
     invoke-static {v2, v3, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 30
     iget-object v0, v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz v0, :cond_5
 
-    .line 31
     invoke-interface {v0, v13}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onError(I)V
 
     :cond_5
@@ -715,14 +657,11 @@
 .method public onSurfaceTextureUpdated(Lcom/android/camera/effect/draw_mode/DrawAttribute;Z)V
     .locals 1
 
-    .line 7
     monitor-enter p0
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMediaVideoEncoder:Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
-    .line 9
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -731,7 +670,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 10
     invoke-virtual {v0, p1}, Lcom/android/camera/module/encoder/MediaVideoEncoder;->frameAvailableSoon(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
 
     :cond_0
@@ -740,7 +678,6 @@
     :catchall_0
     move-exception p1
 
-    .line 11
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -752,14 +689,11 @@
 .method public onSurfaceTextureUpdated(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;Z)V
     .locals 6
 
-    .line 1
     monitor-enter p0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMediaVideoEncoder:Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
-    .line 3
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -768,7 +702,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iget-object v1, p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
@@ -789,7 +722,6 @@
 
     invoke-virtual {p2, v1, p1, v2}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/module/encoder/MediaVideoEncoder;->frameAvailableSoon(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)Z
@@ -800,7 +732,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -812,19 +743,16 @@
 .method public release()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->releaseMediaRecorder()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->releaseLastMediaRecorder()V
 
     return-void
 .end method
 
-.method public startRecorder(JZ)Z
+.method public startRecorder(J)Z
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -843,32 +771,27 @@
 
     move-wide p1, v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->startRecording(JZ)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->startRecording(J)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     invoke-virtual {p2}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->stopRecording()V
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz p2, :cond_1
 
-    const/4 p3, 0x2
+    const/4 v0, 0x2
 
-    .line 5
-    invoke-interface {p2, p3}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onError(I)V
+    invoke-interface {p2, v0}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onError(I)V
 
-    .line 6
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->releaseMediaRecorder()V
 
@@ -879,21 +802,17 @@
 .method public stopRecorder()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->stopRecording()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-interface {v0}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onStop()V
 
     :cond_1
@@ -905,28 +824,23 @@
 .method public stopRecorder(J)Z
     .locals 2
 
-    .line 5
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     sub-long/2addr v0, p1
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mMuxer:Lcom/android/camera/module/encoder/MediaMuxerWrapper;
 
     if-eqz p1, :cond_0
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->stopRecording()V
 
-    .line 8
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/encoder/LiveMediaRecorder;->mRecorderListener:Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;
 
     if-eqz p1, :cond_1
 
-    .line 9
     invoke-interface {p1}, Lcom/android/camera/module/encoder/LiveMediaRecorder$LiveMediaRecorderListener;->onStop()V
 
     :cond_1
@@ -945,7 +859,6 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 10
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->handleVideoFile(Z)V
 

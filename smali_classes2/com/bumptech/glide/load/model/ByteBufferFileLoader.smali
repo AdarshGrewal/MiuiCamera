@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,7 +55,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance p2, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p3, Lcom/bumptech/glide/signature/ObjectKey;
@@ -75,7 +73,6 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/ByteBufferFileLoader;->buildLoadData(Ljava/io/File;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -96,7 +93,6 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/ByteBufferFileLoader;->handles(Ljava/io/File;)Z

@@ -18,7 +18,6 @@
 
     new-array v0, v0, [C
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/xiaomi/stat/d/d;->b:[C
@@ -27,7 +26,6 @@
 
     new-array v0, v0, [B
 
-    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/xiaomi/stat/d/d;->c:[B
@@ -240,7 +238,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -249,12 +246,10 @@
 .method public static a([B)Ljava/lang/String;
     .locals 8
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -264,14 +259,12 @@
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 3
     aget-byte v2, p0, v2
 
     and-int/lit16 v2, v2, 0xff
 
     if-ne v3, v1, :cond_0
 
-    .line 4
     sget-object p0, Lcom/xiaomi/stat/d/d;->b:[C
 
     ushr-int/lit8 v1, v2, 0x2
@@ -280,7 +273,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 5
     sget-object p0, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v1, v2, 0x3
@@ -293,7 +285,6 @@
 
     const-string p0, "=="
 
-    .line 6
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -301,14 +292,12 @@
     :cond_0
     add-int/lit8 v4, v3, 0x1
 
-    .line 7
     aget-byte v3, p0, v3
 
     and-int/lit16 v3, v3, 0xff
 
     if-ne v4, v1, :cond_1
 
-    .line 8
     sget-object p0, Lcom/xiaomi/stat/d/d;->b:[C
 
     ushr-int/lit8 v1, v2, 0x2
@@ -317,7 +306,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 9
     sget-object p0, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v1, v2, 0x3
@@ -334,7 +322,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 10
     sget-object p0, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v1, v3, 0xf
@@ -347,7 +334,6 @@
 
     const-string p0, "="
 
-    .line 11
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -355,12 +341,10 @@
     :cond_1
     add-int/lit8 v5, v4, 0x1
 
-    .line 12
     aget-byte v4, p0, v4
 
     and-int/lit16 v4, v4, 0xff
 
-    .line 13
     sget-object v6, Lcom/xiaomi/stat/d/d;->b:[C
 
     ushr-int/lit8 v7, v2, 0x2
@@ -369,7 +353,6 @@
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 14
     sget-object v6, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v2, v2, 0x3
@@ -386,7 +369,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 15
     sget-object v2, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v3, v3, 0xf
@@ -403,7 +385,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 16
     sget-object v2, Lcom/xiaomi/stat/d/d;->b:[C
 
     and-int/lit8 v3, v4, 0x3f
@@ -416,7 +397,6 @@
 
     goto/16 :goto_0
 
-    .line 17
     :cond_2
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -429,7 +409,6 @@
 .method public static a(Ljava/lang/String;)[B
     .locals 2
 
-    .line 18
     :try_start_0
     invoke-static {p0}, Lcom/xiaomi/stat/d/d;->b(Ljava/lang/String;)[B
 
@@ -446,7 +425,6 @@
 
     const-string v1, "decode e"
 
-    .line 19
     invoke-static {v0, v1, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
@@ -464,19 +442,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v1, "US-ASCII"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
-    .line 3
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -486,7 +461,6 @@
 
     if-ge v2, v1, :cond_e
 
-    .line 4
     :goto_1
     sget-object v4, Lcom/xiaomi/stat/d/d;->c:[B
 
@@ -515,7 +489,6 @@
 
     goto/16 :goto_9
 
-    .line 5
     :cond_2
     :goto_3
     sget-object v6, Lcom/xiaomi/stat/d/d;->c:[B
@@ -554,20 +527,17 @@
 
     int-to-char v2, v2
 
-    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     :goto_5
     add-int/lit8 v2, v7, 0x1
 
-    .line 7
     aget-byte v6, p0, v7
 
     const/16 v7, 0x3d
 
     if-ne v6, v7, :cond_6
 
-    .line 8
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -578,7 +548,6 @@
 
     return-object p0
 
-    .line 9
     :cond_6
     sget-object v8, Lcom/xiaomi/stat/d/d;->c:[B
 
@@ -614,18 +583,15 @@
 
     int-to-char v5, v5
 
-    .line 10
     invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     :goto_7
     add-int/lit8 v5, v2, 0x1
 
-    .line 11
     aget-byte v2, p0, v2
 
     if-ne v2, v7, :cond_a
 
-    .line 12
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -636,7 +602,6 @@
 
     return-object p0
 
-    .line 13
     :cond_a
     sget-object v8, Lcom/xiaomi/stat/d/d;->c:[B
 
@@ -668,14 +633,12 @@
 
     int-to-char v2, v2
 
-    .line 14
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     move v2, v5
 
     goto/16 :goto_0
 
-    .line 15
     :cond_e
     :goto_9
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

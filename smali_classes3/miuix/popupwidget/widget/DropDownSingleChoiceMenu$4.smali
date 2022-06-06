@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu$4;->this$0:Lmiuix/popupwidget/widget/DropDownSingleChoiceMenu;
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
@@ -35,10 +34,8 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 2
     const-class p1, Landroid/widget/Spinner;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -53,10 +50,8 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 2
     const-class p1, Landroid/widget/Spinner;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;

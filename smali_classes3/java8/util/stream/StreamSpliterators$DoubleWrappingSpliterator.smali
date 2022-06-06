@@ -45,7 +45,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Z)V
 
     return-void
@@ -65,7 +64,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/function/Supplier;Z)V
 
     return-void
@@ -74,7 +72,6 @@
 .method public static synthetic lambda$initPartialTraversalState$147(Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->spliterator:Ljava8/util/Spliterator;
 
     iget-object p0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->bufferSink:Ljava8/util/stream/Sink;
@@ -91,7 +88,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;->forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
@@ -111,7 +107,6 @@
         }
     .end annotation
 
-    .line 9
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfDouble;->forEachRemaining(Ljava8/util/Spliterator$OfDouble;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -120,7 +115,6 @@
 .method public forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
     if-nez v0, :cond_0
@@ -129,18 +123,14 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->init()V
 
-    .line 5
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;-><init>(Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;Ljava8/util/function/DoubleConsumer;)V
 
-    .line 6
     iget-object p1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;
 
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->spliterator:Ljava8/util/Spliterator;
@@ -149,12 +139,10 @@
 
     const/4 p1, 0x1
 
-    .line 7
     iput-boolean p1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->finished:Z
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;->tryAdvance(Ljava8/util/function/DoubleConsumer;)Z
 
@@ -169,20 +157,16 @@
 .method public initPartialTraversalState()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SpinedBuffer$OfDouble;
 
     invoke-direct {v0}, Ljava8/util/stream/SpinedBuffer$OfDouble;-><init>()V
 
-    .line 2
     iput-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
-    .line 3
     new-instance v1, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$1;
 
     invoke-direct {v1, p0, v0}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$1;-><init>(Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;Ljava8/util/stream/SpinedBuffer$OfDouble;)V
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;
 
     invoke-virtual {v0, v1}, Ljava8/util/stream/PipelineHelper;->wrapSink(Ljava8/util/stream/Sink;)Ljava8/util/stream/Sink;
@@ -191,7 +175,6 @@
 
     iput-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->bufferSink:Ljava8/util/stream/Sink;
 
-    .line 5
     invoke-static {p0}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$$Lambda$1;->lambdaFactory$(Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;)Ljava8/util/function/BooleanSupplier;
 
     move-result-object v0
@@ -204,7 +187,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;->tryAdvance(Ljava8/util/function/DoubleConsumer;)Z
@@ -226,7 +208,6 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfDouble;->tryAdvance(Ljava8/util/Spliterator$OfDouble;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -237,17 +218,14 @@
 .method public tryAdvance(Ljava8/util/function/DoubleConsumer;)Z
     .locals 4
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->doAdvance()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
     check-cast v1, Ljava8/util/stream/SpinedBuffer$OfDouble;
@@ -267,7 +245,6 @@
 .method public trySplit()Ljava8/util/Spliterator$OfDouble;
     .locals 1
 
-    .line 3
     invoke-super {p0}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -280,7 +257,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;->trySplit()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -291,7 +267,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;->trySplit()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -313,7 +288,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;
 
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;

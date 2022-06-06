@@ -22,10 +22,8 @@
 .method public constructor <init>(Ljavax/microedition/khronos/egl/EGLContext;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/magicvideoskymediacodec/EglBase$Context;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/EglBase10$Context;->eglContext:Ljavax/microedition/khronos/egl/EGLContext;
 
     return-void
@@ -34,7 +32,6 @@
 .method public static synthetic access$000(Lcom/xiaomi/magicvideoskymediacodec/EglBase10$Context;)Ljavax/microedition/khronos/egl/EGLContext;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/EglBase10$Context;->eglContext:Ljavax/microedition/khronos/egl/EGLContext;
 
     return-object p0

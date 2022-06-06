@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/a/c;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/a/f;->b:Lcom/xiaomi/stat/a/c;
 
     iput-object p2, p0, Lcom/xiaomi/stat/a/f;->a:Ljava/util/ArrayList;
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/a/f;->b:Lcom/xiaomi/stat/a/c;
 
     iget-object v1, p0, Lcom/xiaomi/stat/a/f;->a:Ljava/util/ArrayList;

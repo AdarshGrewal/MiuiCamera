@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->values()[Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0

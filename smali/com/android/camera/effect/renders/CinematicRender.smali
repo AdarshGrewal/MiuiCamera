@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -94,7 +93,6 @@
 
     const/16 v3, 0x20
 
-    .line 1
     invoke-static {v3}, Lcom/android/camera/effect/renders/ShaderRender;->allocateByteBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v4
@@ -105,15 +103,12 @@
 
     iput-object v4, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
-    .line 2
     invoke-virtual {v4, v1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v1, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     invoke-static {v3}, Lcom/android/camera/effect/renders/ShaderRender;->allocateByteBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -124,10 +119,8 @@
 
     iput-object v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
 
-    .line 5
     invoke-virtual {v1, v0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;

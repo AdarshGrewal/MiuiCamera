@@ -77,7 +77,6 @@
 
     new-array v0, v0, [C
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->hexArray:[C
@@ -108,32 +107,26 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
-    .line 3
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;
 
     invoke-direct {v1, p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;-><init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mConnectionMonitor:Ljava/lang/Runnable;
 
-    .line 4
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;
 
     invoke-direct {v1, p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$5;-><init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mRetryConnection:Ljava/lang/Runnable;
 
-    .line 5
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mCSeq:I
 
-    .line 6
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     const/4 v2, 0x0
@@ -144,24 +137,18 @@
 
     const/16 v3, 0x78f
 
-    .line 7
     iput v3, v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->port:I
 
     const-string v3, "/"
 
-    .line 8
     iput-object v3, v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->path:Ljava/lang/String;
 
-    .line 9
     iput v0, v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->transport:I
 
-    .line 10
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mAuthorization:Ljava/lang/String;
 
-    .line 11
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mCallback:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;
 
-    .line 12
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -174,25 +161,20 @@
 
     const/4 v1, 0x3
 
-    .line 13
     iput v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
-    .line 14
     new-instance v1, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
-    .line 15
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;
 
     const-string v2, "net.majorkernelpanic.streaming.RtspClient"
 
     invoke-direct {v0, p0, v2, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;-><init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Ljava/lang/String;Ljava/util/concurrent/Semaphore;)V
 
-    .line 16
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 17
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->acquireUninterruptibly()V
 
     return-void
@@ -201,13 +183,11 @@
 .method private abort()V
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->sendRequestTeardown()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
     :catch_0
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mSocket:Ljava/net/Socket;
@@ -216,7 +196,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3
     :catch_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
@@ -224,7 +203,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mRetryConnection:Ljava/lang/Runnable;
@@ -233,7 +211,6 @@
 
     const/4 v0, 0x3
 
-    .line 5
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
     return-void
@@ -242,7 +219,6 @@
 .method public static synthetic access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -251,7 +227,6 @@
 .method public static synthetic access$1000(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->postMessage(I)V
 
     return-void
@@ -260,7 +235,6 @@
 .method public static synthetic access$102(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Landroid/os/Handler;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     return-object p1
@@ -269,7 +243,6 @@
 .method public static synthetic access$1100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mRetryConnection:Ljava/lang/Runnable;
 
     return-object p0
@@ -278,7 +251,6 @@
 .method public static synthetic access$1200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mCallback:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;
 
     return-object p0
@@ -287,7 +259,6 @@
 .method public static synthetic access$200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
     return p0
@@ -296,7 +267,6 @@
 .method public static synthetic access$202(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
     return p1
@@ -305,7 +275,6 @@
 .method public static synthetic access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     return-object p0
@@ -314,7 +283,6 @@
 .method public static synthetic access$302(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     return-object p1
@@ -323,7 +291,6 @@
 .method public static synthetic access$400(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     return-object p0
@@ -337,7 +304,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->tryConnection()V
 
     return-void
@@ -346,7 +312,6 @@
 .method public static synthetic access$600(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;ILjava/lang/Exception;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->postError(ILjava/lang/Exception;)V
 
     return-void
@@ -355,7 +320,6 @@
 .method public static synthetic access$700(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->abort()V
 
     return-void
@@ -364,7 +328,6 @@
 .method public static synthetic access$800(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mConnectionMonitor:Ljava/lang/Runnable;
 
     return-object p0
@@ -378,7 +341,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->sendRequestOption()V
 
     return-void
@@ -387,7 +349,6 @@
 .method private addHeaders()Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,7 +425,6 @@
 .method public static bytesToHex([B)Ljava/lang/String;
     .locals 6
 
-    .line 1
     array-length v0, p0
 
     mul-int/lit8 v0, v0, 0x2
@@ -473,20 +433,17 @@
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 3
     aget-byte v2, p0, v1
 
     and-int/lit16 v2, v2, 0xff
 
     mul-int/lit8 v3, v1, 0x2
 
-    .line 4
     sget-object v4, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->hexArray:[C
 
     ushr-int/lit8 v5, v2, 0x4
@@ -499,7 +456,6 @@
 
     and-int/lit8 v2, v2, 0xf
 
-    .line 5
     aget-char v2, v4, v2
 
     aput-char v2, v0, v3
@@ -508,7 +464,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance p0, Ljava/lang/String;
 
@@ -523,14 +478,12 @@
     :try_start_0
     const-string v0, "MD5"
 
-    .line 1
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
     const-string v1, "UTF-8"
 
-    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p1
@@ -557,7 +510,6 @@
 .method private postError(ILjava/lang/Exception;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mMainHandler:Landroid/os/Handler;
 
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$7;
@@ -572,7 +524,6 @@
 .method private postMessage(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mMainHandler:Landroid/os/Handler;
 
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$6;
@@ -596,7 +547,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget-object v1, v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
@@ -605,7 +555,6 @@
 
     move-result-object v1
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -662,7 +611,6 @@
 
     invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v10
@@ -681,7 +629,6 @@
 
     move-result-object v2
 
-    .line 4
     invoke-virtual {v2, v7}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v11
@@ -696,7 +643,6 @@
 
     invoke-static {v13, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v11, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     const-string v14, "UTF-8"
@@ -707,19 +653,16 @@
 
     invoke-virtual {v11, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 6
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
 
-    .line 7
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
     invoke-static {v2}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->parseResponse(Ljava/io/BufferedReader;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;
 
     move-result-object v2
 
-    .line 8
     iget-object v11, v2, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->headers:Ljava/util/HashMap;
 
     const-string v15, "server"
@@ -730,7 +673,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 9
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -760,10 +702,8 @@
     :cond_0
     const-string v11, "RTSP server name unknown"
 
-    .line 10
     invoke-static {v13, v11}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :goto_0
     iget-object v11, v2, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->headers:Ljava/util/HashMap;
 
@@ -775,7 +715,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 12
     :try_start_0
     sget-object v11, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->rexegSession:Ljava/util/regex/Pattern;
 
@@ -791,10 +730,8 @@
 
     move-result-object v11
 
-    .line 13
     invoke-virtual {v11}, Ljava/util/regex/Matcher;->find()Z
 
-    .line 14
     invoke-virtual {v11, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v11
@@ -805,7 +742,6 @@
 
     goto :goto_1
 
-    .line 15
     :catch_0
     new-instance v1, Ljava/io/IOException;
 
@@ -829,7 +765,6 @@
 
     throw v1
 
-    .line 16
     :cond_1
     :goto_1
     iget v11, v2, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->status:I
@@ -838,7 +773,6 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 17
     iget-object v11, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget-object v15, v11, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->username:Ljava/lang/String;
@@ -849,7 +783,6 @@
 
     if-eqz v11, :cond_3
 
-    .line 18
     :try_start_1
     sget-object v11, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->rexegAuthenticate:Ljava/util/regex/Pattern;
 
@@ -871,19 +804,16 @@
 
     const/4 v11, 0x2
 
-    .line 19
     invoke-virtual {v2, v11}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 20
     invoke-virtual {v2, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v12
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 21
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -916,7 +846,6 @@
 
     move-result-object v8
 
-    .line 22
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -957,7 +886,6 @@
 
     move-result-object v11
 
-    .line 23
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -976,7 +904,6 @@
 
     move-result-object v13
 
-    .line 24
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1005,7 +932,6 @@
 
     move-result-object v2
 
-    .line 25
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1054,7 +980,6 @@
 
     iput-object v2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mAuthorization:Ljava/lang/String;
 
-    .line 26
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1099,7 +1024,6 @@
 
     invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 27
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -1136,7 +1060,6 @@
 
     move-result-object v1
 
-    .line 28
     invoke-virtual {v1, v7}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
@@ -1151,7 +1074,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     move-object/from16 v3, v16
@@ -1162,19 +1084,16 @@
 
     invoke-virtual {v2, v1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 30
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
 
-    .line 31
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
     invoke-static {v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->parseResponse(Ljava/io/BufferedReader;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;
 
     move-result-object v1
 
-    .line 32
     iget v1, v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->status:I
 
     const/16 v2, 0x191
@@ -1192,7 +1111,6 @@
 
     throw v1
 
-    .line 33
     :catch_1
     new-instance v1, Ljava/io/IOException;
 
@@ -1202,7 +1120,6 @@
 
     throw v1
 
-    .line 34
     :cond_3
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1220,7 +1137,6 @@
     :goto_2
     return-void
 
-    .line 35
     :cond_5
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -1239,7 +1155,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1286,7 +1201,6 @@
 
     const-string v1, "\r\n"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -1301,7 +1215,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     const-string v2, "UTF-8"
@@ -1312,12 +1225,10 @@
 
     invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->parseResponse(Ljava/io/BufferedReader;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;
@@ -1335,7 +1246,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1374,7 +1284,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->addHeaders()Ljava/lang/String;
 
     move-result-object v1
@@ -1387,7 +1296,6 @@
 
     const-string v1, "\r\n"
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -1402,7 +1310,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     const-string v2, "UTF-8"
@@ -1413,12 +1320,10 @@
 
     invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 6
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->parseResponse(Ljava/io/BufferedReader;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;
@@ -1445,7 +1350,6 @@
 
     if-ge v1, v2, :cond_4
 
-    .line 1
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget-object v2, v2, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
@@ -1456,7 +1360,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 2
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget v3, v3, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->transport:I
@@ -1517,7 +1420,6 @@
 
     move-result-object v3
 
-    .line 3
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1568,7 +1470,6 @@
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->addHeaders()Ljava/lang/String;
 
     move-result-object v7
@@ -1579,7 +1480,6 @@
 
     move-result-object v6
 
-    .line 5
     invoke-virtual {v6, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
@@ -1592,7 +1492,6 @@
 
     invoke-static {v7, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     const-string v8, "UTF-8"
@@ -1603,19 +1502,16 @@
 
     invoke-virtual {v3, v6}, Ljava/io/OutputStream;->write([B)V
 
-    .line 7
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v3}, Ljava/io/OutputStream;->flush()V
 
-    .line 8
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
     invoke-static {v3}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->parseResponse(Ljava/io/BufferedReader;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;
 
     move-result-object v3
 
-    .line 9
     iget-object v6, v3, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->headers:Ljava/util/HashMap;
 
     const-string v8, "session"
@@ -1626,7 +1522,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 10
     :try_start_0
     sget-object v6, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->rexegSession:Ljava/util/regex/Pattern;
 
@@ -1642,10 +1537,8 @@
 
     move-result-object v6
 
-    .line 11
     invoke-virtual {v6}, Ljava/util/regex/Matcher;->find()Z
 
-    .line 12
     invoke-virtual {v6, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -1656,7 +1549,6 @@
 
     goto :goto_2
 
-    .line 13
     :catch_0
     new-instance v0, Ljava/io/IOException;
 
@@ -1680,7 +1572,6 @@
 
     throw v0
 
-    .line 14
     :cond_1
     :goto_2
     iget-object v6, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -1689,7 +1580,6 @@
 
     if-nez v6, :cond_2
 
-    .line 15
     :try_start_1
     sget-object v6, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Response;->rexegTransport:Ljava/util/regex/Pattern;
 
@@ -1711,7 +1601,6 @@
 
     const/4 v6, 0x3
 
-    .line 16
     invoke-virtual {v3, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v8
@@ -1732,7 +1621,6 @@
 
     invoke-interface {v2, v8, v10}, Lnet/majorkernelpanic/streaming/Stream;->setDestinationPorts(II)V
 
-    .line 17
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1778,15 +1666,12 @@
     :catch_1
     move-exception v3
 
-    .line 18
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 19
     invoke-interface {v2}, Lnet/majorkernelpanic/streaming/Stream;->getDestinationPorts()[I
 
     move-result-object v2
 
-    .line 20
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1813,7 +1698,6 @@
 
     goto :goto_3
 
-    .line 21
     :cond_2
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
@@ -1841,7 +1725,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1888,7 +1771,6 @@
 
     const-string v1, "\r\n"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -1903,7 +1785,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     const-string v2, "UTF-8"
@@ -1914,7 +1795,6 @@
 
     invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
@@ -1932,10 +1812,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mCSeq:I
 
-    .line 2
     new-instance v0, Ljava/net/Socket;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -1948,7 +1826,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mSocket:Ljava/net/Socket;
 
-    .line 3
     new-instance v0, Ljava/io/BufferedReader;
 
     new-instance v1, Ljava/io/InputStreamReader;
@@ -1965,7 +1842,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mBufferedReader:Ljava/io/BufferedReader;
 
-    .line 4
     new-instance v0, Ljava/io/BufferedOutputStream;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mSocket:Ljava/net/Socket;
@@ -1978,13 +1854,10 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 5
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->sendRequestAnnounce()V
 
-    .line 6
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->sendRequestSetup()V
 
-    .line 7
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->sendRequestRecord()V
 
     return-void
@@ -1995,7 +1868,6 @@
 .method public getSession()Lnet/majorkernelpanic/streaming/Session;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget-object v0, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
@@ -2006,7 +1878,6 @@
 .method public isStreaming()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mState:I
 
     const/4 v1, 0x1
@@ -2028,10 +1899,8 @@
 .method public release()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->stopStream()V
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -2046,7 +1915,6 @@
 .method public setCallback(Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mCallback:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;
 
     return-void
@@ -2055,12 +1923,10 @@
 .method public setCredentials(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iput-object p1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->username:Ljava/lang/String;
 
-    .line 2
     iput-object p2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->password:Ljava/lang/String;
 
     return-void
@@ -2069,12 +1935,10 @@
 .method public setServerAddress(Ljava/lang/String;I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iput p2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->port:I
 
-    .line 2
     iput-object p1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->host:Ljava/lang/String;
 
     return-void
@@ -2083,7 +1947,6 @@
 .method public setSession(Lnet/majorkernelpanic/streaming/Session;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iput-object p1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
@@ -2094,7 +1957,6 @@
 .method public setStreamPath(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iput-object p1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->path:Ljava/lang/String;
@@ -2105,7 +1967,6 @@
 .method public setTransportMode(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iput p1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->transport:I
@@ -2116,19 +1977,16 @@
 .method public startStream()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mTmpParameters:Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->host:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    .line 2
     iget-object v0, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;
@@ -2139,7 +1997,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2149,7 +2006,6 @@
 
     throw v0
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2163,7 +2019,6 @@
 .method public stopStream()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$3;

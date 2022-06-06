@@ -50,16 +50,12 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/data/data/ComponentData;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mContext:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
-    .line 4
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
@@ -72,23 +68,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/data/data/ComponentData;Z)V
     .locals 0
 
-    .line 5
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mContext:Landroid/content/Context;
 
-    .line 7
     iput-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
-    .line 8
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 9
     iput-boolean p3, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mSupportRealtimeEffect:Z
 
     return-void
@@ -97,26 +88,20 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/data/data/ComponentData;ZLcom/android/camera/ui/gl/EglCore;)V
     .locals 0
 
-    .line 10
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 11
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mContext:Landroid/content/Context;
 
-    .line 12
     iput-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
-    .line 13
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 14
     iput-boolean p3, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mSupportRealtimeEffect:Z
 
-    .line 15
     iput-object p4, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEglCore:Lcom/android/camera/ui/gl/EglCore;
 
     return-void
@@ -125,7 +110,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/EffectItemAdapter;)Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEffectItemListener:Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;
 
     return-object p0
@@ -134,7 +118,6 @@
 .method public static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/EffectItemAdapter;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -145,7 +128,6 @@
 .method public synthetic OooO00o(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEffectItemListener:Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;
 
     if-eqz v0, :cond_0
@@ -158,7 +140,6 @@
 
     const/16 v0, 0x80
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
@@ -168,14 +149,12 @@
 .method public getItemCount()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/fragment/EffectItemAdapter;->TAG:Ljava/lang/String;
 
     const-string v2, "mComponentData = null "
@@ -184,7 +163,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/data/data/ComponentData;->getItems()Ljava/util/List;
 
@@ -192,7 +170,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/fragment/EffectItemAdapter;->TAG:Ljava/lang/String;
 
     const-string v2, " getItems() = null "
@@ -201,7 +178,6 @@
 
     return v1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
@@ -219,7 +195,6 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/ComponentData;->getItems()Ljava/util/List;
@@ -232,12 +207,10 @@
 
     check-cast v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 2
     move-object v1, p1
 
     check-cast v1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;
 
-    .line 3
     iget-object v2, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -246,18 +219,15 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 4
     invoke-virtual {v1, p2, v0}, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->bindEffectIndex(ILcom/android/camera/data/data/ComponentDataItem;)V
 
-    .line 5
     iget-boolean p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mSupportRealtimeEffect:Z
 
     if-eqz p2, :cond_0
 
-    .line 6
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a0148
+    const v0, 0x7f0a014f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -269,10 +239,9 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setRotation(F)V
 
-    .line 7
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a0146
+    const p2, 0x7f0a014d
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -286,7 +255,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -301,51 +269,42 @@
 .end method
 
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)V
-    .locals 3
+    .locals 2
 
-    .line 9
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/EffectItemAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 11
     :cond_0
     instance-of p2, p1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_2
 
-    .line 12
     check-cast p1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;
 
     const/4 p2, 0x0
 
-    .line 13
     invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     instance-of v0, v0, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 14
     invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;
 
-    .line 15
     iget-boolean v0, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
-
-    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
@@ -357,71 +316,43 @@
 
     move-result v0
 
-    iget v2, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->index:I
+    iget v1, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->index:I
 
-    if-eq v0, v2, :cond_1
+    if-eq v0, v1, :cond_1
 
-    .line 16
     iput-boolean p2, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
 
-    goto :goto_0
-
-    .line 17
     :cond_1
-    iget-boolean p2, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
-
-    if-nez p2, :cond_2
-
-    iget-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEffectItemListener:Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;
-
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2}, Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;->getCurrentIndex()I
-
-    move-result p2
-
-    iget v0, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->index:I
-
-    if-ne p2, v0, :cond_2
-
-    .line 18
-    iput-boolean v1, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
-
-    .line 19
-    :cond_2
-    :goto_0
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-boolean v0, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setActivated(Z)V
 
-    .line 20
     iget-object p1, p1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->mSelectedIndicator:Landroid/widget/ImageView;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    .line 21
     iget-boolean p2, p3, Lcom/android/camera/fragment/EffectItemAdapter$ItemChangeData;->select:Z
 
-    invoke-static {p1, p2, v1}, Lcom/android/camera/Util;->updateSelectIndicator(Landroid/view/View;ZZ)V
+    const/4 p3, 0x1
 
-    :cond_3
-    :goto_1
+    invoke-static {p1, p2, p3}, Lcom/android/camera/Util;->updateSelectIndicator(Landroid/view/View;ZZ)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 2
 
-    .line 1
     iget-boolean p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mSupportRealtimeEffect:Z
 
     const/4 v0, 0x0
 
     if-eqz p2, :cond_0
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x7f0d0042
@@ -430,7 +361,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance p2, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;
 
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEglCore:Lcom/android/camera/ui/gl/EglCore;
@@ -439,7 +369,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
@@ -449,18 +378,15 @@
 
     move-result-object p1
 
-    .line 5
     new-instance p2, Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder;
 
     invoke-direct {p2, p0, p1}, Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder;-><init>(Lcom/android/camera/fragment/EffectItemAdapter;Landroid/view/View;)V
 
-    .line 6
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/animation/FolmeUtils;->handleListItemTouch(Landroid/view/View;)V
 
     return-object p2
@@ -473,13 +399,12 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f120465
+    const v1, 0x7f120443
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -487,7 +412,6 @@
 
     if-lez p2, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -499,7 +423,6 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,7 +433,6 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -527,20 +449,17 @@
 
     move-result-object p2
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 7
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0o;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0o;
 
-    invoke-direct {p2, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0o;-><init>(Lcom/android/camera/fragment/EffectItemAdapter;Landroid/view/View;)V
+    invoke-direct {p2, p0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0o;-><init>(Lcom/android/camera/fragment/EffectItemAdapter;Landroid/view/View;)V
 
     const-wide/16 v0, 0x64
 
@@ -548,7 +467,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -560,7 +478,6 @@
 .method public setDisplayRotation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mDisplayRotation:I
 
     return-void
@@ -569,7 +486,6 @@
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-void
@@ -578,7 +494,6 @@
 .method public setOnEffectItemListener(Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mEffectItemListener:Lcom/android/camera/fragment/EffectItemAdapter$IEffectItemListener;
 
     return-void
@@ -587,7 +502,6 @@
 .method public setRotation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mDegree:I
 
     return-void
@@ -596,10 +510,8 @@
 .method public updateData(Lcom/android/camera/data/data/ComponentData;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
-    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void

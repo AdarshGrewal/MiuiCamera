@@ -32,7 +32,6 @@
 .method public constructor <init>(JILjava8/util/function/DoubleUnaryOperator;DLjava8/util/function/DoublePredicate;)V
     .locals 0
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/DoubleStreams$2;->val$next:Ljava8/util/function/DoubleUnaryOperator;
 
     iput-wide p5, p0, Ljava8/util/stream/DoubleStreams$2;->val$seed:D
@@ -49,7 +48,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/DoubleStreams$2;->forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
@@ -60,10 +58,8 @@
 .method public forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
     .locals 3
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/DoubleStreams$2;->finished:Z
 
     if-eqz v0, :cond_0
@@ -73,10 +69,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Ljava8/util/stream/DoubleStreams$2;->finished:Z
 
-    .line 5
     iget-boolean v0, p0, Ljava8/util/stream/DoubleStreams$2;->started:Z
 
     if-eqz v0, :cond_1
@@ -94,7 +88,6 @@
     :cond_1
     iget-wide v0, p0, Ljava8/util/stream/DoubleStreams$2;->val$seed:D
 
-    .line 6
     :goto_0
     iget-object v2, p0, Ljava8/util/stream/DoubleStreams$2;->val$hasNext:Ljava8/util/function/DoublePredicate;
 
@@ -104,10 +97,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 7
     invoke-interface {p1, v0, v1}, Ljava8/util/function/DoubleConsumer;->accept(D)V
 
-    .line 8
     iget-object v2, p0, Ljava8/util/stream/DoubleStreams$2;->val$next:Ljava8/util/function/DoubleUnaryOperator;
 
     invoke-interface {v2, v0, v1}, Ljava8/util/function/DoubleUnaryOperator;->applyAsDouble(D)D
@@ -123,7 +114,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/DoubleStreams$2;->tryAdvance(Ljava8/util/function/DoubleConsumer;)Z
@@ -136,10 +126,8 @@
 .method public tryAdvance(Ljava8/util/function/DoubleConsumer;)Z
     .locals 5
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/DoubleStreams$2;->finished:Z
 
     const/4 v1, 0x0
@@ -148,7 +136,6 @@
 
     return v1
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Ljava8/util/stream/DoubleStreams$2;->started:Z
 
@@ -156,7 +143,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/DoubleStreams$2;->val$next:Ljava8/util/function/DoubleUnaryOperator;
 
     iget-wide v3, p0, Ljava8/util/stream/DoubleStreams$2;->prev:D
@@ -167,14 +153,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-wide v3, p0, Ljava8/util/stream/DoubleStreams$2;->val$seed:D
 
-    .line 7
     iput-boolean v2, p0, Ljava8/util/stream/DoubleStreams$2;->started:Z
 
-    .line 8
     :goto_0
     iget-object v0, p0, Ljava8/util/stream/DoubleStreams$2;->val$hasNext:Ljava8/util/function/DoublePredicate;
 
@@ -184,12 +167,10 @@
 
     if-nez v0, :cond_2
 
-    .line 9
     iput-boolean v2, p0, Ljava8/util/stream/DoubleStreams$2;->finished:Z
 
     return v1
 
-    .line 10
     :cond_2
     iput-wide v3, p0, Ljava8/util/stream/DoubleStreams$2;->prev:D
 

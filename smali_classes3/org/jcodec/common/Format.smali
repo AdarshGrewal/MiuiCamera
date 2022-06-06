@@ -58,7 +58,6 @@
 .method public static constructor <clinit>()V
     .locals 18
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v1, "MOV"
@@ -69,7 +68,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MOV:Lorg/jcodec/common/Format;
 
-    .line 2
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v3, "MPEG_PS"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MPEG_PS:Lorg/jcodec/common/Format;
 
-    .line 3
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v4, "MPEG_TS"
@@ -87,7 +84,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MPEG_TS:Lorg/jcodec/common/Format;
 
-    .line 4
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v5, "MKV"
@@ -96,7 +92,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MKV:Lorg/jcodec/common/Format;
 
-    .line 5
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v6, "H264"
@@ -107,7 +102,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->H264:Lorg/jcodec/common/Format;
 
-    .line 6
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v8, "RAW"
@@ -116,7 +110,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->RAW:Lorg/jcodec/common/Format;
 
-    .line 7
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v9, "FLV"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->FLV:Lorg/jcodec/common/Format;
 
-    .line 8
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v10, "AVI"
@@ -134,7 +126,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->AVI:Lorg/jcodec/common/Format;
 
-    .line 9
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v11, "IMG"
@@ -143,7 +134,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->IMG:Lorg/jcodec/common/Format;
 
-    .line 10
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v12, "IVF"
@@ -152,7 +142,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->IVF:Lorg/jcodec/common/Format;
 
-    .line 11
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v13, "MJPEG"
@@ -161,7 +150,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MJPEG:Lorg/jcodec/common/Format;
 
-    .line 12
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v14, "Y4M"
@@ -170,7 +158,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->Y4M:Lorg/jcodec/common/Format;
 
-    .line 13
     new-instance v0, Lorg/jcodec/common/Format;
 
     const-string v15, "WAV"
@@ -179,7 +166,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->WAV:Lorg/jcodec/common/Format;
 
-    .line 14
     new-instance v0, Lorg/jcodec/common/Format;
 
     move-object/from16 v16, v15
@@ -190,7 +176,6 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->WEBP:Lorg/jcodec/common/Format;
 
-    .line 15
     new-instance v0, Lorg/jcodec/common/Format;
 
     move-object/from16 v17, v15
@@ -201,96 +186,82 @@
 
     sput-object v0, Lorg/jcodec/common/Format;->MPEG_AUDIO:Lorg/jcodec/common/Format;
 
-    .line 16
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     sput-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
-    .line 17
     sget-object v2, Lorg/jcodec/common/Format;->MOV:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 18
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->MPEG_PS:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->MPEG_TS:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->MKV:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->H264:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v6, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->RAW:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->FLV:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v9, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->AVI:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v10, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->IMG:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v11, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->IVF:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v12, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->MJPEG:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v13, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->Y4M:Lorg/jcodec/common/Format;
 
     invoke-interface {v0, v14, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->WAV:Lorg/jcodec/common/Format;
@@ -299,7 +270,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->WEBP:Lorg/jcodec/common/Format;
@@ -308,7 +278,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     sget-object v1, Lorg/jcodec/common/Format;->MPEG_AUDIO:Lorg/jcodec/common/Format;
@@ -321,16 +290,12 @@
 .method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/common/Format;->name:Ljava/lang/String;
 
-    .line 3
     iput-boolean p2, p0, Lorg/jcodec/common/Format;->video:Z
 
-    .line 4
     iput-boolean p3, p0, Lorg/jcodec/common/Format;->audio:Z
 
     return-void
@@ -339,7 +304,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/jcodec/common/Format;
     .locals 1
 
-    .line 1
     sget-object v0, Lorg/jcodec/common/Format;->_values:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -356,7 +320,6 @@
 .method public isAudio()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lorg/jcodec/common/Format;->audio:Z
 
     return v0
@@ -365,7 +328,6 @@
 .method public isVideo()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lorg/jcodec/common/Format;->video:Z
 
     return v0

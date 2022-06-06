@@ -7,68 +7,92 @@
 .implements Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance$EmoticonPackListener;
 
 
-# static fields
-.field public static final DEFAULT_FACE_DETECTED_RESULT:I = -0x1
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+    }
+.end annotation
 
+
+# static fields
 .field public static final FLAG_HAS_FACE:I = 0xa
 
-.field public static final TAG:Ljava/lang/String;
+.field public static final FLAG_INIT_FACE:I = 0x0
 
-.field public static final mDisposable:Lio/reactivex/disposables/CompositeDisposable;
+.field public static final START_OFFSET_MS:J = 0x384L
 
-.field public static final mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final TAG:Ljava/lang/String; = "Mimojifu"
 
-.field public static final sTransRotate:[F
+.field public static mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public static sTransRotate:[F
 
 
 # instance fields
 .field public NVFormat:I
 
-.field public final cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+.field public cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
 .field public currentPos:I
 
-.field public final currentScenePath:[Ljava/lang/String;
+.field public currentScenePath:[Ljava/lang/String;
 
-.field public final defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+.field public defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
 .field public drawTransformAttribute:Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
 
-.field public final dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+.field public dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+.field public executorService:Ljava/util/concurrent/ExecutorService;
+
+.field public fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
 .field public flipX:I
 
 .field public flipY:I
 
+.field public fuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
+
 .field public gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
 .field public gson:Lcom/google/gson/Gson;
 
-.field public ignoreCount:I
-
 .field public isConvertEmoticon:Z
-
-.field public isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 .field public isShaderCacheSuccess:Z
 
 .field public isloadEmoticon:Z
 
-.field public final mActivityBase:Lcom/android/camera/ActivityBase;
+.field public mActivityBase:Lcom/android/camera/ActivityBase;
+
+.field public mCacheCameraView:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;
 
 .field public volatile mCameraNV21Byte:[B
 
-.field public final mContext:Landroid/content/Context;
+.field public mCaptureHandler:Landroid/os/Handler;
 
-.field public final mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public mCaptureThread:Landroid/os/HandlerThread;
 
-.field public final mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+.field public mContext:Landroid/content/Context;
 
-.field public mFaceCheckResult:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public mCountDownTimer:Landroid/os/CountDownTimer;
+
+.field public mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public mDrawSize:Landroid/util/Size;
+
+.field public mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+.field public mGifBitmap:Landroid/graphics/Bitmap;
 
 .field public mIsAr:Z
 
 .field public mIsCreate:Z
+
+.field public mIsCreateAvatarShutterClick:Z
+
+.field public mIsFaceDetectSuccess:Z
 
 .field public mIsFrameAvailable:Z
 
@@ -76,21 +100,37 @@
 
 .field public mIsGifOn:Z
 
-.field public final mIsMimojiFuCreated:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public mIsLoadFinish:Z
 
-.field public final mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public mIsMimojiFuCreated:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public mLightingProtocol:Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;
+.field public mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final mLoadHandler:Landroid/os/Handler;
+.field public mIsNeedCapture:Z
+
+.field public mIsNeedTakePicIcon:Z
+
+.field public mIsRecordStopping:Z
+
+.field public volatile mIsRecording:Z
+
+.field public mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+.field public mLoadHandler:Landroid/os/Handler;
 
 .field public mLoadThread:Landroid/os/HandlerThread;
 
-.field public final mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+.field public mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+.field public mMaxVideoDurationInMs:I
+
+.field public mMediaEncoderListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+
+.field public mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
 .field public mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
@@ -98,9 +138,9 @@
 
 .field public mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
-.field public final mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+.field public mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-.field public mMimojiStateChanges:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
+.field public mNeedThumbnail:Z
 
 .field public mOnFuPrepareListener:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;
 
@@ -120,13 +160,21 @@
 
 .field public mRecordingStartTime:J
 
-.field public final mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+.field public mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+.field public mRotationDevice:I
 
 .field public mRotationFu:I
 
+.field public mStopRecordType:I
+
 .field public mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
 
-.field public final mUiHandler:Landroid/os/Handler;
+.field public mTakePicIconIng:Z
+
+.field public mTotalRecordingTime:J
+
+.field public mUiHandler:Landroid/os/Handler;
 
 .field public mtx:[F
 
@@ -134,11 +182,15 @@
 
 .field public onCompleteListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
+.field public onEncoderPictureListener:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
+
 .field public onRecordListener:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$OnRecordListener;
 
 .field public rotateMode:I
 
-.field public final trans:[F
+.field public trans:[F
+
+.field public transTemp:[F
 
 .field public uiStyle:I
 
@@ -147,39 +199,14 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "MIMOJI_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-class v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->sTransRotate:[F
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -187,13 +214,6 @@
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 4
-    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
-
-    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
-
-    sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 
@@ -221,50 +241,52 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x5a
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     const/16 v1, 0x10
 
     new-array v2, v1, [F
 
-    .line 3
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
 
-    .line 4
+    new-array v2, v1, [F
+
+    iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->transTemp:[F
+
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiFuCreated:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 5
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 6
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 7
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 8
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFaceDetectSuccess:Z
+
     new-instance v2, Landroid/os/HandlerThread;
 
     const-string v3, "LoadConfig"
@@ -273,21 +295,38 @@
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadThread:Landroid/os/HandlerThread;
 
-    .line 9
+    new-instance v2, Landroid/os/HandlerThread;
+
+    const-string v3, "Capture"
+
+    invoke-direct {v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCaptureThread:Landroid/os/HandlerThread;
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mNeedThumbnail:Z
+
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-direct {v2}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 10
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
     invoke-direct {v2}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
-    .line 11
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreateAvatarShutterClick:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedTakePicIcon:Z
+
     new-instance v2, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -298,91 +337,92 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 12
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
 
-    .line 13
     new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 14
     new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 15
     new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    .line 16
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 17
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
 
     new-array v0, v1, [F
 
-    .line 18
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mtx:[F
 
     new-array v0, v1, [F
 
-    .line 19
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mvp:[F
 
-    .line 20
     new-instance v0, Lcom/google/gson/Gson;
 
     invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gson:Lcom/google/gson/Gson;
 
-    .line 21
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
 
-    const/4 v1, -0x1
+    invoke-direct {v0}, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawTransformAttribute:Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
 
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mFaceCheckResult:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$5;
 
-    .line 22
-    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$1;
-
-    invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$1;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$5;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onRecordListener:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$OnRecordListener;
 
-    .line 23
-    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$2;
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$6;
 
-    invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$2;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$6;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onEncoderPictureListener:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
+
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$7;
+
+    invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$7;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onCompleteListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
-    .line 24
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    .line 25
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    .line 26
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x1388
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x3a98
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    :goto_0
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCameraAppImpl()Lcom/android/camera/CameraAppImpl;
 
     move-result-object v0
@@ -393,30 +433,26 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
 
-    .line 27
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
-    const/16 v1, 0xa03
+    const/16 v1, 0xa6
 
-    .line 28
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLightingProtocol:Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
-    .line 29
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xf7
 
-    .line 30
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -425,12 +461,29 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
-    .line 31
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMediaEncoderListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/module/BaseModule;
+
+    invoke-direct {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;-><init>(Lcom/android/camera/module/BaseModule;)V
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMediaEncoderListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+
+    :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 32
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadThread:Landroid/os/HandlerThread;
@@ -443,7 +496,22 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadHandler:Landroid/os/Handler;
 
-    .line 33
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCaptureThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCaptureThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCaptureHandler:Landroid/os/Handler;
+
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getMainLooper()Landroid/os/Looper;
@@ -454,25 +522,28 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
 
-    .line 34
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object p1
 
-    const-class v0, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p1, v0}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
+    invoke-virtual {p1}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->executorService:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
-.method public static synthetic OooO00o(Ljava/lang/String;[BLio/reactivex/ObservableEmitter;)V
+.method public static synthetic OooO00o(Ljava/lang/String;[BLio/reactivex/SingleEmitter;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -480,10 +551,8 @@
         }
     .end annotation
 
-    .line 66
     invoke-static {p0}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
 
-    .line 67
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     move-result-object v0
@@ -494,419 +563,457 @@
 
     if-eqz p0, :cond_0
 
-    .line 68
-    invoke-interface {p2, p0}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
+    invoke-interface {p2, p0}, Lio/reactivex/SingleEmitter;->onSuccess(Ljava/lang/Object;)V
 
-    return-void
+    goto :goto_0
 
-    .line 69
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    new-instance p0, Ljava/lang/Throwable;
 
-    const-string p1, "CREATE ERROR"
+    const-string p1, "error"
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    invoke-interface {p2, p0}, Lio/reactivex/SingleEmitter;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
 .end method
 
 .method public static synthetic OooO00o(ZLcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;)V
-    .locals 3
+    .locals 2
 
-    .line 54
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "mimojifu showLoadProgress : "
 
-    const-string v2, "mimojifu showLoadProgress : "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Mimojifu"
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     invoke-interface {p1, p0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;->firstProgressShow(Z)V
 
     return-void
 .end method
 
 .method public static synthetic OooO0oo()V
-    .locals 2
+    .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
-    const/16 v1, 0xa2
+    const/16 v1, 0xac
 
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->showOrHideMimojiProgress(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicInteger;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$100(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1000(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicBoolean;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$102(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$1100(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$1200(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1202(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$1300(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1400(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1500(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1502(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$1600(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->resetCreateState()V
-
-    return-void
-.end method
-
-.method public static synthetic access$1700(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onProfileFinish()V
-
-    return-void
-.end method
-
-.method public static synthetic access$200()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static synthetic access$300(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isloadEmoticon:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$302(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isloadEmoticon:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$400(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$500(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/ui/RenderEngineAdapter;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$600()Ljava/util/concurrent/atomic/AtomicBoolean;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-object v0
-.end method
-
-.method public static synthetic access$700(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicBoolean;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$800(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$802(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;)Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    return-object p1
-.end method
-
-.method public static synthetic access$900(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Landroid/os/Handler;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method private avatarProcess()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 2
-    invoke-interface {v0, v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->requestRender(Z)V
+    const/4 v2, -0x1
 
-    goto :goto_0
+    invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
 
-    .line 3
     :cond_0
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object v0
-
-    const/16 v1, 0xf7
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    :goto_0
     return-void
 .end method
 
-.method private convertYUVData(Landroid/media/Image;)V
-    .locals 3
+.method public static synthetic access$002(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
 
-    .line 1
-    invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->getNV21(Landroid/media/Image;)[B
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
 
-    move-result-object p1
+    return p1
+.end method
 
-    if-eqz p1, :cond_3
+.method public static synthetic access$1000(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Landroid/content/Context;
+    .locals 0
 
-    .line 2
-    array-length v0, p1
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$102(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;)Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
+
+    return-object p1
+.end method
+
+.method public static synthetic access$1100(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1200(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicInteger;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1300(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$1302(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
+
+    return p1
+.end method
+
+.method public static synthetic access$1402(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
+    return p1
+.end method
+
+.method public static synthetic access$1500(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1600(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isloadEmoticon:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$1602(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isloadEmoticon:Z
+
+    return p1
+.end method
+
+.method public static synthetic access$1700(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1800(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/ui/CameraRenderEngine;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$1900()Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 1
+
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object v0
+.end method
+
+.method public static synthetic access$200(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$2000(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$2100(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$2102(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;)Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    return-object p1
+.end method
+
+.method public static synthetic access$2200(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onProfileFinish()V
+
+    return-void
+.end method
+
+.method public static synthetic access$2300(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Landroid/os/Handler;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$2400(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$2402(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
+
+    return p1
+.end method
+
+.method public static synthetic access$2500(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$2600(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$300(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$400(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTotalRecordingTime:J
+
+    return-wide v0
+.end method
+
+.method public static synthetic access$402(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTotalRecordingTime:J
+
+    return-wide p1
+.end method
+
+.method public static synthetic access$500(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    return p0
+.end method
+
+.method public static synthetic access$600(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->enableStopButton()V
+
+    return-void
+.end method
+
+.method public static synthetic access$700(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mStopRecordType:I
+
+    return p0
+.end method
+
+.method public static synthetic access$800(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Lcom/android/camera/ActivityBase;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$900(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$902(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
+
+    return p1
+.end method
+
+.method private animateCapture()V
+    .locals 2
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isCameraSoundOpen()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    return-void
 
-    .line 3
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+    invoke-virtual {v0, v1}, Lcom/android/camera/ActivityBase;->playCameraSound(I)V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    array-length v1, p1
+.method private clearAvatar()V
+    .locals 4
 
-    if-ge v0, v1, :cond_2
+    const-string v0, "Mimojifu"
 
-    :cond_1
-    const/4 v0, 0x0
+    const-string v1, "ee clearAvatar view"
 
-    .line 4
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
-    array-length v0, p1
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    .line 6
-    :cond_2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    array-length v1, p1
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiBgInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 7
-    :cond_3
+    :cond_0
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    new-instance v1, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    const-string/jumbo v2, "x1 clearAvatar view"
+
+    invoke-static {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$2;
+
+    invoke-direct {v2, p0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$2;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
+
+    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->queueEvent(Ljava/lang/Runnable;)V
+
+    const-wide/16 v2, 0x1
+
+    :try_start_0
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v1, v2, v3, v0}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
     :goto_0
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    return-void
 
-    const-string/jumbo v0, "previewImage data null"
-
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_1
     :goto_1
+    const-string/jumbo v1, "xx clearAvatar view"
+
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 
 .method private copyTexture(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;II)I
-    .locals 14
+    .locals 17
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
     move-object/from16 v1, p2
 
-    move/from16 v10, p4
+    move/from16 v9, p4
 
-    move/from16 v11, p5
+    move/from16 v10, p5
 
-    .line 1
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawTransformAttribute:Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
-
-    if-nez v2, :cond_0
-
-    .line 2
-    new-instance v2, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
-
-    invoke-direct {v2}, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;-><init>()V
-
-    iput-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawTransformAttribute:Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
-
-    :cond_0
     const/4 v2, 0x0
 
-    .line 3
-    invoke-static {v2, v2, v10, v11}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    invoke-static {v2, v2, v9, v10}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 4
-    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v3
 
@@ -914,97 +1021,87 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 5
-    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object v3
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
 
-    move-result v6
+    move-result v13
 
-    const/4 v3, -0x1
+    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    .line 6
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiCreate()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v5, 0x1
-
-    .line 7
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 8
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isProcessorReady()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    array-length v4, v4
-
-    if-eqz v4, :cond_1
-
-    move v3, v2
-
-    :cond_1
-    if-ltz v3, :cond_2
-
-    .line 9
-    iget-boolean v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
-
-    invoke-virtual {p0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
-
-    .line 10
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v5, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    iget v7, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
-
-    iget v8, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
-
-    iget v9, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
-
-    invoke-virtual/range {v4 .. v9}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
 
     move-result v3
 
-    :cond_2
-    move v12, v3
+    if-nez v3, :cond_0
 
-    if-lez v12, :cond_3
+    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    .line 11
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    iget-boolean v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isProcessorReady()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    array-length v3, v3
+
+    if-eqz v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, -0x1
+
+    :goto_0
+    if-ltz v3, :cond_1
+
+    iget-boolean v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    invoke-virtual {v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
+
+    iget-object v11, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v12, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    iget v14, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    iget v15, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    iget v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
+
+    move/from16 v16, v3
+
+    invoke-virtual/range {v11 .. v16}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
+
+    move-result v3
+
+    :cond_1
+    move v11, v3
+
+    if-lez v11, :cond_2
+
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
@@ -1017,25 +1114,20 @@
 
     const/4 v8, 0x0
 
-    const/4 v9, 0x0
-
-    move v3, v12
+    move v3, v11
 
     move/from16 v6, p4
 
     move/from16 v7, p5
 
-    invoke-virtual/range {v2 .. v9}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZI)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    invoke-virtual/range {v2 .. v8}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZ)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
-    .line 12
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
     invoke-interface {v1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 13
     invoke-interface/range {p2 .. p2}, Lcom/android/gallery3d/ui/GLCanvas;->prepareTransformRenders()V
 
-    .line 14
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawTransformAttribute:Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
 
     const/4 v4, 0x0
@@ -1044,9 +1136,11 @@
 
     sget-object v8, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->sTransRotate:[F
 
-    sget-object v9, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->IDENTITY_MATRIX:[F
+    sget-object v12, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->IDENTITY_MATRIX:[F
 
     const/4 v13, 0x0
+
+    move-object v9, v12
 
     move v10, v13
 
@@ -1056,13 +1150,12 @@
 
     invoke-interface {v1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 15
-    :cond_3
+    :cond_2
     iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
 
     move-result-object v4
 
@@ -1070,23 +1163,21 @@
 
     new-instance v6, Landroid/graphics/Rect;
 
-    invoke-direct {v6, v2, v2, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v6, v2, v2, v9, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 16
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-interface {v1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    :goto_0
-    return v12
+    :goto_1
+    return v11
 .end method
 
 .method public static create(Lcom/android/camera/ActivityBase;)Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;
 
     invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;-><init>(Lcom/android/camera/ActivityBase;)V
@@ -1094,10 +1185,579 @@
     return-object v0
 .end method
 
+.method private createAvatar([B)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreateAvatarShutterClick:Z
+
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->CREATE_MODLE_CACHE_DIR:Ljava/lang/String;
+
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0OO;
+
+    invoke-direct {v1, v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0OO;-><init>(Ljava/lang/String;[B)V
+
+    invoke-static {v1}, Lio/reactivex/Single;->create(Lio/reactivex/SingleOnSubscribe;)Lio/reactivex/Single;
+
+    move-result-object p1
+
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lio/reactivex/Single;->subscribeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+
+    move-result-object p1
+
+    invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lio/reactivex/Single;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
+
+    move-result-object p1
+
+    new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$4;
+
+    invoke-direct {v1, p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$4;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Lio/reactivex/Single;->subscribe(Lio/reactivex/SingleObserver;)V
+
+    return-void
+.end method
+
+.method private dealCaptureData([BLandroid/graphics/Rect;)I
+    .locals 19
+
+    move-object/from16 v1, p0
+
+    const-string v2, "Mimojifu"
+
+    const-string v0, "dealCaptureData: "
+
+    invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual/range {p2 .. p2}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/graphics/Rect;->height()I
+
+    move-result v3
+
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    invoke-static/range {p1 .. p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
+
+    new-instance v10, Landroid/graphics/Matrix;
+
+    invoke-direct {v10}, Landroid/graphics/Matrix;-><init>()V
+
+    iget-boolean v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    const/16 v4, 0x5a
+
+    const/high16 v5, -0x40800000    # -1.0f
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/16 v12, 0x10e
+
+    if-eqz v0, :cond_1
+
+    if-eqz v0, :cond_0
+
+    iget v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    if-eq v0, v4, :cond_1
+
+    if-ne v0, v12, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    rem-int/lit16 v0, v0, 0xb4
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {v10, v5, v6}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v10, v6, v5}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    :cond_2
+    :goto_1
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v8
+
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v9
+
+    const/4 v11, 0x0
+
+    move-object v5, v3
+
+    invoke-static/range {v5 .. v11}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object v5
+
+    iget-boolean v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    if-eqz v0, :cond_3
+
+    iget v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    rem-int/lit16 v6, v0, 0xb4
+
+    if-nez v6, :cond_3
+
+    add-int/lit16 v0, v0, 0xb4
+
+    rem-int/lit16 v0, v0, 0x168
+
+    goto :goto_2
+
+    :cond_3
+    iget v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    :goto_2
+    iget-boolean v6, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreateAvatarShutterClick:Z
+
+    const/4 v7, 0x0
+
+    if-eqz v6, :cond_4
+
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getDeviceOrientation()I
+
+    move-result v0
+
+    invoke-direct {v1, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onCreateAvatarShutterClick(Landroid/graphics/Bitmap;I)V
+
+    return v7
+
+    :cond_4
+    const/4 v6, 0x1
+
+    :try_start_0
+    iget-object v8, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    if-eqz v8, :cond_a
+
+    invoke-static {v7}, Lcom/android/camera/CameraSettings;->getEncodingQuality(Z)Lcom/android/camera/EncodingQuality;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v7}, Lcom/android/camera/EncodingQuality;->toInteger(Z)I
+
+    move-result v8
+
+    invoke-static {v5, v8}, Lcom/android/camera/Util;->getBitmapData(Landroid/graphics/Bitmap;I)[B
+
+    move-result-object v8
+
+    iget-boolean v9, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    if-eqz v9, :cond_5
+
+    move-object v9, v3
+
+    goto :goto_3
+
+    :cond_5
+    move-object v9, v5
+
+    :goto_3
+    iget-boolean v10, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    const/4 v11, 0x0
+
+    invoke-static {v11, v9, v0, v10}, Lcom/android/camera/Thumbnail;->createThumbnail(Landroid/net/Uri;Landroid/graphics/Bitmap;IZ)Lcom/android/camera/Thumbnail;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/Thumbnail;->startWaitingForUri()V
+
+    iget-object v9, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v9}, Lcom/android/camera/ActivityBase;->getThumbnailUpdater()Lcom/android/camera/ThumbnailUpdater;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v0, v6, v6}, Lcom/android/camera/ThumbnailUpdater;->setThumbnail(Lcom/android/camera/Thumbnail;ZZ)V
+
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getActualCameraId()I
+
+    move-result v0
+
+    move v14, v0
+
+    goto :goto_4
+
+    :cond_6
+    move v14, v7
+
+    :goto_4
+    new-instance v0, Lcom/xiaomi/camera/core/ParallelTaskData;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v15
+
+    const/16 v17, -0x4
+
+    const/16 v18, 0x0
+
+    move-object v13, v0
+
+    invoke-direct/range {v13 .. v18}, Lcom/xiaomi/camera/core/ParallelTaskData;-><init>(IJILjava/lang/String;)V
+
+    invoke-virtual {v0, v8, v7}, Lcom/xiaomi/camera/core/ParallelTaskData;->fillJpegData([BI)V
+
+    iget-boolean v8, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    if-eqz v8, :cond_7
+
+    move v8, v6
+
+    goto :goto_5
+
+    :cond_7
+    move v8, v7
+
+    :goto_5
+    iget v9, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    invoke-static {v8, v9}, Lcom/android/camera/Util;->getJpegRotation(II)I
+
+    move-result v8
+
+    add-int/2addr v8, v12
+
+    rem-int/lit16 v8, v8, 0x168
+
+    new-instance v9, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    iget-object v10, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    iget-object v13, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    iget-object v14, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    const/16 v15, 0x100
+
+    invoke-direct {v9, v10, v13, v14, v15}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;-><init>(Landroid/util/Size;Landroid/util/Size;Landroid/util/Size;I)V
+
+    invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lcom/android/camera/LocationManager;->getCurrentLocation()Landroid/location/Location;
+
+    move-result-object v10
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isDualCameraWaterMarkOpen()Z
+
+    move-result v13
+
+    invoke-virtual {v9, v13}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setHasDualWaterMark(Z)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v8}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setJpegRotation(I)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v8
+
+    invoke-static {v7}, Lcom/android/camera/CameraSettings;->getEncodingQuality(Z)Lcom/android/camera/EncodingQuality;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v7}, Lcom/android/camera/EncodingQuality;->toInteger(Z)I
+
+    move-result v9
+
+    invoke-virtual {v8, v9}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setJpegQuality(I)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v8
+
+    sget v9, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
+
+    invoke-virtual {v8, v9}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setFilterId(I)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v8
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_8
+
+    move v4, v12
+
+    :cond_8
+    invoke-virtual {v8, v4}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setOrientation(I)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v4
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isTimeWaterMarkOpen()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    iget-object v8, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-static {v8}, Lcom/android/camera/Util;->getTimeWatermark(Landroid/app/Activity;)Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_6
+
+    :cond_9
+    move-object v8, v11
+
+    :goto_6
+    invoke-virtual {v4, v8}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setTimeWaterMarkString(Ljava/lang/String;)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v4
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getDeviceWaterMarkParam()Lcom/android/camera/effect/renders/DeviceWatermarkParam;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setDeviceWatermarkParam(Lcom/android/camera/effect/renders/DeviceWatermarkParam;)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v4
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getPictureInfo()Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setPictureInfo(Lcom/xiaomi/camera/core/PictureInfo;)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v10}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->setLocation(Landroid/location/Location;)Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter$Builder;->build()Lcom/xiaomi/camera/core/ParallelTaskDataParameter;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Lcom/xiaomi/camera/core/ParallelTaskData;->fillParameter(Lcom/xiaomi/camera/core/ParallelTaskDataParameter;)V
+
+    iget-object v4, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-interface {v4}, Lcom/android/camera/AppController;->getImageSaver()Lcom/android/camera/storage/ImageSaver;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0, v11, v11}, Lcom/android/camera/storage/ImageSaver;->onParallelProcessFinish(Lcom/xiaomi/camera/core/ParallelTaskData;Landroid/hardware/camera2/CaptureResult;Landroid/hardware/camera2/CameraCharacteristics;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_a
+    if-eqz v3, :cond_b
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_b
+    if-eqz v5, :cond_c
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_c
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_c
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v0
+
+    instance-of v2, v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    if-eqz v2, :cond_d
+
+    :goto_7
+    check-cast v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;->onMimojiCaptureCallback()V
+
+    :cond_d
+    iput-boolean v7, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpTakePicture(I)V
+
+    goto :goto_8
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_9
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "mimoji void CaptureCallback[byteBuffer] exception "
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v3, :cond_e
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_e
+    if-eqz v5, :cond_f
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_f
+    iget-object v0, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v0
+
+    instance-of v2, v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    if-eqz v2, :cond_d
+
+    goto :goto_7
+
+    :goto_8
+    return v6
+
+    :goto_9
+    if-eqz v3, :cond_10
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_10
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_10
+    if-eqz v5, :cond_11
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_11
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_11
+    iget-object v2, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    if-eqz v3, :cond_12
+
+    check-cast v2, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;->onMimojiCaptureCallback()V
+
+    :cond_12
+    iput-boolean v7, v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v6}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpTakePicture(I)V
+
+    throw v0
+.end method
+
 .method private dealCaptureIconData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->queueIsEmpty()Z
@@ -1108,299 +1768,234 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
 .end method
 
 .method private drawEditFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
-    .locals 14
+    .locals 11
 
-    move-object v0, p0
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    .line 1
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
     invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
+
+    move-result v3
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
+
+    move-result p3
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0703df
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 2
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    const v2, 0x7f0703ce
 
-    if-eqz v2, :cond_3
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_1
-
-    .line 3
-    :cond_0
-    invoke-virtual {v1}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
-
-    move-result v5
-
-    .line 4
-    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
 
-    .line 5
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+    float-to-int v1, v1
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0703e0
+    const v4, 0x7f0703cf
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
     float-to-int v2, v2
 
-    .line 6
-    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+    add-int/2addr v1, v2
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
-    move-result-object v3
+    if-eqz v2, :cond_1
 
-    const v4, 0x7f0703cf
+    invoke-interface {v2}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
+    move-result v2
 
-    move-result v3
+    if-lez v2, :cond_1
 
-    float-to-int v3, v3
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+    invoke-interface {p3}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
 
-    .line 7
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result p3
 
-    move-result-object v4
+    add-int/2addr v1, p3
 
-    const v6, 0x7f0703d0
+    invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
 
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDimension(I)F
+    move-result-object p3
 
-    move-result v4
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
-    float-to-int v4, v4
+    move-result p3
 
-    add-int/2addr v3, v4
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+    invoke-interface {v2}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
 
-    move-result-object v4
+    move-result v2
 
-    const/16 v6, 0xf7
+    add-int/2addr v0, v2
 
-    .line 9
-    invoke-virtual {v4, v6}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+    :cond_1
+    move v7, v0
 
-    move-result-object v4
+    add-int/2addr v1, v7
 
-    check-cast v4, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    const/4 v0, 0x0
 
-    iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
-    if-eqz v4, :cond_1
+    move-result v2
 
-    .line 10
-    invoke-interface {v4}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
+    sub-int/2addr v2, v1
 
-    move-result v4
+    invoke-static {v0, v2, p3, v7}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    if-lez v4, :cond_1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 11
-    iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+    const v1, 0x3da88ce7    # 0.0823f
 
-    invoke-interface {v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
+    invoke-static {v1, v1, v1, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    move-result v1
+    const/16 v0, 0x4000
 
-    add-int/2addr v3, v1
+    invoke-static {v0}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 12
+    invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
+
+    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
+
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    iget v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    iget v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
+
+    move-result v0
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
     invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    move-result v1
-
-    .line 13
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    invoke-interface {v4}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->getTextureViewMarginTopHeight()I
-
-    move-result v4
-
-    add-int/2addr v2, v4
-
-    :cond_1
-    move v9, v2
-
-    add-int/2addr v3, v9
-
-    const/4 v2, 0x0
-
-    .line 14
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
-
-    move-result v4
-
-    sub-int/2addr v4, v3
-
-    invoke-static {v2, v4, v1, v9}, Landroid/opengl/GLES20;->glViewport(IIII)V
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const v3, 0x3da88ce7    # 0.0823f
-
-    .line 15
-    invoke-static {v3, v3, v3, v2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
-
-    const/16 v2, 0x4000
-
-    .line 16
-    invoke-static {v2}, Landroid/opengl/GLES20;->glClear(I)V
-
-    .line 17
-    invoke-interface/range {p2 .. p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
-
-    .line 18
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
-
-    invoke-virtual {v2, v3}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
-
-    .line 19
-    iget-boolean v2, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
-
-    invoke-virtual {p0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
-
-    .line 20
-    iget-object v3, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    iget v6, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
-
-    iget v7, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v3 .. v8}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
-
-    move-result v2
-
-    .line 21
-    iget-object v6, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    move-result v8
 
     invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
 
-    move-result-object v3
+    move-result-object p1
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    move-result v10
+    move-result v9
 
-    invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+    const/4 v10, 0x0
 
-    move-result-object v3
+    move v5, v0
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+    move v6, p3
 
-    move-result v11
+    invoke-virtual/range {v4 .. v10}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZ)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
-    const/4 v12, 0x0
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    const/4 v13, 0x0
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEmoticon()Z
 
-    move v7, v2
+    move-result p1
 
-    move v8, v1
+    if-nez p1, :cond_2
 
-    invoke-virtual/range {v6 .. v13}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZI)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
-    .line 22
-    iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEmoticon()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    if-lez v2, :cond_2
-
-    .line 23
-    iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
-
-    move-object/from16 v3, p2
-
-    invoke-interface {v3, v1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
-
-    goto :goto_0
+    invoke-interface {p2, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
     :cond_2
-    move-object/from16 v3, p2
-
-    .line 24
-    :goto_0
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->avatarProcess()V
-
-    .line 25
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dealCaptureIconData()V
 
-    .line 26
-    invoke-interface/range {p2 .. p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
+    invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v1}, Lcom/android/camera/effect/GLCanvasState;->popState()V
+    invoke-virtual {p1}, Lcom/android/camera/effect/GLCanvasState;->popState()V
 
-    .line 27
-    invoke-interface/range {p2 .. p2}, Lcom/android/gallery3d/ui/GLCanvas;->recycledResources()V
+    invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->recycledResources()V
 
-    return v2
-
-    :cond_3
-    :goto_1
-    const/4 v1, -0x1
-
-    return v1
+    return v0
 .end method
 
 .method private drawPreviewFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
-    .locals 12
+    .locals 9
 
-    .line 1
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1413,8 +2008,7 @@
 
     const/4 v0, 0x0
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
@@ -1432,7 +2026,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
 
@@ -1440,32 +2033,28 @@
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
 
-    move-result v3
+    move-result v0
 
-    .line 4
-    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateCameraImage(Z)V
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    move-result v8
+    move-result v7
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    move-result v9
+    move-result p1
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
@@ -1476,149 +2065,793 @@
 
     iget v6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
 
+    move v3, v0
+
     invoke-virtual/range {v1 .. v6}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
 
-    move-result p1
+    move-result v1
 
-    if-lez p1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 8
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    .line 9
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    if-nez v1, :cond_1
 
-    move-result v0
+    new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    if-nez v0, :cond_1
+    invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;-><init>()V
 
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    .line 10
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    :cond_1
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    move-result v0
+    iget v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
 
-    if-nez v0, :cond_1
+    iget v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
 
-    .line 11
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->IDENTITY_MATRIX:[F
+
+    move v2, v0
+
+    invoke-virtual/range {v1 .. v6}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;->drawFBO(III[F[F)I
+
+    move-result v1
+
+    const-string v0, "Mimojifu"
+
+    const-string v2, "mFuTextureId == 0"
+
+    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    if-lez v1, :cond_3
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
-    move-result v6
+    move-result v4
 
     invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
 
-    move-result v7
+    move-result v5
 
-    const/4 v10, 0x0
+    const/4 v8, 0x0
 
-    const/4 v11, 0x0
+    move v3, v1
 
-    move v5, p1
+    move v6, v7
 
-    invoke-virtual/range {v4 .. v11}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZI)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    move v7, p1
 
-    .line 12
-    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+    invoke-virtual/range {v2 .. v8}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZ)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
 
-    invoke-interface {p2, p3}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    invoke-interface {p2, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
+
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOo0;
+
+    invoke-direct {p2, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOo0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_3
+    return v1
+.end method
+
+.method private drawPreviewNormal(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)V
+    .locals 6
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-eqz p3, :cond_0
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    iget v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    iget v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isAvatarInited()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceNum()I
+
+    move-result v2
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getRotationData()[F
+
+    move-result-object v3
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceOcclusion()I
+
+    move-result v4
+
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getLandmarksData()[F
+
+    move-result-object v5
+
+    invoke-static/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/util/FaceCheckUtil;->checkFace(III[FI[F)I
+
+    move-result p3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, " fd fu result :  "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Mimojifu"
+
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {v0, p3}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->mimojiFaceDetect(I)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
+
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO;
+
+    invoke-virtual {p3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
-    return p1
+    :goto_0
+    iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    invoke-virtual {p3, v0, v1, p1}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    invoke-interface {p2, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
+
+    return-void
+.end method
+
+.method private enableStopButton()V
+    .locals 2
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v1, 0xa2
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1, v1}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->enableStopButton(ZZ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private getDeviceWaterMarkParam()Lcom/android/camera/effect/renders/DeviceWatermarkParam;
+    .locals 5
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isDualCameraWaterMarkOpen()Z
+
+    move-result v0
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCameraWaterMarkOpen()Z
+
+    move-result v1
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isUltraPixelRearOn()Z
+
+    move-result v2
+
+    new-instance v3, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->getDualCameraWaterMarkFilePathVendor()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v0, v1, v2, v4}, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;-><init>(ZZZLjava/lang/String;)V
+
+    invoke-static {}, Lcom/android/camera/Util;->isLTR()Z
+
+    move-result v1
+
+    invoke-virtual {v3, v1}, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->setLTR(Z)Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v2}, Lcom/android/camera/CameraSettings;->getCustomWatermark(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-virtual {v1, v2}, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->setCustomText(Ljava/lang/String;)Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->build()Lcom/android/camera/effect/renders/DeviceWatermarkParam;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private getMimojiPara()Ljava/util/Map;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const-string v2, "attr_mimoji_category"
+
+    const-string/jumbo v3, "null"
+
+    if-eqz v0, :cond_7
+
+    iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_7
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v4, v4, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
+
+    if-eqz v4, :cond_7
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getInfos()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v5, v5, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
+
+    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getDir()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "info.json"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FileUtil;->readFile(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_0
+    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gson:Lcom/google/gson/Gson;
+
+    const-class v6, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;
+
+    invoke-virtual {v5, v4, v6}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;
+
+    invoke-static {v1, v5}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->putMimojiConfigValue(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;)Ljava/util/Map;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, " avatarinfo : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "Mimojifu"
+
+    invoke-static {v6, v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    sget-object v4, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    array-length v4, v0
+
+    const/4 v6, 0x1
+
+    if-gt v4, v6, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    array-length v4, v0
+
+    sub-int/2addr v4, v6
+
+    aget-object v4, v0, v4
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    array-length v4, v0
+
+    add-int/lit8 v4, v4, -0x2
+
+    aget-object v0, v0, v4
+
+    goto :goto_1
+
+    :cond_2
+    array-length v4, v0
+
+    sub-int/2addr v4, v6
+
+    aget-object v0, v0, v4
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    const-string v0, " "
+
+    :goto_1
+    const-string v4, "cartoon"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    const-string v4, "human"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    const-string/jumbo v4, "person"
+
+    if-eqz v5, :cond_6
+
+    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->isEidted()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "_edited"
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    :cond_5
+    const-string v4, "custom"
+
+    :cond_6
+    :goto_2
+    invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->translateForHumanTemplate(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "attr_mimoji_cartoon"
+
+    invoke-interface {v1, v5, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-interface {v1, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_7
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_3
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiTimbreInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;
+
+    move-result-object v0
+
+    const-string v2, ""
+
+    if-nez v0, :cond_8
+
+    move-object v0, v3
+
+    goto :goto_4
+
+    :cond_8
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;->getTimbreId()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_4
+    const-string v4, "attr_mimoji_change_timbre"
+
+    invoke-interface {v1, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiBgInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;
+
+    move-result-object v0
+
+    if-nez v0, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getBgId()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_5
+    const-string v0, "attr_mimoji_change_background"
+
+    invoke-interface {v1, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v1
+.end method
+
+.method private getPictureInfo()Lcom/xiaomi/camera/core/PictureInfo;
+    .locals 2
+
+    new-instance v0, Lcom/xiaomi/camera/core/PictureInfo;
+
+    invoke-direct {v0}, Lcom/xiaomi/camera/core/PictureInfo;-><init>()V
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isFrontMirror()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PictureInfo;->setFrontMirror(Z)Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PictureInfo;->setSensorType(Z)Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PictureInfo;->setBokehFrontCamera(Z)Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "off"
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PictureInfo;->setHdrType(Ljava/lang/String;)Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getOperatingMode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PictureInfo;->setOpMode(I)Lcom/xiaomi/camera/core/PictureInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/xiaomi/camera/core/PictureInfo;->end()V
+
+    return-object v0
 .end method
 
 .method private initGifResource()V
-    .locals 4
+    .locals 5
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v1, " init gif resource begin"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->GIF_PRE_RES_PATH:Ljava/lang/String;
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_PRE_RES_PATH:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
+    const-string v1, "Mimojifu"
+
+    const-string v2, " init gif eeee"
+
+    invoke-static {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, " init gif null"
 
-    const-string v1, " init gif null"
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
 
-    const-string v1, "gifmodel.zip"
+    const-string v2, "gifmodel.zip"
 
-    sget-object v2, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->GIF_PRE_RES_PATH:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_PRE_RES_PATH:Ljava/lang/String;
 
-    const v3, 0x8000
+    const v4, 0x8000
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/Util;->verifyAssetZip(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v0, v2, v3, v4}, Lcom/android/camera/Util;->verifyAssetZip(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 6
     :catch_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "MIMOJIFU GIF UNZIP ERROR"
 
-    const-string v1, "MIMOJIFU GIF UNZIP ERROR"
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 7
     :cond_0
     :goto_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, " init gif xxxx"
 
-    const-string v1, " init gif resource end"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private onFuSdkInit()V
-    .locals 2
+.method private isFrontMirror()Z
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setFuSdkLoadFinish(Z)V
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadHandler:Landroid/os/Handler;
-
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0oo;
-
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
-    invoke-direct {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isLiveShotOn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontMirror()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private onCreateAvatarShutterClick(Landroid/graphics/Bitmap;I)V
+    .locals 9
+
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "onCreateAvatarShutterClick: "
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v7, Landroid/graphics/Matrix;
+
+    invoke-direct {v7}, Landroid/graphics/Matrix;-><init>()V
+
+    int-to-float v0, p2
+
+    invoke-virtual {v7, v0}, Landroid/graphics/Matrix;->postRotate(F)Z
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v5
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v6
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v8, 0x1
+
+    move-object v2, p1
+
+    invoke-static/range {v2 .. v8}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Lcom/android/camera/CameraSettings;->getEncodingQuality(Z)Lcom/android/camera/EncodingQuality;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lcom/android/camera/EncodingQuality;->toInteger(Z)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/Util;->getBitmapData(Landroid/graphics/Bitmap;I)[B
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1, p2}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpCreateFile(Landroid/graphics/Bitmap;[BI)V
+
+    if-eq v0, p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_0
+    invoke-direct {p0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->createAvatar([B)V
 
     return-void
 .end method
@@ -1626,21 +2859,18 @@
 .method private onProfileFinish()V
     .locals 3
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string/jumbo v1, "onProfileFinish"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xd4
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -1649,10 +2879,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingFinish()V
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -1666,25 +2894,22 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    const/4 v1, 0x0
-
     if-eqz v0, :cond_1
+
+    const/4 v1, 0x0
 
     const/4 v2, -0x1
 
-    .line 6
     invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
 
-    .line 7
     :cond_1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
-    const/16 v2, 0xf7
+    const/16 v1, 0xf7
 
-    .line 8
-    invoke-virtual {v0, v2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
@@ -1692,52 +2917,29 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
-    .line 9
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLightingProtocol:Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->mimojiEnd()V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    const/4 v1, 0x6
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
     if-eqz v0, :cond_2
 
-    .line 10
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;->mimojiEnd()V
+    const/16 v1, 0xcb
 
-    .line 11
+    invoke-interface {v0, v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->startMimojiEdit(I)V
+
     :cond_2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStateChanges:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
     if-eqz v0, :cond_3
 
-    const/4 v2, 0x4
-
-    .line 12
-    invoke-interface {v0, v2}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;->setModeState(I)V
-
-    .line 13
-    :cond_3
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    if-eqz v0, :cond_4
-
-    const/16 v2, 0xcb
-
-    .line 14
-    invoke-interface {v0, v2}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->startMimojiEdit(I)V
-
-    .line 15
-    :cond_4
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStateChanges:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
-
-    if-eqz v0, :cond_5
-
-    .line 16
-    invoke-interface {v0, v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;->setActionState(I)V
-
-    .line 17
-    :cond_5
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
-
-    if-eqz v0, :cond_6
-
-    .line 18
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
     move-result-object v0
@@ -1746,81 +2948,83 @@
 
     const/4 v1, 0x1
 
-    .line 19
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;->onMimojiCreateCompleted(Z)V
 
-    :cond_6
+    :cond_3
     const-string v0, "mimoji_click_create_capture"
 
     const-string v1, "create"
 
-    .line 20
     invoke-static {v0, v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimojiClick(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private resetCreateState()V
-    .locals 2
+.method private readPreviewPixels(Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)[B
+    .locals 8
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
-    .line 1
-    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
+    move-result p1
 
-    .line 2
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLightingProtocol:Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;
+    iget v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    if-eqz v1, :cond_0
+    sub-int v2, p1, v0
 
-    .line 3
-    invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;->lightingStart()V
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    .line 4
-    :cond_0
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    move-result v4
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiActionState(I)V
+    iget v3, p2, Landroid/graphics/Rect;->right:I
 
-    .line 5
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
 
-    .line 6
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
-    check-cast v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+    move-result-object p1
 
-    const/4 v1, 0x1
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
 
-    .line 7
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;->onMimojiCreateCompleted(Z)V
+    invoke-virtual {p1, p2}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 8
-    :cond_1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
+    mul-int p1, v3, v4
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOo;
+    mul-int/lit8 p1, p1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    return-void
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    const/16 v5, 0x1908
+
+    const/16 v6, 0x1401
+
+    move-object v7, p1
+
+    invoke-static/range {v1 .. v7}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method private showLoadProgress(Z)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xf8
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -1829,35 +3033,35 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0o0;
 
-    invoke-direct {v2, p1, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO;-><init>(ZLcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;)V
+    invoke-direct {v2, p1, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0o0;-><init>(ZLcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
+    xor-int/lit8 p1, p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
     return-void
 .end method
 
 .method private startConvertGif()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
@@ -1867,7 +3071,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;->startRecording(DLcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$OnRecordListener;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRealSelectedEmoInfoList:Ljava/util/ArrayList;
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
@@ -1886,16 +3089,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;->setGifFileName(Ljava/lang/String;)V
 
-    .line 5
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0O;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0O;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1905,18 +3107,16 @@
 .method private unzipResource()V
     .locals 4
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
 
-    const-string v1, "model.zip"
+    const-string/jumbo v1, "model.zip"
 
-    sget-object v2, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v2, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     const v3, 0x8000
 
@@ -1926,16 +3126,14 @@
 
     goto :goto_0
 
-    .line 3
     :catch_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string/jumbo v1, "unzipResource model error: "
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
 
@@ -1948,16 +3146,15 @@
 .method public synthetic OooO00o()V
     .locals 2
 
-    .line 56
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0o0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0O0;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0o0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0O0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1967,38 +3164,35 @@
 .method public synthetic OooO00o(I)V
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->SHADER_CACHE_DIR:Ljava/lang/String;
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->SHADER_CACHE_DIR:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
+    const-string v1, "Mimojifu"
+
+    const-string v2, " check shader eeee"
+
+    invoke-static {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, " check shader null"
 
-    const-string v1, " check shader null"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, " check shader exist"
 
-    const-string v1, " check shader exist"
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5
     :goto_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiFuCreated:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -2006,189 +3200,154 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiFuCreated:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 7
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setFuSdkLoadFinish(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setFuSdkLoadFinish(Z)V
 
-    .line 8
-    invoke-direct {p0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
+    invoke-direct {p0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->initMimojiResource()V
 
-    .line 10
     :cond_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000oOoO()Ljava/lang/String;
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo0oo()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 11
     invoke-static {}, Lcom/android/camera/CameraSettings;->getMimojiModleVersion()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_3
+    if-eqz v4, :cond_3
 
-    .line 12
-    invoke-static {}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->simpleVerificationModel()Z
+    invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->simpleVerificationModel()Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_2
+    if-nez v4, :cond_2
 
     goto :goto_1
 
     :cond_2
-    move v3, v1
+    move v4, v2
 
     goto :goto_2
 
     :cond_3
     :goto_1
-    move v3, v2
+    move v4, v3
 
     :goto_2
-    if-eqz v3, :cond_6
+    if-eqz v4, :cond_6
 
-    .line 13
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_6
+    if-nez v4, :cond_6
 
-    .line 14
-    sget-object v3, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-string/jumbo v4, "update version: "
+    invoke-virtual {v4, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
 
-    .line 15
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v4, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setFuSdkLoadFinish(Z)V
 
-    .line 16
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
+    invoke-direct {p0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
 
-    .line 17
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v3, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setFuSdkLoadFinish(Z)V
+    invoke-static {v4, v5}, Lcom/android/camera/CameraSettings;->setMimojiDownloadTime(J)V
 
-    .line 18
-    invoke-direct {p0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    const-wide/16 v3, 0x0
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiList()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
 
-    .line 19
-    invoke-static {v3, v4}, Lcom/android/camera/CameraSettings;->setMimojiDownloadTime(J)V
+    move-result-object v4
 
-    .line 20
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    if-eqz v4, :cond_4
 
-    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getCurrentMimojiList()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
+    invoke-virtual {v4}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
 
-    move-result-object v3
-
-    if-eqz v3, :cond_4
-
-    .line 21
-    invoke-virtual {v3}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
-
-    .line 22
     :cond_4
-    new-instance v3, Ljava/io/File;
+    new-instance v4, Ljava/io/File;
 
-    sget-object v4, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v5, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
-    invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 23
-    invoke-static {v3}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/io/File;)Z
+    invoke-static {v4}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/io/File;)Z
 
-    .line 24
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->unzipResource()V
 
-    .line 25
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    move-result-object v3
+    move-result-object v4
 
-    const/16 v4, 0xf8
+    const/16 v5, 0xf8
 
-    .line 26
-    invoke-virtual {v3, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+    invoke-virtual {v4, v5}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;
+    check-cast v4, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;
 
-    if-eqz v3, :cond_5
+    if-eqz v4, :cond_5
 
-    .line 27
-    invoke-interface {v3}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;->setDataResetCompleted()V
+    invoke-interface {v4}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;->setDataResetCompleted()V
 
-    .line 28
     :cond_5
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->setMimojiModleVersion(Ljava/lang/String;)V
 
-    .line 29
     :cond_6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 30
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getJustInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    .line 31
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getJustInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    .line 32
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->isNeedEnterFron()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onSurfaceViewResume()V
 
     goto :goto_3
 
-    .line 34
     :cond_7
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
@@ -2196,51 +3355,49 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    .line 35
     :cond_8
     :goto_3
+    invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    const-string v3, "camera/ar_cam/ar_cam.bundle"
+    const-string v2, "camera/ar_cam/ar_cam.bundle"
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 36
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    const-string v3, "default_bg.bundle"
+    const-string v2, "default_bg.bundle"
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 37
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
-    const-string v3, "camera/xiaomi_bg_cam.bundle"
+    const-string v2, "camera/xiaomi_bg_cam.bundle"
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 38
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    iget-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+    iget-boolean v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
 
-    invoke-virtual {v0, v3, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->onCameraChange(ZI)V
+    invoke-virtual {v0, v2, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->onCameraChange(ZI)V
 
-    .line 39
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onCompleteListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setListener(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;)V
 
-    .line 40
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getIsInitItemFinish()Z
 
     move-result p1
-
-    const/16 v0, 0xa
 
     if-eqz p1, :cond_a
 
@@ -2254,31 +3411,29 @@
 
     goto :goto_4
 
-    .line 41
     :cond_9
-    iput-boolean v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
 
     goto :goto_5
 
-    .line 42
     :cond_a
     :goto_4
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
     if-nez p1, :cond_b
 
-    .line 43
     new-instance p1, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mOnFuPrepareListener:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mOnFuPrepareListener:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;
+
+    const/16 v2, 0xa
 
     const-string v4, "mimojifu"
 
-    invoke-direct {p1, v4, v0, v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;-><init>(Ljava/lang/String;IILcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;)V
+    invoke-direct {p1, v4, v2, v2, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;-><init>(Ljava/lang/String;IILcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;)V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
-    .line 44
     :cond_b
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
@@ -2286,27 +3441,24 @@
 
     move-result p1
 
-    xor-int/2addr p1, v2
+    xor-int/2addr p1, v3
 
     if-eqz p1, :cond_c
 
-    .line 45
     :try_start_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
-    .line 46
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;->waitUntilReady()V
 
-    .line 47
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
 
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    invoke-virtual {p1, v3}, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;->initAvatar(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;)V
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;->initAvatar(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2315,352 +3467,185 @@
     :catch_0
     move-exception p1
 
-    .line 48
-    sget-object v3, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, " cache fail "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
 
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 49
-    iput-boolean v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
-
-    .line 50
     :cond_c
     :goto_5
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 51
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 52
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->reloadConfig()V
-
-    .line 53
-    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->ignoreCount:I
 
     return-void
 .end method
 
-.method public synthetic OooO00o(Lcom/android/gallery3d/ui/ExtTexture;)V
-    .locals 6
+.method public synthetic OooO00o(Landroid/graphics/Rect;[B)V
+    .locals 2
 
-    .line 80
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
-
-    move-result v2
-
-    iget v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
-
-    iget v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
-
-    iget v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->NVFormat:I
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
-
-    .line 81
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 82
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mFaceCheckResult:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
-
-    iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
-
-    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    .line 83
-    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceNum()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getRotationData()[F
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    .line 84
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceOcclusion()I
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getLandmarksData()[F
-
-    move-result-object v5
-
-    .line 85
-    invoke-static/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/util/FaceCheckUtil;->checkFace(III[FI[F)I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    .line 86
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    const-string v0, " fd fu result :  "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mFaceCheckResult:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    const-string v0, "faceDetected"
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p2
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-.method public synthetic OooO00o(Ljava/lang/String;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+    const/16 p2, 0xb4
 
-    .line 70
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    const-string v0, "create avatar onSuccess: "
+    invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->rotateAndMirror(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
-    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p1
 
-    .line 71
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p2
+    iget-boolean p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
 
     if-eqz p2, :cond_0
 
-    .line 72
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mGifBitmap:Landroid/graphics/Bitmap;
 
-    const-string p2, "createSuccess isExitBackstage"
-
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 73
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->resetCreateState()V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    const/4 p2, 0x1
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    .line 74
-    iput-boolean p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
+    move-result-object p2
 
-    .line 75
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    const/16 v0, 0xf9
 
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+    invoke-virtual {p2, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result-object p2
 
-    move-result-object v1
+    check-cast p2, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiFullScreenProtocol;
 
-    const v2, 0x7f0600e0
+    if-eqz p2, :cond_1
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-interface {p2, p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiFullScreenProtocol;->setPreviewCover(Landroid/graphics/Bitmap;)V
 
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderModeEdit(I)V
-
-    .line 76
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->insertAvatar(Ljava/lang/String;)V
-
-    .line 77
-    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpCreateAvatar(I)V
-
-    return-void
-.end method
-
-.method public synthetic OooO00o(Ljava/lang/Throwable;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .line 78
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "create avatar error: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 79
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->resetCreateState()V
-
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 .method public synthetic OooO00o(Ljava/util/concurrent/CountDownLatch;)V
-    .locals 2
+    .locals 3
 
-    .line 62
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    const-string v0, "Mimojifu"
 
-    if-eqz v0, :cond_0
+    const-string v1, " XX onSurfaceViewPause "
 
-    .line 63
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->clearAvatar()V
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string/jumbo v1, "onSurfaceViewPause start"
+
+    invoke-static {v0, v1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->exitBackstage()V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;->release()V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    .line 65
+    :cond_0
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    const-string/jumbo p1, "onSurfaceViewPause end"
+
+    invoke-static {v0, p1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public synthetic OooO00o(Z)V
-    .locals 2
+    .locals 1
 
-    .line 57
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->destroyEmotionItem()V
 
-    .line 58
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
     if-eqz v0, :cond_0
 
-    .line 59
     invoke-interface {v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->onAvatarBindEnd()V
 
     :cond_0
     if-nez p1, :cond_1
 
-    .line 60
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStateChanges:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    .line 61
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    invoke-virtual {p1}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiModeState(I)I
+    const/4 v0, 0x6
 
-    move-result v0
-
-    invoke-interface {p1, v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;->setModeState(I)V
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
 
     :cond_1
+    return-void
+.end method
+
+.method public synthetic OooO00o([BLandroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dealCaptureData([BLandroid/graphics/Rect;)I
+
     return-void
 .end method
 
 .method public synthetic OooO0O0()V
     .locals 3
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->takeBuffer()[B
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 12
-    array-length v1, v0
+    return-void
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    .line 13
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    iput-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setNeedTakePic(Z)V
-
-    .line 14
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/16 v2, 0x12c
@@ -2669,174 +3654,168 @@
 
     move-result-object v1
 
-    .line 15
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
 
     if-eqz v0, :cond_1
 
-    .line 17
     invoke-interface {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;->takePhotoCallBack(Landroid/graphics/Bitmap;)V
 
     :cond_1
-    :goto_0
     return-void
 .end method
 
 .method public synthetic OooO0O0(Ljava/util/concurrent/CountDownLatch;)V
     .locals 2
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string/jumbo v1, "release start"
 
     invoke-static {v0, v1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
     const-string v1, "avatar release X"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->isFuIsGLPrepared()Z
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->clearAvatar()V
 
-    move-result v0
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->exitBackstage()V
 
-    .line 4
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->clearAvatar()V
-
-    .line 5
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->exitBackstage()V
-
-    .line 6
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->onSurfaceDestroy()V
-
-    .line 7
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 8
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->reset()V
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;->release()V
 
-    .line 9
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
     :cond_1
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->reset()V
+
+    :cond_2
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 10
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string/jumbo p1, "release end"
 
-    const-string/jumbo v0, "release end"
-
-    invoke-static {p1, v0}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public synthetic OooO0OO()V
-    .locals 1
+    .locals 6
 
-    const/4 v0, 0x1
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    .line 1
-    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
+    move-result-object v0
 
-    const/4 v0, 0x0
+    const/16 v1, 0xac
 
-    .line 2
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuPrepareRenderThread:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread;
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public synthetic OooO0OO(Ljava/util/concurrent/CountDownLatch;)V
-    .locals 2
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 3
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    if-eqz v0, :cond_3
 
-    const-string v1, " unInitEngine: X"
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceNum()I
 
-    .line 4
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    move-result v1
 
-    const-string/jumbo v1, "unInitEngine start"
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x1
 
-    .line 5
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-ge v1, v3, :cond_0
 
-    const/4 v1, 0x1
+    move v1, v3
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    goto :goto_0
 
-    const/4 v0, 0x0
-
-    .line 6
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    .line 7
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->isFuIsGLPrepared()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 8
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->exitBackstage()V
-
-    .line 9
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 10
     :cond_0
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    move v1, v2
 
-    .line 11
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    :goto_0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v0, "unInitEngine end"
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1, v0}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v5, " fd fu preview result :  "
 
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "Mimojifu"
+
+    invoke-static {v5, v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiBgInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getBgId()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    move v4, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v2
+
+    :goto_1
+    if-eqz v1, :cond_2
+
+    if-nez v4, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    const v1, 0x7f1204b9
+
+    invoke-interface {v0, v2, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    :cond_3
     return-void
 .end method
 
 .method public synthetic OooO0Oo()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->updateEmotion()V
@@ -2845,72 +3824,8 @@
 .end method
 
 .method public synthetic OooO0o()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->updateConfig()V
-
-    return-void
-.end method
-
-.method public synthetic OooO0o0()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isAvatarInited()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setIsAvatarInited(Z)V
-
-    .line 3
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 5
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onBgSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;Z)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public synthetic OooO0oO()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRealSelectedEmoInfoList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
@@ -2927,7 +3842,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRealSelectedEmoInfoList:Ljava/util/ArrayList;
@@ -2952,202 +3866,289 @@
     return-void
 .end method
 
-.method public clearAvatar()V
-    .locals 4
+.method public synthetic OooO0o0()V
+    .locals 2
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    const-string v1, "ee clearAvatar view"
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)Z
 
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Integer;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v3, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Integer;)V
-
-    .line 4
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    .line 5
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 6
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    .line 7
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v2, "x1 clearAvatar view"
-
-    invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 8
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
-
-    move-result-object v3
-
-    :cond_1
-    if-eqz v3, :cond_2
-
-    .line 9
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOOO;
-
-    invoke-direct {v1, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
-
-    invoke-virtual {v3, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_2
-    const-wide/16 v1, 0x1
-
-    .line 10
-    :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 11
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-
-    :goto_0
-    return-void
-
-    .line 12
-    :cond_3
-    :goto_1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "xx clearAvatar view"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiInitFinish()V
 
     return-void
 .end method
 
-.method public createAvatar(Landroid/graphics/Bitmap;)V
-    .locals 2
+.method public synthetic OooO0oO()V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    .line 1
-    invoke-static {v0}, Lcom/android/camera/CameraSettings;->getEncodingQuality(Z)Lcom/android/camera/EncodingQuality;
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->updateConfig()V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/EncodingQuality;->toInteger(Z)I
+.method public backToPreview(ZZ)V
+    .locals 7
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    const-string v3, "add_state"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    const-string v3, "close_state"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :goto_0
+    invoke-virtual {p0, p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)Z
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 v2, 0xac
+
+    invoke-virtual {p1, v2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v2
+
+    const/16 v3, 0xaf
+
+    invoke-virtual {v2, v3}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;
+
+    invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;->reInitTipImage()V
+
+    const/16 v3, 0x8
+
+    const v4, 0x7f1204ba
+
+    const-wide/16 v5, -0x1
+
+    invoke-interface {p1, v3, v4, v5, v6}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
+
+    invoke-interface {p1, v4, v3}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMimojiRecordState()I
+
+    move-result v3
+
+    const/16 v5, 0xc1
+
+    if-ne v3, v0, :cond_1
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->oOooo0o()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    new-array v3, v0, [I
+
+    aput v5, v3, v4
+
+    invoke-interface {p1, v4, v3}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->enableMenuItem(Z[I)V
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_0
+
+    invoke-interface {p1, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->enableMenuItem(Z[I)V
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x3
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_1
+
+    invoke-interface {p1, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->enableMenuItem(Z[I)V
+
+    :goto_1
+    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->reInitAlert(Z)V
+
+    new-array v1, v0, [I
+
+    aput v5, v1, v4
+
+    invoke-interface {p1, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateConfigItem([I)V
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 v1, 0xa4
+
+    invoke-virtual {p1, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMimojiPanelState()I
+
+    move-result p2
+
+    if-eq p2, v0, :cond_2
+
+    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;->showMimojiPanel(I)Z
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;->updateTipImage()V
+
+    :goto_2
+    invoke-virtual {p0, v4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->setDisableSingleTapUp(Z)V
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0xc5
+        0xa2
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0xc5
+        0xc1
+        0xa2
+    .end array-data
+.end method
+
+.method public changeToGif(Z)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    const-string v0, "mimoji_click_gif"
+
+    invoke-static {p1, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMimojiRecordState()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/android/camera/Util;->getBitmapData(Landroid/graphics/Bitmap;I)[B
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMimojiRecordStateFromGif(I)V
 
-    move-result-object p1
+    goto :goto_0
 
-    .line 2
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->CREATE_MODLE_CACHE_DIR:Ljava/lang/String;
+    :cond_0
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    .line 3
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0O;
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMimojiRecordStateFromGif()I
 
-    invoke-direct {v1, v0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0O;-><init>(Ljava/lang/String;[B)V
+    move-result v0
 
-    invoke-static {v1}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMimojiRecordState(I)V
 
-    move-result-object p1
-
-    .line 4
-    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->subscribeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
-
-    move-result-object p1
-
-    .line 5
-    invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
-
-    move-result-object p1
-
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO00o;
-
-    invoke-direct {v1, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/lang/String;)V
-
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOOo;
-
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
-
-    .line 6
-    invoke-virtual {p1, v1, v0}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
-
-    move-result-object p1
-
-    .line 7
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
-
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
-
+    :goto_0
     return-void
 .end method
 
 .method public createEmoticon()V
     .locals 4
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
 
     move-result-object v0
 
@@ -3155,7 +4156,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
@@ -3164,7 +4164,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600e0
+    const v2, 0x7f0600de
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -3174,7 +4174,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderModeEdit(IZ)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
@@ -3182,22 +4181,18 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setListener(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager$OnCompleteListener;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setDefultFuScene()V
 
-    .line 5
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;-><init>()V
 
     const-string v1, "camera/xiaomi_cam_bq1.6.bundle"
 
-    .line 6
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->setBundle(Ljava/lang/String;)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
@@ -3208,9 +4203,9 @@
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOoo;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOO0;
 
-    invoke-direct {v3, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOoo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {v3, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->CreateEmotionItem(Ljava/util/List;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatarInstance$CreateEmoticonListener;)Z
 
@@ -3221,329 +4216,135 @@
     return-void
 .end method
 
-.method public drawPreview(Landroid/graphics/Rect;IIZ[IZ)Z
-    .locals 7
+.method public deleteMimojiCache(I)Z
+    .locals 3
 
-    .line 1
-    iput-boolean p6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 2
-    iget-object p6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p6}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
+    const-string v1, "mimoji boolean deleteMimojiCache[type] : "
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    iget-object p6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p6}, Lcom/android/camera/ui/RenderEngineAdapter;->getGLCanvas()Lcom/android/gallery3d/ui/GLCanvasImpl;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 4
-    invoke-interface {v2}, Lcom/android/gallery3d/ui/GLCanvas;->prepareMimojiRenders()V
+    const-string v1, "Mimojifu"
 
-    const/4 p6, 0x1
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v6, 0x0
+    const/4 v0, 0x1
 
-    if-eqz p4, :cond_1
+    if-eqz p1, :cond_4
 
-    move-object v0, p0
+    if-eq p1, v0, :cond_3
 
-    move-object v3, p1
+    const/4 v2, 0x2
 
-    move v4, p2
+    if-eq p1, v2, :cond_2
 
-    move v5, p3
+    const/4 v2, 0x3
 
-    .line 5
-    invoke-direct/range {v0 .. v5}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->copyTexture(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;II)I
+    if-eq p1, v2, :cond_1
 
-    move-result p1
+    const/4 v2, 0x4
 
-    if-lez p1, :cond_0
+    if-eq p1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p6, v6
+    :try_start_0
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->CREATE_MODLE_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->EMOTICON_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->VIDEO_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    goto :goto_0
+
+    :cond_4
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->VIDEO_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->EMOTICON_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->CREATE_MODLE_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    return p6
+    return v0
 
-    .line 6
-    :cond_1
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    :catch_0
+    move-exception p1
 
-    const-string/jumbo p3, "onDrawFrame start"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p2, p3}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    const-string v2, "mimoji void deleteMimojiCache[] "
 
-    move-result p2
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object p1
 
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sub-int/2addr p2, p3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+    move-result-object p1
 
-    move-result-object p3
+    invoke-static {v1, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
+    const/4 p1, 0x0
 
-    move-result p3
-
-    invoke-virtual {v1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
-
-    move-result p4
-
-    invoke-static {v6, p2, p3, p4}, Landroid/opengl/GLES20;->glViewport(IIII)V
-
-    .line 8
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    invoke-virtual {p2}, Lcom/android/camera/ui/RenderEngineAdapter;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object p2
-
-    const/4 p3, -0x1
-
-    if-nez p2, :cond_2
-
-    .line 9
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string p2, "drawPreview:screen.getSurfaceTexture() is null  "
-
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    aput p3, p5, v6
-
-    return v6
-
-    .line 11
-    :cond_2
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    invoke-virtual {p2}, Lcom/android/camera/ui/RenderEngineAdapter;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object p2
-
-    iget-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
-
-    invoke-virtual {p2, p4}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    const/4 p4, 0x0
-
-    .line 12
-    invoke-static {p4, p4, p4, p2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
-
-    const/16 p2, 0x4000
-
-    .line 13
-    invoke-static {p2}, Landroid/opengl/GLES20;->glClear(I)V
-
-    .line 14
-    invoke-interface {v2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
-
-    .line 15
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isNeedShowAvatar()Z
-
-    move-result p2
-
-    .line 16
-    iget-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz p4, :cond_3
-
-    .line 17
-    invoke-virtual {p4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getIsInitItemFinish()Z
-
-    move-result p4
-
-    if-eqz p4, :cond_3
-
-    iget-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 18
-    invoke-virtual {p4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p4
-
-    if-nez p4, :cond_3
-
-    iget-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 19
-    invoke-virtual {p4}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result p4
-
-    if-nez p4, :cond_3
-
-    iget-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
-
-    if-eqz p4, :cond_3
-
-    .line 20
-    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onFuSdkInit()V
-
-    .line 21
-    :cond_3
-    invoke-virtual {v1}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
-
-    move-result-object p4
-
-    .line 22
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 23
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    if-eqz p2, :cond_4
-
-    if-eqz p4, :cond_4
-
-    move p2, v6
-
-    .line 24
-    :cond_4
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEdit()Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 25
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEmoticon()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    if-eqz p2, :cond_8
-
-    .line 26
-    invoke-direct {p0, v1, v2, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawPreviewFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
-
-    move-result p3
-
-    if-lez p3, :cond_7
-
-    goto :goto_2
-
-    .line 27
-    :cond_6
-    :goto_1
-    invoke-direct {p0, v1, v2, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawEditFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
-
-    move-result p3
-
-    if-lez p3, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    move p6, v6
-
-    :goto_2
-    move p2, p6
-
-    :cond_8
-    if-nez p2, :cond_9
-
-    .line 28
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 29
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEdit()Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    if-eqz p4, :cond_9
-
-    .line 30
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
-
-    iget-object p6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
-
-    invoke-virtual {v1}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p1, p4, p6, v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
-
-    .line 31
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
-
-    invoke-interface {v2, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
-
-    .line 32
-    :cond_9
-    aput p3, p5, v6
-
-    .line 33
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string/jumbo p3, "onDrawFrame end"
-
-    invoke-static {p1, p3}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
-
-    return p2
+    return p1
 .end method
 
 .method public generateGif(IF)V
     .locals 3
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mvp:[F
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mvp:[F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -3552,7 +4353,6 @@
 
     invoke-static {p2, v0, v1, v2, v1}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mvp:[F
@@ -3563,42 +4363,38 @@
 .end method
 
 .method public generateGifEnd()V
-    .locals 3
+    .locals 2
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "generateGif currentNum: "
 
-    const-string v2, "generateGif currentNum: "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
 
-    iget v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Mimojifu"
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;->stopRecording()V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRealSelectedEmoInfoList:Ljava/util/ArrayList;
@@ -3613,399 +4409,49 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->startConvertGif()V
 
     :cond_0
     return-void
 .end method
 
-.method public getFaceResult()V
-    .locals 3
+.method public getGifBitmap()Landroid/graphics/Bitmap;
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
-
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mGifBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    if-nez v1, :cond_0
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mGifBitmap:Landroid/graphics/Bitmap;
 
-    move-result-object v1
-
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0o;
-
-    invoke-direct {v2, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Lcom/android/gallery3d/ui/ExtTexture;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return-object v0
 
     :cond_1
     :goto_0
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
-.method public getMimojiPara()Ljava/util/Map;
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method public getGlcontext()Ljavax/microedition/khronos/egl/EGLContext;
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getEGLContext()Ljavax/microedition/khronos/egl/EGLContext;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
-
-    .line 2
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    const/4 v3, 0x2
-
-    const-string v4, "attr_mimoji_category"
-
-    const-string v5, "null"
-
-    if-eqz v0, :cond_7
-
-    .line 3
-    iget-object v6, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_7
-
-    iget-object v6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v6, v6, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
-
-    if-eqz v6, :cond_7
-
-    .line 4
-    invoke-virtual {v6}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getInfos()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 5
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    .line 6
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v7, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v7, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
-
-    invoke-virtual {v7}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getDir()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, "info.json"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FileUtil;->readFile(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 7
-    :cond_0
-    iget-object v7, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gson:Lcom/google/gson/Gson;
-
-    const-class v8, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;
-
-    invoke-virtual {v7, v6, v8}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;
-
-    .line 8
-    invoke-static {v2, v7}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->putMimojiConfigValue(Ljava/util/Map;Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;)Ljava/util/Map;
-
-    .line 9
-    sget-object v8, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, " avatarinfo : "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v8, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    sget-object v6, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v0, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    .line 11
-    array-length v6, v0
-
-    if-gt v6, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    array-length v6, v0
-
-    sub-int/2addr v6, v1
-
-    aget-object v6, v0, v6
-
-    .line 12
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    array-length v1, v0
-
-    sub-int/2addr v1, v3
-
-    aget-object v0, v0, v1
-
-    goto :goto_1
-
-    :cond_2
-    array-length v6, v0
-
-    sub-int/2addr v6, v1
-
-    aget-object v0, v0, v6
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    const-string v0, " "
-
-    :goto_1
-    const-string v1, "cartoon"
-
-    .line 13
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const-string v1, "human"
-
-    .line 14
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const-string/jumbo v1, "person"
-
-    if-eqz v7, :cond_6
-
-    .line 15
-    invoke-virtual {v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuAvatarInfo;->isEidted()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_6
-
-    .line 16
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "_edited"
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_2
-
-    :cond_5
-    const-string v1, "custom"
-
-    .line 17
-    :cond_6
-    :goto_2
-    invoke-static {v0}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->translateForHumanTemplate(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v6, "attr_mimoji_cartoon"
-
-    invoke-interface {v2, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 18
-    invoke-interface {v2, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_3
-
-    .line 19
-    :cond_7
-    invoke-interface {v2, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 20
-    :goto_3
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v1, 0x3
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreItem;
-
-    const-string v1, ""
-
-    if-nez v0, :cond_8
-
-    move-object v0, v5
-
-    goto :goto_4
-
-    .line 21
-    :cond_8
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreItem;->getTimbreId()I
-
-    move-result v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_4
-    const-string v4, "attr_mimoji_change_timbre"
-
-    invoke-interface {v2, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 22
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;
-
-    if-nez v0, :cond_9
-
-    goto :goto_5
-
-    .line 23
-    :cond_9
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getBgId()I
-
-    move-result v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    :goto_5
-    const-string v0, "attr_mimoji_change_background"
-
-    invoke-interface {v2, v0, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
+    return-object v0
 .end method
 
 .method public getOperatingMode()I
@@ -4016,56 +4462,78 @@
     return v0
 .end method
 
-.method public initEngine(IIIIZ)V
-    .locals 3
+.method public getTimeValue()J
+    .locals 2
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTotalRecordingTime:J
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    return-wide v0
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method public getVideoCache()Ljava/lang/String;
+    .locals 1
 
-    const-string v2, "initAvatarEngine with parameters : displayOrientation = "
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_NORMAL_CACHE_FILE:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->VIDEO_NORMAL_CACHE_FILE:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public initAvatarEngine(IIIIZ)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "initAvatarEngine with parameters : displayOrientation = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", width = "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", height = "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, ", isFrontCamera = "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    const-string v0, "Mimojifu"
+
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
 
-    .line 3
     iput p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
 
-    .line 4
     iput-boolean p5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
 
-    .line 5
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -4076,58 +4544,72 @@
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->uiStyle:I
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object p1
-
-    const/16 p3, 0xed
-
-    .line 7
-    invoke-virtual {p1, p3}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
-
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStateChanges:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiStateChanges;
-
-    .line 8
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiGif()Z
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
 
-    const/4 p1, 0x0
+    invoke-static {}, Lcom/android/camera/Util;->getCameraPreviewRect()Landroid/graphics/Rect;
 
-    .line 9
-    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
+    move-result-object p1
 
-    .line 10
+    iget p3, p1, Landroid/graphics/Rect;->bottom:I
+
+    iget p4, p1, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr p3, p4
+
+    iget p1, p1, Landroid/graphics/Rect;->right:I
+
+    const/4 p4, 0x0
+
+    iput-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
+
+    iput-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    iput-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mNeedThumbnail:Z
+
+    iput-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
+
+    iget-boolean p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+
+    if-eqz p4, :cond_0
+
+    new-instance p3, Landroid/util/Size;
+
+    invoke-direct {p3, p1, p1}, Landroid/util/Size;-><init>(II)V
+
+    iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p4, Landroid/util/Size;
+
+    invoke-direct {p4, p1, p3}, Landroid/util/Size;-><init>(II)V
+
+    iput-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mDrawSize:Landroid/util/Size;
+
+    :goto_0
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->initGifResource()V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mOnFuPrepareListener:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
-    .line 12
-    new-instance p1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0oO;
+    new-instance p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$1;
 
-    invoke-direct {p1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0oO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+    invoke-direct {p1, p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$1;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mOnFuPrepareListener:Lcom/android/camera/features/mimojis/mimojifu/widget/MimojiFuPrepareRenderThread$OnFuPrepareListener;
 
-    .line 13
-    :cond_0
+    :cond_1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadHandler:Landroid/os/Handler;
 
-    new-instance p3, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0Oo;
+    new-instance p3, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0o;
 
-    invoke-direct {p3, p0, p2}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooO0Oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;I)V
+    invoke-direct {p3, p0, p2}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;I)V
 
     invoke-virtual {p1, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4137,46 +4619,29 @@
 .method public initMimojiResource()V
     .locals 6
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v1, "initMimojiResource: "
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
     invoke-static {}, Lcom/faceunity/fuauth_helper/FUAuth;->getExAuth()[B
 
     move-result-object v0
 
-    .line 3
     invoke-static {}, Lcom/faceunity/fuauth_helper/FUAuth;->fuAuth()[B
 
     move-result-object v1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
 
     invoke-static {v2, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->init(Landroid/content/Context;[B[B)Z
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->simpleVerificationMaterial()Z
+    invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->simpleVerificationMaterial()Z
 
     move-result v2
 
+    const-string v3, "Mimojifu"
+
     if-eqz v2, :cond_0
 
-    .line 6
     :try_start_0
-    sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v3, "initialize offline sdk data: "
-
-    invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 7
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
@@ -4190,14 +4655,11 @@
     :catch_0
     move-exception v2
 
-    .line 8
-    sget-object v3, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "initialize offline error: "
+    const-string v5, "initializeOffine error: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4213,33 +4675,28 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :cond_0
     :goto_0
     invoke-static {v1, v0}, Lcom/faceunity/pta_helper/FUAuthCheck;->fuP2ASetAuthInternalCheckEx([B[B)Z
 
     move-result v0
 
-    .line 10
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "helper sdk Auth:"
 
-    const-string v3, "helper sdk Auth:"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     return-void
@@ -4248,12 +4705,7 @@
 .method public isAvatarInited()Z
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
 
     if-eqz v0, :cond_0
 
@@ -4263,7 +4715,6 @@
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
@@ -4272,7 +4723,6 @@
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
@@ -4290,235 +4740,29 @@
     return v0
 .end method
 
-.method public isNeedShowAvatar()Z
-    .locals 4
+.method public isNeedCopyPreviewFromExternal()Z
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    .line 2
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
-
-    move-result-object v2
-
-    const-class v3, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v2, v3}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiCreate()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 3
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
-
-    array-length v0, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    .line 4
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    move-result-object v0
-
-    sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    if-ne v0, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    return v1
+    return v0
 .end method
 
-.method public isNeedShowNoFaceTip()Z
-    .locals 6
+.method public isOnCreateMimoji()Z
+    .locals 1
 
-    .line 1
-    iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->ignoreCount:I
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-lez v0, :cond_0
-
-    sub-int/2addr v0, v2
-
-    .line 2
-    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->ignoreCount:I
-
-    return v1
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    .line 4
-    :cond_1
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFaceNum()I
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
 
     move-result v0
 
-    if-ge v0, v2, :cond_2
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    .line 5
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, " fd fu preview result :  "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "faceDetected"
-
-    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 6
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
-
-    .line 7
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v5, 0x2
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;
-
-    if-eqz v4, :cond_3
-
-    .line 8
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getBgId()I
-
-    move-result v4
-
-    if-lez v4, :cond_3
-
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    move v4, v2
-
-    goto :goto_1
-
-    :cond_3
-    move v4, v1
-
-    :goto_1
-    if-eqz v0, :cond_4
-
-    if-nez v4, :cond_4
-
-    if-eqz v3, :cond_4
-
-    .line 9
-    invoke-virtual {v3}, Lcom/android/camera/resource/BaseResourceItem;->getCurrentState()I
-
-    move-result v0
-
-    const/4 v4, 0x7
-
-    if-ne v0, v4, :cond_4
-
-    iget-object v0, v3, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    const-string v3, "close_state"
-
-    .line 10
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    move v1, v2
-
-    :cond_4
-    return v1
+    return v0
 .end method
 
 .method public isProcessorReady()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     if-eqz v0, :cond_0
@@ -4527,11 +4771,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0OoO0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000O00()Z
 
     move-result v0
 
@@ -4548,751 +4792,218 @@
     return v0
 .end method
 
-.method public onAvatarSelect(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Z)Z
-    .locals 7
+.method public isRecordStopping()Z
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object v1, v0
+    const-string v1, "isRecordStopping = "
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    :cond_0
-    iget-object v1, p1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
 
-    .line 2
-    :goto_0
-    sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "avatarItemSelect  itemId :"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " isFromBack "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    const-string v2, "add_state"
-
-    const-string v3, "close_state"
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    if-nez v1, :cond_c
-
-    if-eqz p1, :cond_c
-
-    iget-object v1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    .line 4
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_c
-
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz v1, :cond_c
-
-    iget-object v1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    .line 5
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_c
-
-    iget-object v1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    .line 6
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_4
-
-    :cond_1
-    const/4 v1, 0x2
-
-    if-nez p2, :cond_6
-
-    .line 7
-    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 8
-    array-length v3, v2
-
-    if-gt v3, v5, :cond_2
-
-    const-string v2, " "
-
-    goto :goto_1
-
-    :cond_2
-    array-length v3, v2
-
-    sub-int/2addr v3, v5
-
-    aget-object v3, v2, v3
-
-    .line 9
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    array-length v3, v2
-
-    sub-int/2addr v3, v1
-
-    aget-object v2, v2, v3
-
-    goto :goto_1
-
-    :cond_3
-    array-length v3, v2
-
-    sub-int/2addr v3, v5
-
-    aget-object v2, v2, v3
-
-    :goto_1
-    const-string v3, "cartoon"
-
-    .line 10
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const-string v3, "human"
-
-    .line 11
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    const-string/jumbo v3, "person"
-
-    goto :goto_2
-
-    :cond_5
-    const-string v3, "custom"
-
-    .line 12
-    :goto_2
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, " - "
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v2}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->translateForHumanTemplate(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 13
-    :cond_6
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p1, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Integer;)V
-
-    .line 14
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
-
-    if-eqz v0, :cond_7
-
-    if-nez p2, :cond_7
-
-    .line 15
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getDir()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
+    const-string v1, "Mimojifu"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v0
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
 
-    if-eqz v0, :cond_7
-
-    .line 16
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string p2, "avatarItemSelect repeat selection"
-
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v5
-
-    .line 17
-    :cond_7
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    move-result-object v0
-
-    sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    if-eq v0, v2, :cond_8
-
-    .line 18
-    iput-boolean v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
-
-    .line 19
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {p2, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
-
-    .line 20
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v0, "RenderMode dif, set AR RenderMode"
-
-    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_3
-
-    .line 21
-    :cond_8
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v2, "avatarItemSelect, just show"
-
-    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 22
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 23
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_9
-
-    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
-
-    if-nez v0, :cond_9
-
-    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 24
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiPreview()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    move v4, v5
-
-    .line 25
-    :cond_9
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object v1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p2, v4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;ZZ)V
-
-    .line 26
-    :goto_3
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEdit()Z
-
-    move-result p2
-
-    if-nez p2, :cond_a
-
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiEmoticon()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_b
-
-    .line 27
-    :cond_a
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    move-result-object p2
-
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Edit:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    if-eq p2, v0, :cond_b
-
-    .line 28
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    iget-object p1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    invoke-virtual {p2, p1, v5}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;Z)V
-
-    :cond_b
-    return v5
-
-    .line 29
-    :cond_c
-    :goto_4
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "avatarItemSelect ,mIsShowAvatarLoading "
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v6
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 30
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz p2, :cond_d
-
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 31
-    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    move-result-object p2
-
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    if-eq p2, v1, :cond_d
-
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    .line 32
-    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiCreate()Z
-
-    move-result p2
-
-    if-nez p2, :cond_d
-
-    .line 33
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    invoke-virtual {p2, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
-
-    .line 34
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string v1, " avatarItemSelect RenderMode dif, set AR RenderMode"
-
-    invoke-static {p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_d
-    if-eqz p1, :cond_10
-
-    .line 35
-    iget-object p2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_e
-
-    goto :goto_5
-
-    .line 36
-    :cond_e
-    iget-object p1, p1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_f
-
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz p1, :cond_f
-
-    .line 37
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    move-result-object p1
-
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Nama:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
-
-    if-eq p1, p2, :cond_f
-
-    .line 38
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
-
-    .line 39
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
-
-    aput-object v0, p1, v4
-
-    :cond_f
-    return v4
-
-    .line 40
-    :cond_10
-    :goto_5
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string p2, " avatarItemSelect close_item, clearAvatar"
-
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 41
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
-
-    return v5
+    return v0
 .end method
 
-.method public onBgSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;Z)V
-    .locals 6
+.method public isRecording()Z
+    .locals 2
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_8
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuScene()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
+    const-string v1, "Recording = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_8
+    const-string v1, "Mimojifu"
 
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
 
-    move-result v0
+    return v0
+.end method
 
-    if-nez v0, :cond_0
+.method public onCaptureImage()V
+    .locals 5
 
-    goto/16 :goto_3
+    const-string v0, "Mimojifu"
 
-    .line 4
-    :cond_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "change mimojiBgItem : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, "  , boolean force "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    const-string/jumbo v1, "onCaptureImage: "
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, 0x2
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    if-eqz v1, :cond_1
 
-    if-eqz p1, :cond_5
+    check-cast v1, Lcom/android/camera/Camera;
 
-    .line 5
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+    invoke-virtual {v1}, Lcom/android/camera/Camera;->isCurrentModuleAlive()Z
 
-    move-result-object v4
+    move-result v1
 
-    if-nez v4, :cond_1
-
-    goto :goto_1
-
-    .line 6
-    :cond_1
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
-
-    aget-object v5, v4, v3
-
-    if-eqz v5, :cond_2
-
-    aget-object v5, v4, v2
-
-    if-eqz v5, :cond_2
-
-    if-nez p2, :cond_2
-
-    aget-object v4, v4, v3
-
-    .line 7
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
-
-    move-result-object v5
-
-    if-ne v4, v5, :cond_2
-
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
-
-    aget-object v4, v4, v2
-
-    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    .line 8
-    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
-
-    move-result-object v5
-
-    if-ne v4, v5, :cond_2
-
-    return-void
-
-    .line 9
-    :cond_2
-    iget-boolean v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
-
-    if-nez v4, :cond_4
-
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 10
-    :cond_3
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+    :cond_0
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
 
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    move-result-object v5
+    invoke-interface {v0}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
 
-    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v5
-
-    aput-object v5, v4, v3
-
-    .line 11
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v2
-
-    .line 12
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    invoke-virtual {v3, v4, v5, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
-
-    .line 13
-    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Lcom/android/camera/CameraSettings;->getFlashMode(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, p1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Integer;)V
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getMimojiPara()Ljava/util/Map;
 
-    goto :goto_2
+    move-result-object v1
 
-    :cond_4
+    iget-boolean v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    invoke-static {v1, v0, v3, v4, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2CaptureOrRecord(Ljava/util/Map;Ljava/lang/String;ZZZ)V
+
+    return-void
+
+    :cond_1
     :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "onCaptureImage:mActivityBase is null ? "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    if-nez v4, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
+.end method
 
-    .line 14
-    :cond_5
-    :goto_1
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+.method public onCreateCapture()Z
+    .locals 5
 
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFaceDetectSuccess:Z
 
-    iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v4, v5, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
+    if-eqz v0, :cond_2
 
-    .line 15
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshFuScene()V
+    if-nez v0, :cond_0
 
-    .line 16
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+    goto :goto_0
 
-    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundlePath()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, p1, v3
-
-    .line 17
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
-
-    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, p1, v2
-
-    if-eqz p2, :cond_6
-
-    .line 18
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :cond_0
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setMimojiItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpCreateAvatar(I)V
 
-    :cond_6
-    :goto_2
-    if-eqz p2, :cond_7
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    const-string p1, "mimoji_change_background"
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
-    .line 19
-    invoke-static {v1, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    :cond_7
-    return-void
+    instance-of v2, v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
 
-    .line 20
-    :cond_8
-    :goto_3
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const/4 v3, 0x1
 
-    const-string/jumbo p2, "onBgSelect: error "
+    if-eqz v2, :cond_1
 
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    check-cast v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
 
-    return-void
+    invoke-static {v1}, Lcom/android/camera/CameraSettings;->setFaceBeautyLevel(I)V
+
+    new-array v2, v3, [I
+
+    const/16 v4, 0xd
+
+    aput v4, v2, v1
+
+    invoke-virtual {v0, v2}, Lcom/android/camera/module/BaseModule;->updatePreferenceInWorkThread([I)V
+
+    :cond_1
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v1, 0xa2
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;
+
+    invoke-interface {v0, v3}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->showOrHideMimojiProgress(Z)V
+
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreateAvatarShutterClick:Z
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->animateCapture()V
+
+    return v3
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
 .method public onDeviceRotationChange(I)V
     .locals 3
+
+    iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
 
     const/16 v0, 0x13b
 
@@ -5312,7 +5023,6 @@
     :cond_1
     const/16 p1, 0x5a
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     goto :goto_0
@@ -5326,7 +5036,6 @@
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     goto :goto_0
@@ -5340,7 +5049,6 @@
 
     const/16 p1, 0x10e
 
-    .line 3
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     goto :goto_0
@@ -5352,28 +5060,23 @@
 
     const/16 p1, 0xb4
 
-    .line 4
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
-    .line 5
     :cond_5
     :goto_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     if-eqz p1, :cond_6
 
-    .line 6
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRotMode(I)V
 
-    .line 7
     :cond_6
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
     if-eqz p1, :cond_7
 
-    .line 8
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationFu:I
 
     invoke-interface {p1, v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->onDeviceRotationChange(I)V
@@ -5382,51 +5085,1205 @@
     return-void
 .end method
 
-.method public onEmoticonBack(Z)V
-    .locals 2
+.method public onDrawFrame(Landroid/graphics/Rect;IIZ)Z
+    .locals 17
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    move-object/from16 v7, p0
+
+    move-object/from16 v0, p1
+
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpFps()D
+
+    const/4 v8, 0x0
 
     if-nez v0, :cond_0
 
-    .line 2
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    return v8
 
-    const-string/jumbo v0, "onMimojiEmoticonBack: mRenderEngine is null"
+    :cond_0
+    iget-boolean v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
 
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v1, :cond_1
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/android/camera/module/Module;->isFrameAvailable()Z
+
+    move-result v1
+
+    iput-boolean v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
+
+    :cond_1
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
+
+    move-result-object v2
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getGLCanvas()Lcom/android/gallery3d/ui/GLCanvasImpl;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lcom/android/gallery3d/ui/GLCanvas;->prepareMimojiRenders()V
+
+    const/4 v9, 0x1
+
+    if-eqz p4, :cond_3
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v4, p1
+
+    move/from16 v5, p2
+
+    move/from16 v6, p3
+
+    invoke-direct/range {v1 .. v6}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->copyTexture(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;II)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    move v8, v9
+
+    :cond_2
+    return v8
+
+    :cond_3
+    const-string v1, "Mimojifu"
+
+    const-string/jumbo v4, "onDrawFrame start"
+
+    invoke-static {v1, v4}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
+
+    move-result v1
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr v1, v4
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    invoke-static {v8, v1, v4, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
+
+    invoke-virtual {v2}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+
+    move-result-object v1
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    invoke-virtual {v1, v4}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
+
+    if-eqz v2, :cond_13
+
+    if-eqz v3, :cond_13
+
+    invoke-virtual {v2}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_13
+
+    monitor-enter v3
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    const/4 v4, 0x0
+
+    :try_start_0
+    invoke-static {v4, v4, v4, v1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
+
+    const/16 v1, 0x4000
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
+
+    invoke-interface {v3}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    iget-boolean v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    if-eqz v1, :cond_5
+
+    iget-boolean v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    array-length v1, v1
+
+    if-nez v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v9
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    move v1, v8
+
+    :goto_1
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getIsInitItemFinish()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiReseting:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    iget-boolean v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    if-nez v4, :cond_6
+
+    iget-boolean v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isShaderCacheSuccess:Z
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v4, v9}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setFuSdkLoadFinish(Z)V
+
+    invoke-direct {v7, v8}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->showLoadProgress(Z)V
+
+    :cond_6
+    const/4 v4, -0x1
+
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedDeleteSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v5
+
+    if-nez v5, :cond_7
+
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    :cond_7
+    iget-boolean v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    if-eqz v5, :cond_8
+
+    iget-object v10, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v11, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    invoke-virtual {v2}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
+
+    move-result v12
+
+    iget v13, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    iget v14, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    const/4 v15, 0x0
+
+    invoke-virtual/range {v10 .. v15}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->Render([BIIII)I
+
+    move-result v4
+
+    move v1, v8
+
+    :cond_8
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEdit()Z
+
+    move-result v5
+
+    if-nez v5, :cond_b
+
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEmoticon()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v5}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEmoticon()Z
+
+    move-result v5
+
+    if-nez v5, :cond_a
+
+    if-eqz v1, :cond_a
+
+    invoke-direct {v7, v2, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawPreviewFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
+
+    move-result v4
+
+    if-lez v4, :cond_c
+
+    goto :goto_3
+
+    :cond_a
+    move v10, v4
+
+    goto :goto_4
+
+    :cond_b
+    :goto_2
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v1
+
+    const/16 v4, 0xf7
+
+    invoke-virtual {v1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    iput-object v1, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    invoke-direct {v7, v2, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawEditFu(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)I
+
+    move-result v4
+
+    if-lez v4, :cond_c
+
+    goto :goto_3
+
+    :cond_c
+    move v9, v8
+
+    :goto_3
+    move v10, v4
+
+    move v1, v9
+
+    :goto_4
+    if-nez v1, :cond_d
+
+    invoke-direct {v7, v2, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->drawPreviewNormal(Lcom/android/camera/CameraScreenNail;Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)V
+
+    :cond_d
+    iget-boolean v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
+
+    if-eqz v4, :cond_10
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    if-eqz v4, :cond_10
+
+    if-eqz v1, :cond_f
+
+    iget-object v9, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v11
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v12
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v13
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v14
+
+    const/4 v15, 0x0
+
+    invoke-virtual/range {v9 .. v15}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZ)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    iget-object v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
+    if-nez v2, :cond_e
+
+    new-instance v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
+    invoke-direct {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;-><init>()V
+
+    iput-object v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
+    :cond_e
+    iget-object v9, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    iget-object v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fboUtils:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    invoke-virtual {v2, v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/FBOUtils;->drawFBO(Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;)I
+
+    move-result v10
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    invoke-virtual/range {v9 .. v15}, Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;->init(IIIIIZ)Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    iget-object v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimoijTexAttribute:Lcom/android/camera/effect/draw_mode/DrawMimoijTexAttribute;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isRecording()Z
+
+    move-result v5
+
+    invoke-virtual {v2, v4, v5}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->onSurfaceTextureUpdated(Lcom/android/camera/effect/draw_mode/DrawAttribute;Z)V
+
+    goto :goto_5
+
+    :cond_f
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->transTemp:[F
+
+    invoke-static {v4, v8}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->transTemp:[F
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    invoke-virtual {v2}, Lcom/android/camera/CameraScreenNail;->getDisplayRect()Landroid/graphics/Rect;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/graphics/Rect;->height()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    invoke-static {v4, v5, v6, v9, v10}, Lcom/android/camera/features/mimojis/commen/widget/MimojiRender;->matrixForCrop([FFFFF)V
+
+    iget-object v11, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    const/4 v12, 0x0
+
+    iget-object v13, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->transTemp:[F
+
+    const/4 v14, 0x0
+
+    iget-object v15, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    const/16 v16, 0x0
+
+    invoke-static/range {v11 .. v16}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    invoke-virtual {v2}, Lcom/android/camera/SurfaceTextureScreenNail;->getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
+
+    move-result-object v2
+
+    iget-object v5, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->trans:[F
+
+    invoke-virtual {v4, v2, v5, v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FLandroid/graphics/Rect;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    iget-object v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isRecording()Z
+
+    move-result v5
+
+    invoke-virtual {v2, v4, v5}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->onSurfaceTextureUpdated(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;Z)V
+
+    :cond_10
+    :goto_5
+    iget-boolean v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mNeedThumbnail:Z
+
+    if-eqz v2, :cond_11
+
+    iput-boolean v8, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mNeedThumbnail:Z
+
+    invoke-direct {v7, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->readPreviewPixels(Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)[B
+
+    move-result-object v2
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLoadHandler:Landroid/os/Handler;
+
+    new-instance v5, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0oO;
+
+    invoke-direct {v5, v7, v0, v2}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0oO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Landroid/graphics/Rect;[B)V
+
+    invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_11
+    iget-boolean v2, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    if-eqz v2, :cond_12
+
+    iput-boolean v8, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedCapture:Z
+
+    invoke-static {}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->getInstance()Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v8}, Lcom/android/camera/features/mimojis/commen/utils/MimojiDumpUtil;->dumpTakePicture(I)V
+
+    invoke-direct {v7, v3, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->readPreviewPixels(Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/Rect;)[B
+
+    move-result-object v2
+
+    iget-object v4, v7, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCaptureHandler:Landroid/os/Handler;
+
+    new-instance v5, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOOO;
+
+    invoke-direct {v5, v7, v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;[BLandroid/graphics/Rect;)V
+
+    invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_12
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v2, "onDrawFrame end"
+
+    invoke-static {v0, v2}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-exit v3
+
+    return v1
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_13
+    return v8
+.end method
+
+.method public onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-nez v0, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "MimojiBgInfo mimojiBgInfo, boolean force : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "  "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Mimojifu"
+
+    invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuScene()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->fuScene:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    aget-object v4, v3, v2
+
+    if-eqz v4, :cond_2
+
+    aget-object v4, v3, v1
+
+    if-eqz v4, :cond_2
+
+    if-nez p2, :cond_2
+
+    aget-object v3, v3, v2
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-ne v3, v4, :cond_2
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    aget-object v3, v3, v1
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-ne v3, v4, :cond_2
+
+    return-void
+
+    :cond_2
+    iget-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+
+    if-nez v3, :cond_4
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v2
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v1
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;->getFuItem()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->dynamicCameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {v2, v3, v4, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiBgInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;)V
+
+    goto :goto_2
+
+    :cond_4
+    :goto_0
+    return-void
+
+    :cond_5
+    :goto_1
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiBgInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {p1, v3, v4, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setDynamicBackground(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;Z)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->refreshFuScene()V
+
+    :cond_6
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->defaultItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundlePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, p1, v2
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->cameraItem:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;
+
+    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->getBundle()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, p1, v1
+
+    if-eqz p2, :cond_7
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiBgInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;)V
+
+    :cond_7
+    :goto_2
+    if-eqz p2, :cond_8
+
+    const-string p1, "mimoji_change_background"
+
+    invoke-static {v0, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    return-void
+.end method
+
+.method public onMimojiChangeTimbre(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;I)V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    if-eqz p2, :cond_1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;->getTimbreId()I
+
+    move-result p2
+
+    if-gtz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiTimbreInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiTimbreInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;)V
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    const p2, 0x7f120917
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;->getDescId()I
+
+    move-result p2
+
+    :goto_2
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
+
+    move-result v1
+
+    const-wide/16 v2, 0x3e8
+
+    const/4 v4, 0x0
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v1
+
+    const/16 v5, 0xac
+
+    invoke-virtual {v1, v5}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1, v4, p2, v2, v3}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertTopHint(IIJ)V
+
+    goto :goto_3
+
+    :cond_3
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v1
+
+    const/16 v5, 0xf9
+
+    invoke-virtual {v1, v5}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiFullScreenProtocol;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v4, p2, v2, v3}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiFullScreenProtocol;->alertTop(IIJ)V
+
+    :cond_4
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p2
+
+    const/16 v1, 0xfc
+
+    invoke-virtual {p2, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiVideoEditor;
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p2}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiVideoEditor;->changeTimbre()V
+
+    :cond_5
+    :goto_3
+    const-string p2, "mimoji_change_timbre"
+
+    invoke-static {v0, p2}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mimoji void onMimojiChangeTimbre[mimojiTimbreInfo]"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "Mimojifu"
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public onMimojiCreate()V
+    .locals 5
+
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "start create mimoji"
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Nama:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->setDisableSingleTapUp(Z)V
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->releaseRender()V
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v1, 0xac
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-eqz v0, :cond_0
+
+    const/16 v1, 0x8
+
+    const v2, 0x7f1204bf
+
+    const-wide/16 v3, -0x1
+
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->mimojiStart()V
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v1, 0xd4
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$RecordState;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->prepareCreateMimoji()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onMimojiDeleted(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "human.json"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mContext:Landroid/content/Context;
+
+    sget-object v4, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+
+    invoke-static {v3, v4, v1, v1}, Lcom/android/camera/module/impl/component/FileUtils;->copyFileIfNeed(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    const-wide/16 v3, 0x0
+
+    invoke-static {v3, v4}, Lcom/android/camera/CameraSettings;->setMimojiDownloadTime(J)V
+
+    :cond_0
+    invoke-static {v2}, Lcom/android/camera/module/impl/component/FileUtils;->readStringFromFile(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "data"
+
+    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiList()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Lcom/android/camera/resource/BaseResourceList;->getIndex(Lcom/android/camera/resource/BaseResourceItem;)I
+
+    move-result p1
+
+    const/4 v4, -0x1
+
+    if-eq p1, v4, :cond_1
+
+    invoke-virtual {v1, p1}, Lorg/json/JSONArray;->remove(I)Ljava/lang/Object;
+
+    new-instance p1, Ljava/io/FileOutputStream;
+
+    invoke-direct {p1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
+
+    invoke-virtual {v3}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "onMimojiDeleted error : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Mimojifu"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_1
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiBgInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;)V
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
+
+    return-void
+.end method
+
+.method public onMimojiEmoticonBack(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    if-eqz v0, :cond_2
+
     iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v0, 0xfa
 
-    .line 5
     invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl$MimojiEmoticon;
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 6
     invoke-interface {p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl$MimojiEmoticon;->coverEmoticonError()V
 
-    .line 7
-    :cond_1
-    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    :cond_0
+    const-string p1, "Mimojifu"
 
     const-string/jumbo v0, "onMimojiEmoticonBack: "
 
@@ -5434,237 +6291,1063 @@
 
     const/4 p1, 0x0
 
-    .line 8
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->gifUtil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/GifUtil;->stopRecording()V
 
     goto :goto_0
 
-    .line 10
-    :cond_2
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    :cond_1
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    :cond_2
     :goto_0
     return-void
 .end method
 
-.method public onFaceDetectResult(Landroid/media/Image;)I
-    .locals 3
+.method public onMimojiInitFinish()V
+    .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
+    const-string v0, "Mimojifu"
 
-    move-result-object v0
+    const-string/jumbo v1, "onMimojiInitFinish"
 
-    const-class v1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onMimojiSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)Z
+    .locals 7
 
-    check-cast v0, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiModeState(I)I
-
-    move-result v0
-
-    .line 2
-    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isFuSdkLoadFinish()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 3
-    invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->convertYUVData(Landroid/media/Image;)V
-
-    :cond_0
-    if-eqz v0, :cond_2
-
-    const/4 p1, 0x1
-
-    if-eq v0, p1, :cond_2
-
-    const/4 p1, 0x2
-
-    if-eq v0, p1, :cond_2
-
-    const/4 p1, 0x3
-
-    if-eq v0, p1, :cond_1
+    move-object v1, v0
 
     goto :goto_0
 
-    .line 4
-    :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getFaceResult()V
+    :cond_0
+    iget-object v1, p1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
 
-    .line 5
     :goto_0
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mFaceCheckResult:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result p1
+    const-string/jumbo v3, "onMimojiSelect  "
 
-    return p1
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " isFromBack "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Mimojifu"
+
+    invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_10
+
+    if-eqz p1, :cond_10
+
+    iget-object v1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_10
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-nez v1, :cond_1
+
+    goto/16 :goto_6
+
+    :cond_1
+    const/4 v1, 0x1
+
+    if-nez p2, :cond_7
+
+    iget-object v4, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_4
+
+    array-length v5, v4
+
+    if-gt v5, v1, :cond_2
+
+    goto :goto_1
+
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isNeedShowNoFaceTip()Z
+    array-length v5, v4
+
+    sub-int/2addr v5, v1
+
+    aget-object v5, v4, v5
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    array-length v5, v4
+
+    add-int/lit8 v5, v5, -0x2
+
+    aget-object v4, v4, v5
+
+    goto :goto_2
+
+    :cond_3
+    array-length v5, v4
+
+    sub-int/2addr v5, v1
+
+    aget-object v4, v4, v5
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    const-string v4, " "
+
+    :goto_2
+    const-string v5, "cartoon"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    const-string v5, "human"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    const-string/jumbo v5, "person"
+
+    goto :goto_3
+
+    :cond_6
+    const-string v5, "custom"
+
+    :goto_3
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " - "
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v4}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->translateForHumanTemplate(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4, v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2Click(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_7
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->fuAvatar:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;
+
+    if-eqz v0, :cond_8
+
+    if-nez p2, :cond_8
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;->getDir()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v4, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    const-string p1, "mimoji void onMimojiSelect[mimojiInfo2] x2"
+
+    invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_8
+    iget-object v0, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    const-string v4, "add_state"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    iget-object v0, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    const-string v4, "close_state"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto/16 :goto_5
+
+    :cond_9
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiInfo(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    if-eq v0, v4, :cond_a
+
+    iput-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsAr:Z
+
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p2, v4}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+
+    const-string p2, " rendermode dif, first set ar"
+
+    invoke-static {v2, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :cond_a
+    const-string v0, " rendermode ==, just show"
+
+    invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiBgInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_b
+
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+
+    if-nez v0, :cond_b
+
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    move v3, v1
+
+    :cond_b
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object v2, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, p2, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;ZZ)V
+
+    :cond_c
+    :goto_4
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEdit()Z
+
+    move-result p2
+
+    if-nez p2, :cond_d
+
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEmoticon()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_e
+
+    :cond_d
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    move-result-object p2
+
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Edit:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    if-eq p2, v0, :cond_e
+
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    iget-object p1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->mConfigPath:Ljava/lang/String;
+
+    invoke-virtual {p2, p1, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->showAvatar(Ljava/lang/String;Z)V
+
+    :cond_e
+    return v1
+
+    :cond_f
+    :goto_5
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
+
+    return v1
+
+    :cond_10
+    :goto_6
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "mimoji void onMimojiSelect[mimojiInfo2] x1 ,mIsShowAvatarLoading "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-eqz p1, :cond_11
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
 
     move-result p1
+
+    if-eqz p1, :cond_11
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->AR:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+
+    if-eq p1, p2, :cond_11
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    invoke-virtual {p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+
+    const-string p1, " rendermode dif, first fff set ar"
+
+    invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_11
+    return v3
+.end method
+
+.method public onPreviewFrame(Landroid/media/Image;Lcom/android/camera2/Camera2Proxy;I)Z
+    .locals 1
+
+    iget-boolean p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsLoadFinish:Z
+
+    const/4 p3, 0x0
+
+    if-eqz p2, :cond_4
+
+    if-eqz p1, :cond_4
+
+    invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->getNV21(Landroid/media/Image;)[B
+
+    move-result-object p1
 
     if-eqz p1, :cond_3
 
-    const/4 v1, -0x1
+    array-length p2, p1
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    array-length p2, p2
+
+    array-length v0, p1
+
+    if-ge p2, v0, :cond_2
+
+    :cond_1
+    const/4 p2, 0x0
+
+    iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    array-length p2, p1
+
+    new-array p2, p2, [B
+
+    iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    :cond_2
+    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCameraNV21Byte:[B
+
+    array-length v0, p1
+
+    invoke-static {p1, p3, p2, p3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_1
 
     :cond_3
-    return v1
+    :goto_0
+    const-string p1, "Mimojifu"
+
+    const-string/jumbo p2, "previewImage data null"
+
+    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    :goto_1
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEdit()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiEmoticon()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    :cond_5
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1, p3}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->requestRender(Z)V
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    invoke-virtual {p1}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
+
+    goto :goto_2
+
+    :cond_6
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 p2, 0xf7
+
+    invoke-virtual {p1, p2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    :cond_7
+    :goto_2
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    :cond_8
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    invoke-virtual {p1}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
+
+    :cond_9
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public onRecordStart()V
+    .locals 12
+
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "start record..."
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
+
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mStopRecordType:I
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    invoke-direct {v1}, Lcom/android/camera/module/encoder/LiveMediaRecorder;-><init>()V
+
+    iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    :cond_1
+    const/4 v1, 0x2
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->getVideoEncoder()I
+
+    move-result v2
+
+    const/4 v3, 0x5
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {p0, v3}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->deleteMimojiCache(I)Z
+
+    sget-object v2, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->VIDEO_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getVideoCache()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
+
+    int-to-double v4, v4
+
+    const-wide/high16 v6, 0x3ff8000000000000L    # 1.5
+
+    div-double/2addr v4, v6
+
+    double-to-int v4, v4
+
+    iget v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
+
+    int-to-double v8, v5
+
+    div-double/2addr v8, v6
+
+    double-to-int v5, v8
+
+    invoke-static {v1, v2, v4, v5}, Lcom/android/camera/Util;->genContentValues(ILjava/lang/String;II)Landroid/content/ContentValues;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x4
+
+    invoke-virtual {p0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->deleteMimojiCache(I)Z
+
+    sget-object v2, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->GIF_CACHE_DIR:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getVideoCache()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v4, 0x1f4
+
+    invoke-static {v1, v2, v4, v4}, Lcom/android/camera/Util;->genContentValues(ILjava/lang/String;II)Landroid/content/ContentValues;
+
+    move-result-object v1
+
+    :goto_0
+    move-object v5, v1
+
+    iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    iget v6, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRotationDevice:I
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getEGLContext14()Landroid/opengl/EGLContext;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    iget-object v9, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMediaEncoderListener:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$MimojiEncoderListener;
+
+    const/4 v10, 0x1
+
+    const/high16 v11, 0x3f800000    # 1.0f
+
+    invoke-virtual/range {v4 .. v11}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->init(Landroid/content/ContentValues;ILandroid/opengl/EGLContext;Ljava/lang/String;Lcom/android/camera/module/encoder/LiveMediaRecorder$EncoderListener;ZF)Z
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->updateRecordingTime()V
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-virtual {v1, v4, v5}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->startRecorder(J)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    invoke-interface {v1}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/android/camera/CameraSettings;->getFlashMode(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v2
+
+    const/16 v4, 0x3a5
+
+    invoke-virtual {v2, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/camera/protocol/ModeProtocol$BluetoothHeadset;
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$BluetoothHeadset;->isBluetoothScoOn()Z
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_4
+    move v2, v0
+
+    :goto_1
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getMimojiPara()Ljava/util/Map;
+
+    move-result-object v4
+
+    iget-boolean v5, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrontCamera:Z
+
+    invoke-static {v4, v1, v0, v5, v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackMimoji2CaptureOrRecord(Ljava/util/Map;Ljava/lang/String;ZZZ)V
+
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
+
+    iput-boolean v3, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mNeedThumbnail:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRecordingStartTime:J
+
+    :cond_5
+    :goto_2
+    return-void
+.end method
+
+.method public onRecordStop(I)V
+    .locals 2
+
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "stop record..."
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
+
+    iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mStopRecordType:I
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->enableStopButton()V
+
+    :cond_1
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountDownTimer:Landroid/os/CountDownTimer;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/os/CountDownTimer;->cancel()V
+
+    :cond_2
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mLiveMediaRecorder:Lcom/android/camera/module/encoder/LiveMediaRecorder;
+
+    if-eqz p1, :cond_3
+
+    iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRecordingStartTime:J
+
+    invoke-virtual {p1, v0, v1}, Lcom/android/camera/module/encoder/LiveMediaRecorder;->stopRecorder(J)Z
+
+    :cond_3
+    return-void
+.end method
+
+.method public onRecordStopped(Z)V
+    .locals 3
+
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "onRecordStopped: "
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecording:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 v0, 0xfb
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/protocol/ModeProtocol$MimojiGifEditor;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getVideoCache()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTotalRecordingTime:J
+
+    invoke-interface {p1, v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$MimojiGifEditor;->combineVideoAudio(Ljava/lang/String;J)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 v0, 0xfc
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiVideoEditor;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->getVideoCache()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mStopRecordType:I
+
+    invoke-interface {p1, v0, v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiVideoEditor;->combineVideoAudio(Ljava/lang/String;I)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public onSurfaceViewPause()V
+    .locals 4
+
+    const-string v0, "Mimojifu"
+
+    const-string v1, " eee onSurfaceViewPause "
+
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
+
+    move-result v1
+
+    const/16 v2, 0xb8
+
+    if-ne v1, v2, :cond_0
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO00o;
+
+    invoke-direct {v2, p0, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    const-wide/16 v1, 0x1
+
+    :try_start_0
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    :goto_0
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->onSurfaceViewPause()V
+
+    goto :goto_1
+
+    :cond_0
+    const-string v1, " null onSurfaceViewPause "
+
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_1
+    return-void
 .end method
 
 .method public onSurfaceViewResume()V
     .locals 3
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string v1, " EE onSurfaceViewResume "
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
+    invoke-interface {v1}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
 
-    .line 3
-    invoke-interface {v0}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
-
-    move-result v0
+    move-result v1
 
     const/16 v2, 0xb8
 
-    if-ne v0, v2, :cond_1
+    if-ne v1, v2, :cond_1
 
-    .line 4
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v1, " XX onSurfaceViewResume "
 
-    const-string v2, " XX onSurfaceViewResume "
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
 
     invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->enterTheFrontDesk()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-interface {v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->onSurfaceViewResume()V
 
-    .line 8
     :cond_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsShowAvatarLoading:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    const/4 v1, 0x0
+
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 9
     :cond_1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 10
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isExitBackstage:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_2
     return-void
 .end method
 
-.method public refeshMaterialConfig(Z)V
-    .locals 2
+.method public refeshMaterialConfig()V
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "updateConfig"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOo00;
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->initMaterialConfig()V
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOo00;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    .line 4
-    invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->getInstance()Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;
-
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/manager/FuPTAResDB;->initMaterialConfig()V
-
-    :cond_1
     return-void
 .end method
 
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5677,54 +7360,51 @@
 .end method
 
 .method public release()V
-    .locals 4
+    .locals 6
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string v1, "avatar release E"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    .line 3
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
 
-    if-eqz v1, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    if-eqz v2, :cond_0
 
-    move-result-object v1
+    invoke-virtual {v2}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    move-object v2, v3
 
     :goto_0
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 4
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOO;
+    new-instance v4, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0oo;
 
-    invoke-direct {v2, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v4, p0, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
-    const-wide/16 v1, 0x1
+    const-wide/16 v4, 0x1
 
-    .line 5
     :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v0, v4, v5, v2}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -5733,99 +7413,27 @@
     :catch_0
     move-exception v0
 
-    .line 6
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v3, "release: error"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :goto_1
+    invoke-virtual {p0, v3, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsRecordStopping:Z
+
     return-void
 .end method
 
 .method public releaseRender()V
-    .locals 4
+    .locals 3
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    .line 3
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    const-string v3, "add_state"
-
-    .line 4
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->mConfigPath:Ljava/lang/String;
-
-    const-string v2, "close_state"
-
-    .line 5
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 6
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsMimojiNeedUpdateSkip:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 7
-    :cond_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
     const-string v1, " releaseRender() "
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentScenePath:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -5834,127 +7442,116 @@
 
     aput-object v2, v0, v1
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getJustInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 10
-    invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getJustInstance()Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setTempFuAvatar(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuAvatar;)V
-
-    :cond_1
     return-void
 .end method
 
 .method public reloadConfig()V
-    .locals 3
+    .locals 2
 
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    const-string v0, "Mimojifu"
 
-    const-string/jumbo v1, "reloadConfig"
+    const-string v1, "MimojiFuControlImpl reloadConfig"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsCreate:Z
 
-    .line 3
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiPreview()Z
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiPreview()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiInitFinish()V
+
     return-void
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mtx:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mvp:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 6
-    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    if-nez v1, :cond_2
-
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMode()I
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    goto :goto_0
-
-    .line 7
-    :cond_1
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getMimojiItem(Ljava/lang/Integer;)Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;
-
-    invoke-virtual {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onBgSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;Z)V
+    invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->clearAvatar()V
 
     goto :goto_1
 
+    :cond_1
+    iget-boolean v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsGifOn:Z
+
+    if-nez v1, :cond_3
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
     :cond_2
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiBgInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
+
+    goto :goto_1
+
+    :cond_3
     :goto_0
     const/4 v1, 0x0
 
-    .line 8
-    invoke-virtual {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onBgSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;Z)V
+    invoke-virtual {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
 
-    .line 9
     :goto_1
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiCreate()Z
+    const/4 v1, 0x2
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMode(I)V
 
-    if-eqz v0, :cond_3
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mUiHandler:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0o;
 
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->getFuControllerRenderMode()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;->Nama:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;
+    return-void
+.end method
 
-    if-eq v0, v1, :cond_3
+.method public removeIconCallBack()V
+    .locals 1
 
-    .line 10
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;->setRenderMode(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$RenderMode;)V
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
 
-    :cond_3
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedTakePicIcon:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
     return-void
 .end method
 
@@ -5970,22 +7567,17 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 1
     :goto_0
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->rotateMode:I
 
-    .line 2
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->flipX:I
 
     const/4 v1, 0x0
 
-    .line 3
     iput v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->flipY:I
 
-    .line 4
     invoke-static {p1, v1, v0}, Lcom/faceunity/wrapper/faceunity;->fuSetInputCameraMatrix(III)V
 
-    .line 5
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewHeight:I
 
     int-to-double v0, p1
@@ -5998,7 +7590,6 @@
 
     sput p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->RENDER_WIDTH:I
 
-    .line 6
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mPreviewWidth:I
 
     int-to-double v0, p1
@@ -6009,7 +7600,6 @@
 
     sput p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->RENDER_HEIGHT:I
 
-    .line 7
     sget p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->RENDER_WIDTH:I
 
     sget v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->RENDER_HEIGHT:I
@@ -6020,7 +7610,7 @@
 .end method
 
 .method public saveEmoticon(Ljava/util/ArrayList;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6030,7 +7620,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -6039,187 +7628,126 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 2
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string/jumbo v1, "saveEmoticon mCountEmotGif: "
 
-    const-string/jumbo v2, "saveEmoticon mCountEmotGif: "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountEmotGif:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Mimojifu"
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRealSelectedEmoInfoList:Ljava/util/ArrayList;
 
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->currentPos:I
 
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->isConvertEmoticon:Z
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->startConvertGif()V
 
     return-void
 .end method
 
-.method public setPicIconCallBack(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;)V
-    .locals 1
+.method public setDetectSuccess(Z)V
+    .locals 0
 
-    if-nez p1, :cond_0
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFaceDetectSuccess:Z
 
-    .line 1
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setNeedTakePic(Z)V
-
-    const/4 p1, 0x0
-
-    .line 2
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
-
-    return-void
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isTakePicIconIng()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 4
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
-
-    .line 5
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setNeedTakePic(Z)V
-
-    :cond_1
     return-void
 .end method
 
-.method public unInitEngine()V
-    .locals 4
-
-    .line 1
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "unInitEngine: E"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
-
-    if-eqz v0, :cond_0
+.method public setDisableSingleTapUp(Z)V
+    .locals 2
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/AppController;->getCurrentModuleIndex()I
 
     move-result v0
 
     const/16 v1, 0xb8
 
-    if-ne v0, v1, :cond_0
-
-    .line 4
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    .line 5
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/RenderEngineAdapter;
-
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
-
-    move-result-object v1
-
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOo0;
-
-    invoke-direct {v2, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0O0/OooOOo0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;Ljava/util/concurrent/CountDownLatch;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    const-wide/16 v1, 0x1
-
-    .line 6
-    :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    .line 7
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-
-    .line 8
-    :goto_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiEditorControl:Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;
-
-    if-eqz v0, :cond_1
-
-    .line 9
-    invoke-interface {v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl;->onSurfaceViewPause()V
-
-    goto :goto_1
-
-    .line 10
     :cond_0
-    sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->TAG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mActivityBase:Lcom/android/camera/ActivityBase;
 
-    const-string/jumbo v1, "unInitEngine: "
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;
+
+    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/commen/module/MimojiModule;->setDisableSingleTapUp(Z)V
 
     :cond_1
-    :goto_1
+    :goto_0
+    return-void
+.end method
+
+.method public setIsFrameAvailable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsFrameAvailable:Z
+
+    return-void
+.end method
+
+.method public setNeedTakePic()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedTakePicIcon:Z
+
+    iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
+    return-void
+.end method
+
+.method public takePicIcon(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakeIconCallBack:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mIsNeedTakePicIcon:Z
+
+    iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTakePicIconIng:Z
+
     return-void
 .end method
 
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -6228,8 +7756,101 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->release()V
+
+    return-void
+.end method
+
+.method public updateConfig()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mRenderEngine:Lcom/android/camera/ui/CameraRenderEngine;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMimojiFuManager:Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuManager;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOOo;
+
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0O0/OooOOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    :goto_0
+    const-string v0, "Mimojifu"
+
+    const-string/jumbo v1, "updateConfig fail"
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public updateRecordingTime()V
+    .locals 7
+
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountDownTimer:Landroid/os/CountDownTimer;
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mTotalRecordingTime:J
+
+    invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
+
+    :cond_0
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/16 v0, 0x1388
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v0, 0x3a98
+
+    iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    :goto_0
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$3;
+
+    iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mMaxVideoDurationInMs:I
+
+    int-to-long v1, v1
+
+    const-wide/16 v3, 0x384
+
+    add-long/2addr v3, v1
+
+    const-wide/16 v5, 0x3e8
+
+    move-object v1, v0
+
+    move-object v2, p0
+
+    invoke-direct/range {v1 .. v6}, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl$3;-><init>(Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;JJ)V
+
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/impl/MimojiFuControlImpl;->mCountDownTimer:Landroid/os/CountDownTimer;
+
+    invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
 .end method

@@ -39,7 +39,6 @@
 .method public constructor <init>(Ljava8/util/stream/DistinctOps$1;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$1$1;->this$0:Ljava8/util/stream/DistinctOps$1;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedReference;-><init>(Ljava8/util/stream/Sink;)V
@@ -59,17 +58,14 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-boolean p1, p0, Ljava8/util/stream/DistinctOps$1$1;->seenNull:Z
 
     if-nez p1, :cond_2
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/DistinctOps$1$1;->seenNull:Z
 
-    .line 3
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     const/4 v0, 0x0
@@ -80,7 +76,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/DistinctOps$1$1;->lastSeen:Ljava/lang/Object;
 
@@ -92,7 +87,6 @@
 
     if-nez v0, :cond_2
 
-    .line 5
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
@@ -110,15 +104,12 @@
 
     const/4 p1, 0x0
 
-    .line 1
     iput-boolean p1, p0, Ljava8/util/stream/DistinctOps$1$1;->seenNull:Z
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$1$1;->lastSeen:Ljava/lang/Object;
 
-    .line 3
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     const-wide/16 v0, -0x1
@@ -133,15 +124,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Ljava8/util/stream/DistinctOps$1$1;->seenNull:Z
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Ljava8/util/stream/DistinctOps$1$1;->lastSeen:Ljava/lang/Object;
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0}, Ljava8/util/stream/Sink;->end()V

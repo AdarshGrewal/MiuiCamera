@@ -13,7 +13,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/internal/log/appender/FileManager;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method private checkRollover()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/FileManager;->mLogFile:Ljava/io/File;
 
     if-eqz v0, :cond_1
@@ -33,7 +31,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-interface {v0, p0}, Lmiuix/internal/log/appender/rolling/RolloverStrategy;->rollover(Lmiuix/internal/log/appender/rolling/RollingFileManager;)Ljava/lang/String;
 
@@ -43,7 +40,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/internal/log/appender/FileManager;->close()V
 
     :cond_1
@@ -56,7 +52,6 @@
 .method public getRolloverStrategy()Lmiuix/internal/log/appender/rolling/RolloverStrategy;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/rolling/RollingFileManager;->mRolloverStrategy:Lmiuix/internal/log/appender/rolling/RolloverStrategy;
 
     return-object v0
@@ -65,12 +60,10 @@
 .method public onBuildLogPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/appender/rolling/RollingFileManager;->mLogPath:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-super {p0}, Lmiuix/internal/log/appender/FileManager;->onBuildLogPath()Ljava/lang/String;
 
     move-result-object v0
@@ -84,13 +77,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iput-object p1, p0, Lmiuix/internal/log/appender/rolling/RollingFileManager;->mRolloverStrategy:Lmiuix/internal/log/appender/rolling/RolloverStrategy;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     monitor-exit p0
 
     return-void
@@ -108,16 +99,13 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-direct {p0}, Lmiuix/internal/log/appender/rolling/RollingFileManager;->checkRollover()V
 
-    .line 2
     invoke-super {p0, p1}, Lmiuix/internal/log/appender/FileManager;->write(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void

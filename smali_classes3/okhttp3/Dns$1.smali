@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +49,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Ljava/net/InetAddress;->getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;
 
     move-result-object p1
@@ -61,7 +59,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/net/UnknownHostException;
 

@@ -37,7 +37,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;Landroid/widget/ImageView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$1;->this$0:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     iput-object p2, p0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$1;->val$imageView:Landroid/widget/ImageView;
@@ -66,21 +65,18 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/module/loader/NullHolder;->isPresent()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/module/loader/NullHolder;->get()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$1;->val$imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -97,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/module/loader/NullHolder;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$1;->accept(Lcom/android/camera/module/loader/NullHolder;)V

@@ -29,18 +29,14 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/internal/log/Logger;->mName:Ljava/lang/String;
 
-    .line 3
     sget-object p1, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     iput-object p1, p0, Lmiuix/internal/log/Logger;->mLevel:Lmiuix/internal/log/Level;
 
-    .line 4
     new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -55,7 +51,6 @@
 
     move-object v0, p0
 
-    .line 1
     iget-object v1, v0, Lmiuix/internal/log/Logger;->mLevel:Lmiuix/internal/log/Level;
 
     move-object v10, p1
@@ -66,12 +61,10 @@
 
     if-ltz v1, :cond_1
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v11
 
-    .line 3
     iget-object v1, v0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -93,7 +86,6 @@
 
     if-nez p3, :cond_0
 
-    .line 4
     iget-object v3, v0, Lmiuix/internal/log/Logger;->mName:Ljava/lang/String;
 
     move-object v4, p2
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v3, v0, Lmiuix/internal/log/Logger;->mName:Ljava/lang/String;
 
@@ -137,14 +128,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->addIfAbsent(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -158,7 +147,6 @@
 .method public getAppenderAt(I)Lmiuix/internal/log/appender/Appender;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -173,7 +161,6 @@
 .method public getAppenderCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
@@ -186,7 +173,6 @@
 .method public getLevel()Lmiuix/internal/log/Level;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mLevel:Lmiuix/internal/log/Level;
 
     return-object v0
@@ -207,7 +193,6 @@
 
     move-object v3, p3
 
-    .line 1
     invoke-direct/range {v0 .. v5}, Lmiuix/internal/log/Logger;->doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -228,7 +213,6 @@
 
     move-object v4, p4
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lmiuix/internal/log/Logger;->doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -249,7 +233,6 @@
 
     move-object v5, p3
 
-    .line 3
     invoke-direct/range {v0 .. v5}, Lmiuix/internal/log/Logger;->doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
     return-void
@@ -260,17 +243,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-interface {p1}, Lmiuix/internal/log/appender/Appender;->close()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -284,7 +264,6 @@
 .method public setLevel(Lmiuix/internal/log/Level;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/Logger;->mLevel:Lmiuix/internal/log/Level;
 
     return-void
@@ -293,7 +272,6 @@
 .method public shutdown()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -313,12 +291,10 @@
 
     check-cast v1, Lmiuix/internal/log/appender/Appender;
 
-    .line 2
     invoke-interface {v1}, Lmiuix/internal/log/appender/Appender;->close()V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/internal/log/Logger;->mAppenders:Ljava/util/concurrent/CopyOnWriteArrayList;
 

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera2/MiCamera2ShotVideo;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/MiCamera2ShotVideo$1;->this$0:Lcom/android/camera2/MiCamera2ShotVideo;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/MiCamera2ShotVideo;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +42,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onCaptureCompleted: "
+    const-string/jumbo v0, "onCaptureCompleted: "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

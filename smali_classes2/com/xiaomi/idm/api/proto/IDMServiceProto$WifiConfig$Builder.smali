@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->access$17400()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearChannel()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -71,10 +67,8 @@
 .method public clearLocalIp()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -87,10 +81,8 @@
 .method public clearMacAddr()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -103,10 +95,8 @@
 .method public clearPwd()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -119,10 +109,8 @@
 .method public clearRemoteIp()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -135,10 +123,8 @@
 .method public clearSsid()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -151,10 +137,8 @@
 .method public clearUse5GBand()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -167,7 +151,6 @@
 .method public getChannel()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -182,7 +165,6 @@
 .method public getLocalIp()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -197,7 +179,6 @@
 .method public getLocalIpBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -212,7 +193,6 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -227,7 +207,6 @@
 .method public getMacAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -242,7 +221,6 @@
 .method public getPwd()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -257,7 +235,6 @@
 .method public getPwdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -272,7 +249,6 @@
 .method public getRemoteIp()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -287,7 +263,6 @@
 .method public getRemoteIpBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -302,7 +277,6 @@
 .method public getSsid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -317,7 +291,6 @@
 .method public getSsidBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -332,7 +305,6 @@
 .method public getUse5GBand()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -347,10 +319,8 @@
 .method public setChannel(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -363,10 +333,8 @@
 .method public setLocalIp(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -379,10 +347,8 @@
 .method public setLocalIpBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -395,10 +361,8 @@
 .method public setMacAddr(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -411,10 +375,8 @@
 .method public setMacAddrBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -427,10 +389,8 @@
 .method public setPwd(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -443,10 +403,8 @@
 .method public setPwdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -459,10 +417,8 @@
 .method public setRemoteIp(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -475,10 +431,8 @@
 .method public setRemoteIpBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -491,10 +445,8 @@
 .method public setSsid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -507,10 +459,8 @@
 .method public setSsidBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
@@ -523,10 +473,8 @@
 .method public setUse5GBand(Z)Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;

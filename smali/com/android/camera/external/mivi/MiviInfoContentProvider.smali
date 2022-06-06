@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -24,12 +23,10 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 1
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p3
@@ -62,7 +59,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getCallingPackage()Ljava/lang/String;
 
@@ -72,9 +68,8 @@
 
     move-result-object p1
 
-    const-string p3, "miviInfo"
+    const-string/jumbo p3, "miviInfo"
 
-    .line 4
     invoke-virtual {p2, p3, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2

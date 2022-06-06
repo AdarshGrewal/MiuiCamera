@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/tts/TTSHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/tts/TTSHelper$2;->this$0:Lcom/android/camera/tts/TTSHelper;
 
     invoke-direct {p0}, Landroid/speech/tts/UtteranceProgressListener;-><init>()V
@@ -33,7 +32,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/tts/TTSHelper$BatchListener;Landroid/util/Pair;)V
     .locals 0
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/tts/TTSHelper$BatchListener;->onStart()V
 
     return-void
@@ -54,16 +52,15 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/tts/TTSHelper$2;->this$0:Lcom/android/camera/tts/TTSHelper;
 
     invoke-static {v0}, Lcom/android/camera/tts/TTSHelper;->access$400(Lcom/android/camera/tts/TTSHelper;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0Oo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0o0;
 
-    invoke-direct {v1, p0, p1, p2}, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0Oo;-><init>(Lcom/android/camera/tts/TTSHelper$2;Ljava/lang/String;Ljava/util/function/BiConsumer;)V
+    invoke-direct {v1, p0, p1, p2}, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0o0;-><init>(Lcom/android/camera/tts/TTSHelper$2;Ljava/lang/String;Ljava/util/function/BiConsumer;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -75,12 +72,10 @@
 .method public synthetic OooO00o(Ljava/lang/String;Ljava/util/function/BiConsumer;)V
     .locals 3
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/tts/TTSHelper;->access$600(Ljava/lang/String;)Landroid/util/Pair;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/tts/TTSHelper$2;->this$0:Lcom/android/camera/tts/TTSHelper;
 
     invoke-static {v1}, Lcom/android/camera/tts/TTSHelper;->access$000(Lcom/android/camera/tts/TTSHelper;)Ljava/util/Map;
@@ -97,12 +92,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {p2, v1, v0}, Ljava/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/tts/TTSHelper;->access$500()Z
 
@@ -110,7 +103,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 5
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,14 +129,12 @@
 .method public onDone(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/tts/TTSHelper;->access$500()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,9 +153,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0O0;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0O0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0O0;
 
     invoke-direct {p0, p1, v0}, Lcom/android/camera/tts/TTSHelper$2;->safeInvokeAsync(Ljava/lang/String;Ljava/util/function/BiConsumer;)V
 
@@ -175,14 +164,12 @@
 .method public onError(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/tts/TTSHelper;->access$500()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,9 +188,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0oo;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0oo;
 
     invoke-direct {p0, p1, v0}, Lcom/android/camera/tts/TTSHelper$2;->safeInvokeAsync(Ljava/lang/String;Ljava/util/function/BiConsumer;)V
 
@@ -213,14 +199,12 @@
 .method public onStart(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/tts/TTSHelper;->access$500()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,9 +223,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0OO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooooo/OooO0OO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0Oo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO0Oo;
 
     invoke-direct {p0, p1, v0}, Lcom/android/camera/tts/TTSHelper$2;->safeInvokeAsync(Ljava/lang/String;Ljava/util/function/BiConsumer;)V
 
@@ -251,14 +234,12 @@
 .method public onStop(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/tts/TTSHelper;->access$500()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 2
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,9 +258,8 @@
 
     invoke-static {v0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
-    sget-object p2, LOooO00o/OooO0O0/OooO00o/Oooooo/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooooo/OooO00o;
+    sget-object p2, LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO00o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooooOo/OooO00o;
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/tts/TTSHelper$2;->safeInvokeAsync(Ljava/lang/String;Ljava/util/function/BiConsumer;)V
 

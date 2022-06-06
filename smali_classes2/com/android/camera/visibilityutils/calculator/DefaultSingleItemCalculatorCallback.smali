@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
 .method public activateNewCurrentItem(Lcom/android/camera/visibilityutils/items/ListItem;Landroid/view/View;I)V
     .locals 0
 
-    .line 1
     invoke-interface {p1, p2, p3}, Lcom/android/camera/visibilityutils/items/ListItem;->setActive(Landroid/view/View;I)V
 
     return-void
@@ -53,7 +51,6 @@
 .method public deactivateCurrentItem(Lcom/android/camera/visibilityutils/items/ListItem;Landroid/view/View;I)V
     .locals 0
 
-    .line 1
     invoke-interface {p1, p2, p3}, Lcom/android/camera/visibilityutils/items/ListItem;->deactivate(Landroid/view/View;I)V
 
     return-void

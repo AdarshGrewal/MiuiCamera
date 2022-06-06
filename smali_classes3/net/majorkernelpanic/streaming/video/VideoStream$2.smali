@@ -35,14 +35,12 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/video/VideoStream;Lnet/majorkernelpanic/streaming/hw/NV21Convertor;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     iput-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->val$convertor:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide p1
@@ -59,7 +57,6 @@
 
     iput-wide p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->i:J
 
-    .line 3
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     invoke-static {p1}, Lnet/majorkernelpanic/streaming/video/VideoStream;->access$000(Lnet/majorkernelpanic/streaming/video/VideoStream;)Landroid/media/MediaCodec;
@@ -80,12 +77,10 @@
 .method public onPreviewFrame([BLandroid/hardware/Camera;)V
     .locals 9
 
-    .line 1
     iget-wide v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->now:J
 
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->oldnow:J
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -96,7 +91,6 @@
 
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->now:J
 
-    .line 3
     iget-wide v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->i:J
 
     const-wide/16 v2, 0x1
@@ -113,10 +107,8 @@
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->i:J
 
-    .line 5
     :cond_0
     :try_start_0
     iget-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
@@ -137,7 +129,6 @@
 
     if-ltz v3, :cond_2
 
-    .line 6
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->inputBuffers:[Ljava/nio/ByteBuffer;
 
@@ -149,12 +140,10 @@
 
     const-string v0, "Symptom of the \"Callback buffer was to small\" problem..."
 
-    .line 7
     invoke-static {p2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->val$convertor:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
@@ -164,7 +153,6 @@
 
     invoke-virtual {p2, p1, v0}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->convert([BLjava/nio/ByteBuffer;)V
 
-    .line 9
     :goto_0
     iget-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
@@ -193,12 +181,10 @@
     :cond_2
     const-string v0, "No buffer available !"
 
-    .line 10
     invoke-static {p2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :goto_1
     iget-object p2, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$2;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 

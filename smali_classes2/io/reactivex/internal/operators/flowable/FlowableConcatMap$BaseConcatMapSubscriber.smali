@@ -101,30 +101,24 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->mapper:Lio/reactivex/functions/Function;
 
-    .line 3
     iput p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->prefetch:I
 
     shr-int/lit8 p1, p2, 0x2
 
     sub-int/2addr p2, p1
 
-    .line 4
     iput p2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->limit:I
 
-    .line 5
     new-instance p1, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;
 
     invoke-direct {p1, p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;-><init>(Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapSupport;)V
 
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->inner:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;
 
-    .line 6
     new-instance p1, Lio/reactivex/internal/util/AtomicThrowable;
 
     invoke-direct {p1}, Lio/reactivex/internal/util/AtomicThrowable;-><init>()V
@@ -144,10 +138,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->active:Z
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->drain()V
 
     return-void
@@ -158,10 +150,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->done:Z
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->drain()V
 
     return-void
@@ -175,14 +165,12 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->sourceMode:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
     invoke-interface {v0, p1}, Lio/reactivex/internal/fuseable/SimpleQueue;->offer(Ljava/lang/Object;)Z
@@ -191,12 +179,10 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->s:Lorg/reactivestreams/Subscription;
 
     invoke-interface {p1}, Lorg/reactivestreams/Subscription;->cancel()V
 
-    .line 4
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Queue full?!"
@@ -207,7 +193,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->drain()V
 
@@ -217,7 +202,6 @@
 .method public final onSubscribe(Lorg/reactivestreams/Subscription;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->s:Lorg/reactivestreams/Subscription;
 
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(Lorg/reactivestreams/Subscription;Lorg/reactivestreams/Subscription;)Z
@@ -226,22 +210,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->s:Lorg/reactivestreams/Subscription;
 
-    .line 3
     instance-of v0, p1, Lio/reactivex/internal/fuseable/QueueSubscription;
 
     if-eqz v0, :cond_1
 
-    .line 4
     move-object v0, p1
 
     check-cast v0, Lio/reactivex/internal/fuseable/QueueSubscription;
 
     const/4 v1, 0x3
 
-    .line 5
     invoke-interface {v0, v1}, Lio/reactivex/internal/fuseable/QueueFuseable;->requestFusion(I)I
 
     move-result v1
@@ -250,19 +230,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 6
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->sourceMode:I
 
-    .line 7
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 8
     iput-boolean v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->done:Z
 
-    .line 9
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->subscribeActual()V
 
-    .line 10
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->drain()V
 
     return-void
@@ -272,16 +247,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 11
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->sourceMode:I
 
-    .line 12
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 13
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->subscribeActual()V
 
-    .line 14
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->prefetch:I
 
     int-to-long v0, v0
@@ -290,7 +261,6 @@
 
     return-void
 
-    .line 15
     :cond_1
     new-instance v0, Lio/reactivex/internal/queue/SpscArrayQueue;
 
@@ -300,10 +270,8 @@
 
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 16
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->subscribeActual()V
 
-    .line 17
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->prefetch:I
 
     int-to-long v0, v0

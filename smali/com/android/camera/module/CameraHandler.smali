@@ -62,8 +62,6 @@
 
 .field public static final MSG_FIXED_SHOT2SHOT_TIME_OUT:I = 0x3b
 
-.field public static final MSG_FIXED_SNAP_SHOT_DELAY_TIME:I = 0x4b
-
 .field public static final MSG_FORCE_MULTI_SNAP_DONE:I = 0x25
 
 .field public static final MSG_HALO_CHANGED:I = 0x48
@@ -151,10 +149,8 @@
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -169,7 +165,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     return-void

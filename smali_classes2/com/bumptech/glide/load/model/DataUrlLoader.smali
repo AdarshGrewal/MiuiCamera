@@ -57,10 +57,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/DataUrlLoader;->dataDecoder:Lcom/bumptech/glide/load/model/DataUrlLoader$DataDecoder;
 
     return-void
@@ -80,7 +78,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p2, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p3, Lcom/bumptech/glide/signature/ObjectKey;
@@ -89,7 +86,6 @@
 
     new-instance p4, Lcom/bumptech/glide/load/model/DataUrlLoader$DataUriFetcher;
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -111,7 +107,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1

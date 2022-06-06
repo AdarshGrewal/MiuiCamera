@@ -19,7 +19,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method private convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/Scanner;
 
     invoke-direct {v0, p1}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
@@ -39,7 +37,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/util/Scanner;->hasNext()Z
 
     move-result v0
@@ -67,7 +64,6 @@
 .method public getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -82,12 +78,10 @@
 .method public getCacheJsonString(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleCacheNetworkJsonRequest;->getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p2
@@ -96,7 +90,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3
     :try_start_0
     new-instance p2, Ljava/io/FileInputStream;
 
@@ -111,12 +104,10 @@
     :catch_0
     move-exception p1
 
-    .line 4
     invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     return-object v0
 
-    .line 5
     :cond_0
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/camera/resource/SimpleCacheNetworkJsonRequest;->convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
@@ -167,13 +158,11 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0, v0, p2}, Lcom/android/camera/resource/SimpleCacheNetworkJsonRequest;->parseJson(Lorg/json/JSONObject;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -185,10 +174,8 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 4
     new-instance p2, Lcom/android/camera/resource/BaseRequestException;
 
     const/4 v0, 0x2
@@ -220,7 +207,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/resource/SimpleCacheNetworkJsonRequest;->enableCache()Z
 
     move-result v0
@@ -237,7 +223,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/camera/resource/SimpleCacheNetworkJsonRequest;->processRestore(Ljava/lang/Object;)V
     :try_end_0
@@ -248,7 +233,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move v0, v1
@@ -256,12 +240,10 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-interface {p1, p2, v1}, Lcom/android/camera/resource/ResponseListener;->onResponse(Ljava/lang/Object;Z)V
 
     return-void
 
-    .line 5
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
 

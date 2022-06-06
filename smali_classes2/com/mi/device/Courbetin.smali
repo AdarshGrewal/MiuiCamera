@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Courbet;-><init>()V
 
     return-void
@@ -15,7 +14,7 @@
 
 
 # virtual methods
-.method public OooOoO0()J
+.method public OooOo0O()J
     .locals 2
 
     const-wide/32 v0, 0x21999a
@@ -23,7 +22,7 @@
     return-wide v0
 .end method
 
-.method public OoooOo0()I
+.method public OoooOO0()I
     .locals 1
 
     const/4 v0, 0x0
@@ -31,7 +30,7 @@
     return v0
 .end method
 
-.method public o000Oo00()Z
+.method public o000O0O0()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -39,7 +38,7 @@
     return v0
 .end method
 
-.method public o000o0O0()Z
+.method public o000Oo0O()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -47,7 +46,7 @@
     return v0
 .end method
 
-.method public o00o00oO()Z
+.method public o00o000o()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -55,7 +54,7 @@
     return v0
 .end method
 
-.method public o0O00O0()Z
+.method public o0O0000O()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -63,7 +62,7 @@
     return v0
 .end method
 
-.method public o0O0o0Oo()Z
+.method public o0O0O0oo()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -71,7 +70,15 @@
     return v0
 .end method
 
-.method public o0O0o0o0()Z
+.method public o0O0OoO()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public oo0OOoo()Z
     .locals 1
 
     const/4 v0, 0x1

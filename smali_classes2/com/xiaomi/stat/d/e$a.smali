@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
-    .line 1
     invoke-static {p0}, Lcom/xiaomi/stat/d/e$a;->b(Landroid/content/Context;)Z
 
     move-result v0
@@ -50,12 +48,10 @@
 
     const-string p0, "Google play service is not available"
 
-    .line 2
     invoke-static {v2, p0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 3
     :cond_0
     new-instance v0, Lcom/xiaomi/stat/d/e$a$a;
 
@@ -63,7 +59,6 @@
 
     invoke-direct {v0, v3}, Lcom/xiaomi/stat/d/e$a$a;-><init>(Lcom/xiaomi/stat/d/f;)V
 
-    .line 4
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
@@ -73,19 +68,16 @@
 
     const-string v4, "com.google.android.gms"
 
-    .line 5
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v4, 0x1
 
-    .line 6
     invoke-virtual {p0, v3, v0, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 7
     new-instance v3, Lcom/xiaomi/stat/d/e$a$b;
 
     invoke-virtual {v0}, Lcom/xiaomi/stat/d/e$a$a;->a()Landroid/os/IBinder;
@@ -94,7 +86,6 @@
 
     invoke-direct {v3, v4}, Lcom/xiaomi/stat/d/e$a$b;-><init>(Landroid/os/IBinder;)V
 
-    .line 8
     invoke-virtual {v3}, Lcom/xiaomi/stat/d/e$a$b;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -102,7 +93,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     return-object v1
@@ -118,12 +108,10 @@
     :try_start_1
     const-string v4, "Query Google ADID failed "
 
-    .line 10
     invoke-static {v2, v4, v3}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :cond_1
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -138,7 +126,6 @@
 .method public static b(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -148,7 +135,6 @@
 
     const/16 v1, 0x4000
 
-    .line 2
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

@@ -38,10 +38,8 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/vendortag/struct/AFFrameControl$MarshalQueryableAFFrameControl$MarshalAFFrameControl;->this$0:Lcom/android/camera2/vendortag/struct/AFFrameControl$MarshalQueryableAFFrameControl;
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -60,21 +58,18 @@
 .method public marshal(Lcom/android/camera2/vendortag/struct/AFFrameControl;Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$000(Lcom/android/camera2/vendortag/struct/AFFrameControl;)I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$100(Lcom/android/camera2/vendortag/struct/AFFrameControl;)I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$200(Lcom/android/camera2/vendortag/struct/AFFrameControl;)Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     move-result-object v0
@@ -92,7 +87,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$200(Lcom/android/camera2/vendortag/struct/AFFrameControl;)Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     move-result-object v2
@@ -113,7 +107,6 @@
     :goto_1
     if-ge v1, v2, :cond_1
 
-    .line 6
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$200(Lcom/android/camera2/vendortag/struct/AFFrameControl;)Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     move-result-object v3
@@ -134,7 +127,6 @@
     :goto_2
     if-ge v1, v2, :cond_2
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$200(Lcom/android/camera2/vendortag/struct/AFFrameControl;)Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     move-result-object v3
@@ -153,7 +145,6 @@
     :goto_3
     if-ge v0, v2, :cond_3
 
-    .line 8
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->access$200(Lcom/android/camera2/vendortag/struct/AFFrameControl;)Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     move-result-object v1
@@ -177,7 +168,6 @@
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera2/vendortag/struct/AFFrameControl;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/vendortag/struct/AFFrameControl$MarshalQueryableAFFrameControl$MarshalAFFrameControl;->marshal(Lcom/android/camera2/vendortag/struct/AFFrameControl;Ljava/nio/ByteBuffer;)V
@@ -188,7 +178,6 @@
 .method public unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/AFFrameControl;
     .locals 8
 
-    .line 2
     new-instance v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
 
     invoke-direct {v0}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;-><init>()V
@@ -202,20 +191,17 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
@@ -227,7 +213,6 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     add-int/lit8 v4, v4, 0x1
@@ -242,26 +227,21 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 8
     :cond_2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 9
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
-    .line 10
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
 
-    .line 11
     iput v4, v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->sampleCount:I
 
     move v4, v1
@@ -271,12 +251,10 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 12
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v5
 
-    .line 13
     iget-object v6, v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->pAngularVelocityX:[F
 
     aput v5, v6, v4
@@ -291,12 +269,10 @@
     :goto_4
     if-ge v4, v5, :cond_4
 
-    .line 14
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v6
 
-    .line 15
     iget-object v7, v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->pAngularVelocityY:[F
 
     aput v6, v7, v4
@@ -311,12 +287,10 @@
     :goto_5
     if-ge v4, v5, :cond_5
 
-    .line 16
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v6
 
-    .line 17
     iget-object v7, v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->pAngularVelocityZ:[F
 
     aput v6, v7, v4
@@ -325,19 +299,16 @@
 
     goto :goto_5
 
-    .line 18
     :cond_5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     :goto_6
     if-ge v1, v5, :cond_6
 
-    .line 19
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v6
 
-    .line 20
     iget-object v4, v0, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->timeStamp:[J
 
     aput-wide v6, v4, v1
@@ -346,7 +317,6 @@
 
     goto :goto_6
 
-    .line 21
     :cond_6
     new-instance p1, Lcom/android/camera2/vendortag/struct/AFFrameControl;
 
@@ -358,7 +328,6 @@
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/vendortag/struct/AFFrameControl$MarshalQueryableAFFrameControl$MarshalAFFrameControl;->unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/AFFrameControl;
 
     move-result-object p1

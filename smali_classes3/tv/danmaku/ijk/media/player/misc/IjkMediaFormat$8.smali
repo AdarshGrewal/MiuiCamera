@@ -22,7 +22,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$8;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     const/4 p1, 0x0
@@ -39,7 +38,6 @@
 
     const-string v0, "sample_rate"
 
-    .line 1
     invoke-virtual {p1, v0}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result p1
@@ -50,7 +48,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 

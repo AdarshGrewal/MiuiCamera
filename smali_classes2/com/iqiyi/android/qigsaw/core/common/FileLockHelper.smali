@@ -29,10 +29,8 @@
 
     const-string v0, "Split.FileLockHelper"
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -54,7 +52,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 3
     :try_start_0
     iget-object v5, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->outputStream:Ljava/io/FileOutputStream;
 
@@ -87,13 +84,11 @@
 
     const-string v5, "getInfoLock Thread failed time:10"
 
-    .line 4
     invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     const-wide/16 v5, 0xa
 
-    .line 5
     :try_start_1
     invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
@@ -106,7 +101,6 @@
 
     const-string v6, "getInfoLock Thread sleep exception"
 
-    .line 6
     invoke-static {v0, v6, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -115,12 +109,10 @@
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 7
     iput-object v1, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->fileLock:Ljava/nio/channels/FileLock;
 
     return-void
 
-    .line 8
     :cond_3
     new-instance v0, Ljava/io/IOException;
 
@@ -155,7 +147,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;
 
     invoke-direct {v0, p0}, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;-><init>(Ljava/io/File;)V
@@ -173,26 +164,22 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->fileLock:Ljava/nio/channels/FileLock;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->fileLock:Ljava/nio/channels/FileLock;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileLock;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->outputStream:Ljava/io/FileOutputStream;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
     :cond_1
@@ -201,15 +188,12 @@
     :catchall_0
     move-exception v0
 
-    .line 5
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/common/FileLockHelper;->outputStream:Ljava/io/FileOutputStream;
 
     if-eqz v1, :cond_2
 
-    .line 6
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 7
     :cond_2
     throw v0
 .end method

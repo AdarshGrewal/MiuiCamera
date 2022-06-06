@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/SpinedBuffer$OfDouble;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 2
     invoke-super {p0, p1, p2}, Ljava8/util/stream/SpinedBuffer$OfDouble;->accept(D)V
 
     return-void
@@ -42,7 +40,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -51,7 +48,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -60,7 +56,6 @@
 .method public accept(Ljava/lang/Double;)V
     .locals 0
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfDouble;->accept(Ljava8/util/stream/Sink$OfDouble;Ljava/lang/Double;)V
 
     return-void
@@ -69,7 +64,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->accept(Ljava/lang/Double;)V
@@ -90,7 +84,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfPrimitive;->asArray(Ljava8/util/stream/Node$OfPrimitive;Ljava8/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -103,7 +96,6 @@
 .method public bridge synthetic asArray(Ljava8/util/function/IntFunction;)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->asArray(Ljava8/util/function/IntFunction;)[Ljava/lang/Double;
 
     move-result-object p1
@@ -114,7 +106,6 @@
 .method public bridge synthetic asPrimitiveArray()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->asPrimitiveArray()[D
 
     move-result-object v0
@@ -125,7 +116,6 @@
 .method public asPrimitiveArray()[D
     .locals 1
 
-    .line 2
     invoke-super {p0}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->asPrimitiveArray()Ljava/lang/Object;
 
     move-result-object v0
@@ -138,10 +128,8 @@
 .method public begin(J)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->clear()V
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->ensureCapacity(J)V
 
     return-void
@@ -156,7 +144,6 @@
 .method public bridge synthetic build()Ljava8/util/stream/Node;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->build()Ljava8/util/stream/Node$OfDouble;
 
     move-result-object v0
@@ -175,7 +162,6 @@
 .method public bridge synthetic copyInto(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, [D
 
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->copyInto([DI)V
@@ -186,7 +172,6 @@
 .method public copyInto([DI)V
     .locals 0
 
-    .line 3
     invoke-super {p0, p1, p2}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->copyInto(Ljava/lang/Object;I)V
 
     return-void
@@ -195,7 +180,6 @@
 .method public copyInto([Ljava/lang/Double;I)V
     .locals 0
 
-    .line 4
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Nodes$OfDouble;->copyInto(Ljava8/util/stream/Node$OfDouble;[Ljava/lang/Double;I)V
 
     return-void
@@ -204,7 +188,6 @@
 .method public bridge synthetic copyInto([Ljava/lang/Object;I)V
     .locals 0
 
-    .line 2
     check-cast p1, [Ljava/lang/Double;
 
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->copyInto([Ljava/lang/Double;I)V
@@ -221,7 +204,6 @@
 .method public bridge synthetic forEach(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->forEach(Ljava8/util/function/DoubleConsumer;)V
@@ -232,7 +214,6 @@
 .method public forEach(Ljava8/util/function/DoubleConsumer;)V
     .locals 0
 
-    .line 2
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->forEach(Ljava/lang/Object;)V
 
     return-void
@@ -241,7 +222,6 @@
 .method public getChild(I)Ljava8/util/stream/Node$OfDouble;
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/Nodes$OfPrimitive;->getChild()Ljava8/util/stream/Node$OfPrimitive;
 
     move-result-object p1
@@ -254,7 +234,6 @@
 .method public bridge synthetic getChild(I)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->getChild(I)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -265,7 +244,6 @@
 .method public bridge synthetic getChild(I)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->getChild(I)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -276,7 +254,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChildCount()I
 
     move-result v0
@@ -287,7 +264,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes$OfDouble;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0
@@ -298,7 +274,6 @@
 .method public spliterator()Ljava8/util/Spliterator$OfDouble;
     .locals 1
 
-    .line 3
     invoke-super {p0}, Ljava8/util/stream/SpinedBuffer$OfDouble;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -309,7 +284,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -320,7 +294,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -341,7 +314,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes$OfDouble;->truncate(Ljava8/util/stream/Node$OfDouble;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -352,7 +324,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -363,7 +334,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$DoubleSpinedNodeBuilder;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1

@@ -32,7 +32,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/Nodes$EmptyNode;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
 .method public bridge synthetic asPrimitiveArray()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->asPrimitiveArray()[I
 
     move-result-object v0
@@ -54,7 +52,6 @@
 .method public asPrimitiveArray()[I
     .locals 1
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/Nodes;->access$500()[I
 
     move-result-object v0
@@ -65,7 +62,6 @@
 .method public copyInto([Ljava/lang/Integer;I)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Nodes$OfInt;->copyInto(Ljava8/util/stream/Node$OfInt;[Ljava/lang/Integer;I)V
 
     return-void
@@ -74,7 +70,6 @@
 .method public bridge synthetic copyInto([Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->copyInto([Ljava/lang/Integer;I)V
@@ -94,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfInt;->forEach(Ljava8/util/stream/Node$OfInt;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -103,7 +97,6 @@
 .method public getChild(I)Ljava8/util/stream/Node$OfInt;
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/Nodes$OfPrimitive;->getChild()Ljava8/util/stream/Node$OfPrimitive;
 
     move-result-object p1
@@ -116,7 +109,6 @@
 .method public bridge synthetic getChild(I)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->getChild(I)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p1
@@ -127,7 +119,6 @@
 .method public bridge synthetic getChild(I)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->getChild(I)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p1
@@ -138,7 +129,6 @@
 .method public bridge synthetic newArray(I)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->newArray(I)[I
 
     move-result-object p1
@@ -149,7 +139,6 @@
 .method public newArray(I)[I
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfInt;->newArray(Ljava8/util/stream/Node$OfInt;I)[I
 
     move-result-object p1
@@ -160,7 +149,6 @@
 .method public spliterator()Ljava8/util/Spliterator$OfInt;
     .locals 1
 
-    .line 3
     invoke-static {}, Ljava8/util/Spliterators;->emptyIntSpliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -171,7 +159,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->spliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -182,7 +169,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->spliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -203,7 +189,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes$OfInt;->truncate(Ljava8/util/stream/Node$OfInt;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p1
@@ -214,7 +199,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p1
@@ -225,7 +209,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$EmptyNode$OfInt;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p1

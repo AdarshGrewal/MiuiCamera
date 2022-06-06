@@ -209,9 +209,6 @@
 .method public varargs abstract enableMenuItem(Z[I)V
 .end method
 
-.method public abstract expandExtraView(Lcom/android/camera/data/data/ComponentData;Landroid/view/View;I)V
-.end method
-
 .method public abstract getAlertIsShow()Z
 .end method
 
@@ -230,7 +227,7 @@
 .method public abstract hideAlert()V
 .end method
 
-.method public abstract hideConfigMenu(Z)V
+.method public abstract hideConfigMenu()V
 .end method
 
 .method public abstract hideDelayNumber()V
@@ -267,9 +264,6 @@
 .end method
 
 .method public abstract isZoomTipShowing()Z
-.end method
-
-.method public abstract onFlashClick(Landroid/view/View;)V
 .end method
 
 .method public abstract reInitAlert(Z)V
@@ -318,9 +312,6 @@
 .end method
 
 .method public abstract showDocumentStateButton(I)V
-.end method
-
-.method public abstract showExtraMenu()V
 .end method
 
 .method public abstract startLiveShotAnimation()V

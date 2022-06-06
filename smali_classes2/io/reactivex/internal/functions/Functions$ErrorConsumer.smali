@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/functions/Functions$ErrorConsumer;->accept(Ljava/lang/Throwable;)V
@@ -57,7 +55,6 @@
 .method public accept(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     return-void

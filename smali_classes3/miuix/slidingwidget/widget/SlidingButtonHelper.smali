@@ -189,7 +189,6 @@
 
     aput v2, v0, v1
 
-    .line 1
     sput-object v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->CHECKED_STATE_SET:[I
 
     return-void
@@ -198,10 +197,8 @@
 .method public constructor <init>(Landroid/widget/CompoundButton;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -210,10 +207,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mIsSliderEdgeReached:Z
 
-    .line 4
     new-instance v1, Lmiuix/slidingwidget/widget/SlidingButtonHelper$1;
 
     const-string v2, "SliderOffset"
@@ -224,45 +219,34 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 5
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderScale:F
 
     const/4 v2, 0x0
 
-    .line 6
     iput v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowAlpha:F
 
     const v3, 0x3dcccccd    # 0.1f
 
-    .line 7
     iput v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStrokeAlpha:F
 
-    .line 8
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
-    .line 9
     iput v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBarAlpha:F
 
-    .line 10
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mParamCached:Z
 
     const/4 v3, -0x1
 
-    .line 11
     iput v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffsetTemp:I
 
-    .line 12
     iput v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlphaTemp:I
 
-    .line 13
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimCheckedTemp:Z
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 14
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlphaTemp:F
 
-    .line 15
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;
 
     const-string v3, "SliderScale"
@@ -271,14 +255,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderScaleFloatProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 16
-    new-instance v0, LOooO0OO/OooO0o0/OooO00o/OooO00o;
+    new-instance v0, LOooO0Oo/OooO0o0/OooO00o/OooO00o;
 
-    invoke-direct {v0, p0}, LOooO0OO/OooO0o0/OooO00o/OooO00o;-><init>(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)V
+    invoke-direct {v0, p0}, LOooO0Oo/OooO0o0/OooO00o/OooO00o;-><init>(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)V
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
-    .line 17
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$3;
 
     const-string v3, "SliderShadowAlpha"
@@ -287,7 +269,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 18
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$4;
 
     const-string v3, "StrokeAlpha"
@@ -296,7 +277,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStrokeAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 19
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$5;
 
     const-string v3, "MaskCheckedSlideBarAlpha"
@@ -305,7 +285,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 20
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$6;
 
     const-string v3, "MaskUnCheckedSlideBarAlpha"
@@ -314,20 +293,16 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBarAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 21
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mExtraAlpha:F
 
-    .line 22
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
-    .line 23
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
-    .line 24
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
@@ -336,7 +311,6 @@
 
     if-nez p1, :cond_0
 
-    .line 25
     iput v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     :cond_0
@@ -346,7 +320,6 @@
 .method public static synthetic access$000(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderScale:F
 
     return p0
@@ -355,7 +328,6 @@
 .method public static synthetic access$002(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderScale:F
 
     return p1
@@ -364,7 +336,6 @@
 .method public static synthetic access$100(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowAlpha:F
 
     return p0
@@ -373,7 +344,6 @@
 .method public static synthetic access$102(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowAlpha:F
 
     return p1
@@ -382,7 +352,6 @@
 .method public static synthetic access$200(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStrokeAlpha:F
 
     return p0
@@ -391,7 +360,6 @@
 .method public static synthetic access$202(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStrokeAlpha:F
 
     return p1
@@ -400,7 +368,6 @@
 .method public static synthetic access$300(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     return p0
@@ -409,7 +376,6 @@
 .method public static synthetic access$302(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     return p1
@@ -418,7 +384,6 @@
 .method public static synthetic access$400(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBarAlpha:F
 
     return p0
@@ -427,7 +392,6 @@
 .method public static synthetic access$402(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBarAlpha:F
 
     return p1
@@ -436,7 +400,6 @@
 .method public static synthetic access$502(Lmiuix/slidingwidget/widget/SlidingButtonHelper;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     return p1
@@ -445,7 +408,6 @@
 .method public static synthetic access$600(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     return p0
@@ -454,7 +416,6 @@
 .method public static synthetic access$700(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
     return p0
@@ -463,7 +424,6 @@
 .method private animateToState(Z)V
     .locals 2
 
-    .line 18
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
@@ -472,21 +432,17 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 19
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 20
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->startCheckedChangeAnimInternal(Z)V
 
-    .line 21
     invoke-virtual {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->notifyCheckedChangeListener()V
 
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 22
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
     goto :goto_0
@@ -494,7 +450,6 @@
     :cond_1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionStart:I
 
-    .line 23
     :goto_0
     new-instance v1, Lmiuix/slidingwidget/widget/SlidingButtonHelper$8;
 
@@ -508,7 +463,6 @@
 .method private animateToState(ZILjava/lang/Runnable;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     if-eqz v0, :cond_0
@@ -519,12 +473,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
@@ -536,7 +488,6 @@
 
     return-void
 
-    .line 4
     :cond_1
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
@@ -550,7 +501,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 5
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object p2
@@ -559,7 +509,6 @@
 
     invoke-virtual {p2, v0}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 6
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p2}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -570,14 +519,12 @@
 
     invoke-virtual {p2, v0}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 7
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {p2, v0}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 8
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     new-instance v0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$7;
@@ -586,14 +533,12 @@
 
     invoke-virtual {p2, v0}, Lmiuix/animation/physics/DynamicAnimation;->addEndListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationEndListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 9
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p2}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
     if-eqz p1, :cond_3
 
-    .line 10
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -602,12 +547,10 @@
 
     if-nez p1, :cond_2
 
-    .line 11
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 12
     :cond_2
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -617,14 +560,12 @@
 
     if-eqz p1, :cond_5
 
-    .line 13
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
     goto :goto_0
 
-    .line 14
     :cond_3
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -634,12 +575,10 @@
 
     if-nez p1, :cond_4
 
-    .line 15
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 16
     :cond_4
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -649,7 +588,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 17
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
@@ -662,7 +600,6 @@
 .method private animateToggle()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
@@ -673,7 +610,6 @@
 
     invoke-direct {p0, v0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->animateToState(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
@@ -686,31 +622,18 @@
 .method private createMaskDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 5
 
-    .line 1
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothContainerDrawable;-><init>()V
 
-    .line 2
-    iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
-
-    invoke-virtual {v1}, Landroid/widget/CompoundButton;->getLayerType()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setLayerType(I)V
-
-    .line 3
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mCornerRadius:I
 
     int-to-float v1, v1
 
     invoke-virtual {v0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setCornerRadius(F)V
 
-    .line 4
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable;->setChildDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5
     new-instance p1, Landroid/graphics/Rect;
 
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarginVertical:I
@@ -733,12 +656,10 @@
 .method private createMaskedSlideBar()Landroid/graphics/drawable/StateListDrawable;
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 2
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
@@ -747,7 +668,6 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/StateListDrawable;->setBounds(IIII)V
 
-    .line 3
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/StateListDrawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
@@ -758,13 +678,10 @@
 .method private initMaskedSlideBar(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
-    .line 2
     iput-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
-    .line 3
     iput-object p3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBar:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -773,7 +690,6 @@
 .method private moveSlider(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-static {v0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -784,7 +700,6 @@
 
     neg-int p1, p1
 
-    .line 2
     :cond_0
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
@@ -792,26 +707,21 @@
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 3
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionStart:I
 
     if-ge v0, p1, :cond_1
 
-    .line 4
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
     if-le v0, p1, :cond_2
 
-    .line 6
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 7
     :cond_2
     :goto_0
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
@@ -838,23 +748,19 @@
     :goto_2
     if-eqz p1, :cond_5
 
-    .line 8
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mIsSliderEdgeReached:Z
 
     if-nez v0, :cond_5
 
-    .line 9
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
 
     invoke-static {v0, v1}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    .line 10
     :cond_5
     iput-boolean p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mIsSliderEdgeReached:Z
 
-    .line 11
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     invoke-virtual {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->setSliderOffset(I)V
@@ -865,7 +771,6 @@
 .method private onDrawSlideBar(Landroid/graphics/Canvas;F)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -882,17 +787,14 @@
 
     if-lez v1, :cond_0
 
-    .line 2
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 3
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4
     :cond_0
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBarAlpha:F
 
@@ -904,17 +806,14 @@
 
     if-lez v1, :cond_1
 
-    .line 5
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 6
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 7
     :cond_1
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
@@ -926,12 +825,10 @@
 
     if-lez p2, :cond_2
 
-    .line 8
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 9
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBar:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -943,7 +840,6 @@
 .method private onDrawSliderShadow(Landroid/graphics/Canvas;II)V
     .locals 6
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowAlpha:F
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -956,7 +852,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
@@ -964,7 +859,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -975,7 +869,6 @@
 
     move-result v1
 
-    .line 4
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
     check-cast v2, Landroid/graphics/drawable/BitmapDrawable;
@@ -990,20 +883,17 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    .line 6
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
-    .line 7
     :goto_0
     iget-object v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
@@ -1021,12 +911,10 @@
 
     invoke-virtual {v3, v4, v5, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 8
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 9
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -1037,7 +925,6 @@
 .method private onDrawSliderStroke(Landroid/graphics/Canvas;IIIIF)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderStroke:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStrokeAlpha:F
@@ -1052,12 +939,10 @@
 
     invoke-virtual {v0, p6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 2
     iget-object p6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderStroke:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p6, p2, p3, p4, p5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 3
     iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderStroke:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -1068,7 +953,6 @@
 .method private onPressedInner()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1077,12 +961,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1092,12 +974,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1107,12 +987,10 @@
 
     if-nez v0, :cond_2
 
-    .line 6
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
@@ -1122,7 +1000,6 @@
 
     if-nez v0, :cond_5
 
-    .line 8
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1131,12 +1008,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 9
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 10
     :cond_3
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1146,12 +1021,10 @@
 
     if-nez v0, :cond_4
 
-    .line 11
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 12
     :cond_4
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1161,7 +1034,6 @@
 
     if-nez v0, :cond_5
 
-    .line 13
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
@@ -1173,7 +1045,6 @@
 .method private onUnPressedInner()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1182,12 +1053,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1197,12 +1066,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1212,12 +1079,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1227,12 +1092,10 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1242,12 +1105,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 10
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 11
     :cond_4
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
@@ -1257,7 +1118,6 @@
 
     if-nez v0, :cond_7
 
-    .line 12
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1266,12 +1126,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 13
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 14
     :cond_5
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1281,12 +1139,10 @@
 
     if-nez v0, :cond_6
 
-    .line 15
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 16
     :cond_6
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1296,7 +1152,6 @@
 
     if-nez v0, :cond_7
 
-    .line 17
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
@@ -1308,47 +1163,38 @@
 .method private popSavedParams()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mParamCached:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffsetTemp:I
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 3
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlphaTemp:I
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
-    .line 4
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlphaTemp:F
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
-    .line 5
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimCheckedTemp:Z
 
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mParamCached:Z
 
     const/4 v0, -0x1
 
-    .line 7
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffsetTemp:I
 
-    .line 8
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlphaTemp:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 9
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlphaTemp:F
 
     :cond_0
@@ -1358,29 +1204,24 @@
 .method private saveCurrentParams()V
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffsetTemp:I
 
-    .line 2
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlphaTemp:I
 
-    .line 3
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlphaTemp:F
 
-    .line 4
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimCheckedTemp:Z
 
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mParamCached:Z
 
     return-void
@@ -1389,7 +1230,6 @@
 .method private scaleCanvasEnd(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1398,10 +1238,8 @@
 .method private scaleCanvasStart(Landroid/graphics/Canvas;II)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 2
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderScale:F
 
     int-to-float p2, p2
@@ -1416,12 +1254,10 @@
 .method private setCheckedInner(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1430,12 +1266,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1449,16 +1283,13 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 5
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
-    .line 6
     :cond_1
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     if-nez v0, :cond_3
 
-    .line 7
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -1467,12 +1298,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 9
     :cond_2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -1486,7 +1315,6 @@
 
     const/4 p1, 0x0
 
-    .line 10
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
     :cond_3
@@ -1496,7 +1324,6 @@
 .method private startCheckedChangeAnimInternal(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     if-eqz v0, :cond_0
@@ -1507,7 +1334,6 @@
 
     if-nez v0, :cond_3
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
@@ -1523,7 +1349,6 @@
     :goto_0
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 3
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     if-eqz v0, :cond_2
@@ -1538,11 +1363,9 @@
     :goto_1
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
-    .line 4
     :cond_3
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->popSavedParams()V
 
-    .line 5
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->setCheckedInner(Z)V
 
     return-void
@@ -1553,7 +1376,6 @@
 .method public synthetic OooO00o(Lmiuix/animation/physics/DynamicAnimation;FF)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->invalidate()V
@@ -1564,7 +1386,6 @@
 .method public getAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mExtraAlpha:F
 
     return v0
@@ -1573,7 +1394,6 @@
 .method public getMeasuredHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
 
     return v0
@@ -1582,7 +1402,6 @@
 .method public getMeasuredWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     return v0
@@ -1591,7 +1410,6 @@
 .method public getSlideBar()Landroid/graphics/drawable/StateListDrawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlideBar:Landroid/graphics/drawable/StateListDrawable;
 
     return-object v0
@@ -1600,7 +1418,6 @@
 .method public getSliderOffset()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     return v0
@@ -1609,7 +1426,6 @@
 .method public getSliderOn()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1618,7 +1434,6 @@
 .method public getSliderOnAlpha()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
     return v0
@@ -1627,7 +1442,6 @@
 .method public initAnim()V
     .locals 9
 
-    .line 1
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1640,7 +1454,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 2
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
@@ -1649,7 +1462,6 @@
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 3
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1660,21 +1472,18 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 4
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     const v3, 0x3b03126f    # 0.002f
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 5
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 6
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1687,14 +1496,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 7
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 8
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1703,19 +1510,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 9
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 10
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderUnPressedAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 11
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1726,14 +1530,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 12
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 13
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1744,21 +1546,18 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 14
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     const/high16 v3, 0x3b800000    # 0.00390625f
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 15
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 16
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1771,14 +1570,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 17
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 18
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1787,19 +1584,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 19
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 20
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 21
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1812,14 +1606,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 22
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 23
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1828,19 +1620,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 24
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 25
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 26
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1853,14 +1642,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 27
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 28
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1869,19 +1656,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 29
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 30
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mStokeAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 31
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1892,7 +1676,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 32
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
@@ -1901,7 +1684,6 @@
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 33
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1910,19 +1692,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 34
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 35
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 36
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1933,14 +1712,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 37
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 38
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1949,19 +1726,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 39
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 40
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 41
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -1974,14 +1748,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 42
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 43
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -1990,19 +1762,16 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 44
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 45
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 46
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -2013,14 +1782,12 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 47
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 48
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -2029,12 +1796,10 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 49
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 50
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mUnMarkedPressedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
@@ -2047,7 +1812,6 @@
 .method public initDrawable()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2062,7 +1826,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderShadow:Landroid/graphics/drawable/Drawable;
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2083,7 +1846,6 @@
 .method public initResource(Landroid/content/Context;Landroid/content/res/TypedArray;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2098,7 +1860,6 @@
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mCornerRadius:I
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2113,14 +1874,12 @@
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarginVertical:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setDrawingCacheEnabled(Z)V
 
-    .line 4
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
@@ -2133,7 +1892,6 @@
 
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTapThreshold:I
 
-    .line 5
     sget v0, Lmiuix/slidingwidget/R$styleable;->SlidingButton_sliderOn:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -2142,7 +1900,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
-    .line 6
     sget v0, Lmiuix/slidingwidget/R$styleable;->SlidingButton_sliderOff:I
 
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -2151,7 +1908,6 @@
 
     iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOff:Landroid/graphics/drawable/Drawable;
 
-    .line 7
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     sget v2, Lmiuix/slidingwidget/R$styleable;->SlidingButton_android_background:I
@@ -2164,26 +1920,22 @@
 
     const-string v0, "#FF0D84FF"
 
-    .line 8
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 9
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x17
 
     if-lt v2, v3, :cond_0
 
-    .line 10
     sget v0, Lmiuix/slidingwidget/R$color;->miuix_appcompat_sliding_button_bar_on_light:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
 
     move-result v0
 
-    .line 11
     :cond_0
     sget p1, Lmiuix/slidingwidget/R$styleable;->SlidingButton_slidingBarColor:I
 
@@ -2193,7 +1945,6 @@
 
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlidingBarColor:I
 
-    .line 12
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2206,7 +1957,6 @@
 
     move-result p1
 
-    .line 13
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2219,7 +1969,6 @@
 
     move-result v0
 
-    .line 14
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v2}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
@@ -2238,10 +1987,8 @@
 
     add-int/2addr p1, v0
 
-    .line 15
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
 
-    .line 16
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -2254,7 +2001,6 @@
 
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderWidth:I
 
-    .line 17
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
 
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
@@ -2269,10 +2015,8 @@
 
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderHeight:I
 
-    .line 18
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionStart:I
 
-    .line 19
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderWidth:I
@@ -2281,44 +2025,36 @@
 
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
-    .line 20
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 21
     new-instance p1, Landroid/util/TypedValue;
 
     invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 22
     sget v0, Lmiuix/slidingwidget/R$styleable;->SlidingButton_barOff:I
 
     invoke-virtual {p2, v0, p1}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
 
-    .line 23
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 24
     sget v1, Lmiuix/slidingwidget/R$styleable;->SlidingButton_barOn:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
 
-    .line 25
     sget v1, Lmiuix/slidingwidget/R$styleable;->SlidingButton_barOff:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 26
     sget v2, Lmiuix/slidingwidget/R$styleable;->SlidingButton_barOn:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    .line 27
     iget v2, p1, Landroid/util/TypedValue;->type:I
 
     iget v3, v0, Landroid/util/TypedValue;->type:I
@@ -2344,49 +2080,40 @@
 
     if-eqz v1, :cond_3
 
-    .line 28
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x15
 
     if-lt p1, v0, :cond_2
 
-    .line 29
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlidingBarColor:I
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    .line 30
     :cond_2
     invoke-direct {p0, p2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->createMaskDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 31
     invoke-direct {p0, v1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->createMaskDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 32
     invoke-direct {p0, p2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->createMaskDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    .line 33
     invoke-direct {p0, p1, v0, p2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->initMaskedSlideBar(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 34
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->createMaskedSlideBar()Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlideBar:Landroid/graphics/drawable/StateListDrawable;
 
-    .line 35
     :cond_3
     invoke-virtual {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->setSliderDrawState()V
 
-    .line 36
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
@@ -2395,7 +2122,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 37
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
     invoke-virtual {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->setSliderOffset(I)V
@@ -2407,12 +2133,10 @@
 .method public jumpDrawablesToCurrentState()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlideBar:Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/drawable/StateListDrawable;->jumpToCurrentState()V
 
     :cond_0
@@ -2422,19 +2146,16 @@
 .method public notifyCheckedChangeListener()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mOnPerformCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mOnPerformCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
@@ -2448,7 +2169,6 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->isEnabled()Z
@@ -2467,7 +2187,6 @@
     :goto_0
     int-to-float v0, v0
 
-    .line 2
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mExtraAlpha:F
 
     mul-float/2addr v0, v1
@@ -2480,10 +2199,8 @@
 
     div-float v9, v1, v2
 
-    .line 3
     invoke-direct {p0, p1, v9}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onDrawSlideBar(Landroid/graphics/Canvas;F)V
 
-    .line 4
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-static {v1}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -2492,7 +2209,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     iget v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
@@ -2513,7 +2229,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
@@ -2532,7 +2247,6 @@
     :goto_2
     move v7, v1
 
-    .line 7
     iget v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
 
     iget v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderHeight:I
@@ -2545,7 +2259,6 @@
 
     add-int v1, v7, v5
 
-    .line 8
     div-int/lit8 v1, v1, 0x2
 
     add-int v2, v8, v6
@@ -2554,43 +2267,35 @@
 
     invoke-direct {p0, p1, v1, v2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onDrawSliderShadow(Landroid/graphics/Canvas;II)V
 
-    .line 9
     invoke-direct {p0, p1, v1, v2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->scaleCanvasStart(Landroid/graphics/Canvas;II)V
 
-    .line 10
     iget-boolean v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     if-eqz v1, :cond_3
 
-    .line 11
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 12
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v5, v6, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 13
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOn:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_3
 
-    .line 14
     :cond_3
     iget-object v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOff:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 15
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOff:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v5, v6, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 16
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOff:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -2600,10 +2305,8 @@
 
     move-object v4, p1
 
-    .line 17
     invoke-direct/range {v3 .. v9}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onDrawSliderStroke(Landroid/graphics/Canvas;IIIIF)V
 
-    .line 18
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->scaleCanvasEnd(Landroid/graphics/Canvas;)V
 
     return-void
@@ -2612,29 +2315,24 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)V
     .locals 7
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
 
     float-to-int p1, p1
 
-    .line 4
     iget-object v2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 5
     iget-object v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-static {v3}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -2643,7 +2341,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6
     iget v4, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v5, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
@@ -2662,7 +2359,6 @@
     :goto_0
     if-eqz v3, :cond_1
 
-    .line 7
     iget v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mWidth:I
 
     iget v5, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
@@ -2678,7 +2374,6 @@
 
     add-int/2addr v3, v5
 
-    .line 8
     :goto_1
     iget v5, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mHeight:I
 
@@ -2702,11 +2397,9 @@
 
     goto/16 :goto_9
 
-    .line 9
     :cond_2
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onUnPressedInner()V
 
-    .line 10
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionStart:I
@@ -2728,7 +2421,6 @@
     :goto_2
     move p1, v3
 
-    .line 11
     :goto_3
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
@@ -2736,7 +2428,6 @@
 
     if-nez p1, :cond_6
 
-    .line 12
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
@@ -2753,40 +2444,32 @@
     :goto_4
     iput-boolean v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
-    .line 13
     invoke-direct {p0, v3}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->animateToState(Z)V
 
-    .line 14
     :cond_6
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
-    .line 15
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoved:Z
 
-    .line 16
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1, v6}, Landroid/widget/CompoundButton;->setPressed(Z)V
 
     goto/16 :goto_9
 
-    .line 17
     :cond_7
     iget-boolean p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
     if-eqz p1, :cond_11
 
-    .line 18
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mLastX:I
 
     sub-int p1, v1, p1
 
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->moveSlider(I)V
 
-    .line 19
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mLastX:I
 
-    .line 20
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mOriginalTouchPointX:I
 
     sub-int/2addr v1, p1
@@ -2799,10 +2482,8 @@
 
     if-lt p1, v0, :cond_11
 
-    .line 21
     iput-boolean v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoved:Z
 
-    .line 22
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getParent()Landroid/view/ViewParent;
@@ -2813,26 +2494,21 @@
 
     goto :goto_9
 
-    .line 23
     :cond_8
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onUnPressedInner()V
 
-    .line 24
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
     if-eqz v0, :cond_b
 
-    .line 25
     iget-boolean v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoved:Z
 
     if-nez v0, :cond_9
 
-    .line 26
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->animateToggle()V
 
     goto :goto_6
 
-    .line 27
     :cond_9
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
@@ -2850,17 +2526,14 @@
     :goto_5
     iput-boolean v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
-    .line 28
     invoke-direct {p0, v3}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->animateToState(Z)V
 
-    .line 29
     invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result p1
 
     if-eqz p1, :cond_c
 
-    .line 30
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
@@ -2869,26 +2542,21 @@
 
     goto :goto_6
 
-    .line 31
     :cond_b
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->animateToggle()V
 
-    .line 32
     :cond_c
     :goto_6
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
-    .line 33
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoved:Z
 
-    .line 34
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1, v6}, Landroid/widget/CompoundButton;->setPressed(Z)V
 
     goto :goto_9
 
-    .line 35
     :cond_d
     invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -2896,18 +2564,14 @@
 
     if-eqz p1, :cond_10
 
-    .line 36
     iput-boolean v3, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
-    .line 37
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1, v3}, Landroid/widget/CompoundButton;->setPressed(Z)V
 
-    .line 38
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->onPressedInner()V
 
-    .line 39
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionStart:I
@@ -2929,18 +2593,14 @@
 
     goto :goto_8
 
-    .line 40
     :cond_10
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mTracking:Z
 
-    .line 41
     :goto_8
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mLastX:I
 
-    .line 42
     iput v1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mOriginalTouchPointX:I
 
-    .line 43
     iput-boolean v6, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoved:Z
 
     :cond_11
@@ -2951,7 +2611,6 @@
 .method public setAlpha(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mExtraAlpha:F
 
     return-void
@@ -2960,15 +2619,12 @@
 .method public setChecked(Z)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->saveCurrentParams()V
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mAnimChecked:Z
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderPositionEnd:I
 
     goto :goto_0
@@ -2988,7 +2644,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 4
     :goto_1
     iput v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
@@ -3001,11 +2656,9 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 5
     :goto_2
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBarAlpha:F
 
-    .line 6
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     if-eqz p1, :cond_3
@@ -3016,12 +2669,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 7
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderMoveAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 8
     :cond_3
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -3031,12 +2682,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 9
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 10
     :cond_4
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -3046,12 +2695,10 @@
 
     if-eqz p1, :cond_5
 
-    .line 11
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMarkedAlphaShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {p1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 12
     :cond_5
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
@@ -3060,55 +2707,9 @@
     return-void
 .end method
 
-.method public setLayerType(I)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskCheckedSlideBar:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    if-eqz v1, :cond_0
-
-    .line 2
-    check-cast v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable;->setLayerType(I)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedSlideBar:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    if-eqz v1, :cond_1
-
-    .line 4
-    check-cast v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable;->setLayerType(I)V
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mMaskUnCheckedPressedSlideBar:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    if-eqz v1, :cond_2
-
-    .line 6
-    check-cast v0, Lmiuix/smooth/SmoothContainerDrawable;
-
-    invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable;->setLayerType(I)V
-
-    :cond_2
-    return-void
-.end method
-
 .method public setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mOnPerformCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     return-void
@@ -3117,7 +2718,6 @@
 .method public setParentClipChildren()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {v0}, Landroid/widget/CompoundButton;->getParent()Landroid/view/ViewParent;
@@ -3126,12 +2726,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     instance-of v1, v0, Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
@@ -3145,14 +2743,12 @@
 .method public setSliderDrawState()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->getSliderOn()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->getSliderOn()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -3165,7 +2761,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->getSlideBar()Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object v0
@@ -3185,10 +2780,8 @@
 .method public setSliderOffset(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOffset:I
 
-    .line 2
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->invalidate()V
@@ -3199,10 +2792,8 @@
 .method public setSliderOnAlpha(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSliderOnAlpha:I
 
-    .line 2
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mView:Landroid/widget/CompoundButton;
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->invalidate()V
@@ -3213,7 +2804,6 @@
 .method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->mSlideBar:Landroid/graphics/drawable/StateListDrawable;
 
     if-ne p1, v0, :cond_0

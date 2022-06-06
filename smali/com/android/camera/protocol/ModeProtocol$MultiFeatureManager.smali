@@ -22,16 +22,21 @@
 
 
 # virtual methods
-.method public abstract batchInstallFeatures(Landroid/content/Context;)Z
-.end method
-
 .method public abstract checkAndShowDownloadConfirmDialog(Ljava/lang/String;Landroid/content/Context;ZLjava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 .end method
 
-.method public abstract containsFeature(Ljava/lang/String;)Z
+.method public abstract getFeatureSize(Ljava/lang/String;)J
 .end method
 
-.method public abstract getFeatureSize(Ljava/lang/String;)J
+.method public abstract getInstalledFeatures()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract hasFeatureInstalled(Ljava/lang/String;)Z
@@ -41,6 +46,9 @@
 .end method
 
 .method public abstract loadLibrary(Landroid/content/Context;Ljava/lang/String;)V
+.end method
+
+.method public abstract startInstallFeature(Ljava/lang/String;Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;)Z
 .end method
 
 .method public abstract tryCancelDownload(Ljava/lang/String;ZLandroid/content/Context;ZLjava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;

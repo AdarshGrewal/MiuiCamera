@@ -36,33 +36,26 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/emoticon/EmoInfo;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->a:Lcom/arcsoft/avatar2/emoticon/EmoInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->index:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->time:F
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asForeGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 5
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 6
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
-    .line 7
     new-instance v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     const/16 v1, 0x100

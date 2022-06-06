@@ -27,6 +27,8 @@
 
 .field public static final BEAUTY_CATEGORY_LEVEL:[Ljava/lang/String;
 
+.field public static final BEAUTY_CATEGORY_LIVE:[Ljava/lang/String;
+
 .field public static final BEAUTY_CATEGORY_MI_LIVE:[Ljava/lang/String;
 
 .field public static final BEAUTY_CATEGORY_TRUESIGHT:[Ljava/lang/String;
@@ -60,8 +62,6 @@
     .end annotation
 .end field
 
-.field public static final BLUSHER_RATIO:Ljava/lang/String; = "pref_beautify_blusher_ratio_key"
-
 .field public static final BODY_SLIM_RATIO:Ljava/lang/String; = "pref_beauty_body_slim_ratio"
 
 .field public static final BUTT_SLIM_RATIO:Ljava/lang/String; = "pref_beauty_butt_slim_ratio"
@@ -76,15 +76,11 @@
 
 .field public static final ENLARGE_EYE_RATIO:Ljava/lang/String; = "pref_beautify_enlarge_eye_ratio_key"
 
-.field public static final EYEBROW_DYE_RATIO:Ljava/lang/String; = "pref_beautify_eyebrow_dye_ratio_key"
-
 .field public static final FRONT_MAKEUPS_LEVEL:I = 0x46
 
 .field public static final HAIRLINE_RATIO:Ljava/lang/String; = "pref_beautify_hairline_ratio_key"
 
 .field public static final HEAD_SLIM_RATIO:Ljava/lang/String; = "pref_beauty_head_slim_ratio"
-
-.field public static final JELLY_LIPS_RATIO:Ljava/lang/String; = "pref_beautify_jelly_lips_ratio_key"
 
 .field public static final LEG_SLIM_RATIO:Ljava/lang/String; = "key_beauty_leg_slim_ratio"
 
@@ -138,8 +134,6 @@
 
 .field public static final PREFIX_BEAUTY_LEVEL:Ljava/lang/String; = "i:"
 
-.field public static final PUPIL_LINE_RATIO:Ljava/lang/String; = "pref_beautify_pupil_line_ratio_key"
-
 .field public static final RISORIUS_RATIO:Ljava/lang/String; = "pref_beautify_risorius_ratio_key"
 
 .field public static final SELECT_SKIN_COLOR:Ljava/lang/String; = "pref_beautify_color_skin_ratio_key"
@@ -177,12 +171,11 @@
 .method public static constructor <clinit>()V
     .locals 12
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000oo0O()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000o0O()Z
 
     move-result v0
 
@@ -198,12 +191,11 @@
     :goto_0
     sput v0, Lcom/android/camera/constant/BeautyConstant;->DEFAULT_SMOOTH_LEVEL:I
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000Oo0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000O0oO()Z
 
     move-result v0
 
@@ -219,12 +211,10 @@
     :goto_1
     sput v0, Lcom/android/camera/constant/BeautyConstant;->DEFAULT_SHRINK_FACE_LEVEL:I
 
-    .line 3
     new-instance v0, Lcom/android/camera/constant/BeautyConstant$1;
 
     invoke-direct {v0}, Lcom/android/camera/constant/BeautyConstant$1;-><init>()V
 
-    .line 4
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -235,7 +225,6 @@
 
     const-string/jumbo v1, "pref_old_beautify_level_key_capture"
 
-    .line 5
     filled-new-array {v1, v0}, [Ljava/lang/String;
 
     move-result-object v1
@@ -252,7 +241,6 @@
 
     const-string/jumbo v5, "pref_beauty_shoulder_slim_ratio"
 
-    .line 6
     filled-new-array {v1, v2, v3, v4, v5}, [Ljava/lang/String;
 
     move-result-object v1
@@ -279,7 +267,6 @@
 
     const-string/jumbo v11, "pref_beautify_hairline_ratio_key"
 
-    .line 7
     filled-new-array/range {v2 .. v11}, [Ljava/lang/String;
 
     move-result-object v1
@@ -306,7 +293,6 @@
 
     const-string/jumbo v11, "pref_beautify_hairline_ratio_key"
 
-    .line 8
     filled-new-array/range {v2 .. v11}, [Ljava/lang/String;
 
     move-result-object v1
@@ -327,7 +313,6 @@
 
     const-string/jumbo v8, "pref_beautify_toughman_makeups_ratio_key"
 
-    .line 9
     filled-new-array/range {v2 .. v8}, [Ljava/lang/String;
 
     move-result-object v1
@@ -340,21 +325,30 @@
 
     const-string/jumbo v3, "pref_beautify_skin_color_ratio_key"
 
-    .line 10
     filled-new-array {v0, v2, v1, v3}, [Ljava/lang/String;
 
     move-result-object v3
 
     sput-object v3, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_FRONT_ADVANCE:[Ljava/lang/String;
 
-    .line 11
+    const-string v3, "key_live_shrink_face_ratio"
+
+    const-string v4, "key_live_enlarge_eye_ratio"
+
+    const-string v5, "key_live_smooth_strength"
+
+    filled-new-array {v3, v4, v5}, [Ljava/lang/String;
+
+    move-result-object v3
+
+    sput-object v3, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_LIVE:[Ljava/lang/String;
+
     filled-new-array {v2, v1}, [Ljava/lang/String;
 
     move-result-object v3
 
     sput-object v3, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_MI_LIVE:[Ljava/lang/String;
 
-    .line 12
     filled-new-array {v0, v2, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -365,7 +359,6 @@
 
     const-string v1, "BY"
 
-    .line 13
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -378,7 +371,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -387,7 +379,6 @@
 .method public static defaultOffRegion()Z
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/android/camera/constant/BeautyConstant;->DEFAULT_OFF_REGION:[Ljava/lang/String;
 
     array-length v1, v0
@@ -401,7 +392,6 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     sget-object v5, Lcom/android/camera/Util;->sRegion:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -424,22 +414,21 @@
 .end method
 
 .method public static getDefaultValueByKey(Ljava/lang/String;)I
-    .locals 9
+    .locals 7
 
-    .line 1
     invoke-static {}, Lcom/android/camera/constant/BeautyConstant;->defaultOffRegion()Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_c
 
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isVideoModule()Z
 
@@ -447,210 +436,192 @@
 
     if-eqz v0, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    const-string v0, "male"
 
-    move-result-object v0
-
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO00o()Z
+    invoke-static {v0}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isNonBeautyModeTsBeauty()Z
+    const-string v2, "female"
+
+    invoke-static {v2}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result v2
 
-    const-string v3, "male"
+    const/4 v3, -0x1
 
-    .line 4
-    invoke-static {v3}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
-
-    move-result v3
-
-    const-string v4, "female"
-
-    .line 5
-    invoke-static {v4}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v4
 
-    const/4 v5, -0x1
+    const/4 v5, 0x3
 
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v6
-
-    const/4 v7, 0x3
-
-    sparse-switch v6, :sswitch_data_0
+    sparse-switch v4, :sswitch_data_0
 
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v6, "key_live_enlarge_eye_ratio"
+    const-string v4, "key_live_enlarge_eye_ratio"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/16 v5, 0x8
+    const/16 v3, 0x8
 
     goto :goto_0
 
     :sswitch_1
-    const-string/jumbo v6, "pref_beautify_makeup_ratio_key"
+    const-string/jumbo v4, "pref_beautify_makeup_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x6
+    const/4 v3, 0x6
 
     goto :goto_0
 
     :sswitch_2
-    const-string/jumbo v6, "pref_beautify_enlarge_eye_ratio_key"
+    const-string/jumbo v4, "pref_beautify_enlarge_eye_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    move v5, v7
+    move v3, v5
 
     goto :goto_0
 
     :sswitch_3
-    const-string/jumbo v6, "pref_beautify_skin_smooth_ratio_key"
+    const-string/jumbo v4, "pref_beautify_skin_smooth_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x1
+    const/4 v3, 0x1
 
     goto :goto_0
 
     :sswitch_4
-    const-string/jumbo v6, "pref_beautify_slim_face_ratio_key"
+    const-string/jumbo v4, "pref_beautify_slim_face_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x2
+    const/4 v3, 0x2
 
     goto :goto_0
 
     :sswitch_5
-    const-string/jumbo v6, "pref_beautify_whiten_ratio_key"
+    const-string/jumbo v4, "pref_beautify_whiten_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x5
+    const/4 v3, 0x5
 
     goto :goto_0
 
     :sswitch_6
-    const-string/jumbo v6, "pref_old_beautify_level_key_capture"
+    const-string/jumbo v4, "pref_old_beautify_level_key_capture"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    move v5, v1
+    move v3, v1
 
     goto :goto_0
 
     :sswitch_7
-    const-string v6, "key_live_shrink_face_ratio"
+    const-string v4, "key_live_shrink_face_ratio"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x7
+    const/4 v3, 0x7
 
     goto :goto_0
 
     :sswitch_8
-    const-string/jumbo v6, "pref_beautify_solid_ratio_key"
+    const-string/jumbo v4, "pref_beautify_solid_ratio_key"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v5, 0x4
+    const/4 v3, 0x4
 
     goto :goto_0
 
     :sswitch_9
-    const-string v6, "key_live_smooth_strength"
+    const-string v4, "key_live_smooth_strength"
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v4
 
-    if-eqz v6, :cond_1
+    if-eqz v4, :cond_1
 
-    const/16 v5, 0x9
+    const/16 v3, 0x9
 
     :cond_1
     :goto_0
-    const/16 v6, 0x32
+    const/16 v4, 0x32
 
-    const/16 v8, 0x28
+    const/16 v6, 0x28
 
-    packed-switch v5, :pswitch_data_0
+    packed-switch v3, :pswitch_data_0
 
-    .line 7
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->isBeautyMakeupsKey(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_b
+    if-eqz p0, :cond_c
 
     const/16 p0, 0x46
 
     return p0
 
     :pswitch_0
-    return v8
+    return v6
 
     :pswitch_1
-    if-eqz v4, :cond_2
+    if-eqz v2, :cond_2
 
-    move v1, v6
+    const/16 v1, 0x3c
 
     :cond_2
     return v1
 
     :pswitch_2
-    if-eqz v4, :cond_3
+    if-eqz v2, :cond_3
 
     const/16 v1, 0x1e
 
@@ -658,64 +629,64 @@
     return v1
 
     :pswitch_3
-    if-nez v4, :cond_4
+    if-nez v2, :cond_4
 
-    if-nez v3, :cond_4
-
-    if-eqz v2, :cond_5
+    if-eqz v0, :cond_5
 
     :cond_4
-    move v1, v6
+    move v1, v4
 
     :cond_5
     return v1
 
     :pswitch_4
-    if-eqz v0, :cond_6
+    if-nez v2, :cond_6
 
-    const/16 v1, 0x14
+    if-eqz v0, :cond_7
 
     :cond_6
+    move v1, v6
+
+    :cond_7
     return v1
 
     :pswitch_5
     if-eqz v0, :cond_8
 
-    if-eqz v3, :cond_7
-
-    move v6, v8
-
-    :cond_7
     return v6
 
-    .line 8
     :cond_8
+    if-eqz v2, :cond_9
+
+    return v4
+
+    :cond_9
     sget p0, Lcom/android/camera/constant/BeautyConstant;->DEFAULT_SHRINK_FACE_LEVEL:I
 
     return p0
 
     :pswitch_6
-    if-nez v0, :cond_a
+    if-eqz v2, :cond_a
 
-    if-eqz v2, :cond_9
+    return v6
 
-    goto :goto_1
+    :cond_a
+    if-eqz v0, :cond_b
 
-    .line 9
-    :cond_9
+    const/16 p0, 0x14
+
+    return p0
+
+    :cond_b
     sget p0, Lcom/android/camera/constant/BeautyConstant;->DEFAULT_SMOOTH_LEVEL:I
 
     return p0
 
-    :cond_a
-    :goto_1
-    return v8
-
     :pswitch_7
-    return v7
+    return v5
 
-    :cond_b
-    :goto_2
+    :cond_c
+    :goto_1
     return v1
 
     nop
@@ -755,7 +726,6 @@
     :try_start_0
     const-string v0, ":"
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -779,7 +749,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -792,13 +761,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     array-length v1, p0
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     aget-object v1, p0, v0
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -824,7 +791,6 @@
 .method public static isBeautyMakeupsKey(Ljava/lang/String;)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -968,7 +934,6 @@
 .method public static isLiveBeautyModeKey(Ljava/lang/String;)Z
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -1052,7 +1017,6 @@
 .method public static isSupportTwoWayAdjustable(Ljava/lang/String;)Z
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -1142,7 +1106,6 @@
 .method public static warppedSettingForMILive(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1163,75 +1126,53 @@
 .method public static wrappedSettingKey(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->getActiveModuleIndex()I
 
     move-result v0
 
     const/16 v1, 0xa7
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_6
 
     const/16 v1, 0xab
 
-    if-eq v0, v1, :cond_6
+    if-eq v0, v1, :cond_5
 
     const/16 v1, 0xad
 
-    if-eq v0, v1, :cond_5
+    if-eq v0, v1, :cond_4
 
     const/16 v1, 0xcd
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_3
 
     const/16 v1, 0xaf
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_6
 
     const/16 v1, 0xb0
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_2
 
     const/16 v1, 0xb7
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_1
 
     const/16 v1, 0xb8
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_0
 
     packed-switch v0, :pswitch_data_0
 
     return-object p0
 
-    .line 2
     :pswitch_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO00o()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForBeautyMode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForCapture(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_0
     return-object p0
 
-    .line 4
     :pswitch_1
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForVideo(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1239,7 +1180,6 @@
 
     return-object p0
 
-    .line 5
     :pswitch_2
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForFun(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1247,63 +1187,54 @@
 
     return-object p0
 
-    .line 6
-    :cond_1
+    :cond_0
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForMimoji(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 7
-    :cond_2
+    :cond_1
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->warppedSettingForMILive(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 8
-    :cond_3
+    :cond_2
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForWideSelfie(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 9
-    :cond_4
+    :cond_3
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForWatermark(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 10
-    :cond_5
+    :cond_4
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForSuperNight(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 11
-    :cond_6
+    :cond_5
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForPortrait(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 12
-    :cond_7
+    :cond_6
     invoke-static {p0}, Lcom/android/camera/constant/BeautyConstant;->wrappedSettingKeyForCapture(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xa1
@@ -1318,7 +1249,6 @@
 
     const-string v0, "female"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result v1
@@ -1344,7 +1274,6 @@
 .method public static wrappedSettingKeyForCapture(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1365,7 +1294,6 @@
 .method public static wrappedSettingKeyForFun(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1386,7 +1314,6 @@
 .method public static wrappedSettingKeyForMimoji(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1407,7 +1334,6 @@
 .method public static wrappedSettingKeyForPortrait(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1428,7 +1354,6 @@
 .method public static wrappedSettingKeyForSuperNight(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1449,7 +1374,6 @@
 .method public static wrappedSettingKeyForVideo(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v0
@@ -1463,7 +1387,6 @@
     :cond_0
     const-string v0, "_back"
 
-    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1487,7 +1410,6 @@
 .method public static wrappedSettingKeyForWatermark(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1508,7 +1430,6 @@
 .method public static wrappedSettingKeyForWideSelfie(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

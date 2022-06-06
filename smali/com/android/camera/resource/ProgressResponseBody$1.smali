@@ -26,17 +26,14 @@
 .method public constructor <init>(Lcom/android/camera/resource/ProgressResponseBody;Lokio/Source;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->this$0:Lcom/android/camera/resource/ProgressResponseBody;
 
     invoke-direct {p0, p2}, Lokio/ForwardingSource;-><init>(Lokio/Source;)V
 
     const-wide/16 p1, 0x0
 
-    .line 2
     iput-wide p1, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->totalBytesRead:J
 
-    .line 3
     iput-wide p1, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->contentLength:J
 
     return-void
@@ -52,12 +49,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lokio/ForwardingSource;->read(Lokio/Buffer;J)J
 
     move-result-wide p1
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->totalBytesRead:J
 
     const-wide/16 v2, -0x1
@@ -80,14 +75,12 @@
 
     iput-wide v0, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->totalBytesRead:J
 
-    .line 3
     iget-wide v0, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->contentLength:J
 
     cmp-long p3, v0, v2
 
     if-nez p3, :cond_1
 
-    .line 4
     iget-object p3, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->this$0:Lcom/android/camera/resource/ProgressResponseBody;
 
     invoke-static {p3}, Lcom/android/camera/resource/ProgressResponseBody;->access$000(Lcom/android/camera/resource/ProgressResponseBody;)Lokhttp3/ResponseBody;
@@ -100,7 +93,6 @@
 
     iput-wide v0, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->contentLength:J
 
-    .line 5
     :cond_1
     iget-object p3, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->this$0:Lcom/android/camera/resource/ProgressResponseBody;
 
@@ -110,7 +102,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 6
     iget-object p3, p0, Lcom/android/camera/resource/ProgressResponseBody$1;->this$0:Lcom/android/camera/resource/ProgressResponseBody;
 
     invoke-static {p3}, Lcom/android/camera/resource/ProgressResponseBody;->access$100(Lcom/android/camera/resource/ProgressResponseBody;)Lcom/android/camera/resource/ResponseListener;

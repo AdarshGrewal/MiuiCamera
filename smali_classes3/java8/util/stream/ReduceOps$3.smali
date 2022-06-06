@@ -37,7 +37,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamShape;Ljava8/util/function/BinaryOperator;Ljava8/util/function/BiConsumer;Ljava8/util/function/Supplier;Ljava8/util/stream/Collector;)V
     .locals 0
 
-    .line 1
     iput-object p2, p0, Ljava8/util/stream/ReduceOps$3;->val$combiner:Ljava8/util/function/BinaryOperator;
 
     iput-object p3, p0, Ljava8/util/stream/ReduceOps$3;->val$accumulator:Ljava8/util/function/BiConsumer;
@@ -56,7 +55,6 @@
 .method public getOpFlags()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$3;->val$collector:Ljava8/util/stream/Collector;
 
     invoke-interface {v0}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
@@ -85,7 +83,6 @@
 .method public makeSink()Ljava8/util/stream/ReduceOps$3ReducingSink;
     .locals 4
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$3ReducingSink;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$3;->val$supplier:Ljava8/util/function/Supplier;
@@ -102,7 +99,6 @@
 .method public bridge synthetic makeSink()Ljava8/util/stream/ReduceOps$AccumulatingSink;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$3;->makeSink()Ljava8/util/stream/ReduceOps$3ReducingSink;
 
     move-result-object v0

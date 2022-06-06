@@ -24,10 +24,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -40,7 +38,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -49,7 +46,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -58,7 +54,6 @@
 .method public static debug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->debug(Ljava/lang/String;Ljava/lang/String;)V
@@ -69,7 +64,6 @@
 .method public static debug(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->debug(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -80,7 +74,6 @@
 .method public static varargs debug(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->debug(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -91,7 +84,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -100,7 +92,6 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -109,7 +100,6 @@
 .method public static error(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->error(Ljava/lang/String;Ljava/lang/String;)V
@@ -120,7 +110,6 @@
 .method public static error(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->error(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -131,7 +120,6 @@
 .method public static varargs error(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->error(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -142,7 +130,6 @@
 .method public static fatal(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->fatal(Ljava/lang/String;Ljava/lang/String;)V
@@ -153,7 +140,6 @@
 .method public static fatal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->fatal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -164,7 +150,6 @@
 .method public static varargs fatal(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->fatal(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -175,10 +160,8 @@
 .method public static getFileLogger(Landroid/content/Context;)Lmiuix/util/Log$Facade;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/util/Log$FileLoggerInstance;->init(Landroid/content/Context;)V
 
-    .line 2
     invoke-static {}, Lmiuix/util/Log$FileLoggerInstance;->instance()Lmiuix/util/Log$Facade;
 
     move-result-object p0
@@ -189,10 +172,8 @@
 .method public static getFullLogger(Landroid/content/Context;)Lmiuix/util/Log$Facade;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/util/Log$FileLoggerInstance;->init(Landroid/content/Context;)V
 
-    .line 2
     sget-object p0, Lmiuix/util/Log$FullLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     return-object p0
@@ -201,7 +182,6 @@
 .method public static getLogcatLogger()Lmiuix/util/Log$Facade;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     return-object v0
@@ -210,7 +190,6 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -219,7 +198,6 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -228,7 +206,6 @@
 .method public static info(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->info(Ljava/lang/String;Ljava/lang/String;)V
@@ -239,7 +216,6 @@
 .method public static info(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->info(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -250,7 +226,6 @@
 .method public static varargs info(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->info(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -261,7 +236,6 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -270,7 +244,6 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -279,7 +252,6 @@
 .method public static verbose(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->verbose(Ljava/lang/String;Ljava/lang/String;)V
@@ -290,7 +262,6 @@
 .method public static verbose(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->verbose(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -301,7 +272,6 @@
 .method public static varargs verbose(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->verbose(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -312,7 +282,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -321,7 +290,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -330,7 +298,6 @@
 .method public static warn(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1}, Lmiuix/util/Log$Facade;->warn(Ljava/lang/String;Ljava/lang/String;)V
@@ -341,7 +308,6 @@
 .method public static warn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 2
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->warn(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -352,7 +318,6 @@
 .method public static varargs warn(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 3
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/util/Log$Facade;->warn(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
@@ -363,7 +328,6 @@
 .method public static wtf(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -372,7 +336,6 @@
 .method public static wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

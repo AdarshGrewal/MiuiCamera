@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/module/BaseModule;ZLandroid/hardware/camera2/CaptureResult;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/BaseModule$3;->this$0:Lcom/android/camera/module/BaseModule;
 
     iput-boolean p2, p0, Lcom/android/camera/module/BaseModule$3;->val$isShow:Z
@@ -46,12 +45,10 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/BaseModule$3;->val$isShow:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule$3;->this$0:Lcom/android/camera/module/BaseModule;
 
     iget-object v1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -70,7 +67,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule$3;->this$0:Lcom/android/camera/module/BaseModule;
 

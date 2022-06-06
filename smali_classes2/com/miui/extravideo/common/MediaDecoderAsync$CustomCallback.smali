@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/miui/extravideo/common/MediaDecoderAsync;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/miui/extravideo/common/MediaDecoderAsync;Lcom/miui/extravideo/common/MediaDecoderAsync$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;-><init>(Lcom/miui/extravideo/common/MediaDecoderAsync;)V
 
     return-void
@@ -48,10 +46,8 @@
 
     const-string v0, "onError"
 
-    .line 1
     invoke-static {p1, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -60,7 +56,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -78,13 +73,11 @@
 
     const-string v0, "MediaDecoderAsync"
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 2
     iget-object v2, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v2}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$100(Lcom/miui/extravideo/common/MediaDecoderAsync;)Landroid/media/MediaExtractor;
@@ -97,7 +90,6 @@
 
     move-result v7
 
-    .line 3
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$100(Lcom/miui/extravideo/common/MediaDecoderAsync;)Landroid/media/MediaExtractor;
@@ -108,7 +100,6 @@
 
     move-result-wide v8
 
-    .line 4
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$208(Lcom/miui/extravideo/common/MediaDecoderAsync;)I
@@ -119,7 +110,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5
     iget-object v4, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v4}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$200(Lcom/miui/extravideo/common/MediaDecoderAsync;)I
@@ -154,7 +144,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -163,7 +152,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 7
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -193,7 +181,6 @@
 
     move v2, p2
 
-    .line 8
     invoke-virtual/range {v1 .. v7}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
     goto :goto_1
@@ -207,10 +194,8 @@
 
     move v5, p2
 
-    .line 9
     invoke-virtual/range {v4 .. v10}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 10
     :goto_0
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
@@ -220,7 +205,6 @@
 
     if-ge v3, p1, :cond_2
 
-    .line 11
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$100(Lcom/miui/extravideo/common/MediaDecoderAsync;)Landroid/media/MediaExtractor;
@@ -240,7 +224,6 @@
 
     const-string p2, "onInputBufferAvailable exception"
 
-    .line 12
     invoke-static {v0, p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -253,7 +236,6 @@
 
     const-string v0, "MediaDecoderAsync"
 
-    .line 1
     :try_start_0
     iget v1, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -272,7 +254,6 @@
     :cond_0
     move v1, v3
 
-    .line 2
     :goto_0
     invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
 
@@ -280,7 +261,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -289,7 +269,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 4
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -302,7 +281,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5
     iget-wide v5, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -317,15 +295,12 @@
 
     invoke-static {v0, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 7
     invoke-virtual {p1, p2, v3}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
     goto :goto_1
 
-    .line 8
     :cond_1
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
@@ -335,7 +310,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 9
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -346,7 +320,6 @@
 
     const-string p1, "OutputBuffer BUFFER_FLAG_END_OF_STREAM"
 
-    .line 10
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -358,7 +331,6 @@
 
     const-string p2, "onOutputBufferAvailable exception"
 
-    .line 11
     invoke-static {v0, p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -379,7 +351,6 @@
 
     const-string v0, "onOutputFormatChanged : %s"
 
-    .line 1
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -388,7 +359,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
@@ -397,7 +367,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaDecoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaDecoderAsync;->access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;

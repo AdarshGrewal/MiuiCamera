@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 .method public bridge synthetic isCacheValid(Lcom/android/camera/resource/BaseResourceCacheable;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/resource/tmmusic/TMMusicList;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/tmmusic/TMMusicCacheLoadRequest;->isCacheValid(Lcom/android/camera/resource/tmmusic/TMMusicList;)Z
@@ -41,26 +39,22 @@
 .method public isCacheValid(Lcom/android/camera/resource/tmmusic/TMMusicList;)Z
     .locals 6
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string/jumbo v1, "tt_initial"
 
-    .line 3
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;->getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
     const-string/jumbo v2, "tt_list"
 
-    .line 4
     invoke-virtual {p0, v2, v0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;->getCacheFile(Ljava/lang/String;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -77,13 +71,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -113,7 +105,6 @@
 .method public bridge synthetic processRestore(Lcom/android/camera/resource/BaseResourceCacheable;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/resource/tmmusic/TMMusicList;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/tmmusic/TMMusicCacheLoadRequest;->processRestore(Lcom/android/camera/resource/tmmusic/TMMusicList;)V
@@ -124,12 +115,10 @@
 .method public processRestore(Lcom/android/camera/resource/tmmusic/TMMusicList;)V
     .locals 3
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 3
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -141,10 +130,8 @@
 
     invoke-direct {v1, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {p1, v1}, Lcom/android/camera/resource/tmmusic/TMMusicList;->parseInitialData(Lorg/json/JSONObject;)V
 
-    .line 5
     new-instance v1, Lorg/json/JSONObject;
 
     const-string/jumbo v2, "tt_list"
@@ -155,7 +142,6 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 6
     invoke-virtual {p1, v1}, Lcom/android/camera/resource/BaseResourceList;->createResourcesList(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -165,7 +151,6 @@
     :catch_0
     move-exception p1
 
-    .line 7
     invoke-virtual {p1}, Lorg/json/JSONException;->printStackTrace()V
 
     :goto_0

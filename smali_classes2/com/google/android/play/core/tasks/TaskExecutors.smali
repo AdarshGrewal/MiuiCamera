@@ -21,14 +21,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/google/android/play/core/tasks/TaskExecutors$MainThreadExecutor;
 
     invoke-direct {v0}, Lcom/google/android/play/core/tasks/TaskExecutors$MainThreadExecutor;-><init>()V
 
     sput-object v0, Lcom/google/android/play/core/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
 
-    .line 2
     new-instance v0, Lcom/google/android/play/core/tasks/TaskExecutor;
 
     invoke-direct {v0}, Lcom/google/android/play/core/tasks/TaskExecutor;-><init>()V
@@ -41,7 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

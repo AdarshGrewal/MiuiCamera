@@ -50,66 +50,56 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$000(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mSupportedCallback:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$100(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$200(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mKey:I
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$300(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mRes:I
 
-    .line 6
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$400(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mBgUpdater:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$500(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mDesc:I
 
-    .line 8
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$600(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mIsActivated:Z
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$700(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mSupportRotation:Z
 
-    .line 10
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->access$800(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
 
     move-result p1
@@ -135,7 +125,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -148,11 +137,9 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     check-cast p1, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;
 
-    .line 3
     iget v2, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mKey:I
 
     iget v3, p1, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mKey:I
@@ -181,7 +168,6 @@
 .method public getBgUpdater()Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mBgUpdater:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
 
     return-object v0
@@ -190,7 +176,6 @@
 .method public getDesc()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mDesc:I
 
     return v0
@@ -199,7 +184,6 @@
 .method public getKey()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mKey:I
 
     return v0
@@ -208,7 +192,6 @@
 .method public getOnClickListener()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-object v0
@@ -217,7 +200,6 @@
 .method public getRes()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mRes:I
 
     return v0
@@ -230,7 +212,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget v1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mKey:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -251,7 +232,6 @@
 .method public isActivated()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mIsActivated:Z
 
     return v0
@@ -260,7 +240,6 @@
 .method public isHideBySelf()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mHideBySelf:Z
 
     return v0
@@ -269,7 +248,6 @@
 .method public isSupportRotation()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mSupportRotation:Z
 
     return v0
@@ -278,7 +256,6 @@
 .method public support()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->mSupportedCallback:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
 
     if-eqz v0, :cond_0
@@ -303,7 +280,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

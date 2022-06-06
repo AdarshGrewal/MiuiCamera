@@ -25,7 +25,6 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/Util$5;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,15 +37,8 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    const/4 p1, 0x0
-
-    .line 2
-    invoke-static {p1}, Lcom/android/camera/Util;->access$002(Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
-
-    .line 3
     iget-object p1, p0, Lcom/android/camera/Util$5;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V

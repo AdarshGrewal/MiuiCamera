@@ -30,19 +30,14 @@
 .method public constructor <init>(Landroid/content/Context;ILandroid/view/View$OnClickListener;Lcom/android/camera/data/data/runing/ComponentRunningPictureStyle;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mCurrentMode:I
 
-    .line 3
     iput-object p3, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 4
     iput-object p4, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mComponentRunningPictureStyle:Lcom/android/camera/data/data/ComponentData;
 
-    .line 5
     invoke-virtual {p4}, Lcom/android/camera/data/data/ComponentData;->getItems()Ljava/util/List;
 
     move-result-object p1
@@ -61,7 +56,6 @@
 
     const/16 v0, 0x80
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     return-void
@@ -72,7 +66,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mCount:I
 
     return v0
@@ -81,8 +74,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 7
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result v0
 
@@ -96,55 +88,41 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 2
-    :cond_0
-    invoke-static {}, Lcom/android/camera/module/ModuleManager;->isProPhotoSquareModule()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 3
-    :cond_1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f080570
+    const v1, 0x7f08056e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     goto :goto_0
 
-    .line 4
-    :cond_2
+    :cond_0
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f08056f
+    const v1, 0x7f08056d
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 5
     :goto_0
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0a00eb
+    const v1, 0x7f0a00f1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 6
     iget v1, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mDegree:I
 
     int-to-float v1, v1
 
     invoke-static {v0, v1}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    .line 7
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0a0256
+    const v1, 0x7f0a0267
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -152,7 +130,6 @@
 
     check-cast v0, Lcom/android/camera/ui/ColorImageView;
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mComponentRunningPictureStyle:Lcom/android/camera/data/data/ComponentData;
 
     iget v2, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mCurrentMode:I
@@ -161,7 +138,6 @@
 
     move-result-object v1
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mComponentRunningPictureStyle:Lcom/android/camera/data/data/ComponentData;
 
     invoke-virtual {v2}, Lcom/android/camera/data/data/ComponentData;->getItems()Ljava/util/List;
@@ -174,10 +150,9 @@
 
     check-cast v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 10
     iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v4, 0x7f0a0258
+    const v4, 0x7f0a0269
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -185,29 +160,24 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 11
     iget v4, v2, Lcom/android/camera/data/data/ComponentDataItem;->mDisplayNameRes:I
 
-    if-lez v4, :cond_3
+    if-lez v4, :cond_1
 
-    .line 12
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_1
     const-string v4, ""
 
-    .line 13
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 14
     :goto_1
     iget v4, v2, Lcom/android/camera/data/data/ComponentDataItem;->mIconRes:I
 
     invoke-virtual {v0, v4}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
-    .line 15
     iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget v5, v2, Lcom/android/camera/data/data/ComponentDataItem;->mDisplayNameRes:I
@@ -220,23 +190,20 @@
 
     invoke-virtual {p0, v4, v5, v6}, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->setAccessible(Landroid/view/View;IZ)V
 
-    .line 16
     iget-object v2, v2, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_2
 
-    .line 17
     invoke-static {}, Lcom/android/camera/customization/TintColor;->tintColor()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ColorImageView;->setColor(I)V
 
-    .line 18
     invoke-static {}, Lcom/android/camera/customization/TintColor;->tintColor()I
 
     move-result v0
@@ -245,18 +212,16 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_2
     const/4 v1, -0x1
 
-    .line 19
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ColorImageView;->setColor(I)V
 
-    .line 20
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f060048
+    const v1, 0x7f060046
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -264,7 +229,6 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 21
     :goto_2
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -272,12 +236,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 22
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-static {v0}, Lcom/android/camera/animation/FolmeUtils;->handleListItemTouch(Landroid/view/View;)V
 
-    .line 23
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -292,7 +254,6 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)V
     .locals 0
 
-    .line 24
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
     return-void
@@ -301,7 +262,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -310,7 +270,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d00de
+    const v0, 0x7f0d00dd
 
     const/4 v1, 0x0
 
@@ -318,7 +278,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance p2, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleViewHolder;
 
     invoke-direct {p2, p1}, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleViewHolder;-><init>(Landroid/view/View;)V
@@ -333,13 +292,12 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f120465
+    const v1, 0x7f120443
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -347,7 +305,6 @@
 
     if-lez p2, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -359,7 +316,6 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +326,6 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -387,20 +342,17 @@
 
     move-result-object p2
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 7
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOo0/OooO00o;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/OoooO00/o000oOoO/OooO00o;
 
-    invoke-direct {p2, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOo0/OooO00o;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/o000oOoO/OooO00o;-><init>(Landroid/view/View;)V
 
     const-wide/16 v0, 0x64
 
@@ -408,7 +360,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -420,7 +371,6 @@
 .method public setRotation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle$PictureStyleAdapter;->mDegree:I
 
     return-void

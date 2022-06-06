@@ -22,14 +22,6 @@
 
 
 # virtual methods
-.method public getAutoFlashTargetState()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public getAutoHDRTargetState()Z
     .locals 1
 
@@ -45,12 +37,6 @@
 .end method
 
 .method public reShowMoon()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public setAutoFlashTargetState(Z)V
     .locals 0
 
     return-void

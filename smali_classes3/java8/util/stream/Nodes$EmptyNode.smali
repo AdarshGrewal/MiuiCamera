@@ -45,7 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -65,7 +64,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-interface {p1, v0}, Ljava8/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -115,7 +113,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChild()Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -126,7 +123,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChildCount()I
 
     move-result v0
@@ -137,7 +133,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0
@@ -157,7 +152,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes;->truncate(Ljava8/util/stream/Node;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1

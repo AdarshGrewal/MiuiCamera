@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,10 +34,8 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     const/4 v0, 0x0
@@ -51,15 +48,12 @@
 .method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     invoke-static {p1, p3}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->access$302(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;F)F
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     invoke-static {p1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->access$200(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
@@ -90,7 +84,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
@@ -128,7 +120,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
@@ -148,7 +139,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState$2;->this$0:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 

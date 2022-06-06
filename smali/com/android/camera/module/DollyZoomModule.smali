@@ -96,42 +96,32 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/BaseModule;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     const/4 v1, 0x1
 
-    .line 3
     iput-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaveCancel:Z
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
     const/4 v1, -0x1
 
-    .line 6
     iput v1, p0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
-    .line 7
     iput v1, p0, Lcom/android/camera/module/DollyZoomModule;->mLastRecordingState:I
 
-    .line 8
     iput v0, p0, Lcom/android/camera/module/DollyZoomModule;->mLastBoxState:I
 
     const/4 v0, 0x0
 
-    .line 9
     iput-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
-    .line 10
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -144,7 +134,6 @@
 .method public static synthetic OooO00o(Landroid/net/Uri;)V
     .locals 2
 
-    .line 59
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -159,7 +148,6 @@
 
     if-nez v0, :cond_0
 
-    .line 60
     sget-object p0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onNewUriArrived dollyZoomProcess is null"
@@ -168,17 +156,8 @@
 
     return-void
 
-    .line 61
     :cond_0
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->onSaveFinish(Landroid/net/Uri;)V
-
-    return-void
-.end method
-
-.method public static synthetic OooO00o(Lcom/android/camera/module/DollyZoomModule;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
     return-void
 .end method
@@ -186,7 +165,6 @@
 .method public static synthetic access$000(Lcom/android/camera/module/DollyZoomModule;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/DollyZoomModule;->mOnResumeTime:J
 
     return-wide v0
@@ -195,7 +173,6 @@
 .method public static synthetic access$100(Lcom/android/camera/module/DollyZoomModule;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->setOrientationParameter()V
 
     return-void
@@ -204,7 +181,6 @@
 .method public static synthetic access$200(Lcom/android/camera/module/DollyZoomModule;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->startVideoRecording()V
 
     return-void
@@ -213,7 +189,6 @@
 .method public static synthetic access$300(Lcom/android/camera/module/DollyZoomModule;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/module/DollyZoomModule;->updateRecordingTime(J)V
 
     return-void
@@ -222,29 +197,24 @@
 .method private cancelVideoCountDown()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mCountDownTimer:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v1, "cancelVideoCountDown"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mCountDownTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mCountDownTimer:Landroid/os/CountDownTimer;
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->hiddenTopRecordingTime()V
 
     :cond_0
@@ -254,7 +224,6 @@
 .method private checkShutterCondition()Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x100
@@ -267,7 +236,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "checkShutterCondition: MSG_WAIT_SHUTTER_SOUND_FINISH"
@@ -276,7 +244,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrameAvailable()Z
 
@@ -284,7 +251,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "checkShutterCondition: isFrameAvailable = false"
@@ -293,7 +259,6 @@
 
     return v1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
@@ -305,7 +270,6 @@
 
     goto/16 :goto_1
 
-    .line 6
     :cond_2
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
@@ -315,7 +279,6 @@
 
     if-nez v0, :cond_3
 
-    .line 7
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "checkShutterCondition: The video has not been saved"
@@ -324,7 +287,6 @@
 
     return v1
 
-    .line 8
     :cond_3
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
@@ -344,7 +306,6 @@
 
     if-gez v0, :cond_4
 
-    .line 9
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "checkShutterCondition: Stop recording too quickly"
@@ -353,7 +314,6 @@
 
     return v1
 
-    .line 10
     :cond_4
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isIgnoreTouchEvent()Z
 
@@ -361,7 +321,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 11
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -386,7 +345,6 @@
 
     return v1
 
-    .line 12
     :cond_5
     invoke-static {}, Lcom/android/camera/storage/Storage;->isLowStorageAtLastPoint()Z
 
@@ -394,7 +352,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 13
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "checkShutterCondition: low storage"
@@ -403,7 +360,6 @@
 
     return v1
 
-    .line 14
     :cond_6
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -419,7 +375,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 15
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->canSnap()Z
 
     move-result v0
@@ -428,7 +383,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_7
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -436,7 +390,6 @@
 
     const/16 v1, 0xab
 
-    .line 17
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -445,7 +398,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 18
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->handleBackStackFromShutter()V
 
     :cond_8
@@ -453,7 +405,6 @@
 
     return v0
 
-    .line 19
     :cond_9
     :goto_0
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
@@ -464,7 +415,6 @@
 
     return v1
 
-    .line 20
     :cond_a
     :goto_1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
@@ -501,14 +451,12 @@
 .method private doLaterReleaseIfNeed()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
 
@@ -516,12 +464,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/Camera;->pauseIfNotRecording()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     const/4 v1, 0x1
@@ -535,17 +481,14 @@
 .method private getContentValue()Landroid/content/ContentValues;
     .locals 6
 
-    .line 1
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const v2, 0x7f1209d6
+    const v2, 0x7f120987
 
-    .line 3
     invoke-static {v2}, Lcom/android/camera/Util;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -554,7 +497,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 4
     new-instance v2, Ljava/util/Date;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -567,7 +509,6 @@
 
     move-result-object v1
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,24 +529,20 @@
 
     iput-object v2, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFileName:Ljava/lang/String;
 
-    .line 6
     invoke-static {v2}, Lcom/android/camera/storage/Storage;->generateFilepath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFilePath:Ljava/lang/String;
 
-    .line 7
     invoke-static {v3}, Lcom/android/camera/Util;->convertOutputFormatToMimeType(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string/jumbo v3, "title"
 
-    .line 8
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFileName:Ljava/lang/String;
 
     const-string v3, "_display_name"
@@ -614,17 +551,14 @@
 
     const-string v1, "mime_type"
 
-    .line 10
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFilePath:Ljava/lang/String;
 
     const-string v2, "_data"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -653,7 +587,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v1
@@ -664,7 +597,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 14
     invoke-virtual {v1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v2
@@ -683,7 +615,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 15
     :cond_0
     invoke-virtual {v1}, Landroid/location/Location;->getLatitude()D
 
@@ -697,7 +628,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 16
     invoke-virtual {v1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v1
@@ -710,7 +640,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 17
     :cond_1
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
@@ -718,7 +647,6 @@
 
     const/4 v1, 0x1
 
-    .line 18
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -734,7 +662,6 @@
 .method private hiddenTopRecordingTime()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -751,7 +678,6 @@
 
     const/4 v1, 0x2
 
-    .line 2
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->setRecordingTimeState(I)V
 
     :cond_0
@@ -761,7 +687,6 @@
 .method private initDollyZoomMode()V
     .locals 11
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -776,7 +701,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v1, "initDollyZoomMode failed, dollyZoomProcess is null"
@@ -785,7 +709,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/module/BaseModule;->mModuleIndex:I
 
@@ -793,7 +716,6 @@
 
     move-result v0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->getVideoEncoder()I
 
     move-result v1
@@ -813,30 +735,28 @@
     :cond_1
     move v6, v3
 
-    .line 5
     :goto_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0o()Lcom/mi/device/Common;
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00O()Lcom/mi/device/Common;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/mi/device/Common;->o00OOoo()Z
+    invoke-virtual {v1}, Lcom/mi/device/Common;->o0o0Oo()Z
 
     move-result v4
 
-    .line 6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0o()Lcom/mi/device/Common;
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00O()Lcom/mi/device/Common;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/mi/device/Common;->o00OOOoO()Z
+    invoke-virtual {v1}, Lcom/mi/device/Common;->o00OOO0O()Z
 
     move-result v1
 
@@ -851,7 +771,6 @@
 
     move v5, v1
 
-    .line 7
     :goto_1
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -861,7 +780,6 @@
 
     if-gez v1, :cond_3
 
-    .line 8
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v2, "initDollyZoomMode orientation not ready yet"
@@ -873,10 +791,8 @@
     :cond_3
     add-int/lit8 v1, v1, 0x5a
 
-    .line 9
     rem-int/lit16 v7, v1, 0x168
 
-    .line 10
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1e
@@ -893,7 +809,6 @@
     :goto_2
     iput-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
-    .line 11
     :try_start_0
     new-instance v1, Lcom/android/camera/storage/mediastore/VideoFile;
 
@@ -907,32 +822,26 @@
 
     const/4 v2, 0x0
 
-    .line 12
     invoke-virtual {v1, v3, v2}, Lcom/android/camera/storage/mediastore/VideoFile;->initialize(ZLandroid/content/Intent;)V
 
-    .line 13
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->getContentValue()Landroid/content/ContentValues;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mContentValues:Landroid/content/ContentValues;
 
-    .line 14
     iget-object v2, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/storage/mediastore/VideoFile;->setContentValues(Landroid/content/ContentValues;)V
 
-    .line 15
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
     if-eqz v1, :cond_5
 
-    .line 16
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-virtual {v1}, Lcom/android/camera/storage/mediastore/VideoFile;->insertContentValues()Landroid/net/Uri;
 
-    .line 17
     :cond_5
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
@@ -942,18 +851,17 @@
 
     iput-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mFd:Landroid/os/ParcelFileDescriptor;
 
-    .line 18
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v9
 
-    new-instance v10, LOooO00o/OooO0O0/OooO00o/o000oOoO/o000oOoO;
+    new-instance v10, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o000oOoO;
 
     move-object v1, v10
 
@@ -965,7 +873,7 @@
 
     move v5, v0
 
-    invoke-direct/range {v1 .. v7}, LOooO00o/OooO0O0/OooO00o/o000oOoO/o000oOoO;-><init>(Lcom/android/camera/module/DollyZoomModule;IIIII)V
+    invoke-direct/range {v1 .. v7}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o000oOoO;-><init>(Lcom/android/camera/module/DollyZoomModule;IIIII)V
 
     invoke-virtual {v9, v10}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -973,7 +881,6 @@
 
     goto :goto_3
 
-    .line 19
     :catch_0
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -981,7 +888,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     :goto_3
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1001,19 +907,16 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     iput-boolean v8, p0, Lcom/android/camera/module/DollyZoomModule;->mPendingStart:Z
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/android/camera/ui/RenderEngineAdapter;->setRendererListener(Lcom/android/camera/ui/CameraRenderEngine$RendererListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/camera/ui/CameraRenderEngine;->setRendererListener(Lcom/android/camera/ui/CameraRenderEngine$RendererListener;)V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
@@ -1028,12 +931,10 @@
 .method private onDollyZoomState()V
     .locals 11
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v1, "mDollyZoomCamera is null, onDollyZoomState fail"
@@ -1045,40 +946,34 @@
     :cond_0
     const/4 v1, -0x1
 
-    .line 3
     invoke-virtual {v0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowState()I
 
     move-result v2
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetNowScale()D
 
     move-result-wide v3
 
     double-to-float v8, v3
 
-    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetEncoderState()I
 
     move-result v7
 
-    .line 6
     invoke-virtual {v0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->GetBoxState()I
 
     move-result v10
 
-    .line 7
     iget v0, p0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
     const-string v3, " recordingState:"
 
     if-eq v0, v2, :cond_3
 
-    const v0, 0x7f120356
+    const v0, 0x7f12033e
 
     packed-switch v2, :pswitch_data_0
 
-    .line 8
     :pswitch_0
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1105,9 +1000,8 @@
     goto/16 :goto_1
 
     :pswitch_1
-    const v1, 0x7f1202c5
+    const v1, 0x7f1202ad
 
-    .line 9
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1132,7 +1026,6 @@
 
     goto/16 :goto_1
 
-    .line 10
     :pswitch_2
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1159,9 +1052,8 @@
     goto/16 :goto_0
 
     :pswitch_3
-    const v1, 0x7f120359
+    const v1, 0x7f120341
 
-    .line 11
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1187,9 +1079,8 @@
     goto/16 :goto_1
 
     :pswitch_4
-    const v1, 0x7f120358
+    const v1, 0x7f120340
 
-    .line 12
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1214,7 +1105,6 @@
 
     goto/16 :goto_1
 
-    .line 13
     :pswitch_5
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1241,9 +1131,8 @@
     goto :goto_0
 
     :pswitch_6
-    const v1, 0x7f120357
+    const v1, 0x7f12033f
 
-    .line 14
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1268,7 +1157,6 @@
 
     goto :goto_1
 
-    .line 15
     :pswitch_7
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1294,7 +1182,6 @@
 
     goto :goto_0
 
-    .line 16
     :pswitch_8
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1323,7 +1210,6 @@
 
     goto :goto_1
 
-    .line 17
     :pswitch_9
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1347,7 +1233,6 @@
 
     invoke-static {v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     :goto_1
     iput v2, p0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
@@ -1372,7 +1257,6 @@
 
     const-string/jumbo v0, "value_dolly_zoom_state_frame_out"
 
-    .line 19
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomClick(Ljava/lang/String;)V
 
     goto :goto_3
@@ -1381,12 +1265,10 @@
     :goto_2
     const-string/jumbo v0, "value_dolly_zoom_state_target_lost"
 
-    .line 20
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomClick(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 21
     :cond_3
     iget v2, p0, Lcom/android/camera/module/DollyZoomModule;->mLastRecordingState:I
 
@@ -1403,7 +1285,6 @@
     :cond_4
     return-void
 
-    .line 22
     :cond_5
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1455,16 +1336,15 @@
     :goto_3
     move v9, v1
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooO0O;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO0;
 
     move-object v5, v1
 
     move-object v6, p0
 
-    invoke-direct/range {v5 .. v10}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooO0O;-><init>(Lcom/android/camera/module/DollyZoomModule;IFII)V
+    invoke-direct/range {v5 .. v10}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO0;-><init>(Lcom/android/camera/module/DollyZoomModule;IFII)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1490,7 +1370,6 @@
 .method private onVideoSaveFinish()V
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -1505,18 +1384,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mContentValues:Landroid/content/ContentValues;
 
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->onPreviewPrepare(Landroid/content/ContentValues;)V
 
-    .line 3
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/Camera;->getImageSaver()Lcom/android/camera/storage/ImageSaver;
@@ -1543,7 +1419,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -1568,10 +1443,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setCameraState(I)V
 
-    .line 2
     sget-object v0, Lcom/android/camera/constant/UpdateConstant;->MI_LIVE_TYPES_ON_PREVIEW_SUCCESS:[I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->updatePreferenceInWorkThread([I)V
@@ -1582,7 +1455,6 @@
 .method private resetAndUnlock3A()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "resetAndUnlock3A"
@@ -1591,15 +1463,12 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-nez v1, :cond_0
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "resetAndUnlock3A, mCamera2Device is null"
@@ -1608,36 +1477,29 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-boolean v2, p0, Lcom/android/camera/module/BaseModule;->mAeLockSupported:Z
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-virtual {v1, v0}, Lcom/android/camera2/Camera2Proxy;->setAELock(Z)V
 
-    .line 7
     :cond_1
     iget-boolean v1, p0, Lcom/android/camera/module/BaseModule;->mAwbLockSupported:Z
 
     if-eqz v1, :cond_2
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v1, v0}, Lcom/android/camera2/Camera2Proxy;->setAWBLock(Z)V
 
-    .line 9
     :cond_2
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updateFocusMode()V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0}, Lcom/android/camera2/Camera2Proxy;->resumePreview()I
 
-    .line 11
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOnAwhile()V
 
     return-void
@@ -1646,7 +1508,6 @@
 .method private resumePreviewIfNeeded()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "resumePreviewIfNeeded"
@@ -1655,10 +1516,8 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsFinished:Z
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->resumePreview()V
 
     return-void
@@ -1667,7 +1526,6 @@
 .method private saveVideo()V
     .locals 7
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1676,19 +1534,16 @@
 
     move-result-object v0
 
-    .line 2
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
     if-nez v1, :cond_1
 
-    .line 3
     new-instance v1, Ljava/io/File;
 
     const-string/jumbo v2, "sdcard/DCIM/Camera/.dolly_zoom/default_dz_video"
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     new-instance v2, Ljava/io/File;
 
     iget-object v3, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFilePath:Ljava/lang/String;
@@ -1697,14 +1552,12 @@
 
     const/4 v3, 0x0
 
-    .line 5
     sget-object v4, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v5, "saveVideo start"
 
     invoke-static {v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     :try_start_0
     invoke-virtual {v1, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -1715,11 +1568,9 @@
 
     if-nez v3, :cond_0
 
-    .line 7
     :goto_0
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 8
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_1
@@ -1732,7 +1583,6 @@
     :catch_0
     move-exception v4
 
-    .line 9
     :try_start_1
     sget-object v5, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -1744,7 +1594,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     :goto_1
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
@@ -1767,16 +1616,13 @@
 
     goto :goto_3
 
-    .line 11
     :goto_2
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 12
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     throw v0
 
-    .line 13
     :cond_1
     :goto_3
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
@@ -1807,10 +1653,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->onVideoSaveFinish()V
 
-    .line 15
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "prepare save video"
@@ -1829,7 +1673,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget v0, p0, Lcom/android/camera/module/BaseModule;->mOrientation:I
 
@@ -1841,13 +1684,10 @@
 
     add-int/lit8 v1, p1, 0x5a
 
-    .line 2
     rem-int/lit16 v1, v1, 0x168
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetRotation(I)Z
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1872,22 +1712,17 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_1
     iput p1, p0, Lcom/android/camera/module/BaseModule;->mOrientation:I
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->checkActivityOrientation()V
 
-    .line 7
     iget p1, p0, Lcom/android/camera/module/BaseModule;->mOrientationCompensation:I
 
     if-eq p1, p2, :cond_2
 
-    .line 8
     iput p2, p0, Lcom/android/camera/module/BaseModule;->mOrientationCompensation:I
 
-    .line 9
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->setOrientationParameter()V
 
     :cond_2
@@ -1897,7 +1732,6 @@
 .method private setOrientationParameter()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isDeparted()Z
 
     move-result v0
@@ -1906,7 +1740,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
@@ -1918,7 +1751,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrameAvailable()Z
 
     move-result v0
@@ -1941,18 +1773,16 @@
 
     aput v2, v0, v1
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->updatePreferenceInWorkThread([I)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object v0, Lcom/xiaomi/camera/rx/CameraSchedulers;->sCameraSetupScheduler:Lio/reactivex/Scheduler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO0O;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooO;-><init>(Lcom/android/camera/module/DollyZoomModule;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO0O;-><init>(Lcom/android/camera/module/DollyZoomModule;)V
 
     invoke-virtual {v0, v1}, Lio/reactivex/Scheduler;->scheduleDirect(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
@@ -1964,17 +1794,14 @@
 .method private startCountDown()V
     .locals 8
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startCountDown"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
-    .line 3
     new-instance v0, Lcom/android/camera/module/DollyZoomModule$1;
 
     const-wide/16 v4, 0x3c5a
@@ -1989,14 +1816,12 @@
 
     iput-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mCountDownTimer:Landroid/os/CountDownTimer;
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/DollyZoomModule;->mRecordingStartTime:J
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mCountDownTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
@@ -2007,12 +1832,10 @@
 .method private startPreviewSession()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startPreview: camera has been closed"
@@ -2024,53 +1847,53 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setDualCamWaterMarkEnable(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mErrorCallback:Lcom/android/camera/CameraErrorCallbackImpl;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setErrorCallback(Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mPreviewSize:Lcom/android/camera/CameraSize;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setPreviewSize(Lcom/android/camera/CameraSize;)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mAlgorithmPreviewSize:Lcom/android/camera/CameraSize;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setAlgorithmPreviewSize(Lcom/android/camera/CameraSize;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0}, Lcom/android/camera2/Camera2Proxy;->startFaceDetection()V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getSurfaceCreatedTimestamp()J
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceCreatedTimestamp()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/BaseModule;->mSurfaceCreatedTimestamp:J
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     new-instance v3, Landroid/view/Surface;
 
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    .line 10
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/SurfaceTextureScreenNail;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v0
 
@@ -2082,8 +1905,7 @@
 
     const/4 v6, 0x0
 
-    .line 11
-    invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getOperatingMode()I
+    invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->getOperatingMode()I
 
     move-result v7
 
@@ -2091,7 +1913,6 @@
 
     move-object v9, p0
 
-    .line 12
     invoke-virtual/range {v2 .. v9}, Lcom/android/camera2/Camera2Proxy;->startPreviewSession(Landroid/view/Surface;IILandroid/view/Surface;IZLcom/android/camera2/Camera2Proxy$CameraPreviewCallback;)V
 
     return-void
@@ -2100,14 +1921,12 @@
 .method private startVideoRecording()V
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startVideoRecording"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2120,7 +1939,6 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v1
@@ -2139,81 +1957,65 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOn()V
 
     const-string/jumbo v2, "value_dolly_zoom_start_record"
 
-    .line 5
     invoke-static {v2}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomClick(Ljava/lang/String;)V
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v2
 
-    invoke-static {v2}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v2}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v2}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
     const-wide/16 v2, 0x0
 
     const/4 v4, 0x0
 
-    .line 7
     invoke-static {v2, v3, v4}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8
     invoke-interface {v0, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
-    .line 9
     invoke-interface {v0, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->setRecordingTimeState(I)V
 
-    .line 10
-    invoke-interface {v0, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideConfigMenu(Z)V
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideConfigMenu()V
 
-    .line 11
     invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->processingPrepare()V
 
-    .line 12
     invoke-interface {v1}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->processingStart()V
 
-    .line 13
     iget-object v2, p0, Lcom/android/camera/module/DollyZoomModule;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 14
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     if-eqz v0, :cond_1
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {v0}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->StartRecording()V
 
-    .line 16
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->startCountDown()V
 
-    .line 17
     :cond_1
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 18
     iput v4, p0, Lcom/android/camera/module/DollyZoomModule;->mLastBoxState:I
 
-    .line 19
     iput-boolean v4, p0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaveCancel:Z
 
     return-void
@@ -2221,7 +2023,6 @@
     :catchall_0
     move-exception v0
 
-    .line 20
     :try_start_1
     monitor-exit v2
     :try_end_1
@@ -2229,7 +2030,6 @@
 
     throw v0
 
-    .line 21
     :cond_2
     :goto_0
     sget-object v2, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
@@ -2262,17 +2062,14 @@
 .method private stopVideoRecording()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "stopVideoRecording"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -2285,12 +2082,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "skip stopVideoRecording & remove startVideoRecording"
@@ -2299,7 +2094,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -2315,30 +2109,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->processingFinish()V
 
-    .line 8
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOnAwhile()V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 10
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     if-eqz v1, :cond_2
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {v1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->StopRecording()V
 
-    .line 12
     :cond_2
     monitor-exit v0
     :try_end_0
@@ -2346,10 +2134,8 @@
 
     const/4 v0, 0x3
 
-    .line 13
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 14
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -2379,7 +2165,6 @@
     :catchall_0
     move-exception v1
 
-    .line 15
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2391,7 +2176,6 @@
 .method private updateDeviceOrientation()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget v1, p0, Lcom/android/camera/module/BaseModule;->mOrientation:I
@@ -2404,7 +2188,6 @@
 .method private updateFocusMode()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     invoke-static {}, Lcom/android/camera/CameraSettings;->getFocusMode()Ljava/lang/String;
@@ -2415,7 +2198,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setFocusMode(Ljava/lang/String;)V
 
     return-void
@@ -2424,7 +2206,6 @@
 .method private updateLiveRelated()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     const/4 v1, 0x0
@@ -2437,15 +2218,12 @@
 .method private updatePictureAndPreviewSize()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCameraCapabilities:Lcom/android/camera2/CameraCapabilities;
 
     const-class v1, Landroid/graphics/SurfaceTexture;
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera2/CameraCapabilities;->getSupportedOutputSizeWithAssignedMode(Ljava/lang/Class;)Ljava/util/List;
 
-    .line 3
     new-instance v0, Lcom/android/camera/CameraSize;
 
     const/16 v1, 0x780
@@ -2456,7 +2234,6 @@
 
     iput-object v0, p0, Lcom/android/camera/module/BaseModule;->mPreviewSize:Lcom/android/camera/CameraSize;
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2481,7 +2258,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     new-instance v0, Lcom/android/camera/CameraSize;
 
     const/16 v1, 0xf00
@@ -2494,10 +2270,8 @@
 
     const/4 v0, 0x0
 
-    .line 6
     iput-object v0, p0, Lcom/android/camera/module/BaseModule;->mPictureSize:Lcom/android/camera/CameraSize;
 
-    .line 7
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2518,7 +2292,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mPreviewSize:Lcom/android/camera/CameraSize;
 
     iget v1, v0, Lcom/android/camera/CameraSize;->width:I
@@ -2543,22 +2316,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     iput-wide p1, p0, Lcom/android/camera/module/DollyZoomModule;->mRecordingTime:J
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 p2, 0xac
 
-    .line 4
     invoke-virtual {p1, p2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
@@ -2567,7 +2336,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
 
     :cond_0
@@ -2577,7 +2345,6 @@
 .method private updateVideoStabilization()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isDeviceAlive()Z
 
     move-result v0
@@ -2586,7 +2353,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
@@ -2594,17 +2360,14 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setEnableEIS(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setEnableOIS(Z)V
 
-    .line 5
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "updateVideoStabilization EIS enable: true"
@@ -2630,7 +2393,6 @@
 
     move/from16 v4, p4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v5
@@ -2645,7 +2407,6 @@
 
     if-eqz v5, :cond_11
 
-    .line 2
     invoke-interface {v5}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->isAdded()Z
 
     move-result v6
@@ -2654,7 +2415,6 @@
 
     goto/16 :goto_a
 
-    .line 3
     :cond_0
     iget v6, v0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
@@ -2674,10 +2434,8 @@
 
     if-ne v1, v11, :cond_b
 
-    .line 4
     iput-boolean v13, v0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
-    .line 5
     sget-object v4, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v6, "onDollyZoomState record video failed"
@@ -2710,7 +2468,6 @@
 
     if-ne v6, v11, :cond_b
 
-    .line 6
     :cond_3
     iget v6, v0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
@@ -2722,10 +2479,8 @@
 
     if-lez v6, :cond_4
 
-    .line 7
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
-    .line 8
     :cond_4
     iget v6, v0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
@@ -2738,7 +2493,6 @@
     :cond_5
     move v6, v12
 
-    .line 9
     :goto_0
     iget v14, v0, Lcom/android/camera/module/DollyZoomModule;->mLastBoxState:I
 
@@ -2748,12 +2502,10 @@
 
     const-string/jumbo v6, "value_dolly_zoom_state_frame_out_warning"
 
-    .line 10
     invoke-static {v6}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomClick(Ljava/lang/String;)V
 
-    const v6, 0x7f12035b
+    const v6, 0x7f120343
 
-    .line 11
     invoke-interface {v5, v6, v12}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
     move v6, v12
@@ -2761,16 +2513,13 @@
     goto :goto_1
 
     :cond_6
-    const v14, 0x7f120357
+    const v14, 0x7f12033f
 
-    .line 12
     invoke-interface {v5, v14, v12}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
-    .line 13
     :goto_1
     iput v4, v0, Lcom/android/camera/module/DollyZoomModule;->mLastBoxState:I
 
-    .line 14
     sget-object v4, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -2804,7 +2553,6 @@
 
     if-lez v4, :cond_9
 
-    .line 15
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
     move v6, v12
@@ -2816,47 +2564,39 @@
 
     goto :goto_5
 
-    .line 16
     :cond_9
     iget-boolean v4, v0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-eqz v4, :cond_a
 
-    .line 17
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v4
 
-    invoke-static {v4}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v4}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v4
 
-    invoke-virtual {v4}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v4}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
-    .line 18
     invoke-static {v13, v2, v12}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomRecordingParams(ZFI)V
 
-    .line 19
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
-    .line 20
     invoke-interface {v5, v13}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->prepare(Z)V
 
-    .line 21
     :cond_a
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->resetAndUnlock3A()V
 
-    .line 22
     iput-boolean v13, v0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
     if-eq v3, v9, :cond_b
 
-    .line 23
     iget-object v4, v0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    new-instance v6, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOo0;
+    new-instance v6, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO00;
 
-    invoke-direct {v6, v0, v5}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOo0;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
+    invoke-direct {v6, v0, v5}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO00;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
 
     invoke-virtual {v4, v6, v7, v8}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -2879,12 +2619,10 @@
     :goto_5
     if-eqz v4, :cond_10
 
-    .line 24
     iget v4, v0, Lcom/android/camera/module/DollyZoomModule;->mLastRecordingState:I
 
     if-eq v4, v1, :cond_10
 
-    .line 25
     sget-object v4, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -2911,14 +2649,12 @@
 
     invoke-static {v4, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     iget v4, v0, Lcom/android/camera/module/DollyZoomModule;->mLastRecordingState:I
 
     if-nez v4, :cond_f
 
     const-wide/16 v7, 0x3a98
 
-    .line 27
     iget-wide v11, v0, Lcom/android/camera/module/DollyZoomModule;->mRecordingTime:J
 
     sub-long/2addr v7, v11
@@ -2931,7 +2667,6 @@
 
     add-int/2addr v7, v13
 
-    .line 28
     iget v8, v0, Lcom/android/camera/module/DollyZoomModule;->mLastDollyZoomState:I
 
     if-eq v8, v10, :cond_c
@@ -2947,41 +2682,34 @@
     :cond_c
     const/4 v4, 0x0
 
-    .line 29
     :goto_6
     invoke-static {v4, v2, v7}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomRecordingParams(ZFI)V
 
     if-ne v1, v13, :cond_e
 
-    .line 30
     iget-boolean v2, v0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaveCancel:Z
 
     if-eqz v2, :cond_d
 
-    .line 31
     invoke-interface {v5, v13}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->prepare(Z)V
 
     move v12, v6
 
     goto :goto_7
 
-    .line 32
     :cond_d
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
     const/4 v2, 0x0
 
-    .line 33
     invoke-interface {v5, v2}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->stopCaptureToPreviewResult(Z)V
 
-    .line 34
     iget-object v2, v0, Lcom/android/camera/module/DollyZoomModule;->mFd:Landroid/os/ParcelFileDescriptor;
 
     invoke-static {v2}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     const/4 v12, 0x0
 
-    .line 35
     :goto_7
     sget-object v2, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -3008,11 +2736,9 @@
     :cond_e
     move v12, v6
 
-    .line 36
     :goto_8
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->resetAndUnlock3A()V
 
-    .line 37
     iput-boolean v13, v0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
     goto :goto_9
@@ -3024,30 +2750,24 @@
 
     const/4 v4, 0x0
 
-    .line 38
     invoke-static {v13, v2, v4}, Lcom/android/camera/statistic/CameraStatUtils;->trackDollyZoomRecordingParams(ZFI)V
 
-    .line 39
     invoke-interface {v5, v4}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->prepare(Z)V
 
-    const v2, 0x7f12035a
+    const v2, 0x7f120342
 
-    .line 40
     invoke-interface {v5, v2, v13}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
-    .line 41
     iget-object v2, v0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    new-instance v6, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOOo;
+    new-instance v6, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooOO0;
 
-    invoke-direct {v6, v0, v5}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOOo;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
+    invoke-direct {v6, v0, v5}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooOO0;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
 
     invoke-virtual {v2, v6, v7, v8}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 42
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/DollyZoomModule;->resetAndUnlock3A()V
 
-    .line 43
     iput-boolean v13, v0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
     move v12, v4
@@ -3057,7 +2777,6 @@
     :cond_10
     move v12, v6
 
-    .line 44
     :goto_9
     iput v1, v0, Lcom/android/camera/module/DollyZoomModule;->mLastRecordingState:I
 
@@ -3067,7 +2786,6 @@
 
     if-eqz v12, :cond_11
 
-    .line 45
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3086,7 +2804,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     invoke-interface {v5, v3, v14}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
     :cond_11
@@ -3097,12 +2814,10 @@
 .method public synthetic OooO00o(IIIII)V
     .locals 4
 
-    .line 49
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 50
     :try_start_0
     new-instance v1, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
@@ -3110,7 +2825,6 @@
 
     iput-object v1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
-    .line 51
     iget-object v2, p0, Lcom/android/camera/module/BaseModule;->mAlgorithmPreviewSize:Lcom/android/camera/CameraSize;
 
     iget v2, v2, Lcom/android/camera/CameraSize;->width:I
@@ -3121,17 +2835,14 @@
 
     invoke-virtual {v1, v2, v3, p1, p2}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->ConstructMediaEffectCamera(IIII)V
 
-    .line 52
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {p1, p3}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetFilmSizeState(I)Z
 
-    .line 53
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {p1, p4}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetEncodeType(I)Z
 
-    .line 54
     iget-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
     if-eqz p1, :cond_0
@@ -3140,7 +2851,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 55
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     iget-object p2, p0, Lcom/android/camera/module/DollyZoomModule;->mFd:Landroid/os/ParcelFileDescriptor;
@@ -3153,7 +2863,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
@@ -3161,13 +2870,11 @@
 
     invoke-virtual {p1, p2}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetSavePath(Ljava/lang/String;)Z
 
-    .line 57
     :goto_0
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {p1, p5}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->SetRotation(I)Z
 
-    .line 58
     monitor-exit v0
 
     return-void
@@ -3185,16 +2892,14 @@
 .method public synthetic OooO00o(Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
     .locals 2
 
-    .line 47
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f120356
+    const v0, 0x7f12033e
 
     const/4 v1, 0x0
 
-    .line 48
     invoke-interface {p1, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
     :cond_0
@@ -3204,12 +2909,10 @@
 .method public synthetic OooO00o(Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;)V
     .locals 3
 
-    .line 62
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 63
     :try_start_0
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -3217,18 +2920,14 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     invoke-virtual {p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->DestructRender()V
 
-    .line 65
     invoke-virtual {p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->DestructMediaEffectCamera()V
 
     const/4 p1, 0x0
 
-    .line 66
     iput-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
-    .line 67
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onDestroy DestructRender & DestructMediaEffectCamera end"
@@ -3237,10 +2936,8 @@
 
     const/4 p1, 0x0
 
-    .line 68
     iput-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
-    .line 69
     monitor-exit v0
 
     return-void
@@ -3258,16 +2955,14 @@
 .method public synthetic OooO0O0(Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f120356
+    const v0, 0x7f12033e
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-interface {p1, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->updateCaptureMessage(IZ)V
 
     :cond_0
@@ -3275,9 +2970,39 @@
 .end method
 
 .method public synthetic OooO0Oo()V
+    .locals 4
+
+    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v1, 0xa6
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    if-eqz v0, :cond_0
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v1, v3, v3, v2}, Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;->setCenterHint(ILjava/lang/String;Ljava/lang/String;I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public synthetic OooO0o0()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget v1, p0, Lcom/android/camera/module/BaseModule;->mOrientation:I
@@ -3290,7 +3015,6 @@
 .method public checkDisplayOrientation()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isCreated()Z
 
     move-result v0
@@ -3299,27 +3023,22 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->checkDisplayOrientation()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget v1, p0, Lcom/android/camera/module/BaseModule;->mCameraDisplayOrientation:I
 
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->setCameraDisplayOrientation(I)V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     if-eqz v0, :cond_2
 
-    .line 6
     iget v1, p0, Lcom/android/camera/module/BaseModule;->mCameraDisplayOrientation:I
 
     invoke-virtual {v0, v1}, Lcom/android/camera/FocusManagerAbstract;->setDisplayOrientation(I)V
@@ -3331,61 +3050,51 @@
 .method public closeCamera()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string v1, "closeCamera E"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/android/camera/CameraScreenNail;->setExternalFrameProcessor(Lcom/android/camera/SurfaceTextureScreenNail$ExternalFrameProcessor;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/RenderEngineAdapter;->requestRender()V
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setFocusCallback(Lcom/android/camera2/Camera2Proxy$FocusCallback;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setErrorCallback(Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/android/camera2/Camera2Proxy;->stopPreviewCallback(Z)V
 
-    .line 9
     iput-object v1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
-    .line 10
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
@@ -3393,15 +3102,12 @@
 
     const/4 v1, 0x0
 
-    .line 11
     invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/camera2/FocusManager2;->setAeAwbLock(Z)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     invoke-virtual {v0}, Lcom/android/camera/module/loader/camera2/FocusManager2;->destroy()V
 
-    .line 13
     :cond_2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -3415,7 +3121,6 @@
 .method public varargs consumePreference([I)V
     .locals 7
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -3475,14 +3180,13 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 2
     sget-object v4, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "no consumer for this updateType: "
+    const-string/jumbo v6, "no consumer for this updateType: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3496,61 +3200,51 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->updateModuleRelated()V
 
     goto :goto_1
 
-    .line 4
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updateLiveRelated()V
 
     goto :goto_1
 
-    .line 5
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->updateThermalLevel()V
 
     goto :goto_1
 
-    .line 6
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->updateBackSoftLightPreference()V
 
     goto :goto_1
 
-    .line 7
     :cond_4
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updateDeviceOrientation()V
 
     goto :goto_1
 
-    .line 8
     :cond_5
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updateVideoStabilization()V
 
     goto :goto_1
 
-    .line 9
     :cond_6
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->updateExposureMeteringMode()V
 
     goto :goto_1
 
-    .line 10
     :cond_7
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->focusCenter()V
 
     goto :goto_1
 
-    .line 11
     :cond_8
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updateFocusMode()V
 
     goto :goto_1
 
-    .line 12
     :cond_9
     invoke-static {}, Lcom/android/camera/CameraSettings;->getAntiBanding()Ljava/lang/String;
 
@@ -3560,13 +3254,11 @@
 
     goto :goto_1
 
-    .line 13
     :cond_a
     invoke-virtual {p0, v1}, Lcom/android/camera/module/BaseModule;->updateFocusArea(Z)V
 
     goto :goto_1
 
-    .line 14
     :cond_b
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->updatePictureAndPreviewSize()V
 
@@ -3577,6 +3269,44 @@
 
     :cond_c
     return-void
+.end method
+
+.method public fillFeatureControl(Lcom/android/camera/module/loader/StartControl;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcom/android/camera/module/BaseModule;->fillFeatureControl(Lcom/android/camera/module/loader/StartControl;)V
+
+    invoke-virtual {p1}, Lcom/android/camera/module/loader/StartControl;->getFeatureDetail()Lcom/android/camera/module/loader/StartControlFeatureDetail;
+
+    move-result-object p1
+
+    const v0, 0x7f0a01ac
+
+    const v1, 0xfffffb
+
+    invoke-virtual {p1, v0, v1}, Lcom/android/camera/module/loader/StartControlFeatureDetail;->addFragmentInfo(II)V
+
+    const v0, 0x7f0a0093
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/module/loader/StartControlFeatureDetail;->hideFragment(I)V
+
+    const v0, 0x7f0a009f
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/module/loader/StartControlFeatureDetail;->hideFragment(I)V
+
+    const v0, 0x7f0a009c
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/module/loader/StartControlFeatureDetail;->hideFragment(I)V
+
+    return-void
+.end method
+
+.method public getOperatingMode()I
+    .locals 1
+
+    const v0, 0x800e
+
+    return v0
 .end method
 
 .method public getProcessorType()I
@@ -3590,7 +3320,6 @@
 .method public getSavePath()Ljava/lang/String;
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3611,7 +3340,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mUserScopedStorage:Z
 
     if-eqz v0, :cond_0
@@ -3634,7 +3362,6 @@
 .method public isDoingAction()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getCameraState()I
 
     move-result v0
@@ -3657,7 +3384,6 @@
 .method public isProcessorReady()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrameAvailable()Z
 
     move-result v0
@@ -3668,7 +3394,6 @@
 .method public isRecording()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     return v0
@@ -3682,7 +3407,7 @@
     return v0
 .end method
 
-.method public isUnIncorruptible()Z
+.method public isUnInterruptable()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -3706,72 +3431,19 @@
     return v0
 .end method
 
-.method public onActionStop()V
-    .locals 3
-
-    .line 1
-    invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onActionStop()V
-
-    .line 2
-    sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "onHostStopAndNotifyActionStop "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v2, p0, Lcom/android/camera/module/DollyZoomModule;->mIsFinished:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
-    iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
-
-    .line 5
-    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->stopVideoRecording()V
-
-    .line 6
-    :cond_0
-    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->resumePreviewIfNeeded()V
-
-    .line 7
-    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->doLaterReleaseIfNeed()V
-
-    return-void
-.end method
-
 .method public onBackPressed()Z
     .locals 8
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 3
     iget-wide v4, p0, Lcom/android/camera/module/BaseModule;->mLastBackPressedTime:J
 
     sub-long v4, v2, v4
@@ -3782,26 +3454,22 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     iput-wide v2, p0, Lcom/android/camera/module/BaseModule;->mLastBackPressedTime:J
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    const v2, 0x7f1208b6
+    const v2, 0x7f120867
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/ToastUtils;->showToast(Landroid/content/Context;IZ)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->stopVideoRecording()V
 
     :goto_0
     return v1
 
-    .line 7
     :cond_1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -3817,12 +3485,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->onBackPressed()V
 
     return v1
 
-    .line 9
     :cond_2
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onBackPressed()Z
 
@@ -3834,38 +3500,30 @@
 .method public onCameraOpened()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onCameraOpened()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->initializeFocusManager()V
 
-    .line 3
     sget-object v0, Lcom/android/camera/constant/UpdateConstant;->FUN_TYPES_INIT:[I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->updatePreferenceTrampoline([I)V
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->startPreviewSession()V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->initDollyZoomMode()V
 
-    .line 6
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/module/DollyZoomModule;->mOnResumeTime:J
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x1f
@@ -3878,7 +3536,6 @@
 .method public onCancelClicked()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->resetAndUnlock3A()V
 
     return-void
@@ -3887,10 +3544,8 @@
 .method public onCreate(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/module/BaseModule;->onCreate(II)V
 
-    .line 2
     new-instance p1, Lcom/android/camera/module/DollyZoomModule$MainHandler;
 
     iget-object p2, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -3903,24 +3558,20 @@
 
     iput-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->onCameraOpened()V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/4 p2, 0x4
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const/16 p2, 0x1f
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {p1}, Lcom/android/camera/Camera;->getSensorStateManager()Lcom/android/camera/SensorStateManager;
@@ -3933,7 +3584,6 @@
 
     const-string/jumbo p1, "sdcard/DCIM/Camera/.dolly_zoom/"
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->makeNoMediaDir(Ljava/lang/String;)Z
 
     return-void
@@ -3942,36 +3592,30 @@
 .method public onDestroy()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onDestroy"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onDestroy()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOOO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/Oooo;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOOO;-><init>(Lcom/android/camera/module/DollyZoomModule;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/Oooo;-><init>(Lcom/android/camera/module/DollyZoomModule;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x2d
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -3983,35 +3627,31 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/SensorStateManager;->setRotationVectorEnabled(Z)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     if-eqz v0, :cond_1
 
-    .line 8
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onDestroy mDollyZoomCamera will be destructed"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/RenderEngineAdapter;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraRenderEngine;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOO0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooOOO;
 
-    invoke-direct {v2, p0, v0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOO0;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;)V
+    invoke-direct {v2, p0, v0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooOOO;-><init>(Lcom/android/camera/module/DollyZoomModule;Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4022,14 +3662,12 @@
 .method public onDrawFrame(Landroid/graphics/Rect;IIZ)Z
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     const/4 p2, 0x0
 
     if-nez p1, :cond_0
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string p3, "mDollyZoomCamera is null, PushExtraYAndUVFrame fail"
@@ -4038,13 +3676,11 @@
 
     return p2
 
-    .line 3
     :cond_0
     iget-object p3, p0, Lcom/android/camera/module/DollyZoomModule;->mRenderRect:Landroid/graphics/Rect;
 
     if-nez p3, :cond_1
 
-    .line 4
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo p3, "onDrawFrame: renderRect hasn\'t been initialized"
@@ -4053,7 +3689,6 @@
 
     return p2
 
-    .line 5
     :cond_1
     iget-boolean p2, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
@@ -4061,19 +3696,16 @@
 
     if-nez p2, :cond_2
 
-    .line 6
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "onDrawFrame InitRender start"
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->ConstructRender()V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     iget-object p2, p0, Lcom/android/camera/module/DollyZoomModule;->mRenderRect:Landroid/graphics/Rect;
@@ -4088,10 +3720,8 @@
 
     invoke-virtual {p1, p4, v0, v1, p2}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->InitRender(IIII)V
 
-    .line 9
     iput-boolean p3, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
-    .line 10
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "onDrawFrame InitRender end"
@@ -4100,7 +3730,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_2
     invoke-virtual {p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->RenderFrame()V
 
@@ -4111,17 +3740,14 @@
 .method public onExitClicked()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onExitClicked"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->cancelVideoCountDown()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mVideoFile:Lcom/android/camera/storage/mediastore/VideoFile;
 
     invoke-virtual {v0}, Lcom/android/camera/storage/mediastore/VideoFile;->cleanResources()V
@@ -4132,7 +3758,6 @@
 .method public onFragmentResume()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4155,17 +3780,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mPendingStart:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mPendingStart:Z
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getCameraState()I
 
@@ -4173,7 +3795,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->resumePreview()V
 
     :cond_1
@@ -4183,7 +3804,6 @@
 .method public onGuideClicked()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onGuideClicked"
@@ -4192,8 +3812,50 @@
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mPendingStart:Z
+
+    return-void
+.end method
+
+.method public onHostStopAndNotifyActionStop()V
+    .locals 3
+
+    invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onHostStopAndNotifyActionStop()V
+
+    sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "onHostStopAndNotifyActionStop "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/camera/module/DollyZoomModule;->mIsFinished:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
+
+    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->stopVideoRecording()V
+
+    :cond_0
+    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->resumePreviewIfNeeded()V
+
+    invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->doLaterReleaseIfNeed()V
 
     return-void
 .end method
@@ -4201,7 +3863,6 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isFrameAvailable()Z
 
     move-result v0
@@ -4212,7 +3873,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -4228,7 +3888,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$DollyZoomProcess;->canSnap()Z
 
     move-result v0
@@ -4266,7 +3925,6 @@
 
     goto :goto_2
 
-    .line 4
     :cond_2
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
@@ -4276,19 +3934,16 @@
 
     const/16 p1, 0x28
 
-    const v0, 0x7f1207c6
+    const v0, 0x7f120786
 
-    .line 5
     invoke-static {v0}, Lcom/android/camera/Util;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result p2
 
-    .line 7
     invoke-virtual {p0, p1, v0, p2, v3}, Lcom/android/camera/module/DollyZoomModule;->performKeyClicked(ILjava/lang/String;IZ)V
 
     :cond_3
@@ -4310,13 +3965,11 @@
     :goto_0
     move v0, v3
 
-    .line 8
     :goto_1
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v2
 
-    .line 9
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object v4
@@ -4331,7 +3984,6 @@
 
     move-result v1
 
-    .line 10
     :cond_7
     invoke-virtual {p0, v0, v3, v2, v1}, Lcom/android/camera/module/BaseModule;->handleVolumeKeyEvent(ZZIZ)Z
 
@@ -4341,7 +3993,6 @@
 
     return v3
 
-    .line 11
     :cond_8
     :goto_2
     invoke-super {p0, p1, p2}, Lcom/android/camera/module/BaseModule;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -4364,7 +4015,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -4372,14 +4022,12 @@
 
     const/16 v1, 0xab
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$BackStack;
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->handleBackStackFromKeyBack()Z
 
     move-result v0
@@ -4390,7 +4038,6 @@
 
     return p1
 
-    .line 4
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/android/camera/module/BaseModule;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -4403,7 +4050,6 @@
 .method public onNewUriArrived(Landroid/net/Uri;Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4434,10 +4080,8 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-super {p0, p1, p2}, Lcom/android/camera/module/BaseModule;->onNewUriArrived(Landroid/net/Uri;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
 
     move-result p2
@@ -4450,11 +4094,10 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOoO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/o000oOoO/OoooOoO;-><init>(Landroid/net/Uri;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/OoooO;-><init>(Landroid/net/Uri;)V
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4466,7 +4109,6 @@
 .method public onOrientationChanged(III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/module/DollyZoomModule;->setOrientation(II)V
 
     return-void
@@ -4475,29 +4117,23 @@
 .method public onPause()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onPause()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onPause"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/module/loader/camera2/FocusManager2;->removeMessages()V
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->tryRemoveCountDownMessage()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/Camera;->getSensorStateManager()Lcom/android/camera/SensorStateManager;
@@ -4506,20 +4142,16 @@
 
     invoke-virtual {v0}, Lcom/android/camera/SensorStateManager;->reset()V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->resetScreenOn()V
 
-    .line 8
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->closeCamera()V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x0
 
-    .line 10
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     :cond_1
@@ -4531,13 +4163,11 @@
 
     const/4 p2, 0x1
 
-    .line 1
     :try_start_0
     iget-object p3, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     if-nez p3, :cond_0
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string p3, "mDollyZoomCamera is null, PushExtraYAndUVFrame fail"
@@ -4546,7 +4176,6 @@
 
     return p2
 
-    .line 3
     :cond_0
     iget-object p3, p0, Lcom/android/camera/module/DollyZoomModule;->mLock:Ljava/lang/Object;
 
@@ -4554,35 +4183,30 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     :try_start_1
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mDollyZoomCamera:Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/dollyzoomprocess/MediaEffectCamera;->PushExtraYAndUVFrame(Landroid/media/Image;)V
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->onDollyZoomState()V
 
-    .line 7
     :cond_1
     monitor-exit p3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8
     :try_start_2
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getRenderEngine()Lcom/android/camera/ui/CameraRenderEngine;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/RenderEngineAdapter;->requestRender()V
+    invoke-virtual {p1}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
     :try_end_2
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -4591,7 +4215,6 @@
     :catchall_0
     move-exception p1
 
-    .line 9
     :try_start_3
     monitor-exit p3
     :try_end_3
@@ -4605,7 +4228,6 @@
     :catch_0
     move-exception p1
 
-    .line 10
     sget-object p3, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -4639,7 +4261,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/module/BaseModule;->onPreviewMetaDataUpdate(Landroid/hardware/camera2/CaptureResult;)V
 
@@ -4655,7 +4276,6 @@
 .method public onPreviewSessionFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isTextureExpired()Z
 
     move-result p1
@@ -4670,7 +4290,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "sessionFailed due to surfaceTexture expired, retry"
@@ -4679,7 +4298,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
@@ -4697,7 +4315,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
 
@@ -4707,7 +4324,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
@@ -4715,7 +4331,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->previewWhenSessionSuccess()V
 
     return-void
@@ -4724,10 +4339,8 @@
 .method public onResume()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onResume()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->keepScreenOnAwhile()V
 
     return-void
@@ -4742,7 +4355,6 @@
 .method public onReviewDoneClicked()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -4757,7 +4369,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onReviewDoneClicked return, configChanges is null"
@@ -4771,7 +4382,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-interface {v0, v1, v2, v2}, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;->configFilm(Lcom/android/camera/fragment/film/FilmItem;ZZ)V
 
     return-void
@@ -4780,7 +4390,6 @@
 .method public onSaveClicked()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->saveVideo()V
 
     return-void
@@ -4789,7 +4398,6 @@
 .method public onShutterButtonClick(I)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->checkShutterCondition()Z
 
     move-result v0
@@ -4798,7 +4406,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -4816,7 +4423,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v1}, Lcom/android/camera/Camera;->onUserInteraction()V
@@ -4825,19 +4431,15 @@
 
     const-string/jumbo v1, "speech_shutter_desc"
 
-    .line 4
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideRecommendDescTip(Ljava/lang/String;)V
 
-    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/camera/module/BaseModule;->setTriggerMode(I)V
 
-    .line 6
     iget-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-nez p1, :cond_3
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     if-eqz p1, :cond_2
@@ -4850,7 +4452,6 @@
 
     if-nez p1, :cond_2
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraSettings;->isCameraSoundOpen()Z
 
     move-result p1
@@ -4859,10 +4460,8 @@
 
     const/4 p1, 0x2
 
-    .line 9
     invoke-virtual {p0, p1}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v1, 0xfa
@@ -4871,7 +4470,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_2
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -4879,12 +4477,10 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->startVideoRecording()V
 
     goto :goto_0
 
-    .line 13
     :cond_3
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
@@ -4894,13 +4490,10 @@
 
     const/4 p1, 0x0
 
-    .line 14
     iput-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsVideoSaved:Z
 
-    .line 15
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->stopVideoRecording()V
 
-    .line 16
     :goto_0
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
@@ -4908,25 +4501,21 @@
 
     if-eqz p1, :cond_7
 
-    .line 17
     iget-boolean v1, p0, Lcom/android/camera/module/BaseModule;->mAeLockSupported:Z
 
     if-eqz v1, :cond_4
 
-    .line 18
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     xor-int/2addr v1, v0
 
     invoke-virtual {p1, v1}, Lcom/android/camera2/Camera2Proxy;->setAELock(Z)V
 
-    .line 19
     :cond_4
     iget-boolean p1, p0, Lcom/android/camera/module/BaseModule;->mAwbLockSupported:Z
 
     if-eqz p1, :cond_5
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
@@ -4935,7 +4524,6 @@
 
     invoke-virtual {p1, v1}, Lcom/android/camera2/Camera2Proxy;->setAWBLock(Z)V
 
-    .line 21
     :cond_5
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
@@ -4945,7 +4533,6 @@
 
     xor-int/2addr p1, v0
 
-    .line 22
     sget-object v1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4972,25 +4559,21 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     iget-boolean v1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-nez v1, :cond_6
 
     if-eqz p1, :cond_6
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/Camera2Proxy;->setFocusMode(I)V
 
-    .line 25
     :cond_6
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {p1}, Lcom/android/camera2/Camera2Proxy;->resumePreview()I
 
-    .line 26
     :cond_7
     iget-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
@@ -5024,17 +4607,14 @@
 .method public onStop()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onStop()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     :cond_0
@@ -5044,18 +4624,16 @@
 .method public onStopClicked()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-static {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onStopClicked"
@@ -5070,26 +4648,22 @@
 
     const/4 p1, 0x1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mRenderRect:Landroid/graphics/Rect;
 
-    .line 3
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mRenderRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -5098,14 +4672,12 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/DollyZoomModule;->mRenderRect:Landroid/graphics/Rect;
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 6
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     sub-int/2addr p2, v1
@@ -5118,10 +4690,8 @@
 
     const/4 p1, 0x0
 
-    .line 7
     iput-boolean p1, p0, Lcom/android/camera/module/DollyZoomModule;->mInitRender:Z
 
-    .line 8
     sget-object p1, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo p2, "onSurfaceChanged"
@@ -5140,10 +4710,8 @@
 .method public onThermalConstrained()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->onThermalConstrained()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->onReviewCancelClicked()V
 
     return-void
@@ -5152,7 +4720,6 @@
 .method public onThumbnailClicked(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->isDoingAction()Z
 
     move-result p1
@@ -5161,7 +4728,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -5175,7 +4741,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->gotoGallery()V
@@ -5187,7 +4752,6 @@
 .method public onWaitingFocusFinished()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isBlockSnap()Z
 
     move-result v0
@@ -5198,7 +4762,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
 
@@ -5217,30 +4780,25 @@
 .method public pausePreview()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "pausePreview"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/Camera2Proxy;->pausePreview()V
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsFinished:Z
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setCameraState(I)V
 
     return-void
@@ -5249,7 +4807,6 @@
 .method public performKeyClicked(ILjava/lang/String;IZ)V
     .locals 0
 
-    .line 1
     iget-boolean p2, p0, Lcom/android/camera/module/BaseModule;->mPaused:Z
 
     if-nez p2, :cond_2
@@ -5269,10 +4826,8 @@
 
     const/4 p2, 0x1
 
-    .line 2
     invoke-virtual {p0, p2, p2}, Lcom/android/camera/module/DollyZoomModule;->onShutterButtonFocus(ZI)V
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/module/DollyZoomModule;->onShutterButtonClick(I)V
 
     goto :goto_0
@@ -5280,7 +4835,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 4
     invoke-virtual {p0, p1, p1}, Lcom/android/camera/module/DollyZoomModule;->onShutterButtonFocus(ZI)V
 
     :cond_2
@@ -5291,10 +4845,8 @@
 .method public registerProtocol()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->registerProtocol()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5303,7 +4855,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5312,7 +4863,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5321,7 +4871,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
@@ -5360,24 +4909,20 @@
 .method public resumePreview()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "resumePreview"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/Camera2Proxy;->resumePreview()I
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setCameraState(I)V
 
     :cond_0
@@ -5385,14 +4930,30 @@
 .end method
 
 .method public setFrameAvailable(Z)V
-    .locals 0
+    .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/module/BaseModule;->setFrameAvailable(Z)V
+
+    sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "setFrameAvailable "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/DollyZoomModule;->resumePreviewIfNeeded()V
 
     :cond_0
@@ -5402,7 +4963,6 @@
 .method public shouldReleaseLater()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/DollyZoomModule;->mIsRecording:Z
 
     if-nez v0, :cond_1
@@ -5429,7 +4989,6 @@
 .method public startPreview()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->isDeviceAlive()Z
 
     move-result v0
@@ -5438,41 +4997,34 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/module/DollyZoomModule;->checkDisplayOrientation()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     iget v1, p0, Lcom/android/camera/module/BaseModule;->mCameraDisplayOrientation:I
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setDisplayOrientation(I)V
 
-    .line 4
     iget-boolean v0, p0, Lcom/android/camera/module/BaseModule;->mAeLockSupported:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setAELock(Z)V
 
-    .line 6
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/module/BaseModule;->mAwbLockSupported:Z
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setAWBLock(Z)V
 
-    .line 8
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
@@ -5480,14 +5032,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setFocusMode(I)V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v0}, Lcom/android/camera2/Camera2Proxy;->resumePreview()I
 
     const/4 v0, 0x1
 
-    .line 10
     invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->setCameraState(I)V
 
     return-void
@@ -5496,17 +5046,14 @@
 .method public unRegisterModulePersistProtocol()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->unRegisterModulePersistProtocol()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/DollyZoomModule;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "unRegisterModulePersistProtocol"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0
@@ -5523,10 +5070,8 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/module/BaseModule;->unRegisterProtocol()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5535,7 +5080,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5544,7 +5088,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -5553,7 +5096,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
     move-result-object v0

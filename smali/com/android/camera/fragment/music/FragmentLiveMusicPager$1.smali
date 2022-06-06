@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object p1, p1, v0
 
     check-cast p1, Ljava/util/List;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
@@ -56,7 +53,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1$1;
 
@@ -66,7 +62,6 @@
 
     move-result-object p1
 
-    .line 4
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -83,7 +78,6 @@
 .method public onResponseError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     new-instance p2, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1$2;
 
     invoke-direct {p2, p0}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1$2;-><init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager$1;)V
@@ -92,7 +86,6 @@
 
     move-result-object p2
 
-    .line 2
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object p3
@@ -103,7 +96,6 @@
 
     invoke-virtual {p2}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$200()Ljava/lang/String;
 
     move-result-object p2

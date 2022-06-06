@@ -45,24 +45,20 @@
 .method public constructor <init>(Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;-><init>(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)V
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;->access$000(Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mDelayHide:J
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;->access$100(Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mDuration:J
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;->access$200(Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem$DynamicBuilder;)I
 
     move-result p1
@@ -81,7 +77,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->getKey()I
 
     move-result v1
@@ -92,7 +87,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->getPriority()I
 
@@ -117,7 +111,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->compareTo(Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;)I
@@ -141,7 +134,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     const-class v2, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -152,7 +144,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->equals(Ljava/lang/Object;)Z
 
@@ -162,11 +153,9 @@
 
     return v1
 
-    .line 3
     :cond_2
     check-cast p1, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;
 
-    .line 4
     iget v2, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mPriority:I
 
     iget p1, p1, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mPriority:I
@@ -189,7 +178,6 @@
 .method public getDelayHide()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mDelayHide:J
 
     return-wide v0
@@ -198,7 +186,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mDuration:J
 
     return-wide v0
@@ -207,7 +194,6 @@
 .method public getPriority()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/DynamicPanelEntranceItem;->mPriority:I
 
     return v0
@@ -220,7 +206,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->hashCode()I
 
     move-result v1

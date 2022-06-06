@@ -21,7 +21,6 @@
 
     const-string v0, "java.vm.version"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -38,13 +37,10 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->appContext:Landroid/content/Context;
 
-    .line 3
     iput-boolean p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->verifySignature:Z
 
     return-void
@@ -61,7 +57,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -79,7 +74,6 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 2
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteFileSafely(Ljava/io/File;)Z
 
     goto :goto_0
@@ -91,7 +85,6 @@
 .method private isLibExtractNeeded(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasLibs()Z
 
     move-result p1
@@ -102,7 +95,6 @@
 .method private isMultiDexExtractNeeded(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->isMultiDex()Z
 
     move-result p1
@@ -113,7 +105,6 @@
 .method private isVMMultiDexCapable()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->IS_VM_MULTIDEX_CAPABLE:Z
 
     return v0
@@ -128,7 +119,6 @@
 
     const-string v1, "(\\d+)\\.(\\d+)(\\.\\d+)?"
 
-    .line 2
     invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
@@ -137,7 +127,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v2
@@ -146,7 +135,6 @@
 
     const/4 v2, 0x1
 
-    .line 4
     :try_start_0
     invoke-virtual {v1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -158,7 +146,6 @@
 
     const/4 v4, 0x2
 
-    .line 5
     invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -181,7 +168,6 @@
     :cond_0
     move v2, v0
 
-    .line 6
     :cond_1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -229,12 +215,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->getMD5(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -243,7 +227,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -251,7 +234,6 @@
 
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->deleteCorruptedFiles(Ljava/util/List;)V
 
-    .line 4
     new-instance p1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     const/16 v1, -0xd
@@ -293,14 +275,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->createFileSafely(Ljava/io/File;)V
     :try_end_0
@@ -313,7 +293,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     const/16 v1, -0x10
@@ -336,14 +315,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-static {p1, p2}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->createFileSafelyLock(Ljava/io/File;Ljava/io/File;)V
     :try_end_0
@@ -356,7 +333,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     const/16 v0, -0x10
@@ -383,7 +359,6 @@
 
     const/16 v1, -0xf
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
@@ -393,7 +368,6 @@
 
     move-result-object v2
 
-    .line 2
     new-instance v3, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitLibExtractor;
 
     invoke-direct {v3, p2, v2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitLibExtractor;-><init>(Ljava/io/File;Ljava/io/File;)V
@@ -402,7 +376,6 @@
 
     const/4 p2, 0x0
 
-    .line 3
     :try_start_1
     invoke-virtual {v3, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitLibExtractor;->load(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;Z)Ljava/util/List;
 
@@ -414,7 +387,6 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -426,7 +398,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5
     :try_start_2
     invoke-static {v3}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
     :try_end_2
@@ -445,10 +416,8 @@
     :try_start_3
     const-string p2, "Failed to load or extract lib files"
 
-    .line 6
     invoke-static {v0, p2, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 7
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     invoke-direct {p2, v1, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;-><init>(ILjava/lang/Throwable;)V
@@ -457,12 +426,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8
     :goto_0
     :try_start_4
     invoke-static {v3}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
 
-    .line 9
     throw p1
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
@@ -470,7 +437,6 @@
     :catch_1
     move-exception p1
 
-    .line 10
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     invoke-direct {p2, v1, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;-><init>(ILjava/lang/Throwable;)V
@@ -502,7 +468,6 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -515,10 +480,8 @@
 
     const-string v4, "VM do not support multi-dex, but split %s has multi dex files, so we need install other dex files manually"
 
-    .line 2
     invoke-static {v2, v4, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v1
@@ -527,7 +490,6 @@
 
     move-result-object v1
 
-    .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -562,7 +524,6 @@
 
     const/16 v4, -0xe
 
-    .line 5
     :try_start_0
     new-instance v5, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;
 
@@ -570,7 +531,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6
     :try_start_1
     iget-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->appContext:Landroid/content/Context;
 
@@ -578,7 +538,6 @@
 
     move-result-object p1
 
-    .line 7
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -587,7 +546,6 @@
 
     invoke-direct {p2, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 8
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -605,7 +563,6 @@
 
     check-cast v6, Ljava/io/File;
 
-    .line 9
     invoke-virtual {v6}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v6
@@ -619,7 +576,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -631,7 +587,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :try_start_2
     invoke-static {v5}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
     :try_end_2
@@ -650,10 +605,8 @@
     :try_start_3
     const-string p2, "Failed to load or extract dex files"
 
-    .line 12
     invoke-static {v2, p2, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 13
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     invoke-direct {p2, v4, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;-><init>(ILjava/lang/Throwable;)V
@@ -662,12 +615,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 14
     :goto_1
     :try_start_4
     invoke-static {v5}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
 
-    .line 15
     throw p1
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
@@ -675,7 +626,6 @@
     :catch_1
     move-exception p1
 
-    .line 16
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     invoke-direct {p2, v4, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;-><init>(ILjava/lang/Throwable;)V
@@ -691,12 +641,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object p1
@@ -705,7 +653,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitVersion()Ljava/lang/String;
 
     move-result-object v2
@@ -714,7 +661,6 @@
 
     move-result v2
 
-    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -735,7 +681,6 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -758,10 +703,8 @@
 
     const-string v2, "SplitInstallerImpl"
 
-    .line 6
     invoke-static {v2, p1, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 7
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object p1
@@ -770,7 +713,6 @@
 
     move-result-object p1
 
-    .line 8
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->isBuiltIn()Z
 
     move-result v1
@@ -789,7 +731,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 9
     new-instance p1, Ljava/io/File;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->appContext:Landroid/content/Context;
@@ -826,7 +767,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -852,7 +792,6 @@
 
     move-object p1, v1
 
-    .line 11
     :goto_0
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->isLegalFile(Ljava/io/File;)Z
 
@@ -860,7 +799,6 @@
 
     if-eqz v1, :cond_a
 
-    .line 12
     iget-boolean v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->verifySignature:Z
 
     const/4 v3, 0x1
@@ -869,7 +807,6 @@
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 13
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
@@ -880,10 +817,8 @@
 
     invoke-static {v2, v4, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 14
     invoke-virtual {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->verifySignature(Ljava/io/File;)V
 
-    .line 15
     :cond_1
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getMd5()Ljava/lang/String;
 
@@ -891,7 +826,6 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->checkSplitMD5(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 16
     invoke-direct {p0, p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->isLibExtractNeeded(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Z
 
     move-result v1
@@ -900,10 +834,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 17
     invoke-virtual {p0, p2, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->extractLib(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;Ljava/io/File;)V
 
-    .line 18
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v1
@@ -917,7 +849,6 @@
     :cond_2
     move-object v1, v4
 
-    .line 19
     :goto_1
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasDex()Z
 
@@ -925,33 +856,28 @@
 
     if-eqz v5, :cond_3
 
-    .line 20
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 21
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 22
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->isVMMultiDexCapable()Z
 
     move-result v6
 
     if-nez v6, :cond_4
 
-    .line 23
     invoke-direct {p0, p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->isMultiDexExtractNeeded(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 24
     invoke-virtual {p0, p2, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->extractMultiDex(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;Ljava/io/File;)Ljava/util/List;
 
     move-result-object v6
@@ -963,7 +889,6 @@
     :cond_3
     move-object v5, v4
 
-    .line 25
     :cond_4
     :goto_2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
@@ -976,14 +901,12 @@
 
     if-eqz v5, :cond_9
 
-    .line 26
     sget-object v7, Ljava/io/File;->pathSeparator:Ljava/lang/String;
 
     invoke-static {v7, v5}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 27
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v8
@@ -996,13 +919,11 @@
 
     goto :goto_3
 
-    .line 28
     :cond_5
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 29
     :goto_3
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -1010,7 +931,6 @@
 
     if-nez v1, :cond_6
 
-    .line 30
     :try_start_0
     new-instance v1, Ldalvik/system/DexClassLoader;
 
@@ -1033,7 +953,6 @@
     :catchall_0
     move-exception p1
 
-    .line 31
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     const/16 v0, -0x11
@@ -1042,7 +961,6 @@
 
     throw p2
 
-    .line 32
     :cond_6
     :goto_4
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/OEMCompat;->shouldCheckOatFileInCurrentSys()Z
@@ -1051,7 +969,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 33
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,29 +989,24 @@
 
     invoke-static {v2, v1, v4}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 34
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/OEMCompat;->isSpecialManufacturer()Z
 
     move-result v1
 
-    .line 35
     invoke-static {p1, v8}, Lcom/iqiyi/android/qigsaw/core/common/OEMCompat;->getOatFilePath(Ljava/io/File;Ljava/io/File;)Ljava/io/File;
 
     move-result-object v4
 
-    .line 36
     invoke-static {v4}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->isLegalFile(Ljava/io/File;)Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    .line 37
     invoke-static {v4}, Lcom/iqiyi/android/qigsaw/core/common/OEMCompat;->checkOatFile(Ljava/io/File;)Z
 
     move-result v7
 
-    .line 38
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1121,7 +1033,6 @@
 
     if-nez v7, :cond_9
 
-    .line 39
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1146,7 +1057,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 40
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object p1
@@ -1155,7 +1065,6 @@
 
     move-result-object p1
 
-    .line 41
     :try_start_1
     invoke-static {v4, p1}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteFileSafelyLock(Ljava/io/File;Ljava/io/File;)Z
     :try_end_1
@@ -1163,7 +1072,6 @@
 
     goto :goto_5
 
-    .line 42
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1189,11 +1097,9 @@
 
     goto :goto_5
 
-    .line 43
     :cond_7
     invoke-static {v4}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteFileSafely(Ljava/io/File;)Z
 
-    .line 44
     :goto_5
     new-instance p1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
@@ -1209,7 +1115,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 45
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
 
     move-result-object p2
@@ -1235,7 +1140,6 @@
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 46
     invoke-virtual {v4}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     move-result-object v3
@@ -1246,7 +1150,6 @@
 
     invoke-static {v2, v0, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 47
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v0
@@ -1255,7 +1158,6 @@
 
     move-result-object v0
 
-    .line 48
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -1268,7 +1170,6 @@
 
     if-nez v1, :cond_9
 
-    .line 49
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v1
@@ -1277,12 +1178,10 @@
 
     move-result-object v1
 
-    .line 50
     invoke-virtual {p0, v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->createInstalledMarkLock(Ljava/io/File;Ljava/io/File;)Z
 
     move-result v0
 
-    .line 51
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;
 
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
@@ -1293,13 +1192,11 @@
 
     return-object v1
 
-    .line 52
     :cond_9
     invoke-virtual {p0, v6}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->createInstalledMark(Ljava/io/File;)Z
 
     move-result v0
 
-    .line 53
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;
 
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
@@ -1310,7 +1207,6 @@
 
     return-object v1
 
-    .line 54
     :cond_a
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
@@ -1326,7 +1222,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 55
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
@@ -1356,7 +1251,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->appContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SignatureValidator;->validateSplit(Landroid/content/Context;Ljava/io/File;)Z
@@ -1367,7 +1261,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1375,7 +1268,6 @@
 
     invoke-direct {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallerImpl;->deleteCorruptedFiles(Ljava/util/List;)V
 
-    .line 3
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;
 
     const/16 v1, -0xc
@@ -1390,7 +1282,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1

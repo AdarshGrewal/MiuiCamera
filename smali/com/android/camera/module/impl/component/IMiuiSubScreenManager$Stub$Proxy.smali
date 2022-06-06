@@ -27,10 +27,8 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -41,7 +39,6 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -63,12 +60,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -76,7 +71,6 @@
     :try_start_0
     const-string v2, "android.os.IPowerManager"
 
-    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -90,7 +84,6 @@
     :pswitch_0
     goto :goto_0
 
-    .line 4
     :pswitch_1
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -99,12 +92,10 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 5
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 6
     :pswitch_2
     new-instance v4, Landroid/os/Binder;
 
@@ -112,40 +103,32 @@
 
     iput-object v4, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mBinder:Landroid/os/Binder;
 
-    .line 7
     invoke-virtual {v0, v4}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 8
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v4
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 9
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 10
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 11
     :pswitch_3
     iget-object v2, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mBinder:Landroid/os/Binder;
 
     if-eqz v2, :cond_0
 
-    .line 12
     iget-object v2, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mBinder:Landroid/os/Binder;
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 13
     :cond_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 14
     :goto_0
     iget-object v2, p0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -153,10 +136,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -164,10 +145,8 @@
     :catchall_0
     move-exception p1
 
-    .line 17
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 18
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     throw p1

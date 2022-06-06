@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentDescription;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription$1;->this$0:Lcom/android/camera/fragment/FragmentDescription;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,10 +34,8 @@
 .method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription$1;->this$0:Lcom/android/camera/fragment/FragmentDescription;
 
     iget-object v0, v0, Lcom/android/camera/fragment/FragmentDescription;->mMistatsName:Ljava/lang/String;
@@ -52,7 +49,6 @@
 
     const/4 p2, 0x1
 
-    .line 3
     :try_start_0
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->canScrollVertically(I)Z
 
@@ -74,10 +70,8 @@
 
     const-string/jumbo v2, "slide"
 
-    .line 4
     invoke-static {v0, v1, v2}, Lcom/android/camera/statistic/MistatsWrapper;->commonKeyTriggerEvent(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription$1;->this$0:Lcom/android/camera/fragment/FragmentDescription;
 
@@ -94,7 +88,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     sget-object p2, Lcom/android/camera/fragment/FragmentDescription;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;

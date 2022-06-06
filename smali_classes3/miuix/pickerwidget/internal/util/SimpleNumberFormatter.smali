@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     sput-object v0, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sLocale:Ljava/util/Locale;
 
-    .line 2
     new-instance v0, Ljava/text/DecimalFormatSymbols;
 
     sget-object v1, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sLocale:Ljava/util/Locale;
@@ -39,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +45,6 @@
 .method public static convertInt(II)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -67,7 +63,6 @@
 
     const/16 v1, 0x2d
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -77,12 +72,10 @@
 
     if-lt p1, v1, :cond_2
 
-    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -90,14 +83,12 @@
     :goto_0
     if-ge v1, p0, :cond_1
 
-    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -136,24 +127,20 @@
     :goto_1
     if-ge v1, p0, :cond_6
 
-    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 8
     :cond_6
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 9
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 10
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1
@@ -168,7 +155,6 @@
 
     const/4 v0, -0x1
 
-    .line 1
     invoke-static {v0, p0}, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->format(II)Ljava/lang/String;
 
     move-result-object p0
@@ -179,7 +165,6 @@
 .method public static format(II)Ljava/lang/String;
     .locals 1
 
-    .line 2
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -188,7 +173,6 @@
 
     move-result v0
 
-    .line 3
     invoke-static {p0, p1}, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->convertInt(II)Ljava/lang/String;
 
     move-result-object p0
@@ -197,7 +181,6 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 4
     invoke-static {v0, p0}, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->localizeDigits(CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -211,7 +194,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     sget-object v0, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sLocale:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -220,7 +202,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/text/DecimalFormatSymbols;
 
     invoke-direct {v0, p0}, Ljava/text/DecimalFormatSymbols;-><init>(Ljava/util/Locale;)V
@@ -231,16 +212,13 @@
 
     sput-char v0, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sZeroDigit:C
 
-    .line 3
     sput-object p0, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sLocale:Ljava/util/Locale;
 
-    .line 4
     :cond_0
     sget-char p0, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->sZeroDigit:C
 
     return p0
 
-    .line 5
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -254,7 +232,6 @@
 .method public static localizeDigits(CLjava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -263,7 +240,6 @@
 
     sub-int/2addr p0, v1
 
-    .line 2
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v2
@@ -279,7 +255,6 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 3
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -294,7 +269,6 @@
 
     int-to-char v4, v4
 
-    .line 4
     :cond_0
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -302,13 +276,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 6
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1

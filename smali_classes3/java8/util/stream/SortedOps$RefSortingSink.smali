@@ -48,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/SortedOps$AbstractRefSortingSink;-><init>(Ljava8/util/stream/Sink;Ljava/util/Comparator;)V
 
     return-void
@@ -64,7 +63,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -87,7 +85,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     long-to-int p1, p1
@@ -106,7 +103,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -120,14 +116,12 @@
 .method public end()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
 
     iget-object v1, p0, Ljava8/util/stream/SortedOps$AbstractRefSortingSink;->comparator:Ljava/util/Comparator;
 
     invoke-static {v0, v1}, Ljava8/util/Lists;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     iget-object v1, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
@@ -140,12 +134,10 @@
 
     invoke-interface {v0, v1, v2}, Ljava8/util/stream/Sink;->begin(J)V
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/SortedOps$AbstractRefSortingSink;->cancellationRequestedCalled:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
 
     iget-object v1, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
@@ -160,7 +152,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
 
@@ -179,7 +170,6 @@
 
     move-result-object v1
 
-    .line 6
     iget-object v2, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v2}, Ljava8/util/stream/Sink;->cancellationRequested()Z
@@ -190,7 +180,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     iget-object v2, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
@@ -198,7 +187,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     :goto_1
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
@@ -207,7 +195,6 @@
 
     const/4 v0, 0x0
 
-    .line 9
     iput-object v0, p0, Ljava8/util/stream/SortedOps$RefSortingSink;->list:Ljava/util/ArrayList;
 
     return-void

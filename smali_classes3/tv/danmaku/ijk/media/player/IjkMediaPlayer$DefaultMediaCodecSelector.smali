@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$DefaultMediaCodecSelector;
 
     invoke-direct {v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$DefaultMediaCodecSelector;-><init>()V
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +49,6 @@
 
     move-object/from16 v0, p2
 
-    .line 1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v2, 0x0
@@ -62,7 +59,6 @@
 
     return-object v2
 
-    .line 2
     :cond_0
     invoke-static/range {p2 .. p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -72,7 +68,6 @@
 
     return-object v2
 
-    .line 3
     :cond_1
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
@@ -112,12 +107,10 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v3
@@ -127,12 +120,10 @@
     :goto_0
     if-ge v4, v3, :cond_8
 
-    .line 6
     invoke-static {v4}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v6
 
-    .line 7
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
     move-result-object v9
@@ -155,7 +146,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-virtual {v6}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v9
@@ -164,7 +154,6 @@
 
     goto :goto_3
 
-    .line 9
     :cond_2
     invoke-virtual {v6}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -174,7 +163,6 @@
 
     goto :goto_3
 
-    .line 10
     :cond_3
     array-length v10, v9
 
@@ -185,7 +173,6 @@
 
     aget-object v12, v9, v11
 
-    .line 11
     invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v13
@@ -194,7 +181,6 @@
 
     goto :goto_2
 
-    .line 12
     :cond_4
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
@@ -214,7 +200,6 @@
 
     invoke-static {v13, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     invoke-virtual {v12, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
@@ -223,7 +208,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_5
     invoke-static {v6, v0}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->setupCandidate(Landroid/media/MediaCodecInfo;Ljava/lang/String;)Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;
 
@@ -233,11 +217,9 @@
 
     goto :goto_2
 
-    .line 15
     :cond_6
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 16
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
     move-result-object v12
@@ -268,7 +250,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     invoke-virtual {v2, v0}, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->dumpProfileLevels(Ljava/lang/String;)V
 
     :goto_2
@@ -286,7 +267,6 @@
 
     goto/16 :goto_0
 
-    .line 18
     :cond_8
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -298,7 +278,6 @@
 
     return-object v0
 
-    .line 19
     :cond_9
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -306,7 +285,6 @@
 
     check-cast v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;
 
-    .line 20
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -325,7 +303,6 @@
 
     check-cast v2, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;
 
-    .line 21
     iget v3, v2, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mRank:I
 
     iget v4, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mRank:I
@@ -336,7 +313,6 @@
 
     goto :goto_4
 
-    .line 22
     :cond_b
     iget v1, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mRank:I
 
@@ -344,7 +320,6 @@
 
     if-ge v1, v2, :cond_c
 
-    .line 23
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -373,7 +348,6 @@
 
     return-object v0
 
-    .line 24
     :cond_c
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->access$100()Ljava/lang/String;
 
@@ -407,7 +381,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     iget-object v0, v0, Ltv/danmaku/ijk/media/player/IjkMediaCodecInfo;->mCodecInfo:Landroid/media/MediaCodecInfo;
 
     invoke-virtual {v0}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;

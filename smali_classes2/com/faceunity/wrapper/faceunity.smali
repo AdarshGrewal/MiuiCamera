@@ -122,7 +122,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/faceunity/wrapper/faceunity$LoadConfig;->access$000()Z
 
     move-result v0
@@ -131,12 +130,10 @@
 
     const-string v0, "fuai"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "CNamaSDK"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     :cond_0
@@ -146,7 +143,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

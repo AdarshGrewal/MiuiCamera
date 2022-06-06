@@ -68,17 +68,17 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f12001a
 
-.field public static final cancel:I = 0x7f12025e
+.field public static final cancel:I = 0x7f120246
 
-.field public static final confirm:I = 0x7f120309
+.field public static final confirm:I = 0x7f1202f1
 
-.field public static final prompt_desc:I = 0x7f1208b0
+.field public static final prompt_desc:I = 0x7f120861
 
-.field public static final search_menu_title:I = 0x7f1208d2
+.field public static final search_menu_title:I = 0x7f120883
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f120914
+.field public static final status_bar_notification_info_overflow:I = 0x7f1208c5
 
-.field public static final warm_prompt:I = 0x7f1209e9
+.field public static final warm_prompt:I = 0x7f120999
 
 
 # direct methods

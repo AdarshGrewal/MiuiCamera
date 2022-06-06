@@ -10,7 +10,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/view/ActionModeImpl;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
 
     return-void
@@ -21,7 +20,6 @@
 .method public addAnimationListener(Lmiuix/view/ActionModeAnimationListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -38,7 +36,6 @@
 .method public getTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -57,7 +54,6 @@
 .method public removeAnimationListener(Lmiuix/view/ActionModeAnimationListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -74,7 +70,6 @@
 .method public setButton(II)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -93,7 +88,6 @@
 .method public setButton(III)V
     .locals 1
 
-    .line 4
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -112,7 +106,6 @@
 .method public setButton(ILjava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -129,7 +122,6 @@
 .method public setButton(ILjava/lang/CharSequence;I)V
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -164,7 +156,6 @@
 .method public setTitle(I)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -183,7 +174,6 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/ActionModeImpl;->mActionModeView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

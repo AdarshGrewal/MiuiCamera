@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,10 +37,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableAmb;
 
     const/4 v1, 0x0
@@ -66,22 +63,18 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lio/reactivex/Completable;->complete()Lio/reactivex/Completable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     array-length v0, p0
 
@@ -91,7 +84,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Completable;->wrap(Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
@@ -100,7 +92,6 @@
 
     return-object p0
 
-    .line 6
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableAmb;
 
@@ -124,7 +115,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/operators/completable/CompletableEmpty;->INSTANCE:Lio/reactivex/Completable;
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Completable;)Lio/reactivex/Completable;
@@ -156,10 +146,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableConcatIterable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableConcatIterable;-><init>(Ljava/lang/Iterable;)V
@@ -197,7 +185,6 @@
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/Completable;->concat(Lorg/reactivestreams/Publisher;I)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -231,15 +218,12 @@
 
     const-string v0, "sources is null"
 
-    .line 4
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "prefetch"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableConcat;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableConcat;-><init>(Lorg/reactivestreams/Publisher;I)V
@@ -262,22 +246,18 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lio/reactivex/Completable;->complete()Lio/reactivex/Completable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     array-length v0, p0
 
@@ -287,7 +267,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Completable;->wrap(Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
@@ -296,7 +275,6 @@
 
     return-object p0
 
-    .line 6
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableConcatArray;
 
@@ -320,10 +298,8 @@
 
     const-string v0, "source is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableCreate;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableCreate;-><init>(Lio/reactivex/CompletableOnSubscribe;)V
@@ -357,10 +333,8 @@
 
     const-string v0, "completableSupplier"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDefer;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableDefer;-><init>(Ljava/util/concurrent/Callable;)V
@@ -403,35 +377,28 @@
 
     const-string v0, "onSubscribe is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onError is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onTerminate is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onAfterTerminate is null"
 
-    .line 5
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onDispose is null"
 
-    .line 6
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletablePeek;
 
     move-object v1, v0
@@ -470,10 +437,8 @@
 
     const-string v0, "error is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableError;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableError;-><init>(Ljava/lang/Throwable;)V
@@ -507,10 +472,8 @@
 
     const-string v0, "errorSupplier is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableErrorSupplier;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableErrorSupplier;-><init>(Ljava/util/concurrent/Callable;)V
@@ -533,10 +496,8 @@
 
     const-string v0, "run is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromAction;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromAction;-><init>(Lio/reactivex/functions/Action;)V
@@ -568,10 +529,8 @@
 
     const-string v0, "callable is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromCallable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromCallable;-><init>(Ljava/util/concurrent/Callable;)V
@@ -603,10 +562,8 @@
 
     const-string v0, "future is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/internal/functions/Functions;->futureAction(Ljava/util/concurrent/Future;)Lio/reactivex/functions/Action;
 
     move-result-object p0
@@ -640,10 +597,8 @@
 
     const-string v0, "observable is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromObservable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromObservable;-><init>(Lio/reactivex/ObservableSource;)V
@@ -681,10 +636,8 @@
 
     const-string v0, "publisher is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromPublisher;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromPublisher;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -707,10 +660,8 @@
 
     const-string v0, "run is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromRunnable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromRunnable;-><init>(Ljava/lang/Runnable;)V
@@ -744,10 +695,8 @@
 
     const-string v0, "single is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromSingle;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromSingle;-><init>(Lio/reactivex/SingleSource;)V
@@ -781,10 +730,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableMergeIterable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableMergeIterable;-><init>(Ljava/lang/Iterable;)V
@@ -824,7 +771,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {p0, v0, v1}, Lio/reactivex/Completable;->merge0(Lorg/reactivestreams/Publisher;IZ)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -858,7 +804,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-static {p0, p1, v0}, Lio/reactivex/Completable;->merge0(Lorg/reactivestreams/Publisher;IZ)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -892,15 +837,12 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableMerge;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/completable/CompletableMerge;-><init>(Lorg/reactivestreams/Publisher;IZ)V
@@ -923,22 +865,18 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lio/reactivex/Completable;->complete()Lio/reactivex/Completable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     array-length v0, p0
 
@@ -948,7 +886,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Completable;->wrap(Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
@@ -957,7 +894,6 @@
 
     return-object p0
 
-    .line 6
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableMergeArray;
 
@@ -981,10 +917,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableMergeDelayErrorArray;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableMergeDelayErrorArray;-><init>([Lio/reactivex/CompletableSource;)V
@@ -1018,10 +952,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableMergeDelayErrorIterable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableMergeDelayErrorIterable;-><init>(Ljava/lang/Iterable;)V
@@ -1061,7 +993,6 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-static {p0, v0, v1}, Lio/reactivex/Completable;->merge0(Lorg/reactivestreams/Publisher;IZ)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -1095,7 +1026,6 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-static {p0, p1, v0}, Lio/reactivex/Completable;->merge0(Lorg/reactivestreams/Publisher;IZ)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -1112,7 +1042,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/operators/completable/CompletableNever;->INSTANCE:Lio/reactivex/Completable;
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Completable;)Lio/reactivex/Completable;
@@ -1133,15 +1062,12 @@
 
     const-string v0, "unit is null"
 
-    .line 1
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 2
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableTimeout;
 
     move-object v1, v0
@@ -1174,7 +1100,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -1197,15 +1122,12 @@
 
     const-string v0, "unit is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableTimer;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/completable/CompletableTimer;-><init>(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
@@ -1220,14 +1142,12 @@
 .method public static toNpe(Ljava/lang/Throwable;)Ljava/lang/NullPointerException;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Actually not, but can\'t pass out an exception otherwise..."
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0, p0}, Ljava/lang/NullPointerException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     return-object v0
@@ -1244,15 +1164,12 @@
 
     const-string v0, "source is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Lio/reactivex/Completable;
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromUnsafeSource;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromUnsafeSource;-><init>(Lio/reactivex/CompletableSource;)V
@@ -1263,7 +1180,6 @@
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1302,7 +1218,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lio/reactivex/Completable;->using(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Consumer;Z)Lio/reactivex/Completable;
 
     move-result-object p0
@@ -1338,20 +1253,16 @@
 
     const-string v0, "resourceSupplier is null"
 
-    .line 2
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "completableFunction is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "disposer is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableUsing;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/completable/CompletableUsing;-><init>(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Consumer;Z)V
@@ -1374,15 +1285,12 @@
 
     const-string v0, "source is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Lio/reactivex/Completable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p0, Lio/reactivex/Completable;
 
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Completable;)Lio/reactivex/Completable;
@@ -1391,7 +1299,6 @@
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromUnsafeSource;
 
@@ -1417,7 +1324,6 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -1432,7 +1338,6 @@
 
     aput-object p1, v0, v1
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/Completable;->ambArray([Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -1449,7 +1354,6 @@
         value = "none"
     .end annotation
 
-    .line 9
     invoke-virtual {p0, p1}, Lio/reactivex/Completable;->concatWith(Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -1484,10 +1388,8 @@
 
     const-string v0, "next is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDelaySubscriptionOther;
 
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
@@ -1526,10 +1428,8 @@
 
     const-string v0, "next is null"
 
-    .line 7
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/operators/maybe/MaybeDelayWithCompletable;
 
     invoke-direct {v0, p1, p0}, Lio/reactivex/internal/operators/maybe/MaybeDelayWithCompletable;-><init>(Lio/reactivex/MaybeSource;Lio/reactivex/CompletableSource;)V
@@ -1564,10 +1464,8 @@
 
     const-string v0, "next is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableDelaySubscriptionOther;
 
     invoke-virtual {p0}, Lio/reactivex/Completable;->toObservable()Lio/reactivex/Observable;
@@ -1606,10 +1504,8 @@
 
     const-string v0, "next is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDelayWithCompletable;
 
     invoke-direct {v0, p1, p0}, Lio/reactivex/internal/operators/single/SingleDelayWithCompletable;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/CompletableSource;)V
@@ -1642,7 +1538,6 @@
 
     const-string v0, "converter is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1662,15 +1557,12 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/observers/BlockingMultiObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
-    .line 3
     invoke-virtual {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;->blockingGet()Ljava/lang/Object;
 
     return-void
@@ -1687,18 +1579,14 @@
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/observers/BlockingMultiObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;-><init>()V
 
-    .line 6
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
-    .line 7
     invoke-virtual {v0, p1, p2, p3}, Lio/reactivex/internal/observers/BlockingMultiObserver;->blockingAwait(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result p1
@@ -1715,15 +1603,12 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/observers/BlockingMultiObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
-    .line 3
     invoke-virtual {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;->blockingGetError()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -1742,18 +1627,14 @@
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/observers/BlockingMultiObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;-><init>()V
 
-    .line 6
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
-    .line 7
     invoke-virtual {v0, p1, p2, p3}, Lio/reactivex/internal/observers/BlockingMultiObserver;->blockingGetError(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Throwable;
 
     move-result-object p1
@@ -1770,7 +1651,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableCache;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableCache;-><init>(Lio/reactivex/CompletableSource;)V
@@ -1793,7 +1673,6 @@
 
     const-string v0, "transformer is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1822,7 +1701,6 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -1837,7 +1715,6 @@
 
     aput-object p1, v0, v1
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/Completable;->concatArray([Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -1854,7 +1731,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -1893,7 +1769,6 @@
 
     move-object v4, p4
 
-    .line 2
     invoke-virtual/range {v0 .. v5}, Lio/reactivex/Completable;->delay(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Z)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -1912,15 +1787,12 @@
 
     const-string v0, "unit is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDelay;
 
     move-object v1, v0
@@ -1953,12 +1825,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
@@ -1973,7 +1843,6 @@
 
     move-object v5, p1
 
-    .line 3
     invoke-direct/range {v0 .. v6}, Lio/reactivex/Completable;->doOnLifecycle(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Action;Lio/reactivex/functions/Action;Lio/reactivex/functions/Action;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -1992,10 +1861,8 @@
 
     const-string v0, "onFinally is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDoFinally;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableDoFinally;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/functions/Action;)V
@@ -2016,7 +1883,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
@@ -2051,7 +1917,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
@@ -2097,7 +1962,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
@@ -2143,10 +2007,8 @@
 
     const-string v0, "onEvent is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDoOnEvent;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableDoOnEvent;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/functions/Consumer;)V
@@ -2178,7 +2040,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
@@ -2211,7 +2072,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
@@ -2246,7 +2106,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableHide;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableHide;-><init>(Lio/reactivex/CompletableSource;)V
@@ -2269,10 +2128,8 @@
 
     const-string v0, "onLift is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableLift;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableLift;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/CompletableOperator;)V
@@ -2295,7 +2152,6 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -2310,7 +2166,6 @@
 
     aput-object p1, v0, v1
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/Completable;->mergeArray([Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -2329,10 +2184,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableObserveOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableObserveOn;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/Scheduler;)V
@@ -2353,7 +2206,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->alwaysTrue()Lio/reactivex/functions/Predicate;
 
     move-result-object v0
@@ -2387,10 +2239,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/functions/Predicate;)V
@@ -2426,10 +2276,8 @@
 
     const-string v0, "errorMapper is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableResumeNext;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableResumeNext;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/functions/Function;)V
@@ -2450,7 +2298,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDetach;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableDetach;-><init>(Lio/reactivex/CompletableSource;)V
@@ -2471,7 +2318,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2496,7 +2342,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2521,7 +2366,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2560,7 +2404,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2585,7 +2428,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2610,7 +2452,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2646,7 +2487,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2684,7 +2524,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2720,7 +2559,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2759,7 +2597,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2786,7 +2623,6 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -2801,7 +2637,6 @@
 
     aput-object p0, v0, p1
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/Completable;->concatArray([Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -2836,10 +2671,8 @@
 
     const-string v0, "other is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     invoke-virtual {p0}, Lio/reactivex/Completable;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -2874,10 +2707,8 @@
 
     const-string v0, "other is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {p0}, Lio/reactivex/Completable;->toObservable()Lio/reactivex/Observable;
 
     move-result-object v0
@@ -2895,12 +2726,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/observers/EmptyCompletableObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/EmptyCompletableObserver;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
     return-object v0
@@ -2917,15 +2746,12 @@
 
     const-string v0, "onComplete is null"
 
-    .line 14
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 15
     new-instance v0, Lio/reactivex/internal/observers/CallbackCompletableObserver;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/observers/CallbackCompletableObserver;-><init>(Lio/reactivex/functions/Action;)V
 
-    .line 16
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
     return-object v0
@@ -2954,20 +2780,16 @@
 
     const-string v0, "onError is null"
 
-    .line 10
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 11
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 12
     new-instance v0, Lio/reactivex/internal/observers/CallbackCompletableObserver;
 
     invoke-direct {v0, p2, p1}, Lio/reactivex/internal/observers/CallbackCompletableObserver;-><init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)V
 
-    .line 13
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
     return-object v0
@@ -2981,16 +2803,13 @@
 
     const-string v0, "s is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     :try_start_0
     invoke-static {p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSubscribe(Lio/reactivex/Completable;Lio/reactivex/CompletableObserver;)Lio/reactivex/CompletableObserver;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p0, p1}, Lio/reactivex/Completable;->subscribeActual(Lio/reactivex/CompletableObserver;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -3001,13 +2820,10 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 7
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 8
     invoke-static {p1}, Lio/reactivex/Completable;->toNpe(Ljava/lang/Throwable;)Ljava/lang/NullPointerException;
 
     move-result-object p1
@@ -3017,7 +2833,6 @@
     :catch_0
     move-exception p1
 
-    .line 9
     throw p1
 .end method
 
@@ -3035,10 +2850,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/Scheduler;)V
@@ -3067,7 +2880,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
     return-object p1
@@ -3091,12 +2903,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/observers/TestObserver;
 
     invoke-direct {v0}, Lio/reactivex/observers/TestObserver;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
     return-object v0
@@ -3120,17 +2930,14 @@
         value = "none"
     .end annotation
 
-    .line 3
     new-instance v0, Lio/reactivex/observers/TestObserver;
 
     invoke-direct {v0}, Lio/reactivex/observers/TestObserver;-><init>()V
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lio/reactivex/observers/TestObserver;->cancel()V
 
-    .line 5
     :cond_0
     invoke-virtual {p0, v0}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/CompletableObserver;)V
 
@@ -3146,7 +2953,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -3177,10 +2983,8 @@
 
     const-string v0, "other is null"
 
-    .line 2
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -3219,7 +3023,6 @@
 
     move-object v4, p4
 
-    .line 4
     invoke-direct/range {v0 .. v5}, Lio/reactivex/Completable;->timeout0(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -3238,10 +3041,8 @@
 
     const-string v0, "other is null"
 
-    .line 5
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     invoke-direct/range {p0 .. p5}, Lio/reactivex/Completable;->timeout0(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Lio/reactivex/CompletableSource;)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -3273,7 +3074,6 @@
     :try_start_0
     const-string v0, "converter is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -3291,10 +3091,8 @@
     :catchall_0
     move-exception p1
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 3
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -3325,12 +3123,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToFlowable;
 
     if-eqz v0, :cond_0
 
-    .line 2
     move-object v0, p0
 
     check-cast v0, Lio/reactivex/internal/fuseable/FuseToFlowable;
@@ -3341,7 +3137,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableToFlowable;
 
@@ -3373,12 +3168,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToMaybe;
 
     if-eqz v0, :cond_0
 
-    .line 2
     move-object v0, p0
 
     check-cast v0, Lio/reactivex/internal/fuseable/FuseToMaybe;
@@ -3389,7 +3182,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/maybe/MaybeFromCompletable;
 
@@ -3421,12 +3213,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToObservable;
 
     if-eqz v0, :cond_0
 
-    .line 2
     move-object v0, p0
 
     check-cast v0, Lio/reactivex/internal/fuseable/FuseToObservable;
@@ -3437,7 +3227,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableToObservable;
 
@@ -3473,10 +3262,8 @@
 
     const-string v0, "completionValueSupplier is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableToSingle;
 
     const/4 v1, 0x0
@@ -3511,10 +3298,8 @@
 
     const-string v0, "completionValue is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableToSingle;
 
     const/4 v1, 0x0
@@ -3539,10 +3324,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableDisposeOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/completable/CompletableDisposeOn;-><init>(Lio/reactivex/CompletableSource;Lio/reactivex/Scheduler;)V

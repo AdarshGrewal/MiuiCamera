@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/SingleCameraProcessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$2;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +37,10 @@
 .method public onImageAvailable(Landroid/media/ImageReader;)V
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v0
@@ -52,10 +49,8 @@
 
     const-string v3, "[     RAW]"
 
-    .line 3
     invoke-static {v3, v2}, Lcom/xiaomi/camera/base/PerformanceTracker;->trackAlgorithmProcess(Ljava/lang/String;I)V
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/camera/core/SingleCameraProcessor;->access$000()Ljava/lang/String;
 
     move-result-object v3
@@ -76,7 +71,6 @@
 
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$2;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
@@ -87,15 +81,12 @@
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
-    .line 7
     new-instance p1, Lcom/xiaomi/camera/core/ImageProcessor$FilterTaskData;
 
     invoke-direct {p1, v0, v2, v2}, Lcom/xiaomi/camera/core/ImageProcessor$FilterTaskData;-><init>(Landroid/media/Image;IZ)V
 
-    .line 8
     iget-object v0, p0, Lcom/xiaomi/camera/core/SingleCameraProcessor$2;->this$0:Lcom/xiaomi/camera/core/SingleCameraProcessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/ImageProcessor;->dispatchFilterTask(Lcom/xiaomi/camera/core/ImageProcessor$FilterTaskData;)V

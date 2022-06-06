@@ -46,7 +46,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +59,6 @@
 .method public getAlgorithmName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mAlgorithmName:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +67,6 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mData:[B
 
     return-object v0
@@ -78,7 +75,6 @@
 .method public getDate()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mDate:J
 
     return-wide v0
@@ -87,7 +83,6 @@
 .method public getExifInterface()Lcom/android/gallery3d/exif/ExifInterface;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mExifInterface:Lcom/android/gallery3d/exif/ExifInterface;
 
     return-object v0
@@ -96,7 +91,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mHeight:I
 
     return v0
@@ -105,7 +99,6 @@
 .method public getInfo()Lcom/xiaomi/camera/core/PictureInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mInfo:Lcom/xiaomi/camera/core/PictureInfo;
 
     return-object v0
@@ -114,7 +107,6 @@
 .method public getLocation()Landroid/location/Location;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mLocation:Landroid/location/Location;
 
     return-object v0
@@ -123,7 +115,6 @@
 .method public getOrientation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mOrientation:I
 
     return v0
@@ -132,7 +123,6 @@
 .method public getParallelTaskData()Lcom/xiaomi/camera/core/ParallelTaskData;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mParallelTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     return-object v0
@@ -141,7 +131,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mSize:I
 
     return v0
@@ -150,7 +139,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mWidth:I
 
     return v0
@@ -159,7 +147,6 @@
 .method public isHeic()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mIsHeic:Z
 
     return v0
@@ -168,7 +155,6 @@
 .method public isNeedThumbnail()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mNeedThumbnail:Z
 
     return v0
@@ -177,7 +163,6 @@
 .method public setAlgorithmName(Ljava/lang/String;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mAlgorithmName:Ljava/lang/String;
 
     return-object p0
@@ -186,7 +171,6 @@
 .method public setData([B)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mData:[B
 
     return-object p0
@@ -195,7 +179,6 @@
 .method public setDate(J)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mDate:J
 
     return-object p0
@@ -204,7 +187,6 @@
 .method public setExifInterface(Lcom/android/gallery3d/exif/ExifInterface;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mExifInterface:Lcom/android/gallery3d/exif/ExifInterface;
 
     return-object p0
@@ -213,7 +195,6 @@
 .method public setHeight(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mHeight:I
 
     return-object p0
@@ -222,7 +203,6 @@
 .method public setInfo(Lcom/xiaomi/camera/core/PictureInfo;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mInfo:Lcom/xiaomi/camera/core/PictureInfo;
 
     return-object p0
@@ -231,7 +211,6 @@
 .method public setIsHeic(Z)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mIsHeic:Z
 
     return-object p0
@@ -240,7 +219,6 @@
 .method public setLocation(Landroid/location/Location;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mLocation:Landroid/location/Location;
 
     return-object p0
@@ -249,7 +227,6 @@
 .method public setNeedThumbnail(Z)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mNeedThumbnail:Z
 
     return-object p0
@@ -258,7 +235,6 @@
 .method public setOrientation(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mOrientation:I
 
     return-object p0
@@ -267,7 +243,6 @@
 .method public setParallelTaskData(Lcom/xiaomi/camera/core/ParallelTaskData;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mParallelTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     return-object p0
@@ -276,7 +251,6 @@
 .method public setSize(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mSize:I
 
     return-object p0
@@ -285,7 +259,6 @@
 .method public setWidth(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->mWidth:I
 
     return-object p0
@@ -294,7 +267,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

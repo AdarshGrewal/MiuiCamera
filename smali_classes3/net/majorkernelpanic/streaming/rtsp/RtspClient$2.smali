@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)I
@@ -51,7 +49,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -63,10 +60,8 @@
 
     const-string v3, "Connecting to RTSP server..."
 
-    .line 3
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$400(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -79,7 +74,6 @@
 
     invoke-static {v0, v3}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$302(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v0, v3}, Lnet/majorkernelpanic/streaming/Session;->setDestination(Ljava/lang/String;)V
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -112,7 +105,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 7
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -120,7 +112,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 8
     :try_start_2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -132,14 +123,12 @@
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->syncStart()V
 
-    .line 9
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$202(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;I)I
 
-    .line 10
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -150,7 +139,6 @@
 
     if-nez v0, :cond_1
 
-    .line 11
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Landroid/os/Handler;
@@ -169,7 +157,6 @@
 
     goto :goto_0
 
-    .line 12
     :catch_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -182,19 +169,16 @@
     :catch_1
     move-exception v0
 
-    .line 13
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v1, v2, v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$600(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;ILjava/lang/Exception;)V
 
-    .line 14
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$700(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
 
     return-void
 
-    .line 15
     :catch_2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -206,7 +190,6 @@
 
     iput-object v2, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;->session:Lnet/majorkernelpanic/streaming/Session;
 
-    .line 16
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$2;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$202(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;I)I

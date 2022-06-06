@@ -22,7 +22,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$6;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     const/4 p1, 0x0
@@ -39,28 +38,24 @@
 
     const-string v0, "width"
 
-    .line 1
     invoke-virtual {p1, v0}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "height"
 
-    .line 2
     invoke-virtual {p1, v1}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "sar_num"
 
-    .line 3
     invoke-virtual {p1, v2}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v2
 
     const-string v3, "sar_den"
 
-    .line 4
     invoke-virtual {p1, v3}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result p1
@@ -84,7 +79,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -98,7 +92,6 @@
 
     aput-object v0, v7, v4
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -121,14 +114,12 @@
 
     const-string p1, "%d x %d [SAR %d:%d]"
 
-    .line 7
     invoke-static {v6, p1, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 8
     :cond_2
     :goto_0
     sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;

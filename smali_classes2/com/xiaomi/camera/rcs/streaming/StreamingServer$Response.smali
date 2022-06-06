@@ -40,25 +40,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "500 Internal Server Error"
 
-    .line 7
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->status:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 8
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->content:Ljava/lang/String;
 
-    .line 9
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->attributes:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 10
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->mRequest:Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;
 
     return-void
@@ -67,23 +62,18 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "500 Internal Server Error"
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->status:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->content:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->attributes:Ljava/lang/String;
 
-    .line 5
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->mRequest:Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;
 
     return-void
@@ -101,7 +91,6 @@
 
     const-string v0, ""
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->mRequest:Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Request;
 
@@ -132,7 +121,6 @@
     :catch_0
     move-exception v1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v2
@@ -171,7 +159,6 @@
 
     const/4 v1, -0x1
 
-    .line 3
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -231,7 +218,6 @@
 
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingServer$Response;->content:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -254,7 +240,6 @@
 
     move-result-object v1
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/camera/rcs/streaming/StreamingServer;->access$100()Ljava/lang/String;
 
     move-result-object v2
@@ -267,7 +252,6 @@
 
     invoke-static {v2, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0

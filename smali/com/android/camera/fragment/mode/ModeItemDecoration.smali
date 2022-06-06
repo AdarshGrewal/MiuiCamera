@@ -33,23 +33,18 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/fragment/mode/IMoreMode;I)V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
-    .line 3
     iput p3, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mType:I
 
-    .line 4
     invoke-interface {p2}, Lcom/android/camera/fragment/mode/IMoreMode;->getCountPerLine()I
 
     move-result p2
 
     iput p2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mPerLineCount:I
 
-    .line 5
     invoke-static {p1, p3}, Lcom/android/camera/fragment/mode/MoreModeHelper;->getPanelWidth(Landroid/content/Context;I)I
 
     move-result p2
@@ -58,15 +53,13 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
-    .line 7
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0705ad
+    const v2, 0x7f0705aa
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -77,12 +70,11 @@
     :cond_0
     iget-object v1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
-    .line 8
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0705b4
+    const v2, 0x7f0705b1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -91,14 +83,13 @@
     :goto_0
     if-nez p3, :cond_1
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0705b8
+    const v3, 0x7f0705b5
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -111,14 +102,13 @@
     :cond_1
     if-ne p3, v0, :cond_2
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0705b9
+    const v3, 0x7f0705b6
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -128,7 +118,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_2
     iget-object v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
@@ -136,7 +125,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0705b7
+    const v3, 0x7f0705b4
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -144,7 +133,6 @@
 
     iput v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mModeListHorMargin:I
 
-    .line 12
     :goto_1
     iget v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mPerLineCount:I
 
@@ -166,7 +154,6 @@
 
     iput p2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mHorMargin:I
 
-    .line 13
     invoke-static {p1, p3}, Lcom/android/camera/fragment/mode/MoreModeHelper;->getTopMarginForNormal(Landroid/content/Context;I)I
 
     move-result p2
@@ -181,7 +168,6 @@
 
     goto :goto_3
 
-    .line 14
     :cond_3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -199,23 +185,21 @@
     const/4 p2, 0x0
 
     :goto_2
-    invoke-static {p1, v1, p2}, Lcom/android/camera/display/Display;->getMoreModeTabMarginVer(Landroid/content/Context;IZ)I
+    invoke-static {p1, v1, p2}, Lcom/android/camera/Display;->getMoreModeTabMarginVer(Landroid/content/Context;IZ)I
 
     move-result p1
 
     goto :goto_4
 
-    .line 15
     :cond_5
     :goto_3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mContext:Landroid/content/Context;
 
-    .line 16
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0705ae
+    const p2, 0x7f0705ab
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -223,7 +207,6 @@
 
     sub-int/2addr p1, v1
 
-    .line 17
     :goto_4
     iput p1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mBottomMargin:I
 
@@ -235,19 +218,14 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 6
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;->getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
-    .line 2
     iget p4, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mHorMargin:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mBottomMargin:I
 
-    .line 4
     iget v1, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mTopMargin:I
 
-    .line 5
     iget v2, p0, Lcom/android/camera/fragment/mode/ModeItemDecoration;->mType:I
 
     const/4 v3, 0x0
@@ -268,7 +246,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
@@ -286,13 +263,11 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
 
-    .line 8
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v2
@@ -303,7 +278,6 @@
 
     if-eq p2, v2, :cond_6
 
-    .line 9
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p3
@@ -327,20 +301,17 @@
 
     goto :goto_1
 
-    .line 10
     :cond_4
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
 
-    .line 11
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p3
 
     if-eqz p3, :cond_6
 
-    .line 12
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p3
@@ -357,7 +328,6 @@
 
     move-result p3
 
-    .line 13
     invoke-static {p2, p3}, Lcom/android/camera/fragment/mode/MoreModeHelper;->isFooter4PopupStyle(II)Z
 
     move-result p2
@@ -366,7 +336,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_5
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
@@ -376,7 +345,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_6
     :goto_1
     invoke-virtual {p1, p4, v1, p4, v0}, Landroid/graphics/Rect;->set(IIII)V
@@ -387,7 +355,6 @@
 .method public onDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;->onDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     return-void
@@ -396,7 +363,6 @@
 .method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;->onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     return-void

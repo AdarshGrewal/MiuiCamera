@@ -52,7 +52,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +60,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mOverScrollY:F
 
     return p0
@@ -70,7 +68,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mOverScrollY:F
 
     return p1
@@ -79,7 +76,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->cancelFadeOut()V
 
     return-void
@@ -88,7 +84,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->changeBarPosition()V
 
     return-void
@@ -97,7 +92,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTranX:F
 
     return p0
@@ -106,7 +100,6 @@
 .method public static synthetic access$302(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTranX:F
 
     return p1
@@ -115,7 +108,6 @@
 .method public static synthetic access$400(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTranY:F
 
     return p0
@@ -124,7 +116,6 @@
 .method public static synthetic access$402(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTranY:F
 
     return p1
@@ -133,7 +124,6 @@
 .method public static synthetic access$500(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object p0
@@ -142,7 +132,6 @@
 .method public static synthetic access$600(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;Landroidx/recyclerview/widget/RecyclerView;Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$ForEachCallback;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->doForEach(Landroidx/recyclerview/widget/RecyclerView;Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$ForEachCallback;)V
 
     return-void
@@ -151,7 +140,6 @@
 .method public static synthetic access$700(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     return-object p0
@@ -160,7 +148,6 @@
 .method public static synthetic access$800(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->updateScrollbar()V
 
     return-void
@@ -169,7 +156,6 @@
 .method private cancelFadeOut()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     const/16 v1, 0x65
@@ -182,21 +168,18 @@
 .method private changeBarPosition()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
 
     move-result v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
@@ -205,7 +188,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
@@ -236,7 +218,6 @@
 
     mul-float/2addr v1, v0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setY(F)V
@@ -247,7 +228,6 @@
 .method private doForEach(Landroidx/recyclerview/widget/RecyclerView;Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$ForEachCallback;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
@@ -256,18 +236,15 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-interface {p2}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$ForEachCallback;->error()V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v1
 
-    .line 4
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v0
@@ -275,7 +252,6 @@
     :goto_0
     if-gt v1, v0, :cond_2
 
-    .line 5
     invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v2
@@ -284,14 +260,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     iget-object v3, v2, Lcom/android/camera/fragment/mode/ModeAdapter$ModeViewHolder;->mIconView:Landroid/widget/ImageView;
 
     instance-of v3, v3, Lcom/android/camera/ui/InnerSpringImageView;
 
     if-eqz v3, :cond_1
 
-    .line 7
     invoke-interface {p2, v2}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$ForEachCallback;->run(Lcom/android/camera/fragment/mode/ModeAdapter$ModeViewHolder;)V
 
     :cond_1
@@ -306,7 +280,6 @@
 .method private updateScrollbar()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     if-eqz v0, :cond_1
@@ -321,7 +294,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -329,14 +301,12 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
 
     move-result v1
 
-    .line 4
     iget v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mBarMinHeight:F
 
     iget v3, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTrackHeight:F
@@ -353,7 +323,6 @@
 
     move-result v0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -364,10 +333,8 @@
 
     float-to-int v0, v0
 
-    .line 6
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -382,12 +349,10 @@
 .method public synthetic OooO00o(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->cancelFadeOut()V
 
     const/4 p1, 0x1
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->fadeScrollbar(Z)V
 
     const/4 p1, 0x0
@@ -398,7 +363,6 @@
 .method public createLayoutManager(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
     .locals 7
 
-    .line 1
     new-instance v6, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$4;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->getCountPerLine()I
@@ -423,7 +387,6 @@
 .method public createModeItemDecoration(Landroid/content/Context;Lcom/android/camera/fragment/mode/IMoreMode;)Lcom/android/camera/fragment/mode/ModeItemDecoration;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/mode/ModeItemDecoration;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->getType()I
@@ -438,7 +401,6 @@
 .method public fadeScrollbar(Z)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
     if-nez v0, :cond_0
@@ -452,19 +414,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     const/16 v1, 0x64
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     const-wide/16 v1, 0x5dc
@@ -473,13 +432,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -493,8 +450,7 @@
 
     const/4 v0, 0x1
 
-    .line 1
-    invoke-static {v0, v0}, Lcom/android/camera/display/Display;->getMoreModeTabCol(ZZ)I
+    invoke-static {v0, v0}, Lcom/android/camera/Display;->getMoreModeTabCol(ZZ)I
 
     move-result v0
 
@@ -504,14 +460,12 @@
 .method public getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0a02ad
+    const v0, 0x7f0a02bd
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -520,23 +474,20 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    const v0, 0x7f0a03b2
+    const v0, 0x7f0a03c7
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lmiuix/springback/view/SpringBackLayout;
 
-    .line 4
     new-instance v1, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$1;
 
     invoke-direct {v1, p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$1;-><init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
 
     invoke-virtual {v0, v1}, Lmiuix/springback/view/SpringBackLayout;->addOnScrollListener(Lmiuix/springback/view/SpringBackLayout$OnScrollListener;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v1, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$2;
@@ -545,7 +496,6 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getInstance()Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     move-result-object v0
@@ -556,23 +506,20 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->initSpring(Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOoO/OooO0OO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOOO/OooO0OO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OoooOoO/OooO0OO;-><init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOOO/OooO0OO;-><init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const v0, 0x7f0a02b7
+    const v0, 0x7f0a02c7
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -581,16 +528,14 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbarTrack:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a02b6
+    const v0, 0x7f0a02c6
 
-    .line 10
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mScrollbar:Landroid/view/View;
 
-    .line 11
     new-instance v0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -603,12 +548,11 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mUIHandler:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$UIHandler;
 
-    .line 12
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0705e8
+    const v1, 0x7f0705e4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -616,23 +560,21 @@
 
     iput v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mBarMinHeight:F
 
-    .line 13
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0705b1
+    const v1, 0x7f0705ae
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    .line 14
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v1, 0x7f0705b2
+    const v1, 0x7f0705af
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -644,7 +586,6 @@
 
     const/4 p1, 0x0
 
-    .line 15
     invoke-static {p1}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object p1
@@ -661,7 +602,6 @@
 
     iput p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mTrackHeight:F
 
-    .line 16
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -695,7 +635,6 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getInstance()Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     move-result-object p1
@@ -708,14 +647,12 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getInstance()Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->clearSpring()V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V

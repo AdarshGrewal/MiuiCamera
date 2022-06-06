@@ -153,14 +153,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lorg/jcodec/common/model/Label;->_values:Ljava/util/List;
 
-    .line 2
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, -0x1
@@ -169,7 +167,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Unknown:Lorg/jcodec/common/model/Label;
 
-    .line 3
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x0
@@ -178,7 +175,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Unused:Lorg/jcodec/common/model/Label;
 
-    .line 4
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x64
@@ -187,7 +183,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->UseCoordinates:Lorg/jcodec/common/model/Label;
 
-    .line 5
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x1
@@ -196,7 +191,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Left:Lorg/jcodec/common/model/Label;
 
-    .line 6
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x2
@@ -205,7 +199,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Right:Lorg/jcodec/common/model/Label;
 
-    .line 7
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x3
@@ -214,7 +207,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Center:Lorg/jcodec/common/model/Label;
 
-    .line 8
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x4
@@ -223,7 +215,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LFEScreen:Lorg/jcodec/common/model/Label;
 
-    .line 9
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x5
@@ -232,7 +223,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LeftSurround:Lorg/jcodec/common/model/Label;
 
-    .line 10
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x6
@@ -241,7 +231,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RightSurround:Lorg/jcodec/common/model/Label;
 
-    .line 11
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/4 v1, 0x7
@@ -250,7 +239,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LeftCenter:Lorg/jcodec/common/model/Label;
 
-    .line 12
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x8
@@ -259,7 +247,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RightCenter:Lorg/jcodec/common/model/Label;
 
-    .line 13
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x9
@@ -268,7 +255,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->CenterSurround:Lorg/jcodec/common/model/Label;
 
-    .line 14
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xa
@@ -277,7 +263,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LeftSurroundDirect:Lorg/jcodec/common/model/Label;
 
-    .line 15
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xb
@@ -286,7 +271,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RightSurroundDirect:Lorg/jcodec/common/model/Label;
 
-    .line 16
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xc
@@ -295,7 +279,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->TopCenterSurround:Lorg/jcodec/common/model/Label;
 
-    .line 17
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xd
@@ -304,7 +287,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->VerticalHeightLeft:Lorg/jcodec/common/model/Label;
 
-    .line 18
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xe
@@ -313,7 +295,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->VerticalHeightCenter:Lorg/jcodec/common/model/Label;
 
-    .line 19
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xf
@@ -322,7 +303,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->VerticalHeightRight:Lorg/jcodec/common/model/Label;
 
-    .line 20
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x10
@@ -331,7 +311,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->TopBackLeft:Lorg/jcodec/common/model/Label;
 
-    .line 21
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x11
@@ -340,7 +319,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->TopBackCenter:Lorg/jcodec/common/model/Label;
 
-    .line 22
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x12
@@ -349,7 +327,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->TopBackRight:Lorg/jcodec/common/model/Label;
 
-    .line 23
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x21
@@ -358,7 +335,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RearSurroundLeft:Lorg/jcodec/common/model/Label;
 
-    .line 24
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x22
@@ -367,7 +343,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RearSurroundRight:Lorg/jcodec/common/model/Label;
 
-    .line 25
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x23
@@ -376,7 +351,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LeftWide:Lorg/jcodec/common/model/Label;
 
-    .line 26
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x24
@@ -385,7 +359,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RightWide:Lorg/jcodec/common/model/Label;
 
-    .line 27
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x25
@@ -394,7 +367,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LFE2:Lorg/jcodec/common/model/Label;
 
-    .line 28
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x26
@@ -403,7 +375,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->LeftTotal:Lorg/jcodec/common/model/Label;
 
-    .line 29
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x27
@@ -412,7 +383,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->RightTotal:Lorg/jcodec/common/model/Label;
 
-    .line 30
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x28
@@ -421,7 +391,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->HearingImpaired:Lorg/jcodec/common/model/Label;
 
-    .line 31
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x29
@@ -430,7 +399,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Narration:Lorg/jcodec/common/model/Label;
 
-    .line 32
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x2a
@@ -439,7 +407,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Mono:Lorg/jcodec/common/model/Label;
 
-    .line 33
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x2b
@@ -448,7 +415,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->DialogCentricMix:Lorg/jcodec/common/model/Label;
 
-    .line 34
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x2c
@@ -457,7 +423,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->CenterSurroundDirect:Lorg/jcodec/common/model/Label;
 
-    .line 35
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xc8
@@ -466,7 +431,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Ambisonic_W:Lorg/jcodec/common/model/Label;
 
-    .line 36
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xc9
@@ -475,7 +439,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Ambisonic_X:Lorg/jcodec/common/model/Label;
 
-    .line 37
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xca
@@ -484,7 +447,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Ambisonic_Y:Lorg/jcodec/common/model/Label;
 
-    .line 38
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xcb
@@ -493,7 +455,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Ambisonic_Z:Lorg/jcodec/common/model/Label;
 
-    .line 39
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xcc
@@ -502,7 +463,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->MS_Mid:Lorg/jcodec/common/model/Label;
 
-    .line 40
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xcd
@@ -511,7 +471,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->MS_Side:Lorg/jcodec/common/model/Label;
 
-    .line 41
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xce
@@ -520,7 +479,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->XY_X:Lorg/jcodec/common/model/Label;
 
-    .line 42
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0xcf
@@ -529,7 +487,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->XY_Y:Lorg/jcodec/common/model/Label;
 
-    .line 43
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x12d
@@ -538,7 +495,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->HeadphonesLeft:Lorg/jcodec/common/model/Label;
 
-    .line 44
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x12e
@@ -547,7 +503,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->HeadphonesRight:Lorg/jcodec/common/model/Label;
 
-    .line 45
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x130
@@ -556,7 +511,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->ClickTrack:Lorg/jcodec/common/model/Label;
 
-    .line 46
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x131
@@ -565,7 +519,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->ForeignLanguage:Lorg/jcodec/common/model/Label;
 
-    .line 47
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/16 v1, 0x190
@@ -574,7 +527,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete:Lorg/jcodec/common/model/Label;
 
-    .line 48
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const/high16 v1, 0x10000
@@ -583,7 +535,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_0:Lorg/jcodec/common/model/Label;
 
-    .line 49
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10001
@@ -592,7 +543,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_1:Lorg/jcodec/common/model/Label;
 
-    .line 50
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10002
@@ -601,7 +551,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_2:Lorg/jcodec/common/model/Label;
 
-    .line 51
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10003
@@ -610,7 +559,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_3:Lorg/jcodec/common/model/Label;
 
-    .line 52
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10004
@@ -619,7 +567,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_4:Lorg/jcodec/common/model/Label;
 
-    .line 53
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10005
@@ -628,7 +575,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_5:Lorg/jcodec/common/model/Label;
 
-    .line 54
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10006
@@ -637,7 +583,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_6:Lorg/jcodec/common/model/Label;
 
-    .line 55
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10007
@@ -646,7 +591,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_7:Lorg/jcodec/common/model/Label;
 
-    .line 56
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10008
@@ -655,7 +599,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_8:Lorg/jcodec/common/model/Label;
 
-    .line 57
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x10009
@@ -664,7 +607,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_9:Lorg/jcodec/common/model/Label;
 
-    .line 58
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000a
@@ -673,7 +615,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_10:Lorg/jcodec/common/model/Label;
 
-    .line 59
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000b
@@ -682,7 +623,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_11:Lorg/jcodec/common/model/Label;
 
-    .line 60
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000c
@@ -691,7 +631,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_12:Lorg/jcodec/common/model/Label;
 
-    .line 61
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000d
@@ -700,7 +639,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_13:Lorg/jcodec/common/model/Label;
 
-    .line 62
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000e
@@ -709,7 +647,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_14:Lorg/jcodec/common/model/Label;
 
-    .line 63
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1000f
@@ -718,7 +655,6 @@
 
     sput-object v0, Lorg/jcodec/common/model/Label;->Discrete_15:Lorg/jcodec/common/model/Label;
 
-    .line 64
     new-instance v0, Lorg/jcodec/common/model/Label;
 
     const v1, 0x1ffff
@@ -729,7 +665,6 @@
 
     const-string v0, "[_\\ \\.][a-zA-Z]+$"
 
-    .line 65
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -742,10 +677,8 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lorg/jcodec/common/model/Label;->labelVal:I
 
     const/16 v0, 0x12
@@ -771,11 +704,9 @@
     :goto_0
     const-wide/16 v0, 0x0
 
-    .line 3
     :goto_1
     iput-wide v0, p0, Lorg/jcodec/common/model/Label;->bitmapVal:J
 
-    .line 4
     sget-object p1, Lorg/jcodec/common/model/Label;->_values:Ljava/util/List;
 
     invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -786,23 +717,19 @@
 .method public static getByVal(I)Lorg/jcodec/common/model/Label;
     .locals 4
 
-    .line 1
     invoke-static {}, Lorg/jcodec/common/model/Label;->values()[Lorg/jcodec/common/model/Label;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     aget-object v2, v0, v1
 
-    .line 4
     iget v3, v2, Lorg/jcodec/common/model/Label;->labelVal:I
 
     if-ne v3, p0, :cond_0
@@ -814,7 +741,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object p0, Lorg/jcodec/common/model/Label;->Mono:Lorg/jcodec/common/model/Label;
 
@@ -824,7 +750,6 @@
 .method public static values()[Lorg/jcodec/common/model/Label;
     .locals 2
 
-    .line 1
     sget-object v0, Lorg/jcodec/common/model/Label;->_values:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -845,7 +770,6 @@
 .method public getVal()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/common/model/Label;->labelVal:I
 
     return v0

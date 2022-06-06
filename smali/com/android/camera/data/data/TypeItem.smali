@@ -56,19 +56,14 @@
 .method public constructor <init>(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/data/data/TypeItem;->mIconRes:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/data/data/TypeItem;->mDisplayNameRes:I
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/data/data/TypeItem;->mCategory:Ljava/lang/String;
 
-    .line 5
     iput-object p4, p0, Lcom/android/camera/data/data/TypeItem;->mKeyOrType:Ljava/lang/String;
 
     return-void
@@ -85,19 +80,14 @@
         }
     .end annotation
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput p1, p0, Lcom/android/camera/data/data/TypeItem;->mDisplayNameRes:I
 
-    .line 8
     iput-object p2, p0, Lcom/android/camera/data/data/TypeItem;->mCategory:Ljava/lang/String;
 
-    .line 9
     iput-object p3, p0, Lcom/android/camera/data/data/TypeItem;->mKeyOrType:Ljava/lang/String;
 
-    .line 10
     iput-object p4, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     return-void
@@ -106,16 +96,12 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput p2, p0, Lcom/android/camera/data/data/TypeItem;->mDisplayNameRes:I
 
-    .line 13
     iput p3, p0, Lcom/android/camera/data/data/TypeItem;->mColorRes:I
 
-    .line 14
     iput-object p1, p0, Lcom/android/camera/data/data/TypeItem;->mType:Ljava/lang/String;
 
     return-void
@@ -126,7 +112,6 @@
 .method public asBoolean()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     instance-of v0, v0, Ljava/lang/Boolean;
@@ -137,7 +122,6 @@
 .method public asInteger()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     instance-of v0, v0, Ljava/lang/Integer;
@@ -148,7 +132,6 @@
 .method public asString()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     instance-of v0, v0, Ljava/lang/String;
@@ -159,7 +142,6 @@
 .method public getColorResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/TypeItem;->mColorRes:I
 
     return v0
@@ -173,7 +155,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     return-object v0
@@ -182,7 +163,6 @@
 .method public getEntryArrayRes()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/TypeItem;->mEntryArrayRes:I
 
     return v0
@@ -191,7 +171,6 @@
 .method public getImageResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/TypeItem;->mIconRes:I
 
     return v0
@@ -200,7 +179,6 @@
 .method public getTextResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/TypeItem;->mDisplayNameRes:I
 
     return v0
@@ -209,7 +187,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeItem;->mType:Ljava/lang/String;
 
     return-object v0
@@ -218,7 +195,6 @@
 .method public getValueArrayRes()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/TypeItem;->mValueArrayRes:I
 
     return v0
@@ -234,7 +210,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/TypeItem;->mDefaultValue:Ljava/lang/Object;
 
     return-object p0
@@ -243,7 +218,6 @@
 .method public setDescriptionRes(I)Lcom/android/camera/data/data/TypeItem;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/data/data/TypeItem;->mDescriptionRes:I
 
     return-object p0
@@ -252,7 +226,6 @@
 .method public setEntryArrayRes(I)Lcom/android/camera/data/data/TypeItem;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/data/data/TypeItem;->mEntryArrayRes:I
 
     return-object p0
@@ -261,7 +234,6 @@
 .method public setExpandable(Z)Lcom/android/camera/data/data/TypeItem;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/TypeItem;->mExpandable:Z
 
     return-object p0
@@ -270,7 +242,6 @@
 .method public setValueArrayRes(I)Lcom/android/camera/data/data/TypeItem;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/data/data/TypeItem;->mValueArrayRes:I
 
     return-object p0

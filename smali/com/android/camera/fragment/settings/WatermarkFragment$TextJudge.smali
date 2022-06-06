@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/settings/WatermarkFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/WatermarkFragment$TextJudge;->this$0:Lcom/android/camera/fragment/settings/WatermarkFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

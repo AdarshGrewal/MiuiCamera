@@ -39,7 +39,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -50,7 +49,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -59,17 +57,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
-    .line 5
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -80,12 +75,10 @@
 
     new-array p1, p1, [I
 
-    .line 6
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
     const/4 p1, 0x0
 
-    .line 7
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
     return-void
@@ -94,7 +87,6 @@
 .method private preAddView()V
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -104,12 +96,10 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 3
     iget-object v3, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
     new-instance v4, Landroid/util/Pair;
@@ -145,7 +135,6 @@
 .method private preRemoveView(II)V
     .locals 7
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -155,7 +144,6 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 6
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -166,7 +154,6 @@
 
     if-lt v1, v3, :cond_1
 
-    .line 7
     :cond_0
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
@@ -176,7 +163,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 8
     iget-object v3, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
     new-instance v4, Landroid/util/Pair;
@@ -213,7 +199,6 @@
 .method private preRemoveView(Landroid/view/View;)V
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -223,14 +208,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     if-eq p1, v2, :cond_0
 
-    .line 3
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -239,7 +222,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 4
     iget-object v3, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
     new-instance v4, Landroid/util/Pair;
@@ -284,7 +266,6 @@
 
     aput-object p1, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -325,13 +306,10 @@
 .method public addViewSliding(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddView()V
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 3
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->show(Landroid/view/View;)V
 
     return-void
@@ -340,13 +318,10 @@
 .method public addViewSliding(Landroid/view/View;I)V
     .locals 0
 
-    .line 4
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddView()V
 
-    .line 5
     invoke-virtual {p0, p1, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
-    .line 6
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->show(Landroid/view/View;)V
 
     return-void
@@ -355,13 +330,10 @@
 .method public addViewSliding(Landroid/view/View;II)V
     .locals 0
 
-    .line 7
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddView()V
 
-    .line 8
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;II)V
 
-    .line 9
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->show(Landroid/view/View;)V
 
     return-void
@@ -370,13 +342,10 @@
 .method public addViewSliding(Landroid/view/View;ILandroid/widget/LinearLayout$LayoutParams;)V
     .locals 0
 
-    .line 13
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddView()V
 
-    .line 14
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 15
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->show(Landroid/view/View;)V
 
     return-void
@@ -385,13 +354,10 @@
 .method public addViewSliding(Landroid/view/View;Landroid/widget/LinearLayout$LayoutParams;)V
     .locals 0
 
-    .line 10
     invoke-direct {p0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddView()V
 
-    .line 11
     invoke-virtual {p0, p1, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 12
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->show(Landroid/view/View;)V
 
     return-void
@@ -402,17 +368,14 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
     if-eqz p1, :cond_d
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
-    .line 3
     invoke-virtual/range {p0 .. p0}, Landroid/widget/LinearLayout;->getOrientation()I
 
     move-result v2
@@ -427,7 +390,6 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 4
     iget-object v2, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
     aget v2, v2, v5
@@ -460,7 +422,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     iget-object v2, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
@@ -492,12 +453,10 @@
     :goto_2
     if-ge v7, v1, :cond_c
 
-    .line 6
     invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v8
 
-    .line 7
     iget-object v9, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
     const-string v10, "end"
@@ -516,7 +475,6 @@
 
     if-lez v9, :cond_6
 
-    .line 8
     iget-object v9, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
     invoke-virtual {v9, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -527,14 +485,12 @@
 
     if-eqz v9, :cond_5
 
-    .line 9
     invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
 
     move-result v15
 
     if-eq v15, v12, :cond_5
 
-    .line 10
     invoke-virtual {v8}, Landroid/view/View;->getX()F
 
     move-result v15
@@ -570,7 +526,6 @@
     :cond_2
     if-nez v2, :cond_3
 
-    .line 11
     iget-object v3, v9, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Float;
@@ -585,7 +540,6 @@
 
     sub-float/2addr v3, v15
 
-    .line 12
     iget-object v9, v9, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v9, Ljava/lang/Float;
@@ -602,7 +556,6 @@
 
     goto :goto_3
 
-    .line 13
     :cond_3
     invoke-virtual {v8}, Landroid/view/View;->getX()F
 
@@ -638,7 +591,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 14
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
     aget v9, v3, v6
@@ -647,7 +599,6 @@
 
     int-to-float v9, v9
 
-    .line 15
     aget v3, v3, v5
 
     sub-int v3, v3, p3
@@ -667,7 +618,6 @@
 
     const/4 v9, 0x0
 
-    .line 16
     :goto_3
     new-instance v15, Lmiuix/animation/controller/AnimState;
 
@@ -679,7 +629,6 @@
 
     float-to-double v6, v3
 
-    .line 17
     invoke-virtual {v15, v4, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -688,26 +637,22 @@
 
     float-to-double v6, v9
 
-    .line 18
     invoke-virtual {v3, v4, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
 
-    .line 19
     new-instance v4, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {v4, v10}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 20
     invoke-virtual {v4, v6, v13, v14}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v4
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 21
     invoke-virtual {v4, v6, v13, v14}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v4
@@ -718,7 +663,6 @@
 
     aput-object v8, v6, v7
 
-    .line 22
     invoke-static {v6}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v6
@@ -740,7 +684,6 @@
     :cond_5
     move/from16 v16, v7
 
-    .line 23
     :goto_4
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
@@ -751,7 +694,6 @@
     :cond_6
     move/from16 v16, v7
 
-    .line 24
     :goto_5
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
@@ -763,7 +705,6 @@
 
     if-lez v3, :cond_b
 
-    .line 25
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
     invoke-virtual {v3, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -774,14 +715,12 @@
 
     if-eqz v3, :cond_a
 
-    .line 26
     invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
 
     move-result v4
 
     if-eq v4, v12, :cond_a
 
-    .line 27
     invoke-virtual {v8}, Landroid/view/View;->getX()F
 
     move-result v4
@@ -817,7 +756,6 @@
     :cond_7
     if-nez v2, :cond_8
 
-    .line 28
     iget-object v4, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v4, Ljava/lang/Float;
@@ -832,7 +770,6 @@
 
     sub-float v15, v4, v6
 
-    .line 29
     iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Float;
@@ -849,7 +786,6 @@
 
     goto :goto_6
 
-    .line 30
     :cond_8
     invoke-virtual {v8}, Landroid/view/View;->getX()F
 
@@ -885,7 +821,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 31
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
     const/4 v4, 0x0
@@ -896,7 +831,6 @@
 
     int-to-float v15, v6
 
-    .line 32
     aget v3, v3, v5
 
     sub-int v3, v3, p3
@@ -910,7 +844,6 @@
 
     const/4 v15, 0x0
 
-    .line 33
     :goto_6
     new-instance v4, Lmiuix/animation/controller/AnimState;
 
@@ -920,7 +853,6 @@
 
     float-to-double v11, v15
 
-    .line 34
     invoke-virtual {v4, v6, v11, v12}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v4
@@ -929,26 +861,22 @@
 
     float-to-double v11, v3
 
-    .line 35
     invoke-virtual {v4, v6, v11, v12}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
 
-    .line 36
     new-instance v4, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {v4, v10}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 37
     invoke-virtual {v4, v6, v13, v14}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v4
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 38
     invoke-virtual {v4, v6, v13, v14}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v4
@@ -959,7 +887,6 @@
 
     aput-object v8, v6, v7
 
-    .line 39
     invoke-static {v6}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v6
@@ -976,7 +903,6 @@
 
     invoke-interface {v6, v3, v4, v9}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 40
     :cond_a
     iget-object v3, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
@@ -993,35 +919,29 @@
 
     goto/16 :goto_2
 
-    .line 41
     :cond_c
     iget-object v1, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preAddViewPairs:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 42
     iget-object v1, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveViewPairs:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 43
     iget-object v1, v0, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preLayout:[I
 
     const/4 v2, 0x0
 
     aput p2, v1, v2
 
-    .line 44
     aput p3, v1, v5
 
     const/4 v2, 0x2
 
-    .line 45
     aput p4, v1, v2
 
     const/4 v2, 0x3
 
-    .line 46
     aput p5, v1, v2
 
     :cond_d
@@ -1031,7 +951,6 @@
 .method public removeViewSliding(Landroid/view/View;)V
     .locals 6
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveView(Landroid/view/View;)V
 
     const/4 v0, 0x1
@@ -1042,7 +961,6 @@
 
     aput-object p1, v1, v2
 
-    .line 2
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
@@ -1089,12 +1007,10 @@
 .method public removeViewSlidingAt(I)V
     .locals 6
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2
     invoke-direct {p0, v0}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveView(Landroid/view/View;)V
 
     const/4 v1, 0x1
@@ -1105,7 +1021,6 @@
 
     aput-object v0, v2, v3
 
-    .line 3
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -1152,7 +1067,6 @@
 .method public removeViewsSliding(II)V
     .locals 15
 
-    .line 1
     invoke-direct/range {p0 .. p2}, Lmiuix/slidingwidget/widget/SlidingLinearLayout;->preRemoveView(II)V
 
     add-int v6, p1, p2
@@ -1164,12 +1078,10 @@
 
     move-object v8, p0
 
-    .line 2
     invoke-virtual {p0, v7}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v1
@@ -1186,7 +1098,6 @@
 
     aput-object v0, v2, v9
 
-    .line 4
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0

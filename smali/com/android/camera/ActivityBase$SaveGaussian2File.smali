@@ -25,10 +25,8 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/ActivityBase$SaveGaussian2File;->mBitmap:Landroid/graphics/Bitmap;
 
     return-void
@@ -39,7 +37,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/ActivityBase$SaveGaussian2File;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -50,7 +47,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/ActivityBase$SaveGaussian2File;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {v0}, Lcom/android/camera/Util;->saveLastFrameGaussian2File(Landroid/graphics/Bitmap;)V

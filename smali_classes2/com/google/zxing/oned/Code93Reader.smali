@@ -25,7 +25,6 @@
 
     const-string v0, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*"
 
-    .line 1
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
@@ -36,10 +35,8 @@
 
     new-array v0, v0, [I
 
-    .line 2
     fill-array-data v0, :array_0
 
-    .line 3
     sput-object v0, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
 
     const/16 v1, 0x2f
@@ -106,10 +103,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/oned/OneDReader;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x14
@@ -122,7 +117,6 @@
 
     new-array v0, v0, [I
 
-    .line 3
     iput-object v0, p0, Lcom/google/zxing/oned/Code93Reader;->counters:[I
 
     return-void
@@ -136,7 +130,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -145,14 +138,12 @@
 
     const/16 v2, 0x14
 
-    .line 2
     invoke-static {p0, v1, v2}, Lcom/google/zxing/oned/Code93Reader;->checkOneChecksum(Ljava/lang/CharSequence;II)V
 
     add-int/lit8 v0, v0, -0x1
 
     const/16 v1, 0xf
 
-    .line 3
     invoke-static {p0, v0, v1}, Lcom/google/zxing/oned/Code93Reader;->checkOneChecksum(Ljava/lang/CharSequence;II)V
 
     return-void
@@ -177,7 +168,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 1
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
@@ -203,7 +193,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -219,7 +208,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-static {}, Lcom/google/zxing/ChecksumException;->getChecksumInstance()Lcom/google/zxing/ChecksumException;
 
@@ -236,12 +224,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -253,7 +239,6 @@
     :goto_0
     if-ge v3, v0, :cond_e
 
-    .line 3
     invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
@@ -272,7 +257,6 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 4
     invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
@@ -299,7 +283,6 @@
 
     goto/16 :goto_2
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -323,7 +306,6 @@
 
     goto :goto_3
 
-    .line 6
     :cond_2
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -415,7 +397,6 @@
 
     goto :goto_3
 
-    .line 7
     :cond_a
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -435,7 +416,6 @@
 
     goto :goto_3
 
-    .line 8
     :cond_b
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -443,13 +423,11 @@
 
     throw p0
 
-    .line 9
     :goto_3
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_4
 
-    .line 10
     :cond_c
     invoke-static {}, Lcom/google/zxing/FormatException;->getFormatInstance()Lcom/google/zxing/FormatException;
 
@@ -457,7 +435,6 @@
 
     throw p0
 
-    .line 11
     :cond_d
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -466,7 +443,6 @@
 
     goto/16 :goto_0
 
-    .line 12
     :cond_e
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -491,27 +467,22 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Lcom/google/zxing/common/BitArray;->getSize()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {p1, v1}, Lcom/google/zxing/common/BitArray;->getNextSet(I)I
 
     move-result v2
 
-    .line 3
     iget-object v3, p0, Lcom/google/zxing/oned/Code93Reader;->counters:[I
 
     invoke-static {v3, v1}, Ljava/util/Arrays;->fill([II)V
 
-    .line 4
     iget-object v3, p0, Lcom/google/zxing/oned/Code93Reader;->counters:[I
 
-    .line 5
     array-length v4, v3
 
     move v6, v1
@@ -523,7 +494,6 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 6
     invoke-virtual {p1, v2}, Lcom/google/zxing/common/BitArray;->get(I)Z
 
     move-result v8
@@ -532,7 +502,6 @@
 
     if-eq v8, v6, :cond_0
 
-    .line 7
     aget v8, v3, v7
 
     add-int/2addr v8, v9
@@ -546,7 +515,6 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 8
     invoke-static {v3}, Lcom/google/zxing/oned/Code93Reader;->toPattern([I)I
 
     move-result v8
@@ -565,7 +533,6 @@
 
     return-object p1
 
-    .line 9
     :cond_1
     aget v8, v3, v1
 
@@ -577,13 +544,10 @@
 
     add-int/lit8 v8, v7, -0x1
 
-    .line 10
     invoke-static {v3, v11, v3, v1, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 11
     aput v1, v3, v8
 
-    .line 12
     aput v1, v3, v7
 
     add-int/lit8 v7, v7, -0x1
@@ -593,7 +557,6 @@
     :cond_2
     add-int/lit8 v7, v7, 0x1
 
-    .line 13
     :goto_1
     aput v9, v3, v7
 
@@ -604,7 +567,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_3
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -623,7 +585,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     sget-object v1, Lcom/google/zxing/oned/Code93Reader;->CHARACTER_ENCODINGS:[I
 
@@ -631,12 +592,10 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 2
     aget v1, v1, v0
 
     if-ne v1, p0, :cond_0
 
-    .line 3
     sget-object p0, Lcom/google/zxing/oned/Code93Reader;->ALPHABET:[C
 
     aget-char p0, p0, v0
@@ -648,7 +607,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -660,7 +618,6 @@
 .method public static toPattern([I)I
     .locals 7
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -680,7 +637,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     array-length v0, p0
 
@@ -691,7 +647,6 @@
     :goto_1
     if-ge v2, v0, :cond_5
 
-    .line 3
     aget v5, p0, v2
 
     int-to-float v5, v5
@@ -775,59 +730,47 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/google/zxing/oned/Code93Reader;->findAsteriskPattern(Lcom/google/zxing/common/BitArray;)[I
 
     move-result-object p3
 
     const/4 v0, 0x1
 
-    .line 2
     aget v1, p3, v0
 
     invoke-virtual {p2, v1}, Lcom/google/zxing/common/BitArray;->getNextSet(I)I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p2}, Lcom/google/zxing/common/BitArray;->getSize()I
 
     move-result v2
 
-    .line 4
     iget-object v3, p0, Lcom/google/zxing/oned/Code93Reader;->counters:[I
 
     const/4 v4, 0x0
 
-    .line 5
     invoke-static {v3, v4}, Ljava/util/Arrays;->fill([II)V
 
-    .line 6
     iget-object v5, p0, Lcom/google/zxing/oned/Code93Reader;->decodeRowResult:Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 8
     :goto_0
     invoke-static {p2, v1, v3}, Lcom/google/zxing/oned/OneDReader;->recordPattern(Lcom/google/zxing/common/BitArray;I[I)V
 
-    .line 9
     invoke-static {v3}, Lcom/google/zxing/oned/Code93Reader;->toPattern([I)I
 
     move-result v6
 
     if-ltz v6, :cond_5
 
-    .line 10
     invoke-static {v6}, Lcom/google/zxing/oned/Code93Reader;->patternToChar(I)C
 
     move-result v6
 
-    .line 11
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 12
     array-length v7, v3
 
     move v9, v1
@@ -845,7 +788,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_0
     invoke-virtual {p2, v9}, Lcom/google/zxing/common/BitArray;->getNextSet(I)I
 
@@ -855,7 +797,6 @@
 
     if-ne v6, v8, :cond_4
 
-    .line 14
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v6
@@ -864,7 +805,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
 
-    .line 15
     array-length v6, v3
 
     move v8, v4
@@ -885,14 +825,12 @@
     :cond_1
     if-eq v7, v2, :cond_3
 
-    .line 16
     invoke-virtual {p2, v7}, Lcom/google/zxing/common/BitArray;->get(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 17
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result p2
@@ -901,10 +839,8 @@
 
     if-lt p2, v2, :cond_2
 
-    .line 18
     invoke-static {v5}, Lcom/google/zxing/oned/Code93Reader;->checkChecksums(Ljava/lang/CharSequence;)V
 
-    .line 19
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result p2
@@ -913,12 +849,10 @@
 
     invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 20
     invoke-static {v5}, Lcom/google/zxing/oned/Code93Reader;->decodeExtended(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 21
     aget v3, p3, v0
 
     aget p3, p3, v4
@@ -939,7 +873,6 @@
 
     add-float/2addr v1, v5
 
-    .line 22
     new-instance v3, Lcom/google/zxing/Result;
 
     const/4 v5, 0x0
@@ -966,7 +899,6 @@
 
     return-object v3
 
-    .line 23
     :cond_2
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -974,7 +906,6 @@
 
     throw p1
 
-    .line 24
     :cond_3
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 
@@ -987,7 +918,6 @@
 
     goto/16 :goto_0
 
-    .line 25
     :cond_5
     invoke-static {}, Lcom/google/zxing/NotFoundException;->getNotFoundInstance()Lcom/google/zxing/NotFoundException;
 

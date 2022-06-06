@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static copyInto(Ljava8/util/stream/Node$OfInt;[Ljava/lang/Integer;I)V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node$OfPrimitive;->asPrimitiveArray()Ljava/lang/Object;
 
     move-result-object p0
@@ -36,7 +34,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     array-length v1, p0
 
@@ -44,7 +41,6 @@
 
     add-int v1, p2, v0
 
-    .line 3
     aget v2, p0, v0
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -74,19 +70,16 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p1, Ljava8/util/function/IntConsumer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-interface {p0, p1}, Ljava8/util/stream/Node$OfPrimitive;->forEach(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {p0}, Ljava8/util/stream/Node$OfPrimitive;->spliterator()Ljava8/util/Spliterator$OfPrimitive;
 
@@ -103,7 +96,6 @@
 .method public static getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
 
     return-object v0
@@ -118,7 +110,6 @@
 .method public static newArray(Ljava8/util/stream/Node$OfInt;I)[I
     .locals 0
 
-    .line 1
     new-array p0, p1, [I
 
     return-object p0
@@ -145,7 +136,6 @@
 
     if-nez p5, :cond_0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v0
@@ -159,19 +149,16 @@
     :cond_0
     sub-long v0, p3, p1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Node$OfPrimitive;->spliterator()Ljava8/util/Spliterator$OfPrimitive;
 
     move-result-object p5
 
     check-cast p5, Ljava8/util/Spliterator$OfInt;
 
-    .line 3
     invoke-static {v0, v1}, Ljava8/util/stream/Nodes;->intBuilder(J)Ljava8/util/stream/Node$Builder$OfInt;
 
     move-result-object v2
 
-    .line 4
     invoke-interface {v2, v0, v1}, Ljava8/util/stream/Sink;->begin(J)V
 
     const/4 v3, 0x0
@@ -185,7 +172,6 @@
 
     if-gez v5, :cond_1
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/Nodes$OfInt$$Lambda$1;->lambdaFactory$()Ljava8/util/function/IntConsumer;
 
     move-result-object v5
@@ -200,7 +186,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-interface {p0}, Ljava8/util/stream/Node;->count()J
 
@@ -210,7 +195,6 @@
 
     if-nez p0, :cond_2
 
-    .line 7
     invoke-interface {p5, v2}, Ljava8/util/Spliterator$OfInt;->forEachRemaining(Ljava8/util/function/IntConsumer;)V
 
     goto :goto_2
@@ -223,7 +207,6 @@
 
     if-gez p0, :cond_3
 
-    .line 8
     invoke-interface {p5, v2}, Ljava8/util/Spliterator$OfInt;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
 
     move-result p0
@@ -234,12 +217,10 @@
 
     goto :goto_1
 
-    .line 9
     :cond_3
     :goto_2
     invoke-interface {v2}, Ljava8/util/stream/Sink;->end()V
 
-    .line 10
     invoke-interface {v2}, Ljava8/util/stream/Node$Builder$OfInt;->build()Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0

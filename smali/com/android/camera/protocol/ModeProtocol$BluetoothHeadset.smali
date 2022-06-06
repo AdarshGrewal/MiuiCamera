@@ -22,9 +22,6 @@
 
 
 # virtual methods
-.method public abstract isAudioSourceCamcorder(I)Z
-.end method
-
 .method public abstract isBluetoothScoOn()Z
 .end method
 

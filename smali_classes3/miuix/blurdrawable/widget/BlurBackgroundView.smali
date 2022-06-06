@@ -15,7 +15,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/blurdrawable/widget/BlurBackgroundView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -33,14 +31,12 @@
 .method private createBlurBackground()V
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     invoke-direct {v0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;-><init>()V
 
     iput-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -59,7 +55,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     const/16 v2, 0x13
@@ -72,7 +67,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setMixColor(II)V
 
-    .line 4
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -91,7 +85,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
@@ -105,7 +98,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setMixColor(II)V
 
-    .line 6
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -122,7 +114,6 @@
 
     iput-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurForeground:Landroid/graphics/drawable/Drawable;
 
-    .line 7
     :goto_0
     iget-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
@@ -138,7 +129,6 @@
 .method public isSupportBlur()Z
     .locals 3
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -149,7 +139,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlurStatic()Z
 
@@ -168,7 +157,6 @@
 .method public setAlpha(F)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     const/high16 v0, 0x437f0000    # 255.0f
@@ -177,21 +165,17 @@
 
     float-to-int p1, p1
 
-    .line 2
     iget-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurForeground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setAlpha(I)V
 
     :cond_1
@@ -201,7 +185,6 @@
 .method public setBlurBackground(Z)Z
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->isSupportBlur()Z
 
     move-result v0
@@ -217,12 +200,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 2
     iget-object p1, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     if-nez p1, :cond_1
 
-    .line 3
     :try_start_0
     invoke-direct {p0}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->createBlurBackground()V
     :try_end_0
@@ -233,7 +214,6 @@
     :catch_0
     move-exception p1
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,12 +232,10 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iput-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     return v1
 
-    .line 6
     :cond_1
     :goto_0
     iget-object p1, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
@@ -276,28 +254,23 @@
 
     if-nez p1, :cond_4
 
-    .line 7
     :cond_2
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 8
     iget-object p1, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurForeground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 9
     iget-object p1, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 10
     invoke-virtual {p0, p1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->setAlpha(F)V
 
     goto :goto_1
 
-    .line 11
     :cond_3
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
@@ -305,21 +278,16 @@
 
     if-nez p1, :cond_4
 
-    .line 12
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 13
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 14
     iput-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurForeground:Landroid/graphics/drawable/Drawable;
 
-    .line 15
     iput-object v0, p0, Lmiuix/blurdrawable/widget/BlurBackgroundView;->mBlurBackground:Lcom/miui/blur/sdk/drawable/BlurDrawable;
 
     const/16 p1, 0x8
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     :cond_4

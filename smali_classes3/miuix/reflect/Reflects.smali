@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -38,7 +36,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -49,7 +46,6 @@
 .method public static get(Ljava/lang/Object;Ljava/lang/reflect/Field;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,7 +58,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -83,7 +78,6 @@
         }
     .end annotation
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -91,7 +85,6 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -101,7 +94,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -112,12 +104,10 @@
 .method public static getDeclaredField(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/reflect/Field;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/reflect/Reflects;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1}, Lmiuix/reflect/Reflects;->getDeclaredField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
@@ -140,7 +130,6 @@
         }
     .end annotation
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -148,7 +137,6 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -158,7 +146,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -180,12 +167,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lmiuix/reflect/Reflects;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lmiuix/reflect/Reflects;->getDeclaredMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -206,7 +191,6 @@
         }
     .end annotation
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -214,7 +198,6 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -224,7 +207,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -235,12 +217,10 @@
 .method public static getField(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/reflect/Field;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/reflect/Reflects;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1}, Lmiuix/reflect/Reflects;->getField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
@@ -263,7 +243,6 @@
         }
     .end annotation
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -271,7 +250,6 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -281,7 +259,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -303,12 +280,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lmiuix/reflect/Reflects;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lmiuix/reflect/Reflects;->getMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -319,7 +294,6 @@
 .method public static varargs invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -333,7 +307,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -343,7 +316,6 @@
     :catch_1
     move-exception p0
 
-    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -354,7 +326,6 @@
 .method public static set(Ljava/lang/Object;Ljava/lang/reflect/Field;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_0
@@ -365,7 +336,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

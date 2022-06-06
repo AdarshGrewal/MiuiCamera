@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -30,21 +29,19 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v8, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f080272
+    const v2, 0x7f08026e
 
-    const v3, 0x7f080272
+    const v3, 0x7f08026e
 
-    const v4, 0x7f080272
+    const v4, 0x7f08026e
 
-    const v5, 0x7f1207a1
+    const v5, 0x7f120763
 
     const v6, 0x7f1200c0
 
@@ -56,16 +53,15 @@
 
     invoke-interface {v0, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v10, 0x7f080273
+    const v10, 0x7f08026f
 
-    const v11, 0x7f080273
+    const v11, 0x7f08026f
 
-    const v12, 0x7f080273
+    const v12, 0x7f08026f
 
-    const v13, 0x7f1207a2
+    const v13, 0x7f120764
 
     const v14, 0x7f1200c1
 
@@ -77,7 +73,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -98,7 +93,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f1207a5
+    const v0, 0x7f120767
 
     return v0
 .end method
@@ -114,19 +109,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningTiltValue;->initItems()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -144,7 +136,6 @@
 .method public isSwitchOn(I)Z
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     const-string/jumbo v0, "pref_camera_tilt_shift_mode"
@@ -161,7 +152,6 @@
 .method public toSwitch(IZ)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     const-string/jumbo v0, "pref_camera_tilt_shift_mode"

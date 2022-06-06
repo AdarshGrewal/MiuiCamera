@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/tts/TTSHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/tts/TTSHelper$1;->this$0:Lcom/android/camera/tts/TTSHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/tts/TTSHelper$1;->this$0:Lcom/android/camera/tts/TTSHelper;
 
     invoke-static {v0}, Lcom/android/camera/tts/TTSHelper;->access$000(Lcom/android/camera/tts/TTSHelper;)Ljava/util/Map;
@@ -61,7 +59,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/tts/TTSHelper$1;->this$0:Lcom/android/camera/tts/TTSHelper;
 
@@ -79,7 +76,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/camera/tts/TTSHelper$1;->this$0:Lcom/android/camera/tts/TTSHelper;

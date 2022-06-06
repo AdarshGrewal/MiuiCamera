@@ -32,7 +32,6 @@
 
     const-string v0, "idmtransfile"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -41,20 +40,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/idm/transfile/IDMTransFile;->mCreateTaskEnableFlag:I
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lcom/xiaomi/idm/transfile/IDMTransFile;->mHandle:J
 
-    .line 4
     new-instance v0, Lcom/xiaomi/idm/transfile/IDMTransFile$FileNode;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/idm/transfile/IDMTransFile$FileNode;-><init>(Lcom/xiaomi/idm/transfile/IDMTransFile;)V
@@ -87,7 +82,6 @@
 .method public setCallback(Lcom/xiaomi/idm/transfile/IDMTransFile$IDMTransFileCallback;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/transfile/IDMTransFile;->mNode:Lcom/xiaomi/idm/transfile/IDMTransFile$FileNode;
 
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/idm/transfile/IDMTransFile;->registerInterface(Lcom/xiaomi/idm/transfile/IDMTransFile$IDMTransFileCallback;Lcom/xiaomi/idm/transfile/IDMTransFile$FileNode;)I

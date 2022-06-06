@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/ThermalDetector;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/ThermalDetector$1;->this$0:Lcom/android/camera/ThermalDetector;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -55,7 +53,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera/ThermalDetector;->EXTRA_TEMP_STAGE:Ljava/lang/String;
 
@@ -65,7 +62,6 @@
 
     move-result p1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/ThermalDetector;->access$200()Ljava/lang/String;
 
     move-result-object p2
@@ -86,14 +82,12 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     rem-int/lit8 p1, p1, 0xa
 
     const/4 p2, 0x0
 
     const-string v0, "camera.test.auto"
 
-    .line 5
     invoke-static {v0, p2}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p2
@@ -106,7 +100,6 @@
 
     return-void
 
-    .line 6
     :cond_2
     iget-object p2, p0, Lcom/android/camera/ThermalDetector$1;->this$0:Lcom/android/camera/ThermalDetector;
 
@@ -116,12 +109,10 @@
 
     if-eq p2, p1, :cond_3
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/ThermalDetector$1;->this$0:Lcom/android/camera/ThermalDetector;
 
     invoke-static {p2, p1}, Lcom/android/camera/ThermalDetector;->access$302(Lcom/android/camera/ThermalDetector;I)I
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/ThermalDetector$1;->this$0:Lcom/android/camera/ThermalDetector;
 
     invoke-static {p1}, Lcom/android/camera/ThermalDetector;->access$300(Lcom/android/camera/ThermalDetector;)I

@@ -50,7 +50,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/watermark/WaterMarkData$1;
 
     invoke-direct {v0}, Lcom/android/camera/watermark/WaterMarkData$1;-><init>()V
@@ -63,12 +62,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 13
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->watermarkType:I
 
     return-void
@@ -77,15 +74,12 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->watermarkType:I
 
-    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -97,7 +91,6 @@
     :cond_0
     iput-boolean v0, p0, Lcom/android/camera/watermark/WaterMarkData;->isFemale:Z
 
-    .line 4
     const-class v0, Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -112,7 +105,6 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->image:Landroid/graphics/Bitmap;
 
-    .line 5
     const-class v0, Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -127,42 +119,36 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceRectF:Landroid/graphics/RectF;
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->info:Ljava/lang/String;
 
-    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->bottomMargin:I
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewWidth:I
 
-    .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewHeight:I
 
-    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/watermark/WaterMarkData;->orientation:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -185,7 +171,6 @@
 .method public getBottomMargin()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/watermark/WaterMarkData;->bottomMargin:I
 
     return v0
@@ -194,7 +179,6 @@
 .method public getFaceRectF()Landroid/graphics/RectF;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceRectF:Landroid/graphics/RectF;
 
     return-object v0
@@ -203,7 +187,6 @@
 .method public getFaceViewHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewHeight:I
 
     return v0
@@ -212,7 +195,6 @@
 .method public getFaceViewWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewWidth:I
 
     return v0
@@ -221,7 +203,6 @@
 .method public getImage()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->image:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -230,7 +211,6 @@
 .method public getInfo()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->info:Ljava/lang/String;
 
     return-object v0
@@ -239,7 +219,6 @@
 .method public getOrientation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/watermark/WaterMarkData;->orientation:I
 
     return v0
@@ -248,7 +227,6 @@
 .method public getWatermarkType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/watermark/WaterMarkData;->watermarkType:I
 
     return v0
@@ -257,7 +235,6 @@
 .method public isFemale()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/watermark/WaterMarkData;->isFemale:Z
 
     return v0
@@ -266,7 +243,6 @@
 .method public setBottomMargin(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/watermark/WaterMarkData;->bottomMargin:I
 
     return-void
@@ -275,7 +251,6 @@
 .method public setFaceRectF(Landroid/graphics/RectF;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/watermark/WaterMarkData;->faceRectF:Landroid/graphics/RectF;
 
     return-void
@@ -284,7 +259,6 @@
 .method public setFaceViewHeight(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewHeight:I
 
     return-void
@@ -293,7 +267,6 @@
 .method public setFaceViewWidth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewWidth:I
 
     return-void
@@ -302,7 +275,6 @@
 .method public setFemale(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/watermark/WaterMarkData;->isFemale:Z
 
     return-void
@@ -311,7 +283,6 @@
 .method public setImage(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/watermark/WaterMarkData;->image:Landroid/graphics/Bitmap;
 
     return-void
@@ -320,7 +291,6 @@
 .method public setInfo(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/watermark/WaterMarkData;->info:Ljava/lang/String;
 
     return-void
@@ -329,7 +299,6 @@
 .method public setOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/watermark/WaterMarkData;->orientation:I
 
     return-void
@@ -338,7 +307,6 @@
 .method public setWatermarkType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/watermark/WaterMarkData;->watermarkType:I
 
     return-void
@@ -347,49 +315,40 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/watermark/WaterMarkData;->isFemale:Z
 
     int-to-byte v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->image:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkData;->faceRectF:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/watermark/WaterMarkData;->info:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 5
     iget p2, p0, Lcom/android/camera/watermark/WaterMarkData;->bottomMargin:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6
     iget p2, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewWidth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7
     iget p2, p0, Lcom/android/camera/watermark/WaterMarkData;->faceViewHeight:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8
     iget p2, p0, Lcom/android/camera/watermark/WaterMarkData;->orientation:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 9
     iget p2, p0, Lcom/android/camera/watermark/WaterMarkData;->watermarkType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static hashCode(D)I
     .locals 2
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide p0
@@ -35,7 +33,6 @@
 .method public static isFinite(D)Z
     .locals 2
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p0
@@ -60,7 +57,6 @@
 .method public static max(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide p0
@@ -71,7 +67,6 @@
 .method public static min(DD)D
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide p0

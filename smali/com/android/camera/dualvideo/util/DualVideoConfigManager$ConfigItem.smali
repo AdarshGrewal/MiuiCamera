@@ -32,24 +32,18 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/util/DualVideoConfigManager;Lcom/android/camera/dualvideo/render/LayoutType;IFFLjava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->this$0:Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p4, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mPresentZoom:F
 
-    .line 3
     iput p3, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mCameraId:I
 
-    .line 4
     iput p5, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mRelativeZoom:F
 
-    .line 5
     iput-object p6, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mDescription:Ljava/lang/String;
 
-    .line 6
     iput-object p2, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-void
@@ -60,19 +54,16 @@
 .method public getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mCameraId:I
 
     const/16 v1, 0x3e8
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/FaceType;->FACE_REMOTE:Lcom/android/camera/dualvideo/render/FaceType;
 
     return-object v0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -86,12 +77,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     sget-object v0, Lcom/android/camera/dualvideo/render/FaceType;->FACE_FRONT:Lcom/android/camera/dualvideo/render/FaceType;
 
     return-object v0
 
-    .line 5
     :cond_1
     sget-object v0, Lcom/android/camera/dualvideo/render/FaceType;->FACE_BACK:Lcom/android/camera/dualvideo/render/FaceType;
 
@@ -101,7 +90,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
 
     add-long/2addr p2, v0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava8/lang/Longs;->compare(JJ)I
 
     move-result p0
@@ -64,7 +62,6 @@
 
     if-gez v2, :cond_1
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava8/lang/Longs;->compareUnsigned(JJ)I
 
     move-result p0
@@ -84,18 +81,15 @@
 
     if-lez v0, :cond_2
 
-    .line 2
     div-long/2addr p0, p2
 
     return-wide p0
 
-    .line 3
     :cond_2
     invoke-static {p0, p1}, Ljava8/lang/Longs;->toUnsignedBigInteger(J)Ljava/math/BigInteger;
 
     move-result-object p0
 
-    .line 4
     invoke-static {p2, p3}, Ljava8/lang/Longs;->toUnsignedBigInteger(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -128,7 +122,6 @@
 .method public static max(JJ)J
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -139,7 +132,6 @@
 .method public static min(JJ)J
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
@@ -160,12 +152,10 @@
 
     if-lez v0, :cond_0
 
-    .line 1
     rem-long/2addr p0, p2
 
     return-wide p0
 
-    .line 2
     :cond_0
     invoke-static {p0, p1, p2, p3}, Ljava8/lang/Longs;->compareUnsigned(JJ)I
 
@@ -175,13 +165,11 @@
 
     return-wide p0
 
-    .line 3
     :cond_1
     invoke-static {p0, p1}, Ljava8/lang/Longs;->toUnsignedBigInteger(J)Ljava/math/BigInteger;
 
     move-result-object p0
 
-    .line 4
     invoke-static {p2, p3}, Ljava8/lang/Longs;->toUnsignedBigInteger(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -214,7 +202,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -230,7 +217,6 @@
 
     long-to-int p0, p0
 
-    .line 2
     invoke-static {v1}, Ljava8/lang/Integers;->toUnsignedLong(I)J
 
     move-result-wide v1
@@ -243,7 +229,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-static {p0}, Ljava8/lang/Integers;->toUnsignedLong(I)J
 
     move-result-wide v0

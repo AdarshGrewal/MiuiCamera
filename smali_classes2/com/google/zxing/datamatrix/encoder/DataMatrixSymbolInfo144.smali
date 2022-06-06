@@ -25,7 +25,6 @@
 
     move-object v0, p0
 
-    .line 1
     invoke-direct/range {v0 .. v8}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;-><init>(ZIIIIIII)V
 
     return-void

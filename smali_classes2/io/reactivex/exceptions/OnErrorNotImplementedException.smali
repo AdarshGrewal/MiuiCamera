@@ -15,7 +15,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p2, Ljava/lang/NullPointerException;
 
@@ -32,7 +31,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0

@@ -35,7 +35,6 @@
 .method public constructor <init>(Lcom/android/camera/module/video/AutoZoomController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/video/AutoZoomController$2;->this$0:Lcom/android/camera/module/video/AutoZoomController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lcom/android/camera2/autozoom/AutoZoomCaptureResult;
 
     invoke-direct {v0, p1}, Lcom/android/camera2/autozoom/AutoZoomCaptureResult;-><init>(Landroid/hardware/camera2/CaptureResult;)V
@@ -69,7 +67,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/video/AutoZoomController$2;->apply(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/autozoom/AutoZoomCaptureResult;

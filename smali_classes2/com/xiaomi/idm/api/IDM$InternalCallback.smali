@@ -24,12 +24,10 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDM;Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;)V
     .locals 0
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDM$InternalCallback;->this$0:Lcom/xiaomi/idm/api/IDM;
 
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/IConnectionCallback$Stub;-><init>()V
 
-    .line 3
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDM$InternalCallback;->mIDMConnectionCallback:Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;
 
     return-void
@@ -38,7 +36,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/IDM;Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;Lcom/xiaomi/idm/api/IDM$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDM$InternalCallback;-><init>(Lcom/xiaomi/idm/api/IDM;Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;)V
 
     return-void
@@ -49,7 +46,6 @@
 .method public onDisconnected()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDM$InternalCallback;->mIDMConnectionCallback:Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;
 
     invoke-interface {v0}, Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;->onDisconnected()V
@@ -60,24 +56,20 @@
 .method public onFailure([B)V
     .locals 3
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/conn/ConnParam;->buildFromProto([B)Lcom/xiaomi/idm/api/conn/ConnParam;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/conn/ConnParam;->getErrCode()I
 
     move-result v0
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/conn/ConnParam;->getErrMsg()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     iget-object v2, p0, Lcom/xiaomi/idm/api/IDM$InternalCallback;->mIDMConnectionCallback:Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;
 
     invoke-interface {v2, p1, v0, v1}, Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;->onFailure(Lcom/xiaomi/idm/api/conn/ConnParam;ILjava/lang/String;)V
@@ -89,7 +81,6 @@
 .method public onSuccess([B)V
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/conn/ConnParam;->buildFromProto([B)Lcom/xiaomi/idm/api/conn/ConnParam;
 
     move-result-object p1
@@ -100,7 +91,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/conn/ConnParam;->getConfig()Lcom/xiaomi/idm/api/conn/ConnConfig;
 
@@ -111,7 +101,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDM$InternalCallback;->mIDMConnectionCallback:Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;
 
     invoke-interface {v1, p1, v0}, Lcom/xiaomi/idm/api/IDM$IDMConnectionCallback;->onSuccess(Lcom/xiaomi/idm/api/conn/ConnParam;Ljava/lang/Object;)V

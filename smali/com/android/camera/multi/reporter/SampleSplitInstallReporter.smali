@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -33,7 +32,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;->onDeferredInstallFailed(Ljava/util/List;Ljava/util/List;J)V
 
     return-void
@@ -50,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;->onDeferredInstallOK(Ljava/util/List;J)V
 
     return-void
@@ -69,7 +66,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;->onStartInstallFailed(Ljava/util/List;Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;J)V
 
     return-void
@@ -86,10 +82,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitInstallReporter;->onStartInstallOK(Ljava/util/List;J)V
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -108,7 +102,6 @@
 
     check-cast p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
-    .line 3
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;->getInstallFlag()I
 
     move-result p3
@@ -125,7 +118,6 @@
 
     new-array p3, v3, [Ljava/lang/Object;
 
-    .line 4
     iget-object p2, p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;->splitName:Ljava/lang/String;
 
     aput-object p2, p3, v1
@@ -140,7 +132,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {p2}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;->getInstallFlag()I
 
@@ -150,7 +141,6 @@
 
     new-array p3, v3, [Ljava/lang/Object;
 
-    .line 6
     iget-object p2, p2, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;->splitName:Ljava/lang/String;
 
     aput-object p2, p3, v1

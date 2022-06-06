@@ -51,10 +51,8 @@
 .method public constructor <init>(Lcom/xiaomi/mediacodec/MoviePlayer;Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -63,22 +61,16 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopped:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
 
-    .line 5
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
-    .line 6
     iput-object p2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mFeedback:Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 7
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
 
-    .line 8
     new-instance p1, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 
     const/4 p2, 0x0
@@ -95,7 +87,6 @@
 .method public execute()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "Movie Player"
@@ -104,7 +95,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mThread:Ljava/lang/Thread;
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -113,7 +103,6 @@
 .method public frameReceived()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->frameReceived()V
@@ -126,10 +115,8 @@
 
     const-string v0, "playtask requestStop! "
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->requestStop()V
@@ -144,7 +131,6 @@
 
     const/4 v1, 0x1
 
-    .line 1
     :try_start_0
     iget-object v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
@@ -153,58 +139,47 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2
     iget-object v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 3
     :try_start_1
     iput-boolean v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopped:Z
 
-    .line 4
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
 
-    .line 5
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     iget-boolean v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
 
     if-nez v2, :cond_0
 
-    .line 7
     :goto_0
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mLocalHandler:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 
     iget-object v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mFeedback:Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 8
     invoke-virtual {v1, v0, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_1
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mLocalHandler:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 
     iget-object v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mFeedback:Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 11
     invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_1
@@ -212,7 +187,6 @@
     :catchall_0
     move-exception v0
 
-    .line 13
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -228,7 +202,6 @@
     :catch_0
     move-exception v2
 
-    .line 14
     :try_start_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -246,31 +219,25 @@
 
     invoke-static {v2}, Lcom/xiaomi/mediacodec/Logg;->LogE(Ljava/lang/String;)V
 
-    .line 15
     iput-boolean v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 16
     iget-object v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 17
     :try_start_4
     iput-boolean v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopped:Z
 
-    .line 18
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
 
-    .line 19
     monitor-exit v2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 20
     iget-boolean v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
 
     if-nez v2, :cond_0
@@ -283,7 +250,6 @@
     :catchall_2
     move-exception v0
 
-    .line 21
     :try_start_5
     monitor-exit v2
     :try_end_5
@@ -291,58 +257,47 @@
 
     throw v0
 
-    .line 22
     :goto_2
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 23
     :try_start_6
     iput-boolean v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopped:Z
 
-    .line 24
     iget-object v4, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     invoke-virtual {v4}, Ljava/lang/Object;->notifyAll()V
 
-    .line 25
     monitor-exit v3
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 26
     iget-boolean v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mError:Z
 
     if-nez v3, :cond_1
 
-    .line 27
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mLocalHandler:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mFeedback:Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 28
     invoke-virtual {v1, v0, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 29
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_3
 
-    .line 30
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mLocalHandler:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mFeedback:Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 31
     invoke-virtual {v0, v1, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 32
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :goto_3
@@ -351,7 +306,6 @@
     :catchall_3
     move-exception v0
 
-    .line 33
     :try_start_7
     monitor-exit v3
     :try_end_7
@@ -363,7 +317,6 @@
 .method public seekTo(JI)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/xiaomi/mediacodec/MoviePlayer;->seekTo(JI)Z
@@ -376,10 +329,8 @@
 .method public setLoopMode(Z)V
     .locals 1
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mDoLoop:Z
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mPlayer:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/mediacodec/MoviePlayer;->setLoopMode(Z)V
@@ -390,12 +341,10 @@
 .method public waitForStop()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :catch_0
     :goto_0
     :try_start_0
@@ -405,7 +354,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     :try_start_1
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->mStopLock:Ljava/lang/Object;
 
@@ -416,7 +364,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :try_start_2
     monitor-exit v0

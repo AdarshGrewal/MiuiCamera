@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;ILjava8/util/function/DoublePredicate;)V
     .locals 0
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/WhileOps$4;->val$predicate:Ljava8/util/function/DoublePredicate;
 
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/DoublePipeline$StatefulOp;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V
@@ -62,12 +61,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/WhileOps$TakeWhileTask;
 
     invoke-direct {v0, p0, p1, p2, p3}, Ljava8/util/stream/WhileOps$TakeWhileTask;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/function/IntFunction;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
     move-result-object p1
@@ -95,7 +92,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -108,25 +104,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Ljava8/util/stream/WhileOps;->DOUBLE_ARR_GEN:Ljava8/util/function/IntFunction;
 
     invoke-virtual {p0, p1, p2, v0}, Ljava8/util/stream/WhileOps$4;->opEvaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/Node;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble$Taking;
 
-    .line 5
     invoke-virtual {p1, p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object p1
@@ -156,7 +148,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava8/util/stream/WhileOps$4$1;
 
     invoke-direct {p1, p0, p2}, Ljava8/util/stream/WhileOps$4$1;-><init>(Ljava8/util/stream/WhileOps$4;Ljava8/util/stream/Sink;)V

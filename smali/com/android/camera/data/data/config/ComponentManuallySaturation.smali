@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method private getFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentManuallySaturation;->mFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
     if-eqz v0, :cond_0
@@ -34,7 +32,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string v3, "0"
@@ -121,7 +118,7 @@
 .method public getContentDescriptionString()I
     .locals 1
 
-    const v0, 0x7f120773
+    const v0, 0x7f120737
 
     return v0
 .end method
@@ -137,7 +134,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120773
+    const v0, 0x7f120737
 
     return v0
 .end method
@@ -153,7 +150,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -172,7 +168,6 @@
 
     const/16 v0, 0xa0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/config/ComponentManuallySaturation;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v1
@@ -203,12 +198,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -217,7 +210,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -226,7 +218,6 @@
     :goto_0
     if-nez p2, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object p1
@@ -236,12 +227,10 @@
 
     if-ne p1, p2, :cond_2
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallySaturation;->getFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
 
-    .line 6
     iget-object p2, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -250,7 +239,6 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 7
     :cond_2
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -260,10 +248,8 @@
 .method public resetComponentValue(I)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->resetComponentValue(I)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallySaturation;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0

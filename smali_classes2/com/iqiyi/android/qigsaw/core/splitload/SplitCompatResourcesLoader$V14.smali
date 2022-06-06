@@ -20,7 +20,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;-><init>(Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$1;)V
 
     return-void
@@ -34,7 +33,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->installSplitResDirs(Landroid/content/Context;Landroid/content/res/Resources;Ljava/util/List;)V
 
     return-void
@@ -52,7 +50,6 @@
 
     const-string v0, "mResources"
 
-    .line 1
     instance-of v1, p0, Landroid/view/ContextThemeWrapper;
 
     const-string v2, "SplitCompatResourcesLoader"
@@ -67,7 +64,6 @@
 
     if-lt v1, v4, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextThemeWrapper()Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -86,7 +82,6 @@
 
     const/4 v4, 0x0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -101,27 +96,23 @@
 
     invoke-static {v2, v4, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 4
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextThemeWrapper()Ljava/lang/reflect/Field;
 
     move-result-object v1
 
     invoke-virtual {v1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 5
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContextThemeWrapper()Ljava/lang/reflect/Field;
 
     move-result-object v1
 
     invoke-virtual {v1, p0, v3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 6
     :cond_0
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->getBaseContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
-    .line 7
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -138,7 +129,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 8
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl()Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -151,14 +141,12 @@
 
     if-ne v0, p1, :cond_3
 
-    .line 9
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl()Ljava/lang/reflect/Field;
 
     move-result-object p1
 
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 10
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContentImpl()Ljava/lang/reflect/Field;
 
     move-result-object p1
@@ -167,7 +155,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_1
     :try_start_0
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -182,7 +169,6 @@
 
     if-ne v1, p1, :cond_2
 
-    .line 12
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -191,7 +177,6 @@
 
     const-string v0, "mTheme"
 
-    .line 13
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -205,7 +190,6 @@
     :catch_0
     move-exception v0
 
-    .line 14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -230,7 +214,6 @@
 
     invoke-static {v2, v1, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 15
     :cond_2
     :goto_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl()Ljava/lang/reflect/Field;
@@ -245,14 +228,12 @@
 
     if-ne v0, p1, :cond_3
 
-    .line 16
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInContextImpl()Ljava/lang/reflect/Field;
 
     move-result-object p1
 
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 17
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mThemeInContentImpl()Ljava/lang/reflect/Field;
 
     move-result-object p1
@@ -273,7 +254,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Landroid/content/res/AssetManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
@@ -309,32 +289,26 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageResourcePath()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    .line 3
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->getAppResDirs(Ljava/lang/String;Landroid/content/res/AssetManager;)Ljava/util/List;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-interface {p0, v0, p2}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
-    .line 5
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->createAssetManager()Landroid/content/res/AssetManager;
 
     move-result-object p2
 
-    .line 6
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -352,7 +326,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 7
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getAddAssetPathMethod()Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -377,7 +350,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -399,7 +371,6 @@
 
     invoke-static {p2, p0, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 9
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "invoke addAssetPath failure! apk format maybe incorrect"
@@ -408,7 +379,6 @@
 
     throw p0
 
-    .line 10
     :cond_1
     invoke-static {p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->newResources(Landroid/content/res/Resources;Landroid/content/res/AssetManager;)Landroid/content/res/Resources;
 
@@ -440,7 +410,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -449,7 +418,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mStringBlocksInAssetManager()Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -460,7 +428,6 @@
 
     check-cast v1, [Ljava/lang/Object;
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mStringBlocksInAssetManager()Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -471,13 +438,10 @@
 
     check-cast v2, [Ljava/lang/Object;
 
-    .line 4
     array-length v2, v2
 
-    .line 5
     array-length v1, v1
 
-    .line 6
     new-instance v3, Ljava/util/ArrayList;
 
     sub-int v4, v2, v1
@@ -493,7 +457,6 @@
 
     if-gt v4, v2, :cond_0
 
-    .line 7
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getGetCookieNameMethod()Ljava/lang/reflect/Method;
 
     move-result-object v7
@@ -512,14 +475,12 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 8
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-interface {v3, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -532,7 +493,6 @@
     :goto_1
     if-gt p1, v1, :cond_2
 
-    .line 10
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getGetCookieNameMethod()Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -551,7 +511,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 11
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -571,7 +530,6 @@
     :goto_2
     if-nez v6, :cond_3
 
-    .line 12
     invoke-interface {v3, v5, p0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_3
@@ -581,13 +539,11 @@
 .method public static getBaseContext(Landroid/content/Context;)Landroid/content/Context;
     .locals 1
 
-    .line 1
     :goto_0
     instance-of v0, p0, Landroid/content/ContextWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Landroid/content/ContextWrapper;
 
     invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
@@ -619,20 +575,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->createResources(Landroid/content/Context;Landroid/content/res/Resources;Ljava/util/List;)Landroid/content/res/Resources;
 
     move-result-object p2
 
-    .line 2
     invoke-static {p0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->checkOrUpdateResourcesForContext(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources;)V
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getActivityThread()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActivitiesInActivityThread()Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -643,7 +595,6 @@
 
     check-cast v1, Ljava/util/Map;
 
-    .line 5
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -670,14 +621,12 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v5, "activity"
 
-    .line 7
     invoke-static {v2, v5}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
@@ -694,15 +643,12 @@
 
     const-string v5, "pre-resources found in @mActivities"
 
-    .line 8
     invoke-static {v4, v5, v3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 9
     invoke-static {v2, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$V14;->checkOrUpdateResourcesForContext(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources;)V
 
     goto :goto_0
 
-    .line 10
     :cond_1
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -710,7 +656,6 @@
 
     if-ge p0, v1, :cond_2
 
-    .line 11
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInActivityThread()Ljava/lang/reflect/Field;
 
     move-result-object p0
@@ -723,13 +668,11 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->getResourcesManager()Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 13
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mActiveResourcesInResourcesManager()Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -740,7 +683,6 @@
 
     check-cast p0, Ljava/util/Map;
 
-    .line 14
     :goto_1
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -764,7 +706,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 15
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -784,7 +725,6 @@
     :cond_4
     if-ne v5, p1, :cond_3
 
-    .line 16
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -799,10 +739,8 @@
 
     const-string v1, "pre-resources found in @mActiveResources"
 
-    .line 17
     invoke-static {v4, v1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 18
     :cond_5
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mPackagesInActivityThread()Ljava/lang/reflect/Field;
 
@@ -814,7 +752,6 @@
 
     check-cast p0, Ljava/util/Map;
 
-    .line 19
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -837,7 +774,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 20
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -852,7 +788,6 @@
 
     goto :goto_3
 
-    .line 21
     :cond_7
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk()Ljava/lang/reflect/Field;
 
@@ -870,10 +805,8 @@
 
     const-string v5, "pre-resources found in @mPackages"
 
-    .line 22
     invoke-static {v4, v5, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 23
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk()Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -882,7 +815,6 @@
 
     goto :goto_3
 
-    .line 24
     :cond_8
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcePackagesInActivityThread()Ljava/lang/reflect/Field;
 
@@ -894,7 +826,6 @@
 
     check-cast p0, Ljava/util/Map;
 
-    .line 25
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -917,7 +848,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 26
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -932,7 +862,6 @@
 
     goto :goto_4
 
-    .line 27
     :cond_a
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk()Ljava/lang/reflect/Field;
 
@@ -950,10 +879,8 @@
 
     const-string v2, "pre-resources found in @mResourcePackages"
 
-    .line 28
     invoke-static {v4, v2, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 29
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$VersionCompat;->mResourcesInLoadedApk()Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -981,7 +908,6 @@
 
     new-array v1, v0, [Ljava/lang/Class;
 
-    .line 1
     const-class v2, Landroid/content/res/AssetManager;
 
     const/4 v3, 0x0
@@ -1008,7 +934,6 @@
 
     aput-object p1, v0, v3
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p1

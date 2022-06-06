@@ -43,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;-><init>(Lorg/reactivestreams/Subscriber;)V
 
     return-void
@@ -54,7 +53,6 @@
 .method public onComplete()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lio/reactivex/Notification;->createOnComplete()Lio/reactivex/Notification;
 
     move-result-object v0
@@ -74,14 +72,12 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Lio/reactivex/Notification;->isOnError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lio/reactivex/Notification;->getError()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -95,7 +91,6 @@
 .method public bridge synthetic onDrop(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lio/reactivex/Notification;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableMaterialize$MaterializeSubscriber;->onDrop(Lio/reactivex/Notification;)V
@@ -106,7 +101,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/Notification;->createOnError(Ljava/lang/Throwable;)Lio/reactivex/Notification;
 
     move-result-object p1
@@ -124,7 +118,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->produced:J
 
     const-wide/16 v2, 0x1
@@ -133,7 +126,6 @@
 
     iput-wide v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->produced:J
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-static {p1}, Lio/reactivex/Notification;->createOnNext(Ljava/lang/Object;)Lio/reactivex/Notification;

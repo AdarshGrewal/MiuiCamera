@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/TypeElements;-><init>(Lcom/android/camera/data/data/ComponentData;)V
 
     return-void
@@ -20,7 +19,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1
     invoke-direct {p0, p1, p2, p4}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->supportType(Ljava/lang/String;Ljava/lang/String;Lcom/android/camera2/CameraCapabilities;)Z
 
     move-result p3
@@ -32,7 +30,6 @@
     :cond_0
     const/4 p3, -0x1
 
-    .line 2
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result p4
@@ -524,27 +521,26 @@
 
     :cond_1
     :goto_0
-    const p4, 0x7f12039f
+    const p4, 0x7f12037e
 
-    const v2, 0x7f080420
+    const v2, 0x7f08041e
 
-    const v3, 0x7f080433
+    const v3, 0x7f080431
 
-    const v4, 0x7f120398
+    const v4, 0x7f120377
 
-    const v5, 0x7f0803ec
+    const v5, 0x7f0803ea
 
-    const v6, 0x7f12039b
+    const v6, 0x7f12037a
 
-    const v7, 0x7f0803ef
+    const v7, 0x7f0803ed
 
-    const v8, 0x7f1203a5
+    const v8, 0x7f120384
 
-    const v9, 0x7f0803d0
+    const v9, 0x7f0803ce
 
     packed-switch p3, :pswitch_data_0
 
-    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -565,77 +561,70 @@
 
     throw p1
 
-    .line 4
     :pswitch_0
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f080558
+    const p4, 0x7f080555
 
-    const v0, 0x7f1209b2
+    const v0, 0x7f120963
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 5
     :pswitch_1
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f08055a
-
-    const v0, 0x7f1209b4
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 6
-    :pswitch_2
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f080559
-
-    const v0, 0x7f1209b3
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 7
-    :pswitch_3
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f080557
 
-    const v0, 0x7f1209b1
+    const v0, 0x7f120965
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 8
+    :pswitch_2
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f080556
+
+    const v0, 0x7f120964
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :pswitch_3
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f080554
+
+    const v0, 0x7f120962
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
     :pswitch_4
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f0802b9
+    const p4, 0x7f0802b5
 
-    const v0, 0x7f120465
+    const v0, 0x7f120443
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 9
     :pswitch_5
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f1203a4
+    const p4, 0x7f120383
 
     invoke-direct {p3, v3, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 10
     :pswitch_6
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -643,7 +632,6 @@
 
     return-object p3
 
-    .line 11
     :pswitch_7
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -654,249 +642,227 @@
     :pswitch_8
     return-object v0
 
-    .line 12
     :pswitch_9
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f08043c
+    const p4, 0x7f08043a
 
-    const v0, 0x7f12020c
+    const v0, 0x7f1201fc
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 13
     :pswitch_a
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f080407
+    const p4, 0x7f080405
 
-    const v0, 0x7f120208
+    const v0, 0x7f1201f8
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 14
     :pswitch_b
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f080431
+    const p4, 0x7f08042f
 
-    const v0, 0x7f12020a
+    const v0, 0x7f1201fa
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 15
     :pswitch_c
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f0803d2
+    const p4, 0x7f0803d0
 
-    const v0, 0x7f120206
+    const v0, 0x7f1201f6
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 16
     :pswitch_d
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f080402
+    const p4, 0x7f080400
 
-    const v0, 0x7f120207
+    const v0, 0x7f1201f7
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 17
     :pswitch_e
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f08009f
 
-    const v0, 0x7f12022a
+    const v0, 0x7f12021a
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 18
     :pswitch_f
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f08009b
 
-    const v0, 0x7f120226
+    const v0, 0x7f120216
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 19
     :pswitch_10
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f08009e
 
-    const v0, 0x7f120229
+    const v0, 0x7f120219
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 20
     :pswitch_11
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f08009c
 
-    const v0, 0x7f120227
+    const v0, 0x7f120217
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 21
     :pswitch_12
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f0800a0
 
-    const v0, 0x7f12022b
+    const v0, 0x7f12021b
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 22
     :pswitch_13
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f08009d
 
-    const v0, 0x7f120228
+    const v0, 0x7f120218
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 23
     :pswitch_14
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const v0, 0x7f080412
+    const v0, 0x7f080410
 
     invoke-direct {p3, v0, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 24
     :pswitch_15
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const v0, 0x7f080411
+    const v0, 0x7f08040f
 
     invoke-direct {p3, v0, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 25
     :pswitch_16
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f1203a6
+    const p4, 0x7f120385
 
     invoke-direct {p3, v2, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 26
     :pswitch_17
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f1203a7
+    const p4, 0x7f120386
 
     invoke-direct {p3, v9, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 27
     :pswitch_18
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f080546
+
+    const v0, 0x7f12037f
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :pswitch_19
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f0803d3
+
+    const v0, 0x7f120375
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :pswitch_1a
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f080406
+
+    const v0, 0x7f12037d
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :pswitch_1b
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f0803ff
+
+    const v0, 0x7f12037b
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :pswitch_1c
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f080549
 
-    const v0, 0x7f1203a0
+    const v0, 0x7f120382
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 28
-    :pswitch_19
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f0803d5
-
-    const v0, 0x7f120396
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 29
-    :pswitch_1a
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f080408
-
-    const v0, 0x7f12039e
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 30
-    :pswitch_1b
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f080401
-
-    const v0, 0x7f12039c
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 31
-    :pswitch_1c
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f08054c
-
-    const v0, 0x7f1203a3
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 32
     :pswitch_1d
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f1203a1
+    const p4, 0x7f120380
 
     invoke-direct {p3, v2, p4, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 33
     :pswitch_1e
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -908,44 +874,39 @@
 
     return-object p3
 
-    .line 34
     :pswitch_1f
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
-    const p4, 0x7f08043b
+    const p4, 0x7f080439
 
     invoke-direct {p3, p4, v8, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object p3
 
-    .line 35
     :pswitch_20
-    new-instance p3, Lcom/android/camera/data/data/TypeItem;
-
-    const p4, 0x7f080434
-
-    const v0, 0x7f1203a8
-
-    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p3
-
-    .line 36
-    :pswitch_21
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     const p4, 0x7f080432
 
-    const v0, 0x7f120397
+    const v0, 0x7f120387
 
     invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 37
+    return-object p3
+
+    :pswitch_21
+    new-instance p3, Lcom/android/camera/data/data/TypeItem;
+
+    const p4, 0x7f080430
+
+    const v0, 0x7f120376
+
+    invoke-direct {p3, p4, v0, p1, p2}, Lcom/android/camera/data/data/TypeItem;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+
     invoke-virtual {p3, v1}, Lcom/android/camera/data/data/TypeItem;->setExpandable(Z)Lcom/android/camera/data/data/TypeItem;
 
     return-object p3
 
-    .line 38
     :pswitch_22
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -953,7 +914,6 @@
 
     return-object p3
 
-    .line 39
     :pswitch_23
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -961,7 +921,6 @@
 
     return-object p3
 
-    .line 40
     :pswitch_24
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
@@ -1069,7 +1028,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1079,7 +1037,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1103,7 +1060,6 @@
     :goto_1
     if-eq v0, v2, :cond_2
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_2
@@ -1115,33 +1071,31 @@
 
     const-string v0, "female"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120235
+    const v0, 0x7f120225
 
     return v0
 
     :cond_0
     const-string v0, "male"
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f12023e
+    const v0, 0x7f12022e
 
     return v0
 
     :cond_1
-    const v0, 0x7f1203a4
+    const v0, 0x7f120383
 
     return v0
 .end method
@@ -1160,7 +1114,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_FRONT_ADVANCE:[Ljava/lang/String;
 
     const-string v1, "3"
@@ -1173,7 +1126,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
     return-void
@@ -1193,7 +1145,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_BACK_FIGURE:[Ljava/lang/String;
 
     const-string v1, "6"
@@ -1206,10 +1157,8 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
-    .line 3
     invoke-virtual {p4}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isSmoothDependBeautyVersion()Z
 
     move-result p2
@@ -1222,7 +1171,6 @@
 
     const-string/jumbo v0, "pref_beautify_skin_smooth_ratio_key"
 
-    .line 4
     invoke-direct {p0, p4, v0, p2, p3}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object p2
@@ -1231,7 +1179,6 @@
 
     const/4 p3, 0x0
 
-    .line 5
     invoke-interface {p1, p3, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_0
@@ -1252,19 +1199,17 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p3}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isNewMakeupsDependBeautyVersion()Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 2
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_FRONT_MAKEUPS:[Ljava/lang/String;
 
     const/4 v4, 0x1
 
-    const-string v1, "12"
+    const-string v1, "18"
 
     move-object v0, p0
 
@@ -1272,7 +1217,6 @@
 
     move-object v5, p2
 
-    .line 3
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
     :cond_0
@@ -1295,7 +1239,6 @@
         }
     .end annotation
 
-    .line 1
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -1305,14 +1248,12 @@
 
     aget-object v2, p2, v1
 
-    .line 2
     invoke-direct {p0, p1, v2, p4, p5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 3
     invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -1321,6 +1262,37 @@
     goto :goto_0
 
     :cond_1
+    return-void
+.end method
+
+.method private initLiveBeautyItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/android/camera/data/data/TypeItem;",
+            ">;I",
+            "Lcom/android/camera2/CameraCapabilities;",
+            "Lcom/android/camera/data/data/runing/ComponentRunningShine;",
+            ")V"
+        }
+    .end annotation
+
+    sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_LIVE:[Ljava/lang/String;
+
+    const-string v1, "11"
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v3, p1
+
+    move-object v5, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
+
     return-void
 .end method
 
@@ -1338,10 +1310,9 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_MI_LIVE:[Ljava/lang/String;
 
-    const-string v1, "9"
+    const-string v1, "15"
 
     const/4 v4, 0x1
 
@@ -1351,10 +1322,8 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
-    .line 3
     invoke-virtual {p4}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isSmoothDependBeautyVersion()Z
 
     move-result p2
@@ -1363,11 +1332,10 @@
 
     const/4 p2, 0x1
 
-    const-string p4, "9"
+    const-string p4, "15"
 
     const-string/jumbo v0, "pref_beautify_skin_smooth_ratio_key"
 
-    .line 4
     invoke-direct {p0, p4, v0, p2, p3}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object p2
@@ -1376,7 +1344,6 @@
 
     const/4 p3, 0x0
 
-    .line 5
     invoke-interface {p1, p3, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :cond_0
@@ -1397,7 +1364,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_FRONT_REMODELING:[Ljava/lang/String;
 
     const-string v6, "4"
@@ -1412,10 +1378,8 @@
 
     move-object v5, p2
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
-    .line 3
     invoke-virtual {p3}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isSmoothDependBeautyVersion()Z
 
     move-result v0
@@ -1426,7 +1390,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1444,7 +1407,6 @@
     :goto_0
     if-ge v5, v0, :cond_5
 
-    .line 5
     invoke-interface {p1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -1520,23 +1482,19 @@
 
     if-eq v8, v4, :cond_6
 
-    .line 6
     invoke-interface {p1, v8}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_6
     const-string/jumbo v0, "pref_beautify_skin_smooth_ratio_key"
 
-    .line 7
     invoke-direct {p0, v6, v0, v2, p2}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    .line 8
     invoke-interface {p1, v3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 9
     :cond_7
     invoke-virtual {p3}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isNewMakeupsDependBeautyVersion()Z
 
@@ -1546,7 +1504,6 @@
 
     const-string/jumbo v0, "pref_beautify_color_skin_ratio_key"
 
-    .line 10
     invoke-direct {p0, v6, v0, v2, p2}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object v0
@@ -1555,14 +1512,11 @@
 
     const/4 v3, 0x3
 
-    .line 11
     invoke-interface {p1, v3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 12
     :cond_8
     invoke-direct {p0, p1, v1}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->deleteBeautyItems(Ljava/util/List;Ljava/lang/String;)V
 
-    .line 13
     invoke-virtual {p3}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->supportBeautyMakeUp()Z
 
     move-result p3
@@ -1571,14 +1525,12 @@
 
     const-string/jumbo p3, "pref_beautify_makeup_ratio_key"
 
-    .line 14
     invoke-direct {p0, v6, p3, v2, p2}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->createTypeItem(Ljava/lang/String;Ljava/lang/String;ZLcom/android/camera2/CameraCapabilities;)Lcom/android/camera/data/data/TypeItem;
 
     move-result-object p2
 
     if-eqz p2, :cond_9
 
-    .line 15
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_9
@@ -1599,10 +1551,9 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_FRONT_SUPER_NIGHT:[Ljava/lang/String;
 
-    const-string v1, "11"
+    const-string v1, "17"
 
     const/4 v4, 0x0
 
@@ -1612,7 +1563,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
     return-void
@@ -1632,14 +1582,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p3}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->isBeautyModeDependTsVersion()Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 2
     sget-object v2, Lcom/android/camera/constant/BeautyConstant;->BEAUTY_CATEGORY_TRUESIGHT:[Ljava/lang/String;
 
     const/4 v4, 0x1
@@ -1652,12 +1600,10 @@
 
     move-object v5, p2
 
-    .line 3
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
     const-string p2, "male"
 
-    .line 4
     invoke-static {p2}, Lcom/android/camera/CameraSettings;->isUseNewBeautyMode(Ljava/lang/String;)Z
 
     move-result p2
@@ -1666,12 +1612,10 @@
 
     const-string/jumbo p2, "pref_beautify_whiten_ratio_key"
 
-    .line 5
     invoke-direct {p0, p1, p2}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->deleteBeautyItems(Ljava/util/List;Ljava/lang/String;)V
 
     const-string/jumbo p2, "pref_beautify_makeup_ratio_key"
 
-    .line 6
     invoke-direct {p0, p1, p2}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->deleteBeautyItems(Ljava/util/List;Ljava/lang/String;)V
 
     :cond_0
@@ -1692,10 +1636,9 @@
         }
     .end annotation
 
-    .line 1
     sget-object v2, Lcom/android/camera/constant/VideoBokehConstant;->BEAUTY_CATEGORY_VIDEO_BOKEH:[Ljava/lang/String;
 
-    const-string v1, "8"
+    const-string v1, "14"
 
     const/4 v4, 0x0
 
@@ -1705,7 +1648,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initItemsBySupportedTypes(Ljava/lang/String;[Ljava/lang/String;Ljava/util/List;ZLcom/android/camera2/CameraCapabilities;)V
 
     return-void
@@ -1723,7 +1665,6 @@
     :cond_0
     const-string/jumbo v0, "pref_beautify_color_skin_ratio_key"
 
-    .line 1
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1741,9 +1682,8 @@
     return v1
 
     :cond_1
-    const-string v0, "12"
+    const-string v0, "18"
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -1758,7 +1698,6 @@
 
     return v1
 
-    .line 3
     :cond_2
     invoke-virtual {p3, p2}, Lcom/android/camera2/CameraCapabilities;->isSupportBeautyType(Ljava/lang/String;)Z
 
@@ -1789,34 +1728,35 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/TypeElements;->mComponentData:Lcom/android/camera/data/data/ComponentData;
 
     check-cast v0, Lcom/android/camera/data/data/runing/ComponentRunningShine;
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
-    const/16 v3, 0x38
+    const/16 v3, 0x620
+
+    if-eq v2, v3, :cond_4
+
+    const/16 v3, 0x623
 
     if-eq v2, v3, :cond_3
 
-    const/16 v3, 0x39
+    const/16 v3, 0x624
 
     if-eq v2, v3, :cond_2
 
-    const/16 v3, 0x620
+    const/16 v3, 0x626
 
     if-eq v2, v3, :cond_1
 
-    const/16 v3, 0x621
+    const/16 v3, 0x627
 
     if-eq v2, v3, :cond_0
 
@@ -1831,7 +1771,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x5
 
@@ -1844,7 +1784,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x2
 
@@ -1857,7 +1797,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x1
 
@@ -1870,72 +1810,84 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x0
 
     goto :goto_1
 
     :cond_0
-    const-string v2, "12"
+    const-string v2, "18"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x4
 
     goto :goto_1
 
     :cond_1
-    const-string v2, "11"
+    const-string v2, "17"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    const/4 v2, 0x7
+    const/16 v2, 0x8
 
     goto :goto_1
 
     :cond_2
-    const-string v2, "9"
+    const-string v2, "15"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x3
 
     goto :goto_1
 
     :cond_3
-    const-string v2, "8"
+    const-string v2, "14"
 
     invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
+
+    const/4 v2, 0x7
+
+    goto :goto_1
+
+    :cond_4
+    const-string v2, "11"
+
+    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
 
     const/4 v2, 0x6
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     :goto_0
     const/4 v2, -0x1
 
     :goto_1
     packed-switch v2, :pswitch_data_1
 
-    .line 4
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1956,56 +1908,51 @@
 
     throw p1
 
-    .line 5
     :pswitch_4
     invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initSuperNightBeautyItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 6
     :pswitch_5
     invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initVideoBokehItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 7
     :pswitch_6
+    invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initLiveBeautyItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
+
+    goto :goto_2
+
+    :pswitch_7
     invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initFigureItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 8
-    :pswitch_7
+    :pswitch_8
     invoke-direct {p0, v1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initFrontMakeupsItems(Ljava/util/List;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 9
-    :pswitch_8
+    :pswitch_9
     invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initMiLiveItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 10
-    :pswitch_9
+    :pswitch_a
     invoke-direct {p0, v1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initTsBeautyItems(Ljava/util/List;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 11
-    :pswitch_a
+    :pswitch_b
     invoke-direct {p0, v1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initReModelingItems(Ljava/util/List;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     goto :goto_2
 
-    .line 12
-    :pswitch_b
+    :pswitch_c
     invoke-direct {p0, v1, p1, p2, v0}, Lcom/android/camera/data/data/runing/TypeElementsBeauty;->initAdvanceItems(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera/data/data/runing/ComponentRunningShine;)V
 
     :goto_2
     return-object v1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x33
@@ -2017,6 +1964,7 @@
 
     :pswitch_data_1
     .packed-switch 0x0
+        :pswitch_c
         :pswitch_b
         :pswitch_a
         :pswitch_9

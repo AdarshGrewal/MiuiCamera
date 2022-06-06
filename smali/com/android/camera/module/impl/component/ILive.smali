@@ -32,7 +32,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -41,7 +40,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -60,7 +58,6 @@
 
     check-cast v2, Lcom/android/camera/module/impl/component/ILive$ILiveSegmentData;
 
-    .line 3
     invoke-interface {v2}, Lcom/android/camera/module/impl/component/ILive$ILiveSegmentData;->getDuration()J
 
     move-result-wide v2

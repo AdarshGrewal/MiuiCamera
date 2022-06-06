@@ -79,10 +79,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget v0, Ljava8/util/stream/StreamOpFlag;->IS_SHORT_CIRCUIT:I
 
     if-eqz p1, :cond_0
@@ -99,16 +97,12 @@
 
     iput p1, p0, Ljava8/util/stream/FindOps$FindOp;->opFlags:I
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/FindOps$FindOp;->shape:Ljava8/util/stream/StreamShape;
 
-    .line 4
     iput-object p3, p0, Ljava8/util/stream/FindOps$FindOp;->emptyValue:Ljava/lang/Object;
 
-    .line 5
     iput-object p4, p0, Ljava8/util/stream/FindOps$FindOp;->presentPredicate:Ljava8/util/function/Predicate;
 
-    .line 6
     iput-object p5, p0, Ljava8/util/stream/FindOps$FindOp;->sinkSupplier:Ljava8/util/function/Supplier;
 
     return-void
@@ -130,7 +124,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -141,7 +134,6 @@
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava8/util/stream/FindOps$FindTask;
 
     invoke-direct {v1, p0, v0, p1, p2}, Ljava8/util/stream/FindOps$FindTask;-><init>(Ljava8/util/stream/FindOps$FindOp;ZLjava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
@@ -167,7 +159,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/FindOps$FindOp;->sinkSupplier:Ljava8/util/function/Supplier;
 
     invoke-interface {v0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -190,7 +181,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ljava8/util/stream/FindOps$FindOp;->emptyValue:Ljava/lang/Object;
 
@@ -201,7 +191,6 @@
 .method public getOpFlags()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/FindOps$FindOp;->opFlags:I
 
     return v0
@@ -210,7 +199,6 @@
 .method public inputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/FindOps$FindOp;->shape:Ljava8/util/stream/StreamShape;
 
     return-object v0

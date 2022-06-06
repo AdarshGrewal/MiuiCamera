@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$2;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     iput-object p2, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$2;->val$featureName:Ljava/lang/String;
@@ -48,10 +47,8 @@
 
     const-string v0, "attr_feature_install_cellular_confirm"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackFeatureInstallOperation(Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,20 +83,18 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$2;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$2;->val$featureName:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$800(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->startInstallFeature(Ljava/lang/String;Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$2;->val$confirmRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V

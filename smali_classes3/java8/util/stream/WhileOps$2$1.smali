@@ -32,14 +32,12 @@
 .method public constructor <init>(Ljava8/util/stream/WhileOps$2;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/WhileOps$2$1;->this$0:Ljava8/util/stream/WhileOps$2;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedInt;-><init>(Ljava8/util/stream/Sink;)V
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/WhileOps$2$1;->take:Z
 
     return-void
@@ -50,7 +48,6 @@
 .method public accept(I)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$2$1;->take:Z
 
     if-eqz v0, :cond_0
@@ -67,7 +64,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedInt;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0, p1}, Ljava8/util/stream/Sink;->accept(I)V
@@ -79,7 +75,6 @@
 .method public begin(J)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedInt;->downstream:Ljava8/util/stream/Sink;
 
     const-wide/16 v0, -0x1
@@ -92,7 +87,6 @@
 .method public cancellationRequested()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$2$1;->take:Z
 
     if-eqz v0, :cond_1

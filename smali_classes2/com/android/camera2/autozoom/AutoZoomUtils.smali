@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static dp2px(Landroid/content/Context;F)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -41,7 +39,6 @@
 .method public static fromVidhanceCoordinateSystem(Landroid/graphics/RectF;)V
     .locals 3
 
-    .line 1
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -60,16 +57,14 @@
 .method public static getDisplayRotation(Landroid/content/Context;)I
     .locals 1
 
-    const-string v0, "window"
+    const-string/jumbo v0, "window"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 2
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
@@ -121,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -141,7 +135,6 @@
 
     check-cast v3, Ljava/lang/Long;
 
-    .line 2
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v3
@@ -150,7 +143,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -174,7 +166,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -185,11 +176,9 @@
 
     return p0
 
-    .line 2
     :cond_0
     invoke-static {p0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 3
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -198,7 +187,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -241,7 +229,6 @@
 
     return v0
 
-    .line 5
     :cond_1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -265,7 +252,6 @@
 .method public static normalizedRectToSize(Landroid/graphics/RectF;Landroid/util/Size;)V
     .locals 4
 
-    .line 1
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
@@ -314,7 +300,6 @@
 .method public static rotateFromVidhance(Landroid/content/Context;Landroid/graphics/RectF;)V
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera2/autozoom/AutoZoomUtils;->getDisplayRotation(Landroid/content/Context;)I
 
     move-result p0
@@ -333,7 +318,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget p0, p1, Landroid/graphics/RectF;->right:F
 
@@ -355,7 +339,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget p0, p1, Landroid/graphics/RectF;->bottom:F
 
@@ -373,7 +356,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     iget p0, p1, Landroid/graphics/RectF;->bottom:F
 
@@ -396,7 +378,6 @@
 .method public static rotateToVidhance(Landroid/content/Context;Landroid/graphics/RectF;)V
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera2/autozoom/AutoZoomUtils;->getDisplayRotation(Landroid/content/Context;)I
 
     move-result p0
@@ -415,7 +396,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget p0, p1, Landroid/graphics/RectF;->right:F
 
@@ -437,7 +417,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget p0, p1, Landroid/graphics/RectF;->top:F
 
@@ -455,7 +434,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     iget p0, p1, Landroid/graphics/RectF;->top:F
 
@@ -478,7 +456,6 @@
 .method public static toVidhanceCoordinateSystem(Landroid/graphics/RectF;)V
     .locals 3
 
-    .line 1
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     const/high16 v1, 0x3f000000    # 0.5f

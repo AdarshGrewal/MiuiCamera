@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public createTarget(Landroid/view/View;)Lmiuix/animation/IAnimTarget;
     .locals 2
 
-    .line 2
     new-instance v0, Lmiuix/animation/ViewTarget;
 
     const/4 v1, 0x0
@@ -54,7 +52,6 @@
 .method public bridge synthetic createTarget(Ljava/lang/Object;)Lmiuix/animation/IAnimTarget;
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/ViewTarget$1;->createTarget(Landroid/view/View;)Lmiuix/animation/IAnimTarget;

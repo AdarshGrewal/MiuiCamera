@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$ActionBarAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$ActionBarAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->getActionBarContainer()Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
@@ -61,7 +59,6 @@
 
     const/16 v0, 0x8
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0

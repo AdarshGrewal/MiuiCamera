@@ -44,10 +44,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     return-void
@@ -66,34 +64,29 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/shottype/ChainHandler;->couldProcess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/module/shottype/ChainHandler;->process()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mNext:Lcom/android/camera/module/shottype/ChainHandler;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/module/shottype/ChainHandler;->handle()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 
-    .line 5
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -103,7 +96,7 @@
 
     move-result-object v0
 
-    const-string v1, "no next handler, end chain"
+    const-string/jumbo v1, "no next handler, end chain"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -123,7 +116,6 @@
 .method public final setNextHandler(Lcom/android/camera/module/shottype/ChainHandler;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mNext:Lcom/android/camera/module/shottype/ChainHandler;
 
     return-void

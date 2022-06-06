@@ -22,17 +22,8 @@
 
 
 # virtual methods
-.method public abstract addOnDragListener(Lcom/android/camera/ui/DragLayout$OnDragListener;)V
-.end method
-
-.method public abstract disableDrag()V
-.end method
-
 .method public abstract isExpanded()Z
 .end method
 
 .method public abstract shrink(Z)Z
-.end method
-
-.method public abstract switchMoreMode(Z)V
 .end method

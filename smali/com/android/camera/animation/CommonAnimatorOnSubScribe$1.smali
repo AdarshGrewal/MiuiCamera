@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/animation/CommonAnimatorOnSubScribe;Lio/reactivex/CompletableEmitter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->this$0:Lcom/android/camera/animation/CommonAnimatorOnSubScribe;
 
     iput-object p2, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->val$completableEmitter:Lio/reactivex/CompletableEmitter;
@@ -39,10 +38,8 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->this$0:Lcom/android/camera/animation/CommonAnimatorOnSubScribe;
 
     invoke-static {p1}, Lcom/android/camera/animation/CommonAnimatorOnSubScribe;->access$000(Lcom/android/camera/animation/CommonAnimatorOnSubScribe;)Landroid/animation/Animator;
@@ -51,7 +48,6 @@
 
     invoke-virtual {p1}, Landroid/animation/Animator;->removeAllListeners()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->val$completableEmitter:Lio/reactivex/CompletableEmitter;
 
     invoke-interface {p1}, Lio/reactivex/CompletableEmitter;->onComplete()V
@@ -62,10 +58,8 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->this$0:Lcom/android/camera/animation/CommonAnimatorOnSubScribe;
 
     invoke-static {p1}, Lcom/android/camera/animation/CommonAnimatorOnSubScribe;->access$000(Lcom/android/camera/animation/CommonAnimatorOnSubScribe;)Landroid/animation/Animator;
@@ -74,7 +68,6 @@
 
     invoke-virtual {p1}, Landroid/animation/Animator;->removeAllListeners()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/animation/CommonAnimatorOnSubScribe$1;->val$completableEmitter:Lio/reactivex/CompletableEmitter;
 
     invoke-interface {p1}, Lio/reactivex/CompletableEmitter;->onComplete()V

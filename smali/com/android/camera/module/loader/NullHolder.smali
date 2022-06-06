@@ -35,13 +35,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/module/loader/NullHolder;->mValue:Ljava/lang/Object;
 
-    .line 3
     iput p2, p0, Lcom/android/camera/module/loader/NullHolder;->mException:I
 
     return-void
@@ -59,7 +56,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/loader/NullHolder;
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/module/loader/NullHolder;-><init>(Ljava/lang/Object;I)V
@@ -81,7 +77,6 @@
 
     const/16 v0, 0xe0
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/module/loader/NullHolder;->of(Ljava/lang/Object;I)Lcom/android/camera/module/loader/NullHolder;
 
     move-result-object p0
@@ -101,7 +96,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera/module/loader/NullHolder;->of(Ljava/lang/Object;I)Lcom/android/camera/module/loader/NullHolder;
 
     move-result-object p0
@@ -119,7 +113,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/NullHolder;->mValue:Ljava/lang/Object;
 
     return-object v0
@@ -128,7 +121,6 @@
 .method public getException()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/loader/NullHolder;->mException:I
 
     return v0
@@ -137,7 +129,6 @@
 .method public isPresent()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/NullHolder;->mValue:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -156,7 +147,6 @@
 .method public setException(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/NullHolder;->mException:I
 
     return-void

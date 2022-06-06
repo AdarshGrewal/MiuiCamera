@@ -30,7 +30,6 @@
 
     const/16 v0, 0x12c
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;-><init>(I)V
 
     return-void
@@ -39,10 +38,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput p1, p0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->durationMillis:I
 
     return-void
@@ -53,7 +50,6 @@
 .method public build()Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;
 
     iget v1, p0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->durationMillis:I
@@ -68,7 +64,6 @@
 .method public setCrossFadeEnabled(Z)Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->isCrossFadeEnabled:Z
 
     return-object p0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;->val$buffer:Ljava/nio/ByteBuffer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;->val$buffer:Ljava/nio/ByteBuffer;
 
     invoke-interface {p1, v0}, Lcom/bumptech/glide/load/ImageHeaderParser;->getType(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;

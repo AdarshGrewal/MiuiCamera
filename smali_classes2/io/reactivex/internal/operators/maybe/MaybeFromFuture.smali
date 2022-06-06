@@ -43,16 +43,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Maybe;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->future:Ljava/util/concurrent/Future;
 
-    .line 3
     iput-wide p2, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->timeout:J
 
-    .line 4
     iput-object p4, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->unit:Ljava/util/concurrent/TimeUnit;
 
     return-void
@@ -70,22 +66,18 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/disposables/Disposables;->empty()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {p1, v0}, Lio/reactivex/MaybeObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V
 
-    .line 3
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 4
     :try_start_0
     iget-wide v1, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->timeout:J
 
@@ -95,7 +87,6 @@
 
     if-gtz v1, :cond_0
 
-    .line 5
     iget-object v1, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->future:Ljava/util/concurrent/Future;
 
     invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
@@ -104,7 +95,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object v1, p0, Lio/reactivex/internal/operators/maybe/MaybeFromFuture;->future:Ljava/util/concurrent/Future;
 
@@ -120,7 +110,6 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     :goto_0
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
@@ -130,12 +119,10 @@
 
     if-nez v1, :cond_1
 
-    .line 8
     invoke-interface {p1}, Lio/reactivex/MaybeObserver;->onComplete()V
 
     goto :goto_1
 
-    .line 9
     :cond_1
     invoke-interface {p1, v1}, Lio/reactivex/MaybeObserver;->onSuccess(Ljava/lang/Object;)V
 
@@ -144,14 +131,12 @@
     :catch_0
     move-exception v1
 
-    .line 10
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 11
     invoke-interface {p1, v1}, Lio/reactivex/MaybeObserver;->onError(Ljava/lang/Throwable;)V
 
     :cond_2
@@ -160,14 +145,12 @@
     :catch_1
     move-exception v1
 
-    .line 12
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 13
     invoke-virtual {v1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -180,14 +163,12 @@
     :catch_2
     move-exception v1
 
-    .line 14
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 15
     invoke-interface {p1, v1}, Lio/reactivex/MaybeObserver;->onError(Ljava/lang/Throwable;)V
 
     :cond_4

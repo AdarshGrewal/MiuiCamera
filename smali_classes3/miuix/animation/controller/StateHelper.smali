@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/animation/property/ValueProperty;
 
     const-string v1, "defaultProperty"
@@ -22,7 +21,6 @@
 
     sput-object v0, Lmiuix/animation/controller/StateHelper;->DEFAULT_PROPERTY:Lmiuix/animation/property/ValueProperty;
 
-    .line 2
     new-instance v0, Lmiuix/animation/property/IntValueProperty;
 
     const-string v1, "defaultIntProperty"
@@ -37,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,14 +43,12 @@
 .method private addConfigToLink(Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p2, Lmiuix/animation/base/AnimConfig;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p2, Lmiuix/animation/base/AnimConfig;
 
     new-array v0, v1, [Z
@@ -64,13 +59,11 @@
 
     return p1
 
-    .line 3
     :cond_0
     instance-of v0, p2, Lmiuix/animation/base/AnimConfigLink;
 
     if-eqz v0, :cond_1
 
-    .line 4
     check-cast p2, Lmiuix/animation/base/AnimConfigLink;
 
     new-array v0, v1, [Z
@@ -88,14 +81,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 1
     invoke-direct {p0, p4, p5}, Lmiuix/animation/controller/StateHelper;->getPropertyValue(I[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-direct {p0, p2, p3, v1}, Lmiuix/animation/controller/StateHelper;->addPropertyValue(Lmiuix/animation/controller/AnimState;Lmiuix/animation/property/FloatProperty;Ljava/lang/Object;)Z
 
     move-result p2
@@ -104,7 +95,6 @@
 
     add-int/2addr p4, v0
 
-    .line 3
     invoke-direct {p0, p1, p3, p4, p5}, Lmiuix/animation/controller/StateHelper;->setInitVelocity(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;I[Ljava/lang/Object;)Z
 
     move-result p1
@@ -126,12 +116,10 @@
 .method private addPropertyValue(Lmiuix/animation/controller/AnimState;Lmiuix/animation/property/FloatProperty;Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p3, Ljava/lang/Integer;
 
     if-nez v0, :cond_1
 
-    .line 2
     instance-of v1, p3, Ljava/lang/Float;
 
     if-nez v1, :cond_1
@@ -147,14 +135,12 @@
 
     return p1
 
-    .line 3
     :cond_1
     :goto_0
     instance-of v1, p2, Lmiuix/animation/property/IIntValueProperty;
 
     if-eqz v1, :cond_2
 
-    .line 4
     invoke-direct {p0, p3, v0}, Lmiuix/animation/controller/StateHelper;->toInt(Ljava/lang/Object;Z)I
 
     move-result p3
@@ -165,7 +151,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     invoke-direct {p0, p3, v0}, Lmiuix/animation/controller/StateHelper;->toFloat(Ljava/lang/Object;Z)F
 
@@ -184,7 +169,6 @@
 .method private checkAndSetAnimConfig(Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;)Z
     .locals 6
 
-    .line 1
     instance-of v0, p2, Lmiuix/animation/listener/TransitionListener;
 
     const/4 v1, 0x1
@@ -197,7 +181,6 @@
 
     goto :goto_3
 
-    .line 2
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -209,7 +192,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 3
     invoke-static {p2}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v0
@@ -223,12 +205,10 @@
     :goto_0
     if-ge v3, v0, :cond_3
 
-    .line 4
     invoke-static {p2, v3}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 5
     invoke-direct {p0, p1, v5}, Lmiuix/animation/controller/StateHelper;->addConfigToLink(Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;)Z
 
     move-result v5
@@ -256,7 +236,6 @@
     :cond_3
     return v4
 
-    .line 6
     :cond_4
     invoke-direct {p0, p1, p2}, Lmiuix/animation/controller/StateHelper;->addConfigToLink(Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;)Z
 
@@ -264,7 +243,6 @@
 
     return p1
 
-    .line 7
     :cond_5
     :goto_3
     invoke-virtual {p1}, Lmiuix/animation/base/AnimConfigLink;->getHead()Lmiuix/animation/base/AnimConfig;
@@ -279,21 +257,18 @@
 .method private getProperty(Lmiuix/animation/IAnimTarget;Ljava/lang/Object;Ljava/lang/Object;)Lmiuix/animation/property/FloatProperty;
     .locals 2
 
-    .line 1
     instance-of v0, p2, Lmiuix/animation/property/FloatProperty;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     move-object v1, p2
 
     check-cast v1, Lmiuix/animation/property/FloatProperty;
 
     goto :goto_0
 
-    .line 3
     :cond_0
     instance-of v0, p2, Ljava/lang/String;
 
@@ -305,12 +280,10 @@
 
     if-eqz p3, :cond_1
 
-    .line 4
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 5
     :cond_1
     check-cast p1, Lmiuix/animation/ValueTarget;
 
@@ -322,13 +295,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     instance-of p1, p2, Ljava/lang/Float;
 
     if-eqz p1, :cond_3
 
-    .line 7
     sget-object v1, Lmiuix/animation/controller/StateHelper;->DEFAULT_PROPERTY:Lmiuix/animation/property/ValueProperty;
 
     :cond_3
@@ -339,7 +310,6 @@
 .method private varargs getPropertyValue(I[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     array-length v0, p2
 
     if-ge p1, v0, :cond_0
@@ -358,7 +328,6 @@
 .method private isDefaultProperty(Lmiuix/animation/property/FloatProperty;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/controller/StateHelper;->DEFAULT_PROPERTY:Lmiuix/animation/property/ValueProperty;
 
     if-eq p1, v0, :cond_1
@@ -385,7 +354,6 @@
 .method private varargs setInitVelocity(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;I[Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     array-length v0, p4
 
     const/4 v1, 0x0
@@ -394,16 +362,13 @@
 
     return v1
 
-    .line 2
     :cond_0
     aget-object p3, p4, p3
 
-    .line 3
     instance-of p4, p3, Ljava/lang/Float;
 
     if-eqz p4, :cond_1
 
-    .line 4
     check-cast p3, Ljava/lang/Float;
 
     invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
@@ -425,21 +390,18 @@
 .method private varargs setPropertyAndValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;Ljava/lang/Object;I[Ljava/lang/Object;)I
     .locals 6
 
-    .line 1
     invoke-direct {p0, p3, p4}, Lmiuix/animation/controller/StateHelper;->checkAndSetAnimConfig(Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;)Z
 
     move-result p3
 
     if-nez p3, :cond_1
 
-    .line 2
     invoke-direct {p0, p1, p4, p5}, Lmiuix/animation/controller/StateHelper;->getProperty(Lmiuix/animation/IAnimTarget;Ljava/lang/Object;Ljava/lang/Object;)Lmiuix/animation/property/FloatProperty;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    .line 3
     invoke-direct {p0, v3}, Lmiuix/animation/controller/StateHelper;->isDefaultProperty(Lmiuix/animation/property/FloatProperty;)Z
 
     move-result p3
@@ -462,7 +424,6 @@
 
     move-object v5, p7
 
-    .line 4
     invoke-direct/range {v0 .. v5}, Lmiuix/animation/controller/StateHelper;->addProperty(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/property/FloatProperty;I[Ljava/lang/Object;)I
 
     move-result p1
@@ -489,7 +450,6 @@
 .method private setTempConfig(Lmiuix/animation/base/AnimConfig;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     instance-of v0, p2, Lmiuix/animation/listener/TransitionListener;
 
     if-eqz v0, :cond_0
@@ -500,7 +460,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     check-cast p2, Lmiuix/animation/listener/TransitionListener;
 
     aput-object p2, v0, v1
@@ -509,13 +468,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     instance-of v0, p2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     if-eqz v0, :cond_1
 
-    .line 4
     check-cast p2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     invoke-virtual {p1, p2}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
@@ -530,7 +487,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -557,7 +513,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -584,7 +539,6 @@
 .method public varargs parse(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;[Ljava/lang/Object;)V
     .locals 9
 
-    .line 1
     array-length v0, p4
 
     if-nez v0, :cond_0
@@ -594,7 +548,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     aget-object v0, p4, v0
 
     invoke-virtual {p2}, Lmiuix/animation/controller/AnimState;->getTag()Ljava/lang/Object;
@@ -608,18 +561,15 @@
     :goto_0
     move v7, v0
 
-    .line 3
     :goto_1
     array-length v0, p4
 
     if-ge v7, v0, :cond_3
 
-    .line 4
     aget-object v5, p4, v7
 
     add-int/lit8 v0, v7, 0x1
 
-    .line 5
     array-length v1, p4
 
     if-ge v0, v1, :cond_1
@@ -634,7 +584,6 @@
     :goto_2
     move-object v6, v1
 
-    .line 6
     instance-of v1, v5, Ljava/lang/String;
 
     if-eqz v1, :cond_2
@@ -656,7 +605,6 @@
 
     move-object v8, p4
 
-    .line 7
     invoke-direct/range {v1 .. v8}, Lmiuix/animation/controller/StateHelper;->setPropertyAndValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;Ljava/lang/Object;Ljava/lang/Object;I[Ljava/lang/Object;)I
 
     move-result v7

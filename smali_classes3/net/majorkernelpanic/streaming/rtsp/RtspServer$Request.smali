@@ -45,7 +45,6 @@
 
     const-string v1, "(\\w+) (\\S+) RTSP"
 
-    .line 1
     invoke-static {v1, v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v1
@@ -54,7 +53,6 @@
 
     const-string v1, "(\\S+):(.+)"
 
-    .line 2
     invoke-static {v1, v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -67,10 +65,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -90,12 +86,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;
 
     invoke-direct {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v1
@@ -104,19 +98,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
     sget-object v3, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;->regexMethod:Ljava/util/regex/Pattern;
 
     invoke-virtual {v3, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     const/4 v3, 0x1
 
-    .line 5
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -125,14 +116,12 @@
 
     const/4 v4, 0x2
 
-    .line 6
     invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;->uri:Ljava/lang/String;
 
-    .line 7
     :goto_0
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -148,17 +137,14 @@
 
     if-le v5, v6, :cond_0
 
-    .line 8
     sget-object v5, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;->rexegHeader:Ljava/util/regex/Pattern;
 
     invoke-virtual {v5, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 9
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
-    .line 10
     iget-object v5, v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;->headers:Ljava/util/HashMap;
 
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -182,7 +168,6 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 11
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +194,6 @@
 
     return-object v0
 
-    .line 12
     :cond_1
     new-instance p0, Ljava/net/SocketException;
 
@@ -217,7 +201,6 @@
 
     throw p0
 
-    .line 13
     :cond_2
     new-instance p0, Ljava/net/SocketException;
 

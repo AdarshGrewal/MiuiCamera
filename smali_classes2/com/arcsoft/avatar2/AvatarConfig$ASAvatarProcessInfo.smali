@@ -80,40 +80,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x9a
 
     new-array v0, v0, [Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
-    .line 2
     iput-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->outlines:[Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->mouthOpen:I
 
-    .line 4
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->eyeBlink:I
 
-    .line 5
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->eyeBrowRaise:I
 
-    .line 6
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->nodHead:I
 
-    .line 7
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->headPoseLr:I
 
-    .line 8
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->yawStatus:I
 
-    .line 9
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->rollStatus:I
 
-    .line 10
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->pitchStatus:I
 
     return-void
@@ -122,31 +112,24 @@
 .method public constructor <init>(IIIZ)V
     .locals 1
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->processHeight:I
 
-    .line 13
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->processWidth:I
 
-    .line 14
     iput p3, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientation:I
 
-    .line 15
     iput-boolean p4, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->isMirror:Z
 
     const/16 p1, 0x9a
 
     new-array p2, p1, [F
 
-    .line 16
     iput-object p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     new-array p2, p1, [Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
-    .line 17
     iput-object p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->outlines:[Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
     const/4 p2, 0x0
@@ -156,12 +139,10 @@
     :goto_0
     if-ge p3, p1, :cond_0
 
-    .line 18
     new-instance p4, Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
     invoke-direct {p4}, Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;-><init>()V
 
-    .line 19
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->outlines:[Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
     aput-object p4, v0, p3
@@ -170,7 +151,6 @@
 
     goto :goto_0
 
-    .line 20
     :cond_0
     new-instance p1, Lcom/arcsoft/avatar2/AvatarConfig$ASRect;
 
@@ -182,44 +162,32 @@
 
     new-array p1, p1, [F
 
-    .line 21
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceOrientations:[F
 
-    .line 22
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->result:I
 
     const/4 p1, 0x1
 
-    .line 23
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceCount:I
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 24
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->zoomInScale:F
 
-    .line 25
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->mouthOpen:I
 
-    .line 26
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->eyeBlink:I
 
-    .line 27
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->eyeBrowRaise:I
 
-    .line 28
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->nodHead:I
 
-    .line 29
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->headPoseLr:I
 
-    .line 30
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->yawStatus:I
 
-    .line 31
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->rollStatus:I
 
-    .line 32
     iput p2, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->pitchStatus:I
 
     return-void
@@ -260,7 +228,6 @@
 
     move v10, v9
 
-    .line 1
     :goto_0
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
@@ -274,7 +241,6 @@
 
     if-gt v2, v12, :cond_0
 
-    .line 2
     aget v11, v11, v2
 
     add-float/2addr v3, v11
@@ -290,7 +256,6 @@
 
     if-gt v2, v11, :cond_1
 
-    .line 3
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -308,7 +273,6 @@
 
     if-gt v2, v11, :cond_2
 
-    .line 4
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -326,7 +290,6 @@
 
     if-gt v2, v11, :cond_3
 
-    .line 5
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -344,7 +307,6 @@
 
     if-gt v2, v11, :cond_4
 
-    .line 6
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -362,7 +324,6 @@
 
     if-gt v2, v11, :cond_5
 
-    .line 7
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -380,7 +341,6 @@
 
     if-gt v2, v11, :cond_6
 
-    .line 8
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -398,7 +358,6 @@
 
     if-gt v2, v11, :cond_7
 
-    .line 9
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -419,7 +378,6 @@
 
     if-gt v2, v11, :cond_9
 
-    .line 10
     iget-object v11, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v11, v11, v2
@@ -550,7 +508,6 @@
 .method public checkOutLineInfo()I
     .locals 11
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceOrientations:[F
 
     const/4 v1, 0x0
@@ -559,12 +516,10 @@
 
     const/4 v3, 0x1
 
-    .line 2
     aget v3, v0, v3
 
     const/4 v4, 0x2
 
-    .line 3
     aget v0, v0, v4
 
     const/high16 v5, -0x3d240000    # -110.0f
@@ -669,7 +624,6 @@
 
     if-gt v2, v5, :cond_7
 
-    .line 4
     iget-object v5, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v5, v5, v2
@@ -685,7 +639,6 @@
 
     div-float/2addr v3, v2
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -724,7 +677,6 @@
 
     if-gt v3, v7, :cond_9
 
-    .line 6
     iget-object v7, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v7, v7, v3
@@ -740,7 +692,6 @@
 
     div-float/2addr v6, v3
 
-    .line 7
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -766,7 +717,6 @@
 
     if-gt v7, v10, :cond_a
 
-    .line 8
     iget-object v10, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v10, v10, v7
@@ -780,7 +730,6 @@
     :cond_a
     div-float/2addr v9, v3
 
-    .line 9
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -815,7 +764,6 @@
 
     if-gt v3, v9, :cond_c
 
-    .line 10
     iget-object v9, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v9, v9, v3
@@ -829,7 +777,6 @@
     :cond_c
     div-float/2addr v7, v8
 
-    .line 11
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -862,7 +809,6 @@
 
     if-gt v3, v7, :cond_e
 
-    .line 12
     iget-object v7, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     aget v7, v7, v3
@@ -878,7 +824,6 @@
 
     div-float/2addr v0, v3
 
-    .line 13
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -903,7 +848,6 @@
 
     move v6, v0
 
-    .line 14
     :cond_f
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -944,7 +888,6 @@
 .method public getExpWeights()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->expWeights:[F
 
     return-object v0
@@ -953,7 +896,6 @@
 .method public getEyeBlink()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->eyeBlink:I
 
     return v0
@@ -962,7 +904,6 @@
 .method public getFaceCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceCount:I
 
     return v0
@@ -971,7 +912,6 @@
 .method public getHeadPoseLr()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->headPoseLr:I
 
     return v0
@@ -980,7 +920,6 @@
 .method public getHeadRollStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->rollStatus:I
 
     return v0
@@ -989,7 +928,6 @@
 .method public getMouthOpen()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->mouthOpen:I
 
     return v0
@@ -998,7 +936,6 @@
 .method public getOrientationLeftEyes()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationLeftEyes:[F
 
     return-object v0
@@ -1007,7 +944,6 @@
 .method public getOrientationRightEyes()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationRightEyes:[F
 
     return-object v0
@@ -1016,7 +952,6 @@
 .method public getOrientations()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientations:[F
 
     return-object v0
@@ -1025,7 +960,6 @@
 .method public getPitchStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->pitchStatus:I
 
     return v0
@@ -1034,7 +968,6 @@
 .method public getString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1113,7 +1046,6 @@
 .method public getTongueStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->tongueStatus:I
 
     return v0
@@ -1124,21 +1056,16 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->processHeight:I
 
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->processWidth:I
 
-    .line 2
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientation:I
 
-    .line 3
     iput-boolean v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->isMirror:Z
 
-    .line 4
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceCount:I
 
-    .line 5
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->outlines:[Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;
 
     array-length v2, v1
@@ -1152,60 +1079,47 @@
 
     aget-object v5, v1, v3
 
-    .line 6
     iput v4, v5, Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;->x:F
 
-    .line 7
     iput v4, v5, Lcom/arcsoft/avatar2/AvatarConfig$ASPointF;->y:F
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->face:Lcom/arcsoft/avatar2/AvatarConfig$ASRect;
 
     iput v0, v1, Lcom/arcsoft/avatar2/AvatarConfig$ASRect;->bottom:I
 
-    .line 9
     iput v0, v1, Lcom/arcsoft/avatar2/AvatarConfig$ASRect;->right:I
 
-    .line 10
     iput v0, v1, Lcom/arcsoft/avatar2/AvatarConfig$ASRect;->top:I
 
-    .line 11
     iput v0, v1, Lcom/arcsoft/avatar2/AvatarConfig$ASRect;->left:I
 
-    .line 12
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->faceOrientations:[F
 
     invoke-static {v1, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 13
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->result:I
 
-    .line 14
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientations:[F
 
     invoke-static {v0, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 15
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationLeftEyes:[F
 
     invoke-static {v0, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 16
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationRightEyes:[F
 
     invoke-static {v0, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 17
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->expWeights:[F
 
     invoke-static {v0, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 18
     iput v4, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->zoomInScale:F
 
     return-void
@@ -1214,7 +1128,6 @@
 .method public setExpWeights([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->expWeights:[F
 
     return-void
@@ -1223,7 +1136,6 @@
 .method public setOrientationLeftEyes([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationLeftEyes:[F
 
     return-void
@@ -1232,7 +1144,6 @@
 .method public setOrientationRightEyes([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientationRightEyes:[F
 
     return-void
@@ -1241,7 +1152,6 @@
 .method public setOrientations([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->orientations:[F
 
     return-void
@@ -1250,7 +1160,6 @@
 .method public setTongueStatus(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->tongueStatus:I
 
     return-void
@@ -1259,7 +1168,6 @@
 .method public shelterIsNull()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterFlags:[F
 
     if-nez v0, :cond_0

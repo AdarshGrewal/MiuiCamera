@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/core/util/Pools$Manager;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public bridge synthetic createInstance()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/pickerwidget/date/DateUtils$1;->createInstance()Lmiuix/pickerwidget/date/Calendar;
 
     move-result-object v0
@@ -48,7 +46,6 @@
 .method public createInstance()Lmiuix/pickerwidget/date/Calendar;
     .locals 1
 
-    .line 2
     new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V

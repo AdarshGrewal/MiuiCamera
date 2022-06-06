@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public reset()V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -45,10 +43,8 @@
 .method public reset(Ljava/lang/String;)V
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/effect/framework/utils/CounterUtil;->reset()V
 
-    .line 3
     sget-object v0, Lcom/android/camera/effect/framework/utils/CounterUtil;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
@@ -59,12 +55,10 @@
 .method public tick(Ljava/lang/String;)V
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     sget-object v2, Lcom/android/camera/effect/framework/utils/CounterUtil;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -89,7 +83,6 @@
 
     invoke-static {v2, p1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/effect/framework/utils/CounterUtil;->mTs:J
 
     return-void

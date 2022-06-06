@@ -21,10 +21,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
@@ -37,7 +35,6 @@
 .method public static cloneBox(Lorg/jcodec/containers/mp4/boxes/Box;ILorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->doCloneBox(Lorg/jcodec/containers/mp4/boxes/Box;ILorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p0
@@ -48,18 +45,14 @@
 .method public static doCloneBox(Lorg/jcodec/containers/mp4/boxes/Box;ILorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;->write(Ljava/nio/ByteBuffer;)V
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 4
     invoke-static {p1, p2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->parseChildBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p0
@@ -90,7 +83,6 @@
 
     aput-object p2, v0, v1
 
-    .line 1
     invoke-static {p0, p1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findAllPath(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/lang/Class;[Ljava/lang/String;)[Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p0
@@ -113,12 +105,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -129,7 +119,6 @@
 
     invoke-static {p0, v1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findBox(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/util/List;Ljava/util/Collection;)V
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -142,7 +131,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 4
     invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object p2
@@ -151,12 +139,10 @@
 
     if-nez p2, :cond_1
 
-    .line 5
     invoke-interface {p0}, Ljava/util/ListIterator;->remove()V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -168,7 +154,6 @@
 
     if-nez v1, :cond_0
 
-    .line 7
     :try_start_0
     invoke-static {p1, p2}, Lorg/jcodec/containers/mp4/boxes/Box;->asBox(Ljava/lang/Class;Lorg/jcodec/containers/mp4/boxes/Box;)Lorg/jcodec/containers/mp4/boxes/Box;
 
@@ -180,7 +165,6 @@
 
     goto :goto_0
 
-    .line 8
     :catch_0
     invoke-interface {p0}, Ljava/util/ListIterator;->remove()V
 
@@ -189,7 +173,6 @@
     :cond_2
     const/4 p0, 0x0
 
-    .line 9
     invoke-static {p1, p0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -220,7 +203,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -229,22 +211,18 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 3
     instance-of v2, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     if-eqz v2, :cond_2
 
-    .line 4
     check-cast p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
-    .line 5
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->getBoxes()Ljava/util/List;
 
     move-result-object p0
@@ -269,7 +247,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6
     iget-object v3, v2, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v3}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
@@ -282,19 +259,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 7
     :cond_1
     invoke-static {v2, p1, p2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findBox(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/util/List;Ljava/util/Collection;)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-interface {p1, v0, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     goto :goto_1
 
-    .line 9
     :cond_3
     invoke-interface {p2, p0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -317,17 +291,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-static {p0, p1, p2, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findDeepInner(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/lang/Class;Ljava/lang/String;Ljava/util/List;)V
 
     const/4 p0, 0x0
 
-    .line 3
     invoke-static {p1, p0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -363,7 +334,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/Box;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -379,21 +349,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {p3, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 3
     :cond_1
     instance-of v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     if-eqz v0, :cond_2
 
-    .line 4
     check-cast p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
-    .line 5
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->getBoxes()Ljava/util/List;
 
     move-result-object p0
@@ -415,7 +381,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 6
     invoke-static {v0, p1, p2, p3}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findDeepInner(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/lang/Class;Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_0
@@ -447,7 +412,6 @@
 
     aput-object p2, v0, v1
 
-    .line 1
     invoke-static {p0, p1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findFirstPath(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/Class;[Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p0
@@ -470,12 +434,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findAllPath(Lorg/jcodec/containers/mp4/boxes/Box;Ljava/lang/Class;[Ljava/lang/String;)[Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p0
 
-    .line 2
     array-length p1, p0
 
     if-lez p1, :cond_0
@@ -496,12 +458,10 @@
 .method public static parseChildBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -517,12 +477,10 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -534,7 +492,6 @@
 
     return-object v1
 
-    .line 5
     :cond_1
     invoke-static {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->read(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -542,7 +499,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -557,7 +513,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 7
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J
 
     move-result-wide v1
@@ -581,7 +536,6 @@
 .method public add(Lorg/jcodec/containers/mp4/boxes/Box;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -592,7 +546,6 @@
 .method public addFirst(Lorg/jcodec/containers/mp4/boxes/MovieHeaderBox;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -605,7 +558,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -625,7 +577,6 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 2
     invoke-virtual {v1, p1}, Lorg/jcodec/containers/mp4/boxes/Box;->write(Ljava/nio/ByteBuffer;)V
 
     goto :goto_0
@@ -637,7 +588,6 @@
 .method public dump(Ljava/lang/StringBuilder;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -666,20 +616,16 @@
 
     const-string v0, "\"boxes\": ["
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->dumpBoxes(Ljava/lang/StringBuilder;)V
 
     const-string v0, "]"
 
-    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "}"
 
-    .line 5
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
@@ -690,7 +636,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
@@ -700,7 +645,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -711,7 +655,6 @@
 
     invoke-virtual {v1, p1}, Lorg/jcodec/containers/mp4/boxes/Box;->dump(Ljava/lang/StringBuilder;)V
 
-    .line 3
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -724,7 +667,6 @@
 
     const-string v1, ","
 
-    .line 4
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -739,7 +681,6 @@
 .method public estimateSize()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -761,7 +702,6 @@
 
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 2
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/Box;->estimateSize()I
 
     move-result v2
@@ -770,7 +710,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {v1}, Lorg/jcodec/containers/mp4/boxes/Header;->estimateHeaderSize(I)I
 
@@ -792,7 +731,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     return-object v0
@@ -801,7 +739,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     :cond_0
     :goto_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -812,7 +749,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->factory:Lorg/jcodec/containers/mp4/IBoxFactory;
 
     invoke-static {p1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->parseChildBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
@@ -821,7 +757,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -835,7 +770,6 @@
 .method public removeChildren([Ljava/lang/String;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -850,37 +784,31 @@
 
     if-eqz v1, :cond_2
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 3
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/Box;->getFourcc()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 4
     :goto_1
     array-length v3, p1
 
     if-ge v2, v3, :cond_0
 
-    .line 5
     aget-object v3, p1, v2
 
-    .line 6
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 7
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -905,10 +833,8 @@
 
     aput-object p1, v0, v1
 
-    .line 1
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->removeChildren([Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0, p2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
     return-void
@@ -921,7 +847,6 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 1
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Box;->getFourcc()Ljava/lang/String;
 
     move-result-object v1
@@ -932,7 +857,6 @@
 
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->removeChildren([Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
     return-void
@@ -941,7 +865,6 @@
 .method public setFactory(Lorg/jcodec/containers/mp4/IBoxFactory;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->factory:Lorg/jcodec/containers/mp4/IBoxFactory;
 
     return-void

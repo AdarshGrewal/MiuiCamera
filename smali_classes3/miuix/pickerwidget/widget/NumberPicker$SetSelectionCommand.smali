@@ -29,7 +29,6 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 .method public static synthetic access$402(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionStart:I
 
     return p1
@@ -49,7 +47,6 @@
 .method public static synthetic access$502(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionEnd:I
 
     return p1
@@ -60,7 +57,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionEnd:I
 
     iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
@@ -75,7 +71,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$100(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;

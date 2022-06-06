@@ -40,13 +40,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete;->source:Lio/reactivex/CompletableSource;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete;->predicate:Lio/reactivex/functions/Predicate;
 
     return-void
@@ -57,7 +54,6 @@
 .method public subscribeActual(Lio/reactivex/CompletableObserver;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete;->source:Lio/reactivex/CompletableSource;
 
     new-instance v1, Lio/reactivex/internal/operators/completable/CompletableOnErrorComplete$OnError;

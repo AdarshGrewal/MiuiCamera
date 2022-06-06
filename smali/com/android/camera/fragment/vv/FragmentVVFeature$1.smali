@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVFeature;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVFeature$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVFeature;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVFeature$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVFeature;
 
     const/4 v0, 0x0

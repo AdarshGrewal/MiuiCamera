@@ -3,7 +3,7 @@
 .source "Camera2Module.java"
 
 # interfaces
-.implements Lcom/android/camera/module/encoder/LiveMediaRecorder$EncoderListener;
+.implements Lcom/android/camera/protocol/ModeProtocol$CameraClickObservable$ClickObserver;
 
 
 # annotations
@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$1;->this$0:Lcom/android/camera/module/Camera2Module;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,80 +34,39 @@
 
 
 # virtual methods
-.method public onStop()V
-    .locals 2
+.method public action()V
+    .locals 5
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$1;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/module/Camera2Module;->playVideoSound(Z)V
-
-    return-void
-.end method
-
-.method public onStopped(Lcom/android/camera/module/encoder/MediaEncoder;Z)V
-    .locals 3
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v1, 0xac
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
-    const-string/jumbo v2, "onStopped: encoder="
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    const-string p1, " muxerStopped:"
+    const/16 v1, 0x8
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    iget-object p1, p0, Lcom/android/camera/module/Camera2Module$1;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/module/Camera2Module;->executeSaveTask(Z)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
 
     :cond_0
     return-void
 .end method
 
-.method public save(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
+.method public getObserver()I
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$1;->this$0:Lcom/android/camera/module/Camera2Module;
+    const/16 v0, 0xa1
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/module/Camera2Module;->addSaveTask(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
-
-    return-void
-.end method
-
-.method public save(Ljava/lang/String;Landroid/content/ContentValues;)V
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$1;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    invoke-virtual {v0, p1, p2}, Lcom/android/camera/module/Camera2Module;->addSaveTask(Ljava/lang/String;Landroid/content/ContentValues;)V
-
-    return-void
+    return v0
 .end method

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/Session;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/Session;->access$000(Lnet/majorkernelpanic/streaming/Session;)Lnet/majorkernelpanic/streaming/video/VideoStream;
@@ -51,7 +49,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     :try_start_0
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
@@ -61,12 +58,10 @@
 
     invoke-virtual {v2}, Lnet/majorkernelpanic/streaming/video/VideoStream;->startPreview()V
 
-    .line 3
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v2}, Lnet/majorkernelpanic/streaming/Session;->access$100(Lnet/majorkernelpanic/streaming/Session;)V
 
-    .line 4
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v2}, Lnet/majorkernelpanic/streaming/Session;->access$000(Lnet/majorkernelpanic/streaming/Session;)Lnet/majorkernelpanic/streaming/video/VideoStream;
@@ -87,7 +82,6 @@
     :catch_0
     move-exception v2
 
-    .line 5
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v3, v0, v1, v2}, Lnet/majorkernelpanic/streaming/Session;->access$200(Lnet/majorkernelpanic/streaming/Session;IILjava/lang/Exception;)V
@@ -97,7 +91,6 @@
     :catch_1
     move-exception v0
 
-    .line 6
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     const/4 v3, 0x2
@@ -109,7 +102,6 @@
     :catch_2
     move-exception v2
 
-    .line 7
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v3, v0, v1, v2}, Lnet/majorkernelpanic/streaming/Session;->access$200(Lnet/majorkernelpanic/streaming/Session;IILjava/lang/Exception;)V
@@ -119,7 +111,6 @@
     :catch_3
     move-exception v0
 
-    .line 8
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     const/4 v3, 0x4
@@ -131,7 +122,6 @@
     :catch_4
     move-exception v0
 
-    .line 9
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v2, v1, v1, v0}, Lnet/majorkernelpanic/streaming/Session;->access$200(Lnet/majorkernelpanic/streaming/Session;IILjava/lang/Exception;)V
@@ -141,7 +131,6 @@
     :catch_5
     move-exception v0
 
-    .line 10
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/Session$5;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     const/4 v3, 0x0

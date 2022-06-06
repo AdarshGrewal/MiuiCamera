@@ -39,7 +39,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/storage/HeifSaveRequest;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -54,25 +53,18 @@
 .method public constructor <init>(Landroid/media/Image;Landroid/hardware/camera2/CaptureResult;Lcom/xiaomi/camera/core/ParallelTaskData;Lcom/android/camera/storage/HeifSaveRequest$SaveHeifCallback;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/storage/BaseSaveRequest;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mYuvImage:Landroid/media/Image;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/storage/HeifSaveRequest;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
-    .line 5
     iput-object p4, p0, Lcom/android/camera/storage/HeifSaveRequest;->mParent:Lcom/android/camera/storage/HeifSaveRequest$SaveHeifCallback;
 
-    .line 6
     iput-object p5, p0, Lcom/android/camera/storage/HeifSaveRequest;->mHandler:Landroid/os/Handler;
 
-    .line 7
     invoke-virtual {p3}, Lcom/xiaomi/camera/core/ParallelTaskData;->getDataParameter()Lcom/xiaomi/camera/core/ParallelTaskDataParameter;
 
     move-result-object p2
@@ -81,7 +73,6 @@
 
     move-result-object p2
 
-    .line 8
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result p3
@@ -92,14 +83,12 @@
 
     if-ne p3, p4, :cond_0
 
-    .line 9
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
 
-    .line 10
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
     move-result p1
@@ -108,7 +97,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
@@ -116,14 +104,12 @@
 
     iput p2, p0, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
 
-    .line 12
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mHeight:I
 
-    .line 13
     :goto_0
     iget p1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
 
@@ -137,7 +123,6 @@
 
     iput p1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mSize:I
 
-    .line 14
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -172,7 +157,6 @@
 .method private buildExif(Landroid/hardware/camera2/CaptureResult;IIIJLandroid/location/Location;)[B
     .locals 12
 
-    .line 1
     new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
@@ -197,44 +181,36 @@
 
     move-object v10, v0
 
-    .line 2
-    invoke-static/range {v1 .. v11}, Lcom/android/camera/ExifTool;->appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/CaptureResult;JLcom/android/gallery3d/exif/ExifInterface;Z)V
+    invoke-static/range {v1 .. v11}, Lcom/android/camera/Util;->appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/CaptureResult;JLcom/android/gallery3d/exif/ExifInterface;Z)V
 
     :cond_0
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 4
     invoke-virtual {v0, v2}, Lcom/android/gallery3d/exif/ExifInterface;->getExifWriterStream(Ljava/io/OutputStream;)Ljava/io/OutputStream;
 
     move-result-object v0
 
-    .line 5
     instance-of v3, v0, Lcom/android/gallery3d/exif/ExifOutputStream;
 
     if-eqz v3, :cond_2
 
-    .line 6
     move-object v3, v0
 
     check-cast v3, Lcom/android/gallery3d/exif/ExifOutputStream;
 
     invoke-virtual {v3}, Lcom/android/gallery3d/exif/ExifOutputStream;->writeExifForHeif()V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 8
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    .line 9
     sget-object v2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -247,7 +223,7 @@
 
     if-nez v1, :cond_1
 
-    const-string v4, "null"
+    const-string/jumbo v4, "null"
 
     goto :goto_0
 
@@ -269,7 +245,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_2
     sget-object v2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -277,7 +252,6 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :goto_1
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_0
@@ -288,7 +262,6 @@
     :catch_0
     move-exception v0
 
-    .line 12
     sget-object v2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -318,14 +291,12 @@
 .method private imageToBuffer(Landroid/media/Image;Landroid/util/Size;)[B
     .locals 8
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 2
     array-length v1, v0
 
     const/4 v2, 0x3
@@ -334,18 +305,15 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v1
 
-    .line 4
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v3
 
-    .line 5
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result v4
@@ -364,7 +332,6 @@
 
     new-array v0, v0, [I
 
-    .line 6
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result v4
@@ -379,7 +346,6 @@
 
     const/4 v1, 0x1
 
-    .line 7
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
     move-result v4
@@ -392,21 +358,18 @@
 
     aput v3, v0, v1
 
-    .line 8
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
     move-result v1
 
     aput v1, v0, v7
 
-    .line 9
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
     move-result p2
 
     aput p2, v0, v2
 
-    .line 10
     invoke-static {p1, v0}, Lcom/android/camera/Util;->getSubYuvImage(Landroid/media/Image;[I)[B
 
     move-result-object p1
@@ -418,25 +381,20 @@
 
     mul-int/lit8 p2, p1, 0x3
 
-    .line 11
     div-int/2addr p2, v7
 
     sub-int v2, p2, p1
 
-    .line 12
     new-array p2, p2, [B
 
-    .line 13
     aget-object v4, v0, v6
 
     invoke-static {v4, v1, v3}, Lcom/xiaomi/camera/base/ImageUtil;->removePadding(Landroid/media/Image$Plane;II)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    .line 14
     invoke-virtual {v4, p2, v6, p1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 15
     aget-object v0, v0, v7
 
     div-int/2addr v1, v7
@@ -447,7 +405,6 @@
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
@@ -456,12 +413,10 @@
 
     move-result v1
 
-    .line 17
     invoke-virtual {v0, p2, p1, v1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     return-object p2
 
-    .line 18
     :cond_2
     :goto_0
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
@@ -482,7 +437,6 @@
 
     move-object/from16 v9, p4
 
-    .line 1
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -505,7 +459,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 2
     iget-object v11, v10, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -528,7 +481,6 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v19
@@ -553,12 +505,10 @@
 
     move-object/from16 v23, p11
 
-    .line 4
     invoke-static/range {v11 .. v25}, Lcom/android/camera/storage/Storage;->insertToMediaStore(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;ILjava/lang/String;JIILandroid/location/Location;ZZ)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 5
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -582,7 +532,6 @@
 
     goto :goto_0
 
-    .line 6
     :catch_0
     sget-object v2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -620,7 +569,6 @@
     :goto_1
     if-eq v7, v8, :cond_2
 
-    .line 7
     invoke-virtual {v12}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
@@ -647,7 +595,6 @@
 
     goto :goto_2
 
-    .line 8
     :cond_2
     invoke-virtual {v12}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -655,7 +602,6 @@
 
     iget-object v0, v10, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
-    .line 9
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getDataParameter()Lcom/xiaomi/camera/core/ParallelTaskDataParameter;
 
     move-result-object v0
@@ -680,16 +626,13 @@
 
     move/from16 v9, p12
 
-    .line 10
     invoke-direct/range {v0 .. v9}, Lcom/android/camera/storage/HeifSaveRequest;->saveHeifFile(Landroid/media/Image;[BLjava/lang/String;Ljava/io/FileDescriptor;Landroid/util/Size;Landroid/os/Handler;III)Z
 
     move-result v0
 
-    .line 11
     :goto_2
     invoke-static {v12}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 12
     sget-object v1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -725,7 +668,6 @@
 .method private saveHeifFile(Landroid/media/Image;[BLjava/lang/String;Ljava/io/FileDescriptor;Landroid/os/Handler;III)Z
     .locals 5
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -734,7 +676,6 @@
 
     const/4 v3, 0x1
 
-    .line 2
     :try_start_0
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -755,7 +696,6 @@
 
     move-object p3, p4
 
-    .line 3
     :goto_0
     iget-object p4, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
@@ -763,12 +703,10 @@
 
     move-result-object p4
 
-    .line 4
     invoke-virtual {p4}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter;->getJpegRotation()I
 
     move-result p4
 
-    .line 5
     invoke-virtual {p3, p5}, Landroidx/heifwriter/HeifWriter$Builder;->setHandler(Landroid/os/Handler;)Landroidx/heifwriter/HeifWriter$Builder;
 
     move-result-object p3
@@ -785,14 +723,12 @@
 
     move-result-object p3
 
-    .line 6
     invoke-virtual {p3}, Landroidx/heifwriter/HeifWriter;->getInputSurface()Landroid/view/Surface;
 
     move-result-object p4
 
     const/4 p5, 0x2
 
-    .line 7
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result p6
@@ -803,10 +739,8 @@
 
     iput-object p4, p0, Lcom/android/camera/storage/HeifSaveRequest;->mImageWriter:Landroid/media/ImageWriter;
 
-    .line 8
     invoke-virtual {p3}, Landroidx/heifwriter/HeifWriter;->start()V
 
-    .line 9
     sget-object p4, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -831,29 +765,24 @@
 
     invoke-static {p4, p5}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-object p4, p0, Lcom/android/camera/storage/HeifSaveRequest;->mImageWriter:Landroid/media/ImageWriter;
 
     invoke-virtual {p4, p1}, Landroid/media/ImageWriter;->queueInputImage(Landroid/media/Image;)V
 
     if-eqz p2, :cond_1
 
-    .line 11
     array-length p1, p2
 
     if-lez p1, :cond_1
 
-    .line 12
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p4
 
-    .line 13
     array-length p1, p2
 
     invoke-virtual {p3, v2, p2, v2, p1}, Landroidx/heifwriter/HeifWriter;->addExifData(I[BII)V
 
-    .line 14
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -880,7 +809,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_1
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -888,7 +816,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -896,10 +823,8 @@
 
     const-wide/16 p4, 0x0
 
-    .line 17
     invoke-virtual {p3, p4, p5}, Landroidx/heifwriter/HeifWriter;->stop(J)V
 
-    .line 18
     sget-object p4, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -924,15 +849,12 @@
 
     invoke-static {p4, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
 
-    .line 20
     invoke-virtual {p3}, Landroidx/heifwriter/HeifWriter;->close()V
 
-    .line 21
     sget-object p3, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -966,7 +888,6 @@
     :catch_0
     move-exception p1
 
-    .line 22
     sget-object p2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -991,21 +912,17 @@
 
     move p1, v2
 
-    .line 23
     :goto_2
     iget-object p2, p0, Lcom/android/camera/storage/HeifSaveRequest;->mImageWriter:Landroid/media/ImageWriter;
 
     if-eqz p2, :cond_2
 
-    .line 24
     invoke-virtual {p2}, Landroid/media/ImageWriter;->close()V
 
     const/4 p2, 0x0
 
-    .line 25
     iput-object p2, p0, Lcom/android/camera/storage/HeifSaveRequest;->mImageWriter:Landroid/media/ImageWriter;
 
-    .line 26
     :cond_2
     sget-object p2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -1033,7 +950,6 @@
 .method private saveHeifFile(Landroid/media/Image;[BLjava/lang/String;Ljava/io/FileDescriptor;Landroid/util/Size;Landroid/os/Handler;III)Z
     .locals 6
 
-    .line 27
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1042,7 +958,6 @@
 
     const/4 v3, 0x0
 
-    .line 28
     :try_start_0
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1063,7 +978,6 @@
 
     move-object p3, p4
 
-    .line 29
     :goto_0
     iget-object p4, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
@@ -1071,12 +985,10 @@
 
     move-result-object p4
 
-    .line 30
     invoke-virtual {p4}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter;->getJpegRotation()I
 
     move-result p4
 
-    .line 31
     invoke-virtual {p3, p6}, Landroidx/heifwriter/HeifWriter$Builder;->setHandler(Landroid/os/Handler;)Landroidx/heifwriter/HeifWriter$Builder;
 
     move-result-object p3
@@ -1093,10 +1005,8 @@
 
     move-result-object p3
 
-    .line 32
     invoke-virtual {p3}, Landroidx/heifwriter/HeifWriter;->start()V
 
-    .line 33
     sget-object p4, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p6, Ljava/lang/StringBuilder;
@@ -1121,17 +1031,14 @@
 
     invoke-static {p4, p6}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p6
 
-    .line 35
     invoke-direct {p0, p1, p5}, Lcom/android/camera/storage/HeifSaveRequest;->imageToBuffer(Landroid/media/Image;Landroid/util/Size;)[B
 
     move-result-object p1
 
-    .line 36
     sget-object p4, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     const-string/jumbo p5, "prepare buffer cost %dms"
@@ -1152,17 +1059,14 @@
 
     invoke-static {p4, p5, p8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 37
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p4
 
     const/16 p6, 0x23
 
-    .line 38
     invoke-virtual {p3, p6, p1}, Landroidx/heifwriter/HeifWriter;->addYuvBuffer(I[B)V
 
-    .line 39
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     const-string p6, "HeifWriter.addYuvBuffer cost %dms"
@@ -1185,22 +1089,18 @@
 
     if-eqz p2, :cond_1
 
-    .line 40
     array-length p1, p2
 
     if-lez p1, :cond_1
 
-    .line 41
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p4
 
-    .line 42
     array-length p1, p2
 
     invoke-virtual {p3, v3, p2, v3, p1}, Landroidx/heifwriter/HeifWriter;->addExifData(I[BII)V
 
-    .line 43
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1227,7 +1127,6 @@
 
     goto :goto_1
 
-    .line 44
     :cond_1
     sget-object p1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -1235,7 +1134,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1243,10 +1141,8 @@
 
     const-wide/16 p4, 0x0
 
-    .line 46
     invoke-virtual {p3, p4, p5}, Landroidx/heifwriter/HeifWriter;->stop(J)V
 
-    .line 47
     sget-object p4, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p5, Ljava/lang/StringBuilder;
@@ -1271,15 +1167,12 @@
 
     invoke-static {p4, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
 
-    .line 49
     invoke-virtual {p3}, Landroidx/heifwriter/HeifWriter;->close()V
 
-    .line 50
     sget-object p3, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p4, Ljava/lang/StringBuilder;
@@ -1313,7 +1206,6 @@
     :catch_0
     move-exception p1
 
-    .line 51
     sget-object p2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -1338,7 +1230,6 @@
 
     move p1, v3
 
-    .line 52
     :goto_2
     sget-object p2, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -1368,7 +1259,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mSize:I
 
     return v0
@@ -1385,7 +1275,6 @@
 .method public onFinish()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mParent:Lcom/android/camera/storage/HeifSaveRequest$SaveHeifCallback;
 
     iget-object v1, p0, Lcom/android/camera/storage/HeifSaveRequest;->mYuvImage:Landroid/media/Image;
@@ -1394,101 +1283,40 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/camera/storage/HeifSaveRequest$SaveHeifCallback;->onSaveFinish(Landroid/media/Image;Lcom/xiaomi/camera/core/ParallelTaskData;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getTimestamp()J
 
     move-result-wide v1
 
-    .line 3
-    sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
-
-    const/4 v3, 0x4
-
-    const-string v4, "image save onFinish"
-
-    invoke-static {v3, v0, v4}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 4
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
-
-    move-result-object v0
-
-    const/4 v3, 0x3
-
-    new-array v3, v3, [Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    const-string v5, "algo_capture_total_"
-
-    aput-object v5, v3, v4
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "algo_image_save_"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    aput-object v4, v3, v5
-
-    const/4 v4, 0x2
-
-    const-string/jumbo v5, "shot_2_view"
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v0, v3}, Lcom/android/camera/performance/PerformanceManager;->endAction([Ljava/lang/String;)V
-
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iget-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
-    .line 6
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getSavePath()Ljava/lang/String;
 
     move-result-object v6
 
     const/4 v3, 0x5
 
-    .line 7
-    invoke-static/range {v1 .. v6}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(JIJLjava/lang/String;)V
+    invoke-static/range {v1 .. v6}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(JIJLjava/lang/String;)V
 
-    .line 8
     invoke-static {}, Lcom/android/gallery3d/exif/ExifHelper;->clearCacheMap()V
 
     const/4 v0, 0x0
 
-    .line 9
     iput-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mYuvImage:Landroid/media/Image;
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
-    .line 11
     iput-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mParent:Lcom/android/camera/storage/HeifSaveRequest$SaveHeifCallback;
 
-    .line 12
     iput-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
-    .line 13
     iput-object v0, p0, Lcom/android/camera/storage/HeifSaveRequest;->mHandler:Landroid/os/Handler;
 
-    .line 14
     iget-object v1, p0, Lcom/android/camera/storage/BaseSaveRequest;->mSaverCallback:Lcom/android/camera/storage/SaverCallback;
 
     invoke-virtual {p0}, Lcom/android/camera/storage/HeifSaveRequest;->getSize()I
@@ -1497,7 +1325,6 @@
 
     invoke-interface {v1, v2}, Lcom/android/camera/storage/SaverCallback;->onSaveFinish(I)V
 
-    .line 15
     iput-object v0, p0, Lcom/android/camera/storage/BaseSaveRequest;->mSaverCallback:Lcom/android/camera/storage/SaverCallback;
 
     return-void
@@ -1506,10 +1333,8 @@
 .method public run()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/HeifSaveRequest;->save()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/storage/HeifSaveRequest;->onFinish()V
 
     return-void
@@ -1520,48 +1345,40 @@
 
     move-object/from16 v14, p0
 
-    .line 1
     iget-object v0, v14, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getSavePath()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 2
     invoke-static {v15}, Lcom/android/camera/Util;->getFileTitleFromPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 3
     iget-object v0, v14, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getDateTakenTime()J
 
     move-result-wide v9
 
-    .line 4
     iget-object v0, v14, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskData;->getDataParameter()Lcom/xiaomi/camera/core/ParallelTaskDataParameter;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter;->getJpegQuality()I
 
     move-result v16
 
-    .line 6
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter;->getJpegRotation()I
 
     move-result v17
 
-    .line 7
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/ParallelTaskDataParameter;->getLocation()Landroid/location/Location;
 
     move-result-object v18
 
-    .line 8
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     const/4 v12, 0x3
@@ -1572,7 +1389,6 @@
 
     aput-object v15, v1, v11
 
-    .line 9
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1591,15 +1407,12 @@
 
     const-string/jumbo v2, "save: E. path=%s quality=%d jpegRotation=%d"
 
-    .line 10
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 11
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v19
 
-    .line 12
     iget-object v2, v14, Lcom/android/camera/storage/HeifSaveRequest;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     iget v3, v14, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
@@ -1620,7 +1433,6 @@
 
     move-result-object v3
 
-    .line 13
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1645,7 +1457,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     invoke-static {}, Lcom/android/camera/db/DbRepository;->dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
 
     move-result-object v0
@@ -1654,7 +1465,6 @@
 
     move-result-object v8
 
-    .line 15
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1677,7 +1487,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 16
     invoke-virtual {v8}, Lcom/android/camera/db/element/SaveTask;->isValid()Z
 
     move-result v0
@@ -1686,13 +1495,11 @@
 
     goto/16 :goto_2
 
-    .line 17
     :cond_0
     invoke-static {v13, v11}, Lcom/android/camera/storage/Storage;->generateFileTemppath4Image(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 18
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1707,7 +1514,6 @@
 
     move-result-object v5
 
-    .line 19
     invoke-virtual {v8}, Lcom/android/camera/db/element/SaveTask;->getMediaStoreId()Ljava/lang/Long;
 
     move-result-object v1
@@ -1716,27 +1522,22 @@
 
     move-result-wide v1
 
-    .line 20
     iget-object v4, v14, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
     const/4 v7, 0x0
 
-    .line 21
     invoke-static {v4, v7, v15}, Lcom/android/camera/storage/Storage;->getMediaUri(Landroid/content/Context;ZLjava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 22
     invoke-static {v4, v1, v2}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object v19
 
-    .line 23
     invoke-static {v15}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->useScopedStorage(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 24
     iget-object v2, v14, Lcom/android/camera/storage/HeifSaveRequest;->mYuvImage:Landroid/media/Image;
 
     iget v1, v14, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
@@ -1773,14 +1574,12 @@
 
     move-result-object v9
 
-    .line 25
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     if-eqz v9, :cond_1
 
-    .line 26
     :try_start_0
     invoke-static {v0, v15}, Lcom/android/camera/FileCompat;->renameFile(Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_0
@@ -1793,14 +1592,12 @@
 
     move-object v1, v0
 
-    .line 27
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "renameFile failed"
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 28
     :goto_0
     iget-object v1, v14, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
@@ -1820,7 +1617,6 @@
 
     invoke-static/range {v1 .. v8}, Lcom/android/camera/storage/Storage;->updateHeifInfo(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/location/Location;III)Landroid/net/Uri;
 
-    .line 29
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1849,7 +1645,6 @@
 
     goto :goto_1
 
-    .line 30
     :cond_1
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -1869,29 +1664,25 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 32
     :goto_1
     iget-object v0, v14, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
     move-object/from16 v11, v24
 
-    invoke-static {v0, v11}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
+    const/4 v8, 0x0
 
-    .line 33
+    invoke-static {v0, v11, v8}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;Z)V
+
     sget-object v0, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v8, 0x0
-
     aput-object v15, v1, v8
 
-    .line 34
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1910,7 +1701,6 @@
 
     const-string/jumbo v2, "save: X. path=%s quality=%d jpegRotation=%d"
 
-    .line 35
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     goto/16 :goto_4
@@ -1927,12 +1717,10 @@
 
     const/4 v8, 0x0
 
-    .line 36
     invoke-static {v15}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->useScopedStorage(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 37
     iget-object v2, v14, Lcom/android/camera/storage/HeifSaveRequest;->mYuvImage:Landroid/media/Image;
 
     iget v0, v14, Lcom/android/camera/storage/HeifSaveRequest;->mWidth:I
@@ -1975,7 +1763,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 38
     iget-object v1, v14, Lcom/android/camera/storage/HeifSaveRequest;->mTaskData:Lcom/xiaomi/camera/core/ParallelTaskData;
 
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/ParallelTaskData;->isNeedThumbnail()Z
@@ -1984,7 +1771,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 39
     iget-object v1, v14, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0, v15}, Lcom/android/camera/Thumbnail;->createThumbnailFromUri(Landroid/content/Context;Landroid/net/Uri;Z)Lcom/android/camera/Thumbnail;
@@ -1993,7 +1779,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 40
     iget-object v2, v14, Lcom/android/camera/storage/BaseSaveRequest;->mSaverCallback:Lcom/android/camera/storage/SaverCallback;
 
     const/4 v3, 0x1
@@ -2002,13 +1787,11 @@
 
     goto :goto_3
 
-    .line 41
     :cond_3
     iget-object v1, v14, Lcom/android/camera/storage/BaseSaveRequest;->mSaverCallback:Lcom/android/camera/storage/SaverCallback;
 
     invoke-interface {v1}, Lcom/android/camera/storage/SaverCallback;->postHideThumbnailProgressing()V
 
-    .line 42
     :cond_4
     :goto_3
     iget-object v1, v14, Lcom/android/camera/storage/BaseSaveRequest;->mSaverCallback:Lcom/android/camera/storage/SaverCallback;
@@ -2023,7 +1806,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 43
     sget-object v3, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2046,24 +1828,20 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     invoke-static {v0}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v3
 
-    .line 45
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/android/camera/db/element/SaveTask;->setMediaStoreId(Ljava/lang/Long;)V
 
-    .line 46
     iget-object v3, v14, Lcom/android/camera/storage/BaseSaveRequest;->mContext:Landroid/content/Context;
 
-    invoke-static {v3, v1}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
+    invoke-static {v3, v1, v15}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;Z)V
 
-    .line 47
     :cond_5
     sget-object v1, Lcom/android/camera/storage/HeifSaveRequest;->TAG:Ljava/lang/String;
 
@@ -2097,7 +1875,6 @@
 .method public bridge synthetic setContextAndCallback(Landroid/content/Context;Lcom/android/camera/storage/SaverCallback;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/storage/BaseSaveRequest;->setContextAndCallback(Landroid/content/Context;Lcom/android/camera/storage/SaverCallback;)V
 
     return-void

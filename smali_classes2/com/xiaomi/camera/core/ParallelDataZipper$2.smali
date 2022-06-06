@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/ParallelDataZipper;Lcom/xiaomi/protocol/ICustomCaptureResult;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     iput-object p2, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$captureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
@@ -44,7 +43,6 @@
 .method public static synthetic OooO00o(Ljava/util/Map$Entry;)Lcom/xiaomi/camera/core/CaptureData;
     .locals 0
 
-    .line 2
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -59,7 +57,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -94,35 +91,30 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$captureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     invoke-virtual {v1}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getTimeStamp()J
 
     move-result-wide v1
 
-    .line 2
     iget-object v3, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$captureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     invoke-virtual {v3}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getSequenceId()I
 
     move-result v3
 
-    .line 3
     iget-object v4, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$captureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     invoke-virtual {v4}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getCaptureId()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 4
     iget-object v5, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v5, v1, v2}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$500(Lcom/xiaomi/camera/core/ParallelDataZipper;J)J
 
     move-result-wide v5
 
-    .line 5
     iget-object v7, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v7}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$600(Lcom/xiaomi/camera/core/ParallelDataZipper;)Ljava/util/Map;
@@ -137,30 +129,26 @@
 
     move-result-object v7
 
-    new-instance v8, LOooO00o/OooO0o/OooO00o/OooO00o/OooO00o;
+    new-instance v8, LOooO0O0/OooO0o/OooO00o/OooO00o/OooO00o;
 
-    invoke-direct {v8, v4}, LOooO00o/OooO0o/OooO00o/OooO00o/OooO00o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v4}, LOooO0O0/OooO0o/OooO00o/OooO00o/OooO00o;-><init>(Ljava/lang/String;)V
 
-    .line 6
     invoke-interface {v7, v8}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v7
 
-    sget-object v8, LOooO00o/OooO0o/OooO00o/OooO00o/OooO0O0;->OooO00o:LOooO00o/OooO0o/OooO00o/OooO00o/OooO0O0;
+    sget-object v8, LOooO0O0/OooO0o/OooO00o/OooO00o/OooO0O0;->OooO00o:LOooO0O0/OooO0o/OooO00o/OooO00o/OooO0O0;
 
-    .line 7
     invoke-interface {v7, v8}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v7
 
-    .line 8
     invoke-interface {v7}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    .line 9
     invoke-virtual {v7, v8}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -169,7 +157,6 @@
 
     if-nez v7, :cond_0
 
-    .line 10
     invoke-static {}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$300()Ljava/lang/String;
 
     move-result-object v7
@@ -178,7 +165,6 @@
 
     invoke-static {v7, v8}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object v7, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v7}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$600(Lcom/xiaomi/camera/core/ParallelDataZipper;)Ljava/util/Map;
@@ -200,7 +186,6 @@
 
     if-nez v7, :cond_1
 
-    .line 12
     invoke-static {}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$300()Ljava/lang/String;
 
     move-result-object v7
@@ -233,30 +218,25 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData;->getStreamNum()I
 
     move-result v8
 
-    .line 14
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData;->isRequireTuningData()Z
 
     move-result v5
 
-    .line 15
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData;->getSatFusionType()I
 
     move-result v6
 
     const/4 v9, 0x1
 
-    .line 16
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData;->isHdrSR()Z
 
     move-result v10
 
-    .line 17
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData;->getCaptureTimestamp()J
 
     move-result-wide v11
@@ -273,7 +253,6 @@
 
     move v11, v10
 
-    .line 18
     :goto_0
     iget-object v7, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
@@ -289,7 +268,6 @@
 
     if-nez v7, :cond_2
 
-    .line 19
     new-instance v10, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
 
     move-object v7, v10
@@ -314,10 +292,8 @@
 
     invoke-direct/range {v7 .. v12}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;-><init>(IZIZZ)V
 
-    .line 20
     invoke-virtual {v3, v4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setCaptureId(Ljava/lang/String;)V
 
-    .line 21
     iget-object v4, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v4}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$700(Lcom/xiaomi/camera/core/ParallelDataZipper;)Landroid/util/LongSparseArray;
@@ -337,14 +313,11 @@
 
     move/from16 v18, v12
 
-    .line 22
     invoke-virtual {v7, v4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setCaptureId(Ljava/lang/String;)V
 
-    .line 23
     :goto_1
     invoke-virtual {v7, v5, v6}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setFirstTimestamp(J)V
 
-    .line 24
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->getStreamNum()I
 
     move-result v3
@@ -353,7 +326,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 25
     invoke-static {}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$300()Ljava/lang/String;
 
     move-result-object v3
@@ -374,10 +346,8 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     invoke-virtual {v7, v13}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setStreamNum(I)V
 
-    .line 27
     :cond_3
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isRequireTuningData()Z
 
@@ -385,10 +355,8 @@
 
     if-eq v3, v14, :cond_4
 
-    .line 28
     invoke-virtual {v7, v14}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setRequireTuningData(Z)V
 
-    .line 29
     :cond_4
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->getSatFusionType()I
 
@@ -396,10 +364,8 @@
 
     if-eq v3, v15, :cond_5
 
-    .line 30
     invoke-virtual {v7, v15}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setSatFusionType(I)V
 
-    .line 31
     :cond_5
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isHdrSrShot()Z
 
@@ -409,10 +375,8 @@
 
     if-eq v3, v8, :cond_6
 
-    .line 32
     invoke-virtual {v7, v8}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setIsHdrSrShot(Z)V
 
-    .line 33
     :cond_6
     invoke-static {}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$300()Ljava/lang/String;
 
@@ -440,7 +404,6 @@
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 34
     invoke-virtual {v7}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->getStreamNum()I
 
     move-result v1
@@ -479,20 +442,16 @@
 
     move-result-object v1
 
-    .line 35
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     invoke-virtual {v7, v9}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setHasCaptureData(Z)V
 
-    .line 37
     iget-object v1, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$captureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     iget-boolean v2, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->val$isFirst:Z
 
     invoke-virtual {v7, v1, v2}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;Z)V
 
-    .line 38
     iget-object v1, v0, Lcom/xiaomi/camera/core/ParallelDataZipper$2;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v1, v7}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$800(Lcom/xiaomi/camera/core/ParallelDataZipper;Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;)V

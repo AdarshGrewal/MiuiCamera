@@ -96,12 +96,10 @@
 
     new-array v1, v0, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 1
     sput-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->EMPTY:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
     new-array v0, v0, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 2
     sput-object v0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->TERMINATED:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
     return-void
@@ -118,17 +116,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->EMPTY:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
@@ -137,17 +132,14 @@
 
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 4
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 5
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->shouldConnect:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 6
     iput p2, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->bufferSize:I
 
     return-void
@@ -165,7 +157,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -175,7 +166,6 @@
 
     check-cast v0, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 2
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->TERMINATED:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
     const/4 v2, 0x0
@@ -184,22 +174,17 @@
 
     return v2
 
-    .line 3
     :cond_1
     array-length v1, v0
 
     add-int/lit8 v3, v1, 0x1
 
-    .line 4
     new-array v3, v3, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 5
     invoke-static {v0, v2, v3, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 6
     aput-object p1, v3, v1
 
-    .line 7
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v1, v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -220,7 +205,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/internal/util/NotificationLite;->isComplete(Ljava/lang/Object;)Z
 
     move-result v1
@@ -233,12 +217,10 @@
 
     if-eqz p2, :cond_4
 
-    .line 2
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p1, p0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 3
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object p2, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->TERMINATED:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
@@ -256,7 +238,6 @@
 
     aget-object v1, p1, v0
 
-    .line 4
     iget-object v1, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;->child:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v1}, Lorg/reactivestreams/Subscriber;->onComplete()V
@@ -268,18 +249,15 @@
     :cond_0
     return v3
 
-    .line 5
     :cond_1
     invoke-static {p1}, Lio/reactivex/internal/util/NotificationLite;->getError(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object p1
 
-    .line 6
     iget-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p2, p0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 7
     iget-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->TERMINATED:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
@@ -290,12 +268,10 @@
 
     check-cast p2, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 8
     array-length v1, p2
 
     if-eqz v1, :cond_2
 
-    .line 9
     array-length v1, p2
 
     :goto_1
@@ -303,7 +279,6 @@
 
     aget-object v2, p2, v0
 
-    .line 10
     iget-object v2, v2, Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;->child:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v2, p1}, Lorg/reactivestreams/Subscriber;->onError(Ljava/lang/Throwable;)V
@@ -312,7 +287,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_2
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
@@ -328,7 +302,6 @@
 
     move-object/from16 v1, p0
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
@@ -342,16 +315,13 @@
 
     move v3, v2
 
-    .line 2
     :goto_0
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 3
     iget-object v4, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
     if-eqz v4, :cond_2
 
-    .line 4
     invoke-interface {v4}, Lio/reactivex/internal/fuseable/SimpleQueue;->isEmpty()Z
 
     move-result v6
@@ -369,7 +339,6 @@
     :goto_1
     move v6, v2
 
-    .line 5
     :goto_2
     invoke-virtual {v1, v0, v6}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->checkTerminated(Ljava/lang/Object;Z)Z
 
@@ -382,7 +351,6 @@
     :cond_3
     if-nez v6, :cond_13
 
-    .line 6
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -393,12 +361,10 @@
 
     check-cast v7, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 7
     array-length v0, v7
 
     const-wide v8, 0x7fffffffffffffffL
 
-    .line 8
     array-length v10, v7
 
     const/4 v11, 0x0
@@ -414,7 +380,6 @@
 
     move/from16 v16, v6
 
-    .line 9
     invoke-virtual {v15}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v5
@@ -423,7 +388,6 @@
 
     if-ltz v13, :cond_4
 
-    .line 10
     invoke-static {v8, v9, v5, v6}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v5
@@ -456,10 +420,8 @@
 
     if-ne v0, v12, :cond_a
 
-    .line 11
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 12
     :try_start_0
     invoke-interface {v4}, Lio/reactivex/internal/fuseable/SimpleQueue;->poll()Ljava/lang/Object;
 
@@ -474,10 +436,8 @@
 
     move-object v4, v0
 
-    .line 13
     invoke-static {v4}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 14
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -488,12 +448,10 @@
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscription;->cancel()V
 
-    .line 15
     invoke-static {v4}, Lio/reactivex/internal/util/NotificationLite;->error(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 16
     iput-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
     const/4 v10, 0x0
@@ -508,7 +466,6 @@
     :cond_7
     const/4 v4, 0x0
 
-    .line 17
     :goto_6
     invoke-virtual {v1, v0, v4}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->checkTerminated(Ljava/lang/Object;Z)Z
 
@@ -518,13 +475,11 @@
 
     return-void
 
-    .line 18
     :cond_8
     iget v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->sourceMode:I
 
     if-eq v0, v2, :cond_9
 
-    .line 19
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -554,10 +509,8 @@
 
     if-gez v0, :cond_10
 
-    .line 20
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 21
     :try_start_1
     invoke-interface {v4}, Lio/reactivex/internal/fuseable/SimpleQueue;->poll()Ljava/lang/Object;
 
@@ -572,10 +525,8 @@
 
     move-object/from16 v16, v0
 
-    .line 22
     invoke-static/range {v16 .. v16}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 23
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -586,12 +537,10 @@
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscription;->cancel()V
 
-    .line 24
     invoke-static/range {v16 .. v16}, Lio/reactivex/internal/util/NotificationLite;->error(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 25
     iput-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
     const/16 v16, 0x0
@@ -606,7 +555,6 @@
     :cond_b
     const/4 v10, 0x0
 
-    .line 26
     :goto_9
     invoke-virtual {v1, v0, v10}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->checkTerminated(Ljava/lang/Object;Z)Z
 
@@ -623,13 +571,11 @@
 
     goto :goto_b
 
-    .line 27
     :cond_d
     invoke-static/range {v16 .. v16}, Lio/reactivex/internal/util/NotificationLite;->getValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 28
     array-length v2, v7
 
     const/4 v3, 0x0
@@ -639,7 +585,6 @@
 
     aget-object v12, v7, v3
 
-    .line 29
     invoke-virtual {v12}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v17
@@ -648,12 +593,10 @@
 
     if-lez v16, :cond_e
 
-    .line 30
     iget-object v13, v12, Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;->child:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v13, v0}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
-    .line 31
     invoke-virtual {v12, v5, v6}, Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;->produced(J)J
 
     :cond_e
@@ -676,14 +619,12 @@
     :goto_b
     if-lez v11, :cond_11
 
-    .line 32
     iget v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->sourceMode:I
 
     const/4 v4, 0x1
 
     if-eq v0, v4, :cond_12
 
-    .line 33
     iget-object v0, v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -724,7 +665,6 @@
     :cond_14
     neg-int v0, v15
 
-    .line 34
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
     move-result v3
@@ -742,7 +682,6 @@
 .method public dispose()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -753,7 +692,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
@@ -762,19 +700,16 @@
 
     check-cast v0, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 3
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->TERMINATED:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
     if-eq v0, v1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->current:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 5
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {v0}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->cancel(Ljava/util/concurrent/atomic/AtomicReference;)Z
@@ -786,7 +721,6 @@
 .method public isDisposed()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -811,19 +745,16 @@
 .method public onComplete()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/util/NotificationLite;->complete()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->dispatch()V
 
     :cond_0
@@ -833,24 +764,20 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/util/NotificationLite;->error(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->dispatch()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
@@ -866,7 +793,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->sourceMode:I
 
     if-nez v0, :cond_0
@@ -879,7 +805,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     new-instance p1, Lio/reactivex/exceptions/MissingBackpressureException;
 
     const-string v0, "Prefetch queue is full?!"
@@ -890,7 +815,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->dispatch()V
 
@@ -900,7 +824,6 @@
 .method public onSubscribe(Lorg/reactivestreams/Subscription;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->setOnce(Ljava/util/concurrent/atomic/AtomicReference;Lorg/reactivestreams/Subscription;)Z
@@ -909,19 +832,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     instance-of v0, p1, Lio/reactivex/internal/fuseable/QueueSubscription;
 
     if-eqz v0, :cond_1
 
-    .line 3
     move-object v0, p1
 
     check-cast v0, Lio/reactivex/internal/fuseable/QueueSubscription;
 
     const/4 v1, 0x3
 
-    .line 4
     invoke-interface {v0, v1}, Lio/reactivex/internal/fuseable/QueueFuseable;->requestFusion(I)I
 
     move-result v1
@@ -930,20 +850,16 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 5
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->sourceMode:I
 
-    .line 6
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 7
     invoke-static {}, Lio/reactivex/internal/util/NotificationLite;->complete()Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->terminalEvent:Ljava/lang/Object;
 
-    .line 8
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->dispatch()V
 
     return-void
@@ -953,13 +869,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 9
     iput v1, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->sourceMode:I
 
-    .line 10
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 11
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->bufferSize:I
 
     int-to-long v0, v0
@@ -968,7 +881,6 @@
 
     return-void
 
-    .line 12
     :cond_1
     new-instance v0, Lio/reactivex/internal/queue/SpscArrayQueue;
 
@@ -978,7 +890,6 @@
 
     iput-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->queue:Lio/reactivex/internal/fuseable/SimpleQueue;
 
-    .line 13
     iget v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->bufferSize:I
 
     int-to-long v0, v0
@@ -999,7 +910,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -1009,7 +919,6 @@
 
     check-cast v0, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 2
     array-length v1, v0
 
     if-nez v1, :cond_1
@@ -1026,7 +935,6 @@
     :goto_0
     if-ge v4, v1, :cond_3
 
-    .line 3
     aget-object v5, v0, v4
 
     invoke-virtual {v5, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1055,7 +963,6 @@
 
     if-ne v1, v4, :cond_5
 
-    .line 4
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->EMPTY:[Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
     goto :goto_2
@@ -1063,10 +970,8 @@
     :cond_5
     add-int/lit8 v5, v1, -0x1
 
-    .line 5
     new-array v5, v5, [Lio/reactivex/internal/operators/flowable/FlowablePublish$InnerSubscriber;
 
-    .line 6
     invoke-static {v0, v3, v5, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/lit8 v3, v2, 0x1
@@ -1075,12 +980,10 @@
 
     sub-int/2addr v1, v4
 
-    .line 7
     invoke-static {v0, v3, v5, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object v1, v5
 
-    .line 8
     :goto_2
     iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowablePublish$PublishSubscriber;->subscribers:Ljava/util/concurrent/atomic/AtomicReference;
 

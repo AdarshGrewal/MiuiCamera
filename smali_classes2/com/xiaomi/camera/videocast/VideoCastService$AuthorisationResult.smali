@@ -36,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     const/4 v1, 0x0
@@ -47,7 +46,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->UNKNOWN:Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     const/4 v2, 0x1
@@ -58,7 +56,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->REJECTED:Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     const/4 v3, 0x2
@@ -73,7 +70,6 @@
 
     new-array v4, v4, [Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
-    .line 4
     sget-object v5, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->UNKNOWN:Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     aput-object v5, v4, v1
@@ -97,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -106,7 +101,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +115,6 @@
 .method public static values()[Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->$VALUES:[Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->clone()Ljava/lang/Object;

@@ -39,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;-><init>(Lorg/reactivestreams/Subscriber;)V
 
     return-void
@@ -55,7 +54,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->isCancelled()Z
 
     move-result v0
@@ -67,7 +65,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -78,7 +75,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -90,19 +86,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v0, p1}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
     const-wide/16 v0, 0x1
 
-    .line 5
     invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/BackpressureHelper;->produced(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     goto :goto_0
 
-    .line 6
     :cond_2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$NoOverflowBaseAsyncEmitter;->onOverflow()V
 

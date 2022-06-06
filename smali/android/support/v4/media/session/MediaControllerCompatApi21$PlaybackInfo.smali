@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public static getAudioAttributes(Ljava/lang/Object;)Landroid/media/AudioAttributes;
     .locals 0
 
-    .line 1
     check-cast p0, Landroid/media/session/MediaController$PlaybackInfo;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getAudioAttributes()Landroid/media/AudioAttributes;
@@ -48,7 +46,6 @@
 .method public static getCurrentVolume(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p0, Landroid/media/session/MediaController$PlaybackInfo;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getCurrentVolume()I
@@ -61,12 +58,10 @@
 .method public static getLegacyAudioStream(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     invoke-static {p0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$PlaybackInfo;->getAudioAttributes(Ljava/lang/Object;)Landroid/media/AudioAttributes;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$PlaybackInfo;->toLegacyStreamType(Landroid/media/AudioAttributes;)I
 
     move-result p0
@@ -77,7 +72,6 @@
 .method public static getMaxVolume(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p0, Landroid/media/session/MediaController$PlaybackInfo;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getMaxVolume()I
@@ -90,7 +84,6 @@
 .method public static getPlaybackType(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p0, Landroid/media/session/MediaController$PlaybackInfo;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
@@ -103,7 +96,6 @@
 .method public static getVolumeControl(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p0, Landroid/media/session/MediaController$PlaybackInfo;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getVolumeControl()I
@@ -116,7 +108,6 @@
 .method public static toLegacyStreamType(Landroid/media/AudioAttributes;)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getFlags()I
 
     move-result v0
@@ -131,7 +122,6 @@
 
     return p0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getFlags()I
 
@@ -147,7 +137,6 @@
 
     return p0
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getUsage()I
 

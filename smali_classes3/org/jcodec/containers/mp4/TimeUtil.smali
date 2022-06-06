@@ -13,7 +13,6 @@
 
     const-string v0, "GMT"
 
-    .line 1
     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v0
@@ -36,17 +35,14 @@
 
     move-object v1, v0
 
-    .line 2
     invoke-virtual/range {v1 .. v7}, Ljava/util/Calendar;->set(IIIIII)V
 
     const/16 v1, 0xe
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -59,7 +55,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,7 +69,6 @@
 
     mul-long/2addr v0, v2
 
-    .line 1
     sget-wide v2, Lorg/jcodec/containers/mp4/TimeUtil;->MOV_TIME_OFFSET:J
 
     add-long/2addr v0, v2
@@ -85,7 +79,6 @@
 .method public static macTimeToDate(I)Ljava/util/Date;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/util/Date;
 
     invoke-static {p0}, Lorg/jcodec/containers/mp4/TimeUtil;->fromMovTime(I)J
@@ -100,7 +93,6 @@
 .method public static toMovTime(J)I
     .locals 2
 
-    .line 1
     sget-wide v0, Lorg/jcodec/containers/mp4/TimeUtil;->MOV_TIME_OFFSET:J
 
     sub-long/2addr p0, v0

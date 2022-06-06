@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$7;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$7;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$1000(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Landroid/widget/ImageView;
@@ -49,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$7;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$1100(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Landroid/widget/ImageView;

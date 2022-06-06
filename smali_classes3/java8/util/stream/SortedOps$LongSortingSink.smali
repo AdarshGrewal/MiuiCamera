@@ -31,7 +31,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/SortedOps$AbstractLongSortingSink;-><init>(Ljava8/util/stream/Sink;)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public accept(J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/SortedOps$LongSortingSink;->b:Ljava8/util/stream/SpinedBuffer$OfLong;
 
     invoke-virtual {v0, p1, p2}, Ljava8/util/stream/SpinedBuffer$OfLong;->accept(J)V
@@ -65,7 +63,6 @@
 
     if-lez v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SpinedBuffer$OfLong;
 
     long-to-int p1, p1
@@ -84,7 +81,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -98,7 +94,6 @@
 .method public end()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/SortedOps$LongSortingSink;->b:Ljava8/util/stream/SpinedBuffer$OfLong;
 
     invoke-virtual {v0}, Ljava8/util/stream/SpinedBuffer$OfPrimitive;->asPrimitiveArray()Ljava/lang/Object;
@@ -107,10 +102,8 @@
 
     check-cast v0, [J
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->sort([J)V
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     array-length v2, v0
@@ -119,14 +112,12 @@
 
     invoke-interface {v1, v2, v3}, Ljava8/util/stream/Sink;->begin(J)V
 
-    .line 4
     iget-boolean v1, p0, Ljava8/util/stream/SortedOps$AbstractLongSortingSink;->cancellationRequestedCalled:Z
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_0
 
-    .line 5
     array-length v1, v0
 
     :goto_0
@@ -134,7 +125,6 @@
 
     aget-wide v3, v0, v2
 
-    .line 6
     iget-object v5, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v5, v3, v4}, Ljava8/util/stream/Sink;->accept(J)V
@@ -143,7 +133,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     array-length v1, v0
 
@@ -152,7 +141,6 @@
 
     aget-wide v3, v0, v2
 
-    .line 8
     iget-object v5, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v5}, Ljava8/util/stream/Sink;->cancellationRequested()Z
@@ -163,7 +151,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_1
     iget-object v5, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
@@ -173,7 +160,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_2
     :goto_2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;

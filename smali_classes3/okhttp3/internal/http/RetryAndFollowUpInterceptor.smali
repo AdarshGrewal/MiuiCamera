@@ -26,13 +26,10 @@
 .method public constructor <init>(Lokhttp3/OkHttpClient;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
-    .line 3
     iput-boolean p2, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->forWebSocket:Z
 
     return-void
@@ -43,7 +40,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-virtual/range {p1 .. p1}, Lokhttp3/HttpUrl;->isHttps()Z
 
     move-result v1
@@ -52,21 +48,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget-object v1, v0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v1}, Lokhttp3/OkHttpClient;->sslSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v2
 
-    .line 3
     iget-object v1, v0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v1}, Lokhttp3/OkHttpClient;->hostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v1
 
-    .line 4
     iget-object v3, v0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v3}, Lokhttp3/OkHttpClient;->certificatePinner()Lokhttp3/CertificatePinner;
@@ -88,7 +81,6 @@
 
     move-object v11, v10
 
-    .line 5
     :goto_0
     new-instance v1, Lokhttp3/Address;
 
@@ -114,14 +106,12 @@
 
     iget-object v2, v0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
-    .line 6
     invoke-virtual {v2}, Lokhttp3/OkHttpClient;->proxyAuthenticator()Lokhttp3/Authenticator;
 
     move-result-object v12
 
     iget-object v2, v0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
-    .line 7
     invoke-virtual {v2}, Lokhttp3/OkHttpClient;->proxy()Ljava/net/Proxy;
 
     move-result-object v13
@@ -161,7 +151,6 @@
 
     if-eqz p1, :cond_13
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {v0}, Lokhttp3/internal/connection/StreamAllocation;->connection()Lokhttp3/internal/connection/RealConnection;
@@ -172,7 +161,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lokhttp3/Connection;->route()Lokhttp3/Route;
 
     move-result-object v0
@@ -182,13 +170,11 @@
     :cond_0
     move-object v0, v1
 
-    .line 3
     :goto_0
     invoke-virtual {p1}, Lokhttp3/Response;->code()I
 
     move-result v2
 
-    .line 4
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
     move-result-object v3
@@ -223,7 +209,6 @@
 
     return-object v1
 
-    .line 5
     :cond_1
     iget-object v2, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
@@ -235,7 +220,6 @@
 
     return-object v1
 
-    .line 6
     :cond_2
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
@@ -251,7 +235,6 @@
 
     return-object v1
 
-    .line 7
     :cond_3
     invoke-virtual {p1}, Lokhttp3/Response;->priorResponse()Lokhttp3/Response;
 
@@ -259,7 +242,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 8
     invoke-virtual {p1}, Lokhttp3/Response;->priorResponse()Lokhttp3/Response;
 
     move-result-object v2
@@ -272,7 +254,6 @@
 
     return-object v1
 
-    .line 9
     :cond_4
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
@@ -283,14 +264,12 @@
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 10
     invoke-virtual {v0}, Lokhttp3/Route;->proxy()Ljava/net/Proxy;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 11
     :cond_6
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
@@ -298,7 +277,6 @@
 
     move-result-object v1
 
-    .line 12
     :goto_1
     invoke-virtual {v1}, Ljava/net/Proxy;->type()Ljava/net/Proxy$Type;
 
@@ -308,7 +286,6 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 13
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v1}, Lokhttp3/OkHttpClient;->proxyAuthenticator()Lokhttp3/Authenticator;
@@ -321,7 +298,6 @@
 
     return-object p1
 
-    .line 14
     :cond_7
     new-instance p1, Ljava/net/ProtocolException;
 
@@ -331,7 +307,6 @@
 
     throw p1
 
-    .line 15
     :cond_8
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
@@ -345,7 +320,6 @@
 
     return-object p1
 
-    .line 16
     :cond_9
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -363,7 +337,6 @@
 
     return-object v1
 
-    .line 17
     :cond_a
     :pswitch_0
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
@@ -379,7 +352,6 @@
     :cond_b
     const-string v0, "Location"
 
-    .line 18
     invoke-virtual {p1, v0}, Lokhttp3/Response;->header(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -388,7 +360,6 @@
 
     return-object v1
 
-    .line 19
     :cond_c
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
@@ -406,7 +377,6 @@
 
     return-object v1
 
-    .line 20
     :cond_d
     invoke-virtual {v0}, Lokhttp3/HttpUrl;->scheme()Ljava/lang/String;
 
@@ -430,7 +400,6 @@
 
     if-nez v2, :cond_e
 
-    .line 21
     iget-object v2, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v2}, Lokhttp3/OkHttpClient;->followSslRedirects()Z
@@ -441,7 +410,6 @@
 
     return-object v1
 
-    .line 22
     :cond_e
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
@@ -451,26 +419,22 @@
 
     move-result-object v2
 
-    .line 23
     invoke-static {v3}, Lokhttp3/internal/http/HttpMethod;->permitsRequestBody(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_11
 
-    .line 24
     invoke-static {v3}, Lokhttp3/internal/http/HttpMethod;->redirectsWithBody(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 25
     invoke-static {v3}, Lokhttp3/internal/http/HttpMethod;->redirectsToGet(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_f
 
-    .line 26
     invoke-virtual {v2, v5, v1}, Lokhttp3/Request$Builder;->method(Ljava/lang/String;Lokhttp3/RequestBody;)Lokhttp3/Request$Builder;
 
     goto :goto_2
@@ -478,7 +442,6 @@
     :cond_f
     if-eqz v4, :cond_10
 
-    .line 27
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
     move-result-object v1
@@ -487,7 +450,6 @@
 
     move-result-object v1
 
-    .line 28
     :cond_10
     invoke-virtual {v2, v3, v1}, Lokhttp3/Request$Builder;->method(Ljava/lang/String;Lokhttp3/RequestBody;)Lokhttp3/Request$Builder;
 
@@ -496,20 +458,16 @@
 
     const-string v1, "Transfer-Encoding"
 
-    .line 29
     invoke-virtual {v2, v1}, Lokhttp3/Request$Builder;->removeHeader(Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     const-string v1, "Content-Length"
 
-    .line 30
     invoke-virtual {v2, v1}, Lokhttp3/Request$Builder;->removeHeader(Ljava/lang/String;)Lokhttp3/Request$Builder;
 
     const-string v1, "Content-Type"
 
-    .line 31
     invoke-virtual {v2, v1}, Lokhttp3/Request$Builder;->removeHeader(Ljava/lang/String;)Lokhttp3/Request$Builder;
 
-    .line 32
     :cond_11
     invoke-direct {p0, p1, v0}, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->sameConnection(Lokhttp3/Response;Lokhttp3/HttpUrl;)Z
 
@@ -519,10 +477,8 @@
 
     const-string p1, "Authorization"
 
-    .line 33
     invoke-virtual {v2, p1}, Lokhttp3/Request$Builder;->removeHeader(Ljava/lang/String;)Lokhttp3/Request$Builder;
 
-    .line 34
     :cond_12
     invoke-virtual {v2, v0}, Lokhttp3/Request$Builder;->url(Lokhttp3/HttpUrl;)Lokhttp3/Request$Builder;
 
@@ -534,7 +490,6 @@
 
     return-object p1
 
-    .line 35
     :cond_13
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -556,7 +511,6 @@
 .method private isRecoverable(Ljava/io/IOException;Z)Z
     .locals 3
 
-    .line 1
     instance-of v0, p1, Ljava/net/ProtocolException;
 
     const/4 v1, 0x0
@@ -565,7 +519,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     instance-of v0, p1, Ljava/io/InterruptedIOException;
 
@@ -573,7 +526,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     instance-of p1, p1, Ljava/net/SocketTimeoutException;
 
     if-eqz p1, :cond_1
@@ -585,13 +537,11 @@
     :cond_1
     return v1
 
-    .line 4
     :cond_2
     instance-of p2, p1, Ljavax/net/ssl/SSLHandshakeException;
 
     if-eqz p2, :cond_3
 
-    .line 5
     invoke-virtual {p1}, Ljava/io/IOException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p2
@@ -602,7 +552,6 @@
 
     return v1
 
-    .line 6
     :cond_3
     instance-of p1, p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
@@ -617,12 +566,10 @@
 .method private recover(Ljava/io/IOException;ZLokhttp3/Request;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {v0, p1}, Lokhttp3/internal/connection/StreamAllocation;->streamFailed(Ljava/io/IOException;)V
 
-    .line 2
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
 
     invoke-virtual {v0}, Lokhttp3/OkHttpClient;->retryOnConnectionFailure()Z
@@ -638,7 +585,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 3
     invoke-virtual {p3}, Lokhttp3/Request;->body()Lokhttp3/RequestBody;
 
     move-result-object p3
@@ -649,7 +595,6 @@
 
     return v1
 
-    .line 4
     :cond_1
     invoke-direct {p0, p1, p2}, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->isRecoverable(Ljava/io/IOException;Z)Z
 
@@ -659,7 +604,6 @@
 
     return v1
 
-    .line 5
     :cond_2
     iget-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
@@ -680,7 +624,6 @@
 .method private sameConnection(Lokhttp3/Response;Lokhttp3/HttpUrl;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lokhttp3/Response;->request()Lokhttp3/Request;
 
     move-result-object p1
@@ -689,7 +632,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Lokhttp3/HttpUrl;->host()Ljava/lang/String;
 
     move-result-object v0
@@ -704,7 +646,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lokhttp3/HttpUrl;->port()I
 
     move-result v0
@@ -715,7 +656,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 4
     invoke-virtual {p1}, Lokhttp3/HttpUrl;->scheme()Ljava/lang/String;
 
     move-result-object p1
@@ -748,15 +688,12 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->canceled:Z
 
-    .line 2
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lokhttp3/internal/connection/StreamAllocation;->cancel()V
 
     :cond_0
@@ -771,25 +708,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Lokhttp3/Interceptor$Chain;->request()Lokhttp3/Request;
 
     move-result-object v0
 
-    .line 2
     check-cast p1, Lokhttp3/internal/http/RealInterceptorChain;
 
-    .line 3
     invoke-virtual {p1}, Lokhttp3/internal/http/RealInterceptorChain;->call()Lokhttp3/Call;
 
     move-result-object v7
 
-    .line 4
     invoke-virtual {p1}, Lokhttp3/internal/http/RealInterceptorChain;->eventListener()Lokhttp3/EventListener;
 
     move-result-object v8
 
-    .line 5
     new-instance v9, Lokhttp3/internal/connection/StreamAllocation;
 
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
@@ -826,13 +758,11 @@
 
     move-object v1, v10
 
-    .line 6
     :goto_0
     iget-boolean v3, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->canceled:Z
 
     if-nez v3, :cond_a
 
-    .line 7
     :try_start_0
     iget-object v3, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
@@ -846,37 +776,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 8
     invoke-virtual {v0}, Lokhttp3/Response;->newBuilder()Lokhttp3/Response$Builder;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {v1}, Lokhttp3/Response;->newBuilder()Lokhttp3/Response$Builder;
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {v1, v10}, Lokhttp3/Response$Builder;->body(Lokhttp3/ResponseBody;)Lokhttp3/Response$Builder;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {v1}, Lokhttp3/Response$Builder;->build()Lokhttp3/Response;
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {v0, v1}, Lokhttp3/Response$Builder;->priorResponse(Lokhttp3/Response;)Lokhttp3/Response$Builder;
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0}, Lokhttp3/Response$Builder;->build()Lokhttp3/Response;
 
     move-result-object v0
 
-    .line 14
     :cond_0
     invoke-direct {p0, v0}, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->followUpRequest(Lokhttp3/Response;)Lokhttp3/Request;
 
@@ -884,12 +807,10 @@
 
     if-nez v11, :cond_2
 
-    .line 15
     iget-boolean p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->forWebSocket:Z
 
     if-nez p1, :cond_1
 
-    .line 16
     iget-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {p1}, Lokhttp3/internal/connection/StreamAllocation;->release()V
@@ -897,7 +818,6 @@
     :cond_1
     return-object v0
 
-    .line 17
     :cond_2
     invoke-virtual {v0}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -911,7 +831,6 @@
 
     if-gt v12, v1, :cond_6
 
-    .line 18
     invoke-virtual {v11}, Lokhttp3/Request;->body()Lokhttp3/RequestBody;
 
     move-result-object v1
@@ -920,7 +839,6 @@
 
     if-nez v1, :cond_5
 
-    .line 19
     invoke-virtual {v11}, Lokhttp3/Request;->url()Lokhttp3/HttpUrl;
 
     move-result-object v1
@@ -931,12 +849,10 @@
 
     if-nez v1, :cond_3
 
-    .line 20
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {v1}, Lokhttp3/internal/connection/StreamAllocation;->release()V
 
-    .line 21
     new-instance v13, Lokhttp3/internal/connection/StreamAllocation;
 
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->client:Lokhttp3/OkHttpClient;
@@ -945,7 +861,6 @@
 
     move-result-object v2
 
-    .line 22
     invoke-virtual {v11}, Lokhttp3/Request;->url()Lokhttp3/HttpUrl;
 
     move-result-object v1
@@ -968,7 +883,6 @@
 
     goto :goto_1
 
-    .line 23
     :cond_3
     iget-object v1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
@@ -987,7 +901,6 @@
 
     goto :goto_0
 
-    .line 24
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1013,13 +926,11 @@
 
     throw p1
 
-    .line 25
     :cond_5
     iget-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {p1}, Lokhttp3/internal/connection/StreamAllocation;->release()V
 
-    .line 26
     new-instance p1, Ljava/net/HttpRetryException;
 
     invoke-virtual {v0}, Lokhttp3/Response;->code()I
@@ -1032,13 +943,11 @@
 
     throw p1
 
-    .line 27
     :cond_6
     iget-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {p1}, Lokhttp3/internal/connection/StreamAllocation;->release()V
 
-    .line 28
     new-instance p1, Ljava/net/ProtocolException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1067,7 +976,6 @@
     :catch_0
     move-exception v3
 
-    .line 29
     :try_start_1
     instance-of v4, v3, Lokhttp3/internal/http2/ConnectionShutdownException;
 
@@ -1080,7 +988,6 @@
     :cond_7
     move v4, v9
 
-    .line 30
     :goto_2
     invoke-direct {p0, v3, v4, v0}, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->recover(Ljava/io/IOException;ZLokhttp3/Request;)Z
 
@@ -1096,7 +1003,6 @@
     :catch_1
     move-exception v3
 
-    .line 31
     invoke-virtual {v3}, Lokhttp3/internal/connection/RouteException;->getLastConnectException()Ljava/io/IOException;
 
     move-result-object v4
@@ -1109,7 +1015,6 @@
 
     goto/16 :goto_0
 
-    .line 32
     :cond_9
     invoke-virtual {v3}, Lokhttp3/internal/connection/RouteException;->getLastConnectException()Ljava/io/IOException;
 
@@ -1119,26 +1024,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 33
     :goto_3
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {v0, v10}, Lokhttp3/internal/connection/StreamAllocation;->streamFailed(Ljava/io/IOException;)V
 
-    .line 34
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {v0}, Lokhttp3/internal/connection/StreamAllocation;->release()V
 
     throw p1
 
-    .line 35
     :cond_a
     iget-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     invoke-virtual {p1}, Lokhttp3/internal/connection/StreamAllocation;->release()V
 
-    .line 36
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "Canceled"
@@ -1151,7 +1052,6 @@
 .method public isCanceled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->canceled:Z
 
     return v0
@@ -1160,7 +1060,6 @@
 .method public setCallStackTrace(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->callStackTrace:Ljava/lang/Object;
 
     return-void
@@ -1169,7 +1068,6 @@
 .method public streamAllocation()Lokhttp3/internal/connection/StreamAllocation;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/http/RetryAndFollowUpInterceptor;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     return-object v0

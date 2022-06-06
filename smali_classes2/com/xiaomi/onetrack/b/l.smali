@@ -1,538 +1,222 @@
 .class public Lcom/xiaomi/onetrack/b/l;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "UploadTimer"
+.field public static a:Ljava/lang/String; = "ConfigProvider"
 
-.field public static final b:I = 0x1388
+.field public static volatile b:Z = false
 
-.field public static final c:I = 0x3a98
-
-.field public static final d:I = 0x124f80
-
-
-# instance fields
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public h:I
-
-.field public i:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public j:Landroid/content/BroadcastReceiver;
+.field public static volatile c:Z = true
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    const/16 p1, 0x3e8
-
-    .line 2
-    iput p1, p0, Lcom/xiaomi/onetrack/b/l;->e:I
-
-    const/16 p1, 0x2710
-
-    .line 3
-    iput p1, p0, Lcom/xiaomi/onetrack/b/l;->f:I
-
-    const v0, 0x124f80
-
-    .line 4
-    iput v0, p0, Lcom/xiaomi/onetrack/b/l;->g:I
-
-    .line 5
-    iput p1, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    .line 6
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/l;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 7
-    new-instance p1, Lcom/xiaomi/onetrack/b/m;
-
-    invoke-direct {p1, p0}, Lcom/xiaomi/onetrack/b/m;-><init>(Lcom/xiaomi/onetrack/b/l;)V
-
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/l;->j:Landroid/content/BroadcastReceiver;
-
-    .line 8
-    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->a()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/b/l;->a(Landroid/content/Context;)V
+.method public static constructor <clinit>()V
+    .locals 0
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/xiaomi/onetrack/b/l;)Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public constructor <init>()V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/xiaomi/onetrack/b/l;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    return-void
 .end method
 
-.method private a(IJ)V
-    .locals 2
+.method public static a(I)I
+    .locals 3
 
-    .line 13
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
+    sget-boolean v0, Lcom/xiaomi/onetrack/h/q;->b:Z
 
-    .line 14
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object p0, Lcom/xiaomi/onetrack/b/l;->a:Ljava/lang/String;
 
-    const-string v1, "will post msg, prio="
+    const-string v0, "debug upload mode, send events immediately"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v0}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 p0, 0x0
 
-    const-string v1, ", delay="
+    return p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    :try_start_0
+    invoke-static {}, Lcom/xiaomi/onetrack/b/c;->c()Ljava/util/Map;
 
     move-result-object v0
 
-    const-string v1, "UploadTimer"
+    add-int/lit8 p0, p0, 0x1
 
-    invoke-static {v1, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 15
-    invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    move-result-object p0
 
-    return-void
-.end method
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method private a(Landroid/content/Context;)V
-    .locals 3
+    move-result-object p0
 
-    if-nez p1, :cond_0
+    check-cast p0, Ljava/lang/Integer;
 
-    return-void
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    .line 9
-    :cond_0
-    :try_start_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
-
-    .line 10
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 11
-    iget-object v1, p0, Lcom/xiaomi/onetrack/b/l;->j:Landroid/content/BroadcastReceiver;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v0, v2, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    move-result p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception p1
-
-    .line 12
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "registerNetReceiver: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "UploadTimer"
-
-    invoke-static {v0, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const p0, 0xea60
 
     :goto_0
-    return-void
-.end method
+    sget-object v0, Lcom/xiaomi/onetrack/b/l;->a:Ljava/lang/String;
 
-.method private b()V
-    .locals 4
-
-    .line 1
-    invoke-static {}, Lcom/xiaomi/onetrack/b/p;->a()Lcom/xiaomi/onetrack/b/p;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/onetrack/b/p;->a(I)Z
-
-    move-result v0
-
-    const-string v2, "UploadTimer"
-
-    if-nez v0, :cond_1
-
-    const/16 v0, 0x3e8
-
-    .line 2
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 3
-    iget v3, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    mul-int/2addr v3, v1
-
-    iput v3, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    const v1, 0x124f80
-
-    if-le v3, v1, :cond_0
-
-    .line 4
-    iput v1, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    .line 5
-    :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "will restart retry msg after "
+    const-string v2, "getUploadInterval "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
-    iget v1, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v0, 0x2710
-
-    .line 7
-    iput v0, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    const-string v0, "retry success"
-
-    .line 8
-    invoke-static {v2, v0}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public a()V
+.method public static declared-synchronized a(Z)V
     .locals 1
 
-    .line 16
-    new-instance v0, Lcom/xiaomi/onetrack/b/o;
+    const-class v0, Lcom/xiaomi/onetrack/b/l;
 
-    invoke-direct {v0, p0}, Lcom/xiaomi/onetrack/b/o;-><init>(Lcom/xiaomi/onetrack/b/l;)V
+    monitor-enter v0
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/util/i;->a(Ljava/lang/Runnable;)V
+    :try_start_0
+    sput-boolean p0, Lcom/xiaomi/onetrack/b/l;->b:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+
+    throw p0
 .end method
 
-.method public a(IZ)V
+.method public static a()Z
     .locals 4
 
-    const/16 v0, 0x3e8
+    const/4 v0, 0x0
 
-    .line 2
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->hasMessages(I)Z
+    :try_start_0
+    invoke-static {}, Lcom/xiaomi/onetrack/d/f;->a()Lcom/xiaomi/onetrack/d/f;
 
-    move-result v0
+    move-result-object v1
 
-    const-string v1, "UploadTimer"
+    invoke-virtual {v1}, Lcom/xiaomi/onetrack/d/f;->b()[Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    .line 3
-    new-instance p2, Ljava/lang/StringBuilder;
+    aget-object v2, v1, v0
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "in retry mode, return, prio="
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    .line 4
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    if-eqz p2, :cond_2
-
-    const-wide/16 v2, 0x0
-
-    goto :goto_0
-
-    .line 6
-    :cond_2
-    invoke-static {p1}, Lcom/xiaomi/onetrack/a/l;->a(I)I
-
-    move-result p2
-
-    int-to-long v2, p2
-
-    .line 7
-    :goto_0
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "will check prio="
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", delay="
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v1, p2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    invoke-direct {p0, p1, v2, v3}, Lcom/xiaomi/onetrack/b/l;->a(IJ)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 5
-
-    .line 1
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
-
-    .line 2
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->a()Z
-
-    move-result v0
-
-    const-string v1, "UploadTimer"
-
-    if-eqz v0, :cond_3
-
-    .line 3
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 4
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 5
-    :cond_0
-    iget p1, p1, Landroid/os/Message;->what:I
-
-    const/16 v0, 0x3e8
-
-    if-ne p1, v0, :cond_1
-
-    .line 6
-    invoke-direct {p0}, Lcom/xiaomi/onetrack/b/l;->b()V
-
-    return-void
-
-    .line 7
-    :cond_1
-    invoke-static {}, Lcom/xiaomi/onetrack/b/p;->a()Lcom/xiaomi/onetrack/b/p;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Lcom/xiaomi/onetrack/b/p;->a(I)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    .line 8
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/4 v3, 0x1
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v2, :cond_0
 
-    const-string v4, "handleCheckUpload ret="
+    aget-object v1, v1, v3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v4, ", prio="
+    if-nez v1, :cond_0
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v1, v3
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    move v1, v0
 
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez v2, :cond_2
-
-    const-string p1, "handleCheckUpload failed, will check if need to send retry msg"
-
-    .line 9
-    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 10
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    .line 11
-    iget p1, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    int-to-long v2, p1
-
-    invoke-virtual {p0, v0, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 12
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "fire retry timer after "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Lcom/xiaomi/onetrack/b/l;->h:I
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    return-void
-
-    .line 13
-    :cond_3
     :goto_0
-    new-instance p1, Ljava/lang/StringBuilder;
+    sget-object v2, Lcom/xiaomi/onetrack/b/l;->a:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v2}, Lcom/xiaomi/onetrack/h/r;->a(Ljava/lang/String;)Z
 
-    const-string v0, "\u4e0d\u7528\u5904\u7406\u6d88\u606f, available="
+    move-result v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
-    .line 14
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->a()Z
+    if-nez v2, :cond_1
+
+    move v0, v3
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    sget-object v2, Lcom/xiaomi/onetrack/b/l;->a:Ljava/lang/String;
+
+    const-string v3, "ConfigProvider.available"
+
+    invoke-static {v2, v3, v1}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    return v0
+.end method
+
+.method public static declared-synchronized b()Z
+    .locals 2
+
+    const-class v0, Lcom/xiaomi/onetrack/b/l;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Lcom/xiaomi/onetrack/b/l;->b:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public static c()Z
+    .locals 1
+
+    invoke-static {}, Lcom/xiaomi/onetrack/g/c;->a()Z
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ", \u662f\u5426\u6709\u7f51="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 15
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->c()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ", \u6570\u636e\u5e93\u662f\u5426\u4e3a\u7a7a="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 16
-    invoke-static {}, Lcom/xiaomi/onetrack/a/l;->b()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 17
-    invoke-static {v1, p1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method

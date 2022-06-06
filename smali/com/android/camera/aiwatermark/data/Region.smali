@@ -17,33 +17,24 @@
 .method public constructor <init>(DDDD)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLatitude:D
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLatitude:D
 
-    .line 4
     iput-wide v0, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLongitude:D
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLongitude:D
 
-    .line 6
     iput-wide p1, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLatitude:D
 
-    .line 7
     iput-wide p3, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLatitude:D
 
-    .line 8
     iput-wide p5, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLongitude:D
 
-    .line 9
     iput-wide p7, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLongitude:D
 
     return-void
@@ -86,7 +77,6 @@
 .method public isInRegion(DD)Z
     .locals 7
 
-    .line 1
     iget-wide v3, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLatitude:D
 
     iget-wide v5, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLatitude:D
@@ -99,7 +89,6 @@
 
     move-result p1
 
-    .line 2
     iget-wide v3, p0, Lcom/android/camera/aiwatermark/data/Region;->mLittleLongitude:D
 
     iget-wide v5, p0, Lcom/android/camera/aiwatermark/data/Region;->mGreatLongitude:D

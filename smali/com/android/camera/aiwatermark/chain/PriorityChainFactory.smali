@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p1, Lcom/android/camera/aiwatermark/chain/IndiaPriorityChain;
 
@@ -38,7 +36,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     new-instance p1, Lcom/android/camera/aiwatermark/chain/ChinaPriorityChain;
 

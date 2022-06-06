@@ -33,7 +33,6 @@
 
     const/high16 v0, -0x80000000
 
-    .line 1
     invoke-direct {p0, v0, v0}, Lcom/bumptech/glide/request/target/CustomTarget;-><init>(II)V
 
     return-void
@@ -42,25 +41,20 @@
 .method public constructor <init>(II)V
     .locals 3
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {p1, p2}, Lcom/bumptech/glide/util/Util;->isValidDimensions(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iput p1, p0, Lcom/bumptech/glide/request/target/CustomTarget;->width:I
 
-    .line 5
     iput p2, p0, Lcom/bumptech/glide/request/target/CustomTarget;->height:I
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -94,7 +88,6 @@
 .method public final getRequest()Lcom/bumptech/glide/request/Request;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-object v0
@@ -103,7 +96,6 @@
 .method public final getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/request/target/CustomTarget;->width:I
 
     iget v1, p0, Lcom/bumptech/glide/request/target/CustomTarget;->height:I
@@ -152,7 +144,6 @@
 .method public final setRequest(Lcom/bumptech/glide/request/Request;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/request/target/CustomTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-void

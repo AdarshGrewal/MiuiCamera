@@ -26,7 +26,6 @@
 
     const-string v0, "urn:aiot-spec-v3:service:input:00000001:1"
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/idm/service/iot/InputMethodService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -35,7 +34,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/InputMethodService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -50,17 +48,14 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     iget-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     or-int/2addr p1, p2
 
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
-    .line 2
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mTextEventEnabled:Z
 
-    .line 3
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mInputCompleteEventEnabled:Z
 
     goto :goto_0
@@ -70,10 +65,8 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 4
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mTextEventEnabled:Z
 
-    .line 5
     iget-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     or-int/2addr p1, p2
@@ -87,10 +80,8 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 6
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mInputCompleteEventEnabled:Z
 
-    .line 7
     iget-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     or-int/2addr p1, p2
@@ -107,12 +98,10 @@
 .method public notifyInputCompleteEvent(I)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mInputCompleteEventEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;->newBuilder()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent$Builder;
 
     move-result-object v0
@@ -129,7 +118,6 @@
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputCompleteEvent;->toByteArray()[B
 
     move-result-object p1
@@ -143,12 +131,10 @@
 .method public notifyTextEvent(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Skeleton;->mTextEventEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;->newBuilder()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;
 
     move-result-object v0
@@ -165,7 +151,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;->toByteArray()[B
 
     move-result-object p1

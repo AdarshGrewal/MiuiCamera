@@ -38,10 +38,8 @@
 .method public constructor <init>(Ljava8/util/stream/SpinedBuffer$OfLong;IIII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer$OfLong;
 
-    .line 2
     invoke-direct/range {p0 .. p5}, Ljava8/util/stream/SpinedBuffer$OfPrimitive$BaseSpliterator;-><init>(Ljava8/util/stream/SpinedBuffer$OfPrimitive;IIII)V
 
     return-void
@@ -52,7 +50,6 @@
 .method public bridge synthetic arrayForOne(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, [J
 
     check-cast p3, Ljava8/util/function/LongConsumer;
@@ -65,7 +62,6 @@
 .method public arrayForOne([JILjava8/util/function/LongConsumer;)V
     .locals 0
 
-    .line 2
     aget-wide p1, p1, p2
 
     invoke-interface {p3, p1, p2}, Ljava8/util/function/LongConsumer;->accept(J)V
@@ -78,7 +74,6 @@
 
     add-int/2addr p3, p2
 
-    .line 2
     invoke-static {p1, p2, p3}, Ljava8/util/J8Arrays;->spliterator([JII)Ljava8/util/Spliterator$OfLong;
 
     move-result-object p1
@@ -89,7 +84,6 @@
 .method public bridge synthetic arraySpliterator(Ljava/lang/Object;II)Ljava8/util/Spliterator$OfPrimitive;
     .locals 0
 
-    .line 1
     check-cast p1, [J
 
     invoke-virtual {p0, p1, p2, p3}, Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;->arraySpliterator([JII)Ljava8/util/Spliterator$OfLong;
@@ -111,7 +105,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->forEachRemaining(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -120,7 +113,6 @@
 .method public bridge synthetic forEachRemaining(Ljava8/util/function/LongConsumer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer$OfPrimitive$BaseSpliterator;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
@@ -138,7 +130,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getComparator(Ljava8/util/Spliterator;)Ljava/util/Comparator;
 
     move-result-object v0
@@ -149,7 +140,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -160,7 +150,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -171,7 +160,6 @@
 .method public bridge synthetic newSpliterator(IIII)Ljava8/util/Spliterator$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;->newSpliterator(IIII)Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;
 
     move-result-object p1
@@ -182,7 +170,6 @@
 .method public newSpliterator(IIII)Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;
     .locals 7
 
-    .line 2
     new-instance v6, Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;
 
     iget-object v1, p0, Ljava8/util/stream/SpinedBuffer$OfLong$1Splitr;->this$0:Ljava8/util/stream/SpinedBuffer$OfLong;
@@ -214,7 +201,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->tryAdvance(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -225,7 +211,6 @@
 .method public bridge synthetic tryAdvance(Ljava8/util/function/LongConsumer;)Z
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/SpinedBuffer$OfPrimitive$BaseSpliterator;->tryAdvance(Ljava/lang/Object;)Z
 
     move-result p1
@@ -236,7 +221,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfLong;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/SpinedBuffer$OfPrimitive$BaseSpliterator;->trySplit()Ljava8/util/Spliterator$OfPrimitive;
 
     move-result-object v0

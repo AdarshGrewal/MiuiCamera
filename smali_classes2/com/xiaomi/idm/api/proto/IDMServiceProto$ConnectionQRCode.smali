@@ -77,15 +77,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
-    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -96,21 +93,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->macAddr_:Ljava/lang/String;
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->pwd_:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->ssid_:Ljava/lang/String;
 
-    .line 5
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->idHash_:Ljava/lang/String;
 
     return-void
@@ -119,7 +111,6 @@
 .method public static synthetic access$21100()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     return-object v0
@@ -128,7 +119,6 @@
 .method public static synthetic access$21200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setConnType(I)V
 
     return-void
@@ -137,7 +127,6 @@
 .method public static synthetic access$21300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearConnType()V
 
     return-void
@@ -146,7 +135,6 @@
 .method public static synthetic access$21400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setChannel(I)V
 
     return-void
@@ -155,7 +143,6 @@
 .method public static synthetic access$21500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearChannel()V
 
     return-void
@@ -164,7 +151,6 @@
 .method public static synthetic access$21600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setMacAddr(Ljava/lang/String;)V
 
     return-void
@@ -173,7 +159,6 @@
 .method public static synthetic access$21700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearMacAddr()V
 
     return-void
@@ -182,7 +167,6 @@
 .method public static synthetic access$21800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setMacAddrBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -191,7 +175,6 @@
 .method public static synthetic access$21900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setPwd(Ljava/lang/String;)V
 
     return-void
@@ -200,7 +183,6 @@
 .method public static synthetic access$22000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearPwd()V
 
     return-void
@@ -209,7 +191,6 @@
 .method public static synthetic access$22100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setPwdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -218,7 +199,6 @@
 .method public static synthetic access$22200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setSsid(Ljava/lang/String;)V
 
     return-void
@@ -227,7 +207,6 @@
 .method public static synthetic access$22300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearSsid()V
 
     return-void
@@ -236,7 +215,6 @@
 .method public static synthetic access$22400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setSsidBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -245,7 +223,6 @@
 .method public static synthetic access$22500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setIdHash(Ljava/lang/String;)V
 
     return-void
@@ -254,7 +231,6 @@
 .method public static synthetic access$22600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->clearIdHash()V
 
     return-void
@@ -263,7 +239,6 @@
 .method public static synthetic access$22700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->setIdHashBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -274,7 +249,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->channel_:I
 
     return-void
@@ -285,7 +259,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->connType_:I
 
     return-void
@@ -294,7 +267,6 @@
 .method private clearIdHash()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     move-result-object v0
@@ -311,7 +283,6 @@
 .method private clearMacAddr()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     move-result-object v0
@@ -328,7 +299,6 @@
 .method private clearPwd()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     move-result-object v0
@@ -345,7 +315,6 @@
 .method private clearSsid()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     move-result-object v0
@@ -362,7 +331,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     return-object v0
@@ -371,7 +339,6 @@
 .method public static newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -386,7 +353,6 @@
 .method public static newBuilder(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -406,7 +372,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -426,7 +391,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -446,7 +410,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -466,7 +429,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -486,7 +448,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -506,7 +467,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -526,7 +486,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -546,7 +505,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -566,7 +524,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -586,7 +543,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -606,7 +562,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -626,7 +581,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -649,7 +603,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->getParserForType()Lcom/google/protobuf/Parser;
@@ -662,7 +615,6 @@
 .method private setChannel(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->channel_:I
 
     return-void
@@ -671,7 +623,6 @@
 .method private setConnType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->connType_:I
 
     return-void
@@ -682,7 +633,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->idHash_:Ljava/lang/String;
 
     return-void
@@ -690,7 +640,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -699,10 +648,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -714,7 +661,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -723,7 +669,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->macAddr_:Ljava/lang/String;
 
     return-void
@@ -731,7 +676,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -740,10 +684,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -755,7 +697,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -764,7 +705,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->pwd_:Ljava/lang/String;
 
     return-void
@@ -772,7 +712,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -781,10 +720,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -796,7 +733,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -805,7 +741,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->ssid_:Ljava/lang/String;
 
     return-void
@@ -813,7 +748,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -822,10 +756,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -837,7 +769,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -846,7 +777,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -861,7 +791,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -871,7 +800,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -879,34 +807,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -925,7 +847,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
@@ -970,7 +891,6 @@
 
     aput-object p3, p1, p2
 
-    .line 11
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
     const-string p3, "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0004\u0002\u0004\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208"
@@ -981,7 +901,6 @@
 
     return-object p1
 
-    .line 12
     :pswitch_5
     new-instance p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
 
@@ -989,7 +908,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_6
     new-instance p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
 
@@ -1014,7 +932,6 @@
 .method public getChannel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->channel_:I
 
     return v0
@@ -1023,7 +940,6 @@
 .method public getConnType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->connType_:I
 
     return v0
@@ -1032,7 +948,6 @@
 .method public getIdHash()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->idHash_:Ljava/lang/String;
 
     return-object v0
@@ -1041,7 +956,6 @@
 .method public getIdHashBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->idHash_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1054,7 +968,6 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->macAddr_:Ljava/lang/String;
 
     return-object v0
@@ -1063,7 +976,6 @@
 .method public getMacAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->macAddr_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1076,7 +988,6 @@
 .method public getPwd()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->pwd_:Ljava/lang/String;
 
     return-object v0
@@ -1085,7 +996,6 @@
 .method public getPwdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->pwd_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1098,7 +1008,6 @@
 .method public getSsid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->ssid_:Ljava/lang/String;
 
     return-object v0
@@ -1107,7 +1016,6 @@
 .method public getSsidBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;->ssid_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;

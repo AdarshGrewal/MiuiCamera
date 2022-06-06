@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService$1;->this$0:Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;
 
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallService$Stub;-><init>()V
@@ -35,7 +34,6 @@
 .method public cancelInstall(Ljava/lang/String;ILandroid/os/Bundle;Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1
@@ -64,7 +62,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1
@@ -93,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1
@@ -110,7 +106,6 @@
 .method public getSessionState(Ljava/lang/String;ILcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1
@@ -127,7 +122,6 @@
 .method public getSessionStates(Ljava/lang/String;Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1
@@ -156,7 +150,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallService;->getHandler(Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object p1

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/miui/extravideo/common/MediaEncoderAsync;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/miui/extravideo/common/MediaEncoderAsync;Lcom/miui/extravideo/common/MediaEncoderAsync$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;-><init>(Lcom/miui/extravideo/common/MediaEncoderAsync;)V
 
     return-void
@@ -48,10 +46,8 @@
 
     const-string v0, "onError"
 
-    .line 1
     invoke-static {p1, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2
     :try_start_0
     iget-object p2, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -61,7 +57,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3
     iget-object p2, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p2}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;
@@ -79,7 +74,6 @@
 
     const-string v0, "onError exception"
 
-    .line 4
     invoke-static {p1, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -92,7 +86,6 @@
 
     const-string p1, "MediaEncoderAsync"
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -102,7 +95,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;
@@ -120,10 +112,8 @@
     :cond_0
     const-string v0, "onInputBufferAvailable"
 
-    .line 3
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$200(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/interpolation/EncodeBufferHolder;
@@ -136,7 +126,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$300(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaCodec;
@@ -157,7 +146,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -169,7 +157,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$300(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaCodec;
@@ -180,10 +167,8 @@
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 9
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$200(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/interpolation/EncodeBufferHolder;
@@ -194,7 +179,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 10
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$300(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaCodec;
@@ -235,7 +219,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_2
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -264,7 +247,6 @@
 
     const-string v0, "onInputBufferAvailable exception"
 
-    .line 12
     invoke-static {p1, v0, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -278,7 +260,6 @@
 
     const-string v0, "MediaEncoderAsync"
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -290,17 +271,14 @@
 
     move-result-object v1
 
-    .line 2
     iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
     if-eqz v2, :cond_0
 
-    .line 3
     iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     iget v3, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -309,7 +287,6 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,7 +319,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6
     :try_start_1
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -368,10 +344,8 @@
     :try_start_2
     const-string v1, "Too many frames"
 
-    .line 7
     invoke-static {v0, v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 8
     :goto_0
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
@@ -383,7 +357,6 @@
 
     invoke-virtual {p1, p2, v1}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
-    .line 9
     :cond_0
     iget p1, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -393,10 +366,8 @@
 
     const-string p1, "end of stream reached"
 
-    .line 10
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;
@@ -405,7 +376,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 12
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;
@@ -425,7 +395,6 @@
 
     const-string p2, "onOutputBufferAvailable exception"
 
-    .line 13
     invoke-static {v0, p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -436,7 +405,6 @@
 .method public onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$300(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaCodec;
@@ -447,7 +415,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object p2, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p2}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$500(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaMuxer;
@@ -460,7 +427,6 @@
 
     invoke-static {p2, p1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$402(Lcom/miui/extravideo/common/MediaEncoderAsync;I)I
 
-    .line 3
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$CustomCallback;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {p1}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$500(Lcom/miui/extravideo/common/MediaEncoderAsync;)Landroid/media/MediaMuxer;

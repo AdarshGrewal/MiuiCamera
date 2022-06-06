@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/impl/XMPDateTimeImpl;
 
     invoke-direct {v0}, Lcom/adobe/xmp/impl/XMPDateTimeImpl;-><init>()V
@@ -41,17 +39,14 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertNotNull(Ljava/lang/Object;)V
 
-    .line 3
     new-instance v0, Lcom/adobe/xmp/impl/ParseState;
 
     invoke-direct {v0, p0}, Lcom/adobe/xmp/impl/ParseState;-><init>(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
-    .line 4
     invoke-virtual {v0, p0}, Lcom/adobe/xmp/impl/ParseState;->ch(I)C
 
     move-result v1
@@ -64,7 +59,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 5
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->length()I
 
     move-result v1
@@ -79,7 +73,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 6
     :cond_0
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->length()I
 
@@ -113,14 +106,12 @@
 
     if-nez v1, :cond_d
 
-    .line 7
     invoke-virtual {v0, p0}, Lcom/adobe/xmp/impl/ParseState;->ch(I)C
 
     move-result v7
 
     if-ne v7, v5, :cond_3
 
-    .line 8
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     :cond_3
@@ -128,12 +119,10 @@
 
     const-string v8, "Invalid year in date string"
 
-    .line 9
     invoke-virtual {v0, v8, v7}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 10
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v8
@@ -148,7 +137,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_4
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -158,7 +146,6 @@
 
     throw p0
 
-    .line 12
     :cond_5
     :goto_2
     invoke-virtual {v0, p0}, Lcom/adobe/xmp/impl/ParseState;->ch(I)C
@@ -169,11 +156,9 @@
 
     neg-int v7, v7
 
-    .line 13
     :cond_6
     invoke-interface {p1, v7}, Lcom/adobe/xmp/XMPDateTime;->setYear(I)V
 
-    .line 14
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v7
@@ -182,7 +167,6 @@
 
     return-object p1
 
-    .line 15
     :cond_7
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
@@ -190,12 +174,10 @@
 
     const-string v8, "Invalid month in date string"
 
-    .line 16
     invoke-virtual {v0, v8, v7}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 17
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v8
@@ -210,7 +192,6 @@
 
     goto :goto_3
 
-    .line 18
     :cond_8
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -220,12 +201,10 @@
 
     throw p0
 
-    .line 19
     :cond_9
     :goto_3
     invoke-interface {p1, v7}, Lcom/adobe/xmp/XMPDateTime;->setMonth(I)V
 
-    .line 20
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v7
@@ -234,7 +213,6 @@
 
     return-object p1
 
-    .line 21
     :cond_a
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
@@ -242,12 +220,10 @@
 
     const-string v8, "Invalid day in date string"
 
-    .line 22
     invoke-virtual {v0, v8, v7}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 23
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v8
@@ -262,7 +238,6 @@
 
     goto :goto_4
 
-    .line 24
     :cond_b
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -272,12 +247,10 @@
 
     throw p0
 
-    .line 25
     :cond_c
     :goto_4
     invoke-interface {p1, v7}, Lcom/adobe/xmp/XMPDateTime;->setDay(I)V
 
-    .line 26
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v7
@@ -286,14 +259,11 @@
 
     return-object p1
 
-    .line 27
     :cond_d
     invoke-interface {p1, v4}, Lcom/adobe/xmp/XMPDateTime;->setMonth(I)V
 
-    .line 28
     invoke-interface {p1, v4}, Lcom/adobe/xmp/XMPDateTime;->setDay(I)V
 
-    .line 29
     :cond_e
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
@@ -301,7 +271,6 @@
 
     if-ne v7, v2, :cond_f
 
-    .line 30
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     goto :goto_5
@@ -314,34 +283,28 @@
 
     const-string v2, "Invalid hour in date string"
 
-    .line 31
     invoke-virtual {v0, v2, v1}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 32
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v7
 
     if-ne v7, v3, :cond_1f
 
-    .line 33
     invoke-interface {p1, v2}, Lcom/adobe/xmp/XMPDateTime;->setHour(I)V
 
-    .line 34
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     const/16 v2, 0x3b
 
     const-string v7, "Invalid minute in date string"
 
-    .line 35
     invoke-virtual {v0, v7, v2}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 36
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v8
@@ -352,7 +315,6 @@
 
     if-eqz v8, :cond_11
 
-    .line 37
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v8
@@ -379,7 +341,6 @@
 
     goto :goto_6
 
-    .line 38
     :cond_10
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -389,29 +350,24 @@
 
     throw p0
 
-    .line 39
     :cond_11
     :goto_6
     invoke-interface {p1, v7}, Lcom/adobe/xmp/XMPDateTime;->setMinute(I)V
 
-    .line 40
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v7
 
     if-ne v7, v3, :cond_18
 
-    .line 41
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     const-string v7, "Invalid whole seconds in date string"
 
-    .line 42
     invoke-virtual {v0, v7, v2}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 43
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result v8
@@ -432,7 +388,6 @@
 
     if-eq v8, v10, :cond_13
 
-    .line 44
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v8
@@ -447,7 +402,6 @@
 
     goto :goto_7
 
-    .line 45
     :cond_12
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -457,22 +411,18 @@
 
     throw p0
 
-    .line 46
     :cond_13
     :goto_7
     invoke-interface {p1, v7}, Lcom/adobe/xmp/XMPDateTime;->setSecond(I)V
 
-    .line 47
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v7
 
     if-ne v7, v11, :cond_18
 
-    .line 48
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
-    .line 49
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->pos()I
 
     move-result v7
@@ -481,12 +431,10 @@
 
     const-string v11, "Invalid fractional seconds in date string"
 
-    .line 50
     invoke-virtual {v0, v11, v8}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v8
 
-    .line 51
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v11
@@ -507,7 +455,6 @@
 
     goto :goto_8
 
-    .line 52
     :cond_14
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -517,7 +464,6 @@
 
     throw p0
 
-    .line 53
     :cond_15
     :goto_8
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->pos()I
@@ -531,7 +477,6 @@
 
     if-le v11, v7, :cond_16
 
-    .line 54
     div-int/lit8 v8, v8, 0xa
 
     add-int/lit8 v11, v11, -0x1
@@ -548,11 +493,9 @@
 
     goto :goto_a
 
-    .line 55
     :cond_17
     invoke-interface {p1, v8}, Lcom/adobe/xmp/XMPDateTime;->setNanoSecond(I)V
 
-    .line 56
     :cond_18
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
@@ -560,12 +503,10 @@
 
     if-ne v7, v10, :cond_19
 
-    .line 57
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     goto :goto_c
 
-    .line 58
     :cond_19
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
@@ -573,7 +514,6 @@
 
     if-eqz v7, :cond_1d
 
-    .line 59
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result p0
@@ -584,7 +524,6 @@
 
     goto :goto_b
 
-    .line 60
     :cond_1a
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
@@ -594,30 +533,25 @@
 
     const/4 p0, -0x1
 
-    .line 61
     :goto_b
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     const-string v4, "Invalid time zone hour in date string"
 
-    .line 62
     invoke-virtual {v0, v4, v1}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 63
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->ch()C
 
     move-result v4
 
     if-ne v4, v3, :cond_1b
 
-    .line 64
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->skip()V
 
     const-string v3, "Invalid time zone minute in date string"
 
-    .line 65
     invoke-virtual {v0, v3, v2}, Lcom/adobe/xmp/impl/ParseState;->gatherInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -630,7 +564,6 @@
 
     goto :goto_d
 
-    .line 66
     :cond_1b
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -640,7 +573,6 @@
 
     throw p0
 
-    .line 67
     :cond_1c
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -669,7 +601,6 @@
 
     mul-int/2addr p0, v1
 
-    .line 68
     new-instance v1, Ljava/util/SimpleTimeZone;
 
     const-string v2, ""
@@ -678,7 +609,6 @@
 
     invoke-interface {p1, v1}, Lcom/adobe/xmp/XMPDateTime;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 69
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/ParseState;->hasNext()Z
 
     move-result p0
@@ -687,7 +617,6 @@
 
     return-object p1
 
-    .line 70
     :cond_1e
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -697,7 +626,6 @@
 
     throw p0
 
-    .line 71
     :cond_1f
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -707,7 +635,6 @@
 
     throw p0
 
-    .line 72
     :cond_20
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -721,12 +648,10 @@
 .method public static render(Lcom/adobe/xmp/XMPDateTime;)Ljava/lang/String;
     .locals 8
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/text/DecimalFormat;
 
     new-instance v2, Ljava/text/DecimalFormatSymbols;
@@ -739,7 +664,6 @@
 
     invoke-direct {v1, v3, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V
 
-    .line 3
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getYear()I
 
     move-result v2
@@ -752,14 +676,12 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 4
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getMonth()I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -769,10 +691,8 @@
     :cond_0
     const-string v2, "\'-\'00"
 
-    .line 6
     invoke-virtual {v1, v2}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
-    .line 7
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getMonth()I
 
     move-result v2
@@ -785,21 +705,18 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 8
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getDay()I
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 10
     :cond_1
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getDay()I
 
@@ -813,35 +730,30 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 11
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getHour()I
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 12
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getMinute()I
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 13
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getSecond()I
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 14
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getNanoSecond()I
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 15
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getTimeZone()Ljava/util/TimeZone;
 
     move-result-object v2
@@ -861,15 +773,12 @@
     :cond_2
     const/16 v2, 0x54
 
-    .line 16
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     const-string v2, "00"
 
-    .line 17
     invoke-virtual {v1, v2}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
-    .line 18
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getHour()I
 
     move-result v2
@@ -884,10 +793,8 @@
 
     const/16 v2, 0x3a
 
-    .line 19
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 20
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getMinute()I
 
     move-result v2
@@ -900,7 +807,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 21
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getSecond()I
 
     move-result v2
@@ -913,7 +819,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 22
     :cond_3
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getSecond()I
 
@@ -935,17 +840,14 @@
 
     const-string v4, ":00.#########"
 
-    .line 23
     invoke-virtual {v1, v4}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 25
     :cond_4
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getTimeZone()Ljava/util/TimeZone;
 
@@ -953,7 +855,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 26
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getCalendar()Ljava/util/Calendar;
 
     move-result-object v2
@@ -962,7 +863,6 @@
 
     move-result-wide v2
 
-    .line 27
     invoke-interface {p0}, Lcom/adobe/xmp/XMPDateTime;->getTimeZone()Ljava/util/TimeZone;
 
     move-result-object p0
@@ -975,7 +875,6 @@
 
     const/16 p0, 0x5a
 
-    .line 28
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -983,10 +882,8 @@
     :cond_5
     const v2, 0x36ee80
 
-    .line 29
     div-int v3, p0, v2
 
-    .line 30
     rem-int/2addr p0, v2
 
     const v2, 0xea60
@@ -999,12 +896,10 @@
 
     const-string v2, "+00;-00"
 
-    .line 31
     invoke-virtual {v1, v2}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
     int-to-long v2, v3
 
-    .line 32
     invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
 
     move-result-object v2
@@ -1013,19 +908,16 @@
 
     const-string v2, ":00"
 
-    .line 33
     invoke-virtual {v1, v2}, Ljava/text/DecimalFormat;->applyPattern(Ljava/lang/String;)V
 
     int-to-long v2, p0
 
-    .line 34
     invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 35
     :cond_6
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

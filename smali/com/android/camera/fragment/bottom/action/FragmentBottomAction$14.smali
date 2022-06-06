@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$BackgroundType;->values()[Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$BackgroundType;
 
     move-result-object v0

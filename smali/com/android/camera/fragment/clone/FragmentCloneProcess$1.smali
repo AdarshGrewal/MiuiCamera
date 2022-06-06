@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/clone/FragmentCloneProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneProcess$1;->this$0:Lcom/android/camera/fragment/clone/FragmentCloneProcess;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -35,7 +34,6 @@
 .method public onDown(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -74,7 +71,6 @@
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -89,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/camera/protocol/ModeProtocol$CloneAction;->onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result p1
@@ -105,7 +100,6 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -120,7 +114,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1

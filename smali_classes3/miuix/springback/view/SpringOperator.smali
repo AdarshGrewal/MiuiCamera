@@ -13,7 +13,6 @@
 .method public constructor <init>(FF)V
     .locals 6
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     float-to-double v0, p2
@@ -24,7 +23,6 @@
 
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 2
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -39,7 +37,6 @@
 
     div-double/2addr p1, v0
 
-    .line 3
     iput-wide p1, p0, Lmiuix/springback/view/SpringOperator;->damping:D
 
     return-void
@@ -50,7 +47,6 @@
 .method public updateVelocity(DFDD)D
     .locals 6
 
-    .line 1
     iget-wide v0, p0, Lmiuix/springback/view/SpringOperator;->damping:D
 
     float-to-double v2, p3
@@ -63,7 +59,6 @@
 
     mul-double/2addr p1, v4
 
-    .line 2
     iget-wide v0, p0, Lmiuix/springback/view/SpringOperator;->tension:D
 
     sub-double/2addr p4, p6

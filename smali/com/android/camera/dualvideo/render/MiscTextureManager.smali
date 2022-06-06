@@ -67,37 +67,30 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v1, v0, [F
 
-    .line 2
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexTransMatrix:[F
 
     new-array v0, v0, [F
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mAnimTexTransMatrix:[F
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexOrientation:I
 
-    .line 5
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mInited:Z
 
-    .line 7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,12 +111,10 @@
 
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->ROTATE_ANIM_VALUE:Ljava/lang/String;
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexTransMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mAnimTexTransMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
@@ -134,7 +125,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/dualvideo/render/MiscRenderItem;)V
     .locals 0
 
-    .line 11
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/MiscRenderItem;->getBasicTexture()Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p0
@@ -147,7 +137,6 @@
 .method public static synthetic OooO00o(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscRenderItem;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/MiscRenderItem;->getBasicTexture()Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p1
@@ -160,7 +149,6 @@
 .method public static synthetic OooO00o(Ljava/lang/String;Lcom/android/camera/dualvideo/render/MiscRenderItem;)Z
     .locals 0
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/MiscRenderItem;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -175,7 +163,6 @@
 .method public static synthetic access$000(Lcom/android/camera/dualvideo/render/MiscTextureManager;)[F
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mAnimTexTransMatrix:[F
 
     return-object p0
@@ -204,7 +191,6 @@
     :cond_1
     add-int/lit16 p2, p2, -0x168
 
-    .line 1
     :goto_0
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->doRotation(II)V
 
@@ -216,7 +202,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
@@ -226,13 +211,12 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooooo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooooo;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Ooooooo;-><init>(Lcom/android/camera/dualvideo/render/MiscTextureManager;Landroid/content/res/Resources;)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Ooooooo;-><init>(Lcom/android/camera/dualvideo/render/MiscTextureManager;Landroid/content/res/Resources;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
@@ -241,9 +225,8 @@
 
     new-instance v3, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v4, 0x7f12081f
+    const v4, 0x7f1207dc
 
-    .line 3
     invoke-virtual {p1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -260,12 +243,10 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-void
@@ -285,7 +266,6 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 1
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->ROTATE_ANIM_VALUE:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -298,17 +278,14 @@
 
     const-string/jumbo v2, "rotate_group"
 
-    .line 2
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
-    .line 3
     invoke-interface {v1}, Lmiuix/animation/ICancelableStyle;->cancel()V
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 4
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->ROTATE_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v4, v1, v3
@@ -317,7 +294,6 @@
 
     move-result-object v1
 
-    .line 5
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
@@ -330,7 +306,6 @@
 
     aput-object v5, v4, v3
 
-    .line 6
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -349,7 +324,6 @@
 
     const/16 v5, 0x3e8
 
-    .line 7
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -368,14 +342,12 @@
 
     const/4 v7, 0x6
 
-    .line 8
     invoke-virtual {v5, v7, v6}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
 
     new-array v6, v3, [Lmiuix/animation/listener/TransitionListener;
 
-    .line 9
     invoke-virtual {v5, v6}, Lmiuix/animation/base/AnimConfig;->removeListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
@@ -388,14 +360,12 @@
 
     aput-object v6, v0, v3
 
-    .line 10
     invoke-virtual {v5, v0}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     aput-object p1, v4, v2
 
-    .line 11
     invoke-interface {v1, v4}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -406,7 +376,6 @@
 .method public synthetic OooO00o(Landroid/content/res/Resources;Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;)V
     .locals 7
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -427,7 +396,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p2, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mDescription:Ljava/lang/String;
 
     const-string v1, "front"
@@ -442,16 +410,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v4, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v5, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v6, 0x7f12081e
+    const v6, 0x7f1207db
 
-    .line 5
     invoke-virtual {p1, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -464,10 +430,8 @@
 
     invoke-direct {v4, v1, v5}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 6
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
@@ -479,7 +443,6 @@
 
     iget-object p2, p2, Lcom/android/camera/dualvideo/util/DualVideoConfigManager$ConfigItem;->mDescription:Ljava/lang/String;
 
-    .line 8
     invoke-static {p2, v2}, Lcom/android/camera/dualvideo/render/RenderUtil;->textAsBitmap(Ljava/lang/String;I)Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -488,7 +451,6 @@
 
     invoke-direct {v0, v1, v4}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 9
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -499,7 +461,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mAnimTexTransMatrix:[F
     :try_end_0
@@ -522,7 +483,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
@@ -532,7 +492,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     monitor-exit p0
 
     return-object v0
@@ -540,7 +499,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 3
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -611,7 +569,6 @@
 
     const-string v0, "MiscTextureManager"
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -632,12 +589,10 @@
 
     const/4 p1, 0x0
 
-    .line 5
     monitor-exit p0
 
     return-object p1
 
-    .line 6
     :cond_5
     :try_start_2
     new-instance v0, Lcom/android/gallery3d/ui/RawTexture;
@@ -656,7 +611,6 @@
 
     invoke-direct {v0, v1, v2, v4}, Lcom/android/gallery3d/ui/RawTexture;-><init>(IIZ)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/android/camera/dualvideo/render/MiscRenderItem;
@@ -667,7 +621,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 8
     monitor-exit p0
 
     return-object v0
@@ -685,7 +638,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexOrientation:I
     :try_end_0
@@ -708,7 +660,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexTransMatrix:[F
     :try_end_0
@@ -731,7 +682,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
@@ -739,9 +689,9 @@
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0OoOo0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooooO;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o0OoOo0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OoooooO;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
@@ -751,9 +701,8 @@
 
     move-result-object p1
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000OoO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/o000OoO;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000OoO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o000OoO;
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p1
@@ -783,27 +732,23 @@
 .method public init(Lcom/android/gallery3d/ui/GLCanvas;Landroid/content/res/Resources;)V
     .locals 5
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mInited:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->createTagTex(Landroid/content/res/Resources;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080290
+    const v3, 0x7f08028c
 
-    .line 4
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -816,19 +761,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080291
+    const v3, 0x7f08028d
 
-    .line 7
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -839,19 +781,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 8
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080289
+    const v3, 0x7f080285
 
-    .line 10
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -862,19 +801,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 11
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080287
+    const v3, 0x7f080283
 
-    .line 13
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -885,19 +821,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 14
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f08028a
+    const v3, 0x7f080286
 
-    .line 16
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -908,19 +841,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 17
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080288
+    const v3, 0x7f080284
 
-    .line 19
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -931,19 +861,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 20
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 21
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f08028b
+    const v3, 0x7f080287
 
-    .line 22
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -954,19 +881,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 23
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 24
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f08028c
+    const v3, 0x7f080288
 
-    .line 25
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -977,19 +901,16 @@
 
     invoke-direct {v1, v3, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 26
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 27
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v2, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    const v3, 0x7f080421
+    const v3, 0x7f08041f
 
-    .line 28
     invoke-static {p2, v3}, Lcom/android/camera/dualvideo/render/RenderUtil;->getBitmap(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -1000,17 +921,14 @@
 
     invoke-direct {v1, p2, v2}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 29
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 30
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v1, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    .line 31
     invoke-static {v4}, Lcom/android/camera/dualvideo/render/RenderUtil;->getSelectFrame(Z)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -1021,10 +939,8 @@
 
     invoke-direct {v0, v2, v1}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 32
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 33
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/camera/dualvideo/render/MiscRenderItem;
@@ -1033,7 +949,6 @@
 
     const/4 v2, 0x1
 
-    .line 34
     invoke-static {v2}, Lcom/android/camera/dualvideo/render/RenderUtil;->getSelectFrame(Z)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -1044,17 +959,14 @@
 
     invoke-direct {v0, v3, v1}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 35
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 36
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/camera/dualvideo/render/MiscRenderItem;
 
     new-instance v1, Lcom/android/gallery3d/ui/BitmapTexture;
 
-    .line 37
     invoke-static {}, Lcom/android/camera/dualvideo/render/RenderUtil;->getSelectIndexBG()Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -1065,19 +977,16 @@
 
     invoke-direct {v0, v3, v1}, Lcom/android/camera/dualvideo/render/MiscRenderItem;-><init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
 
-    .line 38
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 39
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooooo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0OoOo0;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/Oooooo;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/o0OoOo0;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 40
     iput-boolean v2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mInited:Z
 
     return-void
@@ -1088,27 +997,23 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OoooooO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooooo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/Oooooo;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mMiscRenderList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mInited:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
@@ -1128,7 +1033,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     monitor-exit p0
 
     return-void
@@ -1140,7 +1044,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {p1, v2, v1, v1, v0}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
@@ -1156,17 +1059,14 @@
 
     move-object v3, p1
 
-    .line 3
     invoke-static/range {v3 .. v8}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
     const/high16 p2, -0x41000000    # -0.5f
 
-    .line 4
     invoke-static {p1, v2, p2, p2, v0}, Landroid/opengl/Matrix;->translateM([FIFFF)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-void
@@ -1184,7 +1084,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexOrientation:I
     :try_end_0
@@ -1192,36 +1091,30 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 2
     monitor-exit p0
 
     return-void
 
-    .line 3
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexOrientation:I
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->animTexTransMatrix(II)V
 
-    .line 4
     iput p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexOrientation:I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexTransMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager;->mTexTransMatrix:[F
 
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->rotateTexTransMatrix([FI)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 7
     monitor-exit p0
 
     return-void

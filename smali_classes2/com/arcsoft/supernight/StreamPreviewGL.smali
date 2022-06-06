@@ -102,56 +102,48 @@
 
     new-array v1, v0, [F
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->s:[F
 
     new-array v1, v0, [F
 
-    .line 2
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->t:[F
 
     new-array v1, v0, [F
 
-    .line 3
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->u:[F
 
     new-array v1, v0, [F
 
-    .line 4
     fill-array-data v1, :array_3
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->v:[F
 
     new-array v1, v0, [F
 
-    .line 5
     fill-array-data v1, :array_4
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->w:[F
 
     new-array v1, v0, [F
 
-    .line 6
     fill-array-data v1, :array_5
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->x:[F
 
     new-array v1, v0, [F
 
-    .line 7
     fill-array-data v1, :array_6
 
     sput-object v1, Lcom/arcsoft/supernight/StreamPreviewGL;->y:[F
 
     new-array v0, v0, [F
 
-    .line 8
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/arcsoft/supernight/StreamPreviewGL;->z:[F
@@ -260,48 +252,36 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->b:Z
 
     const/4 v1, 0x0
 
-    .line 3
     iput-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->p:Ljava/nio/ByteBuffer;
 
-    .line 4
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->q:I
 
-    .line 5
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->r:I
 
-    .line 6
     iput-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->A:Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;
 
-    .line 7
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->C:Z
 
-    .line 8
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->D:Z
 
     const/4 v0, 0x1
 
-    .line 9
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     const/16 v1, 0x5a
 
-    .line 10
     iput v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->J:I
 
-    .line 11
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->K:Z
 
-    .line 12
     invoke-virtual {p0, p1}, Lcom/arcsoft/supernight/StreamPreviewGL;->init(Landroid/content/Context;)V
 
     return-void
@@ -310,48 +290,36 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 13
     invoke-direct {p0, p1, p2}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x0
 
-    .line 14
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->b:Z
 
     const/4 v0, 0x0
 
-    .line 15
     iput-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->p:Ljava/nio/ByteBuffer;
 
-    .line 16
     iput p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->q:I
 
-    .line 17
     iput p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->r:I
 
-    .line 18
     iput-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->A:Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;
 
-    .line 19
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->C:Z
 
-    .line 20
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->D:Z
 
     const/4 p2, 0x1
 
-    .line 21
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     const/16 v0, 0x5a
 
-    .line 22
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->J:I
 
-    .line 23
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->K:Z
 
-    .line 24
     invoke-virtual {p0, p1}, Lcom/arcsoft/supernight/StreamPreviewGL;->init(Landroid/content/Context;)V
 
     return-void
@@ -364,12 +332,10 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
     const/16 v1, 0x30
 
-    .line 2
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -388,7 +354,6 @@
 
     iput-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->n:Ljava/nio/FloatBuffer;
 
-    .line 3
     invoke-virtual {v1, v0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
@@ -397,10 +362,8 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     iput-boolean v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->C:Z
 
-    .line 5
     iput-boolean v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->D:Z
 
     return-void
@@ -429,15 +392,12 @@
 
     new-array v1, v0, [I
 
-    .line 1
     iput-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 3
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     aget v0, v0, v2
@@ -450,29 +410,24 @@
 
     const/16 v2, 0x2801
 
-    .line 4
     invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const v3, 0x46180400    # 9729.0f
 
     const/16 v4, 0x2800
 
-    .line 5
     invoke-static {v1, v4, v3}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v5, 0x2802
 
     const v6, 0x47012f00    # 33071.0f
 
-    .line 6
     invoke-static {v1, v5, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v7, 0x2803
 
-    .line 7
     invoke-static {v1, v7, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 8
     iget-object v8, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     const/4 v9, 0x1
@@ -481,21 +436,16 @@
 
     invoke-static {v1, v8}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 9
     invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 10
     invoke-static {v1, v4, v3}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 11
     invoke-static {v1, v5, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 12
     invoke-static {v1, v7, v6}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
     const/16 v0, 0xcf5
 
-    .line 13
     invoke-static {v0, v9}, Landroid/opengl/GLES20;->glPixelStorei(II)V
 
     return-void
@@ -504,7 +454,6 @@
 .method private c()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -519,7 +468,6 @@
 
     iput-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->f:Ljava/lang/String;
 
-    .line 2
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -534,7 +482,6 @@
 
     iput-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->g:Ljava/lang/String;
 
-    .line 3
     iget-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->f:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/arcsoft/supernight/ShaderUtils;->createProgram(Ljava/lang/String;Ljava/lang/String;)I
@@ -545,14 +492,12 @@
 
     const-string v1, "aPosition"
 
-    .line 4
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->i:I
 
-    .line 5
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->h:I
 
     const-string v1, "aTexCoord"
@@ -563,7 +508,6 @@
 
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->j:I
 
-    .line 6
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->h:I
 
     const-string v1, "uTextureY"
@@ -574,7 +518,6 @@
 
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->k:I
 
-    .line 7
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->h:I
 
     const-string v1, "uTextureUV"
@@ -585,7 +528,6 @@
 
     iput v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->l:I
 
-    .line 8
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->h:I
 
     const-string v1, "uNV12"
@@ -602,18 +544,15 @@
 .method private d()V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->K:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/arcsoft/supernight/StreamPreviewGL;->s:[F
 
-    .line 3
     iget v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->J:I
 
     if-eqz v1, :cond_4
@@ -632,7 +571,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->h()[F
 
@@ -640,7 +578,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->g()[F
 
@@ -648,7 +585,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_3
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->f()[F
 
@@ -656,13 +592,11 @@
 
     goto :goto_0
 
-    .line 7
     :cond_4
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->e()[F
 
     move-result-object v0
 
-    .line 8
     :goto_0
     array-length v1, v0
 
@@ -686,7 +620,6 @@
 
     iput-object v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->o:Ljava/nio/FloatBuffer;
 
-    .line 9
     invoke-virtual {v1, v0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
@@ -695,7 +628,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 10
     iput-boolean v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->K:Z
 
     return-void
@@ -704,7 +636,6 @@
 .method private e()[F
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     if-eqz v0, :cond_0
@@ -723,7 +654,6 @@
 .method private f()[F
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     if-eqz v0, :cond_0
@@ -742,7 +672,6 @@
 .method private g()[F
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     if-eqz v0, :cond_0
@@ -761,7 +690,6 @@
 .method private h()[F
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     if-eqz v0, :cond_0
@@ -780,20 +708,17 @@
 .method private i()V
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->H:[Ljava/nio/ByteBuffer;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->h:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 3
     iget v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->i:I
 
     const/4 v2, 0x3
@@ -808,12 +733,10 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 4
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->i:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 5
     iget v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->j:I
 
     const/4 v2, 0x2
@@ -822,17 +745,14 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 6
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->j:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const v0, 0x84c0
 
-    .line 7
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 8
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     const/4 v1, 0x0
@@ -843,7 +763,6 @@
 
     invoke-static {v2, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 9
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->G:I
 
     const/16 v3, 0xcf2
@@ -854,7 +773,6 @@
 
     const/16 v6, 0x1909
 
-    .line 10
     iget v7, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->c:I
 
     iget v8, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->d:I
@@ -875,17 +793,14 @@
 
     invoke-static/range {v4 .. v12}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 11
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->k:I
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
     const v0, 0x84c1
 
-    .line 12
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 13
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     const/4 v4, 0x1
@@ -894,7 +809,6 @@
 
     invoke-static {v2, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 14
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->G:I
 
     div-int/lit8 v0, v0, 0x2
@@ -907,7 +821,6 @@
 
     const/16 v7, 0x190a
 
-    .line 15
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->c:I
 
     div-int/lit8 v8, v0, 0x2
@@ -926,15 +839,12 @@
 
     aget-object v0, v0, v4
 
-    .line 16
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     move-result-object v13
 
-    .line 17
     invoke-static/range {v5 .. v13}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 18
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->l:I
 
     invoke-static {v0, v4}, Landroid/opengl/GLES20;->glUniform1i(II)V
@@ -943,23 +853,18 @@
 
     const/4 v3, 0x4
 
-    .line 19
     invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 20
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->i:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 21
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->j:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 22
     invoke-static {v2, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 23
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->m:I
 
     iget-boolean v1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->L:Z
@@ -978,18 +883,14 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->b:Z
 
-    .line 2
     invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->requestRender()V
 
-    .line 3
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->A:Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-interface {v0}, Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;->onRenderNotify()V
 
     :cond_0
@@ -999,29 +900,22 @@
 .method public drawPreviewFrame([Ljava/nio/ByteBuffer;III)Z
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->H:[Ljava/nio/ByteBuffer;
 
-    .line 2
     iput p4, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->G:I
 
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->b:Z
 
-    .line 4
     invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->requestRender()V
 
-    .line 5
     iget-object p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->A:Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;
 
     if-eqz p2, :cond_0
 
-    .line 6
     invoke-interface {p2}, Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;->onRenderNotify()V
 
-    .line 7
     :cond_0
     iget-object p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->H:[Ljava/nio/ByteBuffer;
 
@@ -1036,20 +930,16 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->a:Landroid/content/Context;
 
     const/4 p1, 0x2
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
 
-    .line 3
     invoke-virtual {p0, p0}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
 
     const/4 p1, 0x0
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
     return-void
@@ -1060,10 +950,8 @@
 
     const/16 p1, 0x4100
 
-    .line 1
     invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 2
     iget-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->b:Z
 
     if-eqz p1, :cond_0
@@ -1072,19 +960,15 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {v0, v0, v0, p1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->d()V
 
-    .line 5
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->a()V
 
-    .line 6
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->i()V
 
     :goto_0
@@ -1096,10 +980,8 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 2
     iget p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->E:I
 
     if-ne p1, p2, :cond_0
@@ -1108,16 +990,13 @@
 
     if-eq p1, p3, :cond_1
 
-    .line 3
     :cond_0
     iput p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->E:I
 
-    .line 4
     iput p3, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->F:I
 
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->D:Z
 
     :cond_1
@@ -1131,13 +1010,10 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-static {p1, p1, p1, p2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 2
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->b()V
 
-    .line 3
     invoke-direct {p0}, Lcom/arcsoft/supernight/StreamPreviewGL;->c()V
 
     return-void
@@ -1146,7 +1022,6 @@
 .method public releaseGLView()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->e:[I
 
     if-eqz v0, :cond_0
@@ -1155,7 +1030,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-static {v1, v0, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     :cond_0
@@ -1165,7 +1039,6 @@
 .method public setDataFormat(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->L:Z
 
     return-void
@@ -1174,7 +1047,6 @@
 .method public setOrientationMirror(IZ)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->J:I
 
     if-ne v0, p1, :cond_0
@@ -1183,16 +1055,13 @@
 
     if-eq v0, p2, :cond_1
 
-    .line 2
     :cond_0
     iput p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->J:I
 
-    .line 3
     iput-boolean p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->I:Z
 
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->K:Z
 
     :cond_1
@@ -1202,12 +1071,10 @@
 .method public setPreviewArea(Landroid/graphics/RectF;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->B:Landroid/graphics/RectF;
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->C:Z
 
     return-void
@@ -1216,7 +1083,6 @@
 .method public setPreviewSize(II)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->c:I
 
     if-ne v0, p1, :cond_0
@@ -1225,16 +1091,13 @@
 
     if-eq v0, p2, :cond_1
 
-    .line 2
     :cond_0
     iput p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->c:I
 
-    .line 3
     iput p2, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->d:I
 
     const/4 p1, 0x0
 
-    .line 4
     iput-object p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->H:[Ljava/nio/ByteBuffer;
 
     :cond_1
@@ -1244,7 +1107,6 @@
 .method public setRenderListener(Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/StreamPreviewGL;->A:Lcom/arcsoft/supernight/StreamPreviewGL$OnRenderListener;
 
     return-void

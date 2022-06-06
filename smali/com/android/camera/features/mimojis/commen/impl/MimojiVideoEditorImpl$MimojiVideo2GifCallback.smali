@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;-><init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)V
 
     return-void
@@ -55,7 +53,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     iget p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->index:I
 
     iget v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->count:I
@@ -64,14 +61,12 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v0, 0xfa
 
-    .line 3
     invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
@@ -80,19 +75,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$302(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;Z)Z
 
-    .line 5
     invoke-interface {p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiEditorControl$MimojiEmoticon;->coverEmoticonSuccess()V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
@@ -134,7 +126,6 @@
 .method public getCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->count:I
 
     return v0
@@ -143,7 +134,6 @@
 .method public getIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->index:I
 
     return v0
@@ -152,7 +142,6 @@
 .method public setCount(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->count:I
 
     return-void
@@ -161,7 +150,6 @@
 .method public setIndex(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiVideo2GifCallback;->index:I
 
     return-void

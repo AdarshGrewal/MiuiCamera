@@ -25,19 +25,16 @@
 .method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;
 
-    .line 3
     new-instance v2, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ThreeChildAnimationProvider;
 
     invoke-direct {v2}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ThreeChildAnimationProvider;-><init>()V
@@ -54,7 +51,6 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mAnimationsProviders:[Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     return-void
@@ -63,7 +59,6 @@
 .method public static animator(Landroid/view/ViewGroup;)Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;-><init>(Landroid/view/ViewGroup;)V
@@ -82,7 +77,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mAnimationsProviders:[Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;
 
     array-length v1, v0
@@ -94,7 +88,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget-object v4, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-interface {v3, v4}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;->expandAnimation(Landroid/view/ViewGroup;)Ljava/util/ArrayList;
@@ -127,7 +120,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mAnimationsProviders:[Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;
 
     array-length v1, v0
@@ -139,7 +131,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget-object v4, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-interface {v3, v4}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$ChildAnimationsProvider;->shrinkAnimation(Landroid/view/ViewGroup;)Ljava/util/ArrayList;
@@ -172,7 +163,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -190,7 +180,6 @@
 
     check-cast v0, Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    .line 2
     invoke-virtual {v0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 
     goto :goto_0
@@ -204,14 +193,12 @@
 .method public expandAnimate()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->getChildCount()I
 
@@ -223,7 +210,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->getChildExpandAnimations()Ljava/util/List;
 
@@ -231,10 +217,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->triggerAnimators(Ljava/util/List;)V
 
-    .line 5
     iput-boolean v1, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     :cond_2
@@ -244,7 +228,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -259,7 +242,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     return-void
@@ -268,14 +250,12 @@
 .method public shrinkAnimate()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->getChildCount()I
 
@@ -287,7 +267,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->getChildShrinkAnimations()Ljava/util/List;
 
@@ -295,12 +274,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->triggerAnimators(Ljava/util/List;)V
 
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     :cond_2
@@ -310,14 +287,12 @@
 .method public shrinkImmediately()V
     .locals 6
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->getChildCount()I
 
@@ -329,7 +304,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v2, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
@@ -339,7 +313,6 @@
 
     move-result-object v2
 
-    .line 4
     iget-object v4, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getMeasuredWidth()I
@@ -362,20 +335,17 @@
 
     int-to-float v4, v4
 
-    .line 5
     invoke-static {v2, v4}, Landroidx/core/view/ViewCompat;->setTranslationX(Landroid/view/View;F)V
 
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 7
     iget-object v4, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mViewGroup:Landroid/view/ViewGroup;
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getMeasuredWidth()I
@@ -398,24 +368,20 @@
 
     int-to-float v4, v4
 
-    .line 8
     invoke-static {v2, v4}, Landroidx/core/view/ViewCompat;->setTranslationX(Landroid/view/View;F)V
 
     const/4 v4, 0x0
 
-    .line 9
     invoke-virtual {v2, v4}, Landroid/view/View;->setAlpha(F)V
 
     const/4 v4, 0x4
 
-    .line 10
     invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 11
     :cond_2
     iput-boolean v3, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->mExpand:Z
 

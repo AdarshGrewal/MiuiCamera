@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 1
     new-instance v6, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v6}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
@@ -45,12 +44,10 @@
 
     move-object v0, v6
 
-    .line 2
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -69,7 +66,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;-><init>(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;Lcom/xiaomi/camera/liveshot/LivePhotoResult;)V
 
     return-void
@@ -78,18 +74,14 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;Lcom/xiaomi/camera/liveshot/LivePhotoResult;)V
     .locals 6
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->data:Ljava/nio/ByteBuffer;
 
-    .line 3
     new-instance p1, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {p1}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 4
     iget v1, p2, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     iget v2, p2, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -102,10 +94,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
-    .line 5
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->info:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 6
     iput-object p3, p0, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->livePhotoResult:Lcom/xiaomi/camera/liveshot/LivePhotoResult;
 
     return-void
@@ -114,7 +104,6 @@
 .method public static create(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;
 
     invoke-direct {v0, p0, p1}, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;-><init>(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
@@ -125,7 +114,6 @@
 .method public static create(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;Lcom/xiaomi/camera/liveshot/LivePhotoResult;)Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;-><init>(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;Lcom/xiaomi/camera/liveshot/LivePhotoResult;)V

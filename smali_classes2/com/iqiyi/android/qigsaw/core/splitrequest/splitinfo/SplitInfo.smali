@@ -80,46 +80,32 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->splitName:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->appVersion:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->splitVersion:Ljava/lang/String;
 
-    .line 5
     iput-object p4, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->url:Ljava/lang/String;
 
-    .line 6
     iput-object p5, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->md5:Ljava/lang/String;
 
-    .line 7
     iput-wide p6, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->size:J
 
-    .line 8
     iput-boolean p8, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->builtIn:Z
 
-    .line 9
     iput p9, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->minSdkVersion:I
 
-    .line 10
     iput p10, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->dexNumber:I
 
-    .line 11
     iput-object p11, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->workProcesses:Ljava/util/List;
 
-    .line 12
     iput-object p12, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->dependencies:Ljava/util/List;
 
-    .line 13
     iput-boolean p13, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasLibs:Z
 
-    .line 14
     iput-object p14, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
     const/4 p1, 0x1
@@ -131,7 +117,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 15
     :goto_0
     iput-boolean p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->isMultiDex:Z
 
@@ -141,7 +126,6 @@
 .method private checkLibInfo()Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
     if-eqz v0, :cond_4
@@ -154,7 +138,6 @@
 
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
-    .line 2
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;->access$000(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;)Ljava/util/List;
 
     move-result-object v0
@@ -165,7 +148,6 @@
 
     if-nez v0, :cond_4
 
-    .line 3
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;->access$100(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;)Ljava/lang/String;
@@ -182,7 +164,6 @@
 
     return v1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
@@ -207,7 +188,6 @@
 
     check-cast v2, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;
 
-    .line 5
     invoke-static {v2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;->access$200(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;)Ljava/lang/String;
 
     move-result-object v3
@@ -218,7 +198,6 @@
 
     if-nez v3, :cond_3
 
-    .line 6
     invoke-static {v2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;->access$300(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;)Ljava/lang/String;
 
     move-result-object v3
@@ -231,7 +210,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-static {v2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;->access$200(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;)Ljava/lang/String;
 
@@ -245,7 +223,6 @@
 
     if-nez v3, :cond_1
 
-    .line 8
     invoke-static {v2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;->access$200(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;)Ljava/lang/String;
 
     move-result-object v2
@@ -273,7 +250,6 @@
 .method public getAppVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->appVersion:Ljava/lang/String;
 
     return-object v0
@@ -290,7 +266,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->dependencies:Ljava/util/List;
 
     return-object v0
@@ -299,7 +274,6 @@
 .method public getLibInfo()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasLibs:Z
 
     if-eqz v0, :cond_1
@@ -310,7 +284,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -334,7 +307,6 @@
 
     throw v0
 
-    .line 3
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->primaryLibInfo:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
@@ -345,7 +317,6 @@
 .method public getMd5()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->md5:Ljava/lang/String;
 
     return-object v0
@@ -354,7 +325,6 @@
 .method public getMinSdkVersion()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->minSdkVersion:I
 
     return v0
@@ -363,7 +333,6 @@
 .method public getSize()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->size:J
 
     return-wide v0
@@ -372,7 +341,6 @@
 .method public getSplitName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->splitName:Ljava/lang/String;
 
     return-object v0
@@ -381,7 +349,6 @@
 .method public getSplitVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->splitVersion:Ljava/lang/String;
 
     return-object v0
@@ -390,7 +357,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->url:Ljava/lang/String;
 
     return-object v0
@@ -407,7 +373,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->workProcesses:Ljava/util/List;
 
     return-object v0
@@ -416,7 +381,6 @@
 .method public hasDex()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->dexNumber:I
 
     if-lez v0, :cond_0
@@ -435,7 +399,6 @@
 .method public hasLibs()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->hasLibs:Z
 
     return v0
@@ -444,7 +407,6 @@
 .method public isBuiltIn()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->builtIn:Z
 
     return v0
@@ -453,7 +415,6 @@
 .method public isMultiDex()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->isMultiDex:Z
 
     return v0
@@ -462,7 +423,6 @@
 .method public isValid()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->url:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -479,7 +439,6 @@
 
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->splitName:Ljava/lang/String;
 
-    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0

@@ -25,10 +25,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -37,7 +35,6 @@
 
     const v1, -0x10f447
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -52,7 +49,6 @@
 .method public static create()Lcom/android/camera/scene/MiScene;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/scene/MiScene;
 
     invoke-direct {v0}, Lcom/android/camera/scene/MiScene;-><init>()V
@@ -65,7 +61,6 @@
 .method public isChange(F)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/scene/MiScene;->lastResult:F
 
     cmpl-float v0, v0, p1
@@ -79,7 +74,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iput p1, p0, Lcom/android/camera/scene/MiScene;->lastResult:F
 
@@ -89,7 +83,6 @@
 .method public isEnable()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/scene/MiScene;->mEnable:Z
 
     return v0
@@ -98,7 +91,6 @@
 .method public setEnable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/scene/MiScene;->mEnable:Z
 
     return-void

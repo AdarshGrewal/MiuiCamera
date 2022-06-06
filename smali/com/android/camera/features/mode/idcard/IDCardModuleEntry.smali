@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/entry/BaseModuleEntry;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getEntryName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mode/idcard/IDCardModuleEntry;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,7 +29,6 @@
 .method public getModeUI()Lcom/android/camera/fragment/modeui/IModeUI;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mode/idcard/IDCardModeUI;
 
     iget-object v1, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mContext:Landroid/content/Context;
@@ -44,21 +41,9 @@
 .method public getModule()Lcom/android/camera/module/Module;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/Camera2Module;
 
     invoke-direct {v0}, Lcom/android/camera/module/Camera2Module;-><init>()V
-
-    return-object v0
-.end method
-
-.method public getModuleDevice()Lcom/android/camera/features/mode/IModuleDevice;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcom/android/camera/features/mode/idcard/IDCardModuleDevice;
-
-    invoke-direct {v0}, Lcom/android/camera/features/mode/idcard/IDCardModuleDevice;-><init>()V
 
     return-object v0
 .end method
@@ -74,10 +59,9 @@
 .method public support()Z
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    iget-object v0, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OoO00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Oo0O0()Z
 
     move-result v0
 

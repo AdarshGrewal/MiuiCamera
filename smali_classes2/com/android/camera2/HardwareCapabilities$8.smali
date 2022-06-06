@@ -28,7 +28,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera2/HardwareCapabilities$TypedValue;-><init>(Lcom/android/camera2/HardwareCapabilities$1;)V
 
     return-void
@@ -39,7 +38,6 @@
 .method public create()Ljava/lang/Boolean;
     .locals 3
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -61,7 +58,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -75,7 +71,6 @@
 
     return-object v1
 
-    .line 5
     :cond_1
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->isSuperNightYUVReprocessSupported()Z
 
@@ -91,7 +86,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/HardwareCapabilities$8;->create()Ljava/lang/Boolean;
 
     move-result-object v0

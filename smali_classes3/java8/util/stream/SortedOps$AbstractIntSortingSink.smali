@@ -39,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/Sink$ChainedInt;-><init>(Ljava8/util/stream/Sink;)V
 
     return-void
@@ -52,7 +51,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Ljava8/util/stream/SortedOps$AbstractIntSortingSink;->cancellationRequestedCalled:Z
 
     const/4 v0, 0x0

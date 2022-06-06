@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     const/4 v1, 0x0
@@ -46,7 +45,6 @@
 
     aput-object v0, v2, v1
 
-    .line 2
     sput-object v2, Lio/reactivex/internal/subscriptions/EmptySubscription;->$VALUES:[Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     return-void
@@ -60,7 +58,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -76,12 +73,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->INSTANCE:Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     invoke-interface {p0, v0}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V
 
-    .line 2
     invoke-interface {p0}, Lorg/reactivestreams/Subscriber;->onComplete()V
 
     return-void
@@ -98,12 +93,10 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->INSTANCE:Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     invoke-interface {p1, v0}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V
 
-    .line 2
     invoke-interface {p1, p0}, Lorg/reactivestreams/Subscriber;->onError(Ljava/lang/Throwable;)V
 
     return-void
@@ -112,7 +105,6 @@
 .method public static valueOf(Ljava/lang/String;)Lio/reactivex/internal/subscriptions/EmptySubscription;
     .locals 1
 
-    .line 1
     const-class v0, Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +119,6 @@
 .method public static values()[Lio/reactivex/internal/subscriptions/EmptySubscription;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/subscriptions/EmptySubscription;->$VALUES:[Lio/reactivex/internal/subscriptions/EmptySubscription;
 
     invoke-virtual {v0}, [Lio/reactivex/internal/subscriptions/EmptySubscription;->clone()Ljava/lang/Object;
@@ -164,7 +155,6 @@
 .method public offer(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Should not be called!"
@@ -177,7 +167,6 @@
 .method public offer(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "Should not be called!"
@@ -198,7 +187,6 @@
 .method public request(J)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     return-void

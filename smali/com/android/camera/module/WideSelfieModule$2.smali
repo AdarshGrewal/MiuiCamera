@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/module/WideSelfieModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/WideSelfieModule$2;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/WideSelfieModule$2;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/WideSelfieModule;->access$402(Lcom/android/camera/module/WideSelfieModule;Lio/reactivex/FlowableEmitter;)Lio/reactivex/FlowableEmitter;

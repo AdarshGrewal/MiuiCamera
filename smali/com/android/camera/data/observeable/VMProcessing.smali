@@ -59,10 +59,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/observeable/VMBase;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/observeable/RxData;
 
     const/4 v1, 0x1
@@ -83,7 +81,6 @@
 .method public achieveEndOfCycle()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mRxProcessingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -134,7 +131,6 @@
 .method public getCurrentState()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mRxProcessingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/RxData;->get()Ljava/lang/Object;
@@ -153,19 +149,16 @@
 .method public getCurrentWorkspaceItem(Ljava/lang/String;Ljava/lang/String;)Lcom/android/camera/fragment/vv/VVWorkspaceItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->createNew(Ljava/lang/String;Ljava/lang/String;)Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/data/observeable/VMProcessing;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/data/observeable/VMProcessing;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
@@ -181,7 +174,6 @@
 .method public reset()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/observeable/VMProcessing;->rollbackData()V
 
     return-void
@@ -190,7 +182,6 @@
 .method public rollbackData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mRxProcessingState:Lcom/android/camera/data/observeable/RxData;
 
     const/4 v1, 0x1
@@ -207,7 +198,6 @@
 .method public setCurrentWorkspaceItem(Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/observeable/VMProcessing;->mCurrentWorkspaceItem:Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     return-void
@@ -226,7 +216,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mRxProcessingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/data/observeable/RxData;->observable(Landroidx/lifecycle/LifecycleOwner;)Lcom/android/camera/data/observeable/RxData$DataObservable;
@@ -241,7 +230,6 @@
 .method public updateState(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/VMProcessing;->mRxProcessingState:Lcom/android/camera/data/observeable/RxData;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -250,7 +238,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/camera/data/observeable/RxData;->set(Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/observeable/VMBase;->judge()V
 
     return-void

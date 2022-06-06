@@ -24,7 +24,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$4;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     iput-object p2, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$4;->val$contentView:Landroid/view/View;
@@ -39,7 +38,6 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -57,10 +55,8 @@
     :cond_0
     const p1, 0x3f333333    # 0.7f
 
-    .line 2
     invoke-virtual {p2, p1}, Landroid/graphics/Outline;->setAlpha(F)V
 
-    .line 3
     iget-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$4;->val$contentView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -69,7 +65,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$4;->val$contentView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;

@@ -36,10 +36,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->mContext:Landroid/content/Context;
 
     return-void
@@ -50,19 +48,16 @@
 .method public notifyCameraResume()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->TAG:Ljava/lang/String;
 
-    const-string v1, "notify external(status: start_foreground)"
+    const-string/jumbo v1, "notify external(status: start_foreground)"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.camera.action.camera_status"
@@ -73,10 +68,8 @@
 
     const-string/jumbo v2, "start_foreground"
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->mContext:Landroid/content/Context;
 
     const-string v2, "com.android.camera.permission.CAMERA_STATUS"
@@ -90,19 +83,17 @@
 .method public notifyModeAndFacing(II)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "notify external(mode:"
+    const-string/jumbo v2, "notify external(mode:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,23 +115,20 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.camera.action.camera_status"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "module"
+    const-string/jumbo v1, "module"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -149,7 +137,6 @@
 
     invoke-virtual {v0, p2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/external/SendBroadcastNotifyExternal;->mContext:Landroid/content/Context;
 
     const-string p2, "com.android.camera.permission.CAMERA_STATUS"

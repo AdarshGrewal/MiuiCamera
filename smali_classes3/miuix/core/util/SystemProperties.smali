@@ -13,24 +13,23 @@
 
 .field public static final PROP_VALUE_MAX:I = 0x5b
 
-.field public static classSystemProperties:Ljava/lang/Class; = null
+.field public static classSystemProperties:Ljava/lang/Class;
 
-.field public static isSupportGet:Z = false
+.field public static isSupportGet:Z
 
-.field public static isSupportGetBoolean:Z = false
+.field public static isSupportGetBoolean:Z
 
-.field public static isSupportGetInt:Z = false
+.field public static isSupportGetInt:Z
 
-.field public static isSupportGetLong:Z = false
+.field public static isSupportGetLong:Z
 
-.field public static isSupportSet:Z = false
+.field public static isSupportSet:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1
     const-class v0, Ljava/lang/String;
 
     :try_start_0
@@ -49,10 +48,8 @@
     :catch_0
     const/4 v1, 0x0
 
-    .line 2
     sput-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
 
-    .line 3
     :goto_0
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
 
@@ -73,7 +70,6 @@
 
     aput-object v0, v6, v3
 
-    .line 4
     invoke-virtual {v1, v5, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -94,11 +90,9 @@
 
     goto :goto_2
 
-    .line 5
     :catch_1
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGet:Z
 
-    .line 6
     :goto_2
     :try_start_2
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -133,11 +127,9 @@
 
     goto :goto_4
 
-    .line 7
     :catch_2
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetInt:Z
 
-    .line 8
     :goto_4
     :try_start_3
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -172,11 +164,9 @@
 
     goto :goto_6
 
-    .line 9
     :catch_3
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetLong:Z
 
-    .line 10
     :goto_6
     :try_start_4
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -211,11 +201,9 @@
 
     goto :goto_8
 
-    .line 11
     :catch_4
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetBoolean:Z
 
-    .line 12
     :goto_8
     :try_start_5
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -246,7 +234,6 @@
 
     goto :goto_a
 
-    .line 13
     :catch_5
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportSet:Z
 
@@ -258,7 +245,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -269,7 +255,6 @@
 
     const-string v0, ""
 
-    .line 3
     invoke-static {p0, v0}, Lmiuix/core/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -280,12 +265,10 @@
 .method public static get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGet:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -299,12 +282,10 @@
 .method public static getBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetBoolean:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -318,12 +299,10 @@
 .method public static getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetInt:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -337,12 +316,10 @@
 .method public static getLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetLong:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p1, p2}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide p0
@@ -356,7 +333,6 @@
 .method public static set(Ljava/lang/String;I)V
     .locals 0
 
-    .line 7
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -369,7 +345,6 @@
 .method public static set(Ljava/lang/String;J)V
     .locals 0
 
-    .line 8
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p1
@@ -382,12 +357,10 @@
 .method public static set(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportSet:Z
 
     if-eqz v0, :cond_3
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -398,7 +371,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -409,7 +381,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -419,14 +390,12 @@
 
     throw p0
 
-    .line 5
     :cond_1
     :goto_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 6
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -444,7 +413,6 @@
 .method public static set(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 9
     invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p1

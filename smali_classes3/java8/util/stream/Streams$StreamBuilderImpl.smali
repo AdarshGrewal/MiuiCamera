@@ -56,7 +56,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;-><init>(Ljava8/util/stream/Streams$1;)V
 
     return-void
@@ -72,15 +71,12 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, v0}, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;-><init>(Ljava8/util/stream/Streams$1;)V
 
-    .line 3
     iput-object p1, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->first:Ljava/lang/Object;
 
     const/4 p1, -0x2
 
-    .line 4
     iput p1, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     return-void
@@ -96,17 +92,14 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     if-nez v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->first:Ljava/lang/Object;
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 3
     iput v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     goto :goto_0
@@ -114,31 +107,26 @@
     :cond_0
     if-lez v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->buffer:Ljava8/util/stream/SpinedBuffer;
 
     if-nez v0, :cond_1
 
-    .line 5
     new-instance v0, Ljava8/util/stream/SpinedBuffer;
 
     invoke-direct {v0}, Ljava8/util/stream/SpinedBuffer;-><init>()V
 
     iput-object v0, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->buffer:Ljava8/util/stream/SpinedBuffer;
 
-    .line 6
     iget-object v1, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->first:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava8/util/stream/SpinedBuffer;->accept(Ljava/lang/Object;)V
 
-    .line 7
     iget v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
-    .line 8
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->buffer:Ljava8/util/stream/SpinedBuffer;
 
@@ -147,7 +135,6 @@
     :goto_0
     return-void
 
-    .line 9
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -166,7 +153,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Streams$StreamBuilderImpl;->accept(Ljava/lang/Object;)V
 
     return-object p0
@@ -182,7 +168,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     if-ltz v0, :cond_1
@@ -191,7 +176,6 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 2
     iput v1, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     const/4 v1, 0x2
@@ -200,7 +184,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     invoke-static {p0, v2}, Ljava8/util/stream/StreamSupport;->stream(Ljava8/util/Spliterator;Z)Ljava8/util/stream/Stream;
 
     move-result-object v0
@@ -221,7 +204,6 @@
     :goto_0
     return-object v0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -240,24 +222,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     const/4 v1, -0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->first:Ljava/lang/Object;
 
     invoke-interface {p1, v0}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     const/4 p1, -0x1
 
-    .line 4
     iput p1, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     :cond_0
@@ -274,24 +252,20 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     const/4 v1, -0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/Streams$StreamBuilderImpl;->first:Ljava/lang/Object;
 
     invoke-interface {p1, v0}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     const/4 p1, -0x1
 
-    .line 4
     iput p1, p0, Ljava8/util/stream/Streams$AbstractStreamBuilderImpl;->count:I
 
     const/4 p1, 0x1

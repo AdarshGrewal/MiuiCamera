@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/parallel/AlgoConnector;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method private isRelevant(Landroid/content/ComponentName;)Z
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/LocalParallelService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -59,7 +57,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -86,12 +83,10 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     instance-of p1, p2, Lcom/android/camera/LocalParallelService$LocalBinder;
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -102,7 +97,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$100()Lcom/android/camera/parallel/AlgoConnector;
 
@@ -110,7 +104,6 @@
 
     monitor-enter p1
 
-    .line 5
     :try_start_0
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
@@ -120,21 +113,18 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     check-cast p2, Lcom/android/camera/LocalParallelService$LocalBinder;
 
     invoke-static {v0, p2}, Lcom/android/camera/parallel/AlgoConnector;->access$202(Lcom/android/camera/parallel/AlgoConnector;Lcom/android/camera/LocalParallelService$LocalBinder;)Lcom/android/camera/LocalParallelService$LocalBinder;
 
-    .line 7
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$100()Lcom/android/camera/parallel/AlgoConnector;
 
     move-result-object p2
 
     invoke-virtual {p2}, Ljava/lang/Object;->notify()V
 
-    .line 8
     monitor-exit p1
 
     return-void
@@ -152,7 +142,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -161,7 +150,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     invoke-static {v0}, Lcom/android/camera/parallel/AlgoConnector;->access$200(Lcom/android/camera/parallel/AlgoConnector;)Lcom/android/camera/LocalParallelService$LocalBinder;
@@ -181,7 +169,6 @@
     :cond_0
     move v0, v2
 
-    .line 3
     :goto_0
     invoke-direct {p0, p1}, Lcom/android/camera/parallel/AlgoConnector$1;->isRelevant(Landroid/content/ComponentName;)Z
 
@@ -189,7 +176,6 @@
 
     if-nez v3, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
     move-result-object v3
@@ -210,7 +196,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$100()Lcom/android/camera/parallel/AlgoConnector;
 
@@ -218,7 +203,6 @@
 
     monitor-enter p1
 
-    .line 6
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
@@ -226,14 +210,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/parallel/AlgoConnector;->access$202(Lcom/android/camera/parallel/AlgoConnector;Lcom/android/camera/LocalParallelService$LocalBinder;)Lcom/android/camera/LocalParallelService$LocalBinder;
 
-    .line 7
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$100()Lcom/android/camera/parallel/AlgoConnector;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 8
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -241,7 +223,6 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     invoke-static {p1}, Lcom/android/camera/parallel/AlgoConnector;->access$300(Lcom/android/camera/parallel/AlgoConnector;)I
@@ -252,12 +233,10 @@
 
     if-ge p1, v0, :cond_2
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     invoke-static {p1}, Lcom/android/camera/parallel/AlgoConnector;->access$308(Lcom/android/camera/parallel/AlgoConnector;)I
 
-    .line 11
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -284,7 +263,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/parallel/AlgoConnector$1;->this$0:Lcom/android/camera/parallel/AlgoConnector;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -299,7 +277,6 @@
     :catchall_0
     move-exception v0
 
-    .line 13
     :try_start_1
     monitor-exit p1
     :try_end_1

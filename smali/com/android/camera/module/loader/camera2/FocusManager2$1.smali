@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/module/loader/camera2/FocusManager2;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/loader/camera2/FocusManager2$1;->this$0:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/FocusManager2$1;->this$0:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/loader/camera2/FocusManager2;->access$502(Lcom/android/camera/module/loader/camera2/FocusManager2;Lio/reactivex/ObservableEmitter;)Lio/reactivex/ObservableEmitter;

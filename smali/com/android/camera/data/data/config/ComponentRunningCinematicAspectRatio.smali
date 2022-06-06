@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -26,7 +25,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120578
+    const v0, 0x7f120542
 
     return v0
 .end method
@@ -42,7 +41,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -97,7 +95,6 @@
 
     return-object p1
 
-    .line 1
     :cond_0
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -186,7 +183,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -204,7 +200,6 @@
 .method public reInit(I)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -249,14 +244,13 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     :pswitch_0
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f080212
+    const v1, 0x7f08020e
 
-    const v2, 0x7f080213
+    const v2, 0x7f08020f
 
     const v3, 0x7f12008b
 
@@ -266,7 +260,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     :goto_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -287,7 +280,6 @@
 .method public setEnabled(IZ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentRunningCinematicAspectRatio;->getKey(I)Ljava/lang/String;

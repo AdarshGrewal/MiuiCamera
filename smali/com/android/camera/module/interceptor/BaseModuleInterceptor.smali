@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
 .method public asBlocker()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/interceptor/BaseModuleInterceptor;->getPriority()I
 
     move-result v0

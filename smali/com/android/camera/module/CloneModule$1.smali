@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/CloneModule;JJ)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/CloneModule$1;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -35,7 +34,6 @@
 .method public onFinish()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$1;->this$0:Lcom/android/camera/module/CloneModule;
 
     const/16 v1, 0xa
@@ -48,7 +46,6 @@
 .method public onTick(J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$1;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/module/CloneModule;->updateRecordingTime(J)V

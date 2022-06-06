@@ -27,10 +27,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;Z)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     const/4 v0, 0x2
@@ -39,23 +37,16 @@
 
     iput-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
-    .line 3
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p1, v0}, Landroid/util/SparseBooleanArray;-><init>(I)V
 
     iput-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
-    const/4 p1, 0x0
-
-    .line 4
-    iput-boolean p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
-
     if-eqz p2, :cond_0
 
     const-string/jumbo p1, "pref_hdr10plus_video_mode_key"
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->PREFERENCES_KEY:Ljava/lang/String;
 
     goto :goto_0
@@ -63,7 +54,6 @@
     :cond_0
     const-string/jumbo p1, "pref_hdr10_video_mode_key"
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->PREFERENCES_KEY:Ljava/lang/String;
 
     :goto_0
@@ -73,7 +63,6 @@
 .method private isFeatureOn(I)Z
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isSupport(I)Z
 
     move-result v0
@@ -84,7 +73,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
 
@@ -92,7 +80,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
@@ -100,7 +87,6 @@
 
     return v1
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
@@ -112,7 +98,6 @@
 
     return v1
 
-    .line 5
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isClosed()Z
 
@@ -122,7 +107,6 @@
 
     return v1
 
-    .line 6
     :cond_4
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -138,58 +122,25 @@
 .method private isFeaturesMutex(I)Z
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCinematicAspectRatioEnabled(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isProVideoLogOpen(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isSubtitleEnabled(I)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isAiEnhancedVideoEnabled(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 5
-    invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMasterFilterOn(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 6
-    invoke-static {p1}, Lcom/android/camera/CameraSettings;->isSuperEISEnabled(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 7
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->getComponentRunningShine()Lcom/android/camera/data/data/runing/ComponentRunningShine;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->determineStatus(I)Z
 
     move-result p1
 
@@ -214,7 +165,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
@@ -247,12 +197,10 @@
 
     const-string p1, "isTagMutex return true, due to Capabilities is null"
 
-    .line 1
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 2
     :cond_0
     sget-object v2, Lcom/android/camera/hdr10/HDR10Characteristics;->AVAILABLE_CONFIGURATIONS:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -266,12 +214,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 3
     invoke-static {p2, p1}, Lcom/android/camera/CameraSettings;->getPreferVideoQuality(II)I
 
     move-result p1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->getHSRIntegerValue()I
 
     move-result p2
@@ -280,7 +226,6 @@
 
     const/16 p2, 0x1e
 
-    .line 5
     :cond_1
     invoke-static {p3, p4, p1, p2}, Lcom/android/camera/hdr10/HDR10Characteristics;->isCurrentQualitySupportHdr10(Lcom/android/camera2/CameraCapabilities;III)Z
 
@@ -290,7 +235,6 @@
 
     return p1
 
-    .line 6
     :cond_2
     invoke-direct {p0, p3, p4}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoHdrModeSupportedByCompatTag(Lcom/android/camera2/CameraCapabilities;I)Z
 
@@ -304,7 +248,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 7
     invoke-static {p4}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->videoHdrModeToString(I)Ljava/lang/String;
 
     move-result-object p4
@@ -323,7 +266,6 @@
 
     const-string p2, "isTagMutex %s, current id not support, id %s"
 
-    .line 8
     invoke-static {v0, p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return v1
@@ -337,7 +279,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     sget-object v0, Lcom/android/camera/hdr10/HDR10Characteristics;->AVAILABLE_CONFIGURATIONS:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -350,7 +291,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p2, p1}, Lcom/android/camera/hdr10/HDR10Characteristics;->isVideoHdrModeSupported(Lcom/android/camera2/CameraCapabilities;I)Z
 
     move-result p1
@@ -360,7 +300,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 3
     invoke-direct {p0, p2, p1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoHdrModeSupportedByCompatTag(Lcom/android/camera2/CameraCapabilities;I)Z
 
     move-result p1
@@ -381,7 +320,6 @@
 .method private final isVideoHdrModeSupportedByCompatTag(Lcom/android/camera2/CameraCapabilities;I)Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/hdr10/HDR10Characteristics;->SUPPORT_VIDEO_HDR10:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -400,12 +338,10 @@
 
     const-string p2, "isVideoHDR10Supported: false, because tag undefined"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getCameraCharacteristics()Landroid/hardware/camera2/CameraCharacteristics;
 
@@ -413,7 +349,6 @@
 
     sget-object v0, Lcom/android/camera/hdr10/HDR10Characteristics;->SUPPORT_VIDEO_HDR10:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 4
     invoke-static {p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CameraCharacteristics;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
 
     move-result-object p1
@@ -422,7 +357,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -438,7 +372,6 @@
 .method private isVideoQualityMutex(I)Z
     .locals 4
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v0
@@ -447,7 +380,6 @@
 
     move-result p1
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->is4KHigherVideoQuality(I)Z
 
     move-result v0
@@ -458,7 +390,6 @@
 
     const/4 v2, 0x0
 
-    .line 8
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -477,70 +408,9 @@
 
     const-string v3, "isTagMutex quality %s, is4KHigher %s"
 
-    .line 9
     invoke-static {p1, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     xor-int/lit8 p1, v0, 0x1
-
-    return p1
-.end method
-
-.method private isVideoQualityMutex(IILcom/android/camera2/CameraCapabilities;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-nez p3, :cond_0
-
-    const-string p1, "ComponentConfigHDR10"
-
-    const-string p2, "isVideoQualityMutex return true, due to Capabilities is null"
-
-    .line 1
-    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v0
-
-    .line 2
-    :cond_0
-    sget-object v1, Lcom/android/camera/hdr10/HDR10Characteristics;->AVAILABLE_CONFIGURATIONS:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p3, v1}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 3
-    invoke-static {p2, p1}, Lcom/android/camera/CameraSettings;->getPreferVideoQuality(II)I
-
-    move-result p1
-
-    .line 4
-    invoke-static {}, Lcom/android/camera/CameraSettings;->getHSRIntegerValue()I
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    const/16 p2, 0x1e
-
-    .line 5
-    :cond_1
-    invoke-static {p3, p1, p2}, Lcom/android/camera/hdr10/HDR10Characteristics;->isCurrentQualitySupport(Lcom/android/camera2/CameraCapabilities;II)Z
-
-    move-result p1
-
-    xor-int/2addr p1, v0
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
 
     return p1
 .end method
@@ -583,7 +453,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
@@ -594,14 +463,12 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v2
 
-    .line 3
     invoke-virtual {p0, v2}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isMutexEnable(I)Z
 
     move-result v3
@@ -618,7 +485,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 4
     monitor-exit p0
 
     return v2
@@ -628,7 +494,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     monitor-exit p0
 
@@ -645,7 +510,6 @@
 .method public getDefaultValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "ComponentConfigHDR10#getDefaultValue() not supported"
@@ -658,7 +522,6 @@
 .method public getDisplayTitleString()I
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "ComponentConfigHDR10#getDisplayTitleString() not supported"
@@ -679,7 +542,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "ComponentConfigHDR10#getItems() not supported"
@@ -692,7 +554,6 @@
 .method public getKey(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "ComponentConfigHDR10#getKey() not supported"
@@ -711,7 +572,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
@@ -722,7 +582,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseBooleanArray;->valueAt(I)Z
@@ -731,7 +590,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
@@ -749,7 +607,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     monitor-exit p0
 
@@ -766,7 +623,6 @@
 .method public isActualOn()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     iget-object v1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->PREFERENCES_KEY:Ljava/lang/String;
@@ -781,7 +637,6 @@
 
     return v2
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
 
@@ -789,7 +644,6 @@
 
     return v2
 
-    .line 3
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
@@ -806,7 +660,6 @@
 .method public isClosed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsClosed:Z
 
     return v0
@@ -817,7 +670,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isFeatureOn(I)Z
 
     move-result v0
@@ -830,7 +682,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isFeatureOn(I)Z
 
     move-result v0
@@ -843,7 +694,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
     :try_end_0
@@ -853,12 +703,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     monitor-exit p0
 
     return v1
 
-    .line 3
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
@@ -867,12 +715,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     monitor-exit p0
 
     return v1
 
-    .line 5
     :cond_1
     :try_start_2
     iget-object v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
@@ -898,7 +744,6 @@
 .method public isSATShow()Z
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsSATCameraId:Z
 
     const/4 v1, 0x0
@@ -907,7 +752,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isSupportedHdr10()Z
 
@@ -923,7 +767,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
 
@@ -931,7 +774,6 @@
 
     return v1
 
-    .line 4
     :cond_2
     iget-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
@@ -950,7 +792,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isSupport(I)Z
 
     move-result v0
@@ -963,7 +804,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isSupport(I)Z
 
     move-result v0
@@ -974,7 +814,6 @@
 .method public isSwitchOn(I)Z
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "ComponentConfigHDR10#isSwitchOn() not supported"
@@ -985,18 +824,16 @@
 .end method
 
 .method public reInit(IILcom/android/camera2/CameraCapabilities;)V
-    .locals 10
+    .locals 8
 
     const-string v0, "ComponentConfigHDR10"
 
     const-string/jumbo v1, "reInit E"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsSATCameraId:Z
 
     const/16 v1, 0xa2
@@ -1007,24 +844,21 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 3
     monitor-enter p0
 
-    .line 4
     :try_start_0
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
-    .line 7
+    iput-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
+
     monitor-exit p0
 
     return-void
@@ -1038,13 +872,11 @@
 
     throw p1
 
-    .line 8
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v1
 
-    .line 9
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v2
@@ -1059,21 +891,18 @@
 
     const/4 v2, 0x1
 
-    .line 10
     invoke-direct {p0, v2, v1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoHdrModeSupported(ILcom/android/camera2/CameraCapabilities;)Z
 
     move-result v3
 
     const/4 v4, 0x2
 
-    .line 11
     invoke-direct {p0, v4, v1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoHdrModeSupported(ILcom/android/camera2/CameraCapabilities;)Z
 
     move-result v5
 
     if-nez p2, :cond_2
 
-    .line 12
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraId()I
 
     move-result v6
@@ -1102,107 +931,70 @@
 
     move-object p3, v1
 
-    .line 13
     :cond_2
     invoke-direct {p0, p1, p2, p3, v2}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isTagMutex(IILcom/android/camera2/CameraCapabilities;I)Z
 
-    move-result v6
+    move-result v1
 
-    .line 14
     invoke-direct {p0, p1, p2, p3, v4}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isTagMutex(IILcom/android/camera2/CameraCapabilities;I)Z
+
+    move-result p2
+
+    invoke-direct {p0, p1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isFeaturesMutex(I)Z
 
     move-result p3
 
-    .line 15
-    invoke-direct {p0, p1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isFeaturesMutex(I)Z
-
-    move-result v7
-
-    .line 16
-    iget-object v8, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->PREFERENCES_KEY:Ljava/lang/String;
-
-    const-string/jumbo v9, "pref_hdr10_video_mode_key"
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    .line 17
     invoke-direct {p0, p1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoQualityMutex(I)Z
 
     move-result p1
 
-    goto :goto_1
-
-    .line 18
-    :cond_3
-    invoke-direct {p0, p1, p2, v1}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->isVideoQualityMutex(IILcom/android/camera2/CameraCapabilities;)Z
-
-    move-result p1
-
-    .line 19
-    :goto_1
     monitor-enter p0
 
-    .line 20
     :try_start_1
-    iget-object p2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
+    iget-object v6, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p2}, Landroid/util/SparseBooleanArray;->clear()V
+    invoke-virtual {v6}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 21
-    iget-object p2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
+    iget-object v6, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p2}, Landroid/util/SparseBooleanArray;->clear()V
+    invoke-virtual {v6}, Landroid/util/SparseBooleanArray;->clear()V
 
-    .line 22
     iput-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
-    .line 23
     iput-boolean v0, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
 
-    .line 24
-    iput-boolean v7, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
+    iput-boolean p3, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsFeatureMutexEnable:Z
 
-    .line 25
     iput-boolean p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsQualityMutexEnable:Z
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
-    .line 26
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1, v2, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 27
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p1, v2, v6}, Landroid/util/SparseBooleanArray;->put(IZ)V
+    invoke-virtual {p1, v2, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    :cond_4
-    if-eqz v5, :cond_5
+    :cond_3
+    if-eqz v5, :cond_4
 
-    .line 28
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1, v4, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 29
     iget-object p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p1, v4, p3}, Landroid/util/SparseBooleanArray;->put(IZ)V
+    invoke-virtual {p1, v4, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 30
-    :cond_5
+    :cond_4
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     new-array p1, v4, [Ljava/lang/Object;
 
-    .line 31
     iget-object p2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mSupportedArray:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p2}, Landroid/util/SparseBooleanArray;->toString()Ljava/lang/String;
@@ -1213,7 +1005,6 @@
 
     iget-object p2, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsTagMutexEnableArray:Landroid/util/SparseBooleanArray;
 
-    .line 32
     invoke-virtual {p2}, Landroid/util/SparseBooleanArray;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -1224,7 +1015,6 @@
 
     const-string/jumbo p3, "reInit X, isVideoHdrModeSupported mSupportedArray %s mIsTagMutexEnableArray %s"
 
-    .line 33
     invoke-static {p2, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return-void
@@ -1232,7 +1022,6 @@
     :catchall_1
     move-exception p1
 
-    .line 34
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -1244,7 +1033,6 @@
 .method public setClosed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/hdr10/ComponentConfigHDR10;->mIsClosed:Z
 
     return-void
@@ -1255,10 +1043,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/hdr10/ComponentConfigHDR10;->setClosed(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;

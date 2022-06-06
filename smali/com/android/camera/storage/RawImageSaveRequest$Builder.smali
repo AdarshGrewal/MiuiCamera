@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
 .method public static synthetic access$000(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)[B
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->data:[B
 
     return-object p0
@@ -54,7 +52,6 @@
 .method public static synthetic access$100(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)Landroid/hardware/camera2/CaptureResult;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->captureResult:Landroid/hardware/camera2/CaptureResult;
 
     return-object p0
@@ -63,7 +60,6 @@
 .method public static synthetic access$200(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)Landroid/hardware/camera2/CameraCharacteristics;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->characteristics:Landroid/hardware/camera2/CameraCharacteristics;
 
     return-object p0
@@ -72,7 +68,6 @@
 .method public static synthetic access$300(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->dateTaken:J
 
     return-wide v0
@@ -81,7 +76,6 @@
 .method public static synthetic access$400(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->title:Ljava/lang/String;
 
     return-object p0
@@ -90,7 +84,6 @@
 .method public static synthetic access$500(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->width:I
 
     return p0
@@ -99,7 +92,6 @@
 .method public static synthetic access$600(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->height:I
 
     return p0
@@ -108,7 +100,6 @@
 .method public static synthetic access$700(Lcom/android/camera/storage/RawImageSaveRequest$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->orientation:I
 
     return p0
@@ -119,7 +110,6 @@
 .method public build()Lcom/android/camera/storage/RawImageSaveRequest;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/storage/RawImageSaveRequest;
 
     const/4 v1, 0x0
@@ -132,7 +122,6 @@
 .method public setCaptureResult(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->captureResult:Landroid/hardware/camera2/CaptureResult;
 
     return-object p0
@@ -141,7 +130,6 @@
 .method public setCharacteristics(Landroid/hardware/camera2/CameraCharacteristics;)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->characteristics:Landroid/hardware/camera2/CameraCharacteristics;
 
     return-object p0
@@ -150,7 +138,6 @@
 .method public setData([B)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->data:[B
 
     return-object p0
@@ -159,7 +146,6 @@
 .method public setDateTaken(J)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->dateTaken:J
 
     return-object p0
@@ -168,7 +154,6 @@
 .method public setHeight(I)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->height:I
 
     return-object p0
@@ -177,7 +162,6 @@
 .method public setOrientation(I)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->orientation:I
 
     return-object p0
@@ -186,7 +170,6 @@
 .method public setTitle(Ljava/lang/String;)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->title:Ljava/lang/String;
 
     return-object p0
@@ -195,7 +178,6 @@
 .method public setWidth(I)Lcom/android/camera/storage/RawImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/RawImageSaveRequest$Builder;->width:I
 
     return-object p0

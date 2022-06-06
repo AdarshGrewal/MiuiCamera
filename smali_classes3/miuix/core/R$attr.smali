@@ -14,19 +14,19 @@
 
 
 # static fields
-.field public static final dependencyType:I = 0x7f04010e
+.field public static final dependencyType:I = 0x7f04010c
 
-.field public static final level:I = 0x7f0401e2
+.field public static final level:I = 0x7f0401de
 
-.field public static final maxLevel:I = 0x7f040218
+.field public static final maxLevel:I = 0x7f040214
 
-.field public static final minLevel:I = 0x7f040223
+.field public static final minLevel:I = 0x7f04021f
 
-.field public static final moduleContent:I = 0x7f040246
+.field public static final moduleContent:I = 0x7f040242
 
-.field public static final name:I = 0x7f040248
+.field public static final name:I = 0x7f040244
 
-.field public static final targetLevel:I = 0x7f0402f3
+.field public static final targetLevel:I = 0x7f0402ef
 
 
 # direct methods

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createNameBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/NameBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/NameBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -33,7 +31,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/NameBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/NameBox;->name:Ljava/lang/String;
 
     return-object v0
@@ -52,7 +49,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NameBox;->name:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
@@ -63,7 +59,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     return-void
@@ -72,7 +67,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NameBox;->name:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
@@ -89,7 +83,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/NameBox;->name:Ljava/lang/String;
 
     return-object v0
@@ -98,7 +91,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->readNullTermString(Ljava/nio/ByteBuffer;)Ljava/lang/String;
 
     move-result-object p1

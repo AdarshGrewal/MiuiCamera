@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,18 +37,16 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3000(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;
 
     move-result-object p1
 
-    const v0, 0x7f080424
+    const v0, 0x7f080422
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundResource(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3000(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;
@@ -66,18 +63,16 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3000(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;
 
     move-result-object p1
 
-    const v0, 0x7f080424
+    const v0, 0x7f080422
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundResource(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3000(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;
@@ -100,7 +95,6 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$22;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3000(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;

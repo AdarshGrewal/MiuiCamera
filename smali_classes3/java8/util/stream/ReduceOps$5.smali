@@ -28,7 +28,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamShape;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/ReduceOps$ReduceOp;-><init>(Ljava8/util/stream/StreamShape;)V
 
     return-void
@@ -51,7 +50,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {p2}, Ljava8/util/Spliterator;->getExactSizeIfKnown()J
 
     move-result-wide p1
@@ -75,7 +72,6 @@
 
     return-object p1
 
-    .line 4
     :cond_0
     invoke-super {p0, p1, p2}, Ljava8/util/stream/ReduceOps$ReduceOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
 
@@ -89,7 +85,6 @@
 .method public bridge synthetic evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/ReduceOps$5;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Long;
 
     move-result-object p1
@@ -112,7 +107,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -125,7 +119,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {p2}, Ljava8/util/Spliterator;->getExactSizeIfKnown()J
 
     move-result-wide p1
@@ -136,7 +129,6 @@
 
     return-object p1
 
-    .line 4
     :cond_0
     invoke-super {p0, p1, p2}, Ljava8/util/stream/ReduceOps$ReduceOp;->evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
 
@@ -150,7 +142,6 @@
 .method public bridge synthetic evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/ReduceOps$5;->evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Long;
 
     move-result-object p1
@@ -161,7 +152,6 @@
 .method public getOpFlags()I
     .locals 1
 
-    .line 1
     sget v0, Ljava8/util/stream/StreamOpFlag;->NOT_ORDERED:I
 
     return v0
@@ -170,7 +160,6 @@
 .method public bridge synthetic makeSink()Ljava8/util/stream/ReduceOps$AccumulatingSink;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$5;->makeSink()Ljava8/util/stream/ReduceOps$CountingSink;
 
     move-result-object v0
@@ -188,7 +177,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$CountingSink$OfRef;
 
     invoke-direct {v0}, Ljava8/util/stream/ReduceOps$CountingSink$OfRef;-><init>()V

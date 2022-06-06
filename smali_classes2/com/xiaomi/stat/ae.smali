@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/ab;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/ae;->c:Lcom/xiaomi/stat/ab;
 
     iput-object p2, p0, Lcom/xiaomi/stat/ae;->a:Ljava/lang/String;
@@ -36,7 +35,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/stat/ae;->c:Lcom/xiaomi/stat/ab;
 
@@ -48,7 +46,6 @@
 
     move-result-object v1
 
-    .line 2
     iget-object v2, p0, Lcom/xiaomi/stat/ae;->a:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -71,7 +68,6 @@
     :try_start_1
     new-array v2, v13, [Ljava/lang/String;
 
-    .line 3
     iget-object v3, p0, Lcom/xiaomi/stat/ae;->b:Ljava/lang/String;
 
     aput-object v3, v2, v12
@@ -89,7 +85,6 @@
 
     new-array v6, v13, [Ljava/lang/String;
 
-    .line 4
     iget-object v2, p0, Lcom/xiaomi/stat/ae;->b:Ljava/lang/String;
 
     aput-object v2, v6, v12
@@ -109,7 +104,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5
     :try_start_2
     invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
 
@@ -124,7 +118,6 @@
     :cond_1
     move v3, v13
 
-    .line 6
     :goto_0
     new-instance v4, Landroid/content/ContentValues;
 
@@ -132,21 +125,18 @@
 
     const-string v5, "pref_key"
 
-    .line 7
     iget-object v6, p0, Lcom/xiaomi/stat/ae;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v5, "pref_value"
 
-    .line 8
     iget-object v6, p0, Lcom/xiaomi/stat/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v3, :cond_2
 
-    .line 9
     invoke-virtual {v1, v11, v0, v4}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     goto :goto_1
@@ -154,7 +144,6 @@
     :cond_2
     new-array v0, v13, [Ljava/lang/String;
 
-    .line 10
     iget-object v3, p0, Lcom/xiaomi/stat/ae;->b:Ljava/lang/String;
 
     aput-object v3, v0, v12
@@ -167,7 +156,6 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 11
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -198,7 +186,6 @@
     :try_start_3
     const-string v2, "MiStatPref"
 
-    .line 12
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +206,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 13
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_3

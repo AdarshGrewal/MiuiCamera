@@ -54,7 +54,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/facebook/rebound/SpringConfigRegistry;->getInstance()Lcom/facebook/rebound/SpringConfigRegistry;
 
     move-result-object v0
@@ -63,7 +62,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     sput v0, Lcom/facebook/rebound/SpringChain;->id:I
 
     return-void
@@ -80,7 +78,6 @@
 
     const/16 v3, 0xa
 
-    .line 1
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/facebook/rebound/SpringChain;-><init>(IIII)V
 
     return-void
@@ -89,24 +86,20 @@
 .method public constructor <init>(IIII)V
     .locals 2
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {}, Lcom/facebook/rebound/SpringSystem;->create()Lcom/facebook/rebound/SpringSystem;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSpringSystem:Lcom/facebook/rebound/SpringSystem;
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
@@ -115,14 +108,12 @@
 
     const/4 v0, -0x1
 
-    .line 6
     iput v0, p0, Lcom/facebook/rebound/SpringChain;->mControlSpringIndex:I
 
     int-to-double v0, p1
 
     int-to-double p1, p2
 
-    .line 7
     invoke-static {v0, v1, p1, p2}, Lcom/facebook/rebound/SpringConfig;->fromOrigamiTensionAndFriction(DD)Lcom/facebook/rebound/SpringConfig;
 
     move-result-object p1
@@ -133,14 +124,12 @@
 
     int-to-double p3, p4
 
-    .line 8
     invoke-static {p1, p2, p3, p4}, Lcom/facebook/rebound/SpringConfig;->fromOrigamiTensionAndFriction(DD)Lcom/facebook/rebound/SpringConfig;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/facebook/rebound/SpringChain;->mAttachmentSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
-    .line 9
     sget-object p1, Lcom/facebook/rebound/SpringChain;->registry:Lcom/facebook/rebound/SpringConfigRegistry;
 
     iget-object p2, p0, Lcom/facebook/rebound/SpringChain;->mMainSpringConfig:Lcom/facebook/rebound/SpringConfig;
@@ -167,7 +156,6 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/facebook/rebound/SpringConfigRegistry;->addSpringConfig(Lcom/facebook/rebound/SpringConfig;Ljava/lang/String;)Z
 
-    .line 10
     sget-object p1, Lcom/facebook/rebound/SpringChain;->registry:Lcom/facebook/rebound/SpringConfigRegistry;
 
     iget-object p2, p0, Lcom/facebook/rebound/SpringChain;->mAttachmentSpringConfig:Lcom/facebook/rebound/SpringConfig;
@@ -200,7 +188,6 @@
 .method public static create()Lcom/facebook/rebound/SpringChain;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/facebook/rebound/SpringChain;
 
     invoke-direct {v0}, Lcom/facebook/rebound/SpringChain;-><init>()V
@@ -211,7 +198,6 @@
 .method public static create(IIII)Lcom/facebook/rebound/SpringChain;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/facebook/rebound/SpringChain;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/facebook/rebound/SpringChain;-><init>(IIII)V
@@ -224,7 +210,6 @@
 .method public addSpring(Lcom/facebook/rebound/SpringListener;)Lcom/facebook/rebound/SpringChain;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSpringSystem:Lcom/facebook/rebound/SpringSystem;
 
     invoke-virtual {v0}, Lcom/facebook/rebound/BaseSpringSystem;->createSpring()Lcom/facebook/rebound/Spring;
@@ -241,12 +226,10 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -265,7 +248,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object v0
@@ -274,7 +256,6 @@
 .method public getAttachmentSpringConfig()Lcom/facebook/rebound/SpringConfig;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mAttachmentSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     return-object v0
@@ -283,7 +264,6 @@
 .method public getControlSpring()Lcom/facebook/rebound/Spring;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     iget v1, p0, Lcom/facebook/rebound/SpringChain;->mControlSpringIndex:I
@@ -300,7 +280,6 @@
 .method public getMainSpringConfig()Lcom/facebook/rebound/SpringConfig;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mMainSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     return-object v0
@@ -309,14 +288,12 @@
 .method public onSpringActivate(Lcom/facebook/rebound/Spring;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -333,14 +310,12 @@
 .method public onSpringAtRest(Lcom/facebook/rebound/Spring;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -357,14 +332,12 @@
 .method public onSpringEndStateChange(Lcom/facebook/rebound/Spring;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -381,14 +354,12 @@
 .method public onSpringUpdate(Lcom/facebook/rebound/Spring;)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -397,7 +368,6 @@
 
     check-cast v1, Lcom/facebook/rebound/SpringListener;
 
-    .line 3
     iget v2, p0, Lcom/facebook/rebound/SpringChain;->mControlSpringIndex:I
 
     const/4 v3, -0x1
@@ -436,7 +406,6 @@
     :goto_0
     if-le v0, v3, :cond_3
 
-    .line 4
     iget-object v4, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
@@ -445,7 +414,6 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 5
     iget-object v4, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -463,7 +431,6 @@
     :cond_3
     if-le v2, v3, :cond_4
 
-    .line 6
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
@@ -472,7 +439,6 @@
 
     if-ge v2, v0, :cond_4
 
-    .line 7
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -487,7 +453,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/facebook/rebound/Spring;->setEndValue(D)Lcom/facebook/rebound/Spring;
 
-    .line 8
     :cond_4
     invoke-interface {v1, p1}, Lcom/facebook/rebound/SpringListener;->onSpringUpdate(Lcom/facebook/rebound/Spring;)V
 
@@ -497,10 +462,8 @@
 .method public setControlSpringIndex(I)Lcom/facebook/rebound/SpringChain;
     .locals 2
 
-    .line 1
     iput p1, p0, Lcom/facebook/rebound/SpringChain;->mControlSpringIndex:I
 
-    .line 2
     iget-object v0, p0, Lcom/facebook/rebound/SpringChain;->mSprings:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
@@ -515,7 +478,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/facebook/rebound/SpringChain;->mSpringSystem:Lcom/facebook/rebound/SpringSystem;
 
@@ -540,14 +502,12 @@
 
     check-cast v0, Lcom/facebook/rebound/Spring;
 
-    .line 4
     iget-object v1, p0, Lcom/facebook/rebound/SpringChain;->mAttachmentSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     invoke-virtual {v0, v1}, Lcom/facebook/rebound/Spring;->setSpringConfig(Lcom/facebook/rebound/SpringConfig;)Lcom/facebook/rebound/Spring;
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/facebook/rebound/SpringChain;->getControlSpring()Lcom/facebook/rebound/Spring;
 

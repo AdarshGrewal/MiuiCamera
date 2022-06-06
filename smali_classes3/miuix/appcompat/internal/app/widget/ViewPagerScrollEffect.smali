@@ -38,17 +38,14 @@
 .method public constructor <init>(Lmiuix/viewpager/widget/ViewPager;Lmiuix/appcompat/internal/app/widget/DynamicFragmentPagerAdapter;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sRect:Landroid/graphics/Rect;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -57,29 +54,22 @@
 
     const/4 v0, -0x1
 
-    .line 4
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
     const/4 v1, 0x1
 
-    .line 5
     iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
-    .line 6
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mScrollBasePosition:I
 
-    .line 7
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mIncomingPosition:I
 
     const/4 v0, 0x0
 
-    .line 8
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
-    .line 9
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mViewPager:Lmiuix/viewpager/widget/ViewPager;
 
-    .line 10
     iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mPagerAdapter:Lmiuix/appcompat/internal/app/widget/DynamicFragmentPagerAdapter;
 
     return-void
@@ -90,12 +80,10 @@
 .method public clearTranslation(Landroid/view/ViewGroup;)V
     .locals 2
 
-    .line 5
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->fillList(Landroid/view/ViewGroup;Ljava/util/ArrayList;)V
 
-    .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -104,7 +92,6 @@
 
     if-nez p1, :cond_0
 
-    .line 7
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -126,7 +113,6 @@
 
     const/4 v1, 0x0
 
-    .line 8
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_0
@@ -148,7 +134,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -167,7 +152,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result v1
@@ -176,7 +160,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getTranslationX()F
 
     move-result v1
@@ -187,7 +170,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_0
@@ -203,7 +185,6 @@
 
     mul-int/2addr p1, p2
 
-    .line 1
     div-int/2addr p1, p3
 
     goto :goto_0
@@ -259,18 +240,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p2, p1}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->clearTranslation(Ljava/util/ArrayList;Landroid/view/ViewGroup;)V
 
-    .line 2
     invoke-virtual {p2}, Ljava/util/ArrayList;->clear()V
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sRect:Landroid/graphics/Rect;
 
     invoke-static {p1, v0}, Lmiuix/internal/util/ViewUtils;->getContentRect(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -281,7 +258,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -292,12 +268,10 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
-    .line 6
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -312,7 +286,6 @@
 
     if-lez v3, :cond_2
 
-    .line 8
     :cond_1
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -330,7 +303,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mViewPager:Lmiuix/viewpager/widget/ViewPager;
 
     invoke-virtual {p1}, Landroidx/viewpager/widget/OriginalViewPager;->getCurrentItem()I
@@ -341,15 +313,12 @@
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->clearTranslation(Landroid/view/ViewGroup;)V
 
     :cond_0
@@ -367,32 +336,25 @@
 
     if-nez p3, :cond_0
 
-    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
-    .line 2
     iput-boolean p4, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->clearTranslation(Landroid/view/ViewGroup;)V
 
-    .line 5
     :cond_0
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mScrollBasePosition:I
 
     if-eq v0, p1, :cond_3
 
-    .line 6
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
     if-ge v0, p1, :cond_1
 
-    .line 7
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
     goto :goto_0
@@ -402,39 +364,31 @@
 
     if-le v0, v1, :cond_2
 
-    .line 8
     iput v1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
-    .line 9
     :cond_2
     :goto_0
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mScrollBasePosition:I
 
-    .line 10
     iput-boolean p4, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
-    .line 11
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->clearTranslation(Landroid/view/ViewGroup;)V
 
     :cond_3
     if-lez p3, :cond_8
 
-    .line 13
     iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
     const/4 v0, 0x0
 
     if-eqz p3, :cond_5
 
-    .line 14
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItemUpdated:Z
 
-    .line 15
     iget p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mBaseItem:I
 
     if-ne p3, p1, :cond_4
@@ -451,16 +405,13 @@
 
     add-int/lit8 p3, p1, 0x1
 
-    .line 16
     iput p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mIncomingPosition:I
 
     goto :goto_1
 
-    .line 17
     :cond_4
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mIncomingPosition:I
 
-    .line 18
     :goto_1
     iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mPagerAdapter:Lmiuix/appcompat/internal/app/widget/DynamicFragmentPagerAdapter;
 
@@ -472,19 +423,16 @@
 
     const/4 v1, 0x0
 
-    .line 19
     iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
     if-eqz p3, :cond_5
 
-    .line 20
     invoke-virtual {p3}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v1
 
     if-eqz v1, :cond_5
 
-    .line 21
     invoke-virtual {p3}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object p3
@@ -495,17 +443,14 @@
 
     move-result-object p3
 
-    .line 22
     instance-of v1, p3, Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_5
 
-    .line 23
     check-cast p3, Landroid/view/ViewGroup;
 
     iput-object p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
-    .line 24
     :cond_5
     iget p3, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mIncomingPosition:I
 
@@ -518,12 +463,10 @@
     :cond_6
     move v5, p2
 
-    .line 25
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->mListView:Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_8
 
-    .line 26
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v3
@@ -548,7 +491,6 @@
     :goto_2
     move-object v1, p0
 
-    .line 27
     invoke-virtual/range {v1 .. v6}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->translateView(Landroid/view/ViewGroup;IIFZ)V
 
     :cond_8
@@ -564,12 +506,10 @@
 .method public translateView(Landroid/view/ViewGroup;IIFZ)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->fillList(Landroid/view/ViewGroup;Ljava/util/ArrayList;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -578,7 +518,6 @@
 
     if-nez p1, :cond_2
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
@@ -595,7 +534,6 @@
 
     const v1, 0x7fffffff
 
-    .line 4
     iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->sList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -615,21 +553,18 @@
 
     check-cast v3, Landroid/view/View;
 
-    .line 5
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v4
 
     if-eq v1, v4, :cond_1
 
-    .line 6
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v0
 
     sub-int v1, v0, p1
 
-    .line 7
     invoke-virtual {p0, v1, p2, p3, p4}, Lmiuix/appcompat/internal/app/widget/ViewPagerScrollEffect;->computOffset(IIIF)I
 
     move-result v1
@@ -651,7 +586,6 @@
     :cond_1
     int-to-float v4, v0
 
-    .line 8
     invoke-virtual {v3, v4}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_0

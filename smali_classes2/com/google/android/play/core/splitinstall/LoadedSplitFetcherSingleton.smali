@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -34,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +41,6 @@
 .method public static get()Lcom/google/android/play/core/splitinstall/LoadedSplitFetcher;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/android/play/core/splitinstall/LoadedSplitFetcherSingleton;->sInstalledSplitsFetcherRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -58,7 +55,6 @@
 .method public static set(Lcom/google/android/play/core/splitinstall/LoadedSplitFetcher;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/google/android/play/core/splitinstall/LoadedSplitFetcherSingleton;->sInstalledSplitsFetcherRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0

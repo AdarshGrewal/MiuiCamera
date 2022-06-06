@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/TimePicker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$3;->this$0:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onValueChange(Lmiuix/pickerwidget/widget/NumberPicker;II)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$3;->this$0:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/TimePicker;->access$200(Lmiuix/pickerwidget/widget/TimePicker;)V

@@ -39,6 +39,9 @@
 .method public abstract hideFaceAnimator()V
 .end method
 
+.method public abstract hideOrShowDocument(Z)V
+.end method
+
 .method public abstract initializeFocusView(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
 .end method
 
@@ -70,6 +73,27 @@
 .end method
 
 .method public abstract isObjectTrackFailed()Z
+.end method
+
+.method public abstract lightingCancel()V
+.end method
+
+.method public abstract lightingDetectFace([Lcom/android/camera2/CameraHardwareFace;Z)V
+.end method
+
+.method public abstract lightingFocused()V
+.end method
+
+.method public abstract lightingStart()V
+.end method
+
+.method public abstract mimojiEnd()V
+.end method
+
+.method public abstract mimojiFaceDetect(I)V
+.end method
+
+.method public abstract mimojiStart()V
 .end method
 
 .method public abstract onStopObjectTrack()V
@@ -124,6 +148,17 @@
 .end method
 
 .method public abstract startEvShowAgainAnimation()V
+.end method
+
+.method public abstract updateDocument(Landroid/util/Pair;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/Pair<",
+            "Lcom/xiaomi/ocr/sdk/imgprocess/DocumentProcess$QuadStatus;",
+            "[F>;)V"
+        }
+    .end annotation
 .end method
 
 .method public abstract updateFaceView(ZZZZI)V

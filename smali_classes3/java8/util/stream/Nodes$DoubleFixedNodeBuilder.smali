@@ -21,7 +21,6 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/Nodes$DoubleArrayNode;-><init>(J)V
 
     return-void
@@ -32,7 +31,6 @@
 .method public accept(D)V
     .locals 3
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
     iget-object v1, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->array:[D
@@ -43,14 +41,12 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 3
     iput v2, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
     aput-wide p1, v1, v0
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -64,7 +60,6 @@
 
     array-length v1, v1
 
-    .line 5
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -73,7 +68,6 @@
 
     const-string v0, "Accept exceeded fixed size of %d"
 
-    .line 6
     invoke-static {v0, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -86,7 +80,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 8
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -95,7 +88,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 9
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -104,7 +96,6 @@
 .method public accept(Ljava/lang/Double;)V
     .locals 0
 
-    .line 7
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfDouble;->accept(Ljava8/util/stream/Sink$OfDouble;Ljava/lang/Double;)V
 
     return-void
@@ -113,7 +104,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$DoubleFixedNodeBuilder;->accept(Ljava/lang/Double;)V
@@ -124,7 +114,6 @@
 .method public begin(J)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->array:[D
 
     array-length v0, v0
@@ -137,12 +126,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iput v1, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -150,7 +137,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 4
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -171,7 +157,6 @@
 
     const-string p1, "Begin size %d is not equal to fixed size %d"
 
-    .line 5
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -184,7 +169,6 @@
 .method public build()Ljava8/util/stream/Node$OfDouble;
     .locals 4
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
     iget-object v1, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->array:[D
@@ -195,7 +179,6 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -207,7 +190,6 @@
 
     iget v3, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
-    .line 4
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -228,7 +210,6 @@
 
     const-string v2, "Current size %d is less than fixed size %d"
 
-    .line 5
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -241,7 +222,6 @@
 .method public bridge synthetic build()Ljava8/util/stream/Node;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$DoubleFixedNodeBuilder;->build()Ljava8/util/stream/Node$OfDouble;
 
     move-result-object v0
@@ -260,7 +240,6 @@
 .method public end()V
     .locals 4
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
     iget-object v1, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->array:[D
@@ -271,7 +250,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -283,7 +261,6 @@
 
     iget v3, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->curSize:I
 
-    .line 3
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -304,7 +281,6 @@
 
     const-string v2, "End size %d is less than fixed size %d"
 
-    .line 4
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -321,7 +297,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget-object v1, p0, Ljava8/util/stream/Nodes$DoubleArrayNode;->array:[D
 
     array-length v1, v1
@@ -330,7 +305,6 @@
 
     sub-int/2addr v1, v2
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -351,7 +325,6 @@
 
     const-string v1, "DoubleFixedNodeBuilder[%d][%s]"
 
-    .line 3
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

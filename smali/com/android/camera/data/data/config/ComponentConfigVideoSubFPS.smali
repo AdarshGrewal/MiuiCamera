@@ -53,45 +53,38 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_VALUE:Ljava/util/List;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 4
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_VALUE:Ljava/util/List;
 
     const-string v1, "24"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_VALUE:Ljava/util/List;
 
     const-string v1, "30"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_VALUE:Ljava/util/List;
 
     const-string v1, "60"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_VALUE:Ljava/util/List;
 
     const-string v1, "120"
@@ -104,15 +97,12 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mForceValue:[Ljava/lang/String;
 
-    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -125,7 +115,6 @@
 .method private getSupportMinValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-eqz v0, :cond_3
@@ -140,7 +129,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -155,7 +143,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -165,7 +152,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -178,7 +164,6 @@
 
     if-nez v1, :cond_2
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -218,57 +203,51 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isSupport8K()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000oooo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000oo0()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f12087e
+    const v1, 0x7f120831
 
     const-string v2, "24"
 
-    const v3, 0x7f080221
+    const v3, 0x7f08021d
 
     invoke-direct {v0, v3, v3, v1, v2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     :cond_0
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f12087f
+    const v1, 0x7f120832
 
     const-string v2, "30"
 
-    const v3, 0x7f080222
+    const v3, 0x7f08021e
 
     invoke-direct {v0, v3, v3, v1, v2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     invoke-interface {p3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     invoke-virtual {p5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isSupport1080P()Z
 
     move-result v0
@@ -279,14 +258,12 @@
 
     const/16 v1, 0x438
 
-    .line 7
     invoke-static {v0, v1, p4, p2}, Lcom/android/camera/CameraSettings;->isSupportFpsRange(IIILcom/android/camera2/CameraCapabilities;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 8
     :cond_1
     invoke-virtual {p5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isSupport4K()Z
 
@@ -298,31 +275,27 @@
 
     const/16 v1, 0x870
 
-    .line 9
     invoke-static {v0, v1, p4, p2}, Lcom/android/camera/CameraSettings;->isSupportFpsRange(IIILcom/android/camera2/CameraCapabilities;)Z
 
     move-result p4
 
     if-eqz p4, :cond_3
 
-    .line 10
     :cond_2
     new-instance p4, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v0, 0x7f120881
+    const v0, 0x7f120834
 
     const-string v1, "60"
 
-    const v2, 0x7f080227
+    const v2, 0x7f080223
 
     invoke-direct {p4, v2, v2, v0, v1}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, p4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-interface {p3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     :cond_3
     invoke-virtual {p5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isSupport4K()Z
 
@@ -330,7 +303,6 @@
 
     if-eqz p4, :cond_7
 
-    .line 13
     invoke-static {p2}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->isSupported4K120Fps(Lcom/android/camera2/CameraCapabilities;)Z
 
     move-result p4
@@ -339,7 +311,6 @@
 
     if-nez p4, :cond_6
 
-    .line 14
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getCameraRoleIds()[I
 
     move-result-object v0
@@ -350,7 +321,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 15
     invoke-static {v0, v1}, Ljava/util/Arrays;->binarySearch([II)I
 
     move-result v0
@@ -359,7 +329,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_4
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getCameraRoleId()I
 
@@ -378,7 +347,6 @@
     :goto_1
     if-eqz p2, :cond_6
 
-    .line 17
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object p2
@@ -387,7 +355,6 @@
 
     move-result-object p2
 
-    .line 18
     invoke-static {p2}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->isSupported4K120Fps(Lcom/android/camera2/CameraCapabilities;)Z
 
     move-result p2
@@ -399,20 +366,18 @@
     :cond_6
     if-eqz p4, :cond_7
 
-    .line 19
     new-instance p2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const p4, 0x7f12087d
+    const p4, 0x7f120830
 
     const-string p5, "120"
 
-    const v0, 0x7f08021e
+    const v0, 0x7f08021a
 
     invoke-direct {p2, v0, v0, p4, p5}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 20
     invoke-interface {p3, p5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_7
@@ -436,12 +401,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p6, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p6
@@ -529,19 +492,19 @@
     const/4 p1, -0x1
 
     :goto_1
-    const p6, 0x7f12087f
+    const p6, 0x7f120832
 
-    const v0, 0x7f080222
+    const v0, 0x7f08021e
 
     const-string v5, "30"
 
     if-eqz p1, :cond_d
 
-    const v6, 0x7f120881
+    const v6, 0x7f120834
 
     const-string v7, "60"
 
-    const v8, 0x7f080227
+    const v8, 0x7f080223
 
     if-eq p1, v4, :cond_c
 
@@ -551,7 +514,6 @@
 
     goto/16 :goto_5
 
-    .line 3
     :cond_5
     iget-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
@@ -565,21 +527,18 @@
 
     if-eqz p1, :cond_6
 
-    .line 4
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const p5, 0x7f12087e
+    const p5, 0x7f120831
 
-    const v1, 0x7f080221
+    const v1, 0x7f08021d
 
     invoke-direct {p1, v1, v1, p5, p3}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     invoke-interface {p4, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_6
     iget-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
@@ -591,19 +550,16 @@
 
     if-eqz p1, :cond_e
 
-    .line 7
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {p1, v0, v0, p6, v5}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     invoke-interface {p4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_5
 
-    .line 9
     :cond_7
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -611,31 +567,26 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 10
     invoke-interface {p4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/16 p1, 0xf00
 
     const/16 p6, 0x870
 
-    .line 11
     invoke-static {p1, p6, p5, p3}, Lcom/android/camera/CameraSettings;->isSupportFpsRange(IIILcom/android/camera2/CameraCapabilities;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 12
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {p1, v8, v8, v6, v7}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 13
     invoke-interface {p4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 14
     :cond_8
     invoke-static {p3}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->isSupported4K120Fps(Lcom/android/camera2/CameraCapabilities;)Z
 
@@ -643,7 +594,6 @@
 
     if-nez p1, :cond_b
 
-    .line 15
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraRoleIds()[I
 
     move-result-object p5
@@ -652,7 +602,6 @@
 
     if-eqz p5, :cond_9
 
-    .line 16
     invoke-static {p5, p6}, Ljava/util/Arrays;->binarySearch([II)I
 
     move-result p5
@@ -661,7 +610,6 @@
 
     goto :goto_2
 
-    .line 17
     :cond_9
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraRoleId()I
 
@@ -680,7 +628,6 @@
     :goto_3
     if-eqz p3, :cond_b
 
-    .line 18
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object p3
@@ -689,7 +636,6 @@
 
     move-result-object p3
 
-    .line 19
     invoke-static {p3}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->isSupported4K120Fps(Lcom/android/camera2/CameraCapabilities;)Z
 
     move-result p3
@@ -704,25 +650,22 @@
     :goto_4
     if-eqz v4, :cond_e
 
-    .line 20
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const p3, 0x7f12087d
+    const p3, 0x7f120830
 
     const-string p5, "120"
 
-    const p6, 0x7f08021e
+    const p6, 0x7f08021a
 
     invoke-direct {p1, p6, p6, p3, p5}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     invoke-interface {p4, p5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
-    .line 22
     :cond_c
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -730,33 +673,28 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 23
     invoke-interface {p4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/16 p1, 0x780
 
     const/16 p6, 0x438
 
-    .line 24
     invoke-static {p1, p6, p5, p3}, Lcom/android/camera/CameraSettings;->isSupportFpsRange(IIILcom/android/camera2/CameraCapabilities;)Z
 
     move-result p1
 
     if-eqz p1, :cond_e
 
-    .line 25
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {p1, v8, v8, v6, v7}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 26
     invoke-interface {p4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
-    .line 27
     :cond_d
     new-instance p1, Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -764,7 +702,6 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 28
     invoke-interface {p4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_e
@@ -788,7 +725,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 1
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
@@ -797,7 +733,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -816,7 +751,6 @@
 
     check-cast v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 3
     iget-object v2, v1, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {p1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -845,7 +779,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->TAG:Ljava/lang/String;
 
     const-string v1, "getSupportedHfrSettings: CameraCapabilities is null!!!"
@@ -854,18 +787,15 @@
 
     return v0
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getSupportedHighSpeedVideoSize()[Landroid/util/Size;
 
     move-result-object v2
 
-    .line 4
     array-length v3, v2
 
     move v4, v0
@@ -875,7 +805,6 @@
 
     aget-object v5, v2, v4
 
-    .line 5
     invoke-virtual {v5}, Landroid/util/Size;->getWidth()I
 
     move-result v6
@@ -886,13 +815,11 @@
 
     goto :goto_2
 
-    .line 6
     :cond_1
     invoke-virtual {p0, v5}, Lcom/android/camera2/CameraCapabilities;->getSupportedHighSpeedVideoFPSRange(Landroid/util/Size;)[Landroid/util/Range;
 
     move-result-object v6
 
-    .line 7
     array-length v7, v6
 
     move v8, v0
@@ -902,14 +829,12 @@
 
     aget-object v9, v6, v8
 
-    .line 8
     sget-object v10, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v11, 0x3
 
     new-array v11, v11, [Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {v5}, Landroid/util/Size;->getWidth()I
 
     move-result v12
@@ -942,19 +867,16 @@
 
     const-string v9, "%dx%d:%d"
 
-    .line 10
     invoke-static {v10, v9, v11}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 11
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v10
 
     if-nez v10, :cond_2
 
-    .line 12
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
@@ -971,7 +893,6 @@
     :cond_4
     const-string p0, "3840x2160:120"
 
-    .line 13
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -984,7 +905,6 @@
 .method public checkValueValid(ILjava/lang/String;)Z
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-direct {p0, p2, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->isContain(Ljava/lang/String;Ljava/util/List;)Z
@@ -997,7 +917,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->TAG:Ljava/lang/String;
 
@@ -1033,7 +952,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
     return-object v0
@@ -1042,12 +960,10 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->getKey(I)Ljava/lang/String;
@@ -1058,12 +974,10 @@
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mForceValue:[Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 4
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -1091,14 +1005,12 @@
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 5
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->checkValueValid(ILjava/lang/String;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 6
     const-class p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -1121,7 +1033,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-direct {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->getSupportMinValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1157,19 +1068,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->TAG:Ljava/lang/String;
 
     const-string v1, "List is empty!"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -1199,7 +1107,6 @@
 .method public isForceQuality()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mForceValue:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1218,12 +1125,10 @@
 .method public reInit(IILcom/android/camera2/CameraCapabilities;ILcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;)V
     .locals 10
 
-    .line 1
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
@@ -1238,31 +1143,27 @@
 
     goto/16 :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000oooo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000oo0()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
     const-string v1, "24"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->get8KMaxFpsSupported()I
 
@@ -1274,17 +1175,16 @@
 
     if-le v0, v1, :cond_2
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000oo0O()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mAllFpsIn8K:Ljava/util/List;
 
     invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1304,10 +1204,8 @@
 
     move-object v6, p5
 
-    .line 8
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->initItem(ILjava/util/List;Lcom/android/camera2/CameraCapabilities;Ljava/util/List;ILcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;)V
 
-    .line 9
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result p1
@@ -1316,7 +1214,6 @@
 
     if-nez p2, :cond_5
 
-    .line 10
     sget-object p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
     if-eqz p1, :cond_3
@@ -1327,18 +1224,15 @@
 
     if-nez p1, :cond_4
 
-    .line 11
     :cond_3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object p2
@@ -1357,15 +1251,12 @@
 
     move-object v5, p5
 
-    .line 14
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->initAllItem(Ljava/util/List;Lcom/android/camera2/CameraCapabilities;Ljava/util/List;ILcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;)V
 
-    .line 15
     sget-object p2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/data/data/ComponentData;->copyList(Ljava/util/List;Ljava/util/List;)V
 
-    .line 16
     :cond_4
     sget-object p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
@@ -1373,15 +1264,12 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
-    .line 17
     sget-object p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
     invoke-virtual {p0, p1, v7}, Lcom/android/camera/data/data/ComponentData;->copyList(Ljava/util/List;Ljava/util/List;)V
 
-    .line 18
     invoke-virtual {p0, v7, v8}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
-    .line 19
     :cond_5
     invoke-virtual {p5}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isForceQuality()Z
 
@@ -1389,14 +1277,12 @@
 
     if-eqz p1, :cond_6
 
-    .line 20
     filled-new-array {v9}, [Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, v7, p1}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 21
     filled-new-array {v9}, [Ljava/lang/String;
 
     move-result-object p1
@@ -1408,10 +1294,8 @@
     :cond_6
     const/4 p1, 0x0
 
-    .line 22
     iput-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->mForceValue:[Ljava/lang/String;
 
-    .line 23
     :goto_0
     invoke-static {v7}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -1425,15 +1309,12 @@
 .method public reset()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->ALL_FPS_ITEMS:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -1457,7 +1338,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, v1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubFPS;->getKey(I)Ljava/lang/String;

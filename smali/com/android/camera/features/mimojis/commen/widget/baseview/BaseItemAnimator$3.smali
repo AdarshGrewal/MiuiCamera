@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->val$additions:Ljava/util/ArrayList;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->val$additions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -62,20 +60,17 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;->animateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->val$additions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$3;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iget-object v0, v0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;->mAdditionsList:Ljava/util/ArrayList;

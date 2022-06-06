@@ -27,7 +27,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/Session;J)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/Session$14;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     iput-wide p2, p0, Lnet/majorkernelpanic/streaming/Session$14;->val$bitrate:J
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$14;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/Session;->access$300(Lnet/majorkernelpanic/streaming/Session;)Lnet/majorkernelpanic/streaming/Session$Callback;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$14;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/Session;->access$300(Lnet/majorkernelpanic/streaming/Session;)Lnet/majorkernelpanic/streaming/Session$Callback;

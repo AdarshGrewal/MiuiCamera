@@ -42,10 +42,8 @@
 .method public constructor <init>(Lcom/android/camera/module/FunctionDxoAsdSceneDetected$IDxoAsdSceneDetected;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -60,7 +58,6 @@
 .method public apply(Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/FunctionDxoAsdSceneDetected;->mModuleCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -71,7 +68,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/FunctionDxoAsdSceneDetected;->mModuleCallback:Ljava/lang/ref/WeakReference;
 
@@ -81,24 +77,20 @@
 
     check-cast v0, Lcom/android/camera/module/FunctionDxoAsdSceneDetected$IDxoAsdSceneDetected;
 
-    .line 4
     instance-of v1, v0, Lcom/android/camera/module/Camera2Module;
 
     if-eqz v1, :cond_2
 
-    .line 5
     move-object v1, v0
 
     check-cast v1, Lcom/android/camera/module/Camera2Module;
 
-    .line 6
     iget-object v1, v1, Lcom/android/camera/module/BaseModule;->mCameraCapabilities:Lcom/android/camera2/CameraCapabilities;
 
     invoke-static {v1, p1}, Lcom/android/camera2/CaptureResultParser;->getDxoAsdScene(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
     move-result-object v1
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/module/FunctionDxoAsdSceneDetected;->mCurrentAsdScene:Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
     invoke-virtual {v1, v2}, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;->equals(Ljava/lang/Object;)Z
@@ -109,11 +101,9 @@
 
     return-object p1
 
-    .line 8
     :cond_1
     iput-object v1, p0, Lcom/android/camera/module/FunctionDxoAsdSceneDetected;->mCurrentAsdScene:Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
-    .line 9
     invoke-interface {v0, v1}, Lcom/android/camera/module/FunctionDxoAsdSceneDetected$IDxoAsdSceneDetected;->updateDxoAsdScene(Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;)V
 
     :cond_2
@@ -128,7 +118,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/FunctionDxoAsdSceneDetected;->apply(Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;

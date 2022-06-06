@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/miui/filtersdk/filter/base/GPUImageFilter;Landroid/graphics/PointF;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$7;->this$0:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     iput-object p2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$7;->val$point:Landroid/graphics/PointF;
@@ -50,7 +49,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     iget-object v1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$7;->val$point:Landroid/graphics/PointF;
 
     iget v2, v1, Landroid/graphics/PointF;->x:F
@@ -59,14 +57,12 @@
 
     aput v2, v0, v3
 
-    .line 2
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     const/4 v2, 0x1
 
     aput v1, v0, v2
 
-    .line 3
     iget v1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$7;->val$location:I
 
     invoke-static {v1, v2, v0, v3}, Landroid/opengl/GLES20;->glUniform2fv(II[FI)V

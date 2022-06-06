@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -51,7 +49,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -62,7 +59,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -84,7 +80,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$100(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
@@ -101,7 +96,6 @@
 
     if-lez p1, :cond_1
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -112,7 +106,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
@@ -122,7 +115,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -133,7 +125,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 5
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$1900(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/View;
@@ -161,7 +152,6 @@
 
     sub-float p2, p1, p2
 
-    .line 1
     :goto_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
@@ -171,7 +161,6 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$2200(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Z
@@ -182,7 +171,6 @@
 
     const/4 p1, 0x0
 
-    .line 3
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {p2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$2100(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Ljava/lang/ref/WeakReference;
@@ -197,12 +185,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 4
     invoke-virtual {p2}, Landroid/view/View;->getTranslationY()F
 
     move-result p1
 
-    .line 5
     :cond_1
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
@@ -212,7 +198,6 @@
 
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$DimViewAnimationProcessor;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    .line 6
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$2000(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     move-result-object v0
@@ -235,7 +220,6 @@
 
     add-float/2addr p1, v0
 
-    .line 7
     invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationY(F)V
 
     :cond_3

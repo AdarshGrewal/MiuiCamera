@@ -55,18 +55,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 3
     iput-object p2, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iCache:[Lmiuix/internal/log/message/Message;
 
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
     return-void
@@ -80,7 +76,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iConstructor:Ljava/lang/reflect/Constructor;
 
@@ -101,7 +96,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,19 +148,16 @@
     :try_start_0
     new-array v0, v0, [Ljava/lang/Class;
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, [Lmiuix/internal/log/message/Message;
 
-    .line 3
     new-instance v1, Lmiuix/internal/log/message/MessageFactory$MessageCache;
 
     invoke-direct {v1, v0, p1}, Lmiuix/internal/log/message/MessageFactory$MessageCache;-><init>(Ljava/lang/reflect/Constructor;[Lmiuix/internal/log/message/Message;)V
@@ -175,7 +166,6 @@
 
     return-object v1
 
-    .line 4
     :catch_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -218,35 +208,29 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
     if-lez v0, :cond_0
 
-    .line 2
     iget v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
-    .line 3
     iget-object v1, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iCache:[Lmiuix/internal/log/message/Message;
 
     aget-object v0, v1, v0
 
-    .line 4
     invoke-interface {v0}, Lmiuix/internal/log/message/Message;->prepareForReuse()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-object v0
 
-    .line 6
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lmiuix/internal/log/message/MessageFactory$MessageCache;->create()Lmiuix/internal/log/message/Message;
@@ -277,7 +261,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
@@ -287,14 +270,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iCache:[Lmiuix/internal/log/message/Message;
 
     iget v1, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
     aput-object p1, v0, v1
 
-    .line 3
     iget p1, p0, Lmiuix/internal/log/message/MessageFactory$MessageCache;->iPointer:I
 
     add-int/lit8 p1, p1, 0x1
@@ -303,7 +284,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
     monitor-exit p0
 

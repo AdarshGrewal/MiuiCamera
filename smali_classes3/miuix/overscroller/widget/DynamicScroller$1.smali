@@ -31,7 +31,6 @@
 .method public constructor <init>(Lmiuix/overscroller/widget/DynamicScroller;III)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     iput p2, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->val$min:I
@@ -54,7 +53,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -95,7 +93,6 @@
 
     invoke-static {p2, v0}, Lmiuix/overscroller/widget/OverScrollLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     iget-object p2, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     invoke-static {p2}, Lmiuix/overscroller/widget/DynamicScroller;->access$100(Lmiuix/overscroller/widget/DynamicScroller;)Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation;
@@ -114,7 +111,6 @@
 
     invoke-virtual {p2, v0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->setStartValue(F)Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;
 
-    .line 3
     iget-object p2, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     invoke-static {p2}, Lmiuix/overscroller/widget/DynamicScroller;->access$100(Lmiuix/overscroller/widget/DynamicScroller;)Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation;
@@ -131,7 +127,6 @@
 
     invoke-virtual {p2, v0}, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation;->setStartVelocity(F)Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation;
 
-    .line 4
     iget-object p2, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     invoke-static {p2}, Lmiuix/overscroller/widget/DynamicScroller;->access$100(Lmiuix/overscroller/widget/DynamicScroller;)Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation;
@@ -146,7 +141,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     iget p1, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->val$max:I
 
     int-to-float p1, p1
@@ -166,15 +160,12 @@
     :cond_0
     const-string p1, "fling destination beyound boundary, start spring"
 
-    .line 6
     invoke-static {p1}, Lmiuix/overscroller/widget/OverScrollLogger;->debug(Ljava/lang/String;)V
 
-    .line 7
     iget-object p1, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     invoke-static {p1}, Lmiuix/overscroller/widget/DynamicScroller;->access$200(Lmiuix/overscroller/widget/DynamicScroller;)V
 
-    .line 8
     iget-object v2, p0, Lmiuix/overscroller/widget/DynamicScroller$1;->this$0:Lmiuix/overscroller/widget/DynamicScroller;
 
     const/4 v3, 0x2
@@ -204,7 +195,6 @@
     :cond_1
     const-string p1, "fling finished, no more work."
 
-    .line 9
     invoke-static {p1}, Lmiuix/overscroller/widget/OverScrollLogger;->debug(Ljava/lang/String;)V
 
     return v2

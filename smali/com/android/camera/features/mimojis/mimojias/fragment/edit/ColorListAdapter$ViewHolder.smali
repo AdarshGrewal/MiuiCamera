@@ -24,15 +24,12 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
-    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0a01e5
+    const p1, 0x7f0a01f1
 
-    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -47,7 +44,6 @@
 .method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;)Lcom/android/camera/ui/CircleImageView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;->ivColor:Lcom/android/camera/ui/CircleImageView;
 
     return-object p0

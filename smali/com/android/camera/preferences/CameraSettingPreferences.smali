@@ -28,7 +28,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/preferences/CameraSettingPreferences;
 
     invoke-direct {v0}, Lcom/android/camera/preferences/CameraSettingPreferences;-><init>()V
@@ -41,7 +40,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/preferences/CameraSettingPreferences;->sPreferences:Lcom/android/camera/preferences/CameraSettingPreferences;
     :try_end_0
@@ -77,14 +74,12 @@
 .method public contains(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -95,7 +90,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -103,7 +97,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -114,7 +107,6 @@
 
     return p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -130,7 +122,6 @@
 .method public edit()Landroid/content/SharedPreferences$Editor;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/preferences/CameraSettingPreferences$MyEditor;
 
     invoke-direct {v0, p0}, Lcom/android/camera/preferences/CameraSettingPreferences$MyEditor;-><init>(Lcom/android/camera/preferences/CameraSettingPreferences;)V
@@ -157,14 +148,12 @@
 .method public getBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -175,7 +164,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -183,7 +171,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -194,7 +181,6 @@
 
     return p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -210,14 +196,12 @@
 .method public getFloat(Ljava/lang/String;F)F
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -228,7 +212,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -236,7 +219,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -247,7 +229,6 @@
 
     return p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -263,14 +244,12 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -281,7 +260,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -289,7 +267,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -300,7 +277,6 @@
 
     return p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -316,14 +292,12 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -334,7 +308,6 @@
 
     return-wide p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -342,7 +315,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -353,7 +325,6 @@
 
     return-wide p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -369,14 +340,12 @@
 .method public getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isCameraSpecific(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -387,7 +356,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isTransient(Ljava/lang/String;)Z
 
@@ -395,7 +363,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -406,7 +373,6 @@
 
     return-object p1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -434,7 +400,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$6;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$6;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {p1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$700(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Landroid/view/View;
@@ -65,7 +63,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$6;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 
     move-object v8, p6
 
-    .line 2
     invoke-static/range {v0 .. v8}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeAsyncWithWatermark(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZLcom/miui/extravideo/interpolation/EncodeListener;)V
 
     return-void
@@ -61,7 +59,6 @@
 
     move-object v6, p4
 
-    .line 1
     invoke-static/range {v0 .. v6}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeAsyncWithWatermark(Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZLcom/miui/extravideo/interpolation/EncodeListener;)V
 
     return-void
@@ -82,7 +79,6 @@
 
     const-string v1, "start doDecodeAndEncode async mode sdk version : %s"
 
-    .line 5
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -91,7 +87,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     new-instance v0, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;
 
     const/4 v8, 0x0
@@ -116,10 +111,8 @@
 
     move-object/from16 v1, p8
 
-    .line 7
     invoke-virtual {v0, v1}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->setEncodeListener(Lcom/miui/extravideo/interpolation/EncodeListener;)V
 
-    .line 8
     invoke-virtual {v0}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->doDecodeAndEncode()V
 
     return-void
@@ -140,7 +133,6 @@
 
     const-string v0, "start doDecodeAndEncode async mode sdk version : %s"
 
-    .line 1
     invoke-static {v0, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
@@ -149,7 +141,6 @@
 
     invoke-static {v0, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance p3, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;
 
     const/4 v5, 0x0
@@ -168,17 +159,15 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;-><init>(Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)V
 
-    .line 3
     invoke-virtual {p3, p6}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->setEncodeListener(Lcom/miui/extravideo/interpolation/EncodeListener;)V
 
-    .line 4
     invoke-virtual {p3}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->doDecodeAndEncode()V
 
     return-void
 .end method
 
-.method public static doDecodeAndEncodeSync(IILjava/lang/String;Ljava/lang/String;ZZZ)Z
-    .locals 9
+.method public static doDecodeAndEncodeSync(IILjava/lang/String;Ljava/lang/String;ZZ)Z
+    .locals 8
 
     const/4 v5, 0x0
 
@@ -196,10 +185,7 @@
 
     move v7, p5
 
-    move v8, p6
-
-    .line 3
-    invoke-static/range {v0 .. v8}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeSyncWithWatermark(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZZ)Z
+    invoke-static/range {v0 .. v7}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeSyncWithWatermark(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)Z
 
     move-result p0
 
@@ -211,7 +197,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, p1, v0, v0}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeSync(Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result p0
@@ -234,7 +219,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-static/range {v0 .. v5}, Lcom/miui/extravideo/interpolation/VideoInterpolator;->doDecodeAndEncodeSyncWithWatermark(Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)Z
 
     move-result p0
@@ -242,8 +226,8 @@
     return p0
 .end method
 
-.method public static doDecodeAndEncodeSyncWithWatermark(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZZ)Z
-    .locals 15
+.method public static doDecodeAndEncodeSyncWithWatermark(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)Z
+    .locals 14
 
     const/4 v0, 0x1
 
@@ -257,7 +241,6 @@
 
     const-string v2, "start doDecodeAndEncode sync mode sdk version : %s"
 
-    .line 15
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -268,24 +251,21 @@
 
     new-array v1, v0, [Z
 
-    .line 16
     new-instance v2, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .line 17
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
-    .line 18
-    new-instance v14, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;
+    new-instance v13, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;
 
-    move-object v4, v14
+    move-object v4, v13
 
     move v5, p0
 
-    move/from16 v6, p1
+    move v6, p1
 
     move-object/from16 v7, p2
 
@@ -299,32 +279,24 @@
 
     move/from16 v12, p7
 
-    move/from16 v13, p8
+    invoke-direct/range {v4 .. v12}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;-><init>(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)V
 
-    invoke-direct/range {v4 .. v13}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;-><init>(IILjava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZZ)V
-
-    .line 19
     new-instance v4, Lcom/miui/extravideo/interpolation/VideoInterpolator$2;
 
     invoke-direct {v4, v2, v1, v0}, Lcom/miui/extravideo/interpolation/VideoInterpolator$2;-><init>(Ljava/util/concurrent/locks/Lock;[ZLjava/util/concurrent/locks/Condition;)V
 
-    .line 20
-    invoke-virtual {v14, v4}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->setEncodeListener(Lcom/miui/extravideo/interpolation/EncodeListener;)V
+    invoke-virtual {v13, v4}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->setEncodeListener(Lcom/miui/extravideo/interpolation/EncodeListener;)V
 
-    .line 21
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 22
     :try_start_0
-    invoke-virtual {v14}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->doDecodeAndEncode()V
+    invoke-virtual {v13}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->doDecodeAndEncode()V
 
-    .line 23
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     :goto_0
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
@@ -338,7 +310,6 @@
     :catch_0
     move-exception v0
 
-    .line 25
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -348,17 +319,14 @@
 
     goto :goto_0
 
-    .line 26
     :goto_1
     aget-boolean v0, v1, v3
 
     return v0
 
-    .line 27
     :goto_2
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 28
     throw v0
 .end method
 
@@ -377,7 +345,6 @@
 
     const-string v2, "start doDecodeAndEncode sync mode sdk version : %s"
 
-    .line 1
     invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -388,17 +355,14 @@
 
     new-array v1, v0, [Z
 
-    .line 2
     new-instance v2, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .line 3
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
-    .line 4
     new-instance v11, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;
 
     move-object v4, v11
@@ -417,28 +381,22 @@
 
     invoke-direct/range {v4 .. v10}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;-><init>(Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/Bitmap;[FZ)V
 
-    .line 5
     new-instance v4, Lcom/miui/extravideo/interpolation/VideoInterpolator$1;
 
     invoke-direct {v4, v2, v1, v0}, Lcom/miui/extravideo/interpolation/VideoInterpolator$1;-><init>(Ljava/util/concurrent/locks/Lock;[ZLjava/util/concurrent/locks/Condition;)V
 
-    .line 6
     invoke-virtual {v11, v4}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->setEncodeListener(Lcom/miui/extravideo/interpolation/EncodeListener;)V
 
-    .line 7
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 8
     :try_start_0
     invoke-virtual {v11}, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp;->doDecodeAndEncode()V
 
-    .line 9
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     :goto_0
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
@@ -452,7 +410,6 @@
     :catch_0
     move-exception v0
 
-    .line 11
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -462,16 +419,13 @@
 
     goto :goto_0
 
-    .line 12
     :goto_1
     aget-boolean v0, v1, v3
 
     return v0
 
-    .line 13
     :goto_2
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 14
     throw v0
 .end method

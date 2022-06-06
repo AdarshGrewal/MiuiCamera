@@ -28,15 +28,12 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$ViewHolder;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter;
 
-    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0a043a
+    const p1, 0x7f0a044c
 
-    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -45,9 +42,8 @@
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$ViewHolder;->mTvSubTitle:Landroid/widget/TextView;
 
-    const p1, 0x7f0a00e5
+    const p1, 0x7f0a00eb
 
-    .line 4
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -58,12 +54,10 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    const p1, 0x7f0a03df
+    const p1, 0x7f0a03f5
 
-    .line 6
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -72,7 +66,6 @@
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/EditLevelListAdapter$ViewHolder;->mThumbnailGV:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
     return-void

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lorg/jcodec/movtool/MetadataEditor;Lorg/jcodec/movtool/MetadataEditor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/movtool/MetadataEditor$1;->this$0:Lorg/jcodec/movtool/MetadataEditor;
 
     iput-object p2, p0, Lorg/jcodec/movtool/MetadataEditor$1;->val$self:Lorg/jcodec/movtool/MetadataEditor;
@@ -42,7 +41,6 @@
 .method public apply(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
     .locals 6
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->fourcc()Ljava/lang/String;
@@ -65,7 +63,6 @@
 
     aput-object v3, v2, v4
 
-    .line 2
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->fourcc()Ljava/lang/String;
 
     move-result-object v4
@@ -80,7 +77,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
-    .line 3
     iget-object v2, p0, Lorg/jcodec/movtool/MetadataEditor$1;->val$self:Lorg/jcodec/movtool/MetadataEditor;
 
     invoke-static {v2}, Lorg/jcodec/movtool/MetadataEditor;->access$000(Lorg/jcodec/movtool/MetadataEditor;)Ljava/util/Map;
@@ -103,15 +99,12 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->createMetaBox()Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {p1, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 6
     :cond_0
     iget-object v2, p0, Lorg/jcodec/movtool/MetadataEditor$1;->val$self:Lorg/jcodec/movtool/MetadataEditor;
 
@@ -121,7 +114,6 @@
 
     invoke-virtual {v1, v2}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->setKeyedMeta(Ljava/util/Map;)V
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lorg/jcodec/movtool/MetadataEditor$1;->val$self:Lorg/jcodec/movtool/MetadataEditor;
 
@@ -145,12 +137,10 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/UdtaMetaBox;->createUdtaMetaBox()Lorg/jcodec/containers/mp4/boxes/UdtaMetaBox;
 
     move-result-object v0
 
-    .line 9
     const-class v1, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     invoke-static {p1, v1, v3}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findFirst(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/Class;Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/Box;
@@ -161,7 +151,6 @@
 
     if-nez v1, :cond_2
 
-    .line 10
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     const-wide/16 v4, 0x0
@@ -172,14 +161,11 @@
 
     invoke-direct {v1, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 11
     invoke-virtual {p1, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 12
     :cond_2
     invoke-virtual {v1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 13
     :cond_3
     iget-object p1, p0, Lorg/jcodec/movtool/MetadataEditor$1;->val$self:Lorg/jcodec/movtool/MetadataEditor;
 

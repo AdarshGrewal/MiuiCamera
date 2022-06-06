@@ -38,7 +38,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, v0, v0}, Lcom/xiaomi/camera/device/callable/CameraCallable;-><init>(Ljava/lang/String;Lcom/xiaomi/camera/device/callable/CallableListener;)V
 
     return-void
@@ -47,7 +46,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/Camera$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/Camera$AdjBoostCallable;-><init>()V
 
     return-void
@@ -66,7 +64,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/device/callable/CameraCallable;->getCookieStore()Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;
 
     move-result-object v0
@@ -92,7 +89,6 @@
 
     check-cast v1, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;
 
-    .line 2
     iget-object v1, v1, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-eqz v1, :cond_0
@@ -105,10 +101,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->adjBoost()V
 
-    .line 4
     :cond_1
     new-instance v0, Lcom/xiaomi/camera/device/callable/CallableReturn;
 
@@ -122,7 +116,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/Camera$AdjBoostCallable;->TAG:Ljava/lang/String;
 
     return-object v0

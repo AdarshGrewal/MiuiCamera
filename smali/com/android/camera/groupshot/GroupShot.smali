@@ -24,9 +24,8 @@
     .locals 4
 
     :try_start_0
-    const-string v0, "morpho_groupshot"
+    const-string/jumbo v0, "morpho_groupshot"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -36,7 +35,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -66,12 +64,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     return-void
@@ -104,7 +100,6 @@
 .method public static getFD(Ljava/io/FileDescriptor;)I
     .locals 2
 
-    .line 1
     :try_start_0
     const-class v0, Ljava/io/FileDescriptor;
 
@@ -116,10 +111,8 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 3
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result p0
@@ -206,7 +199,6 @@
 .method public addTargetRect([I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -219,7 +211,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->addTargetRect(J[I)I
 
@@ -231,7 +222,6 @@
 .method public attach(Landroid/media/Image;)I
     .locals 12
 
-    .line 4
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -256,7 +246,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-wide v2, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v5, 0x0
@@ -272,19 +261,16 @@
     :cond_0
     const/16 v0, 0x23
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v3
 
     if-ne v0, v3, :cond_1
 
-    .line 7
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
-    .line 8
     sget-object v2, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -293,7 +279,6 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v6
@@ -318,7 +303,6 @@
 
     aget-object v6, v0, v4
 
-    .line 10
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v6
@@ -345,14 +329,12 @@
 
     const-string p1, "attach: size=%dx%d stride=%dx%d"
 
-    .line 11
     invoke-static {v3, p1, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     iget-wide v6, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     aget-object p1, v0, v4
@@ -369,7 +351,6 @@
 
     aget-object p1, v0, v4
 
-    .line 13
     invoke-virtual {p1}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v10
@@ -382,14 +363,12 @@
 
     move-object v5, p0
 
-    .line 14
     invoke-direct/range {v5 .. v11}, Lcom/android/camera/groupshot/GroupShot;->attachYuv(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)I
 
     move-result p1
 
     return p1
 
-    .line 15
     :cond_1
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
@@ -419,7 +398,6 @@
 .method public attach([B)I
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -444,7 +422,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -457,7 +434,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->attach(J[B)I
 
@@ -469,7 +445,6 @@
 .method public attach_end()I
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -494,7 +469,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -507,7 +481,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0, v1}, Lcom/android/camera/groupshot/GroupShot;->end(J)I
 
@@ -519,7 +492,6 @@
 .method public attach_start(I)I
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -544,7 +516,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v2, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v4, 0x0
@@ -557,11 +528,9 @@
 
     return p1
 
-    .line 3
     :cond_0
     iput-boolean v1, p0, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
-    .line 4
     invoke-direct {p0, v2, v3, p1}, Lcom/android/camera/groupshot/GroupShot;->start(JI)I
 
     move-result p1
@@ -572,7 +541,6 @@
 .method public changeMaxNum(II)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -585,7 +553,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->changeMaxNum(JII)I
 
@@ -597,7 +564,6 @@
 .method public clearImages()I
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -622,7 +588,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -635,7 +600,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0, v1}, Lcom/android/camera/groupshot/GroupShot;->clearImages(J)I
 
@@ -647,7 +611,6 @@
 .method public finish()V
     .locals 6
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -658,7 +621,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v4, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
@@ -682,24 +644,18 @@
 
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-wide v4, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     invoke-direct {p0, v4, v5}, Lcom/android/camera/groupshot/GroupShot;->deleteNativeObject(J)V
 
-    .line 4
     iput v1, p0, Lcom/android/camera/groupshot/GroupShot;->mWidth:I
 
-    .line 5
     iput v1, p0, Lcom/android/camera/groupshot/GroupShot;->mHeight:I
 
-    .line 6
     iput v1, p0, Lcom/android/camera/groupshot/GroupShot;->mMaxImageNum:I
 
-    .line 7
     iput-boolean v1, p0, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
-    .line 8
     iput-wide v2, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     return-void
@@ -708,7 +664,6 @@
 .method public getImageAndSaveJpeg(Ljava/io/FileDescriptor;)I
     .locals 6
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -721,13 +676,11 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {p1}, Lcom/android/camera/groupshot/GroupShot;->getFD(Ljava/io/FileDescriptor;)I
 
     move-result p1
 
-    .line 3
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     const/4 v2, 0x2
@@ -764,7 +717,6 @@
 
     return v1
 
-    .line 4
     :cond_1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
@@ -780,7 +732,6 @@
 .method public getImageAndSaveJpeg(Ljava/lang/String;)I
     .locals 6
 
-    .line 5
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -793,7 +744,6 @@
 
     return v3
 
-    .line 6
     :cond_0
     sget-object v2, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
@@ -821,7 +771,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     invoke-direct {p0, v0, v1, p1, v3}, Lcom/android/camera/groupshot/GroupShot;->getImageAndSaveJpeg(JLjava/lang/String;I)I
@@ -834,7 +783,6 @@
 .method public getImageData(I[B)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -847,7 +795,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->getRawData(JI[B)I
 
@@ -859,7 +806,6 @@
 .method public getJpegData(I[B)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -872,7 +818,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->getJpegData(JI[B)I
 
@@ -884,7 +829,6 @@
 .method public getJpegSize(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -897,7 +841,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->getJpegSize(JI)I
 
@@ -909,7 +852,6 @@
 .method public getPreviewImage(III[B)I
     .locals 7
 
-    .line 1
     iget-wide v1, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v3, 0x0
@@ -933,7 +875,6 @@
 
     move-object v6, p4
 
-    .line 2
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/groupshot/GroupShot;->getPreviewImage(JIII[B)I
 
     move-result p1
@@ -944,7 +885,6 @@
 .method public getRecommendedImageIndex([II)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -957,7 +897,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->getRecommendedImageIndex(J[II)I
 
@@ -969,7 +908,6 @@
 .method public getRecommendedRect(II[I)I
     .locals 6
 
-    .line 1
     iget-wide v1, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v3, 0x0
@@ -991,7 +929,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/groupshot/GroupShot;->getRecommendedRect(JII[I)I
 
     move-result p1
@@ -1002,7 +939,6 @@
 .method public getScaledImageAndSaveJpeg(IILjava/lang/String;)I
     .locals 9
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1015,7 +951,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     sget-object v2, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
@@ -1043,7 +978,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-wide v4, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     move-object v3, p0
@@ -1064,7 +998,6 @@
 .method public getScaledOutputImage(II[B)I
     .locals 6
 
-    .line 1
     iget-wide v1, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v3, 0x0
@@ -1086,7 +1019,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/groupshot/GroupShot;->getScaledOutputImage(JII[B)I
 
     move-result p1
@@ -1097,7 +1029,6 @@
 .method public getTargetImage(IIII[B)I
     .locals 8
 
-    .line 1
     iget-wide v1, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v3, 0x0
@@ -1123,7 +1054,6 @@
 
     move-object v7, p5
 
-    .line 2
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/groupshot/GroupShot;->getTargetImage(JIIII[B)I
 
     move-result p1
@@ -1134,7 +1064,6 @@
 .method public getTargetNum()I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1147,7 +1076,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1}, Lcom/android/camera/groupshot/GroupShot;->getTargetNum(J)I
 
@@ -1159,7 +1087,6 @@
 .method public getTargetRects([I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1172,7 +1099,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->getTargetRects(J[I)I
 
@@ -1191,7 +1117,6 @@
 
     const/16 v0, 0x23
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v1
@@ -1200,13 +1125,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p1
 
-    .line 3
     iget-wide v1, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const/4 v0, 0x0
@@ -1227,7 +1150,6 @@
 
     aget-object v0, p1, v0
 
-    .line 4
     invoke-virtual {v0}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v6
@@ -1246,12 +1168,10 @@
 
     move v6, p1
 
-    .line 5
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/groupshot/GroupShot;->getYuvImage(JLjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)I
 
     move-result p1
 
-    .line 6
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1272,7 +1192,6 @@
 
     return p1
 
-    .line 7
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
@@ -1309,7 +1228,6 @@
 
     move/from16 v13, p4
 
-    .line 1
     iget-boolean v0, v10, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
     const/4 v14, 0x0
@@ -1330,7 +1248,6 @@
 
     return v14
 
-    .line 2
     :cond_0
     iget-boolean v0, v10, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
@@ -1348,14 +1265,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/groupshot/GroupShot;->clearImages()I
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/groupshot/GroupShot;->finish()V
 
-    .line 5
     :cond_2
     iget-wide v0, v10, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
@@ -1365,7 +1279,6 @@
 
     if-nez v0, :cond_3
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/groupshot/GroupShot;->createNativeObject()J
 
     move-result-wide v0
@@ -1380,7 +1293,6 @@
 
     return v0
 
-    .line 7
     :cond_3
     sget-object v0, Lcom/android/camera/groupshot/GroupShot;->TAG:Ljava/lang/String;
 
@@ -1390,7 +1302,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 8
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1455,14 +1366,12 @@
 
     const-string v3, "initialize imageNum=%d, width=%d, height=%d, mStart=%b, mWidth=%d, mHeight=%d, mMaxImageNum=%d"
 
-    .line 9
     invoke-static {v1, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-wide v1, v10, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const/4 v9, 0x0
@@ -1483,16 +1392,12 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/android/camera/groupshot/GroupShot;->initializeNativeObject(JIIIIIII)I
 
-    .line 11
     iput v11, v10, Lcom/android/camera/groupshot/GroupShot;->mMaxImageNum:I
 
-    .line 12
     iput v12, v10, Lcom/android/camera/groupshot/GroupShot;->mWidth:I
 
-    .line 13
     iput v13, v10, Lcom/android/camera/groupshot/GroupShot;->mHeight:I
 
-    .line 14
     iput-boolean v14, v10, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
     return v14
@@ -1501,7 +1406,6 @@
 .method public isUsed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/groupshot/GroupShot;->mStart:Z
 
     return v0
@@ -1510,7 +1414,6 @@
 .method public saveInputImages(Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1523,7 +1426,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->saveInputImages(JLjava/lang/String;)I
 
@@ -1535,7 +1437,6 @@
 .method public selectImage(II)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1548,7 +1449,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->selectTarget(JII)I
 
@@ -1560,7 +1460,6 @@
 .method public setBaseImage(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1573,7 +1472,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/groupshot/GroupShot;->setBaseImage(JI)I
 
@@ -1585,7 +1483,6 @@
 .method public setBestFace()I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1598,7 +1495,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1}, Lcom/android/camera/groupshot/GroupShot;->setBestFace(J)I
 
@@ -1610,7 +1506,6 @@
 .method public updateTargetRect(I[I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/groupshot/GroupShot;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -1623,7 +1518,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/groupshot/GroupShot;->updateTargetRect(JI[I)I
 

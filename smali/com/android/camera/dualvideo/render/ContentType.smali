@@ -41,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 11
 
-    .line 1
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v1, 0x0
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 2
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v3, 0x2
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_GRID_LINE:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 3
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v4, 0x3
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_SELECTED_FRAME:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 4
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v5, 0x4
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_LABEL:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 5
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v6, 0x5
@@ -98,7 +93,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_SCALING_HANDLE:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 6
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v7, 0x6
@@ -109,7 +103,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_SWITCH_HANDLE:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 7
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/4 v8, 0x7
@@ -120,7 +113,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_BLUR:Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 8
     new-instance v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     const/16 v9, 0x8
@@ -133,7 +125,6 @@
 
     new-array v9, v9, [Lcom/android/camera/dualvideo/render/ContentType;
 
-    .line 9
     sget-object v10, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     aput-object v10, v9, v1
@@ -177,15 +168,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/dualvideo/render/ContentType;->mWeight:I
 
-    .line 3
     iput p3, p0, Lcom/android/camera/dualvideo/render/ContentType;->mWeight:I
 
     return-void
@@ -194,7 +182,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/dualvideo/render/ContentType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,7 +196,6 @@
 .method public static values()[Lcom/android/camera/dualvideo/render/ContentType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->$VALUES:[Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {v0}, [Lcom/android/camera/dualvideo/render/ContentType;->clone()Ljava/lang/Object;
@@ -226,7 +212,6 @@
 .method public getWeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/ContentType;->mWeight:I
 
     return v0

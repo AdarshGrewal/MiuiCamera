@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createMovieBox()Lorg/jcodec/containers/mp4/boxes/MovieBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -43,7 +41,6 @@
 .method private getMovieHeader()Lorg/jcodec/containers/mp4/boxes/MovieHeaderBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MovieHeaderBox;
 
     const-string v1, "mvhd"
@@ -62,7 +59,6 @@
 .method public getTimescale()I
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lorg/jcodec/containers/mp4/boxes/MovieBox;->getMovieHeader()Lorg/jcodec/containers/mp4/boxes/MovieHeaderBox;
 
     move-result-object v0
@@ -77,7 +73,6 @@
 .method public getTracks()[Lorg/jcodec/containers/mp4/boxes/TrakBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TrakBox;
 
     const-string v1, "trak"
@@ -94,7 +89,6 @@
 .method public isPureRefMovie()Z
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/MovieBox;->getTracks()[Lorg/jcodec/containers/mp4/boxes/TrakBox;
 
     move-result-object v0
@@ -103,16 +97,13 @@
 
     const/4 v2, 0x0
 
-    .line 2
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_0
 
-    .line 3
     aget-object v3, v0, v2
 
-    .line 4
     invoke-virtual {v3}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->isPureRef()Z
 
     move-result v3
@@ -130,7 +121,6 @@
 .method public rescale(JJ)J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/MovieBox;->getTimescale()I
 
     move-result v0

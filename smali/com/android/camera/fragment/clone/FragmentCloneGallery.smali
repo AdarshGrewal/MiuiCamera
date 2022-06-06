@@ -54,17 +54,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BasePanelFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mIsSupportCloneCopyMode:Z
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
     return-void
@@ -73,7 +70,6 @@
 .method public static synthetic access$000(Lcom/android/camera/ui/TextureVideoView;)V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->stopPlay(Lcom/android/camera/ui/TextureVideoView;)V
 
     return-void
@@ -86,14 +82,12 @@
 
     if-le p1, v0, :cond_0
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->adapter:Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneRecyclerAdapter;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -103,14 +97,12 @@
     :cond_0
     if-le p2, v0, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->adapter:Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneRecyclerAdapter;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -128,22 +120,18 @@
 
     const-string/jumbo v0, "onClick: clone_copy_layout"
 
-    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object p1, Lcom/xiaomi/fenshen/FenShenCam$Mode;->MCOPY:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/clone/Config;->setCloneMode(Lcom/xiaomi/fenshen/FenShenCam$Mode;)V
 
     const/4 p1, 0x2
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onSelected(IZ)V
 
     return-void
@@ -156,22 +144,18 @@
 
     const-string/jumbo v0, "onClick: clone_photo_layout"
 
-    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object p1, Lcom/xiaomi/fenshen/FenShenCam$Mode;->PHOTO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/clone/Config;->setCloneMode(Lcom/xiaomi/fenshen/FenShenCam$Mode;)V
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onSelected(IZ)V
 
     return-void
@@ -184,20 +168,16 @@
 
     const-string/jumbo v0, "onClick: video_copy_layout"
 
-    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object p1, Lcom/xiaomi/fenshen/FenShenCam$Mode;->VIDEO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/clone/Config;->setCloneMode(Lcom/xiaomi/fenshen/FenShenCam$Mode;)V
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1, p1}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onSelected(IZ)V
 
     return-void
@@ -206,7 +186,6 @@
 .method private scrollIfNeed(I)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     if-eqz v0, :cond_2
@@ -219,7 +198,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
@@ -235,7 +213,6 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 3
     iget-object v4, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getWidth()I
@@ -260,7 +237,6 @@
 
     new-array v0, v0, [Ljava/lang/Integer;
 
-    .line 4
     iget-object v5, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {v5}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
@@ -275,7 +251,6 @@
 
     iget-object v3, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
-    .line 5
     invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstCompletelyVisibleItemPosition()I
 
     move-result v3
@@ -288,7 +263,6 @@
 
     iget-object v2, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
-    .line 6
     invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v2
@@ -303,7 +277,6 @@
 
     iget-object v2, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
-    .line 7
     invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastCompletelyVisibleItemPosition()I
 
     move-result v2
@@ -314,12 +287,10 @@
 
     aput-object v2, v0, v1
 
-    .line 8
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 9
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -330,7 +301,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {v0, p1, v4}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
@@ -343,17 +313,14 @@
 .method private selectLastModule()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/clone/Config;->getCloneMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/xiaomi/fenshen/FenShenCam$Mode;->PHOTO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera/fragment/clone/FragmentCloneGallery$1;->$SwitchMap$com$xiaomi$fenshen$FenShenCam$Mode:[I
 
@@ -379,19 +346,16 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onCopyModeClick(Z)V
 
     goto :goto_0
 
-    .line 5
     :cond_2
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onVideoModeClick(Z)V
 
     goto :goto_0
 
-    .line 6
     :cond_3
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onPhotoModeClick(Z)V
 
@@ -402,7 +366,6 @@
 .method public static stopPlay(Lcom/android/camera/ui/TextureVideoView;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneRecyclerAdapter;->VIDEO_VIEW_STATE:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -413,7 +376,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/view/TextureView;->setTag(ILjava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/ui/TextureVideoView;->isPlaying()Z
 
     move-result v0
@@ -422,13 +384,11 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/ui/TextureVideoView;->stop()V
 
     const/4 v0, 0x4
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/view/TextureView;->setVisibility(I)V
 
     return-void
@@ -455,7 +415,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0062
+    const v0, 0x7f0d0061
 
     return v0
 .end method
@@ -463,7 +423,6 @@
 .method public hide()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -482,13 +441,10 @@
 .method public initView(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRootView:Landroid/view/View;
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
-    .line 3
     new-instance v0, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -507,12 +463,10 @@
 
     const/4 v1, 0x0
 
-    .line 4
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    const v0, 0x7f0a00d0
+    const v0, 0x7f0a00d7
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -521,7 +475,6 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
-    .line 6
     new-instance p1, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneRecyclerAdapter;
 
     iget-boolean v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mIsSupportCloneCopyMode:Z
@@ -530,26 +483,22 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->adapter:Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneRecyclerAdapter;
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     iget-boolean v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mIsSupportCloneCopyMode:Z
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;->setScrollEnabled(Z)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 10
     new-instance p1, Lcom/android/camera/fragment/clone/FragmentCloneGallery$RecyclerDecoration;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -560,12 +509,10 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mDecoration:Lcom/android/camera/fragment/clone/FragmentCloneGallery$RecyclerDecoration;
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     iget-boolean v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mIsSupportCloneCopyMode:Z
@@ -578,7 +525,6 @@
 .method public isShow()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -589,7 +535,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -597,7 +542,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -621,24 +565,22 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a00cd
+    const v1, 0x7f0a00d4
 
     const/4 v2, 0x1
 
     if-eq v0, v1, :cond_2
 
-    const v1, 0x7f0a00db
+    const v1, 0x7f0a00e1
 
     if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -654,7 +596,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onVideoModeClick(Z)V
 
     goto :goto_0
@@ -662,7 +603,6 @@
     :cond_1
     const/4 v0, 0x2
 
-    .line 4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -677,12 +617,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 5
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onCopyModeClick(Z)V
 
     goto :goto_0
 
-    .line 6
     :cond_2
     invoke-direct {p0, v2}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->onPhotoModeClick(Z)V
 
@@ -694,15 +632,13 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0O()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0oOo()Z
 
     move-result p1
 
@@ -714,17 +650,14 @@
 .method public onResume()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->selectLastModule()V
 
     :cond_0
@@ -734,7 +667,6 @@
 .method public onSelected(IZ)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -743,12 +675,10 @@
 
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackCloneTemplateThumbnailClick(Ljava/lang/String;)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
     if-eq v0, p1, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -767,18 +697,14 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
-    .line 5
     iput p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
     if-eqz p2, :cond_0
 
-    .line 6
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->scrollIfNeed(I)V
 
-    .line 7
     iget p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->notifyItemChanged(II)V
@@ -790,12 +716,10 @@
 .method public onStart()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStart()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedIndex:I
 
     return-void
@@ -804,12 +728,10 @@
 .method public onStop()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iget-object v1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
@@ -819,7 +741,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -831,9 +752,8 @@
     goto :goto_1
 
     :cond_0
-    const v2, 0x7f0a00e0
+    const v2, 0x7f0a00e6
 
-    .line 4
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -842,7 +762,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-static {v1}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->stopPlay(Lcom/android/camera/ui/TextureVideoView;)V
 
     :cond_1
@@ -866,14 +785,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
     const/16 p2, 0xd2
 
     if-eq p1, p2, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->hide()V
 
     :cond_0
@@ -893,7 +810,6 @@
 
     aput v1, p1, v0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/animation/FragmentAnimationFactory;->wrapperAnimation([I)Landroid/view/animation/Animation;
 
     move-result-object p1
@@ -914,7 +830,6 @@
 
     aput v1, p1, v0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/animation/FragmentAnimationFactory;->wrapperAnimation([I)Landroid/view/animation/Animation;
 
     move-result-object p1
@@ -933,10 +848,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideOrientationChanged(ILjava/util/List;I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mRootView:Landroid/view/View;
 
     if-eqz p1, :cond_0
@@ -950,15 +863,12 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0x1a0
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -973,7 +883,6 @@
 .method public startShot()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     const/4 v1, 0x0
@@ -984,12 +893,10 @@
 
     const-string/jumbo v0, "startShot ignore, mSelectedMode is null"
 
-    .line 2
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -997,7 +904,6 @@
 
     const/16 v3, 0xa4
 
-    .line 4
     invoke-virtual {v0, v3}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -1008,12 +914,10 @@
 
     const-string/jumbo v0, "startShot ignore, configChanges is null"
 
-    .line 5
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 6
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
@@ -1023,12 +927,10 @@
 
     const-string/jumbo v1, "value_clone_click_start_photo"
 
-    .line 7
     invoke-static {v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackCloneClick(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     sget-object v2, Lcom/xiaomi/fenshen/FenShenCam$Mode;->VIDEO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
@@ -1036,12 +938,10 @@
 
     const-string/jumbo v1, "value_clone_click_start_video"
 
-    .line 9
     invoke-static {v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackCloneClick(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 10
     :cond_3
     sget-object v2, Lcom/xiaomi/fenshen/FenShenCam$Mode;->MCOPY:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
@@ -1049,10 +949,8 @@
 
     const-string/jumbo v1, "value_clone_click_start_freeze_frame"
 
-    .line 11
     invoke-static {v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackCloneClick(Ljava/lang/String;)V
 
-    .line 12
     :cond_4
     :goto_0
     iget-object v1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery;->mSelectedMode:Lcom/xiaomi/fenshen/FenShenCam$Mode;
@@ -1067,15 +965,12 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0x1a0
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

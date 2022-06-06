@@ -62,10 +62,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RetryWhenInner;->handler:Lio/reactivex/functions/Function;
 
     return-void
@@ -93,22 +91,18 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ErrorMapperFilter;->INSTANCE:Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ErrorMapperFilter;
 
-    .line 3
     invoke-virtual {p1, v0}, Lio/reactivex/Observable;->takeWhile(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object v0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ErrorMapperFilter;->INSTANCE:Lio/reactivex/internal/operators/observable/ObservableInternalHelper$ErrorMapperFilter;
 
-    .line 4
     invoke-virtual {p1, v0}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    .line 5
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RetryWhenInner;->handler:Lio/reactivex/functions/Function;
 
     invoke-interface {v0, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,7 +122,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/Observable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableInternalHelper$RetryWhenInner;->apply(Lio/reactivex/Observable;)Lio/reactivex/ObservableSource;

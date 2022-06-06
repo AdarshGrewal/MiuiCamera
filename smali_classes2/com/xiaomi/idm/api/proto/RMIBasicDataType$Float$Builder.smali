@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->access$800()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/api/proto/RMIBasicDataType$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearV()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
@@ -71,7 +67,6 @@
 .method public getV()F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
@@ -86,10 +81,8 @@
 .method public setV(F)Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;

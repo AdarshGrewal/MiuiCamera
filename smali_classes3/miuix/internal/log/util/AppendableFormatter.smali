@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-direct {p0, v0}, Lmiuix/internal/log/util/AppendableFormatter;-><init>(Ljava/util/Locale;)V
@@ -32,10 +31,8 @@
 .method public constructor <init>(Ljava/util/Locale;)V
     .locals 2
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;
 
     const/4 v1, 0x0
@@ -44,7 +41,6 @@
 
     iput-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter;->mAppendableWrapper:Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;
 
-    .line 4
     new-instance v0, Ljava/util/Formatter;
 
     iget-object v1, p0, Lmiuix/internal/log/util/AppendableFormatter;->mAppendableWrapper:Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;
@@ -61,7 +57,6 @@
 .method public varargs format(Ljava/lang/String;[Ljava/lang/Object;)Lmiuix/internal/log/util/AppendableFormatter;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter;->mFormatter:Ljava/util/Formatter;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
@@ -72,7 +67,6 @@
 .method public varargs format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Lmiuix/internal/log/util/AppendableFormatter;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter;->mFormatter:Ljava/util/Formatter;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/util/Formatter;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
@@ -83,7 +77,6 @@
 .method public setAppendable(Ljava/lang/Appendable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/util/AppendableFormatter;->mAppendableWrapper:Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;
 
     invoke-virtual {v0, p1}, Lmiuix/internal/log/util/AppendableFormatter$AppendableWrapper;->setAppendable(Ljava/lang/Appendable;)V

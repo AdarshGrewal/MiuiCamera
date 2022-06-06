@@ -34,7 +34,6 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/util/ThreadUtils$4;->val$runner:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/util/ThreadUtils$4;->call()Ljava/lang/Void;
 
     move-result-object v0
@@ -63,7 +61,6 @@
 .method public call()Ljava/lang/Void;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/util/ThreadUtils$4;->val$runner:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V

@@ -41,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/TintColor;->availableColors()Ljava/util/List;
 
     move-result-object v0
@@ -54,16 +53,12 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/customization/TintColor;->color:Ljava/lang/String;
 
-    .line 3
     iput p2, p0, Lcom/android/camera/customization/TintColor;->name:I
 
-    .line 4
     iput p3, p0, Lcom/android/camera/customization/TintColor;->previewCH:I
 
     return-void
@@ -80,17 +75,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/customization/TintColor;
 
     const-string v2, "#FFCE16"
 
-    const v3, 0x7f12032c
+    const v3, 0x7f120314
 
     const v4, 0x7f0808f7
 
@@ -98,12 +91,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/customization/TintColor;
 
     const-string v2, "#FFC396"
 
-    const v3, 0x7f12032b
+    const v3, 0x7f120313
 
     const v4, 0x7f0808f4
 
@@ -111,12 +103,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/customization/TintColor;
 
     const-string v2, "#9895FF"
 
-    const v3, 0x7f12032d
+    const v3, 0x7f120315
 
     const v4, 0x7f0808f6
 
@@ -124,12 +115,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/customization/TintColor;
 
     const-string v2, "#30C0FF"
 
-    const v3, 0x7f12032f
+    const v3, 0x7f120317
 
     const v4, 0x7f0808f3
 
@@ -137,12 +127,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     new-instance v1, Lcom/android/camera/customization/TintColor;
 
     const-string v2, "#75E9E3"
 
-    const v3, 0x7f120330
+    const v3, 0x7f120318
 
     const v4, 0x7f0808f5
 
@@ -164,7 +153,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/customization/TintColor;->sAvailableColors:Ljava/util/List;
 
     return-object v0
@@ -173,12 +161,10 @@
 .method public static getTintColor()Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/TintColor;->readColorId()I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/customization/TintColor;->sAvailableColors:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -328,12 +314,10 @@
 .method public static isYellowTintColor()Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/TintColor;->readColorId()I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/customization/TintColor;->sAvailableColors:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -365,7 +349,6 @@
 .method public static persistColorId(I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -376,7 +359,6 @@
 
     const-string/jumbo v1, "pref_tint_color"
 
-    .line 2
     invoke-interface {v0, v1, p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putInt(Ljava/lang/String;I)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object p0
@@ -389,7 +371,6 @@
 .method public static readColorId()I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -408,12 +389,10 @@
 .method public static tintColor()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/TintColor;->readColorId()I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/customization/TintColor;->sAvailableColors:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -434,7 +413,6 @@
 .method public color()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/TintColor;->color:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -447,7 +425,6 @@
 .method public name()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/TintColor;->name:I
 
     return v0
@@ -456,7 +433,6 @@
 .method public previewResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/TintColor;->previewCH:I
 
     return v0

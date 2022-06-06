@@ -40,7 +40,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
 .method public static synthetic access$000(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Landroid/net/Uri;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->uri:Landroid/net/Uri;
 
     return-object p0
@@ -58,7 +56,6 @@
 .method public static synthetic access$100(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->title:Ljava/lang/String;
 
     return-object p0
@@ -67,7 +64,6 @@
 .method public static synthetic access$200(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->oldTitle:Ljava/lang/String;
 
     return-object p0
@@ -76,7 +72,6 @@
 .method public static synthetic access$300(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Lcom/android/gallery3d/exif/ExifInterface;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->exif:Lcom/android/gallery3d/exif/ExifInterface;
 
     return-object p0
@@ -85,7 +80,6 @@
 .method public static synthetic access$400(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isHide:Z
 
     return p0
@@ -94,7 +88,6 @@
 .method public static synthetic access$500(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isMap:Z
 
     return p0
@@ -103,7 +96,6 @@
 .method public static synthetic access$600(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->finalImage:Z
 
     return p0
@@ -112,7 +104,6 @@
 .method public static synthetic access$700(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->mirror:Z
 
     return p0
@@ -121,7 +112,6 @@
 .method public static synthetic access$800(Lcom/android/camera/storage/ImageSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isParallelProcess:Z
 
     return p0
@@ -130,7 +120,6 @@
 .method public static synthetic access$900(Lcom/android/camera/storage/ImageSaveRequest$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->previewThumbnailHash:I
 
     return p0
@@ -141,7 +130,6 @@
 .method public bridge synthetic build()Lcom/android/camera/storage/AbstractSaveRequest;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/ImageSaveRequest$Builder;->build()Lcom/android/camera/storage/ImageSaveRequest;
 
     move-result-object v0
@@ -152,7 +140,6 @@
 .method public build()Lcom/android/camera/storage/ImageSaveRequest;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/android/camera/storage/ImageSaveRequest;
 
     invoke-direct {v0, p0}, Lcom/android/camera/storage/ImageSaveRequest;-><init>(Lcom/android/camera/storage/ImageSaveRequest$Builder;)V
@@ -163,7 +150,6 @@
 .method public getExif()Lcom/android/gallery3d/exif/ExifInterface;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->exif:Lcom/android/gallery3d/exif/ExifInterface;
 
     return-object v0
@@ -172,7 +158,6 @@
 .method public getOldTitle()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->oldTitle:Ljava/lang/String;
 
     return-object v0
@@ -181,7 +166,6 @@
 .method public getPreviewThumbnailHash()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->previewThumbnailHash:I
 
     return v0
@@ -190,7 +174,6 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->title:Ljava/lang/String;
 
     return-object v0
@@ -199,7 +182,6 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->uri:Landroid/net/Uri;
 
     return-object v0
@@ -208,7 +190,6 @@
 .method public isFinalImage()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->finalImage:Z
 
     return v0
@@ -217,7 +198,6 @@
 .method public isHide()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isHide:Z
 
     return v0
@@ -226,7 +206,6 @@
 .method public isMap()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isMap:Z
 
     return v0
@@ -235,7 +214,6 @@
 .method public isMirror()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->mirror:Z
 
     return v0
@@ -244,7 +222,6 @@
 .method public isParallelProcess()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isParallelProcess:Z
 
     return v0
@@ -253,7 +230,6 @@
 .method public setExif(Lcom/android/gallery3d/exif/ExifInterface;)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->exif:Lcom/android/gallery3d/exif/ExifInterface;
 
     return-object p0
@@ -262,7 +238,6 @@
 .method public setFinalImage(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->finalImage:Z
 
     return-object p0
@@ -271,7 +246,6 @@
 .method public setHide(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isHide:Z
 
     return-object p0
@@ -280,7 +254,6 @@
 .method public setMap(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isMap:Z
 
     return-object p0
@@ -289,7 +262,6 @@
 .method public setMirror(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->mirror:Z
 
     return-object p0
@@ -298,7 +270,6 @@
 .method public setOldTitle(Ljava/lang/String;)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->oldTitle:Ljava/lang/String;
 
     return-object p0
@@ -307,7 +278,6 @@
 .method public setParallelProcess(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->isParallelProcess:Z
 
     return-object p0
@@ -316,7 +286,6 @@
 .method public setPreviewThumbnailHash(I)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->previewThumbnailHash:I
 
     return-object p0
@@ -325,7 +294,6 @@
 .method public setTitle(Ljava/lang/String;)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->title:Ljava/lang/String;
 
     return-object p0
@@ -334,7 +302,6 @@
 .method public setUri(Landroid/net/Uri;)Lcom/android/camera/storage/ImageSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/ImageSaveRequest$Builder;->uri:Landroid/net/Uri;
 
     return-object p0
@@ -343,7 +310,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

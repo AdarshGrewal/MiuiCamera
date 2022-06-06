@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 
     move v4, p4
 
-    .line 1
     invoke-virtual/range {v0 .. v5}, Lcom/google/zxing/MultiFormatWriter;->encode(Ljava/lang/String;Lcom/google/zxing/BarcodeFormat;IILjava/util/Map;)Lcom/google/zxing/common/BitMatrix;
 
     move-result-object p1
@@ -67,7 +65,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/google/zxing/MultiFormatWriter$1;->$SwitchMap$com$google$zxing$BarcodeFormat:[I
 
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
@@ -78,7 +75,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -95,7 +91,6 @@
 
     throw p1
 
-    .line 4
     :pswitch_0
     new-instance v0, Lcom/google/zxing/aztec/AztecWriter;
 
@@ -103,7 +98,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_1
     new-instance v0, Lcom/google/zxing/datamatrix/DataMatrixWriter;
 
@@ -111,7 +105,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_2
     new-instance v0, Lcom/google/zxing/oned/CodaBarWriter;
 
@@ -119,7 +112,6 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_3
     new-instance v0, Lcom/google/zxing/pdf417/PDF417Writer;
 
@@ -127,7 +119,6 @@
 
     goto :goto_0
 
-    .line 8
     :pswitch_4
     new-instance v0, Lcom/google/zxing/oned/ITFWriter;
 
@@ -135,7 +126,6 @@
 
     goto :goto_0
 
-    .line 9
     :pswitch_5
     new-instance v0, Lcom/google/zxing/oned/Code128Writer;
 
@@ -143,7 +133,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_6
     new-instance v0, Lcom/google/zxing/oned/Code93Writer;
 
@@ -151,7 +140,6 @@
 
     goto :goto_0
 
-    .line 11
     :pswitch_7
     new-instance v0, Lcom/google/zxing/oned/Code39Writer;
 
@@ -159,7 +147,6 @@
 
     goto :goto_0
 
-    .line 12
     :pswitch_8
     new-instance v0, Lcom/google/zxing/qrcode/QRCodeWriter;
 
@@ -167,7 +154,6 @@
 
     goto :goto_0
 
-    .line 13
     :pswitch_9
     new-instance v0, Lcom/google/zxing/oned/UPCAWriter;
 
@@ -175,7 +161,6 @@
 
     goto :goto_0
 
-    .line 14
     :pswitch_a
     new-instance v0, Lcom/google/zxing/oned/EAN13Writer;
 
@@ -183,7 +168,6 @@
 
     goto :goto_0
 
-    .line 15
     :pswitch_b
     new-instance v0, Lcom/google/zxing/oned/UPCEWriter;
 
@@ -191,7 +175,6 @@
 
     goto :goto_0
 
-    .line 16
     :pswitch_c
     new-instance v0, Lcom/google/zxing/oned/EAN8Writer;
 
@@ -210,7 +193,6 @@
 
     move-object v6, p5
 
-    .line 17
     invoke-interface/range {v1 .. v6}, Lcom/google/zxing/Writer;->encode(Ljava/lang/String;Lcom/google/zxing/BarcodeFormat;IILjava/util/Map;)Lcom/google/zxing/common/BitMatrix;
 
     move-result-object p1

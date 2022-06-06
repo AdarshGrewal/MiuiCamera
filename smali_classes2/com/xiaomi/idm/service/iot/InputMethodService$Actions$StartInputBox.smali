@@ -32,45 +32,36 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;->newBuilder()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1, v0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setAid(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p1, p2}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setClientId(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1, p3}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setMethodType(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1, p4}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setImeOptions(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p1, p5}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setInputContent(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 8
     invoke-virtual {p1, p7}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setCharacterType(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
 
-    .line 9
     invoke-virtual {p1, p6}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;->setInputTextLength(I)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox$Builder;
 
     move-result-object p1
@@ -96,10 +87,8 @@
 
     const/4 v0, 0x1
 
-    .line 10
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 11
     invoke-static {p2}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;->parseFrom([B)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;
 
     move-result-object p1
@@ -116,7 +105,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
@@ -132,7 +120,6 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Actions$StartInputBox;->action:Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;
 
-    .line 2
     invoke-virtual {v1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;->getMethodType()I
 
     move-result v4
@@ -151,7 +138,6 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Actions$StartInputBox;->action:Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;
 
-    .line 3
     invoke-virtual {v1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;->getInputTextLength()I
 
     move-result v7
@@ -162,7 +148,6 @@
 
     move-result v8
 
-    .line 4
     invoke-virtual/range {v2 .. v8}, Lcom/xiaomi/idm/service/iot/InputMethodService;->startInputBox(Ljava/lang/String;IILjava/lang/String;II)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputMethodResponse;
 
     move-result-object v1
@@ -174,7 +159,6 @@
     :catch_0
     move-exception v1
 
-    .line 5
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -190,7 +174,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-virtual {v1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputMethodResponse;->toByteArray()[B
 
@@ -208,7 +191,6 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputMethodResponse;->parseFrom([B)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputMethodResponse;
 
@@ -218,7 +200,6 @@
 
     return-object p1
 
-    .line 3
     :catch_0
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -237,7 +218,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/iot/InputMethodService$Actions$StartInputBox;->parseResponse([B)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$InputMethodResponse;
 
     move-result-object p1
@@ -248,7 +228,6 @@
 .method public toBytes()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/InputMethodService$Actions$StartInputBox;->action:Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$StartInputBox;
 
     if-nez v0, :cond_0

@@ -33,13 +33,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->installer:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->needUpdateSplits:Ljava/util/Collection;
 
     return-void
@@ -87,25 +84,20 @@
 .method public final run()V
     .locals 15
 
-    .line 1
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onPreInstall()V
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->isStartInstallOperation()Z
 
     move-result v2
 
-    .line 4
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     iget-object v5, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->needUpdateSplits:Ljava/util/Collection;
@@ -116,12 +108,10 @@
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 6
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     iget-object v6, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->needUpdateSplits:Ljava/util/Collection;
 
     invoke-interface {v6}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -148,7 +138,6 @@
 
     check-cast v9, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 8
     new-instance v11, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     invoke-virtual {v9}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
@@ -165,7 +154,6 @@
 
     invoke-direct {v11, v12, v13, v14}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 9
     :try_start_0
     iget-object v12, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->installer:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;
 
@@ -173,7 +161,6 @@
 
     move-result-object v9
 
-    .line 10
     iget-boolean v12, v9, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;->firstInstalled:Z
 
     if-eqz v12, :cond_1
@@ -188,10 +175,8 @@
     :goto_1
     invoke-virtual {v11, v12}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;->setInstallFlag(I)V
 
-    .line 11
     invoke-interface {v4, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     invoke-interface {v3, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException; {:try_start_0 .. :try_end_0} :catch_0
@@ -201,7 +186,6 @@
     :catch_0
     move-exception v8
 
-    .line 13
     new-instance v9, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallError;
 
     invoke-virtual {v8}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallException;->getErrorCode()I
@@ -220,7 +204,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 14
     :cond_2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallReporterManager;->getInstallReporter()Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallReporter;
 
@@ -228,14 +211,12 @@
 
     if-eqz v8, :cond_4
 
-    .line 15
     invoke-virtual {p0, v3}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onInstallCompleted(Ljava/util/List;)V
 
     if-eqz v6, :cond_6
 
     if-eqz v2, :cond_3
 
-    .line 16
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -246,7 +227,6 @@
 
     goto :goto_2
 
-    .line 17
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -258,7 +238,6 @@
 
     goto :goto_2
 
-    .line 18
     :cond_4
     invoke-virtual {p0, v5}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onInstallFailed(Ljava/util/List;)V
 
@@ -266,7 +245,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 19
     invoke-interface {v5, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -283,7 +261,6 @@
 
     goto :goto_2
 
-    .line 20
     :cond_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

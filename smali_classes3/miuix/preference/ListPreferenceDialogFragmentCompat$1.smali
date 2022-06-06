@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/preference/ListPreferenceDialogFragmentCompat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/ListPreferenceDialogFragmentCompat$1;->this$0:Lmiuix/preference/ListPreferenceDialogFragmentCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 .method public onBindDialogView(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/ListPreferenceDialogFragmentCompat$1;->this$0:Lmiuix/preference/ListPreferenceDialogFragmentCompat;
 
     invoke-static {v0, p1}, Lmiuix/preference/ListPreferenceDialogFragmentCompat;->access$100(Lmiuix/preference/ListPreferenceDialogFragmentCompat;Landroid/view/View;)V
@@ -57,7 +55,6 @@
 .method public onCreateDialogView(Landroid/content/Context;)Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/ListPreferenceDialogFragmentCompat$1;->this$0:Lmiuix/preference/ListPreferenceDialogFragmentCompat;
 
     invoke-static {v0, p1}, Lmiuix/preference/ListPreferenceDialogFragmentCompat;->access$000(Lmiuix/preference/ListPreferenceDialogFragmentCompat;Landroid/content/Context;)Landroid/view/View;
@@ -70,7 +67,6 @@
 .method public onPrepareDialogBuilder(Lmiuix/appcompat/app/AlertDialog$Builder;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/ListPreferenceDialogFragmentCompat$1;->this$0:Lmiuix/preference/ListPreferenceDialogFragmentCompat;
 
     invoke-virtual {v0, p1}, Lmiuix/preference/ListPreferenceDialogFragmentCompat;->onPrepareDialogBuilder(Lmiuix/appcompat/app/AlertDialog$Builder;)V

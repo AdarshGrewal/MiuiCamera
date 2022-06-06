@@ -21,10 +21,8 @@
 .method public constructor <init>(Landroid/os/IHwBinder;Landroid/os/IHwBinder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -33,7 +31,6 @@
 
     iput-object p1, p0, Lcom/android/camera/MiSysProxy;->mMiSysV1:Landroid/os/IHwBinder;
 
-    .line 3
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -59,14 +56,12 @@
 
     const-string/jumbo v2, "vendor.xiaomi.hardware.misys@1.0::IMiSys"
 
-    .line 1
     invoke-static {v2, v1, v0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object v2
 
     const-string/jumbo v3, "vendor.xiaomi.hardware.misys@2.0::IMiSys"
 
-    .line 2
     invoke-static {v3, v1, v0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
 
     move-result-object v0
@@ -77,7 +72,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance v1, Lcom/android/camera/MiSysProxy;
 
@@ -102,28 +96,22 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string/jumbo v1, "vendor.xiaomi.hardware.misys@1.0::IMiSys"
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 5
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 6
     :try_start_0
     iget-object p2, p0, Lcom/android/camera/MiSysProxy;->mMiSysV1:Landroid/os/IHwBinder;
 
@@ -133,20 +121,16 @@
 
     invoke-interface {p2, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 7
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 8
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 9
     invoke-virtual {p1}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p2
@@ -167,28 +151,22 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string/jumbo v1, "vendor.xiaomi.hardware.misys@2.0::IMiSys"
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 5
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 6
     :try_start_0
     iget-object p2, p0, Lcom/android/camera/MiSysProxy;->mMiSysV2:Landroid/os/IHwBinder;
 
@@ -198,20 +176,16 @@
 
     invoke-interface {p2, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 7
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 8
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 9
     invoke-virtual {p1}, Landroid/os/HwParcel;->readBool()Z
 
     move-result p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p2
@@ -243,34 +217,26 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/os/HwParcel;
 
     invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
 
     const-string/jumbo v1, "vendor.xiaomi.hardware.misys@2.0::IMiSys"
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeString(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v0, p3}, Landroid/os/HwParcel;->writeInt8Vector(Ljava/util/ArrayList;)V
 
-    .line 6
     invoke-virtual {v0, p4, p5}, Landroid/os/HwParcel;->writeInt64(J)V
 
-    .line 7
     new-instance p1, Landroid/os/HwParcel;
 
     invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
 
-    .line 8
     :try_start_0
     iget-object p2, p0, Lcom/android/camera/MiSysProxy;->mMiSysV2:Landroid/os/IHwBinder;
 
@@ -280,20 +246,16 @@
 
     invoke-interface {p2, p3, v0, p1, p4}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
 
-    .line 9
     invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
 
-    .line 10
     invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
 
-    .line 11
     invoke-virtual {p1}, Landroid/os/HwParcel;->readInt32()I
 
     move-result p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
 
     return p2

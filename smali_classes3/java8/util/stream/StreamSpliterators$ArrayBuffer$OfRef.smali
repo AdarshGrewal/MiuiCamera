@@ -36,10 +36,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer;-><init>()V
 
-    .line 2
     new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfRef;->array:[Ljava/lang/Object;
@@ -57,7 +55,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfRef;->array:[Ljava/lang/Object;
 
     iget v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer;->index:I
@@ -90,12 +87,10 @@
 
     if-gez v1, :cond_0
 
-    .line 1
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfRef;->array:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
-    .line 2
     invoke-interface {p1, v1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     add-int/lit8 v0, v0, 0x1

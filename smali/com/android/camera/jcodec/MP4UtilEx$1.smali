@@ -25,7 +25,6 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/jcodec/MP4UtilEx$1;->val$tags:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public apply(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
     .locals 6
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->fourcc()Ljava/lang/String;
@@ -53,15 +51,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->createMetaBox()Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->getKeyedMeta()Ljava/util/Map;
 
@@ -69,12 +64,10 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 6
     :cond_1
     iget-object v2, p0, Lcom/android/camera/jcodec/MP4UtilEx$1;->val$tags:Ljava/util/List;
 
@@ -96,14 +89,12 @@
 
     check-cast v3, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;
 
-    .line 7
     invoke-virtual {v3}, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->getKey()Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_3
 
-    .line 8
     invoke-virtual {v3}, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -116,7 +107,6 @@
 
     invoke-interface {v1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     :cond_3
     invoke-virtual {v3}, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->getData()[B
 
@@ -124,7 +114,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 10
     invoke-virtual {v3}, Lcom/android/camera/jcodec/MP4UtilEx$VideoTag;->getBoxType()Ljava/lang/String;
 
     move-result-object v4
@@ -137,7 +126,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_4
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->setKeyedMeta(Ljava/util/Map;)V
 

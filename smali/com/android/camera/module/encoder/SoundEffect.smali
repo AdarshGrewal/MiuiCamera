@@ -18,7 +18,6 @@
     :try_start_0
     const-string v0, "camera_sound_effect"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -28,7 +27,6 @@
     :catchall_0
     move-exception v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/module/encoder/SoundEffect;->TAG:Ljava/lang/String;
 
     const-string v2, "load libcamera_sound_effect.so failed."
@@ -42,15 +40,12 @@
 .method public constructor <init>(II)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
-    .line 3
     invoke-static {p1, p2}, Lcom/android/camera/module/encoder/SoundEffect;->newInstance(II)J
 
     move-result-wide p1
@@ -83,7 +78,6 @@
 .method public flush()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     invoke-static {v0, v1}, Lcom/android/camera/module/encoder/SoundEffect;->flush(J)V
@@ -94,7 +88,6 @@
 .method public putSamples([S)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     invoke-static {v0, v1, p1}, Lcom/android/camera/module/encoder/SoundEffect;->putSamples(J[S)V
@@ -105,7 +98,6 @@
 .method public receiveSamples(I)[S
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     invoke-static {v0, v1, p1}, Lcom/android/camera/module/encoder/SoundEffect;->receiveSamples(JI)[S
@@ -118,14 +110,12 @@
 .method public release()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     invoke-static {v0, v1}, Lcom/android/camera/module/encoder/SoundEffect;->release(J)V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     return-void
@@ -134,7 +124,6 @@
 .method public setTempo(F)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/encoder/SoundEffect;->handle:J
 
     invoke-static {v0, v1, p1}, Lcom/android/camera/module/encoder/SoundEffect;->setTempo(JF)V

@@ -31,22 +31,18 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsEnd:Z
 
-    .line 4
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsExit:Z
 
     return-void
@@ -55,7 +51,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$1;)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;-><init>(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)V
 
     return-void
@@ -66,7 +61,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
@@ -92,7 +86,6 @@
 
     if-gez v1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -101,7 +94,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -113,7 +105,6 @@
     :cond_0
     return v0
 
-    .line 4
     :cond_1
     iget-object v2, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
     :try_end_0
@@ -125,7 +116,6 @@
 
     if-nez v2, :cond_2
 
-    .line 5
     :try_start_1
     const-class v2, Landroid/media/AudioRecord;
 
@@ -157,7 +147,6 @@
 
     move-result-object v2
 
-    .line 6
     const-class v6, Landroid/media/AudioAttributes$Builder;
 
     const-string v7, "setInternalCapturePreset"
@@ -172,7 +161,6 @@
 
     move-result-object v6
 
-    .line 7
     new-instance v7, Landroid/media/AudioFormat$Builder;
 
     invoke-direct {v7}, Landroid/media/AudioFormat$Builder;-><init>()V
@@ -211,14 +199,12 @@
 
     move-result-object v7
 
-    .line 8
     new-instance v10, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v10}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
     new-array v11, v4, [Ljava/lang/Object;
 
-    .line 9
     iget-object v12, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v12}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$500(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)I
@@ -235,7 +221,6 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 10
     invoke-virtual {v10}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
     move-result-object v6
@@ -272,7 +257,6 @@
 
     iput-object v2, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
-    .line 11
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,7 +333,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -358,7 +341,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 13
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -373,7 +355,6 @@
 
     invoke-interface {v1, v2}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;->onAudioSessionId(I)V
 
-    .line 14
     :cond_2
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
@@ -383,7 +364,6 @@
 
     if-eq v1, v4, :cond_4
 
-    .line 15
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -392,7 +372,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 16
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -409,7 +388,6 @@
     :cond_4
     const-string v0, "init Recording"
 
-    .line 17
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v4
@@ -417,10 +395,8 @@
     :catch_0
     move-exception v1
 
-    .line 18
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 19
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -429,7 +405,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 20
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -449,18 +424,14 @@
 
     const/4 v1, 0x0
 
-    .line 1
     iput-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsEnd:Z
 
-    .line 2
     iput-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsExit:Z
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 4
     iget-object v4, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v4}, Landroid/media/AudioRecord;->getState()I
@@ -474,22 +445,18 @@
     :try_start_0
     const-string v4, "start Recording"
 
-    .line 5
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v4, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v4}, Landroid/media/AudioRecord;->startRecording()V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 8
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -513,15 +480,12 @@
     :catch_0
     move-exception v2
 
-    .line 9
     invoke-virtual {v2}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     const-string v2, "start Recording failed"
 
-    .line 10
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -530,7 +494,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -542,7 +505,6 @@
     :cond_0
     return v1
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
@@ -552,7 +514,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 14
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -572,10 +533,8 @@
 
     const/16 v0, -0x13
 
-    .line 1
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->init()Z
 
     move-result v0
@@ -584,7 +543,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
@@ -597,7 +555,6 @@
 
     const-string v1, "DSPVoiceRecord"
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -620,14 +577,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-direct {p0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->startup()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 6
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -636,7 +591,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 7
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -645,14 +599,12 @@
 
     invoke-interface {v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;->onRecordingStart()V
 
-    .line 8
     :cond_1
     :goto_0
     iget-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsExit:Z
 
     if-nez v1, :cond_5
 
-    .line 9
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     const/4 v2, 0x0
@@ -669,7 +621,6 @@
 
     if-gtz v1, :cond_3
 
-    .line 10
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -678,7 +629,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -690,7 +640,6 @@
     :cond_2
     const-string v0, "DSPVoiceRecord"
 
-    .line 12
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -709,7 +658,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_3
     iget-object v2, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
@@ -721,7 +669,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14
     :try_start_1
     iget-object v3, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
@@ -731,7 +678,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 15
     iget-object v3, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v3}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -740,13 +686,11 @@
 
     invoke-interface {v3, v0, v1}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;->onRecording([BI)V
 
-    .line 16
     :cond_4
     iget-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsEnd:Z
 
     iput-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsExit:Z
 
-    .line 17
     monitor-exit v2
 
     goto :goto_0
@@ -766,10 +710,8 @@
     :catch_0
     move-exception v0
 
-    .line 18
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 19
     :cond_5
     :goto_1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
@@ -780,7 +722,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 20
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -789,13 +730,11 @@
 
     invoke-interface {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;->onRecordingEnd()V
 
-    .line 21
     :cond_6
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     if-eqz v0, :cond_7
 
-    .line 22
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$800(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Ljava/lang/Object;
@@ -804,20 +743,17 @@
 
     monitor-enter v0
 
-    .line 23
     :try_start_3
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v1}, Landroid/media/AudioRecord;->stop()V
 
-    .line 24
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v1}, Landroid/media/AudioRecord;->release()V
 
     const/4 v1, 0x0
 
-    .line 25
     iput-object v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mAudioRecord:Landroid/media/AudioRecord;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
@@ -833,11 +769,9 @@
     :catch_1
     move-exception v1
 
-    .line 26
     :try_start_4
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 27
     :goto_2
     monitor-exit v0
 
@@ -856,10 +790,8 @@
 
     const-string v1, "RecordingRunnable is exit"
 
-    .line 28
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -868,7 +800,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 30
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$400(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordListener;
@@ -884,7 +815,6 @@
 .method public stop()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->this$0:Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;->access$800(Lcom/xiaomi/asr/engine/record/DSPVoiceRecord;)Ljava/lang/Object;
@@ -895,7 +825,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/xiaomi/asr/engine/record/DSPVoiceRecord$RecordingRunnable;->mIsEnd:Z
 
@@ -903,10 +832,8 @@
 
     const-string v2, "stop"
 
-    .line 3
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     monitor-exit v0
 
     return-void

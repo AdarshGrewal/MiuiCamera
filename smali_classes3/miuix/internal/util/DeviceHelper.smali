@@ -15,7 +15,6 @@
 
     const-string v1, "ro.debuggable"
 
-    .line 1
     invoke-static {v1, v0}, Lmiuix/core/util/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -35,7 +34,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +50,6 @@
 .method public static isHideGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -84,7 +81,6 @@
 .method public static isTablet()Z
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0

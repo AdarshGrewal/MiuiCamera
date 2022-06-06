@@ -7,7 +7,6 @@
 .method public constructor <init>(Lcom/android/camera/module/shottype/ShotTypeParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/shottype/ShotTypeHandler;-><init>(Lcom/android/camera/module/shottype/ShotTypeParam;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public couldProcess()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -43,7 +41,6 @@
 
     const-string/jumbo v2, "portrait shot type could handle"
 
-    .line 2
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -52,7 +49,6 @@
 .method public process()Ljava/lang/Integer;
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -61,40 +57,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
-
-    invoke-virtual {v0}, Lcom/android/camera/module/shottype/ShotTypeParam;->getBogusId()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
-
-    check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
-
-    invoke-virtual {v0}, Lcom/android/camera/module/shottype/ShotTypeParam;->isMultiRawCapture()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0xf
-
-    .line 4
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 5
-    :cond_0
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -105,27 +69,25 @@
 
     const/16 v1, 0xb
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0O0o0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00O0o()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 7
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -136,35 +98,32 @@
 
     const/16 v2, 0x8
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 8
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O00o0O()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O000o0()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
 
-    .line 9
     invoke-virtual {v0}, Lcom/android/camera/module/shottype/ShotTypeParam;->getBogusId()I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
 
-    .line 10
     invoke-virtual {v0}, Lcom/android/camera/module/shottype/ShotTypeParam;->getCameraConfigs()Lcom/android/camera2/CameraConfigs;
 
     move-result-object v0
@@ -173,25 +132,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 11
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 12
-    :cond_2
+    :cond_1
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 13
-    :cond_3
+    :cond_2
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -206,9 +162,8 @@
 
     const/4 v1, 0x5
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -217,19 +172,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     const/4 v1, 0x6
 
-    :cond_4
+    :cond_3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 15
-    :cond_5
+    :cond_4
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -238,9 +192,8 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_6
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -253,7 +206,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/CameraConfigs;->setRawCallbackType(I)V
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -262,19 +214,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     const/16 v2, 0xd
 
-    :cond_6
+    :cond_5
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 18
-    :cond_7
+    :cond_6
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -283,19 +234,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     const/4 v1, 0x7
 
-    :cond_8
+    :cond_7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 19
-    :cond_9
+    :cond_8
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera/module/shottype/ShotTypeParam;
@@ -304,13 +254,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     const/4 v0, 0x2
 
     goto :goto_0
 
-    :cond_a
+    :cond_9
     const/4 v0, 0x0
 
     :goto_0
@@ -324,7 +274,6 @@
 .method public bridge synthetic process()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/module/shottype/PortraitShotTypeHandler;->process()Ljava/lang/Integer;
 
     move-result-object v0

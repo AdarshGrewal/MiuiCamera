@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
     return-void
@@ -60,7 +58,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/io/InputStream;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/FileLoader$StreamFactory$1;->close(Ljava/io/InputStream;)V
@@ -79,7 +76,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Ljava/io/InputStream;
 
     return-object v0
@@ -93,7 +89,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -109,7 +104,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/FileLoader$StreamFactory$1;->open(Ljava/io/File;)Ljava/io/InputStream;
 
     move-result-object p1

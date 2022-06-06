@@ -19,14 +19,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/adobe/xmp/options/Options;-><init>()V
 
     const/16 v0, 0x18
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-void
@@ -92,7 +90,6 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -105,7 +102,6 @@
 
     const/16 v0, 0x8
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -118,7 +114,6 @@
 
     const/16 v0, 0x20
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -131,7 +126,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -144,7 +138,6 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -165,7 +158,6 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -176,7 +168,6 @@
 
     const/16 v0, 0x8
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -187,7 +178,6 @@
 
     const/16 v0, 0x20
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -198,7 +188,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -209,7 +198,6 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0

@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/camera/resource/SimpleParseRequest;->processParse(Lcom/android/camera/resource/BaseResourceCacheable;)V
     :try_end_0
@@ -59,7 +57,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-interface {p1, p2, v0}, Lcom/android/camera/resource/ResponseListener;->onResponse(Ljava/lang/Object;Z)V
 
     return-void
@@ -67,14 +64,12 @@
     :catch_0
     move-exception p2
 
-    .line 4
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    .line 5
     invoke-interface {p1, p2, v0}, Lcom/android/camera/resource/ResponseListener;->onResponse(Ljava/lang/Object;Z)V
 
     return-void
@@ -83,7 +78,6 @@
 .method public bridge synthetic scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceCacheable;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleParseRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Lcom/android/camera/resource/BaseResourceCacheable;)V

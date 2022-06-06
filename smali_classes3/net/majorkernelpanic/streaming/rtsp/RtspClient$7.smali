@@ -29,7 +29,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;ILjava/lang/Exception;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$7;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     iput p2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$7;->val$message:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$7;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$1200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$7;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$1200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Callback;

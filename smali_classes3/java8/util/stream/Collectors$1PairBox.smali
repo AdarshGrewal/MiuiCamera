@@ -59,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c1Supplier:Ljava8/util/function/Supplier;
 
     iput-object p2, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c2Supplier:Ljava8/util/function/Supplier;
@@ -80,7 +79,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iget-object p1, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c1Supplier:Ljava8/util/function/Supplier;
 
     invoke-interface {p1}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -89,7 +87,6 @@
 
     iput-object p1, p0, Ljava8/util/stream/Collectors$1PairBox;->left:Ljava/lang/Object;
 
-    .line 3
     iget-object p1, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c2Supplier:Ljava8/util/function/Supplier;
 
     invoke-interface {p1}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -111,14 +108,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c1Accumulator:Ljava8/util/function/BiConsumer;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->left:Ljava/lang/Object;
 
     invoke-interface {v0, v1, p1}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c2Accumulator:Ljava8/util/function/BiConsumer;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->right:Ljava/lang/Object;
@@ -131,7 +126,6 @@
 .method public combine(Ljava8/util/stream/Collectors$1PairBox;)Ljava8/util/stream/Collectors$1PairBox;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c1Combiner:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->left:Ljava/lang/Object;
@@ -144,7 +138,6 @@
 
     iput-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->left:Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c2Combiner:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->right:Ljava/lang/Object;
@@ -168,7 +161,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c1Finisher:Ljava8/util/function/Function;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->left:Ljava/lang/Object;
@@ -177,7 +169,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Ljava8/util/stream/Collectors$1PairBox;->val$c2Finisher:Ljava8/util/function/Function;
 
     iget-object v2, p0, Ljava8/util/stream/Collectors$1PairBox;->right:Ljava/lang/Object;
@@ -186,7 +177,6 @@
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Ljava8/util/stream/Collectors$1PairBox;->val$merger:Ljava8/util/function/BiFunction;
 
     invoke-interface {v2, v0, v1}, Ljava8/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

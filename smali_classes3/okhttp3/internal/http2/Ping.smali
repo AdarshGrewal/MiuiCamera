@@ -15,10 +15,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -29,10 +27,8 @@
 
     const-wide/16 v0, -0x1
 
-    .line 3
     iput-wide v0, p0, Lokhttp3/internal/http2/Ping;->sent:J
 
-    .line 4
     iput-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
     return-void
@@ -43,7 +39,6 @@
 .method public cancel()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
     const-wide/16 v2, -0x1
@@ -62,17 +57,14 @@
 
     sub-long/2addr v0, v2
 
-    .line 2
     iput-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
-    .line 3
     iget-object v0, p0, Lokhttp3/internal/http2/Ping;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -84,7 +76,6 @@
 .method public receive()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
     const-wide/16 v2, -0x1
@@ -99,21 +90,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
-    .line 3
     iget-object v0, p0, Lokhttp3/internal/http2/Ping;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -130,12 +118,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/internal/http2/Ping;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
-    .line 2
     iget-wide v0, p0, Lokhttp3/internal/http2/Ping;->received:J
 
     iget-wide v2, p0, Lokhttp3/internal/http2/Ping;->sent:J
@@ -153,7 +139,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Lokhttp3/internal/http2/Ping;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
@@ -162,7 +147,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-wide p1, p0, Lokhttp3/internal/http2/Ping;->received:J
 
     iget-wide v0, p0, Lokhttp3/internal/http2/Ping;->sent:J
@@ -180,7 +164,6 @@
 .method public send()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lokhttp3/internal/http2/Ping;->sent:J
 
     const-wide/16 v2, -0x1
@@ -189,7 +172,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -198,7 +180,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

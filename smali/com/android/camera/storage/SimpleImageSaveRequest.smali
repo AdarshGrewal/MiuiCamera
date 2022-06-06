@@ -19,7 +19,6 @@
 .method public constructor <init>(Lcom/android/camera/storage/SimpleImageSaveRequest$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/storage/ImageSaveRequest;-><init>(Lcom/android/camera/storage/ImageSaveRequest$Builder;)V
 
     return-void
@@ -28,9 +27,8 @@
 
 # virtual methods
 .method public parserParallelTaskData()V
-    .locals 6
+    .locals 7
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mWidth:I
 
     iget v1, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mHeight:I
@@ -41,7 +39,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mData:[B
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -50,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 3
     sget-object v1, Lcom/android/camera/EncodingQuality;->NORMAL:Lcom/android/camera/EncodingQuality;
 
     const/4 v2, 0x0
@@ -63,38 +59,35 @@
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 5
     new-instance v2, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v2}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 6
     :try_start_0
     invoke-virtual {v2, v0}, Lcom/android/gallery3d/exif/ExifInterface;->readExif([B)V
 
-    .line 7
-    iget v3, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mOrientation:I
+    const-string v3, "None"
 
-    iget v4, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mWidth:I
+    iget v4, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mOrientation:I
 
-    iget v5, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mHeight:I
+    iget v5, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mWidth:I
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/android/gallery3d/exif/ExifInterface;->updateBasicInfo(III)Z
+    iget v6, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mHeight:I
 
-    .line 8
+    invoke-virtual {v2, v3, v4, v5, v6}, Lcom/android/gallery3d/exif/ExifInterface;->addParallelProcessComment(Ljava/lang/String;III)Z
+
+    invoke-virtual {v2}, Lcom/android/gallery3d/exif/ExifInterface;->removeParallelProcessComment()V
+
     invoke-virtual {v2, v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif([BLjava/io/OutputStream;)V
 
-    .line 9
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v2
 
-    .line 10
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -110,10 +103,8 @@
 
     const-string/jumbo v3, "updateExif error"
 
-    .line 11
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 12
     :goto_0
     iput-object v0, p0, Lcom/android/camera/storage/AbstractSaveRequest;->mData:[B
 

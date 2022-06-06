@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/CameraAppImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,33 +37,12 @@
 .method public run()V
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isShowFirstUseHint()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
-
-    invoke-static {v0}, Lcom/android/camera/CameraAppImpl;->access$000(Lcom/android/camera/CameraAppImpl;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Track init start"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->TrackInit(Landroid/content/Context;)V
 
-    .line 4
-    :cond_0
     iget-object v0, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
 
     invoke-static {v0}, Lcom/android/camera/CameraAppImpl;->access$000(Lcom/android/camera/CameraAppImpl;)Ljava/lang/String;
@@ -91,7 +69,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {}, Lcom/android/camera/db/DbRepository;->dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
 
     move-result-object v0
@@ -102,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/db/item/DbItemSaveTask;->markAllDepartedTask(I)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
 
     invoke-static {v0}, Lcom/android/camera/CameraAppImpl;->access$000(Lcom/android/camera/CameraAppImpl;)Ljava/lang/String;
@@ -113,15 +89,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
-    .line 8
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
 
-    .line 9
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v1
@@ -130,12 +103,10 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    .line 10
     invoke-static {}, Lcom/android/camera/Util;->removeCustomWatermark()V
 
-    .line 11
     invoke-virtual {v0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
@@ -148,8 +119,7 @@
 
     invoke-interface {v0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
 
-    .line 12
-    :cond_1
+    :cond_0
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
 
     move-result-object v0
@@ -158,50 +128,43 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    .line 13
     invoke-static {}, Lcom/android/camera/Util;->generateMainWatermark2File()Landroid/graphics/Bitmap;
 
-    .line 14
-    :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    :cond_1
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O00OO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0000O()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     sget-object v0, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
-    .line 15
     invoke-static {v0}, Lcom/android/camera/WatermarkMiSysUtils;->isFileExist(Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_2
 
-    .line 16
     invoke-static {}, Lcom/android/camera/Util;->generateFrontWatermark2File()Landroid/graphics/Bitmap;
 
-    .line 17
-    :cond_3
+    :cond_2
     sget-object v0, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/WatermarkMiSysUtils;->isFileExist(Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
-    .line 18
     invoke-static {}, Lcom/android/camera/Util;->generateCinematicRatioWatermark2File()Landroid/graphics/Bitmap;
 
-    .line 19
-    :cond_4
+    :cond_3
     iget-object v0, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
 
     invoke-static {v0}, Lcom/android/camera/CameraAppImpl;->access$000(Lcom/android/camera/CameraAppImpl;)Ljava/lang/String;
@@ -214,14 +177,12 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/camera/features/FeatureLoader;->load(Landroid/content/Context;)Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 21
     iget-object v0, p0, Lcom/android/camera/CameraAppImpl$1;->this$0:Lcom/android/camera/CameraAppImpl;
 
     invoke-static {v0}, Lcom/android/camera/CameraAppImpl;->access$000(Lcom/android/camera/CameraAppImpl;)Ljava/lang/String;

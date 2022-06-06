@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert$TopAlertRunnable;-><init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
@@ -35,7 +34,6 @@
 .method public runToSafe()V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -54,7 +52,6 @@
 
     invoke-direct {v0, v2, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$500(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/android/camera/ui/ToggleSwitch;

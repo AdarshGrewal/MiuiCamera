@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/network/net/base/ResponseDispatcher;Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$2;->this$0:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     iput-object p2, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$2;->val$errorCode:Lcom/android/camera/network/net/base/ErrorCode;
@@ -50,7 +49,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/net/base/ResponseDispatcher$2;->this$0:Lcom/android/camera/network/net/base/ResponseDispatcher;
 
     invoke-static {v0}, Lcom/android/camera/network/net/base/ResponseDispatcher;->access$000(Lcom/android/camera/network/net/base/ResponseDispatcher;)Lcom/android/camera/network/net/base/ResponseListener;

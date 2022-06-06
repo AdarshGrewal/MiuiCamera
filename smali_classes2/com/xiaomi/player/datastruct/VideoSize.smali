@@ -13,13 +13,10 @@
 .method public constructor <init>(FF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/player/datastruct/VideoSize;->video_height:F
 
-    .line 3
     iput p2, p0, Lcom/xiaomi/player/datastruct/VideoSize;->video_width:F
 
     return-void
@@ -30,7 +27,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/handoff_sdk/HandoffApi;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/handoff_sdk/HandoffApi$1;->this$0:Lcom/xiaomi/idm/handoff_sdk/HandoffApi;
 
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_sdk/IHandoffProcessCallback$Stub;-><init>()V

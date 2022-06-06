@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,20 +31,17 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/network/net/HttpManager;->instance:Lcom/android/camera/network/net/HttpManager;
 
     if-nez v1, :cond_0
 
-    .line 2
     new-instance v1, Lcom/android/camera/network/net/HttpManager;
 
     invoke-direct {v1}, Lcom/android/camera/network/net/HttpManager;-><init>()V
 
     sput-object v1, Lcom/android/camera/network/net/HttpManager;->instance:Lcom/android/camera/network/net/HttpManager;
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera/network/net/HttpManager;->instance:Lcom/android/camera/network/net/HttpManager;
     :try_end_0
@@ -68,7 +64,6 @@
 .method public initRequestQueue(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/net/HttpManager;->mContext:Landroid/content/Context;
 
     return-void

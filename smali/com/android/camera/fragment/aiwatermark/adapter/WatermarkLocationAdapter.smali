@@ -43,7 +43,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -58,10 +57,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,24 +67,18 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mContext:Landroid/content/Context;
 
     const/4 v0, -0x1
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mSelectedIndex:I
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mContext:Landroid/content/Context;
 
-    .line 7
     iput-object p2, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 8
     invoke-virtual {p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationList()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -102,12 +93,10 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mItems:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -124,7 +113,6 @@
 .method public getSelectLocation()Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mItems:Ljava/util/List;
 
@@ -140,7 +128,6 @@
 
     goto :goto_0
 
-    .line 2
     :catch_0
     sget-object v0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->TAG:Ljava/lang/String;
 
@@ -157,7 +144,6 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->onBindViewHolder(Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;I)V
@@ -168,7 +154,6 @@
 .method public onBindViewHolder(Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;I)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mItems:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -179,7 +164,6 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->bindHolder(ILjava/lang/String;)V
 
-    .line 3
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -188,27 +172,23 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 4
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 6
     iget v1, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mSelectedIndex:I
 
     if-ne v1, p2, :cond_0
 
-    .line 7
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f060364
+    const v1, 0x7f060363
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -216,7 +196,6 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 8
     invoke-virtual {p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->getSelectedIndicator()Landroid/view/View;
 
     move-result-object p2
@@ -225,12 +204,11 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->getTextView()Landroid/widget/TextView;
 
     move-result-object p1
 
-    const p2, 0x7f060363
+    const p2, 0x7f060362
 
     invoke-virtual {v0, p2}, Landroid/content/Context;->getColor(I)I
 
@@ -240,11 +218,10 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f060366
+    const v1, 0x7f060365
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -252,7 +229,6 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 11
     invoke-virtual {p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->getSelectedIndicator()Landroid/view/View;
 
     move-result-object p2
@@ -261,12 +237,11 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 12
     invoke-virtual {p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->getTextView()Landroid/widget/TextView;
 
     move-result-object p1
 
-    const p2, 0x7f060365
+    const p2, 0x7f060364
 
     invoke-virtual {v0, p2}, Landroid/content/Context;->getColor(I)I
 
@@ -281,7 +256,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -295,17 +269,14 @@
 
     move-result p1
 
-    .line 2
     iput p1, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mSelectedIndex:I
 
-    .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 4
     :catch_0
     sget-object p1, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->TAG:Ljava/lang/String;
 
@@ -320,7 +291,6 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;
 
     move-result-object p1
@@ -331,7 +301,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;
     .locals 3
 
-    .line 2
     sget-object v0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -350,7 +319,6 @@
 
     invoke-static {v0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -365,7 +333,6 @@
 
     move-result-object p1
 
-    .line 4
     new-instance p2, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;
 
     invoke-direct {p2, p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;-><init>(Landroid/view/View;)V
@@ -378,7 +345,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mItems:Ljava/util/List;
 
@@ -388,7 +354,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mItems:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -403,7 +368,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/aiwatermark/adapter/WatermarkLocationAdapter;->mSelectedIndex:I
 
     goto :goto_1
@@ -413,7 +377,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     :goto_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -424,14 +387,13 @@
 .method public updateSelectItem(Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;I)V
     .locals 2
 
-    .line 1
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f060363
+    const v1, 0x7f060362
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -439,7 +401,6 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/fragment/aiwatermark/holder/LocationItemHolder;->getSelectedIndicator()Landroid/view/View;
 
     move-result-object p1

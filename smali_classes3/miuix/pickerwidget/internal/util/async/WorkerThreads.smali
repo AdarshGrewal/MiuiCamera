@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
@@ -43,7 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads;->sWorkers:Ljava/util/Map;
 
@@ -68,19 +65,16 @@
 
     if-nez v1, :cond_0
 
-    .line 2
     new-instance v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;
 
     invoke-direct {v1, p0}, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;-><init>(Ljava/lang/String;)V
 
-    .line 3
     sget-object v2, Lmiuix/pickerwidget/internal/util/async/WorkerThreads;->sWorkers:Ljava/util/Map;
 
     invoke-interface {v2, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget p0, v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;->refCount:I
 
@@ -88,7 +82,6 @@
 
     iput p0, v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;->refCount:I
 
-    .line 5
     :goto_0
     iget-object p0, v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;->thread:Landroid/os/HandlerThread;
 
@@ -117,7 +110,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads;->sWorkers:Ljava/util/Map;
 
@@ -129,7 +121,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget v2, v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;->refCount:I
 
     add-int/lit8 v2, v2, -0x1
@@ -138,19 +129,16 @@
 
     if-nez v2, :cond_0
 
-    .line 3
     sget-object v2, Lmiuix/pickerwidget/internal/util/async/WorkerThreads;->sWorkers:Ljava/util/Map;
 
     invoke-interface {v2, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iget-object p0, v1, Lmiuix/pickerwidget/internal/util/async/WorkerThreads$ThreadWrapper;->thread:Landroid/os/HandlerThread;
 
     invoke-virtual {p0}, Landroid/os/HandlerThread;->quitSafely()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :cond_0
     monitor-exit v0
 

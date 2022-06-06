@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/VideoSkyModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,13 @@
 .method public OnNeedStopRecording()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/o000oOoO/o0O0O00;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o0OOO0o;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/o000oOoO/o0O0O00;-><init>(Lcom/android/camera/module/VideoSkyModule$1;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooOO0/o0OOO0o;-><init>(Lcom/android/camera/module/VideoSkyModule$1;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -61,7 +59,6 @@
 .method public OnNotifyRender()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -76,14 +73,12 @@
 .method public OnReceivedFirstFrame()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/camera/module/VideoSkyModule;->access$502(Lcom/android/camera/module/VideoSkyModule;Z)Z
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -98,7 +93,6 @@
 .method public OnRecordFailed()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -113,7 +107,6 @@
 .method public OnRecordFinish(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -128,14 +121,12 @@
 .method public OnRecordFinish(Ljava/lang/String;JJ)V
     .locals 9
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/camera/module/VideoSkyModule;->access$102(Lcom/android/camera/module/VideoSkyModule;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$200(Lcom/android/camera/module/VideoSkyModule;)Ljava/util/Stack;
@@ -158,7 +149,6 @@
 
     invoke-virtual {v0, v8}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -171,7 +161,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/extra/DataItemLive;->setVideoSkySegmentData(Ljava/util/List;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$300(Lcom/android/camera/module/VideoSkyModule;)I
@@ -182,12 +171,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$400(Lcom/android/camera/module/VideoSkyModule;)V
 
-    .line 7
     :cond_0
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
@@ -227,7 +214,6 @@
 .method public synthetic OooO00o()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$1;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget v1, v0, Lcom/android/camera/module/BaseModule;->mModuleIndex:I

@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/facebook/rebound/SpringLooper;-><init>()V
 
     return-void
@@ -26,12 +25,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/facebook/rebound/SteppingLooper;->mStarted:Z
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/facebook/rebound/SteppingLooper;->mLastTime:J
 
     return-void
@@ -40,7 +37,6 @@
 .method public step(J)Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringLooper;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     if-eqz v0, :cond_1
@@ -51,7 +47,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-wide v1, p0, Lcom/facebook/rebound/SteppingLooper;->mLastTime:J
 
@@ -59,13 +54,10 @@
 
     long-to-double p1, v1
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/facebook/rebound/BaseSpringSystem;->loop(D)V
 
-    .line 4
     iput-wide v1, p0, Lcom/facebook/rebound/SteppingLooper;->mLastTime:J
 
-    .line 5
     iget-object p1, p0, Lcom/facebook/rebound/SpringLooper;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     invoke-virtual {p1}, Lcom/facebook/rebound/BaseSpringSystem;->getIsIdle()Z
@@ -86,7 +78,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/facebook/rebound/SteppingLooper;->mStarted:Z
 
     return-void

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$2;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
@@ -35,10 +34,8 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 2
     const-class p1, Landroid/widget/TextView;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;

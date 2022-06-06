@@ -27,10 +27,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/greenrobot/greendao/AbstractDaoSession;-><init>(Lorg/greenrobot/greendao/database/Database;)V
 
-    .line 2
     const-class p1, Lcom/android/camera/db/greendao/SaveTaskDao;
 
     invoke-interface {p3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -45,10 +43,8 @@
 
     iput-object p1, p0, Lcom/android/camera/db/greendao/DaoSession;->saveTaskDaoConfig:Lorg/greenrobot/greendao/internal/DaoConfig;
 
-    .line 3
     invoke-virtual {p1, p2}, Lorg/greenrobot/greendao/internal/DaoConfig;->initIdentityScope(Lorg/greenrobot/greendao/identityscope/IdentityScopeType;)V
 
-    .line 4
     new-instance p1, Lcom/android/camera/db/greendao/SaveTaskDao;
 
     iget-object p2, p0, Lcom/android/camera/db/greendao/DaoSession;->saveTaskDaoConfig:Lorg/greenrobot/greendao/internal/DaoConfig;
@@ -57,7 +53,6 @@
 
     iput-object p1, p0, Lcom/android/camera/db/greendao/DaoSession;->saveTaskDao:Lcom/android/camera/db/greendao/SaveTaskDao;
 
-    .line 5
     const-class p2, Lcom/android/camera/db/element/SaveTask;
 
     invoke-virtual {p0, p2, p1}, Lorg/greenrobot/greendao/AbstractDaoSession;->registerDao(Ljava/lang/Class;Lorg/greenrobot/greendao/AbstractDao;)V
@@ -70,7 +65,6 @@
 .method public clear()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/greendao/DaoSession;->saveTaskDaoConfig:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/DaoConfig;->clearIdentityScope()V
@@ -81,7 +75,6 @@
 .method public getSaveTaskDao()Lcom/android/camera/db/greendao/SaveTaskDao;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/greendao/DaoSession;->saveTaskDao:Lcom/android/camera/db/greendao/SaveTaskDao;
 
     return-object v0

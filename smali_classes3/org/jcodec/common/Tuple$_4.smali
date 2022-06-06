@@ -72,19 +72,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
-    .line 3
     iput-object p2, p0, Lorg/jcodec/common/Tuple$_4;->v1:Ljava/lang/Object;
 
-    .line 4
     iput-object p3, p0, Lorg/jcodec/common/Tuple$_4;->v2:Ljava/lang/Object;
 
-    .line 5
     iput-object p4, p0, Lorg/jcodec/common/Tuple$_4;->v3:Ljava/lang/Object;
 
     return-void

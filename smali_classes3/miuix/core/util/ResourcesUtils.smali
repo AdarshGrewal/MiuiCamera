@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     :try_start_0
     const-class v0, Landroid/content/res/AssetManager;
 
@@ -43,7 +42,6 @@
 
     sput-object v0, Lmiuix/core/util/ResourcesUtils;->ASSET_MANAGER_ADD_ASSET_PATH:Ljava/lang/reflect/Method;
 
-    .line 2
     const-class v0, Landroid/content/res/AssetManager;
 
     new-array v1, v4, [Ljava/lang/Class;
@@ -61,7 +59,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     :goto_0
@@ -71,7 +68,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,7 +78,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     sget-object v1, Lmiuix/core/util/ResourcesUtils;->ASSET_MANAGER_CONSTRUCTOR:Ljava/lang/reflect/Constructor;
 
@@ -100,7 +95,6 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_4
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 3
     :try_start_1
     array-length v3, p1
 
@@ -111,7 +105,6 @@
 
     aget-object v5, p1, v4
 
-    .line 4
     sget-object v6, Lmiuix/core/util/ResourcesUtils;->ASSET_MANAGER_ADD_ASSET_PATH:Ljava/lang/reflect/Method;
 
     const/4 v7, 0x1
@@ -150,7 +143,6 @@
 
     move-object v1, v0
 
-    .line 5
     :goto_1
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
@@ -161,7 +153,6 @@
 
     move-object v1, v0
 
-    .line 6
     :goto_2
     invoke-virtual {p1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
@@ -172,7 +163,6 @@
 
     move-object v1, v0
 
-    .line 7
     :goto_3
     invoke-virtual {p1}, Ljava/lang/InstantiationException;->printStackTrace()V
 
@@ -180,14 +170,12 @@
     :goto_4
     if-nez p0, :cond_1
 
-    .line 8
     new-instance p0, Landroid/content/res/Resources;
 
     invoke-direct {p0, v1, v0, v0}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
     goto :goto_5
 
-    .line 9
     :cond_1
     new-instance p1, Landroid/content/res/Resources;
 
@@ -212,7 +200,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0, p0}, Lmiuix/core/util/ResourcesUtils;->createResources(Landroid/content/res/Resources;[Ljava/lang/String;)Landroid/content/res/Resources;
 
     move-result-object p0

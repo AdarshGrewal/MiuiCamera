@@ -27,12 +27,10 @@
 .method public constructor <init>(Lcom/android/camera/db/provider/DbProviderMgr;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/db/provider/DbProviderMgr$DbProviderImpl;->this$0:Lcom/android/camera/db/provider/DbProviderMgr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance p1, Lcom/android/camera/db/item/DbItemSaveTask;
 
     invoke-direct {p1}, Lcom/android/camera/db/item/DbItemSaveTask;-><init>()V
@@ -47,7 +45,6 @@
 .method public dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/db/provider/DbProviderMgr$DbProviderImpl;->dbItemSaveTask:Lcom/android/camera/db/item/DbItemSaveTask;
 
     return-object v0
@@ -56,7 +53,6 @@
 .method public bridge synthetic dbItemSaveTask()Lcom/android/camera/db/provider/DbProvider$providerDb;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/db/provider/DbProviderMgr$DbProviderImpl;->dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
 
     move-result-object v0

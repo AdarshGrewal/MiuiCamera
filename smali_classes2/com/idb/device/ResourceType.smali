@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -65,7 +63,6 @@
 
     goto :goto_2
 
-    .line 2
     :cond_2
     new-instance p0, Ljava/util/ArrayList;
 
@@ -73,27 +70,22 @@
 
     const-string v0, "mijia.camera.v3"
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v0, "chuangmi.camera.ipc009"
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v0, "chuangmi.camera.ipc019"
 
-    .line 5
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v0, "chuangmi.camera.ipc022"
 
-    .line 6
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v0, "isa.camera.hlc6"
 
-    .line 7
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_2

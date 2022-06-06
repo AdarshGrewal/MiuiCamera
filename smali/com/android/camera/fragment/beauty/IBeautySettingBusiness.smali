@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "IBeautySettingBusiness.java"
 
+# interfaces
+.implements Lcom/android/camera/fragment/beauty/IBeautyBusiness;
+
 
 # virtual methods
 .method public abstract clearBeauty()V

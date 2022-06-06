@@ -59,14 +59,12 @@
 
     const/high16 v0, 0x41680000    # 14.5f
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v1
 
     sput v1, Lcom/android/camera/dualvideo/render/RegionHelper;->MINI_MARGIN:I
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v0
@@ -75,7 +73,6 @@
 
     const v0, 0x408ba5e3    # 4.364f
 
-    .line 3
     invoke-static {v0}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v0
@@ -88,38 +85,30 @@
 .method public constructor <init>(Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mIsHovering:Z
 
     const/4 v1, 0x0
 
-    .line 3
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mStartX:F
 
-    .line 4
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mStartY:F
 
-    .line 5
     iput v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 6
     sget v0, Lcom/android/camera/dualvideo/render/RegionHelper;->MINI_MARGIN:I
 
     iput v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
-    .line 7
     new-instance v0, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v0}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
-    .line 8
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->setDrawRect(Landroid/graphics/Rect;)V
 
     return-void
@@ -128,7 +117,6 @@
 .method public static synthetic access$002(Lcom/android/camera/dualvideo/render/RegionHelper;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
     return p1
@@ -137,7 +125,6 @@
 .method public static synthetic access$100(Lcom/android/camera/dualvideo/render/RegionHelper;)Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mListener:Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;
 
     return-object p0
@@ -146,7 +133,6 @@
 .method public static synthetic access$202(Lcom/android/camera/dualvideo/render/RegionHelper;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
     return p1
@@ -155,7 +141,6 @@
 .method private checkLocation()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
@@ -164,10 +149,8 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
@@ -177,10 +160,8 @@
 
     if-le v0, v1, :cond_1
 
-    .line 4
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 5
     :cond_1
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
@@ -190,10 +171,8 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 6
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
-    .line 7
     :cond_2
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
@@ -203,7 +182,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 8
     iput v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
     :cond_3
@@ -213,7 +191,6 @@
 .method private getLayoutRect(Lcom/android/camera/dualvideo/render/LayoutType;)Landroid/graphics/Rect;
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -237,7 +214,6 @@
     :cond_0
     const/4 v1, 0x3
 
-    .line 2
     :goto_0
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/LayoutType;->getIndex()I
 
@@ -251,10 +227,8 @@
 
     sub-int/2addr p1, v2
 
-    .line 3
     div-int v2, p1, v1
 
-    .line 4
     rem-int v3, p1, v1
 
     const/4 v4, 0x1
@@ -270,7 +244,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 5
     :goto_1
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
@@ -290,12 +263,10 @@
 
     sub-int/2addr v0, v4
 
-    .line 6
     div-int/2addr v0, v1
 
     add-int/2addr v0, v4
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
@@ -312,7 +283,6 @@
 
     div-int/2addr v1, v0
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
     iget v6, v0, Landroid/graphics/Rect;->left:I
@@ -325,7 +295,6 @@
 
     add-int/2addr v6, v3
 
-    .line 9
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
     mul-int/2addr v4, v2
@@ -338,7 +307,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 10
     new-instance p1, Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
@@ -351,7 +319,6 @@
 
     return-object p1
 
-    .line 11
     :cond_2
     new-instance p1, Landroid/graphics/Rect;
 
@@ -378,7 +345,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     iget v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
     aput v2, v0, v1
@@ -408,7 +374,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/dualvideo/render/RegionHelper$3;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
@@ -420,14 +385,12 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->getLayoutRect(Lcom/android/camera/dualvideo/render/LayoutType;)Landroid/graphics/Rect;
 
     move-result-object p1
 
     goto/16 :goto_0
 
-    .line 3
     :pswitch_0
     new-instance p1, Landroid/graphics/Rect;
 
@@ -441,7 +404,6 @@
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 4
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -472,7 +434,6 @@
 
     return-object p1
 
-    .line 5
     :pswitch_1
     :try_start_1
     new-instance p1, Landroid/graphics/Rect;
@@ -495,7 +456,6 @@
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 6
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -520,7 +480,6 @@
 
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 7
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v4
@@ -549,7 +508,6 @@
 
     return-object p1
 
-    .line 8
     :pswitch_2
     :try_start_2
     new-instance p1, Landroid/graphics/Rect;
@@ -604,7 +562,6 @@
 
     return-object p1
 
-    .line 9
     :pswitch_3
     :try_start_3
     new-instance p1, Landroid/graphics/Rect;
@@ -651,7 +608,6 @@
 
     return-object p1
 
-    .line 10
     :pswitch_4
     :try_start_4
     new-instance p1, Landroid/graphics/Rect;
@@ -722,7 +678,6 @@
 
     return-object p1
 
-    .line 11
     :pswitch_5
     :try_start_5
     new-instance p1, Landroid/graphics/Rect;
@@ -785,7 +740,6 @@
 
     return-object p1
 
-    .line 12
     :goto_0
     monitor-exit p0
 
@@ -812,7 +766,6 @@
 .method public moveToEdge()V
     .locals 11
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 v1, 0x0
@@ -821,7 +774,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 v3, 0x1
@@ -830,14 +782,13 @@
 
     move-result v2
 
-    .line 3
     sget-object v4, Lcom/android/camera/dualvideo/render/RegionHelper;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "moveToEdge xSpeed: "
+    const-string/jumbo v6, "moveToEdge xSpeed: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -863,7 +814,6 @@
 
     if-lez v5, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -875,7 +825,6 @@
 
     if-lez v0, :cond_2
 
-    .line 5
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
@@ -886,14 +835,12 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
@@ -901,7 +848,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
@@ -912,7 +858,6 @@
 
     if-lez v4, :cond_3
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
@@ -924,7 +869,6 @@
 
     if-lez v2, :cond_5
 
-    .line 10
     iget v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
@@ -935,14 +879,12 @@
 
     if-ge v2, v4, :cond_4
 
-    .line 11
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
     goto :goto_1
 
-    .line 12
     :cond_4
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
@@ -950,7 +892,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_5
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
@@ -963,7 +904,6 @@
 
     aput-object v5, v4, v1
 
-    .line 14
     invoke-static {v4}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v4
@@ -978,7 +918,6 @@
 
     iget v8, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 15
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -995,7 +934,6 @@
 
     aput-object v7, v8, v1
 
-    .line 16
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1024,14 +962,12 @@
 
     aput-object v10, v7, v1
 
-    .line 17
     invoke-virtual {v0, v7}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
 
     aput-object v0, v8, v5
 
-    .line 18
     invoke-interface {v4, v8}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     new-array v0, v3, [Ljava/lang/Object;
@@ -1040,7 +976,6 @@
 
     aput-object v4, v0, v1
 
-    .line 19
     invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -1053,7 +988,6 @@
 
     iget v8, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
-    .line 20
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -1068,7 +1002,6 @@
 
     aput-object v7, v4, v1
 
-    .line 21
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1095,19 +1028,15 @@
 
     aput-object v6, v3, v1
 
-    .line 22
     invoke-virtual {v2, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    .line 23
     invoke-interface {v0, v4}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return-void
-
-    nop
 
     :array_0
     .array-data 4
@@ -1125,17 +1054,14 @@
 .method public setDrawRect(Landroid/graphics/Rect;)V
     .locals 5
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 2
     new-instance p1, Landroid/graphics/Rect;
 
     sget v0, Lcom/android/camera/dualvideo/render/RegionHelper;->MINI_MARGIN:I
 
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 3
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -1162,7 +1088,6 @@
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mDrawRect:Landroid/graphics/Rect;
 
-    .line 4
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -1189,12 +1114,10 @@
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mValidMiniRect:Landroid/graphics/Rect;
 
-    .line 5
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
     if-nez v0, :cond_0
 
-    .line 6
     iget p1, p1, Landroid/graphics/Rect;->right:I
 
     iput p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
@@ -1206,12 +1129,10 @@
 .method public setListener(Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-virtual {v0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 v1, 0x2
@@ -1236,7 +1157,6 @@
 
     invoke-virtual {v0, v1}, Lmiuix/animation/utils/VelocityMonitor;->update([F)V
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mListener:Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;
 
     return-void
@@ -1245,10 +1165,8 @@
 .method public setStartPosition(FF)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mStartX:F
 
-    .line 2
     iput p2, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mStartY:F
 
     return-void
@@ -1259,7 +1177,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
@@ -1267,22 +1184,18 @@
 
     iput v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 2
     iget p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
     add-int/2addr p1, p2
 
     iput p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/RegionHelper;->checkLocation()V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mListener:Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;
 
     invoke-interface {p1}, Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;->onUpdated()V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 p2, 0x2
@@ -1313,7 +1226,6 @@
 
     aput-object v0, p1, v2
 
-    .line 6
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -1326,7 +1238,6 @@
 
     iget v1, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginLeft:I
 
-    .line 7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1341,7 +1252,6 @@
 
     aput-object v0, p1, v2
 
-    .line 8
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -1354,7 +1264,6 @@
 
     iget v0, p0, Lcom/android/camera/dualvideo/render/RegionHelper;->mMiniMarginTop:I
 
-    .line 9
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1365,7 +1274,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void

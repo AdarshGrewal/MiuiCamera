@@ -28,7 +28,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera2/HardwareCapabilities$TypedValue;-><init>(Lcom/android/camera2/HardwareCapabilities$1;)V
 
     return-void
@@ -39,7 +38,6 @@
 .method public create()Ljava/lang/Boolean;
     .locals 7
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -61,7 +58,6 @@
 
     return-object v2
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -75,7 +71,6 @@
 
     return-object v2
 
-    .line 5
     :cond_1
     const-class v2, Landroid/media/MediaRecorder;
 
@@ -85,12 +80,10 @@
 
     move-result-object v2
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->get8kProfile()I
 
     move-result v3
 
-    .line 7
     new-instance v4, Lcom/android/camera/CameraSize;
 
     const/16 v5, 0x1e00
@@ -105,7 +98,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 8
     invoke-static {v0, v3}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result v0
@@ -114,7 +106,6 @@
 
     const/4 v1, 0x1
 
-    .line 9
     :cond_2
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -126,7 +117,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/HardwareCapabilities$7;->create()Ljava/lang/Boolean;
 
     move-result-object v0

@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;->access$1000()Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearCode()Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -71,10 +67,8 @@
 .method public clearMessage()Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -87,10 +81,8 @@
 .method public clearResponse()Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -103,7 +95,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -118,7 +109,6 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -133,7 +123,6 @@
 .method public getMessageBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -148,7 +137,6 @@
 .method public getResponse()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -163,7 +151,6 @@
 .method public getResponseBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -178,10 +165,8 @@
 .method public setCode(I)Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -194,10 +179,8 @@
 .method public setMessage(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -210,10 +193,8 @@
 .method public setMessageBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -226,10 +207,8 @@
 .method public setResponse(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;
@@ -242,10 +221,8 @@
 .method public setResponseBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/IPCameraServiceProto$IPCResponse;

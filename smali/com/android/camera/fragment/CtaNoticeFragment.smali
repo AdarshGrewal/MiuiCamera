@@ -37,13 +37,10 @@
 .method public constructor <init>(Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/CtaNoticeFragment;->mClickListener:Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;
 
-    .line 3
     iput p2, p0, Lcom/android/camera/fragment/CtaNoticeFragment;->mType:I
 
     return-void
@@ -54,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/android/camera/fragment/CtaNoticeFragment;->checkCta(Landroidx/fragment/app/FragmentManager;Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)Z
 
     move-result p0
@@ -65,7 +61,6 @@
 .method public static checkCta(Landroidx/fragment/app/FragmentManager;Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/android/camera/fragment/CtaNoticeFragment;->showCta(Landroidx/fragment/app/FragmentManager;Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)Lcom/android/camera/fragment/CtaNoticeFragment;
 
     move-result-object p0
@@ -86,7 +81,6 @@
 .method public static showCta(Landroidx/fragment/app/FragmentManager;Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)Lcom/android/camera/fragment/CtaNoticeFragment;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isAllowCTA()Z
 
     move-result v0
@@ -95,24 +89,20 @@
 
     const-string v0, "CtaNoticeFragment"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 3
     new-instance v1, Lcom/android/camera/fragment/CtaNoticeFragment;
 
     invoke-direct {v1, p1, p2}, Lcom/android/camera/fragment/CtaNoticeFragment;-><init>(Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;I)V
 
-    .line 4
     invoke-virtual {v1, p0, v0}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 5
     :cond_0
     check-cast v1, Lcom/android/camera/fragment/CtaNoticeFragment;
 
@@ -133,26 +123,20 @@
 
     const-string/jumbo v1, "onClick LocationAccess PositiveButton"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackCTADialogAgree()V
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->updateCTAPreference(Z)V
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/fragment/CtaNoticeFragment$CTA;->setCanConnectNetwork(Z)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/CtaNoticeFragment;->mClickListener:Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-interface {v0, p1, p2}, Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;->onPositiveClick(Landroid/content/DialogInterface;I)V
 
     :cond_0
@@ -166,26 +150,20 @@
 
     const-string/jumbo v1, "onClick LocationAccess NegativeButton"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackCTADialogDisagree()V
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->updateCTAPreference(Z)V
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/fragment/CtaNoticeFragment$CTA;->setCanConnectNetwork(Z)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/CtaNoticeFragment;->mClickListener:Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-interface {v0, p1, p2}, Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;->onNegativeClick(Landroid/content/DialogInterface;I)V
 
     :cond_0
@@ -195,14 +173,12 @@
 .method public dismiss()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->dismiss()V
 
     :cond_0
@@ -212,17 +188,14 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/CtaNoticeFragment;->mClickListener:Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;
 
     if-eqz v0, :cond_0
 
     const/4 v1, -0x2
 
-    .line 3
     invoke-interface {v0, p1, v1}, Lcom/android/camera/fragment/CtaNoticeFragment$OnCtaNoticeClickListener;->onNegativeClick(Landroid/content/DialogInterface;I)V
 
     :cond_0
@@ -232,12 +205,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroidx/fragment/app/DialogFragment;->setCancelable(Z)V
 
     return-void
@@ -250,7 +221,6 @@
 
     new-array v0, p1, [Ljava/lang/Object;
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
@@ -277,7 +247,6 @@
 
     const-string v1, "%s_%s"
 
-    .line 2
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -286,9 +255,8 @@
 
     aput-object v0, v1, v2
 
-    const v4, 0x7f12046c
+    const v4, 0x7f12044a
 
-    .line 3
     invoke-virtual {p0, v4, v1}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -297,14 +265,12 @@
 
     aput-object v0, v4, v2
 
-    const v5, 0x7f12046b
+    const v5, 0x7f120449
 
-    .line 4
     invoke-virtual {p0, v5, v4}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 5
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,9 +307,8 @@
 
     aput-object v4, p1, v3
 
-    const v0, 0x7f120325
+    const v0, 0x7f12030d
 
-    .line 6
     invoke-virtual {p0, v0, p1}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -354,7 +319,6 @@
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -371,26 +335,22 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a041f
+    const v1, 0x7f0a0432
 
-    .line 8
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 9
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     invoke-static {v1, p1}, Lcom/android/camera/ui/ScreenHint;->setLinkClickEvent(Landroid/widget/TextView;Landroid/app/Activity;)V
 
-    .line 11
     new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -399,39 +359,34 @@
 
     invoke-direct {p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 12
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0Oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0Oo;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0Oo;-><init>(Lcom/android/camera/fragment/CtaNoticeFragment;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0Oo;-><init>(Lcom/android/camera/fragment/CtaNoticeFragment;)V
 
-    const v1, 0x7f1205a8
+    const v1, 0x7f120572
 
-    .line 13
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0o0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0o0;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooO0o0;-><init>(Lcom/android/camera/fragment/CtaNoticeFragment;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooO0o0;-><init>(Lcom/android/camera/fragment/CtaNoticeFragment;)V
 
-    const v1, 0x7f1209a8
+    const v1, 0x7f120959
 
-    .line 14
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    .line 15
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    .line 16
     invoke-virtual {p1}, Landroid/app/Dialog;->show()V
 
     return-object p1
@@ -440,10 +395,8 @@
 .method public onStart()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStart()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -452,7 +405,6 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCancelable(Z)V
 
     :cond_0

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->this$0:Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->val$callback:Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;
@@ -42,7 +41,6 @@
 .method public onDataNotAvailable()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->this$0:Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->val$callback:Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;
@@ -63,12 +61,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->this$0:Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;
 
     invoke-static {v0, p1}, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;->access$000(Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository;Ljava/util/List;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mvp/data/source/TasksRepository$1;->val$callback:Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;
 
     new-instance v0, Ljava/util/ArrayList;

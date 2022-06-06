@@ -45,10 +45,8 @@
 .method public constructor <init>(J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;->estimate:J
 
     return-void
@@ -67,7 +65,6 @@
 .method public estimateSize()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;->estimate:J
 
     return-wide v0
@@ -83,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getComparator(Ljava8/util/Spliterator;)Ljava/util/Comparator;
 
     move-result-object v0
@@ -94,7 +90,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -105,7 +100,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1

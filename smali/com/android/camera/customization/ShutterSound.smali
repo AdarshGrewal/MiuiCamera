@@ -51,7 +51,6 @@
 
     const-string v4, "camera_fast_burst.ogg"
 
-    .line 1
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
@@ -66,14 +65,12 @@
 
     const-string/jumbo v3, "sounds/scanner_success.ogg"
 
-    .line 2
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/customization/ShutterSound;->commonSounds:[Ljava/lang/String;
 
-    .line 3
     array-length v0, v0
 
     new-array v0, v0, [I
@@ -84,25 +81,20 @@
 
     const/4 v2, 0x0
 
-    .line 4
     aput v1, v0, v2
 
     const/4 v2, 0x1
 
-    .line 5
     aput v1, v0, v2
 
     const/4 v2, 0x2
 
-    .line 6
     aput v1, v0, v2
 
     const/4 v2, 0x3
 
-    .line 7
     aput v1, v0, v2
 
-    .line 8
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->loadAvailableSounds()Ljava/util/List;
 
     move-result-object v0
@@ -115,19 +107,14 @@
 .method public constructor <init>(ILjava/lang/String;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p3, p0, Lcom/android/camera/customization/ShutterSound;->mCover:I
 
-    .line 3
     iput p1, p0, Lcom/android/camera/customization/ShutterSound;->mTitle:I
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/customization/ShutterSound;->folderName:Ljava/lang/String;
 
-    .line 5
     sget-object p1, Lcom/android/camera/customization/ShutterSound;->soundNames:[Ljava/lang/String;
 
     array-length p1, p1
@@ -138,7 +125,6 @@
 
     const/4 p1, 0x0
 
-    .line 6
     :goto_0
     iget-object p2, p0, Lcom/android/camera/customization/ShutterSound;->soundIds:[I
 
@@ -148,7 +134,6 @@
 
     const/4 p3, -0x1
 
-    .line 7
     aput p3, p2, p1
 
     add-int/lit8 p1, p1, 0x1
@@ -192,7 +177,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -203,18 +187,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     new-instance v1, Lcom/android/camera/customization/ShutterSound;
 
-    const v2, 0x7f120327
+    const v2, 0x7f12030f
 
-    const v3, 0x7f0808e9
+    const v3, 0x7f0808e6
 
     const-string v4, "default"
 
@@ -222,12 +204,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/customization/ShutterSound;
 
-    const v2, 0x7f120326
+    const v2, 0x7f12030e
 
-    const v3, 0x7f0808e8
+    const v3, 0x7f0808e5
 
     const-string v4, "art"
 
@@ -235,12 +216,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/customization/ShutterSound;
 
-    const v2, 0x7f120329
+    const v2, 0x7f120311
 
-    const v3, 0x7f0808ec
+    const v3, 0x7f0808e9
 
     const-string/jumbo v4, "old"
 
@@ -248,23 +228,20 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     new-instance v1, Lcom/android/camera/customization/ShutterSound;
 
-    const v2, 0x7f120328
+    const v2, 0x7f120310
 
-    const v3, 0x7f0808eb
+    const v3, 0x7f0808e8
 
-    const-string v4, "modern"
+    const-string/jumbo v4, "modern"
 
     invoke-direct {v1, v2, v4, v3}, Lcom/android/camera/customization/ShutterSound;-><init>(ILjava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     sput-object v0, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
-    .line 8
     :cond_1
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
@@ -274,7 +251,6 @@
 .method public static loadCommonSound(ILandroid/media/SoundPool;)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->commonSounds:[Ljava/lang/String;
 
     aget-object v0, v0, p0
@@ -287,7 +263,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->commonSounds:[Ljava/lang/String;
 
     aget-object v0, v0, p0
@@ -298,7 +273,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->commonSounds:[Ljava/lang/String;
 
@@ -310,7 +284,6 @@
 
     move-result p1
 
-    .line 4
     :goto_0
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->commonSoundIds:[I
 
@@ -322,7 +295,6 @@
 .method public static loadFromAsset(Ljava/lang/String;Landroid/media/SoundPool;)I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -333,7 +305,6 @@
 
     const/4 v1, -0x1
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p0}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
@@ -343,7 +314,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     :try_start_1
     invoke-virtual {p1, p0, v0}, Landroid/media/SoundPool;->load(Landroid/content/res/AssetFileDescriptor;I)I
 
@@ -353,7 +323,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     :try_start_2
     invoke-virtual {p0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
@@ -384,7 +353,6 @@
 
     const-string p1, "IOException occurs when closing Camera Sound AssetFileDescriptor."
 
-    .line 5
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -395,7 +363,6 @@
 .method public static loadSound(Landroid/media/SoundPool;I)I
     .locals 3
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/customization/ShutterSound;->isCommonSound(I)Z
 
     move-result v0
@@ -404,7 +371,6 @@
 
     add-int/lit8 p1, p1, -0x5
 
-    .line 2
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->commonSoundIds:[I
 
     aget v1, v0, p1
@@ -413,26 +379,22 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 3
     invoke-static {p1, p0}, Lcom/android/camera/customization/ShutterSound;->loadCommonSound(ILandroid/media/SoundPool;)I
 
     move-result p0
 
     return p0
 
-    .line 4
     :cond_0
     aget p0, v0, p1
 
     return p0
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->read()I
 
     move-result v0
 
-    .line 6
     sget-object v1, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -441,14 +403,12 @@
 
     check-cast v0, Lcom/android/camera/customization/ShutterSound;
 
-    .line 7
     invoke-direct {v0, p1}, Lcom/android/camera/customization/ShutterSound;->loaded(I)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 8
     invoke-virtual {v0, p1}, Lcom/android/camera/customization/ShutterSound;->soundPath(I)Ljava/lang/String;
 
     move-result-object v1
@@ -457,10 +417,8 @@
 
     move-result p0
 
-    .line 9
     invoke-direct {v0, p1, p0}, Lcom/android/camera/customization/ShutterSound;->setSoundId(II)V
 
-    .line 10
     :cond_2
     invoke-direct {v0, p1}, Lcom/android/camera/customization/ShutterSound;->soundId(I)I
 
@@ -472,7 +430,6 @@
 .method private loaded(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/ShutterSound;->soundIds:[I
 
     aget p1, v0, p1
@@ -495,7 +452,6 @@
 .method public static persist(I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -506,7 +462,6 @@
 
     const-string v1, "key_shutter_sound"
 
-    .line 2
     invoke-interface {v0, v1, p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putInt(Ljava/lang/String;I)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object p0
@@ -519,16 +474,14 @@
 .method public static read()I
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO0()I
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo0o0()I
 
     move-result v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v1
@@ -541,7 +494,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 3
     sget-object v1, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -560,12 +512,10 @@
 .method public static readSoundName(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->read()I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -588,7 +538,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     sget-object v1, Lcom/android/camera/customization/ShutterSound;->commonSoundIds:[I
 
@@ -598,14 +547,12 @@
 
     const/4 v2, -0x1
 
-    .line 2
     aput v2, v1, v0
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
@@ -626,7 +573,6 @@
 
     check-cast v1, Lcom/android/camera/customization/ShutterSound;
 
-    .line 4
     invoke-direct {v1}, Lcom/android/camera/customization/ShutterSound;->releaseSounds()V
 
     goto :goto_1
@@ -640,7 +586,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera/customization/ShutterSound;->soundIds:[I
 
@@ -650,7 +595,6 @@
 
     const/4 v2, -0x1
 
-    .line 2
     aput v2, v1, v0
 
     add-int/lit8 v0, v0, 0x1
@@ -664,7 +608,6 @@
 .method private setSoundId(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/ShutterSound;->soundIds:[I
 
     aput p2, v0, p1
@@ -675,7 +618,6 @@
 .method private soundId(I)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/ShutterSound;->soundIds:[I
 
     aget p1, v0, p1
@@ -686,7 +628,6 @@
 .method public static tryPlaySound(ILandroid/media/SoundPool;FILjava/util/ArrayList;)I
     .locals 10
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/customization/ShutterSound;->isCommonSound(I)Z
 
     move-result v0
@@ -697,21 +638,18 @@
 
     add-int/lit8 p0, p0, -0x5
 
-    .line 2
     sget-object p4, Lcom/android/camera/customization/ShutterSound;->commonSoundIds:[I
 
     aget v0, p4, p0
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera/customization/ShutterSound;->loadCommonSound(ILandroid/media/SoundPool;)I
 
     move-result p0
 
     return p0
 
-    .line 4
     :cond_0
     aget v3, p4, p0
 
@@ -731,13 +669,11 @@
 
     return v1
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/customization/ShutterSound;->read()I
 
     move-result v0
 
-    .line 6
     sget-object v2, Lcom/android/camera/customization/ShutterSound;->sAvailableSounds:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -746,14 +682,12 @@
 
     check-cast v0, Lcom/android/camera/customization/ShutterSound;
 
-    .line 7
     invoke-direct {v0, p0}, Lcom/android/camera/customization/ShutterSound;->loaded(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 8
     invoke-direct {v0, p0}, Lcom/android/camera/customization/ShutterSound;->soundId(I)I
 
     move-result v4
@@ -772,7 +706,6 @@
 
     invoke-virtual/range {v3 .. v9}, Landroid/media/SoundPool;->play(IFFIIF)I
 
-    .line 9
     invoke-virtual {p4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1
@@ -798,7 +731,6 @@
     :cond_2
     return v1
 
-    .line 10
     :cond_3
     :goto_0
     invoke-direct {v0, p0}, Lcom/android/camera/customization/ShutterSound;->soundId(I)I
@@ -807,7 +739,6 @@
 
     return p0
 
-    .line 11
     :cond_4
     invoke-virtual {v0, p0}, Lcom/android/camera/customization/ShutterSound;->soundPath(I)Ljava/lang/String;
 
@@ -819,7 +750,6 @@
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/customization/ShutterSound;->setSoundId(II)V
 
-    .line 12
     invoke-direct {v0, p0}, Lcom/android/camera/customization/ShutterSound;->soundId(I)I
 
     move-result p0
@@ -832,7 +762,6 @@
 .method public cover()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/ShutterSound;->mCover:I
 
     return v0
@@ -841,7 +770,6 @@
 .method public getFolderName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/ShutterSound;->folderName:Ljava/lang/String;
 
     return-object v0
@@ -850,7 +778,6 @@
 .method public soundPath(I)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -883,7 +810,6 @@
 .method public title()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/ShutterSound;->mTitle:I
 
     return v0

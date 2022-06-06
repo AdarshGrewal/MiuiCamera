@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMClient;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/xiaomi/idm/service/iot/LightService;-><init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/service/iot/LightService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     return-void
@@ -41,12 +39,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/iot/LightService$Stub;->getPropertyAsync(Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -63,14 +59,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -94,7 +88,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/LightService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/PropertyService$Actions$GetProperty;
@@ -127,12 +120,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/iot/LightService$Stub;->getPropertyCommandsAsync(Ljava/util/Map;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -149,14 +140,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -182,7 +171,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/LightService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/PropertyService$Actions$GetPropertyCommands;
@@ -204,12 +192,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/LightService$Stub;->setPropertyAsync(Ljava/lang/String;Z)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -226,14 +212,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -257,7 +241,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/LightService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/PropertyService$Actions$SetProperty;
@@ -290,12 +273,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/iot/LightService$Stub;->setPropertyCommandsAsync(Ljava/util/Map;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -312,14 +293,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -345,7 +324,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/LightService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/PropertyService$Actions$SetPropertyCommands;

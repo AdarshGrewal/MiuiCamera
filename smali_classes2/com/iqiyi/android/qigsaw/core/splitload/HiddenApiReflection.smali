@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,19 +22,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -56,21 +52,18 @@
 
     check-cast v1, [Ljava/lang/Object;
 
-    .line 4
     array-length v2, p2
 
     const/4 v3, 0x0
 
     invoke-static {p2, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 5
     array-length p2, p2
 
     array-length v2, v0
 
     invoke-static {v0, v3, v1, p2, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 6
     invoke-virtual {p1, p0, v1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -99,13 +92,11 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 9
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->isAccessible()Z
 
     move-result v1
@@ -114,7 +105,6 @@
 
     const/4 v1, 0x1
 
-    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -122,7 +112,6 @@
     :cond_0
     return-object v0
 
-    .line 12
     :catch_0
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     new-instance v0, Ljava/lang/NoSuchMethodException;
 
@@ -142,7 +130,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 14
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -184,7 +171,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -192,13 +178,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->isAccessible()Z
 
     move-result v2
@@ -207,7 +191,6 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -215,7 +198,6 @@
     :cond_0
     return-object v1
 
-    .line 5
     :catch_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -223,7 +205,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/NoSuchMethodException;
 
@@ -235,7 +216,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -246,7 +226,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -286,13 +265,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 7
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {v1}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v2
@@ -301,7 +278,6 @@
 
     const/4 v2, 0x1
 
-    .line 9
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -309,7 +285,6 @@
     :cond_0
     return-object v1
 
-    .line 10
     :catch_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -317,7 +292,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     new-instance v0, Ljava/lang/NoSuchFieldException;
 
@@ -354,7 +328,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -362,13 +335,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v2
@@ -377,7 +348,6 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -385,7 +355,6 @@
     :cond_0
     return-object v1
 
-    .line 5
     :catch_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -393,7 +362,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/NoSuchFieldException;
 
@@ -450,13 +418,11 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 9
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->isAccessible()Z
 
     move-result v1
@@ -465,7 +431,6 @@
 
     const/4 v1, 0x1
 
-    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -473,7 +438,6 @@
     :cond_0
     return-object v0
 
-    .line 12
     :catch_0
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -481,7 +445,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     new-instance v0, Ljava/lang/NoSuchMethodException;
 
@@ -499,7 +462,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 14
     invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -541,7 +503,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -549,13 +510,11 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p1, p2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->isAccessible()Z
 
     move-result v2
@@ -564,7 +523,6 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
@@ -572,7 +530,6 @@
     :cond_0
     return-object v1
 
-    .line 5
     :catch_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -580,7 +537,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/NoSuchMethodException;
 
@@ -598,7 +554,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -609,7 +564,6 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -639,20 +593,17 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 3
     array-length v1, v0
 
     sub-int/2addr v1, p2
@@ -661,7 +612,6 @@
 
     return-void
 
-    .line 4
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -679,10 +629,8 @@
 
     const/4 v3, 0x0
 
-    .line 5
     invoke-static {v0, p2, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 6
     invoke-virtual {p1, p0, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void

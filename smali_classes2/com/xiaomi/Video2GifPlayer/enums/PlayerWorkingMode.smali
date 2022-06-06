@@ -35,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     const/4 v1, 0x0
@@ -46,7 +45,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingLipSyncMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     const/4 v2, 0x1
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingLowVideoDelayMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     const/4 v3, 0x2
@@ -68,7 +65,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingVideoSmoothMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     const/4 v4, 0x3
@@ -79,7 +75,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingDisableAudioDeviceMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     const/4 v5, 0x4
@@ -94,7 +89,6 @@
 
     new-array v6, v6, [Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 6
     sget-object v7, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingLipSyncMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     aput-object v7, v6, v1
@@ -126,10 +120,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->nCode:I
 
     return-void
@@ -138,10 +130,8 @@
 .method public static int2enum(I)Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->PlayerWorkingLipSyncMode:Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->values()[Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     move-result-object v1
@@ -155,7 +145,6 @@
 
     aget-object v4, v1, v3
 
-    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -176,7 +165,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -191,7 +179,6 @@
 .method public static values()[Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->$VALUES:[Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->clone()Ljava/lang/Object;
@@ -208,7 +195,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerWorkingMode;->nCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

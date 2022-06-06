@@ -7,10 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;-><init>(Landroid/content/Context;)V
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/SecondaryExpandTabContainer;->getTabContainerHeight()I
 
     move-result p1
@@ -25,7 +23,6 @@
 .method public getTabBarLayoutRes()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$layout;->miuix_appcompat_action_bar_tabbar_secondary:I
 
     return v0
@@ -42,7 +39,6 @@
 .method public getTabTextStyle()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$attr;->actionBarTabTextSecondaryExpandStyle:I
 
     return v0
@@ -51,7 +47,6 @@
 .method public getTabViewLayoutRes()I
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/appcompat/R$layout;->miuix_appcompat_action_bar_tab_secondary:I
 
     return v0
@@ -60,7 +55,6 @@
 .method public getTabViewMarginHorizontal()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getContext()Landroid/content/Context;
 
     move-result-object v0

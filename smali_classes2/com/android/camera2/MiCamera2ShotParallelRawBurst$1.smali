@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
@@ -35,15 +34,13 @@
 .method public onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureBufferLost: frameNumber="
+    const-string/jumbo p2, "onCaptureBufferLost: frameNumber="
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -73,17 +70,15 @@
 .method public onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 6
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {p1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$708(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureCompleted: "
+    const-string/jumbo p2, "onCaptureCompleted: "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -115,7 +110,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object p1, p1, Lcom/android/camera2/MiCamera2ShotParallel;->mCaptureId:Ljava/lang/String;
@@ -124,14 +118,12 @@
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p3}, Landroid/hardware/camera2/TotalCaptureResult;->getPhysicalCameraResults()Ljava/util/Map;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$800(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -142,7 +134,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$800(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -161,15 +152,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-static {v0}, Lcom/xiaomi/camera/base/CameraDeviceUtil;->getNativeMetadata(Landroid/hardware/camera2/CaptureResult;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {p1, v0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->setMainPhysicalResult(Landroid/os/Parcelable;)V
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
@@ -193,7 +181,6 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 10
     iget-object v3, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v3}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$600(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Lcom/xiaomi/camera/core/ParallelTaskData;
@@ -202,7 +189,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 11
     iget-object v3, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object v3, v3, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -213,7 +199,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 12
     sget-object v4, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_RAW_BUFFER_SIZE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v4}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -226,7 +211,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 13
     sget-object v3, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_RAW_BUFFER_SIZE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p3, v3}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -235,12 +219,11 @@
 
     check-cast p3, Landroid/util/Size;
 
-    .line 14
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "onCaptureCompleted: rawSize = "
+    const-string/jumbo v4, "onCaptureCompleted: rawSize = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -254,7 +237,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 15
     invoke-virtual {p3}, Landroid/util/Size;->getWidth()I
 
     move-result v3
@@ -271,7 +253,6 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 16
     invoke-virtual {p3}, Landroid/util/Size;->getHeight()I
 
     move-result v3
@@ -288,14 +269,12 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 17
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 18
     invoke-virtual {p3}, Landroid/util/Size;->getWidth()I
 
     move-result v5
@@ -316,16 +295,14 @@
 
     aput-object v1, v4, v2
 
-    const-string v1, "onCaptureCompleted: override raw size: %dx%d"
+    const-string/jumbo v1, "onCaptureCompleted: override raw size: %dx%d"
 
-    .line 19
     invoke-static {v3, v1, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     iget-object p2, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {p2}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$600(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Lcom/xiaomi/camera/core/ParallelTaskData;
@@ -342,7 +319,6 @@
 
     invoke-virtual {p2, v1, p3}, Lcom/xiaomi/camera/core/ParallelTaskData;->setRawInputSize(II)V
 
-    .line 21
     :cond_2
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->getInstance()Lcom/android/camera/parallel/AlgoConnector;
 
@@ -354,7 +330,6 @@
 
     invoke-virtual {p2, p1, v0}, Lcom/android/camera/LocalParallelService$LocalBinder;->onCaptureCompleted(Lcom/xiaomi/protocol/ICustomCaptureResult;Z)V
 
-    .line 22
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {p1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$100(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -369,10 +344,8 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 23
     invoke-virtual {p0}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->onCaptureShutter()V
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object p2, p1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -386,12 +359,11 @@
 .method public onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
     .locals 2
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureFailed: reason="
+    const-string/jumbo p2, "onCaptureFailed: reason="
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -415,7 +387,6 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p3}, Landroid/hardware/camera2/CaptureFailure;->getFrameNumber()J
 
     move-result-wide v0
@@ -428,10 +399,8 @@
 
     const-string p2, "ShotParallelRawBurst"
 
-    .line 3
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object p2, p1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -440,7 +409,6 @@
 
     invoke-virtual {p2, v0, p1}, Lcom/android/camera2/MiCamera2;->onCapturePictureFinished(ZLcom/android/camera2/MiCamera2Shot;)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-wide p1, p1, Lcom/android/camera2/MiCamera2ShotParallel;->mFirstFrameTimestamp:J
@@ -451,7 +419,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->getInstance()Lcom/android/camera/parallel/AlgoConnector;
 
     move-result-object p1
@@ -477,15 +444,13 @@
 .method public onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureProgressed: frameNumber="
+    const-string/jumbo p2, "onCaptureProgressed: frameNumber="
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -509,12 +474,11 @@
 .method public onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onCaptureSequenceAborted: sequenceId = "
+    const-string/jumbo v0, "onCaptureSequenceAborted: sequenceId = "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -528,7 +492,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object p2, p1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -537,7 +500,6 @@
 
     invoke-virtual {p2, v0, p1}, Lcom/android/camera2/MiCamera2;->onCapturePictureFinished(ZLcom/android/camera2/MiCamera2Shot;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-virtual {p1}, Lcom/android/camera2/MiCamera2ShotParallel;->processCaptureFail()V
@@ -548,15 +510,13 @@
 .method public onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onCaptureSequenceCompleted: sequenceId="
+    const-string/jumbo v0, "onCaptureSequenceCompleted: sequenceId="
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -582,7 +542,6 @@
 .method public onCaptureShutter()V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v0}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$200(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Z
@@ -593,7 +552,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
@@ -607,7 +565,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
@@ -621,7 +578,6 @@
 
     return-void
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
@@ -631,12 +587,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 5
     new-instance v3, Lcom/android/camera2/QuickViewParam;
 
     iget-object v4, p0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
-    .line 6
     invoke-virtual {v4}, Lcom/android/camera2/MiCamera2Shot;->isQuickShotAnimation()Z
 
     move-result v4
@@ -665,7 +619,6 @@
     :goto_0
     invoke-direct {v3, v4, v5, v1, v7}, Lcom/android/camera2/QuickViewParam;-><init>(ZZZZ)V
 
-    .line 7
     invoke-interface {v0, v3}, Lcom/android/camera2/Camera2Proxy$PictureCallback;->onCaptureShutter(Lcom/android/camera2/QuickViewParam;)V
 
     :cond_4
@@ -679,12 +632,11 @@
 
     move-wide/from16 v7, p3
 
-    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onCaptureStarted: timestamp="
+    const-string/jumbo v2, "onCaptureStarted: timestamp="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -716,22 +668,18 @@
 
     invoke-static {v9, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$008(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
 
-    .line 3
     invoke-super/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
 
-    .line 4
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-virtual {v1}, Lcom/android/camera2/MiCamera2Shot;->getPictureCallback()Lcom/android/camera2/Camera2Proxy$PictureCallback;
 
     move-result-object v10
 
-    .line 5
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$000(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -748,10 +696,8 @@
 
     if-eqz v10, :cond_0
 
-    .line 6
     invoke-interface {v10}, Lcom/android/camera2/Camera2Proxy$PictureCallback;->onAllHalFrameReceived()V
 
-    .line 7
     :cond_0
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
@@ -761,7 +707,6 @@
 
     const/4 v3, -0x3
 
-    .line 8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -770,21 +715,18 @@
 
     move-wide/from16 v1, p3
 
-    invoke-static/range {v1 .. v6}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(JIJLjava/lang/String;)V
+    invoke-static/range {v1 .. v6}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(JIJLjava/lang/String;)V
 
-    .line 9
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     const/4 v11, 0x0
 
     iput-boolean v11, v1, Lcom/android/camera2/MiCamera2ShotParallel;->mWaitingFirstFrame:Z
 
-    .line 10
     iput-wide v7, v1, Lcom/android/camera2/MiCamera2ShotParallel;->mFirstFrameTimestamp:J
 
     if-eqz v10, :cond_3
 
-    .line 11
     new-instance v12, Lcom/xiaomi/camera/core/ParallelTaskData;
 
     iget-object v1, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
@@ -799,7 +741,6 @@
 
     iget-object v1, v1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
 
-    .line 12
     invoke-virtual {v1}, Lcom/android/camera2/MiCamera2;->getCameraConfigs()Lcom/android/camera2/CameraConfigs;
 
     move-result-object v1
@@ -814,7 +755,6 @@
 
     iget-object v1, v1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
 
-    .line 13
     invoke-virtual {v1}, Lcom/android/camera2/MiCamera2;->getCameraConfigs()Lcom/android/camera2/CameraConfigs;
 
     move-result-object v1
@@ -831,7 +771,6 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/xiaomi/camera/core/ParallelTaskData;-><init>(IJILjava/lang/String;J)V
 
-    .line 14
     new-instance v1, Lcom/android/camera2/CaptureStartParam$Builder;
 
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
@@ -840,7 +779,6 @@
 
     invoke-direct {v1, v2}, Lcom/android/camera2/CaptureStartParam$Builder;-><init>(Lcom/android/camera/CameraSize;)V
 
-    .line 15
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v2}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$200(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Z
@@ -864,13 +802,11 @@
     :cond_1
     move v3, v11
 
-    .line 16
     :goto_0
     new-instance v2, Lcom/android/camera2/QuickViewParam;
 
     iget-object v4, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
-    .line 17
     invoke-static {v4}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$200(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Z
 
     move-result v4
@@ -885,31 +821,26 @@
 
     iget v2, v2, Lcom/android/camera2/MiCamera2Shot;->mSatCameraId:I
 
-    .line 18
     invoke-virtual {v1, v2}, Lcom/android/camera2/CaptureStartParam$Builder;->setSatCameraId(I)Lcom/android/camera2/CaptureStartParam$Builder;
 
     move-result-object v1
 
-    .line 19
     invoke-virtual {v1}, Lcom/android/camera2/CaptureStartParam$Builder;->build()Lcom/android/camera2/CaptureStartParam;
 
     move-result-object v1
 
-    .line 20
     invoke-interface {v10, v12, v1}, Lcom/android/camera2/Camera2Proxy$PictureCallback;->onCaptureStart(Lcom/xiaomi/camera/core/ParallelTaskData;Lcom/android/camera2/CaptureStartParam;)Lcom/xiaomi/camera/core/ParallelTaskData;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 21
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object v2, v2, Lcom/android/camera2/MiCamera2ShotParallel;->mCaptureId:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/camera/core/ParallelTaskData;->setCaptureId(Ljava/lang/String;)V
 
-    .line 22
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v2}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$100(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -918,7 +849,6 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/camera/core/ParallelTaskData;->setBurstNum(I)V
 
-    .line 23
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v2}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$400(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)I
@@ -927,7 +857,6 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/camera/core/ParallelTaskData;->setAlgoType(I)V
 
-    .line 24
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v2}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$500(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;)Landroid/util/Size;
@@ -950,14 +879,12 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/xiaomi/camera/core/ParallelTaskData;->setRawInputSize(II)V
 
-    .line 25
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     iget-object v2, v2, Lcom/android/camera2/MiCamera2ShotParallel;->mBufferFormat:Lcom/xiaomi/engine/BufferFormat;
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/camera/core/ParallelTaskData;->setChangedBufferFormat(Lcom/xiaomi/engine/BufferFormat;)V
 
-    .line 26
     invoke-static {}, Lcom/android/camera/parallel/AlgoConnector;->getInstance()Lcom/android/camera/parallel/AlgoConnector;
 
     move-result-object v2
@@ -968,7 +895,6 @@
 
     invoke-virtual {v2, v1}, Lcom/android/camera/LocalParallelService$LocalBinder;->onCaptureStarted(Lcom/xiaomi/camera/core/ParallelTaskData;)V
 
-    .line 27
     iget-object v2, v0, Lcom/android/camera2/MiCamera2ShotParallelRawBurst$1;->this$0:Lcom/android/camera2/MiCamera2ShotParallelRawBurst;
 
     invoke-static {v2, v1}, Lcom/android/camera2/MiCamera2ShotParallelRawBurst;->access$602(Lcom/android/camera2/MiCamera2ShotParallelRawBurst;Lcom/xiaomi/camera/core/ParallelTaskData;)Lcom/xiaomi/camera/core/ParallelTaskData;
@@ -976,17 +902,15 @@
     goto :goto_1
 
     :cond_2
-    const-string v1, "onCaptureStarted: null task data"
+    const-string/jumbo v1, "onCaptureStarted: null task data"
 
-    .line 28
     invoke-static {v9, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
     :cond_3
-    const-string v1, "onCaptureStarted: null picture callback"
+    const-string/jumbo v1, "onCaptureStarted: null picture callback"
 
-    .line 29
     invoke-static {v9, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4

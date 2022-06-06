@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;-><init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)V
 
     return-void
@@ -47,14 +45,12 @@
 .method public synthetic OooO00o()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xf9
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -65,10 +61,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, v1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiFullScreenProtocol;->showPreviewCover(Z)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -77,7 +71,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -85,7 +78,6 @@
 
     const/16 v2, 0xf8
 
-    .line 6
     invoke-virtual {v0, v2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -94,10 +86,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     invoke-interface {v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;->hideTimbreProgress()I
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
@@ -109,7 +99,6 @@
 .method public onBufferingUpdate(Landroid/media/MediaPlayer;I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -136,7 +125,6 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -151,7 +139,6 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -186,7 +173,6 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 4
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$700(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)Lcom/android/camera/ui/TextureVideoView;
@@ -199,7 +185,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -224,7 +209,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$700(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)Lcom/android/camera/ui/TextureVideoView;
@@ -237,16 +221,15 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$700(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)Lcom/android/camera/ui/TextureVideoView;
 
     move-result-object p1
 
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0O0/OooO00o;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0O0/OooO00o;
 
-    invoke-direct {p2, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;)V
+    invoke-direct {p2, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;)V
 
     const-wide/16 v1, 0xc8
 
@@ -254,7 +237,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
@@ -262,7 +244,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
@@ -288,12 +269,10 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1, v0}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$302(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;Z)Z
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$800(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)V
@@ -305,7 +284,6 @@
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -314,7 +292,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$700(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)Lcom/android/camera/ui/TextureVideoView;
@@ -331,7 +308,6 @@
 .method public onSurfaceReady(Landroid/view/Surface;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -340,7 +316,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {v0}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$900(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;)Z
@@ -349,7 +324,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl$MimojiMediaPlayerCallback;->this$0:Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;
 
     invoke-static {v0, p1}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$1000(Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;Landroid/view/Surface;)V
@@ -367,7 +341,6 @@
 .method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/commen/impl/MimojiVideoEditorImpl;->access$400()Ljava/lang/String;
 
     move-result-object p1

@@ -59,20 +59,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScale:F
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlpha:F
 
-    .line 4
     new-instance v0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$1;
 
     const-string v1, "ShadowAlpha"
@@ -81,14 +77,12 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 5
-    new-instance v0, LOooO0OO/OooO00o/OooO00o/OooO00o/OooO00o;
+    new-instance v0, LOooO0Oo/OooO00o/OooO00o/OooO00o/OooO00o;
 
-    invoke-direct {v0, p0}, LOooO0OO/OooO00o/OooO00o/OooO00o/OooO00o;-><init>(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)V
+    invoke-direct {v0, p0}, LOooO0Oo/OooO00o/OooO00o/OooO00o/OooO00o;-><init>(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)V
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
-    .line 6
     new-instance v0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$2;
 
     const-string v1, "Scale"
@@ -97,7 +91,6 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScaleFloatProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 7
     invoke-direct {p0}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->initAnim()V
 
     return-void
@@ -106,20 +99,16 @@
 .method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)V
     .locals 0
 
-    .line 8
     invoke-direct {p0, p1, p2, p3}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)V
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 9
     iput p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScale:F
 
     const/4 p2, 0x0
 
-    .line 10
     iput p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlpha:F
 
-    .line 11
     new-instance p2, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$1;
 
     const-string p3, "ShadowAlpha"
@@ -128,14 +117,12 @@
 
     iput-object p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlphaProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 12
-    new-instance p2, LOooO0OO/OooO00o/OooO00o/OooO00o/OooO00o;
+    new-instance p2, LOooO0Oo/OooO00o/OooO00o/OooO00o/OooO00o;
 
-    invoke-direct {p2, p0}, LOooO0OO/OooO00o/OooO00o/OooO00o/OooO00o;-><init>(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)V
+    invoke-direct {p2, p0}, LOooO0Oo/OooO00o/OooO00o/OooO00o/OooO00o;-><init>(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)V
 
     iput-object p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
-    .line 13
     new-instance p2, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$2;
 
     const-string p3, "Scale"
@@ -144,17 +131,14 @@
 
     iput-object p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScaleFloatProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 14
     invoke-direct {p0}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->initAnim()V
 
     if-eqz p1, :cond_0
 
-    .line 15
     sget-object p2, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_0
 
-    .line 16
     sget p2, Lmiuix/androidbasewidget/R$drawable;->miuix_appcompat_sliding_btn_slider_shadow:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -170,43 +154,36 @@
 .method private drawShadow(Landroid/graphics/Canvas;)V
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    .line 4
     sget-object v2, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
-    .line 5
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->getIntrinsicWidth()I
 
     move-result v3
 
     sub-int/2addr v1, v3
 
-    .line 6
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->getIntrinsicHeight()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    .line 7
     sget-object v3, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v4, v0, Landroid/graphics/Rect;->left:I
@@ -231,7 +208,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 8
     sget-object v0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -244,7 +220,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 9
     sget-object v0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -256,7 +231,6 @@
 .method private initAnim()V
     .locals 6
 
-    .line 1
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v1, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScaleFloatProperty:Lmiuix/animation/property/FloatProperty;
@@ -267,7 +241,6 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 2
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
@@ -276,7 +249,6 @@
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 3
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -287,21 +259,18 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 4
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     const v2, 0x3b03126f    # 0.002f
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 5
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v3, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 6
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v3, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScaleFloatProperty:Lmiuix/animation/property/FloatProperty;
@@ -312,14 +281,12 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 7
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 8
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -330,19 +297,16 @@
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 9
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 10
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 11
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v2, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlphaProperty:Lmiuix/animation/property/FloatProperty;
@@ -351,14 +315,12 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 12
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 13
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -369,21 +331,18 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 14
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     const/high16 v3, 0x3b800000    # 0.00390625f
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 15
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
 
     invoke-virtual {v0, v4}, Lmiuix/animation/physics/DynamicAnimation;->addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 16
     new-instance v0, Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v4, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlphaProperty:Lmiuix/animation/property/FloatProperty;
@@ -394,14 +353,12 @@
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
-    .line 17
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lmiuix/animation/physics/SpringForce;->setStiffness(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 18
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->getSpring()Lmiuix/animation/physics/SpringForce;
@@ -410,12 +367,10 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/physics/SpringForce;->setDampingRatio(F)Lmiuix/animation/physics/SpringForce;
 
-    .line 19
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0, v3}, Lmiuix/animation/physics/DynamicAnimation;->setMinimumVisibleChange(F)Lmiuix/animation/physics/DynamicAnimation;
 
-    .line 20
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     iget-object v1, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mInvalidateUpdateListener:Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;
@@ -430,7 +385,6 @@
 .method public synthetic OooO00o(Lmiuix/animation/physics/DynamicAnimation;FF)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->invalidateSelf()V
 
     return-void
@@ -439,12 +393,10 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/GradientDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 2
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -453,7 +405,6 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 3
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -462,13 +413,10 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    .line 4
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->drawShadow(Landroid/graphics/Canvas;)V
 
-    .line 5
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 6
     iget v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScale:F
 
     int-to-float v1, v1
@@ -477,10 +425,8 @@
 
     invoke-virtual {p1, v0, v0, v1, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 7
     invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 8
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -489,7 +435,6 @@
 .method public getScale()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScale:F
 
     return v0
@@ -498,7 +443,6 @@
 .method public getShadowAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlpha:F
 
     return v0
@@ -507,7 +451,6 @@
 .method public newSeekBarGradientState()Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$SeekBaThumbShapeDrawableState;
 
     invoke-direct {v0}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$SeekBaThumbShapeDrawableState;-><init>()V
@@ -518,7 +461,6 @@
 .method public setScale(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mScale:F
 
     return-void
@@ -527,7 +469,6 @@
 .method public setShadowAlpha(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mShadowAlpha:F
 
     return-void
@@ -536,7 +477,6 @@
 .method public startPressedAnim()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -545,12 +485,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -560,12 +498,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -575,12 +511,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -590,7 +524,6 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
@@ -602,7 +535,6 @@
 .method public startUnPressedAnim()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
@@ -611,12 +543,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -626,12 +556,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedScaleAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -641,12 +569,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mPressedShadowShowAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
@@ -656,7 +582,6 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->mUnPressedShadowHideAnim:Lmiuix/animation/physics/SpringAnimation;
 
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringAnimation;->start()V

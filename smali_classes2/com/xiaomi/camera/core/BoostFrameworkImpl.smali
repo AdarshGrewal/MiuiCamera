@@ -51,12 +51,11 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO00o:Ljava/lang/String;
+    sget-object v1, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO00o:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -76,20 +75,16 @@
 
     const/4 v0, 0x0
 
-    .line 2
     sput-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStartBoost:Ljava/lang/reflect/Method;
 
-    .line 3
     sput-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStopBoost:Ljava/lang/reflect/Method;
 
-    .line 4
     sput-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mBoostClass:Ljava/lang/Class;
 
     const/4 v0, 0x0
 
     new-array v0, v0, [I
 
-    .line 5
     sput-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefaultParams:[I
 
     return-void
@@ -98,19 +93,16 @@
 .method public constructor <init>()V
     .locals 7
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mPerf:Ljava/lang/Object;
 
     const/16 v0, 0xc
 
     new-array v1, v0, [I
 
-    .line 3
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefultQComPerfList:[I
@@ -119,24 +111,20 @@
 
     new-array v1, v1, [I
 
-    .line 4
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefultMtkPerfList:[I
 
     new-array v0, v0, [I
 
-    .line 5
     fill-array-data v0, :array_2
 
     iput-object v0, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mVideoPerfList:[I
 
-    .line 6
     const-class v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
     monitor-enter v0
 
-    .line 7
     :try_start_0
     sget-boolean v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->isInited:Z
     :try_end_0
@@ -148,9 +136,8 @@
 
     if-nez v1, :cond_3
 
-    .line 8
     :try_start_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result v1
 
@@ -178,7 +165,6 @@
 
     new-array v5, v5, [Ljava/lang/Class;
 
-    .line 9
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v6, v5, v3
@@ -193,7 +179,6 @@
 
     sput-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStartBoost:Ljava/lang/reflect/Method;
 
-    .line 10
     sget-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mBoostClass:Ljava/lang/Class;
 
     const-string v4, "perfLockRelease"
@@ -206,7 +191,6 @@
 
     sput-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStopBoost:Ljava/lang/reflect/Method;
 
-    .line 11
     :cond_1
     invoke-direct {p0}, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->getBoostParams()[I
 
@@ -214,7 +198,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 12
     sput-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefaultParams:[I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -225,28 +208,23 @@
     :catch_0
     move-exception v1
 
-    .line 13
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 14
     :cond_2
     :goto_1
     sput-boolean v2, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->isInited:Z
 
-    .line 15
     :cond_3
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 16
     :try_start_3
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mBoostClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_4
 
-    .line 17
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mBoostClass:Ljava/lang/Class;
 
     new-array v1, v3, [Ljava/lang/Class;
@@ -255,12 +233,10 @@
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 19
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -274,7 +250,6 @@
     :catch_1
     move-exception v0
 
-    .line 20
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4
@@ -284,7 +259,6 @@
     :catchall_0
     move-exception v1
 
-    .line 21
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -340,7 +314,6 @@
 .method private getBoostParams()[I
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -361,7 +334,6 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -385,7 +357,6 @@
 .method private startBoostInternal(I[I)Z
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -404,7 +375,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mPerf:Ljava/lang/Object;
 
     const/4 v2, 0x0
@@ -413,12 +383,10 @@
 
     const-string p1, "not init boost pref"
 
-    .line 3
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 4
     :cond_0
     :try_start_0
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStartBoost:Ljava/lang/reflect/Method;
@@ -427,17 +395,14 @@
 
     const-string v0, "ready to boost"
 
-    .line 5
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStartBoost:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 7
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStartBoost:Ljava/lang/reflect/Method;
 
     iget-object v4, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mPerf:Ljava/lang/Object;
@@ -463,7 +428,6 @@
     :catch_0
     move-exception p1
 
-    .line 8
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,7 +444,6 @@
 
     invoke-static {v1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -494,22 +457,18 @@
 
     const-string v1, "stopBoostInternal:"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mPerf:Ljava/lang/Object;
 
     if-nez v1, :cond_0
 
     const-string v1, "not init boost pref, not need to stop"
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_0
     sget-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStopBoost:Ljava/lang/reflect/Method;
@@ -518,17 +477,14 @@
 
     const-string v1, "ready to stop boost"
 
-    .line 5
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     sget-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStopBoost:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 7
     sget-object v1, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mStopBoost:Ljava/lang/reflect/Method;
 
     iget-object v2, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mPerf:Ljava/lang/Object;
@@ -546,7 +502,6 @@
     :catch_0
     move-exception v1
 
-    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -563,7 +518,6 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -604,20 +558,17 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mVideoPerfList:[I
 
     goto :goto_1
 
-    .line 3
     :cond_1
     sget-object p2, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefaultParams:[I
 
@@ -627,9 +578,8 @@
 
     if-nez p2, :cond_4
 
-    .line 4
     :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result p2
 
@@ -645,11 +595,9 @@
     :goto_0
     sput-object p2, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefaultParams:[I
 
-    .line 5
     :cond_4
     sget-object v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->mDefaultParams:[I
 
-    .line 6
     :goto_1
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->startBoost(I[I)Z
 
@@ -661,7 +609,6 @@
 .method public startBoost(I[I)Z
     .locals 0
 
-    .line 7
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->startBoostInternal(I[I)Z
 
     move-result p1
@@ -672,7 +619,6 @@
 .method public stopBoost()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/core/BoostFrameworkImpl;->stopBoostInternal()V
 
     return-void

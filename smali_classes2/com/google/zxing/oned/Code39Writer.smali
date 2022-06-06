@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     :cond_0
     const/4 v2, 0x2
 
-    .line 1
     :goto_1
     aput v2, p1, v0
 
@@ -53,12 +51,10 @@
 .method public static tryToConvertToExtendedMode(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +64,6 @@
     :goto_0
     if-ge v2, v0, :cond_e
 
-    .line 3
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -101,7 +96,6 @@
 
     const/16 v4, 0x24
 
-    .line 4
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x1
@@ -110,7 +104,6 @@
 
     int-to-char v3, v3
 
-    .line 5
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -120,7 +113,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 6
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x1b
@@ -129,7 +121,6 @@
 
     int-to-char v3, v3
 
-    .line 7
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -160,7 +151,6 @@
 
     int-to-char v3, v3
 
-    .line 8
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -170,7 +160,6 @@
 
     if-gt v3, v4, :cond_4
 
-    .line 9
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x3b
@@ -179,7 +168,6 @@
 
     int-to-char v3, v3
 
-    .line 10
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -195,7 +183,6 @@
 
     int-to-char v3, v3
 
-    .line 11
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto/16 :goto_2
@@ -205,7 +192,6 @@
 
     if-gt v3, v4, :cond_6
 
-    .line 12
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x5b
@@ -214,7 +200,6 @@
 
     int-to-char v3, v3
 
-    .line 13
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -226,7 +211,6 @@
 
     const/16 v4, 0x2b
 
-    .line 14
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x61
@@ -235,7 +219,6 @@
 
     int-to-char v3, v3
 
-    .line 15
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -245,7 +228,6 @@
 
     if-gt v3, v4, :cond_8
 
-    .line 16
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v3, v3, -0x7b
@@ -254,12 +236,10 @@
 
     int-to-char v3, v3
 
-    .line 17
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 18
     :cond_8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -269,7 +249,6 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 19
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -288,7 +267,6 @@
 
     throw v0
 
-    .line 20
     :cond_9
     :goto_1
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -299,7 +277,6 @@
 
     int-to-char v3, v3
 
-    .line 21
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -307,7 +284,6 @@
     :cond_a
     const-string v3, "%W"
 
-    .line 22
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -315,12 +291,10 @@
     :cond_b
     const-string v3, "%V"
 
-    .line 23
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 24
     :cond_c
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -329,7 +303,6 @@
     :cond_d
     const-string v3, "%U"
 
-    .line 25
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_2
@@ -337,7 +310,6 @@
 
     goto/16 :goto_0
 
-    .line 26
     :cond_e
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -351,7 +323,6 @@
 .method public encode(Ljava/lang/String;)[Z
     .locals 12
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -371,7 +342,6 @@
 
     if-ge v4, v0, :cond_2
 
-    .line 2
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -382,12 +352,10 @@
 
     if-gez v6, :cond_1
 
-    .line 3
     invoke-static {p1}, Lcom/google/zxing/oned/Code39Writer;->tryToConvertToExtendedMode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -396,7 +364,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -433,17 +400,14 @@
 
     add-int/lit8 v2, v2, 0x19
 
-    .line 6
     new-array v2, v2, [Z
 
     const/16 v4, 0x94
 
-    .line 7
     invoke-static {v4, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
     const/4 v6, 0x1
 
-    .line 8
     invoke-static {v2, v3, v1, v6}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
     move-result v7
@@ -452,7 +416,6 @@
 
     aput v6, v8, v3
 
-    .line 9
     invoke-static {v2, v7, v8, v3}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
     move-result v9
@@ -464,7 +427,6 @@
     :goto_2
     if-ge v9, v0, :cond_3
 
-    .line 10
     invoke-virtual {p1, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
@@ -473,21 +435,18 @@
 
     move-result v10
 
-    .line 11
     sget-object v11, Lcom/google/zxing/oned/Code39Reader;->CHARACTER_ENCODINGS:[I
 
     aget v10, v11, v10
 
     invoke-static {v10, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
-    .line 12
     invoke-static {v2, v7, v1, v6}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
     move-result v10
 
     add-int/2addr v7, v10
 
-    .line 13
     invoke-static {v2, v7, v8, v3}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
     move-result v10
@@ -498,16 +457,13 @@
 
     goto :goto_2
 
-    .line 14
     :cond_3
     invoke-static {v4, v1}, Lcom/google/zxing/oned/Code39Writer;->toIntArray(I[I)V
 
-    .line 15
     invoke-static {v2, v7, v1, v6}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
     return-object v2
 
-    .line 16
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -535,7 +491,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/google/zxing/BarcodeFormat;->CODE_39:Lcom/google/zxing/BarcodeFormat;
 
     invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera2/DetachableClickListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/DetachableClickListener$1;->this$0:Lcom/android/camera2/DetachableClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onWindowAttached()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/DetachableClickListener;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -53,14 +51,12 @@
 .method public onWindowDetached()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/DetachableClickListener$1;->this$0:Lcom/android/camera2/DetachableClickListener;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera2/DetachableClickListener;->access$102(Lcom/android/camera2/DetachableClickListener;Landroid/content/DialogInterface$OnClickListener;)Landroid/content/DialogInterface$OnClickListener;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera2/DetachableClickListener$1;->this$0:Lcom/android/camera2/DetachableClickListener;
 
     invoke-static {v0, v1}, Lcom/android/camera2/DetachableClickListener;->access$202(Lcom/android/camera2/DetachableClickListener;Landroid/content/DialogInterface$OnCancelListener;)Landroid/content/DialogInterface$OnCancelListener;

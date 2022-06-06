@@ -80,74 +80,60 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/CustomTrigger;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 3
     iput v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
-    .line 4
     iput v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelTop:I
 
-    .line 5
     iput v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelBottom:I
 
-    .line 6
     new-instance v2, Lmiuix/springback/trigger/DefaultTrigger$1;
 
     invoke-direct {v2, p0}, Lmiuix/springback/trigger/DefaultTrigger$1;-><init>(Lmiuix/springback/trigger/DefaultTrigger;)V
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnActionDataListener:Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateActionDataListener;
 
-    .line 7
     new-instance v2, Lmiuix/springback/trigger/DefaultTrigger$2;
 
     invoke-direct {v2, p0}, Lmiuix/springback/trigger/DefaultTrigger$2;-><init>(Lmiuix/springback/trigger/DefaultTrigger;)V
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnUpActionDataListener:Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateUpActionDataListener;
 
-    .line 8
     new-instance v2, Lmiuix/springback/trigger/DefaultTrigger$3;
 
     invoke-direct {v2, p0}, Lmiuix/springback/trigger/DefaultTrigger$3;-><init>(Lmiuix/springback/trigger/DefaultTrigger;)V
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnIndeterminateActionViewListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction$OnIndeterminateActionViewListener;
 
-    .line 9
     new-instance v2, Lmiuix/springback/trigger/DefaultTrigger$4;
 
     invoke-direct {v2, p0}, Lmiuix/springback/trigger/DefaultTrigger$4;-><init>(Lmiuix/springback/trigger/DefaultTrigger;)V
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnSimpleActionViewListener:Lmiuix/springback/trigger/BaseTrigger$SimpleAction$OnSimpleActionViewListener;
 
-    .line 10
     new-instance v2, Lmiuix/springback/trigger/DefaultTrigger$5;
 
     invoke-direct {v2, p0}, Lmiuix/springback/trigger/DefaultTrigger$5;-><init>(Lmiuix/springback/trigger/DefaultTrigger;)V
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnIndeterminateUpActionViewListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnIndeterminateUpActionViewListener;
 
-    .line 11
     iput-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
-    .line 12
     iget-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnActionDataListener:Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateActionDataListener;
 
     invoke-virtual {p0, v2}, Lmiuix/springback/trigger/CustomTrigger;->setOnActionDataListener(Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateActionDataListener;)V
 
-    .line 13
     iget-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnUpActionDataListener:Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateUpActionDataListener;
 
     invoke-virtual {p0, v2}, Lmiuix/springback/trigger/CustomTrigger;->setOnUpActionDataListener(Lmiuix/springback/trigger/CustomTrigger$OnIndeterminateUpActionDataListener;)V
 
-    .line 14
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -160,7 +146,6 @@
 
     sput p1, Lmiuix/springback/trigger/DefaultTrigger;->mIndeterminateTop:I
 
-    .line 15
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -169,12 +154,10 @@
 
     sget v2, Lmiuix/springback/R$dimen;->miuix_sbl_action_indeterminate_distance:I
 
-    .line 16
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    .line 17
     new-instance v2, Landroid/util/Pair;
 
     add-int/2addr p1, v0
@@ -187,7 +170,6 @@
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mIndeterminateActionPoint:Landroid/util/Pair;
 
-    .line 18
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -196,12 +178,10 @@
 
     sget v2, Lmiuix/springback/R$dimen;->miuix_sbl_action_upindeterminate_distance:I
 
-    .line 19
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    .line 20
     new-instance v2, Landroid/util/Pair;
 
     add-int/2addr p1, v0
@@ -214,7 +194,6 @@
 
     iput-object v2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mIndeterminateUpActionPoint:Landroid/util/Pair;
 
-    .line 21
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -227,7 +206,6 @@
 
     move-result p1
 
-    .line 22
     new-instance v0, Landroid/util/Pair;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -248,7 +226,6 @@
 .method public static synthetic access$000(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     return-object p0
@@ -257,7 +234,6 @@
 .method public static synthetic access$100(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     return-object p0
@@ -266,7 +242,6 @@
 .method public static synthetic access$200(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     return-object p0
@@ -275,7 +250,6 @@
 .method public static synthetic access$300(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingIndicatorLabel:Landroid/widget/TextView;
 
     return-object p0
@@ -284,7 +258,6 @@
 .method public static synthetic access$400(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpLoadingIndicator:Landroid/widget/ProgressBar;
 
     return-object p0
@@ -293,7 +266,6 @@
 .method public static synthetic access$500(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingIndicator:Landroid/view/View;
 
     return-object p0
@@ -302,7 +274,6 @@
 .method public static synthetic access$600(Lmiuix/springback/trigger/DefaultTrigger;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/DefaultTrigger;->viewShow(Landroid/view/View;)V
 
     return-void
@@ -311,7 +282,6 @@
 .method public static synthetic access$700(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/ViewGroup;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingContainer:Landroid/view/ViewGroup;
 
     return-object p0
@@ -320,7 +290,6 @@
 .method private initIndeterminateActionView()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -333,7 +302,6 @@
 
     iput-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -348,7 +316,6 @@
 
     iput-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -369,7 +336,6 @@
 .method private initIndeterminateUpActionView()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
 
     move-result-object v0
@@ -384,7 +350,6 @@
 
     iput-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingContainer:Landroid/view/ViewGroup;
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
 
     move-result-object v0
@@ -397,7 +362,6 @@
 
     iput-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingIndicator:Landroid/view/View;
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
 
     move-result-object v0
@@ -412,7 +376,6 @@
 
     iput-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingIndicatorLabel:Landroid/widget/TextView;
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
 
     move-result-object v0
@@ -443,13 +406,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     array-length v1, p2
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -477,10 +438,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string v2, "start"
@@ -491,7 +450,6 @@
 
     const-wide/16 v3, 0x0
 
-    .line 3
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -500,12 +458,10 @@
 
     const-wide v5, -0x3f99800000000000L    # -180.0
 
-    .line 4
     invoke-virtual {v1, v2, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 5
     new-instance v2, Lmiuix/animation/controller/AnimState;
 
     const-string v5, "show"
@@ -516,7 +472,6 @@
 
     const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
 
-    .line 6
     invoke-virtual {v2, v5, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
@@ -525,12 +480,10 @@
 
     const-wide/high16 v8, 0x4039000000000000L    # 25.0
 
-    .line 7
     invoke-virtual {v2, v5, v8, v9}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
 
-    .line 8
     new-instance v5, Lmiuix/animation/controller/AnimState;
 
     const-string v8, "hide"
@@ -539,14 +492,12 @@
 
     sget-object v8, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 9
     invoke-virtual {v5, v8, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v5
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     invoke-virtual {v5, v6, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -557,7 +508,6 @@
 
     aput-object p1, v5, v0
 
-    .line 11
     invoke-static {v5}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -586,12 +536,10 @@
 
     const/4 v9, 0x4
 
-    .line 12
     invoke-static {v9, v8}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object v8
 
-    .line 13
     invoke-virtual {v6, v8}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v6
@@ -612,19 +560,16 @@
 
     fill-array-data v4, :array_1
 
-    .line 14
     invoke-static {v9, v4}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object v4
 
-    .line 15
     invoke-virtual {v2, v4}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v2
 
     aput-object v2, v1, v0
 
-    .line 16
     invoke-interface {p1, v3, v1}, Lmiuix/animation/IStateStyle;->then(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     :cond_0
@@ -652,26 +597,20 @@
 .method public addAction(Lmiuix/springback/trigger/BaseTrigger$Action;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/springback/trigger/CustomTrigger;->addAction(Lmiuix/springback/trigger/BaseTrigger$Action;)V
 
-    .line 2
     instance-of v0, p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lmiuix/springback/trigger/DefaultTrigger;->initIndeterminateUpActionView()V
 
-    .line 4
     check-cast p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;
 
-    .line 5
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnIndeterminateUpActionViewListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnIndeterminateUpActionViewListener;
 
     invoke-virtual {p0, v0}, Lmiuix/springback/trigger/CustomTrigger;->setOnIndeterminateUpActionViewListener(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnIndeterminateUpActionViewListener;)V
 
-    .line 6
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
     iget-object v1, p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mTriggerTextIDs:[I
@@ -682,24 +621,19 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     instance-of v0, p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;
 
     if-eqz v0, :cond_1
 
-    .line 8
     invoke-direct {p0}, Lmiuix/springback/trigger/DefaultTrigger;->initIndeterminateActionView()V
 
-    .line 9
     check-cast p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;
 
-    .line 10
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnIndeterminateActionViewListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction$OnIndeterminateActionViewListener;
 
     invoke-virtual {p0, v0}, Lmiuix/springback/trigger/CustomTrigger;->setOnIndeterminateActionViewListener(Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction$OnIndeterminateActionViewListener;)V
 
-    .line 11
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mContext:Landroid/content/Context;
 
     iget-object v1, p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;->mTriggerTextIDs:[I
@@ -710,16 +644,13 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     instance-of p1, p1, Lmiuix/springback/trigger/BaseTrigger$SimpleAction;
 
     if-eqz p1, :cond_2
 
-    .line 13
     invoke-direct {p0}, Lmiuix/springback/trigger/DefaultTrigger;->initSimpleActionView()V
 
-    .line 14
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mOnSimpleActionViewListener:Lmiuix/springback/trigger/BaseTrigger$SimpleAction$OnSimpleActionViewListener;
 
     invoke-virtual {p0, p1}, Lmiuix/springback/trigger/CustomTrigger;->setOnSimpleActionViewListener(Lmiuix/springback/trigger/BaseTrigger$SimpleAction$OnSimpleActionViewListener;)V
@@ -732,7 +663,6 @@
 .method public containAction(Lmiuix/springback/trigger/BaseTrigger$Action;)Z
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/springback/trigger/BaseTrigger;->containAction(Lmiuix/springback/trigger/BaseTrigger$Action;)Z
 
     move-result p1
@@ -743,7 +673,6 @@
 .method public isActionRunning()Z
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lmiuix/springback/trigger/CustomTrigger;->isActionRunning()Z
 
     move-result v0
@@ -754,7 +683,6 @@
 .method public isActionRunning(Lmiuix/springback/trigger/BaseTrigger$Action;)Z
     .locals 0
 
-    .line 2
     invoke-super {p0, p1}, Lmiuix/springback/trigger/CustomTrigger;->isActionRunning(Lmiuix/springback/trigger/BaseTrigger$Action;)Z
 
     move-result p1
@@ -765,7 +693,6 @@
 .method public onSpringBackLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitIndeterminateAction()Z
 
     move-result p1
@@ -776,7 +703,6 @@
 
     move p2, p1
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Lmiuix/springback/trigger/BaseTrigger;->getActions()Ljava/util/List;
 
@@ -788,7 +714,6 @@
 
     if-ge p2, p3, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/springback/trigger/BaseTrigger;->getActions()Ljava/util/List;
 
     move-result-object p3
@@ -799,15 +724,12 @@
 
     check-cast p3, Lmiuix/springback/trigger/BaseTrigger$Action;
 
-    .line 4
     instance-of p4, p3, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;
 
     if-eqz p4, :cond_0
 
-    .line 5
     check-cast p3, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;
 
-    .line 6
     sget p4, Lmiuix/springback/trigger/DefaultTrigger;->mIndeterminateTop:I
 
     iget-object p5, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
@@ -818,34 +740,28 @@
 
     if-lt p4, p5, :cond_0
 
-    .line 7
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     iget p5, p3, Lmiuix/springback/trigger/BaseTrigger$Action;->mEnterPoint:I
 
     sub-int/2addr p5, p1
 
-    .line 8
     invoke-virtual {p4, p5}, Landroid/widget/ProgressBar;->offsetTopAndBottom(I)V
 
-    .line 9
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     iget p5, p3, Lmiuix/springback/trigger/BaseTrigger$Action;->mEnterPoint:I
 
     sub-int/2addr p5, p1
 
-    .line 10
     invoke-virtual {p4, p5}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    .line 11
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     iget p3, p3, Lmiuix/springback/trigger/BaseTrigger$Action;->mEnterPoint:I
 
     sub-int/2addr p3, p1
 
-    .line 12
     invoke-virtual {p4, p3}, Landroid/widget/TextView;->offsetTopAndBottom(I)V
 
     :cond_0
@@ -853,7 +769,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
@@ -863,7 +778,6 @@
 
     if-nez p1, :cond_6
 
-    .line 14
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentAction()Lmiuix/springback/trigger/BaseTrigger$Action;
 
     move-result-object p1
@@ -878,12 +792,10 @@
 
     if-eqz p1, :cond_6
 
-    .line 15
     iget p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
     if-gtz p1, :cond_2
 
-    .line 16
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
@@ -892,7 +804,6 @@
 
     iput p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
-    .line 17
     :cond_2
     iget p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelTop:I
 
@@ -902,7 +813,6 @@
 
     if-gtz p1, :cond_4
 
-    .line 18
     :cond_3
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
@@ -912,7 +822,6 @@
 
     iput p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelTop:I
 
-    .line 19
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getBottom()I
@@ -921,7 +830,6 @@
 
     iput p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelBottom:I
 
-    .line 20
     :cond_4
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
@@ -935,7 +843,6 @@
 
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
-    .line 21
     invoke-virtual {p1}, Landroid/widget/ProgressBar;->getVisibility()I
 
     move-result p1
@@ -944,7 +851,6 @@
 
     if-ne p1, p2, :cond_6
 
-    .line 22
     :cond_5
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentState()Lmiuix/springback/trigger/TriggerState;
 
@@ -970,12 +876,10 @@
 
     if-le p1, p2, :cond_6
 
-    .line 23
     iget-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     iget p2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
-    .line 24
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object p3
@@ -994,10 +898,8 @@
 
     add-int/2addr p2, p3
 
-    .line 25
     invoke-virtual {p1, p2}, Landroid/view/View;->setBottom(I)V
 
-    .line 26
     :cond_6
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitSimpleAction()Z
 
@@ -1015,7 +917,6 @@
 
     if-nez p1, :cond_7
 
-    .line 27
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p1
@@ -1045,7 +946,6 @@
 
     if-gez p4, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitIndeterminateUpAction()Z
 
     move-result p2
@@ -1058,7 +958,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentAction()Lmiuix/springback/trigger/BaseTrigger$Action;
 
     move-result-object p2
@@ -1067,7 +966,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndeterminateUpView()Landroid/view/View;
 
     move-result-object p2
@@ -1088,14 +986,12 @@
 
     move-result p2
 
-    .line 4
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mUpTrackingContainer:Landroid/view/ViewGroup;
 
     int-to-float p2, p2
 
     invoke-virtual {p4, p2}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitIndeterminateAction()Z
 
@@ -1117,14 +1013,12 @@
 
     if-eqz p2, :cond_8
 
-    .line 6
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentAction()Lmiuix/springback/trigger/BaseTrigger$Action;
 
     move-result-object p2
 
     check-cast p2, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;
 
-    .line 7
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {p4}, Landroid/view/View;->getVisibility()I
@@ -1133,7 +1027,6 @@
 
     if-nez p4, :cond_8
 
-    .line 8
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {p4}, Landroid/view/View;->getTop()I
@@ -1150,7 +1043,6 @@
 
     iput p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
-    .line 9
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {p4}, Landroid/widget/TextView;->getTop()I
@@ -1159,7 +1051,6 @@
 
     iput p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelTop:I
 
-    .line 10
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {p4}, Landroid/widget/TextView;->getBottom()I
@@ -1168,10 +1059,8 @@
 
     iput p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelBottom:I
 
-    .line 11
     iget p4, p2, Lmiuix/springback/trigger/BaseTrigger$Action;->mTriggerPoint:I
 
-    .line 12
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -1198,7 +1087,6 @@
 
     move-result v0
 
-    .line 13
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v3
@@ -1221,7 +1109,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
@@ -1241,13 +1128,11 @@
 
     move-result v3
 
-    .line 15
     :goto_0
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 16
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v5
@@ -1266,7 +1151,6 @@
 
     goto :goto_1
 
-    .line 17
     :cond_2
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
@@ -1294,13 +1178,11 @@
 
     move-result p4
 
-    .line 18
     :goto_1
     invoke-static {v2, p4}, Ljava/lang/Math;->max(FF)F
 
     move-result p4
 
-    .line 19
     iget-object v4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getWidth()I
@@ -1315,41 +1197,34 @@
 
     mul-float/2addr v4, v1
 
-    .line 20
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 21
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 22
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 23
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {v1, p4}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 24
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     iget v5, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelTop:I
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setTop(I)V
 
-    .line 25
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     iget v5, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabelBottom:I
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setBottom(I)V
 
-    .line 26
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1}, Landroid/widget/ProgressBar;->getVisibility()I
@@ -1358,22 +1233,18 @@
 
     if-nez v1, :cond_3
 
-    .line 27
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v3}, Landroid/widget/ProgressBar;->setAlpha(F)V
 
-    .line 28
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setScaleX(F)V
 
-    .line 29
     iget-object v1, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setScaleY(F)V
 
-    .line 30
     :cond_3
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
@@ -1391,12 +1262,10 @@
 
     if-lez p4, :cond_4
 
-    .line 31
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {p4, v4}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 32
     :cond_4
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentState()Lmiuix/springback/trigger/TriggerState;
 
@@ -1406,7 +1275,6 @@
 
     if-ne p4, v0, :cond_5
 
-    .line 33
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     iget-object p2, p2, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;->mTriggerTexts:[Ljava/lang/String;
@@ -1415,7 +1283,6 @@
 
     invoke-virtual {p4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 34
     :cond_5
     iget-object p2, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
@@ -1425,7 +1292,6 @@
 
     goto :goto_3
 
-    .line 35
     :cond_6
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
@@ -1439,7 +1305,6 @@
 
     if-lt p4, v0, :cond_8
 
-    .line 36
     iget p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorBottom:I
 
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
@@ -1456,7 +1321,6 @@
 
     add-int/2addr p4, v0
 
-    .line 37
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mLoadingIndicator:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
@@ -1473,15 +1337,12 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 38
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicator:Landroid/view/View;
 
     invoke-virtual {v0, p4}, Landroid/view/View;->setBottom(I)V
 
-    .line 39
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
-    .line 40
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -1500,13 +1361,11 @@
 
     goto :goto_2
 
-    .line 41
     :cond_7
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     invoke-virtual {p4, v2}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 42
     :goto_2
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getCurrentState()Lmiuix/springback/trigger/TriggerState;
 
@@ -1516,7 +1375,6 @@
 
     if-ne p4, v0, :cond_8
 
-    .line 43
     iget-object p4, p0, Lmiuix/springback/trigger/DefaultTrigger;->mTrackingIndicatorLabel:Landroid/widget/TextView;
 
     iget-object p2, p2, Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;->mTriggerTexts:[Ljava/lang/String;
@@ -1527,7 +1385,6 @@
 
     invoke-virtual {p4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 44
     :cond_8
     :goto_3
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitSimpleAction()Z
@@ -1552,7 +1409,6 @@
 
     if-eqz p2, :cond_9
 
-    .line 45
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object p2
@@ -1569,7 +1425,6 @@
 
     if-ge p2, v0, :cond_9
 
-    .line 46
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p1
@@ -1578,7 +1433,6 @@
 
     goto :goto_4
 
-    .line 47
     :cond_9
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitSimpleAction()Z
 
@@ -1600,7 +1454,6 @@
 
     if-eqz p2, :cond_a
 
-    .line 48
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getRootContainer()Landroid/view/ViewGroup;
 
     move-result-object p2
@@ -1617,7 +1470,6 @@
 
     if-lt p2, v0, :cond_a
 
-    .line 49
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p2
@@ -1628,21 +1480,18 @@
 
     if-ne p2, p4, :cond_a
 
-    .line 50
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p2
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 51
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/DefaultTrigger;->viewShow(Landroid/view/View;)V
 
-    .line 52
     :cond_a
     :goto_4
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->isExitSimpleAction()Z
@@ -1667,7 +1516,6 @@
 
     if-nez p1, :cond_b
 
-    .line 53
     invoke-virtual {p0}, Lmiuix/springback/trigger/CustomTrigger;->getIndicatorContainer()Landroid/view/ViewGroup;
 
     move-result-object p1

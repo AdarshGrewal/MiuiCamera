@@ -1,53 +1,64 @@
 .class public Lcom/xiaomi/onetrack/b/g;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:Lorg/json/JSONArray;
+.field public final synthetic a:Ljava/util/ArrayList;
 
-.field public b:I
-
-.field public c:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public d:Z
+.field public final synthetic b:Lcom/xiaomi/onetrack/b/f;
 
 
 # direct methods
-.method public constructor <init>(Lorg/json/JSONArray;ILjava/util/ArrayList;Z)V
+.method public constructor <init>(Lcom/xiaomi/onetrack/b/f;Ljava/util/ArrayList;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lorg/json/JSONArray;",
-            "I",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;Z)V"
-        }
-    .end annotation
 
-    .line 1
+    iput-object p1, p0, Lcom/xiaomi/onetrack/b/g;->b:Lcom/xiaomi/onetrack/b/f;
+
+    iput-object p2, p0, Lcom/xiaomi/onetrack/b/g;->a:Ljava/util/ArrayList;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/g;->a:Lorg/json/JSONArray;
+    return-void
+.end method
 
-    .line 3
-    iput p2, p0, Lcom/xiaomi/onetrack/b/g;->b:I
 
-    .line 4
-    iput-object p3, p0, Lcom/xiaomi/onetrack/b/g;->c:Ljava/util/ArrayList;
+# virtual methods
+.method public run()V
+    .locals 2
 
-    .line 5
-    iput-boolean p4, p0, Lcom/xiaomi/onetrack/b/g;->d:Z
+    sget-boolean v0, Lcom/xiaomi/onetrack/h/q;->a:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "update: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/xiaomi/onetrack/b/g;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ConfigDbManager"
+
+    invoke-static {v1, v0}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/onetrack/b/g;->b:Lcom/xiaomi/onetrack/b/f;
+
+    iget-object v1, p0, Lcom/xiaomi/onetrack/b/g;->a:Ljava/util/ArrayList;
+
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/b/f;->a(Lcom/xiaomi/onetrack/b/f;Ljava/util/ArrayList;)V
 
     return-void
 .end method

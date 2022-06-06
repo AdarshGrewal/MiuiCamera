@@ -33,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -46,7 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +59,6 @@
 
     return-object p0
 
-    .line 1
     :pswitch_0
     new-instance p0, Lmiuix/view/animation/BounceEaseInOutInterpolator;
 
@@ -69,7 +66,6 @@
 
     return-object p0
 
-    .line 2
     :pswitch_1
     new-instance p0, Lmiuix/view/animation/BounceEaseOutInterpolator;
 
@@ -77,7 +73,6 @@
 
     return-object p0
 
-    .line 3
     :pswitch_2
     new-instance p0, Lmiuix/view/animation/BounceEaseInInterpolator;
 
@@ -85,7 +80,6 @@
 
     return-object p0
 
-    .line 4
     :pswitch_3
     new-instance p0, Landroid/view/animation/BounceInterpolator;
 
@@ -93,7 +87,6 @@
 
     return-object p0
 
-    .line 5
     :pswitch_4
     new-instance p0, Landroid/view/animation/AccelerateInterpolator;
 
@@ -101,7 +94,6 @@
 
     return-object p0
 
-    .line 6
     :pswitch_5
     new-instance p0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -109,7 +101,6 @@
 
     return-object p0
 
-    .line 7
     :pswitch_6
     new-instance p0, Landroid/view/animation/DecelerateInterpolator;
 
@@ -117,7 +108,6 @@
 
     return-object p0
 
-    .line 8
     :pswitch_7
     new-instance p0, Lmiuix/view/animation/ExponentialEaseInOutInterpolator;
 
@@ -125,7 +115,6 @@
 
     return-object p0
 
-    .line 9
     :pswitch_8
     new-instance p0, Lmiuix/view/animation/ExponentialEaseOutInterpolator;
 
@@ -133,7 +122,6 @@
 
     return-object p0
 
-    .line 10
     :pswitch_9
     new-instance p0, Lmiuix/view/animation/ExponentialEaseInInterpolator;
 
@@ -141,7 +129,6 @@
 
     return-object p0
 
-    .line 11
     :pswitch_a
     new-instance p0, Lmiuix/view/animation/SineEaseInOutInterpolator;
 
@@ -149,7 +136,6 @@
 
     return-object p0
 
-    .line 12
     :pswitch_b
     new-instance p0, Lmiuix/view/animation/SineEaseOutInterpolator;
 
@@ -157,7 +143,6 @@
 
     return-object p0
 
-    .line 13
     :pswitch_c
     new-instance p0, Lmiuix/view/animation/SineEaseInInterpolator;
 
@@ -165,7 +150,6 @@
 
     return-object p0
 
-    .line 14
     :pswitch_d
     new-instance p0, Lmiuix/view/animation/QuinticEaseInOutInterpolator;
 
@@ -173,7 +157,6 @@
 
     return-object p0
 
-    .line 15
     :pswitch_e
     new-instance p0, Lmiuix/view/animation/QuinticEaseOutInterpolator;
 
@@ -181,7 +164,6 @@
 
     return-object p0
 
-    .line 16
     :pswitch_f
     new-instance p0, Lmiuix/view/animation/QuinticEaseInInterpolator;
 
@@ -189,7 +171,6 @@
 
     return-object p0
 
-    .line 17
     :pswitch_10
     new-instance p0, Lmiuix/view/animation/QuarticEaseInOutInterpolator;
 
@@ -197,7 +178,6 @@
 
     return-object p0
 
-    .line 18
     :pswitch_11
     new-instance p0, Lmiuix/view/animation/QuadraticEaseOutInterpolator;
 
@@ -205,7 +185,6 @@
 
     return-object p0
 
-    .line 19
     :pswitch_12
     new-instance p0, Lmiuix/view/animation/QuarticEaseInInterpolator;
 
@@ -213,7 +192,6 @@
 
     return-object p0
 
-    .line 20
     :pswitch_13
     new-instance p0, Lmiuix/view/animation/CubicEaseInOutInterpolator;
 
@@ -221,7 +199,6 @@
 
     return-object p0
 
-    .line 21
     :pswitch_14
     new-instance p0, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
@@ -229,7 +206,6 @@
 
     return-object p0
 
-    .line 22
     :pswitch_15
     new-instance p0, Lmiuix/view/animation/CubicEaseInInterpolator;
 
@@ -237,7 +213,6 @@
 
     return-object p0
 
-    .line 23
     :pswitch_16
     new-instance p0, Lmiuix/view/animation/QuadraticEaseInOutInterpolator;
 
@@ -245,7 +220,6 @@
 
     return-object p0
 
-    .line 24
     :pswitch_17
     new-instance p0, Lmiuix/view/animation/QuadraticEaseOutInterpolator;
 
@@ -253,7 +227,6 @@
 
     return-object p0
 
-    .line 25
     :pswitch_18
     new-instance p0, Lmiuix/view/animation/QuadraticEaseInInterpolator;
 
@@ -261,7 +234,6 @@
 
     return-object p0
 
-    .line 26
     :pswitch_19
     new-instance p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
@@ -271,7 +243,6 @@
 
     aget v0, p1, v0
 
-    .line 27
     invoke-virtual {p0, v0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     move-result-object p0
@@ -280,14 +251,12 @@
 
     aget p1, p1, v0
 
-    .line 28
     invoke-virtual {p0, p1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     move-result-object p0
 
     return-object p0
 
-    .line 29
     :pswitch_1a
     new-instance p0, Landroid/view/animation/LinearInterpolator;
 
@@ -333,12 +302,10 @@
 .method public static varargs getInterpolator(I[F)Landroid/animation/TimeInterpolator;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/animation/utils/EaseManager;->getInterpolatorStyle(I[F)Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Lmiuix/animation/utils/EaseManager;->getInterpolator(Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;)Landroid/animation/TimeInterpolator;
 
     move-result-object p0
@@ -351,7 +318,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 3
     sget-object v0, Lmiuix/animation/utils/EaseManager;->sInterpolatorCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -368,7 +334,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     iget v0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
     iget-object v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
@@ -379,7 +344,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     sget-object v1, Lmiuix/animation/utils/EaseManager;->sInterpolatorCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget p0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -402,7 +366,6 @@
 .method public static varargs getInterpolatorStyle(I[F)Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     invoke-direct {v0, p0, p1}, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;-><init>(I[F)V
@@ -417,7 +380,6 @@
 
     if-lt p0, v0, :cond_2
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -428,7 +390,6 @@
 
     array-length v0, p1
 
-    .line 2
     invoke-static {p1, v2, v0}, Ljava/util/Arrays;->copyOfRange([FII)[F
 
     move-result-object v0
@@ -438,18 +399,15 @@
     :cond_0
     new-array v0, v1, [F
 
-    .line 3
     :goto_0
     invoke-static {p0, v0}, Lmiuix/animation/utils/EaseManager;->getInterpolatorStyle(I[F)Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     move-result-object p0
 
-    .line 4
     array-length v0, p1
 
     if-lez v0, :cond_1
 
-    .line 5
     aget p1, p1, v1
 
     float-to-int p1, p1
@@ -461,7 +419,6 @@
     :cond_1
     return-object p0
 
-    .line 6
     :cond_2
     new-instance v0, Lmiuix/animation/utils/EaseManager$EaseStyle;
 

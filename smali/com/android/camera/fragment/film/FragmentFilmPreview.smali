@@ -33,12 +33,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mOldControlStream:I
 
     return-void
@@ -47,7 +45,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Lcom/android/camera/fragment/film/FilmResourceSelectedListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mResourceSelectedListener:Lcom/android/camera/fragment/film/FilmResourceSelectedListener;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Lcom/android/camera/fragment/film/FilmList;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mFilmList:Lcom/android/camera/fragment/film/FilmList;
 
     return-object p0
@@ -65,7 +61,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Landroidx/viewpager/widget/ViewPager;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     return-object p0
@@ -74,7 +69,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Lcom/android/camera/fragment/BaseFragmentPagerAdapter;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewAdapter:Lcom/android/camera/fragment/BaseFragmentPagerAdapter;
 
     return-object p0
@@ -83,19 +77,17 @@
 .method private initViewPager()V
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0707e2
+    const v2, 0x7f0707ce
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -113,15 +105,13 @@
 
     float-to-int v2, v2
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v5
 
     if-le v2, v5, :cond_0
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v1
 
@@ -141,14 +131,11 @@
 
     float-to-int v1, v1
 
-    .line 5
     :cond_0
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 6
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -157,12 +144,11 @@
 
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0707e6
+    const v4, 0x7f0707d2
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -172,10 +158,8 @@
 
     const/4 v10, 0x2
 
-    .line 9
     div-int/2addr v4, v10
 
-    .line 10
     iget-object v5, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     new-instance v6, Lcom/android/camera/fragment/film/FragmentFilmPreview$1;
@@ -184,7 +168,6 @@
 
     invoke-virtual {v5, v6}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
-    .line 11
     iget-object v5, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewLayout:Landroid/view/ViewGroup;
 
     new-instance v6, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;
@@ -193,12 +176,10 @@
 
     invoke-virtual {v5, v6}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0, v3}, Landroidx/viewpager/widget/ViewPager;->setPageMargin(I)V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     new-instance v3, Lcom/android/camera/fragment/film/FilmPreviewTransformer;
@@ -209,7 +190,6 @@
 
     invoke-virtual {v0, v4, v3}, Landroidx/viewpager/widget/ViewPager;->setPageTransformer(ZLandroidx/viewpager/widget/ViewPager$PageTransformer;)V
 
-    .line 14
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mFilmList:Lcom/android/camera/fragment/film/FilmList;
@@ -224,7 +204,6 @@
 
     move v12, v11
 
-    .line 15
     :goto_0
     iget-object v3, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mFilmList:Lcom/android/camera/fragment/film/FilmList;
 
@@ -234,12 +213,10 @@
 
     if-ge v12, v3, :cond_1
 
-    .line 16
     new-instance v13, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;
 
     invoke-direct {v13}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;-><init>()V
 
-    .line 17
     iget-object v3, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mFilmList:Lcom/android/camera/fragment/film/FilmList;
 
     invoke-virtual {v3, v12}, Lcom/android/camera/resource/BaseResourceList;->getItem(I)Lcom/android/camera/resource/BaseResourceItem;
@@ -264,14 +241,12 @@
 
     invoke-virtual/range {v3 .. v9}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->setData(ILcom/android/camera/fragment/film/FilmItem;IILandroid/view/View$OnClickListener;I)V
 
-    .line 18
     invoke-interface {v0, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 19
     :cond_1
     new-instance v1, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;
 
@@ -283,17 +258,14 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewAdapter:Lcom/android/camera/fragment/BaseFragmentPagerAdapter;
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
-    .line 21
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v0, v10}, Landroidx/viewpager/widget/ViewPager;->setOffscreenPageLimit(I)V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     iget v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewIndex:I
@@ -306,12 +278,10 @@
 .method private restoreOuterAudio()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/AudioController;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -326,20 +296,17 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
     invoke-virtual {v0}, Lcom/android/camera/module/AudioController;->restoreAudio()V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mOldControlStream:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -355,12 +322,10 @@
 .method private silenceOuterAudio()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/AudioController;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -375,13 +340,11 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mAudioController:Lcom/android/camera/module/AudioController;
 
     invoke-virtual {v0}, Lcom/android/camera/module/AudioController;->silenceAudio()V
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -392,7 +355,6 @@
 
     iput v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mOldControlStream:I
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -405,28 +367,24 @@
 .end method
 
 .method private transformToGallery(ILandroid/view/View;)V
-    .locals 3
+    .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
     if-eqz p2, :cond_0
 
-    .line 3
     invoke-static {p2}, Landroidx/core/view/ViewCompat;->getTransitionName(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, p2, v0}, Landroidx/fragment/app/FragmentTransaction;->addSharedElement(Landroid/view/View;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -444,19 +402,16 @@
 
     check-cast p2, Lcom/android/camera/fragment/film/FragmentFilmGallery;
 
-    const/4 v0, 0x5
+    const v0, 0x7f0a0094
 
     if-nez p2, :cond_1
 
-    .line 5
     new-instance p2, Lcom/android/camera/fragment/film/FragmentFilmGallery;
 
     invoke-direct {p2}, Lcom/android/camera/fragment/film/FragmentFilmGallery;-><init>()V
 
-    .line 6
     invoke-virtual {p2}, Lcom/android/camera/fragment/BaseFragment;->registerProtocol()V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v1}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
@@ -465,25 +420,18 @@
 
     invoke-virtual {p2, v1}, Lcom/android/camera/fragment/film/FragmentFilmGallery;->setPreviewData(I)V
 
-    .line 8
-    invoke-static {v0}, Lcom/android/camera/fragment/BaseFragmentDelegate;->getViewContainer(I)I
-
-    move-result v1
-
     invoke-virtual {p2}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p1, v1, p2, v2}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
+    invoke-virtual {p1, v0, p2, v1}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 9
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
@@ -493,20 +441,16 @@
 
     invoke-virtual {p2, v1}, Lcom/android/camera/fragment/film/FragmentFilmGallery;->setPreviewData(I)V
 
-    .line 11
     invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 12
     invoke-virtual {p1, p2}, Landroidx/fragment/app/FragmentTransaction;->show(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 13
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    .line 14
     :goto_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -514,7 +458,6 @@
 
     const/16 v1, 0xa0
 
-    .line 15
     invoke-virtual {p1, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
@@ -523,16 +466,13 @@
 
     if-eqz p1, :cond_2
 
-    .line 16
-    invoke-static {v0}, Lcom/android/camera/fragment/BaseFragmentDelegate;->getViewContainer(I)I
-
-    move-result v1
-
     invoke-virtual {p2}, Lcom/android/camera/fragment/film/FragmentFilmGallery;->getFragmentInto()I
 
     move-result p2
 
-    invoke-interface {p1, v1, p2, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->updateCurrentFragments(III)V
+    const/4 v1, 0x5
+
+    invoke-interface {p1, v0, p2, v1}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->updateCurrentFragments(III)V
 
     :cond_2
     return-void
@@ -551,7 +491,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d00c0
+    const v0, 0x7f0d00c1
 
     return v0
 .end method
@@ -559,12 +499,10 @@
 .method public initView(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
-    const v0, 0x7f0a04ad
+    const v0, 0x7f0a04c0
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -573,9 +511,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewLayout:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a04c8
+    const v0, 0x7f0a04db
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -584,7 +521,6 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewViewPager:Landroidx/viewpager/widget/ViewPager;
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -595,7 +531,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewLayout:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -604,7 +539,6 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 6
     iget-object p1, p1, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->mTargetDisplayRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -613,7 +547,6 @@
 
     iput p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->initViewPager()V
 
@@ -634,7 +567,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->transformToGallery(ILandroid/view/View;)V
 
     const/4 p1, 0x1
@@ -645,12 +577,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a04a7
+    const v1, 0x7f0a04ba
 
     if-eq v0, v1, :cond_0
 
@@ -661,10 +592,8 @@
 
     const-string/jumbo v1, "vv_preview_item_collapsing"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -675,21 +604,18 @@
 
     move-result v0
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a04a9
+    const v1, 0x7f0a04bc
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 6
     invoke-direct {p0, v0, p1}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->transformToGallery(ILandroid/view/View;)V
 
     :goto_0
@@ -699,7 +625,6 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -708,10 +633,8 @@
 .method public onPause()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->restoreOuterAudio()V
 
     return-void
@@ -720,10 +643,8 @@
 .method public onResume()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->silenceOuterAudio()V
 
     return-void
@@ -732,10 +653,8 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
-    .line 2
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -744,10 +663,8 @@
 .method public setPreviewData(ILcom/android/camera/fragment/film/FilmList;)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mPreviewIndex:I
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mFilmList:Lcom/android/camera/fragment/film/FilmList;
 
     return-void
@@ -756,7 +673,6 @@
 .method public setResourceSelectedListener(Lcom/android/camera/fragment/film/FilmResourceSelectedListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview;->mResourceSelectedListener:Lcom/android/camera/fragment/film/FilmResourceSelectedListener;
 
     return-void
@@ -765,10 +681,8 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
-    .line 2
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/VideoSkyModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public isWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
@@ -75,7 +73,6 @@
 .method public onDeviceBecomeStable()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/VideoSkyModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +93,6 @@
 .method public onDeviceKeepMoving(D)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
@@ -115,7 +111,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -136,14 +131,12 @@
 
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/VideoSkyModule;->is3ALocked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -156,7 +149,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/VideoSkyModule;->isRecording()Z
@@ -165,7 +157,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -197,7 +188,6 @@
 .method public onDeviceRotationChanged([F)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$1100(Lcom/android/camera/module/VideoSkyModule;)[F
@@ -212,7 +202,6 @@
 
     aput v2, v0, v1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$1100(Lcom/android/camera/module/VideoSkyModule;)[F
@@ -225,7 +214,6 @@
 
     aput v2, v0, v1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$1100(Lcom/android/camera/module/VideoSkyModule;)[F
@@ -238,7 +226,6 @@
 
     aput v2, v0, v1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/VideoSkyModule$4;->this$0:Lcom/android/camera/module/VideoSkyModule;
 
     invoke-static {v0}, Lcom/android/camera/module/VideoSkyModule;->access$1100(Lcom/android/camera/module/VideoSkyModule;)[F

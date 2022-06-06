@@ -40,25 +40,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "500 Internal Server Error"
 
-    .line 7
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->status:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 8
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->content:Ljava/lang/String;
 
-    .line 9
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->attributes:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 10
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->mRequest:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;
 
     return-void
@@ -67,23 +62,18 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "500 Internal Server Error"
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->status:Ljava/lang/String;
 
     const-string v0, ""
 
-    .line 3
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->content:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->attributes:Ljava/lang/String;
 
-    .line 5
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->mRequest:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;
 
     return-void
@@ -103,7 +93,6 @@
 
     const-string v1, ""
 
-    .line 1
     :try_start_0
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->mRequest:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Request;
 
@@ -134,7 +123,6 @@
     :catch_0
     move-exception v2
 
-    .line 2
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,7 +157,6 @@
 
     const/4 v2, -0x1
 
-    .line 3
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -229,7 +216,6 @@
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$Response;->content:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -254,14 +240,12 @@
 
     const-string v3, "\r"
 
-    .line 5
     invoke-virtual {v2, v3, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0

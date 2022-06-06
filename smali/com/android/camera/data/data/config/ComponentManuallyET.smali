@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -48,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,7 +68,6 @@
 
     if-ne p1, v2, :cond_5
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getExposureTimeRange()Landroid/util/Range;
 
@@ -78,7 +75,6 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getVideoFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
@@ -88,14 +84,12 @@
     :cond_2
     if-ne p1, v2, :cond_3
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFastmotionFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 5
     :cond_3
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -104,14 +98,12 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 6
     aget-object v1, p1, v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     if-eqz p2, :cond_5
 
-    .line 7
     invoke-virtual {p2}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object v1
@@ -122,7 +114,6 @@
 
     move-result-wide v1
 
-    .line 8
     invoke-virtual {p2}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object p2
@@ -135,16 +126,13 @@
 
     const/4 p2, 0x1
 
-    .line 9
     :goto_1
     array-length v5, p1
 
     if-ge p2, v5, :cond_5
 
-    .line 10
     aget-object v5, p1, p2
 
-    .line 11
     iget-object v6, v5, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -159,7 +147,6 @@
 
     if-gtz v6, :cond_4
 
-    .line 12
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_4
@@ -176,7 +163,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isMovieSolidOn()Z
 
     move-result v1
@@ -204,7 +190,6 @@
     :goto_0
     move v1, v3
 
-    .line 2
     :goto_1
     iget-object v4, v0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mFastmotionFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -216,7 +201,6 @@
 
     return-object v4
 
-    .line 3
     :cond_2
     iput-boolean v1, v0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mFastmotionEISEnabled:Z
 
@@ -224,10 +208,9 @@
 
     new-array v5, v4, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 4
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v7, 0x7f1206c4
+    const v7, 0x7f120688
 
     const/4 v8, -0x1
 
@@ -239,7 +222,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v7, 0x7f1206b2
+    const v7, 0x7f120676
 
     const-string v9, "250000"
 
@@ -249,7 +232,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v7, 0x7f1206ac
+    const v7, 0x7f120670
 
     const-string v9, "312500"
 
@@ -261,7 +244,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v9, 0x7f1206a5
+    const v9, 0x7f120669
 
     const-string v10, "400000"
 
@@ -273,7 +256,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v10, 0x7f1206a1
+    const v10, 0x7f120665
 
     const-string v11, "500000"
 
@@ -285,7 +268,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v11, 0x7f120699
+    const v11, 0x7f12065d
 
     const-string v12, "625000"
 
@@ -297,7 +280,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f120693
+    const v12, 0x7f120657
 
     const-string v13, "800000"
 
@@ -309,7 +292,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v13, 0x7f120690
+    const v13, 0x7f120654
 
     const-string v14, "1000000"
 
@@ -321,7 +304,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v14, 0x7f1206c0
+    const v14, 0x7f120684
 
     const-string v15, "1250000"
 
@@ -333,7 +316,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206bb
+    const v15, 0x7f12067f
 
     const-string v4, "1562500"
 
@@ -345,7 +328,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206b6
+    const v15, 0x7f12067a
 
     const-string v4, "2000000"
 
@@ -357,7 +340,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206b1
+    const v15, 0x7f120675
 
     const-string v4, "2500000"
 
@@ -369,7 +352,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206ab
+    const v15, 0x7f12066f
 
     const-string v4, "3125000"
 
@@ -381,7 +364,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206a4
+    const v15, 0x7f120668
 
     const-string v4, "4000000"
 
@@ -393,7 +376,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206a0
+    const v15, 0x7f120664
 
     const-string v4, "5000000"
 
@@ -405,7 +388,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f120698
+    const v15, 0x7f12065c
 
     const-string v4, "6250000"
 
@@ -417,7 +400,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f120692
+    const v15, 0x7f120656
 
     const-string v4, "8000000"
 
@@ -429,7 +412,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f12068f
+    const v15, 0x7f120653
 
     const-string v4, "10000000"
 
@@ -441,7 +424,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206bf
+    const v15, 0x7f120683
 
     const-string v4, "12500000"
 
@@ -453,7 +436,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v15, 0x7f1206ba
+    const v15, 0x7f12067e
 
     const-string v4, "16670000"
 
@@ -467,7 +450,7 @@
 
     new-instance v15, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b5
+    const v4, 0x7f120679
 
     const-string v14, "20000000"
 
@@ -479,7 +462,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v14, 0x7f1206b0
+    const v14, 0x7f120674
 
     const-string v15, "25000000"
 
@@ -491,7 +474,7 @@
 
     new-instance v6, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v14, 0x7f1206a9
+    const v14, 0x7f12066d
 
     const-string v15, "33300000"
 
@@ -499,7 +482,6 @@
 
     aput-object v6, v5, v4
 
-    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -512,10 +494,9 @@
 
     new-array v1, v12, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 6
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f1206a3
+    const v6, 0x7f120667
 
     const-string v14, "40000000"
 
@@ -525,7 +506,7 @@
 
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f12069f
+    const v6, 0x7f120663
 
     const-string v14, "50000000"
 
@@ -535,7 +516,7 @@
 
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f120696
+    const v6, 0x7f12065a
 
     const-string v14, "66700000"
 
@@ -545,7 +526,7 @@
 
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f120694
+    const v6, 0x7f120658
 
     const-string v14, "76900000"
 
@@ -555,7 +536,7 @@
 
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f12068e
+    const v6, 0x7f120652
 
     const-string v14, "100000000"
 
@@ -565,7 +546,7 @@
 
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f1206be
+    const v6, 0x7f120682
 
     const-string v14, "125000000"
 
@@ -573,19 +554,17 @@
 
     aput-object v5, v1, v11
 
-    .line 7
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v4, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 8
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOoo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OOO()Z
 
     move-result v1
 
@@ -595,10 +574,9 @@
 
     new-array v1, v1, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 9
     new-instance v5, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f1206b9
+    const v6, 0x7f12067d
 
     const-string v14, "166700000"
 
@@ -608,7 +586,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v5, 0x7f1206b4
+    const v5, 0x7f120678
 
     const-string v6, "200000000"
 
@@ -618,7 +596,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206af
+    const v3, 0x7f120673
 
     const-string v5, "250000000"
 
@@ -628,7 +606,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120689
+    const v3, 0x7f12064d
 
     const-string v5, "300000000"
 
@@ -638,7 +616,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12068a
+    const v3, 0x7f12064e
 
     const-string v5, "400000000"
 
@@ -648,7 +626,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12068b
+    const v3, 0x7f12064f
 
     const-string v5, "500000000"
 
@@ -658,7 +636,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12068c
+    const v3, 0x7f120650
 
     const-string v5, "600000000"
 
@@ -668,7 +646,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12068d
+    const v3, 0x7f120651
 
     const-string v5, "800000000"
 
@@ -678,7 +656,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069e
+    const v3, 0x7f120662
 
     const-string v5, "1000000000"
 
@@ -690,7 +668,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069c
+    const v3, 0x7f120660
 
     const-string v5, "1300000000"
 
@@ -702,7 +680,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069d
+    const v3, 0x7f120661
 
     const-string v5, "1600000000"
 
@@ -714,7 +692,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206a8
+    const v3, 0x7f12066c
 
     const-string v5, "2000000000"
 
@@ -726,7 +704,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206a7
+    const v3, 0x7f12066b
 
     const-string v5, "2500000000"
 
@@ -738,7 +716,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206ae
+    const v3, 0x7f120672
 
     const-string v5, "3200000000"
 
@@ -750,7 +728,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206b3
+    const v3, 0x7f120677
 
     const-string v5, "4000000000"
 
@@ -762,7 +740,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206b8
+    const v3, 0x7f12067c
 
     const-string v5, "5000000000"
 
@@ -774,7 +752,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206bd
+    const v3, 0x7f120681
 
     const-string v5, "6000000000"
 
@@ -786,7 +764,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206c2
+    const v3, 0x7f120686
 
     const-string v5, "8000000000"
 
@@ -798,7 +776,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120691
+    const v3, 0x7f120655
 
     const-string v5, "10000000000"
 
@@ -810,7 +788,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120695
+    const v3, 0x7f120659
 
     const-string v5, "13000000000"
 
@@ -824,7 +802,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v5, 0x7f120697
+    const v5, 0x7f12065b
 
     const-string v6, "15000000000"
 
@@ -836,7 +814,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v5, 0x7f1206a2
+    const v5, 0x7f120666
 
     const-string v6, "20000000000"
 
@@ -848,7 +826,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v5, 0x7f1206a6
+    const v5, 0x7f12066a
 
     const-string v6, "25000000000"
 
@@ -858,7 +836,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206aa
+    const v3, 0x7f12066e
 
     const-string v5, "30000000000"
 
@@ -868,14 +846,12 @@
 
     aput-object v2, v1, v3
 
-    .line 10
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v4, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 11
     :cond_3
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -899,28 +875,26 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
     if-eqz v1, :cond_0
 
     return-object v1
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0OooO()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0OO()Z
 
     move-result v1
 
-    const v2, 0x7f1206a4
+    const v2, 0x7f120668
 
     const-string v6, "2000000"
 
-    const v7, 0x7f1206b6
+    const v7, 0x7f12067a
 
     const/16 v9, 0x9
 
@@ -928,7 +902,7 @@
 
     const-string v11, "1000000"
 
-    const v12, 0x7f120690
+    const v12, 0x7f120654
 
     const/4 v13, 0x7
 
@@ -946,7 +920,7 @@
 
     const-string v3, "0"
 
-    const v4, 0x7f1206c4
+    const v4, 0x7f120688
 
     const/16 v20, 0x0
 
@@ -954,12 +928,11 @@
 
     if-nez v1, :cond_2
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0OOoo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00oO0()Z
 
     move-result v1
 
@@ -972,7 +945,6 @@
 
     new-array v1, v1, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 4
     new-instance v8, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {v8, v5, v5, v4, v3}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
@@ -1001,7 +973,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120692
+    const v3, 0x7f120656
 
     const-string v4, "8000000"
 
@@ -1011,7 +983,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206ba
+    const v3, 0x7f12067e
 
     const-string v4, "16667000"
 
@@ -1021,7 +993,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206a9
+    const v3, 0x7f12066d
 
     const-string v4, "33333000"
 
@@ -1031,7 +1003,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120696
+    const v3, 0x7f12065a
 
     const-string v4, "66667000"
 
@@ -1041,7 +1013,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206be
+    const v3, 0x7f120682
 
     const-string v4, "125000000"
 
@@ -1051,7 +1023,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206af
+    const v3, 0x7f120673
 
     const-string v4, "250000000"
 
@@ -1061,7 +1033,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069b
+    const v3, 0x7f12065f
 
     const-string v4, "500000000"
 
@@ -1073,7 +1045,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069e
+    const v3, 0x7f120662
 
     const-string v4, "1000000000"
 
@@ -1085,7 +1057,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206a8
+    const v3, 0x7f12066c
 
     const-string v4, "2000000000"
 
@@ -1097,7 +1069,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206b3
+    const v3, 0x7f120677
 
     const-string v4, "4000000000"
 
@@ -1111,7 +1083,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206c2
+    const v4, 0x7f120686
 
     const-string v6, "8000000000"
 
@@ -1123,7 +1095,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12069a
+    const v4, 0x7f12065e
 
     const-string v6, "16000000000"
 
@@ -1135,7 +1107,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206ad
+    const v4, 0x7f120671
 
     const-string v6, "32000000000"
 
@@ -1153,7 +1125,6 @@
 
     new-array v1, v1, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 5
     new-instance v8, Lcom/android/camera/data/data/ComponentDataItem;
 
     invoke-direct {v8, v5, v5, v4, v3}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
@@ -1162,7 +1133,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b2
+    const v4, 0x7f120676
 
     const-string v8, "250000"
 
@@ -1172,7 +1143,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206ac
+    const v4, 0x7f120670
 
     const-string v8, "312500"
 
@@ -1182,7 +1153,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a5
+    const v4, 0x7f120669
 
     const-string v8, "400000"
 
@@ -1192,7 +1163,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a1
+    const v4, 0x7f120665
 
     const-string v8, "500000"
 
@@ -1202,7 +1173,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120699
+    const v4, 0x7f12065d
 
     const-string v8, "625000"
 
@@ -1212,7 +1183,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120693
+    const v4, 0x7f120657
 
     const-string v8, "800000"
 
@@ -1228,7 +1199,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206c0
+    const v4, 0x7f120684
 
     const-string v8, "1250000"
 
@@ -1238,7 +1209,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206bb
+    const v4, 0x7f12067f
 
     const-string v8, "1562500"
 
@@ -1256,7 +1227,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b1
+    const v4, 0x7f120675
 
     const-string v6, "2500000"
 
@@ -1268,7 +1239,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206ab
+    const v4, 0x7f12066f
 
     const-string v6, "3125000"
 
@@ -1292,7 +1263,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a0
+    const v4, 0x7f120664
 
     const-string v6, "5000000"
 
@@ -1304,7 +1275,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120698
+    const v4, 0x7f12065c
 
     const-string v6, "6250000"
 
@@ -1316,7 +1287,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120692
+    const v4, 0x7f120656
 
     const-string v6, "8000000"
 
@@ -1328,7 +1299,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068f
+    const v4, 0x7f120653
 
     const-string v6, "10000000"
 
@@ -1340,7 +1311,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206bf
+    const v4, 0x7f120683
 
     const-string v6, "12500000"
 
@@ -1352,7 +1323,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206ba
+    const v4, 0x7f12067e
 
     const-string v6, "16670000"
 
@@ -1364,7 +1335,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b5
+    const v4, 0x7f120679
 
     const-string v6, "20000000"
 
@@ -1376,7 +1347,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b0
+    const v4, 0x7f120674
 
     const-string v6, "25000000"
 
@@ -1388,7 +1359,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a9
+    const v4, 0x7f12066d
 
     const-string v6, "33300000"
 
@@ -1400,7 +1371,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a3
+    const v4, 0x7f120667
 
     const-string v6, "40000000"
 
@@ -1412,7 +1383,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12069f
+    const v4, 0x7f120663
 
     const-string v6, "50000000"
 
@@ -1424,7 +1395,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120696
+    const v4, 0x7f12065a
 
     const-string v6, "66700000"
 
@@ -1436,7 +1407,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120694
+    const v4, 0x7f120658
 
     const-string v6, "76900000"
 
@@ -1448,7 +1419,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068e
+    const v4, 0x7f120652
 
     const-string v6, "100000000"
 
@@ -1460,7 +1431,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206be
+    const v4, 0x7f120682
 
     const-string v6, "125000000"
 
@@ -1472,7 +1443,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b9
+    const v4, 0x7f12067d
 
     const-string v6, "166700000"
 
@@ -1484,7 +1455,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b4
+    const v4, 0x7f120678
 
     const-string v6, "200000000"
 
@@ -1496,7 +1467,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206af
+    const v4, 0x7f120673
 
     const-string v6, "250000000"
 
@@ -1508,7 +1479,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120689
+    const v4, 0x7f12064d
 
     const-string v6, "300000000"
 
@@ -1520,7 +1491,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068a
+    const v4, 0x7f12064e
 
     const-string v6, "400000000"
 
@@ -1532,7 +1503,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068b
+    const v4, 0x7f12064f
 
     const-string v6, "500000000"
 
@@ -1544,7 +1515,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068c
+    const v4, 0x7f120650
 
     const-string v6, "600000000"
 
@@ -1556,7 +1527,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12068d
+    const v4, 0x7f120651
 
     const-string v6, "800000000"
 
@@ -1568,7 +1539,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12069e
+    const v4, 0x7f120662
 
     const-string v6, "1000000000"
 
@@ -1580,7 +1551,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12069c
+    const v4, 0x7f120660
 
     const-string v6, "1300000000"
 
@@ -1592,7 +1563,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f12069d
+    const v4, 0x7f120661
 
     const-string v6, "1600000000"
 
@@ -1604,7 +1575,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a8
+    const v4, 0x7f12066c
 
     const-string v6, "2000000000"
 
@@ -1616,7 +1587,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a7
+    const v4, 0x7f12066b
 
     const-string v6, "2500000000"
 
@@ -1628,7 +1599,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206ae
+    const v4, 0x7f120672
 
     const-string v6, "3200000000"
 
@@ -1640,7 +1611,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b3
+    const v4, 0x7f120677
 
     const-string v6, "4000000000"
 
@@ -1652,7 +1623,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206b8
+    const v4, 0x7f12067c
 
     const-string v6, "5000000000"
 
@@ -1664,7 +1635,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206bd
+    const v4, 0x7f120681
 
     const-string v6, "6000000000"
 
@@ -1676,7 +1647,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206c2
+    const v4, 0x7f120686
 
     const-string v6, "8000000000"
 
@@ -1688,7 +1659,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120691
+    const v4, 0x7f120655
 
     const-string v6, "10000000000"
 
@@ -1700,7 +1671,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120695
+    const v4, 0x7f120659
 
     const-string v6, "13000000000"
 
@@ -1712,7 +1683,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f120697
+    const v4, 0x7f12065b
 
     const-string v6, "15000000000"
 
@@ -1724,7 +1695,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a2
+    const v4, 0x7f120666
 
     const-string v6, "20000000000"
 
@@ -1736,7 +1707,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206a6
+    const v4, 0x7f12066a
 
     const-string v6, "25000000000"
 
@@ -1748,7 +1719,7 @@
 
     new-instance v3, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v4, 0x7f1206aa
+    const v4, 0x7f12066e
 
     const-string v6, "30000000000"
 
@@ -1758,7 +1729,6 @@
 
     iput-object v1, v0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 6
     :goto_1
     iget-object v1, v0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -1768,12 +1738,10 @@
 .method private getVideoFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
     .locals 14
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isMovieSolidOn()Z
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mVideoFullItems:[Lcom/android/camera/data/data/ComponentDataItem;
 
     if-eqz v1, :cond_0
@@ -1784,7 +1752,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     iput-boolean v0, p0, Lcom/android/camera/data/data/config/ComponentManuallyET;->mSupperEISEnabled:Z
 
@@ -1792,10 +1759,9 @@
 
     new-array v1, v1, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 4
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206c4
+    const v3, 0x7f120688
 
     const/4 v4, -0x1
 
@@ -1809,7 +1775,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v5, 0x7f1206b2
+    const v5, 0x7f120676
 
     const-string v6, "250000"
 
@@ -1821,7 +1787,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v6, 0x7f1206ac
+    const v6, 0x7f120670
 
     const-string v7, "312500"
 
@@ -1833,7 +1799,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v7, 0x7f1206a5
+    const v7, 0x7f120669
 
     const-string v8, "400000"
 
@@ -1845,7 +1811,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v8, 0x7f1206a1
+    const v8, 0x7f120665
 
     const-string v9, "500000"
 
@@ -1857,7 +1823,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v9, 0x7f120699
+    const v9, 0x7f12065d
 
     const-string v10, "625000"
 
@@ -1869,7 +1835,7 @@
 
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v10, 0x7f120693
+    const v10, 0x7f120657
 
     const-string v11, "800000"
 
@@ -1883,7 +1849,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f120690
+    const v12, 0x7f120654
 
     const-string v13, "1000000"
 
@@ -1895,7 +1861,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206c0
+    const v12, 0x7f120684
 
     const-string v13, "1250000"
 
@@ -1907,7 +1873,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206bb
+    const v12, 0x7f12067f
 
     const-string v13, "1562500"
 
@@ -1919,7 +1885,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206b6
+    const v12, 0x7f12067a
 
     const-string v13, "2000000"
 
@@ -1931,7 +1897,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206b1
+    const v12, 0x7f120675
 
     const-string v13, "2500000"
 
@@ -1943,7 +1909,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206ab
+    const v12, 0x7f12066f
 
     const-string v13, "3125000"
 
@@ -1955,7 +1921,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206a4
+    const v12, 0x7f120668
 
     const-string v13, "4000000"
 
@@ -1967,7 +1933,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206a0
+    const v12, 0x7f120664
 
     const-string v13, "5000000"
 
@@ -1979,7 +1945,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f120698
+    const v12, 0x7f12065c
 
     const-string v13, "6250000"
 
@@ -1991,7 +1957,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f120692
+    const v12, 0x7f120656
 
     const-string v13, "8000000"
 
@@ -2003,7 +1969,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f12068f
+    const v12, 0x7f120653
 
     const-string v13, "10000000"
 
@@ -2015,7 +1981,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206bf
+    const v12, 0x7f120683
 
     const-string v13, "12500000"
 
@@ -2027,7 +1993,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206ba
+    const v12, 0x7f12067e
 
     const-string v13, "16670000"
 
@@ -2039,7 +2005,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206b5
+    const v12, 0x7f120679
 
     const-string v13, "20000000"
 
@@ -2051,7 +2017,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206b0
+    const v12, 0x7f120674
 
     const-string v13, "25000000"
 
@@ -2063,7 +2029,7 @@
 
     new-instance v11, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v12, 0x7f1206a9
+    const v12, 0x7f12066d
 
     const-string v13, "33300000"
 
@@ -2071,7 +2037,6 @@
 
     aput-object v11, v1, v2
 
-    .line 5
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -2084,10 +2049,9 @@
 
     new-array v0, v10, [Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 6
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v10, 0x7f1206a3
+    const v10, 0x7f120667
 
     const-string v11, "40000000"
 
@@ -2097,7 +2061,7 @@
 
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12069f
+    const v3, 0x7f120663
 
     const-string v10, "50000000"
 
@@ -2107,7 +2071,7 @@
 
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120696
+    const v3, 0x7f12065a
 
     const-string v5, "66700000"
 
@@ -2117,7 +2081,7 @@
 
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f120694
+    const v3, 0x7f120658
 
     const-string v5, "76900000"
 
@@ -2127,7 +2091,7 @@
 
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f12068e
+    const v3, 0x7f120652
 
     const-string v5, "100000000"
 
@@ -2137,7 +2101,7 @@
 
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v3, 0x7f1206be
+    const v3, 0x7f120682
 
     const-string v5, "125000000"
 
@@ -2145,14 +2109,12 @@
 
     aput-object v1, v0, v9
 
-    .line 7
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v2, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 8
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -2176,7 +2138,6 @@
 .method public checkValueValid(ILjava/lang/String;)Z
     .locals 4
 
-    .line 1
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2189,7 +2150,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getVideoFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
@@ -2201,20 +2161,17 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFastmotionFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object p1
 
-    .line 5
     :goto_0
     array-length v0, p1
 
@@ -2225,7 +2182,6 @@
 
     aget-object v3, p1, v2
 
-    .line 6
     iget-object v3, v3, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2243,7 +2199,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_3
     sget-object p1, Lcom/android/camera/data/data/config/ComponentManuallyET;->TAG:Ljava/lang/String;
 
@@ -2257,19 +2212,16 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 8
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getItems()Ljava/util/List;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 3
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -2278,7 +2230,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -2296,7 +2247,6 @@
 
     iget-object v2, v2, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
-    .line 5
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v4
@@ -2309,12 +2259,10 @@
 
     if-lez v4, :cond_1
 
-    .line 6
     invoke-virtual {p0, p1, v2}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-object v2
 
-    .line 7
     :cond_1
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2326,7 +2274,6 @@
 
     const-string v2, "0"
 
-    .line 8
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2345,7 +2292,6 @@
 
     if-gez v2, :cond_2
 
-    .line 9
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-object v1
@@ -2358,7 +2304,7 @@
 .method public getContentDescriptionString()I
     .locals 1
 
-    const v0, 0x7f1205d0
+    const v0, 0x7f12059a
 
     return v0
 .end method
@@ -2374,7 +2320,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120817
+    const v0, 0x7f1207d4
 
     return v0
 .end method
@@ -2390,7 +2336,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -2425,7 +2370,6 @@
 .method public getMillSecond(I)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
@@ -2436,7 +2380,6 @@
 
     const-wide/32 v2, 0xf4240
 
-    .line 2
     div-long/2addr v0, v2
 
     long-to-int p1, v0
@@ -2447,7 +2390,6 @@
 .method public getValueDisplayString(I)I
     .locals 7
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -2456,7 +2398,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getVideoFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object v1
@@ -2468,20 +2409,17 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFastmotionFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getFullItems()[Lcom/android/camera/data/data/ComponentDataItem;
 
     move-result-object v1
 
-    .line 5
     :goto_0
     array-length v2, v1
 
@@ -2494,7 +2432,6 @@
 
     aget-object v5, v1, v4
 
-    .line 6
     iget-object v6, v5, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2503,7 +2440,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 7
     iget p1, v5, Lcom/android/camera/data/data/ComponentDataItem;->mDisplayNameRes:I
 
     return p1
@@ -2513,7 +2449,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_3
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -2521,7 +2456,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 9
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -2540,14 +2474,12 @@
 
     aput-object p1, v2, v0
 
-    const-string p1, "mode %1$d, invalid value %2$s for %3$s"
+    const-string/jumbo p1, "mode %1$d, invalid value %2$s for %3$s"
 
-    .line 10
     invoke-static {v1, p1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 11
     const-class v0, Lcom/android/camera/data/data/config/ComponentManuallyET;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -2556,7 +2488,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     invoke-static {}, Lcom/android/camera/Util;->isDebugOsBuild()Z
 
     move-result v0
@@ -2567,7 +2498,6 @@
 
     return p1
 
-    .line 13
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2587,7 +2517,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
@@ -2620,7 +2549,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
@@ -2645,7 +2573,6 @@
 .method public reInit(ILcom/android/camera2/CameraCapabilities;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/data/data/config/ComponentManuallyET;->createItems(ILcom/android/camera2/CameraCapabilities;)Ljava/util/List;
 
     move-result-object p1
@@ -2662,10 +2589,8 @@
 .method public resetComponentValue(I)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->resetComponentValue(I)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0

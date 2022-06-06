@@ -31,19 +31,14 @@
 .method public constructor <init>(Ljava/lang/String;JJF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mPath:Ljava/lang/String;
 
-    .line 3
     iput-wide p2, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mNextPos:J
 
-    .line 4
     iput-wide p4, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mDuration:J
 
-    .line 5
     iput p6, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mSpeed:F
 
     return-void
@@ -54,7 +49,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mDuration:J
 
     return-wide v0
@@ -63,7 +57,6 @@
 .method public getNextPos()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mNextPos:J
 
     return-wide v0
@@ -72,7 +65,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mPath:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -86,7 +78,6 @@
 .method public getSpeed()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLiveRecorder$MiLiveItem;->mSpeed:F
 
     return v0
@@ -95,7 +86,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

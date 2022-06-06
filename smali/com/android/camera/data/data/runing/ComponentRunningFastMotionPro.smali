@@ -21,10 +21,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -33,7 +31,6 @@
 
     const/4 p1, 0x1
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;->mIsClosed:Z
 
     return-void
@@ -51,10 +48,8 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;-><init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
 
-    .line 5
     iput-object p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;->mList:Ljava/util/ArrayList;
 
     return-void
@@ -73,7 +68,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f1203d3
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -89,7 +84,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;->mList:Ljava/util/ArrayList;
 
     return-object v0
@@ -106,7 +100,6 @@
 .method public isClosed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;->mIsClosed:Z
 
     return v0
@@ -115,7 +108,6 @@
 .method public setClosed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotionPro;->mIsClosed:Z
 
     return-void

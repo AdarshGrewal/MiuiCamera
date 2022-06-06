@@ -29,14 +29,12 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;-><init>()V
 
     const/4 v0, 0x6
 
     new-array v1, v0, [I
 
-    .line 2
     iput-object v1, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     const/4 v1, 0x0
@@ -46,7 +44,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 3
     iget-object v3, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     aput v1, v3, v2
@@ -58,7 +55,6 @@
     :cond_0
     const/high16 v2, 0x42480000    # 50.0f
 
-    .line 4
     invoke-virtual {p0, v2}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->setExtraSpan(F)V
 
     new-array v0, v0, [[F
@@ -67,7 +63,6 @@
 
     new-array v3, v2, [F
 
-    .line 5
     fill-array-data v3, :array_0
 
     aput-object v3, v0, v1
@@ -174,7 +169,6 @@
 .method public beautify([BII)I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     invoke-static {v0}, Lcom/miui/filtersdk/BeautifyJni;->beautifyFaceUpdateIntensity([I)I
@@ -183,14 +177,12 @@
 
     new-array v0, v0, [I
 
-    .line 2
     iget v1, p0, Lcom/miui/filtersdk/beauty/BeautyProcessor;->mRotation:I
 
     invoke-static {p1, p2, p3, v1, v0}, Lcom/miui/filtersdk/BeautifyJni;->beautifyFaceYUVPreviewGPU([BIII[I)I
 
     const/4 p1, 0x0
 
-    .line 3
     aget p1, v0, p1
 
     return p1
@@ -226,7 +218,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1
     iget-object v2, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     aput v0, v2, v1
@@ -246,7 +237,6 @@
 
     new-array v0, v0, [Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 1
     sget-object v1, Lcom/miui/filtersdk/beauty/BeautyParameterType;->WHITEN_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v2, 0x0
@@ -277,7 +267,6 @@
 .method public getSupportedParamRange(Lcom/miui/filtersdk/beauty/BeautyParameterType;)[F
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -311,7 +300,6 @@
     :cond_0
     new-array p1, v1, [F
 
-    .line 2
     fill-array-data p1, :array_0
 
     return-object p1
@@ -326,10 +314,8 @@
 .method public init(II)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/miui/filtersdk/BeautifyJni;->Initbeautify()I
 
-    .line 2
     invoke-static {p1, p2}, Lcom/miui/filtersdk/BeautifyJni;->beautifyFaceSetScreenSize(II)I
 
     return-void
@@ -344,7 +330,6 @@
 .method public release()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/miui/filtersdk/BeautifyJni;->Cleanbeautify()I
 
     return-void
@@ -353,7 +338,6 @@
 .method public setBeautyParamDegree(Lcom/miui/filtersdk/beauty/BeautyParameterType;Ljava/lang/Float;)V
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -410,7 +394,6 @@
     :goto_0
     if-eq v0, v1, :cond_5
 
-    .line 2
     iget-object p1, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
@@ -423,7 +406,6 @@
 
     aput p2, p1, v1
 
-    .line 3
     iget-object p1, p0, Lcom/miui/filtersdk/beauty/NewBeautyProcessor;->mBeautyParameters:[I
 
     invoke-static {p1}, Lcom/miui/filtersdk/BeautifyJni;->beautifyFaceUpdateIntensity([I)I
@@ -444,7 +426,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -466,7 +447,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1

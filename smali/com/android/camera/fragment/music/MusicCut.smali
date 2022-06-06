@@ -25,17 +25,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x19000
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/music/MusicCut;->SAMPLE_SIZE:I
 
     const/4 v0, 0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/music/MusicCut;->mLoopNum:I
 
     return-void
@@ -48,14 +45,12 @@
 
     const/4 v1, -0x1
 
-    .line 1
     aput-byte v1, p1, v0
 
     const/4 v0, 0x1
 
     const/4 v1, -0x7
 
-    .line 2
     aput-byte v1, p1, v0
 
     const/16 v0, 0x50
@@ -64,7 +59,6 @@
 
     const/4 v1, 0x2
 
-    .line 3
     aput-byte v0, p1, v1
 
     shr-int/lit8 v0, p2, 0xb
@@ -77,7 +71,6 @@
 
     const/4 v1, 0x3
 
-    .line 4
     aput-byte v0, p1, v1
 
     and-int/lit16 v0, p2, 0x7ff
@@ -88,7 +81,6 @@
 
     const/4 v1, 0x4
 
-    .line 5
     aput-byte v0, p1, v1
 
     and-int/lit8 p2, p2, 0x7
@@ -101,14 +93,12 @@
 
     int-to-byte p2, p2
 
-    .line 6
     aput-byte p2, p1, v0
 
     const/4 p2, 0x6
 
     const/4 v0, -0x4
 
-    .line 7
     aput-byte v0, p1, p2
 
     return-void
@@ -125,7 +115,6 @@
 
     const-wide/16 v2, 0x8
 
-    .line 1
     div-long/2addr v0, v2
 
     const-wide/16 v2, 0x3e8
@@ -140,7 +129,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-virtual {p1}, Landroid/media/MediaExtractor;->getTrackCount()I
 
@@ -148,21 +136,18 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
     move-result-object v1
 
     const-string v2, "mime"
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "audio"
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -187,7 +172,6 @@
 
     const-string/jumbo v0, "read wav header byte"
 
-    .line 1
     sget-object v1, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
 
     const-string v2, "getWavHeaderByte"
@@ -200,7 +184,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     :try_start_0
     new-instance v3, Ljava/io/DataInputStream;
 
@@ -213,14 +196,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v3, v1}, Ljava/io/DataInputStream;->read([B)I
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     :try_start_2
     invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
     :try_end_2
@@ -231,7 +212,6 @@
     :catch_0
     move-exception p1
 
-    .line 5
     sget-object v2, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
 
     invoke-static {v2, v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -260,7 +240,6 @@
     :catch_2
     move-exception p1
 
-    .line 6
     :goto_0
     :try_start_3
     sget-object v3, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
@@ -271,7 +250,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 7
     :try_start_4
     invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
 
@@ -285,7 +263,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 8
     :cond_1
     throw p1
 .end method
@@ -301,7 +278,6 @@
 
     const-string v2, "Music cut failed"
 
-    .line 1
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -316,7 +292,6 @@
 
     move-result v3
 
-    .line 2
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -335,7 +310,6 @@
 
     const/4 v6, 0x0
 
-    .line 3
     :try_start_0
     new-instance v7, Landroid/media/MediaExtractor;
 
@@ -344,11 +318,9 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 4
     :try_start_1
     invoke-virtual {v7, v0}, Landroid/media/MediaExtractor;->setDataSource(Ljava/lang/String;)V
 
-    .line 5
     invoke-direct {v1, v7}, Lcom/android/camera/fragment/music/MusicCut;->getAudioTrack(Landroid/media/MediaExtractor;)I
 
     move-result v8
@@ -358,24 +330,20 @@
 
     if-gez v8, :cond_0
 
-    .line 6
     invoke-virtual {v7}, Landroid/media/MediaExtractor;->release()V
 
     return v6
 
-    .line 7
     :cond_0
     :try_start_2
     invoke-virtual {v7, v8}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
-    .line 8
     iget v8, v1, Lcom/android/camera/fragment/music/MusicCut;->SAMPLE_SIZE:I
 
     invoke-static {v8}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 9
     new-instance v9, Ljava/io/BufferedOutputStream;
 
     new-instance v10, Ljava/io/FileOutputStream;
@@ -393,7 +361,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 10
     :try_start_3
     invoke-direct/range {p0 .. p1}, Lcom/android/camera/fragment/music/MusicCut;->getWavHeaderByte(Ljava/lang/String;)[B
 
@@ -423,22 +390,18 @@
 
     move v0, v6
 
-    .line 11
     :goto_1
     iget v12, v1, Lcom/android/camera/fragment/music/MusicCut;->mLoopNum:I
 
     if-ge v0, v12, :cond_7
 
-    .line 12
     invoke-virtual {v7, v10, v11, v6}, Landroid/media/MediaExtractor;->seekTo(JI)V
 
-    .line 13
     :goto_2
     invoke-virtual {v7, v8, v6}, Landroid/media/MediaExtractor;->readSampleData(Ljava/nio/ByteBuffer;I)I
 
     move-result v12
 
-    .line 14
     invoke-virtual {v7}, Landroid/media/MediaExtractor;->getSampleTime()J
 
     move-result-wide v14
@@ -457,7 +420,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_3
     sget-object v14, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
 
@@ -479,7 +441,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 16
     invoke-virtual {v8, v6}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v13
@@ -508,25 +469,19 @@
     :goto_5
     add-int v15, v12, v14
 
-    .line 17
     new-array v6, v15, [B
 
     if-eqz v13, :cond_6
 
-    .line 18
     invoke-direct {v1, v6, v15}, Lcom/android/camera/fragment/music/MusicCut;->addADTStoPacket([BI)V
 
-    .line 19
     :cond_6
     invoke-virtual {v8, v6, v14, v12}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 20
     invoke-virtual {v9, v6}, Ljava/io/BufferedOutputStream;->write([B)V
 
-    .line 21
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 22
     invoke-virtual {v7}, Landroid/media/MediaExtractor;->advance()Z
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
@@ -536,11 +491,9 @@
 
     goto :goto_2
 
-    .line 23
     :cond_7
     invoke-virtual {v7}, Landroid/media/MediaExtractor;->release()V
 
-    .line 24
     :try_start_4
     invoke-virtual {v9}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_4
@@ -555,7 +508,6 @@
 
     move-object v3, v0
 
-    .line 25
     sget-object v0, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
 
     invoke-static {v0, v2, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -596,7 +548,6 @@
 
     move-object v9, v5
 
-    .line 26
     :goto_8
     :try_start_5
     sget-object v3, Lcom/android/camera/fragment/music/MusicCut;->TAG:Ljava/lang/String;
@@ -607,13 +558,11 @@
 
     if-eqz v5, :cond_8
 
-    .line 27
     invoke-virtual {v5}, Landroid/media/MediaExtractor;->release()V
 
     :cond_8
     if-eqz v9, :cond_9
 
-    .line 28
     :try_start_6
     invoke-virtual {v9}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_6
@@ -630,19 +579,16 @@
     :goto_9
     if-eqz v5, :cond_a
 
-    .line 29
     invoke-virtual {v5}, Landroid/media/MediaExtractor;->release()V
 
     :cond_a
     if-eqz v9, :cond_b
 
-    .line 30
     :try_start_7
     invoke-virtual {v9}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
 
-    .line 31
     :cond_b
     throw v0
 .end method
@@ -650,7 +596,6 @@
 .method public getLoopNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/MusicCut;->mLoopNum:I
 
     return v0
@@ -659,7 +604,6 @@
 .method public setLoopNum(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/music/MusicCut;->mLoopNum:I
 
     return-void

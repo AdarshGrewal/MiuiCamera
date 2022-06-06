@@ -34,10 +34,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -46,10 +44,8 @@
 
     const-wide/16 v0, 0x0
 
-    .line 3
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mPos:J
 
-    .line 4
     new-instance v0, Ljava/io/RandomAccessFile;
 
     new-instance v1, Ljava/io/File;
@@ -65,7 +61,6 @@
     :try_start_0
     const-string p1, ""
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
     move-result-wide v0
@@ -79,10 +74,8 @@
     :catch_0
     move-exception p1
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 7
     new-instance p1, Ljava/io/IOException;
 
     const-string v0, "Parse error: malformed mp4 file"
@@ -100,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;
 
     invoke-direct {v0, p0}, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;-><init>(Ljava/lang/String;)V
@@ -126,7 +118,6 @@
 
     const-string v4, ""
 
-    .line 2
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -157,14 +148,12 @@
 
     if-gez v4, :cond_6
 
-    .line 3
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mFile:Ljava/io/RandomAccessFile;
 
     const/4 v11, 0x0
 
     invoke-virtual {v4, v3, v11, v2}, Ljava/io/RandomAccessFile;->read([BII)I
 
-    .line 4
     iget-wide v12, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mPos:J
 
     add-long/2addr v12, v5
@@ -173,14 +162,12 @@
 
     add-long/2addr v9, v5
 
-    .line 5
     invoke-direct {v0, v3}, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->validBoxName([B)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 6
     new-instance v4, Ljava/lang/String;
 
     const/4 v12, 0x4
@@ -189,19 +176,16 @@
 
     const/4 v13, 0x3
 
-    .line 7
     aget-byte v13, v3, v13
 
     const/4 v14, 0x1
 
     if-ne v13, v14, :cond_1
 
-    .line 8
     iget-object v12, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v12, v3, v11, v2}, Ljava/io/RandomAccessFile;->read([BII)I
 
-    .line 9
     iget-wide v12, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mPos:J
 
     add-long/2addr v12, v5
@@ -210,12 +194,10 @@
 
     add-long/2addr v9, v5
 
-    .line 10
     invoke-static {v3, v11, v2}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object v11
 
-    .line 11
     invoke-virtual {v11}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v11
@@ -226,13 +208,11 @@
 
     goto :goto_1
 
-    .line 12
     :cond_1
     invoke-static {v3, v11, v12}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object v11
 
-    .line 13
     invoke-virtual {v11}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v11
@@ -252,7 +232,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 14
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +266,6 @@
 
     add-long/2addr v9, v11
 
-    .line 15
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,7 +286,6 @@
 
     goto/16 :goto_0
 
-    .line 16
     :cond_2
     new-instance v1, Ljava/io/IOException;
 
@@ -321,7 +298,6 @@
 
     if-gez v4, :cond_4
 
-    .line 17
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v4}, Ljava/io/RandomAccessFile;->getFilePointer()J
@@ -341,7 +317,6 @@
 
     goto/16 :goto_0
 
-    .line 18
     :cond_4
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mFile:Ljava/io/RandomAccessFile;
 
@@ -355,7 +330,6 @@
 
     if-lt v4, v13, :cond_5
 
-    .line 19
     iget-wide v13, v0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mPos:J
 
     add-long/2addr v13, v11
@@ -364,7 +338,6 @@
 
     goto :goto_2
 
-    .line 20
     :cond_5
     new-instance v1, Ljava/io/IOException;
 
@@ -379,7 +352,6 @@
 .method public static toHexString([BII)Ljava/lang/String;
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -391,7 +363,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     aget-byte v2, p0, v1
 
     and-int/lit16 v2, v2, 0xff
@@ -400,7 +371,6 @@
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -430,7 +400,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -453,7 +422,6 @@
 
     add-int/lit8 v2, v1, 0x4
 
-    .line 1
     aget-byte v3, p1, v2
 
     const/16 v4, 0x61
@@ -501,7 +469,6 @@
 .method public close()V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mFile:Ljava/io/RandomAccessFile;
 
@@ -521,7 +488,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mBoxes:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -532,7 +498,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/mp4/MP4Parser;->mBoxes:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -547,7 +512,6 @@
 
     return-wide v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -578,7 +542,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     new-instance v0, Lnet/majorkernelpanic/streaming/mp4/StsdBox;
 
@@ -596,7 +559,6 @@
 
     return-object v0
 
-    .line 2
     :catch_0
     new-instance v0, Ljava/io/IOException;
 

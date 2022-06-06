@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p0
@@ -37,7 +35,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p1
@@ -46,7 +43,6 @@
 .method private confirmEdit()V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -64,7 +59,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -72,7 +66,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 4
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -99,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/global/DataItemGlobal;->setSortModes([I)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -112,27 +103,22 @@
 
     const-string/jumbo v2, "pref_user_edit_modes"
 
-    .line 7
     invoke-interface {v0, v2, v1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putBoolean(Ljava/lang/String;Z)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
 
-    .line 8
     invoke-interface {v0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mComponentModuleList:Lcom/android/camera/data/data/global/ComponentModuleList;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/global/ComponentModuleList;->reInit(Z)V
 
-    .line 10
     invoke-static {}, Lcom/android/camera/CameraSettings;->isPopupMoreStyle()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -141,16 +127,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/global/DataItemGlobal;->setCurrentMode(I)V
 
-    .line 12
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->hide()V
+    invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->hide()Z
 
     const-string/jumbo v0, "value_edit_mode_click_confirm"
 
-    .line 13
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackModeEditClick(Ljava/lang/String;)V
 
-    .line 14
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackModeEditInfo()V
 
     return-void
@@ -161,10 +144,8 @@
 
     const-string/jumbo v0, "value_edit_mode_click_exit"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackModeEditClick(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object v0
@@ -177,12 +158,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3
-    invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->hide()V
+    invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->hide()Z
 
     return v1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
@@ -190,7 +169,6 @@
 
     return v1
 
-    .line 5
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -198,15 +176,14 @@
 
     const/4 v3, 0x0
 
-    const v0, 0x7f120557
+    const v0, 0x7f120526
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    const v0, 0x7f1204ec
+    const v0, 0x7f1204bb
 
-    .line 6
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -219,9 +196,8 @@
 
     const/4 v8, 0x0
 
-    const v0, 0x7f120555
+    const v0, 0x7f120524
 
-    .line 7
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
@@ -230,14 +206,12 @@
 
     invoke-direct {v10, p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit$2;-><init>(Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;)V
 
-    .line 8
     invoke-static/range {v2 .. v10}, Lcom/android/camera/RotateDialogController;->showSystemAlertDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 9
     new-instance v1, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit$3;
 
     invoke-direct {v1, p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit$3;-><init>(Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;)V
@@ -254,7 +228,6 @@
 .method public createLayoutManager(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
     .locals 4
 
-    .line 1
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->getCountPerLine()I
@@ -273,7 +246,6 @@
 .method public createModeItemDecoration(Landroid/content/Context;Lcom/android/camera/fragment/mode/IMoreMode;)Lcom/android/camera/fragment/mode/ModeItemDecoration;
     .locals 2
 
-    .line 1
     new-instance p1, Lcom/android/camera/fragment/mode/ModeItemDecoration;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -294,8 +266,7 @@
 
     const/4 v0, 0x0
 
-    .line 1
-    invoke-static {v0, v0}, Lcom/android/camera/display/Display;->getMoreModeTabCol(ZZ)I
+    invoke-static {v0, v0}, Lcom/android/camera/Display;->getMoreModeTabCol(ZZ)I
 
     move-result v0
 
@@ -313,7 +284,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d00a6
+    const v0, 0x7f0d00a4
 
     return v0
 .end method
@@ -321,10 +292,9 @@
 .method public getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
-    const v0, 0x7f0a0295
+    const v0, 0x7f0a02a6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -343,71 +313,106 @@
     return v0
 .end method
 
-.method public hide()V
-    .locals 1
+.method public hide()Z
+    .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_0
 
-    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/android/camera/ModeEditorActivity;
+
+    if-eqz v0, :cond_0
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
+    return v1
+
     :cond_0
-    return-void
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/android/camera/Camera;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v0
+
+    const/16 v2, 0xa4
+
+    invoke-virtual {v0, v2}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;->configModeEdit()V
+
+    return v1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public initView(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->initView(Landroid/view/View;)V
 
-    const v0, 0x7f0a0292
+    const v0, 0x7f0a02a3
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0293
+    const v0, 0x7f0a02a4
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0294
+    const v0, 0x7f0a02a5
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 6
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/camera/display/Display;->getStatusBarHeight(Landroid/content/Context;)I
+    invoke-static {}, Lcom/android/camera/Display;->getStatusBarHeight()I
 
     move-result v0
 
@@ -419,7 +424,6 @@
 .method public onBackEvent(I)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->showExitConfirm()Z
 
     move-result p1
@@ -430,7 +434,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -444,10 +447,8 @@
     :pswitch_0
     const-string/jumbo p1, "onClick: mode_edit_exit"
 
-    .line 2
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->showExitConfirm()Z
 
     goto :goto_0
@@ -455,17 +456,15 @@
     :pswitch_1
     const-string/jumbo p1, "onClick: mode_edit_done"
 
-    .line 4
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeEdit;->confirmEdit()V
 
     :goto_0
     return-void
 
     :pswitch_data_0
-    .packed-switch 0x7f0a0292
+    .packed-switch 0x7f0a02a3
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -474,11 +473,9 @@
 .method public onPause()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->onPause()V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000OO()Z
 
     move-result v0
 
@@ -486,7 +483,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
@@ -504,11 +500,9 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000OO()Z
 
     move-result v0
 
@@ -516,7 +510,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
@@ -534,17 +527,14 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const-string v0, "MoreModeEdit"
 
     const-string/jumbo v1, "register"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -553,17 +543,14 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const-string v0, "MoreModeEdit"
 
     const-string/jumbo v1, "unRegister"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

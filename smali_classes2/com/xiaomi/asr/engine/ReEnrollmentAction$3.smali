@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$3;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
 
     const-string v1, "Start re-enroll with backup audio"
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$3;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$000(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/util/List;
@@ -60,14 +57,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 3
     new-instance v2, Lcom/xiaomi/asr/engine/record/XSpeedStreamingFileRecorderSource;
 
     sget-object v3, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_16k:Lcom/xiaomi/asr/engine/record/AudioType;
 
     invoke-direct {v2, v3, v1}, Lcom/xiaomi/asr/engine/record/XSpeedStreamingFileRecorderSource;-><init>(Lcom/xiaomi/asr/engine/record/AudioType;Ljava/lang/String;)V
 
-    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +79,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->getInstance()Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     move-result-object v0

@@ -24,10 +24,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;->mTextResource:I
 
     return-void
@@ -36,10 +34,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;->mText:Ljava/lang/String;
 
     return-void
@@ -48,7 +44,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;->mText:Ljava/lang/String;
 
     return-object p0
@@ -59,7 +54,6 @@
 .method public getText()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;->mText:Ljava/lang/String;
 
     return-object v0
@@ -68,7 +62,6 @@
 .method public getTextResource()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$LevelItem;->mTextResource:I
 
     return v0

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract requestChangeTheme(Lcom/android/camera/customization/FlashHalo$ThemeConfiguration;)V
+.method public abstract requestChangeTheme(IZZZ)V
 .end method

@@ -26,12 +26,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a0148
+    const v0, 0x7f0a014f
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -48,26 +46,22 @@
 .method public bindEffectIndex(ILcom/android/camera/data/data/ComponentDataItem;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->getRenderId(ILcom/android/camera/data/data/ComponentDataItem;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->mEffectIndex:I
 
-    .line 2
     iget p1, p2, Lcom/android/camera/data/data/ComponentDataItem;->mDisplayNameRes:I
 
     if-lez p1, :cond_0
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->mTextView:Lcom/android/camera/ui/ScrollTextview;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->mTextView:Lcom/android/camera/ui/ScrollTextview;
 
@@ -90,7 +84,6 @@
 .method public getRenderId(ILcom/android/camera/data/data/ComponentDataItem;)I
     .locals 0
 
-    .line 1
     iget-object p1, p2, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I

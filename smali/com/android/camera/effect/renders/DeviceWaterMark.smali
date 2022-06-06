@@ -31,21 +31,16 @@
 .method public constructor <init>(IIILjava/lang/String;ZZ)V
     .locals 5
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/effect/renders/WaterMark;-><init>(III)V
 
-    .line 2
     iput-boolean p5, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mIsCinematicAspectRatio:Z
 
-    .line 3
     iput-boolean p6, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mIsLTR:Z
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera/Util;->getWatermarkRatio(II)F
 
     move-result v0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingX()F
 
     move-result v1
@@ -60,7 +55,6 @@
 
     iput v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingY()F
 
     move-result v1
@@ -75,7 +69,6 @@
 
     iput v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
-    .line 7
     iget-boolean v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mIsCinematicAspectRatio:Z
 
     const/16 v2, 0x10e
@@ -97,7 +90,6 @@
 
     move p1, v4
 
-    .line 8
     :cond_1
     invoke-static {p1, p2}, Lcom/android/camera/Util;->getWatermarkCinematicAspectMargin(II)I
 
@@ -105,7 +97,6 @@
 
     if-ge p1, p2, :cond_2
 
-    .line 9
     iget p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
     add-int/2addr p1, v1
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     iget p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
@@ -138,7 +128,6 @@
     :cond_5
     const/4 p1, 0x0
 
-    .line 11
     :goto_1
     invoke-static {p4, v0, p1, p6}, Lcom/android/gallery3d/ui/DeviceWaterMarkTexture;->newInstance(Ljava/lang/String;FZZ)Lcom/android/gallery3d/ui/DeviceWaterMarkTexture;
 
@@ -146,14 +135,12 @@
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
-    .line 12
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterWidth:I
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -162,10 +149,8 @@
 
     iput p1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterHeight:I
 
-    .line 14
     invoke-direct {p0}, Lcom/android/camera/effect/renders/DeviceWaterMark;->calcCenterAxis()V
 
-    .line 15
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/DeviceWaterMark;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -180,7 +165,6 @@
 .method private calcCenterAxis()V
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mIsLTR:Z
 
     const/16 v1, 0x10e
@@ -191,7 +175,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
     if-eqz v0, :cond_3
@@ -204,7 +187,6 @@
 
     goto/16 :goto_0
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
@@ -218,7 +200,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/DeviceWaterMark;->getWidth()I
@@ -233,7 +214,6 @@
 
     goto/16 :goto_0
 
-    .line 5
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -251,7 +231,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/DeviceWaterMark;->getHeight()I
@@ -266,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 7
     :cond_2
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -284,7 +262,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
@@ -303,7 +280,6 @@
 
     goto/16 :goto_0
 
-    .line 9
     :cond_3
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
@@ -317,7 +293,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
@@ -336,7 +311,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_4
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
@@ -350,7 +324,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_5
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
@@ -362,7 +335,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 13
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
@@ -379,7 +351,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_6
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
@@ -391,7 +362,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 15
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterHeight:I
@@ -404,7 +374,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_7
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -420,7 +389,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 17
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterWidth:I
@@ -433,7 +401,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_8
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -449,7 +416,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
-    .line 19
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
@@ -473,7 +439,6 @@
 .method public getCenterX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterX:I
 
     return v0
@@ -482,7 +447,6 @@
 .method public getCenterY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mCenterY:I
 
     return v0
@@ -491,7 +455,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterHeight:I
 
     return v0
@@ -500,7 +463,6 @@
 .method public getPaddingX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingX:I
 
     return v0
@@ -509,7 +471,6 @@
 .method public getPaddingY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mPaddingY:I
 
     return v0
@@ -518,7 +479,6 @@
 .method public getTexture()Lcom/android/gallery3d/ui/BasicTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     return-object v0
@@ -527,7 +487,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/DeviceWaterMark;->mWaterWidth:I
 
     return v0
@@ -536,7 +495,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

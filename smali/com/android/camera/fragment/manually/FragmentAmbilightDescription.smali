@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentDescription;-><init>()V
 
     return-void
@@ -32,10 +31,8 @@
 
     new-array v0, v0, [Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 1
     new-instance v7, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -46,7 +43,6 @@
 
     move-result-object v4
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -73,7 +69,6 @@
 
     new-instance v2, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -102,7 +97,6 @@
 
     new-instance v2, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -113,7 +107,6 @@
 
     move-result-object v7
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -140,7 +133,6 @@
 
     new-instance v2, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -169,7 +161,6 @@
 
     new-instance v2, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -192,14 +183,12 @@
 
     div-int/lit16 v7, v7, 0x3e8
 
-    .line 9
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     aput-object v7, v6, v1
 
-    .line 10
     invoke-virtual {v4, v5, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
@@ -228,7 +217,6 @@
 
     const v6, 0x7f08008e
 
-    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -259,7 +247,6 @@
 
     aput-object v10, v0, v2
 
-    .line 12
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -276,22 +263,18 @@
 .method public initView(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/FragmentDescription;->initView(Landroid/view/View;)V
 
     const-string p1, "ambilight_user_guide"
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mMistatsName:Ljava/lang/String;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mTitle:Landroid/widget/TextView;
 
     const v0, 0x7f12013e
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;
@@ -304,7 +287,6 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 5
     new-instance p1, Lcom/android/camera/fragment/manually/adapter/AmbilightDescriptionAdapter;
 
     invoke-direct {p0}, Lcom/android/camera/fragment/manually/FragmentAmbilightDescription;->getParameterData()Ljava/util/ArrayList;
@@ -315,7 +297,6 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/manually/FragmentAmbilightDescription;->mDescriptionAdapter:Lcom/android/camera/fragment/manually/adapter/AmbilightDescriptionAdapter;
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V

@@ -151,84 +151,72 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$Identity;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$Identity;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->IDENTITY:Lio/reactivex/functions/Function;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/functions/Functions$EmptyRunnable;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$EmptyRunnable;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_RUNNABLE:Ljava/lang/Runnable;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/functions/Functions$EmptyAction;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$EmptyAction;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/functions/Functions$EmptyConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$EmptyConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_CONSUMER:Lio/reactivex/functions/Consumer;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/functions/Functions$ErrorConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$ErrorConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->ERROR_CONSUMER:Lio/reactivex/functions/Consumer;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/functions/Functions$OnErrorMissingConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$OnErrorMissingConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->ON_ERROR_MISSING:Lio/reactivex/functions/Consumer;
 
-    .line 7
     new-instance v0, Lio/reactivex/internal/functions/Functions$EmptyLongConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$EmptyLongConsumer;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_LONG_CONSUMER:Lio/reactivex/functions/LongConsumer;
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/functions/Functions$TruePredicate;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$TruePredicate;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->ALWAYS_TRUE:Lio/reactivex/functions/Predicate;
 
-    .line 9
     new-instance v0, Lio/reactivex/internal/functions/Functions$FalsePredicate;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$FalsePredicate;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->ALWAYS_FALSE:Lio/reactivex/functions/Predicate;
 
-    .line 10
     new-instance v0, Lio/reactivex/internal/functions/Functions$NullCallable;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$NullCallable;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->NULL_SUPPLIER:Ljava/util/concurrent/Callable;
 
-    .line 11
     new-instance v0, Lio/reactivex/internal/functions/Functions$NaturalObjectComparator;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$NaturalObjectComparator;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/functions/Functions;->NATURAL_COMPARATOR:Ljava/util/Comparator;
 
-    .line 12
     new-instance v0, Lio/reactivex/internal/functions/Functions$MaxRequestSubscription;
 
     invoke-direct {v0}, Lio/reactivex/internal/functions/Functions$MaxRequestSubscription;-><init>()V
@@ -241,10 +229,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No instances!"
@@ -268,7 +254,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ActionConsumer;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$ActionConsumer;-><init>(Lio/reactivex/functions/Action;)V
@@ -288,7 +273,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->ALWAYS_FALSE:Lio/reactivex/functions/Predicate;
 
     return-object v0
@@ -306,7 +290,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->ALWAYS_TRUE:Lio/reactivex/functions/Predicate;
 
     return-object v0
@@ -328,7 +311,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$CastToClass;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$CastToClass;-><init>(Ljava/lang/Class;)V
@@ -349,7 +331,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ArrayListCapacityCallable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$ArrayListCapacityCallable;-><init>(I)V
@@ -370,7 +351,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions$HashSetCallable;->INSTANCE:Lio/reactivex/internal/functions/Functions$HashSetCallable;
 
     return-object v0
@@ -388,7 +368,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_CONSUMER:Lio/reactivex/functions/Consumer;
 
     return-object v0
@@ -406,7 +385,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$EqualsPredicate;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$EqualsPredicate;-><init>(Ljava/lang/Object;)V
@@ -425,7 +403,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$FutureAction;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$FutureAction;-><init>(Ljava/util/concurrent/Future;)V
@@ -445,7 +422,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->IDENTITY:Lio/reactivex/functions/Function;
 
     return-object v0
@@ -467,7 +443,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ClassFilter;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$ClassFilter;-><init>(Ljava/lang/Class;)V
@@ -487,7 +462,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$JustValue;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$JustValue;-><init>(Ljava/lang/Object;)V
@@ -509,7 +483,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$JustValue;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$JustValue;-><init>(Ljava/lang/Object;)V
@@ -534,7 +507,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ListSorter;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$ListSorter;-><init>(Ljava/util/Comparator;)V
@@ -554,7 +526,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions$NaturalComparator;->INSTANCE:Lio/reactivex/internal/functions/Functions$NaturalComparator;
 
     return-object v0
@@ -572,7 +543,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->NATURAL_COMPARATOR:Ljava/util/Comparator;
 
     return-object v0
@@ -593,7 +563,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$NotificationOnComplete;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$NotificationOnComplete;-><init>(Lio/reactivex/functions/Consumer;)V
@@ -618,7 +587,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$NotificationOnError;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$NotificationOnError;-><init>(Lio/reactivex/functions/Consumer;)V
@@ -642,7 +610,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$NotificationOnNext;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$NotificationOnNext;-><init>(Lio/reactivex/functions/Consumer;)V
@@ -662,7 +629,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->NULL_SUPPLIER:Ljava/util/concurrent/Callable;
 
     return-object v0
@@ -682,7 +648,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$BooleanSupplierPredicateReverse;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$BooleanSupplierPredicateReverse;-><init>(Lio/reactivex/functions/BooleanSupplier;)V
@@ -707,7 +672,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$TimestampFunction;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/functions/Functions$TimestampFunction;-><init>(Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
@@ -737,10 +701,8 @@
 
     const-string v0, "f is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array2Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array2Func;-><init>(Lio/reactivex/functions/BiFunction;)V
@@ -772,10 +734,8 @@
 
     const-string v0, "f is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array3Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array3Func;-><init>(Lio/reactivex/functions/Function3;)V
@@ -809,10 +769,8 @@
 
     const-string v0, "f is null"
 
-    .line 5
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array4Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array4Func;-><init>(Lio/reactivex/functions/Function4;)V
@@ -848,10 +806,8 @@
 
     const-string v0, "f is null"
 
-    .line 7
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array5Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array5Func;-><init>(Lio/reactivex/functions/Function5;)V
@@ -889,10 +845,8 @@
 
     const-string v0, "f is null"
 
-    .line 9
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 10
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array6Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array6Func;-><init>(Lio/reactivex/functions/Function6;)V
@@ -932,10 +886,8 @@
 
     const-string v0, "f is null"
 
-    .line 11
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 12
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array7Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array7Func;-><init>(Lio/reactivex/functions/Function7;)V
@@ -977,10 +929,8 @@
 
     const-string v0, "f is null"
 
-    .line 13
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 14
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array8Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array8Func;-><init>(Lio/reactivex/functions/Function8;)V
@@ -1024,10 +974,8 @@
 
     const-string v0, "f is null"
 
-    .line 15
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 16
     new-instance v0, Lio/reactivex/internal/functions/Functions$Array9Func;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$Array9Func;-><init>(Lio/reactivex/functions/Function9;)V
@@ -1052,7 +1000,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ToMapKeySelector;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/functions/Functions$ToMapKeySelector;-><init>(Lio/reactivex/functions/Function;)V
@@ -1081,7 +1028,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ToMapKeyValueSelector;
 
     invoke-direct {v0, p1, p0}, Lio/reactivex/internal/functions/Functions$ToMapKeyValueSelector;-><init>(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;)V
@@ -1116,7 +1062,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/functions/Functions$ToMultimapKeyValueSelector;
 
     invoke-direct {v0, p2, p1, p0}, Lio/reactivex/internal/functions/Functions$ToMultimapKeyValueSelector;-><init>(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;)V

@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public onAbortEnrollmentComplete()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -47,7 +45,6 @@
 .method public onAudioData([B)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -76,7 +73,6 @@
 .method public onCommitEnrollmentComplete()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -91,7 +87,6 @@
 .method public onConflictAudio()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -106,7 +101,6 @@
 .method public onDebug(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -133,7 +127,6 @@
 .method public onEndOfSpeech()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -148,7 +141,6 @@
 .method public onEnergyLevelAvailable(FZ)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -181,7 +173,6 @@
 .method public onEnrollAudioBufferAvailable([BZ)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -216,7 +207,6 @@
 .method public onEnrollmentComplete(ZZFI)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object p3
@@ -255,7 +245,6 @@
 .method public onGenerateModel(ZLjava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -288,7 +277,6 @@
 .method public onGrammarUpdated(Z)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -317,12 +305,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/MultiWakeupEngine;->wakeupVersion()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -350,7 +336,6 @@
 .method public onPhraseSpotted(Lcom/xiaomi/asr/engine/PhraseWakeupResult;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -375,7 +360,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -394,7 +378,6 @@
 .method public onRelease()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -409,7 +392,6 @@
 .method public onStartAudio()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -424,7 +406,6 @@
 .method public onStartOfSpeech()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -439,7 +420,6 @@
 .method public onStopAudio()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/impl/component/SpeechShutterImpl;->access$000()Ljava/lang/String;
 
     move-result-object v0

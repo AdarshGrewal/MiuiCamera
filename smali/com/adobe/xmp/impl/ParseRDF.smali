@@ -61,7 +61,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,12 +74,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
@@ -91,7 +88,6 @@
 
     const-string v3, "http://purl.org/dc/1.1/"
 
-    .line 3
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -100,7 +96,6 @@
 
     const-string v1, "http://purl.org/dc/elements/1.1/"
 
-    .line 4
     :cond_0
     invoke-interface {v0, v1}, Lcom/adobe/xmp/XMPSchemaRegistry;->getNamespacePrefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -110,7 +105,6 @@
 
     if-nez v3, :cond_2
 
-    .line 5
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v3
@@ -126,13 +120,11 @@
     :cond_1
     move-object v3, v4
 
-    .line 6
     :goto_0
     invoke-interface {v0, v1, v3}, Lcom/adobe/xmp/XMPSchemaRegistry;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 7
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -150,7 +142,6 @@
 
     move-result-object p2
 
-    .line 8
     new-instance v3, Lcom/adobe/xmp/options/PropertyOptions;
 
     invoke-direct {v3}, Lcom/adobe/xmp/options/PropertyOptions;-><init>()V
@@ -161,7 +152,6 @@
 
     if-eqz p4, :cond_3
 
-    .line 9
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
@@ -170,24 +160,20 @@
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1, v5}, Lcom/adobe/xmp/impl/XMPNode;->setImplicit(Z)V
 
-    .line 11
     invoke-interface {v0, p2}, Lcom/adobe/xmp/XMPSchemaRegistry;->findAlias(Ljava/lang/String;)Lcom/adobe/xmp/properties/XMPAliasInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
 
     invoke-virtual {p0, v6}, Lcom/adobe/xmp/impl/XMPNode;->setHasAliases(Z)V
 
-    .line 13
     invoke-virtual {p1, v6}, Lcom/adobe/xmp/impl/XMPNode;->setHasAliases(Z)V
 
     move v5, v6
@@ -195,34 +181,28 @@
     :cond_3
     const-string/jumbo p0, "rdf:li"
 
-    .line 14
     invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     const-string/jumbo v0, "rdf:value"
 
-    .line 15
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 16
     new-instance v1, Lcom/adobe/xmp/impl/XMPNode;
 
     invoke-direct {v1, p2, p3, v3}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 17
     invoke-virtual {v1, v5}, Lcom/adobe/xmp/impl/XMPNode;->setAlias(Z)V
 
     if-nez v0, :cond_4
 
-    .line 18
     invoke-virtual {p1, v1}, Lcom/adobe/xmp/impl/XMPNode;->addChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_1
 
-    .line 19
     :cond_4
     invoke-virtual {p1, v6, v1}, Lcom/adobe/xmp/impl/XMPNode;->addChild(ILcom/adobe/xmp/impl/XMPNode;)V
 
@@ -231,7 +211,6 @@
 
     if-nez p4, :cond_5
 
-    .line 20
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p2
@@ -242,12 +221,10 @@
 
     if-eqz p2, :cond_5
 
-    .line 21
     invoke-virtual {p1, v6}, Lcom/adobe/xmp/impl/XMPNode;->setHasValueChild(Z)V
 
     goto :goto_2
 
-    .line 22
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -261,7 +238,6 @@
     :goto_2
     if-eqz p0, :cond_8
 
-    .line 23
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p0
@@ -274,12 +250,10 @@
 
     const-string p0, "[]"
 
-    .line 24
     invoke-virtual {v1, p0}, Lcom/adobe/xmp/impl/XMPNode;->setName(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 25
     :cond_7
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -293,7 +267,6 @@
     :goto_3
     return-object v1
 
-    .line 26
     :cond_9
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -314,12 +287,10 @@
 
     const-string/jumbo v0, "xml:lang"
 
-    .line 1
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 2
     new-instance v1, Lcom/adobe/xmp/impl/XMPNode;
 
     if-eqz v0, :cond_0
@@ -333,7 +304,6 @@
 
     invoke-direct {v1, p1, p2, v0}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 3
     invoke-virtual {p0, v1}, Lcom/adobe/xmp/impl/XMPNode;->addQualifier(Lcom/adobe/xmp/impl/XMPNode;)V
 
     return-object v1
@@ -349,12 +319,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/XMPNode;->getChild(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v2
@@ -365,7 +333,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v2
@@ -376,20 +343,16 @@
 
     if-nez v2, :cond_0
 
-    .line 4
     invoke-virtual {v1, v0}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v2
 
-    .line 5
     invoke-virtual {v1, v2}, Lcom/adobe/xmp/impl/XMPNode;->removeQualifier(Lcom/adobe/xmp/impl/XMPNode;)V
 
-    .line 6
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/XMPNode;->addQualifier(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_0
 
-    .line 7
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -401,7 +364,6 @@
 
     throw p0
 
-    .line 8
     :cond_1
     :goto_0
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->getQualifierLength()I
@@ -410,12 +372,10 @@
 
     if-gt v0, v2, :cond_2
 
-    .line 9
     invoke-virtual {v1, v0}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v2
 
-    .line 10
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/XMPNode;->addQualifier(Lcom/adobe/xmp/impl/XMPNode;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -425,7 +385,6 @@
     :cond_2
     const/4 v0, 0x2
 
-    .line 11
     :goto_1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getChildrenLength()I
 
@@ -433,12 +392,10 @@
 
     if-gt v0, v2, :cond_3
 
-    .line 12
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/XMPNode;->getChild(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v2
 
-    .line 13
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/XMPNode;->addQualifier(Lcom/adobe/xmp/impl/XMPNode;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -448,17 +405,14 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 14
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/XMPNode;->setHasValueChild(Z)V
 
-    .line 15
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Lcom/adobe/xmp/options/PropertyOptions;->setStruct(Z)Lcom/adobe/xmp/options/PropertyOptions;
 
-    .line 16
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v0
@@ -469,17 +423,14 @@
 
     invoke-virtual {v0, v2}, Lcom/adobe/xmp/options/PropertyOptions;->mergeWith(Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 17
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/XMPNode;->setValue(Ljava/lang/String;)V
 
-    .line 18
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->removeChildren()V
 
-    .line 19
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object v0
@@ -491,14 +442,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 20
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 21
     invoke-virtual {p0, v1}, Lcom/adobe/xmp/impl/XMPNode;->addChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_2
@@ -510,12 +459,10 @@
 .method public static getRDFTermKind(Lorg/w3c/dom/Node;)I
     .locals 6
 
-    .line 1
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
@@ -528,7 +475,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -548,7 +494,6 @@
 
     check-cast p0, Lorg/w3c/dom/Attr;
 
-    .line 4
     invoke-interface {p0}, Lorg/w3c/dom/Attr;->getOwnerElement()Lorg/w3c/dom/Element;
 
     move-result-object p0
@@ -565,7 +510,6 @@
 
     move-object v1, v4
 
-    .line 5
     :cond_1
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -575,7 +519,6 @@
 
     const-string p0, "li"
 
-    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -589,7 +532,6 @@
     :cond_2
     const-string/jumbo p0, "parseType"
 
-    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -603,7 +545,6 @@
     :cond_3
     const-string p0, "Description"
 
-    .line 8
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -614,7 +555,6 @@
 
     return p0
 
-    .line 9
     :cond_4
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -629,7 +569,6 @@
     :cond_5
     const-string/jumbo p0, "resource"
 
-    .line 10
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -643,7 +582,6 @@
     :cond_6
     const-string p0, "RDF"
 
-    .line 11
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -654,7 +592,6 @@
 
     return p0
 
-    .line 12
     :cond_7
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -667,9 +604,8 @@
     return p0
 
     :cond_8
-    const-string p0, "nodeID"
+    const-string/jumbo p0, "nodeID"
 
-    .line 13
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -683,7 +619,6 @@
     :cond_9
     const-string p0, "datatype"
 
-    .line 14
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -697,7 +632,6 @@
     :cond_a
     const-string p0, "aboutEach"
 
-    .line 15
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -711,7 +645,6 @@
     :cond_b
     const-string p0, "aboutEachPrefix"
 
-    .line 16
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -725,7 +658,6 @@
     :cond_c
     const-string p0, "bagID"
 
-    .line 17
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -791,7 +723,6 @@
 
     if-eq p0, v0, :cond_1
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParseRDF;->isOldTerm(I)Z
 
     move-result v0
@@ -800,7 +731,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParseRDF;->isCoreSyntaxTerm(I)Z
 
@@ -820,7 +750,6 @@
 .method public static isWhitespaceNode(Lorg/w3c/dom/Node;)Z
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v0
@@ -833,7 +762,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -841,7 +769,6 @@
 
     move v0, v1
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -849,7 +776,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -881,12 +807,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
     invoke-direct {v0}, Lcom/adobe/xmp/impl/XMPMetaImpl;-><init>()V
 
-    .line 2
     invoke-static {v0, p0}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_RDF(Lcom/adobe/xmp/impl/XMPMetaImpl;Lorg/w3c/dom/Node;)V
 
     return-object v0
@@ -902,7 +826,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-interface/range {p2 .. p2}, Lorg/w3c/dom/Node;->hasChildNodes()Z
 
     move-result v1
@@ -923,7 +846,6 @@
 
     const/4 v8, 0x0
 
-    .line 2
     :goto_0
     invoke-interface/range {p2 .. p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -947,7 +869,6 @@
 
     if-ge v4, v9, :cond_b
 
-    .line 3
     invoke-interface/range {p2 .. p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v9
@@ -956,7 +877,6 @@
 
     move-result-object v9
 
-    .line 4
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v1
@@ -967,7 +887,6 @@
 
     if-nez v1, :cond_a
 
-    .line 5
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v1
@@ -986,7 +905,6 @@
 
     goto/16 :goto_1
 
-    .line 6
     :cond_0
     invoke-static {v9}, Lcom/adobe/xmp/impl/ParseRDF;->getRDFTermKind(Lorg/w3c/dom/Node;)I
 
@@ -1010,7 +928,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1018,7 +935,6 @@
 
     throw v0
 
-    .line 8
     :cond_2
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1040,7 +956,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_5
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1050,7 +965,6 @@
 
     throw v0
 
-    .line 10
     :cond_6
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1058,7 +972,6 @@
 
     throw v0
 
-    .line 11
     :cond_7
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
@@ -1072,7 +985,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 12
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
@@ -1093,7 +1005,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_8
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1103,7 +1014,6 @@
 
     throw v0
 
-    .line 14
     :cond_9
     invoke-interface {v9}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -1132,7 +1042,6 @@
 
     move/from16 v9, p3
 
-    .line 15
     invoke-static {v0, v4, v8, v1, v9}, Lcom/adobe/xmp/impl/ParseRDF;->addChildNode(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v4
@@ -1146,7 +1055,6 @@
     :cond_c
     if-eqz v7, :cond_f
 
-    .line 16
     invoke-virtual {v4}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
@@ -1165,7 +1073,6 @@
 
     if-eqz v3, :cond_e
 
-    .line 17
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v1
@@ -1175,7 +1082,6 @@
 
     if-nez v5, :cond_f
 
-    .line 18
     invoke-virtual {v4}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
@@ -1188,7 +1094,6 @@
     :goto_3
     const/4 v5, 0x0
 
-    .line 19
     :goto_4
     invoke-interface/range {p2 .. p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -1200,7 +1105,6 @@
 
     if-ge v5, v6, :cond_17
 
-    .line 20
     invoke-interface/range {p2 .. p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v6
@@ -1211,7 +1115,6 @@
 
     if-eq v6, v3, :cond_16
 
-    .line 21
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v7
@@ -1222,7 +1125,6 @@
 
     if-nez v7, :cond_16
 
-    .line 22
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v7
@@ -1241,7 +1143,6 @@
 
     goto :goto_5
 
-    .line 23
     :cond_10
     invoke-static {v6}, Lcom/adobe/xmp/impl/ParseRDF;->getRDFTermKind(Lorg/w3c/dom/Node;)I
 
@@ -1257,7 +1158,6 @@
 
     goto :goto_5
 
-    .line 24
     :cond_11
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1265,7 +1165,6 @@
 
     throw v0
 
-    .line 25
     :cond_12
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -1280,7 +1179,6 @@
     :cond_13
     if-nez v1, :cond_14
 
-    .line 26
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v7
@@ -1289,12 +1187,10 @@
 
     move-result-object v6
 
-    .line 27
     invoke-static {v4, v7, v6}, Lcom/adobe/xmp/impl/ParseRDF;->addQualifierNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/XMPNode;
 
     goto :goto_5
 
-    .line 28
     :cond_14
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -1306,7 +1202,6 @@
 
     if-eqz v7, :cond_15
 
-    .line 29
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v6
@@ -1315,7 +1210,6 @@
 
     goto :goto_5
 
-    .line 30
     :cond_15
     invoke-interface {v6}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -1339,7 +1233,6 @@
     :cond_17
     return-void
 
-    .line 31
     :cond_18
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
@@ -1360,7 +1253,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, p2, v0, p3}, Lcom/adobe/xmp/impl/ParseRDF;->addChildNode(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -1369,7 +1261,6 @@
 
     move p3, p1
 
-    .line 2
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -1383,7 +1274,6 @@
 
     if-ge p3, v0, :cond_4
 
-    .line 3
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v0
@@ -1392,7 +1282,6 @@
 
     move-result-object v0
 
-    .line 4
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v2
@@ -1405,7 +1294,6 @@
 
     if-nez v2, :cond_3
 
-    .line 5
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v2
@@ -1424,18 +1312,15 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 7
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v4
@@ -1448,7 +1333,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 9
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v0
@@ -1460,7 +1344,6 @@
     :cond_1
     const-string v0, "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
-    .line 10
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1469,7 +1352,6 @@
 
     const-string v0, "ID"
 
-    .line 11
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1486,7 +1368,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1505,7 +1386,6 @@
     :cond_4
     const-string p3, ""
 
-    .line 13
     :goto_2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -1517,7 +1397,6 @@
 
     if-ge p1, v0, :cond_6
 
-    .line 14
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
@@ -1526,7 +1405,6 @@
 
     move-result-object v0
 
-    .line 15
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v2
@@ -1535,7 +1413,6 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 16
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1556,7 +1433,6 @@
 
     goto :goto_2
 
-    .line 17
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1566,7 +1442,6 @@
 
     throw p0
 
-    .line 18
     :cond_6
     invoke-virtual {p0, p3}, Lcom/adobe/xmp/impl/XMPNode;->setValue(Ljava/lang/String;)V
 
@@ -1581,7 +1456,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Lcom/adobe/xmp/impl/ParseRDF;->getRDFTermKind(Lorg/w3c/dom/Node;)I
 
     move-result v0
@@ -1594,7 +1468,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1614,7 +1487,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1626,12 +1498,10 @@
 
     throw p0
 
-    .line 4
     :cond_3
     :goto_1
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_NodeElementAttrs(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
-    .line 5
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_PropertyElementList(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     return-void
@@ -1649,7 +1519,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -1661,7 +1530,6 @@
 
     if-ge v0, v2, :cond_8
 
-    .line 2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v2
@@ -1670,7 +1538,6 @@
 
     move-result-object v2
 
-    .line 3
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v3
@@ -1683,7 +1550,6 @@
 
     if-nez v3, :cond_7
 
-    .line 4
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v3
@@ -1702,7 +1568,6 @@
 
     goto :goto_2
 
-    .line 5
     :cond_0
     invoke-static {v2}, Lcom/adobe/xmp/impl/ParseRDF;->getRDFTermKind(Lorg/w3c/dom/Node;)I
 
@@ -1726,7 +1591,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1746,7 +1610,6 @@
 
     if-ne v3, v6, :cond_7
 
-    .line 7
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1763,7 +1626,6 @@
 
     if-lez v3, :cond_4
 
-    .line 8
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1780,7 +1642,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1792,7 +1653,6 @@
 
     throw p0
 
-    .line 10
     :cond_4
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -1802,7 +1662,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1812,7 +1671,6 @@
 
     throw p0
 
-    .line 12
     :cond_6
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -1840,7 +1698,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -1852,7 +1709,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
@@ -1861,7 +1717,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Lcom/adobe/xmp/impl/ParseRDF;->isWhitespaceNode(Lorg/w3c/dom/Node;)Z
 
     move-result v2
@@ -1870,7 +1725,6 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-static {p0, p1, v1, v2}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_NodeElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     :cond_0
@@ -1890,7 +1744,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const-string v1, "ParseTypeCollection property element not allowed"
@@ -1910,7 +1763,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const-string v1, "ParseTypeLiteral property element not allowed"
@@ -1930,7 +1782,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const-string v1, "ParseTypeOther property element not allowed"
@@ -1952,12 +1803,10 @@
 
     const-string v0, ""
 
-    .line 1
     invoke-static {p0, p1, p2, v0, p3}, Lcom/adobe/xmp/impl/ParseRDF;->addChildNode(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p3
@@ -1970,7 +1819,6 @@
 
     move v0, p3
 
-    .line 3
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -1982,7 +1830,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 4
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v1
@@ -1991,7 +1838,6 @@
 
     move-result-object v1
 
-    .line 5
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v2
@@ -2004,7 +1850,6 @@
 
     if-nez v2, :cond_3
 
-    .line 6
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v2
@@ -2023,18 +1868,15 @@
 
     goto :goto_1
 
-    .line 7
     :cond_0
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 9
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v4
@@ -2047,7 +1889,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 10
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v1
@@ -2059,7 +1900,6 @@
     :cond_1
     const-string v1, "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
-    .line 11
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2068,7 +1908,6 @@
 
     const-string v1, "ID"
 
-    .line 12
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2085,7 +1924,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2103,18 +1941,15 @@
 
     goto :goto_0
 
-    .line 14
     :cond_4
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_PropertyElementList(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
-    .line 15
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getHasValueChild()Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
-    .line 16
     invoke-static {p1}, Lcom/adobe/xmp/impl/ParseRDF;->fixupQualifiedNode(Lcom/adobe/xmp/impl/XMPNode;)V
 
     :cond_5
@@ -2129,19 +1964,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Lcom/adobe/xmp/impl/ParseRDF;->getRDFTermKind(Lorg/w3c/dom/Node;)I
 
     move-result v0
 
-    .line 2
     invoke-static {v0}, Lcom/adobe/xmp/impl/ParseRDF;->isPropertyElementName(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_12
 
-    .line 3
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v0
@@ -2152,7 +1984,6 @@
 
     move v3, v2
 
-    .line 4
     :goto_0
     invoke-interface {v0}, Lorg/w3c/dom/NamedNodeMap;->getLength()I
 
@@ -2160,12 +1991,10 @@
 
     if-ge v3, v4, :cond_3
 
-    .line 5
     invoke-interface {v0, v3}, Lorg/w3c/dom/NamedNodeMap;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 6
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v5
@@ -2178,7 +2007,6 @@
 
     if-nez v5, :cond_0
 
-    .line 7
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v5
@@ -2198,12 +2026,10 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 8
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9
     :cond_1
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -2219,7 +2045,6 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 10
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2231,19 +2056,16 @@
 
     if-eqz v3, :cond_4
 
-    .line 11
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 12
     invoke-interface {v0, v3}, Lorg/w3c/dom/NamedNodeMap;->removeNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     goto :goto_1
 
-    .line 13
     :cond_4
     invoke-interface {v0}, Lorg/w3c/dom/NamedNodeMap;->getLength()I
 
@@ -2253,7 +2075,6 @@
 
     if-le v1, v3, :cond_5
 
-    .line 14
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_EmptyPropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     goto/16 :goto_7
@@ -2261,7 +2082,6 @@
     :cond_5
     move v1, v2
 
-    .line 15
     :goto_2
     invoke-interface {v0}, Lorg/w3c/dom/NamedNodeMap;->getLength()I
 
@@ -2269,27 +2089,22 @@
 
     if-ge v1, v4, :cond_e
 
-    .line 16
     invoke-interface {v0, v1}, Lorg/w3c/dom/NamedNodeMap;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
-    .line 17
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 18
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 19
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 20
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v4
@@ -2306,7 +2121,6 @@
 
     const-string v4, "ID"
 
-    .line 21
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -2330,7 +2144,6 @@
     :goto_3
     const-string v0, "datatype"
 
-    .line 22
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2343,7 +2156,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 23
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_LiteralPropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     goto :goto_5
@@ -2351,7 +2163,6 @@
     :cond_8
     const-string/jumbo v0, "parseType"
 
-    .line 24
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2369,14 +2180,12 @@
     :cond_9
     const-string v0, "Literal"
 
-    .line 25
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 26
     invoke-static {}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_ParseTypeLiteralPropertyElement()V
 
     goto :goto_5
@@ -2384,14 +2193,12 @@
     :cond_a
     const-string v0, "Resource"
 
-    .line 27
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 28
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_ParseTypeResourcePropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     goto :goto_5
@@ -2399,25 +2206,21 @@
     :cond_b
     const-string p0, "Collection"
 
-    .line 29
     invoke-virtual {p0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_c
 
-    .line 30
     invoke-static {}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_ParseTypeCollectionPropertyElement()V
 
     goto :goto_5
 
-    .line 31
     :cond_c
     invoke-static {}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_ParseTypeOtherPropertyElement()V
 
     goto :goto_5
 
-    .line 32
     :cond_d
     :goto_4
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_EmptyPropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
@@ -2425,7 +2228,6 @@
     :goto_5
     return-void
 
-    .line 33
     :cond_e
     invoke-interface {p2}, Lorg/w3c/dom/Node;->hasChildNodes()Z
 
@@ -2433,7 +2235,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 34
     :goto_6
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -2445,7 +2246,6 @@
 
     if-ge v2, v0, :cond_10
 
-    .line 35
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
@@ -2454,14 +2254,12 @@
 
     move-result-object v0
 
-    .line 36
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v0
 
     if-eq v0, v3, :cond_f
 
-    .line 37
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_ResourcePropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     return-void
@@ -2471,20 +2269,17 @@
 
     goto :goto_6
 
-    .line 38
     :cond_10
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_LiteralPropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     goto :goto_7
 
-    .line 39
     :cond_11
     invoke-static {p0, p1, p2, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_EmptyPropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     :goto_7
     return-void
 
-    .line 40
     :cond_12
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2507,7 +2302,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -2519,7 +2313,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
@@ -2528,7 +2321,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Lcom/adobe/xmp/impl/ParseRDF;->isWhitespaceNode(Lorg/w3c/dom/Node;)Z
 
     move-result v2
@@ -2537,7 +2329,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -2547,7 +2338,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 5
     invoke-static {p0, p1, v1, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_PropertyElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
     :goto_1
@@ -2555,7 +2345,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2579,14 +2368,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Lorg/w3c/dom/Node;->hasAttributes()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v0
@@ -2595,7 +2382,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2618,7 +2404,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v0
@@ -2636,7 +2421,6 @@
     :cond_0
     const-string v0, ""
 
-    .line 2
     invoke-static {p0, p1, p2, v0, p3}, Lcom/adobe/xmp/impl/ParseRDF;->addChildNode(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
@@ -2645,7 +2429,6 @@
 
     move v0, p3
 
-    .line 3
     :goto_0
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -2661,7 +2444,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 4
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v1
@@ -2670,7 +2452,6 @@
 
     move-result-object v1
 
-    .line 5
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v4
@@ -2683,7 +2464,6 @@
 
     if-nez v4, :cond_4
 
-    .line 6
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
     move-result-object v4
@@ -2702,18 +2482,15 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 8
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 9
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v6
@@ -2726,7 +2503,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 10
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v1
@@ -2738,7 +2514,6 @@
     :cond_2
     const-string v1, "ID"
 
-    .line 11
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2753,7 +2528,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2774,7 +2548,6 @@
 
     move v1, v0
 
-    .line 13
     :goto_2
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -2786,7 +2559,6 @@
 
     if-ge v0, v4, :cond_10
 
-    .line 14
     invoke-interface {p2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v4
@@ -2795,7 +2567,6 @@
 
     move-result-object v4
 
-    .line 15
     invoke-static {v4}, Lcom/adobe/xmp/impl/ParseRDF;->isWhitespaceNode(Lorg/w3c/dom/Node;)Z
 
     move-result v5
@@ -2804,7 +2575,6 @@
 
     if-nez v5, :cond_f
 
-    .line 16
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v5
@@ -2813,7 +2583,6 @@
 
     if-nez v1, :cond_d
 
-    .line 17
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
@@ -2822,7 +2591,6 @@
 
     move-result v1
 
-    .line 18
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v5
@@ -2831,14 +2599,12 @@
 
     const-string v7, "Bag"
 
-    .line 19
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_6
 
-    .line 20
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
@@ -2852,14 +2618,12 @@
 
     const-string v7, "Seq"
 
-    .line 21
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_7
 
-    .line 22
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
@@ -2877,14 +2641,12 @@
 
     const-string v7, "Alt"
 
-    .line 23
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    .line 24
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
@@ -2897,12 +2659,10 @@
 
     move-result-object v1
 
-    .line 25
     invoke-virtual {v1, v6}, Lcom/adobe/xmp/options/PropertyOptions;->setArrayAlternate(Z)Lcom/adobe/xmp/options/PropertyOptions;
 
     goto :goto_3
 
-    .line 26
     :cond_8
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
@@ -2914,21 +2674,18 @@
 
     const-string v1, "Description"
 
-    .line 27
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_a
 
-    .line 28
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_9
 
-    .line 29
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2947,12 +2704,10 @@
 
     const-string/jumbo v5, "rdf:type"
 
-    .line 30
     invoke-static {p1, v5, v1}, Lcom/adobe/xmp/impl/ParseRDF;->addQualifierNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/XMPNode;
 
     goto :goto_3
 
-    .line 31
     :cond_9
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2964,24 +2719,20 @@
 
     throw p0
 
-    .line 32
     :cond_a
     :goto_3
     invoke-static {p0, p1, v4, p3}, Lcom/adobe/xmp/impl/ParseRDF;->rdf_NodeElement(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lorg/w3c/dom/Node;Z)V
 
-    .line 33
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getHasValueChild()Z
 
     move-result v1
 
     if-eqz v1, :cond_b
 
-    .line 34
     invoke-static {p1}, Lcom/adobe/xmp/impl/ParseRDF;->fixupQualifiedNode(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_4
 
-    .line 35
     :cond_b
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
@@ -2993,7 +2744,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 36
     invoke-static {p1}, Lcom/adobe/xmp/impl/XMPNodeUtils;->detectAltText(Lcom/adobe/xmp/impl/XMPNode;)V
 
     :cond_c
@@ -3005,7 +2755,6 @@
     :cond_d
     if-eqz v1, :cond_e
 
-    .line 37
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
     const-string p1, "Invalid child of resource property element"
@@ -3014,7 +2763,6 @@
 
     throw p0
 
-    .line 38
     :cond_e
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -3035,7 +2783,6 @@
 
     return-void
 
-    .line 39
     :cond_11
     new-instance p0, Lcom/adobe/xmp/XMPException;
 

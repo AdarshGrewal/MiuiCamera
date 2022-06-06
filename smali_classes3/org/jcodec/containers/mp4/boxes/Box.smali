@@ -23,10 +23,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     return-void
@@ -53,7 +51,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Box;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v2
@@ -66,7 +63,6 @@
 
     check-cast p0, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Box;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v0
@@ -81,13 +77,10 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1, v0}, Lorg/jcodec/containers/mp4/boxes/Box;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 5
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/Box;->parse(Ljava/nio/ByteBuffer;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -97,7 +90,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -108,12 +100,10 @@
 .method public static createLeafBox(Lorg/jcodec/containers/mp4/boxes/Header;Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;
 
     invoke-direct {v0, p0}, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p1, v0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;->data:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -122,12 +112,10 @@
 .method public static parseBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/boxes/Header;Lorg/jcodec/containers/mp4/IBoxFactory;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 4
 
-    .line 1
     invoke-interface {p2, p1}, Lorg/jcodec/containers/mp4/IBoxFactory;->newBox(Lorg/jcodec/containers/mp4/boxes/Header;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object p2
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J
 
     move-result-wide v0
@@ -138,12 +126,10 @@
 
     if-gez p1, :cond_0
 
-    .line 3
     invoke-virtual {p2, p0}, Lorg/jcodec/containers/mp4/boxes/Box;->parse(Ljava/nio/ByteBuffer;)V
 
     return-object p2
 
-    .line 4
     :cond_0
     new-instance p0, Lorg/jcodec/containers/mp4/boxes/Box$LeafBox;
 
@@ -165,7 +151,6 @@
 
     const/16 v0, 0x2e
 
-    .line 1
     invoke-static {p0, v0}, Lorg/jcodec/common/StringUtils;->splitC(Ljava/lang/String;C)[Ljava/lang/String;
 
     move-result-object p0
@@ -176,7 +161,6 @@
 .method public static terminatorAtom()Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 2
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/Header;
 
     const/4 v1, 0x4
@@ -210,7 +194,6 @@
 .method public dump(Ljava/lang/StringBuilder;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +229,6 @@
 .method public getFourcc()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getFourcc()Ljava/lang/String;
@@ -259,7 +241,6 @@
 .method public getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     return-object v0
@@ -271,15 +252,12 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/Box;->dump(Ljava/lang/StringBuilder;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -290,20 +268,16 @@
 .method public write(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     const/16 v1, 0x8
 
-    .line 2
     invoke-static {p1, v1}, Lorg/jcodec/common/io/NIOUtils;->skip(Ljava/nio/ByteBuffer;I)I
 
-    .line 3
     invoke-virtual {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 4
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -320,7 +294,6 @@
 
     invoke-virtual {v2, p1}, Lorg/jcodec/containers/mp4/boxes/Header;->setBodySize(I)V
 
-    .line 5
     iget-object p1, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->headerSize()J
@@ -343,7 +316,6 @@
     :goto_0
     invoke-static {p1}, Lorg/jcodec/common/Preconditions;->checkState(Z)V
 
-    .line 6
     iget-object p1, p0, Lorg/jcodec/containers/mp4/boxes/Box;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {p1, v0}, Lorg/jcodec/containers/mp4/boxes/Header;->write(Ljava/nio/ByteBuffer;)V

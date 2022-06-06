@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static synthetic access$000(Lcom/android/camera/storage/PreviewSaveRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->mSavePath:Ljava/lang/String;
 
     return-object p0
@@ -46,7 +44,6 @@
 .method public static synthetic access$100(Lcom/android/camera/storage/PreviewSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->finalImage:Z
 
     return p0
@@ -55,7 +52,6 @@
 .method public static synthetic access$200(Lcom/android/camera/storage/PreviewSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->isParallelProcess:Z
 
     return p0
@@ -64,7 +60,6 @@
 .method public static synthetic access$300(Lcom/android/camera/storage/PreviewSaveRequest$Builder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->mNoGaussian:Z
 
     return p0
@@ -75,7 +70,6 @@
 .method public bridge synthetic build()Lcom/android/camera/storage/AbstractSaveRequest;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->build()Lcom/android/camera/storage/PreviewSaveRequest;
 
     move-result-object v0
@@ -86,7 +80,6 @@
 .method public build()Lcom/android/camera/storage/PreviewSaveRequest;
     .locals 2
 
-    .line 2
     new-instance v0, Lcom/android/camera/storage/PreviewSaveRequest;
 
     const/4 v1, 0x0
@@ -99,7 +92,6 @@
 .method public setFinalImage(Z)Lcom/android/camera/storage/PreviewSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->finalImage:Z
 
     return-object p0
@@ -108,7 +100,6 @@
 .method public setNoGaussian(Z)Lcom/android/camera/storage/PreviewSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->mNoGaussian:Z
 
     return-object p0
@@ -117,7 +108,6 @@
 .method public setParallelProcess(Z)Lcom/android/camera/storage/PreviewSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->isParallelProcess:Z
 
     return-object p0
@@ -126,7 +116,6 @@
 .method public setSavePath(Ljava/lang/String;)Lcom/android/camera/storage/PreviewSaveRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/PreviewSaveRequest$Builder;->mSavePath:Ljava/lang/String;
 
     return-object p0
@@ -135,7 +124,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

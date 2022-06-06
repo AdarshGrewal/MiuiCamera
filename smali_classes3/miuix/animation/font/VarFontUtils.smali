@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 14
 
-    .line 1
     invoke-static {}, Lmiuix/animation/font/VarFontUtils;->isUsingThemeFont()Z
 
     move-result v0
@@ -46,21 +45,18 @@
 
     if-lt v0, v4, :cond_0
 
-    .line 2
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getTotalRam()I
 
     move-result v0
 
     if-le v0, v1, :cond_0
 
-    .line 3
     invoke-static {}, Lmiuix/animation/font/VarFontUtils;->isFontAnimDisabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel()I
 
     move-result v0
@@ -83,26 +79,22 @@
 
     new-array v4, v0, [I
 
-    .line 5
     fill-array-data v4, :array_0
 
     sput-object v4, Lmiuix/animation/font/VarFontUtils;->MIUI_WGHT:[I
 
     new-array v4, v0, [I
 
-    .line 6
     fill-array-data v4, :array_1
 
     sput-object v4, Lmiuix/animation/font/VarFontUtils;->MITYPE_WGHT:[I
 
-    .line 7
     sput v0, Lmiuix/animation/font/VarFontUtils;->MIN_WGHT:I
 
     const/4 v4, 0x3
 
     new-array v5, v4, [[[I
 
-    .line 8
     sput-object v5, Lmiuix/animation/font/VarFontUtils;->RULES:[[[I
 
     new-array v6, v0, [[I
@@ -111,7 +103,6 @@
 
     new-array v8, v7, [I
 
-    .line 9
     fill-array-data v8, :array_2
 
     aput-object v8, v6, v3
@@ -186,7 +177,6 @@
 
     new-array v8, v7, [I
 
-    .line 10
     fill-array-data v8, :array_c
 
     aput-object v8, v6, v3
@@ -251,7 +241,6 @@
 
     new-array v6, v7, [I
 
-    .line 11
     fill-array-data v6, :array_16
 
     aput-object v6, v0, v3
@@ -314,20 +303,17 @@
 
     goto :goto_1
 
-    .line 12
     :cond_1
     sput v3, Lmiuix/animation/font/VarFontUtils;->MIN_WGHT:I
 
     new-array v0, v3, [I
 
-    .line 13
     sput-object v0, Lmiuix/animation/font/VarFontUtils;->MITYPE_WGHT:[I
 
     sput-object v0, Lmiuix/animation/font/VarFontUtils;->MIUI_WGHT:[I
 
     new-array v0, v3, [[[I
 
-    .line 14
     sput-object v0, Lmiuix/animation/font/VarFontUtils;->RULES:[[[I
 
     :goto_1
@@ -547,7 +533,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -556,14 +541,12 @@
 .method public static getScaleWght(IFII)I
     .locals 3
 
-    .line 1
     sget-boolean v0, Lmiuix/animation/font/VarFontUtils;->IS_USING_VAR_FONT:Z
 
     if-nez v0, :cond_0
 
     return p0
 
-    .line 2
     :cond_0
     invoke-static {p0, p1}, Lmiuix/animation/font/VarFontUtils;->getWghtRange(IF)[I
 
@@ -571,21 +554,18 @@
 
     const/4 v0, 0x0
 
-    .line 3
     aget v0, p1, v0
 
     invoke-static {v0, p2}, Lmiuix/animation/font/VarFontUtils;->getWghtByType(II)I
 
     move-result v0
 
-    .line 4
     invoke-static {p0, p2}, Lmiuix/animation/font/VarFontUtils;->getWghtByType(II)I
 
     move-result p0
 
     const/4 v1, 0x1
 
-    .line 5
     aget p1, p1, v1
 
     invoke-static {p1, p2}, Lmiuix/animation/font/VarFontUtils;->getWghtByType(II)I
@@ -652,7 +632,6 @@
 .method public static getSysFontScale(Landroid/content/Context;)I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -661,7 +640,6 @@
 
     const/16 v1, 0x32
 
-    .line 2
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -682,7 +660,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object p0, Lmiuix/animation/font/VarFontUtils;->MIUI_WGHT:[I
 
@@ -699,7 +676,6 @@
 .method public static getWghtByType(II)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lmiuix/animation/font/VarFontUtils;->getWghtArray(I)[I
 
     move-result-object p1
@@ -742,7 +718,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 1
     :goto_0
     sget-object v0, Lmiuix/animation/font/VarFontUtils;->RULES:[[[I
 
@@ -759,14 +734,12 @@
     :try_start_0
     const-string v0, "ro.miui.ui.font.animation"
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/utils/CommonUtils;->readProp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "disable"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -782,7 +755,6 @@
 
     const-string v2, "isFontAnimationEnabled failed"
 
-    .line 3
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -793,7 +765,6 @@
 .method public static isUsingThemeFont()Z
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/theme/fonts/"
@@ -802,7 +773,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -810,14 +780,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     array-length v0, v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -836,7 +804,6 @@
 
     const-string v3, "isUsingThemeFont, failed to check theme font directory"
 
-    .line 5
     invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -846,12 +813,10 @@
 .method public static setVariationFont(Landroid/widget/TextView;I)V
     .locals 2
 
-    .line 1
     sget-boolean v0, Lmiuix/animation/font/VarFontUtils;->IS_USING_VAR_FONT:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

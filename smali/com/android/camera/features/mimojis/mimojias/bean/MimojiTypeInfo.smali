@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public getASAvatarConfigType()Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTypeInfo;->mASAvatarConfigType:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigType;
 
     return-object v0
@@ -31,7 +29,6 @@
 .method public setASAvatarConfigType(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTypeInfo;->mASAvatarConfigType:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigType;
 
     return-void

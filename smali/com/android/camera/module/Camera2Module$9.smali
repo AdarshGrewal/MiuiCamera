@@ -3,12 +3,12 @@
 .source "Camera2Module.java"
 
 # interfaces
-.implements Lio/reactivex/FlowableOnSubscribe;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->initHistogramEmitter()V
+    value = Lcom/android/camera/module/Camera2Module;->onBeautyBodySlimCountChange(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,26 +16,20 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lio/reactivex/FlowableOnSubscribe<",
-        "Landroid/hardware/camera2/CaptureResult;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/module/Camera2Module;
 
+.field public final synthetic val$isNeedTip:Z
+
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
+.method public constructor <init>(Lcom/android/camera/module/Camera2Module;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$9;->this$0:Lcom/android/camera/module/Camera2Module;
+
+    iput-boolean p2, p0, Lcom/android/camera/module/Camera2Module$9;->val$isNeedTip:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,27 +38,47 @@
 
 
 # virtual methods
-.method public subscribe(Lio/reactivex/FlowableEmitter;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/reactivex/FlowableEmitter<",
-            "Landroid/hardware/camera2/CaptureResult;",
-            ">;)V"
-        }
-    .end annotation
+.method public run()V
+    .locals 5
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$9;->this$0:Lcom/android/camera/module/Camera2Module;
+    move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/android/camera/module/Camera2Module;->access$1402(Lcom/android/camera/module/Camera2Module;Lio/reactivex/FlowableEmitter;)Lio/reactivex/FlowableEmitter;
+    const/16 v1, 0xac
 
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-boolean v1, p0, Lcom/android/camera/module/Camera2Module$9;->val$isNeedTip:Z
+
+    const v2, 0x7f1201fb
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x0
+
+    const-wide/16 v3, 0xfa0
+
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v1, 0x8
+
+    const-wide/16 v3, 0x0
+
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
+
+    :goto_0
     return-void
 .end method

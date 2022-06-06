@@ -38,15 +38,12 @@
 .method public constructor <init>(Lcom/android/camera/module/Panorama3Module;ZLjava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2
     iput-boolean p2, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->mSaveImage:Z
 
-    .line 3
     iput-object p3, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->mStopMode:Ljava/lang/String;
 
     return-void
@@ -55,12 +52,10 @@
 .method private savePanoramaPicture()V
     .locals 15
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v2
@@ -71,12 +66,10 @@
 
     const/16 v2, 0x600
 
-    .line 3
     sget-object v3, Lcom/android/camera/module/Panorama3Module;->mEngineLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 4
     :try_start_0
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -86,7 +79,6 @@
 
     invoke-static {v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v4}, Lcom/android/camera/module/Panorama3Module;->access$700(Lcom/android/camera/module/Panorama3Module;)Lcom/android/camera/panorama/MorphoPanoramaGP3;
@@ -95,7 +87,6 @@
 
     if-nez v4, :cond_0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -106,7 +97,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -118,7 +108,6 @@
 
     return-void
 
-    .line 8
     :cond_0
     :try_start_2
     iget-boolean v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->mSaveImage:Z
@@ -129,7 +118,6 @@
 
     if-nez v4, :cond_2
 
-    .line 9
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -144,7 +132,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$700(Lcom/android/camera/module/Panorama3Module;)Lcom/android/camera/panorama/MorphoPanoramaGP3;
@@ -169,7 +156,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v1
@@ -192,7 +178,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 12
     :cond_1
     :try_start_3
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -205,7 +190,6 @@
 
     return-void
 
-    .line 13
     :cond_2
     :try_start_4
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -220,7 +204,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 14
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v7
@@ -241,7 +224,6 @@
 
     invoke-static {v7, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_3
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -255,7 +237,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 16
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v4
@@ -278,7 +259,6 @@
 
     invoke-static {v4, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     :cond_4
     iget-object v2, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -304,7 +284,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 18
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -327,7 +306,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 19
     :try_start_5
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -339,14 +317,12 @@
 
     return-void
 
-    .line 20
     :cond_5
     :try_start_6
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 21
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v4}, Lcom/android/camera/module/Panorama3Module;->access$700(Lcom/android/camera/module/Panorama3Module;)Lcom/android/camera/panorama/MorphoPanoramaGP3;
@@ -359,7 +335,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 22
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -382,7 +357,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 23
     :try_start_7
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -394,14 +368,12 @@
 
     return-void
 
-    .line 24
     :cond_6
     :try_start_8
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v11
 
-    .line 25
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v12
@@ -412,7 +384,6 @@
 
     goto/16 :goto_0
 
-    .line 26
     :cond_7
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -426,7 +397,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 27
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -449,7 +419,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 28
     :try_start_9
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -461,7 +430,6 @@
 
     return-void
 
-    .line 29
     :cond_8
     :try_start_a
     iget-object v2, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -476,14 +444,12 @@
 
     move-result-object v10
 
-    .line 30
     invoke-static {v10, v6}, Lcom/android/camera/storage/Storage;->generateFilepath4Image(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v9
 
     new-array v2, v5, [Landroid/net/Uri;
 
-    .line 31
     iget-object v4, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v4, v2, v9, v11, v12}, Lcom/android/camera/module/Panorama3Module;->access$1100(Lcom/android/camera/module/Panorama3Module;[Landroid/net/Uri;Ljava/lang/String;II)Z
@@ -494,7 +460,6 @@
 
     if-nez v4, :cond_9
 
-    .line 32
     :try_start_b
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -506,7 +471,6 @@
 
     return-void
 
-    .line 33
     :cond_9
     :try_start_c
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
@@ -517,7 +481,6 @@
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    .line 34
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v13
@@ -530,10 +493,8 @@
 
     aput-object v13, v8, v6
 
-    .line 35
     invoke-static {v4, v7, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 36
     iget-object v7, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     aget-object v8, v2, v6
@@ -546,25 +507,21 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    .line 37
     :try_start_d
     iget-object v2, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v2}, Lcom/android/camera/module/Panorama3Module;->access$1300(Lcom/android/camera/module/Panorama3Module;)V
 
-    .line 38
     monitor-exit v3
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_1
 
-    .line 39
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v2
 
     new-array v3, v5, [Ljava/lang/Object;
 
-    .line 40
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -579,12 +536,10 @@
 
     const-string/jumbo v0, "savePanoramaPicture total duration %s ms"
 
-    .line 41
     invoke-static {v2, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return-void
 
-    .line 42
     :cond_a
     :goto_0
     :try_start_e
@@ -610,7 +565,6 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_0
 
-    .line 43
     :try_start_f
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -632,7 +586,6 @@
     :catchall_1
     move-exception v0
 
-    .line 44
     monitor-exit v3
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_1
@@ -645,7 +598,6 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -654,7 +606,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->savePanoramaPicture()V
 
     const/4 p1, 0x0
@@ -665,7 +616,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
@@ -678,7 +628,6 @@
 .method public onPostExecute(Ljava/lang/Integer;)V
     .locals 7
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -687,21 +636,18 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera/AutoLockManager;->getInstance(Landroid/content/Context;)Lcom/android/camera/AutoLockManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/AutoLockManager;->hibernateDelayed()V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
@@ -711,12 +657,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {p1, v1}, Lcom/android/camera/module/Panorama3Module;->access$1402(Lcom/android/camera/module/Panorama3Module;Z)Z
 
-    .line 7
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -732,20 +676,17 @@
 
     if-eqz p1, :cond_2
 
-    .line 8
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getThumbnailUpdater()Lcom/android/camera/ThumbnailUpdater;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ThumbnailUpdater;->updateThumbnailView(Z)V
 
-    .line 9
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/module/BaseModule;->enableCameraControls(Z)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
@@ -756,12 +697,10 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {p1, v1}, Lcom/android/camera/module/Panorama3Module;->access$1402(Lcom/android/camera/module/Panorama3Module;Z)Z
 
-    .line 12
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object p1
@@ -770,7 +709,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -787,7 +725,6 @@
 
     const-string v1, "[MORTIME] PanoramaFinish time = %d"
 
-    .line 14
     invoke-static {v2, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -800,7 +737,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/Panorama3Module$SaveOutputImageTask;->onPostExecute(Ljava/lang/Integer;)V
@@ -811,7 +747,6 @@
 .method public onPreExecute()V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

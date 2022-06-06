@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/MultiFrameProcessor;Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     iput-object p2, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->val$captureDataBean:Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
@@ -46,7 +45,6 @@
 .method public onEarlyMetaAvailable(Lcom/xiaomi/camera/isp/ISPResult;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -61,7 +59,6 @@
 .method public onError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$300(Lcom/xiaomi/camera/core/MultiFrameProcessor;)Ljava/lang/Object;
@@ -70,7 +67,6 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
@@ -98,19 +94,16 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
-    sget-boolean v1, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0O0:Z
+    sget-boolean v1, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0O0:Z
 
     if-nez v1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$402(Lcom/xiaomi/camera/core/MultiFrameProcessor;Z)Z
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$300(Lcom/xiaomi/camera/core/MultiFrameProcessor;)Ljava/lang/Object;
@@ -119,7 +112,6 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->notify()V
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -152,12 +144,10 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     monitor-exit v0
 
     return-void
 
-    .line 8
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -188,7 +178,6 @@
     :catchall_0
     move-exception p1
 
-    .line 9
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -199,7 +188,6 @@
 .method public onJpegAvailable([BLjava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -226,7 +214,6 @@
 .method public onJpegImageAvailable(Landroid/media/Image;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -259,7 +246,6 @@
 .method public onYuvAvailable(Landroid/media/Image;Ljava/lang/String;Z)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$300(Lcom/xiaomi/camera/core/MultiFrameProcessor;)Ljava/lang/Object;
@@ -268,7 +254,6 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
@@ -290,21 +275,18 @@
 
     invoke-static {v1, p2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p2, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     const/4 v1, 0x0
 
     invoke-static {p2, v1}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$402(Lcom/xiaomi/camera/core/MultiFrameProcessor;Z)Z
 
-    .line 4
     iget-object p2, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->val$captureDataBean:Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
 
     iget v1, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->val$imageType:I
 
     invoke-virtual {p2, p1, v1, p3}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/camera/core/MultiFrameProcessor$2;->this$0:Lcom/xiaomi/camera/core/MultiFrameProcessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$300(Lcom/xiaomi/camera/core/MultiFrameProcessor;)Ljava/lang/Object;
@@ -313,7 +295,6 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->notify()V
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/camera/core/MultiFrameProcessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -346,7 +327,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     monitor-exit v0
 
     return-void

@@ -58,13 +58,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->actual:Lorg/reactivestreams/Subscriber;
 
-    .line 3
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-direct {p1}, Lio/reactivex/internal/disposables/SequentialDisposable;-><init>()V
@@ -79,12 +76,10 @@
 .method public final cancel()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->serial:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->dispose()V
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->onUnsubscribed()V
 
     return-void
@@ -93,7 +88,6 @@
 .method public complete()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->isCancelled()Z
 
     move-result v0
@@ -102,7 +96,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     :try_start_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->actual:Lorg/reactivestreams/Subscriber;
@@ -111,7 +104,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->serial:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->dispose()V
@@ -133,14 +125,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->isCancelled()Z
 
@@ -152,7 +142,6 @@
 
     return p1
 
-    .line 3
     :cond_1
     :try_start_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->actual:Lorg/reactivestreams/Subscriber;
@@ -161,7 +150,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->serial:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->dispose()V
@@ -183,7 +171,6 @@
 .method public final isCancelled()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->serial:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/internal/disposables/SequentialDisposable;->isDisposed()Z
@@ -196,7 +183,6 @@
 .method public onComplete()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->complete()V
 
     return-void
@@ -205,14 +191,12 @@
 .method public final onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->tryOnError(Ljava/lang/Throwable;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
@@ -234,17 +218,14 @@
 .method public final request(J)V
     .locals 1
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->add(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->onRequested()V
 
     :cond_0
@@ -254,7 +235,6 @@
 .method public final requested()J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v0
@@ -272,7 +252,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCreate$SerializedEmitter;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$SerializedEmitter;-><init>(Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;)V
@@ -283,7 +262,6 @@
 .method public final setCancellable(Lio/reactivex/functions/Cancellable;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/disposables/CancellableDisposable;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/disposables/CancellableDisposable;-><init>(Lio/reactivex/functions/Cancellable;)V
@@ -296,7 +274,6 @@
 .method public final setDisposable(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->serial:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->update(Lio/reactivex/disposables/Disposable;)Z
@@ -307,7 +284,6 @@
 .method public tryOnError(Ljava/lang/Throwable;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->error(Ljava/lang/Throwable;)Z
 
     move-result p1

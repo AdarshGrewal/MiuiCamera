@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 
     const/16 v0, 0x8
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0

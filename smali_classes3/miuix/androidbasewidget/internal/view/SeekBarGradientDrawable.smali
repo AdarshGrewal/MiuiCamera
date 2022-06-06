@@ -27,25 +27,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mWidth:I
 
-    .line 3
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mHeight:I
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->newSeekBarGradientState()Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mSeekBarGradientState:Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
-    .line 5
     invoke-super {p0}, Landroid/graphics/drawable/GradientDrawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v1
@@ -58,20 +53,16 @@
 .method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)V
     .locals 1
 
-    .line 6
     invoke-direct {p0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 7
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mWidth:I
 
-    .line 8
     iput v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mHeight:I
 
     if-nez p1, :cond_0
 
-    .line 9
     iget-object p1, p3, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
@@ -83,7 +74,6 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 10
     iget-object p2, p3, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
@@ -92,7 +82,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     iget-object v0, p3, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -100,7 +89,6 @@
 
     move-result-object p1
 
-    .line 12
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -108,38 +96,32 @@
 
     iput-object p2, p3, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 13
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->newSeekBarGradientState()Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
     move-result-object p2
 
     iput-object p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mSeekBarGradientState:Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
-    .line 14
     iget-object p3, p3, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {p2, p3}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->setConstantState(Landroid/graphics/drawable/Drawable$ConstantState;)V
 
-    .line 15
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result p2
 
     iput p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mWidth:I
 
-    .line 16
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result p2
 
     iput p2, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mHeight:I
 
-    .line 17
     instance-of p2, p1, Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz p2, :cond_2
 
-    .line 18
     check-cast p1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/GradientDrawable;->getCornerRadius()F
@@ -148,14 +130,12 @@
 
     invoke-virtual {p0, p2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
 
-    .line 19
     invoke-virtual {p1}, Landroid/graphics/drawable/GradientDrawable;->getShape()I
 
     move-result p2
 
     invoke-virtual {p0, p2}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    .line 20
     invoke-virtual {p1}, Landroid/graphics/drawable/GradientDrawable;->getColor()Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -171,7 +151,6 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mSeekBarGradientState:Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
     return-object v0
@@ -180,7 +159,6 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mHeight:I
 
     return v0
@@ -189,7 +167,6 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->mWidth:I
 
     return v0
@@ -206,7 +183,6 @@
 .method public newSeekBarGradientState()Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;
 
     invoke-direct {v0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;-><init>()V
@@ -217,12 +193,10 @@
 .method public onStateChange([I)Z
     .locals 6
 
-    .line 1
     invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->onStateChange([I)Z
 
     move-result v0
 
-    .line 2
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -248,13 +222,11 @@
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->startPressedAnim()V
 
     :cond_2
     if-nez v3, :cond_3
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;->startUnPressedAnim()V
 
     :cond_3

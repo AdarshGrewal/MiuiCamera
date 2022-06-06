@@ -23,7 +23,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -34,7 +33,6 @@
 
     const-string v0, "urn:aiot-spec-v3:service:iot-local-control:00000001:1"
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -43,7 +41,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -126,12 +123,10 @@
 .method public request(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 5
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getAid()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getRequest()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
@@ -151,7 +146,6 @@
 
     goto :goto_0
 
-    .line 3
     :pswitch_0
     :try_start_0
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$InvokeAction;
@@ -160,7 +154,6 @@
 
     goto :goto_1
 
-    .line 4
     :pswitch_1
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetSceneAlias;
 
@@ -168,7 +161,6 @@
 
     goto :goto_1
 
-    .line 5
     :pswitch_2
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$Stop;
 
@@ -176,7 +168,6 @@
 
     goto :goto_1
 
-    .line 6
     :pswitch_3
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$SetToken;
 
@@ -184,7 +175,6 @@
 
     goto :goto_1
 
-    .line 7
     :pswitch_4
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$ExeScenes;
 
@@ -192,7 +182,6 @@
 
     goto :goto_1
 
-    .line 8
     :pswitch_5
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$SetDeviceProperties;
 
@@ -200,7 +189,6 @@
 
     goto :goto_1
 
-    .line 9
     :pswitch_6
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDeviceProperties;
 
@@ -208,7 +196,6 @@
 
     goto :goto_1
 
-    .line 10
     :pswitch_7
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetHomeFastCommands;
 
@@ -216,7 +203,6 @@
 
     goto :goto_1
 
-    .line 11
     :pswitch_8
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDeviceInformations;
 
@@ -224,7 +210,6 @@
 
     goto :goto_1
 
-    .line 12
     :pswitch_9
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetScenes;
 
@@ -232,7 +217,6 @@
 
     goto :goto_1
 
-    .line 13
     :pswitch_a
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetHomes;
 
@@ -240,7 +224,6 @@
 
     goto :goto_1
 
-    .line 14
     :pswitch_b
     new-instance v3, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDevices;
 
@@ -253,7 +236,6 @@
     :catch_0
     move-exception v1
 
-    .line 15
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
@@ -268,14 +250,12 @@
     :goto_1
     if-nez v3, :cond_1
 
-    .line 16
     sget-object v1, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->ERR_ACTION_NOT_FOUND:Lcom/xiaomi/idm/api/ResponseCode$RequestCode;
 
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getCode()I
 
     move-result v1
 
-    .line 17
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,7 +272,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getUUID()Ljava/lang/String;
 
     move-result-object v4
@@ -309,20 +288,17 @@
 
     move-result-object v0
 
-    .line 19
     invoke-static {v1, v0, p1, v2}, Lcom/xiaomi/idm/utils/ResponseHelper;->buildResponse(ILjava/lang/String;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p1
 
     return-object p1
 
-    .line 20
     :cond_1
     invoke-virtual {v3}, Lcom/xiaomi/idm/api/IDMService$Action;->invoke()[B
 
     move-result-object v0
 
-    .line 21
     invoke-static {p1, v0}, Lcom/xiaomi/idm/utils/ResponseHelper;->buildResponse(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p1

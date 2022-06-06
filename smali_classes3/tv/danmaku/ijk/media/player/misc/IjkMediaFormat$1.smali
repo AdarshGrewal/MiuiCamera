@@ -22,7 +22,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$1;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     const/4 p1, 0x0
@@ -37,7 +36,6 @@
 .method public doFormat(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$1;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     iget-object p1, p1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->mMediaFormat:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;

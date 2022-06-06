@@ -24,13 +24,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/google/zxing/aztec/detector/Detector$Point;->x:I
 
-    .line 3
     iput p2, p0, Lcom/google/zxing/aztec/detector/Detector$Point;->y:I
 
     return-void
@@ -41,7 +38,6 @@
 .method public getX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/aztec/detector/Detector$Point;->x:I
 
     return v0
@@ -50,7 +46,6 @@
 .method public getY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/aztec/detector/Detector$Point;->y:I
 
     return v0
@@ -59,7 +54,6 @@
 .method public toResultPoint()Lcom/google/zxing/ResultPoint;
     .locals 3
 
-    .line 1
     new-instance v0, Lcom/google/zxing/ResultPoint;
 
     iget v1, p0, Lcom/google/zxing/aztec/detector/Detector$Point;->x:I
@@ -78,7 +72,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "<"

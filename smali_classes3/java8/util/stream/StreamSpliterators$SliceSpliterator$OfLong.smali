@@ -32,7 +32,6 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfLong;JJ)V
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p5}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfPrimitive;-><init>(Ljava8/util/Spliterator$OfPrimitive;JJ)V
 
     return-void
@@ -41,7 +40,6 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfLong;JJJJ)V
     .locals 0
 
-    .line 2
     invoke-direct/range {p0 .. p9}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfPrimitive;-><init>(Ljava8/util/Spliterator$OfPrimitive;JJJJ)V
 
     return-void
@@ -58,7 +56,6 @@
 .method public bridge synthetic emptyConsumer()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfLong;->emptyConsumer()Ljava8/util/function/LongConsumer;
 
     move-result-object v0
@@ -69,7 +66,6 @@
 .method public emptyConsumer()Ljava8/util/function/LongConsumer;
     .locals 1
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfLong$$Lambda$1;->lambdaFactory$()Ljava8/util/function/LongConsumer;
 
     move-result-object v0
@@ -89,7 +85,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->forEachRemaining(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -98,7 +93,6 @@
 .method public bridge synthetic forEachRemaining(Ljava8/util/function/LongConsumer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfPrimitive;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
@@ -116,7 +110,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getComparator(Ljava8/util/Spliterator;)Ljava/util/Comparator;
 
     move-result-object v0
@@ -127,7 +120,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -138,7 +130,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -149,7 +140,6 @@
 .method public makeSpliterator(Ljava8/util/Spliterator$OfLong;JJJJ)Ljava8/util/Spliterator$OfLong;
     .locals 11
 
-    .line 2
     new-instance v10, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfLong;
 
     move-object v0, v10
@@ -172,7 +162,6 @@
 .method public bridge synthetic makeSpliterator(Ljava8/util/Spliterator;JJJJ)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/Spliterator$OfLong;
 
     invoke-virtual/range {p0 .. p9}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfLong;->makeSpliterator(Ljava8/util/Spliterator$OfLong;JJJJ)Ljava8/util/Spliterator$OfLong;
@@ -194,7 +183,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->tryAdvance(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -205,7 +193,6 @@
 .method public bridge synthetic tryAdvance(Ljava8/util/function/LongConsumer;)Z
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
     move-result p1
@@ -216,7 +203,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfLong;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

@@ -18,7 +18,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Ljava/lang/String;Lcom/xiaomi/idm/task/CallFuture$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/task/CallFuture$ExeException;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/ExecutionException;->getMessage()Ljava/lang/String;
 
     move-result-object v0

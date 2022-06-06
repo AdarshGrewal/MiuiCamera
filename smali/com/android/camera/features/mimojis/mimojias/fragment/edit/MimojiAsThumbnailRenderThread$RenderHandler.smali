@@ -30,10 +30,8 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -46,7 +44,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread$RenderHandler;-><init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;)V
 
     return-void
@@ -57,7 +54,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread$RenderHandler;->mRenderThread:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -70,7 +66,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -108,7 +103,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -118,7 +112,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -128,13 +121,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;->access$800(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;)V
 
     goto :goto_0
 
-    .line 6
     :cond_4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -144,19 +135,16 @@
 
     goto :goto_0
 
-    .line 7
     :cond_5
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;->access$900(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;)V
 
     goto :goto_0
 
-    .line 8
     :cond_6
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;->access$600(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsThumbnailRenderThread;)V
 
     goto :goto_0
 
-    .line 9
     :cond_7
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -166,7 +154,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_8
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 

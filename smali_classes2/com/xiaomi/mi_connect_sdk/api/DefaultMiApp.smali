@@ -48,10 +48,8 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMBinderBase;-><init>(Landroid/content/Context;Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;)V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -60,16 +58,12 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isAdvertising:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDiscovering:Z
 
-    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDestroying:Z
 
-    .line 6
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -80,7 +74,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->uiHandler:Landroid/os/Handler;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;-><init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)V
@@ -91,12 +84,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 8
     iput p3, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
     return-void
 
-    .line 9
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -110,7 +101,6 @@
 .method public static synthetic access$002(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isAdvertising:Z
 
     return p1
@@ -119,7 +109,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -128,7 +117,6 @@
 .method public static synthetic access$1000(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -137,7 +125,6 @@
 .method public static synthetic access$1100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -146,7 +133,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->uiHandler:Landroid/os/Handler;
 
     return-object p0
@@ -155,7 +141,6 @@
 .method public static synthetic access$302(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDiscovering:Z
 
     return p1
@@ -164,7 +149,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -173,7 +157,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -182,7 +165,6 @@
 .method public static synthetic access$600(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -191,7 +173,6 @@
 .method public static synthetic access$700(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -200,7 +181,6 @@
 .method public static synthetic access$800(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -209,7 +189,6 @@
 .method public static synthetic access$900(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     return-object p0
@@ -218,7 +197,6 @@
 .method private requestServiceFromOtherApp(ILcom/xiaomi/mi_connect_sdk/api/AppConfig;)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p2}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscAppIds()[I
 
     move-result-object v0
@@ -233,7 +211,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p2}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscAppIds()[I
 
@@ -262,14 +239,12 @@
 .method public acceptConnection(Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -282,7 +257,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -290,7 +264,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -303,29 +276,24 @@
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->getRoleType()I
 
     move-result v2
 
-    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->getEndPointId()I
 
     move-result v3
 
-    .line 8
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->isEndPointTrusted()Z
 
     move-result p1
 
-    .line 9
     invoke-interface {v0, v1, v2, v3, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->acceptConnection(IIIZ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -335,10 +303,8 @@
     :catch_0
     move-exception p1
 
-    .line 10
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 11
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -356,21 +322,17 @@
 .method public destroy(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->doDestroy()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDestroying:Z
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
     invoke-interface {v0, v1, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->destroy(II)V
@@ -382,10 +344,8 @@
     :catch_0
     move-exception p1
 
-    .line 5
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 6
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->unbindService()V
@@ -404,10 +364,8 @@
 
     const-string v2, "deviceInfoIDM"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
@@ -416,7 +374,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -429,7 +386,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     sget v0, Lcom/xiaomi/idm/api/IDMBinderBase;->sServiceApiVersion:I
 
@@ -437,7 +393,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -450,7 +405,6 @@
 
     return-object v1
 
-    .line 6
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -466,7 +420,6 @@
     :catch_0
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -476,14 +429,12 @@
 .method public disconnectFromEndPoint(Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -496,7 +447,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -504,7 +454,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -517,14 +466,12 @@
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->getRoleType()I
 
     move-result v2
@@ -533,7 +480,6 @@
 
     move-result p1
 
-    .line 7
     invoke-interface {v0, v1, v2, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->disconnectFromEndPoint(III)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -543,10 +489,8 @@
     :catch_0
     move-exception p1
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 9
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -572,10 +516,8 @@
 
     const-string v2, "getIdHash"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
@@ -584,7 +526,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -597,7 +538,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -605,7 +545,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -618,7 +557,6 @@
 
     return-object v1
 
-    .line 6
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -634,7 +572,6 @@
     :catch_0
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -652,13 +589,10 @@
 .method public onServiceConnected()V
     .locals 4
 
-    .line 1
     invoke-super {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->onServiceConnected()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->commandList:Ljava/util/List;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -670,21 +604,18 @@
 
     if-ge v2, v1, :cond_0
 
-    .line 4
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;
 
-    .line 5
     invoke-virtual {v3}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;->execute()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -694,7 +625,6 @@
 .method public publish(Ljava/lang/String;Ljava/lang/String;[B)I
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -723,14 +653,12 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -745,7 +673,6 @@
 
     return p1
 
-    .line 4
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -765,7 +692,6 @@
 
     const-string p2, ""
 
-    .line 5
     invoke-static {v3, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v1
@@ -782,10 +708,8 @@
 
     const-string v2, "registerSoundBoxWhiteName"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
@@ -794,7 +718,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -807,7 +730,6 @@
 
     return v2
 
-    .line 4
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -825,7 +747,6 @@
 
     const-string v0, ""
 
-    .line 5
     invoke-static {v1, v0, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v2
@@ -834,14 +755,12 @@
 .method public rejectConnection(Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -854,7 +773,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -862,7 +780,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -875,14 +792,12 @@
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->getRoleType()I
 
     move-result v2
@@ -891,7 +806,6 @@
 
     move-result p1
 
-    .line 7
     invoke-interface {v0, v1, v2, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->rejectConnection(III)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -901,10 +815,8 @@
     :catch_0
     move-exception p1
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 9
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -922,14 +834,12 @@
 .method public requestConnection(Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -942,7 +852,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -950,7 +859,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -963,14 +871,12 @@
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->getEndPointId()I
 
     move-result v2
@@ -979,7 +885,6 @@
 
     move-result-object p1
 
-    .line 7
     invoke-interface {v0, v1, v2, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->requestConnection(II[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -989,10 +894,8 @@
     :catch_0
     move-exception p1
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 9
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1010,14 +913,12 @@
 .method public sendPayload(Lcom/xiaomi/mi_connect_sdk/api/PayloadConfig;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1030,7 +931,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -1038,7 +938,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1051,29 +950,24 @@
 
     return-void
 
-    .line 5
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/PayloadConfig;->getRoleType()I
 
     move-result v2
 
-    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/PayloadConfig;->getEndPointId()I
 
     move-result v3
 
-    .line 8
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/PayloadConfig;->getPayload()[B
 
     move-result-object p1
 
-    .line 9
     invoke-interface {v0, v1, v2, v3, p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->sendPayload(III[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1083,10 +977,8 @@
     :catch_0
     move-exception p1
 
-    .line 10
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 11
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1112,10 +1004,8 @@
 
     const-string v2, "setIPCDataCallback"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
@@ -1124,7 +1014,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1137,7 +1026,6 @@
 
     return v2
 
-    .line 4
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1157,7 +1045,6 @@
 
     const-string p2, ""
 
-    .line 5
     invoke-static {v1, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v2
@@ -1166,7 +1053,6 @@
 .method public startAdvertising(Lcom/xiaomi/mi_connect_sdk/api/AppConfig;)V
     .locals 10
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDestroying:Z
 
     if-eqz v0, :cond_0
@@ -1176,17 +1062,14 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->bindService()V
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;
 
     new-instance v1, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$2;
@@ -1195,14 +1078,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;-><init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Ljava/lang/Runnable;)V
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->commandList:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -1210,7 +1091,6 @@
 
     if-nez v1, :cond_2
 
-    .line 7
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1223,7 +1103,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1234,32 +1113,26 @@
 
     invoke-interface {v1, v2, v0, v3}, Lcom/xiaomi/mi_connect_service/IMiConnect;->setCallback(IILcom/xiaomi/mi_connect_service/IMiConnectCallback;)V
 
-    .line 9
     iget-object v4, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v5, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 10
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAdvData()[B
 
     move-result-object v6
 
-    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscType()I
 
     move-result v7
 
-    .line 12
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommType()I
 
     move-result v8
 
-    .line 13
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getCommData()[B
 
     move-result-object v9
 
-    .line 14
     invoke-interface/range {v4 .. v9}, Lcom/xiaomi/mi_connect_service/IMiConnect;->startAdvertising(I[BII[B)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1269,10 +1142,8 @@
     :catch_0
     move-exception p1
 
-    .line 15
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 16
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1298,17 +1169,14 @@
 
     const-string v2, "startAp"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1319,7 +1187,6 @@
 
     invoke-interface {p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
-    .line 4
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
@@ -1330,7 +1197,6 @@
 
     return-wide p1
 
-    .line 5
     :cond_0
     sget v0, Lcom/xiaomi/idm/api/IDMBinderBase;->sServiceApiVersion:I
 
@@ -1338,7 +1204,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1349,7 +1214,6 @@
 
     invoke-interface {p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
-    .line 7
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
@@ -1360,7 +1224,6 @@
 
     return-wide p1
 
-    .line 8
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1388,7 +1251,6 @@
 
     const-string p2, ""
 
-    .line 9
     invoke-static {v1, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-wide/16 p1, -0x1
@@ -1403,7 +1265,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     iget-boolean v2, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDestroying:Z
 
     if-eqz v2, :cond_0
@@ -1413,17 +1274,14 @@
     :cond_0
     const/4 v2, 0x2
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 3
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->bindService()V
 
-    .line 4
     new-instance v2, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;
 
     new-instance v3, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$3;
@@ -1432,14 +1290,12 @@
 
     invoke-direct {v2, v0, v3}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$Command;-><init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Ljava/lang/Runnable;)V
 
-    .line 5
     iget-object v1, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->commandList:Ljava/util/List;
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -1447,7 +1303,6 @@
 
     if-nez v3, :cond_2
 
-    .line 7
     iget-object v1, v0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1460,7 +1315,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     :try_start_0
     iget-object v3, v0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1471,7 +1325,6 @@
 
     invoke-interface {v3, v4, v2, v5}, Lcom/xiaomi/mi_connect_service/IMiConnect;->setCallback(IILcom/xiaomi/mi_connect_service/IMiConnectCallback;)V
 
-    .line 9
     iget v2, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
     invoke-direct {v0, v2, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->requestServiceFromOtherApp(ILcom/xiaomi/mi_connect_sdk/api/AppConfig;)Z
@@ -1486,75 +1339,61 @@
 
     if-le v2, v3, :cond_3
 
-    .line 10
     iget-object v4, v0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v5, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 11
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getCommData()[B
 
     move-result-object v6
 
-    .line 12
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscType()I
 
     move-result v7
 
-    .line 13
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommType()I
 
     move-result v8
 
-    .line 14
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommDataType()I
 
     move-result v9
 
-    .line 15
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscAppIds()[I
 
     move-result-object v10
 
-    .line 16
     invoke-interface/range {v4 .. v10}, Lcom/xiaomi/mi_connect_service/IMiConnect;->startDiscoveryV2(I[BIII[I)V
 
     goto :goto_0
 
-    .line 17
     :cond_3
     iget-object v11, v0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v12, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 18
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getCommData()[B
 
     move-result-object v13
 
-    .line 19
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getDiscType()I
 
     move-result v14
 
-    .line 20
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommType()I
 
     move-result v15
 
-    .line 21
     invoke-virtual/range {p1 .. p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommDataType()I
 
     move-result v16
 
-    .line 22
     invoke-interface/range {v11 .. v16}, Lcom/xiaomi/mi_connect_service/IMiConnect;->startDiscovery(I[BIII)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 23
     :catch_0
     iget-object v1, v0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
@@ -1581,10 +1420,8 @@
 
     const-string v2, "startScannerList"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
@@ -1593,7 +1430,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1606,7 +1442,6 @@
 
     return v2
 
-    .line 4
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1626,7 +1461,6 @@
 
     const-string p2, ""
 
-    .line 5
     invoke-static {v1, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v2
@@ -1635,14 +1469,12 @@
 .method public stopAdvertising()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isAdvertising:Z
 
     if-eqz v0, :cond_0
@@ -1655,10 +1487,8 @@
 
     const-string v2, "service unbind but advertising"
 
-    .line 3
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_ADVERTISING_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1671,7 +1501,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
@@ -1688,7 +1517,6 @@
     :goto_0
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -1696,7 +1524,6 @@
 
     if-nez v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1709,7 +1536,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1722,7 +1548,6 @@
 
     goto :goto_1
 
-    .line 9
     :catch_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
@@ -1749,17 +1574,14 @@
 
     const-string v2, "stopAp"
 
-    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1772,7 +1594,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     sget v0, Lcom/xiaomi/idm/api/IDMBinderBase;->sServiceApiVersion:I
 
@@ -1780,7 +1601,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object p2, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1793,7 +1613,6 @@
 
     return-void
 
-    .line 6
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1809,7 +1628,6 @@
 
     const-string p2, ""
 
-    .line 7
     invoke-static {v1, p2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -1819,14 +1637,12 @@
 .method public stopDiscovery()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->isDiscovering:Z
 
     if-eqz v0, :cond_0
@@ -1839,10 +1655,8 @@
 
     const-string v2, "service unbind but discovering"
 
-    .line 3
     invoke-static {v1, v2, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_DISCOVERY_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1855,7 +1669,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
@@ -1872,7 +1685,6 @@
     :goto_0
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->isVersionSatisfied()Z
 
@@ -1880,7 +1692,6 @@
 
     if-nez v0, :cond_2
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1893,7 +1704,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1909,10 +1719,8 @@
     :catch_0
     move-exception v0
 
-    .line 9
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    .line 10
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1930,14 +1738,12 @@
 .method public updateCommConfig(Lcom/xiaomi/mi_connect_sdk/api/AppConfig;)I
     .locals 10
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBinderBase;->serviceAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1948,12 +1754,10 @@
 
     invoke-interface {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
-    .line 3
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
 
-    .line 4
     :cond_0
     sget v0, Lcom/xiaomi/idm/api/IDMBinderBase;->sServiceApiVersion:I
 
@@ -1961,7 +1765,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -1972,7 +1775,6 @@
 
     invoke-interface {p1, v0}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
-    .line 6
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
@@ -1981,7 +1783,6 @@
 
     return p1
 
-    .line 7
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2007,38 +1808,31 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 8
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->UNKNOWN_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
 
-    .line 9
     :try_start_0
     iget-object v4, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iget v5, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->mAppId:I
 
-    .line 10
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppRoleType()I
 
     move-result v6
 
-    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommType()I
 
     move-result v7
 
-    .line 12
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getCommData()[B
 
     move-result-object v8
 
-    .line 13
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;->getAppCommDataType()I
 
     move-result v9
 
-    .line 14
     invoke-interface/range {v4 .. v9}, Lcom/xiaomi/mi_connect_service/IMiConnect;->updateCommConfig(III[BI)I
 
     move-result p1
@@ -2050,7 +1844,6 @@
     :catch_0
     move-exception p1
 
-    .line 15
     invoke-virtual {p1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -2059,7 +1852,6 @@
 
     invoke-static {v3, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 16
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
@@ -2070,7 +1862,6 @@
 
     invoke-interface {p1, v0}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
-    .line 17
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I

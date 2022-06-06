@@ -23,17 +23,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2, p4}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;-><init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;Ljava/util/Collection;)V
 
-    .line 2
     invoke-interface {p3, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;->getSessionState(I)Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
 
-    .line 3
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
     return-void
@@ -42,7 +39,6 @@
 .method private emitSessionStatus()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
@@ -73,10 +69,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onInstallCompleted(Ljava/util/List;)V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -85,7 +79,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -103,24 +96,20 @@
 
     check-cast v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;
 
-    .line 4
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 5
     iget-object v3, v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;->addedDexPaths:Ljava/util/List;
 
     if-eqz v3, :cond_0
 
-    .line 6
     check-cast v3, Ljava/util/ArrayList;
 
     const-string v4, "added-dex"
 
     invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    .line 7
     :cond_0
     iget-object v3, v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;->apkFile:Ljava/io/File;
 
@@ -132,25 +121,21 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8
     iget-object v1, v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller$InstallResult;->splitName:Ljava/lang/String;
 
     const-string v3, "splitName"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 9
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
 
     invoke-virtual {p1, v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->setSplitFileIntents(Ljava/util/List;)V
 
-    .line 11
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
@@ -163,7 +148,6 @@
 
     invoke-interface {p1, v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;->changeSessionState(II)V
 
-    .line 12
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->emitSessionStatus()V
 
     return-void
@@ -180,10 +164,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onInstallFailed(Ljava/util/List;)V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
 
     const/4 v1, 0x0
@@ -198,7 +180,6 @@
 
     invoke-virtual {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->setErrorCode(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
@@ -211,7 +192,6 @@
 
     invoke-interface {p1, v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;->changeSessionState(II)V
 
-    .line 4
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->emitSessionStatus()V
 
     return-void
@@ -220,10 +200,8 @@
 .method public onPreInstall()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallTask;->onPreInstall()V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->mSessionState:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;
@@ -236,7 +214,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;->changeSessionState(II)V
 
-    .line 3
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;->emitSessionStatus()V
 
     return-void

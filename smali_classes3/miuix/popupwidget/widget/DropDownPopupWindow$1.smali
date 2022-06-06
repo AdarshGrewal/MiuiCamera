@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-static {p1}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$000(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Landroid/animation/ValueAnimator;
@@ -55,7 +53,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-static {v0}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$100(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Lmiuix/popupwidget/widget/DropDownPopupWindow$ContainerController;
@@ -64,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-static {v0}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$100(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Lmiuix/popupwidget/widget/DropDownPopupWindow$ContainerController;
@@ -79,7 +75,6 @@
 
     invoke-interface {v0, v1, p1}, Lmiuix/popupwidget/widget/DropDownPopupWindow$Controller;->onAniamtionUpdate(Landroid/view/View;F)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
@@ -89,7 +84,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$1;->this$0:Lmiuix/popupwidget/widget/DropDownPopupWindow;
 
     invoke-static {v0}, Lmiuix/popupwidget/widget/DropDownPopupWindow;->access$300(Lmiuix/popupwidget/widget/DropDownPopupWindow;)Lmiuix/popupwidget/widget/DropDownPopupWindow$ContentController;

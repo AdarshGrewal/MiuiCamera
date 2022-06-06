@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/miui/filtersdk/filter/base/GPUImageFilter;I[F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$5;->this$0:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     iput p2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$5;->val$location:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$5;->val$location:I
 
     iget-object v1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter$5;->val$arrayValue:[F

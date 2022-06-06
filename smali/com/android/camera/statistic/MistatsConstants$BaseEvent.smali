@@ -177,10 +177,6 @@
 
 .field public static final VALUE_ON:Ljava/lang/String; = "on"
 
-.field public static final VALUE_ON_FEMALE:Ljava/lang/String; = "on_female"
-
-.field public static final VALUE_ON_MALE:Ljava/lang/String; = "on_male"
-
 .field public static final VALUE_OPEN:Ljava/lang/String; = "open"
 
 .field public static final VALUE_SUCCESS:Ljava/lang/String; = "success"

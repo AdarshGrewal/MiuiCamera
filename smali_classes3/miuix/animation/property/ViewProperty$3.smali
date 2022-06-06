@@ -18,7 +18,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -29,14 +28,12 @@
 .method public getValue(Landroid/view/View;)F
     .locals 2
 
-    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTranslationZ()F
 
     move-result p1
@@ -52,7 +49,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewProperty$3;->getValue(Landroid/view/View;)F
@@ -65,14 +61,12 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 2
 
-    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationZ(F)V
 
     :cond_0
@@ -82,7 +76,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewProperty$3;->setValue(Landroid/view/View;F)V

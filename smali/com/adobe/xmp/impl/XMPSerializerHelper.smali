@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,13 +24,11 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p2, Lcom/adobe/xmp/options/SerializeOptions;
 
     invoke-direct {p2}, Lcom/adobe/xmp/options/SerializeOptions;-><init>()V
 
-    .line 2
     :goto_0
     invoke-virtual {p2}, Lcom/adobe/xmp/options/SerializeOptions;->getSort()Z
 
@@ -39,10 +36,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->sort()V
 
-    .line 4
     :cond_1
     new-instance v0, Lcom/adobe/xmp/impl/XMPSerializerRDF;
 
@@ -61,17 +56,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     const/16 v1, 0x800
 
     invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/adobe/xmp/impl/XMPSerializerHelper;->serialize(Lcom/adobe/xmp/impl/XMPMetaImpl;Ljava/io/OutputStream;Lcom/adobe/xmp/options/SerializeOptions;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -91,7 +83,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p1, Lcom/adobe/xmp/options/SerializeOptions;
 
@@ -100,20 +91,16 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p1, v0}, Lcom/adobe/xmp/options/SerializeOptions;->setEncodeUTF16BE(Z)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 3
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     const/16 v1, 0x800
 
     invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 4
     invoke-static {p0, v0, p1}, Lcom/adobe/xmp/impl/XMPSerializerHelper;->serialize(Lcom/adobe/xmp/impl/XMPMetaImpl;Ljava/io/OutputStream;Lcom/adobe/xmp/options/SerializeOptions;)V
 
-    .line 5
     :try_start_0
     invoke-virtual {p1}, Lcom/adobe/xmp/options/SerializeOptions;->getEncoding()Ljava/lang/String;
 
@@ -127,7 +114,6 @@
 
     return-object p0
 
-    .line 6
     :catch_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 

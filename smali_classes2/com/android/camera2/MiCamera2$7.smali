@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera2/MiCamera2;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/MiCamera2$7;->this$0:Lcom/android/camera2/MiCamera2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onImageAvailable(Landroid/media/ImageReader;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object p1
@@ -47,7 +45,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/MiCamera2$7;->this$0:Lcom/android/camera2/MiCamera2;
 
@@ -57,21 +54,18 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera2/MiCamera2;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "onImageAvailable: NO portrait image processor!"
+    const-string/jumbo v1, "onImageAvailable: NO portrait image processor!"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/MiCamera2$7;->this$0:Lcom/android/camera2/MiCamera2;
 

@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 5
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/FolmeFont$FontType;
 
     const/4 v1, 0x0
@@ -59,7 +58,6 @@
 
     new-array v3, v3, [Lmiuix/animation/controller/FolmeFont$FontType;
 
-    .line 2
     sget-object v4, Lmiuix/animation/controller/FolmeFont$FontType;->INIT:Lmiuix/animation/controller/FolmeFont$FontType;
 
     aput-object v4, v3, v1
@@ -79,7 +77,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -88,7 +85,6 @@
 .method public static valueOf(Ljava/lang/String;)Lmiuix/animation/controller/FolmeFont$FontType;
     .locals 1
 
-    .line 1
     const-class v0, Lmiuix/animation/controller/FolmeFont$FontType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -103,7 +99,6 @@
 .method public static values()[Lmiuix/animation/controller/FolmeFont$FontType;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/controller/FolmeFont$FontType;->$VALUES:[Lmiuix/animation/controller/FolmeFont$FontType;
 
     invoke-virtual {v0}, [Lmiuix/animation/controller/FolmeFont$FontType;->clone()Ljava/lang/Object;

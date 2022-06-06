@@ -22,8 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO00o/OooO00o/OooOOo;->values()[LOooO00o/OooO00o/OooO00o/OooOOo;
+    invoke-static {}, LOooO0O0/OooO00o/OooO00o/OooOOo;->values()[LOooO0O0/OooO00o/OooO00o/OooOOo;
 
     move-result-object v0
 
@@ -34,7 +33,7 @@
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$OooO0o0;->OooO00o:[I
 
     :try_start_0
-    sget-object v1, LOooO00o/OooO00o/OooO00o/OooOOo;->OooO0O0:LOooO00o/OooO00o/OooO00o/OooOOo;
+    sget-object v1, LOooO0O0/OooO00o/OooO00o/OooOOo;->OooO0O0:LOooO0O0/OooO00o/OooO00o/OooOOo;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -50,7 +49,7 @@
     :try_start_1
     sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$OooO0o0;->OooO00o:[I
 
-    sget-object v1, LOooO00o/OooO00o/OooO00o/OooOOo;->OooO0OO:LOooO00o/OooO00o/OooO00o/OooOOo;
+    sget-object v1, LOooO0O0/OooO00o/OooO00o/OooOOo;->OooO0OO:LOooO0O0/OooO00o/OooO00o/OooOOo;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -66,7 +65,7 @@
     :try_start_2
     sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$OooO0o0;->OooO00o:[I
 
-    sget-object v1, LOooO00o/OooO00o/OooO00o/OooOOo;->OooO00o:LOooO00o/OooO00o/OooO00o/OooOOo;
+    sget-object v1, LOooO0O0/OooO00o/OooO00o/OooOOo;->OooO00o:LOooO0O0/OooO00o/OooO00o/OooOOo;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

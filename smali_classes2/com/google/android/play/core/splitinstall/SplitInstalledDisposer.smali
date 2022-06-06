@@ -16,13 +16,10 @@
 .method public constructor <init>(Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;Lcom/google/android/play/core/splitinstall/SplitInstallRequest;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstalledDisposer;->splitInstallManager:Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstalledDisposer;->splitInstallRequest:Lcom/google/android/play/core/splitinstall/SplitInstallRequest;
 
     return-void
@@ -31,7 +28,6 @@
 .method private makeInstalledSessionState([Ljava/lang/String;)Landroid/os/Bundle;
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -46,15 +42,12 @@
 
     const/4 v3, 0x5
 
-    .line 2
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "error_code"
 
-    .line 3
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -71,12 +64,10 @@
 
     const-string p1, "total_bytes_to_download"
 
-    .line 5
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string p1, "bytes_downloaded"
 
-    .line 6
     invoke-virtual {v0, p1, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     return-object v0
@@ -87,7 +78,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstalledDisposer;->splitInstallManager:Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;
 
     invoke-virtual {v0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getRegistry()Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
@@ -96,7 +86,6 @@
 
     iget-object v1, p0, Lcom/google/android/play/core/splitinstall/SplitInstalledDisposer;->splitInstallRequest:Lcom/google/android/play/core/splitinstall/SplitInstallRequest;
 
-    .line 2
     invoke-virtual {v1}, Lcom/google/android/play/core/splitinstall/SplitInstallRequest;->getModuleNames()Ljava/util/List;
 
     move-result-object v1
@@ -119,7 +108,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->notifyListeners(Ljava/lang/Object;)V
 
     return-void

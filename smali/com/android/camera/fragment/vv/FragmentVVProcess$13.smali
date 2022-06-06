@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$13;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,7 +34,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     return-void

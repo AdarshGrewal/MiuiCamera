@@ -29,7 +29,6 @@
 
     const/16 v1, 0x3c
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -48,17 +47,14 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 2
     sget p1, Lcom/android/camera/effect/renders/FocusPeakingRender;->DEFAULT_THRESHOLD:F
 
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mThreshold:F
 
     const p1, 0xf9310f
 
-    .line 3
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mPeakColor:I
 
     return-void
@@ -67,17 +63,14 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 4
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 5
     sget p1, Lcom/android/camera/effect/renders/FocusPeakingRender;->DEFAULT_THRESHOLD:F
 
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mThreshold:F
 
     const p1, 0xf9310f
 
-    .line 6
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mPeakColor:I
 
     return-void
@@ -96,10 +89,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uThreshold"
@@ -110,7 +101,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mUniformThresholdH:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uPeakColor"
@@ -127,17 +117,14 @@
 .method public initShaderValue(Z)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mUniformThresholdH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mThreshold:F
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mUniformPeakColorH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mPeakColor:I
@@ -154,7 +141,6 @@
 
     iget v2, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mPeakColor:I
 
-    .line 4
     invoke-static {v2}, Landroid/graphics/Color;->green(I)I
 
     move-result v2
@@ -173,7 +159,6 @@
 
     div-float/2addr v3, v1
 
-    .line 5
     invoke-static {p1, v0, v2, v3}, Landroid/opengl/GLES20;->glUniform3f(IFFF)V
 
     return-void
@@ -182,7 +167,6 @@
 .method public setPeakColor(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mPeakColor:I
 
     return-void
@@ -191,7 +175,6 @@
 .method public setThreshold(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/renders/FocusPeakingRender;->mThreshold:F
 
     return-void

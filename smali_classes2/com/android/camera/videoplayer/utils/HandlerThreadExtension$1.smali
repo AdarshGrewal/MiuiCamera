@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension$1;->this$0:Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;->access$000()Z
 
     move-result p1
@@ -69,13 +67,11 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
     const/4 p1, 0x0
 
-    .line 3
     invoke-static {p1}, Ljava/lang/System;->exit(I)V
 
     return-void

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/DualCameraProcessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/DualCameraProcessor$4;->this$0:Lcom/xiaomi/camera/core/DualCameraProcessor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onFrameImageClosed(Landroid/media/Image;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/core/DualCameraProcessor;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -59,17 +57,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/core/DualCameraProcessor$4;->this$0:Lcom/xiaomi/camera/core/DualCameraProcessor;
 
     iget-object v0, v0, Lcom/xiaomi/camera/core/ImageProcessor;->mImageProcessorStatusCallback:Lcom/xiaomi/camera/core/ImageProcessor$ImageProcessorStatusCallback;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, p1}, Lcom/xiaomi/camera/core/ImageProcessor$ImageProcessorStatusCallback;->onOriginalImageClosed(Landroid/media/Image;)V
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 

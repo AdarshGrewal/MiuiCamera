@@ -30,10 +30,8 @@
 .method public constructor <init>(Lcom/android/camera/module/SuperMoonModule;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -48,7 +46,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/SuperMoonModule$MainHandler;->mModule:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -61,7 +58,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isCreated()Z
 
@@ -71,12 +67,10 @@
 
     if-nez v1, :cond_1
 
-    .line 3
     invoke-virtual {p0, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     return-void
 
-    .line 4
     :cond_1
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
 
@@ -86,7 +80,6 @@
 
     return-void
 
-    .line 5
     :cond_2
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -132,14 +125,13 @@
 
     packed-switch v1, :pswitch_data_3
 
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "no consumer for this message: "
+    const-string/jumbo v2, "no consumer for this message: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,13 +147,11 @@
 
     throw v0
 
-    .line 7
     :pswitch_0
     invoke-virtual {v0}, Lcom/android/camera/module/SuperMoonModule;->onWaitingFocusFinished()Z
 
     goto/16 :goto_1
 
-    .line 8
     :pswitch_1
     invoke-static {}, Lcom/android/camera/module/SuperMoonModule;->access$300()Ljava/lang/String;
 
@@ -171,12 +161,10 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-static {v0, v3}, Lcom/android/camera/module/SuperMoonModule;->access$402(Lcom/android/camera/module/SuperMoonModule;Z)Z
 
     goto/16 :goto_1
 
-    .line 10
     :pswitch_2
     invoke-static {}, Lcom/android/camera/module/SuperMoonModule;->access$300()Ljava/lang/String;
 
@@ -186,18 +174,14 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iput v3, v0, Lcom/android/camera/module/BaseModule;->mIsSatFallback:I
 
-    .line 12
     iput-boolean v3, v0, Lcom/android/camera/module/BaseModule;->mFallbackProcessed:Z
 
     const/4 p1, -0x1
 
-    .line 13
     iput p1, v0, Lcom/android/camera/module/BaseModule;->mLastSatFallbackRequestId:I
 
-    .line 14
     iget-boolean p1, v0, Lcom/android/camera/module/BaseModule;->mWaitingSnapshot:Z
 
     if-eqz p1, :cond_b
@@ -208,17 +192,14 @@
 
     if-ne p1, v2, :cond_b
 
-    .line 15
     iput-boolean v3, v0, Lcom/android/camera/module/BaseModule;->mWaitingSnapshot:Z
 
     const/16 p1, 0x3e
 
-    .line 16
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto/16 :goto_1
 
-    .line 17
     :pswitch_3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -234,7 +215,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 18
     iget v0, v0, Lcom/android/camera/module/BaseModule;->mOrientationCompensation:I
 
     if-ltz v0, :cond_3
@@ -251,17 +231,14 @@
     :goto_0
     rsub-int v0, v0, 0x168
 
-    .line 19
     rem-int/lit16 v0, v0, 0x168
 
-    .line 20
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     invoke-interface {v1, p1, v0}, Lcom/android/camera/protocol/ModeProtocol$ConfigChanges;->configRotationChange(II)V
 
     goto/16 :goto_1
 
-    .line 21
     :pswitch_4
     invoke-static {}, Lcom/android/zxing/PreviewDecodeManager;->getInstance()Lcom/android/zxing/PreviewDecodeManager;
 
@@ -271,13 +248,11 @@
 
     goto/16 :goto_1
 
-    .line 22
     :pswitch_5
     iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
     if-eqz p1, :cond_b
 
-    .line 23
     invoke-interface {p1, v2}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->isFaceExists(I)Z
 
     move-result p1
@@ -286,7 +261,6 @@
 
     iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
-    .line 24
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->isFocusViewVisible()Z
 
     move-result p1
@@ -297,14 +271,12 @@
 
     if-eqz p1, :cond_b
 
-    .line 25
     invoke-virtual {p1}, Lcom/android/camera2/Camera2Proxy;->getFocusMode()I
 
     move-result p1
 
     if-ne v5, p1, :cond_b
 
-    .line 26
     iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
 
     const/4 v0, 0x7
@@ -313,7 +285,6 @@
 
     goto/16 :goto_1
 
-    .line 27
     :pswitch_6
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getTriggerMode()I
 
@@ -321,9 +292,8 @@
 
     invoke-virtual {v0, p1}, Lcom/android/camera/module/SuperMoonModule;->onShutterButtonClick(I)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 28
     :pswitch_7
     invoke-static {}, Lcom/android/camera/module/SuperMoonModule;->access$300()Ljava/lang/String;
 
@@ -335,12 +305,10 @@
 
     const-wide/16 v1, 0x0
 
-    .line 29
     invoke-virtual {v0, v3, v1, v2}, Lcom/android/camera/module/SuperMoonModule;->onPictureTakenFinished(ZJ)V
 
     goto :goto_1
 
-    .line 30
     :pswitch_8
     iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
@@ -350,31 +318,29 @@
 
     if-nez p1, :cond_b
 
-    .line 31
     iput-boolean v2, v0, Lcom/android/camera/module/BaseModule;->mOpenCameraFail:Z
 
-    .line 32
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->onCameraException()V
 
     goto :goto_1
 
-    .line 33
+    :pswitch_9
+    iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
+
+    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;->initializeFocusView(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
+
+    goto :goto_1
+
     :cond_4
     invoke-virtual {v0, v2}, Lcom/android/camera/module/BaseModule;->setActivity(Lcom/android/camera/Camera;)V
 
     goto :goto_1
 
-    .line 34
     :cond_5
-    iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
-
-    iget v0, v0, Lcom/android/camera/module/BaseModule;->mModuleIndex:I
-
-    invoke-virtual {p1, v0}, Lcom/android/camera/ActivityBase;->restartModule(I)V
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->restartModule()V
 
     goto :goto_1
 
-    .line 35
     :cond_6
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -384,27 +350,22 @@
 
     goto :goto_1
 
-    .line 36
     :cond_7
     invoke-static {v0}, Lcom/android/camera/module/SuperMoonModule;->access$200(Lcom/android/camera/module/SuperMoonModule;)V
 
     goto :goto_1
 
-    .line 37
     :cond_8
     invoke-virtual {p0, v6}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 38
     invoke-virtual {p0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 39
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     invoke-virtual {p1, v3}, Landroid/view/Window;->addFlags(I)V
 
-    .line 40
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getScreenDelay()I
 
     move-result p1
@@ -415,11 +376,9 @@
 
     goto :goto_1
 
-    .line 41
     :cond_9
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->checkActivityOrientation()V
 
-    .line 42
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -438,12 +397,10 @@
 
     const-wide/16 v0, 0x64
 
-    .line 43
     invoke-virtual {p0, v5, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_1
 
-    .line 44
     :cond_a
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getWindow()Landroid/view/Window;
 
@@ -453,7 +410,7 @@
 
     :cond_b
     :goto_1
-    :pswitch_9
+    :pswitch_a
     return-void
 
     nop
@@ -462,7 +419,7 @@
     .packed-switch 0x9
         :pswitch_9
         :pswitch_8
-        :pswitch_9
+        :pswitch_a
     .end packed-switch
 
     :pswitch_data_1

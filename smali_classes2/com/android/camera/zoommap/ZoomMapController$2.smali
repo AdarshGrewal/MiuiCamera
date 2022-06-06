@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/zoommap/ZoomMapController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/zoommap/ZoomMapController$2;->this$0:Lcom/android/camera/zoommap/ZoomMapController;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +34,8 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/zoommap/ZoomMapController$2;->this$0:Lcom/android/camera/zoommap/ZoomMapController;
 
     invoke-static {p1}, Lcom/android/camera/zoommap/ZoomMapController;->access$300(Lcom/android/camera/zoommap/ZoomMapController;)Lcom/android/camera/ui/GLTextureView;

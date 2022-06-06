@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static asciiString(Ljava/lang/String;)[B
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lorg/jcodec/platform/Platform;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -31,7 +29,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -54,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -74,7 +70,6 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 2
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -83,13 +78,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -107,12 +100,10 @@
 
     check-cast v1, Ljava/nio/ByteBuffer;
 
-    .line 5
     invoke-static {v0, v1}, Lorg/jcodec/common/io/NIOUtils;->write(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
@@ -129,7 +120,6 @@
 
     const/high16 v0, 0x10000
 
-    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -137,10 +127,8 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v1
@@ -155,7 +143,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 4
     invoke-interface {p0, v0}, Ljava/nio/channels/ReadableByteChannel;->read(Ljava/nio/ByteBuffer;)I
 
     move-result v1
@@ -164,10 +151,8 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 6
     invoke-interface {p1, v0}, Ljava/nio/channels/WritableByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
     int-to-long v3, v1
@@ -195,15 +180,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p0, p1}, Lorg/jcodec/common/io/NIOUtils;->readFromChannel(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/ByteBuffer;)I
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-object p1
@@ -219,7 +201,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -229,14 +210,12 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/common/io/NIOUtils;->fetchFromChannel(Ljava/nio/channels/ReadableByteChannel;I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     invoke-static {v0}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return-object p0
@@ -252,7 +231,6 @@
 .method public static fill(Ljava/nio/ByteBuffer;B)V
     .locals 1
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -260,7 +238,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     goto :goto_0
@@ -272,12 +249,10 @@
 .method public static from(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
@@ -297,7 +272,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -317,12 +291,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
@@ -339,7 +311,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     return-object p0
@@ -348,22 +319,18 @@
 .method public static final read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
     add-int/2addr v1, p1
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 4
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object v0
@@ -372,12 +339,10 @@
 .method public static readBuf(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
@@ -395,12 +360,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 2
     :goto_0
     invoke-interface {p0, p1}, Ljava/nio/channels/ReadableByteChannel;->read(Ljava/nio/ByteBuffer;)I
 
@@ -418,7 +381,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
@@ -434,7 +396,6 @@
 
     const-string v0, "UTF-8"
 
-    .line 1
     invoke-static {p0, v0}, Lorg/jcodec/common/io/NIOUtils;->readNullTermStringCharset(Ljava/nio/ByteBuffer;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -445,12 +406,10 @@
 .method public static readNullTermStringCharset(Ljava/nio/ByteBuffer;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -466,7 +425,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -474,7 +432,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p0
@@ -483,7 +440,6 @@
 
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 5
     :cond_1
     invoke-static {v0}, Lorg/jcodec/common/io/NIOUtils;->toArray(Ljava/nio/ByteBuffer;)[B
 
@@ -499,7 +455,6 @@
 .method public static readPascalString(Ljava/nio/ByteBuffer;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v0
@@ -518,12 +473,10 @@
 
     add-int/lit8 v0, p1, 0x1
 
-    .line 1
     invoke-static {p0, v0}, Lorg/jcodec/common/io/NIOUtils;->read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v0
@@ -552,7 +505,6 @@
 .method public static readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lorg/jcodec/common/io/NIOUtils;->read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -576,7 +528,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/io/FileChannelWrapper;
 
     new-instance v1, Ljava/io/FileInputStream;
@@ -600,7 +551,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/io/FileChannelWrapper;
 
     new-instance v1, Ljava/io/RandomAccessFile;
@@ -621,7 +571,6 @@
 .method public static skip(Ljava/nio/ByteBuffer;I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -630,7 +579,6 @@
 
     move-result p1
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
@@ -645,14 +593,12 @@
 .method public static toArray(Ljava/nio/ByteBuffer;)[B
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -665,7 +611,6 @@
 .method public static toArrayL(Ljava/nio/ByteBuffer;I)[B
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -676,7 +621,6 @@
 
     new-array p1, p1, [B
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -694,7 +638,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/io/FileChannelWrapper;
 
     new-instance v1, Ljava/io/FileOutputStream;
@@ -713,14 +656,12 @@
 .method public static write(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
@@ -751,7 +692,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -770,7 +710,6 @@
 .method public static writePascalString(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -779,7 +718,6 @@
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 2
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->asciiString(Ljava/lang/String;)[B
 
     move-result-object p1
@@ -792,7 +730,6 @@
 .method public static writePascalStringL(Ljava/nio/ByteBuffer;Ljava/lang/String;I)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -801,14 +738,12 @@
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 2
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->asciiString(Ljava/lang/String;)[B
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1

@@ -33,12 +33,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 13
     iput v0, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
     return-void
@@ -47,39 +45,28 @@
 .method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;IIIII)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->id:Ljava/lang/Long;
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/db/element/SaveTask;->startTime:Ljava/lang/Long;
 
-    .line 5
     iput-object p3, p0, Lcom/android/camera/db/element/SaveTask;->mediaStoreId:Ljava/lang/Long;
 
-    .line 6
     iput-object p4, p0, Lcom/android/camera/db/element/SaveTask;->path:Ljava/lang/String;
 
-    .line 7
     iput p5, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
-    .line 8
     iput p6, p0, Lcom/android/camera/db/element/SaveTask;->percentage:I
 
-    .line 9
     iput p7, p0, Lcom/android/camera/db/element/SaveTask;->jpegRotation:I
 
-    .line 10
     iput p8, p0, Lcom/android/camera/db/element/SaveTask;->noGaussian:I
 
-    .line 11
     iput p9, p0, Lcom/android/camera/db/element/SaveTask;->applicationId:I
 
     return-void
@@ -88,18 +75,14 @@
 .method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;)V
     .locals 1
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 15
     iput v0, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
-    .line 16
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->mediaStoreId:Ljava/lang/Long;
 
-    .line 17
     iput-object p2, p0, Lcom/android/camera/db/element/SaveTask;->path:Ljava/lang/String;
 
     return-void
@@ -110,7 +93,6 @@
 .method public getApplicationId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/db/element/SaveTask;->applicationId:I
 
     return v0
@@ -119,7 +101,6 @@
 .method public getId()Ljava/lang/Long;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/element/SaveTask;->id:Ljava/lang/Long;
 
     return-object v0
@@ -128,7 +109,6 @@
 .method public getJpegRotation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/db/element/SaveTask;->jpegRotation:I
 
     return v0
@@ -137,7 +117,6 @@
 .method public getMediaStoreId()Ljava/lang/Long;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/element/SaveTask;->mediaStoreId:Ljava/lang/Long;
 
     return-object v0
@@ -146,7 +125,6 @@
 .method public getNoGaussian()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/db/element/SaveTask;->noGaussian:I
 
     return v0
@@ -155,7 +133,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/element/SaveTask;->path:Ljava/lang/String;
 
     return-object v0
@@ -164,7 +141,6 @@
 .method public getPercentage()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/db/element/SaveTask;->percentage:I
 
     return v0
@@ -173,7 +149,6 @@
 .method public getStartTime()Ljava/lang/Long;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/element/SaveTask;->startTime:Ljava/lang/Long;
 
     return-object v0
@@ -182,7 +157,6 @@
 .method public getStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
     return v0
@@ -191,7 +165,6 @@
 .method public isDeparted(JI)Z
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/db/element/SaveTask;->getApplicationId()I
 
     move-result v0
@@ -200,7 +173,6 @@
 
     if-eq p3, v0, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,7 +197,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/db/element/SaveTask;->getStartTime()Ljava/lang/Long;
 
@@ -255,7 +226,6 @@
 .method public isValid()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/db/element/SaveTask;->getMediaStoreId()Ljava/lang/Long;
 
     move-result-object v0
@@ -276,7 +246,6 @@
 .method public setApplicationId(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,7 +264,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput p1, p0, Lcom/android/camera/db/element/SaveTask;->applicationId:I
 
     return-void
@@ -304,7 +272,6 @@
 .method public setId(Ljava/lang/Long;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->id:Ljava/lang/Long;
 
     return-void
@@ -313,7 +280,6 @@
 .method public setJpegRotation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/db/element/SaveTask;->jpegRotation:I
 
     return-void
@@ -322,7 +288,6 @@
 .method public setMediaStoreId(Ljava/lang/Long;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->mediaStoreId:Ljava/lang/Long;
 
     return-void
@@ -331,7 +296,6 @@
 .method public setNoGaussian(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/db/element/SaveTask;->noGaussian:I
 
     return-void
@@ -340,7 +304,6 @@
 .method public setPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->path:Ljava/lang/String;
 
     return-void
@@ -349,7 +312,6 @@
 .method public setPercentage(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/db/element/SaveTask;->percentage:I
 
     return-void
@@ -358,7 +320,6 @@
 .method public setStartTime(Ljava/lang/Long;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,7 +338,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/db/element/SaveTask;->startTime:Ljava/lang/Long;
 
     return-void
@@ -386,7 +346,6 @@
 .method public setStatus(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/db/element/SaveTask;->status:I
 
     return-void
@@ -395,7 +354,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

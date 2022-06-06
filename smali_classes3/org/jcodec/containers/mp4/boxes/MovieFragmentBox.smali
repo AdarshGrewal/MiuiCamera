@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createMovieFragmentBox()Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -49,7 +47,6 @@
 .method public getMovie()Lorg/jcodec/containers/mp4/boxes/MovieBox;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;->moov:Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     return-object v0
@@ -58,7 +55,6 @@
 .method public getSequenceNumber()I
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;->fourcc()Ljava/lang/String;
@@ -73,14 +69,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;->getSequenceNumber()I
 
     move-result v0
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -94,7 +88,6 @@
 .method public getTracks()[Lorg/jcodec/containers/mp4/boxes/TrackFragmentBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBox;->fourcc()Ljava/lang/String;
@@ -113,7 +106,6 @@
 .method public setMovie(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;->moov:Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     return-void

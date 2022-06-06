@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;)Lcom/android/camera/data/data/ComponentDataItem;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;->mDataItem:Lcom/android/camera/data/data/ComponentDataItem;
 
     return-object p0
@@ -51,7 +49,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;->isCommon:Z
 
     return p0
@@ -62,7 +59,6 @@
 .method public build()Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem;-><init>(Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;)V
@@ -78,7 +74,6 @@
         }
     .end annotation
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;->isCommon:Z
 
     return-object p0
@@ -94,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/modeui/modeselector/BaseModeSelectorItem$BaseBuilder;->mDataItem:Lcom/android/camera/data/data/ComponentDataItem;
 
     return-object p0

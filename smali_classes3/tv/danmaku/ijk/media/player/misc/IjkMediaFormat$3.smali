@@ -22,7 +22,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$3;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     const/4 p1, 0x0
@@ -39,7 +38,6 @@
 
     const-string v0, "bitrate"
 
-    .line 1
     invoke-virtual {p1, v0}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result p1
@@ -59,7 +57,6 @@
 
     if-ge p1, v2, :cond_1
 
-    .line 2
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -78,7 +75,6 @@
 
     return-object p1
 
-    .line 3
     :cond_1
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 

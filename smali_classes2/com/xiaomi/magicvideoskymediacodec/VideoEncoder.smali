@@ -93,62 +93,48 @@
 .method public constructor <init>(IIIIILjava/lang/String;Ljava/lang/String;Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAudioTrackIndex:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBitrate:I
 
-    .line 6
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mRotation:I
 
     const-string v1, "video/avc"
 
-    .line 7
     iput-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->VIDEO_MIME_TYPE:Ljava/lang/String;
 
     const-wide/16 v2, 0x0
 
-    .line 8
     iput-wide v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoderFrames:J
 
-    .line 9
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mNum:I
 
-    .line 10
     iput-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mDump:Z
 
     const-string v0, "/sdcard/voip-data/dump.h264"
 
-    .line 11
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mDumpPath:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 12
     iput-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
-    .line 13
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->audioFrames:Ljava/util/Queue;
 
-    .line 14
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -157,7 +143,6 @@
 
     const-string v0, "hevc"
 
-    .line 15
     invoke-virtual {p7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -166,16 +151,13 @@
 
     const-string v0, "video/hevc"
 
-    .line 16
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->VIDEO_MIME_TYPE:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 17
     :cond_0
     iput-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->VIDEO_MIME_TYPE:Ljava/lang/String;
 
-    .line 18
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -217,33 +199,24 @@
 
     invoke-static {p7}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 19
     iput-object p8, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
-    .line 20
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mWidth:I
 
-    .line 21
     iput p2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mHeight:I
 
-    .line 22
     iput p3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mFps:I
 
-    .line 23
     iput-object p6, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mPath:Ljava/lang/String;
 
-    .line 24
     iput p4, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBitrate:I
 
-    .line 25
     iput p5, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mRotation:I
 
-    .line 26
     iget-boolean p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mDump:Z
 
     if-eqz p1, :cond_1
 
-    .line 27
     :try_start_0
     new-instance p1, Ljava/io/FileOutputStream;
 
@@ -260,7 +233,6 @@
     :catch_0
     move-exception p1
 
-    .line 28
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +249,6 @@
 
     invoke-static {p1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 29
     :cond_1
     :goto_1
     new-instance p1, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$1;
@@ -286,7 +257,6 @@
 
     iput-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->encoderCallback:Landroid/media/MediaCodec$Callback;
 
-    .line 30
     invoke-direct {p0}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->setupEncoder()V
 
     return-void
@@ -295,7 +265,6 @@
 .method public static synthetic access$000(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     return-object p0
@@ -304,7 +273,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Landroid/media/MediaCodec;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     return-object p0
@@ -313,7 +281,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoderFrames:J
 
     return-wide v0
@@ -322,7 +289,6 @@
 .method public static synthetic access$208(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoderFrames:J
 
     const-wide/16 v2, 0x1
@@ -337,7 +303,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
     return p0
@@ -346,7 +311,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
     return p0
@@ -355,7 +319,6 @@
 .method public static synthetic access$402(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
     return p1
@@ -364,7 +327,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Landroid/media/MediaMuxer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     return-object p0
@@ -373,7 +335,6 @@
 .method public static synthetic access$600(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Ljava/util/Queue;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->videoFrames:Ljava/util/Queue;
 
     return-object p0
@@ -382,7 +343,6 @@
 .method public static synthetic access$700(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mDump:Z
 
     return p0
@@ -391,7 +351,6 @@
 .method public static synthetic access$800(Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;)Ljava/io/FileOutputStream;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mOutputStream:Ljava/io/FileOutputStream;
 
     return-object p0
@@ -400,19 +359,16 @@
 .method private setupEncoder()V
     .locals 5
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -432,7 +388,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->VIDEO_MIME_TYPE:Ljava/lang/String;
 
     iget v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mWidth:I
@@ -443,24 +398,20 @@
 
     move-result-object v0
 
-    .line 5
     iget v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mFps:I
 
     const v2, 0x7f000789
 
     const-string v3, "color-format"
 
-    .line 6
     invoke-virtual {v0, v3, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 7
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBitrate:I
 
     const/4 v3, 0x2
 
     if-gtz v2, :cond_1
 
-    .line 8
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mWidth:I
 
     iget v4, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mHeight:I
@@ -473,7 +424,6 @@
 
     iput v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBitrate:I
 
-    .line 9
     :cond_1
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBitrate:I
 
@@ -483,17 +433,14 @@
 
     const-string v2, "frame-rate"
 
-    .line 10
     invoke-virtual {v0, v2, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
     const-string v2, "capture-rate"
 
-    .line 11
     invoke-virtual {v0, v2, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
     const v2, 0xf4240
 
-    .line 12
     div-int/2addr v2, v1
 
     const-string v4, "repeat-previous-frame-after"
@@ -502,10 +449,8 @@
 
     const-string v2, "i-frame-interval"
 
-    .line 13
     invoke-virtual {v0, v2, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 14
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -554,7 +499,6 @@
 
     invoke-static {v1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 15
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -573,7 +517,6 @@
 
     const/4 v1, 0x1
 
-    .line 16
     :try_start_0
     iget-object v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->VIDEO_MIME_TYPE:Ljava/lang/String;
 
@@ -585,10 +528,8 @@
 
     const/4 v3, 0x0
 
-    .line 17
     invoke-virtual {v2, v0, v3, v3, v1}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
-    .line 18
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->createInputSurface()Landroid/view/Surface;
@@ -597,19 +538,16 @@
 
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mInputSurface:Landroid/view/Surface;
 
-    .line 19
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
     if-eqz v0, :cond_2
 
-    .line 20
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     iget-object v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->encoderCallback:Landroid/media/MediaCodec$Callback;
 
     invoke-virtual {v0, v2}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
 
-    .line 21
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -629,12 +567,10 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 22
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
-    .line 23
     new-instance v0, Landroid/media/MediaMuxer;
 
     iget-object v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mPath:Ljava/lang/String;
@@ -645,17 +581,14 @@
 
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
-    .line 24
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mRotation:I
 
     invoke-virtual {v0, v2}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
 
-    .line 25
     sget-object v0, Lcom/xiaomi/magicvideoskymediacodec/GlUtil;->location:[F
 
     if-eqz v0, :cond_3
 
-    .line 26
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     sget-object v2, Lcom/xiaomi/magicvideoskymediacodec/GlUtil;->location:[F
@@ -675,7 +608,6 @@
     :catch_0
     move-exception v0
 
-    .line 27
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -692,12 +624,10 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 28
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     invoke-interface {v0, v1}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;->onVideoEncoderError(I)V
 
-    .line 29
     invoke-virtual {p0}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->release()V
 
     :cond_3
@@ -712,21 +642,18 @@
 
     const-string v0, "mime"
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "audio/"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
@@ -737,7 +664,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
@@ -747,7 +673,6 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
-    .line 5
     :goto_0
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
@@ -763,17 +688,14 @@
 
     if-nez p1, :cond_1
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {p1}, Landroid/media/MediaMuxer;->start()V
 
     const/4 p1, 0x1
 
-    .line 7
     iput-boolean p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
-    .line 8
     :cond_1
     iget-boolean p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
@@ -781,7 +703,6 @@
 
     return-void
 
-    .line 9
     :cond_2
     :goto_1
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->audioFrames:Ljava/util/Queue;
@@ -794,7 +715,6 @@
 
     if-lez p1, :cond_3
 
-    .line 10
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->audioFrames:Ljava/util/Queue;
 
     invoke-interface {p1}, Ljava/util/Queue;->peek()Ljava/lang/Object;
@@ -803,7 +723,6 @@
 
     check-cast p1, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$MediaFrame;
 
-    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -832,7 +751,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAudioTrackIndex:I
@@ -843,14 +761,12 @@
 
     invoke-virtual {v0, v1, v2, p1}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 13
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->audioFrames:Ljava/util/Queue;
 
     invoke-interface {p1}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 14
     :cond_3
     :goto_2
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->videoFrames:Ljava/util/Queue;
@@ -861,7 +777,6 @@
 
     if-lez p1, :cond_4
 
-    .line 15
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->videoFrames:Ljava/util/Queue;
 
     invoke-interface {p1}, Ljava/util/Queue;->peek()Ljava/lang/Object;
@@ -870,7 +785,6 @@
 
     check-cast p1, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$MediaFrame;
 
-    .line 16
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -899,7 +813,6 @@
 
     invoke-static {v1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 17
     iget-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
@@ -910,7 +823,6 @@
 
     invoke-virtual {v1, v2, v3, p1}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 18
     iget-object p1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->videoFrames:Ljava/util/Queue;
 
     invoke-interface {p1}, Ljava/util/Queue;->remove()Ljava/lang/Object;
@@ -924,7 +836,6 @@
 .method public drainEncoder(Z)V
     .locals 10
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
     if-eqz v0, :cond_0
@@ -936,15 +847,12 @@
 
     const-string v0, "sending EOS to encoder"
 
-    .line 2
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->signalEndOfInputStream()V
 
-    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
@@ -963,7 +871,6 @@
 
     const-string v0, "MediaCodec.INFO_TRY_AGAIN_LATER"
 
-    .line 5
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     if-nez p1, :cond_2
@@ -973,7 +880,6 @@
     :cond_2
     const-string v0, "no output available, spinning to await EOS"
 
-    .line 6
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     goto :goto_0
@@ -987,22 +893,18 @@
 
     const-string v0, "MediaCodec.INFO_OUTPUT_FORMAT_CHANGED"
 
-    .line 7
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 8
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
     if-nez v0, :cond_4
 
-    .line 9
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputFormat()Landroid/media/MediaFormat;
 
     move-result-object v0
 
-    .line 10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1019,7 +921,6 @@
 
     invoke-static {v1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 11
     iget-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v1, v0}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
@@ -1028,17 +929,14 @@
 
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
 
-    .line 13
     iput-boolean v2, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
     goto :goto_0
 
-    .line 14
     :cond_4
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1051,7 +949,6 @@
     :cond_5
     if-gez v0, :cond_6
 
-    .line 15
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1070,7 +967,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_6
     iget-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
@@ -1080,7 +976,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 17
     iget-object v3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v3, v3, Landroid/media/MediaCodec$BufferInfo;->flags:I
@@ -1095,15 +990,12 @@
 
     const-string v3, "ignoring BUFFER_FLAG_CODEC_CONFIG"
 
-    .line 18
     invoke-static {v3}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 19
     iget-object v3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iput v5, v3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 20
     :cond_7
     iget-object v3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -1113,17 +1005,14 @@
 
     if-eqz v6, :cond_9
 
-    .line 21
     iget-boolean v6, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
     if-eqz v6, :cond_8
 
-    .line 22
     iget v3, v3, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 23
     iget-object v3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v6, v3, Landroid/media/MediaCodec$BufferInfo;->offset:I
@@ -1134,7 +1023,6 @@
 
     invoke-virtual {v1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 24
     iget-object v3, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget v6, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mTrackIndex:I
@@ -1143,7 +1031,6 @@
 
     invoke-virtual {v3, v6, v1, v8}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 25
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1238,7 +1125,6 @@
 
     invoke-static {v1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 26
     iget v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mNum:I
 
     add-int/2addr v1, v2
@@ -1247,7 +1133,6 @@
 
     goto :goto_1
 
-    .line 27
     :cond_8
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1257,7 +1142,6 @@
 
     throw p1
 
-    .line 28
     :cond_9
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1279,13 +1163,11 @@
 
     invoke-static {v1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 29
     :goto_1
     iget-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1, v0, v5}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
-    .line 30
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
@@ -1294,12 +1176,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 31
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     if-eqz v0, :cond_a
 
-    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1318,7 +1198,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 33
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     invoke-interface {v0}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;->onVideoEncoderEOF()V
@@ -1328,7 +1207,6 @@
 
     const-string p1, "reached end of stream unexpectedly"
 
-    .line 34
     invoke-static {p1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogW(Ljava/lang/String;)V
 
     goto :goto_2
@@ -1336,13 +1214,11 @@
     :cond_b
     const-string p1, "end of stream reached"
 
-    .line 35
     invoke-static {p1}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     :goto_2
     return-void
 
-    .line 36
     :cond_c
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1372,26 +1248,21 @@
 .method public flush()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/MediaCodec;->flush()V
 
-    .line 3
     :cond_0
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
     :cond_1
@@ -1401,7 +1272,6 @@
 .method public getInputSurface()Landroid/view/Surface;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mInputSurface:Landroid/view/Surface;
 
     return-object v0
@@ -1412,40 +1282,32 @@
 
     const-string v0, "releasing encoder objects"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
     :try_start_0
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mInputSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 6
     iput-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     :catch_0
     iput-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
@@ -1453,10 +1315,8 @@
 
     const-string v0, "to stop muxter"
 
-    .line 9
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 10
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
@@ -1464,27 +1324,22 @@
 
     const-string v0, "to release muxter"
 
-    .line 11
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
 
-    .line 13
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     if-eqz v0, :cond_1
 
-    .line 14
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mCallBack:Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;
 
     invoke-interface {v0}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder$VideoEncoderCallBack;->onVideoEncoderEOF()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 15
     :catch_1
     :cond_1
     iput-object v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
@@ -1496,7 +1351,6 @@
 .method public stopEncoder()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1515,18 +1369,15 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     :try_start_0
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAsync:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->signalEndOfInputStream()V
@@ -1536,7 +1387,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 5
     invoke-virtual {p0, v0}, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->drainEncoder(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1550,19 +1400,16 @@
 .method public writeAudioSample(Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$MediaFrame;)V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxerStarted:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->audioFrames:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1594,7 +1441,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget v1, p0, Lcom/xiaomi/magicvideoskymediacodec/VideoEncoder;->mAudioTrackIndex:I

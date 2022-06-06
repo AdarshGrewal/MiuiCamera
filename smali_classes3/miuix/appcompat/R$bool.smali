@@ -32,9 +32,9 @@
 
 .field public static final check_widget_anim_enable:I = 0x7f050009
 
-.field public static final spinner_popup_item_bg_enable_variablePadding:I = 0x7f050059
+.field public static final spinner_popup_item_bg_enable_variablePadding:I = 0x7f050053
 
-.field public static final treat_as_land:I = 0x7f05005a
+.field public static final treat_as_land:I = 0x7f050054
 
 
 # direct methods

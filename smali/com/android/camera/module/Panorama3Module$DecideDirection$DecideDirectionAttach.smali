@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/android/camera/module/Panorama3Module$DecideDirection;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     invoke-direct {p0}, Lcom/android/camera/panorama/AttachRunnable;-><init>()V
@@ -39,7 +38,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/module/Panorama3Module$DecideDirection;Lcom/android/camera/module/Panorama3Module$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;-><init>(Lcom/android/camera/module/Panorama3Module$DecideDirection;)V
 
     return-void
@@ -48,7 +46,6 @@
 .method private createDirection(ILandroid/util/Size;)V
     .locals 11
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -106,7 +103,6 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_1
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -134,14 +130,12 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleH()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -152,7 +146,6 @@
 
     if-ne p1, v9, :cond_2
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -169,7 +162,6 @@
 
     int-to-float v5, p1
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -192,7 +184,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 7
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -219,12 +210,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/RightDirectionFunction;-><init>(IIIIFI)V
 
-    .line 8
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 9
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -248,7 +237,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 10
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -275,12 +263,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/LeftDirectionFunction;-><init>(IIIIFI)V
 
-    .line 11
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 12
     :cond_3
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -308,14 +294,12 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleH()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -326,7 +310,6 @@
 
     if-ne p1, v9, :cond_4
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -343,7 +326,6 @@
 
     int-to-float v5, p1
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -366,7 +348,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 17
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -393,12 +374,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/LeftDirectionFunction;-><init>(IIIIFI)V
 
-    .line 18
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 19
     :cond_4
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -422,7 +401,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 20
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -449,12 +427,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/RightDirectionFunction;-><init>(IIIIFI)V
 
-    .line 21
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 22
     :cond_5
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -462,14 +438,12 @@
 
     invoke-static {p1, v3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleH()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -480,7 +454,6 @@
 
     if-ne p1, v9, :cond_6
 
-    .line 25
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -503,7 +476,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 26
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -530,12 +502,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/DownDirectionFunction;-><init>(IIIIFI)V
 
-    .line 27
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 28
     :cond_6
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -559,7 +529,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 29
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -586,12 +555,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/UpDirectionFunction;-><init>(IIIIFI)V
 
-    .line 30
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 31
     :cond_7
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -599,14 +566,12 @@
 
     invoke-static {p1, v4}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleH()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 33
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -617,7 +582,6 @@
 
     if-ne p1, v9, :cond_8
 
-    .line 34
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -640,7 +604,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 35
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -667,12 +630,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/UpDirectionFunction;-><init>(IIIIFI)V
 
-    .line 36
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 37
     :cond_8
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -696,7 +657,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 38
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -723,7 +683,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/DownDirectionFunction;-><init>(IIIIFI)V
 
-    .line 39
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
@@ -740,7 +699,6 @@
 
     goto/16 :goto_1
 
-    .line 40
     :cond_a
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -768,14 +726,12 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleV()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 42
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -786,7 +742,6 @@
 
     if-ne p1, v9, :cond_b
 
-    .line 43
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -803,7 +758,6 @@
 
     int-to-float v5, p1
 
-    .line 44
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -826,7 +780,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 45
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -853,12 +806,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/DownDirectionFunction;-><init>(IIIIFI)V
 
-    .line 46
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 47
     :cond_b
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -882,7 +833,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 48
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -909,12 +859,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/UpDirectionFunction;-><init>(IIIIFI)V
 
-    .line 49
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 50
     :cond_c
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -942,14 +890,12 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleV()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 52
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -960,7 +906,6 @@
 
     if-ne p1, v9, :cond_d
 
-    .line 53
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -977,7 +922,6 @@
 
     int-to-float v5, p1
 
-    .line 54
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1000,7 +944,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 55
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1027,12 +970,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/UpDirectionFunction;-><init>(IIIIFI)V
 
-    .line 56
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 57
     :cond_d
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1056,7 +997,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 58
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1083,12 +1023,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/DownDirectionFunction;-><init>(IIIIFI)V
 
-    .line 59
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 60
     :cond_e
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -1096,14 +1034,12 @@
 
     invoke-static {p1, v3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleV()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 62
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1114,7 +1050,6 @@
 
     if-ne p1, v9, :cond_f
 
-    .line 63
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1137,7 +1072,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 64
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1164,12 +1098,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/LeftDirectionFunction;-><init>(IIIIFI)V
 
-    .line 65
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 66
     :cond_f
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1193,7 +1125,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 67
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1220,12 +1151,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/RightDirectionFunction;-><init>(IIIIFI)V
 
-    .line 68
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto/16 :goto_1
 
-    .line 69
     :cond_10
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -1233,14 +1162,12 @@
 
     invoke-static {p1, v4}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     invoke-direct {p0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->getScaleV()I
 
     move-result p1
 
     int-to-float v5, p1
 
-    .line 71
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1251,7 +1178,6 @@
 
     if-ne p1, v9, :cond_11
 
-    .line 72
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object p1, p1, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1274,7 +1200,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 73
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1301,12 +1226,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/RightDirectionFunction;-><init>(IIIIFI)V
 
-    .line 74
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     goto :goto_1
 
-    .line 75
     :cond_11
     iget-object p1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1330,7 +1253,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 76
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3300(Lcom/android/camera/module/Panorama3Module;)I
 
     move-result v3
@@ -1357,7 +1279,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/panorama/LeftDirectionFunction;-><init>(IIIIFI)V
 
-    .line 77
     invoke-static {p1, p2}, Lcom/android/camera/module/Panorama3Module;->access$3502(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/DirectionFunction;)Lcom/android/camera/panorama/DirectionFunction;
 
     :goto_1
@@ -1367,7 +1288,6 @@
 .method private getScaleH()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1376,7 +1296,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
@@ -1396,7 +1316,6 @@
 .method private getScaleV()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1407,7 +1326,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1418,7 +1336,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1428,7 +1345,6 @@
 
     move-result v0
 
-    .line 4
     :goto_0
     iget-object v1, p0, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1485,7 +1401,6 @@
 
     move-object/from16 v1, p0
 
-    .line 1
     :cond_0
     :goto_0
     :try_start_0
@@ -1511,18 +1426,15 @@
 
     if-eq v0, v2, :cond_8
 
-    .line 2
     :try_start_1
     invoke-virtual {v1, v0}, Lcom/android/camera/panorama/AttachRunnable;->setImage(Lcom/android/camera/panorama/CaptureImage;)V
 
-    .line 3
     sget-object v2, Lcom/android/camera/module/Panorama3Module;->mEngineLock:Ljava/lang/Object;
 
     monitor-enter v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4
     :try_start_2
     iget-object v3, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
@@ -1530,7 +1442,6 @@
 
     invoke-static {v3, v0}, Lcom/android/camera/module/Panorama3Module;->access$3000(Lcom/android/camera/module/Panorama3Module;Lcom/android/camera/panorama/CaptureImage;)V
 
-    .line 5
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1541,7 +1452,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -1550,12 +1460,10 @@
 
     invoke-static {v0, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 8
     :try_start_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
     :try_end_3
@@ -1563,7 +1471,6 @@
 
     return-void
 
-    .line 9
     :cond_1
     :try_start_4
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
@@ -1574,7 +1481,6 @@
 
     invoke-static {v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1629,7 +1535,6 @@
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
-    .line 11
     invoke-static {v0}, Lcom/android/camera/module/Panorama3Module;->access$3100(Lcom/android/camera/module/Panorama3Module;)Lcom/android/camera/panorama/SensorInfoManager;
 
     move-result-object v13
@@ -1646,12 +1551,10 @@
 
     move-object/from16 v15, v17
 
-    .line 12
     invoke-virtual/range {v3 .. v15}, Lcom/android/camera/panorama/MorphoPanoramaGP3;->attach(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IIIIIILcom/android/camera/panorama/SensorInfoManager;[DLandroid/content/Context;)I
 
     move-result v3
 
-    .line 13
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v4
@@ -1688,7 +1591,6 @@
 
     if-nez v15, :cond_3
 
-    .line 14
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v4
@@ -1709,7 +1611,6 @@
 
     invoke-static {v4, v5}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_3
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -1733,12 +1634,10 @@
 
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     monitor-exit v2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 17
     :try_start_5
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
     :try_end_5
@@ -1746,7 +1645,6 @@
 
     return-void
 
-    .line 18
     :cond_4
     :try_start_6
     iget-object v3, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
@@ -1765,7 +1663,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 19
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v3
@@ -1774,7 +1671,6 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     iget-object v3, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v3, v3, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1787,7 +1683,6 @@
 
     move-result v3
 
-    .line 21
     iget-object v4, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v4, v4, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1800,12 +1695,10 @@
 
     if-ne v3, v4, :cond_6
 
-    .line 22
     monitor-exit v2
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 23
     :try_start_7
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
     :try_end_7
@@ -1813,7 +1706,6 @@
 
     goto/16 :goto_0
 
-    .line 24
     :cond_5
     :try_start_8
     iget-object v3, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
@@ -1826,7 +1718,6 @@
 
     iget v3, v3, Lcom/android/camera/panorama/MorphoPanoramaGP3$InitParam;->direction:I
 
-    .line 25
     :cond_6
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
@@ -1852,7 +1743,6 @@
 
     new-array v4, v4, [I
 
-    .line 26
     iget-object v5, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v5, v5, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1867,7 +1757,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 27
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v3
@@ -1890,12 +1779,10 @@
 
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     monitor-exit v2
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 29
     :try_start_9
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
     :try_end_9
@@ -1903,7 +1790,6 @@
 
     return-void
 
-    .line 30
     :cond_7
     :try_start_a
     iget-object v5, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
@@ -1914,7 +1800,6 @@
 
     invoke-static {v5, v6}, Lcom/android/camera/module/Panorama3Module;->access$3302(Lcom/android/camera/module/Panorama3Module;I)I
 
-    .line 31
     iget-object v5, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v5, v5, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1923,7 +1808,6 @@
 
     invoke-static {v5, v0}, Lcom/android/camera/module/Panorama3Module;->access$2702(Lcom/android/camera/module/Panorama3Module;I)I
 
-    .line 32
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -1966,23 +1850,19 @@
 
     invoke-static {v0, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     monitor-exit v2
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 34
     :try_start_b
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
 
-    .line 35
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-static {v0, v3}, Lcom/android/camera/module/Panorama3Module;->access$3402(Lcom/android/camera/module/Panorama3Module;I)I
 
-    .line 36
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -1993,7 +1873,6 @@
 
     invoke-direct {v1, v3, v0}, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->createDirection(ILandroid/util/Size;)V
 
-    .line 37
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
 
     iget-object v0, v0, Lcom/android/camera/module/Panorama3Module$DecideDirection;->this$0:Lcom/android/camera/module/Panorama3Module;
@@ -2015,7 +1894,6 @@
     :catchall_0
     move-exception v0
 
-    .line 38
     :try_start_c
     monitor-exit v2
     :try_end_c
@@ -2029,7 +1907,6 @@
     :catchall_1
     move-exception v0
 
-    .line 39
     :try_start_e
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera/panorama/AttachRunnable;->closeSrc()V
 
@@ -2040,10 +1917,8 @@
     :catch_0
     move-exception v0
 
-    .line 40
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 41
     :cond_8
     :goto_2
     iget-object v0, v1, Lcom/android/camera/module/Panorama3Module$DecideDirection$DecideDirectionAttach;->this$1:Lcom/android/camera/module/Panorama3Module$DecideDirection;
@@ -2068,7 +1943,6 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 42
     invoke-static {}, Lcom/android/camera/module/Panorama3Module;->access$400()Ljava/lang/String;
 
     move-result-object v0

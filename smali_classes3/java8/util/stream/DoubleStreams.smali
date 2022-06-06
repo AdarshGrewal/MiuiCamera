@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static builder()Ljava8/util/stream/DoubleStream$Builder;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$DoubleStreamBuilderImpl;
 
     invoke-direct {v0}, Ljava8/util/stream/Streams$DoubleStreamBuilderImpl;-><init>()V
@@ -27,16 +25,12 @@
 .method public static concat(Ljava8/util/stream/DoubleStream;Ljava8/util/stream/DoubleStream;)Ljava8/util/stream/DoubleStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Streams$ConcatSpliterator$OfDouble;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/DoubleStream;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v1
@@ -47,7 +41,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava8/util/stream/Streams$ConcatSpliterator$OfDouble;-><init>(Ljava8/util/Spliterator$OfDouble;Ljava8/util/Spliterator$OfDouble;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result v1
@@ -76,7 +69,6 @@
 
     move-result-object v0
 
-    .line 6
     invoke-static {p0, p1}, Ljava8/util/stream/Streams;->composedClose(Ljava8/util/stream/BaseStream;Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0
@@ -93,16 +85,12 @@
 .method public static dropWhile(Ljava8/util/stream/DoubleStream;Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble$Dropping;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/DoubleStream;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v1
@@ -111,17 +99,14 @@
 
     invoke-direct {v0, v1, v2, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble$Dropping;-><init>(Ljava8/util/Spliterator$OfDouble;ZLjava8/util/function/DoublePredicate;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result p1
 
-    .line 6
     invoke-static {v0, p1}, Ljava8/util/stream/StreamSupport;->doubleStream(Ljava8/util/Spliterator$OfDouble;Z)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
 
-    .line 7
     invoke-static {p0}, Ljava8/util/stream/StreamSupport;->closeHandler(Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0
@@ -138,7 +123,6 @@
 .method public static empty()Ljava8/util/stream/DoubleStream;
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava8/util/Spliterators;->emptyDoubleSpliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -155,10 +139,8 @@
 .method public static generate(Ljava8/util/function/DoubleSupplier;)Ljava8/util/stream/DoubleStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfDouble;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -177,13 +159,10 @@
 .method public static iterate(DLjava8/util/function/DoublePredicate;Ljava8/util/function/DoubleUnaryOperator;)Ljava8/util/stream/DoubleStream;
     .locals 9
 
-    .line 4
     invoke-static {p3}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     new-instance v8, Ljava8/util/stream/DoubleStreams$2;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -202,7 +181,6 @@
 
     const/4 p0, 0x0
 
-    .line 7
     invoke-static {v8, p0}, Ljava8/util/stream/StreamSupport;->doubleStream(Ljava8/util/Spliterator$OfDouble;Z)Ljava8/util/stream/DoubleStream;
 
     move-result-object p0
@@ -213,10 +191,8 @@
 .method public static iterate(DLjava8/util/function/DoubleUnaryOperator;)Ljava8/util/stream/DoubleStream;
     .locals 8
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v7, Ljava8/util/stream/DoubleStreams$1;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -233,7 +209,6 @@
 
     const/4 p0, 0x0
 
-    .line 3
     invoke-static {v7, p0}, Ljava8/util/stream/StreamSupport;->doubleStream(Ljava8/util/Spliterator$OfDouble;Z)Ljava8/util/stream/DoubleStream;
 
     move-result-object p0
@@ -244,7 +219,6 @@
 .method public static of(D)Ljava8/util/stream/DoubleStream;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$DoubleStreamBuilderImpl;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Streams$DoubleStreamBuilderImpl;-><init>(D)V
@@ -261,7 +235,6 @@
 .method public static varargs of([D)Ljava8/util/stream/DoubleStream;
     .locals 0
 
-    .line 2
     invoke-static {p0}, Ljava8/util/J8Arrays;->stream([D)Ljava8/util/stream/DoubleStream;
 
     move-result-object p0
@@ -272,16 +245,12 @@
 .method public static takeWhile(Ljava8/util/stream/DoubleStream;Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/DoubleStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble$Taking;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/DoubleStream;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v1
@@ -290,17 +259,14 @@
 
     invoke-direct {v0, v1, v2, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble$Taking;-><init>(Ljava8/util/Spliterator$OfDouble;ZLjava8/util/function/DoublePredicate;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result p1
 
-    .line 6
     invoke-static {v0, p1}, Ljava8/util/stream/StreamSupport;->doubleStream(Ljava8/util/Spliterator$OfDouble;Z)Ljava8/util/stream/DoubleStream;
 
     move-result-object p1
 
-    .line 7
     invoke-static {p0}, Ljava8/util/stream/StreamSupport;->closeHandler(Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0

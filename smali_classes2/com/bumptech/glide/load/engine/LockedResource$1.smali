@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/load/engine/LockedResource;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/LockedResource;-><init>()V
@@ -59,7 +57,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/LockedResource$1;->create()Lcom/bumptech/glide/load/engine/LockedResource;
 
     move-result-object v0

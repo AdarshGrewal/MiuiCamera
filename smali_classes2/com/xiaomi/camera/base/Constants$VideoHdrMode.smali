@@ -24,8 +24,6 @@
 # static fields
 .field public static final VIDEO_HDR10:I = 0x2
 
-.field public static final VIDEO_HDR10PRO:I = 0x1
-
 .field public static final VIDEO_HDR10_OFF:I = 0x0
 
 .field public static final VIDEO_HDR10_PLUS:I = 0x3

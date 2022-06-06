@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/animation/styles/PropertyStyle;-><init>()V
 
     return-void
@@ -16,12 +15,10 @@
 .method public static end(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->isInvalid(Landroid/view/View;)Z
 
     move-result v0
@@ -30,13 +27,11 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->get(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
 
     move-result-object p0
 
-    .line 4
     iget-object p1, p1, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v0, p1, Lmiuix/animation/internal/AnimInfo;->value:D
@@ -45,14 +40,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 5
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 6
     invoke-virtual {p0}, Lmiuix/animation/styles/TintDrawable;->restoreOriginalDrawable()V
 
     :cond_1
@@ -62,12 +55,10 @@
 .method public static getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
     .locals 1
 
-    .line 1
     instance-of v0, p0, Lmiuix/animation/ViewTarget;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {p0}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
@@ -87,7 +78,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x17
@@ -112,12 +102,10 @@
 .method public static start(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
     .locals 3
 
-    .line 1
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->isInvalid(Landroid/view/View;)Z
 
     move-result v0
@@ -126,18 +114,15 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object p1, p1, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget p1, p1, Lmiuix/animation/internal/AnimInfo;->tintMode:I
 
-    .line 4
     invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->setAndGet(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
 
     move-result-object p0
 
-    .line 5
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel()I
 
     move-result v0
@@ -163,7 +148,6 @@
     :goto_0
     and-int/2addr p1, v1
 
-    .line 6
     invoke-virtual {p0, p1}, Lmiuix/animation/styles/TintDrawable;->initTintBuffer(I)V
 
     return-void

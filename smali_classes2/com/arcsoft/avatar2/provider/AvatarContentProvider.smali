@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
 .method public a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,7 +65,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +81,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +121,6 @@
 
     move-result-object p1
 
-    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,14 +145,12 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
@@ -166,10 +158,8 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 4
     sget-object v2, Lcom/arcsoft/avatar2/provider/AvatarProfile;->sUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -187,7 +177,6 @@
     :cond_0
     const-string p1, "avatar_db"
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,13 +195,11 @@
 
     move-result p1
 
-    .line 6
     :goto_0
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :try_start_1
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -220,16 +207,13 @@
 
     if-eqz p2, :cond_1
 
-    .line 8
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 9
     :cond_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 10
     sget-object p2, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->a:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -253,7 +237,6 @@
     :catchall_0
     move-exception p1
 
-    .line 11
     :try_start_2
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -261,7 +244,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 12
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     :cond_2
@@ -270,7 +252,6 @@
     :catchall_1
     move-exception p1
 
-    .line 13
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -289,14 +270,12 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
@@ -306,13 +285,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
     const-wide/16 v3, -0x1
 
-    .line 4
     sget-object v5, Lcom/arcsoft/avatar2/provider/AvatarProfile;->sUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v5, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -328,12 +305,10 @@
     :cond_0
     const-string v3, "avatar_db"
 
-    .line 5
     invoke-virtual {v2, v3, v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v3
 
-    .line 6
     :goto_0
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
 
@@ -343,7 +318,6 @@
 
     if-gez p2, :cond_1
 
-    .line 7
     sget-object p1, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->a:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -364,7 +338,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -392,7 +365,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9
     :goto_1
     :try_start_2
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
@@ -401,10 +373,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 10
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 11
     :cond_2
     monitor-exit v0
 
@@ -420,7 +390,6 @@
     :catchall_1
     move-exception p1
 
-    .line 12
     :goto_2
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -428,7 +397,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 13
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     :cond_3
@@ -437,7 +405,6 @@
     :catchall_2
     move-exception p1
 
-    .line 14
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -448,7 +415,6 @@
 .method public onCreate()Z
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
@@ -471,7 +437,6 @@
 
     move-object v0, p1
 
-    .line 1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -490,14 +455,12 @@
 
     invoke-static {v3, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v2, v1, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
     monitor-enter v2
 
     const/4 v3, 0x0
 
-    .line 3
     :try_start_0
     iget-object v4, v1, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
@@ -507,13 +470,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4
     :try_start_1
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
     const-string v5, "DELETE"
 
-    .line 5
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -530,7 +491,6 @@
 
     invoke-static {v5, v6}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     sget-object v5, Lcom/arcsoft/avatar2/provider/AvatarProfile;->sUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v5, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -560,18 +520,15 @@
 
     move-object/from16 v12, p5
 
-    .line 7
     invoke-virtual/range {v5 .. v12}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v3
 
-    .line 8
     :goto_0
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
 
     if-nez v3, :cond_1
 
-    .line 9
     sget-object v0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->a:Ljava/lang/String;
 
     const-string v5, "query err:retCursor==null"
@@ -580,7 +537,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -597,7 +553,6 @@
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 11
     :try_start_2
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -605,10 +560,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 12
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 13
     :cond_2
     monitor-exit v2
 
@@ -627,14 +580,12 @@
     :goto_2
     if-eqz v3, :cond_3
 
-    .line 14
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 15
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     :cond_3
@@ -643,7 +594,6 @@
     :catchall_2
     move-exception v0
 
-    .line 16
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -654,14 +604,12 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider;->b:Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;
 
@@ -669,10 +617,8 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 4
     sget-object v2, Lcom/arcsoft/avatar2/provider/AvatarProfile;->sUriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -690,7 +636,6 @@
     :cond_0
     const-string p1, "avatar_db"
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -709,13 +654,11 @@
 
     move-result p1
 
-    .line 6
     :goto_0
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :try_start_1
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -723,10 +666,8 @@
 
     if-eqz p2, :cond_1
 
-    .line 8
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 9
     :cond_1
     monitor-exit v0
 
@@ -735,14 +676,12 @@
     :catchall_0
     move-exception p1
 
-    .line 10
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 11
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     :cond_2
@@ -751,7 +690,6 @@
     :catchall_1
     move-exception p1
 
-    .line 12
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1

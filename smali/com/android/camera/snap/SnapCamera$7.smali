@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/snap/SnapCamera;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
@@ -50,19 +48,16 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/camera/snap/SnapCamera;->access$802(Lcom/android/camera/snap/SnapCamera;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapCamera;->access$900(Lcom/android/camera/snap/SnapCamera;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapCamera;->access$1000(Lcom/android/camera/snap/SnapCamera;)Landroid/os/Handler;
@@ -71,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$7;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {v0}, Lcom/android/camera/snap/SnapCamera;->access$1000(Lcom/android/camera/snap/SnapCamera;)Landroid/os/Handler;
@@ -82,7 +76,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_0
     monitor-exit p0
 

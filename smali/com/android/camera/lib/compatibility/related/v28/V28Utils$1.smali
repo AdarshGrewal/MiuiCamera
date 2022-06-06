@@ -25,7 +25,6 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/lib/compatibility/related/v28/V28Utils$1;->val$handler:Landroid/os/Handler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/lib/compatibility/related/v28/V28Utils$1;->val$handler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

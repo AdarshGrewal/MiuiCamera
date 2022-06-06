@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitBackgroundThread;
 
     invoke-direct {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitBackgroundThread;-><init>()V
@@ -28,7 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +35,6 @@
 .method public static getExecutor()Ljava/util/concurrent/Executor;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitBackgroundExecutor;->sExecutor:Ljava/util/concurrent/Executor;
 
     return-object v0

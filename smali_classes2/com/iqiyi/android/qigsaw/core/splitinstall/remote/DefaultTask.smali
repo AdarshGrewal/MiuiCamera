@@ -21,13 +21,10 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->mCallback:Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitApkInstaller;->getSplitInstallSupervisor()Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;
 
     move-result-object p1
@@ -68,7 +65,6 @@
 .method public onError(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->mCallback:Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;
 
@@ -81,7 +77,6 @@
     :catch_0
     move-exception p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -117,12 +112,10 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->installSupervisor:Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->execute(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;)V
     :try_end_0
@@ -133,12 +126,10 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->mCallback:Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;
@@ -159,7 +150,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {v0, v1, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -169,7 +159,6 @@
     :catch_1
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0

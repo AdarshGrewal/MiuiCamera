@@ -63,17 +63,14 @@
 .method public constructor <init>(Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$Builder;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;-><init>(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)V
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$Builder;->access$000(Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$Builder;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;->mGravity:I
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$Builder;->access$100(Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$Builder;)Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$VisibleCondition;
 
     move-result-object p1
@@ -99,7 +96,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     const-class v2, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -110,7 +106,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->equals(Ljava/lang/Object;)Z
 
@@ -120,11 +115,9 @@
 
     return v1
 
-    .line 3
     :cond_2
     check-cast p1, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;
 
-    .line 4
     iget v2, p0, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;->mGravity:I
 
     iget p1, p1, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;->mGravity:I
@@ -147,7 +140,6 @@
 .method public getGravity()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;->mGravity:I
 
     return v0
@@ -160,7 +152,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->hashCode()I
 
     move-result v1
@@ -193,7 +184,6 @@
 .method public isVisible()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem;->mCondition:Lcom/android/camera/fragment/modeui/panelentrance/NormalPanelEntranceItem$VisibleCondition;
 
     if-eqz v0, :cond_0
@@ -218,7 +208,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +224,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-super {p0}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;->toString()Ljava/lang/String;
 
     move-result-object v1

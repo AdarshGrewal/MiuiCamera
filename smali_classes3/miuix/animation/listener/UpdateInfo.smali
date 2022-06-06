@@ -21,20 +21,16 @@
 .method public constructor <init>(Lmiuix/animation/property/FloatProperty;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/animation/internal/AnimInfo;
 
     invoke-direct {v0}, Lmiuix/animation/internal/AnimInfo;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
-    .line 3
     iput-object p1, p0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 4
     instance-of p1, p1, Lmiuix/animation/property/IIntValueProperty;
 
     iput-boolean p1, p0, Lmiuix/animation/listener/UpdateInfo;->useInt:Z
@@ -56,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -74,7 +69,6 @@
 
     check-cast v0, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 2
     iget-object v1, v0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -105,7 +99,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -123,7 +116,6 @@
 
     check-cast v0, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 2
     iget-object v1, v0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     invoke-virtual {v1}, Landroid/util/Property;->getName()Ljava/lang/String;
@@ -149,7 +141,6 @@
 .method public getFloatValue()F
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v0, v0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
@@ -164,7 +155,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
@@ -192,7 +182,6 @@
 .method public getIntValue()I
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v0, v0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
@@ -207,7 +196,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
@@ -242,7 +230,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     instance-of v0, v0, Lmiuix/animation/property/IIntValueProperty;
@@ -272,7 +259,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Ljava/lang/Float;
 
     if-eq p1, v0, :cond_3
@@ -283,7 +269,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     const-class v0, Ljava/lang/Double;
 
@@ -295,7 +280,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lmiuix/animation/listener/UpdateInfo;->getIntValue()I
 
@@ -307,7 +291,6 @@
 
     return-object p1
 
-    .line 4
     :cond_2
     :goto_0
     iget-object p1, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
@@ -320,7 +303,6 @@
 
     return-object p1
 
-    .line 5
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
@@ -337,7 +319,6 @@
 .method public isValid()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     if-eqz v0, :cond_0
@@ -358,10 +339,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
-    .line 2
     iput v0, p0, Lmiuix/animation/listener/UpdateInfo;->frameCount:I
 
     return-void
@@ -389,11 +368,9 @@
     :goto_0
     move v1, v0
 
-    .line 1
     :goto_1
     iput-boolean v1, p0, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
-    .line 2
     iget-boolean v1, p0, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
     if-eqz v1, :cond_2
@@ -408,12 +385,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
     iget-object v1, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iput-boolean v0, v1, Lmiuix/animation/internal/AnimInfo;->justEnd:Z
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
@@ -425,12 +400,10 @@
 .method public setTargetValue(Lmiuix/animation/IAnimTarget;)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/animation/listener/UpdateInfo;->useInt:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     check-cast v0, Lmiuix/animation/property/IIntValueProperty;
@@ -443,7 +416,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
@@ -460,7 +432,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

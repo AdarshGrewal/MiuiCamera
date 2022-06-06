@@ -53,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 17
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/model/ChannelLabel;
 
     const/4 v1, 0x0
@@ -218,7 +217,6 @@
 
     new-array v15, v15, [Lorg/jcodec/common/model/ChannelLabel;
 
-    .line 2
     sget-object v16, Lorg/jcodec/common/model/ChannelLabel;->MONO:Lorg/jcodec/common/model/ChannelLabel;
 
     aput-object v16, v15, v1
@@ -298,7 +296,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -307,7 +304,6 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/jcodec/common/model/ChannelLabel;
     .locals 1
 
-    .line 1
     const-class v0, Lorg/jcodec/common/model/ChannelLabel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -322,7 +318,6 @@
 .method public static values()[Lorg/jcodec/common/model/ChannelLabel;
     .locals 1
 
-    .line 1
     sget-object v0, Lorg/jcodec/common/model/ChannelLabel;->$VALUES:[Lorg/jcodec/common/model/ChannelLabel;
 
     invoke-virtual {v0}, [Lorg/jcodec/common/model/ChannelLabel;->clone()Ljava/lang/Object;

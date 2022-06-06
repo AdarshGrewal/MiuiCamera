@@ -51,7 +51,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,7 +59,6 @@
 .method public static final buildFromJson(Ljava/lang/String;)Lcom/idb/device/IotDeviceInfo;
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -81,7 +79,6 @@
 
     const-string v1, ""
 
-    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -92,7 +89,6 @@
 .method public static final buildFromJson(Lorg/json/JSONObject;)Lcom/idb/device/IotDeviceInfo;
     .locals 3
 
-    .line 3
     :try_start_0
     new-instance v0, Lcom/idb/device/IotDeviceInfo;
 
@@ -100,7 +96,6 @@
 
     const-string v1, "did"
 
-    .line 4
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -109,7 +104,6 @@
 
     const-string v1, "uid"
 
-    .line 5
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
@@ -118,7 +112,6 @@
 
     const-string v1, "token"
 
-    .line 6
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -127,7 +120,6 @@
 
     const-string v1, "name"
 
-    .line 7
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -136,7 +128,6 @@
 
     const-string v1, "pid"
 
-    .line 8
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
@@ -145,7 +136,6 @@
 
     const-string v1, "localip"
 
-    .line 9
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -154,7 +144,6 @@
 
     const-string v1, "mac"
 
-    .line 10
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -163,7 +152,6 @@
 
     const-string v1, "ssid"
 
-    .line 11
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -172,7 +160,6 @@
 
     const-string v1, "bssid"
 
-    .line 12
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -181,7 +168,6 @@
 
     const-string v1, "rssi"
 
-    .line 13
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v1
@@ -190,7 +176,6 @@
 
     const-string v1, "longitude"
 
-    .line 14
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -199,7 +184,6 @@
 
     const-string v1, "latitude"
 
-    .line 15
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -208,7 +192,6 @@
 
     const-string v1, "parent_id"
 
-    .line 16
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -217,7 +200,6 @@
 
     const-string v1, "show_mode"
 
-    .line 17
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
@@ -226,7 +208,6 @@
 
     const-string v1, "model"
 
-    .line 18
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -235,7 +216,6 @@
 
     const-string v1, "permitLevel"
 
-    .line 19
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
@@ -244,7 +224,6 @@
 
     const-string v1, "isOnline"
 
-    .line 20
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v1
@@ -253,7 +232,6 @@
 
     const-string v1, "spec_type"
 
-    .line 21
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -262,7 +240,6 @@
 
     const-string v1, "voice_ctrl"
 
-    .line 22
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result p0
@@ -280,7 +257,6 @@
 
     const-string v1, "Error when create IotDeviceInfo"
 
-    .line 23
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -299,7 +275,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_0
@@ -311,7 +286,6 @@
 .method public getBssid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->bssid:Ljava/lang/String;
 
     return-object v0
@@ -320,7 +294,6 @@
 .method public getDid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->did:Ljava/lang/String;
 
     return-object v0
@@ -329,7 +302,6 @@
 .method public getLatitude()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->latitude:Ljava/lang/String;
 
     return-object v0
@@ -338,7 +310,6 @@
 .method public getLocalip()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->localip:Ljava/lang/String;
 
     return-object v0
@@ -347,7 +318,6 @@
 .method public getLongitude()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->longitude:Ljava/lang/String;
 
     return-object v0
@@ -356,7 +326,6 @@
 .method public getMac()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->mac:Ljava/lang/String;
 
     return-object v0
@@ -365,7 +334,6 @@
 .method public getModel()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->model:Ljava/lang/String;
 
     return-object v0
@@ -374,7 +342,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->name:Ljava/lang/String;
 
     return-object v0
@@ -383,7 +350,6 @@
 .method public getParent_id()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->parent_id:Ljava/lang/String;
 
     return-object v0
@@ -392,7 +358,6 @@
 .method public getPermitLevel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/idb/device/IotDeviceInfo;->permitLevel:I
 
     return v0
@@ -401,7 +366,6 @@
 .method public getPid()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/idb/device/IotDeviceInfo;->pid:I
 
     return v0
@@ -410,7 +374,6 @@
 .method public getRssi()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/idb/device/IotDeviceInfo;->rssi:I
 
     return v0
@@ -419,7 +382,6 @@
 .method public getShow_mode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/idb/device/IotDeviceInfo;->show_mode:I
 
     return v0
@@ -428,7 +390,6 @@
 .method public getSpec_type()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->spec_type:Ljava/lang/String;
 
     return-object v0
@@ -437,7 +398,6 @@
 .method public getSsid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->ssid:Ljava/lang/String;
 
     return-object v0
@@ -446,7 +406,6 @@
 .method public getToken()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/idb/device/IotDeviceInfo;->token:Ljava/lang/String;
 
     return-object v0
@@ -455,7 +414,6 @@
 .method public getUid()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/idb/device/IotDeviceInfo;->uid:J
 
     return-wide v0
@@ -464,7 +422,6 @@
 .method public getVoice_ctrl()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/idb/device/IotDeviceInfo;->voice_ctrl:I
 
     return v0
@@ -473,7 +430,6 @@
 .method public isOnline()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/idb/device/IotDeviceInfo;->isOnline:Z
 
     return v0
@@ -482,7 +438,6 @@
 .method public toJson()Lorg/json/JSONObject;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -490,14 +445,12 @@
     :try_start_0
     const-string v1, "did"
 
-    .line 2
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->did:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "uid"
 
-    .line 3
     iget-wide v2, p0, Lcom/idb/device/IotDeviceInfo;->uid:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -508,21 +461,18 @@
 
     const-string v1, "token"
 
-    .line 4
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->token:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "name"
 
-    .line 5
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->name:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "pid"
 
-    .line 6
     iget v2, p0, Lcom/idb/device/IotDeviceInfo;->pid:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -533,35 +483,30 @@
 
     const-string v1, "localip"
 
-    .line 7
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->localip:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "mac"
 
-    .line 8
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->mac:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "ssid"
 
-    .line 9
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->ssid:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "bssid"
 
-    .line 10
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->bssid:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "rssi"
 
-    .line 11
     iget v2, p0, Lcom/idb/device/IotDeviceInfo;->rssi:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -572,28 +517,24 @@
 
     const-string v1, "longitude"
 
-    .line 12
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->longitude:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "latitude"
 
-    .line 13
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->latitude:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "parent_id"
 
-    .line 14
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->parent_id:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "show_mode"
 
-    .line 15
     iget v2, p0, Lcom/idb/device/IotDeviceInfo;->show_mode:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -604,14 +545,12 @@
 
     const-string v1, "model"
 
-    .line 16
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->model:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "permitLevel"
 
-    .line 17
     iget v2, p0, Lcom/idb/device/IotDeviceInfo;->permitLevel:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -622,7 +561,6 @@
 
     const-string v1, "isOnline"
 
-    .line 18
     iget-boolean v2, p0, Lcom/idb/device/IotDeviceInfo;->isOnline:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -633,14 +571,12 @@
 
     const-string v1, "spec_type"
 
-    .line 19
     iget-object v2, p0, Lcom/idb/device/IotDeviceInfo;->spec_type:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/idb/device/IotDeviceInfo;->setJsonValue(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "voice_ctrl"
 
-    .line 20
     iget v2, p0, Lcom/idb/device/IotDeviceInfo;->voice_ctrl:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -660,7 +596,6 @@
 
     const-string v3, ""
 
-    .line 21
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -670,7 +605,6 @@
 .method public toJsonString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/idb/device/IotDeviceInfo;->toJson()Lorg/json/JSONObject;
 
     move-result-object v0

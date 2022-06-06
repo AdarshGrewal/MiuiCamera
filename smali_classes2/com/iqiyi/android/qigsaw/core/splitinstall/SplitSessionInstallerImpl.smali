@@ -18,16 +18,12 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitSessionInstallerImpl;->splitInstaller:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitSessionInstallerImpl;->sessionManager:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallSessionManager;
 
-    .line 4
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitSessionInstallerImpl;->executor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -46,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitSessionInstallerImpl;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitStartInstallTask;

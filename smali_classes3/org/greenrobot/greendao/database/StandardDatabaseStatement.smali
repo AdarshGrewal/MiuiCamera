@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/database/sqlite/SQLiteStatement;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     return-void
@@ -28,7 +26,6 @@
 .method public bindBlob(I[B)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindBlob(I[B)V
@@ -39,7 +36,6 @@
 .method public bindDouble(ID)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindDouble(ID)V
@@ -50,7 +46,6 @@
 .method public bindLong(IJ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
@@ -61,7 +56,6 @@
 .method public bindNull(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteStatement;->bindNull(I)V
@@ -72,7 +66,6 @@
 .method public bindString(ILjava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
@@ -83,7 +76,6 @@
 .method public clearBindings()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
@@ -94,7 +86,6 @@
 .method public close()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->close()V
@@ -105,7 +96,6 @@
 .method public execute()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
@@ -116,7 +106,6 @@
 .method public executeInsert()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
@@ -129,7 +118,6 @@
 .method public getRawStatement()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     return-object v0
@@ -138,7 +126,6 @@
 .method public simpleQueryForLong()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;->delegate:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->simpleQueryForLong()J

@@ -16,10 +16,8 @@
 .method public constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/animation/type/BaseOnSubScribe;-><init>(Landroid/view/View;)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/animation/type/TranslateYAlphaInOnSubscribe;->mDistanceY:I
 
     return-void
@@ -30,12 +28,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/animation/type/BaseOnSubScribe;->setAnimateViewVisible(Landroid/view/View;I)V
 
     int-to-float p1, p1
 
-    .line 2
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->setTranslationY(Landroid/view/View;F)V
 
     return-void
@@ -46,14 +42,12 @@
 .method public getAnimation()Landroidx/core/view/ViewPropertyAnimatorCompat;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mAniView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera/animation/type/BaseOnSubScribe;->setAnimateViewVisible(Landroid/view/View;I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;

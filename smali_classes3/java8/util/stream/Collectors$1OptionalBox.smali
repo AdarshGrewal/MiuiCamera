@@ -48,19 +48,16 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->val$op:Ljava8/util/function/BinaryOperator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->value:Ljava/lang/Object;
 
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->present:Z
 
     return-void
@@ -76,12 +73,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Collectors$1OptionalBox;->present:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Collectors$1OptionalBox;->val$op:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->value:Ljava/lang/Object;
@@ -94,13 +89,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iput-object p1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->value:Ljava/lang/Object;
 
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Ljava8/util/stream/Collectors$1OptionalBox;->present:Z
 
     :goto_0

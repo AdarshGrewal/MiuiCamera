@@ -59,10 +59,8 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p3}, Ljava8/util/stream/Nodes$ToArrayTask;-><init>(Ljava8/util/stream/Node;I)V
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;->array:Ljava/lang/Object;
 
     return-void
@@ -71,7 +69,6 @@
 .method public synthetic constructor <init>(Ljava8/util/stream/Node$OfPrimitive;Ljava/lang/Object;ILjava8/util/stream/Nodes$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;-><init>(Ljava8/util/stream/Node$OfPrimitive;Ljava/lang/Object;I)V
 
     return-void
@@ -89,10 +86,8 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/Nodes$ToArrayTask;-><init>(Ljava8/util/stream/Nodes$ToArrayTask;Ljava8/util/stream/Node;I)V
 
-    .line 5
     iget-object p1, p1, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;->array:Ljava/lang/Object;
 
     iput-object p1, p0, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;->array:Ljava/lang/Object;
@@ -105,7 +100,6 @@
 .method public copyNodeToArray()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
     check-cast v0, Ljava8/util/stream/Node$OfPrimitive;
@@ -131,7 +125,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;
 
     iget-object v1, p0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
@@ -150,7 +143,6 @@
 .method public bridge synthetic makeChild(II)Ljava8/util/stream/Nodes$ToArrayTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;->makeChild(II)Ljava8/util/stream/Nodes$ToArrayTask$OfPrimitive;
 
     move-result-object p1

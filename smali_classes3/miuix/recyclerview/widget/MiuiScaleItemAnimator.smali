@@ -17,12 +17,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput v0, p0, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->mScaleDist:F
 
     return-void
@@ -31,7 +29,6 @@
 .method private getFlomeScale(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)F
     .locals 3
 
-    .line 1
     iget v0, p0, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->mScaleDist:F
 
     const/4 v1, 0x1
@@ -44,10 +41,8 @@
 
     const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 2
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 3
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -62,7 +57,6 @@
 
     iput v0, p0, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->mScaleDist:F
 
-    .line 4
     :cond_0
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -82,7 +76,6 @@
 
     int-to-float p1, p1
 
-    .line 5
     iget v0, p0, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->mScaleDist:F
 
     sub-float v0, p1, v0
@@ -103,14 +96,12 @@
 .method public animateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 11
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->notifyAddStarting(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     const/4 v0, 0x1
 
     new-array v1, v0, [Landroid/view/View;
 
-    .line 2
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v3, 0x0
@@ -135,7 +126,6 @@
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 3
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
@@ -172,7 +162,6 @@
 
     new-array v1, v0, [Landroid/view/View;
 
-    .line 4
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     aput-object v2, v1, v3
@@ -193,7 +182,6 @@
 
     aput-object v4, v2, v0
 
-    .line 5
     sget-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
     aput-object v0, v2, v6
@@ -210,7 +198,6 @@
 
     move-result-wide v0
 
-    .line 6
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v3, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator$1;
@@ -225,15 +212,12 @@
 .method public animateRemoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 12
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->getFlomeScale(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)F
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->notifyRemoveStarting(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 3
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     sget-object v2, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->sAttachedListener:Landroid/view/View$OnAttachStateChangeListener;
@@ -244,7 +228,6 @@
 
     new-array v2, v1, [Landroid/view/View;
 
-    .line 4
     iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v4, 0x0
@@ -269,7 +252,6 @@
 
     const/4 v5, 0x0
 
-    .line 5
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v5
@@ -314,7 +296,6 @@
 
     new-array v2, v1, [Landroid/view/View;
 
-    .line 6
     iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     aput-object v3, v2, v4
@@ -335,7 +316,6 @@
 
     aput-object v5, v3, v1
 
-    .line 7
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
     aput-object v1, v3, v7
@@ -360,7 +340,6 @@
 
     move-result-wide v0
 
-    .line 8
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v3, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator$2;
@@ -375,20 +354,16 @@
 .method public prepareAdd(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->prepareAdd(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/recyclerview/widget/MiuiScaleItemAnimator;->getFlomeScale(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)F
 
     move-result v0
 
-    .line 3
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 4
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
@@ -399,7 +374,6 @@
 .method public resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 5
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     if-eqz p1, :cond_0
@@ -408,7 +382,6 @@
 
     new-array v1, v0, [Landroid/view/View;
 
-    .line 2
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v3, 0x0
@@ -437,14 +410,12 @@
 
     invoke-interface {v1, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
-    .line 3
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 4
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V

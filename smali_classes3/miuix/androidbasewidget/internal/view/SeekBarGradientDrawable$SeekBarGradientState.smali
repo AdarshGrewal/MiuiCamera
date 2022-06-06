@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
@@ -46,7 +44,6 @@
 .method public getChangingConfigurations()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
@@ -59,7 +56,6 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -68,7 +64,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, v1, v1, p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->newSeekBarGradientDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)Landroid/graphics/drawable/Drawable;
 
@@ -80,7 +75,6 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 3
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -89,7 +83,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     invoke-virtual {p0, p1, v1, p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->newSeekBarGradientDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)Landroid/graphics/drawable/Drawable;
 
@@ -101,7 +94,6 @@
 .method public newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 5
     iget-object v0, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     if-nez v0, :cond_0
@@ -110,7 +102,6 @@
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-virtual {p0, p1, p2, p0}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->newSeekBarGradientDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)Landroid/graphics/drawable/Drawable;
 
@@ -122,7 +113,6 @@
 .method public newSeekBarGradientDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;
 
     invoke-direct {v0, p1, p2, p3}, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;)V
@@ -133,7 +123,6 @@
 .method public setConstantState(Landroid/graphics/drawable/Drawable$ConstantState;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/androidbasewidget/internal/view/SeekBarGradientDrawable$SeekBarGradientState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     return-void

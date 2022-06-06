@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/fragment/settings/SmartGuideFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -34,10 +33,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;-><init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
@@ -50,7 +47,6 @@
 .method public static synthetic OooO00o()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->TAG:Ljava/lang/String;
 
     const-string v1, "installQRCodeReceiver onClick negative"
@@ -71,7 +67,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/settings/SmartGuideFragment;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mScanAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p1
@@ -80,7 +75,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/settings/SmartGuideFragment;)Lcom/android/camera/lib/compatibility/util/CompatibilityUtils$PackageInstallerListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mAppInstalledListener:Lcom/android/camera/lib/compatibility/util/CompatibilityUtils$PackageInstallerListener;
 
     return-object p0
@@ -89,7 +83,6 @@
 .method private installQRCodeReceiver()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/settings/SmartGuideFragment$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/settings/SmartGuideFragment$2;-><init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
@@ -98,7 +91,6 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
@@ -107,12 +99,10 @@
 .method private updateQRCodeEntry()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
     const-string/jumbo v1, "pref_scan_qrcode_key"
 
-    .line 2
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -123,11 +113,9 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -140,7 +128,6 @@
 
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferences:Lcom/android/camera/preferences/CameraSettingPreferences;
 
-    .line 5
     invoke-virtual {v0}, Landroidx/preference/TwoStatePreference;->isChecked()Z
 
     move-result v3
@@ -151,14 +138,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     sget-object v2, Lcom/android/camera/fragment/settings/SmartGuideFragment;->TAG:Ljava/lang/String;
 
     const-string v3, "disable QRCodeScan"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferences:Lcom/android/camera/preferences/CameraSettingPreferences;
 
     invoke-virtual {v2}, Lcom/android/camera/preferences/CameraSettingPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -167,13 +152,10 @@
 
     const/4 v3, 0x0
 
-    .line 8
     invoke-interface {v2, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 9
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 10
     invoke-virtual {v0, v3}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
     :cond_1
@@ -185,7 +167,6 @@
 .method public addCurrentPreferences()V
     .locals 7
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mFromWhere:I
 
     iget-boolean v1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mIsFrontCamera:Z
@@ -196,14 +177,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v4, 0x7f050026
+    const v4, 0x7f050027
 
-    const v5, 0x7f1208d9
+    const v5, 0x7f12088a
 
-    const v6, 0x7f1208d8
+    const v6, 0x7f120889
 
     const-string/jumbo v3, "pref_camera_near_range_key"
 
@@ -211,7 +191,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addCheckBoxPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -227,44 +206,41 @@
 
     iget-boolean v1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mIsFrontCamera:Z
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/CameraSettings;->isAiTipNeed(IZ)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OoO00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Oo0O0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOo0o:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOo0o:Z
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOoO0:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOoO0:Z
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOoO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOoO:Z
 
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v4, 0x7f050036
+    const v4, 0x7f050037
 
-    const v5, 0x7f1207a7
+    const v5, 0x7f120769
 
-    const v6, 0x7f1208d6
+    const v6, 0x7f120887
 
     const-string/jumbo v3, "pref_camera_ai_detect_id_card"
 
@@ -272,7 +248,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addCheckBoxPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
 
-    .line 7
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -282,38 +257,46 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mFromWhere:I
 
     iget-boolean v1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mIsFrontCamera:Z
 
-    .line 8
     invoke-static {v0, v1}, Lcom/android/camera/CameraSettings;->isAiTipNeed(IZ)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 9
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO()I
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0O()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_2
 
-    .line 10
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO0OO()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_2
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v4, 0x7f050036
+    const v4, 0x7f050037
 
-    const v5, 0x7f1207a6
+    const v5, 0x7f120768
 
-    const v6, 0x7f1208d7
+    const v6, 0x7f120888
 
     const-string/jumbo v3, "pref_camera_ai_detect_doc"
 
@@ -321,8 +304,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addCheckBoxPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
 
-    .line 11
-    :cond_2
+    :cond_3
     iget v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mFromWhere:I
 
     iget-boolean v1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mIsFrontCamera:Z
@@ -331,16 +313,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 12
     iget-object v2, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
-    const v4, 0x7f050052
+    const v4, 0x7f05004c
 
-    const v5, 0x7f120842
+    const v5, 0x7f1207f5
 
-    const v6, 0x7f120841
+    const v6, 0x7f1207f4
 
     const-string/jumbo v3, "pref_scan_qrcode_key"
 
@@ -348,14 +329,14 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->addCheckBoxPreference(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
 .method public getFragmentTitle()I
     .locals 1
 
-    const v0, 0x7f12084e
+    const v0, 0x7f120801
 
     return v0
 .end method
@@ -363,14 +344,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mIsFrontCamera:Z
 
-    .line 2
     invoke-super {p0, p1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -379,7 +358,6 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 10
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -402,7 +380,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -441,7 +418,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -453,7 +429,6 @@
 
     if-nez p1, :cond_4
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mScanAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     const/4 v0, 0x1
@@ -462,36 +437,32 @@
 
     return v0
 
-    .line 5
     :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    const p1, 0x7f12030c
+    const p1, 0x7f1202f4
 
-    .line 6
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const p1, 0x7f12030b
+    const p1, 0x7f1202f3
 
-    .line 7
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const p1, 0x7f120449
+    const p1, 0x7f120427
 
-    .line 8
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, LOooO00o/OooO0O0/OooO00o/OoooO0/OooooO0/OooOO0;
+    new-instance v5, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOoO/OooO0oo;
 
-    invoke-direct {v5, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooooO0/OooOO0;-><init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
+    invoke-direct {v5, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOoO/OooO0oo;-><init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
 
     const/4 v6, 0x0
 
@@ -499,21 +470,18 @@
 
     const/high16 p1, 0x1040000
 
-    .line 9
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    sget-object v9, LOooO00o/OooO0O0/OooO00o/OoooO0/OooooO0/OooO;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/OooooO0/OooO;
+    sget-object v9, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOoO/OooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOoO/OooO;
 
-    .line 10
     invoke-static/range {v1 .. v9}, Lcom/android/camera/RotateDialogController;->showSystemAlertDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment;->mScanAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 11
     new-instance v1, Lcom/android/camera/fragment/settings/SmartGuideFragment$1;
 
     invoke-direct {v1, p0}, Lcom/android/camera/fragment/settings/SmartGuideFragment$1;-><init>(Lcom/android/camera/fragment/settings/SmartGuideFragment;)V
@@ -530,7 +498,6 @@
 .method public onRestart()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
     iget-object v1, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferences:Lcom/android/camera/preferences/CameraSettingPreferences;
@@ -543,10 +510,8 @@
 .method public onResume()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->onResume()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/settings/SmartGuideFragment;->updateQRCodeEntry()V
 
     return-void
@@ -555,7 +520,6 @@
 .method public registerPreferenceListener()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->mPreferenceGroup:Landroidx/preference/PreferenceScreen;
 
     invoke-virtual {p0, v0, p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->registerListener(Landroidx/preference/PreferenceGroup;Landroidx/preference/Preference$OnPreferenceChangeListener;)V

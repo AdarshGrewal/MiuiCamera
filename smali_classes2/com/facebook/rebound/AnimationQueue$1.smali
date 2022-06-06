@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/facebook/rebound/AnimationQueue;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/AnimationQueue$1;->this$0:Lcom/facebook/rebound/AnimationQueue;
 
     invoke-direct {p0}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public doFrame(J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue$1;->this$0:Lcom/facebook/rebound/AnimationQueue;
 
     invoke-static {v0, p1, p2}, Lcom/facebook/rebound/AnimationQueue;->access$000(Lcom/facebook/rebound/AnimationQueue;J)V

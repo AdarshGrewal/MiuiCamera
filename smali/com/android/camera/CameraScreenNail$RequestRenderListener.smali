@@ -15,11 +15,5 @@
 
 
 # virtual methods
-.method public requestChangeWCGConfig()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public abstract requestRender()V
 .end method

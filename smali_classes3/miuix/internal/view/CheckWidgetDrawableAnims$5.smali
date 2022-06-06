@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/internal/view/CheckWidgetDrawableAnims;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/view/CheckWidgetDrawableAnims$5;->this$0:Lmiuix/internal/view/CheckWidgetDrawableAnims;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +42,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/internal/view/CheckWidgetCircleDrawable;
 
     invoke-virtual {p0, p1}, Lmiuix/internal/view/CheckWidgetDrawableAnims$5;->getValue(Lmiuix/internal/view/CheckWidgetCircleDrawable;)F
@@ -56,7 +54,6 @@
 .method public getValue(Lmiuix/internal/view/CheckWidgetCircleDrawable;)F
     .locals 0
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/internal/view/CheckWidgetCircleDrawable;->getAlpha()I
 
     move-result p1
@@ -71,7 +68,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/internal/view/CheckWidgetCircleDrawable;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/internal/view/CheckWidgetDrawableAnims$5;->setValue(Lmiuix/internal/view/CheckWidgetCircleDrawable;F)V
@@ -106,7 +102,6 @@
 
     float-to-int p2, p2
 
-    .line 2
     invoke-virtual {p1, p2}, Lmiuix/internal/view/CheckWidgetCircleDrawable;->setAlpha(I)V
 
     return-void

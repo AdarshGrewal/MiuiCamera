@@ -37,7 +37,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;ILandroid/animation/ArgbEvaluator;Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;Lcom/android/camera/ui/CircleImageView;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$position:I
@@ -62,7 +61,6 @@
 
     const/16 v0, 0x80
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     return-void
@@ -73,7 +71,6 @@
 
     const/16 v0, 0x80
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     return-void
@@ -84,7 +81,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/utils/ClickCheck;->getInstance()Lcom/android/camera/features/mimojis/mimojias/utils/ClickCheck;
 
     move-result-object v0
@@ -97,7 +93,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
@@ -121,7 +116,6 @@
 
     goto/16 :goto_3
 
-    .line 3
     :cond_1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->TAG:Ljava/lang/String;
 
@@ -143,7 +137,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$avatarConfigInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
     iget v0, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
@@ -152,7 +145,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 5
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
 
     move-result-object v0
@@ -167,7 +159,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->setInnerConfigSelectIndex(IF)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
 
     move-result-object v0
@@ -182,7 +173,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->setInnerConfigSelectIndex(IF)V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
@@ -196,7 +186,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 8
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$position:I
 
     iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
@@ -215,7 +204,6 @@
 
     iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
-    .line 9
     invoke-static {v5}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->access$200(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;)Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     move-result-object v5
@@ -228,7 +216,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_3
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$position:I
 
@@ -248,7 +235,6 @@
 
     iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
-    .line 11
     invoke-static {v5}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->access$200(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;)Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     move-result-object v5
@@ -259,7 +245,6 @@
 
     if-ne v0, v5, :cond_6
 
-    .line 12
     :cond_4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
@@ -273,7 +258,6 @@
 
     iget-object v6, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
-    .line 13
     invoke-virtual {v6}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->getItemCount()I
 
     move-result v6
@@ -284,12 +268,10 @@
 
     move-result v5
 
-    .line 14
     invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
     goto :goto_1
 
-    .line 15
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
@@ -308,7 +290,6 @@
 
     invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 16
     :cond_6
     :goto_1
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->getInstance()Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;
@@ -325,7 +306,6 @@
 
     invoke-virtual {v0, v6, v5}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/AvatarEngineManager;->setInnerConfigSelectIndex(IF)V
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->access$100(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;)Landroidx/recyclerview/widget/RecyclerView;
@@ -344,14 +324,12 @@
 
     if-eqz v0, :cond_7
 
-    .line 18
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;->access$000(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$ViewHolder;)Lcom/android/camera/ui/CircleImageView;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Lcom/android/camera/ui/CircleImageView;->updateView(Z)V
 
-    .line 19
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -390,7 +368,6 @@
 
     goto :goto_2
 
-    .line 20
     :cond_7
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
@@ -398,20 +375,17 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
-    .line 21
     :goto_2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$circleImageView:Lcom/android/camera/ui/CircleImageView;
 
     invoke-virtual {v0, v2}, Lcom/android/camera/ui/CircleImageView;->updateView(Z)V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->this$0:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter$1;->val$position:I
 
     iput v1, v0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->mLastPosion:I
 
-    .line 23
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;->access$300(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/ColorListAdapter;)Lcom/android/camera/features/mimojis/mimojias/fragment/edit/AvatarConfigItemClick;
 
     move-result-object v0
@@ -422,7 +396,6 @@
 
     invoke-interface {v0, v1, v2, v5}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/AvatarConfigItemClick;->onConfigItemClick(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;ZI)V
 
-    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -457,24 +430,21 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 25
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 26
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO0O0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO0O0;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO0O0;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO0O0;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p1, v0, v3, v4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_8
     return-void
 
-    .line 27
     :cond_9
     :goto_3
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
@@ -483,10 +453,9 @@
 
     if-eqz v0, :cond_a
 
-    .line 28
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO00o;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO00o;
 
-    invoke-direct {v0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO00o;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0O0/OooO00o/OooO00o/OooO00o;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p1, v0, v3, v4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 

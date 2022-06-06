@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/settings/SmartGuideFragment$3;Landroidx/preference/CheckBoxPreference;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3$1;->this$1:Lcom/android/camera/fragment/settings/SmartGuideFragment$3;
 
     iput-object p2, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3$1;->val$scanQRCode:Landroidx/preference/CheckBoxPreference;
@@ -42,14 +41,12 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3$1;->val$scanQRCode:Landroidx/preference/CheckBoxPreference;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3$1;->this$1:Lcom/android/camera/fragment/settings/SmartGuideFragment$3;
 
     iget-object v0, v0, Lcom/android/camera/fragment/settings/SmartGuideFragment$3;->this$0:Lcom/android/camera/fragment/settings/SmartGuideFragment;

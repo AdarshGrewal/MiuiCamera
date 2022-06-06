@@ -71,7 +71,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/Config;->SHOW_LOGS:Z
 
     sput-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
@@ -82,10 +81,8 @@
 .method public constructor <init>(Landroid/media/MediaPlayer;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -96,7 +93,6 @@
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -105,35 +101,30 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mPositionUpdateNotifier:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 5
     new-instance v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$1;-><init>(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)V
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mOnVideoPreparedMessage:Ljava/lang/Runnable;
 
-    .line 6
     new-instance v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$3;
 
     invoke-direct {v0, p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$3;-><init>(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)V
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mOnVideoStopMessage:Ljava/lang/Runnable;
 
-    .line 7
     new-instance v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$4;
 
     invoke-direct {v0, p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$4;-><init>(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)V
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mNotifyPositionUpdateRunnable:Ljava/lang/Runnable;
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,7 +141,6 @@
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
-    .line 9
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v1, :cond_0
@@ -159,7 +149,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     :cond_0
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -187,7 +176,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :cond_1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -215,7 +203,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     :cond_2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -223,48 +210,40 @@
 
     if-nez v0, :cond_3
 
-    .line 13
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->IDLE:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {p1, p0}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {p1, p0}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {p1, p0}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {p1, p0}, Landroid/media/MediaPlayer;->setOnBufferingUpdateListener(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {p1, p0}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
 
     return-void
 
-    .line 20
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string v0, "myLooper not null, a bug in some MediaPlayer implementation cause that listeners are not called at all. Please use a thread without Looper"
+    const-string/jumbo v0, "myLooper not null, a bug in some MediaPlayer implementation cause that listeners are not called at all. Please use a thread without Looper"
 
     invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -274,7 +253,6 @@
 .method public static synthetic access$000()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     return v0
@@ -283,7 +261,6 @@
 .method public static synthetic access$100(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
     return-object p0
@@ -292,7 +269,6 @@
 .method public static synthetic access$200(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     return-object p0
@@ -301,7 +277,6 @@
 .method public static synthetic access$300(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->notifyPositionUpdated()V
 
     return-void
@@ -310,7 +285,6 @@
 .method private inUiThread()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -339,12 +313,10 @@
 .method private notifyPositionUpdated()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mVideoStateListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$VideoStateListener;
 
@@ -360,7 +332,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mVideoStateListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$VideoStateListener;
 
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
@@ -371,7 +342,6 @@
 
     invoke-interface {v1, v2}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$VideoStateListener;->onVideoPlayTimeChanged(I)V
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -390,7 +360,6 @@
 .method private onPrepareError(Ljava/io/IOException;)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -417,7 +386,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/videoplayer/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -425,7 +393,6 @@
 
     invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_1
@@ -434,16 +401,13 @@
 
     const/16 v1, -0x3ec
 
-    .line 4
     invoke-interface {p1, v0, v1}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;->onErrorMainThread(II)V
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_2
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMainThreadHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$2;
@@ -469,7 +433,6 @@
 
     mul-float/2addr p0, p1
 
-    .line 1
     invoke-static {p0}, Ljava/lang/Math;->round(F)I
 
     move-result p0
@@ -480,7 +443,6 @@
 .method private positionUpdaterIsWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
@@ -521,7 +483,6 @@
 
     goto/16 :goto_0
 
-    .line 1
     :pswitch_0
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -535,7 +496,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :pswitch_1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -549,7 +509,6 @@
 
     goto :goto_0
 
-    .line 3
     :pswitch_2
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -563,7 +522,6 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_3
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -577,7 +535,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_4
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -591,7 +548,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_5
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -605,7 +561,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -619,7 +574,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -633,7 +587,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -647,7 +600,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_3
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -683,12 +635,10 @@
 .method private startPositionUpdateNotifier()V
     .locals 9
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -709,7 +659,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mPositionUpdateNotifier:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -733,12 +682,10 @@
 .method private stopPositionUpdateNotifier()V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -759,7 +706,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
@@ -769,7 +715,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mFuture:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
@@ -780,7 +725,6 @@
 .method public clearAll()V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -805,13 +749,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -819,32 +761,26 @@
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnBufferingUpdateListener(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_1
@@ -875,7 +811,6 @@
     :catchall_0
     move-exception v1
 
-    .line 10
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -887,7 +822,6 @@
 .method public getCurrentPosition()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
@@ -900,12 +834,10 @@
 .method public getCurrentState()Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -922,7 +854,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -933,12 +864,10 @@
 .method public getDuration()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -962,7 +891,6 @@
 
     goto :goto_0
 
-    .line 3
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -970,7 +898,6 @@
 
     move-result v2
 
-    .line 4
     :goto_0
     :pswitch_1
     monitor-exit v0
@@ -1006,7 +933,6 @@
 .method public getVideoHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoHeight()I
@@ -1019,7 +945,6 @@
 .method public getVideoWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoWidth()I
@@ -1032,7 +957,6 @@
 .method public isPlaying()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -1045,12 +969,10 @@
 .method public isReadyForPlayback()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -1076,7 +998,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -1086,7 +1007,6 @@
 
     check-cast v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
-    .line 4
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
@@ -1104,7 +1024,6 @@
     :pswitch_0
     const/4 v2, 0x1
 
-    .line 5
     :goto_0
     :pswitch_1
     monitor-exit v0
@@ -1138,12 +1057,10 @@
 .method public onBufferingUpdate(Landroid/media/MediaPlayer;I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-interface {p1, p2}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;->onBufferingUpdateMainThread(I)V
 
     :cond_0
@@ -1153,7 +1070,6 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 2
 
-    .line 1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz p1, :cond_0
@@ -1178,13 +1094,11 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter p1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -1192,17 +1106,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 4
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_1
 
-    .line 6
     invoke-interface {p1}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;->onVideoCompletionMainThread()V
 
     :cond_1
@@ -1211,7 +1122,6 @@
     :catchall_0
     move-exception v0
 
-    .line 7
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -1223,7 +1133,6 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
 
-    .line 1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz p1, :cond_0
@@ -1252,13 +1161,11 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter p1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -1266,22 +1173,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 4
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->positionUpdaterIsWorking()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->stopPositionUpdateNotifier()V
 
-    .line 7
     :cond_1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -1307,13 +1210,11 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_2
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_3
 
-    .line 9
     invoke-interface {p1, p2, p3}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;->onErrorMainThread(II)V
 
     :cond_3
@@ -1324,7 +1225,6 @@
     :catchall_0
     move-exception p2
 
-    .line 10
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -1336,7 +1236,6 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz p1, :cond_0
@@ -1347,7 +1246,6 @@
 
     invoke-static {p1, p3}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->printInfo(I)V
 
@@ -1359,7 +1257,6 @@
 .method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
     .locals 2
 
-    .line 1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz p1, :cond_0
@@ -1388,13 +1285,11 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-interface {p1, p2, p3}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;->onVideoSizeChangedMainThread(II)V
 
     :cond_1
@@ -1404,7 +1299,6 @@
 .method public pause()V
     .locals 4
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -1415,19 +1309,16 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v1, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1448,7 +1339,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_1
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -1470,13 +1360,11 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->pause()V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->PAUSED:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
@@ -1485,7 +1373,6 @@
 
     goto :goto_0
 
-    .line 8
     :pswitch_1
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1509,13 +1396,11 @@
 
     throw v1
 
-    .line 9
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_2
@@ -1532,7 +1417,6 @@
     :catchall_0
     move-exception v1
 
-    .line 11
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1558,7 +1442,6 @@
 .method public prepare()V
     .locals 5
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -1583,13 +1466,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -1611,7 +1492,6 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1637,26 +1517,22 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :pswitch_1
     :try_start_1
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->prepare()V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->PREPARED:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz v1, :cond_1
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMainThreadHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mOnVideoPreparedMessage:Ljava/lang/Runnable;
@@ -1672,7 +1548,6 @@
     :catch_0
     move-exception v1
 
-    .line 9
     :try_start_2
     invoke-direct {p0, v1}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->onPrepareError(Ljava/io/IOException;)V
 
@@ -1681,7 +1556,6 @@
     :catch_1
     move-exception v1
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1708,14 +1582,12 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/videoplayer/utils/Logger;->err(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :cond_1
     :goto_0
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 12
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_2
@@ -1746,7 +1618,6 @@
     :catchall_0
     move-exception v1
 
-    .line 13
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -1774,7 +1645,6 @@
 .method public release()V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -1799,31 +1669,26 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->END:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_1
@@ -1854,7 +1719,6 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1866,7 +1730,6 @@
 .method public reset()V
     .locals 4
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -1891,13 +1754,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -1919,7 +1780,6 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -1947,26 +1807,22 @@
 
     throw v1
 
-    .line 5
     :pswitch_1
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->IDLE:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 7
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_1
@@ -1997,7 +1853,6 @@
     :catchall_0
     move-exception v1
 
-    .line 9
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2025,12 +1880,10 @@
 .method public seekToPercent(I)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -2040,7 +1893,6 @@
 
     check-cast v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
-    .line 3
     sget-boolean v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v2, :cond_0
@@ -2069,7 +1921,6 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_0
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -2090,7 +1941,6 @@
 
     div-float/2addr p1, v1
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->getDuration()I
 
     move-result v1
@@ -2101,17 +1951,14 @@
 
     float-to-int p1, p1
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, p1}, Landroid/media/MediaPlayer;->seekTo(I)V
 
-    .line 7
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->notifyPositionUpdated()V
 
     goto :goto_0
 
-    .line 8
     :pswitch_1
     sget-boolean p1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2123,7 +1970,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/videoplayer/utils/Logger;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :cond_1
     :goto_0
     monitor-exit v0
@@ -2164,12 +2010,10 @@
         }
     .end annotation
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 10
     :try_start_0
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -2191,40 +2035,32 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 11
     iget-object v3, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 12
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v4
 
-    .line 13
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
 
     move-result-wide v5
 
-    .line 14
     invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getLength()J
 
     move-result-wide v7
 
-    .line 15
     invoke-virtual/range {v3 .. v8}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;JJ)V
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->INITIALIZED:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 17
     monitor-exit v0
 
     return-void
 
-    .line 18
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -2251,7 +2087,6 @@
     :catchall_0
     move-exception p1
 
-    .line 19
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2267,12 +2102,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2304,7 +2137,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -2326,24 +2158,20 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, p1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->INITIALIZED:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 6
     monitor-exit v0
 
     return-void
 
-    .line 7
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -2370,7 +2198,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2381,7 +2208,6 @@
 .method public setLooping(Z)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -2404,7 +2230,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -2416,7 +2241,6 @@
 .method public setMainThreadMediaPlayerListener(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     return-void
@@ -2425,7 +2249,6 @@
 .method public setSurfaceTexture(Landroid/graphics/SurfaceTexture;)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -2448,7 +2271,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2477,21 +2299,18 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 3
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
     iput-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mSurface:Landroid/view/Surface;
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1, v0}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
     goto :goto_0
 
-    .line 5
     :cond_2
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
@@ -2499,7 +2318,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 6
     :goto_0
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2530,7 +2348,6 @@
 .method public setVideoStateListener(Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$VideoStateListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mVideoStateListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$VideoStateListener;
 
     return-void
@@ -2539,7 +2356,6 @@
 .method public setVolume(FF)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaPlayer;->setVolume(FF)V
@@ -2550,7 +2366,6 @@
 .method public start()V
     .locals 4
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -2561,13 +2376,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2593,7 +2406,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_1
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -2615,7 +2427,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2639,7 +2450,6 @@
 
     throw v1
 
-    .line 6
     :pswitch_1
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2663,7 +2473,6 @@
 
     throw v1
 
-    .line 7
     :pswitch_2
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2693,29 +2502,24 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_2
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
 
-    .line 9
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->startPositionUpdateNotifier()V
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v2, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->STARTED:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 11
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_3
@@ -2732,7 +2536,6 @@
     :catchall_0
     move-exception v1
 
-    .line 13
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2758,7 +2561,6 @@
 .method public stop()V
     .locals 4
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -2769,13 +2571,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2801,7 +2601,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_1
     sget-object v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$5;->$SwitchMap$com$android$camera$videoplayer$ui$MediaPlayerWrapper$State:[I
 
@@ -2823,11 +2622,9 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_0
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->stopPositionUpdateNotifier()V
 
-    .line 6
     :pswitch_1
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
@@ -2839,13 +2636,11 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :cond_2
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 8
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v1, :cond_3
@@ -2856,7 +2651,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :cond_3
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mState:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -2864,12 +2658,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mListener:Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$MainThreadMediaPlayerListener;
 
     if-eqz v1, :cond_4
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mMainThreadHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->mOnVideoStopMessage:Ljava/lang/Runnable;
@@ -2878,7 +2670,6 @@
 
     goto :goto_0
 
-    .line 12
     :pswitch_2
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2902,7 +2693,6 @@
 
     throw v1
 
-    .line 13
     :pswitch_3
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2912,14 +2702,12 @@
 
     throw v1
 
-    .line 14
     :cond_4
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_5
@@ -2936,7 +2724,6 @@
     :catchall_0
     move-exception v1
 
-    .line 16
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2962,7 +2749,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

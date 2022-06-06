@@ -38,7 +38,6 @@
 .method public constructor <init>(Ljava8/util/stream/DistinctOps$1;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$1$2;->this$0:Ljava8/util/stream/DistinctOps$1;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedReference;-><init>(Ljava8/util/stream/Sink;)V
@@ -56,7 +55,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/DistinctOps$1$2;->seen:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -65,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0, p1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -77,14 +74,12 @@
 .method public begin(J)V
     .locals 2
 
-    .line 1
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$1$2;->seen:Ljava/util/Set;
 
-    .line 2
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     const-wide/16 v0, -0x1
@@ -99,10 +94,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Ljava8/util/stream/DistinctOps$1$2;->seen:Ljava/util/Set;
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0}, Ljava8/util/stream/Sink;->end()V

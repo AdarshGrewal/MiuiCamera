@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask$1;->this$0:Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask$1;->this$0:Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;->access$000(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;)Ljava/lang/Object;
@@ -47,13 +45,11 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask$1;->this$0:Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;
 
     invoke-static {v1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;->access$100(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;)V
 
-    .line 3
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask$1;->this$0:Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;
 
     invoke-static {v1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;->access$000(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadTask;)Ljava/lang/Object;
@@ -62,7 +58,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 4
     monitor-exit v0
 
     return-void

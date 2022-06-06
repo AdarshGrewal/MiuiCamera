@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1;Landroid/content/Context;IIZ)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1$1;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV1;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;IIZ)V
@@ -35,12 +34,11 @@
 .method public canScrollVertically()Z
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooOO0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooOO0()Z
 
     move-result v0
 
@@ -50,7 +48,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-super {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->canScrollVertically()Z
 

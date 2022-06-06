@@ -45,7 +45,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     sget v1, Lmiuix/springback/R$string;->miuix_sbl_tracking_progress_labe_up_refresh:I
 
     const/4 v2, 0x0
@@ -78,7 +77,6 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lmiuix/springback/trigger/BaseTrigger;->access$300()I
 
     move-result v0
@@ -87,7 +85,6 @@
 
     invoke-direct {p0, p1, v0}, Lmiuix/springback/trigger/BaseTrigger$Action;-><init>(II)V
 
-    .line 2
     sget-object v0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->DEFAULT_TRIGGER_TEXTIDS:[I
 
     array-length v1, v0
@@ -98,17 +95,14 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iput v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     if-ltz p1, :cond_0
 
-    .line 4
     iput-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mTriggerTextIDs:[I
 
     return-void
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -122,10 +116,8 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 13
     invoke-direct {p0, p1, p2}, Lmiuix/springback/trigger/BaseTrigger$Action;-><init>(II)V
 
-    .line 14
     sget-object p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->DEFAULT_TRIGGER_TEXTIDS:[I
 
     array-length p2, p1
@@ -136,10 +128,8 @@
 
     const/4 p2, 0x0
 
-    .line 15
     iput p2, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
-    .line 16
     iput-object p1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mTriggerTextIDs:[I
 
     return-void
@@ -148,10 +138,8 @@
 .method public constructor <init>(II[I)V
     .locals 0
 
-    .line 17
     invoke-direct {p0, p1, p2}, Lmiuix/springback/trigger/BaseTrigger$Action;-><init>(II)V
 
-    .line 18
     sget-object p1, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->DEFAULT_TRIGGER_TEXTIDS:[I
 
     array-length p2, p1
@@ -162,24 +150,20 @@
 
     const/4 p2, 0x0
 
-    .line 19
     iput p2, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     if-eqz p3, :cond_0
 
-    .line 20
     array-length p2, p3
 
     array-length p1, p1
 
     if-ne p2, p1, :cond_0
 
-    .line 21
     iput-object p3, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mTriggerTextIDs:[I
 
     return-void
 
-    .line 22
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -193,7 +177,6 @@
 .method public constructor <init>(I[I)V
     .locals 2
 
-    .line 6
     invoke-static {}, Lmiuix/springback/trigger/BaseTrigger;->access$300()I
 
     move-result v0
@@ -202,7 +185,6 @@
 
     invoke-direct {p0, p1, v0}, Lmiuix/springback/trigger/BaseTrigger$Action;-><init>(II)V
 
-    .line 7
     sget-object v0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->DEFAULT_TRIGGER_TEXTIDS:[I
 
     array-length v1, v0
@@ -213,26 +195,22 @@
 
     const/4 v1, 0x0
 
-    .line 8
     iput v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     if-ltz p1, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 9
     array-length p1, p2
 
     array-length v0, v0
 
     if-ne p1, v0, :cond_0
 
-    .line 10
     iput-object p2, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mTriggerTextIDs:[I
 
     return-void
 
-    .line 11
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -242,7 +220,6 @@
 
     throw p1
 
-    .line 12
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -258,7 +235,6 @@
 .method public getCountNoData()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     return v0
@@ -267,7 +243,6 @@
 .method public isNoData()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     if-lez v0, :cond_0
@@ -286,19 +261,16 @@
 .method public notifyActionNoData()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
-    .line 3
     invoke-interface {v0, p0, v1}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onActionNoData(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;I)V
 
     :cond_0
@@ -308,12 +280,10 @@
 .method public notifyLoadCancel()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onActionLoadCancel(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;)V
 
     :cond_0
@@ -323,17 +293,14 @@
 .method public notifyLoadComplete()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 2
     iput v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
-    .line 3
     invoke-interface {v0, p0}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onActionComplete(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;)V
 
     :cond_0
@@ -343,12 +310,10 @@
 .method public notifyLoadFail()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onActionLoadFail(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;)V
 
     :cond_0
@@ -358,25 +323,21 @@
 .method public notifyTriggerTextIndex(ILjava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->DEFAULT_TRIGGER_TEXTIDS:[I
 
     array-length v0, v0
 
     if-ge p1, v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, p0, p1, p2}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onUpdateTriggerTextIndex(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;ILjava/lang/String;)V
 
     :cond_0
     return-void
 
-    .line 4
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -390,17 +351,14 @@
 .method public startIndeterminateUpAction()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mUpDataListener:Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 2
     iput v1, p0, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;->mCountNoData:I
 
-    .line 3
     invoke-interface {v0, p0}, Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction$OnUpActionDataListener;->onActionStart(Lmiuix/springback/trigger/BaseTrigger$IndeterminateUpAction;)V
 
     :cond_0

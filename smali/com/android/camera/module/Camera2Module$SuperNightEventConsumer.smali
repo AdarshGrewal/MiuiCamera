@@ -54,15 +54,12 @@
 .method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mState:I
 
-    .line 4
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -75,7 +72,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/module/Camera2Module;Lcom/android/camera/module/Camera2Module$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;-><init>(Lcom/android/camera/module/Camera2Module;)V
 
     return-void
@@ -84,8 +80,7 @@
 .method private handleNewAnimation(I)V
     .locals 6
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object v0
 
@@ -105,14 +100,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xd4
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -123,7 +116,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget v1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mState:I
 
@@ -133,8 +125,7 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object v1
 
@@ -164,13 +155,10 @@
 
     const/4 v1, 0x0
 
-    .line 6
     invoke-static {v1}, Lcom/xiaomi/camera/base/PerformanceTracker;->calCaptureDuration(I)V
 
-    .line 7
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPrepare()V
 
-    .line 8
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onStart()V
 
     goto/16 :goto_1
@@ -197,35 +185,17 @@
 
     if-ne v2, v5, :cond_3
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "handleNewAnimation: specified time complete "
+    const-string v2, "handleNewAnimation: specified time complete "
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     invoke-static {v3}, Lcom/xiaomi/camera/base/PerformanceTracker;->calCaptureDuration(I)V
 
-    .line 11
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object v0
-
-    const/16 v1, 0xa2
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;
-
-    if-eqz v0, :cond_6
-
-    .line 12
-    invoke-interface {v0, v4}, Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;->processingPostAction(I)V
+    invoke-interface {v0, v4}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingStart(I)V
 
     goto :goto_1
 
@@ -236,17 +206,14 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 13
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingFinish()V
 
-    .line 14
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/DataItemRunning;->resetMultiFrameTotalCaptureDuration()V
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mCamera2ModuleRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -255,7 +222,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mCamera2ModuleRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -264,13 +230,12 @@
 
     check-cast p1, Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1100(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/subjects/PublishSubject;
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$800(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/subjects/PublishSubject;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lio/reactivex/subjects/PublishSubject;->onComplete()V
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mCamera2ModuleRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -279,23 +244,20 @@
 
     check-cast p1, Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1200(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$900(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 18
     invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->isDisposed()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 19
     invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mCamera2ModuleRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -306,18 +268,16 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/android/camera/module/Camera2Module;->access$1202(Lcom/android/camera/module/Camera2Module;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, v0}, Lcom/android/camera/module/Camera2Module;->access$902(Lcom/android/camera/module/Camera2Module;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
-    .line 21
     :cond_4
     iput v3, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mState:I
 
     return-void
 
-    .line 22
     :cond_5
     :goto_0
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object v1
 
@@ -325,15 +285,12 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     invoke-static {v3}, Lcom/xiaomi/camera/base/PerformanceTracker;->calCaptureDuration(I)V
 
     const/4 v1, 0x4
 
-    .line 24
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingStart(I)V
 
-    .line 25
     :cond_6
     :goto_1
     iget v0, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mState:I
@@ -342,8 +299,7 @@
 
     iput p1, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mState:I
 
-    .line 26
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object p1
 
@@ -378,8 +334,7 @@
         }
     .end annotation
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object v0
 
@@ -399,7 +354,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->mCamera2ModuleRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -408,18 +362,16 @@
 
     check-cast v0, Lcom/android/camera/module/Camera2Module;
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_8
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -427,37 +379,36 @@
 
     const/4 v2, 0x1
 
-    if-eq v1, v2, :cond_9
+    if-eq v1, v2, :cond_7
 
     const/4 v3, 0x2
 
-    if-eq v1, v3, :cond_9
+    if-eq v1, v3, :cond_7
 
     const/4 v3, 0x4
 
-    if-eq v1, v3, :cond_9
+    if-eq v1, v3, :cond_7
 
-    const/16 v3, 0xac
+    const/16 v4, 0xac
 
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    if-eq v1, v4, :cond_7
+    if-eq v1, v5, :cond_5
 
     const/16 p1, 0x12c
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    if-eq v1, p1, :cond_6
+    if-eq v1, p1, :cond_4
 
     const/16 p1, 0x7d0
 
     if-eq v1, p1, :cond_1
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
-    .line 6
     :cond_1
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object p1
 
@@ -465,10 +416,8 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
-    invoke-static {v0, v2}, Lcom/android/camera/module/Camera2Module;->access$902(Lcom/android/camera/module/Camera2Module;Z)Z
+    invoke-static {v0, v2}, Lcom/android/camera/module/Camera2Module;->access$602(Lcom/android/camera/module/Camera2Module;Z)Z
 
-    .line 8
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -479,91 +428,48 @@
 
     if-eqz p1, :cond_2
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isNightPreviewAnimEnabled()Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_3
+    if-nez p1, :cond_3
 
-    .line 10
     :cond_2
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1000(Lcom/android/camera/module/Camera2Module;)V
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$700(Lcom/android/camera/module/Camera2Module;)V
 
     :cond_3
-    if-eqz p1, :cond_4
+    invoke-virtual {v0, v5}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 11
-    invoke-virtual {p1}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isMiviNightModeSupported()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 12
-    invoke-virtual {p1}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isReadPixelRequested()Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    .line 13
-    invoke-virtual {p1, v2}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->setReadPixelRequested(Z)V
-
-    .line 14
-    iget-object p1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/android/camera/CameraScreenNail;->requestReadPixels()V
-
-    goto :goto_0
-
-    .line 15
-    :cond_4
-    invoke-virtual {v0, v4}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
-
-    .line 16
-    :cond_5
-    :goto_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {p1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {p1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
 
-    .line 17
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v0, 0xd4
 
-    .line 18
     invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$RecordState;
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_8
 
-    const/4 v0, 0x5
+    invoke-interface {p1, v3}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingStart(I)V
 
-    .line 19
-    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingStart(I)V
+    goto :goto_0
 
-    goto :goto_1
-
-    .line 20
-    :cond_6
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    :cond_4
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object p1
 
@@ -571,27 +477,23 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
-    .line 22
-    invoke-virtual {p1, v3}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+    invoke-virtual {p1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_8
 
-    .line 23
-    invoke-interface {p1, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertSuperNightSeTip(I)V
+    invoke-interface {p1, v5}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertSuperNightSeTip(I)V
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 24
-    :cond_7
+    :cond_5
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v1
@@ -600,52 +502,37 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_7
 
-    .line 25
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isMiviNightCaptureInProgress()Z
 
-    move-result v5
+    move-result v1
 
-    if-eqz v5, :cond_9
+    if-eqz v1, :cond_7
 
-    .line 26
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v3}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
-
-    if-eqz v3, :cond_8
-
-    .line 27
-    invoke-interface {v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertSuperNightSeTip(I)V
-
-    .line 28
-    :cond_8
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isReadPixelRequested()Z
-
-    move-result v3
-
-    if-nez v3, :cond_9
-
-    .line 29
-    invoke-virtual {v1, v2}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->setReadPixelRequested(Z)V
-
-    .line 30
-    iget-object v1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
-
-    invoke-static {v1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+    invoke-virtual {v1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
-    .line 31
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1, v5}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertSuperNightSeTip(I)V
+
+    :cond_6
+    iget-object v1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
+
+    invoke-static {v1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO0o()V
+
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
@@ -654,16 +541,15 @@
 
     invoke-virtual {v0}, Lcom/android/camera/CameraScreenNail;->requestReadPixels()V
 
-    .line 32
-    :cond_9
+    :cond_7
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
     invoke-direct {p0, p1}, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->handleNewAnimation(I)V
 
-    :cond_a
-    :goto_1
+    :cond_8
+    :goto_0
     return-void
 .end method
 
@@ -675,7 +561,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/Camera2Module$SuperNightEventConsumer;->accept(Ljava/lang/Integer;)V

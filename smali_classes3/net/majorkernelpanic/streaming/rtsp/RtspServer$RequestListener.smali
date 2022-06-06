@@ -32,12 +32,10 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspServer;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2
     :try_start_0
     new-instance v0, Ljava/net/ServerSocket;
 
@@ -47,7 +45,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;->mServer:Ljava/net/ServerSocket;
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catch Ljava/net/BindException; {:try_start_0 .. :try_end_0} :catch_0
@@ -61,15 +58,12 @@
 
     const-string v2, "Port already in use !"
 
-    .line 4
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
-    .line 5
     invoke-virtual {p1, v0, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->postError(Ljava/lang/Exception;I)V
 
-    .line 6
     throw v0
 .end method
 
@@ -78,7 +72,6 @@
 .method public kill()V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;->mServer:Ljava/net/ServerSocket;
 
@@ -86,7 +79,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
     :catch_0
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Thread;->join()V
@@ -100,7 +92,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +116,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :goto_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -133,7 +123,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     :try_start_0
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$WorkerThread;
 
@@ -157,7 +146,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -170,7 +158,6 @@
     :cond_0
     const-string v0, "RTSP server stopped !"
 
-    .line 5
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

@@ -27,7 +27,6 @@
 
     new-array v1, v0, [I
 
-    .line 1
     sget v2, Lmiuix/appcompat/R$attr;->state_first_v:I
 
     const/4 v3, 0x0
@@ -38,7 +37,6 @@
 
     new-array v1, v0, [I
 
-    .line 2
     sget v2, Lmiuix/appcompat/R$attr;->state_middle_v:I
 
     aput v2, v1, v3
@@ -47,7 +45,6 @@
 
     new-array v1, v0, [I
 
-    .line 3
     sget v2, Lmiuix/appcompat/R$attr;->state_last_v:I
 
     aput v2, v1, v3
@@ -56,7 +53,6 @@
 
     new-array v1, v0, [I
 
-    .line 4
     sget v2, Lmiuix/appcompat/R$attr;->state_first_h:I
 
     aput v2, v1, v3
@@ -65,7 +61,6 @@
 
     new-array v1, v0, [I
 
-    .line 5
     sget v2, Lmiuix/appcompat/R$attr;->state_middle_h:I
 
     aput v2, v1, v3
@@ -74,7 +69,6 @@
 
     new-array v1, v0, [I
 
-    .line 6
     sget v2, Lmiuix/appcompat/R$attr;->state_last_h:I
 
     aput v2, v1, v3
@@ -83,7 +77,6 @@
 
     new-array v0, v0, [I
 
-    .line 7
     sget v1, Lmiuix/appcompat/R$attr;->state_single_h:I
 
     aput v1, v0, v3
@@ -96,7 +89,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -105,7 +97,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -114,7 +105,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -125,7 +115,6 @@
 .method public onCreateDrawableState(I)[I
     .locals 10
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/Button;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -134,20 +123,17 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-super {p0, p1}, Landroid/widget/Button;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
     return-object p1
 
-    .line 3
     :cond_0
     instance-of v1, v0, Landroid/widget/LinearLayout;
 
     if-eqz v1, :cond_e
 
-    .line 4
     move-object v1, v0
 
     check-cast v1, Landroid/widget/LinearLayout;
@@ -156,7 +142,6 @@
 
     move-result v1
 
-    .line 5
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result v2
@@ -173,7 +158,6 @@
 
     move v8, v7
 
-    .line 6
     :goto_0
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -181,7 +165,6 @@
 
     if-ge v5, v9, :cond_3
 
-    .line 7
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v9
@@ -218,12 +201,10 @@
 
     add-int/lit8 p1, p1, 0x2
 
-    .line 8
     invoke-super {p0, p1}, Landroid/widget/Button;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
-    .line 9
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_SINGLE_H:[I
 
     invoke-static {p1, v0}, Landroid/widget/Button;->mergeDrawableStates([I[I)[I
@@ -232,7 +213,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 10
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_FIRST_V:[I
 
     invoke-static {p1, v0}, Landroid/widget/Button;->mergeDrawableStates([I[I)[I
@@ -242,14 +222,12 @@
     :cond_5
     if-eqz v8, :cond_6
 
-    .line 11
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_LAST_V:[I
 
     invoke-static {p1, v0}, Landroid/widget/Button;->mergeDrawableStates([I[I)[I
 
     goto :goto_1
 
-    .line 12
     :cond_6
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_MIDDLE_V:[I
 
@@ -259,7 +237,6 @@
     :goto_1
     return-object p1
 
-    .line 13
     :cond_8
     invoke-static {p0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
@@ -267,14 +244,12 @@
 
     add-int/2addr p1, v4
 
-    .line 14
     invoke-super {p0, p1}, Landroid/widget/Button;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
     if-eqz v3, :cond_9
 
-    .line 15
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_SINGLE_H:[I
 
     invoke-static {p1, v0}, Landroid/widget/Button;->mergeDrawableStates([I[I)[I
@@ -286,7 +261,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 16
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_LAST_H:[I
 
     goto :goto_2
@@ -304,7 +278,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 17
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_FIRST_H:[I
 
     goto :goto_3
@@ -317,7 +290,6 @@
 
     goto :goto_4
 
-    .line 18
     :cond_d
     sget-object v0, Lmiuix/internal/widget/GroupButton;->STATE_MIDDLE_H:[I
 
@@ -326,7 +298,6 @@
     :goto_4
     return-object p1
 
-    .line 19
     :cond_e
     invoke-super {p0, p1}, Landroid/widget/Button;->onCreateDrawableState(I)[I
 

@@ -53,17 +53,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
     return-void
@@ -72,7 +69,6 @@
 .method private viewIsPartiallyHiddenBottom(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -95,7 +91,6 @@
 .method private viewIsPartiallyHiddenTop()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -118,15 +113,12 @@
 .method public createView(Landroid/view/View;I)Landroid/view/View;
     .locals 2
 
-    .line 1
     new-instance p2, Lcom/android/camera/fragment/clone/VideoViewHolder;
 
     invoke-direct {p2, p1}, Lcom/android/camera/fragment/clone/VideoViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 3
     iget-object v0, p2, Lcom/android/camera/fragment/clone/VideoViewHolder;->mTextureView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -135,14 +127,12 @@
 
     check-cast v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
-    .line 4
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     if-eqz v0, :cond_0
 
-    .line 5
     new-instance p2, Lcom/android/camera/fragment/clone/BaseVideoItem$VideoPlayerListener;
 
     invoke-direct {p2, v1}, Lcom/android/camera/fragment/clone/BaseVideoItem$VideoPlayerListener;-><init>(Ljava/lang/ref/WeakReference;)V
@@ -156,7 +146,6 @@
 .method public deactivate(Landroid/view/View;I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
     invoke-interface {p0, p1}, Lcom/android/camera/videoplayer/manager/VideoItem;->stopPlayback(Lcom/android/camera/videoplayer/manager/VideoPlayerManager;)V
@@ -170,17 +159,14 @@
 .method public getVisibilityPercents(Landroid/view/View;)I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/clone/BaseVideoItem;->viewIsPartiallyHiddenTop()Z
 
     move-result v0
@@ -189,7 +175,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -202,7 +187,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/BaseVideoItem;->viewIsPartiallyHiddenBottom(I)Z
 
@@ -210,7 +194,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem;->mCurrentViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -227,14 +210,12 @@
 .method public setActive(Landroid/view/View;I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera/fragment/clone/VideoViewHolder;
 
-    .line 2
     new-instance v1, Lcom/android/camera/videoplayer/meta/CurrentItemMetaData;
 
     invoke-direct {v1, p2, p1}, Lcom/android/camera/videoplayer/meta/CurrentItemMetaData;-><init>(ILandroid/view/View;)V

@@ -71,15 +71,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
-    .line 3
     const-class v1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -90,10 +87,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/google/protobuf/MapFieldLite;->emptyMapField()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
@@ -106,7 +101,6 @@
 .method public static synthetic access$1600()Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     return-object v0
@@ -115,7 +109,6 @@
 .method public static synthetic access$1700(Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->setAid(I)V
 
     return-void
@@ -124,7 +117,6 @@
 .method public static synthetic access$1800(Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->clearAid()V
 
     return-void
@@ -133,7 +125,6 @@
 .method public static synthetic access$1900(Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;)Ljava/util/Map;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->getMutablePropertyMapMap()Ljava/util/Map;
 
     move-result-object p0
@@ -146,7 +137,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->aid_:I
 
     return-void
@@ -155,7 +145,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     return-object v0
@@ -173,7 +162,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetMutablePropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
@@ -193,7 +181,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->propertyMap_:Lcom/google/protobuf/MapFieldLite;
 
     invoke-virtual {v0}, Lcom/google/protobuf/MapFieldLite;->isMutable()Z
@@ -202,7 +189,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->propertyMap_:Lcom/google/protobuf/MapFieldLite;
 
     invoke-virtual {v0}, Lcom/google/protobuf/MapFieldLite;->mutableCopy()Lcom/google/protobuf/MapFieldLite;
@@ -211,7 +197,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->propertyMap_:Lcom/google/protobuf/MapFieldLite;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->propertyMap_:Lcom/google/protobuf/MapFieldLite;
 
@@ -230,7 +215,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->propertyMap_:Lcom/google/protobuf/MapFieldLite;
 
     return-object v0
@@ -239,7 +223,6 @@
 .method public static newBuilder()Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -254,7 +237,6 @@
 .method public static newBuilder(Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;)Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -274,7 +256,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -294,7 +275,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -314,7 +294,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -334,7 +313,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -354,7 +332,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -374,7 +351,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -394,7 +370,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -414,7 +389,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -434,7 +408,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -454,7 +427,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -474,7 +446,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -494,7 +465,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -517,7 +487,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->getParserForType()Lcom/google/protobuf/Parser;
@@ -530,7 +499,6 @@
 .method private setAid(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->aid_:I
 
     return-void
@@ -543,7 +511,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetPropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
@@ -557,14 +524,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -579,7 +544,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -589,7 +553,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -597,34 +560,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -643,7 +600,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
@@ -666,12 +622,10 @@
 
     const/4 p2, 0x2
 
-    .line 11
     sget-object p3, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands$PropertyMapDefaultEntryHolder;->defaultEntry:Lcom/google/protobuf/MapEntryLite;
 
     aput-object p3, p1, p2
 
-    .line 12
     sget-object p2, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
     const-string p3, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0004\u00022"
@@ -682,7 +636,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_5
     new-instance p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands$Builder;
 
@@ -690,7 +643,6 @@
 
     return-object p1
 
-    .line 14
     :pswitch_6
     new-instance p1, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;
 
@@ -713,7 +665,6 @@
 .method public getAid()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->aid_:I
 
     return v0
@@ -734,7 +685,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->getPropertyMapMap()Ljava/util/Map;
 
     move-result-object v0
@@ -745,7 +695,6 @@
 .method public getPropertyMapCount()I
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetPropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
@@ -769,12 +718,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetPropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -787,12 +734,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetPropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -813,7 +758,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -822,19 +766,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/PropertyServiceProto$SetPropertyCommands;->internalGetPropertyMap()Lcom/google/protobuf/MapFieldLite;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -843,7 +784,6 @@
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -854,6 +794,5 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 5
     throw p1
 .end method

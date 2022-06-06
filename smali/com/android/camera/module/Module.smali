@@ -2,66 +2,235 @@
 .super Ljava/lang/Object;
 .source "Module.java"
 
+# interfaces
+.implements Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+.implements Lcom/android/camera/bluetooth/IBluetoothHeadsetConnectionState;
+
 
 # virtual methods
-.method public abstract attachModuleDevice(Lcom/android/camera/features/mode/IModuleDevice;)V
+.method public abstract announceForAccessibility(I)V
+.end method
+
+.method public abstract canIgnoreFocusChanged()Z
+.end method
+
+.method public abstract checkActivityOrientation()V
+.end method
+
+.method public abstract closeCamera()V
+.end method
+
+.method public abstract enableCameraControls(Z)V
 .end method
 
 .method public abstract exitAutoHibernation()V
 .end method
 
-.method public abstract getActivity()Lcom/android/camera/Camera;
-.end method
-
-.method public abstract getAppStateMgr()Lcom/android/camera/module/common/IAppStateMgr;
-.end method
-
-.method public abstract getCameraManager()Lcom/android/camera/module/common/ICameraMgr;
-.end method
-
-.method public getModuleDeviceParam()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract fillFeatureControl(Lcom/android/camera/module/loader/StartControl;)V
 .end method
 
 .method public abstract getModuleIndex()I
 .end method
 
-.method public abstract getModuleState()Lcom/android/camera/module/common/IModuleState;
+.method public abstract getPortraitLightingVersion()I
 .end method
 
-.method public abstract getMutexModePicker()Lcom/android/camera/MutexModeManager;
+.method public abstract getSupportedSettingKeys()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract getSurfaceTextureMgr()Lcom/android/camera/module/common/ISurfaceTextureMgr;
+.method public abstract getUnInterruptableReason()Ljava/lang/String;
 .end method
 
-.method public abstract getUserEventMgr()Lcom/android/camera/module/common/IUserEventMgr;
+.method public abstract isBlockSnap()Z
 .end method
 
-.method public abstract onGLAndCameraReady(II)V
+.method public abstract isCaptureIntent()Z
 .end method
 
-.method public abstract onModuleCreated(Lcom/android/camera/Camera;Lcom/android/camera/module/loader/StartControl;II)V
+.method public abstract isCreated()Z
 .end method
 
-.method public abstract onRenderRequested()V
+.method public abstract isDeparted()Z
 .end method
 
-.method public abstract onVideoCastStateChanged(Landroid/os/Bundle;)V
+.method public abstract isDisconnected()Z
+.end method
+
+.method public abstract isDoingAction()Z
+.end method
+
+.method public abstract isFrameAvailable()Z
+.end method
+
+.method public abstract isIgnoreTouchEvent()Z
+.end method
+
+.method public abstract isKeptBitmapTexture()Z
+.end method
+
+.method public abstract isPostProcessing()Z
+.end method
+
+.method public abstract isReceiveDoubleTap()Z
+.end method
+
+.method public abstract isRecording()Z
+.end method
+
+.method public abstract isSelectingCapturedResult()Z
+.end method
+
+.method public abstract isShot2GalleryOrEnableParallel()Z
+.end method
+
+.method public abstract isUnInterruptable()Z
+.end method
+
+.method public abstract isVideoCastIntent()Z
+.end method
+
+.method public abstract notifyAfterFirstFrameArrived()V
+.end method
+
+.method public abstract notifyError()V
+.end method
+
+.method public abstract onActivityResult(IILandroid/content/Intent;)V
+.end method
+
+.method public abstract onBackPressed()Z
+.end method
+
+.method public abstract onBroadcastReceived(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract onCreate(II)V
+.end method
+
+.method public abstract onDestroy()V
+.end method
+
+.method public abstract onDoubleTap(Landroid/view/MotionEvent;)Z
+.end method
+
+.method public abstract onGestureTrack(Landroid/graphics/RectF;Z)Z
+.end method
+
+.method public abstract onHibernate()V
+.end method
+
+.method public abstract onHostStopAndNotifyActionStop()V
+.end method
+
+.method public abstract onKeyDown(ILandroid/view/KeyEvent;)Z
+.end method
+
+.method public abstract onKeyUp(ILandroid/view/KeyEvent;)Z
+.end method
+
+.method public abstract onLongPress(FF)V
+.end method
+
+.method public abstract onNewIntent()V
+.end method
+
+.method public abstract onNewUriArrived(Landroid/net/Uri;Ljava/lang/String;)V
+.end method
+
+.method public abstract onOrientationChanged(III)V
+.end method
+
+.method public abstract onPause()V
+.end method
+
+.method public abstract onPreviewPixelsRead([BIIIZ)V
+.end method
+
+.method public abstract onResume()V
+.end method
+
+.method public abstract onSaveInstanceState(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract onScale(FFF)Z
+.end method
+
+.method public abstract onScaleBegin(FF)Z
+.end method
+
+.method public abstract onScaleEnd()V
+.end method
+
+.method public abstract onSingleTapUp(IIZ)V
+.end method
+
+.method public abstract onStop()V
+.end method
+
+.method public abstract onSurfaceTexturePending(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)Z
+.end method
+
+.method public abstract onSurfaceTextureReleased()V
+.end method
+
+.method public abstract onSurfaceTextureUpdated(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)V
+.end method
+
+.method public abstract onUserInteraction()V
+.end method
+
+.method public abstract onWindowFocusChanged(Z)V
+.end method
+
+.method public abstract pausePreview()V
+.end method
+
+.method public abstract preTransferOrientation(II)V
 .end method
 
 .method public abstract quickEnterAutoHibernation()V
 .end method
 
-.method public abstract release(Z)V
+.method public abstract registerProtocol()V
+.end method
+
+.method public abstract requestRender()V
+.end method
+
+.method public abstract resumePreview()V
+.end method
+
+.method public abstract setActivity(Lcom/android/camera/Camera;)V
 .end method
 
 .method public abstract setDeparted()V
 .end method
 
+.method public abstract setFrameAvailable(Z)V
+.end method
+
+.method public abstract setRestoring(Z)V
+.end method
+
+.method public abstract setVideoCastState(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract shouldReleaseLater()Z
+.end method
+
+.method public abstract startPreview()V
+.end method
+
 .method public abstract unRegisterModulePersistProtocol()V
+.end method
+
+.method public abstract unRegisterProtocol()V
 .end method

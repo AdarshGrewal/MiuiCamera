@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/media/Image;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/panorama/CaptureImage;-><init>(Landroid/media/Image;)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-virtual {v0}, Landroid/media/Image;->getHeight()I
@@ -31,7 +29,6 @@
 .method public getImageFormat()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-static {v0}, Lcom/android/camera/panorama/PanoramaGP3ImageFormat;->getImageFormat(Landroid/media/Image;)Ljava/lang/String;
@@ -44,7 +41,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-virtual {v0}, Landroid/media/Image;->getWidth()I

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/zxing/PreviewDecodeManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/PreviewDecodeManager$1;->this$0:Lcom/android/zxing/PreviewDecodeManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onPreviewFrame(Landroid/media/Image;Lcom/android/camera2/Camera2Proxy;I)Z
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/android/zxing/PreviewDecodeManager$1;->this$0:Lcom/android/zxing/PreviewDecodeManager;
 
     invoke-static {p2}, Lcom/android/zxing/PreviewDecodeManager;->access$000(Lcom/android/zxing/PreviewDecodeManager;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -66,14 +64,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/zxing/Decoder;
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/zxing/Decoder;->needPreviewFrame()Z
 
     move-result v1
@@ -82,7 +78,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/android/zxing/Decoder;->isNeedImage()Z
 
@@ -90,12 +85,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-virtual {v0, p1}, Lcom/android/zxing/Decoder;->onPreviewFrame(Landroid/media/Image;)V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v1, Lcom/android/zxing/PreviewImage;
 

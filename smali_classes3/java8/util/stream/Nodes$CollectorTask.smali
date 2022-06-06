@@ -89,20 +89,16 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/AbstractTask;Ljava8/util/Spliterator;)V
 
-    .line 6
     iget-object p2, p1, Ljava8/util/stream/Nodes$CollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iput-object p2, p0, Ljava8/util/stream/Nodes$CollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 7
     iget-object p2, p1, Ljava8/util/stream/Nodes$CollectorTask;->builderFactory:Ljava8/util/function/LongFunction;
 
     iput-object p2, p0, Ljava8/util/stream/Nodes$CollectorTask;->builderFactory:Ljava8/util/function/LongFunction;
 
-    .line 8
     iget-object p1, p1, Ljava8/util/stream/Nodes$CollectorTask;->concFactory:Ljava8/util/function/BinaryOperator;
 
     iput-object p1, p0, Ljava8/util/stream/Nodes$CollectorTask;->concFactory:Ljava8/util/function/BinaryOperator;
@@ -128,16 +124,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$CollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 3
     iput-object p3, p0, Ljava8/util/stream/Nodes$CollectorTask;->builderFactory:Ljava8/util/function/LongFunction;
 
-    .line 4
     iput-object p4, p0, Ljava8/util/stream/Nodes$CollectorTask;->concFactory:Ljava8/util/function/BinaryOperator;
 
     return-void
@@ -148,7 +140,6 @@
 .method public bridge synthetic doLeaf()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$CollectorTask;->doLeaf()Ljava8/util/stream/Node;
 
     move-result-object v0
@@ -164,7 +155,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectorTask;->builderFactory:Ljava8/util/function/LongFunction;
 
     iget-object v1, p0, Ljava8/util/stream/Nodes$CollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
@@ -181,7 +171,6 @@
 
     check-cast v0, Ljava8/util/stream/Node$Builder;
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/Nodes$CollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iget-object v2, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
@@ -202,7 +191,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$CollectorTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/Nodes$CollectorTask;
 
     move-result-object p1
@@ -224,7 +212,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/Nodes$CollectorTask;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Nodes$CollectorTask;-><init>(Ljava8/util/stream/Nodes$CollectorTask;Ljava8/util/Spliterator;)V
@@ -242,14 +229,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isLeaf()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectorTask;->concFactory:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
@@ -274,7 +259,6 @@
 
     invoke-virtual {p0, v0}, Ljava8/util/stream/AbstractTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Ljava8/util/stream/AbstractTask;->onCompletion(Ljava8/util/concurrent/CountedCompleter;)V
 

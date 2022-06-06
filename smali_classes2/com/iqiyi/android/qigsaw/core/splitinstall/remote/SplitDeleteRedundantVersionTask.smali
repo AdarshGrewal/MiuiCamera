@@ -36,10 +36,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;->allSplits:Ljava/util/Collection;
 
     return-void
@@ -48,12 +46,10 @@
 .method private deleteRedundantSplitVersionDirs(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask$1;
 
     invoke-direct {v1, p0, p1, v0, p3}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask$1;-><init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;Ljava/io/File;Ljava/lang/String;Ljava/io/File;)V
@@ -64,14 +60,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     array-length p2, p1
 
     const/4 p3, 0x1
 
     if-le p2, p3, :cond_0
 
-    .line 4
     new-instance p2, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask$2;
 
     invoke-direct {p2, p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask$2;-><init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;)V
@@ -80,7 +74,6 @@
 
     move p2, p3
 
-    .line 5
     :goto_0
     array-length v1, p1
 
@@ -94,7 +87,6 @@
 
     aput-object v0, v1, v2
 
-    .line 6
     aget-object v2, p1, p2
 
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -109,7 +101,6 @@
 
     invoke-static {v2, v3, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 7
     aget-object v1, p1, p2
 
     invoke-static {v1}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteDir(Ljava/io/File;)Z
@@ -127,12 +118,10 @@
 .method public run()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;->allSplits:Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -150,7 +139,6 @@
 
     check-cast v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v2
@@ -159,7 +147,6 @@
 
     move-result-object v2
 
-    .line 4
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v3
@@ -168,7 +155,6 @@
 
     move-result-object v3
 
-    .line 5
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v4
@@ -177,7 +163,6 @@
 
     move-result-object v1
 
-    .line 6
     invoke-direct {p0, v2, v3, v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;->deleteRedundantSplitVersionDirs(Ljava/io/File;Ljava/io/File;Ljava/io/File;)V
 
     goto :goto_0

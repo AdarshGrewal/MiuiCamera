@@ -23,10 +23,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/facebook/rebound/SpringLooper;-><init>()V
 
-    .line 2
     sget-wide v0, Lcom/facebook/rebound/SynchronousLooper;->SIXTY_FPS:D
 
     iput-wide v0, p0, Lcom/facebook/rebound/SynchronousLooper;->mTimeStep:D
@@ -39,7 +37,6 @@
 .method public getTimeStep()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/SynchronousLooper;->mTimeStep:D
 
     return-wide v0
@@ -48,7 +45,6 @@
 .method public setTimeStep(D)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/facebook/rebound/SynchronousLooper;->mTimeStep:D
 
     return-void
@@ -59,10 +55,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/facebook/rebound/SynchronousLooper;->mRunning:Z
 
-    .line 2
     :goto_0
     iget-object v0, p0, Lcom/facebook/rebound/SpringLooper;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
@@ -72,14 +66,12 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-boolean v0, p0, Lcom/facebook/rebound/SynchronousLooper;->mRunning:Z
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/SpringLooper;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
@@ -99,7 +91,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/facebook/rebound/SynchronousLooper;->mRunning:Z
 
     return-void

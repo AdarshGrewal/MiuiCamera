@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;ZZ)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     iput-boolean p2, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->val$formWorkspace:Z
@@ -46,7 +45,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -77,14 +75,12 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->val$formWorkspace:Z
 
     iget-boolean v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->val$inPreview:Z
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
-    .line 3
     invoke-static {v1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$400(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Landroid/view/ViewGroup;
 
     move-result-object v1
@@ -107,7 +103,6 @@
     :goto_0
     iget-object v3, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
-    .line 4
     invoke-static {v3}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$300(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Landroid/widget/CheckBox;
 
     move-result-object v3
@@ -116,15 +111,12 @@
 
     move-result v3
 
-    .line 5
     invoke-static {p1, v0, v1, v3}, Lcom/android/camera/statistic/CameraStatUtils;->trackVV2ExitConfirm(ZZZZ)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-virtual {p1, v2}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->quitLiveRecordPreview(Z)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$4;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {p1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$200(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Z

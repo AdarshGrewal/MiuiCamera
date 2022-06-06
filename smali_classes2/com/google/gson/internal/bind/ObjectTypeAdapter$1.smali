@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p2}, Lcom/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object p2
@@ -55,7 +53,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 2
     new-instance p2, Lcom/google/gson/internal/bind/ObjectTypeAdapter;
 
     invoke-direct {p2, p1, v1}, Lcom/google/gson/internal/bind/ObjectTypeAdapter;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/internal/bind/ObjectTypeAdapter$1;)V

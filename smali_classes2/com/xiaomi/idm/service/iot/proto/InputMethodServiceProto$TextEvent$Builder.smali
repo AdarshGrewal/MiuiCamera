@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;->access$2800()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearInputData()Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;
@@ -71,7 +67,6 @@
 .method public getInputData()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;
@@ -86,7 +81,6 @@
 .method public getInputDataBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;
@@ -101,10 +95,8 @@
 .method public setInputData(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;
@@ -117,10 +109,8 @@
 .method public setInputDataBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/InputMethodServiceProto$TextEvent;

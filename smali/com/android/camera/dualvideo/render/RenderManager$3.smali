@@ -24,7 +24,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/render/LayoutType;->values()[Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -112,7 +111,6 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 2
     :catch_4
     invoke-static {}, Lcom/android/camera/dualvideo/render/FaceType;->values()[Lcom/android/camera/dualvideo/render/FaceType;
 

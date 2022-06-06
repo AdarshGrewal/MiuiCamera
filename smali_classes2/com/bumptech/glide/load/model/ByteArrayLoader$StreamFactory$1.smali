@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory$1;->this$0:Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 .method public convert([B)Ljava/io/InputStream;
     .locals 1
 
-    .line 2
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
@@ -58,7 +56,6 @@
 .method public bridge synthetic convert([B)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory$1;->convert([B)Ljava/io/InputStream;
 
     move-result-object p1
@@ -77,7 +74,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Ljava/io/InputStream;
 
     return-object v0

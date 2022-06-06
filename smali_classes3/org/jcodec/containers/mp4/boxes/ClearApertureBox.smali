@@ -17,7 +17,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static createClearApertureBox(II)Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -39,12 +37,10 @@
 
     int-to-float p0, p0
 
-    .line 2
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->width:F
 
     int-to-float p0, p1
 
-    .line 3
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->height:F
 
     return-object v0
@@ -55,10 +51,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->width:F
 
     const/high16 v1, 0x47800000    # 65536.0f
@@ -69,7 +63,6 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->height:F
 
     mul-float/2addr v0, v1
@@ -92,7 +85,6 @@
 .method public getHeight()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->height:F
 
     return v0
@@ -101,7 +93,6 @@
 .method public getWidth()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->width:F
 
     return v0
@@ -110,10 +101,8 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -126,7 +115,6 @@
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/ClearApertureBox;->width:F
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1

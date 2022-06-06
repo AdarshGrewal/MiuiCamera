@@ -24,8 +24,6 @@
 
 .field public static final MASK_CAPTURE_MODE_HDR_ENABLE:I = 0x4
 
-.field public static final MASK_CAPTURE_MODE_REPLACE_SR_WITH_MFNR:I = 0x8
-
 .field public static final MASK_PORTRAIT_MODE_DENOISE_ENABLE:I = 0x200
 
 .field public static final MASK_PORTRAIT_MODE_ENABLE:I = 0x100

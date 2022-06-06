@@ -75,7 +75,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/constant/CaptureHelper;->FLASH_LEGACY_FLOW:[I
@@ -84,22 +83,18 @@
 
     new-array v1, v0, [I
 
-    .line 2
     sput-object v1, Lcom/android/camera/constant/CaptureHelper;->FLASH_AE_PRIOR_FLOW:[I
 
     new-array v1, v0, [I
 
-    .line 3
     sput-object v1, Lcom/android/camera/constant/CaptureHelper;->FLASH_AF_PRIOR_FLOW:[I
 
     new-array v1, v0, [I
 
-    .line 4
     sput-object v1, Lcom/android/camera/constant/CaptureHelper;->FLASH_NON_AF_FLOW:[I
 
     new-array v0, v0, [I
 
-    .line 5
     sput-object v0, Lcom/android/camera/constant/CaptureHelper;->NORMAL_AE_PRIOR_FLOW:[I
 
     return-void
@@ -115,7 +110,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -142,7 +136,6 @@
 
     return p1
 
-    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

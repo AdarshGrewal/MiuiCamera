@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/beauty/MakeupParamsFragment;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public synthetic OooO00o(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
     invoke-interface {p1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -33,14 +31,12 @@
 
     iget-object p1, p1, Lcom/android/camera/data/data/TypeItem;->mKeyOrType:Ljava/lang/String;
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p2
 
     const/16 p4, 0xb4
 
-    .line 3
     invoke-virtual {p2, p4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p2
@@ -49,7 +45,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 4
     iget-object p4, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
     invoke-interface {p4, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -64,7 +59,6 @@
 
     invoke-interface {p2, p1, p3, p4}, Lcom/android/camera/protocol/ModeProtocol$MakeupProtocol;->onMakeupItemSelected(Ljava/lang/String;IZ)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/TsBeautyParamsFragment;->getShineType()Ljava/lang/String;
 
     move-result-object p2
@@ -86,7 +80,6 @@
 .method public initExtraType()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
     const/4 v1, 0x1
@@ -103,7 +96,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mItemList:Ljava/util/List;
 
-    .line 2
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -134,11 +126,9 @@
     :cond_1
     move v2, v0
 
-    .line 3
     :goto_0
     iput v2, p0, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->mAlphaElement:I
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v2
@@ -159,19 +149,45 @@
 .method public initOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
     .locals 1
 
-    .line 1
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0oo/OooO0o;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo0o/OooO0o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0oo/OooO0o;-><init>(Lcom/android/camera/fragment/beauty/TsBeautyParamsFragment;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo0o/OooO0o;-><init>(Lcom/android/camera/fragment/beauty/TsBeautyParamsFragment;)V
 
     return-object v0
 .end method
 
 .method public onBeautyNoneClick()V
-    .locals 0
+    .locals 3
 
-    .line 1
-    invoke-super {p0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->onBeautyNoneClick()V
+    invoke-static {}, Lcom/android/camera/fragment/beauty/ShineHelper;->clearBeauty()V
+
+    invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->selectFirstItem()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f120221
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/beauty/BaseBeautyMakeupFragment;->toast(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    const-string v1, "attr_operate_state"
+
+    const-string v2, "attr_click_beauty_face_none"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "key_beauty_face"
+
+    invoke-static {v1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->mistatEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -183,13 +199,10 @@
 
     const-string/jumbo v1, "onClearClick"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-super {p0}, Lcom/android/camera/fragment/beauty/MakeupParamsFragment;->onClearClick()V
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -198,20 +211,17 @@
 
     const-string v2, "attr_click_beauty_face_clear"
 
-    .line 4
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "key_beauty_face"
 
-    .line 5
     invoke-static {v1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->mistatEvent(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f12020e
+    const v1, 0x7f1201fe
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -225,10 +235,8 @@
 .method public onResetClick()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/beauty/MakeupParamsFragment;->onResetClick()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -237,12 +245,10 @@
 
     const-string v2, "attr_click_beauty_face_reset"
 
-    .line 3
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "key_beauty_face"
 
-    .line 4
     invoke-static {v1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->mistatEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void

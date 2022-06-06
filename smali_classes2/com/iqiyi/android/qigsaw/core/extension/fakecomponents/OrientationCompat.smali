@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1a
@@ -35,7 +33,6 @@
 
     if-le v1, v2, :cond_0
 
-    .line 2
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/extension/fakecomponents/OrientationCompat;->isTranslucentOrFloating(Landroid/app/Activity;)Z
 
     move-result v1
@@ -48,7 +45,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     :try_start_0
     const-class v1, Landroid/app/Activity;
 
@@ -60,15 +56,12 @@
 
     const/4 v2, 0x1
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 5
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 6
     const-class v1, Landroid/content/pm/ActivityInfo;
 
     const-string v3, "screenOrientation"
@@ -77,17 +70,14 @@
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 8
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v2
 
     if-ne v2, v0, :cond_0
 
-    .line 9
     invoke-virtual {v1, p0, p1}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
@@ -103,7 +93,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     const-class v1, Landroid/app/Activity;
 
@@ -115,15 +104,12 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 3
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 4
     const-class v1, Landroid/content/pm/ActivityInfo;
 
     const-string v3, "isFixedOrientation"
@@ -134,12 +120,10 @@
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v2, v0, [Ljava/lang/Object;
 
-    .line 6
     invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -167,26 +151,22 @@
     :try_start_0
     const-string v1, "com.android.internal.R$styleable"
 
-    .line 1
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "Window"
 
-    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
     const/4 v3, 0x1
 
-    .line 3
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v4, 0x0
 
-    .line 4
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -199,35 +179,28 @@
 
     const-string v2, "Window_windowIsTranslucent"
 
-    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 6
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const-string v5, "Window_windowSwipeToDismiss"
 
-    .line 7
     invoke-virtual {v1, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
 
-    .line 8
     invoke-virtual {v5, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const-string v6, "Window_windowIsFloating"
 
-    .line 9
     invoke-virtual {v1, v6}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 11
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -242,7 +215,6 @@
 
     move-result v6
 
-    .line 12
     invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -259,7 +231,6 @@
 
     if-nez v2, :cond_0
 
-    .line 13
     invoke-virtual {v5, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -283,7 +254,6 @@
     :cond_0
     move v2, v0
 
-    .line 14
     :goto_0
     invoke-virtual {v1, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -320,7 +290,6 @@
 .method public static releaseFixedOrientation(Landroid/app/Activity;)I
     .locals 4
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -337,7 +306,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 2
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/extension/fakecomponents/OrientationCompat;->isTranslucentOrFloating(Landroid/app/Activity;)Z
 
     move-result v0
@@ -350,7 +318,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     :try_start_0
     const-class v0, Landroid/app/Activity;
 
@@ -362,15 +329,12 @@
 
     const/4 v1, 0x1
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 6
     const-class v0, Landroid/content/pm/ActivityInfo;
 
     const-string v3, "screenOrientation"
@@ -379,10 +343,8 @@
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v1
@@ -392,7 +354,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 9
     :try_start_1
     invoke-virtual {v0, p0, v2}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
     :try_end_1

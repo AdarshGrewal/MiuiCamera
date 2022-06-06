@@ -17,21 +17,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->left:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->top:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->width:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->height:I
 
     return-void
@@ -42,7 +37,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->height:I
 
     return v0
@@ -51,7 +45,6 @@
 .method public getLeft()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->left:I
 
     return v0
@@ -60,7 +53,6 @@
 .method public getTop()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->top:I
 
     return v0
@@ -69,7 +61,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->width:I
 
     return v0
@@ -78,7 +69,6 @@
 .method public setHeight(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->height:I
 
     return-void
@@ -87,7 +77,6 @@
 .method public setLeft(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->left:I
 
     return-void
@@ -96,7 +85,6 @@
 .method public setTop(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->top:I
 
     return-void
@@ -105,7 +93,6 @@
 .method public setWidth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/SaliencyProcessRect;->width:I
 
     return-void
@@ -114,7 +101,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

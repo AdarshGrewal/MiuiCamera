@@ -50,7 +50,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v0
@@ -84,7 +83,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct/range {p0 .. p9}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;-><init>(Ljava8/util/Spliterator;JJJJ)V
 
     return-void
@@ -108,10 +106,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->sliceOrigin:J
 
     iget-wide v2, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->fence:J
@@ -122,7 +118,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-wide v4, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
@@ -137,7 +132,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -154,21 +148,18 @@
 
     if-gtz v0, :cond_2
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator$OfPrimitive;->forEachRemaining(Ljava/lang/Object;)V
 
-    .line 6
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->fence:J
 
     iput-wide v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
     goto :goto_2
 
-    .line 7
     :cond_2
     :goto_0
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->sliceOrigin:J
@@ -181,7 +172,6 @@
 
     if-lez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -192,7 +182,6 @@
 
     invoke-interface {v0, v3}, Ljava8/util/Spliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
-    .line 9
     iget-wide v3, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
     add-long/2addr v3, v1
@@ -201,7 +190,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_3
     :goto_1
     iget-wide v3, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
@@ -212,14 +200,12 @@
 
     if-gez v0, :cond_4
 
-    .line 11
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
-    .line 12
     iget-wide v3, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
     add-long/2addr v3, v1
@@ -241,10 +227,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->sliceOrigin:J
 
     iget-wide v2, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->fence:J
@@ -257,7 +241,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     :goto_0
     iget-wide v2, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->sliceOrigin:J
@@ -270,7 +253,6 @@
 
     if-lez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -281,7 +263,6 @@
 
     invoke-interface {v0, v4}, Ljava8/util/Spliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
-    .line 5
     iget-wide v4, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
     add-long/2addr v4, v2
@@ -290,7 +271,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-wide v6, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->fence:J
 
@@ -303,10 +283,8 @@
     :cond_2
     add-long/2addr v4, v2
 
-    .line 7
     iput-wide v4, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->index:J
 
-    .line 8
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->s:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -321,7 +299,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/StreamSpliterators$SliceSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

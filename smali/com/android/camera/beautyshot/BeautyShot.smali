@@ -18,17 +18,14 @@
     :try_start_0
     const-string v0, "camera_beauty_mpbase"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "camera_arcsoft_beautyshot"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "jni_arcsoft_beautyshot"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -38,7 +35,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,12 +64,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     return-void
@@ -102,14 +96,12 @@
 .method public init(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/beautyshot/BeautyShot;->nativeInit()V
 
     return-void
@@ -118,7 +110,6 @@
 .method public processByBeautyLevel([BIIIII)I
     .locals 8
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     if-nez v1, :cond_0
@@ -127,7 +118,6 @@
 
     const-string p2, "BeautyShot is not initialized"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
@@ -149,7 +139,6 @@
 
     move v7, p6
 
-    .line 3
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/beautyshot/BeautyShot;->processByBeautyLevel(Landroid/content/res/AssetManager;[BIIIII)I
 
     move-result p1
@@ -160,7 +149,6 @@
 .method public processBySmoothLevel([BIIIII)I
     .locals 8
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
     if-nez v1, :cond_0
@@ -169,7 +157,6 @@
 
     const-string p2, "BeautyShot is not initialized"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
@@ -191,7 +178,6 @@
 
     move v7, p6
 
-    .line 3
     invoke-direct/range {v0 .. v7}, Lcom/android/camera/beautyshot/BeautyShot;->processBySmoothLevel(Landroid/content/res/AssetManager;[BIIIII)I
 
     move-result p1
@@ -204,10 +190,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/beautyshot/BeautyShot;->mAssetsManager:Landroid/content/res/AssetManager;
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/beautyshot/BeautyShot;->nativeUninit()V
 
     return-void

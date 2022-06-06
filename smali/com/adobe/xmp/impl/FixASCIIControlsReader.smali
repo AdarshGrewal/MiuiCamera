@@ -33,18 +33,14 @@
 
     const/16 v0, 0x8
 
-    .line 1
     invoke-direct {p0, p1, v0}, Ljava/io/PushbackReader;-><init>(Ljava/io/Reader;I)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
-    .line 3
     iput p1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
-    .line 4
     iput p1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->digits:I
 
     return-void
@@ -53,7 +49,6 @@
 .method private processChar(C)C
     .locals 10
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     const/4 v1, 0x1
@@ -90,7 +85,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iput v9, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -101,7 +95,6 @@
 
     if-gt p1, v5, :cond_3
 
-    .line 3
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
     mul-int/2addr v0, v4
@@ -114,7 +107,6 @@
 
     iput v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
-    .line 4
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->digits:I
 
     add-int/2addr v0, v1
@@ -123,12 +115,10 @@
 
     if-gt v0, v3, :cond_2
 
-    .line 5
     iput v8, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     goto :goto_1
 
-    .line 6
     :cond_2
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -137,7 +127,6 @@
     :cond_3
     if-ne p1, v2, :cond_4
 
-    .line 7
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
     int-to-char v0, v0
@@ -148,10 +137,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 8
     iput v9, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
-    .line 9
     iget p1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
     :goto_0
@@ -159,7 +146,6 @@
 
     return p1
 
-    .line 10
     :cond_4
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -189,7 +175,6 @@
 
     if-gt p1, v0, :cond_a
 
-    .line 11
     :cond_8
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
@@ -205,7 +190,6 @@
 
     iput v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
-    .line 12
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->digits:I
 
     add-int/2addr v0, v1
@@ -214,12 +198,10 @@
 
     if-gt v0, v8, :cond_9
 
-    .line 13
     iput v7, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     goto :goto_2
 
-    .line 14
     :cond_9
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -228,7 +210,6 @@
     :cond_a
     if-ne p1, v2, :cond_b
 
-    .line 15
     iget v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
     int-to-char v0, v0
@@ -239,15 +220,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 16
     iput v9, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
-    .line 17
     iget p1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
     goto :goto_0
 
-    .line 18
     :cond_b
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -259,13 +237,10 @@
 
     if-ne p1, v0, :cond_d
 
-    .line 19
     iput v9, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
-    .line 20
     iput v9, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->digits:I
 
-    .line 21
     iput v7, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     goto :goto_3
@@ -275,22 +250,18 @@
 
     if-gt p1, v5, :cond_e
 
-    .line 22
     invoke-static {p1, v4}, Ljava/lang/Character;->digit(CI)I
 
     move-result v0
 
     iput v0, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->control:I
 
-    .line 23
     iput v1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->digits:I
 
-    .line 24
     iput v8, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     goto :goto_3
 
-    .line 25
     :cond_e
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -302,12 +273,10 @@
 
     if-ne p1, v0, :cond_10
 
-    .line 26
     iput v2, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     goto :goto_4
 
-    .line 27
     :cond_10
     iput v3, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
@@ -319,7 +288,6 @@
 
     if-ne p1, v0, :cond_12
 
-    .line 28
     iput v1, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     :cond_12
@@ -357,7 +325,6 @@
 
     if-ge v4, p3, :cond_6
 
-    .line 1
     invoke-super {p0, v0, v5, v2}, Ljava/io/PushbackReader;->read([CII)I
 
     move-result v3
@@ -376,19 +343,16 @@
 
     if-eqz v3, :cond_5
 
-    .line 2
     aget-char v7, v0, v5
 
     invoke-direct {p0, v7}, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->processChar(C)C
 
     move-result v7
 
-    .line 3
     iget v8, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     if-nez v8, :cond_3
 
-    .line 4
     invoke-static {v7}, Lcom/adobe/xmp/impl/Utils;->isControlChar(C)Z
 
     move-result v5
@@ -400,7 +364,6 @@
     :cond_2
     add-int/lit8 v5, p2, 0x1
 
-    .line 5
     aput-char v7, p1, p2
 
     add-int/lit8 v4, v4, 0x1
@@ -414,7 +377,6 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 6
     invoke-virtual {p0, v0, v1, v5}, Ljava/io/PushbackReader;->unread([CII)V
 
     :goto_3
@@ -430,10 +392,8 @@
     :cond_5
     if-lez v5, :cond_0
 
-    .line 7
     invoke-virtual {p0, v0, v1, v5}, Ljava/io/PushbackReader;->unread([CII)V
 
-    .line 8
     iput v6, p0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;->state:I
 
     move v5, v1

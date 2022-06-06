@@ -13,13 +13,10 @@
 .method public constructor <init>([BII)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/panorama/CaptureImage;-><init>([B)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/panorama/Camera1Image;->mWidth:I
 
-    .line 3
     iput p3, p0, Lcom/android/camera/panorama/Camera1Image;->mHeight:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/Camera1Image;->mHeight:I
 
     return v0
@@ -47,7 +43,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/panorama/Camera1Image;->mWidth:I
 
     return v0

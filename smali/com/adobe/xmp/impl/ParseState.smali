@@ -13,15 +13,12 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
-    .line 3
     iput-object p1, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
 
     return-void
@@ -32,7 +29,6 @@
 .method public ch()C
     .locals 2
 
-    .line 3
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     iget-object v1, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
@@ -47,7 +43,6 @@
 
     iget v1, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -64,7 +59,6 @@
 .method public ch(I)C
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -75,7 +69,6 @@
 
     iget-object v0, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -97,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/ParseState;->ch(I)C
@@ -127,14 +119,12 @@
 
     add-int/2addr v3, v0
 
-    .line 2
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     add-int/2addr v0, v1
 
     iput v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/impl/ParseState;->ch(I)C
 
     move-result v0
@@ -158,7 +148,6 @@
     :cond_2
     return v3
 
-    .line 4
     :cond_3
     new-instance p2, Lcom/adobe/xmp/XMPException;
 
@@ -172,7 +161,6 @@
 .method public hasNext()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     iget-object v1, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
@@ -197,7 +185,6 @@
 .method public length()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/ParseState;->str:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -210,7 +197,6 @@
 .method public pos()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     return v0
@@ -219,7 +205,6 @@
 .method public skip()V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/ParseState;->pos:I
 
     add-int/lit8 v0, v0, 0x1

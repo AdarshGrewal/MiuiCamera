@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V14;->load(Ljava/lang/ClassLoader;Ljava/io/File;)V
 
     return-void
@@ -48,31 +46,26 @@
 
     const-string v0, "pathList"
 
-    .line 1
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     const-string v0, "nativeLibraryDirectories"
 
-    .line 3
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Ljava/io/File;
 
-    .line 5
     new-instance v2, Ljava/util/ArrayList;
 
     array-length v3, v1
@@ -81,10 +74,8 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 6
     invoke-interface {v2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     array-length v3, v1
 
     const/4 v4, 0x0
@@ -96,14 +87,12 @@
 
     aget-object v6, v1, v5
 
-    .line 8
     invoke-virtual {p1, v6}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
-    .line 9
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -114,7 +103,6 @@
     :cond_1
     new-array p1, v4, [Ljava/io/File;
 
-    .line 10
     invoke-interface {v2, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1

@@ -69,15 +69,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
-    .line 3
     const-class v1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -88,15 +85,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clientId_:Ljava/lang/String;
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -109,7 +103,6 @@
 .method public static synthetic access$28800()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     return-object v0
@@ -118,7 +111,6 @@
 .method public static synthetic access$28900(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->setClientId(Ljava/lang/String;)V
 
     return-void
@@ -127,7 +119,6 @@
 .method public static synthetic access$29000(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clearClientId()V
 
     return-void
@@ -136,7 +127,6 @@
 .method public static synthetic access$29100(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->setClientIdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -145,7 +135,6 @@
 .method public static synthetic access$29200(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->setService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -154,7 +143,6 @@
 .method public static synthetic access$29300(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->setService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
 
     return-void
@@ -163,7 +151,6 @@
 .method public static synthetic access$29400(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->addService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -172,7 +159,6 @@
 .method public static synthetic access$29500(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->addService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -181,7 +167,6 @@
 .method public static synthetic access$29600(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->addService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
 
     return-void
@@ -190,7 +175,6 @@
 .method public static synthetic access$29700(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->addService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
 
     return-void
@@ -199,7 +183,6 @@
 .method public static synthetic access$29800(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;Ljava/lang/Iterable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->addAllService(Ljava/lang/Iterable;)V
 
     return-void
@@ -208,7 +191,6 @@
 .method public static synthetic access$29900(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clearService()V
 
     return-void
@@ -217,7 +199,6 @@
 .method public static synthetic access$30000(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->removeService(I)V
 
     return-void
@@ -235,10 +216,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
@@ -249,10 +228,8 @@
 .method private addService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 1
 
-    .line 9
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 10
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -269,10 +246,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$ProtobufList;->add(ILjava/lang/Object;)V
@@ -282,17 +257,14 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 6
     throw p1
 .end method
 
 .method private addService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 1
 
-    .line 7
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 8
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -309,10 +281,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->add(Ljava/lang/Object;)Z
@@ -322,14 +292,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private clearClientId()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     move-result-object v0
@@ -346,7 +314,6 @@
 .method private clearService()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -359,7 +326,6 @@
 .method private ensureServiceIsMutable()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->isModifiable()Z
@@ -368,10 +334,8 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
-    .line 3
     invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageLite;->mutableCopy(Lcom/google/protobuf/Internal$ProtobufList;)Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -385,7 +349,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     return-object v0
@@ -394,7 +357,6 @@
 .method public static newBuilder()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -409,7 +371,6 @@
 .method public static newBuilder(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -429,7 +390,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -449,7 +409,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -469,7 +428,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -489,7 +447,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -509,7 +466,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -529,7 +485,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -549,7 +504,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -569,7 +523,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -589,7 +542,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -609,7 +561,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -629,7 +580,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -649,7 +599,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -672,7 +621,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->getParserForType()Lcom/google/protobuf/Parser;
@@ -685,10 +633,8 @@
 .method private removeService(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->remove(I)Ljava/lang/Object;
@@ -701,7 +647,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clientId_:Ljava/lang/String;
 
     return-void
@@ -709,7 +654,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -718,10 +662,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -733,17 +675,14 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setService(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
@@ -760,10 +699,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->ensureServiceIsMutable()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$ProtobufList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -773,7 +710,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -782,7 +718,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -797,7 +732,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -807,7 +741,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -815,34 +748,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -861,7 +788,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
@@ -884,12 +810,10 @@
 
     const/4 p2, 0x2
 
-    .line 11
     const-class p3, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     aput-object p3, p1, p2
 
-    .line 12
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
     const-string p3, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u001b"
@@ -900,7 +824,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_5
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse$Builder;
 
@@ -908,7 +831,6 @@
 
     return-object p1
 
-    .line 14
     :pswitch_6
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;
 
@@ -931,7 +853,6 @@
 .method public getClientId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clientId_:Ljava/lang/String;
 
     return-object v0
@@ -940,7 +861,6 @@
 .method public getClientIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->clientId_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -953,7 +873,6 @@
 .method public getService(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->get(I)Ljava/lang/Object;
@@ -968,7 +887,6 @@
 .method public getServiceCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->size()I
@@ -989,7 +907,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object v0
@@ -998,7 +915,6 @@
 .method public getServiceOrBuilder(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMServiceOrBuilder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$ProtobufList;->get(I)Ljava/lang/Object;
@@ -1022,7 +938,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IDMScanServicesResponse;->service_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object v0

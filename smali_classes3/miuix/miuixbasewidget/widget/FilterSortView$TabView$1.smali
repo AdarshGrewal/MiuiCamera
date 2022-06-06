@@ -27,7 +27,6 @@
 .method public constructor <init>(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     iput-object p2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->val$l:Landroid/view/View$OnClickListener;
@@ -42,7 +41,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$700(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$800(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
@@ -62,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$900(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
@@ -75,20 +71,17 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
     invoke-static {v0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->access$400(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
 
-    .line 5
     :cond_1
     :goto_0
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$1;->val$l:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 6
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_NORMAL:I
 
     invoke-static {p1, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z

@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleNever;
 
     invoke-direct {v0}, Lio/reactivex/internal/operators/single/SingleNever;-><init>()V
@@ -42,7 +41,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
     return-void
@@ -62,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/disposables/EmptyDisposable;->NEVER:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->onSubscribe(Lio/reactivex/disposables/Disposable;)V

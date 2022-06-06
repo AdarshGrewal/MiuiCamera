@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/LiveModuleSubVV$1;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/LiveModuleSubVV$1$2;->this$1:Lcom/android/camera/module/LiveModuleSubVV$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

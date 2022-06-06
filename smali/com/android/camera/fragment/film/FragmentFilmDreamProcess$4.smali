@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     iput-object p2, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->val$savePath:Ljava/lang/String;
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$100(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Z
@@ -71,10 +68,8 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$FilmDreamRecorderControl;->stopPlayWhenSave()V
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->val$savePath:Ljava/lang/String;
 
@@ -84,7 +79,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$200(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Lcom/android/camera/storage/mediastore/VideoFile;
@@ -93,7 +87,6 @@
 
     if-nez v1, :cond_1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$300()Ljava/lang/String;
 
     move-result-object p1
@@ -104,7 +97,6 @@
 
     return-void
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
@@ -114,7 +106,6 @@
 
     invoke-virtual {v1}, Lcom/android/camera/storage/mediastore/VideoFile;->insertContentValues()Landroid/net/Uri;
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$200(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Lcom/android/camera/storage/mediastore/VideoFile;
@@ -125,13 +116,11 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$4;->val$savePath:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$LiveVVExternal;->combineVideoAudio(Ljava/lang/String;)V
 
-    .line 10
     :cond_3
     :goto_0
     invoke-interface {p1}, Lio/reactivex/CompletableEmitter;->onComplete()V

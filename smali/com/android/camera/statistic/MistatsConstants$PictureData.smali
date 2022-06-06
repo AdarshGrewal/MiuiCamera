@@ -25,8 +25,6 @@
 
 .field public static final PARAM_PICTURE_ISO:Ljava/lang/String; = "attr_picture_iso"
 
-.field public static final PARAM_PICTURE_ROTATION:Ljava/lang/String; = "attr_picture_orientation"
-
 .field public static final PARAM_PREDICTIVE_SHUTTER_HAL:Ljava/lang/String; = "attr_predictive_shutter_hal"
 
 .field public static final PARAM_PREDICTIVE_SHUTTER_HAL_GAIN:Ljava/lang/String; = "attr_predictive_shutter_hal_gain"

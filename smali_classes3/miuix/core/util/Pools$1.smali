@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/core/util/Pools$Manager;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public bridge synthetic createInstance()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/core/util/Pools$1;->createInstance()Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -48,7 +46,6 @@
 .method public createInstance()Ljava/lang/StringBuilder;
     .locals 1
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +56,6 @@
 .method public bridge synthetic onRelease(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Lmiuix/core/util/Pools$1;->onRelease(Ljava/lang/StringBuilder;)V
@@ -72,7 +68,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
     return-void

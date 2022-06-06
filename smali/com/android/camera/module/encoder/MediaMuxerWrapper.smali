@@ -33,17 +33,14 @@
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 5
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 14
     iput-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->parcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     const/4 v0, 0x0
 
-    .line 15
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -61,7 +58,6 @@
 
     iput-object v1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->parcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 16
     new-instance v1, Landroid/media/MediaMuxer;
 
     iget-object v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->parcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
@@ -81,7 +77,6 @@
     :catch_0
     move-exception v1
 
-    .line 17
     sget-object v2, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -100,14 +95,11 @@
 
     invoke-static {v2, p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 18
     :goto_0
     iput v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
-    .line 19
     iput v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
-    .line 20
     iput-boolean v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
     return-void
@@ -121,15 +113,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->parcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
     move-result v1
@@ -138,7 +127,6 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v0, Landroid/media/MediaMuxer;
 
     invoke-direct {v0, p1, v2}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
@@ -150,13 +138,11 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 5
     :try_start_0
     invoke-static {p1, v1}, Lcom/android/camera/FileCompat;->getParcelFileDescriptor(Ljava/lang/String;Z)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -170,7 +156,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :goto_0
     invoke-static {v0}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
@@ -184,7 +169,6 @@
     :catch_0
     move-exception v1
 
-    .line 8
     :try_start_1
     sget-object v3, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
@@ -208,19 +192,15 @@
 
     goto :goto_0
 
-    .line 9
     :goto_1
     iput v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
-    .line 10
     iput v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
-    .line 11
     iput-boolean v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
     return-void
 
-    .line 12
     :goto_2
     invoke-static {v0}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
@@ -232,22 +212,18 @@
 .method public addEncoder(Lcom/android/camera/module/encoder/MediaEncoder;)V
     .locals 3
 
-    .line 1
     instance-of v0, p1, Lcom/android/camera/module/encoder/MediaVideoEncoder;
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-nez v0, :cond_0
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -257,21 +233,17 @@
 
     throw p1
 
-    .line 5
     :cond_1
     instance-of v0, p1, Lcom/android/camera/module/encoder/MediaAudioEncoder;
 
     if-eqz v0, :cond_5
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-nez v0, :cond_4
 
-    .line 7
     iput-object p1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
-    .line 8
     :goto_0
     iget-object p1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
@@ -305,7 +277,6 @@
 
     return-void
 
-    .line 9
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -315,7 +286,6 @@
 
     throw p1
 
-    .line 10
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -331,20 +301,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
 
     move-result v0
 
-    .line 3
     sget-object v1, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -379,17 +346,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return v0
 
-    .line 5
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "muxer already started"
+    const-string/jumbo v0, "muxer already started"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -408,12 +373,10 @@
 .method public closeFd()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->parcelFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_0
@@ -425,7 +388,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
     :try_end_0
@@ -446,39 +408,31 @@
 .method public join()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     const-string v1, "join>>>"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->join()V
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->join()V
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
-    .line 8
     :cond_1
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
@@ -497,21 +451,17 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->prepare()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->prepare()V
 
     :cond_1
@@ -521,7 +471,6 @@
 .method public setLocation(FF)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaMuxer;->setLocation(FF)V
@@ -532,7 +481,6 @@
 .method public setOrientationHint(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
@@ -545,7 +493,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
@@ -567,7 +514,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
     const/4 v1, 0x1
@@ -576,7 +522,6 @@
 
     iput v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
-    .line 3
     iget v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
     if-lez v2, :cond_0
@@ -585,25 +530,20 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
 
-    .line 5
     iput-boolean v1, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 7
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     const-string v1, "MediaMuxer started"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
     :try_end_0
@@ -621,10 +561,9 @@
     throw v0
 .end method
 
-.method public startRecording(JZ)Z
+.method public startRecording(J)Z
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -643,7 +582,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     const/4 v1, 0x0
@@ -652,8 +590,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/module/encoder/MediaEncoder;->startRecording(JZ)Z
+    invoke-virtual {v0, p1, p2}, Lcom/android/camera/module/encoder/MediaEncoder;->startRecording(J)Z
 
     move-result v0
 
@@ -670,14 +607,12 @@
     :goto_0
     move v0, v2
 
-    .line 4
     :goto_1
     iget-object v3, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v3, :cond_3
 
-    .line 5
-    invoke-virtual {v3, p1, p2, p3}, Lcom/android/camera/module/encoder/MediaEncoder;->startRecording(JZ)Z
+    invoke-virtual {v3, p1, p2}, Lcom/android/camera/module/encoder/MediaEncoder;->startRecording(J)Z
 
     move-result p1
 
@@ -699,7 +634,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
@@ -721,7 +655,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
     const/4 v1, 0x1
@@ -730,7 +663,6 @@
 
     iput v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
-    .line 3
     iget v2, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
     const/4 v3, 0x0
@@ -739,27 +671,22 @@
 
     if-gtz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
 
-    .line 6
     iput-boolean v3, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
-    .line 7
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "MediaMuxer stopped"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_0
     iget v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
     :try_end_0
@@ -788,31 +715,25 @@
 .method public stopRecording()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "stopRecording>>>"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->stopRecording()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/android/camera/module/encoder/MediaEncoder;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/MediaEncoder;->stopRecording()V
 
-    .line 6
     :cond_1
     sget-object v0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
@@ -828,19 +749,15 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mStartedCount:I
 
     if-lez v0, :cond_0
 
-    .line 2
     iget-wide v0, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 3
     iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 4
     sget-object v3, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -871,14 +788,12 @@
 
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_0
     monitor-exit p0
 

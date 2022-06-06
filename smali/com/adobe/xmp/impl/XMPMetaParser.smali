@@ -13,14 +13,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/adobe/xmp/impl/XMPMetaParser;->XMP_RDF:Ljava/lang/Object;
 
-    .line 2
     invoke-static {}, Lcom/adobe/xmp/impl/XMPMetaParser;->createDocumentBuilderFactory()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v0
@@ -33,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,23 +39,19 @@
 .method public static createDocumentBuilderFactory()Ljavax/xml/parsers/DocumentBuilderFactory;
     .locals 3
 
-    .line 1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
 
-    .line 3
     invoke-virtual {v0, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setIgnoringComments(Z)V
 
     :try_start_0
     const-string v2, "http://javax.xml.XMLConstants/feature/secure-processing"
 
-    .line 4
     invoke-virtual {v0, v2, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setFeature(Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -70,7 +63,6 @@
 .method public static findRootNode(Lorg/w3c/dom/Node;Z[Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 7
 
-    .line 1
     invoke-interface {p0}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object p0
@@ -79,7 +71,6 @@
 
     move v1, v0
 
-    .line 2
     :goto_0
     invoke-interface {p0}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -87,12 +78,10 @@
 
     if-ge v1, v2, :cond_6
 
-    .line 3
     invoke-interface {p0, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 4
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v3
@@ -105,7 +94,6 @@
 
     check-cast v3, Lorg/w3c/dom/ProcessingInstruction;
 
-    .line 5
     invoke-interface {v3}, Lorg/w3c/dom/ProcessingInstruction;->getTarget()Ljava/lang/String;
 
     move-result-object v5
@@ -118,7 +106,6 @@
 
     const/4 v2, 0x2
 
-    .line 6
     invoke-interface {v3}, Lorg/w3c/dom/ProcessingInstruction;->getData()Ljava/lang/String;
 
     move-result-object v3
@@ -130,33 +117,28 @@
     :cond_0
     const/4 v3, 0x3
 
-    .line 7
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v5
 
     if-eq v3, v5, :cond_5
 
-    .line 8
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v3
 
     if-eq v4, v3, :cond_5
 
-    .line 9
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 10
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getLocalName()Ljava/lang/String;
 
     move-result-object v4
 
     const-string/jumbo v5, "xmpmeta"
 
-    .line 11
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -165,7 +147,6 @@
 
     const-string/jumbo v5, "xapmeta"
 
-    .line 12
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -175,14 +156,12 @@
     :cond_1
     const-string v5, "adobe:ns:meta/"
 
-    .line 13
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 14
     invoke-static {v2, v0, p2}, Lcom/adobe/xmp/impl/XMPMetaParser;->findRootNode(Lorg/w3c/dom/Node;Z[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -194,7 +173,6 @@
 
     const-string v5, "RDF"
 
-    .line 15
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -203,7 +181,6 @@
 
     const-string v4, "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
-    .line 16
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -212,10 +189,8 @@
 
     if-eqz p2, :cond_3
 
-    .line 17
     aput-object v2, p2, v0
 
-    .line 18
     sget-object p0, Lcom/adobe/xmp/impl/XMPMetaParser;->XMP_RDF:Ljava/lang/Object;
 
     const/4 p1, 0x1
@@ -225,7 +200,6 @@
     :cond_3
     return-object p2
 
-    .line 19
     :cond_4
     invoke-static {v2, p1, p2}, Lcom/adobe/xmp/impl/XMPMetaParser;->findRootNode(Lorg/w3c/dom/Node;Z[Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -255,26 +229,22 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertNotNull(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p1, Lcom/adobe/xmp/options/ParseOptions;
 
     invoke-direct {p1}, Lcom/adobe/xmp/options/ParseOptions;-><init>()V
 
-    .line 3
     :goto_0
     invoke-static {p0, p1}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseXml(Ljava/lang/Object;Lcom/adobe/xmp/options/ParseOptions;)Lorg/w3c/dom/Document;
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p1}, Lcom/adobe/xmp/options/ParseOptions;->getRequireXMPMeta()Z
 
     move-result v0
@@ -283,7 +253,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p0, v0, v1}, Lcom/adobe/xmp/impl/XMPMetaParser;->findRootNode(Lorg/w3c/dom/Node;Z[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -292,7 +261,6 @@
 
     const/4 v0, 0x1
 
-    .line 6
     aget-object v0, p0, v0
 
     sget-object v1, Lcom/adobe/xmp/impl/XMPMetaParser;->XMP_RDF:Ljava/lang/Object;
@@ -301,7 +269,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     aget-object v0, p0, v0
 
     check-cast v0, Lorg/w3c/dom/Node;
@@ -312,21 +279,18 @@
 
     const/4 v1, 0x2
 
-    .line 8
     aget-object p0, p0, v1
 
     check-cast p0, Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->setPacketHeader(Ljava/lang/String;)V
 
-    .line 9
     invoke-virtual {p1}, Lcom/adobe/xmp/options/ParseOptions;->getOmitNormalization()Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
-    .line 10
     invoke-static {v0, p1}, Lcom/adobe/xmp/impl/XMPNormalizer;->process(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/options/ParseOptions;)Lcom/adobe/xmp/XMPMeta;
 
     move-result-object p0
@@ -336,7 +300,6 @@
     :cond_1
     return-object v0
 
-    .line 11
     :cond_2
     new-instance p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
@@ -353,7 +316,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/adobe/xmp/impl/XMPMetaParser;->factory:Ljavax/xml/parsers/DocumentBuilderFactory;
 
@@ -363,10 +325,8 @@
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1}, Ljavax/xml/parsers/DocumentBuilder;->setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
 
-    .line 3
     invoke-virtual {v0, p0}, Ljavax/xml/parsers/DocumentBuilder;->parse(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;
 
     move-result-object p0
@@ -380,7 +340,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const/16 v1, 0xcc
@@ -394,7 +353,6 @@
     :catch_1
     move-exception p0
 
-    .line 5
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const/4 v1, 0x0
@@ -408,7 +366,6 @@
     :catch_2
     move-exception p0
 
-    .line 6
     new-instance v0, Lcom/adobe/xmp/XMPException;
 
     const/16 v1, 0xc9
@@ -428,12 +385,10 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p0, Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Ljava/io/InputStream;
 
     invoke-static {p0, p1}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseXmlFromInputStream(Ljava/io/InputStream;Lcom/adobe/xmp/options/ParseOptions;)Lorg/w3c/dom/Document;
@@ -442,13 +397,11 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_1
 
-    .line 4
     new-instance v0, Lcom/adobe/xmp/impl/ByteBuffer;
 
     check-cast p0, [B
@@ -461,7 +414,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     check-cast p0, Ljava/lang/String;
 
@@ -480,7 +432,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/xml/sax/InputSource;
 
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->getByteStream()Ljava/io/InputStream;
@@ -489,7 +440,6 @@
 
     invoke-direct {v0, v1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     :try_start_0
     invoke-static {v0}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseInputSource(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;
 
@@ -502,7 +452,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Lcom/adobe/xmp/XMPException;->getErrorCode()I
 
     move-result v1
@@ -511,7 +460,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/adobe/xmp/XMPException;->getErrorCode()I
 
     move-result v1
@@ -522,11 +470,9 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     throw v0
 
-    .line 6
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/adobe/xmp/options/ParseOptions;->getAcceptLatin1()Z
@@ -535,12 +481,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 7
     invoke-static {p0}, Lcom/adobe/xmp/impl/Latin1Converter;->convert(Lcom/adobe/xmp/impl/ByteBuffer;)Lcom/adobe/xmp/impl/ByteBuffer;
 
     move-result-object p0
 
-    .line 8
     :cond_2
     invoke-virtual {p1}, Lcom/adobe/xmp/options/ParseOptions;->getFixControlChars()Z
 
@@ -548,18 +492,15 @@
 
     if-eqz p1, :cond_3
 
-    .line 9
     :try_start_1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->getEncoding()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 10
     new-instance v1, Lcom/adobe/xmp/impl/FixASCIIControlsReader;
 
     new-instance v2, Ljava/io/InputStreamReader;
 
-    .line 11
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->getByteStream()Ljava/io/InputStream;
 
     move-result-object p0
@@ -568,7 +509,6 @@
 
     invoke-direct {v1, v2}, Lcom/adobe/xmp/impl/FixASCIIControlsReader;-><init>(Ljava/io/Reader;)V
 
-    .line 12
     new-instance p0, Lorg/xml/sax/InputSource;
 
     invoke-direct {p0, v1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/Reader;)V
@@ -581,7 +521,6 @@
 
     return-object p0
 
-    .line 13
     :catch_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -593,7 +532,6 @@
 
     throw p0
 
-    .line 14
     :cond_3
     new-instance p1, Lorg/xml/sax/InputSource;
 
@@ -603,7 +541,6 @@
 
     invoke-direct {p1, p0}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
 
-    .line 15
     invoke-static {p1}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseInputSource(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;
 
     move-result-object p0
@@ -619,7 +556,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Lcom/adobe/xmp/options/ParseOptions;->getAcceptLatin1()Z
 
     move-result v0
@@ -632,7 +568,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance p1, Lorg/xml/sax/InputSource;
 
     invoke-direct {p1, p0}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/InputStream;)V
@@ -643,14 +578,12 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     :try_start_0
     new-instance v0, Lcom/adobe/xmp/impl/ByteBuffer;
 
     invoke-direct {v0, p0}, Lcom/adobe/xmp/impl/ByteBuffer;-><init>(Ljava/io/InputStream;)V
 
-    .line 4
     invoke-static {v0, p1}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseXmlFromBytebuffer(Lcom/adobe/xmp/impl/ByteBuffer;Lcom/adobe/xmp/options/ParseOptions;)Lorg/w3c/dom/Document;
 
     move-result-object p0
@@ -662,7 +595,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Lcom/adobe/xmp/XMPException;
 
     const/16 v0, 0xcc
@@ -682,7 +614,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/xml/sax/InputSource;
 
     new-instance v1, Ljava/io/StringReader;
@@ -691,7 +622,6 @@
 
     invoke-direct {v0, v1}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/Reader;)V
 
-    .line 2
     :try_start_0
     invoke-static {v0}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseInputSource(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;
 
@@ -704,7 +634,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Lcom/adobe/xmp/XMPException;->getErrorCode()I
 
     move-result v1
@@ -719,7 +648,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     new-instance p1, Lorg/xml/sax/InputSource;
 
     new-instance v0, Lcom/adobe/xmp/impl/FixASCIIControlsReader;
@@ -732,14 +660,12 @@
 
     invoke-direct {p1, v0}, Lorg/xml/sax/InputSource;-><init>(Ljava/io/Reader;)V
 
-    .line 5
     invoke-static {p1}, Lcom/adobe/xmp/impl/XMPMetaParser;->parseInputSource(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     throw v0
 .end method

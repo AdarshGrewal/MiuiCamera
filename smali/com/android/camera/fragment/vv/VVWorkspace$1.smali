@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspace;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspace$1;->this$0:Lcom/android/camera/fragment/vv/VVWorkspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 .method public compare(Lcom/android/camera/fragment/vv/VVWorkspaceItem;Lcom/android/camera/fragment/vv/VVWorkspaceItem;)I
     .locals 3
 
-    .line 2
     iget-wide v0, p1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mLastModifiedTime:J
 
     iget-wide p1, p2, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mLastModifiedTime:J
@@ -79,7 +77,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
     check-cast p2, Lcom/android/camera/fragment/vv/VVWorkspaceItem;

@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +57,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData$SatFusionCalibrationInfoMarshalQueryable$MarshalerImpl;
 
     const/4 v1, 0x0
@@ -81,7 +79,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     const-class p2, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;
 
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;

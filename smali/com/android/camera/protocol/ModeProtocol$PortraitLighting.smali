@@ -18,7 +18,7 @@
 
 
 # static fields
-.field public static final TYPE_TAG:I = 0xa02
+.field public static final TYPE_TAG:I = 0x2a0
 
 
 # virtual methods

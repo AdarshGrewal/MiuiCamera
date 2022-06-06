@@ -13,7 +13,6 @@
 
     const-string v0, "0123456789abcdef"
 
-    .line 1
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -53,13 +50,11 @@
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     sget-object v2, Lcom/android/camera/resource/tmmusic/TangoCompressTests;->hex:[C
 
     aget-byte v3, p0, v1
@@ -86,7 +81,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

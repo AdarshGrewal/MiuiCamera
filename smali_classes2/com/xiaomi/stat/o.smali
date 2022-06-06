@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/o;->a:Lcom/xiaomi/stat/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b/c;->a()Lcom/xiaomi/stat/b/c;
 
     move-result-object v0
@@ -62,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/stat/o;->a()Ljava/lang/String;
 
     move-result-object v0

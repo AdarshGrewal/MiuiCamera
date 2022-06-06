@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/util/ThreadUtils$1Result;Ljava/util/concurrent/Callable;Lcom/xiaomi/camera/util/ThreadUtils$1CaughtException;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/util/ThreadUtils$3;->val$result:Lcom/xiaomi/camera/util/ThreadUtils$1Result;
 
     iput-object p2, p0, Lcom/xiaomi/camera/util/ThreadUtils$3;->val$callable:Ljava/util/concurrent/Callable;
@@ -50,16 +49,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/xiaomi/camera/util/ThreadUtils;->access$000()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "E: invokeAtFrontUninterruptibly#call"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/util/ThreadUtils$3;->val$result:Lcom/xiaomi/camera/util/ThreadUtils$1Result;
 
@@ -78,25 +67,14 @@
     :catch_0
     move-exception v0
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/camera/util/ThreadUtils$3;->val$caughtException:Lcom/xiaomi/camera/util/ThreadUtils$1CaughtException;
 
     iput-object v0, v1, Lcom/xiaomi/camera/util/ThreadUtils$1CaughtException;->e:Ljava/lang/Exception;
 
-    .line 4
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/camera/util/ThreadUtils$3;->val$barrier:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    .line 5
-    invoke-static {}, Lcom/xiaomi/camera/util/ThreadUtils;->access$000()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "X: invokeAtFrontUninterruptibly#call"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

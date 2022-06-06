@@ -60,9 +60,8 @@
     .locals 3
 
     :try_start_0
-    const-string v0, "morpho_sensor_fusion"
+    const-string/jumbo v0, "morpho_sensor_fusion"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -76,7 +75,6 @@
 
     const-string v2, "can\'t loadLibrary morpho_sensor_fusion"
 
-    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -86,15 +84,12 @@
 .method public constructor <init>()V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/panorama/MorphoSensorFusion;->createNativeObject()J
 
     move-result-wide v2
@@ -103,12 +98,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 4
     iput-wide v2, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iput-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
@@ -131,7 +124,6 @@
 .method public static getVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/panorama/MorphoSensorFusion;->nativeGetVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -177,7 +169,6 @@
 .method public calc()I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -186,7 +177,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->calc(J)I
 
     move-result v0
@@ -203,7 +193,6 @@
 .method public finish()I
     .locals 6
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -212,17 +201,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->finish(J)I
 
     move-result v0
 
-    .line 3
     iget-wide v4, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     invoke-direct {p0, v4, v5}, Lcom/android/camera/panorama/MorphoSensorFusion;->deleteNativeObject(J)V
 
-    .line 4
     iput-wide v2, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     goto :goto_0
@@ -237,7 +223,6 @@
 .method public initialize()I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -246,7 +231,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->initialize(J)I
 
     move-result v0
@@ -263,7 +247,6 @@
 .method public outputRotationAngle([D)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -272,7 +255,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->outputRotationAngle(J[D)I
 
     move-result p1
@@ -289,7 +271,6 @@
 .method public outputRotationMatrix3x3(I[D)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -298,7 +279,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->outputRotationMatrix3x3(JI[D)I
 
     move-result p1
@@ -315,7 +295,6 @@
 .method public setAppState(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -324,7 +303,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setAppState(JI)I
 
     move-result p1
@@ -341,7 +319,6 @@
 .method public setMode(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -350,7 +327,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setMode(JI)I
 
     move-result p1
@@ -367,7 +343,6 @@
 .method public setOffset(Lcom/android/camera/panorama/MorphoSensorFusion$SensorData;I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -376,7 +351,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setOffset(JLcom/android/camera/panorama/MorphoSensorFusion$SensorData;I)I
 
     move-result p1
@@ -393,7 +367,6 @@
 .method public setOffsetMode(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -402,7 +375,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setOffsetMode(JI)I
 
     move-result p1
@@ -419,7 +391,6 @@
 .method public setRotation(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -428,7 +399,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setRotation(JI)I
 
     move-result p1
@@ -445,7 +415,6 @@
 .method public setSensorData([Ljava/lang/Object;I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -454,7 +423,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setSensorData(J[Ljava/lang/Object;I)I
 
     move-result p1
@@ -471,7 +439,6 @@
 .method public setSensorReliability(II)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -480,7 +447,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setSensorReliability(JII)I
 
     move-result p1

@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
@@ -46,7 +45,6 @@
     :goto_0
     sput-boolean v0, Lcom/facebook/rebound/ChoreographerCompat;->IS_JELLYBEAN_OR_HIGHER:Z
 
-    .line 2
     new-instance v0, Lcom/facebook/rebound/ChoreographerCompat;
 
     invoke-direct {v0}, Lcom/facebook/rebound/ChoreographerCompat;-><init>()V
@@ -59,15 +57,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-boolean v0, Lcom/facebook/rebound/ChoreographerCompat;->IS_JELLYBEAN_OR_HIGHER:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/facebook/rebound/ChoreographerCompat;->getChoreographer()Landroid/view/Choreographer;
 
     move-result-object v0
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -95,7 +89,6 @@
 .method private choreographerPostFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mChoreographer:Landroid/view/Choreographer;
 
     invoke-virtual {v0, p1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
@@ -106,7 +99,6 @@
 .method private choreographerPostFrameCallbackDelayed(Landroid/view/Choreographer$FrameCallback;J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mChoreographer:Landroid/view/Choreographer;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/view/Choreographer;->postFrameCallbackDelayed(Landroid/view/Choreographer$FrameCallback;J)V
@@ -117,7 +109,6 @@
 .method private choreographerRemoveFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mChoreographer:Landroid/view/Choreographer;
 
     invoke-virtual {v0, p1}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
@@ -128,7 +119,6 @@
 .method private getChoreographer()Landroid/view/Choreographer;
     .locals 1
 
-    .line 1
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object v0
@@ -139,7 +129,6 @@
 .method public static getInstance()Lcom/facebook/rebound/ChoreographerCompat;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/facebook/rebound/ChoreographerCompat;->__instance:Lcom/facebook/rebound/ChoreographerCompat;
 
     return-object v0
@@ -150,12 +139,10 @@
 .method public postFrameCallback(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/facebook/rebound/ChoreographerCompat;->IS_JELLYBEAN_OR_HIGHER:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->getFrameCallback()Landroid/view/Choreographer$FrameCallback;
 
     move-result-object p1
@@ -164,7 +151,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mHandler:Landroid/os/Handler;
 
@@ -183,12 +169,10 @@
 .method public postFrameCallbackDelayed(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;J)V
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/facebook/rebound/ChoreographerCompat;->IS_JELLYBEAN_OR_HIGHER:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->getFrameCallback()Landroid/view/Choreographer$FrameCallback;
 
     move-result-object p1
@@ -197,7 +181,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mHandler:Landroid/os/Handler;
 
@@ -218,12 +201,10 @@
 .method public removeFrameCallback(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/facebook/rebound/ChoreographerCompat;->IS_JELLYBEAN_OR_HIGHER:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->getFrameCallback()Landroid/view/Choreographer$FrameCallback;
 
     move-result-object p1
@@ -232,7 +213,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat;->mHandler:Landroid/os/Handler;
 

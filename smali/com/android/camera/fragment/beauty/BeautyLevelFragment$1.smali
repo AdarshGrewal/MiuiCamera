@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/beauty/BeautyLevelFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/beauty/BeautyLevelFragment$1;->this$0:Lcom/android/camera/fragment/beauty/BeautyLevelFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyLevelFragment$1;->this$0:Lcom/android/camera/fragment/beauty/BeautyLevelFragment;
 
     move-object v1, p1

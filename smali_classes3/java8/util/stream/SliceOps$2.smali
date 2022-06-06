@@ -32,7 +32,6 @@
 .method public constructor <init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;IJJ)V
     .locals 0
 
-    .line 1
     iput-wide p4, p0, Ljava8/util/stream/SliceOps$2;->val$skip:J
 
     iput-wide p6, p0, Ljava8/util/stream/SliceOps$2;->val$limit:J
@@ -68,7 +67,6 @@
 
     move-object/from16 v9, p0
 
-    .line 1
     invoke-virtual/range {p1 .. p2}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v6
@@ -85,14 +83,12 @@
 
     move-object/from16 v3, p2
 
-    .line 2
     invoke-interface {v3, v0}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual/range {p1 .. p1}, Ljava8/util/stream/PipelineHelper;->getSourceShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v10
@@ -109,7 +105,6 @@
 
     move-object/from16 v2, p1
 
-    .line 4
     invoke-static {v2, v0, v8}, Ljava8/util/stream/Nodes;->collectInt(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Z)Ljava8/util/stream/Node$OfInt;
 
     move-result-object v0
@@ -126,7 +121,6 @@
 
     move-object/from16 v3, p2
 
-    .line 5
     :goto_0
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
@@ -140,7 +134,6 @@
 
     if-nez v0, :cond_2
 
-    .line 6
     invoke-virtual/range {p1 .. p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -155,19 +148,16 @@
 
     move-object/from16 v0, p0
 
-    .line 7
     invoke-virtual/range {v0 .. v7}, Ljava8/util/stream/SliceOps$2;->unorderedSkipLimitSpliterator(Ljava8/util/Spliterator$OfInt;JJJ)Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
 
-    .line 8
     invoke-static {v9, v0, v8}, Ljava8/util/stream/Nodes;->collectInt(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Z)Ljava8/util/stream/Node$OfInt;
 
     move-result-object v0
 
     return-object v0
 
-    .line 9
     :cond_2
     new-instance v10, Ljava8/util/stream/SliceOps$SliceTask;
 
@@ -187,7 +177,6 @@
 
     invoke-direct/range {v0 .. v8}, Ljava8/util/stream/SliceOps$SliceTask;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/function/IntFunction;JJ)V
 
-    .line 10
     invoke-virtual {v10}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
     move-result-object v0
@@ -217,7 +206,6 @@
 
     move-object/from16 v9, p0
 
-    .line 1
     invoke-virtual/range {p1 .. p2}, Ljava8/util/stream/PipelineHelper;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v6
@@ -232,17 +220,14 @@
 
     move-object/from16 v3, p2
 
-    .line 2
     invoke-interface {v3, v0}, Ljava8/util/Spliterator;->hasCharacteristics(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfInt;
 
-    .line 4
     invoke-virtual/range {p1 .. p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object v1
@@ -255,7 +240,6 @@
 
     iget-wide v1, v9, Ljava8/util/stream/SliceOps$2;->val$limit:J
 
-    .line 5
     invoke-static {v12, v13, v1, v2}, Ljava8/util/stream/SliceOps;->access$000(JJ)J
 
     move-result-wide v14
@@ -269,7 +253,6 @@
     :cond_0
     move-object/from16 v3, p2
 
-    .line 6
     :cond_1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
@@ -283,7 +266,6 @@
 
     if-nez v0, :cond_2
 
-    .line 7
     invoke-virtual/range {p1 .. p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -298,14 +280,12 @@
 
     move-object/from16 v0, p0
 
-    .line 8
     invoke-virtual/range {v0 .. v7}, Ljava8/util/stream/SliceOps$2;->unorderedSkipLimitSpliterator(Ljava8/util/Spliterator$OfInt;JJJ)Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
 
     return-object v0
 
-    .line 9
     :cond_2
     new-instance v10, Ljava8/util/stream/SliceOps$SliceTask;
 
@@ -325,7 +305,6 @@
 
     invoke-direct/range {v0 .. v8}, Ljava8/util/stream/SliceOps$SliceTask;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/function/IntFunction;JJ)V
 
-    .line 10
     invoke-virtual {v10}, Ljava8/util/concurrent/ForkJoinTask;->invoke()Ljava/lang/Object;
 
     move-result-object v0
@@ -353,7 +332,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava8/util/stream/SliceOps$2$1;
 
     invoke-direct {p1, p0, p2}, Ljava8/util/stream/SliceOps$2$1;-><init>(Ljava8/util/stream/SliceOps$2;Ljava8/util/stream/Sink;)V
@@ -376,7 +354,6 @@
 
     sub-long v5, p6, p2
 
-    .line 1
     invoke-static {p4, p5, v5, v6}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
@@ -393,7 +370,6 @@
 
     move-wide v0, p4
 
-    .line 2
     :goto_0
     new-instance v2, Ljava8/util/stream/StreamSpliterators$UnorderedSliceSpliterator$OfInt;
 

@@ -32,10 +32,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$RequestHandoffData;->newBuilder()Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$RequestHandoffData$Builder;
 
     move-result-object p1
@@ -65,10 +63,8 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 4
     invoke-static {p2}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$RequestHandoffData;->parseFrom([B)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$RequestHandoffData;
 
     move-result-object p1
@@ -85,7 +81,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
@@ -102,7 +97,6 @@
     :catch_0
     move-exception v1
 
-    .line 2
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -118,7 +112,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-virtual {v1}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;->toByteArray()[B
 
@@ -136,7 +129,6 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;->parseFrom([B)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
 
@@ -146,7 +138,6 @@
 
     return-object p1
 
-    .line 3
     :catch_0
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -165,7 +156,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/handoff/HandoffService$Actions$RequestHandoffData;->parseResponse([B)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
 
     move-result-object p1
@@ -176,7 +166,6 @@
 .method public toBytes()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Actions$RequestHandoffData;->action:Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$RequestHandoffData;
 
     if-nez v0, :cond_0

@@ -35,7 +35,6 @@
 
     new-array v0, v0, [Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
-    .line 1
     new-instance v8, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     const/4 v2, 0x0
@@ -642,7 +641,6 @@
 
     aput-object v1, v0, v2
 
-    .line 2
     sput-object v0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->PROD_SYMBOLS:[Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     sput-object v0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->symbols:[Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
@@ -671,7 +669,6 @@
 
     move v8, p3
 
-    .line 1
     invoke-direct/range {v0 .. v8}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;-><init>(ZIIIIIII)V
 
     return-void
@@ -680,31 +677,22 @@
 .method public constructor <init>(ZIIIIIII)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-boolean p1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rectangular:Z
 
-    .line 4
     iput p2, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
-    .line 5
     iput p3, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
 
-    .line 6
     iput p4, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixWidth:I
 
-    .line 7
     iput p5, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->matrixHeight:I
 
-    .line 8
     iput p6, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
 
-    .line 9
     iput p7, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
 
-    .line 10
     iput p8, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockError:I
 
     return-void
@@ -713,7 +701,6 @@
 .method private getHorizontalDataRegions()I
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
 
     const/4 v1, 0x1
@@ -740,7 +727,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -760,7 +746,6 @@
 .method private getVerticalDataRegions()I
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataRegions:I
 
     const/4 v1, 0x1
@@ -787,7 +772,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -810,7 +794,6 @@
 .method public static lookup(I)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_NONE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
     const/4 v1, 0x1
@@ -827,7 +810,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-static {p0, p1, v0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->lookup(ILcom/google/zxing/datamatrix/encoder/SymbolShapeHint;Z)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     move-result-object p0
@@ -838,7 +820,6 @@
 .method public static lookup(ILcom/google/zxing/datamatrix/encoder/SymbolShapeHint;Lcom/google/zxing/Dimension;Lcom/google/zxing/Dimension;Z)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
     .locals 6
 
-    .line 6
     sget-object v0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->symbols:[Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     array-length v1, v0
@@ -850,7 +831,6 @@
 
     aget-object v3, v0, v2
 
-    .line 7
     sget-object v4, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_SQUARE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
     if-ne p1, v4, :cond_0
@@ -859,7 +839,6 @@
 
     if-nez v4, :cond_4
 
-    .line 8
     :cond_0
     sget-object v4, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_RECTANGLE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
@@ -872,7 +851,6 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 9
     invoke-virtual {v3}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolWidth()I
 
     move-result v4
@@ -883,7 +861,6 @@
 
     if-lt v4, v5, :cond_4
 
-    .line 10
     invoke-virtual {v3}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolHeight()I
 
     move-result v4
@@ -897,7 +874,6 @@
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 11
     invoke-virtual {v3}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolWidth()I
 
     move-result v4
@@ -908,7 +884,6 @@
 
     if-gt v4, v5, :cond_4
 
-    .line 12
     invoke-virtual {v3}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolHeight()I
 
     move-result v4
@@ -919,7 +894,6 @@
 
     if-gt v4, v5, :cond_4
 
-    .line 13
     :cond_3
     iget v4, v3, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
@@ -939,7 +913,6 @@
 
     return-object p0
 
-    .line 14
     :cond_6
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -963,7 +936,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-static {p0, p1, v0, v0, p2}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->lookup(ILcom/google/zxing/datamatrix/encoder/SymbolShapeHint;Lcom/google/zxing/Dimension;Lcom/google/zxing/Dimension;Z)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     move-result-object p0
@@ -976,7 +948,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     sget-object p1, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_NONE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
     goto :goto_0
@@ -984,7 +955,6 @@
     :cond_0
     sget-object p1, Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;->FORCE_SQUARE:Lcom/google/zxing/datamatrix/encoder/SymbolShapeHint;
 
-    .line 4
     :goto_0
     invoke-static {p0, p1, p2}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->lookup(ILcom/google/zxing/datamatrix/encoder/SymbolShapeHint;Z)Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
@@ -996,7 +966,6 @@
 .method public static overrideSymbolSet([Lcom/google/zxing/datamatrix/encoder/SymbolInfo;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->symbols:[Lcom/google/zxing/datamatrix/encoder/SymbolInfo;
 
     return-void
@@ -1007,7 +976,6 @@
 .method public getCodewordCount()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
     iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
@@ -1020,7 +988,6 @@
 .method public final getDataCapacity()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
     return v0
@@ -1029,7 +996,6 @@
 .method public getDataLengthForInterleavedBlock(I)I
     .locals 0
 
-    .line 1
     iget p1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
 
     return p1
@@ -1038,7 +1004,6 @@
 .method public final getErrorCodewords()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->errorCodewords:I
 
     return v0
@@ -1047,7 +1012,6 @@
 .method public final getErrorLengthForInterleavedBlock(I)I
     .locals 0
 
-    .line 1
     iget p1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockError:I
 
     return p1
@@ -1056,7 +1020,6 @@
 .method public getInterleavedBlockCount()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->dataCapacity:I
 
     iget v1, p0, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->rsBlockData:I
@@ -1069,7 +1032,6 @@
 .method public final getSymbolDataHeight()I
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getVerticalDataRegions()I
 
     move-result v0
@@ -1084,7 +1046,6 @@
 .method public final getSymbolDataWidth()I
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getHorizontalDataRegions()I
 
     move-result v0
@@ -1099,7 +1060,6 @@
 .method public final getSymbolHeight()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolDataHeight()I
 
     move-result v0
@@ -1118,7 +1078,6 @@
 .method public final getSymbolWidth()I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolDataWidth()I
 
     move-result v0
@@ -1137,7 +1096,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1176,7 +1134,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolWidth()I
 
     move-result v2
@@ -1195,7 +1152,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {p0}, Lcom/google/zxing/datamatrix/encoder/SymbolInfo;->getSymbolDataWidth()I
 
     move-result v2

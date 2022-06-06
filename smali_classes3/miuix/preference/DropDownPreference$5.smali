@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/DropDownPreference$5;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -62,7 +60,6 @@
 
     aput-object p1, p2, v2
 
-    .line 2
     invoke-static {p2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -77,18 +74,15 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
 
-    .line 5
     iget-object v2, p0, Lmiuix/preference/DropDownPreference$5;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-static {v2}, Lmiuix/preference/DropDownPreference;->access$400(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
@@ -97,7 +91,6 @@
 
     invoke-virtual {v2, p1}, Lmiuix/appcompat/widget/Spinner;->setFenceXFromView(Landroid/view/View;)V
 
-    .line 6
     iget-object p1, p0, Lmiuix/preference/DropDownPreference$5;->this$0:Lmiuix/preference/DropDownPreference;
 
     invoke-static {p1}, Lmiuix/preference/DropDownPreference;->access$400(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
@@ -113,7 +106,6 @@
 
     aput-object p1, p2, v2
 
-    .line 7
     invoke-static {p2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1

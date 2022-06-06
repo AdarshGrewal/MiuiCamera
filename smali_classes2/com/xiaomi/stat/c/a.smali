@@ -33,14 +33,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
 
     sput-object v0, Lcom/xiaomi/stat/c/a;->g:Landroid/content/Context;
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -49,14 +47,12 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     sget-object v0, Lcom/xiaomi/stat/c/a;->h:Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -67,7 +63,6 @@
 
     invoke-virtual {v0, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     sget-object v0, Lcom/xiaomi/stat/c/a;->h:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -84,7 +79,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     sget-object v0, Lcom/xiaomi/stat/c/a;->h:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Lcom/xiaomi/stat/c/a;->h:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -118,7 +111,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -129,7 +121,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/xiaomi/stat/c/a;->h:Ljava/util/HashMap;
 
@@ -141,7 +132,6 @@
 
     move-result-object v1
 
-    .line 2
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -150,14 +140,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -168,7 +156,6 @@
 
     move-result v3
 
-    .line 5
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -179,7 +166,6 @@
 
     move-result v2
 
-    .line 6
     invoke-static {v3, p0}, Lcom/xiaomi/stat/c/a;->a(ILjava/lang/String;)Z
 
     move-result v3
@@ -199,7 +185,6 @@
 
     const-string v2, "getClientConfiguration exception"
 
-    .line 7
     invoke-static {v1, v2, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
@@ -229,7 +214,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/xiaomi/stat/b;->g()Z
@@ -238,7 +222,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     invoke-static {}, Lcom/xiaomi/stat/d/k;->a()Z
 
@@ -246,7 +229,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     invoke-static {p1}, Lcom/xiaomi/stat/b;->d(Ljava/lang/String;)Z
 
@@ -254,7 +236,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_3
     invoke-static {}, Lcom/xiaomi/stat/b;->u()Z
 
@@ -271,7 +252,6 @@
 
     const-string v0, "checkSetting exception"
 
-    .line 12
     invoke-static {p1, v0, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0

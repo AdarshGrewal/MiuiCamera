@@ -49,33 +49,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->modelMatrix:[F
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mReserverResolution:Z
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropTop:I
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropLeft:I
 
-    .line 6
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropBottom:I
 
-    .line 7
     iput v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropRight:I
 
     return-void
@@ -88,7 +81,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -102,22 +94,18 @@
 
     const v0, 0x84c0
 
-    .line 1
     invoke-static {v0}, Landroid/opengl/GLES30;->glActiveTexture(I)V
 
     const v0, 0x8d65
 
-    .line 2
     invoke-static {v0, p1}, Landroid/opengl/GLES30;->glBindTexture(II)V
 
-    .line 3
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->s_Texture:I
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
     return-void
@@ -126,14 +114,12 @@
 .method public static checkNoGLES2Error()V
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/opengl/GLES30;->glGetError()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +148,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -190,7 +175,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Landroid/opengl/GLES30;->glBindTexture(II)V
 
     return-void
@@ -209,7 +193,6 @@
 .method public getOutputTextureId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mOutputTextureId:I
 
     return v0
@@ -226,7 +209,6 @@
 .method public onChanged(II)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mReserverResolution:Z
 
     invoke-static {p1, p2, v0}, Lcom/xiaomi/magicvideoskymediacodec/GlesUtil;->createFrameTexture(IIZ)I
@@ -235,7 +217,6 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mOutputTextureId:I
 
-    .line 2
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_Position"
@@ -246,7 +227,6 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_Position:I
 
-    .line 3
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "af_Position"
@@ -257,7 +237,6 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->af_Position:I
 
-    .line 4
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_width"
@@ -268,10 +247,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_width:I
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 6
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_height"
@@ -282,10 +259,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_height:I
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 8
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_cropTop"
@@ -296,10 +271,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropTop:I
 
-    .line 9
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 10
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_cropLeft"
@@ -310,10 +283,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropLeft:I
 
-    .line 11
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 12
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_cropBottom"
@@ -324,10 +295,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropBottom:I
 
-    .line 13
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 14
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "av_cropRight"
@@ -338,10 +307,8 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropRight:I
 
-    .line 15
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 16
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "s_Texture"
@@ -352,7 +319,6 @@
 
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->s_Texture:I
 
-    .line 17
     iget p1, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mProgram:I
 
     const-string p2, "modelViewProjectionMatrix"
@@ -375,25 +341,18 @@
 .method public onCroped(IIIIII)V
     .locals 2
 
-    .line 1
     iput p3, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropTop:I
 
-    .line 2
     iput p4, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropLeft:I
 
-    .line 3
     iput p5, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropBottom:I
 
-    .line 4
     iput p6, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropRight:I
 
-    .line 5
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->decodeWidth:I
 
-    .line 6
     iput p2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->decodeHeight:I
 
-    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -446,7 +405,6 @@
 .method public onDraw()V
     .locals 9
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mInputTextureId:I
 
     if-eqz v0, :cond_1
@@ -457,7 +415,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->modelMatrix:[F
 
@@ -465,7 +422,6 @@
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 3
     iget-object v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->modelMatrix:[F
 
     const/4 v3, 0x0
@@ -480,7 +436,6 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 4
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->s_mvp:I
 
     const/4 v2, 0x1
@@ -489,93 +444,74 @@
 
     invoke-static {v0, v2, v1, v3, v1}, Landroid/opengl/GLES30;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 5
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropTop:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropTop:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 7
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropLeft:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropLeft:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 8
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 9
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropBottom:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropBottom:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 10
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 11
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_cropRight:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->cropRight:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 12
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 13
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_width:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->decodeWidth:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 14
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 15
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_height:I
 
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->decodeHeight:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES30;->glUniform1i(II)V
 
-    .line 16
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 17
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_Position:I
 
     invoke-static {v0}, Landroid/opengl/GLES30;->glEnableVertexAttribArray(I)V
 
-    .line 18
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 19
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->af_Position:I
 
     invoke-static {v0}, Landroid/opengl/GLES30;->glEnableVertexAttribArray(I)V
 
-    .line 20
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 21
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mVertexBufferId:I
 
     const v2, 0x8892
 
     invoke-static {v2, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
-    .line 22
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 23
     iget v3, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_Position:I
 
     const/4 v4, 0x2
@@ -590,69 +526,52 @@
 
     invoke-static/range {v3 .. v8}, Landroid/opengl/GLES30;->glVertexAttribPointer(IIIZII)V
 
-    .line 24
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 25
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->mFrameTextureBufferId:I
 
     invoke-static {v2, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
-    .line 26
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 27
     iget v3, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->af_Position:I
 
     invoke-static/range {v3 .. v8}, Landroid/opengl/GLES30;->glVertexAttribPointer(IIIZII)V
 
-    .line 28
     invoke-static {v2, v1}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
-    .line 29
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 30
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mInputTextureId:I
 
     invoke-direct {p0, v0}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->bindTexture(I)V
 
-    .line 31
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
     const/4 v0, 0x5
 
-    .line 32
     iget v2, p0, Lcom/xiaomi/magicvideoskymediacodec/BaseRenderDrawer;->VertexCount:I
 
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES30;->glDrawArrays(III)V
 
-    .line 33
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 34
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 35
     invoke-direct {p0}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->unBindTexure()V
 
-    .line 36
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 37
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->av_Position:I
 
     invoke-static {v0}, Landroid/opengl/GLES30;->glDisableVertexAttribArray(I)V
 
-    .line 38
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
-    .line 39
     iget v0, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->af_Position:I
 
     invoke-static {v0}, Landroid/opengl/GLES30;->glDisableVertexAttribArray(I)V
 
-    .line 40
     invoke-static {}, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->checkNoGLES2Error()V
 
     return-void
@@ -661,7 +580,6 @@
     :goto_0
     const-string v0, "not inited"
 
-    .line 41
     invoke-static {v0}, Lcom/xiaomi/magicvideoskymediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -676,7 +594,6 @@
 .method public setInputTextureId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mInputTextureId:I
 
     return-void
@@ -685,7 +602,6 @@
 .method public setReserverResolution(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/magicvideoskymediacodec/OriginalRenderDrawer;->mReserverResolution:Z
 
     return-void

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/animation/controller/FolmeTouch;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch$1;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -53,7 +51,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch$1;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     iget-object p1, p1, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;

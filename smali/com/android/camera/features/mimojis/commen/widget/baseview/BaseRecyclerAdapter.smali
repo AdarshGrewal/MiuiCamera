@@ -56,7 +56,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;-><init>(Ljava/util/List;)V
 
     return-void
@@ -72,13 +71,10 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
-    .line 4
     new-instance p1, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {p1}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
@@ -100,20 +96,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -121,7 +114,6 @@
 
     move-result v0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -130,12 +122,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_1
     monitor-exit p0
 
@@ -159,7 +149,6 @@
 
     monitor-enter p0
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -175,23 +164,19 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     invoke-interface {v0, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 9
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void
 
-    .line 11
     :cond_1
     :goto_0
     monitor-exit p0
@@ -209,7 +194,6 @@
 .method public getCubicEaseOut()Lmiuix/view/animation/CubicEaseOutInterpolator;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mCubicEaseOut:Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     return-object v0
@@ -225,7 +209,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     return-object v0
@@ -234,7 +217,6 @@
 .method public getDegree()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDegree:I
 
     return v0
@@ -243,7 +225,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -270,7 +251,6 @@
 .method public isAvailablePosion(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -299,7 +279,6 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onBindViewHolder(Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;I)V
@@ -310,7 +289,6 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)V
     .locals 0
 
-    .line 2
     check-cast p1, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onBindViewHolder(Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;ILjava/util/List;)V
@@ -337,7 +315,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     if-eqz v0, :cond_5
@@ -352,7 +329,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -362,7 +338,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     sget-object v1, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->TAG:Ljava/lang/String;
 
     const-string v2, "data null error"
@@ -372,14 +347,12 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 6
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
     move-result p3
 
     if-eqz p3, :cond_3
 
-    .line 7
     :cond_2
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;->getRotateViews()[Landroid/view/View;
 
@@ -387,7 +360,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 8
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;->getRotateViews()[Landroid/view/View;
 
     move-result-object p3
@@ -401,7 +373,6 @@
 
     aget-object v3, p3, v2
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDegree()I
 
     move-result v4
@@ -417,16 +388,13 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 10
     invoke-virtual {p1, v0, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;->setData(Ljava/lang/Object;I)V
 
-    .line 11
     :cond_4
     iget-object p3, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;
 
     if-eqz p3, :cond_5
 
-    .line 12
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, p3, v0, p2, v1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;->setClickListener(Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;Ljava/lang/Object;ILandroid/view/View;)V
@@ -451,7 +419,6 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;
 
     move-result-object p1
@@ -462,7 +429,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;
     .locals 0
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onCreateBaseRecyclerViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;
 
     move-result-object p1
@@ -475,7 +441,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -495,23 +460,19 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
 
-    .line 5
     :cond_1
     :goto_0
     monitor-exit p0
@@ -538,16 +499,13 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
-    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
@@ -570,7 +528,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;
 
     return-void
@@ -579,7 +536,6 @@
 .method public setRotation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDegree:I
 
     return-void
@@ -595,7 +551,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -603,12 +558,10 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     invoke-virtual {p0, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->addData(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     :cond_0
     monitor-exit p0
 
@@ -617,7 +570,6 @@
     :cond_1
     if-ltz p1, :cond_4
 
-    .line 4
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -629,7 +581,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
@@ -639,34 +590,28 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 6
     invoke-virtual {p0, p2}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->addData(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 7
     monitor-exit p0
 
     return-void
 
-    .line 8
     :cond_3
     :try_start_2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->mDdataList:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void
 
-    .line 11
     :cond_4
     :goto_0
     monitor-exit p0

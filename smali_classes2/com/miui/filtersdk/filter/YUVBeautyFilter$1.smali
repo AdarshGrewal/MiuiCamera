@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/miui/filtersdk/filter/YUVBeautyFilter;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter$1;->this$0:Lcom/miui/filtersdk/filter/YUVBeautyFilter;
 
     iput p2, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter$1;->val$width:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter$1;->this$0:Lcom/miui/filtersdk/filter/YUVBeautyFilter;
 
     invoke-static {v0}, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->access$000(Lcom/miui/filtersdk/filter/YUVBeautyFilter;)Ljava/nio/ByteBuffer;

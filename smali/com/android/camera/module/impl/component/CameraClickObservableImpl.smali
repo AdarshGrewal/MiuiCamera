@@ -40,24 +40,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObservableArray:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObserverArray:Ljava/util/List;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,7 +66,6 @@
 .method public static create()Lcom/android/camera/module/impl/component/CameraClickObservableImpl;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;
 
     invoke-direct {v0}, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;-><init>()V
@@ -87,7 +82,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObservableArray:Ljava/util/List;
 
@@ -99,7 +93,6 @@
 
     invoke-interface {v0, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget-object p3, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipTipMsgArray:Ljava/util/List;
 
     array-length v0, p1
@@ -110,7 +103,6 @@
 
     invoke-interface {p3, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObserverArray:Ljava/util/List;
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -121,7 +113,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -136,7 +127,6 @@
 .method public subscribe(I)V
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -155,7 +145,6 @@
 
     move v3, v1
 
-    .line 2
     :goto_0
     iget-object v4, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipTipMsgArray:Ljava/util/List;
 
@@ -165,7 +154,6 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 3
     iget-object v4, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipTipMsgArray:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -174,7 +162,6 @@
 
     check-cast v4, [I
 
-    .line 4
     array-length v5, v4
 
     move v6, v1
@@ -188,7 +175,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     :try_start_0
     invoke-interface {v0, v7}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->isCurrentRecommendTipText(I)Z
 
@@ -219,7 +205,6 @@
 
     return-void
 
-    .line 6
     :cond_3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObservableArray:Ljava/util/List;
 
@@ -231,26 +216,22 @@
 
     if-eqz v0, :cond_6
 
-    .line 7
     array-length v3, v0
 
     if-gtz v3, :cond_4
 
     goto :goto_4
 
-    .line 8
     :cond_4
     :goto_3
     array-length v3, v0
 
     if-ge v1, v3, :cond_6
 
-    .line 9
     aget v3, v0, v1
 
     if-ne v3, p1, :cond_5
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObserverArray:Ljava/util/List;
 
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -276,22 +257,18 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObservableArray:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipObserverArray:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/CameraClickObservableImpl;->mBottomTipTipMsgArray:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0

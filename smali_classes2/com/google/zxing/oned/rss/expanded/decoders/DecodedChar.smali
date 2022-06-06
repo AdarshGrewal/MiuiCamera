@@ -15,10 +15,8 @@
 .method public constructor <init>(IC)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedObject;-><init>(I)V
 
-    .line 2
     iput-char p2, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedChar;->value:C
 
     return-void
@@ -29,7 +27,6 @@
 .method public getValue()C
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedChar;->value:C
 
     return v0
@@ -38,7 +35,6 @@
 .method public isFNC1()Z
     .locals 2
 
-    .line 1
     iget-char v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/DecodedChar;->value:C
 
     const/16 v1, 0x24

@@ -48,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$7ReducingSink;->val$supplier:Ljava8/util/function/Supplier;
 
     iput-object p2, p0, Ljava8/util/stream/ReduceOps$7ReducingSink;->val$accumulator:Ljava8/util/function/ObjIntConsumer;
@@ -65,7 +64,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -74,7 +72,6 @@
 .method public accept(I)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$7ReducingSink;->val$accumulator:Ljava8/util/function/ObjIntConsumer;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$Box;->state:Ljava/lang/Object;
@@ -87,7 +84,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -96,7 +92,6 @@
 .method public accept(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfInt;->accept(Ljava8/util/stream/Sink$OfInt;Ljava/lang/Integer;)V
 
     return-void
@@ -105,7 +100,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$7ReducingSink;->accept(Ljava/lang/Integer;)V
@@ -116,7 +110,6 @@
 .method public begin(J)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/ReduceOps$7ReducingSink;->val$supplier:Ljava8/util/function/Supplier;
 
     invoke-interface {p1}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -139,7 +132,6 @@
 .method public combine(Ljava8/util/stream/ReduceOps$7ReducingSink;)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$7ReducingSink;->val$combiner:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$Box;->state:Ljava/lang/Object;
@@ -158,7 +150,6 @@
 .method public bridge synthetic combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/stream/ReduceOps$7ReducingSink;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$7ReducingSink;->combine(Ljava8/util/stream/ReduceOps$7ReducingSink;)V

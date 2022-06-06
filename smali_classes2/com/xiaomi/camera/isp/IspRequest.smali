@@ -40,33 +40,24 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/camera/isp/IspRequest;->orientation:I
 
-    .line 3
     iput p1, p0, Lcom/xiaomi/camera/isp/IspRequest;->requestNumber:I
 
-    .line 4
     iput p2, p0, Lcom/xiaomi/camera/isp/IspRequest;->flipMode:I
 
-    .line 5
     iput-object p3, p0, Lcom/xiaomi/camera/isp/IspRequest;->settings:Landroid/os/Parcelable;
 
-    .line 6
     iput-object p4, p0, Lcom/xiaomi/camera/isp/IspRequest;->inputBuffers:Ljava/util/ArrayList;
 
-    .line 7
     iput-object p5, p0, Lcom/xiaomi/camera/isp/IspRequest;->cropRegion:[I
 
-    .line 8
     iput p6, p0, Lcom/xiaomi/camera/isp/IspRequest;->functionType:I
 
-    .line 9
     iput p7, p0, Lcom/xiaomi/camera/isp/IspRequest;->orientation:I
 
     return-void

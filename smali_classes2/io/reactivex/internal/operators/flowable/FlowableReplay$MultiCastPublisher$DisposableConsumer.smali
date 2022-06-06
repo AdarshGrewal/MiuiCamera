@@ -50,12 +50,10 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher$DisposableConsumer;->this$0:Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher$DisposableConsumer;->srw:Lio/reactivex/internal/subscribers/SubscriberResourceWrapper;
 
     return-void
@@ -66,7 +64,6 @@
 .method public accept(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher$DisposableConsumer;->srw:Lio/reactivex/internal/subscribers/SubscriberResourceWrapper;
 
     invoke-virtual {v0, p1}, Lio/reactivex/internal/subscribers/SubscriberResourceWrapper;->setResource(Lio/reactivex/disposables/Disposable;)V
@@ -82,7 +79,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/disposables/Disposable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay$MultiCastPublisher$DisposableConsumer;->accept(Lio/reactivex/disposables/Disposable;)V

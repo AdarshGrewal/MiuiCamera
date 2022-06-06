@@ -14,10 +14,8 @@
 .method public constructor <init>(Landroid/media/MediaPlayer$TrackInfo;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     return-void
@@ -26,14 +24,12 @@
 .method public static fromMediaPlayer(Landroid/media/MediaPlayer;)[Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/media/MediaPlayer;->getTrackInfo()[Landroid/media/MediaPlayer$TrackInfo;
 
     move-result-object p0
@@ -59,7 +55,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     array-length v0, p0
 
@@ -67,13 +62,11 @@
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     new-instance v2, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;
 
     aget-object v3, p0, v1
@@ -95,7 +88,6 @@
 .method public getFormat()Ltv/danmaku/ijk/media/player/misc/IMediaFormat;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     const/4 v1, 0x0
@@ -104,7 +96,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -114,7 +105,6 @@
 
     return-object v1
 
-    .line 3
     :cond_1
     invoke-virtual {v0}, Landroid/media/MediaPlayer$TrackInfo;->getFormat()Landroid/media/MediaFormat;
 
@@ -124,7 +114,6 @@
 
     return-object v1
 
-    .line 4
     :cond_2
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/AndroidMediaFormat;
 
@@ -136,12 +125,10 @@
 .method public getInfoInline()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/MediaPlayer$TrackInfo;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -157,7 +144,6 @@
 .method public getLanguage()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     if-nez v0, :cond_0
@@ -166,7 +152,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/media/MediaPlayer$TrackInfo;->getLanguage()Ljava/lang/String;
 
@@ -178,7 +163,6 @@
 .method public getTrackType()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     if-nez v0, :cond_0
@@ -187,7 +171,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/media/MediaPlayer$TrackInfo;->getTrackType()I
 
@@ -199,14 +182,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2
     const-class v1, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -217,15 +198,12 @@
 
     const/16 v1, 0x7b
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 4
     iget-object v1, p0, Ltv/danmaku/ijk/media/player/misc/AndroidTrackInfo;->mTrackInfo:Landroid/media/MediaPlayer$TrackInfo;
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {v1}, Landroid/media/MediaPlayer$TrackInfo;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -237,16 +215,13 @@
     :cond_0
     const-string v1, "null"
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
     const/16 v1, 0x7d
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

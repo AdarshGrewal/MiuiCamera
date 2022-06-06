@@ -46,14 +46,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sHardwareCodecs:Ljava/util/HashMap;
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -66,7 +64,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,10 +72,8 @@
 .method public static findCodecsFormMimeType(Ljava/lang/String;Z)Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;
     .locals 11
 
-    .line 1
     invoke-static {p0}, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->findSupportedColorFormats(Ljava/lang/String;)V
 
-    .line 2
     sget-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sHardwareCodecs:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -87,7 +82,6 @@
 
     check-cast v0, Landroid/util/SparseArray;
 
-    .line 3
     sget-object v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sSoftwareCodecs:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -96,12 +90,10 @@
 
     check-cast p0, Landroid/util/SparseArray;
 
-    .line 4
     new-instance v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;
 
     invoke-direct {v1}, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;-><init>()V
 
-    .line 5
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const-string v3, "Choosen secondary codec: "
@@ -126,7 +118,6 @@
 
     const p1, 0x7f000789
 
-    .line 6
     :try_start_0
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -142,12 +133,10 @@
 
     iput-object v0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->hardwareCodec:Ljava/lang/String;
 
-    .line 7
     iput p1, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->hardwareColorFormat:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :catch_0
     :try_start_1
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -164,18 +153,15 @@
 
     iput-object p0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->softwareCodec:Ljava/lang/String;
 
-    .line 9
     iput p1, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->softwareColorFormat:I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 10
     :catch_1
     iget-object p0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->hardwareCodec:Ljava/lang/String;
 
     if-eqz p0, :cond_0
 
-    .line 11
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,17 +186,14 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     invoke-static {v9, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     :goto_0
     iget-object p0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->softwareCodec:Ljava/lang/String;
 
     if-eqz p0, :cond_1
 
-    .line 14
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +218,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_1
     invoke-static {v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -245,7 +227,6 @@
     :cond_2
     move p1, v8
 
-    .line 16
     :goto_2
     sget-object v2, Lnet/majorkernelpanic/streaming/video/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
@@ -253,7 +234,6 @@
 
     if-ge p1, v10, :cond_3
 
-    .line 17
     :try_start_2
     aget v2, v2, p1
 
@@ -271,7 +251,6 @@
 
     iput-object v2, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->hardwareCodec:Ljava/lang/String;
 
-    .line 18
     sget-object v2, Lnet/majorkernelpanic/streaming/video/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     aget v2, v2, p1
@@ -291,7 +270,6 @@
     :goto_3
     move p1, v8
 
-    .line 19
     :goto_4
     sget-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
@@ -299,7 +277,6 @@
 
     if-ge p1, v2, :cond_4
 
-    .line 20
     :try_start_3
     aget v0, v0, p1
 
@@ -317,7 +294,6 @@
 
     iput-object v0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->softwareCodec:Ljava/lang/String;
 
-    .line 21
     sget-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     aget v0, v0, p1
@@ -333,14 +309,12 @@
 
     goto :goto_4
 
-    .line 22
     :cond_4
     :goto_5
     iget-object p0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->hardwareCodec:Ljava/lang/String;
 
     if-eqz p0, :cond_5
 
-    .line 23
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,17 +339,14 @@
 
     goto :goto_6
 
-    .line 24
     :cond_5
     invoke-static {v9, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     :goto_6
     iget-object p0, v1, Lnet/majorkernelpanic/streaming/video/CodecManager$Codecs;->softwareCodec:Ljava/lang/String;
 
     if-eqz p0, :cond_6
 
-    .line 26
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,7 +371,6 @@
 
     goto :goto_7
 
-    .line 27
     :cond_6
     invoke-static {v9, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -411,17 +381,14 @@
 .method public static findSupportedColorFormats(Ljava/lang/String;)V
     .locals 14
 
-    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 2
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    .line 3
     sget-object v2, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sSoftwareCodecs:Ljava/util/HashMap;
 
     invoke-virtual {v2, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -432,7 +399,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -456,7 +422,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v2
@@ -470,12 +435,10 @@
 
     if-ltz v2, :cond_9
 
-    .line 6
     invoke-static {v2}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v6
 
-    .line 7
     invoke-virtual {v6}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v7
@@ -484,7 +447,6 @@
 
     goto/16 :goto_5
 
-    .line 8
     :cond_1
     invoke-virtual {v6}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -492,13 +454,11 @@
 
     move v8, v5
 
-    .line 9
     :goto_1
     array-length v9, v7
 
     if-ge v8, v9, :cond_8
 
-    .line 10
     aget-object v9, v7, v8
 
     invoke-virtual {v9, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -507,7 +467,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 11
     invoke-virtual {v6, p0}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v9
@@ -516,7 +475,6 @@
 
     move v11, v10
 
-    .line 12
     :goto_2
     sget-object v12, Lnet/majorkernelpanic/streaming/video/CodecManager;->SOFTWARE_ENCODERS:[Ljava/lang/String;
 
@@ -524,7 +482,6 @@
 
     if-ge v10, v12, :cond_3
 
-    .line 13
     invoke-virtual {v6}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v12
@@ -549,7 +506,6 @@
     :cond_3
     move v10, v5
 
-    .line 14
     :goto_3
     iget-object v12, v9, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
@@ -557,12 +513,10 @@
 
     if-ge v10, v13, :cond_7
 
-    .line 15
     aget v12, v12, v10
 
     if-eqz v11, :cond_5
 
-    .line 16
     invoke-virtual {v0, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -575,7 +529,6 @@
 
     invoke-virtual {v0, v12, v13}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 17
     :cond_4
     invoke-virtual {v0, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -591,7 +544,6 @@
 
     goto :goto_4
 
-    .line 18
     :cond_5
     invoke-virtual {v1, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -605,7 +557,6 @@
 
     invoke-virtual {v1, v12, v13}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 19
     :cond_6
     invoke-virtual {v1, v12}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -635,7 +586,6 @@
 
     goto/16 :goto_0
 
-    .line 20
     :cond_9
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -643,12 +593,10 @@
 
     const-string v6, "Supported color formats on this phone: "
 
-    .line 21
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v6, v5
 
-    .line 22
     :goto_6
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -680,7 +628,6 @@
 
     goto :goto_6
 
-    .line 23
     :cond_a
     :goto_7
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
@@ -727,7 +674,6 @@
 
     goto :goto_7
 
-    .line 24
     :cond_c
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -735,12 +681,10 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     sget-object v2, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sSoftwareCodecs:Ljava/util/HashMap;
 
     invoke-virtual {v2, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v0, Lnet/majorkernelpanic/streaming/video/CodecManager$Selector;->sHardwareCodecs:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

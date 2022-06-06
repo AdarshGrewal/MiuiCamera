@@ -47,7 +47,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -56,10 +55,8 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;ILjava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 3
     invoke-direct {p0, p3}, Lcom/android/camera/effect/renders/KaleidoscopeRender;->convertToKaleidoscopeEffectId(Ljava/lang/String;)V
 
     return-void
@@ -68,7 +65,6 @@
 .method private convertToKaleidoscopeEffectId(Ljava/lang/String;)V
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -187,40 +183,33 @@
     :cond_1
     const/4 p1, 0x6
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     goto :goto_2
 
-    .line 3
     :cond_2
     iput v5, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     goto :goto_2
 
-    .line 4
     :cond_3
     iput v4, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     goto :goto_2
 
-    .line 5
     :cond_4
     iput v3, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     goto :goto_2
 
-    .line 6
     :cond_5
     iput v2, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     goto :goto_2
 
-    .line 7
     :cond_6
     iput v1, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
-    .line 8
     :goto_2
     sget-object p1, Lcom/android/camera/effect/renders/KaleidoscopeRender;->TAG:Ljava/lang/String;
 
@@ -270,10 +259,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uMode"
@@ -284,7 +271,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mUniformModeHandle:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uResolution"
@@ -301,17 +287,14 @@
 .method public initShaderValue(Z)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mUniformModeHandle:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mKaleidoscopeId:I
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/renders/KaleidoscopeRender;->mUniformResolutionHandle:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
@@ -330,7 +313,6 @@
 .method public setKaleidoscope(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/KaleidoscopeRender;->convertToKaleidoscopeEffectId(Ljava/lang/String;)V
 
     return-void

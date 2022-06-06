@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$2;->this$0:Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$2;->this$0:Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J

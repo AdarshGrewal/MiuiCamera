@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static getFilter(Lcom/miui/filtersdk/filter/helper/FilterType;ZI)Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
     .locals 9
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/helper/FilterType;->getResources()[Ljava/lang/String;
 
     move-result-object v0
@@ -37,14 +35,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 2
     array-length v2, v0
 
     if-eqz v2, :cond_5
 
     const/4 v2, 0x0
 
-    .line 3
     sget-object v3, Lcom/miui/filtersdk/filter/helper/FilterFactory$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterCategory:[I
 
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/helper/FilterType;->getFilterCategory()Lcom/miui/filtersdk/filter/helper/FilterCategory;
@@ -71,7 +67,6 @@
 
     goto/16 :goto_2
 
-    .line 4
     :pswitch_0
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -81,7 +76,6 @@
 
     goto/16 :goto_2
 
-    .line 5
     :pswitch_1
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -91,7 +85,6 @@
 
     goto/16 :goto_2
 
-    .line 6
     :pswitch_2
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -101,7 +94,6 @@
 
     goto :goto_2
 
-    .line 7
     :pswitch_3
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -111,7 +103,6 @@
 
     goto :goto_2
 
-    .line 8
     :pswitch_4
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -121,7 +112,6 @@
 
     goto :goto_2
 
-    .line 9
     :pswitch_5
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -139,7 +129,6 @@
 
     goto :goto_2
 
-    .line 10
     :pswitch_6
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -149,13 +138,11 @@
 
     goto :goto_2
 
-    .line 11
     :pswitch_7
     sget p1, Lcom/miui/filtersdk/filter/helper/FilterFactory;->LIGHTING_VERSION:I
 
     if-lt p1, v4, :cond_1
 
-    .line 12
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
     aget-object p1, v0, v8
@@ -164,7 +151,6 @@
 
     goto :goto_2
 
-    .line 13
     :cond_1
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -177,7 +163,6 @@
     :pswitch_8
     if-ne p2, v5, :cond_2
 
-    .line 14
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
     aget-object p1, v0, v4
@@ -189,7 +174,6 @@
     :cond_2
     if-ne p2, v4, :cond_3
 
-    .line 15
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
     const/4 p1, 0x3
@@ -200,7 +184,6 @@
 
     goto :goto_2
 
-    .line 16
     :cond_3
     new-instance v2, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;
 
@@ -216,7 +199,6 @@
     :goto_1
     invoke-direct {v2, p1, v6}, Lcom/miui/filtersdk/filter/base/ColorLookupFilter;-><init>(Ljava/lang/String;I)V
 
-    .line 17
     :goto_2
     sget-object p1, Lcom/miui/filtersdk/filter/helper/FilterFactory;->TAG:Ljava/lang/String;
 
@@ -256,7 +238,6 @@
 
     return-object v2
 
-    .line 18
     :cond_5
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -307,12 +288,10 @@
 .method public static getFiltersByCategory(Lcom/miui/filtersdk/filter/helper/FilterCategory;)[Lcom/miui/filtersdk/filter/helper/FilterType;
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/miui/filtersdk/filter/helper/FilterType;->values()[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v1
@@ -326,14 +305,12 @@
 
     aget-object v4, v1, v3
 
-    .line 3
     invoke-virtual {v4}, Lcom/miui/filtersdk/filter/helper/FilterType;->getFilterCategory()Lcom/miui/filtersdk/filter/helper/FilterCategory;
 
     move-result-object v5
 
     if-ne v5, p0, :cond_0
 
-    .line 4
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -341,7 +318,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -349,7 +325,6 @@
 
     new-array p0, p0, [Lcom/miui/filtersdk/filter/helper/FilterType;
 
-    .line 6
     invoke-interface {v0, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -362,7 +337,6 @@
 .method public static setLightingVersion(I)V
     .locals 0
 
-    .line 1
     sput p0, Lcom/miui/filtersdk/filter/helper/FilterFactory;->LIGHTING_VERSION:I
 
     return-void

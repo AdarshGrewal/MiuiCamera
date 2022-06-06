@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/adobe/xmp/impl/XMPNode;Ljava/util/Iterator;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/impl/XMPNode$1;->this$0:Lcom/adobe/xmp/impl/XMPNode;
 
     iput-object p2, p0, Lcom/adobe/xmp/impl/XMPNode$1;->val$it:Ljava/util/Iterator;
@@ -42,7 +41,6 @@
 .method public hasNext()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPNode$1;->val$it:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -55,7 +53,6 @@
 .method public next()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPNode$1;->val$it:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -68,7 +65,6 @@
 .method public remove()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string/jumbo v1, "remove() is not allowed due to the internal contraints"

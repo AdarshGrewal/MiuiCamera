@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra;Lcom/android/camera/data/data/ComponentData;ILcom/android/camera/fragment/manually/ManuallyListener;II)V
     .locals 6
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra$1;->this$0:Lcom/android/camera/fragment/fastmotion/FragmentFastmotionProExtra;
 
     move-object v0, p0
@@ -51,7 +50,6 @@
 
     const-string v0, "manual"
 
-    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -62,7 +60,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->couldNewValueTakeEffect(Ljava/lang/String;)Z
 

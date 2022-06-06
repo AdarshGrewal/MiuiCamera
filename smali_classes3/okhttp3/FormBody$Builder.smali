@@ -44,7 +44,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lokhttp3/FormBody$Builder;-><init>(Ljava/nio/charset/Charset;)V
 
     return-void
@@ -53,24 +52,20 @@
 .method public constructor <init>(Ljava/nio/charset/Charset;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lokhttp3/FormBody$Builder;->values:Ljava/util/List;
 
-    .line 5
     iput-object p1, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
 
     return-void
@@ -81,7 +76,6 @@
 .method public add(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/FormBody$Builder;
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;
 
     iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
@@ -104,7 +98,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget-object p1, p0, Lokhttp3/FormBody$Builder;->values:Ljava/util/List;
 
     iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
@@ -129,7 +122,6 @@
 .method public addEncoded(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/FormBody$Builder;
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;
 
     iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
@@ -152,7 +144,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget-object p1, p0, Lokhttp3/FormBody$Builder;->values:Ljava/util/List;
 
     iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
@@ -179,7 +170,6 @@
 .method public build()Lokhttp3/FormBody;
     .locals 3
 
-    .line 1
     new-instance v0, Lokhttp3/FormBody;
 
     iget-object v1, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;

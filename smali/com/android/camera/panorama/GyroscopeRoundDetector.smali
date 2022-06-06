@@ -23,12 +23,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/panorama/RoundDetector;-><init>()V
 
     const/high16 v0, 0x43b40000    # 360.0f
 
-    .line 2
     iput v0, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mTargetDegree:F
 
     return-void
@@ -39,12 +37,10 @@
 .method public detect()Z
     .locals 10
 
-    .line 1
     sget-object v0, Lcom/android/camera/panorama/RoundDetector;->SynchronizedObject:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/android/camera/panorama/RoundDetector;->mIsEndOk:Z
 
@@ -52,12 +48,10 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     monitor-exit v0
 
     return v2
 
-    .line 4
     :cond_0
     iget v1, p0, Lcom/android/camera/panorama/RoundDetector;->mDirection:I
 
@@ -65,7 +59,6 @@
 
     if-nez v1, :cond_2
 
-    .line 5
     iget v1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mTargetDegree:F
 
     invoke-virtual {p0}, Lcom/android/camera/panorama/RoundDetector;->currentDegree()I
@@ -85,7 +78,6 @@
 
     return v2
 
-    .line 6
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/panorama/RoundDetector;->currentDegree()I
 
@@ -115,7 +107,6 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -126,7 +117,6 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 8
 
-    .line 1
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
@@ -139,7 +129,6 @@
 
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
-    .line 2
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
@@ -150,24 +139,20 @@
 
     return-void
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/panorama/RoundDetector;->SynchronizedObject:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-boolean v1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mUseSensor:Z
 
     if-nez v1, :cond_1
 
-    .line 5
     monitor-exit v0
 
     return-void
 
-    .line 6
     :cond_1
     iget v1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mLastTimestamp:F
 
@@ -183,7 +168,6 @@
 
     if-nez v1, :cond_2
 
-    .line 7
     iget-wide v4, p1, Landroid/hardware/SensorEvent;->timestamp:J
 
     long-to-float v1, v4
@@ -196,17 +180,14 @@
 
     mul-float/2addr v1, v4
 
-    .line 8
     iget-object v4, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v4, v4, v2
 
-    .line 9
     iget-object v5, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v5, v5, v3
 
-    .line 10
     iget v6, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianLandscape:F
 
     mul-float/2addr v4, v1
@@ -215,7 +196,6 @@
 
     iput v6, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianLandscape:F
 
-    .line 11
     iget v4, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianPortrait:F
 
     mul-float/2addr v5, v1
@@ -224,7 +204,6 @@
 
     iput v4, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianPortrait:F
 
-    .line 12
     :cond_2
     iget-wide v4, p1, Landroid/hardware/SensorEvent;->timestamp:J
 
@@ -232,14 +211,12 @@
 
     iput p1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mLastTimestamp:F
 
-    .line 13
     iget p1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianLandscape:F
 
     invoke-static {p1}, Lcom/android/camera/panorama/RoundDetector;->radianToDegree(F)I
 
     move-result p1
 
-    .line 14
     iget v1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianPortrait:F
 
     invoke-static {v1}, Lcom/android/camera/panorama/RoundDetector;->radianToDegree(F)I
@@ -248,7 +225,6 @@
 
     if-gtz p1, :cond_3
 
-    .line 15
     iget v4, p0, Lcom/android/camera/panorama/RoundDetector;->mDirection:I
 
     if-ne v4, v3, :cond_3
@@ -258,14 +234,12 @@
     :cond_3
     if-gtz v1, :cond_4
 
-    .line 16
     iget v4, p0, Lcom/android/camera/panorama/RoundDetector;->mDirection:I
 
     if-ne v4, v3, :cond_4
 
     add-int/lit16 v1, v1, 0x168
 
-    .line 17
     :cond_4
     iget-boolean v4, p0, Lcom/android/camera/panorama/RoundDetector;->isLandscape:Z
 
@@ -278,7 +252,6 @@
     :cond_5
     move v4, v1
 
-    .line 18
     :goto_0
     iget-boolean v5, p0, Lcom/android/camera/panorama/RoundDetector;->isLandscape:Z
 
@@ -291,7 +264,6 @@
     :cond_6
     iget v5, p0, Lcom/android/camera/panorama/RoundDetector;->mCurrentDegreePortrait:I
 
-    .line 19
     :goto_1
     iget v6, p0, Lcom/android/camera/panorama/RoundDetector;->mDirection:I
 
@@ -305,7 +277,6 @@
 
     sub-int/2addr v4, v5
 
-    .line 20
     invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     move-result v4
@@ -332,7 +303,6 @@
 
     sub-int/2addr v4, v5
 
-    .line 21
     invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     move-result v4
@@ -344,19 +314,15 @@
     :goto_3
     if-eqz v4, :cond_a
 
-    .line 22
     iput p1, p0, Lcom/android/camera/panorama/RoundDetector;->mCurrentDegreeLandscape:I
 
-    .line 23
     iput v1, p0, Lcom/android/camera/panorama/RoundDetector;->mCurrentDegreePortrait:I
 
-    .line 24
     :cond_a
     iget-boolean p1, p0, Lcom/android/camera/panorama/RoundDetector;->mIsEndOk:Z
 
     if-nez p1, :cond_c
 
-    .line 25
     invoke-virtual {p0}, Lcom/android/camera/panorama/RoundDetector;->currentDegree()I
 
     move-result p1
@@ -376,7 +342,6 @@
     :cond_b
     iput-boolean v2, p0, Lcom/android/camera/panorama/RoundDetector;->mIsEndOk:Z
 
-    .line 26
     :cond_c
     monitor-exit v0
 
@@ -416,45 +381,34 @@
     :goto_0
     move p1, v0
 
-    .line 1
     :goto_1
     iput-boolean p1, p0, Lcom/android/camera/panorama/RoundDetector;->isLandscape:Z
 
-    .line 2
     sget-object p1, Lcom/android/camera/panorama/RoundDetector;->SynchronizedObject:Ljava/lang/Object;
 
     monitor-enter p1
 
     const/4 v2, 0x0
 
-    .line 3
     :try_start_0
     iput v2, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mLastTimestamp:F
 
-    .line 4
     iput v2, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianLandscape:F
 
-    .line 5
     iput v2, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mRadianPortrait:F
 
-    .line 6
     iput v1, p0, Lcom/android/camera/panorama/RoundDetector;->mCurrentDegreeLandscape:I
 
-    .line 7
     iput v1, p0, Lcom/android/camera/panorama/RoundDetector;->mCurrentDegreePortrait:I
 
-    .line 8
     iput p2, p0, Lcom/android/camera/panorama/RoundDetector;->mDirection:I
 
-    .line 9
     iput-boolean v1, p0, Lcom/android/camera/panorama/RoundDetector;->mIsEndOk:Z
 
-    .line 10
     iput-boolean v0, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mUseSensor:Z
 
     if-nez p5, :cond_3
 
-    .line 11
     iget-boolean p2, p0, Lcom/android/camera/panorama/RoundDetector;->isLandscape:Z
 
     const/high16 p5, 0x41a00000    # 20.0f
@@ -467,7 +421,6 @@
 
     add-float/2addr v0, p5
 
-    .line 12
     iput v0, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mTargetDegree:F
 
     goto :goto_2
@@ -477,10 +430,8 @@
 
     add-float/2addr v0, p5
 
-    .line 13
     iput v0, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mTargetDegree:F
 
-    .line 14
     :cond_3
     :goto_2
     monitor-exit p1
@@ -500,18 +451,15 @@
 .method public stop()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/panorama/RoundDetector;->SynchronizedObject:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/android/camera/panorama/GyroscopeRoundDetector;->mUseSensor:Z
 
-    .line 3
     monitor-exit v0
 
     return-void

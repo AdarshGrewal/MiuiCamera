@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lmiuix/io/ResettableInputStream$Type;->values()[Lmiuix/io/ResettableInputStream$Type;
 
     move-result-object v0

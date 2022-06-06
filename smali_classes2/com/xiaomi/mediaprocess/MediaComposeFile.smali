@@ -23,10 +23,8 @@
 .method public constructor <init>(Lcom/xiaomi/mediaprocess/MediaEffectGraph;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     return-void
@@ -58,7 +56,6 @@
 .method public BeginComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,7 +76,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->BeginComposeFileJni()V
 
     return-void
@@ -88,7 +84,6 @@
 .method public CancelComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -109,7 +104,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->CancelComposeFileJni()V
 
     return-void
@@ -118,12 +112,10 @@
 .method public ConstructMediaComposeFile(IIII)Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     const-string p2, "effect graph is null, failed!"
@@ -134,7 +126,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->GetGraphLine()J
 
@@ -150,7 +141,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->ConstructMediaComposeFileJni(JIIII)Z
 
-    .line 4
     sget-object p1, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -179,7 +169,6 @@
 .method public DestructMediaComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -200,7 +189,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->DestructMediaComposeFileJni()V
 
     return-void
@@ -211,12 +199,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileFdJni(Ljava/io/FileDescriptor;)V
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -230,7 +216,6 @@
 .method public SetComposeFileName(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -249,7 +234,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileNameJni(Ljava/lang/String;)V
 
     return-void
@@ -258,7 +242,6 @@
 .method public SetComposeNotify(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -279,7 +262,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeNotifyJni(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
 
     return-void
@@ -288,7 +270,6 @@
 .method public SetMediaEffectGraph(Lcom/xiaomi/mediaprocess/MediaEffectGraph;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     return-void

@@ -24,12 +24,10 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$1;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$1;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->access$000(Lcom/android/camera/dualvideo/render/CameraItem;)Landroid/graphics/Rect;
@@ -55,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$1;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->access$100(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -82,7 +79,6 @@
 
     add-float/2addr p1, p2
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItem$1;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     new-instance v0, Landroid/graphics/Rect;

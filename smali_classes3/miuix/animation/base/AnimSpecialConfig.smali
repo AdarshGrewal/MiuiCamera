@@ -15,7 +15,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Lmiuix/animation/base/AnimConfig;-><init>(Z)V
 
     return-void
@@ -58,10 +57,8 @@
 .method public setMinAndMax(DD)Lmiuix/animation/base/AnimSpecialConfig;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/animation/base/AnimSpecialConfig;->minValue:D
 
-    .line 2
     iput-wide p3, p0, Lmiuix/animation/base/AnimSpecialConfig;->maxValue:D
 
     return-object p0
@@ -80,7 +77,6 @@
 
     move-object v5, p4
 
-    .line 1
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0
@@ -107,7 +103,6 @@
 
     move-object v5, p5
 
-    .line 3
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0
@@ -126,7 +121,6 @@
 
     move-object v5, p3
 
-    .line 2
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0
@@ -145,7 +139,6 @@
 
     move-object v5, p4
 
-    .line 4
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0
@@ -172,7 +165,6 @@
 
     move-object v5, p5
 
-    .line 6
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0
@@ -191,7 +183,6 @@
 
     move-object v5, p3
 
-    .line 5
     invoke-super/range {v0 .. v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/base/AnimSpecialConfig;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)V
 
     return-object p0

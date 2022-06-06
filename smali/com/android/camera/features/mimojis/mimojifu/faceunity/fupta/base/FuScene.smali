@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 .method public getItem(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$SceneType;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene$1;->$SwitchMap$com$android$camera$features$mimojis$mimojifu$faceunity$fupta$base$entity$LabelCollection$SceneType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -53,23 +51,19 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->light:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->background:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 4
     :cond_2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->camera:Ljava/lang/String;
 
-    .line 5
     :goto_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -86,7 +80,6 @@
 .method public setBackground(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->background:Ljava/lang/String;
 
     return-void
@@ -95,7 +88,6 @@
 .method public setCamera(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->camera:Ljava/lang/String;
 
     return-void
@@ -104,7 +96,6 @@
 .method public setLight(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuScene;->light:Ljava/lang/String;
 
     return-void

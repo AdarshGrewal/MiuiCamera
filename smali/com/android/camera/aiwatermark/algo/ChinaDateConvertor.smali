@@ -15,7 +15,6 @@
 
     new-array v0, v0, [J
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lunarInfo:[J
@@ -180,7 +179,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -193,7 +191,6 @@
 
     new-array v0, v0, [J
 
-    .line 1
     invoke-static/range {p0 .. p2}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->getOffset(III)J
 
     move-result-wide v1
@@ -231,7 +228,6 @@
 
     if-lez v7, :cond_0
 
-    .line 2
     invoke-static {v4}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lYearDays(I)I
 
     move-result v6
@@ -240,7 +236,6 @@
 
     sub-long/2addr v1, v10
 
-    .line 3
     aget-wide v10, v0, v5
 
     add-long/2addr v10, v8
@@ -262,7 +257,6 @@
 
     add-int/lit8 v4, v4, -0x1
 
-    .line 4
     aget-wide v12, v0, v5
 
     sub-long/2addr v12, v8
@@ -282,7 +276,6 @@
 
     aput-wide v8, v0, v7
 
-    .line 5
     invoke-static {v4}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->leapMonth(I)I
 
     move-result v4
@@ -310,7 +303,6 @@
 
     if-ne v9, v6, :cond_2
 
-    .line 6
     aget-wide v15, v0, v7
 
     cmp-long v6, v15, v10
@@ -323,7 +315,6 @@
 
     move/from16 p1, v9
 
-    .line 7
     aget-wide v8, v0, v3
 
     long-to-int v6, v8
@@ -336,7 +327,6 @@
 
     goto :goto_2
 
-    .line 8
     :cond_2
     aget-wide v5, v0, v3
 
@@ -348,7 +338,6 @@
 
     move v6, v5
 
-    .line 9
     :goto_2
     aget-wide v15, v0, v7
 
@@ -369,7 +358,6 @@
 
     sub-long/2addr v1, v3
 
-    .line 10
     aget-wide v3, v0, v7
 
     cmp-long v3, v3, v10
@@ -378,7 +366,6 @@
 
     const/4 v3, 0x4
 
-    .line 11
     aget-wide v15, v0, v3
 
     add-long/2addr v15, v13
@@ -411,7 +398,6 @@
 
     if-ne v9, v5, :cond_7
 
-    .line 12
     aget-wide v4, v0, v7
 
     cmp-long v4, v4, v13
@@ -429,7 +415,6 @@
 
     const/4 v4, 0x4
 
-    .line 13
     aget-wide v7, v0, v4
 
     sub-long/2addr v7, v13
@@ -451,7 +436,6 @@
 
     add-int/lit8 v9, v9, -0x1
 
-    .line 14
     aget-wide v5, v0, v4
 
     sub-long/2addr v5, v13
@@ -490,7 +474,6 @@
     :cond_0
     const-string v0, ""
 
-    .line 1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -510,14 +493,12 @@
 .method public static final getDate()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "MMdd"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
@@ -532,7 +513,6 @@
 .method public static getOffset(III)J
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/util/GregorianCalendar;
 
     const/16 v1, 0x76c
@@ -547,7 +527,6 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/util/GregorianCalendar;
 
     add-int/lit8 p1, p1, -0x1
@@ -558,7 +537,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/util/Date;->getTime()J
 
     move-result-wide p0
@@ -579,7 +557,6 @@
 .method public static final isChineseEve()Z
     .locals 8
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
     invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/Locale;)Ljava/util/Calendar;
@@ -588,14 +565,12 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x2
 
-    .line 3
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
@@ -604,17 +579,14 @@
 
     const/4 v5, 0x5
 
-    .line 4
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 5
     invoke-static {v2, v4, v0}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->calElement(III)[J
 
     move-result-object v0
 
-    .line 6
     aget-wide v4, v0, v1
 
     const-wide/16 v6, 0xc
@@ -625,7 +597,6 @@
 
     if-nez v2, :cond_0
 
-    .line 7
     :try_start_0
     aget-wide v5, v0, v4
 
@@ -639,7 +610,6 @@
 
     move-result v2
 
-    .line 8
     aget-wide v5, v0, v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -667,7 +637,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 1
     sget-object v2, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lunarInfo:[J
 
     add-int/lit16 v3, p0, -0x76c
@@ -691,7 +660,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     invoke-static {p0}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->leapDays(I)I
 
@@ -705,14 +673,12 @@
 .method public static final leapDays(I)I
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->leapMonth(I)I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     sget-object v0, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lunarInfo:[J
 
     add-int/lit16 p0, p0, -0x76c
@@ -747,7 +713,6 @@
 .method public static final leapMonth(I)I
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lunarInfo:[J
 
     add-int/lit16 p0, p0, -0x76c
@@ -766,7 +731,6 @@
 .method public static final monthDays(II)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->lunarInfo:[J
 
     add-int/lit16 p0, p0, -0x76c
@@ -800,7 +764,6 @@
 .method public static today()Ljava/lang/String;
     .locals 6
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
     invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/Locale;)Ljava/util/Calendar;
@@ -809,14 +772,12 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x2
 
-    .line 3
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
@@ -825,22 +786,18 @@
 
     const/4 v5, 0x5
 
-    .line 4
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 5
     invoke-static {v2, v4, v0}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->calElement(III)[J
 
     move-result-object v0
 
-    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7
     aget-wide v4, v0, v1
 
     invoke-static {v4, v5}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->formatData(J)Ljava/lang/String;
@@ -849,7 +806,6 @@
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     aget-wide v0, v0, v3
 
     invoke-static {v0, v1}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->formatData(J)Ljava/lang/String;
@@ -858,7 +814,6 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 9
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

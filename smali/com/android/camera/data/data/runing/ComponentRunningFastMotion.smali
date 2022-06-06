@@ -23,10 +23,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -35,10 +33,8 @@
 
     const/4 p1, 0x1
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mIsClosed:Z
 
-    .line 4
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -60,10 +56,8 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;-><init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
 
-    .line 6
     iput-object p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mList:Ljava/util/ArrayList;
 
     return-void
@@ -74,7 +68,6 @@
 .method public getCurrentType()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mCurrentType:Ljava/lang/String;
 
     return-object v0
@@ -107,7 +100,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mList:Ljava/util/ArrayList;
 
     return-object v0
@@ -124,7 +116,6 @@
 .method public isClosed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mIsClosed:Z
 
     return v0
@@ -135,7 +126,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -148,7 +138,6 @@
 .method public setClosed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mIsClosed:Z
 
     return-void
@@ -157,7 +146,6 @@
 .method public setCurrentType(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningFastMotion;->mCurrentType:Ljava/lang/String;
 
     return-void

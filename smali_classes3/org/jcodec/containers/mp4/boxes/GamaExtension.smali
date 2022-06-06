@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createGamaExtension(F)Lorg/jcodec/containers/mp4/boxes/GamaExtension;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/GamaExtension;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -33,7 +31,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/GamaExtension;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput p0, v0, Lorg/jcodec/containers/mp4/boxes/GamaExtension;->gamma:F
 
     return-object v0
@@ -52,7 +49,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/GamaExtension;->gamma:F
 
     const/high16 v1, 0x47800000    # 65536.0f
@@ -77,7 +73,6 @@
 .method public getGamma()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/GamaExtension;->gamma:F
 
     return v0
@@ -86,7 +81,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -97,7 +91,6 @@
 
     div-float/2addr p1, v0
 
-    .line 2
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/GamaExtension;->gamma:F
 
     return-void

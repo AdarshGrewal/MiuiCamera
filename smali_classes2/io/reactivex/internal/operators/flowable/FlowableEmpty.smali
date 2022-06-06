@@ -35,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableEmpty;
 
     invoke-direct {v0}, Lio/reactivex/internal/operators/flowable/FlowableEmpty;-><init>()V
@@ -48,7 +47,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
     return-void
@@ -76,7 +74,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->complete(Lorg/reactivestreams/Subscriber;)V
 
     return-void

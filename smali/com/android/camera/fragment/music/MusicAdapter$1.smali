@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/MusicAdapter;Landroid/widget/ImageView;ILandroid/widget/ProgressBar;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/MusicAdapter$1;->this$0:Lcom/android/camera/fragment/music/MusicAdapter;
 
     iput-object p2, p0, Lcom/android/camera/fragment/music/MusicAdapter$1;->val$music_play:Landroid/widget/ImageView;
@@ -50,14 +49,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/music/MusicAdapter$1;->this$0:Lcom/android/camera/fragment/music/MusicAdapter;
 
     iget-object p1, p1, Lcom/android/camera/fragment/music/MusicAdapter;->mItemOnClickInterface:Lcom/android/camera/fragment/music/MusicAdapter$ItemOnClickInterface;
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/music/MusicAdapter$1;->val$music_play:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/android/camera/fragment/music/MusicAdapter$1;->val$position:I

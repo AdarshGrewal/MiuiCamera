@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/RemoteOnlineTipsDialogFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/RemoteOnlineTipsDialogFragment$1;->this$0:Lcom/android/camera/fragment/dialog/RemoteOnlineTipsDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/RemoteOnlineTipsDialogFragment$1;->this$0:Lcom/android/camera/fragment/dialog/RemoteOnlineTipsDialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/DialogFragment;->dismiss()V

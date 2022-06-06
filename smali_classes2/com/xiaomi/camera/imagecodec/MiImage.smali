@@ -39,64 +39,52 @@
 .method public constructor <init>(Landroid/media/Image;)V
     .locals 8
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mWidth:I
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mHeight:I
 
-    .line 4
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mFormat:I
 
-    .line 5
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mFormat:I
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mWidth:I
 
-    .line 7
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mHeight:I
 
-    .line 8
     invoke-virtual {p1}, Landroid/media/Image;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mCropRect:Landroid/graphics/Rect;
 
-    .line 9
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mTimeStamp:J
 
-    .line 10
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
-    .line 11
     array-length v1, v0
 
-    .line 12
     new-array v2, v1, [Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     iput-object v2, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
@@ -106,12 +94,10 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 13
     invoke-direct {p0, v2}, Lcom/xiaomi/camera/imagecodec/MiImage;->getEffectivePlaneSizeForImage(I)Landroid/util/Size;
 
     move-result-object v3
 
-    .line 14
     invoke-virtual {v3}, Landroid/util/Size;->getWidth()I
 
     move-result v3
@@ -124,7 +110,6 @@
 
     mul-int/2addr v3, v4
 
-    .line 15
     aget-object v4, v0, v2
 
     invoke-virtual {v4}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -139,7 +124,6 @@
 
     move-result-object v4
 
-    .line 16
     iget-object v5, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     new-instance v6, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
@@ -158,7 +142,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_0
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/imagecodec/MiImage;->fromImage(Landroid/media/Image;)V
 
@@ -168,58 +151,49 @@
 .method private fromImage(Landroid/media/Image;)V
     .locals 23
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v2
 
-    .line 3
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getPlanes()[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     move-result-object v3
 
     const/4 v5, 0x0
 
-    .line 4
     :goto_0
     array-length v6, v3
 
     if-ge v5, v6, :cond_6
 
-    .line 5
     aget-object v6, v2, v5
 
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v6
 
-    .line 6
     aget-object v7, v3, v5
 
     invoke-virtual {v7}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getRowStride()I
 
     move-result v7
 
-    .line 7
     aget-object v8, v2, v5
 
     invoke-virtual {v8}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 8
     aget-object v9, v3, v5
 
     invoke-virtual {v9}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v9
 
-    .line 9
     aget-object v10, v2, v5
 
     invoke-virtual {v10}, Landroid/media/Image$Plane;->getPixelStride()I
@@ -234,20 +208,16 @@
 
     if-ne v10, v11, :cond_5
 
-    .line 10
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v10
 
-    .line 11
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 12
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     if-ne v6, v7, :cond_1
 
-    .line 13
     invoke-virtual {v9, v8}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-wide/from16 v16, v0
@@ -261,25 +231,21 @@
 
     goto/16 :goto_5
 
-    .line 14
     :cond_1
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v11
 
-    .line 15
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v12
 
     move-object/from16 v13, p0
 
-    .line 16
     invoke-direct {v13, v5}, Lcom/xiaomi/camera/imagecodec/MiImage;->getEffectivePlaneSizeForImage(I)Landroid/util/Size;
 
     move-result-object v14
 
-    .line 17
     invoke-virtual {v14}, Landroid/util/Size;->getWidth()I
 
     move-result v15
@@ -292,14 +258,12 @@
 
     mul-int v15, v15, v16
 
-    .line 18
     new-array v4, v15, [B
 
     move-wide/from16 v16, v0
 
     const/4 v13, 0x0
 
-    .line 19
     :goto_1
     invoke-virtual {v14}, Landroid/util/Size;->getHeight()I
 
@@ -307,13 +271,10 @@
 
     if-ge v13, v0, :cond_0
 
-    .line 20
     invoke-virtual {v8, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 21
     invoke-virtual {v9, v12}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 22
     invoke-virtual {v14}, Landroid/util/Size;->getHeight()I
 
     move-result v0
@@ -324,7 +285,6 @@
 
     if-ne v13, v0, :cond_4
 
-    .line 23
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -333,7 +293,6 @@
 
     if-le v15, v0, :cond_2
 
-    .line 24
     sget-object v15, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     move-object/from16 v19, v14
@@ -344,7 +303,6 @@
 
     new-array v3, v1, [Ljava/lang/Object;
 
-    .line 25
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v21
@@ -363,7 +321,6 @@
 
     const-string v1, "srcPlane[%d].remain=%d"
 
-    .line 26
     invoke-static {v14, v1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -379,7 +336,6 @@
 
     move-object/from16 v19, v14
 
-    .line 27
     :goto_2
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -387,7 +343,6 @@
 
     if-le v15, v0, :cond_3
 
-    .line 28
     sget-object v1, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -396,7 +351,6 @@
 
     new-array v14, v14, [Ljava/lang/Object;
 
-    .line 29
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
@@ -417,7 +371,6 @@
 
     const-string v15, "dstPlane[%d].remain=%d"
 
-    .line 30
     invoke-static {v3, v15, v14}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -443,11 +396,9 @@
     :goto_3
     const/4 v2, 0x0
 
-    .line 31
     :goto_4
     invoke-virtual {v8, v4, v2, v15}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 32
     invoke-virtual {v9, v4, v2, v15}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v11, v6
@@ -464,11 +415,9 @@
 
     goto/16 :goto_1
 
-    .line 33
     :goto_5
     invoke-virtual {v8, v10}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 34
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     add-int/lit8 v5, v5, 0x1
@@ -486,7 +435,6 @@
 
     move-object/from16 v20, v3
 
-    .line 35
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -499,7 +447,6 @@
 
     aget-object v2, v21, v5
 
-    .line 36
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v2
@@ -512,7 +459,6 @@
 
     aget-object v2, v20, v5
 
-    .line 37
     invoke-virtual {v2}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getPixelStride()I
 
     move-result v2
@@ -530,7 +476,6 @@
     :cond_6
     move-wide/from16 v16, v0
 
-    .line 38
     sget-object v0, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -561,7 +506,6 @@
 .method private getEffectivePlaneSizeForImage(I)Landroid/util/Size;
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getFormat()I
 
     move-result v0
@@ -626,13 +570,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getFormat()I
 
     move-result v1
@@ -653,7 +595,6 @@
 
     throw p1
 
-    .line 4
     :cond_1
     new-instance p1, Landroid/util/Size;
 
@@ -664,7 +605,6 @@
     :cond_2
     if-nez p1, :cond_3
 
-    .line 5
     new-instance p1, Landroid/util/Size;
 
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getWidth()I
@@ -679,7 +619,6 @@
 
     return-object p1
 
-    .line 6
     :cond_3
     new-instance p1, Landroid/util/Size;
 
@@ -702,7 +641,6 @@
     :cond_4
     if-nez p1, :cond_5
 
-    .line 7
     new-instance p1, Landroid/util/Size;
 
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getWidth()I
@@ -717,7 +655,6 @@
 
     return-object p1
 
-    .line 8
     :cond_5
     new-instance p1, Landroid/util/Size;
 
@@ -735,7 +672,6 @@
 
     return-object p1
 
-    .line 9
     :cond_6
     :goto_0
     new-instance p1, Landroid/util/Size;
@@ -758,14 +694,12 @@
 .method public close()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
@@ -773,17 +707,14 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 3
     aget-object v2, v1, v0
 
     if-eqz v2, :cond_0
 
-    .line 4
     aget-object v1, v1, v0
 
     invoke-static {v1}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->access$000(Lcom/xiaomi/camera/imagecodec/MiImage$Plane;)V
 
-    .line 5
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     const/4 v2, 0x0
@@ -802,7 +733,6 @@
 .method public getFormat()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mFormat:I
 
     return v0
@@ -811,7 +741,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mHeight:I
 
     return v0
@@ -820,7 +749,6 @@
 .method public getPlanes()[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mPlanes:[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     return-object v0
@@ -829,7 +757,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/MiImage;->mWidth:I
 
     return v0
@@ -838,7 +765,6 @@
 .method public toImage(Landroid/media/Image;)V
     .locals 23
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getFormat()I
 
     move-result v0
@@ -849,7 +775,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 2
     new-instance v0, Landroid/util/Size;
 
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getWidth()I
@@ -862,7 +787,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    .line 3
     new-instance v1, Landroid/util/Size;
 
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getWidth()I
@@ -875,29 +799,24 @@
 
     invoke-direct {v1, v2, v3}, Landroid/util/Size;-><init>(II)V
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 6
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/imagecodec/MiImage;->getPlanes()[Lcom/xiaomi/camera/imagecodec/MiImage$Plane;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual/range {p1 .. p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v3
 
-    .line 8
     array-length v4, v2
 
     const/4 v5, 0x1
@@ -907,35 +826,30 @@
     :goto_0
     if-ltz v4, :cond_6
 
-    .line 9
     aget-object v6, v2, v4
 
     invoke-virtual {v6}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getRowStride()I
 
     move-result v6
 
-    .line 10
     aget-object v7, v3, v4
 
     invoke-virtual {v7}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v7
 
-    .line 11
     aget-object v8, v2, v4
 
     invoke-virtual {v8}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 12
     aget-object v9, v3, v4
 
     invoke-virtual {v9}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v9
 
-    .line 13
     aget-object v10, v2, v4
 
     invoke-virtual {v10}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getPixelStride()I
@@ -950,20 +864,16 @@
 
     if-ne v10, v11, :cond_5
 
-    .line 14
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v10
 
-    .line 15
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 16
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     if-ne v6, v7, :cond_0
 
-    .line 17
     invoke-virtual {v9, v8}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-wide/from16 v17, v0
@@ -976,25 +886,21 @@
 
     goto/16 :goto_4
 
-    .line 18
     :cond_0
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v11
 
-    .line 19
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v12
 
     move-object/from16 v13, p0
 
-    .line 20
     invoke-direct {v13, v4}, Lcom/xiaomi/camera/imagecodec/MiImage;->getEffectivePlaneSizeForImage(I)Landroid/util/Size;
 
     move-result-object v14
 
-    .line 21
     invoke-virtual {v14}, Landroid/util/Size;->getWidth()I
 
     move-result v15
@@ -1007,7 +913,6 @@
 
     mul-int v15, v15, v16
 
-    .line 22
     new-array v5, v15, [B
 
     move/from16 v16, v11
@@ -1022,7 +927,6 @@
 
     move/from16 v12, v16
 
-    .line 23
     :goto_1
     invoke-virtual {v14}, Landroid/util/Size;->getHeight()I
 
@@ -1030,13 +934,10 @@
 
     if-ge v13, v0, :cond_4
 
-    .line 24
     invoke-virtual {v8, v12}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 25
     invoke-virtual {v9, v15}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 26
     invoke-virtual {v14}, Landroid/util/Size;->getHeight()I
 
     move-result v0
@@ -1047,7 +948,6 @@
 
     if-ne v13, v0, :cond_3
 
-    .line 27
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -1056,7 +956,6 @@
 
     if-le v11, v0, :cond_1
 
-    .line 28
     sget-object v11, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     move-object/from16 v19, v14
@@ -1067,7 +966,6 @@
 
     new-array v3, v1, [Ljava/lang/Object;
 
-    .line 29
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v21
@@ -1086,7 +984,6 @@
 
     const-string v1, "srcPlane[%d].remain=%d"
 
-    .line 30
     invoke-static {v14, v1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -1102,7 +999,6 @@
 
     move-object/from16 v19, v14
 
-    .line 31
     :goto_2
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -1110,7 +1006,6 @@
 
     if-le v11, v0, :cond_2
 
-    .line 32
     sget-object v1, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -1119,7 +1014,6 @@
 
     new-array v11, v11, [Ljava/lang/Object;
 
-    .line 33
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v14
@@ -1140,7 +1034,6 @@
 
     const-string v14, "dstPlane[%d].remain=%d"
 
-    .line 34
     invoke-static {v3, v14, v11}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -1171,11 +1064,9 @@
 
     const/4 v2, 0x0
 
-    .line 35
     :goto_3
     invoke-virtual {v8, v5, v2, v11}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 36
     invoke-virtual {v9, v5, v2, v11}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v12, v6
@@ -1199,11 +1090,9 @@
 
     const/16 v16, 0x1
 
-    .line 37
     :goto_4
     invoke-virtual {v8, v10}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 38
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     add-int/lit8 v4, v4, -0x1
@@ -1223,7 +1112,6 @@
 
     move-object/from16 v20, v3
 
-    .line 39
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1236,7 +1124,6 @@
 
     aget-object v2, v21, v4
 
-    .line 40
     invoke-virtual {v2}, Lcom/xiaomi/camera/imagecodec/MiImage$Plane;->getPixelStride()I
 
     move-result v2
@@ -1249,7 +1136,6 @@
 
     aget-object v2, v20, v4
 
-    .line 41
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v2
@@ -1267,7 +1153,6 @@
     :cond_6
     move-wide/from16 v17, v0
 
-    .line 42
     sget-object v0, Lcom/xiaomi/camera/imagecodec/MiImage;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1294,7 +1179,6 @@
 
     return-void
 
-    .line 43
     :cond_7
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -1322,7 +1206,6 @@
 
     throw v2
 
-    .line 44
     :cond_8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

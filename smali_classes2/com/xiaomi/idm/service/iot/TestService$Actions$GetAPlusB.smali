@@ -32,10 +32,8 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetAPlusB;->newBuilder()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetAPlusB$Builder;
 
     move-result-object p1
@@ -73,10 +71,8 @@
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 4
     invoke-static {p2}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetAPlusB;->parseFrom([B)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetAPlusB;
 
     move-result-object p1
@@ -93,7 +89,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
@@ -115,7 +110,6 @@
 
     move-result v1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer;->newBuilder()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer$Builder;
 
     move-result-object v2
@@ -137,7 +131,6 @@
     :catch_0
     move-exception v1
 
-    .line 3
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -153,7 +146,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer;->toByteArray()[B
 
@@ -171,13 +163,11 @@
         }
     .end annotation
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer;->parseFrom([B)Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Integer;->getV()I
 
     move-result p1
@@ -190,7 +180,6 @@
 
     return-object p1
 
-    .line 4
     :catch_0
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -209,7 +198,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/service/iot/TestService$Actions$GetAPlusB;->parseResponse([B)Ljava/lang/Integer;
 
     move-result-object p1
@@ -220,7 +208,6 @@
 .method public toBytes()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/TestService$Actions$GetAPlusB;->action:Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetAPlusB;
 
     if-nez v0, :cond_0

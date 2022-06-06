@@ -13,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -28,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     sput-boolean v0, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->isDebug:Z
 
     return-void
@@ -37,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +49,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
@@ -62,13 +58,11 @@
 
     const/4 v0, 0x1
 
-    .line 2
     :cond_1
     sget-boolean v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->isDebug:Z
 
     if-eqz v1, :cond_2
 
-    .line 3
     sget-object v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -110,7 +104,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
@@ -127,7 +120,6 @@
     :cond_1
     move v1, v0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
@@ -146,13 +138,11 @@
     :cond_2
     move v3, v0
 
-    .line 3
     :goto_1
     sget-boolean v4, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->isDebug:Z
 
     if-eqz v4, :cond_3
 
-    .line 4
     sget-object v4, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -207,13 +197,11 @@
 
     return v0
 
-    .line 1
     :cond_0
     sget-boolean v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->isDebug:Z
 
     if-eqz v1, :cond_1
 
-    .line 2
     sget-object v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -253,7 +241,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 3
     invoke-static {p0}, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->getViewIsVisible(Landroid/view/View;)Z
 
     move-result p1
@@ -262,7 +249,6 @@
 
     return v1
 
-    .line 4
     :cond_2
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -271,7 +257,6 @@
     :cond_3
     const/16 p1, 0x8
 
-    .line 5
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     :goto_0
@@ -283,7 +268,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     invoke-static {p0, p1, v0}, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->setViewVisible(Landroid/view/View;ZZ)Z
 
     move-result p0
@@ -300,13 +284,11 @@
 
     return v0
 
-    .line 1
     :cond_0
     sget-boolean v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->isDebug:Z
 
     if-eqz v1, :cond_1
 
-    .line 2
     sget-object v1, Lcom/android/camera/features/mimojis/commen/utils/MimojiViewUtil;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -346,7 +328,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 3
     new-instance p1, Lcom/android/camera/animation/folme/FolmeAlphaInOnSubscribe;
 
     invoke-direct {p1, p0}, Lcom/android/camera/animation/folme/FolmeAlphaInOnSubscribe;-><init>(Landroid/view/View;)V
@@ -359,7 +340,6 @@
 
     goto :goto_2
 
-    .line 4
     :cond_2
     invoke-static {p0}, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->directSetResult(Landroid/view/View;)V
 
@@ -373,7 +353,6 @@
     :cond_4
     const/16 v0, 0x8
 
-    .line 5
     :goto_0
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -386,7 +365,6 @@
     :cond_5
     const/4 p1, 0x0
 
-    .line 6
     :goto_1
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 

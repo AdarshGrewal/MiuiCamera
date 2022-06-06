@@ -50,12 +50,10 @@
         }
     .end annotation
 
-    .line 1
     array-length v0, p3
 
     invoke-direct {p0, p1, p2, v0}, Ljava8/util/stream/Nodes$SizedCollectorTask;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/PipelineHelper;I)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->array:[J
 
     return-void
@@ -73,7 +71,6 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p1, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->array:[J
 
     array-length v8, v0
@@ -90,7 +87,6 @@
 
     invoke-direct/range {v1 .. v8}, Ljava8/util/stream/Nodes$SizedCollectorTask;-><init>(Ljava8/util/stream/Nodes$SizedCollectorTask;Ljava8/util/Spliterator;JJI)V
 
-    .line 4
     iget-object p1, p1, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->array:[J
 
     iput-object p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->array:[J
@@ -103,14 +99,12 @@
 .method public accept(J)V
     .locals 3
 
-    .line 2
     iget v0, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->index:I
 
     iget v1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->fence:I
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->array:[J
 
     add-int/lit8 v2, v0, 0x1
@@ -121,7 +115,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -139,7 +132,6 @@
 .method public accept(Ljava/lang/Long;)V
     .locals 0
 
-    .line 5
     invoke-static {p0, p1}, Ljava8/util/stream/SinkDefaults$OfLong;->accept(Ljava8/util/stream/Sink$OfLong;Ljava/lang/Long;)V
 
     return-void
@@ -148,7 +140,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->accept(Ljava/lang/Long;)V
@@ -168,7 +159,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v7, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;
 
     move-object v0, v7
@@ -189,7 +179,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;JJ)Ljava8/util/stream/Nodes$SizedCollectorTask;
     .locals 0
 
-    .line 1
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;->makeChild(Ljava8/util/Spliterator;JJ)Ljava8/util/stream/Nodes$SizedCollectorTask$OfLong;
 
     move-result-object p1

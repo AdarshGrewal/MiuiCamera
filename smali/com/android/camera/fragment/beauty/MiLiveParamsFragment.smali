@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/beauty/RemodelingParamsFragment;-><init>()V
 
     return-void
@@ -18,7 +17,7 @@
 .method public getShineType()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "9"
+    const-string v0, "15"
 
     return-object v0
 .end method

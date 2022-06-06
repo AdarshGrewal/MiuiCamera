@@ -17,7 +17,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -33,7 +32,6 @@
         }
     .end annotation
 
-    .line 2
     iput-object p1, p2, Lcom/android/camera/resource/BaseResourceRaw;->content:Ljava/lang/String;
 
     return-object p2
@@ -47,7 +45,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceRaw;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/SimpleNetworkRawRequest;->process(Ljava/lang/String;Lcom/android/camera/resource/BaseResourceRaw;)Lcom/android/camera/resource/BaseResourceRaw;

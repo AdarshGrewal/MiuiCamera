@@ -22,10 +22,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -40,7 +38,6 @@
 .method public formatDay(III)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lmiuix/pickerwidget/widget/DateTimePicker;->access$100()Ljava/lang/ThreadLocal;
 
     move-result-object v0
@@ -53,12 +50,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    .line 3
     invoke-static {}, Lmiuix/pickerwidget/widget/DateTimePicker;->access$100()Ljava/lang/ThreadLocal;
 
     move-result-object v1
@@ -68,20 +63,16 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 4
     invoke-virtual {v0, v1, p1}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p1, 0x5
 
-    .line 5
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
     const/16 p1, 0x9
 
-    .line 6
     invoke-virtual {v0, p1, p3}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 7
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p1
@@ -102,7 +93,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 8
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DateTimePicker$DayFormatter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
@@ -115,7 +105,6 @@
 
     move-result-object p1
 
-    .line 9
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DateTimePicker$DayFormatter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
@@ -128,7 +117,6 @@
 
     move-result-object p2
 
-    .line 10
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,7 +141,6 @@
 
     return-object p1
 
-    .line 11
     :cond_1
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DateTimePicker$DayFormatter;->mContext:Landroid/content/Context;
 

@@ -49,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
@@ -61,7 +60,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/adobe/xmp/XMPSchemaRegistry;->registerNamespace(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v0
@@ -79,7 +77,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     sget-object v1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -105,7 +102,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -114,7 +110,6 @@
 .method public static createXMPMeta()Lcom/adobe/xmp/XMPMeta;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->create()Lcom/adobe/xmp/XMPMeta;
 
     move-result-object v0
@@ -125,14 +120,12 @@
 .method public static extractOrCreateXMPMeta(Ljava/lang/String;)Lcom/adobe/xmp/XMPMeta;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/XmpHelper;->extractXMPMeta(Ljava/lang/String;)Lcom/adobe/xmp/XMPMeta;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/XmpHelper;->createXMPMeta()Lcom/adobe/xmp/XMPMeta;
 
     move-result-object p0
@@ -146,7 +139,6 @@
 
     const/4 v0, 0x1
 
-    .line 5
     invoke-static {p0, v0}, Lcom/android/camera/XmpHelper;->parse(Ljava/io/InputStream;Z)Ljava/util/List;
 
     move-result-object p0
@@ -157,7 +149,6 @@
 
     return-object v0
 
-    .line 6
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -176,7 +167,6 @@
 
     check-cast v1, Lcom/android/camera/XmpHelper$Section;
 
-    .line 7
     iget-object v2, v1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
     invoke-static {v2}, Lcom/android/camera/XmpHelper;->hasXMPHeader([B)Z
@@ -185,7 +175,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 8
     iget-object p0, v1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
     invoke-static {p0}, Lcom/android/camera/XmpHelper;->getXMPContentEnd([B)I
@@ -196,17 +185,14 @@
 
     sub-int/2addr p0, v2
 
-    .line 9
     new-array v3, p0, [B
 
-    .line 10
     iget-object v1, v1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
     const/4 v4, 0x0
 
     invoke-static {v1, v2, v3, v4, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 11
     :try_start_0
     invoke-static {v3}, Lcom/adobe/xmp/XMPMetaFactory;->parseFromBuffer([B)Lcom/adobe/xmp/XMPMeta;
 
@@ -219,7 +205,6 @@
     :catch_0
     move-exception p0
 
-    .line 12
     sget-object v1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -245,7 +230,6 @@
 .method public static extractXMPMeta(Ljava/lang/String;)Lcom/adobe/xmp/XMPMeta;
     .locals 5
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -276,7 +260,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p0, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     const-string v0, "XMP parse: only jpeg file is supported"
@@ -285,7 +268,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
@@ -303,7 +285,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     sget-object v2, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -334,7 +315,6 @@
 .method public static getXMPContentEnd([B)I
     .locals 4
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x1
@@ -344,7 +324,6 @@
     :goto_0
     if-lt v0, v1, :cond_1
 
-    .line 2
     aget-byte v2, p0, v0
 
     const/16 v3, 0x3e
@@ -353,7 +332,6 @@
 
     add-int/lit8 v2, v0, -0x1
 
-    .line 3
     aget-byte v2, p0, v2
 
     const/16 v3, 0x3f
@@ -369,7 +347,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     array-length p0, p0
 
@@ -379,7 +356,6 @@
 .method public static hasXMPHeader([B)Z
     .locals 3
 
-    .line 1
     array-length v0, p0
 
     const/16 v1, 0x1d
@@ -394,10 +370,8 @@
     :try_start_0
     new-array v0, v1, [B
 
-    .line 2
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3
     new-instance p0, Ljava/lang/String;
 
     const-string v1, "UTF-8"
@@ -443,7 +417,6 @@
 
     if-eqz p0, :cond_5
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -454,27 +427,22 @@
 
     goto/16 :goto_2
 
-    .line 2
     :cond_0
     :try_start_0
     new-instance v1, Lcom/adobe/xmp/options/SerializeOptions;
 
     invoke-direct {v1}, Lcom/adobe/xmp/options/SerializeOptions;-><init>()V
 
-    .line 3
     invoke-virtual {v1, v2}, Lcom/adobe/xmp/options/SerializeOptions;->setUseCompactFormat(Z)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 4
     invoke-virtual {v1, v2}, Lcom/adobe/xmp/options/SerializeOptions;->setOmitPacketWrapper(Z)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 5
     invoke-static {p1, v1}, Lcom/adobe/xmp/XMPMetaFactory;->serializeToBuffer(Lcom/adobe/xmp/XMPMeta;Lcom/adobe/xmp/options/SerializeOptions;)[B
 
     move-result-object p1
     :try_end_0
     .catch Lcom/adobe/xmp/XMPException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6
     array-length v1, p1
 
     const v3, 0xffde
@@ -483,7 +451,6 @@
 
     return-object v0
 
-    .line 7
     :cond_1
     array-length v1, p1
 
@@ -495,7 +462,6 @@
 
     const-string v5, "http://ns.adobe.com/xap/1.0/\u0000"
 
-    .line 8
     invoke-virtual {v5}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v5
@@ -504,32 +470,26 @@
 
     invoke-static {v5, v6, v4, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 9
     array-length v5, p1
 
     invoke-static {p1, v6, v4, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 10
     new-instance p1, Lcom/android/camera/XmpHelper$Section;
 
     invoke-direct {p1, v0}, Lcom/android/camera/XmpHelper$Section;-><init>(Lcom/android/camera/XmpHelper$1;)V
 
     const/16 v0, 0xe1
 
-    .line 11
     iput v0, p1, Lcom/android/camera/XmpHelper$Section;->marker:I
 
     add-int/lit8 v1, v1, 0x2
 
-    .line 12
     iput v1, p1, Lcom/android/camera/XmpHelper$Section;->length:I
 
-    .line 13
     iput-object v4, p1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
     move v1, v6
 
-    .line 14
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -537,7 +497,6 @@
 
     if-ge v1, v3, :cond_3
 
-    .line 15
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -548,7 +507,6 @@
 
     if-ne v3, v0, :cond_2
 
-    .line 16
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -563,7 +521,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 17
     invoke-interface {p0, v1, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
@@ -573,13 +530,11 @@
 
     goto :goto_0
 
-    .line 18
     :cond_3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 19
     invoke-interface {p0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -595,7 +550,6 @@
     :cond_4
     move v2, v6
 
-    .line 20
     :goto_1
     invoke-interface {p0, v6, v2}, Ljava/util/List;->subList(II)Ljava/util/List;
 
@@ -603,10 +557,8 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 21
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 22
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -622,7 +574,6 @@
     :catch_0
     move-exception p0
 
-    .line 23
     sget-object p1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -661,7 +612,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
@@ -681,13 +631,11 @@
 
     goto/16 :goto_4
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
@@ -704,7 +652,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     :try_start_1
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -714,7 +661,6 @@
     :cond_1
     return-object v0
 
-    .line 5
     :cond_2
     :goto_1
     :try_start_2
@@ -734,7 +680,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 6
     :try_start_3
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -753,19 +698,15 @@
 
     if-nez p1, :cond_6
 
-    .line 7
     :try_start_4
     new-instance p1, Lcom/android/camera/XmpHelper$Section;
 
     invoke-direct {p1, v0}, Lcom/android/camera/XmpHelper$Section;-><init>(Lcom/android/camera/XmpHelper$1;)V
 
-    .line 8
     iput v3, p1, Lcom/android/camera/XmpHelper$Section;->marker:I
 
-    .line 9
     iput v4, p1, Lcom/android/camera/XmpHelper$Section;->length:I
 
-    .line 10
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
 
     move-result v2
@@ -774,12 +715,10 @@
 
     iput-object v2, p1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
-    .line 11
     array-length v3, v2
 
     invoke-virtual {p0, v2, v6, v3}, Ljava/io/InputStream;->read([BII)I
 
-    .line 12
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_6
@@ -788,7 +727,6 @@
     :cond_6
     if-eqz p0, :cond_7
 
-    .line 13
     :try_start_5
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -798,14 +736,12 @@
     :cond_7
     return-object v1
 
-    .line 14
     :cond_8
     :try_start_6
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
     move-result v5
 
-    .line 15
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
     move-result v7
@@ -834,35 +770,28 @@
 
     int-to-long v3, v4
 
-    .line 16
     invoke-virtual {p0, v3, v4}, Ljava/io/InputStream;->skip(J)J
 
     goto :goto_0
 
-    .line 17
     :cond_b
     :goto_2
     new-instance v5, Lcom/android/camera/XmpHelper$Section;
 
     invoke-direct {v5, v0}, Lcom/android/camera/XmpHelper$Section;-><init>(Lcom/android/camera/XmpHelper$1;)V
 
-    .line 18
     iput v3, v5, Lcom/android/camera/XmpHelper$Section;->marker:I
 
-    .line 19
     iput v4, v5, Lcom/android/camera/XmpHelper$Section;->length:I
 
     add-int/lit8 v4, v4, -0x2
 
-    .line 20
     new-array v3, v4, [B
 
     iput-object v3, v5, Lcom/android/camera/XmpHelper$Section;->data:[B
 
-    .line 21
     invoke-virtual {p0, v3, v6, v4}, Ljava/io/InputStream;->read([BII)I
 
-    .line 22
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
@@ -874,7 +803,6 @@
     :goto_3
     if-eqz p0, :cond_d
 
-    .line 23
     :try_start_7
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_7
@@ -917,7 +845,6 @@
     :catch_6
     move-exception p1
 
-    .line 24
     :try_start_a
     sget-object v1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
@@ -941,7 +868,6 @@
 
     if-eqz p0, :cond_12
 
-    .line 25
     :try_start_b
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_b
@@ -959,7 +885,6 @@
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_8
 
-    .line 26
     :catch_8
     :cond_13
     throw p1
@@ -985,15 +910,12 @@
 
     const/16 v0, 0xff
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write(I)V
 
     const/16 v1, 0xd8
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1011,15 +933,12 @@
 
     check-cast v1, Lcom/android/camera/XmpHelper$Section;
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write(I)V
 
-    .line 5
     iget v2, v1, Lcom/android/camera/XmpHelper$Section;->marker:I
 
     invoke-virtual {p0, v2}, Ljava/io/OutputStream;->write(I)V
 
-    .line 6
     iget v2, v1, Lcom/android/camera/XmpHelper$Section;->length:I
 
     if-lez v2, :cond_0
@@ -1028,13 +947,10 @@
 
     and-int/lit16 v2, v2, 0xff
 
-    .line 7
     invoke-virtual {p0, v3}, Ljava/io/OutputStream;->write(I)V
 
-    .line 8
     invoke-virtual {p0, v2}, Ljava/io/OutputStream;->write(I)V
 
-    .line 9
     :cond_0
     iget-object v1, v1, Lcom/android/camera/XmpHelper$Section;->data:[B
 
@@ -1051,12 +967,10 @@
 
     const/4 v0, 0x0
 
-    .line 12
     invoke-static {p0, v0}, Lcom/android/camera/XmpHelper;->parse(Ljava/io/InputStream;Z)Ljava/util/List;
 
     move-result-object p0
 
-    .line 13
     invoke-static {p0, p2}, Lcom/android/camera/XmpHelper;->insertXMPSection(Ljava/util/List;Lcom/adobe/xmp/XMPMeta;)Ljava/util/List;
 
     move-result-object p0
@@ -1065,7 +979,6 @@
 
     return v0
 
-    .line 14
     :cond_0
     :try_start_0
     invoke-static {p1, p0}, Lcom/android/camera/XmpHelper;->writeJpegFile(Ljava/io/OutputStream;Ljava/util/List;)V
@@ -1075,7 +988,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 15
     :try_start_1
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_1
@@ -1095,7 +1007,6 @@
     :catch_1
     move-exception p0
 
-    .line 16
     :try_start_2
     sget-object p2, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
@@ -1119,7 +1030,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 17
     :try_start_3
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_3
@@ -1137,7 +1047,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 18
     :catch_3
     :cond_3
     throw p0
@@ -1148,7 +1057,6 @@
 
     const-string v0, ": "
 
-    .line 1
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -1179,7 +1087,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2
     sget-object p0, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     const-string p1, "XMP parse: only jpeg file is supported"
@@ -1188,7 +1095,6 @@
 
     return v2
 
-    .line 3
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
@@ -1199,7 +1105,6 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v1, p1}, Lcom/android/camera/XmpHelper;->insertXMPSection(Ljava/util/List;Lcom/adobe/xmp/XMPMeta;)Ljava/util/List;
 
     move-result-object p1
@@ -1210,7 +1115,6 @@
 
     return v2
 
-    .line 5
     :cond_1
     :try_start_1
     new-instance v1, Ljava/io/FileOutputStream;
@@ -1219,13 +1123,11 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 6
     :try_start_2
     invoke-static {v1, p1}, Lcom/android/camera/XmpHelper;->writeJpegFile(Ljava/io/OutputStream;Ljava/util/List;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 7
     :try_start_3
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -1238,7 +1140,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     :try_start_4
     throw p1
     :try_end_4
@@ -1247,7 +1148,6 @@
     :catchall_1
     move-exception v3
 
-    .line 9
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -1269,7 +1169,6 @@
     :catch_0
     move-exception p1
 
-    .line 10
     sget-object v1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1297,7 +1196,6 @@
     :catch_1
     move-exception p1
 
-    .line 11
     sget-object v1, Lcom/android/camera/XmpHelper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;

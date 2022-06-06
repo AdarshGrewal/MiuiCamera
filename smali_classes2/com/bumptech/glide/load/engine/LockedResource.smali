@@ -54,14 +54,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/LockedResource$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/engine/LockedResource$1;-><init>()V
 
     const/16 v1, 0x14
 
-    .line 2
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/pool/FactoryPools;->threadSafe(ILcom/bumptech/glide/util/pool/FactoryPools$Factory;)Landroidx/core/util/Pools$Pool;
 
     move-result-object v0
@@ -74,10 +72,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/bumptech/glide/util/pool/StateVerifier;->newInstance()Lcom/bumptech/glide/util/pool/StateVerifier;
 
     move-result-object v0
@@ -99,15 +95,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isRecycled:Z
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isLocked:Z
 
-    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
     return-void
@@ -127,7 +120,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/load/engine/LockedResource;->POOL:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0}, Landroidx/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -142,7 +134,6 @@
 
     check-cast v0, Lcom/bumptech/glide/load/engine/LockedResource;
 
-    .line 2
     invoke-direct {v0, p0}, Lcom/bumptech/glide/load/engine/LockedResource;->init(Lcom/bumptech/glide/load/engine/Resource;)V
 
     return-object v0
@@ -153,10 +144,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
-    .line 2
     sget-object v0, Lcom/bumptech/glide/load/engine/LockedResource;->POOL:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0, p0}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
@@ -174,7 +163,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
@@ -194,7 +182,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->getResourceClass()Ljava/lang/Class;
@@ -207,7 +194,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
@@ -220,7 +206,6 @@
 .method public getVerifier()Lcom/bumptech/glide/util/pool/StateVerifier;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     return-object v0
@@ -231,7 +216,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
@@ -239,25 +223,20 @@
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isRecycled:Z
 
-    .line 3
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isLocked:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->toWrap:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
-    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/LockedResource;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_0
     monitor-exit p0
 
@@ -276,39 +255,32 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->stateVerifier:Lcom/bumptech/glide/util/pool/StateVerifier;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/util/pool/StateVerifier;->throwIfRecycled()V
 
-    .line 2
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isLocked:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isLocked:Z
 
-    .line 4
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/LockedResource;->isRecycled:Z
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/LockedResource;->recycle()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 7
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;

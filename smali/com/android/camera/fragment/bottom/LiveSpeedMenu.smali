@@ -15,7 +15,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/android/camera/fragment/bottom/MenuItem;",
+            "Lcom/android/camera/fragment/beauty/MenuItem;",
             ">;"
         }
     .end annotation
@@ -33,11 +33,10 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;Landroid/widget/LinearLayout;Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Lcom/android/camera/fragment/bottom/AbBottomMenu;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/fragment/bottom/AbBottomMenu;-><init>(Landroid/content/Context;Landroid/widget/LinearLayout;Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;)V
 
     return-void
 .end method
@@ -47,14 +46,12 @@
 .method public addAllView()V
     .locals 7
 
-    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mMenuTextViewList:Landroid/util/SparseArray;
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->getMenuData()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -63,7 +60,6 @@
 
     move v2, v1
 
-    .line 3
     :goto_0
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -71,14 +67,12 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 4
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/camera/fragment/bottom/MenuItem;
+    check-cast v3, Lcom/android/camera/fragment/beauty/MenuItem;
 
-    .line 5
     iget-object v4, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -87,22 +81,19 @@
 
     const v5, 0x7f0d002c
 
-    .line 6
     iget-object v6, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mContainerView:Landroid/widget/LinearLayout;
 
-    .line 7
     invoke-virtual {v4, v5, v6, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/camera/ui/ColorActivateTextView;
 
-    .line 8
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v5
 
-    const v6, 0x7f060305
+    const v6, 0x7f060303
 
     invoke-virtual {v5, v6}, Lcom/android/camera/customization/ThemeResource;->getColor(I)I
 
@@ -110,27 +101,23 @@
 
     invoke-virtual {v4, v5}, Lcom/android/camera/ui/ColorActivateTextView;->setNormalCor(I)V
 
-    .line 9
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v5
 
-    const v6, 0x7f130165
+    const v6, 0x7f130161
 
     invoke-virtual {v5, v4, v6}, Lcom/android/camera/customization/ThemeResource;->setTextShadowStyle(Landroid/widget/TextView;I)V
 
     const v5, -0x4c000001
 
-    .line 10
     invoke-virtual {v4, v5}, Lcom/android/camera/ui/ColorActivateTextView;->setActivateColor(I)V
 
-    .line 11
-    iget-object v5, v3, Lcom/android/camera/fragment/bottom/MenuItem;->text:Ljava/lang/String;
+    iget-object v5, v3, Lcom/android/camera/fragment/beauty/MenuItem;->text:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 12
-    iget v5, v3, Lcom/android/camera/fragment/bottom/MenuItem;->type:I
+    iget v5, v3, Lcom/android/camera/fragment/beauty/MenuItem;->type:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -138,37 +125,30 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 13
     invoke-virtual {v4, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 14
-    iget v5, v3, Lcom/android/camera/fragment/bottom/MenuItem;->type:I
+    iget v5, v3, Lcom/android/camera/fragment/beauty/MenuItem;->type:I
 
     if-nez v5, :cond_0
 
     const/4 v5, 0x1
 
-    .line 15
     invoke-virtual {v4, v5}, Lcom/android/camera/ui/ColorActivateTextView;->setActivated(Z)V
 
-    .line 16
     iput-object v4, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mCurrentBeautyTextView:Lcom/android/camera/ui/ColorActivateTextView;
 
     goto :goto_1
 
-    .line 17
     :cond_0
     invoke-virtual {v4, v1}, Lcom/android/camera/ui/ColorActivateTextView;->setActivated(Z)V
 
-    .line 18
     :goto_1
     iget-object v5, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mMenuTextViewList:Landroid/util/SparseArray;
 
-    iget v3, v3, Lcom/android/camera/fragment/bottom/MenuItem;->type:I
+    iget v3, v3, Lcom/android/camera/fragment/beauty/MenuItem;->type:I
 
     invoke-virtual {v5, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 19
     iget-object v3, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mContainerView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
@@ -177,10 +157,7 @@
 
     goto :goto_0
 
-    .line 20
     :cond_1
-    invoke-super {p0}, Lcom/android/camera/fragment/bottom/AbBottomMenu;->addAllView()V
-
     return-void
 .end method
 
@@ -195,7 +172,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mMenuTextViewList:Landroid/util/SparseArray;
 
     return-object v0
@@ -215,19 +191,17 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/android/camera/fragment/bottom/MenuItem;",
+            "Lcom/android/camera/fragment/beauty/MenuItem;",
             ">;"
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mLiveSpeedMenuTabList:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance v0, Landroid/util/SparseArray;
 
@@ -235,38 +209,32 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mLiveSpeedMenuTabList:Landroid/util/SparseArray;
 
-    .line 3
-    new-instance v0, Lcom/android/camera/fragment/bottom/MenuItem;
+    new-instance v0, Lcom/android/camera/fragment/beauty/MenuItem;
 
-    invoke-direct {v0}, Lcom/android/camera/fragment/bottom/MenuItem;-><init>()V
+    invoke-direct {v0}, Lcom/android/camera/fragment/beauty/MenuItem;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 4
-    iput v1, v0, Lcom/android/camera/fragment/bottom/MenuItem;->type:I
+    iput v1, v0, Lcom/android/camera/fragment/beauty/MenuItem;->type:I
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f12048e
+    const v3, 0x7f12046c
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/camera/fragment/bottom/MenuItem;->text:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/camera/fragment/beauty/MenuItem;->text:Ljava/lang/String;
 
-    .line 6
-    iput v1, v0, Lcom/android/camera/fragment/bottom/MenuItem;->number:I
+    iput v1, v0, Lcom/android/camera/fragment/beauty/MenuItem;->number:I
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mLiveSpeedMenuTabList:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->mLiveSpeedMenuTabList:Landroid/util/SparseArray;
 
     return-object v0
@@ -289,15 +257,12 @@
 .method public switchMenu()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mContainerView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->addAllView()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/bottom/LiveSpeedMenu;->getDefaultType()I
 
     move-result v0

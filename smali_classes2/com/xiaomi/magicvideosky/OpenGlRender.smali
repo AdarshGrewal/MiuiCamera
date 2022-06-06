@@ -27,10 +27,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Lcom/xiaomi/magicvideosky/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "construction"
@@ -66,7 +64,6 @@
 .method public RenderFrame()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->RenderFrameJni()V
 
     return-void
@@ -75,14 +72,12 @@
 .method public SetCurrentGLContext()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/magicvideosky/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "SetCurrentGLContext"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetCurrentGLContextJni()V
 
     return-void
@@ -91,14 +86,12 @@
 .method public SetCurrentGLContextJniForGraph()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/magicvideosky/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "SetCurrentGLContext"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetCurrentGLContextForGraphJni()V
 
     return-void
@@ -107,14 +100,12 @@
 .method public SetOpengGlRenderParams(IIII[B[B)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/magicvideosky/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "SetOpengGlRenderParams"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static/range {p1 .. p6}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetOpengGlRenderParamsJni(IIII[B[B)V
 
     return-void
@@ -123,7 +114,6 @@
 .method public SetWindowSize(IIII)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2, p3, p4}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetWindowSizeJni(IIII)V
 
     return-void
@@ -132,7 +122,6 @@
 .method public onFrameAvailable()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->FrameAvailableJni()V
 
     return-void
@@ -141,7 +130,6 @@
 .method public setCopyTextureOfFBO(II)V
     .locals 0
 
-    .line 1
     sget-object p1, Lcom/xiaomi/magicvideosky/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string p2, "setCopyTextureOfFBO"

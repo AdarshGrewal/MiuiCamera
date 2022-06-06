@@ -35,15 +35,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, -0x3f79999a    # -4.2f
 
-    .line 2
     iput v0, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mFriction:F
 
-    .line 3
     new-instance v0, Lmiuix/animation/physics/DynamicAnimation$MassState;
 
     invoke-direct {v0}, Lmiuix/animation/physics/DynamicAnimation$MassState;-><init>()V
@@ -56,7 +53,6 @@
 .method public synthetic constructor <init>(Lmiuix/animation/physics/FlingAnimation$1;)V
     .locals 0
 
-    .line 4
     invoke-direct {p0}, Lmiuix/animation/physics/FlingAnimation$DragForce;-><init>()V
 
     return-void
@@ -67,7 +63,6 @@
 .method public getAcceleration(FF)F
     .locals 0
 
-    .line 1
     iget p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mFriction:F
 
     mul-float/2addr p2, p1
@@ -78,7 +73,6 @@
 .method public getFrictionScalar()F
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mFriction:F
 
     const v1, -0x3f79999a    # -4.2f
@@ -91,7 +85,6 @@
 .method public isAtEquilibrium(FF)Z
     .locals 0
 
-    .line 1
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -120,7 +113,6 @@
 
     mul-float/2addr p1, v0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mFriction:F
 
     return-void
@@ -133,7 +125,6 @@
 
     mul-float/2addr p1, v0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mVelocityThreshold:F
 
     return-void
@@ -142,7 +133,6 @@
 .method public updateValueAndVelocity(FFJ)Lmiuix/animation/physics/DynamicAnimation$MassState;
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
     float-to-double v1, p2
@@ -169,7 +159,6 @@
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
     iget v1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mFriction:F
@@ -190,7 +179,6 @@
 
     float-to-double p3, v1
 
-    .line 3
     invoke-static {p3, p4}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide p3
@@ -203,7 +191,6 @@
 
     iput p1, v0, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
 
-    .line 4
     iget-object p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
     iget p2, p1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
@@ -216,14 +203,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget-object p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
     const/4 p2, 0x0
 
     iput p2, p1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
-    .line 6
     :cond_0
     iget-object p1, p0, Lmiuix/animation/physics/FlingAnimation$DragForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 

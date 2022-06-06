@@ -32,17 +32,14 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
-    .line 3
     iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mNewState:I
 
     return-void
@@ -53,10 +50,8 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onBegin(Ljava/lang/Object;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -69,7 +64,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->isResizable()Z
 
@@ -79,15 +73,12 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
 
     const/4 v0, 0x2
 
-    .line 5
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
 
-    .line 6
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2700(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
     move-result-object p1
@@ -102,10 +93,8 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -118,27 +107,23 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mNewState:I
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
 
-    .line 4
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2600(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
 
-    .line 5
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2800(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2700(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
     move-result-object p1
@@ -149,7 +134,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2700(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;
 
@@ -166,10 +150,8 @@
 .method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/IIntValueProperty;IFZ)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Lmiuix/animation/property/IIntValueProperty;IFZ)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$InnerTransitionListener;->mRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -182,11 +164,9 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {p1, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2202(Lmiuix/appcompat/internal/app/widget/ActionBarView;I)I
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/ViewGroup;->requestLayout()V
 
     return-void

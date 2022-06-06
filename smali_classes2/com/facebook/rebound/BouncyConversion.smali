@@ -33,13 +33,10 @@
 
     move-wide/from16 v0, p3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide v8, v7, Lcom/facebook/rebound/BouncyConversion;->mSpeed:D
 
-    .line 3
     iput-wide v0, v7, Lcom/facebook/rebound/BouncyConversion;->mBounciness:D
 
     const-wide v10, 0x3ffb333333333333L    # 1.7
@@ -52,14 +49,12 @@
 
     move-object v0, p0
 
-    .line 4
     invoke-direct/range {v0 .. v6}, Lcom/facebook/rebound/BouncyConversion;->normalize(DDD)D
 
     move-result-wide v1
 
     const-wide v5, 0x3fe999999999999aL    # 0.8
 
-    .line 5
     invoke-direct/range {v0 .. v6}, Lcom/facebook/rebound/BouncyConversion;->project_normal(DDD)D
 
     move-result-wide v12
@@ -68,7 +63,6 @@
 
     const-wide/high16 v5, 0x4034000000000000L    # 20.0
 
-    .line 6
     invoke-direct/range {v0 .. v6}, Lcom/facebook/rebound/BouncyConversion;->normalize(DDD)D
 
     move-result-wide v1
@@ -77,14 +71,12 @@
 
     const-wide/high16 v5, 0x4069000000000000L    # 200.0
 
-    .line 7
     invoke-direct/range {v0 .. v6}, Lcom/facebook/rebound/BouncyConversion;->project_normal(DDD)D
 
     move-result-wide v0
 
     iput-wide v0, v7, Lcom/facebook/rebound/BouncyConversion;->mBouncyTension:D
 
-    .line 8
     invoke-direct {p0, v0, v1}, Lcom/facebook/rebound/BouncyConversion;->b3_nobounce(D)D
 
     move-result-wide v3
@@ -109,7 +101,6 @@
 
     const-wide/high16 v0, 0x4008000000000000L    # 3.0
 
-    .line 1
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -148,7 +139,6 @@
 
     const-wide/high16 v0, 0x4008000000000000L    # 3.0
 
-    .line 1
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -185,7 +175,6 @@
 
     const-wide/high16 v0, 0x4008000000000000L    # 3.0
 
-    .line 1
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -228,7 +217,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/facebook/rebound/BouncyConversion;->b3_friction1(D)D
 
     move-result-wide p1
@@ -246,7 +234,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/facebook/rebound/BouncyConversion;->b3_friction2(D)D
 
     move-result-wide p1
@@ -258,7 +245,6 @@
 
     if-lez v0, :cond_2
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lcom/facebook/rebound/BouncyConversion;->b3_friction3(D)D
 
     move-result-wide p1
@@ -329,7 +315,6 @@
 
     move-wide v7, p5
 
-    .line 1
     invoke-direct/range {v2 .. v8}, Lcom/facebook/rebound/BouncyConversion;->linear_interpolation(DDD)D
 
     move-result-wide p1
@@ -342,7 +327,6 @@
 .method public getBounciness()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/BouncyConversion;->mBounciness:D
 
     return-wide v0
@@ -351,7 +335,6 @@
 .method public getBouncyFriction()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/BouncyConversion;->mBouncyFriction:D
 
     return-wide v0
@@ -360,7 +343,6 @@
 .method public getBouncyTension()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/BouncyConversion;->mBouncyTension:D
 
     return-wide v0
@@ -369,7 +351,6 @@
 .method public getSpeed()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/BouncyConversion;->mSpeed:D
 
     return-wide v0

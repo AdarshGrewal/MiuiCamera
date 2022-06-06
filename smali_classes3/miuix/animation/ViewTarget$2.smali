@@ -29,7 +29,6 @@
 .method public constructor <init>(Lmiuix/animation/ViewTarget;Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/ViewTarget$2;->this$0:Lmiuix/animation/ViewTarget;
 
     iput-object p2, p0, Lmiuix/animation/ViewTarget$2;->val$view:Landroid/view/View;
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/ViewTarget$2;->this$0:Lmiuix/animation/ViewTarget;
 
     iget-object v1, p0, Lmiuix/animation/ViewTarget$2;->val$view:Landroid/view/View;

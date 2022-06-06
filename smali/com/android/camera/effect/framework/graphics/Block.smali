@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
 
     new-array p2, p2, [I
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/framework/graphics/Block;->mOffset:I
 
     rem-int v1, v0, p1
@@ -49,7 +47,6 @@
 
     div-int/2addr v1, v2
 
-    .line 2
     div-int/2addr v0, p1
 
     iget p1, p0, Lcom/android/camera/effect/framework/graphics/Block;->mLogicHeight:I
@@ -78,12 +75,10 @@
 
     new-array p4, p4, [I
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/framework/graphics/Block;->mOffset:I
 
     div-int v1, v0, p3
 
-    .line 2
     rem-int/2addr v0, p3
 
     mul-int/2addr p1, v1
@@ -100,7 +95,6 @@
 
     div-double/2addr v1, v3
 
-    .line 3
     invoke-static {v1, v2}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v1

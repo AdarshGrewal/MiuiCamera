@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IDMServiceFactoryBase;-><init>()V
 
     return-void
@@ -24,14 +23,12 @@
 
     if-eqz p2, :cond_3
 
-    .line 1
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getType()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -59,7 +56,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_2
     new-instance v0, Lcom/xiaomi/idm/service/test/TestBuiltinService$Stub;
 
@@ -74,7 +70,6 @@
     :goto_2
     if-nez v0, :cond_4
 
-    .line 4
     invoke-super {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMServiceFactoryBase;->createIDMService(Lcom/xiaomi/idm/api/IDMClient;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)Lcom/xiaomi/idm/api/IDMService;
 
     move-result-object v0

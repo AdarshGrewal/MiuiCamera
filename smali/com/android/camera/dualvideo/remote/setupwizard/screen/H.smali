@@ -15,15 +15,13 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;-><init>(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;Landroid/view/View;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getContentView()Landroid/view/View;
 
     move-result-object p1
 
-    const p2, 0x7f0a01ba
+    const p2, 0x7f0a01c2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -31,12 +29,11 @@
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenMain:Landroid/view/View;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getContentView()Landroid/view/View;
 
     move-result-object p1
 
-    const p2, 0x7f0a01bc
+    const p2, 0x7f0a01c4
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -44,12 +41,11 @@
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenWhat:Landroid/view/View;
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getContentView()Landroid/view/View;
 
     move-result-object p1
 
-    const p2, 0x7f0a01bb
+    const p2, 0x7f0a01c3
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +59,6 @@
 .method public static synthetic access$000(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenMain:Landroid/view/View;
 
     return-object p0
@@ -72,7 +67,6 @@
 .method public static synthetic access$100(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenWhat:Landroid/view/View;
 
     return-object p0
@@ -81,7 +75,6 @@
 .method public static synthetic access$200(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenPerm:Landroid/view/View;
 
     return-object p0
@@ -90,7 +83,6 @@
 .method public static synthetic access$300(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mAlertDialogTitle:I
 
     return p0
@@ -99,7 +91,6 @@
 .method public static synthetic access$400(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->gotoAppSettings()V
 
     return-void
@@ -108,7 +99,6 @@
 .method public static synthetic access$500(Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->mAlertDialogTitle:I
 
     return p0
@@ -117,14 +107,12 @@
 .method private gotoAppSettings()V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     move-result-object v1
@@ -145,10 +133,8 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getSetupWizard()Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     move-result-object v1
@@ -173,33 +159,28 @@
 .method public onResume()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/permission/PermissionManager;->checkCameraLocationPermissions()Z
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenMain:Landroid/view/View;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenWhat:Landroid/view/View;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/H;->mHomeScreenPerm:Landroid/view/View;
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     const/4 v1, -0x2
 
-    .line 5
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getAlertDialogButton(I)Landroid/widget/Button;
 
     move-result-object v1
@@ -212,7 +193,6 @@
 
     const/4 v1, -0x1
 
-    .line 6
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getAlertDialogButton(I)Landroid/widget/Button;
 
     move-result-object v1
@@ -229,12 +209,11 @@
 .method public setupViews()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a01b9
+    const v1, 0x7f0a01c1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -246,12 +225,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a01b8
+    const v1, 0x7f0a01c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

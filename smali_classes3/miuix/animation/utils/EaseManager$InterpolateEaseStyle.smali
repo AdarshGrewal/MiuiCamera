@@ -22,12 +22,10 @@
 .method public varargs constructor <init>(I[F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/animation/utils/EaseManager$EaseStyle;-><init>(I[F)V
 
     const-wide/16 p1, 0x12c
 
-    .line 2
     iput-wide p1, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
 
     return-void
@@ -38,7 +36,6 @@
 .method public setDuration(J)Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
 
     return-object p0
@@ -47,7 +44,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +70,6 @@
 
     iget-object v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
     move-result-object v1

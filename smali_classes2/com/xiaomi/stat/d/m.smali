@@ -29,7 +29,6 @@
     :try_start_0
     const-string v2, "android.os.SystemProperties"
 
-    .line 1
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -38,7 +37,6 @@
 
     new-array v4, v1, [Ljava/lang/Class;
 
-    .line 2
     const-class v5, Ljava/lang/String;
 
     aput-object v5, v4, v0
@@ -55,7 +53,6 @@
     :try_start_1
     const-string v2, "miui.os.Build"
 
-    .line 3
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -68,7 +65,6 @@
     :try_start_2
     const-string v2, "android.provider.MiuiSettings$Secure"
 
-    .line 4
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -77,7 +73,6 @@
 
     new-array v4, v1, [Ljava/lang/Class;
 
-    .line 5
     const-class v5, Landroid/content/ContentResolver;
 
     aput-object v5, v4, v0
@@ -88,7 +83,6 @@
 
     sput-object v0, Lcom/xiaomi/stat/d/m;->f:Ljava/lang/reflect/Method;
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -100,7 +94,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -111,7 +104,6 @@
 
     const v0, 0xea60
 
-    .line 8
     :try_start_0
     div-int/2addr p0, v0
 
@@ -123,7 +115,6 @@
 
     neg-int p0, p0
 
-    .line 9
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -133,28 +124,22 @@
 
     const-string v2, "GMT"
 
-    .line 10
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 11
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 12
     div-int/lit8 v0, p0, 0x3c
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/m;->a(Ljava/lang/StringBuilder;I)V
 
     const/16 v0, 0x3a
 
-    .line 13
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 14
     rem-int/lit8 p0, p0, 0x3c
 
     invoke-static {v1, p0}, Lcom/xiaomi/stat/d/m;->a(Ljava/lang/StringBuilder;I)V
 
-    .line 15
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -174,17 +159,14 @@
 
     const-string v0, "gsm.operator.numeric"
 
-    .line 20
     invoke-static {v0}, Lcom/xiaomi/stat/d/m;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 21
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 22
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -193,12 +175,10 @@
 
     const-string v2, ","
 
-    .line 23
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 24
     array-length v3, v0
 
     const/4 v4, 0x0
@@ -208,7 +188,6 @@
 
     aget-object v5, v0, v4
 
-    .line 25
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -223,17 +202,14 @@
 
     if-nez v6, :cond_1
 
-    .line 26
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v6
 
     if-lez v6, :cond_0
 
-    .line 27
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
     :cond_0
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -242,13 +218,11 @@
 
     goto :goto_0
 
-    .line 29
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 30
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -257,14 +231,12 @@
 
     const-string v0, "phone"
 
-    .line 31
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/telephony/TelephonyManager;
 
-    .line 32
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v0
@@ -283,13 +255,11 @@
 
     const/4 v0, 0x0
 
-    .line 33
     :try_start_0
     sget-object v1, Lcom/xiaomi/stat/d/m;->d:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 34
     sget-object v1, Lcom/xiaomi/stat/d/m;->d:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -315,7 +285,6 @@
     :catch_0
     move-exception p0
 
-    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -345,14 +314,12 @@
 .method public static a(Ljava/lang/StringBuilder;I)V
     .locals 2
 
-    .line 16
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 17
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -364,14 +331,12 @@
 
     const/16 v1, 0x30
 
-    .line 18
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 19
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,12 +346,10 @@
 .method public static a()Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/m;->g:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -396,12 +359,10 @@
     :cond_0
     const-string v0, "ro.miui.ui.version.code"
 
-    .line 3
     invoke-static {v0}, Lcom/xiaomi/stat/d/m;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -410,7 +371,6 @@
 
     const/4 v0, 0x1
 
-    .line 5
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -422,14 +382,12 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 6
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     sput-object v0, Lcom/xiaomi/stat/d/m;->g:Ljava/lang/Boolean;
 
-    .line 7
     :goto_0
     sget-object v0, Lcom/xiaomi/stat/d/m;->g:Ljava/lang/Boolean;
 
@@ -451,7 +409,6 @@
 .method public static b(Landroid/content/Context;)Z
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/m;->f:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -468,7 +425,6 @@
 
     const/4 v4, 0x0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -492,7 +448,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -521,7 +476,6 @@
 .method public static c()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
     return-object v0
@@ -530,7 +484,6 @@
 .method public static d()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     return-object v0
@@ -539,7 +492,6 @@
 .method public static e()Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
@@ -559,10 +511,8 @@
     :catch_0
     move-exception v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -580,10 +530,8 @@
     :catch_1
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/lang/AssertionError;->printStackTrace()V
 
-    .line 5
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -603,12 +551,10 @@
 .method public static f()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -641,19 +587,16 @@
 
     const-string v0, "ro.miui.region"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/stat/d/m;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -674,7 +617,6 @@
 .method public static h()Ljava/lang/String;
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/m;->e:Ljava/lang/Class;
 
     if-eqz v0, :cond_2
@@ -682,7 +624,6 @@
     :try_start_0
     const-string v1, "IS_ALPHA_BUILD"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -705,7 +646,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/stat/d/m;->e:Ljava/lang/Class;
 
@@ -731,7 +671,6 @@
 
     return-object v0
 
-    .line 4
     :cond_1
     sget-object v0, Lcom/xiaomi/stat/d/m;->e:Ljava/lang/Class;
 
@@ -762,7 +701,6 @@
     :catch_0
     move-exception v0
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -794,7 +732,6 @@
 .method public static i()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/m;->e:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
@@ -802,7 +739,6 @@
     :try_start_0
     const-string v1, "IS_INTERNATIONAL_BUILD"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0

@@ -103,64 +103,48 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/AvatarEngine;Ljava/lang/String;ILcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v1, 0x1
 
     new-array v1, v1, [I
 
-    .line 3
     iput-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->d:[I
 
     const/4 v1, 0x0
 
-    .line 4
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
-    .line 5
     iput v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
-    .line 6
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->i:Ljava/util/ArrayList;
 
-    .line 7
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->j:Z
 
     const/4 v2, -0x1
 
-    .line 8
     iput v2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->k:I
 
-    .line 9
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->l:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 10
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->m:[B
 
-    .line 11
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->n:Landroid/util/Size;
 
-    .line 12
     iput v2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->o:I
 
-    .line 13
     iput-object p4, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->b:Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;
 
-    .line 14
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
-    .line 15
     sget-object p1, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->g:Landroid/opengl/EGLContext;
 
-    .line 16
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -169,10 +153,8 @@
 
     add-int/lit8 p1, p3, 0x1
 
-    .line 17
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->k:I
 
-    .line 18
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +173,6 @@
 
     invoke-static {p4, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,12 +189,10 @@
 
     invoke-static {p4, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     iget-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {p1, v1, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
 
-    .line 21
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -238,7 +217,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 22
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -247,7 +225,6 @@
 
     goto :goto_1
 
-    .line 23
     :cond_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -267,7 +244,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,7 +258,6 @@
 
     move-result-object v1
 
-    .line 25
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -299,12 +274,10 @@
 
     invoke-static {p4, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 27
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -317,7 +290,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 28
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,7 +314,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 29
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -357,7 +328,6 @@
 .method private a()I
     .locals 1
 
-    .line 3
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
     return v0
@@ -382,7 +352,6 @@
 
     const-string v8, "AvatarEmoManager"
 
-    .line 4
     :try_start_0
     new-instance v10, Ljava/lang/StringBuilder;
     :try_end_0
@@ -412,17 +381,14 @@
 
     invoke-static {v8, v10}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     new-instance v10, Ljava/io/FileInputStream;
 
     invoke-direct {v10, v2}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 6
     new-instance v2, Ljava/io/InputStreamReader;
 
     invoke-direct {v2, v10}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 7
     new-instance v11, Ljava/io/BufferedReader;
 
     invoke-direct {v11, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
@@ -440,7 +406,6 @@
 
     const/4 v15, 0x0
 
-    .line 8
     :goto_0
     :try_start_2
     invoke-virtual {v11}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -451,7 +416,6 @@
 
     move-object/from16 p1, v12
 
-    .line 9
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,7 +440,6 @@
 
     invoke-static {v8, v7}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -490,13 +453,11 @@
 
     if-nez v7, :cond_1b
 
-    .line 11
     :try_start_4
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 12
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -524,16 +485,13 @@
 
     if-eqz v9, :cond_0
 
-    .line 13
     :try_start_5
     new-instance v9, Lcom/arcsoft/avatar2/emoticon/EmoInfo;
 
     invoke-direct {v9}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;-><init>()V
 
-    .line 14
     invoke-virtual {v9, v3}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setFilePath(Ljava/lang/String;)V
 
-    .line 15
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -554,10 +512,8 @@
 
     move-result-object v10
 
-    .line 16
     invoke-virtual {v9, v10}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setThumbForGroundPath(Ljava/lang/String;)V
 
-    .line 17
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -578,7 +534,6 @@
 
     move-result-object v2
 
-    .line 18
     invoke-virtual {v9, v2}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setThumbBgGroundPath(Ljava/lang/String;)V
 
     move-object/from16 v22, v4
@@ -587,7 +542,6 @@
 
     goto/16 :goto_8
 
-    .line 19
     :cond_0
     invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -595,7 +549,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 20
     new-instance v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;
 
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -609,7 +562,6 @@
 
     goto/16 :goto_8
 
-    .line 21
     :cond_1
     invoke-virtual {v14, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -617,7 +569,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 22
     invoke-virtual {v13, v7}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setEmoName(Ljava/lang/String;)V
 
     goto :goto_1
@@ -625,14 +576,12 @@
     :cond_2
     const-string v9, "KEY_SIZE"
 
-    .line 23
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_3
 
-    .line 24
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
@@ -644,14 +593,12 @@
     :cond_3
     const-string v9, "KEY_X"
 
-    .line 25
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    .line 26
     invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
@@ -663,14 +610,12 @@
     :cond_4
     const-string v9, "KEY_Y"
 
-    .line 27
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_5
 
-    .line 28
     invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
@@ -682,7 +627,6 @@
     :cond_5
     const-string v9, "KEY_COLOR"
 
-    .line 29
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
@@ -695,7 +639,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 30
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
@@ -715,14 +658,12 @@
     :cond_7
     const-string v9, "BACK_GROUND"
 
-    .line 31
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_9
 
-    .line 32
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
@@ -742,14 +683,12 @@
     :cond_9
     const-string v9, "THUMB_INDEX"
 
-    .line 33
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_a
 
-    .line 34
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
@@ -761,14 +700,12 @@
     :cond_a
     const-string v9, "SCALE_LEVEL"
 
-    .line 35
     invoke-virtual {v14, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_b
 
-    .line 36
     invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
@@ -777,7 +714,6 @@
 
     goto/16 :goto_8
 
-    .line 37
     :cond_b
     invoke-virtual {v14, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -785,14 +721,12 @@
 
     if-eqz v9, :cond_f
 
-    .line 38
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v9
 
     iput v9, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->index:I
 
-    .line 39
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -817,14 +751,12 @@
 
     move-result-object v9
 
-    .line 40
     invoke-virtual {v13}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isNeedFaceColor()Z
 
     move-result v12
 
     if-eqz v12, :cond_c
 
-    .line 41
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -857,25 +789,21 @@
 
     move-result-object v9
 
-    .line 42
     :cond_c
     iput-object v9, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->foreGroundPath:Ljava/lang/String;
 
-    .line 43
     invoke-virtual {v13}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoImageSize()Landroid/util/Size;
 
     move-result-object v10
 
     if-nez v10, :cond_d
 
-    .line 44
     invoke-direct {v1, v9}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c(Ljava/lang/String;)Landroid/util/Size;
 
     move-result-object v9
 
     invoke-virtual {v13, v9}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setEmoImageSize(Landroid/util/Size;)V
 
-    .line 45
     :cond_d
     invoke-virtual {v13}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isMultipleBG()Z
 
@@ -883,7 +811,6 @@
 
     if-eqz v9, :cond_e
 
-    .line 46
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -908,18 +835,15 @@
 
     move-result-object v2
 
-    .line 47
     iput-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->backGroundPath:Ljava/lang/String;
 
     goto/16 :goto_8
 
-    .line 48
     :cond_e
     iget-object v9, v1, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->l:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     if-nez v9, :cond_1a
 
-    .line 49
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -944,14 +868,12 @@
 
     move-result-object v2
 
-    .line 50
     invoke-direct {v1, v2}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->b(Ljava/lang/String;)Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     move-result-object v4
 
     iput-object v4, v1, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->l:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 51
     iput-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->backGroundPath:Ljava/lang/String;
 
     goto/16 :goto_8
@@ -959,14 +881,12 @@
     :cond_f
     const-string v2, "KEY_TIME"
 
-    .line 52
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_10
 
-    .line 53
     invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
@@ -978,7 +898,6 @@
     :cond_10
     const-string v2, "HEAD_ROTATE"
 
-    .line 54
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -992,26 +911,22 @@
 
     if-eqz v2, :cond_12
 
-    .line 55
     :try_start_6
     invoke-virtual {v7, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 56
     array-length v4, v2
 
     new-array v4, v4, [F
 
     move/from16 v8, v21
 
-    .line 57
     :goto_4
     array-length v9, v2
 
     if-ge v8, v9, :cond_11
 
-    .line 58
     aget-object v9, v2, v8
 
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -1024,7 +939,6 @@
 
     goto :goto_4
 
-    .line 59
     :cond_11
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -1035,32 +949,27 @@
     :cond_12
     const-string v2, "LEFT_EYE_ROTATE"
 
-    .line 60
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_14
 
-    .line 61
     invoke-virtual {v7, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 62
     array-length v4, v2
 
     new-array v4, v4, [F
 
     move/from16 v8, v21
 
-    .line 63
     :goto_5
     array-length v9, v2
 
     if-ge v8, v9, :cond_13
 
-    .line 64
     aget-object v9, v2, v8
 
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -1073,7 +982,6 @@
 
     goto :goto_5
 
-    .line 65
     :cond_13
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -1084,32 +992,27 @@
     :cond_14
     const-string v2, "RIGHT_EYE_ROTATE"
 
-    .line 66
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_16
 
-    .line 67
     invoke-virtual {v7, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 68
     array-length v4, v2
 
     new-array v4, v4, [F
 
     move/from16 v8, v21
 
-    .line 69
     :goto_6
     array-length v9, v2
 
     if-ge v8, v9, :cond_15
 
-    .line 70
     aget-object v9, v2, v8
 
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -1122,7 +1025,6 @@
 
     goto :goto_6
 
-    .line 71
     :cond_15
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -1133,14 +1035,12 @@
     :cond_16
     const-string v2, "TONGUE_STATE"
 
-    .line 72
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_17
 
-    .line 73
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1154,7 +1054,6 @@
     :cond_17
     const-string v2, "MORPH_SIZE"
 
-    .line 74
     invoke-virtual {v14, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1163,7 +1062,6 @@
 
     goto :goto_8
 
-    .line 75
     :cond_18
     invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1171,7 +1069,6 @@
 
     if-eqz v2, :cond_1a
 
-    .line 76
     invoke-static {}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getMaxExpressNum()I
 
     move-result v2
@@ -1180,54 +1077,46 @@
 
     const-string v9, ";"
 
-    .line 77
     invoke-virtual {v7, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 
     move/from16 v10, v21
 
-    .line 78
     :goto_7
     array-length v11, v9
 
     if-ge v10, v11, :cond_19
 
-    .line 79
     aget-object v11, v9, v10
 
     invoke-virtual {v11, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v11
 
-    .line 80
     aget-object v12, v11, v4
 
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
 
-    .line 81
     aget-object v11, v11, v21
 
     invoke-static {v11}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v11
 
-    .line 82
     aput v11, v2, v12
 
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_7
 
-    .line 83
     :cond_19
     iget-object v4, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v4, v2}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
-    .line 84
     invoke-virtual {v13}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -1253,26 +1142,22 @@
 
     move-object/from16 v20, v11
 
-    .line 85
     invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1c
 
-    .line 86
     invoke-static {}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getMaxExpressNum()I
 
     move-result v2
 
     new-array v2, v2, [F
 
-    .line 87
     iget-object v4, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v4, v2}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
-    .line 88
     invoke-virtual {v13}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -1352,13 +1237,10 @@
 
     move-object/from16 v20, v11
 
-    .line 89
     invoke-virtual/range {v20 .. v20}, Ljava/io/BufferedReader;->close()V
 
-    .line 90
     invoke-virtual/range {v19 .. v19}, Ljava/io/InputStreamReader;->close()V
 
-    .line 91
     invoke-virtual/range {v18 .. v18}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/FileNotFoundException; {:try_start_6 .. :try_end_6} :catch_7
@@ -1485,7 +1367,6 @@
 
     goto :goto_f
 
-    .line 92
     :goto_c
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1509,12 +1390,10 @@
 
     invoke-static {v5, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 93
     invoke-virtual {v2}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_10
 
-    .line 94
     :goto_d
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1534,12 +1413,10 @@
 
     invoke-static {v5, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto :goto_10
 
-    .line 96
     :goto_e
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1559,12 +1436,10 @@
 
     invoke-static {v5, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_10
 
-    .line 98
     :goto_f
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1584,7 +1459,6 @@
 
     invoke-static {v5, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {v2}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     :goto_10
@@ -1596,7 +1470,6 @@
 .method private a(Ljava/lang/String;)Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
     .locals 2
 
-    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1615,19 +1488,16 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     invoke-static {p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 102
     invoke-static {p1}, Lcom/arcsoft/avatar2/util/AsvloffscreenUtil;->buildRGBA(Landroid/graphics/Bitmap;)Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
-    .line 103
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
@@ -1637,7 +1507,6 @@
 .method private a(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1656,7 +1525,6 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
     return-void
@@ -1665,7 +1533,6 @@
 .method private b(Ljava/lang/String;)Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
     .locals 4
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1684,38 +1551,30 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 6
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 7
     invoke-static {p1, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 8
     iget v1, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 9
     iget v0, v0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     mul-int v2, v1, v0
 
     mul-int/lit8 v2, v2, 0x4
 
-    .line 10
     new-array v2, v2, [B
 
-    .line 11
     iget-object v3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v3, p1, v1, v0, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->readRGBA(Ljava/lang/String;II[B)I
 
-    .line 12
     new-instance p1, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     invoke-direct {p1, v1, v0, v2}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;-><init>(II[B)V
@@ -1728,20 +1587,17 @@
 
     if-lez p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/recoder/MediaManager;->drawSurfaceWithTextureId(I)V
 
     :cond_1
@@ -1752,7 +1608,6 @@
 .method private c(Ljava/lang/String;)Landroid/util/Size;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1771,22 +1626,18 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 3
     invoke-static {p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     const/4 v1, 0x1
 
-    .line 4
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 5
     new-instance v0, Landroid/util/Size;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -1850,7 +1701,6 @@
     :cond_3
     move v7, v1
 
-    .line 6
     :goto_3
     new-instance v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;
 
@@ -1860,7 +1710,6 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;-><init>(IFFIF)V
 
-    .line 7
     iget-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarEngine;->setTongueAnimationParam(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;)I
@@ -1886,7 +1735,6 @@
     :try_start_0
     const-string v1, "AvatarEmoManager"
 
-    .line 1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1903,32 +1751,26 @@
 
     invoke-static {v1, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object p1
 
     const-string v3, "UTF-8"
 
-    .line 6
     invoke-interface {p1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 7
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v2
@@ -1957,14 +1799,12 @@
     :cond_0
     const-string v2, "emo"
 
-    .line 8
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 9
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v2
@@ -1973,7 +1813,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -1981,13 +1820,11 @@
 
     goto :goto_1
 
-    .line 11
     :cond_2
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 12
     :cond_3
     :goto_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -2006,7 +1843,6 @@
     :catch_0
     move-exception p1
 
-    .line 13
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
@@ -2014,7 +1850,6 @@
     :catch_1
     move-exception p1
 
-    .line 14
     invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_2
@@ -2022,7 +1857,6 @@
     :catch_2
     move-exception p1
 
-    .line 15
     invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
     :goto_2
@@ -2034,13 +1868,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result p1
@@ -2049,7 +1881,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -2062,7 +1893,6 @@
     :catch_0
     move-exception p1
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     return v0
@@ -2073,14 +1903,12 @@
 .method public emoGLRender(Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;)V
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
@@ -2088,7 +1916,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->n:Landroid/util/Size;
 
     invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
@@ -2105,7 +1932,6 @@
 
     mul-int/lit8 v0, v0, 0x4
 
-    .line 4
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->m:[B
 
     if-eqz v1, :cond_1
@@ -2114,13 +1940,11 @@
 
     if-eq v1, v0, :cond_2
 
-    .line 5
     :cond_1
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->m:[B
 
-    .line 6
     :cond_2
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
@@ -2143,7 +1967,6 @@
 
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->n:Landroid/util/Size;
 
-    .line 7
     invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
 
     move-result v0
@@ -2152,7 +1975,6 @@
 
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->n:Landroid/util/Size;
 
-    .line 8
     invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
 
     move-result v0
@@ -2169,22 +1991,18 @@
 
     const/4 v13, 0x0
 
-    .line 9
     invoke-virtual/range {v1 .. v13}, Lcom/arcsoft/avatar2/AvatarEngine;->renderWithBackground(Ljava/lang/String;Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZIIIIZ[I[BZ)I
 
-    .line 10
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
     if-nez v0, :cond_4
 
-    .line 11
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->d:[I
 
     if-eqz v0, :cond_4
 
     const/4 v1, 0x0
 
-    .line 12
     aget v0, v0, v1
 
     invoke-direct {p0, v0}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->b(I)V
@@ -2192,10 +2010,8 @@
     :cond_4
     const/4 v0, 0x0
 
-    .line 13
     iput-object v0, p1, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asForeGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 14
     iput-object v0, p1, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     return-void
@@ -2204,7 +2020,6 @@
 .method public emoProcess(Lcom/arcsoft/avatar2/emoticon/EmoInfo;)V
     .locals 13
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v1, 0x0
@@ -2215,7 +2030,6 @@
 
     new-array v0, v0, [F
 
-    .line 2
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationX()F
 
     move-result v2
@@ -2224,14 +2038,12 @@
 
     const/4 v2, 0x1
 
-    .line 3
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationY()F
 
     move-result v3
 
     aput v3, v0, v2
 
-    .line 4
     iget-object v2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getScaleLevel()F
@@ -2240,12 +2052,10 @@
 
     invoke-virtual {v2, v1, v3, v0}, Lcom/arcsoft/avatar2/AvatarEngine;->setRenderScene3F(ZF[F)V
 
-    .line 5
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v0, v1, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
 
-    .line 6
     :cond_0
     new-instance v0, Landroid/util/Size;
 
@@ -2269,7 +2079,6 @@
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->n:Landroid/util/Size;
 
-    .line 7
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -2296,7 +2105,6 @@
 
     check-cast v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;
 
-    .line 8
     iget-boolean v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->j:Z
 
     const-string v8, "AvatarEmoManager"
@@ -2305,7 +2113,6 @@
 
     const-string p1, "process_render -> emoProcess release & break"
 
-    .line 9
     invoke-static {v8, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
@@ -2315,7 +2122,6 @@
 
     if-lez v7, :cond_4
 
-    .line 10
     iget v9, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->h:I
 
     if-nez v9, :cond_4
@@ -2324,24 +2130,20 @@
 
     move-wide v4, v2
 
-    .line 11
     :cond_3
     invoke-static {v4, v5}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 12
     :cond_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 13
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isMultipleBG()Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
-    .line 14
     iget-object v7, v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->backGroundPath:Ljava/lang/String;
 
     invoke-direct {p0, v7}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->a(Ljava/lang/String;)Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
@@ -2350,13 +2152,11 @@
 
     iput-object v7, v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 15
     :cond_5
     iget-object v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v7, v1, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
 
-    .line 16
     iget v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->o:I
 
     iget-object v9, v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
@@ -2367,7 +2167,6 @@
 
     if-eq v7, v9, :cond_6
 
-    .line 17
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2398,7 +2197,6 @@
 
     invoke-static {v8, v7}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18
     iget-object v7, v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getTongueStatus()I
@@ -2407,7 +2205,6 @@
 
     invoke-direct {p0, v7}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c(I)V
 
-    .line 19
     iget-object v7, v6, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getTongueStatus()I
@@ -2416,7 +2213,6 @@
 
     iput v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->o:I
 
-    .line 20
     :cond_6
     iget-object v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
@@ -2426,7 +2222,6 @@
 
     const-wide/16 v9, 0x28
 
-    .line 21
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v11
@@ -2435,7 +2230,6 @@
 
     add-long/2addr v4, v9
 
-    .line 22
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2452,24 +2246,20 @@
 
     invoke-static {v8, v7}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
     iget-object v7, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->b:Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;
 
     if-eqz v7, :cond_1
 
-    .line 24
     invoke-interface {v7, v6}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;->onFrameRefresh(Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;)V
 
     goto/16 :goto_0
 
-    .line 25
     :cond_7
     :goto_1
     iget-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->b:Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;
 
     if-eqz p1, :cond_8
 
-    .line 26
     invoke-interface {p1}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager$AvatarEmoResCallback;->onMakeMediaEnd()V
 
     :cond_8
@@ -2487,7 +2277,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->i:Ljava/util/ArrayList;
 
     return-object v0
@@ -2496,7 +2285,6 @@
 .method public getFaceColorId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->k:I
 
     return v0
@@ -2507,7 +2295,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v14, 0x0
@@ -2522,7 +2309,6 @@
 
     goto/16 :goto_2
 
-    .line 2
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbFrameIndex()I
 
@@ -2536,7 +2322,6 @@
 
     return-object v14
 
-    .line 3
     :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
@@ -2563,7 +2348,6 @@
 
     new-array v1, v1, [F
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationX()F
 
     move-result v2
@@ -2574,14 +2358,12 @@
 
     const/4 v2, 0x1
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationY()F
 
     move-result v4
 
     aput v4, v1, v2
 
-    .line 6
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getScaleLevel()F
@@ -2590,7 +2372,6 @@
 
     invoke-virtual {v2, v3, v4, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setRenderScene3F(ZF[F)V
 
-    .line 7
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v1, v3, v3}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
@@ -2599,17 +2380,14 @@
 
     mul-int/lit8 v1, v1, 0x4
 
-    .line 8
     new-array v13, v1, [B
 
-    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isMultipleBG()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 10
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbBgGroundPath()Ljava/lang/String;
 
     move-result-object v1
@@ -2636,7 +2414,6 @@
 
     iput-object v1, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 11
     :cond_4
     iget-object v1, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -2646,14 +2423,12 @@
 
     invoke-direct {v0, v1}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c(I)V
 
-    .line 12
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setProcessInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
 
-    .line 13
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbForGroundPath()Ljava/lang/String;
@@ -2709,7 +2484,6 @@
 
     invoke-virtual/range {v1 .. v13}, Lcom/arcsoft/avatar2/AvatarEngine;->renderWithBackground(Ljava/lang/String;Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZIIIIZ[I[BZ)I
 
-    .line 14
     iput-object v14, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     return-object v17
@@ -2722,7 +2496,6 @@
 .method public isRelease()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->j:Z
 
     return v0
@@ -2735,12 +2508,10 @@
 
     const-string v1, "-> AvatarEmoManager release"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->j:Z
 
     return-void
@@ -2753,7 +2524,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v3, 0x0
@@ -2768,7 +2538,6 @@
 
     goto/16 :goto_2
 
-    .line 2
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbFrameIndex()I
 
@@ -2782,7 +2551,6 @@
 
     return v3
 
-    .line 3
     :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
@@ -2809,14 +2577,12 @@
 
     new-array v2, v2, [F
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationX()F
 
     move-result v4
 
     aput v4, v2, v3
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationY()F
 
     move-result v4
@@ -2825,7 +2591,6 @@
 
     aput v4, v2, v16
 
-    .line 6
     iget-object v4, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getScaleLevel()F
@@ -2834,7 +2599,6 @@
 
     invoke-virtual {v4, v3, v5, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setRenderScene3F(ZF[F)V
 
-    .line 7
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v2, v3, v3}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
@@ -2843,17 +2607,14 @@
 
     mul-int/lit8 v2, v2, 0x4
 
-    .line 8
     new-array v14, v2, [B
 
-    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isMultipleBG()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 10
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbBgGroundPath()Ljava/lang/String;
 
     move-result-object v2
@@ -2880,7 +2641,6 @@
 
     iput-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 11
     :cond_4
     iget-object v2, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -2890,14 +2650,12 @@
 
     invoke-direct {v0, v2}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c(I)V
 
-    .line 12
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v3, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v2, v3}, Lcom/arcsoft/avatar2/AvatarEngine;->setProcessInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
 
-    .line 13
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbForGroundPath()Ljava/lang/String;
@@ -2953,12 +2711,10 @@
 
     invoke-virtual/range {v2 .. v14}, Lcom/arcsoft/avatar2/AvatarEngine;->renderWithBackground(Ljava/lang/String;Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZIIIIZ[I[BZ)I
 
-    .line 14
     invoke-virtual {v1, v0}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->setThumbnailData([B)V
 
     const/4 v0, 0x0
 
-    .line 15
     iput-object v0, v15, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     return v16
@@ -2973,7 +2729,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v8, 0x0
@@ -2988,7 +2743,6 @@
 
     goto/16 :goto_2
 
-    .line 2
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbFrameIndex()I
 
@@ -3002,7 +2756,6 @@
 
     return-object v8
 
-    .line 3
     :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
@@ -3029,7 +2782,6 @@
 
     new-array v1, v1, [F
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationX()F
 
     move-result v2
@@ -3040,14 +2792,12 @@
 
     const/4 v2, 0x1
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getTranslationY()F
 
     move-result v4
 
     aput v4, v1, v2
 
-    .line 6
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getScaleLevel()F
@@ -3056,19 +2806,16 @@
 
     invoke-virtual {v2, v3, v4, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setRenderScene3F(ZF[F)V
 
-    .line 7
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v1, v3, v3}, Lcom/arcsoft/avatar2/AvatarEngine;->setAnimationParam(ZI)V
 
-    .line 8
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isMultipleBG()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbBgGroundPath()Ljava/lang/String;
 
     move-result-object v1
@@ -3095,7 +2842,6 @@
 
     iput-object v1, v9, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
-    .line 10
     :cond_4
     iget-object v1, v9, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -3105,14 +2851,12 @@
 
     invoke-direct {v0, v1}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c(I)V
 
-    .line 11
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v2, v9, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setProcessInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
 
-    .line 12
     iget-object v10, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getThumbForGroundPath()Ljava/lang/String;
@@ -3170,7 +2914,6 @@
 
     invoke-virtual/range {v10 .. v22}, Lcom/arcsoft/avatar2/AvatarEngine;->renderWithBackground(Ljava/lang/String;Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZIIIIZ[I[BZ)I
 
-    .line 13
     iget-object v1, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v2, v0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->d:[I
@@ -3183,12 +2926,10 @@
 
     mul-int/lit8 v1, v1, 0x4
 
-    .line 14
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v10
 
-    .line 15
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
@@ -3209,10 +2950,8 @@
 
     move-object v7, v10
 
-    .line 16
     invoke-static/range {v1 .. v7}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
-    .line 17
     iput-object v8, v9, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->asBackGround:Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;
 
     return-object v10
@@ -3225,7 +2964,6 @@
 .method public reset()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->c:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 v1, 0x0
@@ -3234,16 +2972,13 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setRenderScene(ZF)V
 
     :cond_0
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->o:I
 
-    .line 4
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->j:Z
 
     return-void
@@ -3252,7 +2987,6 @@
 .method public resumeRecording()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     if-eqz v0, :cond_0
@@ -3261,7 +2995,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/MediaManager;->resumeRecording()I
 
     :cond_0
@@ -3279,7 +3012,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->i:Ljava/util/ArrayList;
 
     return-void
@@ -3288,7 +3020,6 @@
 .method public setFaceColorId(I)V
     .locals 6
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->k:I
 
     add-int/lit8 v0, v0, -0x1
@@ -3300,15 +3031,12 @@
     :cond_0
     add-int/lit8 p1, p1, 0x1
 
-    .line 2
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->k:I
 
-    .line 3
     iget-object p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->i:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_3
 
-    .line 4
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -3327,7 +3055,6 @@
 
     check-cast v0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;
 
-    .line 5
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->isNeedFaceColor()Z
 
     move-result v1
@@ -3336,7 +3063,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->getEmoExtraInfoList()Ljava/util/ArrayList;
 
@@ -3359,7 +3085,6 @@
 
     check-cast v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;
 
-    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3404,7 +3129,6 @@
 
     iput-object v3, v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->foreGroundPath:Ljava/lang/String;
 
-    .line 8
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3442,7 +3166,6 @@
 
     goto/16 :goto_1
 
-    .line 14
     :cond_0
     rem-int/lit8 v0, p3, 0x2
 
@@ -3453,7 +3176,6 @@
     :cond_1
     move v2, p3
 
-    .line 15
     rem-int/lit8 p3, p4, 0x2
 
     if-eqz p3, :cond_2
@@ -3463,7 +3185,6 @@
     :cond_2
     move v3, p4
 
-    .line 16
     iget-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     if-nez p3, :cond_6
@@ -3484,7 +3205,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3510,7 +3230,6 @@
 
     throw p1
 
-    .line 18
     :cond_4
     :goto_0
     sget-object p3, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
@@ -3519,14 +3238,12 @@
 
     if-ne p3, p4, :cond_5
 
-    .line 19
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentContext()Landroid/opengl/EGLContext;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->g:Landroid/opengl/EGLContext;
 
-    .line 20
     :cond_5
     new-instance p3, Lcom/arcsoft/avatar2/recoder/MediaManager;
 
@@ -3548,27 +3265,22 @@
 
     const/4 p1, 0x1
 
-    .line 21
     invoke-virtual {p3, p1}, Lcom/arcsoft/avatar2/recoder/MediaManager;->setEncoderCount(I)V
 
-    .line 22
     iget-object p2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     iget-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->g:Landroid/opengl/EGLContext;
 
     invoke-virtual {p2, p3, p5, p1, p6}, Lcom/arcsoft/avatar2/recoder/MediaManager;->initVideoEncoderWithSharedContext(Landroid/opengl/EGLContext;IZLjava/lang/String;)V
 
-    .line 23
     iget-object p2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-virtual {p2}, Lcom/arcsoft/avatar2/recoder/MediaManager;->startRecording()V
 
-    .line 24
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
     return-void
 
-    .line 25
     :cond_6
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3590,7 +3302,6 @@
 
     if-eqz p4, :cond_7
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -3599,7 +3310,6 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_0
     rem-int/lit8 v0, p3, 0x2
 
@@ -3610,7 +3320,6 @@
     :cond_1
     move v2, p3
 
-    .line 3
     rem-int/lit8 p3, p4, 0x2
 
     if-eqz p3, :cond_2
@@ -3620,7 +3329,6 @@
     :cond_2
     move v3, p4
 
-    .line 4
     iget-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     if-nez p3, :cond_6
@@ -3641,7 +3349,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3667,7 +3374,6 @@
 
     throw p1
 
-    .line 6
     :cond_4
     :goto_0
     sget-object p3, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
@@ -3676,14 +3382,12 @@
 
     if-ne p3, p4, :cond_5
 
-    .line 7
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentContext()Landroid/opengl/EGLContext;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->g:Landroid/opengl/EGLContext;
 
-    .line 8
     :cond_5
     new-instance p3, Lcom/arcsoft/avatar2/recoder/MediaManager;
 
@@ -3705,27 +3409,22 @@
 
     const/4 p1, 0x1
 
-    .line 9
     invoke-virtual {p3, p1}, Lcom/arcsoft/avatar2/recoder/MediaManager;->setEncoderCount(I)V
 
-    .line 10
     iget-object p2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     iget-object p3, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->g:Landroid/opengl/EGLContext;
 
     invoke-virtual {p2, p3, p5, p1, p6}, Lcom/arcsoft/avatar2/recoder/MediaManager;->initVideoEncoderWithSharedContext(Landroid/opengl/EGLContext;IZLjava/lang/String;)V
 
-    .line 11
     iget-object p2, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-virtual {p2}, Lcom/arcsoft/avatar2/recoder/MediaManager;->startRecording()V
 
-    .line 12
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
     return-void
 
-    .line 13
     :cond_6
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3747,17 +3446,14 @@
 
     const-string v1, "process_render -> stopRecording 0"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
     if-nez v1, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
@@ -3765,36 +3461,29 @@
 
     const-string v1, "process_render -> stopRecording 1"
 
-    .line 4
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->resumeRecording()V
 
     const/4 v1, 0x0
 
-    .line 6
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->e:Z
 
-    .line 7
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/recoder/MediaManager;->stopRecording()V
 
-    .line 8
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/recoder/MediaManager;->releaseFrameQueue()V
 
     const/4 v1, 0x0
 
-    .line 9
     iput-object v1, p0, Lcom/arcsoft/avatar2/emoticon/AvatarEmoManager;->f:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     :cond_1
     const-string v1, "process_render -> stopRecording 2"
 
-    .line 10
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

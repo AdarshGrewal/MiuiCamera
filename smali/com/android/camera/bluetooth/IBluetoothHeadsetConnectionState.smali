@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract onBluetoothHeadsetStateChanged(I)V
+.method public abstract onBluetoothHeadsetConnected()V
+.end method
+
+.method public abstract onBluetoothHeadsetConnecting()V
+.end method
+
+.method public abstract onBluetoothHeadsetDisconnected()V
 .end method

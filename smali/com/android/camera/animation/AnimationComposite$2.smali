@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/animation/AnimationComposite;Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/animation/AnimationComposite$2;->this$0:Lcom/android/camera/animation/AnimationComposite;
 
     iput-object p2, p0, Lcom/android/camera/animation/AnimationComposite$2;->val$pendingViews:Ljava/util/List;
@@ -42,7 +41,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -53,12 +51,10 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/AnimationComposite$2;->this$0:Lcom/android/camera/animation/AnimationComposite;
 
     invoke-static {v0, p1}, Lcom/android/camera/animation/AnimationComposite;->access$102(Lcom/android/camera/animation/AnimationComposite;I)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/animation/AnimationComposite$2;->val$pendingViews:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -82,7 +78,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/animation/AnimationComposite$2;->this$0:Lcom/android/camera/animation/AnimationComposite;
 

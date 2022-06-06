@@ -13,17 +13,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Landroidx/preference/EditTextPreferenceDialogFragmentCompat;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$1;
 
     invoke-direct {v0, p0}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$1;-><init>(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;)V
 
     iput-object v0, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->mImpl:Lmiuix/preference/IPreferenceDialogFragment;
 
-    .line 3
     new-instance v1, Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;
 
     invoke-direct {v1, v0, p0}, Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;-><init>(Lmiuix/preference/IPreferenceDialogFragment;Landroidx/preference/PreferenceDialogFragmentCompat;)V
@@ -36,7 +33,6 @@
 .method public static synthetic access$000(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/content/Context;)Landroid/view/View;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Landroidx/preference/PreferenceDialogFragmentCompat;->onCreateDialogView(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object p0
@@ -47,7 +43,6 @@
 .method public static synthetic access$100(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Landroidx/preference/EditTextPreferenceDialogFragmentCompat;->onBindDialogView(Landroid/view/View;)V
 
     return-void
@@ -56,12 +51,10 @@
 .method public static newInstance(Ljava/lang/String;)Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
     .locals 3
 
-    .line 1
     new-instance v0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
     invoke-direct {v0}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;-><init>()V
 
-    .line 2
     new-instance v1, Landroid/os/Bundle;
 
     const/4 v2, 0x1
@@ -70,10 +63,8 @@
 
     const-string v2, "key"
 
-    .line 3
     invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
@@ -84,7 +75,6 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->mDelegate:Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;
 
     invoke-virtual {v0, p1}, Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
@@ -97,7 +87,6 @@
 .method public final onPrepareDialogBuilder(Landroidx/appcompat/app/AlertDialog$Builder;)V
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "using miuix builder instead"
@@ -110,7 +99,6 @@
 .method public onPrepareDialogBuilder(Lmiuix/appcompat/app/AlertDialog$Builder;)V
     .locals 2
 
-    .line 2
     new-instance v0, Lmiuix/preference/BuilderDelegate;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;

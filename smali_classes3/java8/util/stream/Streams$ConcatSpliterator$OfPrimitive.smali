@@ -52,7 +52,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/Streams$ConcatSpliterator;-><init>(Ljava8/util/Spliterator;Ljava8/util/Spliterator;)V
 
     return-void
@@ -61,7 +60,6 @@
 .method public synthetic constructor <init>(Ljava8/util/Spliterator$OfPrimitive;Ljava8/util/Spliterator$OfPrimitive;Ljava8/util/stream/Streams$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/Streams$ConcatSpliterator$OfPrimitive;-><init>(Ljava8/util/Spliterator$OfPrimitive;Ljava8/util/Spliterator$OfPrimitive;)V
 
     return-void
@@ -77,19 +75,16 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator$OfPrimitive;->forEachRemaining(Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -103,7 +98,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -114,7 +108,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -130,12 +123,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -148,10 +139,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
     check-cast v0, Ljava8/util/Spliterator$OfPrimitive;
@@ -162,7 +151,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -180,7 +168,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/Streams$ConcatSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

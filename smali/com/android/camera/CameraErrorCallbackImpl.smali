@@ -26,10 +26,8 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -54,7 +52,6 @@
 
     const-string/jumbo v2, "onCameraError: camera service error"
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -66,7 +63,6 @@
 
     const-string/jumbo v2, "onCameraError: camera device error"
 
-    .line 2
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -78,7 +74,6 @@
 
     const-string/jumbo v2, "onCameraError: camera disabled"
 
-    .line 3
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -90,7 +85,6 @@
 
     const-string/jumbo v2, "onCameraError: max camera in use"
 
-    .line 4
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -102,12 +96,10 @@
 
     const-string/jumbo v2, "onCameraError: camera in use"
 
-    .line 5
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 6
     :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -125,7 +117,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -143,7 +134,6 @@
 
     invoke-static {p2}, Lcom/android/camera/statistic/CameraStatUtils;->trackCameraError(Ljava/lang/String;)V
 
-    .line 8
     invoke-static {}, Lcom/android/camera/aftersales/AftersalesManager;->getInstance()Lcom/android/camera/aftersales/AftersalesManager;
 
     move-result-object p2
@@ -158,7 +148,6 @@
 
     invoke-virtual {p2, v2, v3, p1, v0}, Lcom/android/camera/aftersales/AftersalesManager;->count(JII)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/CameraErrorCallbackImpl;->mWeakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -169,37 +158,25 @@
 
     if-eqz p1, :cond_5
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    .line 11
-    invoke-interface {p1}, Lcom/android/camera/module/Module;->getModuleState()Lcom/android/camera/module/common/IModuleState;
-
-    move-result-object p2
-
-    invoke-interface {p2}, Lcom/android/camera/module/common/IModuleState;->isCreated()Z
+    invoke-interface {p1}, Lcom/android/camera/module/Module;->isCreated()Z
 
     move-result p2
 
     if-eqz p2, :cond_6
 
-    .line 12
-    invoke-interface {p1}, Lcom/android/camera/module/Module;->getCameraManager()Lcom/android/camera/module/common/ICameraMgr;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/android/camera/module/common/ICameraMgr;->onCameraError()V
+    invoke-interface {p1}, Lcom/android/camera/module/Module;->notifyError()V
 
     goto :goto_1
 
     :cond_5
     const-string p1, "mActivity has been collected."
 
-    .line 13
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6

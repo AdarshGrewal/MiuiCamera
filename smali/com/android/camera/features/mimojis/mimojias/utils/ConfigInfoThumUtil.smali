@@ -75,144 +75,122 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x7
 
     new-array v1, v0, [F
 
-    .line 2
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairStyleRegion:[F
 
     new-array v1, v0, [F
 
-    .line 3
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mFaceSharpRegion:[F
 
     new-array v1, v0, [F
 
-    .line 4
     fill-array-data v1, :array_2
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearStyleRegin:[F
 
     new-array v1, v0, [F
 
-    .line 5
     fill-array-data v1, :array_3
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyelashStyleRegion:[F
 
     new-array v1, v0, [F
 
-    .line 6
     fill-array-data v1, :array_4
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeSharpRegion:[F
 
     new-array v1, v0, [F
 
-    .line 7
     fill-array-data v1, :array_5
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeBrowSharpRegion:[F
 
     new-array v1, v0, [F
 
-    .line 8
     fill-array-data v1, :array_6
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoseShapeRegion:[F
 
     new-array v1, v0, [F
 
-    .line 9
     fill-array-data v1, :array_7
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mMouthSharpRegion:[F
 
     new-array v1, v0, [F
 
-    .line 10
     fill-array-data v1, :array_8
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mBeardStyleRegion:[F
 
     new-array v1, v0, [F
 
-    .line 11
     fill-array-data v1, :array_9
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mFrecklesRegion:[F
 
     new-array v1, v0, [F
 
-    .line 12
     fill-array-data v1, :array_a
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNevusRegion:[F
 
     new-array v1, v0, [F
 
-    .line 13
     fill-array-data v1, :array_b
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEarShapeRegion:[F
 
     new-array v1, v0, [F
 
-    .line 14
     fill-array-data v1, :array_c
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEarRingShapeRegion:[F
 
     new-array v1, v0, [F
 
-    .line 15
     fill-array-data v1, :array_d
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHatStyleRegion:[F
 
     new-array v1, v0, [F
 
-    .line 16
     fill-array-data v1, :array_e
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHeadWearStyleRegion:[F
 
     new-array v1, v0, [F
 
-    .line 17
     fill-array-data v1, :array_f
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mnNormalRegion:[F
 
     const-string v1, "Hat"
 
-    .line 18
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHat:Ljava/lang/String;
 
     const-string v1, "Hea"
 
-    .line 19
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHeadWear:Ljava/lang/String;
 
     new-array v0, v0, [F
 
-    .line 20
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
     const/4 v0, 0x0
 
-    .line 21
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
-    .line 22
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     return-void
@@ -409,10 +387,8 @@
 
     const/4 v3, 0x0
 
-    .line 1
     iput-boolean v3, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
-    .line 2
     iput-boolean v3, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     const-string v4, "ConfigInfoThumUtil"
@@ -421,12 +397,10 @@
 
     const-string v1, "mimoji void renderThumb[avatarEngine, info, gender, backColor] avatar null"
 
-    .line 3
     invoke-static {v4, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 4
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -446,7 +420,6 @@
 
     invoke-static {v4, v5}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget v4, v12, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
     const/4 v5, 0x3
@@ -485,58 +458,48 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 6
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mnNormalRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
     goto/16 :goto_1
 
-    .line 7
     :pswitch_0
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeBrowSharpRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 8
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 9
     :pswitch_1
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoseShapeRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 10
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 11
     :pswitch_2
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mMouthSharpRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 12
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 13
     :pswitch_3
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeSharpRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 14
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 15
     :pswitch_4
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mFaceSharpRegion:[F
 
@@ -544,7 +507,6 @@
 
     goto :goto_1
 
-    .line 16
     :cond_1
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearStyleRegin:[F
 
@@ -552,69 +514,56 @@
 
     goto :goto_1
 
-    .line 17
     :cond_2
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNevusRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 18
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 19
     :cond_3
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mFrecklesRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 20
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 21
     :cond_4
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyelashStyleRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 22
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 23
     :cond_5
     :pswitch_5
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEarRingShapeRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 24
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
-    .line 25
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     goto :goto_1
 
-    .line 26
     :cond_6
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mBeardStyleRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 27
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
-    .line 28
     iput-boolean v7, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
     goto :goto_1
 
-    .line 29
     :cond_7
     iget-object v4, v12, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->name:Ljava/lang/String;
 
@@ -642,31 +591,26 @@
 
     goto :goto_1
 
-    .line 30
     :cond_9
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairStyleRegion:[F
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
-    .line 31
     :goto_1
     iget-boolean v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
     if-eqz v4, :cond_b
 
-    .line 32
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairList:Ljava/util/ArrayList;
 
     if-nez v4, :cond_a
 
-    .line 33
     invoke-virtual {v1, v7, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->getConfig(II)Ljava/util/ArrayList;
 
     move-result-object v4
 
     iput-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairList:Ljava/util/ArrayList;
 
-    .line 34
     :cond_a
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairList:Ljava/util/ArrayList;
 
@@ -676,7 +620,6 @@
 
     if-lez v4, :cond_b
 
-    .line 35
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -693,25 +636,21 @@
 
     invoke-virtual {v1, v4}, Lcom/arcsoft/avatar2/AvatarEngine;->setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
-    .line 36
     :cond_b
     iget-boolean v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
     if-eqz v4, :cond_d
 
-    .line 37
     iget-object v4, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearList:Ljava/util/ArrayList;
 
     if-nez v4, :cond_c
 
-    .line 38
     invoke-virtual {v1, v6, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->getConfig(II)Ljava/util/ArrayList;
 
     move-result-object v2
 
     iput-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearList:Ljava/util/ArrayList;
 
-    .line 39
     :cond_c
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearList:Ljava/util/ArrayList;
 
@@ -721,7 +660,6 @@
 
     if-lez v2, :cond_d
 
-    .line 40
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -732,11 +670,9 @@
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
-    .line 41
     :cond_d
     invoke-virtual/range {p1 .. p2}, Lcom/arcsoft/avatar2/AvatarEngine;->setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
-    .line 42
     iget-object v2, v0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mTempRegion:[F
 
     const/4 v4, 0x4
@@ -747,7 +683,6 @@
 
     const/4 v6, 0x5
 
-    .line 43
     aget v6, v2, v6
 
     float-to-int v14, v6
@@ -756,10 +691,8 @@
 
     mul-int/2addr v6, v4
 
-    .line 44
     new-array v15, v6, [B
 
-    .line 45
     aget v3, v2, v3
 
     float-to-int v3, v3
@@ -802,21 +735,18 @@
 
     invoke-virtual/range {v1 .. v11}, Lcom/arcsoft/avatar2/AvatarEngine;->renderThumb(IIII[BIII[FF)I
 
-    .line 46
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v13, v14, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 47
     invoke-static {v15}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 48
     iput-object v1, v12, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->thum:Landroid/graphics/Bitmap;
 
     return-void
@@ -841,12 +771,10 @@
 
     const-string p2, "mimoji void reset avatar null"
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoHair:Z
 
@@ -860,7 +788,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-static {v0, p2}, Lcom/arcsoft/avatar2/util/AvatarConfigUtils;->getCurrentConfigIdWithType(ILcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)I
 
     move-result v0
@@ -869,7 +796,6 @@
 
     move v0, v2
 
-    .line 4
     :cond_1
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mHairList:Ljava/util/ArrayList;
 
@@ -890,7 +816,6 @@
 
     check-cast v5, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
-    .line 5
     iget v6, v5, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
 
     if-ne v6, v0, :cond_2
@@ -903,10 +828,8 @@
     :goto_0
     if-eqz v5, :cond_4
 
-    .line 6
     invoke-virtual {p1, v5}, Lcom/arcsoft/avatar2/AvatarEngine;->setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
-    .line 7
     :cond_4
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mNoEyeWear:Z
 
@@ -914,7 +837,6 @@
 
     const/16 v0, 0x9
 
-    .line 8
     invoke-static {v0, p2}, Lcom/arcsoft/avatar2/util/AvatarConfigUtils;->getCurrentConfigIdWithType(ILcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)I
 
     move-result p2
@@ -926,7 +848,6 @@
     :cond_5
     move v2, p2
 
-    .line 9
     :goto_1
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojias/utils/ConfigInfoThumUtil;->mEyeWearList:Ljava/util/ArrayList;
 
@@ -947,7 +868,6 @@
 
     check-cast v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
-    .line 10
     iget v3, v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
 
     if-ne v3, v2, :cond_6
@@ -957,7 +877,6 @@
     :cond_7
     if-eqz v1, :cond_8
 
-    .line 11
     invoke-virtual {p1, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
     :cond_8

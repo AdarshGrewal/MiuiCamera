@@ -48,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     const/4 v1, 0x0
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->SERVICE_CHANGED_LOGIN:Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     const/4 v2, 0x1
@@ -74,7 +72,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->SERVICE_CHANGED_LOGOUT:Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     const/4 v3, 0x2
@@ -87,7 +84,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->SERVICE_CHANGED_ACCOUNT_CHANGED:Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     const/4 v4, 0x3
@@ -106,7 +102,6 @@
 
     new-array v5, v5, [Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
-    .line 5
     sget-object v6, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->SERVICE_CHANGED_LOGIN:Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     aput-object v6, v5, v1
@@ -136,13 +131,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->code:I
 
-    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->msg:Ljava/lang/String;
 
     return-void
@@ -151,7 +143,6 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->values()[Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     move-result-object v0
@@ -165,7 +156,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     invoke-virtual {v3}, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->getCode()I
 
     move-result v4
@@ -179,7 +169,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->SERVICE_CHANGED_UNKNOWN:Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
@@ -189,7 +178,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -204,7 +192,6 @@
 .method public static values()[Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->$VALUES:[Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->clone()Ljava/lang/Object;
@@ -221,7 +208,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->code:I
 
     return v0
@@ -230,7 +216,6 @@
 .method public getMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/ResponseCode$ServiceChangedCode;->msg:Ljava/lang/String;
 
     return-object v0

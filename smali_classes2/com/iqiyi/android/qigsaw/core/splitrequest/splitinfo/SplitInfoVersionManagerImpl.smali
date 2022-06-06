@@ -24,16 +24,12 @@
 .method public constructor <init>(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->defaultVersion:Ljava/lang/String;
 
-    .line 3
     iput-boolean p2, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->isMainProcess:Z
 
-    .line 4
     new-instance p2, Ljava/io/File;
 
     const-string p3, "qigsaw"
@@ -46,7 +42,6 @@
 
     invoke-direct {p2, p3, p4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 5
     new-instance p3, Ljava/io/File;
 
     const-string p4, "split_info_version"
@@ -55,10 +50,8 @@
 
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->rootDir:Ljava/io/File;
 
-    .line 6
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->processVersionData(Landroid/content/Context;)V
 
-    .line 7
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->reportNewSplitInfoVersionLoaded()V
 
     return-void
@@ -67,17 +60,14 @@
 .method public static createSplitInfoVersionManager(Landroid/content/Context;Z)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getDefaultSplitInfoVersion()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;
 
     invoke-direct {v2, p0, p1, v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;-><init>(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
@@ -88,7 +78,6 @@
 .method private processVersionData(Landroid/content/Context;)V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->readVersionData()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;
 
     move-result-object v0
@@ -103,24 +92,19 @@
 
     const-string v0, "No new split info version, just use default version."
 
-    .line 2
     invoke-static {v2, v0, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->defaultVersion:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v3, v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;->oldVersion:Ljava/lang/String;
 
-    .line 5
     iget-object v0, v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;->newVersion:Ljava/lang/String;
 
-    .line 6
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -135,21 +119,17 @@
 
     const-string v1, "Splits have been updated, so we use new split info version %s."
 
-    .line 7
     invoke-static {v2, v1, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 8
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 9
     :cond_1
     iget-boolean v4, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->isMainProcess:Z
 
     if-eqz v4, :cond_3
 
-    .line 10
     new-instance v4, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;
 
     invoke-direct {v4, v0, v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -160,26 +140,21 @@
 
     if-eqz v4, :cond_2
 
-    .line 11
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
-    .line 12
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/common/ProcessUtil;->killAllOtherProcess(Landroid/content/Context;)V
 
     new-array p1, v1, [Ljava/lang/Object;
 
     const-string v0, "Splits have been updated, start to kill other processes!"
 
-    .line 13
     invoke-static {v2, v0, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 14
     :cond_2
     iput-object v3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
-    .line 15
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +175,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_3
     iput-object v3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
@@ -211,7 +185,6 @@
 .method private readVersionData()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorageImpl;
 
@@ -219,12 +192,10 @@
 
     invoke-direct {v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorageImpl;-><init>(Ljava/io/File;)V
 
-    .line 2
     invoke-interface {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorage;->readVersionData()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;
 
     move-result-object v1
 
-    .line 3
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -240,12 +211,10 @@
 .method private reportNewSplitInfoVersionLoaded()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->isMainProcess:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->defaultVersion:Ljava/lang/String;
@@ -256,14 +225,12 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitUpdateReporterManager;->getUpdateReporter()Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUpdateReporter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitUpdateReporter;->onNewSplitInfoVersionLoaded(Ljava/lang/String;)V
@@ -275,7 +242,6 @@
 .method private updateVersionData(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;)Z
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorageImpl;
 
@@ -283,12 +249,10 @@
 
     invoke-direct {v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorageImpl;-><init>(Ljava/io/File;)V
 
-    .line 2
     invoke-interface {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionDataStorage;->updateVersionData(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;)Z
 
     move-result p1
 
-    .line 3
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -306,7 +270,6 @@
 .method public getCurrentVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     return-object v0
@@ -315,7 +278,6 @@
 .method public getDefaultVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->defaultVersion:Ljava/lang/String;
 
     return-object v0
@@ -324,7 +286,6 @@
 .method public getRootDir()Ljava/io/File;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->rootDir:Ljava/io/File;
 
     return-object v0
@@ -333,7 +294,6 @@
 .method public updateVersion(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Z
     .locals 5
 
-    .line 1
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->rootDir:Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
@@ -346,7 +306,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->rootDir:Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->mkdirs()Z
@@ -359,12 +318,10 @@
 
     const-string p2, "Failed to make dir for split info file!"
 
-    .line 3
     invoke-static {v0, p2, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -384,25 +341,21 @@
 
     move-result-object p1
 
-    .line 5
     new-instance v2, Ljava/io/File;
 
     iget-object v3, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->rootDir:Ljava/io/File;
 
     invoke-direct {v2, v3, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 6
     :try_start_0
     invoke-static {p3, v2}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->copyFile(Ljava/io/File;Ljava/io/File;)V
 
-    .line 7
     new-instance p1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;
 
     iget-object v2, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     invoke-direct {p1, v2, p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->updateVersionData(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionData;)Z
 
     move-result p1
@@ -417,7 +370,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 9
     iget-object v4, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManagerImpl;->currentVersion:Ljava/lang/String;
 
     aput-object v4, v3, v1
@@ -433,7 +385,6 @@
     :cond_1
     move v2, v1
 
-    .line 10
     :goto_0
     :try_start_1
     invoke-virtual {p3}, Ljava/io/File;->exists()Z
@@ -442,14 +393,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 11
     invoke-virtual {p3}, Ljava/io/File;->delete()Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 12
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -486,7 +435,6 @@
 
     move v2, v1
 
-    .line 13
     :goto_1
     new-instance p2, Ljava/lang/StringBuilder;
 

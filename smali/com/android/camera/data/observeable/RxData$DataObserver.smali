@@ -62,17 +62,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->observer:Lio/reactivex/Observer;
 
     return-void
@@ -83,7 +80,6 @@
 .method public final dispose()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
@@ -94,7 +90,6 @@
 .method public final isDisposed()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -119,7 +114,6 @@
 .method public onComplete()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {v0}, Lio/reactivex/Observer;->onComplete()V
@@ -130,7 +124,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {v0, p1}, Lio/reactivex/Observer;->onError(Ljava/lang/Throwable;)V
@@ -146,7 +139,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {v0, p1}, Lio/reactivex/Observer;->onNext(Ljava/lang/Object;)V
@@ -157,14 +149,12 @@
 .method public final onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->s:Ljava/util/concurrent/atomic/AtomicReference;
 
     const-class v1, Lcom/android/camera/data/observeable/RxData$DataObserver;
 
     invoke-static {v0, p1, v1}, Lio/reactivex/internal/util/EndConsumerHelper;->setOnce(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;Ljava/lang/Class;)Z
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataObserver;->observer:Lio/reactivex/Observer;
 
     invoke-interface {v0, p1}, Lio/reactivex/Observer;->onSubscribe(Lio/reactivex/disposables/Disposable;)V

@@ -32,7 +32,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;ILjava/lang/Object;Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/util/BackgroundTaskScheduler$CancellableTask;-><init>()V
 
     if-nez p2, :cond_1
@@ -41,7 +40,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -51,26 +49,20 @@
 
     throw p1
 
-    .line 4
     :cond_1
     :goto_0
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
-    .line 5
     iput-object p2, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
-    .line 6
     iput p3, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mOrientationHint:I
 
-    .line 7
     iput-object p4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mTag:Ljava/lang/Object;
 
-    .line 8
     iput-object p5, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     const/4 p1, 0x2
 
-    .line 9
     invoke-static {p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
@@ -83,7 +75,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;ILjava/lang/Object;Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$1;)V
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;-><init>(Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;ILjava/lang/Object;Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;)V
 
     return-void
@@ -96,14 +87,12 @@
 
     const-string v0, "Failed to release the media muxer: "
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/util/BackgroundTaskScheduler$CancellableTask;->isCancelled()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -112,17 +101,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mSampleWriterExecutor:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mTag:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;->onVideoClipSavingCancelled(Ljava/lang/Object;)V
@@ -133,7 +119,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 6
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -161,7 +146,6 @@
 
     move-result-object v2
 
-    .line 7
     new-instance v3, Landroid/media/MediaMuxer;
 
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -175,20 +159,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     :try_start_1
     iget v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mOrientationHint:I
 
     invoke-virtual {v3, v4}, Landroid/media/MediaMuxer;->setOrientationHint(I)V
 
-    .line 9
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     const/4 v5, -0x1
 
     if-eqz v4, :cond_2
 
-    .line 10
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-object v4, v4, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->format:Landroid/media/MediaFormat;
@@ -202,13 +183,11 @@
     :cond_2
     move v4, v5
 
-    .line 11
     :goto_0
     iget-object v6, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     if-eqz v6, :cond_3
 
-    .line 12
     iget-object v6, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-object v6, v6, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->format:Landroid/media/MediaFormat;
@@ -222,7 +201,6 @@
     :cond_3
     move v6, v5
 
-    .line 13
     :goto_1
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -232,24 +210,20 @@
 
     invoke-static {v7, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     invoke-virtual {v3}, Landroid/media/MediaMuxer;->start()V
 
-    .line 15
     new-instance v7, Ljava/util/ArrayList;
 
     const/4 v8, 0x2
 
     invoke-direct {v7, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 16
     iget-object v8, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     if-eqz v8, :cond_4
 
     if-eq v4, v5, :cond_4
 
-    .line 17
     new-instance v1, Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     const-wide/16 v8, 0x0
@@ -260,7 +234,6 @@
 
     invoke-direct {v1, v8}, Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;-><init>(Ljava/lang/Object;)V
 
-    .line 18
     iget-object v8, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mSampleWriterExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v9, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;
@@ -275,7 +248,6 @@
 
     invoke-interface {v7, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 19
     :cond_4
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
@@ -283,7 +255,6 @@
 
     if-eq v6, v5, :cond_5
 
-    .line 20
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mSampleWriterExecutor:Ljava/util/concurrent/ExecutorService;
 
     new-instance v5, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;
@@ -298,7 +269,6 @@
 
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     :cond_5
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -308,7 +278,6 @@
 
     invoke-static {v1, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -332,7 +301,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 23
     :try_start_2
     invoke-interface {v4}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
     :try_end_2
@@ -345,7 +313,6 @@
     :catch_0
     move-exception v4
 
-    .line 24
     :try_start_3
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -369,7 +336,6 @@
 
     goto :goto_2
 
-    .line 25
     :cond_7
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -379,20 +345,16 @@
 
     invoke-static {v1, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     invoke-virtual {v3}, Landroid/media/MediaMuxer;->stop()V
 
-    .line 27
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     if-eqz v1, :cond_9
 
-    .line 28
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mTag:Ljava/lang/Object;
 
-    .line 29
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
@@ -410,14 +372,12 @@
 
     iget-wide v5, v5, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->time:J
 
-    .line 30
     :goto_3
     invoke-interface {v1, v4, v2, v5, v6}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;->onVideoClipSavingCompleted(Ljava/lang/Object;Ljava/lang/String;J)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 31
     :cond_9
     :try_start_4
     invoke-virtual {v3}, Landroid/media/MediaMuxer;->release()V
@@ -426,7 +386,6 @@
 
     goto :goto_6
 
-    .line 32
     :catch_1
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -459,7 +418,6 @@
 
     move-object v1, v2
 
-    .line 33
     :goto_4
     :try_start_5
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
@@ -482,12 +440,10 @@
 
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     iget-object v2, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     if-eqz v2, :cond_a
 
-    .line 35
     iget-object v2, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mVideoClipSavingCallback:Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$VideoClipSavingCallback;
 
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mTag:Ljava/lang/Object;
@@ -499,7 +455,6 @@
     :cond_a
     if-eqz v3, :cond_b
 
-    .line 36
     :try_start_6
     invoke-virtual {v3}, Landroid/media/MediaMuxer;->release()V
     :try_end_6
@@ -507,7 +462,6 @@
 
     goto :goto_6
 
-    .line 37
     :catch_4
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -528,7 +482,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     :cond_b
     :goto_6
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mSampleWriterExecutor:Ljava/util/concurrent/ExecutorService;
@@ -543,7 +496,6 @@
     :goto_7
     if-eqz v3, :cond_c
 
-    .line 39
     :try_start_7
     invoke-virtual {v3}, Landroid/media/MediaMuxer;->release()V
     :try_end_7
@@ -551,7 +503,6 @@
 
     goto :goto_8
 
-    .line 40
     :catch_5
     invoke-static {}, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder;->access$100()Ljava/lang/String;
 
@@ -571,7 +522,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     :cond_c
     :goto_8
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/CircularMediaRecorder$SnapshotRequest;->mSampleWriterExecutor:Ljava/util/concurrent/ExecutorService;

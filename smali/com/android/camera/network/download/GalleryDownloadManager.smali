@@ -56,7 +56,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/download/GalleryDownloadManager;
 
     invoke-direct {v0}, Lcom/android/camera/network/download/GalleryDownloadManager;-><init>()V
@@ -69,24 +68,20 @@
 .method public constructor <init>()V
     .locals 9
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mBlockingQueue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 3
     new-instance v0, Lcom/android/camera/network/download/GalleryDownloadManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/network/download/GalleryDownloadManager$1;-><init>(Lcom/android/camera/network/download/GalleryDownloadManager;)V
 
     iput-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
@@ -107,7 +102,6 @@
 
     iput-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -120,7 +114,6 @@
 .method public static synthetic access$000(Lcom/android/camera/network/download/GalleryDownloadManager;)Ljava/util/Map;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     return-object p0
@@ -131,7 +124,6 @@
 .method public cancel(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -144,7 +136,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Lcom/android/camera/network/download/DownloadTask;->cancel(Z)Z
 
     :cond_0
@@ -154,15 +145,12 @@
 .method public download(Lcom/android/camera/network/download/Request;Lcom/android/camera/network/download/GalleryDownloadManager$OnProgressListener;)I
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/download/DownloadTask;
 
     invoke-direct {v0, p1}, Lcom/android/camera/network/download/DownloadTask;-><init>(Lcom/android/camera/network/download/Request;)V
 
-    .line 2
     invoke-virtual {v0, p2}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
@@ -173,7 +161,6 @@
 
     const/4 p2, 0x0
 
-    .line 4
     :try_start_0
     invoke-virtual {v0}, Lcom/android/camera/network/download/DownloadTask;->execute()I
 
@@ -181,10 +168,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     invoke-virtual {v0, p2}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
-    .line 6
     iget-object p2, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
@@ -198,10 +183,8 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     invoke-virtual {v0, p2}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
-    .line 8
     iget-object p2, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
@@ -216,7 +199,6 @@
 .method public enqueue(Lcom/android/camera/network/download/Request;Lcom/android/camera/network/download/GalleryDownloadManager$OnCompleteListener;)V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/download/DownloadTask;
 
     new-instance v1, Lcom/android/camera/network/download/GalleryDownloadManager$TaskMonitor;
@@ -225,7 +207,6 @@
 
     invoke-direct {v0, p1, v1}, Lcom/android/camera/network/download/DownloadTask;-><init>(Lcom/android/camera/network/download/Request;Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;)V
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
@@ -234,7 +215,6 @@
 
     invoke-interface {p2, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/network/download/DownloadTask;->execute(Ljava/util/concurrent/Executor;)V
@@ -245,7 +225,6 @@
 .method public registerOnProgressListener(Ljava/lang/String;Lcom/android/camera/network/download/GalleryDownloadManager$OnProgressListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -256,7 +235,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1, p2}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
     :cond_0
@@ -266,7 +244,6 @@
 .method public unregisterOnProgressListener(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager;->mTasks:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -279,7 +256,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
     :cond_0

@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -35,7 +33,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -60,14 +57,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     instance-of p0, p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
     if-eqz p0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -77,7 +72,6 @@
 
     throw p0
 
-    .line 3
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -100,7 +94,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     instance-of v1, p0, Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -115,7 +108,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -129,7 +121,6 @@
     :goto_0
     return-void
 
-    .line 3
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -150,7 +141,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -159,7 +149,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -182,7 +171,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -191,7 +179,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -214,7 +201,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -223,7 +209,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -246,7 +231,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -255,7 +239,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -278,7 +261,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -287,7 +269,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 

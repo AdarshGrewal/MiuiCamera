@@ -87,10 +87,8 @@
 .method public constructor <init>(IIIJLjava/lang/String;ZLcom/xiaomi/camera/core/ImageProcessor;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -99,28 +97,20 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlreadyDataNum:I
 
-    .line 4
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlgoType:I
 
-    .line 5
     iput p2, p0, Lcom/xiaomi/camera/core/CaptureData;->mStreamNum:I
 
-    .line 6
     iput p3, p0, Lcom/xiaomi/camera/core/CaptureData;->mBurstNum:I
 
-    .line 7
     iput-wide p4, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureTimestamp:J
 
-    .line 8
     iput-boolean p7, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsAbandoned:Z
 
-    .line 9
     iput-object p6, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureId:Ljava/lang/String;
 
-    .line 10
     iput-object p8, p0, Lcom/xiaomi/camera/core/CaptureData;->mImageProcessor:Lcom/xiaomi/camera/core/ImageProcessor;
 
     return-void
@@ -129,7 +119,6 @@
 .method public static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -140,7 +129,6 @@
 .method public getAlgoSize()Landroid/util/Size;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlgoSize:Landroid/util/Size;
 
     return-object v0
@@ -149,7 +137,6 @@
 .method public getAlgoType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlgoType:I
 
     return v0
@@ -158,7 +145,6 @@
 .method public getBurstNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mBurstNum:I
 
     return v0
@@ -175,7 +161,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataBeanList:Ljava/util/List;
 
     return-object v0
@@ -184,7 +169,6 @@
 .method public getCaptureDataListener()Lcom/xiaomi/camera/core/CaptureDataListener;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataListener:Lcom/xiaomi/camera/core/CaptureDataListener;
 
     return-object v0
@@ -193,7 +177,6 @@
 .method public getCaptureId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureId:Ljava/lang/String;
 
     return-object v0
@@ -202,7 +185,6 @@
 .method public getCaptureTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureTimestamp:J
 
     return-wide v0
@@ -211,7 +193,6 @@
 .method public getDataListener()Lcom/xiaomi/camera/core/ParallelDataZipper$DataListener;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mDataListener:Lcom/xiaomi/camera/core/ParallelDataZipper$DataListener;
 
     return-object v0
@@ -220,7 +201,6 @@
 .method public getDispatchedDataNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
     return v0
@@ -237,7 +217,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mHdrSRBeans:Ljava/util/List;
 
     return-object v0
@@ -246,7 +225,6 @@
 .method public getImageProcessor()Lcom/xiaomi/camera/core/ImageProcessor;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mImageProcessor:Lcom/xiaomi/camera/core/ImageProcessor;
 
     return-object v0
@@ -255,7 +233,6 @@
 .method public getMultiFrameProcessResult()Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mMultiFrameProcessResult:Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
 
     return-object v0
@@ -264,7 +241,6 @@
 .method public getNextDispatchTaskData()Lcom/xiaomi/camera/core/TaskData;
     .locals 9
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -273,7 +249,6 @@
 
     iget v3, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
-    .line 2
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -294,13 +269,10 @@
 
     const-string v3, "getNextDispatchTaskData: E. dispatchedNum = %d, readyNum = %d"
 
-    .line 3
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 4
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlreadyDataNum:I
 
-    .line 5
     iget-object v2, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataBeanList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -309,14 +281,12 @@
 
     if-le v0, v2, :cond_0
 
-    .line 6
     sget-object v3, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     sget-object v6, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     new-array v7, v1, [Ljava/lang/Object;
 
-    .line 7
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -331,7 +301,6 @@
 
     const-string v0, "getNextDispatchTaskData: readyNum(%d) is larger than availableNum(%d)"
 
-    .line 8
     invoke-static {v6, v0, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -340,13 +309,11 @@
 
     move v0, v2
 
-    .line 9
     :cond_0
     iget v2, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
     if-lt v2, v0, :cond_1
 
-    .line 10
     sget-object v0, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     const-string v1, "getNextDispatchTaskData: X. No data."
@@ -357,7 +324,6 @@
 
     return-object v0
 
-    .line 11
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
@@ -369,7 +335,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 12
     iget v3, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
     if-nez v3, :cond_2
@@ -381,13 +346,11 @@
     :cond_2
     move v3, v4
 
-    .line 13
     :goto_0
     iget v6, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
     if-ge v6, v0, :cond_3
 
-    .line 14
     iget-object v7, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataBeanList:Ljava/util/List;
 
     add-int/lit8 v8, v6, 0x1
@@ -400,12 +363,10 @@
 
     check-cast v6, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
 
-    .line 15
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 16
     :cond_3
     new-instance v0, Lcom/xiaomi/camera/core/TaskData;
 
@@ -423,14 +384,12 @@
 
     invoke-direct {v0, v2, v3, v6, v7}, Lcom/xiaomi/camera/core/TaskData;-><init>(Ljava/util/List;ZJ)V
 
-    .line 17
     sget-object v2, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     new-array v1, v1, [Ljava/lang/Object;
 
     iget v3, p0, Lcom/xiaomi/camera/core/CaptureData;->mDispatchedDataNum:I
 
-    .line 18
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -447,7 +406,6 @@
 
     const-string v3, "getNextDispatchTaskData: X. dispatchedNum = %d, readyNum = %d"
 
-    .line 19
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
     return-object v0
@@ -456,7 +414,6 @@
 .method public getSatFusionType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mSatFusionType:I
 
     return v0
@@ -465,7 +422,6 @@
 .method public getStreamNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mStreamNum:I
 
     return v0
@@ -474,7 +430,6 @@
 .method public isAbandoned()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsAbandoned:Z
 
     return v0
@@ -483,7 +438,6 @@
 .method public isCapturedByFrontCamera()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCapturedByFrontCamera:Z
 
     return v0
@@ -492,7 +446,6 @@
 .method public isDataReady()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlreadyDataNum:I
 
     iget v1, p0, Lcom/xiaomi/camera/core/CaptureData;->mBurstNum:I
@@ -513,7 +466,6 @@
 .method public isHdrSR()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsHdrSR:Z
 
     return v0
@@ -522,7 +474,6 @@
 .method public isMoonMode()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsMoonMode:Z
 
     return v0
@@ -531,7 +482,6 @@
 .method public isPartialProcess()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsPartialProcess:Z
 
     return v0
@@ -540,7 +490,6 @@
 .method public isRequireTuningData()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mRequireTuningData:Z
 
     return v0
@@ -549,7 +498,6 @@
 .method public isSaveInputImage()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mSaveInputImage:Z
 
     return v0
@@ -558,7 +506,6 @@
 .method public putCaptureDataBean(Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;)V
     .locals 6
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlgoType:I
 
     const/4 v1, 0x1
@@ -577,7 +524,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataBeanList:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -586,13 +532,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataBeanList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     :goto_0
     iget p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlreadyDataNum:I
 
@@ -608,7 +552,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     new-instance v0, Landroid/util/Size;
 
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
@@ -630,7 +573,6 @@
 .method public setCaptureId(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureId:Ljava/lang/String;
 
     return-void
@@ -639,7 +581,6 @@
 .method public setCapturedByFrontCamera(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mCapturedByFrontCamera:Z
 
     return-void
@@ -648,7 +589,6 @@
 .method public setDataListener(Lcom/xiaomi/camera/core/ParallelDataZipper$DataListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mDataListener:Lcom/xiaomi/camera/core/ParallelDataZipper$DataListener;
 
     return-void
@@ -665,7 +605,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mHdrSRBeans:Ljava/util/List;
 
     return-void
@@ -674,7 +613,6 @@
 .method public setHdrSR(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsHdrSR:Z
 
     return-void
@@ -683,7 +621,6 @@
 .method public setImageProcessor(Lcom/xiaomi/camera/core/ImageProcessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mImageProcessor:Lcom/xiaomi/camera/core/ImageProcessor;
 
     return-void
@@ -692,7 +629,6 @@
 .method public setMoonMode(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsMoonMode:Z
 
     return-void
@@ -701,7 +637,6 @@
 .method public setMultiFrameProcessListener(Lcom/xiaomi/camera/core/CaptureDataListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mCaptureDataListener:Lcom/xiaomi/camera/core/CaptureDataListener;
 
     return-void
@@ -710,7 +645,6 @@
 .method public setMultiFrameProcessResult(Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mMultiFrameProcessResult:Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;
 
     return-void
@@ -719,7 +653,6 @@
 .method public setPartialProcess(Z)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/core/CaptureData;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -738,7 +671,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mIsPartialProcess:Z
 
     return-void
@@ -747,7 +679,6 @@
 .method public setRequireTuningData(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mRequireTuningData:Z
 
     return-void
@@ -756,7 +687,6 @@
 .method public setSatFusionType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mSatFusionType:I
 
     return-void
@@ -765,7 +695,6 @@
 .method public setSaveInputImage(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mSaveInputImage:Z
 
     return-void
@@ -774,7 +703,6 @@
 .method public setStreamNum(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData;->mStreamNum:I
 
     return-void
@@ -783,7 +711,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x5
@@ -792,7 +719,6 @@
 
     iget v2, p0, Lcom/xiaomi/camera/core/CaptureData;->mAlgoType:I
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -843,7 +769,6 @@
 
     const-string v2, "CaptureData{algoType=%d, streamNum=%d, burstNum=%d, captureTimestamp=%d, isAbandoned=%b}"
 
-    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

@@ -26,16 +26,12 @@
 .method public constructor <init>(IIJ)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput p1, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mMinIndex:I
 
-    .line 4
     iput p2, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mMaxIndex:I
 
-    .line 5
     iput-wide p3, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mOffset:J
 
     return-void
@@ -44,7 +40,6 @@
 .method public synthetic constructor <init>(IIJLmiuix/core/util/DirectIndexedFile$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;-><init>(IIJ)V
 
     return-void
@@ -58,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->write(Ljava/io/DataOutput;)I
 
     move-result p0
@@ -74,7 +68,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->read(Ljava/io/DataInput;)Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;
 
     move-result-object p0
@@ -90,22 +83,18 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
     move-result v0
 
-    .line 2
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
     move-result v1
 
-    .line 3
     invoke-interface {p0}, Ljava/io/DataInput;->readLong()J
 
     move-result-wide v2
 
-    .line 4
     new-instance p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;-><init>(IIJ)V
@@ -123,17 +112,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget v0, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mMinIndex:I
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 2
     iget v0, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mMaxIndex:I
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 3
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$IndexGroupDescriptor;->mOffset:J
 
     invoke-interface {p1, v0, v1}, Ljava/io/DataOutput;->writeLong(J)V

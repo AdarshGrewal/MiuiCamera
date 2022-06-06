@@ -13,23 +13,18 @@
 .method public constructor <init>(FI)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2
     iput v0, p0, Lcom/android/gallery3d/ui/GLPaint;->mLineWidth:F
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/gallery3d/ui/GLPaint;->mColor:I
 
-    .line 4
     iput p1, p0, Lcom/android/gallery3d/ui/GLPaint;->mLineWidth:F
 
-    .line 5
     iput p2, p0, Lcom/android/gallery3d/ui/GLPaint;->mColor:I
 
     return-void
@@ -40,7 +35,6 @@
 .method public getColor()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/GLPaint;->mColor:I
 
     return v0
@@ -49,7 +43,6 @@
 .method public getLineWidth()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/ui/GLPaint;->mLineWidth:F
 
     return v0
@@ -58,7 +51,6 @@
 .method public setColor(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/gallery3d/ui/GLPaint;->mColor:I
 
     return-void
@@ -80,11 +72,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lcom/android/gallery3d/ui/Utils;->assertTrue(Z)V
 
-    .line 2
     iput p1, p0, Lcom/android/gallery3d/ui/GLPaint;->mLineWidth:F
 
     return-void

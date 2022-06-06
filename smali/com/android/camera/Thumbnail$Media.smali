@@ -54,7 +54,6 @@
 
     move/from16 v9, p9
 
-    .line 1
     invoke-direct/range {v0 .. v10}, Lcom/android/camera/Thumbnail$Media;-><init>(JIJLandroid/net/Uri;Ljava/lang/String;IIZ)V
 
     return-void
@@ -63,31 +62,22 @@
 .method public constructor <init>(JIJLandroid/net/Uri;Ljava/lang/String;IIZ)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-wide p1, p0, Lcom/android/camera/Thumbnail$Media;->id:J
 
-    .line 4
     iput p3, p0, Lcom/android/camera/Thumbnail$Media;->orientation:I
 
-    .line 5
     iput-wide p4, p0, Lcom/android/camera/Thumbnail$Media;->dateTaken:J
 
-    .line 6
     iput-object p6, p0, Lcom/android/camera/Thumbnail$Media;->uri:Landroid/net/Uri;
 
-    .line 7
     iput-object p7, p0, Lcom/android/camera/Thumbnail$Media;->path:Ljava/lang/String;
 
-    .line 8
     iput p8, p0, Lcom/android/camera/Thumbnail$Media;->width:I
 
-    .line 9
     iput p9, p0, Lcom/android/camera/Thumbnail$Media;->height:I
 
-    .line 10
     iput-boolean p10, p0, Lcom/android/camera/Thumbnail$Media;->isGif:Z
 
     return-void

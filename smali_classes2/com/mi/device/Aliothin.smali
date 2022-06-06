@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/mi/device/Alioth;-><init>()V
 
     return-void
@@ -23,7 +22,7 @@
     return-object v0
 .end method
 
-.method public o000O0()I
+.method public o000()I
     .locals 1
 
     const/4 v0, 0x2
@@ -31,15 +30,7 @@
     return v0
 .end method
 
-.method public o000o0oo()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public o0O00o00()I
+.method public o0O00()I
     .locals 1
 
     const/16 v0, 0x78
@@ -47,7 +38,7 @@
     return v0
 .end method
 
-.method public o0O0o0Oo()Z
+.method public o0O0OoO()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -55,7 +46,7 @@
     return v0
 .end method
 
-.method public o0O0o0o0()Z
+.method public oo0OOoo()Z
     .locals 1
 
     const/4 v0, 0x1

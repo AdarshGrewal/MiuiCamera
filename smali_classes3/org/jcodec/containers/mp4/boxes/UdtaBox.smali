@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createUdtaBox()Lorg/jcodec/containers/mp4/boxes/UdtaBox;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/UdtaBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/UdtaBox;->fourcc()Ljava/lang/String;
@@ -51,7 +49,6 @@
 .method public meta()Lorg/jcodec/containers/mp4/boxes/MetaBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->fourcc()Ljava/lang/String;
@@ -70,7 +67,6 @@
 .method public setFactory(Lorg/jcodec/containers/mp4/IBoxFactory;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;
 
     invoke-direct {v0, p0, p1}, Lorg/jcodec/containers/mp4/boxes/UdtaBox$1;-><init>(Lorg/jcodec/containers/mp4/boxes/UdtaBox;Lorg/jcodec/containers/mp4/IBoxFactory;)V

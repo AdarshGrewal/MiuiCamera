@@ -40,13 +40,13 @@
 
 .field public static final months_shortest:I = 0x7f030021
 
-.field public static final solar_terms:I = 0x7f030049
+.field public static final solar_terms:I = 0x7f030048
 
-.field public static final week_days:I = 0x7f03004a
+.field public static final week_days:I = 0x7f030049
 
-.field public static final week_days_short:I = 0x7f03004b
+.field public static final week_days_short:I = 0x7f03004a
 
-.field public static final week_days_shortest:I = 0x7f03004c
+.field public static final week_days_shortest:I = 0x7f03004b
 
 
 # direct methods

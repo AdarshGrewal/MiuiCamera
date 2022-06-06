@@ -21,12 +21,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/ChangeManager;->mStatus:I
 
     return-void
@@ -37,7 +35,6 @@
 .method public check(I)Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ChangeManager;->mStatus:I
 
     and-int/2addr v0, p1
@@ -58,7 +55,6 @@
 .method public clear(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ChangeManager;->mStatus:I
 
     not-int p1, p1
@@ -75,7 +71,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/ChangeManager;->mStatus:I
 
     return-void
@@ -84,7 +79,6 @@
 .method public request(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ChangeManager;->mStatus:I
 
     or-int/2addr p1, v0

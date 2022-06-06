@@ -52,6 +52,8 @@
     .end annotation
 .end field
 
+.field public static final APERTURE_VALUE_PRECISION:Ljava/lang/Long;
+
 .field public static final ASPECT_TOLERANCE:D = 0.02
 
 .field public static final BACK_LIGHT_SENSOR_TYPE:I = 0x1fa266f
@@ -118,6 +120,8 @@
 
 .field public static final FLING_UP:I = 0x1
 
+.field public static final FOCAL_LENGTH_PRECISION:Ljava/lang/Long;
+
 .field public static final FONT_MIPRO_MEDIUM_NAME:Ljava/lang/String; = "mipro-medium"
 
 .field public static final FONT_MIPRO_REGULAR_NAME:Ljava/lang/String; = "mipro-regular"
@@ -125,6 +129,8 @@
 .field public static final FORCE_CAMERA_0_FILE:Ljava/lang/String; = "force_camera_0"
 
 .field public static final FORCE_NAME_SUFFIX_FILE:Ljava/lang/String; = "force_name_suffix"
+
+.field public static final F_NUMBER_PRECISION:Ljava/lang/Long;
 
 .field public static final GOING_TO_CROP:I = 0x5
 
@@ -188,13 +194,19 @@
 
 .field public static final LIMIT_SURFACE_WIDTH:I = 0x2d0
 
+.field public static final LOG_2:D
+
 .field public static final LOW_MEMORY_THRESHOLD_MB:I
 
 .field public static final MARKET_NAME:Ljava/lang/String;
 
 .field public static final MAX_SECURE_SIZE:I = 0x64
 
+.field public static final MS_TO_S:Ljava/lang/Long;
+
 .field public static final NONUI_MODE_PROPERTY:Ljava/lang/String; = "sys.power.nonui"
+
+.field public static final NS_TO_S:Ljava/lang/Long;
 
 .field public static final ORIENTATION_HYSTERESIS:I = 0x5
 
@@ -246,9 +258,9 @@
 
 .field public static final SHADOW_RADIUS:F = 1.0f
 
-.field public static final STANDARD_WIDTH:F = 3000.0f
+.field public static final SHUTTER_SPEED_VALUE_PRECISION:Ljava/lang/Long;
 
-.field public static final SUPER_RESOLUTION_TAG_NULL:F = 0.0f
+.field public static final STANDARD_WIDTH:F = 3000.0f
 
 .field public static final TAG:Ljava/lang/String; = "CameraUtil"
 
@@ -278,8 +290,6 @@
 
 .field public static isHasBackLightSensor:Z = false
 
-.field public static mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager; = null
-
 .field public static mCountryIso:Ljava/lang/String; = null
 
 .field public static mDepthBokeBufferSizeScale:I = 0x0
@@ -287,8 +297,6 @@
 .field public static mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog; = null
 
 .field public static mLockedOrientation:I = 0x0
-
-.field public static mTouchExplorationListener:Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener; = null
 
 .field public static sAAID:Ljava/lang/String; = null
 
@@ -346,21 +354,18 @@
 
     const-string/jumbo v0, "sys.panel.display"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/Util;->SCREEN_VENDOR:Ljava/lang/String;
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -369,14 +374,12 @@
 
     const-string/jumbo v0, "other_space"
 
-    .line 4
     sput-object v0, Lcom/android/camera/Util;->WATERMARK_SPACE:Ljava/lang/String;
 
     const-string/jumbo v0, "ro.product.marketname"
 
     const-string v1, ""
 
-    .line 5
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -387,7 +390,6 @@
 
     const-string v1, "dump_water_mark"
 
-    .line 6
     invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -396,14 +398,12 @@
 
     const-string v1, "cam.app.debug.fps"
 
-    .line 7
     invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/camera/Util;->DEBUG_FPS:Z
 
-    .line 8
     invoke-static {}, Lcom/xiaomi/compat/common/UserHandleCompat;->isUserOwner()Z
 
     move-result v0
@@ -412,10 +412,8 @@
 
     const-string v0, "main_space"
 
-    .line 9
     sput-object v0, Lcom/android/camera/Util;->WATERMARK_SPACE:Ljava/lang/String;
 
-    .line 10
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->SCREEN_VENDOR:Ljava/lang/String;
 
@@ -427,14 +425,12 @@
 
     const-string/jumbo v0, "vendor.panel.display"
 
-    .line 11
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/Util;->SCREEN_VENDOR:Ljava/lang/String;
 
-    .line 12
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -454,7 +450,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -481,7 +476,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
-    .line 14
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/sdcard"
@@ -492,15 +486,13 @@
 
     const-string/jumbo v0, "sc_status"
 
-    .line 15
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/Util;->SCREEN_SLIDE_STATUS_SETTING_URI:Landroid/net/Uri;
 
-    .line 16
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0oO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0oO:Z
 
     const/4 v1, 0x1
 
@@ -508,7 +500,6 @@
 
     sput-boolean v0, Lcom/android/camera/Util;->DEBUG:Z
 
-    .line 17
     new-instance v0, Ljava/util/HashSet;
 
     const-string v2, "TW"
@@ -533,7 +524,6 @@
 
     move-result-object v2
 
-    .line 18
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
@@ -544,50 +534,93 @@
 
     const/4 v0, 0x0
 
-    .line 19
     sput-object v0, Lcom/android/camera/Util;->mCountryIso:Ljava/lang/String;
 
     const/4 v0, -0x1
 
-    .line 20
     sput v0, Lcom/android/camera/Util;->mLockedOrientation:I
 
     const/16 v0, 0x3a98
 
-    .line 21
     sput v0, Lcom/android/camera/Util;->DUMP_BUG_REPORT_THRHOLD:I
 
-    .line 22
     sput v1, Lcom/android/camera/Util;->mDepthBokeBufferSizeScale:I
 
-    .line 23
     invoke-static {}, Lcom/android/camera/Util;->getPhoneMemorySize()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/android/camera/Util;->TOTAL_MEMORY_GB:J
 
-    .line 24
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->Oooo0o()Lcom/mi/device/Common;
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo00O()Lcom/mi/device/Common;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/mi/device/Common;->o00oO0O()I
+    invoke-virtual {v0}, Lcom/mi/device/Common;->o00O0O()I
 
     move-result v0
 
     sput v0, Lcom/android/camera/Util;->LOW_MEMORY_THRESHOLD_MB:I
 
-    .line 25
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
+
+    const-wide/high16 v0, 0x4000000000000000L    # 2.0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v0
+
+    sput-wide v0, Lcom/android/camera/Util;->LOG_2:D
+
+    const-wide/32 v0, 0x3b9aca00
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    const-wide/32 v0, 0xf4240
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera/Util;->MS_TO_S:Ljava/lang/Long;
+
+    const-wide/16 v0, 0x64
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/camera/Util;->SHUTTER_SPEED_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/camera/Util;->F_NUMBER_PRECISION:Ljava/lang/Long;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/camera/Util;->APERTURE_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera/Util;->FOCAL_LENGTH_PRECISION:Ljava/lang/Long;
 
     return-void
 .end method
@@ -595,7 +628,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -608,7 +640,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -622,19 +653,9 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-interface {p0, p1, p2}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils$PackageInstallerListener;->onPackageInstalled(Ljava/lang/String;Z)V
 
     :cond_0
-    return-void
-.end method
-
-.method public static synthetic OooO00o(Z)V
-    .locals 0
-
-    .line 2
-    sput-boolean p0, Lcom/android/camera/Util;->sIsAccessibilityEnable:Z
-
     return-void
 .end method
 
@@ -652,7 +673,6 @@
 
     mul-int/lit8 p2, p1, 0x3
 
-    .line 1
     new-array p2, p2, [B
 
     const/4 v0, 0x0
@@ -666,7 +686,6 @@
 
     mul-int/lit8 v3, v0, 0x4
 
-    .line 2
     aget-byte v4, p0, v3
 
     aput-byte v4, p2, v1
@@ -675,7 +694,6 @@
 
     add-int/lit8 v4, v3, 0x1
 
-    .line 3
     aget-byte v4, p0, v4
 
     aput-byte v4, p2, v2
@@ -684,7 +702,6 @@
 
     add-int/lit8 v3, v3, 0x2
 
-    .line 4
     aget-byte v3, p0, v3
 
     aput-byte v3, p2, v1
@@ -699,21 +716,11 @@
     return-object p2
 .end method
 
-.method public static synthetic access$002(Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
-    .locals 0
-
-    .line 1
-    sput-object p0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
-
-    return-object p0
-.end method
-
 .method public static addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     if-eqz p0, :cond_0
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -728,7 +735,6 @@
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -755,14 +761,12 @@
 .method public static addProperties(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -781,7 +785,6 @@
 
     move-result-object p0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,12 +816,10 @@
     :try_start_0
     const-string v1, "boostParallelServiceAdj"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "miui.process.ProcessManager"
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -829,7 +830,6 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 3
     const-class v5, Ljava/lang/String;
 
     const/4 v6, 0x0
@@ -860,16 +860,14 @@
 
     const-string v2, "android.os.UserHandle"
 
-    .line 4
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
-    const-string v4, "myUserId"
+    const-string/jumbo v4, "myUserId"
 
     new-array v5, v6, [Ljava/lang/Class;
 
-    .line 5
     invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -884,7 +882,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 6
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -895,7 +892,6 @@
 
     aput-object v4, v3, v6
 
-    .line 7
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -916,7 +912,6 @@
 
     aput-object v2, v3, v9
 
-    .line 8
     invoke-virtual {v1, v5, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
@@ -944,7 +939,6 @@
     :catch_3
     move-exception v1
 
-    .line 9
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -989,25 +983,21 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    .line 3
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
     int-to-float p1, p1
 
-    .line 4
     invoke-virtual {v5, p1}, Landroid/graphics/Matrix;->setRotate(F)V
 
     const/4 v1, 0x0
@@ -1018,12 +1008,10 @@
 
     move-object v0, p0
 
-    .line 5
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1043,12 +1031,10 @@
 
     const-string v0, "alignPopupBottom: view is null"
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1056,23 +1042,20 @@
 
     check-cast p0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getCenterDisplayWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getCenterDisplayWidth()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    const/16 v0, 0x51
+    const/4 v0, 0x1
 
-    .line 5
     iput v0, p0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     return-void
@@ -1081,43 +1064,2316 @@
 .method public static alignPopupBottom(Landroid/view/View;I)V
     .locals 0
 
-    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
     check-cast p0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 7
     iput p1, p0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/display/Display;->getCenterDisplayWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getCenterDisplayWidth()I
 
     move-result p1
 
     iput p1, p0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    const/16 p1, 0x51
+    const/4 p1, 0x1
 
-    .line 9
     iput p1, p0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    return-void
+.end method
+
+.method public static appendCaptureResultToExif(Ljava/lang/String;IIIJLandroid/location/Location;JLandroid/hardware/camera2/CaptureResult;)V
+    .locals 18
+
+    move-object/from16 v1, p0
+
+    invoke-static/range {p0 .. p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const-string v2, "CameraUtil"
+
+    if-nez v0, :cond_2
+
+    invoke-static/range {p0 .. p0}, Lcom/android/camera/Util;->isPathExist(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
+
+    invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->readExif(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+
+    new-instance v14, Ljava/io/File;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ".tmp.jpg"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v14, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v14}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "writeExifByFilePath: failed rename to "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v14}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    new-instance v15, Ljava/io/FileInputStream;
+
+    invoke-direct {v15, v14}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_7
+
+    :try_start_2
+    new-instance v13, Ljava/io/FileOutputStream;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v13, v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;Z)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_4
+
+    const/16 v16, 0x1
+
+    move/from16 v3, p1
+
+    move/from16 v4, p2
+
+    move/from16 v5, p3
+
+    move-wide/from16 v6, p4
+
+    move-object/from16 v8, p6
+
+    move-object/from16 v9, p9
+
+    move-wide/from16 v10, p7
+
+    move-object v12, v0
+
+    move-object/from16 v17, v2
+
+    move-object v2, v13
+
+    move/from16 v13, v16
+
+    :try_start_3
+    invoke-static/range {v3 .. v13}, Lcom/android/camera/Util;->appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/CaptureResult;JLcom/android/gallery3d/exif/ExifInterface;Z)V
+
+    invoke-virtual {v0, v15, v2}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    invoke-virtual {v15}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_7
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    move-object v3, v0
+
+    :try_start_6
+    throw v3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    :catchall_2
+    move-exception v0
+
+    move-object v4, v0
+
+    :try_start_7
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+
+    goto :goto_0
+
+    :catchall_3
+    move-exception v0
+
+    move-object v2, v0
+
+    :try_start_8
+    invoke-virtual {v3, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw v4
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    :catchall_4
+    move-exception v0
+
+    move-object/from16 v17, v2
+
+    :goto_1
+    move-object v2, v0
+
+    :try_start_9
+    throw v2
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_5
+
+    :catchall_5
+    move-exception v0
+
+    move-object v3, v0
+
+    :try_start_a
+    invoke-virtual {v15}, Ljava/io/FileInputStream;->close()V
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_6
+
+    goto :goto_2
+
+    :catchall_6
+    move-exception v0
+
+    move-object v4, v0
+
+    :try_start_b
+    invoke-virtual {v2, v4}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_2
+    throw v3
+    :try_end_b
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_0
+    .catchall {:try_start_b .. :try_end_b} :catchall_7
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catchall_7
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v0
+
+    move-object/from16 v17, v2
+
+    :goto_3
+    :try_start_c
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "writeExifByFilePath: failed update exif for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v2, v17
+
+    invoke-static {v2, v1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_7
+
+    :goto_4
+    invoke-virtual {v14}, Ljava/io/File;->delete()Z
+
+    return-void
+
+    :goto_5
+    invoke-virtual {v14}, Ljava/io/File;->delete()Z
+
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    move-object v3, v0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "writeExifByFilePath: failed to extract exif from "
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0, v3}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+
+    :cond_2
+    :goto_6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "writeExifByFilePath: "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " does not exist or its content is empty"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public static appendCaptureResultToExif([BIIIJLandroid/location/Location;Landroid/hardware/camera2/impl/CameraMetadataNative;)[B
+    .locals 12
+
+    move-object v1, p0
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooOoo()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00o0o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    if-nez p7, :cond_3
+
+    :cond_2
+    return-object v1
+
+    :cond_3
+    const/4 v10, 0x0
+
+    invoke-static {p0}, Lcom/android/gallery3d/exif/ExifInterface;->getExif([B)Lcom/android/gallery3d/exif/ExifInterface;
+
+    move-result-object v0
+
+    :try_start_0
+    new-instance v11, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v11}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move-wide/from16 v5, p4
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-object v9, v0
+
+    :try_start_1
+    invoke-static/range {v2 .. v9}, Lcom/android/camera/Util;->appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/impl/CameraMetadataNative;Lcom/android/gallery3d/exif/ExifInterface;)V
+
+    invoke-virtual {v0, p0, v11}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif([BLjava/io/OutputStream;)V
+
+    invoke-virtual {v11}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v10
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {v11}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v0
+
+    :try_start_3
+    throw v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    move-object v3, v0
+
+    :try_start_4
+    invoke-virtual {v11}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception v0
+
+    move-object v4, v0
+
+    :try_start_5
+    invoke-virtual {v2, v4}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw v3
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_0
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+
+    :catch_0
+    const-string v0, "CameraUtil"
+
+    const-string v2, "appendExif(): Failed to append exif metadata"
+
+    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    if-eqz v10, :cond_5
+
+    array-length v0, v10
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    return-object v10
+
+    :cond_5
+    :goto_2
+    return-object v1
+.end method
+
+.method public static appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/CaptureResult;JLcom/android/gallery3d/exif/ExifInterface;Z)V
+    .locals 4
+
+    sget v0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ORIENTATION:I
+
+    invoke-static {p2}, Lcom/android/gallery3d/exif/ExifInterface;->getExifOrientationValue(I)S
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p2
+
+    invoke-static {p9, v0, p2}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_X_DIMENSION:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p9, p2, v0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_Y_DIMENSION:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p9, p2, v0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_WIDTH:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {p9, p2, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_LENGTH:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MODEL:I
+
+    sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget-object p0, Lcom/android/camera/Util;->MARKET_NAME:Ljava/lang/String;
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lcom/android/camera/Util;->MARKET_NAME:Ljava/lang/String;
+
+    invoke-virtual {p9, p0}, Lcom/android/gallery3d/exif/ExifInterface;->addXiaomiProduct(Ljava/lang/String;)Z
+
+    :cond_0
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MAKE:I
+
+    sget-object p1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    const-wide/16 p0, 0x0
+
+    cmp-long p2, p3, p0
+
+    if-lez p2, :cond_1
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_DATE_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-virtual {p9, p2, p3, p4, v0}, Lcom/android/gallery3d/exif/ExifInterface;->addDateTimeStampTag(IJLjava/util/TimeZone;)Z
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SUB_SEC_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-virtual {p9, p2, p3, p4, v0}, Lcom/android/gallery3d/exif/ExifInterface;->addSubTagSecTime(IJLjava/util/TimeZone;)Z
+
+    :cond_1
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Float;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p4, "LENS_FOCAL_LENGTH: "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string p4, "CameraUtil"
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_2
+
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FOCAL_LENGTH:I
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    float-to-double v0, p2
+
+    sget-object p2, Lcom/android/camera/Util;->FOCAL_LENGTH_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p2
+
+    invoke-static {p9, p3, p2}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_2
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Float;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "LENS_APERTURE: "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_3
+
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_F_NUMBER:I
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    sget-object v2, Lcom/android/camera/Util;->F_NUMBER_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v0
+
+    invoke-static {p9, p3, v0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    const-wide/high16 v0, 0x4000000000000000L    # 2.0
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    float-to-double p2, p2
+
+    invoke-static {p2, p3}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide p2
+
+    mul-double/2addr p2, v0
+
+    sget v0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_APERTURE_VALUE:I
+
+    sget-object v1, Lcom/android/camera/Util;->APERTURE_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    invoke-static {p2, p3, v1, v2}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p2
+
+    invoke-static {p9, v0, p2}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_3
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooOoo()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    sget-object p2, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ISO_VALUE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p10, "[ALGOUP|MMCAMERA] SENSOR_SENSITIVITY: "
+
+    invoke-virtual {p3, p10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_4
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    const-string p3, "SENSOR_SENSITIVITY: "
+
+    if-eqz p10, :cond_5
+
+    sget-object p10, Landroid/hardware/camera2/CaptureResult;->CONTROL_POST_RAW_SENSITIVITY_BOOST:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p10}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p10
+
+    check-cast p10, Ljava/lang/Integer;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " CONTROL_POST_RAW_SENSITIVITY_BOOST:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p10, :cond_5
+
+    if-eqz p2, :cond_5
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    invoke-virtual {p10}, Ljava/lang/Integer;->intValue()I
+
+    move-result p10
+
+    div-int/lit8 p10, p10, 0x64
+
+    mul-int/2addr p2, p10
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    :cond_5
+    new-instance p10, Ljava/lang/StringBuilder;
+
+    invoke-direct {p10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p10, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p10, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    if-eqz p2, :cond_6
+
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ISO_SPEED_RATINGS:I
+
+    invoke-static {p9, p3, p2}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_6
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Long;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p10, "SENSOR_EXPOSURE_TIME: "
+
+    invoke-virtual {p3, p10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    cmp-long p0, p7, p0
+
+    const-wide/16 v0, 0x3e8
+
+    if-lez p0, :cond_8
+
+    long-to-double p0, p7
+
+    const-wide p2, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr p0, p2
+
+    const-wide/high16 p7, 0x3fe0000000000000L    # 0.5
+
+    cmpg-double p7, p0, p7
+
+    if-gez p7, :cond_7
+
+    mul-double/2addr p0, p2
+
+    double-to-long p0, p0
+
+    goto :goto_1
+
+    :cond_7
+    invoke-static {p0, p1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide p0
+
+    mul-long/2addr p0, v0
+
+    :goto_1
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance p3, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-direct {p3, p0, p1, v0, v1}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-static {p9, p2, p3}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_8
+    if-eqz p2, :cond_a
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+
+    const-wide p7, 0xee6b2800L
+
+    cmp-long p0, p0, p7
+
+    if-gtz p0, :cond_9
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance p1, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p7
+
+    sget-object p3, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-direct {p1, p7, p8, v0, v1}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_9
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance p1, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p7
+
+    div-long/2addr p7, v0
+
+    sget-object p3, Lcom/android/camera/Util;->MS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-direct {p1, p7, p8, v0, v1}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :goto_2
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+
+    long-to-double p0, p0
+
+    sget-object p2, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p2
+
+    long-to-double p2, p2
+
+    div-double/2addr p0, p2
+
+    invoke-static {p0, p1}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide p0
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SHUTTER_SPEED_VALUE:I
+
+    sget-object p3, Lcom/android/camera/Util;->SHUTTER_SPEED_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p7
+
+    invoke-static {p0, p1, p7, p8}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p0
+
+    invoke-static {p9, p2, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_a
+    :goto_3
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_LOCATION:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/location/Location;
+
+    if-nez p0, :cond_b
+
+    goto :goto_4
+
+    :cond_b
+    move-object p5, p0
+
+    :goto_4
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "JPEG_GPS_LOCATION: "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p4, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x1
+
+    const/4 p1, 0x0
+
+    if-eqz p5, :cond_d
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide p2
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide p7
+
+    invoke-virtual {p9, p2, p3, p7, p8}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsTags(DD)Z
+
+    invoke-virtual {p5}, Landroid/location/Location;->getTime()J
+
+    move-result-wide p2
+
+    invoke-virtual {p9, p2, p3}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsDateTimeStampTag(J)Z
+
+    invoke-virtual {p5}, Landroid/location/Location;->getAltitude()D
+
+    move-result-wide p2
+
+    const-wide/16 p7, 0x0
+
+    cmpl-double p10, p2, p7
+
+    if-eqz p10, :cond_d
+
+    cmpg-double p2, p2, p7
+
+    if-gez p2, :cond_c
+
+    move p2, p0
+
+    goto :goto_5
+
+    :cond_c
+    move p2, p1
+
+    :goto_5
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_ALTITUDE_REF:I
+
+    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p2
+
+    invoke-virtual {p9, p3, p2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {p9, p2}, Lcom/android/gallery3d/exif/ExifInterface;->setTag(Lcom/android/gallery3d/exif/ExifTag;)Lcom/android/gallery3d/exif/ExifTag;
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide p2
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide p7
+
+    invoke-virtual {p9, p2, p3, p7, p8}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsTags(DD)Z
+
+    :cond_d
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->FLASH_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p5, "FLASH_STATE: "
+
+    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p4, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_e
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    const/4 p3, 0x3
+
+    if-ne p2, p3, :cond_e
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    invoke-static {p0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p0
+
+    invoke-static {p9, p1, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    goto :goto_6
+
+    :cond_e
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    invoke-static {p9, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :goto_6
+    return-void
+.end method
+
+.method public static appendExifInfo(IIIJLandroid/location/Location;Landroid/hardware/camera2/impl/CameraMetadataNative;Lcom/android/gallery3d/exif/ExifInterface;)V
+    .locals 4
+
+    sget v0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ORIENTATION:I
+
+    invoke-static {p2}, Lcom/android/gallery3d/exif/ExifInterface;->getExifOrientationValue(I)S
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p2
+
+    invoke-static {p7, v0, p2}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_X_DIMENSION:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p7, p2, v0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_Y_DIMENSION:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p7, p2, v0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_WIDTH:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {p7, p2, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_LENGTH:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p7, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MODEL:I
+
+    sget-object p1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-static {p7, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MAKE:I
+
+    sget-object p1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-static {p7, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    const-wide/16 p0, 0x0
+
+    cmp-long p0, p3, p0
+
+    if-lez p0, :cond_0
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_DATE_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object p1
+
+    invoke-virtual {p7, p0, p3, p4, p1}, Lcom/android/gallery3d/exif/ExifInterface;->addDateTimeStampTag(IJLjava/util/TimeZone;)Z
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_DATE_TIME_ORIGINAL:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object p1
+
+    invoke-virtual {p7, p0, p3, p4, p1}, Lcom/android/gallery3d/exif/ExifInterface;->addDateTimeStampTag(IJLjava/util/TimeZone;)Z
+
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SUB_SEC_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object p1
+
+    invoke-virtual {p7, p0, p3, p4, p1}, Lcom/android/gallery3d/exif/ExifInterface;->addSubTagSecTime(IJLjava/util/TimeZone;)Z
+
+    :cond_0
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Float;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "LENS_FOCAL_LENGTH: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "CameraUtil"
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p0, :cond_1
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FOCAL_LENGTH:I
+
+    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
+
+    move-result p0
+
+    float-to-double p3, p0
+
+    sget-object p0, Lcom/android/camera/Util;->FOCAL_LENGTH_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {p3, p4, v0, v1}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p0
+
+    invoke-static {p7, p1, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_1
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Float;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "LENS_APERTURE: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p0, :cond_2
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_F_NUMBER:I
+
+    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
+
+    move-result p3
+
+    float-to-double p3, p3
+
+    sget-object v0, Lcom/android/camera/Util;->F_NUMBER_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {p3, p4, v0, v1}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p3
+
+    invoke-static {p7, p1, p3}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    const-wide/high16 p3, 0x4000000000000000L    # 2.0
+
+    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
+
+    move-result p0
+
+    float-to-double p0, p0
+
+    invoke-static {p0, p1}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide p0
+
+    mul-double/2addr p0, p3
+
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_APERTURE_VALUE:I
+
+    sget-object p4, Lcom/android/camera/Util;->APERTURE_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {p0, p1, v0, v1}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p0
+
+    invoke-static {p7, p3, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_2
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooOoo()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ISO_VALUE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "[ALGOUP|MMCAMERA] SENSOR_SENSITIVITY: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "SENSOR_SENSITIVITY: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    if-eqz p0, :cond_4
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ISO_SPEED_RATINGS:I
+
+    invoke-static {p7, p1, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_4
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Long;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "SENSOR_EXPOSURE_TIME: "
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p0, :cond_6
+
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p3
+
+    const-wide v0, 0xee6b2800L
+
+    cmp-long p1, p3, v0
+
+    if-gtz p1, :cond_5
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance p3, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sget-object p4, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-direct {p3, v0, v1, v2, v3}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-static {p7, p1, p3}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_5
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance p3, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x3e8
+
+    div-long/2addr v0, v2
+
+    sget-object p4, Lcom/android/camera/Util;->MS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-direct {p3, v0, v1, v2, v3}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-static {p7, p1, p3}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :goto_1
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+
+    long-to-double p0, p0
+
+    sget-object p3, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p3
+
+    long-to-double p3, p3
+
+    div-double/2addr p0, p3
+
+    invoke-static {p0, p1}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide p0
+
+    sget p3, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SHUTTER_SPEED_VALUE:I
+
+    sget-object p4, Lcom/android/camera/Util;->SHUTTER_SPEED_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {p0, p1, v0, v1}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p0
+
+    invoke-static {p7, p3, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :cond_6
+    sget-object p0, Landroid/hardware/camera2/CaptureResult;->JPEG_GPS_LOCATION:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p0}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/location/Location;
+
+    if-nez p0, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    move-object p5, p0
+
+    :goto_2
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "JPEG_GPS_LOCATION: "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x1
+
+    const/4 p1, 0x0
+
+    if-eqz p5, :cond_9
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide p3
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v0
+
+    invoke-virtual {p7, p3, p4, v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsTags(DD)Z
+
+    invoke-virtual {p5}, Landroid/location/Location;->getTime()J
+
+    move-result-wide p3
+
+    invoke-virtual {p7, p3, p4}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsDateTimeStampTag(J)Z
+
+    invoke-virtual {p5}, Landroid/location/Location;->getAltitude()D
+
+    move-result-wide p3
+
+    const-wide/16 v0, 0x0
+
+    cmpl-double v2, p3, v0
+
+    if-eqz v2, :cond_9
+
+    cmpg-double p3, p3, v0
+
+    if-gez p3, :cond_8
+
+    move p3, p0
+
+    goto :goto_3
+
+    :cond_8
+    move p3, p1
+
+    :goto_3
+    sget p4, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_ALTITUDE_REF:I
+
+    invoke-static {p3}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p3
+
+    invoke-virtual {p7, p4, p3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p3
+
+    invoke-virtual {p7, p3}, Lcom/android/gallery3d/exif/ExifInterface;->setTag(Lcom/android/gallery3d/exif/ExifTag;)Lcom/android/gallery3d/exif/ExifTag;
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide p3
+
+    invoke-virtual {p5}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v0
+
+    invoke-virtual {p7, p3, p4, v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->addGpsTags(DD)Z
+
+    :cond_9
+    sget-object p3, Landroid/hardware/camera2/CaptureResult;->FLASH_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p6, p3}, Landroid/hardware/camera2/impl/CameraMetadataNative;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ljava/lang/Integer;
+
+    new-instance p4, Ljava/lang/StringBuilder;
+
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p5, "FLASH_STATE: "
+
+    invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-static {p2, p4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p3, :cond_a
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    const/4 p3, 0x3
+
+    if-ne p2, p3, :cond_a
+
+    sget p1, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    invoke-static {p0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p0
+
+    invoke-static {p7, p1, p0}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_a
+    sget p0, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    invoke-static {p7, p0, p1}, Lcom/android/camera/Util;->setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+
+    :goto_4
+    return-void
+.end method
+
+.method public static appendExifToBitmap(Landroid/graphics/Bitmap;Ljava/io/OutputStream;ILandroid/hardware/camera2/CaptureResult;)V
+    .locals 9
+
+    new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
+
+    invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_X_DIMENSION:I
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_PIXEL_Y_DIMENSION:I
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_WIDTH:I
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_IMAGE_LENGTH:I
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MODEL:I
+
+    sget-object v3, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOOO0:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget-object v2, Lcom/android/camera/Util;->MARKET_NAME:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    sget-object v2, Lcom/android/camera/Util;->MARKET_NAME:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lcom/android/gallery3d/exif/ExifInterface;->addXiaomiProduct(Ljava/lang/String;)Z
+
+    :cond_0
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_MAKE:I
+
+    sget-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ORIENTATION:I
+
+    invoke-static {p2}, Lcom/android/gallery3d/exif/ExifInterface;->getExifOrientationValue(I)S
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p2
+
+    invoke-virtual {v0, v2, p2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long p2, v2, v4
+
+    if-lez p2, :cond_1
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_DATE_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v4
+
+    invoke-virtual {v0, p2, v2, v3, v4}, Lcom/android/gallery3d/exif/ExifInterface;->addDateTimeStampTag(IJLjava/util/TimeZone;)Z
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SUB_SEC_TIME:I
+
+    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
+
+    move-result-object v4
+
+    invoke-virtual {v0, p2, v2, v3, v4}, Lcom/android/gallery3d/exif/ExifInterface;->addSubTagSecTime(IJLjava/util/TimeZone;)Z
+
+    :cond_1
+    invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/android/camera/LocationManager;->getCurrentLocation()Landroid/location/Location;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p2}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v2
+
+    invoke-virtual {p2}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v4
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_LATITUDE:I
+
+    invoke-static {v2, v3}, Lcom/android/gallery3d/exif/ExifInterface;->toExifLatLong(D)[Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v6
+
+    invoke-virtual {v0, p2, v6}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_LONGITUDE:I
+
+    invoke-static {v4, v5}, Lcom/android/gallery3d/exif/ExifInterface;->toExifLatLong(D)[Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v6
+
+    invoke-virtual {v0, p2, v6}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_LATITUDE_REF:I
+
+    const-wide/16 v6, 0x0
+
+    cmpl-double v2, v2, v6
+
+    if-ltz v2, :cond_2
+
+    const-string v2, "N"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v2, "S"
+
+    :goto_0
+    invoke-virtual {v0, p2, v2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_GPS_LONGITUDE_REF:I
+
+    cmpl-double v2, v4, v6
+
+    if-ltz v2, :cond_3
+
+    const-string v2, "E"
+
+    goto :goto_1
+
+    :cond_3
+    const-string v2, "W"
+
+    :goto_1
+    invoke-virtual {v0, p2, v2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    if-eqz p3, :cond_b
+
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p3, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Float;
+
+    if-eqz p2, :cond_5
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FOCAL_LENGTH:I
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    float-to-double v3, p2
+
+    sget-object p2, Lcom/android/camera/Util;->FOCAL_LENGTH_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-static {v3, v4, v5, v6}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object p2
+
+    invoke-virtual {v0, v2, p2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p3, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Float;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "LENS_APERTURE: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "CameraUtil"
+
+    invoke-static {v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_6
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_F_NUMBER:I
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result v4
+
+    float-to-double v4, v4
+
+    sget-object v6, Lcom/android/camera/Util;->F_NUMBER_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v6}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    invoke-static {v4, v5, v6, v7}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v4}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-wide/high16 v4, 0x4000000000000000L    # 2.0
+
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    float-to-double v6, p2
+
+    invoke-static {v6, v7}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v6, v4
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_APERTURE_VALUE:I
+
+    sget-object v2, Lcom/android/camera/Util;->APERTURE_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-static {v6, v7, v4, v5}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p2, v2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p3, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    if-eqz p2, :cond_7
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_ISO_SPEED_RATINGS:I
+
+    invoke-virtual {v0, v2, p2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p3, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Long;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "SENSOR_EXPOSURE_TIME: "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_9
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    const-wide v6, 0xee6b2800L
+
+    cmp-long v2, v4, v6
+
+    if-gtz v2, :cond_8
+
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance v4, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    sget-object v7, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v7
+
+    invoke-direct {v4, v5, v6, v7, v8}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-virtual {v0, v2, v4}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_8
+    sget v2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_EXPOSURE_TIME:I
+
+    new-instance v4, Lcom/android/gallery3d/exif/Rational;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    const-wide/16 v7, 0x3e8
+
+    div-long/2addr v5, v7
+
+    sget-object v7, Lcom/android/camera/Util;->MS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v7
+
+    invoke-direct {v4, v5, v6, v7, v8}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    invoke-virtual {v0, v2, v4}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_2
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    long-to-double v4, v4
+
+    sget-object p2, Lcom/android/camera/Util;->NS_TO_S:Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    long-to-double v6, v6
+
+    div-double/2addr v4, v6
+
+    invoke-static {v4, v5}, Lcom/android/camera/Util;->log2(D)D
+
+    move-result-wide v4
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_SHUTTER_SPEED_VALUE:I
+
+    sget-object v2, Lcom/android/camera/Util;->SHUTTER_SPEED_VALUE_PRECISION:Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    invoke-static {v4, v5, v6, v7}, Lcom/android/camera/Util;->doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p2, v2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_9
+    sget-object p2, Landroid/hardware/camera2/CaptureResult;->FLASH_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+
+    invoke-virtual {p3, p2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "FLASH_STATE: "
+
+    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {v3, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_a
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    const/4 p3, 0x3
+
+    if-ne p2, p3, :cond_a
+
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    const/4 p3, 0x1
+
+    invoke-static {p3}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p3
+
+    invoke-virtual {v0, p2, p3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_a
+    sget p2, Lcom/android/gallery3d/exif/ExifInterface;->TAG_FLASH:I
+
+    const/4 p3, 0x0
+
+    invoke-static {p3}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p3
+
+    invoke-virtual {v0, p2, p3}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_b
+    :goto_3
+    invoke-virtual {v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->setExif(Ljava/util/Collection;)V
+
+    :try_start_0
+    invoke-virtual {v0, p0, p1}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif(Landroid/graphics/Bitmap;Ljava/io/OutputStream;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
+
+    :goto_4
     return-void
 .end method
 
 .method public static appendInApi26(Landroid/text/SpannableStringBuilder;Ljava/lang/CharSequence;Ljava/lang/Object;I)Landroid/text/SpannableStringBuilder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 3
     invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result p1
@@ -1141,7 +3397,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1155,10 +3410,8 @@
 
     add-int v2, v1, v0
 
-    .line 2
     div-int/lit8 v2, v2, 0x2
 
-    .line 3
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1197,13 +3450,11 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -1224,7 +3475,6 @@
 
     sub-int v3, v0, v1
 
-    .line 3
     div-int/lit8 v3, v3, 0x2
 
     goto :goto_1
@@ -1242,7 +3492,6 @@
     :cond_3
     sub-int/2addr v1, v0
 
-    .line 4
     div-int/lit8 v1, v1, 0x2
 
     move v4, v1
@@ -1256,135 +3505,24 @@
 
     move v5, v6
 
-    .line 5
     invoke-static/range {v2 .. v8}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object v0
 .end method
 
-.method public static boostCameraByThreshold(J)V
-    .locals 7
-
-    const-string v0, "TAG"
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v1, p0, v1
-
-    if-gtz v1, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    :try_start_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "boostCameraByThreshold "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v1, "miui.process.ProcessManager"
-
-    .line 2
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v2, "boostCameraByThreshold"
-
-    const/4 v3, 0x1
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    .line 3
-    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const/4 v6, 0x0
-
-    aput-object v5, v4, v6
-
-    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    .line 4
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    aput-object p0, v3, v6
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_3
-    move-exception p0
-
-    .line 5
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_1
-    return-void
-.end method
-
 .method public static broadcastKillService(Landroid/content/Context;Z)V
     .locals 5
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/CameraSettings;->setBroadcastKillServiceTime(J)V
 
-    .line 3
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.android.camera.action.KILL_CAMERA_SERVICE"
@@ -1397,19 +3535,16 @@
 
     const-string/jumbo v3, "time"
 
-    .line 4
     invoke-virtual {v2, v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
     const-string v0, "dump_backtrace"
 
-    .line 5
     invoke-virtual {v2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string p1, "android.hardware.camera.provider@2.4-service"
 
     const-string v0, "android.hardware.camera.provider@2.4-service_64"
 
-    .line 6
     filled-new-array {p1, v0}, [Ljava/lang/String;
 
     move-result-object p1
@@ -1418,10 +3553,8 @@
 
     invoke-virtual {v2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 7
     invoke-virtual {p0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 8
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackBroadcastKillService()V
 
     return-void
@@ -1430,7 +3563,6 @@
 .method public static broadcastNewPicture(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 3
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const-string v1, "android.hardware.action.NEW_PICTURE"
@@ -1439,14 +3571,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 2
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.camera.NEW_PICTURE"
@@ -1462,7 +3592,6 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 4
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
@@ -1477,7 +3606,6 @@
 .method public static calcDualCameraWatermarkLocation(IIII)[I
     .locals 2
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/Util;->getWatermarkRatio(II)F
 
     move-result p0
@@ -1486,7 +3614,6 @@
 
     mul-float/2addr p1, p0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
@@ -1497,14 +3624,12 @@
 
     mul-float/2addr p2, p0
 
-    .line 3
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p2
 
     and-int/lit8 p2, p2, -0x2
 
-    .line 4
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingX()F
 
     move-result p3
@@ -1517,7 +3642,6 @@
 
     and-int/lit8 p3, p3, -0x2
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingY()F
 
     move-result v0
@@ -1556,7 +3680,6 @@
 .method public static calcDualCameraWatermarkLocationByCinema(IIIII)[I
     .locals 5
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/Util;->getWatermarkRatio(II)F
 
     move-result v0
@@ -1565,7 +3688,6 @@
 
     mul-float/2addr p2, v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectWaterMarkRatio()F
 
     move-result v1
@@ -1582,7 +3704,6 @@
 
     mul-float/2addr p3, v0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectWaterMarkRatio()F
 
     move-result v1
@@ -1595,7 +3716,6 @@
 
     and-int/lit8 p3, p3, -0x2
 
-    .line 4
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingX()F
 
     move-result v1
@@ -1614,7 +3734,6 @@
 
     and-int/lit8 v1, v1, -0x2
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingY()F
 
     move-result v2
@@ -1633,7 +3752,6 @@
 
     and-int/lit8 v0, v0, -0x2
 
-    .line 6
     invoke-static {p0, p1}, Lcom/android/camera/Util;->getWatermarkCinematicAspectMargin(II)I
 
     move-result v2
@@ -1692,7 +3810,6 @@
 .method public static final calculateDefaultPreviewEdgeSlop(Landroid/content/Context;)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1701,7 +3818,6 @@
 
     move-result-object v0
 
-    .line 2
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v1, v1
@@ -1710,7 +3826,6 @@
 
     div-float/2addr v1, v2
 
-    .line 3
     iget v2, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-float v2, v2
@@ -1727,7 +3842,6 @@
 
     float-to-double v0, v1
 
-    .line 4
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -1740,14 +3854,13 @@
 
     if-gez v0, :cond_0
 
-    const v0, 0x7f070697
+    const v0, 0x7f070693
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f070696
+    const v0, 0x7f070692
 
-    .line 5
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1765,7 +3878,6 @@
 
     const-string/jumbo v0, "sensor"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1774,14 +3886,12 @@
 
     const v0, 0x1fa266f
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/hardware/Sensor;->getType()I
 
     move-result p0
@@ -1790,7 +3900,6 @@
 
     const/4 p0, 0x1
 
-    .line 4
     sput-boolean p0, Lcom/android/camera/Util;->isHasBackLightSensor:Z
 
     :cond_0
@@ -1800,7 +3909,6 @@
 .method public static checkLockedOrientation(Landroid/app/Activity;)V
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1814,7 +3922,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1832,7 +3939,6 @@
     :cond_0
     const/4 p0, -0x1
 
-    .line 3
     sput p0, Lcom/android/camera/Util;->mLockedOrientation:I
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1844,7 +3950,6 @@
 
     const-string/jumbo v0, "user rotation cannot found"
 
-    .line 4
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1868,7 +3973,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 1
     throw p0
 .end method
 
@@ -1931,30 +4035,24 @@
 .method public static clearMemoryLimit()V
     .locals 6
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->sClearMemoryLimit:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/compat/common/VMRuntimeCompat;->clearGrowthLimit()V
 
     const/4 v2, 0x1
 
-    .line 4
     sput-boolean v2, Lcom/android/camera/Util;->sClearMemoryLimit:Z
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 6
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1982,7 +4080,6 @@
 .method public static clearSeamlessRotation(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -1991,7 +4088,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -2002,17 +4098,14 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->rotationAnimation:I
 
     const-string v1, "CameraUtil"
 
     const-string v2, "clearRotationAnimation"
 
-    .line 4
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -2027,7 +4120,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -2038,7 +4130,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -2053,7 +4144,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -2073,15 +4163,12 @@
 
     const-string v2, "composeDepthMapPicture: process in portrait depth map picture"
 
-    .line 1
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 3
     new-instance v4, Lcom/android/camera2/PortraitDepthMap;
 
     move-object v5, p1
@@ -2094,7 +4181,6 @@
 
     new-array v5, v5, [I
 
-    .line 4
     invoke-virtual/range {p16 .. p16}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getDeviceWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v7
@@ -2107,7 +4193,6 @@
 
     move-result-object v7
 
-    .line 5
     invoke-virtual/range {p16 .. p16}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getTimeWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v8
@@ -2120,7 +4205,6 @@
 
     move-result-object v8
 
-    .line 6
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2139,7 +4223,6 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-static {v5}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v10
@@ -2150,89 +4233,74 @@
 
     move-result-object v9
 
-    .line 8
     invoke-static {v1, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-virtual {v4}, Lcom/android/camera2/PortraitDepthMap;->getDepthMapData()[B
 
     move-result-object v9
 
-    .line 10
     new-instance v10, Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     invoke-direct {v10}, Lcom/android/camera2/PortraitDepthMapExif$Builder;-><init>()V
 
     move-object v11, p0
 
-    .line 11
     invoke-virtual {v10, p0}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->jpeg([B)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v10
 
-    .line 12
     invoke-virtual {v10, v7}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->dulWaterMark([B)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v7
 
-    .line 13
     invoke-virtual {v7, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->dulCameraWaterMarkLocation([I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v6
 
-    .line 14
     invoke-virtual {v6, v8}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->timeWaterMark([B)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v6
 
-    .line 15
     invoke-virtual {v6, v5}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->timeWaterMarkLocation([I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move-object v6, p3
 
-    .line 16
     invoke-virtual {v5, p3}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->jpegDataOfTheRegionUnderWatermarks([B)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move-object/from16 v6, p4
 
-    .line 17
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->coordinatesOfOfTheRegionUnderWatermarks([I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p5
 
-    .line 18
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->rotation(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p9
 
-    .line 19
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->lightingPattern(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p13
 
-    .line 20
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->isFrontMirror(Z)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p14
 
-    .line 21
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->isBokehFrontCamera(Z)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
-    .line 22
     invoke-virtual/range {p16 .. p16}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->isCinematicAspectRatio()Z
 
     move-result v6
@@ -2243,64 +4311,54 @@
 
     move-object/from16 v6, p17
 
-    .line 23
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->pictureInfo(Lcom/xiaomi/camera/core/PictureInfo;)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     array-length v6, v0
 
-    .line 24
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->rawLength(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     array-length v6, v9
 
-    .line 25
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->depthLength(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p18
 
-    .line 26
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->portraitLightingVersioin(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move-wide/from16 v6, p19
 
-    .line 27
     invoke-virtual {v5, v6, v7}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->timeStamp(J)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p6
 
-    .line 28
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->isSupportZeroDegreeOrientationImage(Z)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
     move/from16 v6, p21
 
-    .line 29
     invoke-virtual {v5, v6}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->cameraPreferredMode(I)Lcom/android/camera2/PortraitDepthMapExif$Builder;
 
     move-result-object v5
 
-    .line 30
     invoke-virtual {v5}, Lcom/android/camera2/PortraitDepthMapExif$Builder;->build()Lcom/android/camera2/PortraitDepthMapExif;
 
     move-result-object v5
 
-    .line 31
     invoke-virtual {v4, v5}, Lcom/android/camera2/PortraitDepthMap;->writePortraitExif(Lcom/android/camera2/PortraitDepthMapExif;)[B
 
     move-result-object v4
 
-    .line 32
     array-length v5, v4
 
     array-length v6, v0
@@ -2313,21 +4371,18 @@
 
     new-array v5, v5, [B
 
-    .line 33
     array-length v6, v4
 
     const/4 v7, 0x0
 
     invoke-static {v4, v7, v5, v7, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 34
     array-length v6, v4
 
     array-length v8, v0
 
     invoke-static {p2, v7, v5, v6, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 35
     array-length v4, v4
 
     array-length v0, v0
@@ -2338,7 +4393,6 @@
 
     invoke-static {v9, v7, v5, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2347,7 +4401,6 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 37
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -2360,7 +4413,6 @@
 
     move-result-object v0
 
-    .line 38
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v5
@@ -2389,12 +4441,10 @@
 
     const-string v9, "composeLiveShotPicture(): E"
 
-    .line 1
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz v1, :cond_11
 
-    .line 2
     array-length v10, v1
 
     if-nez v10, :cond_0
@@ -2406,7 +4456,6 @@
 
     const-string v10, "empty"
 
-    .line 3
     invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
@@ -2415,20 +4464,17 @@
 
     goto/16 :goto_11
 
-    .line 4
     :cond_1
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
     move-result v11
 
     if-nez v11, :cond_2
 
-    .line 6
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2447,7 +4493,6 @@
 
     return-object v1
 
-    .line 7
     :cond_2
     invoke-virtual {v10}, Ljava/io/File;->length()J
 
@@ -2459,7 +4504,6 @@
 
     const-string v0, "composeLiveShotPicture(): The corresponding movie of LiveShot length is 0"
 
-    .line 8
     invoke-static {v8, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -2467,7 +4511,6 @@
     :cond_3
     const/4 v12, 0x1
 
-    .line 9
     :try_start_0
     new-instance v14, Ljava/io/ByteArrayOutputStream;
 
@@ -2475,29 +4518,23 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10
     :try_start_1
     new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 11
     invoke-virtual {v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->readExif([B)V
 
-    .line 12
     invoke-virtual {v0, v12}, Lcom/android/gallery3d/exif/ExifInterface;->addFileTypeLiveShot(Z)Z
 
-    .line 13
     invoke-virtual {v0, v1, v14}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif([BLjava/io/OutputStream;)V
 
-    .line 14
     invoke-virtual {v14}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     :try_start_2
     invoke-virtual {v14}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2
@@ -2510,7 +4547,6 @@
 
     move-object v15, v0
 
-    .line 16
     :try_start_3
     throw v15
     :try_end_3
@@ -2521,7 +4557,6 @@
 
     move-object/from16 v16, v0
 
-    .line 17
     :try_start_4
     invoke-virtual {v14}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_4
@@ -2548,7 +4583,6 @@
     :catch_1
     const-string v14, "composeLiveShotPicture(): Failed to insert xiaomi specific metadata"
 
-    .line 18
     invoke-static {v8, v14}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -2558,7 +4592,6 @@
 
     const-string v0, "composeLiveShotPicture(): #1: return original jpeg"
 
-    .line 19
     invoke-static {v8, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -2570,7 +4603,6 @@
 
     new-array v9, v0, [I
 
-    .line 20
     invoke-virtual/range {p10 .. p10}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getDeviceWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v0
@@ -2583,7 +4615,6 @@
 
     move-result-object v0
 
-    .line 21
     invoke-virtual/range {p10 .. p10}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getTimeWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v13
@@ -2596,7 +4627,6 @@
 
     move-result-object v12
 
-    .line 22
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -2617,7 +4647,6 @@
 
     invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 23
     invoke-static {v9}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v10
@@ -2628,21 +4657,17 @@
 
     move-result-object v10
 
-    .line 24
     invoke-static {v8, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     :try_start_6
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
     move-result-object v10
 
-    .line 26
     new-instance v13, Ljava/io/StringWriter;
 
     invoke-direct {v13}, Ljava/io/StringWriter;-><init>()V
 
-    .line 27
     invoke-interface {v10, v13}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_9
@@ -2658,7 +4683,6 @@
 
     const/16 v16, 0x1
 
-    .line 28
     :try_start_8
     invoke-static/range {v16 .. v16}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2688,13 +4712,11 @@
 
     if-eqz v12, :cond_5
 
-    .line 29
     :try_start_9
     array-length v3, v12
 
     if-lez v3, :cond_5
 
-    .line 30
     array-length v3, v12
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_3
@@ -2705,18 +4727,15 @@
 
     const/4 v11, 0x0
 
-    .line 31
     :try_start_a
     invoke-interface {v10, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 32
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v10, v11, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 33
     array-length v2, v12
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2727,7 +4746,6 @@
 
     const/4 v2, 0x0
 
-    .line 34
     aget v21, v9, v2
 
     invoke-static/range {v21 .. v21}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2738,7 +4756,6 @@
 
     const/4 v2, 0x1
 
-    .line 35
     aget v21, v9, v2
 
     invoke-static/range {v21 .. v21}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2749,7 +4766,6 @@
 
     const/4 v2, 0x2
 
-    .line 36
     aget v21, v9, v2
 
     invoke-static/range {v21 .. v21}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2760,7 +4776,6 @@
 
     const/4 v2, 0x3
 
-    .line 37
     aget v9, v9, v2
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2769,7 +4784,6 @@
 
     invoke-interface {v10, v11, v7, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 38
     invoke-interface {v10, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
@@ -2802,13 +4816,11 @@
     :goto_2
     if-eqz v0, :cond_6
 
-    .line 39
     :try_start_b
     array-length v2, v0
 
     if-lez v2, :cond_6
 
-    .line 40
     array-length v2, v0
     :try_end_b
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_4
@@ -2817,18 +4829,15 @@
 
     const/4 v2, 0x0
 
-    .line 41
     :try_start_c
     invoke-interface {v10, v2, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 42
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v10, v2, v4, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 43
     array-length v6, v0
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2839,7 +4848,6 @@
 
     const/4 v6, 0x0
 
-    .line 44
     aget v9, v15, v6
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2850,7 +4858,6 @@
 
     const/4 v6, 0x1
 
-    .line 45
     aget v9, v15, v6
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2861,7 +4868,6 @@
 
     const/4 v6, 0x2
 
-    .line 46
     aget v9, v15, v6
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2872,7 +4878,6 @@
 
     const/4 v6, 0x3
 
-    .line 47
     aget v9, v15, v6
 
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2881,7 +4886,6 @@
 
     invoke-interface {v10, v2, v7, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 48
     invoke-interface {v10, v2, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
@@ -2903,7 +4907,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 49
     :try_start_d
     array-length v5, v2
     :try_end_d
@@ -2922,7 +4925,6 @@
 
     if-lt v6, v9, :cond_8
 
-    .line 50
     array-length v6, v2
     :try_end_e
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_a
@@ -2933,18 +4935,15 @@
 
     const/4 v11, 0x0
 
-    .line 51
     :try_start_f
     invoke-interface {v10, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 52
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v10, v11, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 53
     array-length v3, v2
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2955,7 +4954,6 @@
 
     const/4 v3, 0x0
 
-    .line 54
     aget v4, v5, v3
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2966,7 +4964,6 @@
 
     const/4 v3, 0x1
 
-    .line 55
     aget v4, v5, v3
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2977,7 +4974,6 @@
 
     const/4 v3, 0x2
 
-    .line 56
     aget v3, v5, v3
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2988,7 +4984,6 @@
 
     const/4 v3, 0x3
 
-    .line 57
     aget v3, v5, v3
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -2999,14 +4994,12 @@
 
     const-string/jumbo v1, "rotation"
 
-    .line 58
     invoke-static/range {p13 .. p13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {v10, v11, v1, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 59
     invoke-interface {v10, v11, v6}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_4
@@ -3017,11 +5010,9 @@
     :cond_8
     const/4 v11, 0x0
 
-    .line 60
     :goto_4
     invoke-interface {v10}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 61
     invoke-virtual/range {v18 .. v18}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -3068,7 +5059,6 @@
 
     move-object/from16 v3, v17
 
-    .line 62
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v1, v11
@@ -3078,12 +5068,10 @@
 
     const-string v0, "composeLiveShotPicture(): #2: return original jpeg"
 
-    .line 63
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
 
-    .line 64
     :cond_9
     :try_start_10
     new-instance v4, Ljava/io/ByteArrayInputStream;
@@ -3097,7 +5085,6 @@
     :try_end_11
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_e
 
-    .line 65
     :try_start_12
     new-instance v7, Ljava/io/ByteArrayOutputStream;
 
@@ -3105,7 +5092,6 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_9
 
-    .line 66
     :try_start_13
     invoke-static {}, Lcom/android/camera/XmpHelper;->createXMPMeta()Lcom/adobe/xmp/XMPMeta;
 
@@ -3117,12 +5103,10 @@
 
     const/4 v13, 0x1
 
-    .line 67
     invoke-interface {v8, v10, v9, v13}, Lcom/adobe/xmp/XMPMeta;->setPropertyInteger(Ljava/lang/String;Ljava/lang/String;I)V
 
     const-string v9, "MicroVideo"
 
-    .line 68
     invoke-interface {v8, v10, v9, v13}, Lcom/adobe/xmp/XMPMeta;->setPropertyInteger(Ljava/lang/String;Ljava/lang/String;I)V
 
     const-string v9, "MicroVideoOffset"
@@ -3131,7 +5115,6 @@
 
     move/from16 v13, v20
 
-    .line 69
     :try_start_14
     invoke-interface {v8, v10, v9, v13}, Lcom/adobe/xmp/XMPMeta;->setPropertyInteger(Ljava/lang/String;Ljava/lang/String;I)V
 
@@ -3139,7 +5122,6 @@
 
     move-wide/from16 v14, p4
 
-    .line 70
     invoke-interface {v8, v10, v9, v14, v15}, Lcom/adobe/xmp/XMPMeta;->setPropertyLong(Ljava/lang/String;Ljava/lang/String;J)V
 
     if-eqz v1, :cond_a
@@ -3148,16 +5130,13 @@
 
     const-string v10, "XMPMeta"
 
-    .line 71
     invoke-interface {v8, v9, v10, v1}, Lcom/adobe/xmp/XMPMeta;->setProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 72
     :cond_a
     invoke-static {v4, v7, v8}, Lcom/android/camera/XmpHelper;->writeXMPMeta(Ljava/io/InputStream;Ljava/io/OutputStream;Lcom/adobe/xmp/XMPMeta;)Z
 
     if-eqz v2, :cond_b
 
-    .line 73
     array-length v1, v2
 
     if-lez v1, :cond_b
@@ -3170,43 +5149,35 @@
 
     if-lt v1, v5, :cond_b
 
-    .line 74
     invoke-virtual {v7, v2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
     :cond_b
     if-eqz v0, :cond_c
 
-    .line 75
     array-length v1, v0
 
     if-lez v1, :cond_c
 
-    .line 76
     invoke-virtual {v7, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
     :cond_c
     if-eqz v12, :cond_d
 
-    .line 77
     array-length v0, v12
 
     if-lez v0, :cond_d
 
-    .line 78
     invoke-virtual {v7, v12}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 79
     :cond_d
     invoke-virtual {v7}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 80
     invoke-virtual {v7}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_4
 
-    .line 81
     :try_start_15
     invoke-virtual {v7}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_15
@@ -3244,7 +5215,6 @@
     :goto_9
     move-object v1, v0
 
-    .line 82
     :try_start_17
     throw v1
     :try_end_17
@@ -3255,7 +5225,6 @@
 
     move-object v2, v0
 
-    .line 83
     :try_start_18
     invoke-virtual {v7}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_18
@@ -3289,7 +5258,6 @@
     :goto_b
     move-object v1, v0
 
-    .line 84
     :try_start_1a
     throw v1
     :try_end_1a
@@ -3300,7 +5268,6 @@
 
     move-object v2, v0
 
-    .line 85
     :try_start_1b
     invoke-virtual {v4}, Ljava/io/ByteArrayInputStream;->close()V
     :try_end_1b
@@ -3331,7 +5298,6 @@
     :goto_d
     const-string v0, "composeLiveShotPicture(): failed to insert xmp metadata"
 
-    .line 86
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v1, v11
@@ -3339,7 +5305,6 @@
     :goto_e
     if-eqz v1, :cond_f
 
-    .line 87
     array-length v0, v1
 
     array-length v2, v6
@@ -3348,13 +5313,11 @@
 
     goto :goto_10
 
-    .line 88
     :cond_e
     array-length v0, v1
 
     add-int/2addr v0, v13
 
-    .line 89
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3377,17 +5340,14 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     new-array v0, v0, [B
 
-    .line 91
     array-length v2, v1
 
     const/4 v4, 0x0
 
     invoke-static {v1, v4, v0, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 92
     :try_start_1d
     new-instance v2, Ljava/io/BufferedInputStream;
 
@@ -3401,7 +5361,6 @@
     :try_end_1d
     .catch Ljava/io/IOException; {:try_start_1d .. :try_end_1d} :catch_10
 
-    .line 93
     :try_start_1e
     array-length v1, v1
 
@@ -3409,7 +5368,6 @@
     :try_end_1e
     .catchall {:try_start_1e .. :try_end_1e} :catchall_c
 
-    .line 94
     :try_start_1f
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_1f
@@ -3417,7 +5375,6 @@
 
     const-string v1, "composeLiveShotPicture(): X"
 
-    .line 95
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -3427,7 +5384,6 @@
 
     move-object v1, v0
 
-    .line 96
     :try_start_20
     throw v1
     :try_end_20
@@ -3438,7 +5394,6 @@
 
     move-object v4, v0
 
-    .line 97
     :try_start_21
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_21
@@ -3462,7 +5417,6 @@
     :catch_10
     move-exception v0
 
-    .line 98
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3485,7 +5439,6 @@
     :goto_10
     const-string v0, "composeLiveShotPicture(): #3: return original jpeg"
 
-    .line 99
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -3496,7 +5449,6 @@
 
     const-string v0, "composeLiveShotPicture(): The corresponding movie of LiveShot is empty"
 
-    .line 100
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -3507,7 +5459,6 @@
 
     const-string v0, "composeLiveShotPicture(): The primary photo of LiveShot is empty"
 
-    .line 101
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
@@ -3544,12 +5495,10 @@
 
     const-string v11, "CameraUtil"
 
-    .line 1
     invoke-virtual/range {p10 .. p10}, Lcom/xiaomi/camera/core/ParallelTaskData;->getTimestamp()J
 
     move-result-wide v12
 
-    .line 2
     new-instance v14, Ljava/io/File;
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -3574,7 +5523,6 @@
 
     invoke-direct {v14, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     new-instance v15, Ljava/io/File;
 
     move-object/from16 p4, v9
@@ -3605,7 +5553,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     array-length v12, v2
 
     if-ne v12, v9, :cond_0
@@ -3617,7 +5564,6 @@
     :cond_0
     const/4 v12, 0x0
 
-    .line 5
     :goto_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->isHighQualityPreferred()Z
 
@@ -3625,25 +5571,22 @@
 
     if-eqz v13, :cond_1
 
-    .line 6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v13
 
-    invoke-virtual {v13}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0OoOoOo()Z
+    invoke-virtual {v13}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooo0O()Z
 
     move-result v13
 
     if-eqz v13, :cond_1
 
-    .line 7
     invoke-virtual/range {p10 .. p10}, Lcom/xiaomi/camera/core/ParallelTaskData;->getSatFusionType()I
 
     move-result v13
 
     if-eqz v13, :cond_1
 
-    .line 8
     invoke-virtual {v14}, Ljava/io/File;->exists()Z
 
     move-result v13
@@ -3670,17 +5613,14 @@
 
     return-object v1
 
-    .line 9
     :cond_2
     :try_start_0
     new-instance v10, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v10}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 10
     invoke-virtual {v10, v1}, Lcom/android/gallery3d/exif/ExifInterface;->readExif([B)V
 
-    .line 11
     invoke-virtual {v10}, Lcom/android/gallery3d/exif/ExifInterface;->getMimeType()I
 
     move-result v10
@@ -3691,7 +5631,6 @@
 
     const-string v0, "composeMainSubPicture(): HEIC does not support watermark removal"
 
-    .line 12
     invoke-static {v11, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -3701,7 +5640,6 @@
 
     new-array v8, v9, [I
 
-    .line 13
     invoke-virtual/range {p9 .. p9}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getDeviceWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v9
@@ -3714,7 +5652,6 @@
 
     move-result-object v1
 
-    .line 14
     invoke-virtual/range {p9 .. p9}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->getTimeWaterMark()Lcom/android/camera/effect/renders/WaterMark;
 
     move-result-object v9
@@ -3729,7 +5666,6 @@
 
     move-result-object v1
 
-    .line 15
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -3750,7 +5686,6 @@
 
     invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 16
     invoke-static {v8}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1
@@ -3761,21 +5696,17 @@
 
     move-result-object v1
 
-    .line 17
     invoke-static {v11, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
     move-result-object v9
 
-    .line 19
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
-    .line 20
     invoke-interface {v9, v1}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
 
     move-object/from16 v17, v1
@@ -3786,7 +5717,6 @@
 
     const/16 v18, 0x1
 
-    .line 21
     invoke-static/range {v18 .. v18}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v8
@@ -3813,7 +5743,6 @@
 
     const/4 v13, 0x0
 
-    .line 22
     :try_start_2
     invoke-static {v14, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
@@ -3823,12 +5752,10 @@
 
     const/4 v13, 0x4
 
-    .line 23
     invoke-static {v14, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v3
 
-    .line 24
     invoke-virtual {v14}, Ljava/io/File;->length()J
 
     move-result-wide v22
@@ -3843,7 +5770,6 @@
 
     const/4 v13, 0x0
 
-    .line 25
     :try_start_3
     invoke-static {v15, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
@@ -3851,12 +5777,10 @@
 
     const/4 v13, 0x4
 
-    .line 26
     invoke-static {v15, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v13
 
-    .line 27
     invoke-virtual {v15}, Ljava/io/File;->length()J
 
     move-result-wide v28
@@ -3867,7 +5791,6 @@
 
     move-object/from16 v24, v15
 
-    .line 28
     :try_start_4
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -3907,7 +5830,6 @@
 
     goto :goto_2
 
-    .line 29
     :cond_4
     array-length v1, v0
     :try_end_4
@@ -3916,11 +5838,9 @@
     :goto_2
     const/4 v6, 0x0
 
-    .line 30
     :try_start_5
     invoke-interface {v9, v6, v5}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 31
     invoke-interface {v9, v6, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
@@ -3933,7 +5853,6 @@
 
     add-long v30, v6, v22
 
-    .line 32
     :try_start_6
     invoke-static/range {v30 .. v31}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -3948,21 +5867,18 @@
     :try_start_7
     invoke-interface {v9, v11, v2, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 33
     invoke-static/range {v22 .. v23}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v9, v11, v10, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 34
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v9, v11, v8, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 35
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3971,46 +5887,38 @@
 
     invoke-interface {v9, v11, v3, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 36
     invoke-interface {v9, v11, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     move-object/from16 v1, p8
 
-    .line 37
     invoke-interface {v9, v11, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 38
     invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v9, v11, v2, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 39
     invoke-static/range {v28 .. v29}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v9, v11, v10, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 40
     invoke-static {v14}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v9, v11, v8, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 41
     invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v9, v11, v3, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 42
     invoke-interface {v9, v11, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 43
     invoke-interface {v9, v11, v5}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
@@ -4068,7 +5976,6 @@
     :goto_4
     if-eqz v12, :cond_8
 
-    .line 44
     :try_start_8
     array-length v1, v0
     :try_end_8
@@ -4078,18 +5985,15 @@
 
     const/4 v5, 0x0
 
-    .line 45
     :try_start_9
     invoke-interface {v9, v5, v4}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 46
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-interface {v9, v5, v2, v6}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 47
     array-length v6, v0
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4100,7 +6004,6 @@
 
     const/4 v6, 0x0
 
-    .line 48
     aget v7, p2, v6
 
     invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4113,7 +6016,6 @@
 
     const/4 v6, 0x1
 
-    .line 49
     aget v11, p2, v6
 
     invoke-static {v11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4126,7 +6028,6 @@
 
     const/4 v6, 0x2
 
-    .line 50
     aget v13, p2, v6
 
     invoke-static {v13}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4137,7 +6038,6 @@
 
     const/4 v13, 0x3
 
-    .line 51
     aget v14, p2, v13
 
     invoke-static {v14}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4148,19 +6048,16 @@
 
     const-string/jumbo v14, "rotation"
 
-    .line 52
     invoke-static/range {p11 .. p11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v15
 
     invoke-interface {v9, v5, v14, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 53
     invoke-interface {v9, v5, v4}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_9
 
-    .line 54
     :try_start_a
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4197,7 +6094,6 @@
 
     move-object/from16 v4, p10
 
-    .line 55
     :try_start_c
     array-length v15, v4
 
@@ -4209,18 +6105,15 @@
 
     const/4 v13, 0x0
 
-    .line 56
     :try_start_d
     invoke-interface {v9, v13, v15}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 57
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v15
 
     invoke-interface {v9, v13, v2, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 58
     array-length v15, v4
 
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4231,7 +6124,6 @@
 
     const/4 v15, 0x0
 
-    .line 59
     aget v16, v18, v15
 
     invoke-static/range {v16 .. v16}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4242,7 +6134,6 @@
 
     const/4 v15, 0x1
 
-    .line 60
     aget v16, v18, v15
 
     invoke-static/range {v16 .. v16}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4251,7 +6142,6 @@
 
     invoke-interface {v9, v13, v3, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 61
     aget v15, v18, v6
 
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4262,7 +6152,6 @@
 
     const/4 v15, 0x3
 
-    .line 62
     aget v16, v18, v15
 
     invoke-static/range {v16 .. v16}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4273,12 +6162,10 @@
 
     const-string v15, "lenswatermark"
 
-    .line 63
     invoke-interface {v9, v13, v15}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_6
 
-    .line 64
     :try_start_e
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -4326,7 +6213,6 @@
 
     move-object/from16 v13, p9
 
-    .line 65
     :try_start_f
     array-length v15, v13
 
@@ -4338,18 +6224,15 @@
 
     const/4 v6, 0x0
 
-    .line 66
     :try_start_10
     invoke-interface {v9, v6, v15}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 67
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v15
 
     invoke-interface {v9, v6, v2, v15}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 68
     array-length v2, v13
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4360,7 +6243,6 @@
 
     const/4 v2, 0x0
 
-    .line 69
     aget v2, v19, v2
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4371,7 +6253,6 @@
 
     const/4 v2, 0x1
 
-    .line 70
     aget v2, v19, v2
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4382,7 +6263,6 @@
 
     const/4 v2, 0x2
 
-    .line 71
     aget v2, v19, v2
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4393,7 +6273,6 @@
 
     const/4 v2, 0x3
 
-    .line 72
     aget v2, v19, v2
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4404,10 +6283,8 @@
 
     const-string/jumbo v2, "timewatermark"
 
-    .line 73
     invoke-interface {v9, v6, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 74
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4475,11 +6352,9 @@
     :goto_7
     const/4 v6, 0x0
 
-    .line 75
     :goto_8
     invoke-interface {v9}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 76
     invoke-virtual/range {v17 .. v17}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -4508,7 +6383,6 @@
     :goto_a
     const-string v1, "composeMainSubPicture(): Failed to generate xiaomi specific xmp metadata"
 
-    .line 77
     invoke-static {v14, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v1, v6
@@ -4523,7 +6397,6 @@
     :cond_9
     move-object/from16 v2, p0
 
-    .line 78
     :try_start_11
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
@@ -4532,7 +6405,6 @@
     .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_d
     .catch Lcom/adobe/xmp/XMPException; {:try_start_11 .. :try_end_11} :catch_d
 
-    .line 79
     :try_start_12
     new-instance v5, Ljava/io/ByteArrayOutputStream;
 
@@ -4540,7 +6412,6 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_4
 
-    .line 80
     :try_start_13
     invoke-static {}, Lcom/android/camera/XmpHelper;->createXMPMeta()Lcom/adobe/xmp/XMPMeta;
 
@@ -4550,10 +6421,8 @@
 
     const-string v9, "XMPMeta"
 
-    .line 81
     invoke-interface {v7, v8, v9, v1}, Lcom/adobe/xmp/XMPMeta;->setProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 82
     invoke-static {v3, v5, v7}, Lcom/android/camera/XmpHelper;->writeXMPMeta(Ljava/io/InputStream;Ljava/io/OutputStream;Lcom/adobe/xmp/XMPMeta;)Z
 
     if-eqz v20, :cond_a
@@ -4562,18 +6431,14 @@
 
     move-object/from16 v7, v27
 
-    .line 83
     invoke-static {v7, v5, v1}, Lcom/android/camera/Util;->writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 84
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
     move-object/from16 v7, v24
 
-    .line 85
     invoke-static {v7, v5, v1}, Lcom/android/camera/Util;->writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 86
     invoke-virtual {v7}, Ljava/io/File;->delete()Z
 
     :cond_a
@@ -4581,41 +6446,33 @@
 
     if-eqz v13, :cond_b
 
-    .line 87
     array-length v1, v13
 
     if-lez v1, :cond_b
 
-    .line 88
     invoke-virtual {v5, v13}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
     :cond_b
     if-eqz v4, :cond_c
 
-    .line 89
     array-length v1, v4
 
     if-lez v1, :cond_c
 
-    .line 90
     invoke-virtual {v5, v4}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 91
     :cond_c
     invoke-virtual {v5, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 92
     :cond_d
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 93
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_1
 
-    .line 94
     :try_start_14
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_14
@@ -4641,7 +6498,6 @@
 
     move-object v1, v0
 
-    .line 95
     :try_start_16
     throw v1
     :try_end_16
@@ -4652,7 +6508,6 @@
 
     move-object v4, v0
 
-    .line 96
     :try_start_17
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_17
@@ -4680,7 +6535,6 @@
 
     move-object v1, v6
 
-    .line 97
     :goto_d
     :try_start_19
     throw v4
@@ -4692,7 +6546,6 @@
 
     move-object v5, v0
 
-    .line 98
     :try_start_1a
     invoke-virtual {v3}, Ljava/io/ByteArrayInputStream;->close()V
     :try_end_1a
@@ -4720,13 +6573,11 @@
     :catch_e
     const-string v0, "composeMainSubPicture(): Failed to insert xiaomi specific xmp metadata"
 
-    .line 99
     invoke-static {v14, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_f
     if-eqz v1, :cond_f
 
-    .line 100
     array-length v0, v1
 
     array-length v3, v2
@@ -4742,7 +6593,6 @@
     :goto_10
     const-string v0, "composeMainSubPicture(): Failed to append sub image, return original jpeg"
 
-    .line 101
     invoke-static {v14, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -4754,7 +6604,6 @@
 
     const-string v0, "composeMainSubPicture(): Failed to check file type"
 
-    .line 102
     invoke-static {v14, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
@@ -4763,12 +6612,10 @@
 .method public static computeInitialSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
     .locals 8
 
-    .line 1
     iget v0, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     int-to-double v0, v0
 
-    .line 2
     iget p0, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     int-to-double v2, p0
@@ -4788,7 +6635,6 @@
 
     div-double/2addr v4, v6
 
-    .line 3
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v4
@@ -4811,19 +6657,16 @@
 
     div-double/2addr v0, v5
 
-    .line 4
     invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v0
 
     div-double/2addr v2, v5
 
-    .line 5
     invoke-static {v2, v3}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v2
 
-    .line 6
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v0
@@ -4854,7 +6697,6 @@
 .method public static computeSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/android/camera/Util;->computeInitialSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
     move-result p0
@@ -4875,7 +6717,6 @@
     :cond_0
     add-int/lit8 p0, p0, 0x7
 
-    .line 2
     div-int/2addr p0, p1
 
     mul-int/2addr p1, p0
@@ -4893,17 +6734,14 @@
 
     div-double/2addr v0, v2
 
-    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v0
 
-    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
 
     move-result-wide v2
 
-    .line 3
     invoke-static {p2}, Lcom/android/camera/Util;->normalizeDegree(F)F
 
     move-result p1
@@ -4912,12 +6750,10 @@
 
     add-double/2addr p1, v2
 
-    .line 4
     invoke-static {p1, p2}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide p1
 
-    .line 5
     invoke-static {p1, p2}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide p1
@@ -4948,11 +6784,10 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "null"
+    const-string/jumbo p0, "null"
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -4980,7 +6815,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5033,11 +6867,10 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "null"
+    const-string/jumbo p0, "null"
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -5045,7 +6878,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5068,7 +6900,7 @@
     return-object p0
 
     :pswitch_1
-    const-string p0, "not_focus_locked"
+    const-string/jumbo p0, "not_focus_locked"
 
     return-object p0
 
@@ -5116,11 +6948,10 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "null"
+    const-string/jumbo p0, "null"
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -5168,7 +6999,6 @@
 .method public static convertModeToString(I)Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -5182,7 +7012,6 @@
 
     move-result v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v1
@@ -5214,7 +7043,6 @@
 
     const-string v0, "convertModeToString exception"
 
-    .line 3
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "Unknow"
@@ -5260,7 +7088,6 @@
 .method public static convertResToBitmap(Landroid/content/Context;I)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -5275,10 +7102,8 @@
 .method public static convertSizeToQuality(Lcom/android/camera/CameraSize;)I
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CameraSize;->width:I
 
-    .line 2
     iget p0, p0, Lcom/android/camera/CameraSize;->height:I
 
     if-ge v0, p0, :cond_0
@@ -5350,20 +7175,16 @@
 .method public static correctionSelectView(Landroid/view/View;Z)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
-    .line 2
     instance-of v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 4
     invoke-virtual {p0, p1, p1, p1, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     :cond_0
@@ -5375,7 +7196,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     aget v1, p6, v0
 
     mul-int/2addr v1, p3
@@ -5393,19 +7213,16 @@
     :goto_0
     const/4 v5, 0x3
 
-    .line 2
     aget v6, p6, v5
 
     const/4 v7, 0x2
 
     if-ge v3, v6, :cond_0
 
-    .line 3
     aget v5, p6, v7
 
     invoke-static {p5, v4, p0, v1, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 4
     aget v5, p6, v7
 
     add-int/2addr v4, v5
@@ -5423,7 +7240,6 @@
 
     add-int/2addr p3, p1
 
-    .line 5
     aget p1, p6, v0
 
     div-int/2addr p1, v7
@@ -5436,7 +7252,6 @@
 
     add-int/2addr p3, p1
 
-    .line 6
     :goto_1
     aget p1, p6, v5
 
@@ -5444,14 +7259,12 @@
 
     if-ge v2, p1, :cond_1
 
-    .line 7
     aget p1, p6, v7
 
     invoke-static {p5, v4, p0, p3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/2addr p3, p4
 
-    .line 8
     aget p1, p6, v7
 
     add-int/2addr v4, p1
@@ -5467,7 +7280,6 @@
 .method public static createFile(Ljava/io/File;)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -5478,7 +7290,6 @@
 
     return p0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getParent()Ljava/lang/String;
 
@@ -5486,7 +7297,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -5497,7 +7307,6 @@
 
     invoke-static {v1, v0, v2, v2}, Lcom/android/camera/Util;->mkdirs(Ljava/io/File;III)Z
 
-    .line 4
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->createNewFile()Z
@@ -5513,12 +7322,10 @@
 .method public static createJpegName(J)Ljava/lang/String;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->sImageFileNamer:Lcom/android/camera/Util$ImageFileNamer;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lcom/android/camera/Util;->sImageFileNamer:Lcom/android/camera/Util$ImageFileNamer;
 
@@ -5533,7 +7340,6 @@
     :catchall_0
     move-exception p0
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -5544,7 +7350,6 @@
 .method public static createMeteringRectangleFrom(IIIII)Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 13
 
-    .line 3
     :try_start_0
     new-instance v6, Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -5568,7 +7373,6 @@
 
     move v1, p0
 
-    .line 4
     :try_start_1
     invoke-static {v6, v0, p0}, Lcom/android/camera/Util;->modify(Ljava/lang/Object;Ljava/lang/String;I)V
 
@@ -5578,7 +7382,6 @@
 
     move v2, p1
 
-    .line 5
     :try_start_2
     invoke-static {v6, v0, p1}, Lcom/android/camera/Util;->modify(Ljava/lang/Object;Ljava/lang/String;I)V
 
@@ -5588,7 +7391,6 @@
 
     move v3, p2
 
-    .line 6
     :try_start_3
     invoke-static {v6, v0, p2}, Lcom/android/camera/Util;->modify(Ljava/lang/Object;Ljava/lang/String;I)V
 
@@ -5598,7 +7400,6 @@
 
     move/from16 v4, p3
 
-    .line 7
     :try_start_4
     invoke-static {v6, v0, v4}, Lcom/android/camera/Util;->modify(Ljava/lang/Object;Ljava/lang/String;I)V
 
@@ -5608,7 +7409,6 @@
 
     move/from16 v5, p4
 
-    .line 8
     :try_start_5
     invoke-static {v6, v0, v5}, Lcom/android/camera/Util;->modify(Ljava/lang/Object;Ljava/lang/String;I)V
     :try_end_5
@@ -5631,7 +7431,6 @@
     :catch_4
     move/from16 v5, p4
 
-    .line 9
     :catch_5
     new-instance v0, Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -5655,7 +7454,6 @@
 .method public static createMeteringRectangleFrom(Landroid/graphics/Rect;I)Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 4
 
-    .line 1
     :try_start_0
     iget v0, p0, Landroid/graphics/Rect;->left:I
 
@@ -5677,7 +7475,6 @@
 
     return-object p0
 
-    .line 2
     :catch_0
     new-instance v0, Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -5703,7 +7500,6 @@
 
     move v5, p5
 
-    .line 41
     invoke-static/range {v0 .. v6}, Lcom/android/camera/Util;->cropBitmap(Landroid/graphics/Bitmap;FZFZZZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -5724,7 +7520,6 @@
 
     const-string p2, "cropBitmap: no effect!"
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p0
@@ -5732,7 +7527,6 @@
     :cond_0
     if-eqz p0, :cond_8
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
@@ -5741,18 +7535,15 @@
 
     goto/16 :goto_4
 
-    .line 3
     :cond_1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 5
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
@@ -5807,13 +7598,11 @@
 
     div-float/2addr v6, v4
 
-    .line 6
     invoke-virtual {v0, p2, p3, v3, v6}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     :cond_4
     if-eqz p4, :cond_5
 
-    .line 7
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result p2
@@ -5830,7 +7619,6 @@
 
     div-float/2addr p4, v4
 
-    .line 8
     invoke-virtual {v0, p3, p4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     move p3, p2
@@ -5855,7 +7643,6 @@
 
     int-to-double p5, v1
 
-    .line 9
     :try_start_0
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
@@ -5865,42 +7652,34 @@
 
     double-to-int p3, p5
 
-    .line 10
     sget-object p5, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v2, p5}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p5
 
-    .line 11
     new-instance p6, Landroid/graphics/Canvas;
 
     invoke-direct {p6, p5}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 12
     new-instance v1, Landroid/graphics/PaintFlagsDrawFilter;
 
     invoke-direct {v1, v4, v3}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     invoke-virtual {p6, v1}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 13
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 14
     invoke-virtual {v1, p4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 15
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 16
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
     sub-int p4, v2, p3
 
-    .line 17
     div-int/lit8 p4, p4, 0x2
 
     add-int/2addr v2, p3
@@ -5909,10 +7688,8 @@
 
     invoke-virtual {p6, v4, p4, p2, v2}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 18
     invoke-virtual {p6, p0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 19
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object p5
@@ -5922,7 +7699,6 @@
 
     int-to-double p5, p3
 
-    .line 20
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
     move-result-wide v6
@@ -5931,42 +7707,34 @@
 
     double-to-int p2, p5
 
-    .line 21
     sget-object p5, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v2, p5}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p5
 
-    .line 22
     new-instance p6, Landroid/graphics/Canvas;
 
     invoke-direct {p6, p5}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 23
     new-instance v2, Landroid/graphics/PaintFlagsDrawFilter;
 
     invoke-direct {v2, v4, v3}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     invoke-virtual {p6, v2}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 24
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    .line 25
     invoke-virtual {v2, p4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 26
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 27
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
     sub-int p4, v1, p2
 
-    .line 28
     div-int/lit8 p4, p4, 0x2
 
     add-int/2addr v1, p2
@@ -5975,15 +7743,12 @@
 
     invoke-virtual {p6, p4, v4, v1, p3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 29
     invoke-virtual {p6, p0, v0, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 30
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object p5
 
-    .line 31
     :cond_7
     sget-object p4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -5991,33 +7756,26 @@
 
     move-result-object p2
 
-    .line 32
     new-instance p3, Landroid/graphics/Canvas;
 
     invoke-direct {p3, p2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 33
     new-instance p4, Landroid/graphics/PaintFlagsDrawFilter;
 
     invoke-direct {p4, v4, v3}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     invoke-virtual {p3, p4}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 34
     new-instance p4, Landroid/graphics/Paint;
 
     invoke-direct {p4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 35
     invoke-virtual {p4, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 36
     invoke-virtual {p4, v5}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 37
     invoke-virtual {p3, p0, v0, p4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 38
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -6036,7 +7794,6 @@
     :goto_3
     const-string p3, "Failed to adjust bitmap"
 
-    .line 39
     invoke-static {p1, p3, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object p0
@@ -6045,7 +7802,6 @@
     :goto_4
     const-string p0, "cropBitmap: bitmap is invalid!"
 
-    .line 40
     invoke-static {p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -6056,7 +7812,6 @@
 .method public static debugResourceInfo(Landroid/app/Activity;)V
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -6065,23 +7820,18 @@
 
     move-result-object p0
 
-    .line 2
     iget v0, p0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
-    .line 3
     iget v1, p0, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    .line 4
     iget p0, p0, Landroid/content/res/Configuration;->screenHeightDp:I
 
-    .line 5
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 6
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -6108,7 +7858,6 @@
 
     const-string/jumbo p0, "smallestScreenWidthDp=%d, wDP=%d, hDP=%d"
 
-    .line 7
     invoke-static {v2, p0, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -6127,7 +7876,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
@@ -6135,20 +7883,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/FileCompat;->deleteFile(Ljava/lang/String;)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 3
     :cond_1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v0
@@ -6156,7 +7901,6 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6182,17 +7926,14 @@
 .method public static dismissSystemChoiceDialog()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
-    .line 3
     sput-object v0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_0
@@ -6214,7 +7955,6 @@
 
     float-to-double p0, p0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide p0
@@ -6224,11 +7964,30 @@
     return p0
 .end method
 
+.method public static doubleToRational(DJ)Lcom/android/gallery3d/exif/Rational;
+    .locals 3
+
+    new-instance v0, Lcom/android/gallery3d/exif/Rational;
+
+    long-to-double v1, p2
+
+    mul-double/2addr p0, v1
+
+    const-wide/high16 v1, 0x3fe0000000000000L    # 0.5
+
+    add-double/2addr p0, v1
+
+    double-to-long p0, p0
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/gallery3d/exif/Rational;-><init>(JJ)V
+
+    return-object v0
+.end method
+
 .method public static dpToPixel(F)I
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getPixelDensity()F
+    invoke-static {}, Lcom/android/camera/Display;->getPixelDensity()F
 
     move-result v0
 
@@ -6244,12 +8003,10 @@
 .method public static drawMiMovieBlackBridge(Landroid/media/Image;)V
     .locals 9
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/Image;->getHeight()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/media/Image;->getWidth()I
 
     move-result v1
@@ -6258,7 +8015,6 @@
 
     int-to-double v0, v1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
     move-result-wide v4
@@ -6273,14 +8029,12 @@
 
     double-to-int v0, v2
 
-    .line 4
     invoke-virtual {p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 5
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -6289,14 +8043,12 @@
 
     const/4 v3, 0x2
 
-    .line 6
     aget-object v4, p0, v3
 
     invoke-virtual {v4}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    .line 7
     aget-object v5, p0, v1
 
     invoke-virtual {v5}, Landroid/media/Image$Plane;->getRowStride()I
@@ -6305,19 +8057,16 @@
 
     invoke-virtual {v5}, Landroid/media/Image$Plane;->getRowStride()I
 
-    .line 8
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v5
 
-    .line 9
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v6
 
     move v7, v1
 
-    .line 10
     :goto_0
     aget-object v8, p0, v1
 
@@ -6329,14 +8078,12 @@
 
     if-ge v7, v8, :cond_0
 
-    .line 11
     invoke-virtual {v2, v7, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 12
     :cond_0
     aget-object v7, p0, v1
 
@@ -6351,7 +8098,6 @@
     :goto_1
     if-ge v7, v5, :cond_1
 
-    .line 13
     invoke-virtual {v2, v7, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v7, v7, 0x1
@@ -6362,7 +8108,6 @@
     :goto_2
     const/4 v2, 0x1
 
-    .line 14
     aget-object v5, p0, v2
 
     invoke-virtual {v5}, Landroid/media/Image$Plane;->getRowStride()I
@@ -6377,14 +8122,12 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 15
     invoke-virtual {v4, v1, v7}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 16
     :cond_2
     aget-object p0, p0, v2
 
@@ -6401,7 +8144,6 @@
     :goto_3
     if-ge p0, v6, :cond_3
 
-    .line 17
     invoke-virtual {v4, p0, v7}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 p0, p0, 0x1
@@ -6415,7 +8157,6 @@
 .method public static drawMiMovieBlackBridgeEGL(Lcom/android/gallery3d/ui/BaseGLCanvas;II)V
     .locals 10
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v0
@@ -6430,7 +8171,6 @@
 
     int-to-double v4, p2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
     move-result-wide v6
@@ -6443,7 +8183,6 @@
 
     double-to-int v0, v2
 
-    .line 3
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     const/4 v5, 0x0
@@ -6462,7 +8201,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 4
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     sub-int v5, p1, v0
@@ -6480,7 +8218,6 @@
 
     int-to-double v4, p1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
     move-result-wide v6
@@ -6493,7 +8230,6 @@
 
     double-to-int v0, v2
 
-    .line 6
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     const/4 v5, 0x0
@@ -6512,7 +8248,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 7
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     sub-int v6, p2, v0
@@ -6523,7 +8258,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 8
     :goto_0
     invoke-virtual {p0}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -6537,12 +8271,10 @@
 .method public static dumpBackTrace(Ljava/lang/String;)V
     .locals 10
 
-    .line 1
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6567,10 +8299,8 @@
 
     const-string v1, "**********print backtrace start *************"
 
-    .line 3
     invoke-static {v4, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v0
@@ -6584,7 +8314,6 @@
 
     aget-object v6, v0, v5
 
-    .line 5
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -6597,7 +8326,6 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {v6}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v8
@@ -6626,7 +8354,6 @@
 
     move-result-object v6
 
-    .line 7
     invoke-static {v4, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int/lit8 v5, v5, 0x1
@@ -6636,10 +8363,8 @@
     :cond_0
     const-string v0, "**********print backtrace end *************"
 
-    .line 8
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6662,20 +8387,17 @@
 .method public static dumpBugReportLog()V
     .locals 6
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->sIsDumpBugReport:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3
     sget-wide v2, Lcom/android/camera/Util;->sLastDumpBugReportTime:J
 
     sub-long v2, v0, v2
@@ -6690,7 +8412,6 @@
 
     if-gez v2, :cond_1
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6711,31 +8432,25 @@
 
     return-void
 
-    .line 5
     :cond_1
     sput-wide v0, Lcom/android/camera/Util;->sLastDumpBugReportTime:J
 
     const-string v0, "dumpBugReportLog: start"
 
-    .line 6
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "com.miui.bugreport"
 
-    .line 8
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.miui.bugreport.service.action.DUMPLOG"
 
-    .line 9
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 10
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -6752,30 +8467,25 @@
 .method public static dumpImageInfo(Ljava/lang/String;Landroid/media/Image;)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     aget-object v2, p1, v1
 
     const-string/jumbo v3, "plane_"
 
-    .line 5
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -6784,7 +8494,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v3
@@ -6795,7 +8504,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v4
@@ -6804,7 +8512,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -6823,7 +8530,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -6837,10 +8543,8 @@
 .method public static dumpMatrix([F)Ljava/lang/String;
     .locals 6
 
-    .line 1
     array-length v0, p0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "["
@@ -6858,7 +8562,6 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 3
     aget v5, p0, v3
 
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -6881,7 +8584,6 @@
 
     const-string v4, " "
 
-    .line 4
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -6892,10 +8594,8 @@
     :cond_1
     const-string p0, "]"
 
-    .line 5
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -6906,7 +8606,6 @@
 .method public static dumpRect(Landroid/graphics/RectF;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6963,7 +8662,6 @@
 
     mul-int/lit8 v0, v0, 0x4
 
-    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -6982,22 +8680,18 @@
 
     move-object v7, v0
 
-    .line 2
     invoke-static/range {v1 .. v7}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
     const-string p0, ".jpg"
 
-    .line 3
     invoke-static {p4, p0}, Lcom/android/camera/storage/Storage;->generateFilepath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 4
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v0, p2, p3, p1, p0}, Lcom/android/camera/Util;->saveBitmap(Ljava/nio/Buffer;IILandroid/graphics/Bitmap$Config;Ljava/lang/String;)Z
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7016,7 +8710,6 @@
 
     invoke-static {p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     return-object v0
@@ -7025,7 +8718,6 @@
 .method public static enableSeamlessRotation(Landroid/app/Activity;Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -7043,11 +8735,9 @@
     :cond_0
     const/4 p1, 0x5
 
-    .line 2
     :goto_0
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->rotationAnimation:I
 
-    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7068,7 +8758,6 @@
 
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -7081,19 +8770,16 @@
 .method public static enterLightsOutMode(Landroid/view/Window;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 2
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
     or-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->systemUiVisibility:I
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
@@ -7106,7 +8792,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -7153,14 +8838,12 @@
 
     aput-object p0, v1, v2
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     const-string p0, ""
 
-    .line 2
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -7170,14 +8853,12 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/Process;->waitFor()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7200,13 +8881,11 @@
 
     return-object p0
 
-    .line 5
     :cond_0
     new-instance v4, Ljava/io/BufferedReader;
 
     new-instance v5, Ljava/io/InputStreamReader;
 
-    .line 6
     invoke-virtual {v1}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -7215,14 +8894,12 @@
 
     invoke-direct {v4, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 7
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 8
     :goto_0
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -7230,7 +8907,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 9
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -7249,7 +8925,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     :goto_1
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -7258,21 +8933,17 @@
 
     if-eqz p1, :cond_2
 
-    .line 11
     invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
 
-    .line 12
     :cond_2
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 13
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 14
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -7311,10 +8982,8 @@
 
     const-string v1, "execCommand IOException"
 
-    .line 15
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
@@ -7324,10 +8993,8 @@
 
     const-string v1, "execCommand InterruptedException"
 
-    .line 17
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     invoke-virtual {p1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :goto_2
@@ -7337,62 +9004,52 @@
 .method public static expandViewTouchDelegate(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isShown()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
     const/high16 v1, 0x41200000    # 10.0f
 
-    .line 4
     invoke-static {v1}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v1
 
-    .line 5
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     sub-int/2addr v2, v1
 
     iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 6
     iget v2, v0, Landroid/graphics/Rect;->bottom:I
 
     add-int/2addr v2, v1
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 7
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v2, v1
 
     iput v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 8
     iget v2, v0, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v2, v1
 
     iput v2, v0, Landroid/graphics/Rect;->right:I
 
-    .line 9
     new-instance v1, Landroid/view/TouchDelegate;
 
     invoke-direct {v1, v0, p0}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    .line 10
     const-class v0, Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -7405,7 +9062,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -7416,7 +9072,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     const-class v0, Landroid/view/View;
 
@@ -7430,7 +9085,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 13
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -7451,7 +9105,6 @@
 
     const/16 v0, 0x190
 
-    .line 7
     invoke-static {p0, v0}, Lcom/android/camera/Util;->fadeIn(Landroid/view/View;I)V
 
     return-void
@@ -7462,7 +9115,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -7474,10 +9126,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -7488,13 +9138,10 @@
 
     int-to-long v1, p1
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/View;->clearAnimation()V
 
-    .line 6
     invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_1
@@ -7507,7 +9154,6 @@
 
     const/16 v0, 0x190
 
-    .line 7
     invoke-static {p0, v0}, Lcom/android/camera/Util;->fadeOut(Landroid/view/View;I)V
 
     return-void
@@ -7518,7 +9164,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -7527,7 +9172,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
@@ -7539,18 +9183,14 @@
 
     int-to-long v1, p1
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->clearAnimation()V
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     const/16 p1, 0x8
 
-    .line 6
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_1
@@ -7567,18 +9207,15 @@
 
     return-object v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    .line 3
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -7603,7 +9240,6 @@
 
     invoke-static {v4, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
@@ -7616,7 +9252,6 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 5
     div-int/lit8 p1, v1, 0x2
 
     int-to-float p1, p1
@@ -7629,7 +9264,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     div-int/lit8 p1, v1, 0x2
 
@@ -7641,7 +9275,6 @@
 
     invoke-virtual {v3, v5, v4, p1, v7}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 7
     :goto_0
     :try_start_0
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -7663,7 +9296,6 @@
     :catch_1
     move-exception p1
 
-    .line 8
     :goto_1
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -7672,13 +9304,11 @@
 
     return-object p0
 
-    .line 9
     :cond_2
     new-instance p1, Landroid/graphics/Canvas;
 
     invoke-direct {p1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 10
     new-instance v1, Landroid/graphics/PaintFlagsDrawFilter;
 
     const/4 v2, 0x0
@@ -7689,21 +9319,16 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 11
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 12
     invoke-virtual {v1, v6}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 13
     invoke-virtual {v1, v6}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 14
     invoke-virtual {p1, p0, v3, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 15
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-object v0
@@ -7714,7 +9339,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-byte v0, p0, v0
 
     shl-int/lit8 v0, v0, 0x18
@@ -7753,7 +9377,6 @@
 .method public static genContentValues(ILjava/lang/String;)Landroid/content/ContentValues;
     .locals 5
 
-    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7772,44 +9395,36 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     new-instance v0, Landroid/content/ContentValues;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Landroid/content/ContentValues;-><init>(I)V
 
-    .line 18
     invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 19
     invoke-static {p0}, Lcom/android/camera/Util;->convertOutputFormatToMimeType(I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string/jumbo v2, "title"
 
-    .line 20
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "_display_name"
 
-    .line 21
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "mime_type"
 
-    .line 22
     invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "_data"
 
-    .line 23
     invoke-virtual {v0, p0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object p0
@@ -7820,7 +9435,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 25
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v1
@@ -7839,7 +9453,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 26
     :cond_0
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
@@ -7853,7 +9466,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 27
     invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide p0
@@ -7873,17 +9485,14 @@
 .method public static genContentValues(ILjava/lang/String;II)Landroid/content/ContentValues;
     .locals 4
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/module/impl/component/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/Util;->convertOutputFormatToMimeType(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7900,7 +9509,6 @@
 
     move-result-object p0
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7919,7 +9527,6 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     new-instance v2, Landroid/content/ContentValues;
 
     const/16 v3, 0x8
@@ -7928,25 +9535,20 @@
 
     const-string/jumbo v3, "title"
 
-    .line 6
     invoke-virtual {v2, v3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "_display_name"
 
-    .line 7
     invoke-virtual {v2, v0, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "mime_type"
 
-    .line 8
     invoke-virtual {v2, p0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "_data"
 
-    .line 9
     invoke-virtual {v2, p0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7967,7 +9569,6 @@
 
     invoke-virtual {v2, p1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object p0
@@ -7978,7 +9579,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 12
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide p1
@@ -7997,7 +9597,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 13
     :cond_0
     invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
 
@@ -8011,7 +9610,6 @@
 
     invoke-virtual {v2, p2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 14
     invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide p0
@@ -8027,7 +9625,6 @@
     :cond_1
     const/4 p0, 0x1
 
-    .line 15
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -8042,29 +9639,24 @@
 .method public static genVideoPath(ILjava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     new-instance v2, Ljava/util/Date;
 
     invoke-direct {v2, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    .line 3
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-direct {v0, p1, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 4
     invoke-virtual {v0, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8081,7 +9673,6 @@
 
     move-result-object p0
 
-    .line 6
     invoke-static {p0}, Lcom/android/camera/storage/Storage;->generateFilepath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -8092,36 +9683,30 @@
 .method public static generateCinematicRatioWatermark2File()Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/4 v1, 0x1
 
-    .line 3
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 4
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inPremultiplied:Z
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v2
 
-    invoke-virtual {v2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getBackIconNameGen2()Ljava/lang/String;
 
     move-result-object v2
@@ -8133,7 +9718,6 @@
 
     move-result-object v2
 
-    .line 7
     :goto_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -8143,7 +9727,6 @@
 
     move-result-object v0
 
-    .line 8
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getDescription()Ljava/lang/String;
 
     move-result-object v2
@@ -8152,7 +9735,6 @@
 
     move-result-object v2
 
-    .line 9
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getTitle()Ljava/lang/String;
 
     move-result-object v3
@@ -8161,7 +9743,6 @@
 
     move-result-object v0
 
-    .line 10
     sget-object v1, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/android/camera/Util;->saveCustomWatermark2File(Landroid/graphics/Bitmap;Ljava/lang/String;)V
@@ -8172,12 +9753,10 @@
 .method public static generateFrontWatermark2File()Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->loadFrontCameraWatermark()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/android/camera/Util;->saveCustomWatermark2File(Landroid/graphics/Bitmap;Ljava/lang/String;)V
@@ -8188,46 +9767,39 @@
 .method public static generateMainWatermark2File()Landroid/graphics/Bitmap;
     .locals 6
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 3
     iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/4 v4, 0x1
 
-    .line 4
     iput-boolean v4, v2, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 5
     iput-boolean v4, v2, Landroid/graphics/BitmapFactory$Options;->inPremultiplied:Z
 
-    .line 6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v4
 
-    invoke-virtual {v4}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0Oo0()Z
+    invoke-virtual {v4}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0oO0O0o()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v4
 
-    invoke-virtual {v4}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v4}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v4
 
@@ -8240,20 +9812,18 @@
 
     return-object v0
 
-    .line 8
     :cond_1
     :goto_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v4
 
-    invoke-virtual {v4}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v4}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 9
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getBackIconNameGen2()Ljava/lang/String;
 
     move-result-object v4
@@ -8265,7 +9835,6 @@
 
     move-result-object v4
 
-    .line 10
     :goto_1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -8275,7 +9844,6 @@
 
     move-result-object v2
 
-    .line 11
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getTitle()Ljava/lang/String;
 
     move-result-object v4
@@ -8288,26 +9856,22 @@
 
     move-result-object v5
 
-    .line 12
     invoke-static {v2, v4, v5, v3}, Lcom/android/camera/effect/renders/CustomTextWaterMark;->drawBackWaterMark(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;Z)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 13
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v2, v3}, Lcom/android/camera/Util;->saveCustomWatermark2File(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 14
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v3
 
     invoke-virtual {v3}, Lcom/android/camera/data/data/global/DataItemGlobal;->updateCustomWatermarkVersion()V
 
-    .line 15
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -8324,7 +9888,7 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v0, "ms"
+    const-string/jumbo v0, "ms"
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -8342,10 +9906,8 @@
 .method public static generateWatermark2File()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->generateMainWatermark2File()Landroid/graphics/Bitmap;
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->generateCinematicRatioWatermark2File()Landroid/graphics/Bitmap;
 
     return-void
@@ -8354,7 +9916,6 @@
 .method public static get24HourMode(Landroid/content/Context;)Z
     .locals 0
 
-    .line 1
     invoke-static {p0}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
 
     move-result p0
@@ -8362,619 +9923,672 @@
     return p0
 .end method
 
-.method public static getAIWatermarkRange(ZI[I[FLandroid/graphics/Rect;IILandroid/graphics/Bitmap;)[I
-    .locals 15
+.method public static getAIWatermarkRange(II[I[FLandroid/graphics/Rect;IILandroid/graphics/Bitmap;)[I
+    .locals 17
 
-    move/from16 v0, p1
+    move/from16 v0, p0
 
-    move-object/from16 v1, p4
+    move/from16 v1, p1
 
-    move/from16 v2, p5
+    move-object/from16 v2, p4
 
-    move/from16 v3, p6
+    move/from16 v3, p5
 
-    const/4 v4, 0x4
+    move/from16 v4, p6
 
-    new-array v5, v4, [I
+    const/4 v5, 0x4
 
-    const/4 v6, 0x0
+    new-array v6, v5, [I
 
-    .line 1
-    aget v7, p3, v6
+    add-int/lit16 v7, v1, 0x10e
 
-    const/4 v8, 0x1
+    rem-int/lit16 v7, v7, 0x168
 
-    aget v9, p3, v8
+    sub-int v7, v0, v7
 
-    invoke-static {v7, v9}, Ljava/lang/Math;->min(FF)F
+    invoke-static {v7}, Ljava/lang/Math;->abs(I)I
 
     move-result v7
 
-    const/16 v9, 0xb4
+    const/4 v8, 0x0
 
-    const/16 v10, 0x10e
+    aget v9, p3, v8
 
-    const/16 v11, 0x5a
+    const/4 v10, 0x1
 
-    if-eq v0, v11, :cond_0
+    aget v11, p3, v10
 
-    if-ne v0, v10, :cond_1
+    invoke-static {v9, v11}, Ljava/lang/Math;->min(FF)F
+
+    move-result v9
+
+    const-string v11, "CameraUtil"
+
+    const/16 v12, 0x5a
+
+    const/16 v14, 0x10e
+
+    const/4 v15, 0x2
+
+    if-eq v7, v12, :cond_0
+
+    if-ne v7, v14, :cond_8
 
     :cond_0
-    if-eqz p0, :cond_1
+    const/4 v5, 0x5
 
-    move v12, v9
+    sget-object v13, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-array v12, v15, [Ljava/lang/Object;
+
+    invoke-static/range {p0 .. p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v16
+
+    aput-object v16, v12, v8
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v16
+
+    aput-object v16, v12, v10
+
+    const-string v15, "getAIWatermarkRange error:orientation=%d, jpegRotation=%d"
+
+    invoke-static {v13, v15, v12}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v5, v11, v12}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
+
+    if-ne v0, v1, :cond_1
+
+    if-eq v1, v14, :cond_2
+
+    const/16 v5, 0x5a
+
+    if-eq v1, v5, :cond_2
+
+    :cond_1
+    if-eq v0, v1, :cond_3
+
+    :cond_2
+    const/16 v5, 0xb4
+
+    const/16 v7, 0xb4
 
     goto :goto_0
 
-    :cond_1
-    move v12, v6
+    :cond_3
+    const/16 v5, 0xb4
 
     :goto_0
-    const/4 v13, 0x3
+    if-ne v1, v5, :cond_4
 
-    const/4 v14, 0x2
+    if-eqz v0, :cond_5
 
-    if-eq v12, v9, :cond_2
+    :cond_4
+    if-nez v1, :cond_6
 
-    .line 2
-    aget v9, p2, v8
+    if-ne v0, v5, :cond_6
 
-    int-to-float v9, v9
+    :cond_5
+    move v7, v8
 
-    aget v12, p3, v6
+    :cond_6
+    const/16 v5, 0x5a
 
-    mul-float/2addr v9, v12
+    if-ne v0, v5, :cond_8
 
-    float-to-double v10, v9
+    if-ne v1, v14, :cond_8
 
-    invoke-static {v10, v11}, Ljava/lang/Math;->ceil(D)D
+    invoke-static {}, Lcom/android/camera/CameraSettings;->getCameraId()I
 
-    move-result-wide v9
+    move-result v0
 
-    double-to-int v9, v9
+    if-nez v0, :cond_7
 
-    aput v9, v5, v6
-
-    .line 3
-    iget v9, v1, Landroid/graphics/Rect;->right:I
-
-    iget v10, v1, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v9, v10
-
-    aget v10, p2, v14
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    aget v10, p3, v8
-
-    mul-float/2addr v9, v10
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v9, v9
-
-    aput v9, v5, v8
-
-    .line 4
-    aget v9, p2, v13
-
-    aget v10, p2, v8
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    mul-float/2addr v9, v7
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v9, v9
-
-    aput v9, v5, v14
-
-    .line 5
-    aget v9, p2, v14
-
-    aget v10, p2, v6
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    mul-float/2addr v9, v7
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v7, v9
-
-    aput v7, v5, v13
+    move v7, v8
 
     goto :goto_1
 
-    .line 6
-    :cond_2
-    iget v9, v1, Landroid/graphics/Rect;->bottom:I
+    :cond_7
+    const/16 v7, 0xb4
 
-    iget v10, v1, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v9, v10
-
-    aget v10, p2, v13
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    aget v10, p3, v6
-
-    mul-float/2addr v9, v10
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v9, v9
-
-    aput v9, v5, v6
-
-    .line 7
-    aget v9, p2, v6
-
-    int-to-float v9, v9
-
-    aget v10, p3, v8
-
-    mul-float/2addr v9, v10
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v9, v9
-
-    aput v9, v5, v8
-
-    .line 8
-    aget v9, p2, v13
-
-    aget v10, p2, v8
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    mul-float/2addr v9, v7
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v9, v9
-
-    aput v9, v5, v14
-
-    .line 9
-    aget v9, p2, v14
-
-    aget v10, p2, v6
-
-    sub-int/2addr v9, v10
-
-    int-to-float v9, v9
-
-    mul-float/2addr v9, v7
-
-    float-to-double v9, v9
-
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v9
-
-    double-to-int v7, v9
-
-    aput v7, v5, v13
-
-    .line 10
+    :cond_8
     :goto_1
-    aget v7, p3, v6
+    const/4 v0, 0x3
 
-    aget v9, p3, v8
+    const/16 v5, 0xb4
 
-    sub-float/2addr v7, v9
+    if-eq v7, v5, :cond_9
 
-    const v9, 0x3ca3d70a    # 0.02f
+    aget v5, p2, v10
 
-    cmpl-float v7, v7, v9
+    int-to-float v5, v5
 
-    if-lez v7, :cond_3
+    aget v7, p3, v8
 
-    .line 11
+    mul-float/2addr v5, v7
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v8
+
+    iget v5, v2, Landroid/graphics/Rect;->right:I
+
+    iget v7, v2, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v5, v7
+
+    const/4 v7, 0x2
+
+    aget v12, p2, v7
+
+    sub-int/2addr v5, v12
+
+    int-to-float v5, v5
+
+    aget v7, p3, v10
+
+    mul-float/2addr v5, v7
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v10
+
+    aget v5, p2, v0
+
+    aget v7, p2, v10
+
+    sub-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v9
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    const/4 v7, 0x2
+
+    aput v5, v6, v7
+
+    aget v5, p2, v7
+
+    aget v7, p2, v8
+
+    sub-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v9
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v0
+
+    goto :goto_2
+
+    :cond_9
+    iget v5, v2, Landroid/graphics/Rect;->bottom:I
+
+    iget v7, v2, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v5, v7
+
+    aget v7, p2, v0
+
+    sub-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    aget v7, p3, v8
+
+    mul-float/2addr v5, v7
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v8
+
+    aget v5, p2, v8
+
+    int-to-float v5, v5
+
+    aget v7, p3, v10
+
+    mul-float/2addr v5, v7
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v10
+
+    aget v5, p2, v0
+
+    aget v7, p2, v10
+
+    sub-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v9
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    const/4 v7, 0x2
+
+    aput v5, v6, v7
+
+    aget v5, p2, v7
+
+    aget v7, p2, v8
+
+    sub-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, v9
+
+    float-to-double v12, v5
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v12
+
+    double-to-int v5, v12
+
+    aput v5, v6, v0
+
+    :goto_2
+    aget v5, p3, v8
+
+    aget v7, p3, v10
+
+    sub-float/2addr v5, v7
+
+    const v7, 0x3ca3d70a    # 0.02f
+
+    cmpl-float v5, v5, v7
+
+    if-lez v5, :cond_a
+
     invoke-static/range {p5 .. p6}, Ljava/lang/Math;->max(II)I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
 
     move-result v7
 
     int-to-float v7, v7
 
-    invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
-
-    move-result v9
-
-    int-to-float v9, v9
-
-    aget v10, p3, v8
-
-    mul-float/2addr v9, v10
-
-    sub-float/2addr v7, v9
-
-    const/high16 v9, 0x40000000    # 2.0f
-
-    div-float/2addr v7, v9
-
-    .line 12
-    aget v9, p2, v8
-
-    aget v10, p2, v13
-
-    add-int/2addr v9, v10
-
-    div-int/2addr v9, v14
-
-    iget v10, v1, Landroid/graphics/Rect;->top:I
-
-    iget v11, v1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr v10, v11
-
-    div-int/2addr v10, v14
-
-    sub-int/2addr v9, v10
-
-    .line 13
-    invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    div-int/2addr v1, v14
-
-    int-to-float v9, v9
-
-    int-to-float v1, v1
-
-    div-float/2addr v9, v1
-
-    .line 14
-    aget v1, v5, v6
+    aget v9, p3, v10
 
     mul-float/2addr v7, v9
 
-    float-to-int v7, v7
+    sub-float/2addr v5, v7
 
-    sub-int/2addr v1, v7
+    const/high16 v7, 0x40000000    # 2.0f
 
-    aput v1, v5, v6
+    div-float/2addr v5, v7
 
-    .line 15
-    :cond_3
-    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
+    aget v7, p2, v10
 
-    move-result v1
+    aget v9, p2, v0
 
-    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
+    add-int/2addr v7, v9
 
-    move-result v7
+    const/4 v9, 0x2
 
-    invoke-static {v1, v7}, Ljava/lang/Math;->max(II)I
+    div-int/2addr v7, v9
 
-    move-result v1
+    iget v12, v2, Landroid/graphics/Rect;->top:I
 
-    .line 16
-    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
+    iget v13, v2, Landroid/graphics/Rect;->bottom:I
 
-    move-result v7
+    add-int/2addr v12, v13
 
-    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
+    div-int/2addr v12, v9
 
-    move-result v9
+    sub-int/2addr v7, v12
 
-    invoke-static {v7, v9}, Ljava/lang/Math;->min(II)I
+    invoke-virtual/range {p4 .. p4}, Landroid/graphics/Rect;->height()I
 
-    move-result v7
+    move-result v2
 
-    int-to-float v1, v1
+    div-int/2addr v2, v9
 
     int-to-float v7, v7
 
-    div-float/2addr v1, v7
+    int-to-float v2, v2
 
-    .line 17
-    aget v7, v5, v14
+    div-float/2addr v7, v2
 
-    aget v9, v5, v13
+    aget v2, v6, v8
+
+    mul-float/2addr v5, v7
+
+    float-to-int v5, v5
+
+    sub-int/2addr v2, v5
+
+    aput v2, v6, v8
+
+    :cond_a
+    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v5
+
+    invoke-static {v2, v5}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v5
+
+    invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v7
+
+    invoke-static {v5, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    int-to-float v2, v2
+
+    int-to-float v5, v5
+
+    div-float/2addr v2, v5
+
+    const/4 v5, 0x2
+
+    aget v7, v6, v5
+
+    aget v9, v6, v0
 
     invoke-static {v7, v9}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
-    .line 18
-    aget v9, v5, v14
+    aget v9, v6, v5
 
-    aget v10, v5, v13
+    aget v5, v6, v0
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
+    invoke-static {v9, v5}, Ljava/lang/Math;->min(II)I
 
-    move-result v9
+    move-result v5
 
     int-to-float v7, v7
 
-    int-to-float v9, v9
+    int-to-float v5, v5
 
-    div-float/2addr v7, v9
+    div-float/2addr v7, v5
 
-    sub-float/2addr v1, v7
+    sub-float/2addr v2, v7
 
-    .line 19
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
-    move-result v1
+    move-result v2
 
-    const v7, 0x3e4ccccd    # 0.2f
+    const v5, 0x3e4ccccd    # 0.2f
 
-    cmpl-float v7, v1, v7
+    cmpl-float v5, v2, v5
 
-    if-lez v7, :cond_5
+    if-lez v5, :cond_d
 
-    .line 20
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "[AIWatermark] bitmap and range are not match gap is "
+    const-string v7, "[AIWatermark] bitmap and range are not match gap is "
 
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v7, "CameraUtil"
+    const/4 v5, 0x4
 
-    invoke-static {v4, v7, v1}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v11, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    const/16 v1, 0x5a
+    const/16 v2, 0x5a
 
-    if-eq v0, v1, :cond_4
+    if-eq v1, v2, :cond_b
 
-    const/16 v1, 0x10e
+    if-eq v1, v14, :cond_b
 
-    if-eq v0, v1, :cond_4
-
-    .line 21
     invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v0
-
-    int-to-float v0, v0
-
-    aget v1, p3, v6
-
-    aget v7, p3, v8
-
-    invoke-static {v1, v7}, Ljava/lang/Math;->min(FF)F
-
     move-result v1
 
-    mul-float/2addr v0, v1
+    int-to-float v1, v1
 
-    float-to-double v0, v0
+    aget v2, p3, v8
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    aget v5, p3, v10
 
-    move-result-wide v0
+    invoke-static {v2, v5}, Ljava/lang/Math;->min(FF)F
 
-    double-to-int v0, v0
+    move-result v2
 
-    aput v0, v5, v14
+    mul-float/2addr v1, v2
 
-    .line 22
+    float-to-double v1, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v1
+
+    double-to-int v1, v1
+
+    const/4 v2, 0x2
+
+    aput v1, v6, v2
+
     invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v0
-
-    int-to-float v0, v0
-
-    aget v1, p3, v6
-
-    aget v7, p3, v8
-
-    invoke-static {v1, v7}, Ljava/lang/Math;->min(FF)F
-
     move-result v1
 
-    mul-float/2addr v0, v1
+    int-to-float v1, v1
 
-    float-to-double v0, v0
+    aget v2, p3, v8
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    aget v5, p3, v10
 
-    move-result-wide v0
+    invoke-static {v2, v5}, Ljava/lang/Math;->min(FF)F
 
-    double-to-int v0, v0
+    move-result v2
 
-    aput v0, v5, v13
+    mul-float/2addr v1, v2
 
-    goto :goto_2
+    float-to-double v1, v1
 
-    .line 23
-    :cond_4
+    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v1
+
+    double-to-int v1, v1
+
+    aput v1, v6, v0
+
+    goto :goto_3
+
+    :cond_b
     invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v0
-
-    int-to-float v0, v0
-
-    aget v1, p3, v6
-
-    aget v7, p3, v8
-
-    invoke-static {v1, v7}, Ljava/lang/Math;->min(FF)F
-
     move-result v1
 
-    mul-float/2addr v0, v1
+    int-to-float v1, v1
 
-    float-to-double v0, v0
+    aget v2, p3, v8
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    aget v5, p3, v10
 
-    move-result-wide v0
+    invoke-static {v2, v5}, Ljava/lang/Math;->min(FF)F
 
-    double-to-int v0, v0
+    move-result v2
 
-    aput v0, v5, v14
+    mul-float/2addr v1, v2
 
-    .line 24
+    float-to-double v1, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v1
+
+    double-to-int v1, v1
+
+    const/4 v2, 0x2
+
+    aput v1, v6, v2
+
     invoke-virtual/range {p7 .. p7}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v0
-
-    int-to-float v0, v0
-
-    aget v1, p3, v6
-
-    aget v7, p3, v8
-
-    invoke-static {v1, v7}, Ljava/lang/Math;->min(FF)F
-
     move-result v1
 
-    mul-float/2addr v0, v1
+    int-to-float v1, v1
 
-    float-to-double v0, v0
+    aget v2, p3, v8
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    aget v5, p3, v10
 
-    move-result-wide v0
+    invoke-static {v2, v5}, Ljava/lang/Math;->min(FF)F
 
-    double-to-int v0, v0
+    move-result v2
 
-    aput v0, v5, v13
+    mul-float/2addr v1, v2
 
-    .line 25
-    :cond_5
-    :goto_2
-    aget v0, v5, v6
+    float-to-double v1, v1
 
-    invoke-static {v0, v6}, Ljava/lang/Math;->max(II)I
+    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
 
-    move-result v0
+    move-result-wide v1
 
-    aput v0, v5, v6
+    double-to-int v1, v1
 
-    .line 26
-    aget v0, v5, v8
+    aput v1, v6, v0
 
-    invoke-static {v0, v6}, Ljava/lang/Math;->max(II)I
+    :goto_3
+    aget v1, v6, v8
 
-    move-result v0
+    const/4 v2, 0x2
 
-    aput v0, v5, v8
+    aget v5, v6, v2
 
-    .line 27
-    aget v0, v5, v6
+    add-int/2addr v1, v5
 
-    aget v1, v5, v14
+    if-le v1, v4, :cond_c
 
-    add-int/2addr v0, v1
+    aget v1, v6, v2
 
-    if-le v0, v3, :cond_6
+    sub-int v1, v4, v1
 
-    .line 28
-    aget v0, v5, v14
+    aput v1, v6, v8
 
-    sub-int v0, v3, v0
+    :cond_c
+    aget v1, v6, v10
 
-    aput v0, v5, v6
+    aget v2, v6, v0
 
-    .line 29
-    :cond_6
-    aget v0, v5, v8
+    add-int/2addr v1, v2
 
-    aget v1, v5, v13
+    if-le v1, v3, :cond_d
 
-    add-int/2addr v0, v1
+    aget v1, v6, v0
 
-    if-le v0, v2, :cond_7
+    sub-int v1, v3, v1
 
-    .line 30
-    aget v0, v5, v13
+    aput v1, v6, v10
 
-    sub-int v0, v2, v0
+    :cond_d
+    aget v1, v6, v8
 
-    aput v0, v5, v8
+    const/4 v2, 0x2
 
-    .line 31
-    :cond_7
-    aget v0, v5, v6
+    div-int/2addr v1, v2
 
-    div-int/2addr v0, v14
+    mul-int/2addr v1, v2
 
-    mul-int/2addr v0, v14
+    aput v1, v6, v8
 
-    aput v0, v5, v6
+    aget v1, v6, v10
 
-    .line 32
-    aget v0, v5, v8
+    div-int/2addr v1, v2
 
-    div-int/2addr v0, v14
+    mul-int/2addr v1, v2
 
-    mul-int/2addr v0, v14
+    aput v1, v6, v10
 
-    aput v0, v5, v8
+    aget v1, v6, v2
 
-    .line 33
-    aget v0, v5, v14
+    const/4 v3, 0x4
 
-    div-int/2addr v0, v4
+    div-int/2addr v1, v3
 
-    mul-int/2addr v0, v4
+    mul-int/2addr v1, v3
 
-    aput v0, v5, v14
+    aput v1, v6, v2
 
-    .line 34
-    aget v0, v5, v13
+    aget v1, v6, v0
 
-    div-int/2addr v0, v4
+    div-int/2addr v1, v3
 
-    mul-int/2addr v0, v4
+    mul-int/2addr v1, v3
 
-    aput v0, v5, v13
+    aput v1, v6, v0
 
-    return-object v5
+    return-object v6
 .end method
 
 .method public static getAlgorithmPreviewSize(Ljava/util/List;DLcom/android/camera/CameraSize;)Lcom/android/camera/CameraSize;
@@ -8997,7 +10611,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -9006,7 +10619,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget v1, p3, Lcom/android/camera/CameraSize;->height:I
 
@@ -9022,7 +10634,6 @@
 
     move-result v1
 
-    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -9041,7 +10652,6 @@
 
     check-cast v2, Lcom/android/camera/CameraSize;
 
-    .line 4
     iget v3, v2, Lcom/android/camera/CameraSize;->width:I
 
     int-to-double v3, v3
@@ -9054,7 +10664,6 @@
 
     sub-double/2addr v3, p1
 
-    .line 5
     invoke-static {v3, v4}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v3
@@ -9067,7 +10676,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     iget v3, v2, Lcom/android/camera/CameraSize;->height:I
 
@@ -9075,7 +10683,6 @@
 
     move-object p3, v2
 
-    .line 7
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -9097,14 +10704,12 @@
 
     :cond_4
     :goto_1
-    const-string p0, "null preview size list"
+    const-string/jumbo p0, "null preview size list"
 
-    .line 8
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object p3
 
-    .line 9
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -9127,13 +10732,11 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
-    .line 4
     aget v2, p0, v1
 
     if-ne v2, p1, :cond_1
@@ -9165,7 +10768,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     array-length v1, p0
 
@@ -9178,7 +10780,6 @@
 
     aget-object v4, p0, v2
 
-    .line 2
     invoke-static {v4, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
@@ -9203,12 +10804,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-interface {p0, v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -9217,7 +10816,6 @@
 
     return p2
 
-    .line 3
     :cond_0
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -9231,7 +10829,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -9260,17 +10857,14 @@
 .method public static getBitmapData(Landroid/graphics/Bitmap;I)[B
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 2
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {p0, v1, p1, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -9281,7 +10875,6 @@
 .method public static getBitmapSize(Landroid/content/Context;I)Landroid/util/Size;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -9292,7 +10885,6 @@
 
     if-nez p0, :cond_0
 
-    .line 2
     new-instance p0, Landroid/util/Size;
 
     const/4 p1, 0x0
@@ -9301,21 +10893,17 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 5
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 6
     new-instance p0, Landroid/util/Size;
 
     invoke-direct {p0, p1, v0}, Landroid/util/Size;-><init>(II)V
@@ -9328,7 +10916,6 @@
 
     add-int/lit8 p1, p1, 0x4
 
-    .line 1
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
@@ -9337,11 +10924,9 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     aget-object p0, p0, p1
 
-    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -9382,7 +10967,6 @@
 .method public static getCallers(I)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -9391,7 +10975,6 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -9401,7 +10984,6 @@
     :goto_0
     if-ge v2, p0, :cond_0
 
-    .line 3
     invoke-static {v0, v2}, Lcom/android/camera/Util;->getCaller([Ljava/lang/StackTraceElement;I)Ljava/lang/String;
 
     move-result-object v3
@@ -9416,7 +10998,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -9428,7 +11009,6 @@
 .method public static getCameraPreviewRect()Landroid/graphics/Rect;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -9437,7 +11017,6 @@
 
     move-result v0
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object v1
@@ -9446,30 +11025,27 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->isNotchDevice()Z
+    invoke-static {}, Lcom/android/camera/Display;->isNotchDevice()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oooOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooO0o()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oooo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooOO0()Z
 
     move-result v0
 
@@ -9478,7 +11054,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 6
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
     :cond_1
@@ -9492,7 +11067,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 1
     array-length v1, p0
 
     const/16 v2, 0x19
@@ -9501,7 +11075,6 @@
 
     goto/16 :goto_3
 
-    .line 2
     :cond_0
     array-length v1, p0
 
@@ -9509,7 +11082,6 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 3
     aget-byte v1, p0, v1
 
     if-eqz v1, :cond_1
@@ -9519,7 +11091,6 @@
     :cond_1
     add-int/lit8 v1, v2, 0x1
 
-    .line 4
     aget-byte v2, p0, v2
 
     and-int/lit16 v2, v2, 0xff
@@ -9556,7 +11127,6 @@
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 5
     aget-byte v3, p0, v3
 
     and-int/lit16 v3, v3, 0xff
@@ -9589,7 +11159,6 @@
 
     or-int/2addr v2, v3
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v3
@@ -9600,22 +11169,19 @@
 
     const v4, 0x7f0702d4
 
-    .line 7
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
     const v5, 0x7f0702d3
 
-    .line 8
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     mul-int/2addr v4, v1
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v5
 
@@ -9625,8 +11191,7 @@
 
     int-to-float v3, v3
 
-    .line 10
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v5
 
@@ -9646,7 +11211,6 @@
 
     sub-int/2addr v2, p1
 
-    .line 11
     div-int/lit8 v2, v2, 0x2
 
     const/4 p2, 0x5
@@ -9666,7 +11230,6 @@
 
     sub-int v8, v1, v4
 
-    .line 12
     div-int/lit8 v8, v8, 0x2
 
     add-int/2addr v2, v8
@@ -9678,7 +11241,6 @@
 
     add-int/lit8 v9, v2, 0x1
 
-    .line 13
     aget-byte v2, p0, v2
 
     aget v10, v3, v2
@@ -9704,7 +11266,6 @@
     :goto_2
     if-ge v0, p2, :cond_5
 
-    .line 14
     aget p0, v3, v5
 
     aget p1, v3, v0
@@ -9729,21 +11290,18 @@
 .method public static getChildMeasureWidth(Landroid/view/View;)I
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 2
     iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     add-int/2addr v1, v0
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -9757,15 +11315,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
 
-    .line 5
     invoke-virtual {p0, v0, v0}, Landroid/view/View;->measure(II)V
 
-    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p0
@@ -9786,14 +11341,13 @@
 .method public static getCinematicAspectRatioMargin()I
     .locals 6
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
     int-to-double v0, v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v2
 
@@ -9821,12 +11375,11 @@
 .method public static getCinematicAspectWaterMarkRatio()F
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
@@ -9846,7 +11399,6 @@
 .method public static getCinematicMargin(I)I
     .locals 6
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/CameraSettings;->isCinematicAspectRatioEnabled(I)Z
 
     move-result p0
@@ -9855,7 +11407,6 @@
 
     const/4 p0, 0x1
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object v0
@@ -9864,7 +11415,6 @@
 
     move-result v0
 
-    .line 3
     invoke-static {p0}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object p0
@@ -9877,7 +11427,6 @@
 
     int-to-double v2, p0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
 
     move-result-wide v4
@@ -9904,7 +11453,6 @@
 .method public static getColorMapXmlMapFile()Ljava/io/File;
     .locals 3
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const-string v1, "CameraUtil"
@@ -9913,14 +11461,12 @@
 
     if-lt v0, v2, :cond_2
 
-    .line 2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Oooo00o:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Oooo00o:Z
 
     if-eqz v0, :cond_0
 
     const-string/jumbo v0, "ro.boot.hwc"
 
-    .line 3
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -9933,7 +11479,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/io/File;
 
     const-string v2, "/vendor/etc/screen_light_ind.xml"
@@ -9942,7 +11487,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -9950,7 +11494,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6
     :goto_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -9963,10 +11506,8 @@
     :cond_1
     const-string/jumbo v0, "screen_light.xml do not found under /vendor/etc, roll back to /system/etc"
 
-    .line 7
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_2
     new-instance v0, Ljava/io/File;
 
@@ -9974,7 +11515,6 @@
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 9
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -9986,7 +11526,6 @@
     :cond_3
     const-string/jumbo v0, "screen_light.xml do not found under /system/etc"
 
-    .line 10
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -10001,7 +11540,6 @@
 
     if-eqz p0, :cond_4
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -10010,13 +11548,11 @@
 
     goto :goto_6
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -10034,7 +11570,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -10043,7 +11578,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 5
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
@@ -10052,7 +11586,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
@@ -10090,7 +11623,6 @@
     :catch_2
     move-exception p0
 
-    .line 7
     :goto_1
     :try_start_3
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -10099,7 +11631,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -10110,7 +11641,6 @@
     :catch_3
     move-exception p0
 
-    .line 9
     :goto_2
     :try_start_5
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -10119,7 +11649,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 10
     :try_start_6
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -10130,10 +11659,8 @@
     :catch_4
     move-exception p0
 
-    .line 11
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 12
     :cond_2
     :goto_3
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -10145,7 +11672,6 @@
     :goto_4
     if-eqz v0, :cond_3
 
-    .line 13
     :try_start_7
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -10156,10 +11682,8 @@
     :catch_5
     move-exception v0
 
-    .line 14
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 15
     :cond_3
     :goto_5
     throw p0
@@ -10172,14 +11696,12 @@
 .method public static getDebugInfo()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string/jumbo v1, "persist.camera.debug.show_af"
 
-    .line 2
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10194,7 +11716,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.enable"
 
-    .line 3
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10208,7 +11729,6 @@
     :cond_0
     const-string/jumbo v1, "persist.camera.debug.param0"
 
-    .line 4
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10217,7 +11737,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param1"
 
-    .line 5
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10226,7 +11745,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param2"
 
-    .line 6
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10235,7 +11753,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param3"
 
-    .line 7
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10244,7 +11761,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param4"
 
-    .line 8
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10253,7 +11769,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param5"
 
-    .line 9
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10262,7 +11777,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param6"
 
-    .line 10
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10271,7 +11785,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param7"
 
-    .line 11
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10280,7 +11793,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param8"
 
-    .line 12
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10289,7 +11801,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param9"
 
-    .line 13
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10299,7 +11810,6 @@
     :cond_1
     const-string/jumbo v1, "persist.camera.debug.show_awb"
 
-    .line 14
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10312,7 +11822,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param10"
 
-    .line 15
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10321,7 +11830,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param11"
 
-    .line 16
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10330,7 +11838,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param12"
 
-    .line 17
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10339,7 +11846,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param13"
 
-    .line 18
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10348,7 +11854,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param14"
 
-    .line 19
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10357,7 +11862,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param15"
 
-    .line 20
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10366,7 +11870,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param16"
 
-    .line 21
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10375,7 +11878,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param17"
 
-    .line 22
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10384,7 +11886,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param18"
 
-    .line 23
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10393,7 +11894,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param19"
 
-    .line 24
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10403,7 +11903,6 @@
     :cond_2
     const-string/jumbo v1, "persist.camera.debug.show_aec"
 
-    .line 25
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10416,7 +11915,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param20"
 
-    .line 26
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10425,7 +11923,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param21"
 
-    .line 27
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10434,7 +11931,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param22"
 
-    .line 28
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10443,7 +11939,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param23"
 
-    .line 29
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10452,7 +11947,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param24"
 
-    .line 30
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10461,7 +11955,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param25"
 
-    .line 31
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10470,7 +11963,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param26"
 
-    .line 32
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10479,7 +11971,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param27"
 
-    .line 33
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10488,7 +11979,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param28"
 
-    .line 34
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10497,7 +11987,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.param29"
 
-    .line 35
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10507,7 +11996,6 @@
     :cond_3
     const-string/jumbo v1, "persist.camera.debug.checkerf"
 
-    .line 36
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10516,7 +12004,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.fc"
 
-    .line 37
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10525,7 +12012,6 @@
 
     const-string/jumbo v1, "persist.camera.debug.hht"
 
-    .line 38
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10538,7 +12024,6 @@
 
     const-string v1, "camera.debug.hht.luma"
 
-    .line 39
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10548,7 +12033,6 @@
     :cond_4
     const-string/jumbo v1, "persist.camera.debug.autoscene"
 
-    .line 40
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10561,14 +12045,12 @@
 
     const-string v1, "camera.debug.hht.iso"
 
-    .line 41
     invoke-static {v1}, Lcom/android/camera/Util;->addProperties(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 42
     :cond_5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -10578,26 +12060,22 @@
 .end method
 
 .method public static getDebugInformation(Landroid/hardware/camera2/CaptureResult;Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
+    .locals 8
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getAECFrameControl(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/AECFrameControl;
 
     move-result-object v1
 
-    .line 3
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getAFFrameControl(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/AFFrameControl;
 
     move-result-object v2
 
     const-string v3, "camera.preview.debug.show_shortGain"
 
-    .line 4
     invoke-static {v3}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -10614,14 +12092,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -10655,7 +12131,6 @@
     :cond_0
     const-string v3, "camera.preview.debug.show_adrcGain"
 
-    .line 7
     invoke-static {v3}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -10664,106 +12139,63 @@
 
     move-result v3
 
-    const/4 v6, 0x2
+    if-eqz v3, :cond_1
 
-    if-eqz v3, :cond_2
+    if-eqz v1, :cond_1
 
-    if-eqz v1, :cond_2
-
-    .line 8
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v3
 
-    if-eqz v3, :cond_2
-
-    .line 9
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getCompenADRCGain()F
-
-    move-result v3
-
-    const/4 v7, 0x0
-
-    cmpl-float v3, v3, v7
-
-    const-string v7, "adrc gain : "
-
     if-eqz v3, :cond_1
 
-    .line 10
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "adrc gain : "
 
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getCompenADRCGain()F
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v7
+    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    move-result-object v6
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v7, 0x2
 
-    move-result-object v3
+    aget-object v6, v6, v7
 
-    invoke-static {v3}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->getSensitivity()F
 
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    .line 11
-    :cond_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v6
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v7
 
-    aget-object v7, v7, v6
+    aget-object v7, v7, v5
 
     invoke-virtual {v7}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->getSensitivity()F
 
     move-result v7
 
-    .line 12
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
+    div-float/2addr v6, v7
 
-    move-result-object v8
-
-    aget-object v8, v8, v5
-
-    invoke-virtual {v8}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->getSensitivity()F
-
-    move-result v8
-
-    div-float/2addr v7, v8
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 13
     invoke-static {v3}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    :goto_0
+    :cond_1
     const-string v3, "camera.preview.debug.show_afRegion"
 
-    .line 14
     invoke-static {v3}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -10772,9 +12204,8 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
-    .line 15
     sget-object v3, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, v3}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -10783,16 +12214,15 @@
 
     check-cast v3, [Landroid/hardware/camera2/params/MeteringRectangle;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
-    .line 16
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "af region : "
+    const-string v7, "af region : "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     aget-object v3, v3, v5
 
@@ -10804,9 +12234,9 @@
 
     move-result-object v3
 
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -10816,10 +12246,9 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
+    :cond_2
     const-string v3, "camera.preview.debug.show_exposureTime"
 
-    .line 17
     invoke-static {v3}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -10828,18 +12257,16 @@
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    .line 18
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
-    .line 19
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v1
@@ -10848,22 +12275,21 @@
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->getExposureTime()J
 
-    move-result-wide v7
+    move-result-wide v6
 
-    long-to-float v1, v7
+    long-to-float v1, v6
 
     const v3, 0x4e6e6b28    # 1.0E9f
 
     div-float/2addr v1, v3
 
-    .line 20
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "exposure time : "
+    const-string v6, "exposure time : "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -10881,10 +12307,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
+    :cond_3
     const-string v1, "camera.preview.debug.show_afMode"
 
-    .line 21
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10893,9 +12318,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 22
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10922,10 +12346,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_5
+    :cond_4
     const-string v1, "camera.preview.debug.show_afStatus"
 
-    .line 23
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10934,9 +12357,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
-    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10963,10 +12385,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_6
+    :cond_5
     const-string v1, "camera.preview.debug.show_afLensPosition"
 
-    .line 25
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -10975,29 +12396,27 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_7
 
-    .line 26
     invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getUseDACValue()I
 
     move-result v1
 
     const-string v3, ""
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_6
 
-    .line 27
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getTargetLensPosition()I
 
-    move-result v7
+    move-result v6
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11005,15 +12424,14 @@
 
     move-result-object v3
 
-    .line 28
-    :cond_7
+    :cond_6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "af lens position : "
+    const-string v6, "af lens position : "
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11027,10 +12445,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_8
+    :cond_7
     const-string v1, "camera.preview.debug.show_distance"
 
-    .line 29
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -11039,18 +12456,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_8
 
-    .line 30
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_8
 
-    .line 31
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p0, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -11063,14 +12478,13 @@
 
     move-result v1
 
-    .line 32
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "distance : "
+    const-string v6, "distance : "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -11084,20 +12498,19 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 33
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "distance(m) : "
+    const-string v6, "distance(m) : "
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v7, 0x3f800000    # 1.0f
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    div-float/2addr v7, v1
+    div-float/2addr v6, v1
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -11109,10 +12522,101 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_9
+    :cond_8
     const-string v1, "camera.preview.debug.show_gyro"
 
-    .line 34
+    invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    if-eqz v2, :cond_9
+
+    :goto_0
+    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getSampleCount()I
+
+    move-result v1
+
+    if-ge v5, v1, :cond_9
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "gyro : x: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityX()[F
+
+    move-result-object v3
+
+    aget v3, v3, v5
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", y: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityY()[F
+
+    move-result-object v3
+
+    aget v3, v3, v5
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", z: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityZ()[F
+
+    move-result-object v3
+
+    aget v3, v3, v5
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_9
+    const-string v1, "camera.preview.debug.sat_info"
+
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -11123,115 +12627,12 @@
 
     if-eqz v1, :cond_a
 
-    if-eqz v2, :cond_a
-
-    move v1, v5
-
-    .line 35
-    :goto_1
-    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getSampleCount()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_a
-
-    .line 36
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "gyro : x: "
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 37
-    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityX()[F
-
-    move-result-object v7
-
-    aget v7, v7, v1
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v7, ", y: "
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 38
-    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityY()[F
-
-    move-result-object v7
-
-    aget v7, v7, v1
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v7, ", z: "
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 39
-    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/AFFrameControl;->getAFGyroData()Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/camera2/vendortag/struct/AFFrameControl$AFGyroData;->getpAngularVelocityZ()[F
-
-    move-result-object v7
-
-    aget v7, v7, v1
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 40
-    invoke-static {v3}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_a
-    const-string v1, "camera.preview.debug.sat_info"
-
-    .line 41
-    invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    .line 42
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getSatDbgInfo(Landroid/hardware/camera2/CaptureResult;)[B
 
     move-result-object v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_a
 
-    .line 43
     new-instance v2, Ljava/lang/String;
 
     invoke-direct {v2, v1}, Ljava/lang/String;-><init>([B)V
@@ -11242,10 +12643,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_b
+    :cond_a
     const-string v1, "camera.preview.debug.xp_content"
 
-    .line 44
     invoke-static {v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -11254,35 +12654,31 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_c
 
-    .line 45
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getExifValues(Landroid/hardware/camera2/CaptureResult;)[B
 
     move-result-object v1
 
     const-string v2, "exifInfoString"
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_b
 
-    .line 46
     array-length v3, v1
 
-    if-lez v3, :cond_c
+    if-lez v3, :cond_b
 
-    .line 47
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v1}, Ljava/lang/String;-><init>([B)V
 
-    .line 48
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "exifString:"
+    const-string v5, "exifString:"
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -11292,13 +12688,11 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_c
-    if-eqz p1, :cond_d
+    :cond_b
+    if-eqz p1, :cond_c
 
-    .line 50
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11315,13 +12709,11 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_d
+    :cond_c
     const-string p1, "camera.preview.debug.motionVelocity"
 
-    .line 52
     invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -11330,16 +12722,14 @@
 
     move-result p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_d
 
-    .line 53
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getMiMotionVelocity(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/MiMotionVelocity;
 
     move-result-object p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_d
 
-    .line 54
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/struct/MiMotionVelocity;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -11348,7 +12738,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11373,7 +12762,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11396,10 +12784,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_e
+    :cond_d
     const-string p1, "camera.preview.debug.awb_cct"
 
-    .line 57
     invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -11408,16 +12795,14 @@
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_e
 
-    .line 58
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getAwbCct(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_e
 
-    .line 59
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11436,7 +12821,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11457,10 +12841,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_f
+    :cond_e
     const-string p1, "camera.preview.debug.aec_lux"
 
-    .line 61
     invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -11469,14 +12852,12 @@
 
     move-result p1
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_f
 
-    .line 62
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getAecLux(Landroid/hardware/camera2/CaptureResult;)F
 
     move-result p1
 
-    .line 63
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11495,7 +12876,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11516,10 +12896,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_10
+    :cond_f
     const-string p1, "camera.preview.debug.laser_dist"
 
-    .line 65
     invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -11528,16 +12907,14 @@
 
     move-result p1
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_10
 
-    .line 66
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getLaserDist(Landroid/hardware/camera2/CaptureResult;)[B
 
     move-result-object p1
 
-    if-eqz p1, :cond_11
+    if-eqz p1, :cond_10
 
-    .line 67
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11560,7 +12937,6 @@
 
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11583,10 +12959,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_11
+    :cond_10
     const-string p1, "camera.preview.debug.show_miAiTof"
 
-    .line 69
     invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -11595,288 +12970,41 @@
 
     move-result p1
 
-    if-eqz p1, :cond_12
+    if-eqz p1, :cond_11
 
-    .line 70
     invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getMiAiTof(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Byte;
 
-    move-result-object p1
+    move-result-object p0
 
-    if-eqz p1, :cond_12
+    if-eqz p0, :cond_11
 
-    .line 71
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "miAiTof :"
+    const-string v1, "miAiTof :"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "miAiTof "
-
-    invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 72
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "miAiTof "
 
-    move-result-object p1
+    invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    :cond_12
-    const-string p1, "camera.preview.debug.show_timestamp"
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 73
-    invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_13
-
-    .line 74
-    new-instance p1, Ljava/text/SimpleDateFormat;
-
-    sget-object v1, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
-
-    const-string/jumbo v2, "yyyy/MM/dd HH:mm:ss.SSS"
-
-    invoke-direct {p1, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    new-instance v1, Ljava/util/Date;
-
-    invoke-direct {v1}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {p1, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 75
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "timeStamp :"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string/jumbo v3, "timeStamp "
-
-    invoke-static {v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 76
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_13
-    const-string p1, "camera.preview.debug.show_hdrTrigger"
-
-    .line 77
-    invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_14
-
-    .line 78
-    invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getHdrDetectedScene(Landroid/hardware/camera2/CaptureResult;)I
-
-    move-result p1
-
-    .line 79
-    invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->getHdrCheckerValues(Landroid/hardware/camera2/CaptureResult;)[B
-
-    move-result-object v1
-
-    .line 80
-    new-instance v2, Lcom/android/camera2/vendortag/struct/HdrEvValue;
-
-    invoke-direct {v2, v1}, Lcom/android/camera2/vendortag/struct/HdrEvValue;-><init>([B)V
-
-    .line 81
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "HDR:"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", EV:"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Lcom/android/camera2/vendortag/struct/HdrEvValue;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_14
-    const-string p1, "camera.preview.debug.show_nightTrigger"
-
-    .line 82
-    invoke-static {p1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_19
-
-    .line 83
-    sget-object p1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->NON_SEMANTIC_SCENE:Lcom/android/camera2/vendortag/VendorTag;
-
-    .line 84
-    invoke-static {p0, p1}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;
-
-    const-string/jumbo v1, "off"
-
-    if-eqz p1, :cond_17
-
-    .line 85
-    array-length v2, p1
-
-    if-lez v2, :cond_17
-
-    .line 86
-    array-length v2, p1
-
-    :goto_2
-    if-ge v5, v2, :cond_17
-
-    aget-object v3, p1, v5
-
-    .line 87
-    iget v4, v3, Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;->type:I
-
-    const/4 v7, 0x3
-
-    if-ne v4, v7, :cond_16
-
-    .line 88
-    iget p1, v3, Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;->value:I
-
-    shr-int/lit8 p1, p1, 0x8
-
-    const/4 v2, 0x1
-
-    if-ne p1, v2, :cond_15
-
-    const-string p1, "SE"
-
-    goto :goto_3
-
-    :cond_15
-    if-ne p1, v6, :cond_17
-
-    const-string p1, "ELL"
-
-    goto :goto_3
-
-    :cond_16
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_2
-
-    :cond_17
-    move-object p1, v1
-
-    .line 89
-    :goto_3
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_18
-
-    .line 90
-    invoke-static {p0}, Lcom/android/camera2/CaptureResultParser;->isLLSNeeded(Landroid/hardware/camera2/CaptureResult;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_18
-
-    const-string p1, "LLS"
-
-    .line 91
-    :cond_18
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "night-mode:"
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -11886,8 +13014,72 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 92
-    :cond_19
+    :cond_11
+    const-string p0, "camera.preview.debug.show_timestamp"
+
+    invoke-static {p0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_12
+
+    new-instance p0, Ljava/text/SimpleDateFormat;
+
+    sget-object p1, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
+
+    const-string/jumbo v1, "yyyy/MM/dd HH:mm:ss.SSS"
+
+    invoke-direct {p0, v1, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    new-instance p1, Ljava/util/Date;
+
+    invoke-direct {p1}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p0, p1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "timeStamp :"
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string/jumbo v2, "timeStamp "
+
+    invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/camera/Util;->addDebugInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_12
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -11898,23 +13090,21 @@
 .method public static getDefaultWatermarkFileName()Ljava/lang/String;
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v0
 
@@ -11956,7 +13146,6 @@
 .method public static getDeviceFrontWatermark(IIILcom/android/camera/effect/renders/DeviceWatermarkParam;)Lcom/android/camera/effect/renders/WaterMark;
     .locals 10
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -11971,20 +13160,17 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->generateFrontWatermark2File()Landroid/graphics/Bitmap;
 
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -11992,7 +13178,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5
     :try_start_1
     invoke-static {v2}, Lmiuix/core/util/IOUtils;->toByteArray(Ljava/io/InputStream;)[B
 
@@ -12000,7 +13185,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -12016,7 +13200,6 @@
     :catchall_0
     move-exception v0
 
-    .line 7
     :try_start_3
     throw v0
     :try_end_3
@@ -12025,7 +13208,6 @@
     :catchall_1
     move-exception v3
 
-    .line 8
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -12054,7 +13236,6 @@
 
     const-string v4, "Failed to load front camera water mark"
 
-    .line 9
     invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
@@ -12062,7 +13243,6 @@
 
     const/4 v2, 0x0
 
-    .line 10
     array-length v3, v0
 
     invoke-static {v0, v2, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
@@ -12071,10 +13251,8 @@
 
     if-eqz v5, :cond_1
 
-    .line 11
     new-instance v0, Lcom/android/camera/effect/renders/ImageWaterMark;
 
-    .line 12
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->isCinematicAspectRatio()Z
 
     move-result v9
@@ -12098,23 +13276,21 @@
 .method public static getDeviceWatermark(IIILcom/android/camera/effect/renders/DeviceWatermarkParam;)Lcom/android/camera/effect/renders/WaterMark;
     .locals 10
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0Oo0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0oO0O0o()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v0
 
@@ -12122,7 +13298,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualCameraWaterMarkFilePathVendor()Ljava/lang/String;
 
@@ -12130,14 +13305,12 @@
 
     goto :goto_3
 
-    .line 4
     :cond_1
     :goto_0
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->isCinematicAspectRatio()Z
 
     move-result v0
 
-    .line 5
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->isFrontWatermarkEnable()Z
 
     move-result v1
@@ -12148,7 +13321,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     sget-object v1, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
     goto :goto_1
@@ -12160,19 +13332,16 @@
 
     if-ne p2, v2, :cond_4
 
-    .line 7
     :cond_3
     sget-object v1, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 8
     :cond_4
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 9
     :goto_1
     new-instance v4, Ljava/io/File;
 
@@ -12186,17 +13355,14 @@
 
     invoke-direct {v4, v5, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 11
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 12
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -12209,13 +13375,11 @@
 
     if-ne p2, v2, :cond_6
 
-    .line 13
     :cond_5
     invoke-static {}, Lcom/android/camera/Util;->generateCinematicRatioWatermark2File()Landroid/graphics/Bitmap;
 
     goto :goto_2
 
-    .line 14
     :cond_6
     invoke-static {}, Lcom/android/camera/Util;->generateMainWatermark2File()Landroid/graphics/Bitmap;
 
@@ -12226,7 +13390,6 @@
     :goto_3
     const/4 v1, 0x0
 
-    .line 15
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -12234,7 +13397,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 16
     :try_start_1
     invoke-static {v2}, Lmiuix/core/util/IOUtils;->toByteArray(Ljava/io/InputStream;)[B
 
@@ -12242,7 +13404,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 17
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -12258,7 +13419,6 @@
     :catchall_0
     move-exception v0
 
-    .line 18
     :try_start_3
     throw v0
     :try_end_3
@@ -12267,7 +13427,6 @@
     :catchall_1
     move-exception v3
 
-    .line 19
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -12296,7 +13455,6 @@
 
     const-string v4, "Failed to load dual camera water mark"
 
-    .line 20
     invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_6
@@ -12304,7 +13462,6 @@
 
     const/4 v2, 0x0
 
-    .line 21
     array-length v3, v0
 
     invoke-static {v0, v2, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
@@ -12313,10 +13470,8 @@
 
     if-eqz v5, :cond_8
 
-    .line 22
     new-instance v0, Lcom/android/camera/effect/renders/ImageWaterMark;
 
-    .line 23
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->isCinematicAspectRatio()Z
 
     move-result v9
@@ -12340,7 +13495,6 @@
 .method public static getDisplayOrientation(II)I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -12351,12 +13505,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getSensorOrientation()I
 
     move-result v0
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
     move-result p1
@@ -12365,12 +13517,10 @@
 
     add-int/2addr v0, p0
 
-    .line 4
     rem-int/lit16 v0, v0, 0x168
 
     rsub-int p0, v0, 0x168
 
-    .line 5
     rem-int/lit16 p0, p0, 0x168
 
     goto :goto_0
@@ -12380,7 +13530,6 @@
 
     add-int/lit16 v0, v0, 0x168
 
-    .line 6
     rem-int/lit16 p0, v0, 0x168
 
     :goto_0
@@ -12395,7 +13544,6 @@
 .method public static getDisplayRect()Landroid/graphics/Rect;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -12404,7 +13552,6 @@
 
     move-result v0
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object v0
@@ -12415,8 +13562,7 @@
 .method public static getDisplayRect(I)Landroid/graphics/Rect;
     .locals 0
 
-    .line 3
-    invoke-static {p0}, Lcom/android/camera/display/Display;->getDisplayRect(I)Landroid/graphics/Rect;
+    invoke-static {p0}, Lcom/android/camera/Display;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object p0
 
@@ -12426,8 +13572,7 @@
 .method public static getDisplayRotation(Landroid/app/Activity;)I
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOo0O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOo0O()Z
 
     move-result v0
 
@@ -12443,7 +13588,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getRequestedOrientation()I
 
     move-result v0
@@ -12452,7 +13596,6 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object p0
@@ -12467,7 +13610,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     sget p0, Lcom/android/camera/Util;->mLockedOrientation:I
 
@@ -12482,7 +13624,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     :goto_0
     sget p0, Lcom/android/camera/Util;->mLockedOrientation:I
@@ -12519,7 +13660,6 @@
 .method public static getDumpCropFrontZoomRatio()Ljava/lang/Float;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->sDumpCropFrontZoomRatio:Ljava/lang/Float;
 
     if-nez v0, :cond_0
@@ -12528,7 +13668,6 @@
 
     const-string v1, "camera.debug.cropFrontZoomRatio"
 
-    .line 2
     invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->getFloat(Ljava/lang/String;F)F
 
     move-result v0
@@ -12539,7 +13678,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->sDumpCropFrontZoomRatio:Ljava/lang/Float;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->sDumpCropFrontZoomRatio:Ljava/lang/Float;
 
@@ -12551,14 +13689,12 @@
 
     const-string v0, "CameraUtil"
 
-    .line 15
     new-instance v1, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
     const-wide/16 v2, 0x0
 
-    .line 16
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -12568,12 +13704,10 @@
 
     const/16 v4, 0x9
 
-    .line 17
     invoke-virtual {v1, v4}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 18
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -12600,7 +13734,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_0
     invoke-static {v4}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -12609,7 +13742,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
     :goto_0
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
 
@@ -12626,12 +13758,10 @@
     :try_start_1
     const-string v4, "IllegalArgumentException"
 
-    .line 21
     invoke-static {v0, v4, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 22
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
 
     return-wide v2
@@ -12647,25 +13777,21 @@
 
     const-string v0, "CameraUtil"
 
-    .line 7
     new-instance v1, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
     const-wide/16 v2, 0x0
 
-    .line 8
     :try_start_0
     invoke-virtual {v1, p0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/io/FileDescriptor;)V
 
     const/16 p0, 0x9
 
-    .line 9
     invoke-virtual {v1, p0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 10
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -12686,7 +13812,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -12695,7 +13820,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     :goto_0
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
 
@@ -12712,12 +13836,10 @@
     :try_start_1
     const-string v4, "IllegalArgumentException"
 
-    .line 13
     invoke-static {v0, v4, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 14
     invoke-virtual {v1}, Landroid/media/MediaMetadataRetriever;->release()V
 
     return-wide v2
@@ -12731,18 +13853,15 @@
 .method public static getDuration(Ljava/lang/String;)J
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p0}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
     const/16 p0, 0x9
 
-    .line 3
     invoke-virtual {v0, p0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object p0
@@ -12754,7 +13873,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     invoke-virtual {v0}, Landroid/media/MediaMetadataRetriever;->release()V
 
     return-wide v1
@@ -12772,12 +13890,10 @@
 
     const-string v2, "getDuration Exception"
 
-    .line 5
     invoke-static {v1, v2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     invoke-virtual {v0}, Landroid/media/MediaMetadataRetriever;->release()V
 
     const-wide/16 v0, 0x0
@@ -12803,7 +13919,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/compat/common/UserHandleCompat;->myUserId()I
 
     move-result v0
@@ -12828,49 +13943,41 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
     const-string v0, "enabled_accessibility_services"
 
-    .line 3
     invoke-static {p0, v0, p1}, Lcom/xiaomi/compat/settings/SettingsCompat$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 4
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
     :cond_0
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    .line 7
     new-instance v0, Landroid/text/TextUtils$SimpleStringSplitter;
 
     const/16 v1, 0x3a
 
     invoke-direct {v0, v1}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 8
     invoke-interface {v0, p0}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 9
     invoke-interface {v0}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -12889,14 +13996,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 10
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -12908,14 +14013,12 @@
 .method public static getEnglishDecimalFormat()Landroid/icu/text/DecimalFormat;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/icu/text/DecimalFormat;
 
     const-string v1, "0.0"
 
     invoke-direct {v0, v1}, Landroid/icu/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Landroid/icu/text/DecimalFormatSymbols;
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -12924,10 +14027,8 @@
 
     const/16 v2, 0x2e
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/icu/text/DecimalFormatSymbols;->setDecimalSeparator(C)V
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/icu/text/DecimalFormat;->setDecimalFormatSymbols(Landroid/icu/text/DecimalFormatSymbols;)V
 
     return-object v0
@@ -12940,7 +14041,6 @@
 
     const-wide/16 v1, 0x1f4
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/util/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -12951,12 +14051,10 @@
 .method public static getExif(Ljava/lang/String;)Lcom/android/gallery3d/exif/ExifInterface;
     .locals 2
 
-    .line 4
     new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 5
     :try_start_0
     invoke-virtual {v0, p0}, Lcom/android/gallery3d/exif/ExifInterface;->readExif(Ljava/lang/String;)V
     :try_end_0
@@ -12967,7 +14065,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -12983,12 +14080,10 @@
 .method public static getExif([B)Lcom/android/gallery3d/exif/ExifInterface;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p0}, Lcom/android/gallery3d/exif/ExifInterface;->readExif([B)V
     :try_end_0
@@ -12999,7 +14094,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -13019,7 +14113,6 @@
 
     const-wide/16 v1, 0x1f4
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/util/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -13032,7 +14125,6 @@
 
     const-string/jumbo v0, "vendor/camera/fonts/FZMiaoWuJW.ttf"
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/Util;->getTypefaceFromFile(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -13043,7 +14135,6 @@
 .method public static getFileTitleFromPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -13057,14 +14148,12 @@
     :cond_0
     const-string v0, "/"
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v0
 
     if-ltz v0, :cond_4
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -13078,12 +14167,10 @@
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 5
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -13095,7 +14182,6 @@
     :cond_2
     const-string v0, "."
 
-    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -13107,7 +14193,6 @@
     :cond_3
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -13123,12 +14208,10 @@
 .method public static getFilesState(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -13153,7 +14236,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     :cond_0
     :goto_0
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -13170,12 +14252,10 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13198,7 +14278,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13221,7 +14300,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13244,7 +14322,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -13267,21 +14344,18 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 9
     invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 10
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p0
 
     goto/16 :goto_0
 
-    .line 11
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -13293,33 +14367,28 @@
 .method public static getFirstPlane(Landroid/media/Image;)[B
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p0
 
-    .line 2
     array-length v0, p0
 
     if-lez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     aget-object p0, p0, v0
 
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 5
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -13337,7 +14406,6 @@
 
     const-wide/16 v1, 0x190
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/util/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -13348,7 +14416,6 @@
 .method public static getHeader2Int(Ljava/io/File;I)I
     .locals 3
 
-    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -13360,16 +14427,12 @@
 
     int-to-long v1, p1
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Ljava/io/FileInputStream;->skip(J)J
 
-    .line 3
     invoke-virtual {v0, p0}, Ljava/io/FileInputStream;->read([B)I
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
-    .line 5
     invoke-static {p0}, Lcom/android/camera/Util;->fromByteArray([B)I
 
     move-result p0
@@ -13381,7 +14444,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -13390,16 +14452,61 @@
 .end method
 
 .method public static getJpegRotation(II)I
-    .locals 1
+    .locals 2
 
-    const/16 v0, 0x5a
+    invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
-    .line 1
-    invoke-static {p0, p1, v0}, Lcom/android/camera/Util;->getRotation(III)I
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getCapabilities(I)Lcom/android/camera2/CameraCapabilities;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getSensorOrientation()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-eq p1, v1, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
     move-result p0
 
-    return p0
+    if-nez p0, :cond_0
+
+    sub-int/2addr v0, p1
+
+    add-int/lit16 v0, v0, 0x168
+
+    rem-int/lit16 v0, v0, 0x168
+
+    goto :goto_0
+
+    :cond_0
+    add-int/2addr v0, p1
+
+    rem-int/lit16 v0, v0, 0x168
+
+    goto :goto_0
+
+    :cond_1
+    const-string p0, "CameraUtil"
+
+    const-string p1, "getJpegRotation: orientation UNKNOWN!!! return sensorOrientation..."
+
+    invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v0, 0x5a
+
+    :goto_0
+    return v0
 .end method
 
 .method public static getLength(Ljava/lang/String;)I
@@ -13407,7 +14514,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -13416,7 +14522,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -13440,34 +14545,28 @@
 
     new-array v0, v0, [I
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
     const/4 v1, 0x0
 
-    .line 2
     aget v1, v0, v1
 
     const/4 v2, 0x1
 
-    .line 3
     aget v0, v0, v2
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
     add-int/2addr v2, v1
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p0
 
     add-int/2addr p0, v0
 
-    .line 6
     new-instance v3, Landroid/graphics/RectF;
 
     int-to-float v1, v1
@@ -13486,14 +14585,12 @@
 .method public static getMakeUpRecyclerViewContentWidth(I)I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -13504,7 +14601,6 @@
 
     move-result v1
 
-    .line 3
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -13525,44 +14621,12 @@
 
     return v1
 
-    .line 4
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p0
 
     return p0
-.end method
-
-.method public static getMaxZoomRatio()F
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object v0
-
-    const/16 v1, 0xaa
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ZoomProtocol;
-
-    if-nez v0, :cond_0
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    return v0
-
-    .line 2
-    :cond_0
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$ZoomProtocol;->getMaxZoomRatio()F
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public static getMemInfo()Ljava/util/HashMap;
@@ -13577,7 +14641,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     const/4 v1, 0x2
@@ -13600,12 +14663,10 @@
 
     const-string v7, "cat /proc/meminfo|grep -Ei \'^%s|^%s\'"
 
-    .line 2
     invoke-static {v7, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 3
     invoke-static {v2, v6}, Lcom/android/camera/Util;->execCommand(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v2
@@ -13617,12 +14678,10 @@
     :cond_0
     const-string v7, "\r\n"
 
-    .line 4
     invoke-virtual {v2, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 5
     array-length v7, v2
 
     move v8, v4
@@ -13634,17 +14693,14 @@
 
     const-string v10, ":"
 
-    .line 6
     invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 
-    .line 7
     array-length v10, v9
 
     if-lt v10, v1, :cond_2
 
-    .line 8
     sget-object v10, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     new-array v11, v1, [Ljava/lang/Object;
@@ -13667,7 +14723,6 @@
 
     invoke-static {v11, v10}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     aget-object v10, v9, v4
 
     sget-object v11, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -13676,7 +14731,6 @@
 
     move-result-object v10
 
-    .line 10
     invoke-virtual {v3, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v11
@@ -13689,7 +14743,6 @@
 
     if-eqz v11, :cond_2
 
-    .line 11
     :cond_1
     aget-object v9, v9, v6
 
@@ -13701,7 +14754,6 @@
 
     move-result-object v9
 
-    .line 12
     invoke-virtual {v0, v10, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
@@ -13716,7 +14768,6 @@
 .method public static final getMimeType(Ljava/io/File;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -13729,7 +14780,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -13740,7 +14790,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
     move-result-object v0
@@ -13758,37 +14807,6 @@
     return-object p0
 .end method
 
-.method public static getMinZoomRatio()F
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object v0
-
-    const/16 v1, 0xaa
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$ZoomProtocol;
-
-    if-nez v0, :cond_0
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    return v0
-
-    .line 2
-    :cond_0
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$ZoomProtocol;->getMinZoomRatio()F
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public static getMiuiTypeface()Landroid/graphics/Typeface;
     .locals 2
 
@@ -13796,7 +14814,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v0
@@ -13822,9 +14839,8 @@
 
     if-nez p0, :cond_0
 
-    const-string v2, "null thumbnail size list"
+    const-string/jumbo v2, "null thumbnail size list"
 
-    .line 1
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -13832,7 +14848,6 @@
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -13851,7 +14866,6 @@
 
     check-cast v5, Lcom/android/camera/CameraSize;
 
-    .line 3
     invoke-virtual {v5}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v6
@@ -13866,7 +14880,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-virtual {v5}, Lcom/android/camera/CameraSize;->getWidth()I
 
@@ -13884,14 +14897,12 @@
 
     sub-double v8, v6, p1
 
-    .line 5
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v8
 
     sub-double v10, v2, p1
 
-    .line 6
     invoke-static {v10, v11}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v12
@@ -13911,7 +14922,6 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 7
     invoke-static {v10, v11}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v10
@@ -13920,7 +14930,6 @@
 
     if-ltz v8, :cond_4
 
-    .line 8
     invoke-virtual {v5}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v8
@@ -13943,10 +14952,8 @@
 
     const-string v2, "No thumbnail size match the aspect ratio"
 
-    .line 9
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -13967,7 +14974,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 11
     invoke-virtual {v2}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v3
@@ -14009,7 +15015,6 @@
 
     move-wide v3, p3
 
-    .line 36
     invoke-static/range {v0 .. v5}, Lcom/android/camera/Util;->getOptimalPreviewSize(ZILjava/util/List;DLcom/android/camera/CameraSize;)Lcom/android/camera/CameraSize;
 
     move-result-object p0
@@ -14043,16 +15048,14 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "null preview size list"
+    const-string/jumbo v0, "null preview size list"
 
-    .line 1
     invoke-static {v5, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v4
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O0()I
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000oO()I
 
     move-result v6
 
@@ -14064,7 +15067,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v11
@@ -14084,9 +15086,8 @@
     :cond_1
     move v11, v10
 
-    .line 4
     :goto_0
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayWidth()I
 
     move-result v12
 
@@ -14130,15 +15131,14 @@
     :cond_5
     move v6, v10
 
-    .line 5
     :goto_3
     new-instance v11, Landroid/graphics/Point;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayWidth()I
 
     move-result v12
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayHeight()I
 
     move-result v13
 
@@ -14153,17 +15153,15 @@
     :cond_6
     invoke-direct {v11, v12, v13}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->getCameraPreviewRect()Landroid/graphics/Rect;
 
     move-result-object v12
 
-    .line 7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v13
 
-    invoke-virtual {v13}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oOoo()Z
+    invoke-virtual {v13}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000ooO0()Z
 
     move-result v13
 
@@ -14187,9 +15185,8 @@
 
     move-result v7
 
-    .line 8
     :cond_7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000()Z
 
     move-result v12
 
@@ -14197,13 +15194,11 @@
 
     const/16 v7, 0x2d0
 
-    .line 9
     :cond_8
     iget v12, v11, Landroid/graphics/Point;->x:I
 
     if-le v12, v7, :cond_9
 
-    .line 10
     iget v13, v11, Landroid/graphics/Point;->y:I
 
     mul-int/2addr v13, v7
@@ -14212,13 +15207,11 @@
 
     iput v13, v11, Landroid/graphics/Point;->y:I
 
-    .line 11
     iput v7, v11, Landroid/graphics/Point;->x:I
 
     :cond_9
     if-eqz v3, :cond_d
 
-    .line 12
     iget v6, v11, Landroid/graphics/Point;->x:I
 
     iget v7, v3, Lcom/android/camera/CameraSize;->height:I
@@ -14231,7 +15224,6 @@
 
     if-le v6, v7, :cond_c
 
-    .line 13
     :cond_a
     iget v6, v11, Landroid/graphics/Point;->y:I
 
@@ -14243,7 +15235,6 @@
 
     div-double/2addr v6, v12
 
-    .line 14
     iget v12, v3, Lcom/android/camera/CameraSize;->width:I
 
     iget v13, v3, Lcom/android/camera/CameraSize;->height:I
@@ -14261,13 +15252,11 @@
 
     double-to-int v6, v6
 
-    .line 15
     iput v6, v11, Landroid/graphics/Point;->y:I
 
     :cond_c
     move v6, v10
 
-    .line 16
     :cond_d
     sget v7, Lcom/android/camera/PictureSizeManager;->HIGH_ACCURACY_TOLERANCE:F
 
@@ -14277,7 +15266,6 @@
 
     if-lez v7, :cond_e
 
-    .line 17
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -14296,7 +15284,6 @@
 
     invoke-static {v5, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iget v2, v11, Landroid/graphics/Point;->x:I
 
     invoke-static {v0, v1, v2, v8}, Lcom/android/camera/PictureSizeManager;->findMaxSizeWithRatio(Ljava/util/List;FII)Lcom/android/camera/CameraSize;
@@ -14305,7 +15292,6 @@
 
     return-object v0
 
-    .line 19
     :cond_e
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -14332,7 +15318,6 @@
 
     check-cast v12, Lcom/android/camera/CameraSize;
 
-    .line 20
     iget v13, v12, Lcom/android/camera/CameraSize;->width:I
 
     int-to-double v8, v13
@@ -14345,7 +15330,6 @@
 
     div-double/2addr v8, v10
 
-    .line 21
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -14382,7 +15366,6 @@
 
     if-eqz v3, :cond_f
 
-    .line 22
     iget v11, v3, Lcom/android/camera/CameraSize;->width:I
 
     iget v13, v3, Lcom/android/camera/CameraSize;->height:I
@@ -14412,7 +15395,6 @@
     :cond_10
     sub-double/2addr v8, v1
 
-    .line 23
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v8
@@ -14428,7 +15410,6 @@
 
     if-eqz v6, :cond_14
 
-    .line 24
     iget v9, v8, Landroid/graphics/Point;->x:I
 
     iget v10, v12, Lcom/android/camera/CameraSize;->height:I
@@ -14441,7 +15422,6 @@
 
     if-gt v9, v10, :cond_14
 
-    .line 25
     :cond_12
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -14483,7 +15463,6 @@
 
     goto/16 :goto_4
 
-    .line 26
     :cond_14
     iget v9, v8, Landroid/graphics/Point;->x:I
 
@@ -14515,7 +15494,6 @@
 
     goto :goto_7
 
-    .line 27
     :cond_15
     iget v10, v12, Lcom/android/camera/CameraSize;->height:I
 
@@ -14563,14 +15541,12 @@
     :cond_18
     if-nez v4, :cond_1a
 
-    .line 28
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v6, 0x1
 
     new-array v7, v6, [Ljava/lang/Object;
 
-    .line 29
     invoke-static/range {p3 .. p4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -14579,16 +15555,14 @@
 
     aput-object v1, v7, v2
 
-    const-string v1, "no preview size match the aspect ratio: %.2f"
+    const-string/jumbo v1, "no preview size match the aspect ratio: %.2f"
 
-    .line 30
     invoke-static {v3, v1, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v5, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -14609,7 +15583,6 @@
 
     check-cast v1, Lcom/android/camera/CameraSize;
 
-    .line 32
     iget v2, v8, Landroid/graphics/Point;->x:I
 
     invoke-virtual {v1}, Lcom/android/camera/CameraSize;->getHeight()I
@@ -14651,14 +15624,12 @@
     :cond_1a
     if-eqz v4, :cond_1b
 
-    .line 33
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 34
     invoke-virtual {v4}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v2
@@ -14685,7 +15656,6 @@
 
     const-string v2, "best preview size: %dx%d"
 
-    .line 35
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -14714,14 +15684,12 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "null size list"
+    const-string/jumbo p0, "null size list"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -14741,7 +15709,6 @@
 
     check-cast v3, Lcom/android/camera/CameraSize;
 
-    .line 3
     invoke-virtual {v3}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v4
@@ -14758,7 +15725,6 @@
 
     sub-double/2addr v4, p1
 
-    .line 4
     invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v4
@@ -14774,7 +15740,6 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 5
     invoke-virtual {v3}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v4
@@ -14785,7 +15750,6 @@
 
     if-le v4, v5, :cond_1
 
-    .line 6
     :cond_3
     invoke-virtual {v3}, Lcom/android/camera/CameraSize;->getWidth()I
 
@@ -14808,10 +15772,8 @@
 
     const-string p1, "No picture size match the aspect ratio"
 
-    .line 7
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -14832,7 +15794,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result p2
@@ -14855,7 +15816,6 @@
 .method public static getPhoneMemorySize()J
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/compat/common/ProcessCompat;->getTotalMemory()J
 
     move-result-wide v0
@@ -14879,7 +15839,6 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 1
     aget v1, p3, v0
 
     const/4 v2, 0x3
@@ -14894,7 +15853,6 @@
 
     const/4 v3, 0x1
 
-    .line 2
     aget v3, p3, v3
 
     mul-int/2addr v3, p1
@@ -14909,13 +15867,11 @@
 
     move v5, v4
 
-    .line 3
     :goto_0
     aget v6, p3, v2
 
     if-ge v4, v6, :cond_1
 
-    .line 4
     aget v6, p3, v0
 
     mul-int/2addr v6, p2
@@ -14926,7 +15882,6 @@
 
     add-int/2addr v3, v6
 
-    .line 5
     aget v6, p3, v0
 
     mul-int/2addr v6, p2
@@ -14972,7 +15927,6 @@
 
     aput p1, v0, p0
 
-    .line 1
     aget p1, v0, v1
 
     div-int/2addr p1, v3
@@ -14981,7 +15935,6 @@
 
     aput p1, v0, v1
 
-    .line 2
     aget p1, v0, v2
 
     div-int/2addr p1, v3
@@ -14990,7 +15943,6 @@
 
     aput p1, v0, v2
 
-    .line 3
     aget p1, v0, v3
 
     div-int/2addr p1, p2
@@ -14999,7 +15951,6 @@
 
     aput p1, v0, v3
 
-    .line 4
     aget p1, v0, p0
 
     div-int/2addr p1, p2
@@ -15014,7 +15965,6 @@
 .method public static getRatio(Ljava/lang/String;)F
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -15222,7 +16172,6 @@
 .method public static getRealPathFromURI(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
     .locals 6
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -15249,7 +16198,6 @@
     :catchall_0
     move-exception p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -15257,30 +16205,25 @@
     :goto_0
     if-nez p0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_1
 
-    .line 4
     :cond_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     const-string p1, "_data"
 
-    .line 5
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 6
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 7
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     move-object p0, p1
@@ -15296,30 +16239,24 @@
 
     new-array v0, v0, [I
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
     const/4 p0, 0x0
 
-    .line 2
     aget v1, v0, p0
 
     const/4 v2, 0x1
 
-    .line 3
     aget v3, v0, v2
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 5
     aget p1, v0, p0
 
     sub-int/2addr p1, v1
 
     aput p1, v0, p0
 
-    .line 6
     aget p0, v0, v2
 
     sub-int/2addr p0, v3
@@ -15334,12 +16271,10 @@
 
     const-string/jumbo v0, "resolution"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -15356,13 +16291,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 4
     new-instance v0, Lcom/android/camera/CameraSize;
 
     const/4 v1, 0x0
@@ -15392,97 +16325,31 @@
     return-object p0
 .end method
 
-.method public static getRotation(III)I
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getCapabilities(I)Lcom/android/camera2/CameraCapabilities;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    .line 2
-    invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getSensorOrientation()I
-
-    move-result p2
-
-    const/4 v0, -0x1
-
-    if-eq p1, v0, :cond_1
-
-    .line 3
-    invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    sub-int/2addr p2, p1
-
-    add-int/lit16 p2, p2, 0x168
-
-    .line 4
-    rem-int/lit16 p2, p2, 0x168
-
-    goto :goto_0
-
-    :cond_0
-    add-int/2addr p2, p1
-
-    .line 5
-    rem-int/lit16 p2, p2, 0x168
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "CameraUtil"
-
-    const-string p1, "getRotation: UNKNOWN!!! return sensor orientation"
-
-    .line 6
-    invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    :goto_0
-    return p2
-.end method
-
 .method public static getRoundedCornerBitmap(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 3
     invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 5
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    .line 6
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -15497,25 +16364,20 @@
 
     invoke-direct {v3, v6, v6, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 7
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4, v3}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
     const/4 v5, 0x1
 
-    .line 8
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     const/high16 v5, -0x1000000
 
-    .line 9
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 10
     invoke-virtual {v1, v4, p1, p1, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 11
     new-instance p1, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -15524,7 +16386,6 @@
 
     invoke-virtual {v2, p1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 12
     invoke-virtual {v1, p0, v3, v3, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     return-object v0
@@ -15537,7 +16398,6 @@
 
     const-wide/16 v1, 0x190
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/util/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -15550,28 +16410,24 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     const-string/jumbo v1, "window"
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 3
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 4
     iget p0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -15586,29 +16442,25 @@
 .method public static getScreenInches(Landroid/content/Context;)D
     .locals 7
 
-    .line 1
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     const-string/jumbo v1, "window"
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 3
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p0
 
@@ -15626,8 +16478,7 @@
 
     move-result-wide v1
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result p0
 
@@ -15645,12 +16496,10 @@
 
     add-double/2addr v1, v3
 
-    .line 6
     invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
 
-    .line 7
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -15675,10 +16524,8 @@
 .method public static getScreenLightColor(I)I
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->initScreenLightColorMap()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -15699,7 +16546,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
@@ -15711,7 +16557,6 @@
 
     move-result v0
 
-    .line 4
     sget-object v2, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -15720,7 +16565,6 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 5
     sget-object v0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -15734,7 +16578,6 @@
     :cond_1
     if-lez v0, :cond_2
 
-    .line 6
     sget-object v2, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -15753,7 +16596,6 @@
 
     add-int/lit8 v4, v0, -0x1
 
-    .line 7
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -15770,7 +16612,6 @@
 
     move v0, v4
 
-    .line 8
     :cond_2
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -15805,7 +16646,6 @@
 
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     sget-object p0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_MAP:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -15824,7 +16664,6 @@
     :goto_1
     const-string p0, "color temperature list empty!"
 
-    .line 10
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, -0x1
@@ -15837,28 +16676,24 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     const-string/jumbo v1, "window"
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 3
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 4
     iget p0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -15873,7 +16708,6 @@
 .method public static getSensorOrientation(I)I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -15882,7 +16716,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->getSensorOrientation()I
 
     move-result p0
@@ -15893,7 +16726,6 @@
 .method public static getShareMediaIntent(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;Z)Landroid/content/Intent;
     .locals 0
 
-    .line 1
     new-instance p0, Landroid/content/Intent;
 
     const-string p1, "android.intent.action.SEND"
@@ -15902,14 +16734,12 @@
 
     const-string p1, "android.intent.extra.STREAM"
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     if-eqz p3, :cond_0
 
     const/4 p1, 0x2
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/Util;->convertOutputFormatToMimeType(I)Ljava/lang/String;
 
     move-result-object p1
@@ -15921,13 +16751,11 @@
     :cond_0
     const-string p1, "image/*"
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     :goto_0
     const/4 p1, 0x1
 
-    .line 5
     invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-object p0
@@ -15936,7 +16764,6 @@
 .method public static getShootOrientation(Landroid/app/Activity;I)I
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/Util;->getDisplayRotation(Landroid/app/Activity;)I
 
     move-result p0
@@ -15953,7 +16780,6 @@
 .method public static getShootRotation(Landroid/app/Activity;F)F
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/Util;->getDisplayRotation(Landroid/app/Activity;)I
 
     move-result p0
@@ -16011,17 +16837,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -16032,14 +16855,12 @@
 .method public static getStorageDirectory()Ljava/io/File;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->isExternalStorageMounted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v0
@@ -16056,7 +16877,6 @@
 .method public static getString(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -16068,27 +16888,11 @@
     return-object p0
 .end method
 
-.method public static varargs getString(I[Ljava/lang/Object;)Ljava/lang/String;
-    .locals 1
-
-    .line 2
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static getSubYuvImage([BIIII[I)Lcom/android/camera/effect/MiYuvImage;
     .locals 9
 
     const/4 v0, 0x2
 
-    .line 24
     aget v1, p5, v0
 
     const/4 v2, 0x3
@@ -16105,7 +16909,6 @@
 
     const/4 v3, 0x1
 
-    .line 25
     aget v4, p5, v3
 
     mul-int/2addr v4, p3
@@ -16120,20 +16923,17 @@
 
     move v7, v6
 
-    .line 26
     :goto_0
     aget v8, p5, v2
 
     if-ge v6, v8, :cond_0
 
-    .line 27
     aget v8, p5, v0
 
     invoke-static {p0, v4, v1, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/2addr v4, p3
 
-    .line 28
     aget v8, p5, v0
 
     add-int/2addr v7, v8
@@ -16149,7 +16949,6 @@
 
     add-int/2addr p3, p1
 
-    .line 29
     aget p1, p5, v3
 
     div-int/2addr p1, v0
@@ -16162,7 +16961,6 @@
 
     add-int/2addr p3, p1
 
-    .line 30
     :goto_1
     aget p1, p5, v2
 
@@ -16170,14 +16968,12 @@
 
     if-ge v5, p1, :cond_1
 
-    .line 31
     aget p1, p5, v0
 
     invoke-static {p0, p3, v1, v7, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/2addr p3, p4
 
-    .line 32
     aget p1, p5, v0
 
     add-int/2addr v7, p1
@@ -16186,7 +16982,6 @@
 
     goto :goto_1
 
-    .line 33
     :cond_1
     new-instance p0, Lcom/android/camera/effect/MiYuvImage;
 
@@ -16204,7 +16999,6 @@
 .method public static getSubYuvImage(Landroid/media/Image;[I)[B
     .locals 16
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -16227,14 +17021,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     const/4 v0, 0x2
 
-    .line 3
     aget v4, p1, v0
 
     const/4 v5, 0x3
@@ -16249,21 +17041,18 @@
 
     new-array v4, v4, [B
 
-    .line 4
     invoke-virtual/range {p0 .. p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v6
 
     const/4 v7, 0x0
 
-    .line 5
     aget-object v8, v6, v7
 
     invoke-virtual {v8}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v8
 
-    .line 6
     aget-object v9, v6, v0
 
     invoke-virtual {v9}, Landroid/media/Image$Plane;->getRowStride()I
@@ -16272,7 +17061,6 @@
 
     const/4 v10, 0x1
 
-    .line 7
     aget v11, p1, v10
 
     mul-int/2addr v11, v8
@@ -16281,7 +17069,6 @@
 
     add-int/2addr v11, v12
 
-    .line 8
     aget-object v12, v6, v7
 
     invoke-virtual {v12}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -16292,23 +17079,19 @@
 
     move v14, v13
 
-    .line 9
     :goto_0
     aget v15, p1, v5
 
     if-ge v13, v15, :cond_0
 
-    .line 10
     invoke-virtual {v12, v11}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 11
     aget v15, p1, v0
 
     invoke-virtual {v12, v4, v14, v15}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v11, v8
 
-    .line 12
     aget v15, p1, v0
 
     add-int/2addr v14, v15
@@ -16317,7 +17100,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     aget v8, p1, v10
 
@@ -16331,7 +17113,6 @@
 
     new-array v11, v0, [Ljava/lang/Object;
 
-    .line 14
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -16348,14 +17129,12 @@
 
     invoke-static {v1, v12, v11}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 15
     aget-object v6, v6, v0
 
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    .line 16
     aget v5, p1, v5
 
     div-int/2addr v5, v0
@@ -16365,14 +17144,12 @@
     :goto_1
     if-ge v11, v5, :cond_2
 
-    .line 17
     invoke-virtual {v6, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     add-int/lit8 v12, v5, -0x1
 
     if-ne v11, v12, :cond_1
 
-    .line 18
     aget v12, p1, v0
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->remaining()I
@@ -16383,7 +17160,6 @@
 
     move-result v12
 
-    .line 19
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -16410,12 +17186,10 @@
 
     invoke-static {v1, v13}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     invoke-virtual {v6, v4, v14, v12}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     goto :goto_2
 
-    .line 21
     :cond_1
     aget v12, p1, v0
 
@@ -16424,7 +17198,6 @@
     :goto_2
     add-int/2addr v8, v9
 
-    .line 22
     aget v12, p1, v0
 
     add-int/2addr v14, v12
@@ -16436,7 +17209,6 @@
     :cond_2
     new-array v0, v10, [Ljava/lang/Object;
 
-    .line 23
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -16456,225 +17228,6 @@
     return-object v4
 .end method
 
-.method public static getSuperMoonRange([I[FLandroid/graphics/Rect;)[I
-    .locals 7
-
-    const/4 v0, 0x4
-
-    new-array v1, v0, [I
-
-    const/4 v2, 0x0
-
-    .line 1
-    aget v3, p1, v2
-
-    const/4 v4, 0x1
-
-    aget v5, p1, v4
-
-    invoke-static {v3, v5}, Ljava/lang/Math;->min(FF)F
-
-    move-result v3
-
-    .line 2
-    aget v5, p0, v4
-
-    int-to-float v5, v5
-
-    aget v6, p1, v2
-
-    mul-float/2addr v5, v6
-
-    float-to-double v5, v5
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v5
-
-    double-to-int v5, v5
-
-    aput v5, v1, v2
-
-    .line 3
-    iget v5, p2, Landroid/graphics/Rect;->right:I
-
-    iget p2, p2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v5, p2
-
-    const/4 p2, 0x2
-
-    aget v6, p0, p2
-
-    sub-int/2addr v5, v6
-
-    int-to-float v5, v5
-
-    aget p1, p1, v4
-
-    mul-float/2addr v5, p1
-
-    float-to-double v5, v5
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v5
-
-    double-to-int p1, v5
-
-    aput p1, v1, v4
-
-    const/4 p1, 0x3
-
-    .line 4
-    aget v5, p0, p1
-
-    aget v6, p0, v4
-
-    sub-int/2addr v5, v6
-
-    int-to-float v5, v5
-
-    mul-float/2addr v5, v3
-
-    float-to-double v5, v5
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v5
-
-    double-to-int v5, v5
-
-    aput v5, v1, p2
-
-    .line 5
-    aget v5, p0, p2
-
-    aget p0, p0, v2
-
-    sub-int/2addr v5, p0
-
-    int-to-float p0, v5
-
-    mul-float/2addr p0, v3
-
-    float-to-double v5, p0
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v5
-
-    double-to-int p0, v5
-
-    aput p0, v1, p1
-
-    .line 6
-    aget p0, v1, v2
-
-    div-int/2addr p0, p2
-
-    mul-int/2addr p0, p2
-
-    aput p0, v1, v2
-
-    .line 7
-    aget p0, v1, v4
-
-    div-int/2addr p0, p2
-
-    mul-int/2addr p0, p2
-
-    aput p0, v1, v4
-
-    .line 8
-    aget p0, v1, p2
-
-    div-int/2addr p0, v0
-
-    mul-int/2addr p0, v0
-
-    aput p0, v1, p2
-
-    .line 9
-    aget p0, v1, p1
-
-    div-int/2addr p0, v0
-
-    mul-int/2addr p0, v0
-
-    aput p0, v1, p1
-
-    return-object v1
-.end method
-
-.method public static getSurfaceInfo(Landroid/view/Surface;)Ljava/lang/String;
-    .locals 3
-
-    if-nez p0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 2
-    invoke-virtual {p0}, Landroid/view/Surface;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v1, "|"
-
-    .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Landroid/view/Surface;->isValid()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 6
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->isSurfaceForHwVideoEncoder(Landroid/view/Surface;)Z
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    .line 7
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static getSuspendDuration()J
     .locals 3
 
@@ -16682,7 +17235,6 @@
 
     const-wide/16 v1, 0x1f4
 
-    .line 1
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/util/SystemProperties;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -16693,19 +17245,16 @@
 .method public static getTapableRectWithEdgeSlop(ZLandroid/graphics/Rect;Landroid/content/Context;)Landroid/graphics/Rect;
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/DataItemRunning;->getUiStyle()I
 
-    .line 3
     invoke-static {p2}, Lcom/android/camera/Util;->calculateDefaultPreviewEdgeSlop(Landroid/content/Context;)I
 
     move-result p1
@@ -16714,7 +17263,6 @@
 
     const-string v1, "camera_touch_edge_slop"
 
-    .line 4
     invoke-static {v1, p2}, Lcom/xiaomi/camera/util/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -16726,7 +17274,6 @@
     :cond_0
     int-to-float p1, v1
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result p1
@@ -16734,14 +17281,13 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 6
     iget p0, v0, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result p2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v1
 
@@ -16749,12 +17295,11 @@
 
     if-le p0, p2, :cond_1
 
-    .line 7
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result p0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p2
 
@@ -16762,24 +17307,21 @@
 
     iput p0, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 8
     :cond_1
     iget p0, v0, Landroid/graphics/Rect;->top:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getTopBarHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getTopBarHeight()I
 
     move-result p2
 
     if-ge p0, p2, :cond_2
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->getTopBarHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getTopBarHeight()I
 
     move-result p0
 
     iput p0, v0, Landroid/graphics/Rect;->top:I
 
-    .line 10
     :cond_2
     iget p0, v0, Landroid/graphics/Rect;->left:I
 
@@ -16787,27 +17329,23 @@
 
     add-int/2addr p0, p1
 
-    .line 11
     iput p0, v0, Landroid/graphics/Rect;->left:I
 
-    .line 12
     :cond_3
     iget p0, v0, Landroid/graphics/Rect;->right:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p2
 
     if-ne p0, p2, :cond_4
 
-    .line 13
     iget p0, v0, Landroid/graphics/Rect;->right:I
 
     sub-int/2addr p0, p1
 
     iput p0, v0, Landroid/graphics/Rect;->right:I
 
-    .line 14
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -16839,23 +17377,20 @@
 .method public static getTimeWatermark(Landroid/app/Activity;)Ljava/lang/String;
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f120970
+    const v1, 0x7f120921
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -16866,7 +17401,6 @@
 
     invoke-direct {p0}, Ljava/util/Date;-><init>()V
 
-    .line 4
     invoke-virtual {v1, p0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -16875,27 +17409,22 @@
 
     move-result-object p0
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     const-string p0, "  "
 
-    .line 6
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     new-instance p0, Landroid/text/format/Time;
 
     invoke-direct {p0}, Landroid/text/format/Time;-><init>()V
 
-    .line 8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     invoke-virtual {p0, v1, v2}, Landroid/text/format/Time;->set(J)V
 
-    .line 9
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v2, 0x1
@@ -16922,10 +17451,8 @@
 
     const-string v1, ":"
 
-    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 11
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -16944,7 +17471,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 12
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -16957,22 +17483,18 @@
 
     const-string v0, "activity"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 2
     new-instance v0, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 4
     iget-wide v0, v0, Landroid/app/ActivityManager$MemoryInfo;->totalMem:J
 
     return-wide v0
@@ -16985,7 +17507,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
@@ -16995,7 +17516,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2
     sget-object v1, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -17008,7 +17528,6 @@
 
     invoke-virtual {v1, p1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     :cond_0
     sget-object p0, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
@@ -17039,7 +17558,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
@@ -17049,7 +17567,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
     new-instance v1, Ljava/io/File;
@@ -17062,7 +17579,6 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->sTypefaces:Ljava/util/HashMap;
 
@@ -17089,55 +17605,14 @@
 .method public static getValidValue(III)I
     .locals 0
 
-    .line 1
     invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
 
-    .line 2
     invoke-static {p0, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p0
 
-    return p0
-.end method
-
-.method public static getValue(Ljava/util/HashMap;I)F
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Float;",
-            ">;I)F"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Float;
-
-    if-eqz p0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
-
-    move-result p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
     return p0
 .end method
 
@@ -17244,7 +17719,6 @@
 
     aput p2, v1, v3
 
-    .line 1
     :goto_0
     aget p0, v1, v6
 
@@ -17254,7 +17728,6 @@
 
     aput p0, v1, v6
 
-    .line 2
     aget p0, v1, v4
 
     div-int/2addr p0, v5
@@ -17263,7 +17736,6 @@
 
     aput p0, v1, v4
 
-    .line 3
     aget p0, v1, v5
 
     div-int/2addr p0, v0
@@ -17272,7 +17744,6 @@
 
     aput p0, v1, v5
 
-    .line 4
     aget p0, v1, v3
 
     div-int/2addr p0, v0
@@ -17287,14 +17758,12 @@
 .method public static getVideoDuration(Ljava/lang/String;)J
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/Util;->getDuration(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -17306,13 +17775,11 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     invoke-static {p0, v1}, Lcom/android/camera/FileCompat;->getParcelFileDescriptor(Ljava/lang/String;Z)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v1
@@ -17324,10 +17791,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     invoke-static {v0}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 6
     invoke-static {p0}, Lcom/android/camera/FileCompat;->removeDocumentFileForPath(Ljava/lang/String;)V
 
     move-wide v0, v1
@@ -17337,19 +17802,15 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     invoke-static {v0}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 8
     invoke-static {p0}, Lcom/android/camera/FileCompat;->removeDocumentFileForPath(Ljava/lang/String;)V
 
     throw v1
 
-    .line 9
     :catch_0
     invoke-static {v0}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 10
     invoke-static {p0}, Lcom/android/camera/FileCompat;->removeDocumentFileForPath(Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
@@ -17358,28 +17819,14 @@
     return-wide v0
 .end method
 
-.method public static getVideoRotation(II)I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, p1, v0}, Lcom/android/camera/Util;->getRotation(III)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static getWaterMarkPaddingX()F
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
@@ -17391,12 +17838,11 @@
 .method public static getWaterMarkPaddingY()F
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
@@ -17416,7 +17862,6 @@
 .method public static getWatermarkCinematicAspectMargin(II)I
     .locals 2
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -17460,7 +17905,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x4
@@ -17469,7 +17913,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getWidth()I
 
     move-result v1
@@ -17484,7 +17927,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getHeight()I
 
     move-result v1
@@ -17499,7 +17941,6 @@
 
     const/4 v0, 0x2
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingX()I
 
     move-result v1
@@ -17514,7 +17955,6 @@
 
     const/4 v0, 0x3
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingY()I
 
     move-result v1
@@ -17527,7 +17967,6 @@
 
     aput p2, p1, v0
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/WaterMark;->getTexture()Lcom/android/gallery3d/ui/BasicTexture;
 
@@ -17547,14 +17986,12 @@
 .method public static getWatermarkFileName(Z)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCameraWaterMarkOpen()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object p0, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
     return-object p0
@@ -17562,12 +17999,10 @@
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 3
     sget-object p0, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     return-object p0
 
-    .line 4
     :cond_1
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
 
@@ -17599,35 +18034,30 @@
 
     new-array v8, v6, [I
 
-    .line 1
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/WaterMark;->getWidth()I
 
     move-result v9
 
     aput v9, v8, v5
 
-    .line 2
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/WaterMark;->getHeight()I
 
     move-result v9
 
     aput v9, v8, v4
 
-    .line 3
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingX()I
 
     move-result v9
 
     aput v9, v8, v3
 
-    .line 4
     invoke-virtual {p3}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingY()I
 
     move-result p3
 
     aput p3, v8, v2
 
-    .line 5
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -17640,7 +18070,6 @@
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-static {v8}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v9
@@ -17651,7 +18080,6 @@
 
     move-result-object p3
 
-    .line 7
     invoke-static {v1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -17664,35 +18092,30 @@
 
     new-array v7, v6, [I
 
-    .line 8
     invoke-virtual {p4}, Lcom/android/camera/effect/renders/WaterMark;->getWidth()I
 
     move-result p3
 
     aput p3, v7, v5
 
-    .line 9
     invoke-virtual {p4}, Lcom/android/camera/effect/renders/WaterMark;->getHeight()I
 
     move-result p3
 
     aput p3, v7, v4
 
-    .line 10
     invoke-virtual {p4}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingX()I
 
     move-result p3
 
     aput p3, v7, v3
 
-    .line 11
     invoke-virtual {p4}, Lcom/android/camera/effect/renders/WaterMark;->getPaddingY()I
 
     move-result p3
 
     aput p3, v7, v2
 
-    .line 12
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -17705,7 +18128,6 @@
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 13
     invoke-static {v7}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object p4
@@ -17716,10 +18138,8 @@
 
     move-result-object p3
 
-    .line 14
     invoke-static {v1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_1
     invoke-static {p0, p1, p2, v8, v7}, Lcom/android/camera/Util;->getWatermarkRange(III[I[I)[I
 
@@ -17764,7 +18184,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 16
     aget p2, p3, v5
 
     aget v6, p4, v5
@@ -17775,12 +18194,10 @@
 
     aput p2, v1, v2
 
-    .line 17
     aget p2, p3, v4
 
     aput p2, v1, v3
 
-    .line 18
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -17801,7 +18218,6 @@
 
     aget v7, p4, v5
 
-    .line 19
     invoke-static {v6, v7}, Ljava/lang/Math;->min(II)I
 
     move-result v6
@@ -17810,7 +18226,6 @@
 
     aput p2, v1, v4
 
-    .line 20
     aget p2, p3, v4
 
     sub-int p2, p1, p2
@@ -17826,22 +18241,18 @@
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 21
     aget p2, p3, v5
 
     aput p2, v1, v2
 
-    .line 22
     aget p2, p3, v4
 
     aput p2, v1, v3
 
-    .line 23
     aget p2, p3, v3
 
     aput p2, v1, v4
 
-    .line 24
     aget p2, p3, v2
 
     aput p2, v1, v5
@@ -17851,12 +18262,10 @@
     :cond_2
     if-eqz p4, :cond_c
 
-    .line 25
     aget p2, p4, v5
 
     aput p2, v1, v2
 
-    .line 26
     aget p2, p4, v2
 
     sub-int p2, p1, p2
@@ -17867,12 +18276,10 @@
 
     aput p2, v1, v3
 
-    .line 27
     aget p2, p4, v3
 
     aput p2, v1, v4
 
-    .line 28
     aget p2, p4, v2
 
     aput p2, v1, v5
@@ -17884,12 +18291,10 @@
 
     if-eqz p4, :cond_4
 
-    .line 29
     aget p2, p4, v4
 
     aput p2, v1, v2
 
-    .line 30
     aget p2, p3, v5
 
     aget v6, p4, v5
@@ -17900,7 +18305,6 @@
 
     aput p2, v1, v3
 
-    .line 31
     aget p2, p3, v4
 
     sub-int p2, p0, p2
@@ -17911,7 +18315,6 @@
 
     aput p2, v1, v4
 
-    .line 32
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -17932,7 +18335,6 @@
 
     aget p4, p4, v5
 
-    .line 33
     invoke-static {p3, p4}, Ljava/lang/Math;->min(II)I
 
     move-result p3
@@ -17946,7 +18348,6 @@
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 34
     aget p2, p3, v2
 
     sub-int p2, p0, p2
@@ -17957,17 +18358,14 @@
 
     aput p2, v1, v2
 
-    .line 35
     aget p2, p3, v5
 
     aput p2, v1, v3
 
-    .line 36
     aget p2, p3, v2
 
     aput p2, v1, v4
 
-    .line 37
     aget p2, p3, v3
 
     aput p2, v1, v5
@@ -17977,22 +18375,18 @@
     :cond_5
     if-eqz p4, :cond_c
 
-    .line 38
     aget p2, p4, v4
 
     aput p2, v1, v2
 
-    .line 39
     aget p2, p4, v5
 
     aput p2, v1, v3
 
-    .line 40
     aget p2, p4, v2
 
     aput p2, v1, v4
 
-    .line 41
     aget p2, p4, v3
 
     aput p2, v1, v5
@@ -18004,7 +18398,6 @@
 
     if-eqz p4, :cond_7
 
-    .line 42
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -18025,12 +18418,10 @@
 
     aput p2, v1, v2
 
-    .line 43
     aget p2, p4, v4
 
     aput p2, v1, v3
 
-    .line 44
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -18051,7 +18442,6 @@
 
     aget v7, p4, v5
 
-    .line 45
     invoke-static {v6, v7}, Ljava/lang/Math;->min(II)I
 
     move-result v6
@@ -18060,7 +18450,6 @@
 
     aput p2, v1, v4
 
-    .line 46
     aget p2, p3, v4
 
     sub-int p2, p1, p2
@@ -18076,7 +18465,6 @@
     :cond_7
     if-eqz p3, :cond_8
 
-    .line 47
     aget p2, p3, v3
 
     sub-int p2, p0, p2
@@ -18087,7 +18475,6 @@
 
     aput p2, v1, v2
 
-    .line 48
     aget p2, p3, v2
 
     sub-int p2, p1, p2
@@ -18098,12 +18485,10 @@
 
     aput p2, v1, v3
 
-    .line 49
     aget p2, p3, v3
 
     aput p2, v1, v4
 
-    .line 50
     aget p2, p3, v2
 
     aput p2, v1, v5
@@ -18113,7 +18498,6 @@
     :cond_8
     if-eqz p4, :cond_c
 
-    .line 51
     aget p2, p4, v3
 
     sub-int p2, p0, p2
@@ -18124,17 +18508,14 @@
 
     aput p2, v1, v2
 
-    .line 52
     aget p2, p4, v4
 
     aput p2, v1, v3
 
-    .line 53
     aget p2, p4, v3
 
     aput p2, v1, v4
 
-    .line 54
     aget p2, p4, v2
 
     aput p2, v1, v5
@@ -18146,12 +18527,10 @@
 
     if-eqz p4, :cond_a
 
-    .line 55
     aget p2, p3, v4
 
     aput p2, v1, v2
 
-    .line 56
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -18172,7 +18551,6 @@
 
     aput p2, v1, v3
 
-    .line 57
     aget p2, p3, v4
 
     sub-int p2, p0, p2
@@ -18183,7 +18561,6 @@
 
     aput p2, v1, v4
 
-    .line 58
     aget p2, p3, v3
 
     aget v6, p3, v5
@@ -18204,7 +18581,6 @@
 
     aget p4, p4, v5
 
-    .line 59
     invoke-static {p3, p4}, Ljava/lang/Math;->min(II)I
 
     move-result p3
@@ -18218,12 +18594,10 @@
     :cond_a
     if-eqz p3, :cond_b
 
-    .line 60
     aget p2, p3, v4
 
     aput p2, v1, v2
 
-    .line 61
     aget p2, p3, v3
 
     sub-int p2, p1, p2
@@ -18234,12 +18608,10 @@
 
     aput p2, v1, v3
 
-    .line 62
     aget p2, p3, v2
 
     aput p2, v1, v4
 
-    .line 63
     aget p2, p3, v3
 
     aput p2, v1, v5
@@ -18249,7 +18621,6 @@
     :cond_b
     if-eqz p4, :cond_c
 
-    .line 64
     aget p2, p4, v2
 
     sub-int p2, p0, p2
@@ -18260,7 +18631,6 @@
 
     aput p2, v1, v2
 
-    .line 65
     aget p2, p4, v3
 
     sub-int p2, p1, p2
@@ -18271,17 +18641,14 @@
 
     aput p2, v1, v3
 
-    .line 66
     aget p2, p4, v2
 
     aput p2, v1, v4
 
-    .line 67
     aget p2, p4, v3
 
     aput p2, v1, v5
 
-    .line 68
     :cond_c
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
@@ -18306,13 +18673,10 @@
 
     invoke-static {p3, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     aget p2, v1, v4
 
-    .line 70
     aget p4, v1, v5
 
-    .line 71
     aget v6, v1, v4
 
     div-int/2addr v6, v0
@@ -18321,7 +18685,6 @@
 
     aput v6, v1, v4
 
-    .line 72
     aget v6, v1, v5
 
     div-int/2addr v6, v0
@@ -18330,21 +18693,18 @@
 
     aput v6, v1, v5
 
-    .line 73
     aget v6, v1, v4
 
     add-int/2addr v6, v0
 
     aput v6, v1, v4
 
-    .line 74
     aget v6, v1, v5
 
     add-int/2addr v6, v0
 
     aput v6, v1, v5
 
-    .line 75
     aget v0, v1, v2
 
     aget v6, v1, v4
@@ -18357,7 +18717,6 @@
 
     aput v0, v1, v2
 
-    .line 76
     aget p2, v1, v3
 
     aget v0, v1, v5
@@ -18370,7 +18729,6 @@
 
     aput p2, v1, v3
 
-    .line 77
     aget p2, v1, v2
 
     aget p4, v1, v4
@@ -18379,7 +18737,6 @@
 
     if-le p2, p0, :cond_d
 
-    .line 78
     aget p2, v1, v2
 
     aget p4, v1, v4
@@ -18388,14 +18745,12 @@
 
     sub-int/2addr p2, p0
 
-    .line 79
     aget p0, v1, v2
 
     sub-int/2addr p0, p2
 
     aput p0, v1, v2
 
-    .line 80
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -18412,7 +18767,6 @@
 
     invoke-static {p3, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_d
     aget p0, v1, v3
 
@@ -18422,7 +18776,6 @@
 
     if-le p0, p1, :cond_e
 
-    .line 82
     aget p0, v1, v3
 
     aget p2, v1, v5
@@ -18431,14 +18784,12 @@
 
     sub-int/2addr p0, p1
 
-    .line 83
     aget p1, v1, v3
 
     sub-int/2addr p1, p0
 
     aput p1, v1, v3
 
-    .line 84
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -18455,7 +18806,6 @@
 
     invoke-static {p3, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     :cond_e
     aget p0, v1, v2
 
@@ -18465,7 +18815,6 @@
 
     aput p0, v1, v2
 
-    .line 86
     aget p0, v1, v3
 
     div-int/2addr p0, v4
@@ -18474,7 +18823,6 @@
 
     aput p0, v1, v3
 
-    .line 87
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -18501,7 +18849,6 @@
 .method public static getWatermarkRatio(II)F
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -18522,10 +18869,8 @@
 
     new-array v1, v0, [I
 
-    .line 1
     fill-array-data v1, :array_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/util/Calendar;->getFirstDayOfWeek()I
 
     move-result v2
@@ -18538,7 +18883,6 @@
 
     if-ne v5, v2, :cond_1
 
-    .line 3
     aget v2, v1, v4
 
     :goto_0
@@ -18546,7 +18890,6 @@
 
     add-int/lit8 v6, v4, -0x1
 
-    .line 4
     aget v6, v1, v6
 
     aput v6, v1, v4
@@ -18563,12 +18906,10 @@
     :cond_1
     if-ne v0, v2, :cond_3
 
-    .line 5
     aget v2, v1, v4
 
     const/4 v6, 0x5
 
-    .line 6
     aget v6, v1, v6
 
     :goto_1
@@ -18576,7 +18917,6 @@
 
     add-int/lit8 v7, v4, -0x2
 
-    .line 7
     aget v7, v1, v7
 
     aput v7, v1, v4
@@ -18590,7 +18930,6 @@
 
     aput v6, v1, v3
 
-    .line 8
     :cond_3
     :goto_2
     invoke-virtual {p0, v0}, Ljava/util/Calendar;->get(I)I
@@ -18606,7 +18945,6 @@
     :cond_4
     move v3, p0
 
-    .line 9
     :goto_3
     aget p0, v1, v3
 
@@ -18631,7 +18969,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v2, Ljava/util/zip/ZipFile;
 
@@ -18639,7 +18976,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
     :try_start_1
     invoke-virtual {v2}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
@@ -18647,7 +18983,6 @@
 
     move-wide v3, v0
 
-    .line 3
     :goto_0
     invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -18655,7 +18990,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 4
     invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v5
@@ -18672,7 +19006,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     :try_start_2
     invoke-virtual {v2}, Ljava/util/zip/ZipFile;->close()V
@@ -18686,7 +19019,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6
     :try_start_3
     throw p0
     :try_end_3
@@ -18695,7 +19027,6 @@
     :catchall_1
     move-exception v3
 
-    .line 7
     :try_start_4
     invoke-virtual {v2}, Ljava/util/zip/ZipFile;->close()V
     :try_end_4
@@ -18722,12 +19053,10 @@
 .method public static getZoomRatioText(F)Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/HybridZoomingSystem;->toDecimal(F)F
 
     move-result p0
@@ -18748,7 +19077,6 @@
 
     if-nez v2, :cond_0
 
-    .line 3
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -18757,7 +19085,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
@@ -18768,10 +19095,8 @@
     :goto_0
     const-string p0, "X"
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -18787,12 +19112,10 @@
     :try_start_0
     const-string v1, "hideCoveredBlackView"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "android.cameracovered.MiuiCameraCoveredManager"
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -18803,7 +19126,6 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 3
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -18812,7 +19134,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -18822,7 +19143,6 @@
     :catch_0
     move-exception v1
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -18850,8 +19170,7 @@
 .method public static hintFoldTips(Landroid/app/Activity;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -18862,23 +19181,20 @@
     return-object v1
 
     :cond_0
-    const v0, 0x7f0a02db
+    const v0, 0x7f0a02eb
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 3
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-static {p0}, Lcom/android/camera/OnScreenHint;->hintTips(Landroid/app/Activity;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
@@ -18892,7 +19208,6 @@
 .method public static initScreenLightColorMap()V
     .locals 9
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -18911,7 +19226,6 @@
 
     goto/16 :goto_8
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/Util;->getColorMapXmlMapFile()Ljava/io/File;
 
@@ -18923,7 +19237,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     :try_start_0
     new-instance v3, Ljava/io/FileReader;
 
@@ -18932,16 +19245,13 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_5
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 4
     :try_start_1
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0, v2}, Lorg/xmlpull/v1/XmlPullParserFactory;->setNamespaceAware(Z)V
 
-    .line 6
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v0
@@ -18949,7 +19259,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 7
     :try_start_2
     invoke-interface {v0, v3}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
     :try_end_2
@@ -18994,7 +19303,6 @@
 
     move-object v3, v0
 
-    .line 8
     :goto_2
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -19012,10 +19320,8 @@
 
     const-string v0, "Cannot find screen color map in system, try local resource."
 
-    .line 9
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -19024,7 +19330,6 @@
 
     move-result-object v0
 
-    .line 11
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v5
@@ -19037,7 +19342,6 @@
 
     const-string/jumbo v7, "xml"
 
-    .line 12
     invoke-virtual {v0, v6, v7, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -19046,12 +19350,10 @@
 
     const-string/jumbo v0, "res/xml/screen_light.xml not found!"
 
-    .line 13
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 14
     :cond_2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -19065,7 +19367,6 @@
 
     move-result-object v0
 
-    .line 15
     :cond_3
     :goto_4
     :try_start_3
@@ -19077,7 +19378,6 @@
 
     if-eq v5, v6, :cond_8
 
-    .line 16
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v5
@@ -19091,7 +19391,6 @@
     :cond_4
     const-string/jumbo v5, "screen"
 
-    .line 17
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v7
@@ -19102,7 +19401,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 18
     sget-object v5, Lcom/android/camera/Util;->SCREEN_VENDOR:Ljava/lang/String;
 
     const-string/jumbo v7, "vendor"
@@ -19117,12 +19415,10 @@
 
     if-nez v5, :cond_5
 
-    .line 19
     invoke-static {v0}, Lcom/android/camera/Util;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_4
 
-    .line 20
     :cond_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -19142,7 +19438,6 @@
 
     invoke-static {v4, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     :goto_5
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -19152,7 +19447,6 @@
 
     if-eq v1, v4, :cond_8
 
-    .line 22
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -19164,7 +19458,6 @@
     :cond_6
     const-string v1, "light"
 
-    .line 23
     invoke-interface {v0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -19180,33 +19473,28 @@
     :cond_7
     const-string v1, "CCT"
 
-    .line 24
     invoke-static {v0, v1, v2}, Lcom/android/camera/Util;->getAttributeIntValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v1
 
     const-string v4, "R"
 
-    .line 25
     invoke-static {v0, v4, v2}, Lcom/android/camera/Util;->getAttributeIntValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v4
 
     const-string v5, "G"
 
-    .line 26
     invoke-static {v0, v5, v2}, Lcom/android/camera/Util;->getAttributeIntValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v5
 
     const-string v7, "B"
 
-    .line 27
     invoke-static {v0, v7, v2}, Lcom/android/camera/Util;->getAttributeIntValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v7
 
-    .line 28
     sget-object v8, Lcom/android/camera/Util;->COLOR_TEMPERATURE_LIST:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -19215,7 +19503,6 @@
 
     invoke-interface {v8, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 29
     sget-object v1, Lcom/android/camera/Util;->COLOR_TEMPERATURE_MAP:Ljava/util/List;
 
     invoke-static {v4, v5, v7}, Landroid/graphics/Color;->rgb(III)I
@@ -19234,12 +19521,10 @@
 
     goto :goto_5
 
-    .line 30
     :cond_8
     :goto_6
     invoke-static {v3}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 31
     instance-of v1, v0, Landroid/content/res/XmlResourceParser;
 
     if-eqz v1, :cond_a
@@ -19249,15 +19534,12 @@
     :catchall_0
     move-exception v1
 
-    .line 32
     invoke-static {v3}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 33
     instance-of v2, v0, Landroid/content/res/XmlResourceParser;
 
     if-eqz v2, :cond_9
 
-    .line 34
     check-cast v0, Landroid/content/res/XmlResourceParser;
 
     invoke-interface {v0}, Landroid/content/res/XmlResourceParser;->close()V
@@ -19265,27 +19547,22 @@
     :cond_9
     throw v1
 
-    .line 35
     :catch_6
     invoke-static {v3}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 36
     instance-of v1, v0, Landroid/content/res/XmlResourceParser;
 
     if-eqz v1, :cond_a
 
     goto :goto_7
 
-    .line 37
     :catch_7
     invoke-static {v3}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
-    .line 38
     instance-of v1, v0, Landroid/content/res/XmlResourceParser;
 
     if-eqz v1, :cond_a
 
-    .line 39
     :goto_7
     check-cast v0, Landroid/content/res/XmlResourceParser;
 
@@ -19299,15 +19576,12 @@
 .method public static initialize(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/Util;->updateDeviceConfig(Landroid/content/Context;)V
 
-    .line 2
     new-instance v0, Lcom/android/camera/Util$ImageFileNamer;
 
-    const v1, 0x7f120448
+    const v1, 0x7f120426
 
-    .line 3
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -19316,7 +19590,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->sImageFileNamer:Lcom/android/camera/Util$ImageFileNamer;
 
-    .line 4
     invoke-static {p0}, Lcom/android/camera/Util;->checkHasBackLightSensot(Landroid/content/Context;)V
 
     return-void
@@ -19329,7 +19602,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -19338,17 +19610,15 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0O0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0O0;
 
-    invoke-direct {v1, p2}, LOooO00o/OooO0O0/OooO00o/Oooo0O0;-><init>(Lcom/android/camera/lib/compatibility/util/CompatibilityUtils$PackageInstallerListener;)V
+    invoke-direct {v1, p2}, LOooO0O0/OooO0O0/OooO00o/Oooo0O0;-><init>(Lcom/android/camera/lib/compatibility/util/CompatibilityUtils$PackageInstallerListener;)V
 
     invoke-static {p0, p1, p3, p4, v1}, Lcom/xiaomi/compat/miui/PackageInstallCompat;->installPackage(Landroid/content/Context;Ljava/lang/String;ZZLcom/xiaomi/compat/miui/PackageInstallCompat$Listener;)Z
 
     move-result p0
 
-    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19367,7 +19637,6 @@
 
     return-void
 
-    .line 4
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -19438,7 +19707,6 @@
 .method public static isAccessible()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->sIsAccessibilityEnable:Z
 
     return v0
@@ -19449,7 +19717,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result p0
@@ -19470,7 +19737,6 @@
 .method public static isActivityInvert(Landroid/app/Activity;)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/Util;->getDisplayRotation(Landroid/app/Activity;)I
 
     move-result p0
@@ -19493,7 +19759,6 @@
 .method public static isAntibanding60()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->ANTIBANDING_60_COUNTRY:Ljava/util/HashSet;
 
     sget-object v1, Lcom/android/camera/Util;->mCountryIso:Ljava/lang/String;
@@ -19508,7 +19773,6 @@
 .method public static final isAppLocked(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/GeneralUtils;->isAppLocked(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -19519,7 +19783,6 @@
 .method public static isBitmapLikelyBlack(Landroid/graphics/Bitmap;)Z
     .locals 11
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -19537,7 +19800,6 @@
 
     if-ge v4, v6, :cond_2
 
-    .line 2
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v6
@@ -19552,7 +19814,6 @@
 
     double-to-int v6, v6
 
-    .line 3
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v7
@@ -19567,14 +19828,12 @@
 
     double-to-int v7, v7
 
-    .line 4
     sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v9, 0x1d
 
     if-lt v8, v9, :cond_1
 
-    .line 5
     invoke-virtual {p0, v6, v7}, Landroid/graphics/Bitmap;->getColor(II)Landroid/graphics/Color;
 
     move-result-object v6
@@ -19583,7 +19842,6 @@
 
     move-result-object v6
 
-    .line 6
     aget v7, v6, v2
 
     const/4 v8, 0x0
@@ -19623,7 +19881,6 @@
     :cond_1
     return v2
 
-    .line 7
     :cond_2
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -19655,12 +19912,11 @@
 .method public static isBringupDebug()Z
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oOoo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000ooO0()Z
 
     move-result v0
 
@@ -19678,7 +19934,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iget v1, p0, Landroid/graphics/RectF;->left:F
 
@@ -19730,7 +19985,6 @@
 .method public static isDebugOsBuild()Z
     .locals 2
 
-    .line 1
     sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string/jumbo v1, "userdebug"
@@ -19773,12 +20027,10 @@
 .method public static isDumpImageEnabled()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->sIsDumpImageEnabled:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "algoup_dump_images"
@@ -19799,7 +20051,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->sIsDumpImageEnabled:Ljava/lang/Boolean;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->sIsDumpImageEnabled:Ljava/lang/Boolean;
 
@@ -19808,6 +20059,18 @@
     move-result v0
 
     return v0
+.end method
+
+.method public static isEnglishOrNum(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "[a-zA-Z0-9]+"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static isEqual([BLjava/io/File;)Z
@@ -19819,14 +20082,12 @@
 
     if-eqz p0, :cond_5
 
-    .line 1
     array-length v2, p0
 
     if-nez v2, :cond_0
 
     goto/16 :goto_7
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -19846,12 +20107,10 @@
     :try_start_0
     const-string v5, "MD5"
 
-    .line 3
     invoke-static {v5}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v5
 
-    .line 4
     new-instance v6, Ljava/io/FileInputStream;
 
     invoke-direct {v6, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -19860,7 +20119,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5
     :goto_0
     :try_start_1
     invoke-virtual {v6, v4, v1, v3}, Ljava/io/FileInputStream;->read([BII)I
@@ -19871,12 +20129,10 @@
 
     if-eq p1, v2, :cond_2
 
-    .line 6
     invoke-virtual {v5, v4, v1, p1}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     new-instance p1, Ljava/lang/String;
 
@@ -19886,10 +20142,8 @@
 
     invoke-direct {p1, v2}, Ljava/lang/String;-><init>([B)V
 
-    .line 8
     invoke-virtual {v5}, Ljava/security/MessageDigest;->reset()V
 
-    .line 9
     new-instance v2, Ljava/lang/String;
 
     invoke-virtual {v5, p0}, Ljava/security/MessageDigest;->digest([B)[B
@@ -19898,7 +20152,6 @@
 
     invoke-direct {v2, p0}, Ljava/lang/String;-><init>([B)V
 
-    .line 10
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -19907,7 +20160,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :try_start_2
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -19918,7 +20170,6 @@
     :catch_0
     move-exception p1
 
-    .line 12
     invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -19961,7 +20212,6 @@
     :catch_4
     move-exception p0
 
-    .line 13
     :goto_3
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -19974,7 +20224,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 14
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -19985,7 +20234,6 @@
     :catch_5
     move-exception p0
 
-    .line 15
     invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -19999,7 +20247,6 @@
     :goto_5
     if-eqz v2, :cond_4
 
-    .line 16
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -20010,14 +20257,12 @@
     :catch_6
     move-exception p1
 
-    .line 17
     invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 18
     :cond_4
     :goto_6
     throw p0
@@ -20030,7 +20275,6 @@
 .method public static isEqualsZero(D)Z
     .locals 2
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p0
@@ -20055,12 +20299,11 @@
 .method public static isExternalStorageMounted()Z
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "mounted"
+    const-string/jumbo v1, "mounted"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -20076,22 +20319,19 @@
 
     const/16 v0, 0x1b
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/KeyEvent;->getDevice()Landroid/view/InputDevice;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0o()Ljava/util/ArrayList;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0o()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -20123,7 +20363,6 @@
 .method public static isFlickSensorEnable()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->isFlickSensorEnable:Z
 
     return v0
@@ -20140,7 +20379,6 @@
 
     goto :goto_2
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getX()F
 
@@ -20168,14 +20406,12 @@
 
     sub-int/2addr v2, v1
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
     sub-int v2, p1, p0
 
-    .line 3
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -20229,12 +20465,10 @@
 .method public static isForceNameSuffix()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->sIsForceNameSuffix:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/io/File;
 
     const-string v1, "force_name_suffix"
@@ -20255,7 +20489,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->sIsForceNameSuffix:Ljava/lang/Boolean;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->sIsForceNameSuffix:Ljava/lang/Boolean;
 
@@ -20266,72 +20499,9 @@
     return v0
 .end method
 
-.method public static isFromSecureKeyguard(Landroid/app/Activity;)Z
-    .locals 3
-
-    const-string v0, "keyguard"
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/KeyguardManager;
-
-    .line 2
-    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
-
-    move-result v0
-
-    .line 3
-    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardSecure()Z
-
-    move-result p0
-
-    .line 4
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isFromSecureKeyguard, isKeyguardLocked:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", isKeyguardSecure:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "CameraUtil"
-
-    invoke-static {v2, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    if-eqz v0, :cond_0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
 .method public static isFullScreenNavBarHidden(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -20352,7 +20522,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -20365,11 +20534,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000ooO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000o0()Z
 
     move-result v0
 
@@ -20397,7 +20566,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 3
     array-length v1, p0
 
     const/4 v2, 0x3
@@ -20406,7 +20574,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     aget v1, p0, v0
 
@@ -20462,7 +20629,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-static {p0}, Lcom/android/camera/Util;->isGyroscopeStable([F)Z
 
@@ -20476,7 +20642,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     invoke-static {p1}, Lcom/android/camera/Util;->isGyroscopeStable([F)Z
 
@@ -20493,18 +20658,15 @@
 .method public static isHDR10Video(Ljava/lang/String;)Z
     .locals 7
 
-    .line 1
     new-instance v0, Landroid/media/MediaExtractor;
 
     invoke-direct {v0}, Landroid/media/MediaExtractor;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, p0}, Landroid/media/MediaExtractor;->setDataSource(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Landroid/media/MediaExtractor;->getTrackCount()I
 
     move-result p0
@@ -20519,7 +20681,6 @@
     :goto_0
     if-ge v2, p0, :cond_2
 
-    .line 4
     :try_start_1
     invoke-virtual {v0, v2}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
@@ -20527,12 +20688,10 @@
 
     const-string v5, "mime"
 
-    .line 5
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 6
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -20549,7 +20708,6 @@
 
     const-string v5, "frame-rate"
 
-    .line 7
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v5
@@ -20558,7 +20716,6 @@
 
     const-string/jumbo v5, "width"
 
-    .line 8
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v5
@@ -20567,7 +20724,6 @@
 
     const-string v5, "height"
 
-    .line 9
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v5
@@ -20576,7 +20732,6 @@
 
     const-string/jumbo v5, "profile"
 
-    .line 10
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v3
@@ -20608,7 +20763,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_2
     invoke-virtual {v0}, Landroid/media/MediaExtractor;->release()V
 
@@ -20622,14 +20776,12 @@
     :catch_1
     move-exception p0
 
-    .line 12
     :goto_2
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 13
     invoke-virtual {v0}, Landroid/media/MediaExtractor;->release()V
 
     move v3, v1
@@ -20646,206 +20798,9 @@
 .method public static isHasBackLightSensor()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->isHasBackLightSensor:Z
 
     return v0
-.end method
-
-.method public static isInSRZoomRatioTheInterval(Lcom/android/camera2/Camera2Proxy;Lcom/android/camera2/CameraCapabilities;F)Z
-    .locals 9
-
-    const-string v0, "CameraUtil"
-
-    const/4 v1, 0x0
-
-    if-nez p1, :cond_0
-
-    const-string p0, "SR Trigger optimization CameraCapabilities == null"
-
-    .line 1
-    invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    .line 2
-    :cond_0
-    invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getThresholdZoomValue()Ljava/util/HashMap;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_b
-
-    if-nez p0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    const/16 v0, 0x15
-
-    .line 3
-    invoke-static {p1, v0}, Lcom/android/camera/Util;->getValue(Ljava/util/HashMap;I)F
-
-    move-result v0
-
-    .line 4
-    invoke-static {p1, v1}, Lcom/android/camera/Util;->getValue(Ljava/util/HashMap;I)F
-
-    move-result v2
-
-    const/16 v3, 0x14
-
-    .line 5
-    invoke-static {p1, v3}, Lcom/android/camera/Util;->getValue(Ljava/util/HashMap;I)F
-
-    move-result v3
-
-    const/16 v4, 0x17
-
-    .line 6
-    invoke-static {p1, v4}, Lcom/android/camera/Util;->getValue(Ljava/util/HashMap;I)F
-
-    move-result p1
-
-    .line 7
-    invoke-static {}, Lcom/android/camera/HybridZoomingSystem;->getTeleMinZoomRatio()F
-
-    move-result v4
-
-    .line 8
-    invoke-static {}, Lcom/android/camera/HybridZoomingSystem;->getUltraTeleMinZoomRatio()F
-
-    move-result v5
-
-    const/4 v6, 0x0
-
-    cmpl-float v7, v0, v6
-
-    const/4 v8, 0x1
-
-    if-eqz v7, :cond_2
-
-    cmpl-float v0, p2, v0
-
-    if-ltz v0, :cond_2
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    cmpg-float v0, p2, v0
-
-    if-gez v0, :cond_2
-
-    return v8
-
-    :cond_2
-    cmpl-float v0, v2, v6
-
-    if-eqz v0, :cond_6
-
-    .line 9
-    invoke-virtual {p0}, Lcom/android/camera2/Camera2Proxy;->getSatMasterCameraId()I
-
-    move-result v0
-
-    const/4 v7, 0x2
-
-    if-ne v0, v7, :cond_6
-
-    cmpl-float p0, v3, v6
-
-    if-eqz p0, :cond_3
-
-    cmpl-float v0, p2, v2
-
-    if-gez v0, :cond_5
-
-    :cond_3
-    if-nez p0, :cond_4
-
-    cmpl-float v0, p1, v6
-
-    if-eqz v0, :cond_4
-
-    cmpl-float v0, p2, v2
-
-    if-gez v0, :cond_5
-
-    :cond_4
-    if-nez p0, :cond_a
-
-    cmpl-float p0, p1, v6
-
-    if-nez p0, :cond_a
-
-    cmpl-float p0, p2, v2
-
-    if-ltz p0, :cond_a
-
-    :cond_5
-    return v8
-
-    :cond_6
-    cmpl-float v0, v3, v6
-
-    if-eqz v0, :cond_9
-
-    cmpl-float v0, p2, v4
-
-    if-ltz v0, :cond_9
-
-    cmpl-float p0, p1, v6
-
-    if-eqz p0, :cond_7
-
-    cmpl-float p1, p2, v3
-
-    if-ltz p1, :cond_7
-
-    cmpg-float p1, p2, v5
-
-    if-ltz p1, :cond_8
-
-    :cond_7
-    if-nez p0, :cond_a
-
-    cmpl-float p0, p2, v3
-
-    if-ltz p0, :cond_a
-
-    :cond_8
-    return v8
-
-    :cond_9
-    cmpl-float v0, p1, v6
-
-    if-eqz v0, :cond_a
-
-    .line 10
-    invoke-virtual {p0}, Lcom/android/camera2/Camera2Proxy;->getSatMasterCameraId()I
-
-    move-result p0
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_a
-
-    cmpl-float p0, p2, p1
-
-    if-ltz p0, :cond_a
-
-    return v8
-
-    :cond_a
-    return v1
-
-    :cond_b
-    :goto_0
-    const-string p0, "SR Trigger optimization getThresholdZoom == null"
-
-    .line 11
-    invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
 .end method
 
 .method public static isInViewRegion(Landroid/view/View;II)Z
@@ -20857,7 +20812,6 @@
 
     return p0
 
-    .line 1
     :cond_0
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -20871,23 +20825,19 @@
 
     add-int/lit8 p2, p2, -0x60
 
-    .line 2
     :cond_1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/Activity;
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->isInMultiWindowMode()Z
 
     move-result v1
@@ -20900,22 +20850,18 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 6
     invoke-static {p0}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->getAppBounds(Landroid/app/Activity;)Landroid/graphics/Rect;
 
     move-result-object p0
 
-    .line 7
     iget v1, p0, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr p1, v1
 
-    .line 8
     iget p0, p0, Landroid/graphics/Rect;->top:I
 
     sub-int/2addr p2, p0
 
-    .line 9
     :cond_2
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
@@ -20927,8 +20873,7 @@
 .method public static isInternationalBuild()Z
     .locals 1
 
-    .line 1
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0OO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0OO:Z
 
     return v0
 .end method
@@ -20936,7 +20881,6 @@
 .method public static isLTR()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -20961,7 +20905,6 @@
 .method public static isLabOptionsVisible()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->sIsLabOptionsVisible:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
@@ -20970,7 +20913,6 @@
 
     const-string v1, "camera.lab.options"
 
-    .line 2
     invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -20981,7 +20923,6 @@
 
     sput-object v0, Lcom/android/camera/Util;->sIsLabOptionsVisible:Ljava/lang/Boolean;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/Util;->sIsLabOptionsVisible:Ljava/lang/Boolean;
 
@@ -21001,7 +20942,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -21034,7 +20974,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->getAEState()I
 
@@ -21046,7 +20985,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->getAWBState()I
 
     move-result v1
@@ -21057,14 +20995,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->isGyroScopeStable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->getFilterId()I
 
     move-result p0
@@ -21083,7 +21019,6 @@
 .method public static isLocaleChinese()Z
     .locals 2
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
 
     invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
@@ -21117,17 +21052,14 @@
 .method public static isLowMemory()Z
     .locals 10
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->getMemInfo()Ljava/util/HashMap;
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -21156,7 +21088,6 @@
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 4
     :try_start_0
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -21179,7 +21110,6 @@
     :catch_0
     move-exception v5
 
-    .line 5
     invoke-virtual {v5}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
 
     move-result-object v5
@@ -21188,7 +21118,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     sget v2, Lcom/android/camera/Util;->LOW_MEMORY_THRESHOLD_MB:I
 
@@ -21200,7 +21129,6 @@
 
     shl-int/lit8 v2, v2, 0xa
 
-    .line 7
     sget-object v5, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v7, 0x2
@@ -21229,7 +21157,6 @@
 
     invoke-static {v6, v5}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -21265,22 +21192,18 @@
 
     const-string v0, "activity"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 2
     new-instance v0, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 4
     iget-wide v0, v0, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     const-wide/32 v2, 0x19000000
@@ -21303,7 +21226,6 @@
 .method public static isNightUiMode(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -21312,7 +21234,6 @@
 
     move-result-object p0
 
-    .line 2
     iget p0, p0, Landroid/content/res/Configuration;->uiMode:I
 
     and-int/lit8 p0, p0, 0x30
@@ -21339,7 +21260,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -21352,7 +21272,6 @@
 
     const-string/jumbo v0, "sys.power.nonui"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21379,7 +21298,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
@@ -21388,13 +21306,11 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
@@ -21418,7 +21334,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/NullPointerException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -21430,7 +21345,6 @@
     :catch_1
     move-exception p0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -21440,7 +21354,6 @@
     :goto_0
     return v0
 
-    .line 6
     :cond_3
     :goto_1
     new-instance p0, Ljava/lang/StringBuilder;
@@ -21465,7 +21378,6 @@
 .method public static isPathExist(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -21498,7 +21410,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     array-length v0, p0
 
     const/16 v1, 0x19
@@ -21529,17 +21440,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     instance-of v0, p0, Ljava/io/FileNotFoundException;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -21560,7 +21468,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -21588,7 +21495,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -21599,7 +21505,6 @@
 .method public static isSaveToHidenFolder(I)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/CameraSettings;->isDocumentModeOn(I)Z
 
     move-result v0
@@ -21628,7 +21533,6 @@
 .method public static isScreenSlideOff(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -21659,7 +21563,6 @@
 
     const-string v0, "camera.preview.debug.afRegion_view"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21678,7 +21581,6 @@
 
     const-string/jumbo v0, "persist.camera.enable.log"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21693,7 +21595,6 @@
 
     const-string/jumbo v0, "persist.camera.debug.show_af"
 
-    .line 2
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21706,7 +21607,6 @@
 
     const-string/jumbo v0, "persist.camera.debug.show_awb"
 
-    .line 3
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21719,7 +21619,6 @@
 
     const-string/jumbo v0, "persist.camera.debug.show_aec"
 
-    .line 4
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21732,7 +21631,6 @@
 
     const-string/jumbo v0, "persist.camera.debug.autoscene"
 
-    .line 5
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21745,7 +21643,6 @@
 
     const-string/jumbo v0, "persist.camera.debug.hht"
 
-    .line 6
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21776,7 +21673,6 @@
 
     const-string v0, "camera.preview.debug.debugInfo_view"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21795,7 +21691,6 @@
 
     const-string v0, "camera.preview.enable.log"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -21812,7 +21707,6 @@
 .method public static isStringValueContained(Ljava/lang/Object;I)Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -21825,7 +21719,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera/Util;->isStringValueContained(Ljava/lang/Object;[Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -21854,7 +21747,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21873,7 +21765,6 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    .line 6
     invoke-virtual {v1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -21900,7 +21791,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     array-length v1, p1
 
@@ -21911,7 +21801,6 @@
 
     aget-object v3, p1, v2
 
-    .line 4
     invoke-virtual {v3, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -21933,9 +21822,8 @@
 .end method
 
 .method public static isSupportWCG(Landroid/app/Activity;)Z
-    .locals 2
+    .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -21948,58 +21836,45 @@
 
     move-result p0
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return v0
+    const-string v1, "isSupportWCG.isSupport: "
 
-    .line 2
-    :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oO0O0()Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    return v0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    const-string/jumbo v0, "persist.vendor.camera.sensor.EnableP3ColorSpace"
-
-    .line 3
-    invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
+    move-result-object v0
 
     const-string v1, "CameraUtil"
 
-    if-nez v0, :cond_2
-
-    const-string v0, "isSupportWCG: setprop close"
-
-    .line 4
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
-    const-string v0, "isSupportWCG: true"
+    const/4 v0, 0x0
 
-    .line 5
-    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string/jumbo v1, "persist.vendor.camera.sensor.EnableP3ColorSpace"
 
+    invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_0
+
+    move p0, v0
+
+    :cond_0
     return p0
 .end method
 
 .method public static isSupported(I[I)Z
     .locals 0
 
-    .line 3
     invoke-static {p1, p0}, Lcom/android/camera/Util;->getArrayIndex([II)I
 
     move-result p0
@@ -22029,7 +21904,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p1, p0}, Lcom/android/camera/Util;->getArrayIndex([Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p0
@@ -22063,7 +21937,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-interface {p1, p0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -22112,7 +21985,6 @@
 .method public static isTurnOnInvisibleMode(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -22150,14 +22022,12 @@
     :try_start_0
     const-string/jumbo v2, "r"
 
-    .line 1
     invoke-virtual {p1, p0, v2}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 
     if-nez p1, :cond_1
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -22176,7 +22046,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
@@ -22192,7 +22061,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -22218,7 +22086,6 @@
     :catch_1
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -22244,7 +22111,6 @@
     :catch_2
     move-exception p0
 
-    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -22270,7 +22136,6 @@
     :catch_3
     move-exception p0
 
-    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -22299,7 +22164,6 @@
 
     const-string/jumbo v0, "user"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -22308,7 +22172,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/os/UserManager;->isUserUnlocked()Z
 
     move-result p0
@@ -22329,7 +22192,6 @@
 .method public static isValidValue(Ljava/lang/String;)Z
     .locals 1
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -22362,15 +22224,13 @@
 
     new-array v0, v0, [I
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
     const/4 v1, 0x0
 
-    .line 2
     aget v2, v0, v1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v3
 
@@ -22380,7 +22240,6 @@
 
     aget v2, v0, v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -22391,8 +22250,7 @@
 
     aget v2, v0, v4
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v3
 
@@ -22400,7 +22258,6 @@
 
     aget v0, v0, v4
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p0
@@ -22418,7 +22275,6 @@
 .method public static isVoiceAccessible()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->sIsVoiceAccessibilityEnable:Z
 
     return v0
@@ -22427,7 +22283,6 @@
 .method public static isWiredAudioHeadset(Landroid/media/AudioDeviceInfo;)Z
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -22450,7 +22305,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Landroid/media/AudioDeviceInfo;->getType()I
 
     move-result p0
@@ -22480,7 +22334,6 @@
 .method public static isWiredHeadsetOn()Z
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -22489,7 +22342,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -22502,7 +22354,6 @@
 
     check-cast v1, Landroid/media/AudioManager;
 
-    .line 3
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v3, 0x0
@@ -22513,7 +22364,6 @@
 
     const-string v2, "android.hardware.audio.output"
 
-    .line 4
     invoke-virtual {v0, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result v0
@@ -22522,12 +22372,10 @@
 
     const/4 v0, 0x2
 
-    .line 5
     invoke-virtual {v1, v0}, Landroid/media/AudioManager;->getDevices(I)[Landroid/media/AudioDeviceInfo;
 
     move-result-object v0
 
-    .line 6
     array-length v1, v0
 
     move v2, v3
@@ -22537,7 +22385,6 @@
 
     aget-object v4, v0, v2
 
-    .line 7
     invoke-static {v4}, Lcom/android/camera/Util;->isWiredAudioHeadset(Landroid/media/AudioDeviceInfo;)Z
 
     move-result v4
@@ -22560,22 +22407,18 @@
 .method public static isZhCn()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -22595,7 +22438,6 @@
     :cond_0
     const-string/jumbo v2, "zh"
 
-    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -22622,12 +22464,11 @@
 .method public static isZoomAnimationEnabled()Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oOOOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o()Z
 
     move-result v0
 
@@ -22655,14 +22496,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -22670,7 +22509,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -22679,7 +22517,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 4
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -22690,7 +22527,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -22707,7 +22543,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -22723,7 +22558,6 @@
 
     const/4 v1, 0x3
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -22734,25 +22568,20 @@
 .method public static loadFrontCameraWatermark()Landroid/graphics/Bitmap;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/4 v1, 0x1
 
-    .line 3
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 4
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inPremultiplied:Z
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -22765,7 +22594,6 @@
 
     move-result-object v0
 
-    .line 6
     invoke-static {}, Lcom/android/camera/watermark/WaterMarkUtil;->getFrontTitle()Ljava/lang/String;
 
     move-result-object v1
@@ -22780,14 +22608,12 @@
 .method public static loadWatermarkIcon(Landroid/content/Context;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -22813,7 +22639,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :try_start_1
     invoke-static {p0, v0, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -22823,7 +22648,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -22835,7 +22659,6 @@
     :catchall_0
     move-exception p1
 
-    .line 5
     :try_start_3
     throw p1
     :try_end_3
@@ -22846,7 +22669,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 6
     :try_start_4
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -22873,16 +22695,28 @@
 
     const-string p2, "Failed to load app camera watermark "
 
-    .line 7
     invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
 .end method
 
+.method public static log2(D)D
+    .locals 2
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide p0
+
+    sget-wide v0, Lcom/android/camera/Util;->LOG_2:D
+
+    div-double/2addr p0, v0
+
+    return-wide p0
+.end method
+
 .method public static logStack(Ljava/lang/String;I)V
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -22896,7 +22730,6 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/Util;->getCaller([Ljava/lang/StackTraceElement;I)Ljava/lang/String;
 
     move-result-object v2
@@ -22916,7 +22749,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
@@ -22924,17 +22756,14 @@
 
     const/4 v2, 0x1
 
-    .line 2
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 3
     array-length v2, p0
 
     const/4 v3, 0x0
 
     invoke-static {p0, v3, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 4
     iget-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->mCancel:Z
 
     if-nez v2, :cond_1
@@ -22951,7 +22780,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {v1, v4, p1}, Lcom/android/camera/Util;->computeSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
@@ -22959,18 +22787,14 @@
 
     iput p1, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 6
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 7
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 8
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object p1, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 9
     array-length p1, p0
 
     invoke-static {p0, v3, p1, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -22992,7 +22816,6 @@
 
     const-string v1, "Got oom exception "
 
-    .line 10
     invoke-static {p1, v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -23001,21 +22824,18 @@
 .method public static makeSureNoMedia(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     const-string v1, ".nomedia"
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    .line 3
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
     :try_end_0
@@ -23026,7 +22846,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
@@ -23046,21 +22865,18 @@
     :try_start_0
     const-string v0, "MD5"
 
-    .line 1
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
     const-string v1, "UTF8"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -23069,13 +22885,11 @@
 
     const/4 v1, 0x0
 
-    .line 4
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -23116,7 +22930,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -23129,7 +22942,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZZ)Ljava/lang/String;
 
     move-result-object p0
@@ -23142,7 +22954,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-static {p0, p1, p2, p3, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZZZ)Ljava/lang/String;
 
     move-result-object p0
@@ -23157,15 +22968,12 @@
 
     const-wide/16 v2, 0x3e8
 
-    .line 3
     div-long v4, v0, v2
 
     const-wide/16 v6, 0x3c
 
-    .line 4
     div-long v8, v4, v6
 
-    .line 5
     div-long v10, v8, v6
 
     mul-long v12, v10, v6
@@ -23176,7 +22984,6 @@
 
     sub-long v6, v4, v8
 
-    .line 6
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -23197,10 +23004,8 @@
 
     if-gez v15, :cond_0
 
-    .line 7
     invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 8
     :cond_0
     invoke-virtual {v14, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -23213,7 +23018,6 @@
 
     const-string v10, "00"
 
-    .line 9
     invoke-virtual {v14, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v14, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -23224,10 +23028,8 @@
 
     if-gez v10, :cond_3
 
-    .line 10
     invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 11
     :cond_3
     invoke-virtual {v14, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -23247,7 +23049,6 @@
 
     sub-double/2addr v6, v8
 
-    .line 12
     invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v6
@@ -23259,10 +23060,8 @@
 
     if-gez v2, :cond_5
 
-    .line 13
     invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 14
     :cond_5
     invoke-virtual {v14, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -23270,7 +23069,6 @@
 
     const/16 v2, 0x2e
 
-    .line 15
     invoke-virtual {v14, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const-wide/16 v6, 0x3e8
@@ -23279,21 +23077,17 @@
 
     sub-long/2addr v0, v4
 
-    .line 16
     div-long v0, v0, v17
 
     cmp-long v2, v0, v17
 
     if-gez v2, :cond_6
 
-    .line 17
     invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 18
     :cond_6
     invoke-virtual {v14, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 19
     :cond_7
     invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -23305,7 +23099,6 @@
 .method public static mkdirs(Ljava/io/File;III)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -23316,7 +23109,6 @@
 
     return p0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getParent()Ljava/lang/String;
 
@@ -23324,14 +23116,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-static {v1, p1, p2, p3}, Lcom/android/camera/Util;->mkdirs(Ljava/io/File;III)Z
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->mkdir()Z
 
@@ -23349,7 +23139,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -23360,10 +23149,8 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 3
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
 
     return-void
@@ -23506,10 +23293,8 @@
 .method public static onCameraError(Landroid/app/Activity;Z)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackCameraErrorDialogShow()V
 
-    .line 2
     sget-boolean v0, Lcom/android/camera/Util;->sIsKillCameraService:Z
 
     if-eqz v0, :cond_0
@@ -23520,8 +23305,7 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOoo()Z
 
     move-result v0
 
@@ -23531,7 +23315,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -23554,10 +23337,8 @@
 
     const-string v2, "Error dialog: broadcastKillService"
 
-    .line 5
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p1}, Lcom/android/camera/Util;->broadcastKillService(Landroid/content/Context;Z)V
 
     :cond_0
@@ -23567,17 +23348,14 @@
 .method public static onCameraErrorFinish(Landroid/app/Activity;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->dumpBugReportLog()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->reset()V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
@@ -23590,7 +23368,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-static {p1}, Lcom/android/camera/Util;->isActivityAlive(Landroid/app/Activity;)Z
 
@@ -23600,7 +23377,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
@@ -23610,7 +23386,6 @@
 .method public static parseInt(Ljava/lang/String;I)I
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -23623,7 +23398,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -23632,7 +23406,6 @@
 
     invoke-static {v1, v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->isDebugOsBuild()Z
 
     move-result v0
@@ -23641,7 +23414,6 @@
 
     return p1
 
-    .line 4
     :cond_0
     throw p0
 .end method
@@ -23649,7 +23421,6 @@
 .method public static photoUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -23660,12 +23431,10 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p0}, Landroid/net/Uri$Builder;->path(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object p0
 
-    .line 3
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
@@ -23676,8 +23445,7 @@
 .method public static pixelToXxhdp(F)F
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getsPixelDensityScale()F
+    invoke-static {}, Lcom/android/camera/Display;->getsPixelDensityScale()F
 
     move-result v0
 
@@ -23704,10 +23472,8 @@
 
     new-array v1, v1, [I
 
-    .line 1
     invoke-virtual {p2, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 2
     aget v2, v1, v0
 
     int-to-float v2, v2
@@ -23742,7 +23508,6 @@
 
     aget p0, v1, v3
 
-    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
     move-result p2
@@ -23762,9 +23527,9 @@
 .end method
 
 .method public static prepareMatrix(Landroid/graphics/Matrix;ZIIIIIII)V
-    .locals 1
+    .locals 0
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/high16 p3, 0x3f800000    # 1.0f
 
     if-eqz p1, :cond_0
 
@@ -23773,15 +23538,13 @@
     goto :goto_0
 
     :cond_0
-    move p1, v0
+    move p1, p3
 
-    .line 1
     :goto_0
-    invoke-virtual {p0, p1, v0}, Landroid/graphics/Matrix;->setScale(FF)V
+    invoke-virtual {p0, p1, p3}, Landroid/graphics/Matrix;->setScale(FF)V
 
     int-to-float p1, p2
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     const/16 p1, 0x5a
@@ -23797,7 +23560,6 @@
     :cond_1
     mul-int p1, p4, p7
 
-    .line 3
     div-int/2addr p1, p8
 
     int-to-float p1, p1
@@ -23812,30 +23574,14 @@
 
     div-float/2addr p2, p3
 
-    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     goto :goto_2
 
     :cond_2
     :goto_1
-    if-ne p3, p4, :cond_3
-
-    int-to-float p1, p3
-
-    int-to-float p2, p8
-
-    div-float/2addr p1, p2
-
-    .line 5
-    invoke-virtual {p0, p1, p1}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    goto :goto_2
-
-    :cond_3
     mul-int p1, p4, p8
 
-    .line 6
     div-int/2addr p1, p7
 
     int-to-float p1, p1
@@ -23850,7 +23596,6 @@
 
     div-float/2addr p2, p3
 
-    .line 7
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     :goto_2
@@ -23858,7 +23603,6 @@
 
     int-to-float p2, p6
 
-    .line 8
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     return-void
@@ -23867,20 +23611,17 @@
 .method public static varargs printLog(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 3
     aget-object v2, p1, v1
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -23891,12 +23632,10 @@
 
     const-string v2, " = "
 
-    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 5
     aget-object v2, p1, v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -23907,14 +23646,12 @@
 
     const-string v2, " "
 
-    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -23925,107 +23662,9 @@
     return-void
 .end method
 
-.method public static reclaimMemoryForCamera(J)V
-    .locals 7
-
-    const-string v0, "CameraUtil"
-
-    .line 1
-    :try_start_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "modeValue "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v1, "miui.process.ProcessManager"
-
-    .line 2
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "reclaimMemoryForCamera"
-
-    const/4 v3, 0x1
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    .line 3
-    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const/4 v6, 0x0
-
-    aput-object v5, v4, v6
-
-    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    .line 4
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    aput-object p0, v3, v6
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_3
-    move-exception p0
-
-    .line 5
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    return-void
-.end method
-
 .method public static rectFToRect(Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 1
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -24034,7 +23673,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 2
     iget v0, p0, Landroid/graphics/RectF;->top:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -24043,7 +23681,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 3
     iget v0, p0, Landroid/graphics/RectF;->right:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -24052,7 +23689,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 4
     iget p0, p0, Landroid/graphics/RectF;->bottom:F
 
     invoke-static {p0}, Ljava/lang/Math;->round(F)I
@@ -24067,35 +23703,30 @@
 .method public static removeCustomWatermark()V
     .locals 5
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/camera/WatermarkMiSysUtils;->eraseFile(Ljava/lang/String;)I
 
-    .line 3
     sget-object v0, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/WatermarkMiSysUtils;->eraseFile(Ljava/lang/String;)I
 
-    .line 4
     sget-object v0, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/camera/WatermarkMiSysUtils;->eraseFile(Ljava/lang/String;)I
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -24105,7 +23736,6 @@
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Ljava/io/File;
 
     invoke-static {}, Lcom/android/camera/Util;->getDefaultWatermarkFileName()Ljava/lang/String;
@@ -24114,31 +23744,26 @@
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 7
     new-instance v2, Ljava/io/File;
 
     sget-object v3, Lcom/android/camera/Util;->WATERMARK_FRONT_FILE_NAME:Ljava/lang/String;
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 8
     new-instance v3, Ljava/io/File;
 
     sget-object v4, Lcom/android/camera/Util;->WATERMARK_CINEMATIC_RATIO_FILE_NAME:Ljava/lang/String;
 
     invoke-direct {v3, v0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 9
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 10
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 11
     :cond_1
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -24146,10 +23771,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 12
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 13
     :cond_2
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -24157,7 +23780,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 14
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
     :cond_3
@@ -24167,14 +23789,12 @@
 .method public static replaceStartEffectRender(Landroid/app/Activity;)I
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000O0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -24187,12 +23807,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -24205,7 +23823,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -24214,12 +23831,10 @@
 
     move-result p0
 
-    .line 6
     invoke-static {p0}, Lcom/android/camera/CameraSettings;->setShaderEffect(I)V
 
     return p0
 
-    .line 7
     :cond_0
     sget p0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
@@ -24229,12 +23844,10 @@
 .method public static reverseAnimatorSet(Landroid/animation/AnimatorSet;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -24253,25 +23866,21 @@
 
     check-cast v0, Landroid/animation/Animator;
 
-    .line 3
     instance-of v1, v0, Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_1
 
-    .line 4
     check-cast v0, Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     instance-of v1, v0, Landroid/animation/AnimatorSet;
 
     if-eqz v1, :cond_0
 
-    .line 6
     check-cast v0, Landroid/animation/AnimatorSet;
 
     invoke-static {v0}, Lcom/android/camera/Util;->reverseAnimatorSet(Landroid/animation/AnimatorSet;)V
@@ -24287,7 +23896,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, v0}, Lcom/android/camera/Util;->rotateAndMirror(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -24295,43 +23903,16 @@
     return-object p0
 .end method
 
-.method public static rotate(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-static {p0, p1, v0, p2}, Lcom/android/camera/Util;->rotateAndMirror(Landroid/graphics/Bitmap;IZZ)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static rotateAndMirror(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-static {p0, p1, p2, v0}, Lcom/android/camera/Util;->rotateAndMirror(Landroid/graphics/Bitmap;IZZ)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static rotateAndMirror(Landroid/graphics/Bitmap;IZZ)Landroid/graphics/Bitmap;
     .locals 7
 
     if-nez p1, :cond_0
 
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_7
 
     :cond_0
-    if-eqz p0, :cond_8
+    if-eqz p0, :cond_7
 
-    .line 2
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
@@ -24342,12 +23923,10 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 3
     invoke-virtual {v5, p2, v0}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     add-int/lit16 p1, p1, 0x168
 
-    .line 4
     rem-int/lit16 p1, p1, 0x168
 
     const/4 p2, 0x0
@@ -24371,7 +23950,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -24379,9 +23957,9 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p3, "Invalid degrees="
+    const-string v0, "Invalid degrees="
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -24393,7 +23971,6 @@
 
     throw p0
 
-    .line 6
     :cond_3
     :goto_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
@@ -24406,7 +23983,6 @@
 
     goto :goto_2
 
-    .line 7
     :cond_4
     :goto_1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -24423,7 +23999,6 @@
 
     int-to-float p1, p1
 
-    .line 8
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
@@ -24449,7 +24024,6 @@
 
     const/4 v2, 0x0
 
-    .line 9
     :try_start_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -24467,20 +24041,16 @@
 
     move-result-object p1
 
-    if-eq p0, p1, :cond_8
+    if-eq p0, p1, :cond_7
 
-    if-eqz p3, :cond_7
-
-    .line 10
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_7
     move-object p0, p1
 
     :catch_0
-    :cond_8
+    :cond_7
     return-object p0
 .end method
 
@@ -24498,14 +24068,12 @@
     :cond_0
     sub-int v1, p0, p1
 
-    .line 1
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
     rsub-int v2, v1, 0x168
 
-    .line 2
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -24524,14 +24092,12 @@
 
     add-int/lit8 p0, p0, 0x46
 
-    .line 3
     div-int/lit8 p0, p0, 0x5a
 
     mul-int/lit8 p0, p0, 0x5a
 
     rem-int/lit16 p0, p0, 0x168
 
-    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -24561,7 +24127,6 @@
 
     const/4 v0, -0x1
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -24571,14 +24136,12 @@
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {v1, p0, p1, p2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "CameraUtil"
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -24620,7 +24183,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -24632,17 +24194,14 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     invoke-static {p1, p2, p3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1, p0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
     const/4 p0, 0x0
 
-    .line 3
     :try_start_0
     new-instance p2, Ljava/io/FileOutputStream;
 
@@ -24655,7 +24214,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :try_start_1
     sget-object p0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -24668,11 +24226,9 @@
 
     const/4 p0, 0x1
 
-    .line 5
     :try_start_2
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 6
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -24682,10 +24238,8 @@
     :catch_0
     move-exception p2
 
-    .line 7
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 8
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -24722,18 +24276,15 @@
 
     const-string/jumbo p4, "saveBitmap failed!"
 
-    .line 9
     invoke-static {p3, p4, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     if-eqz p2, :cond_0
 
-    .line 10
     :try_start_4
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 11
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
@@ -24743,10 +24294,8 @@
     :catch_3
     move-exception p0
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 13
     :cond_0
     :goto_2
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
@@ -24759,11 +24308,9 @@
     :goto_3
     if-eqz p2, :cond_1
 
-    .line 14
     :try_start_5
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 15
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
@@ -24773,10 +24320,8 @@
     :catch_4
     move-exception p2
 
-    .line 16
     invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 17
     :cond_1
     :goto_4
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
@@ -24798,10 +24343,8 @@
 
     const-string v1, "The target filepath must not be null"
 
-    .line 1
     invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -24809,14 +24352,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :try_start_1
     invoke-virtual {v1, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 4
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -24835,7 +24375,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -24846,7 +24385,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7
     :try_start_3
     throw p0
     :try_end_3
@@ -24855,7 +24393,6 @@
     :catchall_1
     move-exception v2
 
-    .line 8
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -24874,7 +24411,6 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 9
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -24903,7 +24439,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     array-length v0, p0
 
@@ -24916,7 +24451,6 @@
 
     aget-object v3, p0, v2
 
-    .line 2
     iget v4, v3, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;->type:I
 
     const/16 v5, 0x14
@@ -24943,7 +24477,6 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 3
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -24973,7 +24506,6 @@
     :cond_3
     const-string v5, "back_dual_camera_caldata.bin"
 
-    .line 4
     :goto_1
     iget-object v6, v3, Lcom/android/camera2/vendortag/struct/SatFusionCalibrationData;->data:[B
 
@@ -24989,7 +24521,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 5
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -25018,7 +24549,6 @@
 
     goto :goto_2
 
-    .line 6
     :cond_4
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -25060,7 +24590,6 @@
 
     const-string v0, "CameraUtil"
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
@@ -25073,13 +24602,11 @@
 
     goto :goto_5
 
-    .line 9
     :cond_0
     invoke-virtual {v1, p3}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v3
 
-    .line 10
     invoke-static {p0, v3}, Lcom/android/camera/Util;->isEqual([BLjava/io/File;)Z
 
     move-result v3
@@ -25090,7 +24617,6 @@
 
     return v4
 
-    .line 11
     :cond_1
     :try_start_0
     invoke-virtual {v1, p3, v2}, Landroid/content/Context;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
@@ -25100,7 +24626,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 12
     :try_start_1
     invoke-virtual {p3, p0, p1, p2}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_1
@@ -25108,7 +24633,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 13
     :try_start_2
     invoke-virtual {p3}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -25134,7 +24658,6 @@
     :catchall_0
     move-exception p0
 
-    .line 14
     :try_start_3
     throw p0
     :try_end_3
@@ -25145,7 +24668,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 15
     :try_start_4
     invoke-virtual {p3}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -25172,7 +24694,6 @@
     :goto_1
     const-string/jumbo p1, "saveCameraCalibrationToFile: IOException"
 
-    .line 16
     invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_3
@@ -25183,7 +24704,6 @@
     :goto_2
     const-string/jumbo p1, "saveCameraCalibrationToFile: FileNotFoundException"
 
-    .line 17
     invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_3
@@ -25207,7 +24727,6 @@
 
     return v0
 
-    .line 7
     :cond_0
     array-length v1, p0
 
@@ -25221,7 +24740,6 @@
 .method public static saveCustomWatermark2File(Landroid/graphics/Bitmap;Ljava/lang/String;)V
     .locals 9
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -25240,14 +24758,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     if-eqz p0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
@@ -25256,12 +24772,11 @@
 
     const/4 v0, 0x1
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v4
 
-    invoke-virtual {v4}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v4}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v4
 
@@ -25269,22 +24784,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 5
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 6
     sget-object v4, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {p0, v4, v5, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
 
-    .line 8
     invoke-static {v0, p1}, Lcom/android/camera/WatermarkMiSysUtils;->writeFileToPersist([BLjava/lang/String;)Z
 
     move-result v0
@@ -25294,7 +24805,6 @@
 
     const/4 v0, 0x0
 
-    .line 9
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -25304,7 +24814,6 @@
 
     move-result-object v4
 
-    .line 10
     new-instance v6, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -25323,7 +24832,6 @@
 
     invoke-direct {v6, v4, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 11
     new-instance v7, Ljava/io/FileOutputStream;
 
     invoke-direct {v7, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -25331,16 +24839,13 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 12
     :try_start_1
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {p0, v0, v5, v7}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 13
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 14
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v4, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -25352,7 +24857,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     invoke-static {v7}, Lcom/android/camera/Util;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_3
@@ -25383,12 +24887,10 @@
     :try_start_2
     const-string/jumbo v4, "saveCustomWatermark2File Failed to write image"
 
-    .line 16
     invoke-static {v1, v4, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 17
     invoke-static {v0}, Lcom/android/camera/Util;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_2
@@ -25402,7 +24904,6 @@
     :goto_2
     const/4 p1, 0x0
 
-    .line 18
     :goto_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -25424,7 +24925,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
@@ -25433,7 +24933,7 @@
 
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string p0, "ms"
+    const-string/jumbo p0, "ms"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -25441,7 +24941,6 @@
 
     move-result-object p0
 
-    .line 20
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -25450,14 +24949,12 @@
 .method public static saveImageToJpeg(Landroid/media/Image;)V
     .locals 12
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 2
     aget-object v2, v0, v1
 
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -25466,7 +24963,6 @@
 
     const/4 v3, 0x2
 
-    .line 3
     aget-object v4, v0, v3
 
     invoke-virtual {v4}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -25475,7 +24971,6 @@
 
     new-array v5, v3, [I
 
-    .line 4
     aget-object v6, v0, v1
 
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getRowStride()I
@@ -25494,41 +24989,32 @@
 
     aput v6, v5, v7
 
-    .line 5
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v6
 
-    .line 6
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v8
 
     add-int v9, v6, v8
 
-    .line 7
     new-array v9, v9, [B
 
-    .line 8
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 9
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 10
     invoke-virtual {v2, v9, v1, v6}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 11
     invoke-virtual {v4, v9, v6, v8}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 12
     sget-object v6, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v8, 0x4
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    .line 13
     invoke-virtual {p0}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v10
@@ -25575,12 +25061,10 @@
 
     const-string v0, "%d_image_stride%d_%dx%d"
 
-    .line 14
     invoke-static {v6, v0, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 15
     invoke-virtual {p0}, Landroid/media/Image;->getWidth()I
 
     move-result v1
@@ -25591,7 +25075,6 @@
 
     invoke-static {v9, v1, p0, v5, v0}, Lcom/android/camera/ImageHelper;->saveYuvToJpg([BII[ILjava/lang/String;)V
 
-    .line 16
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -25630,7 +25113,6 @@
 .method public static saveLastFrameGaussian2File(Landroid/graphics/Bitmap;)V
     .locals 8
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -25649,14 +25131,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     if-eqz p0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
@@ -25665,7 +25145,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -25675,14 +25154,12 @@
 
     move-result-object v4
 
-    .line 5
     new-instance v5, Ljava/io/File;
 
     const-string v6, "blur.jpg.tmp"
 
     invoke-direct {v5, v4, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 6
     new-instance v6, Ljava/io/FileOutputStream;
 
     invoke-direct {v6, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -25690,7 +25167,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :try_start_1
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -25698,10 +25174,8 @@
 
     invoke-virtual {p0, v0, v7, v6}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 8
     invoke-virtual {v6}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 9
     new-instance v0, Ljava/io/File;
 
     const-string v7, "blur.jpg"
@@ -25715,7 +25189,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 10
     invoke-static {v6}, Lcom/android/camera/Util;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_3
@@ -25741,12 +25214,10 @@
     :try_start_2
     const-string/jumbo v4, "saveLastFrameGaussian2File Failed to write image"
 
-    .line 11
     invoke-static {v1, v4, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 12
     invoke-static {v6}, Lcom/android/camera/Util;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_2
@@ -25765,7 +25236,6 @@
     :goto_2
     const/4 v0, 0x0
 
-    .line 13
     :goto_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -25787,7 +25257,6 @@
 
     invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 14
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -25796,7 +25265,7 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string p0, "ms"
+    const-string/jumbo p0, "ms"
 
     invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -25804,7 +25273,6 @@
 
     move-result-object p0
 
-    .line 15
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -25820,7 +25288,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
@@ -25829,35 +25296,29 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 6
     :try_start_0
     invoke-virtual {p0, p3, p2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
     const/4 p0, 0x1
@@ -25867,7 +25328,6 @@
     :catchall_0
     move-exception p0
 
-    .line 8
     :try_start_1
     throw p0
     :try_end_1
@@ -25876,7 +25336,6 @@
     :catchall_1
     move-exception p1
 
-    .line 9
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -25902,7 +25361,6 @@
 .method public static saveToFile(Ljava/lang/String;Ljava/io/File;)Z
     .locals 2
 
-    .line 10
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -25916,7 +25374,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 11
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -25926,7 +25383,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 12
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
@@ -25934,14 +25390,12 @@
 
     invoke-virtual {v1, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 13
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 14
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -25978,7 +25432,6 @@
     :catch_2
     move-exception p0
 
-    .line 15
     :goto_0
     :try_start_3
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -25987,7 +25440,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 16
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -25998,7 +25450,6 @@
     :catch_3
     move-exception p0
 
-    .line 17
     :goto_1
     :try_start_5
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -26007,7 +25458,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 18
     :try_start_6
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -26018,7 +25468,6 @@
     :catch_4
     move-exception p0
 
-    .line 19
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_1
@@ -26030,7 +25479,6 @@
     :goto_3
     if-eqz v0, :cond_2
 
-    .line 20
     :try_start_7
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
@@ -26041,10 +25489,8 @@
     :catch_5
     move-exception p1
 
-    .line 21
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 22
     :cond_2
     :goto_4
     throw p0
@@ -26059,7 +25505,6 @@
 
     const/4 v2, 0x0
 
-    .line 1
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -26079,7 +25524,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance v3, Ljava/io/FileOutputStream;
 
     invoke-direct {v3, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
@@ -26087,14 +25531,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v3, p0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 4
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -26114,7 +25555,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -26148,14 +25588,12 @@
     :try_start_3
     const-string p1, "Failed to write image"
 
-    .line 7
     invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     if-eqz v2, :cond_0
 
-    .line 8
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -26166,7 +25604,6 @@
     :catch_2
     move-exception p0
 
-    .line 9
     invoke-static {v1, v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -26176,7 +25613,6 @@
     :goto_2
     if-eqz v2, :cond_1
 
-    .line 10
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -26187,10 +25623,8 @@
     :catch_3
     move-exception p1
 
-    .line 11
     invoke-static {v1, v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 12
     :cond_1
     :goto_3
     throw p0
@@ -26205,12 +25639,10 @@
 
     const-string/jumbo p0, "saveYuvToJpg: null data"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v7, Landroid/graphics/YuvImage;
 
@@ -26228,7 +25660,6 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
 
-    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -26247,7 +25678,6 @@
 
     move-result-object p0
 
-    .line 4
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -26264,7 +25694,6 @@
 
     invoke-static {v0, p3}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :try_start_0
     new-instance p3, Landroid/graphics/Rect;
 
@@ -26287,7 +25716,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -26301,10 +25729,8 @@
 .method public static scaleCamera2Matrix(Landroid/graphics/Matrix;Landroid/graphics/Rect;F)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p2, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 2
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result p2
@@ -26335,10 +25761,8 @@
 .method public static setBrightnessRampRate(I)V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/Util;->setBrightnessRampRate1(I)V
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/Util;->setBrightnessRampRate2(I)V
 
     return-void
@@ -26347,7 +25771,6 @@
 .method public static setBrightnessRampRate1(I)V
     .locals 8
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -26368,7 +25791,6 @@
 
     const-string v0, "android.os.IPowerManager.Stub"
 
-    .line 2
     :try_start_0
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -26380,7 +25802,6 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 3
     const-class v5, Landroid/os/IBinder;
 
     const/4 v6, 0x0
@@ -26397,7 +25818,6 @@
 
     const-string/jumbo v5, "power"
 
-    .line 4
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v5
@@ -26410,7 +25830,6 @@
 
     const-string v2, "android.os.IPowerManager"
 
-    .line 5
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -26419,7 +25838,6 @@
 
     new-array v5, v3, [Ljava/lang/Class;
 
-    .line 6
     sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v7, v5, v6
@@ -26430,7 +25848,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 7
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -26444,9 +25861,8 @@
     goto :goto_0
 
     :catch_0
-    const-string p0, "modify screen light ramp rate failed, so screen light will rise slowly!"
+    const-string/jumbo p0, "modify screen light ramp rate failed, so screen light will rise slowly!"
 
-    .line 8
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -26456,7 +25872,6 @@
 .method public static setBrightnessRampRate2(I)V
     .locals 6
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -26465,7 +25880,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -26499,7 +25913,6 @@
     :goto_0
     const-string v2, "display"
 
-    .line 3
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -26508,13 +25921,11 @@
 
     return-void
 
-    .line 4
     :cond_2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 5
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v4
@@ -26522,25 +25933,20 @@
     :try_start_0
     const-string v5, "android.view.android.hardware.display.IDisplayManager"
 
-    .line 6
     invoke-virtual {v3, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 7
     invoke-virtual {v3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
 
     const p0, 0xfffffd
 
-    .line 8
     invoke-interface {v2, p0, v3, v4, v0}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9
     :goto_1
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 10
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_2
@@ -26554,7 +25960,6 @@
     :try_start_1
     const-string/jumbo p0, "setBrightnessRampRate2 failed!"
 
-    .line 11
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -26564,11 +25969,9 @@
     :goto_2
     return-void
 
-    .line 12
     :goto_3
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 13
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     throw p0
@@ -26577,7 +25980,6 @@
 .method public static setFlickSensorEnable(Z)V
     .locals 0
 
-    .line 1
     sput-boolean p0, Lcom/android/camera/Util;->isFlickSensorEnable:Z
 
     return-void
@@ -26595,7 +25997,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 1
     aget v0, p4, v0
 
     mul-int/2addr v0, p1
@@ -26613,21 +26014,18 @@
     :goto_0
     const/4 v3, 0x3
 
-    .line 2
     aget v3, p4, v3
 
     if-ge v1, v3, :cond_1
 
     const/4 v3, 0x2
 
-    .line 3
     aget v4, p4, v3
 
     mul-int/2addr v4, p2
 
     invoke-static {p3, v2, p0, v0, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 4
     aget v3, p4, v3
 
     mul-int/2addr v3, p2
@@ -26650,8 +26048,7 @@
 .method public static setScreenEffect(Z)V
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00ooo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00o0O()Z
 
     move-result v0
 
@@ -26668,7 +26065,6 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 2
     :goto_0
     :try_start_0
     invoke-static {v0, p0}, Lcom/xiaomi/compat/miui/DisplayFeatureManagerCompat;->setScreenEffect(II)V
@@ -26684,7 +26080,6 @@
 
     const-string v1, "Meet Exception when calling DisplayFeatureManager#setScreenEffect()"
 
-    .line 3
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -26692,21 +26087,36 @@
     return-void
 .end method
 
+.method public static setTagValue(Lcom/android/gallery3d/exif/ExifInterface;ILjava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/gallery3d/exif/ExifInterface;->setTagValue(ILjava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/gallery3d/exif/ExifInterface;->buildTag(ILjava/lang/Object;)Lcom/android/gallery3d/exif/ExifTag;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/android/gallery3d/exif/ExifInterface;->setTag(Lcom/android/gallery3d/exif/ExifTag;)Lcom/android/gallery3d/exif/ExifTag;
+
+    :cond_0
+    return-void
+.end method
+
 .method public static setViewAndChildrenEnabled(Landroid/view/View;Z)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 2
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p0, Landroid/view/ViewGroup;
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -26716,12 +26126,10 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 5
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 6
     invoke-static {v2, p1}, Lcom/android/camera/Util;->setViewAndChildrenEnabled(Landroid/view/View;Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -26735,17 +26143,14 @@
 .method public static shareMediaToMore(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/CharSequence;Z)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p2, p1, p4}, Lcom/android/camera/Util;->getShareMediaIntent(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;Z)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1, p3}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -26762,7 +26167,6 @@
 
     const-string p2, "failed to share video shareMore "
 
-    .line 4
     invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -26778,12 +26182,10 @@
     :try_start_0
     const-string/jumbo v1, "showCoveredBlackView"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v1, "android.cameracovered.MiuiCameraCoveredManager"
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -26794,7 +26196,6 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 3
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -26803,7 +26204,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -26813,7 +26213,6 @@
     :catch_0
     move-exception v1
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -26843,7 +26242,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera/Util;->showErrorAndFinish(Landroid/app/Activity;IZZ)V
 
     return-void
@@ -26852,7 +26250,6 @@
 .method public static showErrorAndFinish(Landroid/app/Activity;IZZ)V
     .locals 9
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
@@ -26862,17 +26259,17 @@
     return-void
 
     :cond_0
-    const v0, 0x7f120260
+    const v0, 0x7f120248
 
     const/4 v1, 0x0
 
     if-eq p1, v0, :cond_2
 
-    const v0, 0x7f1205bb
+    const v0, 0x7f120585
 
     if-eq p1, v0, :cond_2
 
-    const v0, 0x7f12025f
+    const v0, 0x7f120247
 
     if-ne p1, v0, :cond_1
 
@@ -26887,7 +26284,6 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 3
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -26917,61 +26313,51 @@
 
     invoke-static {v4, v3, v2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v2, Lcom/android/camera/Util$1;
 
     invoke-direct {v2, v0, p0}, Lcom/android/camera/Util$1;-><init>(ZLandroid/app/Activity;)V
 
-    .line 5
     new-instance v5, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-direct {v5, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 6
     invoke-virtual {v5, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v5
 
     const v6, 0x1010355
 
-    .line 7
     invoke-virtual {v5, v6}, Lmiuix/appcompat/app/AlertDialog$Builder;->setIconAttribute(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    const v6, 0x7f120249
+    const v6, 0x7f120239
 
-    .line 8
     invoke-virtual {v5, v6}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    .line 9
     invoke-virtual {v5, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v5, 0x7f12034b
+    const v5, 0x7f120333
 
-    .line 10
     invoke-virtual {p1, v5, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->show()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-static {}, Lcom/android/camera/statistic/CameraStatUtils;->trackCameraErrorDialogShow()V
 
     :cond_3
     if-nez p3, :cond_5
 
-    .line 13
     sget-boolean p3, Lcom/android/camera/Util;->sIsKillCameraService:Z
 
     if-eqz p3, :cond_5
@@ -26982,8 +26368,7 @@
 
     if-lt p3, v2, :cond_5
 
-    .line 14
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOoo()Z
 
     move-result p3
 
@@ -26995,7 +26380,6 @@
 
     if-nez p3, :cond_5
 
-    .line 15
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
@@ -27014,24 +26398,19 @@
 
     const-string p3, "Error dialog: broadcastKillService"
 
-    .line 16
     invoke-static {v4, v3, p3}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     invoke-static {p0, p2}, Lcom/android/camera/Util;->broadcastKillService(Landroid/content/Context;Z)V
 
     :cond_4
     const/4 p2, -0x3
 
-    .line 18
     invoke-virtual {p1, p2}, Lmiuix/appcompat/app/AlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v8
 
-    .line 19
     invoke-virtual {v8, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 20
     new-instance p2, Lcom/android/camera/Util$2;
 
     const-wide/16 v3, 0x1388
@@ -27044,19 +26423,16 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/android/camera/Util$2;-><init>(JJLandroid/app/Activity;Landroid/widget/Button;)V
 
-    .line 21
     invoke-virtual {p2}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     move-result-object p2
 
-    .line 22
     new-instance p3, Lcom/android/camera/Util$3;
 
     invoke-direct {p3, p2}, Lcom/android/camera/Util$3;-><init>(Landroid/os/CountDownTimer;)V
 
     invoke-virtual {p1, p3}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 23
     :cond_5
     check-cast p0, Lcom/android/camera/ActivityBase;
 
@@ -27068,25 +26444,20 @@
 .method public static showErrorScreen(ILmiuix/appcompat/app/AppCompatActivity;Z)V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;-><init>()V
 
-    .line 2
     invoke-virtual {v0, p0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->setErrorType(I)V
 
-    .line 3
     invoke-virtual {v0, p2}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->setDumpNativeBackTrace(Z)V
 
     const/4 p0, 0x2
 
-    const p2, 0x7f1300b8
+    const p2, 0x7f1300b6
 
-    .line 4
     invoke-virtual {v0, p0, p2}, Landroidx/fragment/app/DialogFragment;->setStyle(II)V
 
-    .line 5
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -27097,12 +26468,10 @@
 
     const-string p1, "CameraExitHint"
 
-    .line 6
     invoke-virtual {p0, v0, p1}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void
@@ -27111,8 +26480,7 @@
 .method public static showFoldTips(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -27122,20 +26490,18 @@
 
     return-object v1
 
-    .line 2
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f1208ad
+    const v2, 0x7f12085e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -27143,20 +26509,18 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f1208ae
+    const v2, 0x7f12085f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -27172,7 +26536,6 @@
 
     const-wide/16 v1, 0xbb8
 
-    .line 6
     invoke-static {p0, v0, v1, v2, p1}, Lcom/android/camera/OnScreenHint;->showTips(Landroid/app/Activity;Ljava/lang/CharSequence;JI)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
@@ -27184,14 +26547,12 @@
 .end method
 
 .method public static showInvisibleModeDialog(Landroid/app/Activity;)V
-    .locals 4
+    .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
@@ -27200,69 +26561,119 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/Util;->dismissSystemChoiceDialog()V
 
-    .line 4
     :cond_1
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f12044c
+    const v1, 0x7f12042a
 
-    .line 5
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f12044b
+    const v1, 0x7f120429
 
-    .line 6
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v2, 0x7f12044d
+    const v1, 0x7f12042b
 
-    .line 8
-    new-instance v3, Lcom/android/camera/Util$4;
+    new-instance v2, Lcom/android/camera/Util$4;
 
-    invoke-direct {v3, p0}, Lcom/android/camera/Util$4;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v2, p0}, Lcom/android/camera/Util$4;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v2, v3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    const v2, 0x7f12044a
+    const v1, 0x7f120428
 
-    .line 9
-    new-instance v3, Lcom/android/camera/Util$5;
+    new-instance v2, Lcom/android/camera/Util$5;
 
-    invoke-direct {v3, p0}, Lcom/android/camera/Util$5;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v2, p0}, Lcom/android/camera/Util$5;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v2, v3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 10
+    new-instance p0, Lcom/android/camera/Util$6;
+
+    invoke-direct {p0}, Lcom/android/camera/Util$6;-><init>()V
+
+    invoke-virtual {v0, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p0
 
     sput-object p0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 11
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
-
-    .line 12
-    sget-object p0, Lcom/android/camera/Util;->mInvisibleModeDialog:Lmiuix/appcompat/app/AlertDialog;
-
     invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+
+    return-void
+.end method
+
+.method public static showSurfaceInfo(Landroid/view/Surface;)V
+    .locals 6
+
+    invoke-virtual {p0}, Landroid/view/Surface;->isValid()Z
+
+    move-result v0
+
+    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->isSurfaceForHwVideoEncoder(Landroid/view/Surface;)Z
+
+    move-result v1
+
+    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
+
+    move-result-object v2
+
+    invoke-static {p0}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
+
+    move-result v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "showSurfaceInfo: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo p0, "|"
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "CameraUtil"
+
+    invoke-static {v0, p0}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -27276,7 +26687,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -27290,7 +26700,6 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v2
@@ -27316,7 +26725,6 @@
     :cond_2
     return-void
 
-    .line 3
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -27328,7 +26736,6 @@
 .method public static startActivityForResultCatchException(Landroid/app/Activity;Landroid/content/Intent;I)Z
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0, p1, p2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
@@ -27345,7 +26752,6 @@
 
     const-string p2, "failed to start activity"
 
-    .line 2
     invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -27354,35 +26760,13 @@
     return p0
 .end method
 
-.method public static startFromKeyGuard(Landroid/app/Activity;)Z
-    .locals 1
-
-    const-string v0, "keyguard"
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/KeyguardManager;
-
-    .line 2
-    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static startScreenSlideAlphaInAnimation(Landroid/view/View;)V
     .locals 2
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
-    .line 2
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
@@ -27395,14 +26779,12 @@
 
     const-wide/16 v0, 0x15e
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
 
     const-wide/16 v0, 0x190
 
-    .line 4
     invoke-virtual {p0, v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setStartDelay(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
@@ -27411,12 +26793,10 @@
 
     invoke-direct {v0}, Lmiuix/view/animation/SineEaseInOutInterpolator;-><init>()V
 
-    .line 5
     invoke-virtual {p0, v0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
 
-    .line 6
     invoke-virtual {p0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 
     return-void
@@ -27425,20 +26805,16 @@
 .method public static startShareMedia(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 1
     invoke-static {p2, p4, p3, p5}, Lcom/android/camera/Util;->getShareMediaIntent(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;Z)Landroid/content/Intent;
 
     move-result-object p3
 
-    .line 2
     new-instance p5, Landroid/content/ComponentName;
 
     invoke-direct {p5, p0, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p3, p5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 4
     :try_start_0
     invoke-virtual {p2, p3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -27451,7 +26827,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -27492,7 +26867,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -27500,7 +26874,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -27527,19 +26900,16 @@
 .method public static toHumanString(J)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p0, p1}, Ljava/util/Date;-><init>(J)V
 
-    .line 2
     new-instance p0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo p1, "yyyy-MM-dd HH:mm:ss"
 
     invoke-direct {p0, p1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -27547,92 +26917,45 @@
     return-object p0
 .end method
 
-.method public static unRegisterAccessibiltyStateChange()V
-    .locals 2
-
-    .line 1
-    sget-object v0, Lcom/android/camera/Util;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lcom/android/camera/Util;->mTouchExplorationListener:Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
-
-    if-eqz v1, :cond_0
-
-    .line 2
-    invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityManager;->removeTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;)Z
-
-    :cond_0
-    return-void
-.end method
-
 .method public static updateAccessibility(Landroid/content/Context;)V
     .locals 2
 
     const-string v0, "accessibility"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    sput-object v0, Lcom/android/camera/Util;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    .line 2
-    sget-object v0, Lcom/android/camera/Util;->mTouchExplorationListener:Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
-
-    if-nez v0, :cond_0
-
-    .line 3
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0;
-
-    sput-object v0, Lcom/android/camera/Util;->mTouchExplorationListener:Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
-
-    .line 4
-    :cond_0
-    sget-object v0, Lcom/android/camera/Util;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    sget-object v1, Lcom/android/camera/Util;->mTouchExplorationListener:Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
-
-    invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityManager;->addTouchExplorationStateChangeListener(Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;)Z
-
-    .line 5
-    sget-object v0, Lcom/android/camera/Util;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/android/camera/Util;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    if-eqz v1, :cond_0
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const/4 v0, 0x0
 
     :goto_0
     sput-boolean v0, Lcom/android/camera/Util;->sIsAccessibilityEnable:Z
 
-    .line 6
     invoke-static {p0}, Lcom/android/camera/Util;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object p0
 
     const-string v0, "com.miui.accessibility/com.miui.accessibility.voiceaccess.VoiceAccessAccessibilityService"
 
-    .line 7
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -27651,7 +26974,6 @@
 
     const-string/jumbo v0, "ro.miui.region"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -27660,7 +26982,6 @@
 
     const-string/jumbo v0, "ro.miui.customized.region"
 
-    .line 2
     invoke-static {v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -27675,7 +26996,6 @@
 
     const-string v0, "JP"
 
-    .line 3
     sput-object v0, Lcom/android/camera/Util;->sRegion:Ljava/lang/String;
 
     :cond_0
@@ -27683,14 +27003,12 @@
 
     const-string/jumbo v1, "phone"
 
-    .line 4
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 5
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v1
@@ -27699,10 +27017,8 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 6
     sget-object v0, Lcom/android/camera/Util;->sRegion:Ljava/lang/String;
 
-    .line 7
     :cond_1
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -27710,16 +27026,13 @@
 
     if-eqz v1, :cond_2
 
-    .line 8
     invoke-static {p0}, Lcom/xiaomi/compat/common/CountryCompat;->getCountryIso(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 9
     :cond_2
     sput-object v0, Lcom/android/camera/Util;->mCountryIso:Ljava/lang/String;
 
-    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -27748,7 +27061,6 @@
 
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     sget-boolean p0, Lcom/android/camera/Util;->DEBUG:Z
 
     const-string v0, "camera_dump_parameters"
@@ -27763,7 +27075,6 @@
 
     const-string v0, "camera_dump_bug_report"
 
-    .line 12
     invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -27772,15 +27083,13 @@
 
     const-string v0, "camera_dump_orig_jpg"
 
-    .line 13
     invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/camera/Util;->sIsDumpOrigJpg:Z
 
-    .line 14
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Ooooooo:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooooO:Z
 
     const-string v1, "kill_camera_service_enable"
 
@@ -27792,7 +27101,6 @@
 
     const-string/jumbo v0, "super_night_default_mode_enable"
 
-    .line 15
     invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -27803,7 +27111,6 @@
 
     const-string v0, "debug.camera.withoutalgo.depthimage.enble"
 
-    .line 16
     invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -27812,7 +27119,6 @@
 
     const-string/jumbo v0, "persist.mibokeh.depth.scale"
 
-    .line 17
     invoke-static {v0, p0}, Lcom/xiaomi/camera/util/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -27832,20 +27138,17 @@
     :cond_0
     rsub-int v0, p2, 0x168
 
-    .line 1
     rem-int/lit16 v0, v0, 0x168
 
     if-eq p1, p2, :cond_3
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->getScreenOrientation()I
+    invoke-static {}, Lcom/android/camera/Display;->getScreenOrientation()I
 
     move-result p2
 
@@ -27865,16 +27168,14 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p2
 
@@ -27882,21 +27183,18 @@
 
     const/16 p2, 0x10
 
-    .line 6
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     goto :goto_0
 
-    .line 7
     :cond_2
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result p2
 
@@ -27904,16 +27202,13 @@
 
     const/4 p2, 0x0
 
-    .line 9
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     :goto_0
     int-to-float p2, v0
 
-    .line 10
     invoke-virtual {p0, p2}, Landroid/view/View;->setRotation(F)V
 
-    .line 11
     invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_3
@@ -27938,11 +27233,9 @@
     :cond_0
     move p2, v1
 
-    .line 1
     :goto_0
     invoke-virtual {p0, p2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 2
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
@@ -27966,21 +27259,18 @@
 
     invoke-direct {p2}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
-    .line 3
     invoke-virtual {p0, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
 
-    new-instance p2, Lcom/android/camera/Util$6;
+    new-instance p2, Lcom/android/camera/Util$7;
 
-    invoke-direct {p2, p1}, Lcom/android/camera/Util$6;-><init>(Z)V
+    invoke-direct {p2, p1}, Lcom/android/camera/Util$7;-><init>(Z)V
 
-    .line 4
     invoke-virtual {p0, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
 
-    .line 5
     invoke-virtual {p0}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 
     goto :goto_2
@@ -27995,7 +27285,6 @@
     :cond_3
     const/16 p2, 0x8
 
-    .line 6
     :goto_1
     invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
 
@@ -28003,7 +27292,6 @@
 
     move v0, v1
 
-    .line 7
     :cond_4
     invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
@@ -28019,7 +27307,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -28028,12 +27315,10 @@
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p0
 
-    .line 3
     :try_start_0
     invoke-static {p0, p2, p3}, Lcom/android/camera/Util;->verifyZip(Ljava/io/InputStream;Ljava/lang/String;I)V
     :try_end_0
@@ -28041,7 +27326,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     :cond_0
@@ -28050,7 +27334,6 @@
     :catchall_0
     move-exception p1
 
-    .line 5
     :try_start_1
     throw p1
     :try_end_1
@@ -28061,7 +27344,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 6
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -28087,7 +27369,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -28106,23 +27387,19 @@
 
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     new-instance p1, Ljava/io/FileInputStream;
 
     invoke-direct {p1, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 4
     :try_start_0
     invoke-static {p1, p2, p3}, Lcom/android/camera/Util;->verifyZip(Ljava/io/InputStream;Ljava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
 
     return-void
@@ -28130,7 +27407,6 @@
     :catchall_0
     move-exception p0
 
-    .line 6
     :try_start_1
     throw p0
     :try_end_1
@@ -28139,7 +27415,6 @@
     :catchall_1
     move-exception p2
 
-    .line 7
     :try_start_2
     invoke-virtual {p1}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -28164,18 +27439,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    .line 2
     :try_start_0
     invoke-static {v0, p1, p2}, Lcom/android/camera/Util;->verifyZip(Ljava/io/InputStream;Ljava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     return-void
@@ -28183,7 +27455,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4
     :try_start_1
     throw p0
     :try_end_1
@@ -28192,7 +27463,6 @@
     :catchall_1
     move-exception p1
 
-    .line 5
     :try_start_2
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -28229,7 +27499,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Lcom/android/camera/Util;->verifyZip(Ljava/lang/String;Ljava/lang/String;ILio/reactivex/ObservableEmitter;)V
 
     return-void
@@ -28243,7 +27512,6 @@
         }
     .end annotation
 
-    .line 43
     :try_start_0
     new-instance v0, Ljava/util/zip/ZipInputStream;
 
@@ -28251,23 +27519,19 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :try_start_1
     new-instance p0, Ljava/io/File;
 
     invoke-direct {p0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 45
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 46
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
-    .line 47
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
@@ -28276,7 +27540,6 @@
 
     if-eqz p0, :cond_8
 
-    .line 48
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -28301,7 +27564,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 49
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -28312,19 +27574,16 @@
 
     if-nez v2, :cond_3
 
-    .line 50
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 51
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     goto :goto_1
 
-    .line 52
     :cond_1
     new-instance v2, Ljava/io/File;
 
@@ -28334,23 +27593,19 @@
 
     invoke-direct {v2, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 54
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
-    .line 55
     :cond_2
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
     goto :goto_2
 
-    .line 56
     :cond_3
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -28358,22 +27613,18 @@
 
     if-eqz v2, :cond_4
 
-    .line 57
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    .line 58
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 59
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     goto :goto_1
 
-    .line 60
     :cond_4
     invoke-virtual {v1}, Ljava/io/File;->isFile()Z
 
@@ -28381,19 +27632,15 @@
 
     if-nez v2, :cond_5
 
-    .line 61
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 62
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
-    .line 63
     :cond_5
     invoke-static {v1, p2}, Lcom/android/camera/network/download/Verifier;->crc32(Ljava/io/File;I)J
 
     move-result-wide v5
 
-    .line 64
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getCrc()J
 
     move-result-wide v7
@@ -28413,7 +27660,6 @@
 
     const-string v2, "CameraUtil"
 
-    .line 65
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -28434,18 +27680,15 @@
 
     invoke-static {v2, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     new-instance p0, Ljava/io/FileOutputStream;
 
     invoke-direct {p0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 67
     :try_start_2
     new-array v1, p2, [B
 
-    .line 68
     :goto_3
     invoke-virtual {v0, v1}, Ljava/util/zip/ZipInputStream;->read([B)I
 
@@ -28453,14 +27696,12 @@
 
     if-lez v2, :cond_7
 
-    .line 69
     invoke-virtual {p0, v1, v4, v2}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_3
 
-    .line 70
     :cond_7
     :try_start_3
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
@@ -28472,7 +27713,6 @@
     :catchall_0
     move-exception p1
 
-    .line 71
     :try_start_4
     throw p1
     :try_end_4
@@ -28481,7 +27721,6 @@
     :catchall_1
     move-exception p2
 
-    .line 72
     :try_start_5
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -28500,7 +27739,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 73
     :cond_8
     :try_start_7
     invoke-virtual {v0}, Ljava/util/zip/ZipInputStream;->close()V
@@ -28512,7 +27750,6 @@
     :catchall_3
     move-exception p0
 
-    .line 74
     :try_start_8
     throw p0
     :try_end_8
@@ -28521,7 +27758,6 @@
     :catchall_4
     move-exception p1
 
-    .line 75
     :try_start_9
     invoke-virtual {v0}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_9
@@ -28543,7 +27779,6 @@
     :catch_0
     move-exception p0
 
-    .line 76
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_6
@@ -28576,36 +27811,30 @@
 
     move-object/from16 v2, p3
 
-    .line 1
     new-instance v3, Ljava/util/zip/ZipFile;
 
     move-object/from16 v4, p0
 
     invoke-direct {v3, v4}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
 
-    .line 2
     :try_start_0
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 4
     invoke-virtual {v5}, Ljava/io/File;->mkdirs()Z
 
-    .line 5
     :cond_0
     invoke-static/range {p0 .. p0}, Lcom/android/camera/Util;->getZipSize(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    .line 6
     invoke-virtual {v3}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object v6
@@ -28614,7 +27843,6 @@
 
     move-wide v9, v7
 
-    .line 7
     :goto_0
     invoke-interface {v6}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -28622,14 +27850,12 @@
 
     if-eqz v11, :cond_b
 
-    .line 8
     invoke-interface {v6}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Ljava/util/zip/ZipEntry;
 
-    .line 9
     new-instance v12, Ljava/io/File;
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -28654,26 +27880,22 @@
 
     invoke-direct {v12, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v12}, Ljava/io/File;->exists()Z
 
     move-result v13
 
     if-nez v13, :cond_3
 
-    .line 11
     invoke-virtual {v11}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v13
 
     if-eqz v13, :cond_1
 
-    .line 12
     invoke-virtual {v12}, Ljava/io/File;->mkdirs()Z
 
     goto :goto_2
 
-    .line 13
     :cond_1
     new-instance v13, Ljava/io/File;
 
@@ -28683,23 +27905,19 @@
 
     invoke-direct {v13, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 14
     invoke-virtual {v13}, Ljava/io/File;->exists()Z
 
     move-result v14
 
     if-nez v14, :cond_2
 
-    .line 15
     invoke-virtual {v13}, Ljava/io/File;->mkdirs()Z
 
-    .line 16
     :cond_2
     invoke-virtual {v12}, Ljava/io/File;->createNewFile()Z
 
     goto :goto_1
 
-    .line 17
     :cond_3
     invoke-virtual {v11}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
@@ -28707,22 +27925,18 @@
 
     if-eqz v13, :cond_4
 
-    .line 18
     invoke-virtual {v12}, Ljava/io/File;->isDirectory()Z
 
     move-result v13
 
     if-nez v13, :cond_6
 
-    .line 19
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
-    .line 20
     invoke-virtual {v12}, Ljava/io/File;->mkdirs()Z
 
     goto :goto_2
 
-    .line 21
     :cond_4
     invoke-virtual {v12}, Ljava/io/File;->isFile()Z
 
@@ -28730,19 +27944,15 @@
 
     if-nez v13, :cond_5
 
-    .line 22
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
-    .line 23
     invoke-virtual {v12}, Ljava/io/File;->createNewFile()Z
 
-    .line 24
     :cond_5
     invoke-static {v12, v1}, Lcom/android/camera/network/download/Verifier;->crc32(Ljava/io/File;I)J
 
     move-result-wide v13
 
-    .line 25
     invoke-virtual {v11}, Ljava/util/zip/ZipEntry;->getCrc()J
 
     move-result-wide v16
@@ -28765,7 +27975,6 @@
 
     const-string v13, "CameraUtil"
 
-    .line 26
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -28786,14 +27995,12 @@
 
     invoke-static {v13, v14}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     invoke-virtual {v3, v11}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_6
 
-    .line 28
     :try_start_1
     new-instance v13, Ljava/io/FileOutputStream;
 
@@ -28801,11 +28008,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 29
     :try_start_2
     new-array v12, v1, [B
 
-    .line 30
     :goto_4
     invoke-virtual {v11, v12}, Ljava/io/InputStream;->read([B)I
 
@@ -28827,12 +28032,10 @@
 
     mul-long/2addr v7, v9
 
-    .line 31
     div-long/2addr v7, v4
 
     long-to-int v7, v7
 
-    .line 32
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -28842,7 +28045,6 @@
     :cond_7
     const/4 v7, 0x0
 
-    .line 33
     invoke-virtual {v13, v12, v7, v14}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -28851,7 +28053,6 @@
 
     goto :goto_4
 
-    .line 34
     :cond_8
     :try_start_3
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
@@ -28872,7 +28073,6 @@
 
     move-object v1, v0
 
-    .line 35
     :try_start_5
     throw v1
     :try_end_5
@@ -28883,7 +28083,6 @@
 
     move-object v2, v0
 
-    .line 36
     :try_start_6
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -28909,7 +28108,6 @@
 
     move-object v1, v0
 
-    .line 37
     :try_start_8
     throw v1
     :try_end_8
@@ -28922,7 +28120,6 @@
 
     if-eqz v11, :cond_9
 
-    .line 38
     :try_start_9
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_9
@@ -28953,7 +28150,6 @@
 
     const/16 v0, 0x64
 
-    .line 39
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -28962,7 +28158,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_6
 
-    .line 40
     :cond_c
     invoke-virtual {v3}, Ljava/util/zip/ZipFile;->close()V
 
@@ -28973,7 +28168,6 @@
 
     move-object v1, v0
 
-    .line 41
     :try_start_b
     throw v1
     :try_end_b
@@ -28984,7 +28178,6 @@
 
     move-object v2, v0
 
-    .line 42
     :try_start_c
     invoke-virtual {v3}, Ljava/util/zip/ZipFile;->close()V
     :try_end_c
@@ -29006,7 +28199,6 @@
 .method public static viewUri(Landroid/net/Uri;Landroid/content/Context;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -29019,7 +28211,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -29038,7 +28229,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     :try_start_0
     new-instance v0, Landroid/content/Intent;
@@ -29053,7 +28243,6 @@
 
     goto :goto_0
 
-    .line 4
     :catch_0
     :try_start_1
     new-instance v0, Landroid/content/Intent;
@@ -29071,7 +28260,6 @@
     :catch_1
     move-exception p1
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -29128,8 +28316,7 @@
 .method public static workaroundForJ1()Z
     .locals 2
 
-    .line 1
-    sget-object v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO00o:Ljava/lang/String;
+    sget-object v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO00o:Ljava/lang/String;
 
     const-string v1, "cmi"
 
@@ -29143,7 +28330,6 @@
 .method public static writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
     .locals 3
 
-    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -29155,10 +28341,8 @@
 
     int-to-long v1, p2
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Ljava/io/FileInputStream;->skip(J)J
 
-    .line 3
     :goto_0
     invoke-virtual {v0, p0}, Ljava/io/FileInputStream;->read([B)I
 
@@ -29166,7 +28350,6 @@
 
     if-gez p2, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
     goto :goto_1
@@ -29174,7 +28357,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 5
     invoke-virtual {p1, p0, v1, p2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -29184,7 +28366,6 @@
     :catch_0
     move-exception p0
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1

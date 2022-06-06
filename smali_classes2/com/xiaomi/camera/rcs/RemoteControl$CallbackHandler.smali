@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/rcs/IRemoteControlClient$Stub;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/rcs/RemoteControl$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;-><init>()V
 
     return-void
@@ -46,12 +44,10 @@
 .method public connectionStatus(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;->mListener:Lcom/xiaomi/camera/rcs/RemoteControl$ICallbacks;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1}, Lcom/xiaomi/camera/rcs/RemoteControl$ICallbacks;->connectionStatus(I)V
 
     :cond_0
@@ -61,12 +57,10 @@
 .method public customCallback(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;->mCustomListener:Lcom/xiaomi/camera/rcs/RemoteControl$ICustomCallbacks;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/xiaomi/camera/rcs/RemoteControl$ICustomCallbacks;->customCallback(Ljava/lang/String;Landroid/os/Bundle;)V
 
     :cond_0
@@ -76,12 +70,10 @@
 .method public streamingServerStatus(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;->mStreamingListener:Lcom/xiaomi/camera/rcs/RemoteControl$IStreamingCallbacks;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/xiaomi/camera/rcs/RemoteControl$IStreamingCallbacks;->streamingServerStatus(ILandroid/os/Bundle;)V
 
     :cond_0
@@ -91,12 +83,10 @@
 .method public streamingSessionStatus(ILandroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;->mStreamingListener:Lcom/xiaomi/camera/rcs/RemoteControl$IStreamingCallbacks;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/xiaomi/camera/rcs/RemoteControl$IStreamingCallbacks;->streamingSessionStatus(ILandroid/os/Bundle;)V
 
     :cond_0

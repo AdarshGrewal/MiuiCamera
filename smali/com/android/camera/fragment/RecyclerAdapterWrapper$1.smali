@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/RecyclerAdapterWrapper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$1;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;-><init>()V
@@ -35,10 +34,8 @@
 .method public onChanged()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onChanged()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$1;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -49,10 +46,8 @@
 .method public onItemRangeChanged(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeChanged(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$1;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->getHeaderCount()I
@@ -69,10 +64,8 @@
 .method public onItemRangeInserted(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeInserted(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$1;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->getHeaderCount()I
@@ -89,10 +82,8 @@
 .method public onItemRangeRemoved(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeRemoved(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$1;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->getHeaderCount()I

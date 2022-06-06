@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseResourceList;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 
     const-string v0, "data"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
@@ -49,7 +47,6 @@
 .method public getLocalVersion(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -76,14 +73,12 @@
 
     const-string/jumbo v0, "version"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/resource/BaseResourceList;->version:Ljava/lang/String;
 
-    .line 2
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p1
@@ -100,15 +95,12 @@
 .method public parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/fragment/vv/VVItem;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/vv/VVItem;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/vv/VVItem;-><init>()V
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/vv/VVItem;->parseSummaryData(Lorg/json/JSONObject;I)V
 
-    .line 4
     iget-boolean p1, v0, Lcom/android/camera/fragment/vv/VVItem;->isValid:Z
 
     if-nez p1, :cond_0
@@ -124,7 +116,6 @@
 .method public bridge synthetic parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/BaseResourceItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/vv/VVList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/fragment/vv/VVItem;
 
     move-result-object p1
@@ -137,10 +128,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/resource/BaseResourceList;->departed:Z
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
@@ -161,7 +150,6 @@
 .method public stateAllReady()Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object v0
@@ -183,7 +171,6 @@
 
     check-cast v1, Lcom/android/camera/fragment/vv/VVItem;
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/camera/fragment/vv/VVItem;->isCloudItem()Z
 
     move-result v2

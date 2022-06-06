@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask$2;->this$0:Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitDeleteRedundantVersionTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 .method public compare(Ljava/io/File;Ljava/io/File;)I
     .locals 4
 
-    .line 2
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -64,7 +62,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
@@ -91,7 +88,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

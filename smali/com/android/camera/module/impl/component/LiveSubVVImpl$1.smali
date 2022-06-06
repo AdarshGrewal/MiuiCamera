@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,46 +35,44 @@
 
 # virtual methods
 .method public onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 2
+    .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
-    invoke-static {p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$000(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ui/RenderEngineAdapter;
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$000(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$002(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
+
+    :cond_0
+    iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
+
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ActivityBase;
 
     move-result-object p1
 
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
 
-    invoke-static {v0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$100(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Z
+    move-result-object p1
 
-    move-result v0
+    const/4 v0, 0x4
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v0}, Lcom/android/camera/CameraScreenNail;->notifyFrameAvailable(I)V
 
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
+    iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$1;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
-    const/4 v1, 0x1
+    invoke-static {p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$200(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/ui/CameraRenderEngine;
 
-    invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$102(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Z)Z
+    move-result-object p1
 
-    :cond_0
-    if-eqz p1, :cond_1
+    invoke-virtual {p1}, Lcom/android/camera/ui/CameraRenderEngine;->requestRender()V
 
-    .line 4
-    invoke-virtual {p1}, Lcom/android/camera/ui/RenderEngineAdapter;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/CameraScreenNail;->notifyFrameAvailable(I)V
-
-    .line 5
-    invoke-virtual {p1}, Lcom/android/camera/ui/RenderEngineAdapter;->requestRender()V
-
-    :cond_1
     return-void
 .end method

@@ -7,7 +7,6 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public constructor <init>(Landroid/content/Context;IIZ)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;IIZ)V
 
     return-void
@@ -25,7 +23,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -36,7 +33,6 @@
 .method public onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
     :try_end_0
@@ -49,7 +45,6 @@
 
     const-string p2, "IndexOutOfBoundsException "
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

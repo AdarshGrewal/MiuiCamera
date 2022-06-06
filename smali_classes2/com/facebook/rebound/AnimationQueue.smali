@@ -63,45 +63,38 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mPendingQueue:Ljava/util/Queue;
 
-    .line 3
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mAnimationQueue:Ljava/util/Queue;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
-    .line 6
     invoke-static {}, Lcom/facebook/rebound/ChoreographerCompat;->getInstance()Lcom/facebook/rebound/ChoreographerCompat;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mChoreographer:Lcom/facebook/rebound/ChoreographerCompat;
 
-    .line 7
     new-instance v0, Lcom/facebook/rebound/AnimationQueue$1;
 
     invoke-direct {v0, p0}, Lcom/facebook/rebound/AnimationQueue$1;-><init>(Lcom/facebook/rebound/AnimationQueue;)V
@@ -114,7 +107,6 @@
 .method public static synthetic access$000(Lcom/facebook/rebound/AnimationQueue;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/facebook/rebound/AnimationQueue;->onFrame(J)V
 
     return-void
@@ -123,7 +115,6 @@
 .method private onFrame(J)V
     .locals 4
 
-    .line 1
     iget-object p1, p0, Lcom/facebook/rebound/AnimationQueue;->mPendingQueue:Ljava/util/Queue;
 
     invoke-interface {p1}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -136,7 +127,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mAnimationQueue:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
@@ -145,7 +135,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
@@ -165,7 +154,6 @@
 
     move-result p1
 
-    .line 4
     :goto_0
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
@@ -173,7 +161,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -187,7 +174,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 6
     iget-object v1, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -196,7 +182,6 @@
 
     check-cast v1, Ljava/lang/Double;
 
-    .line 7
     iget-object v2, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -209,7 +194,6 @@
 
     add-int/2addr v2, p1
 
-    .line 8
     iget-object v3, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -218,7 +202,6 @@
 
     if-le v3, v2, :cond_1
 
-    .line 9
     iget-object v3, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -234,13 +217,11 @@
 
     goto :goto_1
 
-    .line 10
     :cond_2
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mTempValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 11
     :goto_2
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mAnimationQueue:Ljava/util/Queue;
 
@@ -258,14 +239,12 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 12
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mAnimationQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 13
     :cond_3
     iget-object p1, p0, Lcom/facebook/rebound/AnimationQueue;->mAnimationQueue:Ljava/util/Queue;
 
@@ -283,12 +262,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 14
     iput-boolean p2, p0, Lcom/facebook/rebound/AnimationQueue;->mRunning:Z
 
     goto :goto_3
 
-    .line 15
     :cond_4
     iget-object p1, p0, Lcom/facebook/rebound/AnimationQueue;->mChoreographer:Lcom/facebook/rebound/ChoreographerCompat;
 
@@ -303,17 +280,14 @@
 .method private runIfIdle()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/facebook/rebound/AnimationQueue;->mRunning:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/facebook/rebound/AnimationQueue;->mRunning:Z
 
-    .line 3
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mChoreographer:Lcom/facebook/rebound/ChoreographerCompat;
 
     iget-object v1, p0, Lcom/facebook/rebound/AnimationQueue;->mChoreographerCallback:Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;
@@ -337,12 +311,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mPendingQueue:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->addAll(Ljava/util/Collection;)Z
 
-    .line 2
     invoke-direct {p0}, Lcom/facebook/rebound/AnimationQueue;->runIfIdle()V
 
     return-void
@@ -351,7 +323,6 @@
 .method public addCallback(Lcom/facebook/rebound/AnimationQueue$Callback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -362,12 +333,10 @@
 .method public addValue(Ljava/lang/Double;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mPendingQueue:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 2
     invoke-direct {p0}, Lcom/facebook/rebound/AnimationQueue;->runIfIdle()V
 
     return-void
@@ -376,7 +345,6 @@
 .method public clearCallbacks()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -387,7 +355,6 @@
 .method public clearValues()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mPendingQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
@@ -398,7 +365,6 @@
 .method public removeCallback(Lcom/facebook/rebound/AnimationQueue$Callback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/AnimationQueue;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

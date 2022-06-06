@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/i;->b:Lcom/xiaomi/stat/e;
 
     iput-boolean p2, p0, Lcom/xiaomi/stat/i;->a:Z
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/i;->b:Lcom/xiaomi/stat/e;
 
     invoke-static {v0}, Lcom/xiaomi/stat/e;->b(Lcom/xiaomi/stat/e;)Ljava/lang/String;
@@ -43,7 +41,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/stat/i;->a:Z
 
     const/4 v1, 0x2
@@ -62,7 +59,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/a/c;->a()Lcom/xiaomi/stat/a/c;
 
     move-result-object v0
@@ -75,7 +71,6 @@
 
     invoke-virtual {v0, v2}, Lcom/xiaomi/stat/a/c;->a(Ljava/lang/String;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/stat/i;->b:Lcom/xiaomi/stat/e;
 

@@ -60,7 +60,6 @@
 .method public static constructor <clinit>()V
     .locals 14
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v1, 0x0
@@ -75,7 +74,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->START_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v3, 0x1
@@ -90,7 +88,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->STOP_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v5, 0x2
@@ -105,7 +102,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->ALREADY_ADVERTISING:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const-string v6, "START_ADVERTISING_ERROR"
@@ -118,7 +114,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->START_ADVERTISING_ERROR:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const-string v6, "STOP_ADVERTISING_ERROR"
@@ -131,7 +126,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->STOP_ADVERTISING_ERROR:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v6, 0x5
@@ -146,7 +140,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->NOT_IN_ADVERTISING:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v7, 0x6
@@ -161,7 +154,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->ADVERTISING_PERMISSION_DENIED:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/4 v8, 0x7
@@ -176,7 +168,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->ERROR_CODE_START_DISC_NOT_SUPPORTED:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/16 v9, 0x8
@@ -191,7 +182,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->ERROR_CODE_COMMTYPE_NOT_SUPPORTED:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     const/16 v10, 0x9
@@ -210,7 +200,6 @@
 
     new-array v11, v11, [Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
-    .line 11
     sget-object v12, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->START_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     aput-object v12, v11, v1
@@ -264,13 +253,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->code:I
 
-    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-void
@@ -279,7 +265,6 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->values()[Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     move-result-object v0
@@ -293,7 +278,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget v4, v3, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->code:I
 
     if-ne v4, p0, :cond_0
@@ -305,7 +289,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->ADV_UNKNOWN:Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
@@ -315,7 +298,6 @@
 .method public static getResponseMsg(I)Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->values()[Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     move-result-object v0
@@ -331,12 +313,10 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     iget v5, v4, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->code:I
 
     if-ne v5, p0, :cond_0
 
-    .line 3
     iget-object p0, v4, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-object p0
@@ -346,7 +326,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -372,7 +351,6 @@
 
     invoke-static {v2, v0, v1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -397,7 +375,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -412,7 +389,6 @@
 .method public static values()[Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->$VALUES:[Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->clone()Ljava/lang/Object;
@@ -429,7 +405,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->code:I
 
     return v0
@@ -438,7 +413,6 @@
 .method public getMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-object v0

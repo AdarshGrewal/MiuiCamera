@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording$Listener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog$2;->this$0:Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;
 
     iput-object p2, p0, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog$2;->val$listener:Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording$Listener;
@@ -42,7 +41,6 @@
 .method public onComplete()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -51,12 +49,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog$2;->val$listener:Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording$Listener;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog$2;->this$0:Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;
 
     invoke-virtual {v1}, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;->getSubtitleContent()Ljava/lang/String;
@@ -72,7 +68,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -93,7 +88,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/subtitle/recog/VoiceOnlineRecog$2;->val$listener:Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording$Listener;
 
     if-eqz v0, :cond_0
@@ -102,7 +96,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording$Listener;->onTimeout()V
 
     :cond_0

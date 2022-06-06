@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/AuthoriseActivity;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$1;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -50,14 +48,12 @@
     :goto_0
     const-string p2, "com.xiaomi.camera.videocast.action.DISMISS_ACTIVITIES"
 
-    .line 2
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$1;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-static {p1}, Lcom/xiaomi/camera/videocast/AuthoriseActivity;->access$000(Lcom/xiaomi/camera/videocast/AuthoriseActivity;)Lmiuix/appcompat/app/AlertDialog;
@@ -66,7 +62,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$1;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-static {p1}, Lcom/xiaomi/camera/videocast/AuthoriseActivity;->access$000(Lcom/xiaomi/camera/videocast/AuthoriseActivity;)Lmiuix/appcompat/app/AlertDialog;
@@ -75,7 +70,6 @@
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$1;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
@@ -85,7 +79,6 @@
 
     if-nez p1, :cond_2
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$1;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V

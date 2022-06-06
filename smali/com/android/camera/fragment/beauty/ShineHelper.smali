@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static clearBeauty()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->clearBeauty()V
 
     :cond_0
@@ -41,7 +38,6 @@
 .method public static onBeautyChanged()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -60,7 +56,6 @@
 
     const/16 v2, 0xef
 
-    .line 2
     invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$OnShineChangedProtocol;->onShineChanged(ZI)V
 
     :cond_0
@@ -70,7 +65,6 @@
 .method public static onShineStateChanged()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -85,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->onStateChanged()V
 
     :cond_0
@@ -95,7 +88,6 @@
 .method public static onVideoBokehRatioChanged()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -114,7 +106,6 @@
 
     const/16 v2, 0xf3
 
-    .line 2
     invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$OnShineChangedProtocol;->onShineChanged(ZI)V
 
     :cond_0
@@ -124,7 +115,6 @@
 .method public static onVideoBokehWithRetentionChanged()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -143,7 +133,6 @@
 
     const/16 v2, 0xf4
 
-    .line 2
     invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$OnShineChangedProtocol;->onShineChanged(ZI)V
 
     :cond_0
@@ -153,7 +142,6 @@
 .method public static onVideoFilterChanged()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -172,7 +160,6 @@
 
     const/16 v2, 0xc4
 
-    .line 2
     invoke-interface {v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$OnShineChangedProtocol;->onShineChanged(ZI)V
 
     :cond_0
@@ -182,7 +169,6 @@
 .method public static resetBeauty()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -197,7 +183,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->resetBeauty()V
 
     :cond_0

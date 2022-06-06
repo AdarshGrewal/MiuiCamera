@@ -14,33 +14,33 @@
 
 
 # static fields
-.field public static final miuix_folme_color_touch_tint:I = 0x7f0602ae
+.field public static final miuix_folme_color_touch_tint:I = 0x7f0602ac
 
-.field public static final miuix_folme_color_touch_tint_dark:I = 0x7f0602af
+.field public static final miuix_folme_color_touch_tint_dark:I = 0x7f0602ad
 
-.field public static final miuix_sbl_black:I = 0x7f0602ee
+.field public static final miuix_sbl_black:I = 0x7f0602ec
 
-.field public static final miuix_sbl_loading_light:I = 0x7f0602ef
+.field public static final miuix_sbl_loading_light:I = 0x7f0602ed
 
-.field public static final miuix_sbl_locked_blue:I = 0x7f0602f0
+.field public static final miuix_sbl_locked_blue:I = 0x7f0602ee
 
-.field public static final miuix_sbl_locked_gray:I = 0x7f0602f1
+.field public static final miuix_sbl_locked_gray:I = 0x7f0602ef
 
-.field public static final miuix_sbl_locked_text_blue:I = 0x7f0602f2
+.field public static final miuix_sbl_locked_text_blue:I = 0x7f0602f0
 
-.field public static final miuix_sbl_locked_text_gray:I = 0x7f0602f3
+.field public static final miuix_sbl_locked_text_gray:I = 0x7f0602f1
 
-.field public static final miuix_sbl_transparent:I = 0x7f0602f4
+.field public static final miuix_sbl_transparent:I = 0x7f0602f2
 
-.field public static final miuix_sbl_white:I = 0x7f0602f5
+.field public static final miuix_sbl_white:I = 0x7f0602f3
 
-.field public static final notification_action_color_filter:I = 0x7f06030e
+.field public static final notification_action_color_filter:I = 0x7f06030c
 
-.field public static final notification_icon_bg_color:I = 0x7f06030f
+.field public static final notification_icon_bg_color:I = 0x7f06030d
 
-.field public static final ripple_material_light:I = 0x7f06032b
+.field public static final ripple_material_light:I = 0x7f060329
 
-.field public static final secondary_text_default_material_light:I = 0x7f06032d
+.field public static final secondary_text_default_material_light:I = 0x7f06032b
 
 
 # direct methods

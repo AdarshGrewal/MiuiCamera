@@ -13,13 +13,10 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera2/MiCamera2Preview;->mBogusCameraId:I
 
     return-void
@@ -30,7 +27,6 @@
 .method public needForCapture()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xa3
@@ -87,7 +83,6 @@
 .method public needForFrontCamera()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mBogusCameraId:I
 
     const/4 v1, 0x1
@@ -106,7 +101,6 @@
 .method public needForManually()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xa7
@@ -135,7 +129,6 @@
 .method public needForNormalCapture()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xa3
@@ -156,7 +149,6 @@
 .method public needForPortrait()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xab
@@ -177,7 +169,6 @@
 .method public needForProVideo()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xb4
@@ -188,11 +179,11 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OOOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OOO0O()Z
 
     move-result v0
 
@@ -227,7 +218,6 @@
 .method public needForVideo()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCamera2Preview;->mCurrentModule:I
 
     const/16 v1, 0xa2

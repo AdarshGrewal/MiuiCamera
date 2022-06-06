@@ -37,7 +37,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -48,7 +47,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -59,7 +57,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
@@ -68,21 +65,16 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 p2, 0x1
 
-    .line 5
     iput-boolean p2, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mAutoDismiss:Z
 
-    .line 6
     iput-object p1, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
-    .line 7
     iput-boolean p2, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mAutoDismiss:Z
 
-    .line 8
     invoke-direct {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setupPopupWindow()V
 
     return-void
@@ -91,7 +83,6 @@
 .method private setupPopupWindow()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -100,19 +91,16 @@
 
     sget v1, Lmiuix/popupwidget/R$dimen;->miuix_appcompat_arrow_popup_window_list_max_height:I
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v0
 
     iput v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mListViewMaxHeight:I
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 4
     sget v1, Lmiuix/popupwidget/R$layout;->miuix_appcompat_arrow_popup_view:I
 
     const/4 v2, 0x0
@@ -127,51 +115,41 @@
 
     iput-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
-    .line 5
     invoke-super {p0, v0}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
 
     const/4 v0, -0x1
 
-    .line 6
     invoke-super {p0, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    .line 7
     invoke-super {p0, v0}, Landroid/widget/PopupWindow;->setHeight(I)V
 
     const/4 v0, 0x3
 
-    .line 8
     invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setSoftInputMode(I)V
 
-    .line 9
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setArrowPopupWindow(Lmiuix/popupwidget/widget/ArrowPopupWindow;)V
 
-    .line 10
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getDefaultOnTouchListener()Landroid/view/View$OnTouchListener;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/widget/PopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
 
-    .line 11
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 12
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->addShadow()V
 
-    .line 13
     :cond_0
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->onPrepareWindow()V
 
-    .line 14
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->update()V
 
     return-void
@@ -184,14 +162,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->animateToDismiss()V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->dismiss()V
 
@@ -202,7 +178,6 @@
 .method public getArrowMode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->getArrowMode()I
@@ -215,14 +190,12 @@
 .method public getContentHeight()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v0
@@ -238,7 +211,6 @@
 .method public getContentView()Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->getContentView()Landroid/view/View;
@@ -251,14 +223,12 @@
 .method public getContentWidth()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -274,7 +244,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -283,7 +252,6 @@
 .method public getDefaultOnTouchListener()Landroid/view/View$OnTouchListener;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     return-object v0
@@ -292,7 +260,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentHeight()I
 
     move-result v0
@@ -303,7 +270,6 @@
 .method public getLayoutInflater()Landroid/view/LayoutInflater;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -316,7 +282,6 @@
 .method public getNegativeButton()Landroidx/appcompat/widget/AppCompatButton;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->getNegativeButton()Landroidx/appcompat/widget/AppCompatButton;
@@ -329,7 +294,6 @@
 .method public getPositiveButton()Landroidx/appcompat/widget/AppCompatButton;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->getPositiveButton()Landroidx/appcompat/widget/AppCompatButton;
@@ -342,7 +306,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentWidth()I
 
     move-result v0
@@ -359,7 +322,6 @@
 .method public setArrowMode(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setArrowMode(I)V
@@ -370,7 +332,6 @@
 .method public setAutoDismiss(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mAutoDismiss:Z
 
     return-void
@@ -379,12 +340,10 @@
 .method public setContentHeight(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Landroid/widget/ListView;
 
     if-eqz v1, :cond_0
@@ -398,15 +357,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 4
     iput p1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_1
@@ -416,7 +372,6 @@
 .method public final setContentView(I)V
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setContentView(I)V
@@ -427,7 +382,6 @@
 .method public final setContentView(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setContentView(Landroid/view/View;)V
@@ -438,7 +392,6 @@
 .method public final setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
@@ -449,22 +402,18 @@
 .method public setContentWidth(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContentView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 3
     iput p1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
@@ -474,7 +423,6 @@
 .method public setHeight(I)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setContentHeight(I)V
 
     return-void
@@ -483,7 +431,6 @@
 .method public setNegativeButton(ILandroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -498,7 +445,6 @@
 .method public setNegativeButton(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setNegativeButton(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)V
@@ -509,7 +455,6 @@
 .method public setPositiveButton(ILandroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -524,7 +469,6 @@
 .method public setPositiveButton(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setPositiveButton(Ljava/lang/CharSequence;Landroid/view/View$OnClickListener;)V
@@ -535,7 +479,6 @@
 .method public setTitle(I)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -550,7 +493,6 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setTitle(Ljava/lang/CharSequence;)V
@@ -561,7 +503,6 @@
 .method public setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
@@ -572,7 +513,6 @@
 .method public setWidth(I)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setContentWidth(I)V
 
     return-void
@@ -581,12 +521,10 @@
 .method public show(Landroid/view/View;II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setAnchor(Landroid/view/View;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p2, p3}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setOffset(II)V
@@ -595,17 +533,14 @@
 
     const p3, 0x800033
 
-    .line 3
     invoke-virtual {p0, p1, p3, p2, p2}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 4
     iget-object p1, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     iget-boolean p2, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mAutoDismiss:Z
 
     invoke-virtual {p1, p2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setAutoDismiss(Z)V
 
-    .line 5
     iget-object p1, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->animateToShow()V
@@ -616,7 +551,6 @@
 .method public showAsDropDown(Landroid/view/View;II)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->show(Landroid/view/View;II)V
 
     return-void
@@ -625,7 +559,6 @@
 .method public showAsDropDown(Landroid/view/View;III)V
     .locals 0
 
-    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->show(Landroid/view/View;II)V
 
     return-void
@@ -646,10 +579,8 @@
 
     move v5, p5
 
-    .line 1
     invoke-super/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(IIIIZ)V
 
-    .line 2
     invoke-virtual {p0, p4}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setContentHeight(I)V
 
     return-void

@@ -117,7 +117,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$1;
 
     const-string v1, "translationX"
@@ -126,7 +125,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 2
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$2;
 
     const-string v1, "translationY"
@@ -135,7 +133,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Y:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 3
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$3;
 
     const-string v1, "translationZ"
@@ -144,7 +141,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Z:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 4
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$4;
 
     const-string v1, "scaleX"
@@ -153,7 +149,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 5
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$5;
 
     const-string v1, "scaleY"
@@ -162,7 +157,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->SCALE_Y:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 6
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$6;
 
     const-string v1, "rotation"
@@ -171,7 +165,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ROTATION:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 7
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$7;
 
     const-string v1, "rotationX"
@@ -180,7 +173,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ROTATION_X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 8
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$8;
 
     const-string v1, "rotationY"
@@ -189,7 +181,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ROTATION_Y:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 9
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$9;
 
     const-string v1, "x"
@@ -198,7 +189,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 10
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$10;
 
     const-string v1, "y"
@@ -207,7 +197,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->Y:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 11
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$11;
 
     const-string v1, "z"
@@ -216,7 +205,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->Z:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 12
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$12;
 
     const-string v1, "alpha"
@@ -225,7 +213,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ALPHA:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 13
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$13;
 
     const-string v1, "scrollX"
@@ -234,7 +221,6 @@
 
     sput-object v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->SCROLL_X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    .line 14
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$14;
 
     const-string v1, "scrollY"
@@ -258,61 +244,48 @@
         }
     .end annotation
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 15
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 16
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
-    .line 17
     iput-boolean v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 18
     iput-boolean v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
-    .line 19
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
-    .line 20
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
-    .line 21
     iput-wide v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
-    .line 24
     iput-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
-    .line 25
     iput-object p2, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mProperty:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatPropertyCompat;
 
-    .line 26
     sget-object p1, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ROTATION:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
     if-eq p2, p1, :cond_4
@@ -327,7 +300,6 @@
 
     goto :goto_1
 
-    .line 27
     :cond_0
     sget-object p1, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->ALPHA:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
@@ -335,12 +307,10 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 28
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
 
-    .line 29
     :cond_1
     sget-object p1, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
@@ -355,12 +325,10 @@
     :cond_2
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 30
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
 
-    .line 31
     :cond_3
     :goto_0
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
@@ -371,7 +339,6 @@
     :goto_1
     const p1, 0x3dcccccd    # 0.1f
 
-    .line 32
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     :goto_2
@@ -381,48 +348,38 @@
 .method public constructor <init>(Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 3
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
-    .line 4
     iput-boolean v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 5
     iput-boolean v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
-    .line 6
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
-    .line 7
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
-    .line 8
     iput-wide v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
-    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
-    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -431,10 +388,8 @@
 
     const/4 v0, 0x0
 
-    .line 11
     iput-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
-    .line 12
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$15;
 
     const-string v1, "FloatValueHolder"
@@ -445,7 +400,6 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 13
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     return-void
@@ -456,34 +410,27 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
-    .line 2
     iget-boolean v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mManualAnim:Z
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {}, Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler;->getInstance()Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler;
 
     move-result-object v1
 
     invoke-virtual {v1, p0}, Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler;->removeCallback(Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;)V
 
-    .line 4
     :cond_0
     iput-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mManualAnim:Z
 
     const-wide/16 v1, 0x0
 
-    .line 5
     iput-wide v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
-    .line 6
     iput-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 7
     :goto_0
     iget-object v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
@@ -493,7 +440,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 8
     iget-object v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -502,7 +448,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 9
     iget-object v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -522,7 +467,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
@@ -534,7 +478,6 @@
 .method private getPropertyValue()F
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mProperty:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatPropertyCompat;
 
     iget-object v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
@@ -558,7 +501,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
@@ -567,7 +509,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -586,7 +527,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -596,14 +536,12 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_0
@@ -618,32 +556,26 @@
 .method private startAnimationInternal(Z)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
     if-nez v0, :cond_2
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mManualAnim:Z
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
-    .line 4
     iget-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
     if-nez v0, :cond_0
 
-    .line 5
     invoke-direct {p0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->getPropertyValue()F
 
     move-result v0
 
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    .line 6
     :cond_0
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
@@ -661,7 +593,6 @@
 
     if-nez p1, :cond_2
 
-    .line 7
     invoke-static {}, Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler;->getInstance()Lmiuix/overscroller/internal/dynamicanimation/animation/AnimationHandler;
 
     move-result-object p1
@@ -672,7 +603,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -737,7 +667,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -746,7 +675,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -765,14 +693,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -781,7 +707,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -789,7 +714,6 @@
     :cond_0
     return-object p0
 
-    .line 4
     :cond_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -803,7 +727,6 @@
 .method public cancel()V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -814,20 +737,17 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-direct {p0, v0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->endAnimationInternal(Z)V
 
     :cond_0
     return-void
 
-    .line 4
     :cond_1
     new-instance v0, Landroid/util/AndroidRuntimeException;
 
@@ -841,7 +761,6 @@
 .method public doAnimationFrame(J)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
     const-wide/16 v2, 0x0
@@ -852,10 +771,8 @@
 
     if-nez v2, :cond_0
 
-    .line 2
     iput-wide p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
-    .line 3
     iget p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     invoke-virtual {p0, p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->setPropertyValue(F)V
@@ -865,15 +782,12 @@
     :cond_0
     sub-long v0, p1, v0
 
-    .line 4
     iput-wide p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
 
-    .line 5
     invoke-virtual {p0, v0, v1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->updateValueAndVelocity(J)Z
 
     move-result p1
 
-    .line 6
     iget p2, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
@@ -884,7 +798,6 @@
 
     iput p2, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    .line 7
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     invoke-static {p2, v0}, Ljava/lang/Math;->max(FF)F
@@ -893,12 +806,10 @@
 
     iput p2, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
-    .line 8
     invoke-virtual {p0, p2}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->setPropertyValue(F)V
 
     if-eqz p1, :cond_1
 
-    .line 9
     invoke-direct {p0, v3}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->endAnimationInternal(Z)V
 
     :cond_1
@@ -911,7 +822,6 @@
 .method public getMinimumVisibleChange()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     return v0
@@ -920,7 +830,6 @@
 .method public getValueThreshold()F
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     const/high16 v1, 0x3f400000    # 0.75f
@@ -936,7 +845,6 @@
 .method public isRunning()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
     return v0
@@ -945,7 +853,6 @@
 .method public removeEndListener(Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
@@ -956,7 +863,6 @@
 .method public removeUpdateListener(Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
@@ -972,7 +878,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
 
     return-object p0
@@ -986,7 +891,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
 
     return-object p0
@@ -1006,19 +910,16 @@
 
     if-lez v0, :cond_0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
 
     const/high16 v0, 0x3f400000    # 0.75f
 
     mul-float/2addr p1, v0
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->setValueThreshold(F)V
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1032,7 +933,6 @@
 .method public setPropertyValue(F)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mProperty:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatPropertyCompat;
 
     iget-object v1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
@@ -1041,7 +941,6 @@
 
     const/4 p1, 0x0
 
-    .line 2
     :goto_0
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
@@ -1051,7 +950,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1060,7 +958,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1080,7 +977,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
@@ -1097,12 +993,10 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mValue:F
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
 
     return-object p0
@@ -1116,7 +1010,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
 
     return-object p0
@@ -1130,7 +1023,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->start(Z)V
 
     return-void
@@ -1139,7 +1031,6 @@
 .method public start(Z)V
     .locals 2
 
-    .line 2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1150,18 +1041,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3
     iget-boolean v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-direct {p0, p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;->startAnimationInternal(Z)V
 
     :cond_0
     return-void
 
-    .line 5
     :cond_1
     new-instance p1, Landroid/util/AndroidRuntimeException;
 

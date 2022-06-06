@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, p1, v0}, Lorg/jcodec/common/StringUtils;->splitWorker(Ljava/lang/String;CZ)[Ljava/lang/String;
 
     move-result-object p0
@@ -35,7 +33,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -49,7 +46,6 @@
 
     return-object p0
 
-    .line 2
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
@@ -68,7 +64,6 @@
     :goto_0
     if-ge v4, v0, :cond_5
 
-    .line 3
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -79,7 +74,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 4
     :cond_2
     invoke-virtual {p0, v7, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -114,7 +108,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 5
     :cond_6
     invoke-virtual {p0, v7, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -122,7 +115,6 @@
 
     invoke-interface {v2, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_7
     invoke-interface {v2}, Ljava/util/List;->size()I
 

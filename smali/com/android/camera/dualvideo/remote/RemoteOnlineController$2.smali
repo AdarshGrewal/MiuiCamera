@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/RemoteOnlineController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/RemoteOnlineController$2;->this$0:Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     invoke-static {v0, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/RemoteOnlineController$2;->this$0:Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->access$100(Lcom/android/camera/dualvideo/remote/RemoteOnlineController;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
@@ -65,7 +62,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/RemoteOnlineController$2;->this$0:Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->access$100(Lcom/android/camera/dualvideo/remote/RemoteOnlineController;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
@@ -83,7 +79,6 @@
 .method public onUnavailable()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->access$000()Ljava/lang/String;
 
     move-result-object v0

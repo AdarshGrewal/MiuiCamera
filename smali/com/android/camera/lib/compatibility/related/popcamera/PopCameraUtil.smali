@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     :try_start_0
     const-string/jumbo v2, "popupcamera"
 
-    .line 1
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -38,17 +36,14 @@
 
     const-string v3, "getMotorStatus: E..."
 
-    .line 2
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-interface {v2}, Lmiui/popupcamera/IPopupCameraManager;->getMotorStatus()I
 
     move-result v1
 
     const-string v2, "getMotorStatus: X..."
 
-    .line 4
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -60,7 +55,6 @@
 
     const-string v3, "PopupCameraManagerService connection failed"
 
-    .line 5
     invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -77,7 +71,6 @@
     :try_start_0
     const-string/jumbo v2, "popupcamera"
 
-    .line 1
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -88,17 +81,14 @@
 
     const-string/jumbo v3, "popupMotor: E..."
 
-    .line 2
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-interface {v2}, Lmiui/popupcamera/IPopupCameraManager;->popupMotor()Z
 
     move-result v1
 
     const-string/jumbo v2, "popupMotor: X..."
 
-    .line 4
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -110,7 +100,6 @@
 
     const-string v3, "PopupCameraManagerService connection failed"
 
-    .line 5
     invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -127,7 +116,6 @@
     :try_start_0
     const-string/jumbo v2, "popupcamera"
 
-    .line 1
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
@@ -138,17 +126,14 @@
 
     const-string/jumbo v3, "takebackMotor: E..."
 
-    .line 2
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-interface {v2}, Lmiui/popupcamera/IPopupCameraManager;->takebackMotor()Z
 
     move-result v1
 
     const-string/jumbo v2, "takebackMotor: X..."
 
-    .line 4
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -160,7 +145,6 @@
 
     const-string v3, "PopupCameraManagerService connection failed"
 
-    .line 5
     invoke-static {v0, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

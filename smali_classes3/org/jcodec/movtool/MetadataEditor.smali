@@ -47,16 +47,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/movtool/MetadataEditor;->source:Ljava/io/File;
 
-    .line 3
     iput-object p2, p0, Lorg/jcodec/movtool/MetadataEditor;->keyedMeta:Ljava/util/Map;
 
-    .line 4
     iput-object p3, p0, Lorg/jcodec/movtool/MetadataEditor;->itunesMeta:Ljava/util/Map;
 
     return-void
@@ -65,7 +61,6 @@
 .method public static synthetic access$000(Lorg/jcodec/movtool/MetadataEditor;)Ljava/util/Map;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lorg/jcodec/movtool/MetadataEditor;->keyedMeta:Ljava/util/Map;
 
     return-object p0
@@ -74,7 +69,6 @@
 .method public static synthetic access$100(Lorg/jcodec/movtool/MetadataEditor;)Ljava/util/Map;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lorg/jcodec/movtool/MetadataEditor;->itunesMeta:Ljava/util/Map;
 
     return-object p0
@@ -88,24 +82,20 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
     invoke-static {p0}, Lorg/jcodec/common/JCodecUtil;->detectFormat(Ljava/io/File;)Lorg/jcodec/common/Format;
 
     move-result-object v1
 
-    .line 2
     sget-object v2, Lorg/jcodec/common/Format;->MOV:Lorg/jcodec/common/Format;
 
     if-ne v1, v2, :cond_2
 
-    .line 3
     invoke-static {p0}, Lorg/jcodec/containers/mp4/MP4Util;->parseFullMovie(Ljava/io/File;)Lorg/jcodec/containers/mp4/MP4Util$Movie;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/MP4Util$Movie;->getMoov()Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     move-result-object v2
@@ -120,7 +110,6 @@
 
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
-    .line 5
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/MP4Util$Movie;->getMoov()Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
     move-result-object v1
@@ -137,21 +126,18 @@
 
     const/4 v4, 0x1
 
-    .line 6
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->fourcc()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 7
     invoke-static {v1, v0, v3}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->findFirstPath(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/Class;[Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object v0
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/MetaBox;
 
-    .line 8
     new-instance v1, Lorg/jcodec/movtool/MetadataEditor;
 
     if-nez v2, :cond_0
@@ -176,7 +162,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_1
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MetaBox;->getItunesMeta()Ljava/util/Map;
 
@@ -187,7 +172,6 @@
 
     return-object v1
 
-    .line 10
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -224,7 +208,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/movtool/MetadataEditor;->itunesMeta:Ljava/util/Map;
 
     return-object v0
@@ -242,7 +225,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/movtool/MetadataEditor;->keyedMeta:Ljava/util/Map;
 
     return-object v0
@@ -256,14 +238,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/movtool/MetadataEditor$1;
 
     invoke-direct {v0, p0, p0}, Lorg/jcodec/movtool/MetadataEditor$1;-><init>(Lorg/jcodec/movtool/MetadataEditor;Lorg/jcodec/movtool/MetadataEditor;)V
 
     if-eqz p1, :cond_0
 
-    .line 2
     new-instance p1, Lorg/jcodec/movtool/RelocateMP4Editor;
 
     invoke-direct {p1}, Lorg/jcodec/movtool/RelocateMP4Editor;-><init>()V
@@ -274,7 +254,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance p1, Lorg/jcodec/movtool/ReplaceMP4Editor;
 

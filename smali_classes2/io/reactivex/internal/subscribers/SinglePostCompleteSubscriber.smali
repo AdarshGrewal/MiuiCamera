@@ -65,10 +65,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     return-void
@@ -79,7 +77,6 @@
 .method public cancel()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->s:Lorg/reactivestreams/Subscription;
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscription;->cancel()V
@@ -95,7 +92,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->produced:J
 
     const-wide/16 v2, 0x0
@@ -104,10 +100,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 2
     invoke-static {p0, v0, v1}, Lio/reactivex/internal/util/BackpressureHelper;->produced(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
-    .line 3
     :cond_0
     :goto_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -122,7 +116,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 4
     invoke-virtual {p0, p1}, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->onDrop(Ljava/lang/Object;)V
 
     return-void
@@ -138,26 +131,21 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 5
     invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
 
-    .line 6
     iget-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v0, p1}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
-    .line 7
     iget-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {p1}, Lorg/reactivestreams/Subscriber;->onComplete()V
 
     return-void
 
-    .line 8
     :cond_2
     iput-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->value:Ljava/lang/Object;
 
-    .line 9
     invoke-virtual {p0, v2, v3, v4, v5}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result v0
@@ -169,7 +157,6 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 10
     iput-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->value:Ljava/lang/Object;
 
     goto :goto_0
@@ -189,7 +176,6 @@
 .method public onSubscribe(Lorg/reactivestreams/Subscription;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->s:Lorg/reactivestreams/Subscription;
 
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(Lorg/reactivestreams/Subscription;Lorg/reactivestreams/Subscription;)Z
@@ -198,10 +184,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->s:Lorg/reactivestreams/Subscription;
 
-    .line 3
     iget-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {p1, p0}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V
@@ -213,14 +197,12 @@
 .method public final request(J)V
     .locals 8
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -238,41 +220,35 @@
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 3
     invoke-virtual {p0, v2, v3, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     iget-object p2, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->value:Ljava/lang/Object;
 
     invoke-interface {p1, p2}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
-    .line 5
     iget-object p1, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {p1}, Lorg/reactivestreams/Subscriber;->onComplete()V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-static {v0, v1, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->addCap(JJ)J
 
     move-result-wide v2
 
-    .line 7
     invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lio/reactivex/internal/subscribers/SinglePostCompleteSubscriber;->s:Lorg/reactivestreams/Subscription;
 
     invoke-interface {v0, p1, p2}, Lorg/reactivestreams/Subscription;->request(J)V

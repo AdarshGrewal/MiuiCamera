@@ -4,6 +4,8 @@
 
 # interfaces
 .implements Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+.implements Lcom/android/camera/SurfaceTextureScreenNail$ExternalFrameProcessor;
+.implements Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
 
 # annotations
@@ -22,28 +24,31 @@
 
 
 # virtual methods
-.method public abstract createAvatar(Landroid/graphics/Bitmap;)V
+.method public abstract backToPreview(ZZ)V
+.end method
+
+.method public abstract changeToGif(Z)V
 .end method
 
 .method public abstract createEmoticon()V
 .end method
 
-.method public abstract drawPreview(Landroid/graphics/Rect;IIZ[IZ)Z
+.method public abstract deleteMimojiCache(I)Z
 .end method
 
-.method public abstract getMimojiPara()Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method public abstract getGifBitmap()Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract initEngine(IIIIZ)V
+.method public abstract getGlcontext()Ljavax/microedition/khronos/egl/EGLContext;
+.end method
+
+.method public abstract getTimeValue()J
+.end method
+
+.method public abstract getVideoCache()Ljava/lang/String;
+.end method
+
+.method public abstract initAvatarEngine(IIIIZ)V
 .end method
 
 .method public abstract initMimojiResource()V
@@ -52,25 +57,64 @@
 .method public abstract isAvatarInited()Z
 .end method
 
-.method public abstract onAvatarSelect(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Z)Z
+.method public abstract isOnCreateMimoji()Z
 .end method
 
-.method public abstract onBgSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgItem;Z)V
+.method public abstract isRecordStopping()Z
+.end method
+
+.method public abstract isRecording()Z
+.end method
+
+.method public abstract onCaptureImage()V
+.end method
+
+.method public abstract onCreateCapture()Z
 .end method
 
 .method public abstract onDeviceRotationChange(I)V
 .end method
 
-.method public abstract onEmoticonBack(Z)V
+.method public abstract onMimojiChangeBg(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiBgInfo;Z)V
 .end method
 
-.method public abstract onFaceDetectResult(Landroid/media/Image;)I
+.method public abstract onMimojiChangeTimbre(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiTimbreInfo;I)V
 .end method
 
-.method public abstract refeshMaterialConfig(Z)V
+.method public abstract onMimojiCreate()V
 .end method
 
-.method public abstract releaseRender()V
+.method public abstract onMimojiDeleted(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
+.end method
+
+.method public abstract onMimojiEmoticonBack(Z)V
+.end method
+
+.method public abstract onMimojiInitFinish()V
+.end method
+
+.method public abstract onMimojiSelect(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)Z
+.end method
+
+.method public abstract onRecordStart()V
+.end method
+
+.method public abstract onRecordStop(I)V
+.end method
+
+.method public abstract onRecordStopped(Z)V
+.end method
+
+.method public abstract refeshMaterialConfig()V
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract reloadConfig()V
+.end method
+
+.method public abstract removeIconCallBack()V
 .end method
 
 .method public abstract saveEmoticon(Ljava/util/ArrayList;)V
@@ -84,8 +128,20 @@
     .end annotation
 .end method
 
-.method public abstract setPicIconCallBack(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;)V
+.method public abstract setDetectSuccess(Z)V
 .end method
 
-.method public abstract unInitEngine()V
+.method public abstract setDisableSingleTapUp(Z)V
+.end method
+
+.method public abstract setIsFrameAvailable(Z)V
+.end method
+
+.method public abstract setNeedTakePic()V
+.end method
+
+.method public abstract takePicIcon(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/renderer/BaseRenderer$TakePhotoCallBack;)V
+.end method
+
+.method public abstract updateConfig()V
 .end method

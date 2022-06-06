@@ -25,10 +25,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
@@ -43,7 +41,6 @@
 .method public isCancelled()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/util/BackgroundTaskScheduler$CancellableTask;->mCancelled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -56,7 +53,6 @@
 .method public setCancelled()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/util/BackgroundTaskScheduler$CancellableTask;->mCancelled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1

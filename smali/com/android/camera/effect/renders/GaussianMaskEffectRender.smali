@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/RegionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -43,10 +41,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/RegionEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uMaskAlpha"
@@ -63,10 +59,8 @@
 .method public initShaderValue(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/GaussianMaskEffectRender;->mUniformMaskAlphaH:I
 
     if-eqz p1, :cond_0
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -85,7 +78,6 @@
 
     move-result p1
 
-    .line 4
     :goto_0
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 

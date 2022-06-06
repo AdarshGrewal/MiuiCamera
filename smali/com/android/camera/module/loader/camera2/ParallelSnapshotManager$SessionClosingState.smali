@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/util/State;-><init>()V
@@ -35,7 +34,6 @@
 .method public enter()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -44,9 +42,8 @@
 
     const-string v1, "entering SessionClosingState state"
 
-    invoke-static {v0, v1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$300(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/os/Handler;
@@ -69,7 +66,6 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x2
@@ -88,7 +84,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -98,7 +93,6 @@
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -108,7 +102,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {p1}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$600(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/hardware/camera2/CameraCaptureSession;
@@ -119,19 +112,16 @@
 
     invoke-virtual {p1}, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;->replaceSessionClose()V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     const/4 v1, 0x0
 
     invoke-static {p1, v1}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$602(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;Landroid/hardware/camera2/CameraCaptureSession;)Landroid/hardware/camera2/CameraCaptureSession;
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {p1, v1}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1602(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;Ljava/util/List;)Ljava/util/List;
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {p1}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -140,9 +130,8 @@
 
     const-string v1, "CaptureSession close"
 
-    invoke-static {p1, v1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     iget-object v1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
@@ -153,7 +142,6 @@
 
     invoke-virtual {p1, v1}, Lcom/xiaomi/camera/util/StateMachine;->transitionTo(Lcom/xiaomi/camera/util/IState;)V
 
-    .line 9
     :cond_1
     monitor-exit v0
 
@@ -169,13 +157,11 @@
 
     throw p1
 
-    .line 10
     :cond_2
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/util/StateMachine;->deferMessage(Landroid/os/Message;)V
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1100(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$CameraOpenedState;
@@ -184,7 +170,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->transitionTo(Lcom/xiaomi/camera/util/IState;)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;

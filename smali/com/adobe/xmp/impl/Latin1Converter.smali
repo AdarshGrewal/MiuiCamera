@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public static convert(Lcom/adobe/xmp/impl/ByteBuffer;)Lcom/adobe/xmp/impl/ByteBuffer;
     .locals 12
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->getEncoding()Ljava/lang/String;
 
     move-result-object v0
@@ -39,7 +37,6 @@
 
     new-array v1, v0, [B
 
-    .line 2
     new-instance v2, Lcom/adobe/xmp/impl/ByteBuffer;
 
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->length()I
@@ -62,7 +59,6 @@
 
     move v7, v6
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/ByteBuffer;->length()I
 
@@ -72,7 +68,6 @@
 
     if-ge v4, v8, :cond_6
 
-    .line 4
     invoke-virtual {p0, v4}, Lcom/adobe/xmp/impl/ByteBuffer;->charAt(I)I
 
     move-result v8
@@ -87,7 +82,6 @@
 
     int-to-byte v8, v8
 
-    .line 5
     invoke-virtual {v2, v8}, Lcom/adobe/xmp/impl/ByteBuffer;->append(B)V
 
     goto :goto_3
@@ -121,7 +115,6 @@
 
     int-to-byte v8, v8
 
-    .line 6
     aput-byte v8, v1, v7
 
     move v7, v5
@@ -133,12 +126,10 @@
     :cond_2
     int-to-byte v8, v8
 
-    .line 7
     invoke-static {v8}, Lcom/adobe/xmp/impl/Latin1Converter;->convertToUTF8(B)[B
 
     move-result-object v8
 
-    .line 8
     invoke-virtual {v2, v8}, Lcom/adobe/xmp/impl/ByteBuffer;->append([B)V
 
     goto :goto_3
@@ -154,14 +145,12 @@
 
     int-to-byte v8, v8
 
-    .line 9
     aput-byte v8, v1, v7
 
     add-int/lit8 v6, v6, -0x1
 
     if-nez v6, :cond_4
 
-    .line 10
     invoke-virtual {v2, v1, v3, v9}, Lcom/adobe/xmp/impl/ByteBuffer;->append([BII)V
 
     goto :goto_2
@@ -171,7 +160,6 @@
 
     goto :goto_3
 
-    .line 11
     :cond_5
     aget-byte v5, v1, v3
 
@@ -179,7 +167,6 @@
 
     move-result-object v5
 
-    .line 12
     invoke-virtual {v2, v5}, Lcom/adobe/xmp/impl/ByteBuffer;->append([B)V
 
     sub-int/2addr v4, v7
@@ -200,15 +187,12 @@
     :goto_4
     if-ge v3, v7, :cond_7
 
-    .line 13
     aget-byte p0, v1, v3
 
-    .line 14
     invoke-static {p0}, Lcom/adobe/xmp/impl/Latin1Converter;->convertToUTF8(B)[B
 
     move-result-object p0
 
-    .line 15
     invoke-virtual {v2, p0}, Lcom/adobe/xmp/impl/ByteBuffer;->append([B)V
 
     add-int/lit8 v3, v3, 0x1
@@ -257,7 +241,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     :try_start_0
     new-instance v0, Ljava/lang/String;

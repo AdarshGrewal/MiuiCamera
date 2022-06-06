@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;[B)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     iput-object p2, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->val$data1:[B
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Z
@@ -51,12 +49,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 3
     iget-object v2, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -93,7 +89,6 @@
 
     move-result-object v2
 
-    .line 4
     iget-object v3, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v3}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -102,14 +97,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
     sub-long/2addr v3, v0
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;
@@ -134,7 +127,6 @@
 
     long-to-float v0, v0
 
-    .line 7
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -202,7 +194,6 @@
     :cond_1
     const-string v2, "zhang_san:0.7813"
 
-    .line 8
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
@@ -219,13 +210,10 @@
 
     const/4 v1, 0x2
 
-    .line 9
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 10
     iput-object v2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 11
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v1}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Landroid/os/Handler;
@@ -234,7 +222,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->this$0:Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;->access$500(Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl;)Z
@@ -243,7 +230,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,18 +262,15 @@
 
     move-result-object v0
 
-    .line 14
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 15
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/W2VPEngineImpl$1;->val$data1:[B
 
     invoke-virtual {v1, v0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 16
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -297,7 +280,6 @@
     :catch_0
     move-exception v0
 
-    .line 17
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_3

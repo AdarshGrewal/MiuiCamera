@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$1;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$1$1;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,16 @@
 
     const-string p2, "cancel"
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/statistic/CameraStatUtils;->trackRemoteOnlineClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->current()Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->stopNetworkServer()V
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$1$1;->this$1:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$1;
 

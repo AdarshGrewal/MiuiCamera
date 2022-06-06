@@ -57,7 +57,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/androidbasewidget/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -66,7 +65,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 2
     sget v0, Lmiuix/androidbasewidget/R$attr;->seekBarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/androidbasewidget/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -77,10 +75,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 4
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
     new-instance v0, Lmiuix/androidbasewidget/widget/SeekBar$1;
 
     invoke-direct {v0, p0}, Lmiuix/androidbasewidget/widget/SeekBar$1;-><init>(Lmiuix/androidbasewidget/widget/SeekBar;)V
@@ -89,10 +85,8 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-static {p0, v0}, Lmiuix/view/CompatViewMethod;->setForceDarkAllowed(Landroid/view/View;Z)V
 
-    .line 6
     sget-object v1, Lmiuix/androidbasewidget/R$styleable;->SeekBar:[I
 
     sget v2, Lmiuix/androidbasewidget/R$style;->Widget_SeekBar_DayNight:I
@@ -101,7 +95,6 @@
 
     move-result-object p2
 
-    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -114,7 +107,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryColor:I
 
-    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -127,7 +119,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryDisableColor:I
 
-    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -140,7 +131,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultIconPrimaryColor:I
 
-    .line 10
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_middleEnabled:I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -149,7 +139,6 @@
 
     iput-boolean p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
-    .line 11
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_foregroundPrimaryColor:I
 
     iget v1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryColor:I
@@ -160,7 +149,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mForegroundPrimaryColor:I
 
-    .line 12
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_foregroundPrimaryDisableColor:I
 
     iget v1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryDisableColor:I
@@ -171,7 +159,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mForegroundPrimaryDisableColor:I
 
-    .line 13
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_iconPrimaryColor:I
 
     iget v1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultIconPrimaryColor:I
@@ -182,7 +169,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIconPrimaryColor:I
 
-    .line 14
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_disabledProgressAlpha:I
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -193,7 +179,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mDisabledProgressAlpha:F
 
-    .line 15
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_minMiddle:I
 
     const v2, 0x3eeb851f    # 0.46f
@@ -204,7 +189,6 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
-    .line 16
     sget p3, Lmiuix/androidbasewidget/R$styleable;->SeekBar_maxMiddle:I
 
     const v3, 0x3f0a3d71    # 0.54f
@@ -215,10 +199,8 @@
 
     iput p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMaxMiddle:F
 
-    .line 17
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 18
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -231,7 +213,6 @@
 
     iput p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIconTransparent:I
 
-    .line 19
     iget p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
     cmpl-float p2, p1, v1
@@ -244,11 +225,9 @@
 
     if-gez p1, :cond_1
 
-    .line 20
     :cond_0
     iput v2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
-    .line 21
     :cond_1
     iget p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMaxMiddle:F
 
@@ -262,11 +241,9 @@
 
     if-lez p1, :cond_3
 
-    .line 22
     :cond_2
     iput v3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMaxMiddle:F
 
-    .line 23
     :cond_3
     invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
 
@@ -278,7 +255,6 @@
 
     sub-int/2addr p1, p2
 
-    .line 24
     invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result p2
@@ -289,14 +265,12 @@
 
     iput-boolean p2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIsInMiddle:Z
 
-    .line 25
     invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result p2
 
     iput p2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
-    .line 26
     iget-boolean p2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIsInMiddle:Z
 
     if-eqz p2, :cond_4
@@ -305,14 +279,12 @@
 
     mul-float/2addr p1, v1
 
-    .line 27
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
     iput p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
-    .line 28
     invoke-virtual {p0, p1}, Landroid/widget/SeekBar;->setProgress(I)V
 
     :cond_4
@@ -320,7 +292,6 @@
 
     new-array p2, p1, [Ljava/lang/Object;
 
-    .line 29
     iget p3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -343,7 +314,6 @@
 
     aput-object v1, p3, v0
 
-    .line 30
     iget v0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -354,12 +324,10 @@
 
     invoke-interface {p2, p3}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    .line 31
     iget-object p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->trainsOnSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     invoke-virtual {p0, p1}, Lmiuix/androidbasewidget/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 32
     new-instance p1, Lmiuix/androidbasewidget/widget/SeekBar$ColorUpdateRunner;
 
     invoke-direct {p1, p0}, Lmiuix/androidbasewidget/widget/SeekBar$ColorUpdateRunner;-><init>(Lmiuix/androidbasewidget/widget/SeekBar;)V
@@ -372,7 +340,6 @@
 .method public static synthetic access$000(Lmiuix/androidbasewidget/widget/SeekBar;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
     return p0
@@ -381,7 +348,6 @@
 .method public static synthetic access$100(Lmiuix/androidbasewidget/widget/SeekBar;)I
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->getMinWrapper()I
 
     move-result p0
@@ -392,7 +358,6 @@
 .method public static synthetic access$200(Lmiuix/androidbasewidget/widget/SeekBar;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
     return p0
@@ -401,7 +366,6 @@
 .method public static synthetic access$300(Lmiuix/androidbasewidget/widget/SeekBar;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMaxMiddle:F
 
     return p0
@@ -410,7 +374,6 @@
 .method public static synthetic access$400(Lmiuix/androidbasewidget/widget/SeekBar;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
     return p0
@@ -419,7 +382,6 @@
 .method public static synthetic access$402(Lmiuix/androidbasewidget/widget/SeekBar;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgess:I
 
     return p1
@@ -428,7 +390,6 @@
 .method public static synthetic access$500(Lmiuix/androidbasewidget/widget/SeekBar;)Lmiuix/animation/IStateStyle;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIStateStyle:Lmiuix/animation/IStateStyle;
 
     return-object p0
@@ -437,7 +398,6 @@
 .method public static synthetic access$600(Lmiuix/androidbasewidget/widget/SeekBar;)Landroid/widget/SeekBar$OnSeekBarChangeListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mOnSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     return-object p0
@@ -446,7 +406,6 @@
 .method public static synthetic access$700(Lmiuix/androidbasewidget/widget/SeekBar;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
     return-void
@@ -455,14 +414,12 @@
 .method private getMinWrapper()I
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-super {p0}, Landroid/widget/SeekBar;->getMin()I
 
     move-result v0
@@ -480,7 +437,6 @@
 
     if-lez p1, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->getMinWrapper()I
 
     move-result v0
@@ -498,7 +454,6 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 2
     :goto_0
     iget p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMinMiddle:F
 
@@ -525,41 +480,34 @@
 .method private updatePrimaryColor()V
     .locals 8
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;
 
     if-eqz v1, :cond_5
 
-    .line 3
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
     const v1, 0x102000d
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 5
     instance-of v2, v1, Landroid/graphics/drawable/ClipDrawable;
 
     if-eqz v2, :cond_3
 
-    .line 6
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x17
 
     if-lt v2, v3, :cond_3
 
-    .line 7
     check-cast v1, Landroid/graphics/drawable/ClipDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/ClipDrawable;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -568,29 +516,24 @@
 
     if-eqz v1, :cond_3
 
-    .line 8
     instance-of v2, v1, Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v2, :cond_3
 
-    .line 9
     check-cast v1, Landroid/graphics/drawable/GradientDrawable;
 
     const/4 v2, 0x0
 
-    .line 10
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x18
 
     if-lt v3, v4, :cond_0
 
-    .line 11
     invoke-virtual {v1}, Landroid/graphics/drawable/GradientDrawable;->getColor()Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
-    .line 12
     :cond_0
     iget-object v3, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgressColorStateList:Landroid/content/res/ColorStateList;
 
@@ -598,10 +541,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 13
     iput-object v2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgressColorStateList:Landroid/content/res/ColorStateList;
 
-    .line 14
     :cond_1
     iget-object v2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mProgressColorStateList:Landroid/content/res/ColorStateList;
 
@@ -611,7 +552,6 @@
 
     iget v4, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryDisableColor:I
 
-    .line 15
     invoke-virtual {v2, v3, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result v2
@@ -626,7 +566,6 @@
 
     iget v4, p0, Lmiuix/androidbasewidget/widget/SeekBar;->defaultForegroundPrimaryColor:I
 
-    .line 16
     invoke-virtual {v2, v3, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result v2
@@ -640,7 +579,6 @@
 
     new-array v3, v2, [I
 
-    .line 17
     iget v4, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mForegroundPrimaryDisableColor:I
 
     const/4 v5, 0x0
@@ -667,30 +605,25 @@
 
     aput-object v4, v2, v6
 
-    .line 18
     new-instance v4, Landroid/content/res/ColorStateList;
 
     invoke-direct {v4, v2, v3}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
-    .line 19
     invoke-virtual {v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setColor(Landroid/content/res/ColorStateList;)V
 
     :cond_3
     const v1, 0x1020006
 
-    .line 20
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    .line 21
     instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v1, :cond_5
 
-    .line 22
     iget-boolean v1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
     if-eqz v1, :cond_4
@@ -716,20 +649,16 @@
 .method public drawableStateChanged()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatSeekBar;->drawableStateChanged()V
 
-    .line 2
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/SeekBar;->isEnabled()Z
 
     move-result v1
@@ -759,13 +688,10 @@
 .method public setForegroundPrimaryColor(II)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mForegroundPrimaryColor:I
 
-    .line 2
     iput p2, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mForegroundPrimaryDisableColor:I
 
-    .line 3
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
     return-void
@@ -774,10 +700,8 @@
 .method public setIconPrimaryColor(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mIconPrimaryColor:I
 
-    .line 2
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
     return-void
@@ -786,15 +710,12 @@
 .method public setMiddleEnabled(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mMiddleEnabled:Z
 
-    .line 3
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/SeekBar;->updatePrimaryColor()V
 
     :cond_0
@@ -804,17 +725,14 @@
 .method public setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/SeekBar;->trainsOnSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     invoke-super {p0, v0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/SeekBar;->mOnSeekBarChangeListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 

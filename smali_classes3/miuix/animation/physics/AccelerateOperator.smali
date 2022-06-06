@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget p1, p1, v0
 
     float-to-double v1, p1
@@ -32,7 +30,6 @@
 
     mul-double/2addr v1, v3
 
-    .line 2
     aput-wide v1, p2, v0
 
     return-void

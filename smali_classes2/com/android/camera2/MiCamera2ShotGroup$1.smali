@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera2/MiCamera2ShotGroup;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/MiCamera2ShotGroup$1;->this$0:Lcom/android/camera2/MiCamera2ShotGroup;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/MiCamera2ShotGroup;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +42,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onCaptureCompleted: "
+    const-string/jumbo v0, "onCaptureCompleted: "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -60,7 +58,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotGroup$1;->this$0:Lcom/android/camera2/MiCamera2ShotGroup;
 
     iget-object p2, p1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -95,10 +92,8 @@
 .method public onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera2/MiCamera2ShotGroup;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -107,7 +102,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onCaptureFailed: "
+    const-string/jumbo v0, "onCaptureFailed: "
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -123,7 +118,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotGroup$1;->this$0:Lcom/android/camera2/MiCamera2ShotGroup;
 
     iget-object p2, p1, Lcom/android/camera2/MiCamera2Shot;->mMiCamera:Lcom/android/camera2/MiCamera2;
@@ -138,10 +132,8 @@
 .method public onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotGroup$1;->this$0:Lcom/android/camera2/MiCamera2ShotGroup;
 
     invoke-static {p1}, Lcom/android/camera2/MiCamera2ShotGroup;->access$000(Lcom/android/camera2/MiCamera2ShotGroup;)Lcom/xiaomi/camera/core/ParallelTaskData;
@@ -158,7 +150,6 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/MiCamera2ShotGroup$1;->this$0:Lcom/android/camera2/MiCamera2ShotGroup;
 
     invoke-static {p1}, Lcom/android/camera2/MiCamera2ShotGroup;->access$000(Lcom/android/camera2/MiCamera2ShotGroup;)Lcom/xiaomi/camera/core/ParallelTaskData;

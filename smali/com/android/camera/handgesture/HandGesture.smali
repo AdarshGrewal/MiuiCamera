@@ -14,22 +14,18 @@
     :try_start_0
     const-string v0, "camera_handgesture_mpbase"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "arc_layer_sgl"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "handengine.arcsoft"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "camera_arcsoft_handgesture"
 
-    .line 4
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -39,7 +35,6 @@
     :catch_0
     move-exception v0
 
-    .line 5
     sget-object v1, Lcom/android/camera/handgesture/HandGesture;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,7 +64,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

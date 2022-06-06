@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/Config;->SHOW_LOGS:Z
 
     sput-boolean v0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->SHOW_LOGS:Z
@@ -41,12 +40,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mFailedToPrepareUiForPlayback:Z
 
     return-void
@@ -57,7 +54,6 @@
 .method public isFailedToPrepareUiForPlayback()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mFailedToPrepareUiForPlayback:Z
 
     return v0
@@ -66,7 +62,6 @@
 .method public isReadyForPlayback()Z
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->isVideoSizeAvailable()Z
 
     move-result v0
@@ -86,7 +81,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->SHOW_LOGS:Z
 
@@ -117,7 +111,6 @@
 .method public isSurfaceTextureAvailable()Z
     .locals 3
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->SHOW_LOGS:Z
 
     if-eqz v0, :cond_0
@@ -142,7 +135,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mSurfaceTextureAvailable:Z
 
@@ -152,7 +144,6 @@
 .method public isVideoSizeAvailable()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mVideoSize:Landroid/util/Pair;
 
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -170,7 +161,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     sget-boolean v1, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->SHOW_LOGS:Z
 
@@ -201,7 +191,6 @@
 .method public setFailedToPrepareUiForPlayback(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mFailedToPrepareUiForPlayback:Z
 
     return-void
@@ -210,7 +199,6 @@
 .method public setSurfaceTextureAvailable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/videoplayer/ui/ReadyForPlaybackIndicator;->mSurfaceTextureAvailable:Z
 
     return-void
@@ -219,7 +207,6 @@
 .method public setVideoSize(Ljava/lang/Integer;Ljava/lang/Integer;)V
     .locals 1
 
-    .line 1
     new-instance v0, Landroid/util/Pair;
 
     invoke-direct {v0, p1, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -232,7 +219,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

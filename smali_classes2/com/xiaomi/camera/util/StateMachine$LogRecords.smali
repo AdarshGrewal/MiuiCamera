@@ -42,10 +42,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
@@ -54,18 +52,14 @@
 
     const/16 v0, 0x14
 
-    .line 4
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
-    .line 6
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mCount:I
 
-    .line 7
     iput-boolean v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogOnlyTransitions:Z
 
     return-void
@@ -74,7 +68,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/util/StateMachine$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/util/StateMachine$LogRecords;-><init>()V
 
     return-void
@@ -83,7 +76,6 @@
 .method public static synthetic access$1900(Lcom/xiaomi/camera/util/StateMachine$LogRecords;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     return p0
@@ -92,7 +84,6 @@
 .method public static synthetic access$2000(Lcom/xiaomi/camera/util/StateMachine$LogRecords;)Ljava/util/Vector;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
     return-object p0
@@ -105,7 +96,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mCount:I
 
@@ -113,7 +103,6 @@
 
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mCount:I
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
@@ -124,7 +113,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
     new-instance v8, Lcom/xiaomi/camera/util/StateMachine$LogRec;
@@ -149,7 +137,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
@@ -163,21 +150,18 @@
 
     check-cast v1, Lcom/xiaomi/camera/util/StateMachine$LogRec;
 
-    .line 5
     iget v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
-    .line 6
     iget v2, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     if-lt v0, v2, :cond_1
 
     const/4 v0, 0x0
 
-    .line 7
     iput v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
     :cond_1
@@ -193,12 +177,10 @@
 
     move-object v7, p6
 
-    .line 8
     invoke-virtual/range {v1 .. v7}, Lcom/xiaomi/camera/util/StateMachine$LogRec;->update(Lcom/xiaomi/camera/util/StateMachine;Landroid/os/Message;Ljava/lang/String;Lcom/xiaomi/camera/util/IState;Lcom/xiaomi/camera/util/IState;Lcom/xiaomi/camera/util/IState;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9
     :goto_0
     monitor-exit p0
 
@@ -217,7 +199,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
@@ -225,7 +206,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     monitor-exit p0
 
     return-void
@@ -243,7 +223,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mCount:I
     :try_end_0
@@ -266,23 +245,19 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
     add-int/2addr v0, p1
 
-    .line 2
     iget p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     if-lt v0, p1, :cond_0
 
-    .line 3
     iget p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     sub-int/2addr v0, p1
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->size()I
 
@@ -294,12 +269,10 @@
 
     const/4 p1, 0x0
 
-    .line 5
     monitor-exit p0
 
     return-object p1
 
-    .line 6
     :cond_1
     :try_start_1
     iget-object p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
@@ -329,7 +302,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogOnlyTransitions:Z
     :try_end_0
@@ -352,13 +324,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iput-boolean p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogOnlyTransitions:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     monitor-exit p0
 
     return-void
@@ -376,26 +346,21 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iput p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mMaxSize:I
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mOldestIndex:I
 
-    .line 3
     iput p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mCount:I
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 
     invoke-virtual {p1}, Ljava/util/Vector;->clear()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-void
@@ -413,7 +378,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/util/StateMachine$LogRecords;->mLogRecVector:Ljava/util/Vector;
 

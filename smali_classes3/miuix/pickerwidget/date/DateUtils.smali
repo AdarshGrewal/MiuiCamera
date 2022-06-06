@@ -59,14 +59,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/pickerwidget/date/DateUtils$1;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/date/DateUtils$1;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-static {v0, v1}, Lmiuix/core/util/Pools;->createSoftReferencePool(Lmiuix/core/util/Pools$Manager;I)Lmiuix/core/util/Pools$SoftReferencePool;
 
     move-result-object v0
@@ -84,10 +82,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -100,7 +96,6 @@
 .method public static formatDateTime(Landroid/content/Context;JI)Ljava/lang/String;
     .locals 7
 
-    .line 1
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -121,7 +116,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-static/range {v1 .. v6}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -130,7 +124,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1
@@ -143,7 +136,6 @@
 .method public static formatDateTime(Landroid/content/Context;JILjava/util/TimeZone;)Ljava/lang/String;
     .locals 7
 
-    .line 4
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -164,7 +156,6 @@
 
     move-object v6, p4
 
-    .line 5
     invoke-static/range {v1 .. v6}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -173,7 +164,6 @@
 
     move-result-object p0
 
-    .line 6
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1
@@ -196,7 +186,6 @@
 
     move v4, p4
 
-    .line 7
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -215,7 +204,6 @@
 
     if-nez v0, :cond_1
 
-    .line 8
     invoke-static {p0}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
 
     move-result v0
@@ -232,7 +220,6 @@
     :goto_0
     or-int/2addr p4, v0
 
-    .line 9
     :cond_1
     invoke-static {p4}, Lmiuix/pickerwidget/date/DateUtils;->getFormatResId(I)I
 
@@ -242,7 +229,6 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v1
@@ -253,7 +239,6 @@
 
     check-cast v1, Ljava/lang/StringBuilder;
 
-    .line 11
     sget-object v2, Lmiuix/pickerwidget/date/DateUtils;->CALENDAR_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {v2}, Lmiuix/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -262,15 +247,12 @@
 
     check-cast v2, Lmiuix/pickerwidget/date/Calendar;
 
-    .line 12
     invoke-virtual {v2, p5}, Lmiuix/pickerwidget/date/Calendar;->setTimeZone(Ljava/util/TimeZone;)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 13
     invoke-virtual {v2, p2, p3}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p2, 0x0
 
-    .line 14
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result p3
@@ -278,7 +260,6 @@
     :goto_1
     if-ge p2, p3, :cond_5
 
-    .line 15
     invoke-virtual {v0, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result p5
@@ -295,12 +276,10 @@
 
     if-eq p5, v3, :cond_2
 
-    .line 16
     invoke-virtual {v1, p5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 17
     :cond_2
     invoke-static {p4}, Lmiuix/pickerwidget/date/DateUtils;->getWeekdayPatternResId(I)I
 
@@ -314,7 +293,6 @@
 
     goto :goto_2
 
-    .line 18
     :cond_3
     invoke-static {v2, p4}, Lmiuix/pickerwidget/date/DateUtils;->getTimePatternResId(Lmiuix/pickerwidget/date/Calendar;I)I
 
@@ -328,7 +306,6 @@
 
     goto :goto_2
 
-    .line 19
     :cond_4
     invoke-static {p4}, Lmiuix/pickerwidget/date/DateUtils;->getDatePatternResId(I)I
 
@@ -345,18 +322,15 @@
 
     goto :goto_1
 
-    .line 20
     :cond_5
     invoke-virtual {v2, p0, p1, v1}, Lmiuix/pickerwidget/date/Calendar;->format(Landroid/content/Context;Ljava/lang/StringBuilder;Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 21
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p0
 
     invoke-interface {p0, v1}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
 
-    .line 22
     sget-object p0, Lmiuix/pickerwidget/date/DateUtils;->CALENDAR_POOL:Lmiuix/core/util/Pools$Pool;
 
     invoke-interface {p0, v2}, Lmiuix/core/util/Pools$Pool;->release(Ljava/lang/Object;)V
@@ -367,7 +341,6 @@
 .method public static formatRelativeTime(Landroid/content/Context;JZ)Ljava/lang/String;
     .locals 7
 
-    .line 1
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -388,7 +361,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-static/range {v1 .. v6}, Lmiuix/pickerwidget/date/DateUtils;->formatRelativeTime(Landroid/content/Context;Ljava/lang/StringBuilder;JZLjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -397,7 +369,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1
@@ -410,7 +381,6 @@
 .method public static formatRelativeTime(Landroid/content/Context;JZLjava/util/TimeZone;)Ljava/lang/String;
     .locals 7
 
-    .line 4
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object v0
@@ -431,7 +401,6 @@
 
     move-object v6, p4
 
-    .line 5
     invoke-static/range {v1 .. v6}, Lmiuix/pickerwidget/date/DateUtils;->formatRelativeTime(Landroid/content/Context;Ljava/lang/StringBuilder;JZLjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -440,7 +409,6 @@
 
     move-result-object p0
 
-    .line 6
     invoke-static {}, Lmiuix/core/util/Pools;->getStringBuilderPool()Lmiuix/core/util/Pools$Pool;
 
     move-result-object p1
@@ -463,7 +431,6 @@
 
     move v4, p4
 
-    .line 7
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatRelativeTime(Landroid/content/Context;Ljava/lang/StringBuilder;JZLjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -478,7 +445,6 @@
 
     move-wide/from16 v2, p2
 
-    .line 8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -501,7 +467,6 @@
     :goto_0
     sub-long v8, v0, v2
 
-    .line 9
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v8
@@ -510,7 +475,6 @@
 
     div-long/2addr v8, v10
 
-    .line 10
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
@@ -533,7 +497,6 @@
 
     if-nez v12, :cond_1
 
-    .line 11
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_a_hour_ago:I
 
     goto :goto_1
@@ -543,7 +506,6 @@
 
     if-nez v2, :cond_2
 
-    .line 12
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_half_hour_ago:I
 
     goto :goto_1
@@ -553,12 +515,10 @@
 
     if-nez v0, :cond_3
 
-    .line 13
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_less_than_one_minute_ago:I
 
     goto :goto_1
 
-    .line 14
     :cond_3
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_num_minutes_ago:I
 
@@ -567,7 +527,6 @@
     :cond_4
     if-nez v12, :cond_5
 
-    .line 15
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_in_a_hour:I
 
     goto :goto_1
@@ -577,7 +536,6 @@
 
     if-nez v2, :cond_6
 
-    .line 16
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_in_half_hour:I
 
     goto :goto_1
@@ -587,26 +545,22 @@
 
     if-nez v0, :cond_7
 
-    .line 17
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_in_less_than_one_minute:I
 
     goto :goto_1
 
-    .line 18
     :cond_7
     sget v0, Lmiuix/pickerwidget/R$plurals;->abbrev_in_num_minutes:I
 
     :goto_1
     long-to-int v1, v8
 
-    .line 19
     invoke-virtual {v10, v0, v1}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v0
 
     new-array v1, v7, [Ljava/lang/Object;
 
-    .line 20
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -621,7 +575,6 @@
 
     goto/16 :goto_8
 
-    .line 21
     :cond_8
     sget-object v8, Lmiuix/pickerwidget/date/DateUtils;->CALENDAR_POOL:Lmiuix/core/util/Pools$Pool;
 
@@ -633,35 +586,28 @@
 
     move-object/from16 v9, p5
 
-    .line 22
     invoke-virtual {v8, v9}, Lmiuix/pickerwidget/date/Calendar;->setTimeZone(Ljava/util/TimeZone;)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 23
     invoke-virtual {v8, v0, v1}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 24
     invoke-virtual {v8, v7}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
 
     const/16 v1, 0xc
 
-    .line 25
     invoke-virtual {v8, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v12
 
     const/16 v13, 0xe
 
-    .line 26
     invoke-virtual {v8, v13}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v14
 
-    .line 27
     invoke-virtual {v8, v2, v3}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 28
     invoke-virtual {v8, v7}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v15
@@ -678,7 +624,6 @@
     :goto_2
     if-eqz v0, :cond_a
 
-    .line 29
     invoke-virtual {v8, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v15
@@ -695,7 +640,6 @@
 
     move-object/from16 v5, p5
 
-    .line 30
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_7
@@ -703,7 +647,6 @@
     :cond_a
     if-eqz v0, :cond_c
 
-    .line 31
     invoke-virtual {v8, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v15
@@ -720,7 +663,6 @@
 
     if-eqz v4, :cond_b
 
-    .line 32
     sget v0, Lmiuix/pickerwidget/R$string;->yesterday:I
 
     goto :goto_3
@@ -737,7 +679,6 @@
 
     const/16 v0, 0x20
 
-    .line 33
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/16 v4, 0x300c
@@ -750,7 +691,6 @@
 
     move-object/from16 v5, p5
 
-    .line 34
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     goto :goto_7
@@ -758,7 +698,6 @@
     :cond_c
     if-eqz v0, :cond_e
 
-    .line 35
     invoke-virtual {v8, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
@@ -799,7 +738,6 @@
 
     move-object/from16 v5, p5
 
-    .line 36
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     goto :goto_7
@@ -827,7 +765,6 @@
 
     move-object/from16 v5, p5
 
-    .line 37
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
     goto :goto_7
@@ -853,10 +790,8 @@
 
     move-object/from16 v5, p5
 
-    .line 38
     invoke-static/range {v0 .. v5}, Lmiuix/pickerwidget/date/DateUtils;->formatDateTime(Landroid/content/Context;Ljava/lang/StringBuilder;JILjava/util/TimeZone;)Ljava/lang/StringBuilder;
 
-    .line 39
     :goto_7
     sget-object v0, Lmiuix/pickerwidget/date/DateUtils;->CALENDAR_POOL:Lmiuix/core/util/Pools$Pool;
 
@@ -895,18 +830,15 @@
 
     if-ne p0, v5, :cond_0
 
-    .line 1
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_year_month_day:I
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_year_month:I
 
     goto/16 :goto_0
 
-    .line 3
     :cond_1
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_year:I
 
@@ -921,12 +853,10 @@
 
     if-ne p0, v5, :cond_3
 
-    .line 4
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_month_day:I
 
     goto/16 :goto_0
 
-    .line 5
     :cond_3
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_month:I
 
@@ -937,12 +867,10 @@
 
     if-ne p0, v5, :cond_5
 
-    .line 6
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_numeric_day:I
 
     goto/16 :goto_0
 
-    .line 7
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -969,18 +897,15 @@
 
     if-ne p0, v5, :cond_7
 
-    .line 8
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_short_year_month_day:I
 
     goto :goto_0
 
-    .line 9
     :cond_7
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_short_year_month:I
 
     goto :goto_0
 
-    .line 10
     :cond_8
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_year:I
 
@@ -995,12 +920,10 @@
 
     if-ne p0, v5, :cond_a
 
-    .line 11
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_short_month_day:I
 
     goto :goto_0
 
-    .line 12
     :cond_a
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_short_month:I
 
@@ -1011,12 +934,10 @@
 
     if-ne p0, v5, :cond_c
 
-    .line 13
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_day:I
 
     goto :goto_0
 
-    .line 14
     :cond_c
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1037,18 +958,15 @@
 
     if-ne p0, v5, :cond_e
 
-    .line 15
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_long_year_month_day:I
 
     goto :goto_0
 
-    .line 16
     :cond_e
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_long_year_month:I
 
     goto :goto_0
 
-    .line 17
     :cond_f
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_year:I
 
@@ -1063,12 +981,10 @@
 
     if-ne p0, v5, :cond_11
 
-    .line 18
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_long_month_day:I
 
     goto :goto_0
 
-    .line 19
     :cond_11
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_long_month:I
 
@@ -1079,13 +995,11 @@
 
     if-ne p0, v5, :cond_13
 
-    .line 20
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_day:I
 
     :goto_0
     return p0
 
-    .line 21
     :cond_13
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1117,7 +1031,6 @@
 
     if-ne p0, v2, :cond_0
 
-    .line 1
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_weekday_date_time_timezone:I
 
     goto :goto_0
@@ -1132,7 +1045,6 @@
 
     if-ne p0, v2, :cond_2
 
-    .line 2
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_weekday_date_timezone:I
 
     goto :goto_0
@@ -1151,7 +1063,6 @@
 
     if-ne p0, v2, :cond_4
 
-    .line 3
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_weekday_time_timezone:I
 
     goto :goto_0
@@ -1166,7 +1077,6 @@
 
     if-ne p0, v2, :cond_6
 
-    .line 4
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_weekday_timezone:I
 
     goto :goto_0
@@ -1189,7 +1099,6 @@
 
     if-ne p0, v2, :cond_8
 
-    .line 5
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_time_timezone:I
 
     goto :goto_0
@@ -1204,7 +1113,6 @@
 
     if-ne p0, v2, :cond_a
 
-    .line 6
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_date_timezone:I
 
     goto :goto_0
@@ -1223,7 +1131,6 @@
 
     if-ne p0, v2, :cond_c
 
-    .line 7
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_timezone:I
 
     goto :goto_0
@@ -1238,7 +1145,6 @@
 
     if-ne p0, v2, :cond_e
 
-    .line 8
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_timezone:I
 
     goto :goto_0
@@ -1269,7 +1175,6 @@
 
     const/16 v0, 0x16
 
-    .line 1
     invoke-virtual {p0, v0}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -1289,7 +1194,6 @@
 
     const/16 v0, 0x15
 
-    .line 2
     invoke-virtual {p0, v0}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -1305,7 +1209,6 @@
 
     const/16 v0, 0x14
 
-    .line 3
     invoke-virtual {p0, v0}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result p0
@@ -1351,24 +1254,20 @@
 
     if-ne p0, v3, :cond_3
 
-    .line 4
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute_second_millis:I
 
     goto/16 :goto_0
 
-    .line 5
     :cond_3
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute_second:I
 
     goto/16 :goto_0
 
-    .line 6
     :cond_4
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute:I
 
     goto/16 :goto_0
 
-    .line 7
     :cond_5
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour:I
 
@@ -1387,24 +1286,20 @@
 
     if-ne p0, v3, :cond_7
 
-    .line 8
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute_second_millis_pm:I
 
     goto :goto_0
 
-    .line 9
     :cond_7
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute_second_pm:I
 
     goto :goto_0
 
-    .line 10
     :cond_8
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_minute_pm:I
 
     goto :goto_0
 
-    .line 11
     :cond_9
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_12hour_pm:I
 
@@ -1423,24 +1318,20 @@
 
     if-ne p0, v3, :cond_b
 
-    .line 12
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_24hour_minute_second_millis:I
 
     goto :goto_0
 
-    .line 13
     :cond_b
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_24hour_minute_second:I
 
     goto :goto_0
 
-    .line 14
     :cond_c
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_24hour_minute:I
 
     goto :goto_0
 
-    .line 15
     :cond_d
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_24hour:I
 
@@ -1459,18 +1350,15 @@
 
     if-ne p0, v3, :cond_f
 
-    .line 16
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_minute_second_millis:I
 
     goto :goto_0
 
-    .line 17
     :cond_f
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_minute_second:I
 
     goto :goto_0
 
-    .line 18
     :cond_10
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_minute:I
 
@@ -1485,12 +1373,10 @@
 
     if-ne p0, v3, :cond_12
 
-    .line 19
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_second_millis:I
 
     goto :goto_0
 
-    .line 20
     :cond_12
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_second:I
 
@@ -1501,13 +1387,11 @@
 
     if-ne p0, v3, :cond_14
 
-    .line 21
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_time_millis:I
 
     :goto_0
     return p0
 
-    .line 22
     :cond_14
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1527,7 +1411,6 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 1
     sget p0, Lmiuix/pickerwidget/R$string;->fmt_weekday_short:I
 
     goto :goto_0

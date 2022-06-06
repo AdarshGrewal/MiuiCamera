@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/android/schedulers/AndroidSchedulers$1;
 
     invoke-direct {v0}, Lio/reactivex/android/schedulers/AndroidSchedulers$1;-><init>()V
@@ -36,10 +35,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "No instances."
@@ -54,7 +51,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler;
 
     new-instance v1, Landroid/os/Handler;
@@ -65,7 +61,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -79,7 +74,6 @@
 .method public static mainThread()Lio/reactivex/Scheduler;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/android/schedulers/AndroidSchedulers;->MAIN_THREAD:Lio/reactivex/Scheduler;
 
     invoke-static {v0}, Lio/reactivex/android/plugins/RxAndroidPlugins;->onMainThreadScheduler(Lio/reactivex/Scheduler;)Lio/reactivex/Scheduler;

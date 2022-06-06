@@ -55,40 +55,34 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070715
+    const v0, 0x7f070711
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLineWidth:I
 
-    .line 4
     div-int/lit8 v1, v1, 0x2
 
     iput v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mSemiLineWidth:I
 
-    const v1, 0x7f07070d
+    const v1, 0x7f070709
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisWidth:I
 
-    const v1, 0x7f07070c
+    const v1, 0x7f070708
 
-    .line 6
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
@@ -101,41 +95,36 @@
 
     iput v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisTouchWidth:I
 
-    .line 7
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisWidth:I
 
     sub-int/2addr v1, v0
 
     iput v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaddingLeft:I
 
-    const v0, 0x7f070710
+    const v0, 0x7f07070c
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mCornerRatio:I
 
-    const v0, 0x7f07070e
+    const v0, 0x7f07070a
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mInnerCornerRatio:I
 
-    const v0, 0x7f070714
+    const v0, 0x7f070710
 
-    .line 10
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPointRatio:I
 
-    .line 11
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -144,15 +133,13 @@
 
     const/4 v1, 0x1
 
-    .line 12
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     const/4 v2, 0x0
 
-    const v3, 0x7f060349
+    const v3, 0x7f060348
 
     invoke-virtual {p1, v3, v2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
@@ -160,7 +147,6 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     iget v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLineWidth:I
@@ -169,54 +155,47 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    const v0, 0x7f060096
+    const v0, 0x7f060094
 
-    .line 15
     invoke-virtual {p1, v0, v2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mBgColor:I
 
-    const v0, 0x7f12096b
+    const v0, 0x7f12091c
 
-    .line 16
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTintText:Ljava/lang/String;
 
-    .line 17
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
-    .line 18
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 19
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x41000000    # 8.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 21
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f070712
+    const v1, 0x7f07070e
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -226,14 +205,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x0
@@ -246,12 +223,10 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 24
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 25
     iget-object v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     iget-object v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTintText:Ljava/lang/String;
@@ -262,12 +237,11 @@
 
     invoke-virtual {v2, v3, v1, v4, v0}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 26
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    const v1, 0x7f070716
+    const v1, 0x7f070712
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -285,10 +259,8 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 10
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaLeft:I
 
     iget v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTop:I
@@ -299,14 +271,12 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mBgColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLineWidth:I
@@ -315,14 +285,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 6
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisRight:I
 
     int-to-float v2, v0
@@ -345,14 +313,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 8
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisLeft:I
 
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaddingLeft:I
@@ -385,7 +351,6 @@
 
     invoke-virtual/range {v2 .. v9}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 9
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisRight:I
 
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mCornerRatio:I
@@ -410,7 +375,6 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 10
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisLeft:I
 
     int-to-float v3, v0
@@ -443,7 +407,6 @@
 
     invoke-virtual/range {v2 .. v9}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 11
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisLeft:I
 
     int-to-float v3, v0
@@ -468,21 +431,18 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     const/high16 v2, -0x80000000
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 14
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mBottom:I
 
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTop:I
@@ -491,7 +451,6 @@
 
     shr-int/lit8 v0, v0, 0x1
 
-    .line 15
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisLeft:I
 
     iget v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaddingLeft:I
@@ -516,7 +475,6 @@
 
     invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 16
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisLeft:I
 
     iget v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisWidth:I
@@ -535,13 +493,10 @@
 
     invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 17
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 18
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 19
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisLeft:I
 
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisRight:I
@@ -552,14 +507,12 @@
 
     if-le v0, v2, :cond_0
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
     move-result-object v0
 
-    .line 21
     iget v2, v0, Landroid/graphics/Paint$FontMetrics;->bottom:F
 
     iget v0, v0, Landroid/graphics/Paint$FontMetrics;->top:F
@@ -572,7 +525,6 @@
 
     sub-float/2addr v0, v2
 
-    .line 22
     iget v2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mDrawingBottom:I
 
     iget v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mDrawingTop:I
@@ -585,7 +537,6 @@
 
     add-float/2addr v2, v0
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTintText:Ljava/lang/String;
 
     iget v3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisLeft:I
@@ -604,7 +555,6 @@
 
     invoke-virtual {p1, v0, v3, v2, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 24
     :cond_0
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaLeft:I
 
@@ -622,12 +572,10 @@
 
     invoke-virtual {p1, v0, v3, v4, v2}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 25
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 26
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLineWidth:I
@@ -636,14 +584,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 27
     iget-object v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mPaintNormal:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 28
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisRight:I
 
     int-to-float v2, v0
@@ -672,7 +618,6 @@
 
     invoke-virtual/range {v1 .. v8}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 29
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisRight:I
 
     int-to-float v2, v0
@@ -693,7 +638,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 30
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -702,7 +646,6 @@
 .method public getClipAxisWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisTouchWidth:I
 
     return v0
@@ -711,7 +654,6 @@
 .method public getLineWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLineWidth:I
 
     return v0
@@ -720,7 +662,6 @@
 .method public setClipBoxLeftAndRight(II)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mSemiLineWidth:I
 
     sub-int v1, p1, v0
@@ -729,25 +670,20 @@
 
     add-int/2addr v0, p2
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisLeft:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisTouchWidth:I
 
     sub-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisLeft:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaLeft:I
 
     if-ge p1, v0, :cond_0
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mLeftAxisLeft:I
 
-    .line 6
     :cond_0
     iget p1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mAxisTouchWidth:I
 
@@ -755,12 +691,10 @@
 
     iput p2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisRight:I
 
-    .line 7
     iget p1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaRight:I
 
     if-le p2, p1, :cond_1
 
-    .line 8
     iput p1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mRightAxisRight:I
 
     :cond_1
@@ -770,19 +704,14 @@
 .method public setVisibleArea(IIII)V
     .locals 1
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaLeft:I
 
-    .line 2
     iput p3, p0, Lcom/android/camera/fragment/clone/ClipBox;->mVisibleAreaRight:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/fragment/clone/ClipBox;->mTop:I
 
-    .line 4
     iput p4, p0, Lcom/android/camera/fragment/clone/ClipBox;->mBottom:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/fragment/clone/ClipBox;->mSemiLineWidth:I
 
     add-int/2addr p2, v0
@@ -791,10 +720,8 @@
 
     sub-int/2addr p4, v0
 
-    .line 6
     iput p4, p0, Lcom/android/camera/fragment/clone/ClipBox;->mDrawingBottom:I
 
-    .line 7
     invoke-virtual {p0, p1, p3}, Lcom/android/camera/fragment/clone/ClipBox;->setClipBoxLeftAndRight(II)V
 
     return-void

@@ -28,10 +28,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/fragment/app/FragmentPagerAdapter;-><init>(Landroidx/fragment/app/FragmentManager;)V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     return-void
@@ -42,7 +40,6 @@
 .method public getCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -71,7 +68,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     return-object v0
@@ -80,7 +76,6 @@
 .method public getItem(I)Landroidx/fragment/app/Fragment;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -95,14 +90,12 @@
 .method public getItemId(I)J
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->getItem(I)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->hashCode()I
 
     move-result v0
@@ -113,7 +106,6 @@
 
     return-wide v0
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentPagerAdapter;->getItemId(I)J
 
@@ -125,17 +117,14 @@
 .method public recycleFragmentList(Landroidx/fragment/app/FragmentManager;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/BaseFragmentPagerAdapter;->mFragmentList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -155,12 +144,10 @@
 
     check-cast v1, Landroidx/fragment/app/Fragment;
 
-    .line 4
     invoke-virtual {p1, v1}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 

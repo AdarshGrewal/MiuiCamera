@@ -39,13 +39,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/splitinstall/protocol/SplitInstallServiceCallback;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     return-void
@@ -56,14 +53,12 @@
 .method public onCancelInstall(ILandroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p2, p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p2}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x1
@@ -88,14 +83,12 @@
 .method public onCompleteInstall(I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object v0, v0, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {v0}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object v0, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v1, 0x1
@@ -120,14 +113,12 @@
 .method public onDeferredInstall(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p1, p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p1}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x0
@@ -144,14 +135,12 @@
 .method public onDeferredUninstall(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p1, p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p1}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x0
@@ -168,7 +157,6 @@
 .method public final onError(Landroid/os/Bundle;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object v0, v0, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
@@ -177,12 +165,10 @@
 
     const-string v0, "error_code"
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 3
     sget-object v0, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v1, 0x1
@@ -201,7 +187,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->info(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     new-instance v1, Lcom/google/android/play/core/splitinstall/SplitInstallException;
@@ -216,14 +201,12 @@
 .method public onGetSession(ILandroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p2, p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p2}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x1
@@ -256,14 +239,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p1, p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p1}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x0
@@ -280,14 +261,12 @@
 .method public onStartInstall(ILandroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     iget-object p2, p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->mSplitRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p2}, Lcom/google/android/play/core/remote/RemoteManager;->unbindService()V
 
-    .line 2
     sget-object p2, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v0, 0x1

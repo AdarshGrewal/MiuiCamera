@@ -7,8 +7,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera/module/loader/Func1Base<",
-        "Lcom/android/camera/module/Module;",
-        "Lcom/android/camera/module/Module;",
+        "Lcom/android/camera/module/BaseModule;",
+        "Lcom/android/camera/module/BaseModule;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,6 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/loader/Func1Base;-><init>(I)V
 
     return-void
@@ -32,10 +31,10 @@
         value = {
             "(",
             "Lcom/android/camera/module/loader/NullHolder<",
-            "Lcom/android/camera/module/Module;",
+            "Lcom/android/camera/module/BaseModule;",
             ">;)",
             "Lcom/android/camera/module/loader/NullHolder<",
-            "Lcom/android/camera/module/Module;",
+            "Lcom/android/camera/module/BaseModule;",
             ">;"
         }
     .end annotation
@@ -46,7 +45,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/module/loader/NullHolder;->isPresent()Z
 
     move-result v0
@@ -55,18 +53,15 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/data/DataRepository;->getInstance()Lcom/android/camera/data/DataRepository;
 
     move-result-object v2
@@ -75,7 +70,6 @@
 
     move-result-object v2
 
-    .line 6
     iget v3, p0, Lcom/android/camera/module/loader/Func1Base;->mTargetMode:I
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/global/DataItemGlobal;->getCurrentCameraId()I
@@ -88,21 +82,23 @@
 
     invoke-interface {v2, v1, v3}, Lcom/android/camera/data/backup/DataBackUp;->revertOrCreateRunning(Lcom/android/camera/data/data/runing/DataItemRunning;I)V
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/module/loader/NullHolder;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/camera/module/Module;
+    check-cast v1, Lcom/android/camera/module/BaseModule;
 
-    .line 8
     iget v2, p0, Lcom/android/camera/module/loader/Func1Base;->mTargetMode:I
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/global/DataItemGlobal;->getCurrentCameraId()I
 
     move-result v0
 
-    invoke-interface {v1, v2, v0}, Lcom/android/camera/module/Module;->onGLAndCameraReady(II)V
+    invoke-virtual {v1, v2, v0}, Lcom/android/camera/module/BaseModule;->onCreate(II)V
+
+    invoke-virtual {v1}, Lcom/android/camera/module/BaseModule;->onResume()V
+
+    invoke-virtual {v1}, Lcom/android/camera/module/BaseModule;->registerProtocol()V
 
     return-object p1
 .end method
@@ -115,7 +111,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/module/loader/NullHolder;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/loader/FunctionResumeModule;->apply(Lcom/android/camera/module/loader/NullHolder;)Lcom/android/camera/module/loader/NullHolder;

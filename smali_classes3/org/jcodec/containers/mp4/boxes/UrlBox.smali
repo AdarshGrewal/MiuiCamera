@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createUrlBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/UrlBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/UrlBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -33,7 +31,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/UrlBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/UrlBox;->url:Ljava/lang/String;
 
     return-object v0
@@ -52,17 +49,14 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/UrlBox;->url:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     const-string v1, "UTF-8"
 
-    .line 3
     invoke-static {v0, v1}, Lorg/jcodec/platform/Platform;->getBytesForCharset(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v0
@@ -75,7 +69,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     :cond_0
@@ -85,7 +78,6 @@
 .method public estimateSize()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/UrlBox;->url:Ljava/lang/String;
 
     const/16 v1, 0xd
@@ -94,7 +86,6 @@
 
     const-string v2, "UTF-8"
 
-    .line 2
     invoke-static {v0, v2}, Lorg/jcodec/platform/Platform;->getBytesForCharset(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v0
@@ -110,7 +101,6 @@
 .method public getUrl()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/UrlBox;->url:Ljava/lang/String;
 
     return-object v0
@@ -119,10 +109,8 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -134,7 +122,6 @@
     :cond_0
     const-string v0, "UTF-8"
 
-    .line 3
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->readNullTermStringCharset(Ljava/nio/ByteBuffer;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1

@@ -24,7 +24,6 @@
 
     const/16 v0, 0x20
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/network/download/Verifier;->access$000(Ljava/lang/String;I)[B
 
     move-result-object p1
@@ -41,7 +40,6 @@
 
     const-string v0, "MD5"
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/android/camera/network/download/Verifier;-><init>(Ljava/lang/String;[B)V
 
     return-void

@@ -14,7 +14,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lmiuix/view/ExtendedVibrator;->initialize()V
 
     return-void
@@ -23,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +30,6 @@
 .method public static initialize()V
     .locals 2
 
-    .line 1
     sget v0, Lmiuix/view/PlatformConstants;->VERSION:I
 
     const-string v1, "ExtendedVibrator"
@@ -41,12 +38,10 @@
 
     const-string v0, "MiuiHapticFeedbackConstants not found."
 
-    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Lmiuix/view/ExtendedVibrator;
 
@@ -56,7 +51,6 @@
 
     const-string v0, "setup ExtendedVibrator success."
 
-    .line 4
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -67,14 +61,12 @@
 .method public performHapticFeedback(Landroid/view/View;I)Z
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_VIRTUAL_RELEASE:I
 
     if-ne p2, v0, :cond_0
 
     const/4 p2, 0x2
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->performHapticFeedback(I)Z
 
     move-result p1

@@ -1,5 +1,5 @@
 .class public Lcom/mi/device/DeviceTUCANA;
-.super LOooO00o/OooO0Oo/OooO00o/OooO0Oo;
+.super LOooO0O0/OooO0Oo/OooO00o/OooO0Oo;
 .source "DeviceTUCANA.java"
 
 
@@ -7,8 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, LOooO00o/OooO0Oo/OooO00o/OooO0Oo;-><init>()V
+    invoke-direct {p0}, LOooO0O0/OooO0Oo/OooO00o/OooO0Oo;-><init>()V
 
     return-void
 .end method

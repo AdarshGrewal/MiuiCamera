@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -35,7 +34,6 @@
 
     const-string v0, "urn:aiot-spec-v3:service:ip-camera:00000001:1"
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -44,7 +42,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMService$BuiltinService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -63,12 +60,10 @@
 .method public request(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 5
 
-    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getAid()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getRequest()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     :try_start_0
     new-instance v3, Lcom/xiaomi/idm/service/iot/IPCameraService$Actions$GetIpcSkeletonInfo;
@@ -104,7 +98,6 @@
     :catch_0
     move-exception v1
 
-    .line 4
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
@@ -119,14 +112,12 @@
     :goto_1
     if-nez v3, :cond_2
 
-    .line 5
     sget-object v1, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->ERR_ACTION_NOT_FOUND:Lcom/xiaomi/idm/api/ResponseCode$RequestCode;
 
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getCode()I
 
     move-result v1
 
-    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +134,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getUUID()Ljava/lang/String;
 
     move-result-object v4
@@ -160,20 +150,17 @@
 
     move-result-object v0
 
-    .line 8
     invoke-static {v1, v0, p1, v2}, Lcom/xiaomi/idm/utils/ResponseHelper;->buildResponse(ILjava/lang/String;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p1
 
     return-object p1
 
-    .line 9
     :cond_2
     invoke-virtual {v3}, Lcom/xiaomi/idm/service/iot/IPCameraService$Actions$GetIpcSkeletonInfo;->invoke()[B
 
     move-result-object v0
 
-    .line 10
     invoke-static {p1, v0}, Lcom/xiaomi/idm/utils/ResponseHelper;->buildResponse(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p1

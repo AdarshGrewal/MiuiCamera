@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     iput p2, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->val$targetZoomRatio:F
@@ -39,10 +38,8 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;->access$600(Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;)Landroid/animation/ValueAnimator;
@@ -51,7 +48,6 @@
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     iget v0, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->val$targetZoomRatio:F
@@ -68,10 +64,8 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;->access$600(Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;)Landroid/animation/ValueAnimator;
@@ -80,7 +74,6 @@
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     iget v0, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->val$targetZoomRatio:F
@@ -97,7 +90,6 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->this$0:Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     iget v0, p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust$4;->val$targetZoomRatio:F

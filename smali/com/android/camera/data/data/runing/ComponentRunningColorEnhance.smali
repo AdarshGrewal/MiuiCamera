@@ -22,18 +22,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsEnabled:Z
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mRecordValue:Z
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsSupported:Z
 
     return-void
@@ -44,7 +40,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsSupported:Z
 
     const/16 v1, 0xa3
@@ -68,17 +63,14 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->supportColorEnhance()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mRecordValue:Z
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsSupported:Z
 
     :cond_2
@@ -93,7 +85,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -104,7 +95,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f1208ac
+    const v0, 0x7f12085d
 
     return v0
 .end method
@@ -120,7 +111,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -145,7 +135,6 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsEnabled:Z
 
@@ -155,7 +144,6 @@
 .method public isSupport()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsSupported:Z
 
     return v0
@@ -164,7 +152,6 @@
 .method public reInit(II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->getValue(II)Z
 
     move-result p1
@@ -177,10 +164,8 @@
 .method public reset(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsEnabled:Z
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mRecordValue:Z
 
     return-void
@@ -189,14 +174,12 @@
 .method public setEnabled(ZI)V
     .locals 1
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mIsEnabled:Z
 
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningColorEnhance;->mRecordValue:Z
 
     :cond_0
@@ -206,12 +189,11 @@
 .method public supportColorEnhance()Z
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00oooo()Z
 
     move-result v0
 

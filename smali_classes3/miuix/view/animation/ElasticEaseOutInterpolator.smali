@@ -18,7 +18,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v0}, Lmiuix/view/animation/ElasticEaseOutInterpolator;-><init>(FF)V
 
     return-void
@@ -27,13 +26,10 @@
 .method public constructor <init>(FF)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput p1, p0, Lmiuix/view/animation/ElasticEaseOutInterpolator;->mAmplitude:F
 
-    .line 4
     iput p2, p0, Lmiuix/view/animation/ElasticEaseOutInterpolator;->mPeriod:F
 
     return-void
@@ -44,10 +40,8 @@
 .method public getInterpolation(F)F
     .locals 12
 
-    .line 1
     iget v0, p0, Lmiuix/view/animation/ElasticEaseOutInterpolator;->mPeriod:F
 
-    .line 2
     iget v1, p0, Lmiuix/view/animation/ElasticEaseOutInterpolator;->mAmplitude:F
 
     const/4 v2, 0x0
@@ -96,7 +90,6 @@
 
     float-to-double v2, v3
 
-    .line 3
     invoke-static {v2, v3}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v2
@@ -126,7 +119,6 @@
 
     float-to-double v10, v1
 
-    .line 4
     invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v8

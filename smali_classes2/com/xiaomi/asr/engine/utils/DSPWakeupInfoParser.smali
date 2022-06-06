@@ -29,7 +29,6 @@
 
     const-string v0, "^FMT:(\\d+);VENDOR:NUANCE;START:(\\d+);FTT_LENGTH:(\\d+);SCORE:(\\d+);AEC:(\\d+);PCM_LENGTH:(\\d+)$"
 
-    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -42,34 +41,26 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 2
     iput-wide v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupStartTime:J
 
-    .line 3
     iput-wide v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupEndTime:J
 
     const/4 v2, -0x1
 
-    .line 4
     iput v2, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupSocre:I
 
-    .line 5
     iput-wide v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mWakeupRequiredLeadingSilence:J
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupAec:Z
 
-    .line 7
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mIsValideInfo:Z
 
-    .line 8
     iput v2, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mPcmLength:I
 
     return-void
@@ -80,7 +71,6 @@
 .method public getPcmLength()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mPcmLength:I
 
     return v0
@@ -89,7 +79,6 @@
 .method public getWakeupEndTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupEndTime:J
 
     return-wide v0
@@ -98,7 +87,6 @@
 .method public getWakeupScore()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupSocre:I
 
     return v0
@@ -107,7 +95,6 @@
 .method public getWakeupStartTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupStartTime:J
 
     return-wide v0
@@ -116,7 +103,6 @@
 .method public isInfoValid()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mIsValideInfo:Z
 
     return v0
@@ -125,7 +111,6 @@
 .method public isWakeupAec()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupAec:Z
 
     return v0
@@ -138,15 +123,12 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     array-length v2, v1
 
-    .line 2
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     array-length v4, v1
 
     const/4 v5, -0x1
@@ -178,7 +160,6 @@
 
     if-ge v7, v4, :cond_8
 
-    .line 4
     aget-short v5, v1, v7
 
     int-to-byte v1, v5
@@ -205,7 +186,6 @@
 
     int-to-char v1, v1
 
-    .line 5
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -213,23 +193,19 @@
     :cond_1
     int-to-char v1, v1
 
-    .line 6
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     int-to-char v1, v4
 
-    .line 7
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_2
     if-eqz v13, :cond_4
 
-    .line 8
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 9
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,14 +222,12 @@
 
     invoke-static {v8, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     sget-object v4, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->DSP_WAKEUP_INFO_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v4, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v4
@@ -262,7 +236,6 @@
 
     const-string v1, "format pattern not valid"
 
-    .line 12
     invoke-static {v8, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_5
@@ -270,7 +243,6 @@
     :cond_2
     const/4 v4, 0x1
 
-    .line 13
     invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -281,7 +253,6 @@
 
     const/4 v6, 0x2
 
-    .line 14
     invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -292,7 +263,6 @@
 
     const/4 v6, 0x3
 
-    .line 15
     invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -303,7 +273,6 @@
 
     const/4 v6, 0x4
 
-    .line 16
     invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -316,7 +285,6 @@
 
     const/4 v3, 0x5
 
-    .line 17
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -329,7 +297,6 @@
 
     const/4 v6, 0x6
 
-    .line 18
     invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -342,7 +309,6 @@
 
     const/4 v1, 0x1
 
-    .line 19
     iput-boolean v1, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupAec:Z
 
     const/4 v3, 0x0
@@ -354,7 +320,6 @@
 
     const/4 v3, 0x0
 
-    .line 20
     iput-boolean v3, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupAec:Z
 
     :goto_3
@@ -362,7 +327,6 @@
 
     const-string v1, "format version not valid"
 
-    .line 21
     invoke-static {v8, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move/from16 v4, v16
@@ -380,7 +344,6 @@
 
     move/from16 v6, v20
 
-    .line 22
     :cond_5
     rem-int/lit8 v1, v15, 0x2
 
@@ -464,7 +427,6 @@
 
     if-lez v6, :cond_9
 
-    .line 23
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,26 +445,20 @@
 
     const/4 v1, 0x1
 
-    .line 24
     iput-boolean v1, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mIsValideInfo:Z
 
-    .line 25
     iput-wide v9, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupStartTime:J
 
     add-long/2addr v9, v11
 
-    .line 26
     iput-wide v9, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupEndTime:J
 
-    .line 27
     iput v5, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupSocre:I
 
-    .line 28
     iput v6, v0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mPcmLength:I
 
     goto :goto_7
 
-    .line 29
     :cond_9
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -535,29 +491,22 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mIsValideInfo:Z
 
     const-wide/16 v1, -0x1
 
-    .line 2
     iput-wide v1, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupStartTime:J
 
-    .line 3
     iput-wide v1, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupEndTime:J
 
     const/4 v3, -0x1
 
-    .line 4
     iput v3, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupSocre:I
 
-    .line 5
     iput-wide v1, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mWakeupRequiredLeadingSilence:J
 
-    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mMxeWakeupAec:Z
 
-    .line 7
     iput v3, p0, Lcom/xiaomi/asr/engine/utils/DSPWakeupInfoParser;->mPcmLength:I
 
     return-object p0

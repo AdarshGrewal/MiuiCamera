@@ -88,16 +88,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/concurrent/CountedCompleter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide p1
@@ -110,12 +106,10 @@
 
     const-wide/16 p1, 0x0
 
-    .line 5
     iput-wide p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->offset:J
 
     int-to-long p1, p3
 
-    .line 6
     iput-wide p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->length:J
 
     return-void
@@ -131,26 +125,20 @@
         }
     .end annotation
 
-    .line 7
     invoke-direct {p0, p1}, Ljava8/util/concurrent/CountedCompleter;-><init>(Ljava8/util/concurrent/CountedCompleter;)V
 
-    .line 8
     iput-object p2, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 9
     iget-object p2, p1, Ljava8/util/stream/Nodes$SizedCollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iput-object p2, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 10
     iget-wide p1, p1, Ljava8/util/stream/Nodes$SizedCollectorTask;->targetSize:J
 
     iput-wide p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->targetSize:J
 
-    .line 11
     iput-wide p3, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->offset:J
 
-    .line 12
     iput-wide p5, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->length:J
 
     const-wide/16 p1, 0x0
@@ -177,7 +165,6 @@
 
     return-void
 
-    .line 13
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -187,7 +174,6 @@
 
     const/4 v0, 0x0
 
-    .line 14
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -220,7 +206,6 @@
 
     const-string p3, "offset and length interval [%d, %d + %d) is not within array size interval [0, %d)"
 
-    .line 15
     invoke-static {p3, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -235,7 +220,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -244,7 +228,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -253,7 +236,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -262,14 +244,12 @@
 .method public begin(J)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->length:J
 
     cmp-long p1, p1, v0
 
     if-gtz p1, :cond_0
 
-    .line 2
     iget-wide p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->offset:J
 
     long-to-int p1, p1
@@ -280,12 +260,10 @@
 
     add-int/2addr p1, p2
 
-    .line 3
     iput p1, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->fence:I
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -307,12 +285,10 @@
 .method public compute()V
     .locals 10
 
-    .line 1
     iget-object v6, p0, Ljava8/util/stream/Nodes$SizedCollectorTask;->spliterator:Ljava8/util/Spliterator;
 
     move-object v7, p0
 
-    .line 2
     :goto_0
     invoke-interface {v6}, Ljava8/util/Spliterator;->estimateSize()J
 
@@ -324,7 +300,6 @@
 
     if-lez v0, :cond_0
 
-    .line 3
     invoke-interface {v6}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v1
@@ -333,15 +308,12 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {v7, v0}, Ljava8/util/concurrent/CountedCompleter;->setPendingCount(I)V
 
-    .line 5
     invoke-interface {v1}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v8
 
-    .line 6
     iget-wide v2, v7, Ljava8/util/stream/Nodes$SizedCollectorTask;->offset:J
 
     move-object v0, v7
@@ -354,7 +326,6 @@
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinTask;->fork()Ljava8/util/concurrent/ForkJoinTask;
 
-    .line 7
     iget-wide v0, v7, Ljava8/util/stream/Nodes$SizedCollectorTask;->offset:J
 
     add-long v2, v0, v8
@@ -373,13 +344,11 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, v7, Ljava8/util/stream/Nodes$SizedCollectorTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     invoke-virtual {v0, v7, v6}, Ljava8/util/stream/PipelineHelper;->wrapAndCopyInto(Ljava8/util/stream/Sink;Ljava8/util/Spliterator;)Ljava8/util/stream/Sink;
 
-    .line 9
     invoke-virtual {v7}, Ljava8/util/concurrent/CountedCompleter;->propagateCompletion()V
 
     return-void

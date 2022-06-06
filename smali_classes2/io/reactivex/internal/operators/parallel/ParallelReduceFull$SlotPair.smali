@@ -51,10 +51,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -69,7 +67,6 @@
 .method public releaseSlot()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelReduceFull$SlotPair;->releaseIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -94,7 +91,6 @@
 .method public tryAcquireSlot()I
     .locals 2
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
@@ -111,7 +107,6 @@
     :cond_1
     add-int/lit8 v1, v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
 
     move-result v1

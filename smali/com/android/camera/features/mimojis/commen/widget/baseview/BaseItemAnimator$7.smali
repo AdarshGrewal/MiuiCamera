@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$ChangeInfo;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$changeInfo:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$ChangeInfo;
@@ -47,33 +46,28 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$oldViewAnim:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$view:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$view:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$view:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$changeInfo:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$ChangeInfo;
@@ -84,7 +78,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchChangeFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Z)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iget-object p1, p1, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
@@ -95,7 +88,6 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;->dispatchFinishedWhenDone()V
@@ -106,7 +98,6 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->this$0:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator;
 
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$7;->val$changeInfo:Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseItemAnimator$ChangeInfo;

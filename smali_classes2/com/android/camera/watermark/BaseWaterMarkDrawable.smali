@@ -65,29 +65,24 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     const/4 v0, 0x0
@@ -104,7 +99,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWidth:I
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -119,7 +113,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mHeight:I
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -134,7 +127,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mOrientation:I
 
-    .line 8
     :cond_0
     new-instance p1, Landroid/graphics/Paint;
 
@@ -144,17 +136,14 @@
 
     const/4 v0, 0x1
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 11
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -169,24 +158,20 @@
 
     move-result p1
 
-    .line 12
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    .line 15
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -203,7 +188,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mGap:I
 
-    .line 16
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -220,7 +204,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mCorrection:I
 
-    .line 17
     new-instance p1, Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
@@ -231,14 +214,12 @@
 
     const-string p1, "(\\D+)|(\\d+\\.?\\d*)"
 
-    .line 18
     invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mSplitFaceInfoPattern:Ljava/util/regex/Pattern;
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -253,7 +234,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mVerPadding:I
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -266,7 +246,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mGap:I
 
-    .line 21
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -279,7 +258,6 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mCorrection:I
 
-    .line 22
     iget-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -294,10 +272,8 @@
 
     iput p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mPopBottomMargin:I
 
-    .line 23
     invoke-virtual {p0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->initBeforeDraw()V
 
-    .line 24
     invoke-direct {p0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->draw()V
 
     return-void
@@ -306,7 +282,6 @@
 .method private draw()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -317,14 +292,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/watermark/WaterMarkData;
 
     invoke-direct {v0}, Lcom/android/camera/watermark/WaterMarkData;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkData:Lcom/android/camera/watermark/WaterMarkData;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -341,7 +314,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/watermark/WaterMarkData;->setWatermarkType(I)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWidth:I
 
     iget v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mHeight:I
@@ -354,14 +326,12 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
 
-    .line 5
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 6
     invoke-virtual {p0, v0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->onDraw(Landroid/graphics/Canvas;)V
 
     :cond_0
@@ -371,7 +341,6 @@
 .method private drawFaceInfoText(Landroid/graphics/Canvas;Ljava/lang/String;II)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mSplitFaceInfoPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -382,7 +351,6 @@
 
     int-to-float p4, p4
 
-    .line 2
     :goto_0
     invoke-virtual {p2}, Ljava/util/regex/Matcher;->find()Z
 
@@ -390,14 +358,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p2}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "\\d+\\.?\\d*"
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v1
@@ -406,7 +372,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoNumberPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
@@ -417,14 +382,12 @@
 
     add-float/2addr v2, p3
 
-    .line 6
     iget-object v3, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoNumberPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, p4, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     goto :goto_1
 
-    .line 7
     :cond_0
     iget-object v1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
@@ -436,7 +399,6 @@
 
     add-float/2addr v2, p3
 
-    .line 8
     iget-object v3, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, p4, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
@@ -455,7 +417,6 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -476,7 +437,6 @@
 .method public getWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkData:Lcom/android/camera/watermark/WaterMarkData;
 
     return-object v0
@@ -492,22 +452,18 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 2
     sget-object v4, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->TAG:Ljava/lang/String;
 
     const-string/jumbo v5, "start make water mark."
 
     invoke-static {v4, v5}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4
     iget v4, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mOrientation:I
 
     neg-int v4, v4
@@ -516,14 +472,12 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     iget-object v5, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 6
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -541,7 +495,6 @@
 
     check-cast v5, Lcom/android/camera/watermark/WaterMarkData;
 
-    .line 7
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v7
@@ -558,7 +511,6 @@
 
     mul-float/2addr v8, v9
 
-    .line 8
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v10
@@ -573,10 +525,8 @@
 
     move-result-object v9
 
-    .line 9
     invoke-virtual {v1, v7, v8, v10, v9}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 10
     iget-object v7, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mSplitFaceInfoPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getInfo()Ljava/lang/String;
@@ -589,7 +539,6 @@
 
     const/4 v9, 0x0
 
-    .line 11
     :goto_1
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->find()Z
 
@@ -597,21 +546,18 @@
 
     if-eqz v10, :cond_1
 
-    .line 12
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v10
 
     const-string v11, "\\d+\\.?\\d*"
 
-    .line 13
     invoke-virtual {v10, v11}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 14
     iget-object v11, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoNumberPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v11, v10}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
@@ -620,7 +566,6 @@
 
     goto :goto_2
 
-    .line 15
     :cond_0
     iget-object v11, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
@@ -633,13 +578,11 @@
 
     goto :goto_1
 
-    .line 16
     :cond_1
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getHonPadding(Lcom/android/camera/watermark/WaterMarkData;)I
 
     move-result v7
 
-    .line 17
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v10
@@ -664,7 +607,6 @@
 
     float-to-int v10, v10
 
-    .line 18
     iget v11, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mVerPadding:I
 
     int-to-float v11, v11
@@ -687,10 +629,8 @@
 
     float-to-int v11, v11
 
-    .line 19
     new-instance v12, Landroid/graphics/Rect;
 
-    .line 20
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v13
@@ -705,7 +645,6 @@
 
     sub-int/2addr v13, v10
 
-    .line 21
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v14
@@ -724,7 +663,6 @@
 
     sub-int/2addr v14, v15
 
-    .line 22
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v15
@@ -737,7 +675,6 @@
 
     add-int/2addr v15, v10
 
-    .line 23
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
     move-result-object v6
@@ -752,28 +689,24 @@
 
     invoke-direct {v12, v13, v14, v15, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 24
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopBackgroundDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
     if-eqz v6, :cond_2
 
-    .line 25
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopBackgroundDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
     invoke-virtual {v6, v12}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 26
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopBackgroundDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
     invoke-virtual {v6, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 27
     :cond_2
     invoke-virtual {v12}, Landroid/graphics/Rect;->width()I
 
@@ -789,17 +722,14 @@
 
     move-result-object v6
 
-    .line 28
     new-instance v8, Landroid/graphics/Canvas;
 
     invoke-direct {v8, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 29
     new-instance v12, Landroid/graphics/Rect;
 
     invoke-direct {v12}, Landroid/graphics/Rect;-><init>()V
 
-    .line 30
     iget v13, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mVerPadding:I
 
     int-to-float v13, v13
@@ -816,7 +746,6 @@
 
     float-to-int v13, v13
 
-    .line 31
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v15
@@ -841,7 +770,6 @@
 
     sub-float/2addr v4, v14
 
-    .line 32
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v14
@@ -856,17 +784,14 @@
 
     float-to-int v4, v4
 
-    .line 33
     invoke-virtual {v12, v7, v13, v15, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 34
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     invoke-virtual {v4, v12}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 35
     invoke-virtual {v0, v5}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -879,21 +804,18 @@
 
     if-eqz v4, :cond_3
 
-    .line 36
     iget-object v4, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFaceInfoTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v4}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v4
 
-    .line 37
     iget v7, v12, Landroid/graphics/Rect;->right:I
 
     iget v9, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mGap:I
 
     add-int/2addr v7, v9
 
-    .line 38
     iget v9, v12, Landroid/graphics/Rect;->bottom:I
 
     iget v12, v12, Landroid/graphics/Rect;->top:I
@@ -910,14 +832,12 @@
 
     div-int/lit8 v9, v9, 0x2
 
-    .line 39
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getInfo()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-direct {v0, v8, v4, v7, v9}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->drawFaceInfoText(Landroid/graphics/Canvas;Ljava/lang/String;II)V
 
-    .line 40
     :cond_3
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontMirror()Z
 
@@ -927,12 +847,10 @@
 
     const/4 v4, 0x0
 
-    .line 41
     invoke-static {v6, v4}, Lcom/android/camera/Util;->flipBitmap(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    .line 42
     :cond_4
     invoke-virtual {v5}, Lcom/android/camera/watermark/WaterMarkData;->getFaceRectF()Landroid/graphics/RectF;
 
@@ -976,25 +894,21 @@
 
     goto/16 :goto_0
 
-    .line 43
     :cond_5
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 44
     iget-object v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkData:Lcom/android/camera/watermark/WaterMarkData;
 
     iget v4, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mOrientation:I
 
     invoke-virtual {v1, v4}, Lcom/android/camera/watermark/WaterMarkData;->setOrientation(I)V
 
-    .line 45
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontMirror()Z
 
     move-result v1
 
     if-nez v1, :cond_8
 
-    .line 46
     iget v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mOrientation:I
 
     const/16 v4, 0x5a
@@ -1007,7 +921,6 @@
 
     goto :goto_3
 
-    .line 47
     :cond_6
     iget-object v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
 
@@ -1021,7 +934,6 @@
 
     goto :goto_4
 
-    .line 48
     :cond_7
     :goto_3
     iget-object v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
@@ -1034,7 +946,6 @@
 
     iput-object v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkBitmap:Landroid/graphics/Bitmap;
 
-    .line 49
     :cond_8
     :goto_4
     iget-object v1, v0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkData:Lcom/android/camera/watermark/WaterMarkData;
@@ -1043,7 +954,6 @@
 
     invoke-virtual {v1, v4}, Lcom/android/camera/watermark/WaterMarkData;->setImage(Landroid/graphics/Bitmap;)V
 
-    .line 50
     sget-object v1, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1082,7 +992,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mWaterMarkInfos:Ljava/util/List;
 
     return-void

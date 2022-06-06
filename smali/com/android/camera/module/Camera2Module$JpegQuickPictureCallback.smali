@@ -35,12 +35,10 @@
 .method public constructor <init>(Lcom/android/camera/module/Camera2Module;Landroid/location/Location;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mLocation:Landroid/location/Location;
 
     return-void
@@ -49,10 +47,9 @@
 .method private getBurstShotTitle()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1500(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1200(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result v0
 
@@ -68,33 +65,27 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mPressDownTitle:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mBurstShotTitle:Ljava/lang/String;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mBurstShotTitle:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 6
     invoke-static {v0, v1}, Lcom/android/camera/Util;->createJpegName(J)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mBurstShotTitle:Ljava/lang/String;
 
-    .line 7
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -107,14 +98,12 @@
 
     add-long/2addr v0, v2
 
-    .line 8
     invoke-static {v0, v1}, Lcom/android/camera/Util;->createJpegName(J)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mBurstShotTitle:Ljava/lang/String;
 
-    .line 9
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -144,7 +133,6 @@
 .method public onPictureTaken([BLandroid/hardware/camera2/CaptureResult;)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-boolean v0, v0, Lcom/android/camera/module/BaseModule;->mPaused:Z
@@ -155,14 +143,13 @@
 
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    .line 2
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v1}, Lcom/android/camera/module/Camera2Module;->access$1800(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v1}, Lcom/android/camera/module/Camera2Module;->access$1500(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v1
 
@@ -170,8 +157,7 @@
 
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    .line 3
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1900(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result v0
 
@@ -179,7 +165,6 @@
 
     goto/16 :goto_3
 
-    .line 4
     :cond_0
     iget v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mSavedJpegCallbackNum:I
 
@@ -189,13 +174,12 @@
 
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$2000(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1700(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -212,7 +196,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/camera/storage/ImageSaver;->updateImage(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     :cond_1
     invoke-static {}, Lcom/android/camera/storage/Storage;->isLowStorageAtLastPoint()Z
 
@@ -220,23 +203,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1900(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3600(Lcom/android/camera/module/Camera2Module;)V
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3300(Lcom/android/camera/module/Camera2Module;)V
 
-    .line 9
     :cond_2
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object p1
 
@@ -246,13 +226,11 @@
 
     return-void
 
-    .line 10
     :cond_3
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1604(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1304(Lcom/android/camera/module/Camera2Module;)I
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -267,21 +245,18 @@
 
     if-nez v0, :cond_8
 
-    .line 12
     iget v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mSavedJpegCallbackNum:I
 
     add-int/2addr v0, v1
 
     iput v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mSavedJpegCallbackNum:I
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     const/4 v2, 0x4
 
     invoke-virtual {v0, v2}, Lcom/android/camera/module/BaseModule;->playCameraSound(I)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getActivity()Lcom/android/camera/Camera;
@@ -292,16 +267,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;
+    invoke-static {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO00o(Landroid/content/Context;)LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0O0/OooO0Oo/OooO0Oo;->OooO()V
+    invoke-virtual {v0}, LOooO0O0/OooO0O0/OooO0Oo/OooO0Oo;->OooO()V
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$600(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/ObservableEmitter;
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$200(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/ObservableEmitter;
 
     move-result-object v0
 
@@ -313,15 +287,13 @@
 
     invoke-interface {v0, v2}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
-    .line 16
     invoke-static {p1}, Lcom/android/gallery3d/exif/ExifHelper;->getOrientation([B)I
 
     move-result v0
 
-    .line 17
     iget-object v2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v2}, Lcom/android/camera/module/Camera2Module;->access$2600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v2}, Lcom/android/camera/module/Camera2Module;->access$2300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v2
 
@@ -331,7 +303,6 @@
 
     if-nez v2, :cond_4
 
-    .line 18
     iget-object v2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object v2, v2, Lcom/android/camera/module/BaseModule;->mPictureSize:Lcom/android/camera/CameraSize;
@@ -340,7 +311,6 @@
 
     move-result v2
 
-    .line 19
     iget-object v3, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object v3, v3, Lcom/android/camera/module/BaseModule;->mPictureSize:Lcom/android/camera/CameraSize;
@@ -351,7 +321,6 @@
 
     goto :goto_0
 
-    .line 20
     :cond_4
     iget-object v2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
@@ -361,7 +330,6 @@
 
     move-result v2
 
-    .line 21
     iget-object v3, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object v3, v3, Lcom/android/camera/module/BaseModule;->mPictureSize:Lcom/android/camera/CameraSize;
@@ -370,16 +338,14 @@
 
     move-result v3
 
-    .line 22
     :goto_0
     invoke-direct {p0}, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->getBurstShotTitle()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 23
     iget-object v5, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v5
 
@@ -389,7 +355,7 @@
 
     iget-object v5, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$2000(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1700(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result v5
 
@@ -400,17 +366,16 @@
 
     goto :goto_1
 
-    .line 24
     :cond_6
     iget-object v5, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v5
 
     iget-object v7, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v7}, Lcom/android/camera/module/Camera2Module;->access$1800(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v7}, Lcom/android/camera/module/Camera2Module;->access$1500(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v7
 
@@ -418,7 +383,7 @@
 
     iget-object v5, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$2000(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {v5}, Lcom/android/camera/module/Camera2Module;->access$1700(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result v5
 
@@ -431,49 +396,38 @@
     :cond_7
     move v5, v1
 
-    .line 25
     :goto_1
     new-instance v7, Lcom/android/camera/storage/ImageSaveRequest$Builder;
 
     invoke-direct {v7}, Lcom/android/camera/storage/ImageSaveRequest$Builder;-><init>()V
 
-    .line 26
     invoke-virtual {v7, p1}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setData([B)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 27
     invoke-virtual {v7, v5}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setNeedThumbnail(Z)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 28
     invoke-virtual {v7, v4}, Lcom/android/camera/storage/ImageSaveRequest$Builder;->setTitle(Ljava/lang/String;)Lcom/android/camera/storage/ImageSaveRequest$Builder;
 
-    .line 29
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     invoke-virtual {v7, v4, v5}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setDate(J)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 30
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mLocation:Landroid/location/Location;
 
     invoke-virtual {v7, p1}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setLocation(Landroid/location/Location;)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 31
     invoke-virtual {v7, v2}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setWidth(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 32
     invoke-virtual {v7, v3}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setHeight(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 33
     invoke-virtual {v7, v0}, Lcom/android/camera/storage/AbstractSaveRequest$Builder;->setOrientation(I)Lcom/android/camera/storage/AbstractSaveRequest$Builder;
 
-    .line 34
     invoke-virtual {v7, v1}, Lcom/android/camera/storage/ImageSaveRequest$Builder;->setFinalImage(Z)Lcom/android/camera/storage/ImageSaveRequest$Builder;
 
-    .line 35
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3000(Lcom/android/camera/module/Camera2Module;)Lcom/xiaomi/camera/core/PictureInfo;
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$2700(Lcom/android/camera/module/Camera2Module;)Lcom/xiaomi/camera/core/PictureInfo;
 
     move-result-object p1
 
@@ -481,10 +435,8 @@
 
     const/4 p1, -0x1
 
-    .line 36
     invoke-virtual {v7, p1}, Lcom/android/camera/storage/ImageSaveRequest$Builder;->setPreviewThumbnailHash(I)Lcom/android/camera/storage/ImageSaveRequest$Builder;
 
-    .line 37
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -495,14 +447,12 @@
 
     invoke-virtual {p1, v7, p2}, Lcom/android/camera/storage/ImageSaver;->addImage(Lcom/android/camera/storage/ImageSaveRequest$Builder;Landroid/hardware/camera2/CaptureResult;)V
 
-    .line 38
     iput-boolean v6, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mDropped:Z
 
     goto :goto_2
 
-    .line 39
     :cond_8
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$500()Ljava/lang/String;
 
     move-result-object p1
 
@@ -516,7 +466,7 @@
 
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result v0
 
@@ -528,25 +478,22 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     iput-boolean v1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->mDropped:Z
 
-    .line 41
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result p1
 
     iget-object p2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p2}, Lcom/android/camera/module/Camera2Module;->access$1800(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {p2}, Lcom/android/camera/module/Camera2Module;->access$1500(Lcom/android/camera/module/Camera2Module;)I
 
     move-result p2
 
     if-lt p1, p2, :cond_9
 
-    .line 42
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
     iget-object p1, p1, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
@@ -557,18 +504,17 @@
 
     invoke-virtual {p1, v1}, Lcom/android/camera/ThumbnailUpdater;->getLastThumbnailUncached(Z)V
 
-    .line 43
     :cond_9
     :goto_2
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1600(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1300(Lcom/android/camera/module/Camera2Module;)I
 
     move-result p1
 
     iget-object p2, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p2}, Lcom/android/camera/module/Camera2Module;->access$1800(Lcom/android/camera/module/Camera2Module;)I
+    invoke-static {p2}, Lcom/android/camera/module/Camera2Module;->access$1500(Lcom/android/camera/module/Camera2Module;)I
 
     move-result p2
 
@@ -576,7 +522,7 @@
 
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$2000(Lcom/android/camera/module/Camera2Module;)Z
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$1700(Lcom/android/camera/module/Camera2Module;)Z
 
     move-result p1
 
@@ -586,11 +532,10 @@
 
     if-eqz p1, :cond_b
 
-    .line 44
     :cond_a
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3600(Lcom/android/camera/module/Camera2Module;)V
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3300(Lcom/android/camera/module/Camera2Module;)V
 
     :cond_b
     :goto_3
@@ -600,15 +545,13 @@
 .method public onPictureTakenFinished(ZJ)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3600(Lcom/android/camera/module/Camera2Module;)V
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$3300(Lcom/android/camera/module/Camera2Module;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/module/Camera2Module$JpegQuickPictureCallback;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$600(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/ObservableEmitter;
+    invoke-static {p1}, Lcom/android/camera/module/Camera2Module;->access$200(Lcom/android/camera/module/Camera2Module;)Lio/reactivex/ObservableEmitter;
 
     move-result-object p1
 

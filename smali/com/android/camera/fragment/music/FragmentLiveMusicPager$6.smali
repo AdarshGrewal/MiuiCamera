@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -35,7 +34,6 @@
 .method public synthetic OooO00o()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {v0}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$700(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)Lcom/android/camera/fragment/music/LiveMusicInfo;
@@ -46,7 +44,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->startPlayOrStopMusicByTime(Lcom/android/camera/fragment/music/LiveMusicInfo;I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {v0}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$1100(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)Lcom/android/camera/fragment/music/MusicOperation;
@@ -61,14 +58,13 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     iget-object v0, v0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Ooooo0o/OooO00o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOo0/OooO0OO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Ooooo0o/OooO00o;-><init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OoooOo0/OooO0OO;-><init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager$6;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

@@ -41,34 +41,28 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
-    .line 4
     new-instance v1, Lcom/xiaomi/stat/ab$a;
 
     invoke-direct {v1, v0}, Lcom/xiaomi/stat/ab$a;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/xiaomi/stat/ab;->g:Landroid/database/sqlite/SQLiteOpenHelper;
 
-    .line 5
     invoke-direct {p0}, Lcom/xiaomi/stat/ab;->b()V
 
     const-string v1, "mistat_pf"
 
-    .line 6
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -85,7 +79,6 @@
 .method public static synthetic a(Lcom/xiaomi/stat/ab;)Landroid/database/sqlite/SQLiteOpenHelper;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/stat/ab;->g:Landroid/database/sqlite/SQLiteOpenHelper;
 
     return-object p0
@@ -94,30 +87,25 @@
 .method public static a()Lcom/xiaomi/stat/ab;
     .locals 2
 
-    .line 2
     sget-object v0, Lcom/xiaomi/stat/ab;->e:Lcom/xiaomi/stat/ab;
 
     if-nez v0, :cond_1
 
-    .line 3
     const-class v0, Lcom/xiaomi/stat/ab;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     sget-object v1, Lcom/xiaomi/stat/ab;->e:Lcom/xiaomi/stat/ab;
 
     if-nez v1, :cond_0
 
-    .line 5
     new-instance v1, Lcom/xiaomi/stat/ab;
 
     invoke-direct {v1}, Lcom/xiaomi/stat/ab;-><init>()V
 
     sput-object v1, Lcom/xiaomi/stat/ab;->e:Lcom/xiaomi/stat/ab;
 
-    .line 6
     :cond_0
     monitor-exit v0
 
@@ -132,7 +120,6 @@
 
     throw v1
 
-    .line 7
     :cond_1
     :goto_0
     sget-object v0, Lcom/xiaomi/stat/ab;->e:Lcom/xiaomi/stat/ab;
@@ -143,17 +130,14 @@
 .method private b()V
     .locals 8
 
-    .line 2
     new-instance v0, Lcom/xiaomi/stat/ac;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/stat/ac;-><init>(Lcom/xiaomi/stat/ab;)V
 
-    .line 3
     new-instance v1, Ljava/util/concurrent/FutureTask;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 4
     :try_start_0
     invoke-static {v1}, Lcom/xiaomi/stat/c;->a(Ljava/lang/Runnable;)V
     :try_end_0
@@ -163,7 +147,6 @@
 
     const-wide/16 v2, 0x2
 
-    .line 5
     :try_start_1
     sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -184,11 +167,9 @@
 
     return-void
 
-    .line 6
     :cond_0
     monitor-enter p0
 
-    .line 7
     :try_start_2
     iget-object v1, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -198,24 +179,20 @@
 
     const-string v2, "load pref from db"
 
-    .line 8
     invoke-static {v1, v2}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "pref_key"
 
-    .line 9
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "pref_value"
 
-    .line 10
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 11
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -223,24 +200,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 12
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 13
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 14
     iget-object v5, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
     invoke-interface {v5, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v5, "MiStatPref"
 
-    .line 15
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -268,7 +241,6 @@
 
     goto :goto_0
 
-    .line 16
     :catch_1
     :cond_1
     :try_start_3
@@ -283,7 +255,6 @@
 
     throw v1
 
-    .line 17
     :goto_1
     monitor-exit p0
 
@@ -301,7 +272,6 @@
     :catch_2
     move-exception v0
 
-    .line 18
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -326,7 +296,6 @@
 .method public static synthetic b(Lcom/xiaomi/stat/ab;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/stat/ab;->b()V
 
     return-void
@@ -335,14 +304,12 @@
 .method private c(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/xiaomi/stat/ad;
 
     invoke-direct {v0, p0, p1}, Lcom/xiaomi/stat/ad;-><init>(Lcom/xiaomi/stat/ab;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/xiaomi/stat/ab;->d:Landroid/os/FileObserver;
 
-    .line 2
     invoke-virtual {v0}, Landroid/os/FileObserver;->startWatching()V
 
     return-void
@@ -351,12 +318,10 @@
 .method private c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    .line 3
     monitor-enter p0
 
     const/4 v0, 0x1
 
-    .line 4
     :try_start_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -364,7 +329,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     iget-object v1, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -373,7 +337,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6
     iget-object v1, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -385,7 +348,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -394,7 +356,6 @@
     :goto_0
     const-string v1, "MiStatPref"
 
-    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -419,36 +380,30 @@
 
     if-nez v0, :cond_2
 
-    .line 9
     monitor-exit p0
 
     return-void
 
-    .line 10
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11
     new-instance v0, Lcom/xiaomi/stat/ae;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/xiaomi/stat/ae;-><init>(Lcom/xiaomi/stat/ab;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     new-instance p1, Ljava/util/concurrent/FutureTask;
 
     const/4 p2, 0x0
 
     invoke-direct {p1, v0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    .line 13
     :try_start_1
     invoke-static {p1}, Lcom/xiaomi/stat/c;->a(Ljava/lang/Runnable;)V
     :try_end_1
     .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 14
     :try_start_2
     invoke-virtual {p1}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
     :try_end_2
@@ -461,7 +416,6 @@
     :catch_1
     move-exception p1
 
-    .line 15
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,7 +439,6 @@
     :catchall_0
     move-exception p1
 
-    .line 16
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -499,10 +452,8 @@
 .method public a(Ljava/lang/String;F)F
     .locals 1
 
-    .line 13
     monitor-enter p0
 
-    .line 14
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -514,7 +465,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -540,7 +490,6 @@
 
     return p1
 
-    .line 16
     :catch_0
     :cond_0
     monitor-exit p0
@@ -550,7 +499,6 @@
     :catchall_0
     move-exception p1
 
-    .line 17
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -561,10 +509,8 @@
 .method public a(Ljava/lang/String;I)I
     .locals 1
 
-    .line 8
     monitor-enter p0
 
-    .line 9
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -576,7 +522,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -602,7 +547,6 @@
 
     return p1
 
-    .line 11
     :catch_0
     :cond_0
     monitor-exit p0
@@ -612,7 +556,6 @@
     :catchall_0
     move-exception p1
 
-    .line 12
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -623,10 +566,8 @@
 .method public a(Ljava/lang/String;J)J
     .locals 1
 
-    .line 23
     monitor-enter p0
 
-    .line 24
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -638,7 +579,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 25
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -664,7 +604,6 @@
 
     return-wide p1
 
-    .line 26
     :catch_0
     :cond_0
     monitor-exit p0
@@ -674,7 +613,6 @@
     :catchall_0
     move-exception p1
 
-    .line 27
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -685,10 +623,8 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 18
     monitor-enter p0
 
-    .line 19
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -698,7 +634,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object p2, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -711,7 +646,6 @@
 
     return-object p1
 
-    .line 21
     :cond_0
     monitor-exit p0
 
@@ -720,7 +654,6 @@
     :catchall_0
     move-exception p1
 
-    .line 22
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -731,10 +664,8 @@
 .method public a(Ljava/lang/String;)Z
     .locals 1
 
-    .line 37
     monitor-enter p0
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -749,7 +680,6 @@
     :catchall_0
     move-exception p1
 
-    .line 39
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -760,10 +690,8 @@
 .method public a(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 28
     monitor-enter p0
 
-    .line 29
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
@@ -773,7 +701,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 30
     iget-object v0, p0, Lcom/xiaomi/stat/ab;->f:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -784,7 +711,6 @@
 
     const-string v0, "true"
 
-    .line 31
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -793,7 +719,6 @@
 
     const/4 p1, 0x1
 
-    .line 32
     monitor-exit p0
 
     return p1
@@ -801,7 +726,6 @@
     :cond_0
     const-string v0, "false"
 
-    .line 33
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -810,12 +734,10 @@
 
     const/4 p1, 0x0
 
-    .line 34
     monitor-exit p0
 
     return p1
 
-    .line 35
     :cond_1
     monitor-exit p0
 
@@ -824,7 +746,6 @@
     :catchall_0
     move-exception p1
 
-    .line 36
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -837,7 +758,6 @@
 
     const/4 v0, 0x0
 
-    .line 24
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/stat/ab;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -846,7 +766,6 @@
 .method public b(Ljava/lang/String;F)V
     .locals 0
 
-    .line 20
     invoke-static {p2}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object p2
@@ -859,7 +778,6 @@
 .method public b(Ljava/lang/String;I)V
     .locals 0
 
-    .line 19
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -872,7 +790,6 @@
 .method public b(Ljava/lang/String;J)V
     .locals 0
 
-    .line 22
     invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p2
@@ -885,7 +802,6 @@
 .method public b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 21
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/stat/ab;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -894,7 +810,6 @@
 .method public b(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 23
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2

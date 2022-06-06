@@ -102,63 +102,46 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;IZ)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     const-string p1, ".webp"
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->ASSERT_FORMAT:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedFilter:Z
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedNoise:Z
 
-    .line 5
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedBlur:Z
 
-    .line 6
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedColorSeparation:Z
 
     const/4 v0, 0x1
 
-    .line 7
     iput-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mVerticalScreen:Z
 
-    .line 8
     iput p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mFilterTexture:I
 
-    .line 9
     iput p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
-    .line 10
     iput p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
-    .line 11
     iput p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkTexture:I
 
     const/4 v0, -0x1
 
-    .line 12
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLastRotation:I
 
-    .line 13
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsSnapshot:Z
 
-    .line 14
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsFrontCamera:Z
 
-    .line 15
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedUpdateTexture:Z
 
-    .line 16
     iput-boolean p3, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsFrontCamera:Z
 
-    .line 17
     invoke-direct {p0, p2}, Lcom/android/camera/effect/renders/LightEffectRender;->prepareLightEffect(I)V
 
     return-void
@@ -169,7 +152,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -183,36 +165,30 @@
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 3
     new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 4
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v3, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 5
     invoke-static {v1, v0, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 7
     :catch_0
     sget-object v1, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
@@ -240,40 +216,34 @@
 .method private getCropOperationForCapture(IZ)Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;
     .locals 11
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;-><init>(Lcom/android/camera/effect/renders/LightEffectRender;Lcom/android/camera/effect/renders/LightEffectRender$1;)V
 
-    .line 2
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 5
     iget-boolean v4, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsFrontCamera:Z
 
     const/4 v5, 0x0
 
     if-eqz v4, :cond_2
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontMirror()Z
 
     move-result v4
@@ -285,10 +255,8 @@
     :cond_0
     add-int/lit16 p1, p1, 0xb4
 
-    .line 7
     rem-int/lit16 p1, p1, 0x168
 
-    .line 8
     :cond_1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontMirror()Z
 
@@ -328,7 +296,6 @@
 
     if-eq p1, v7, :cond_3
 
-    .line 9
     sget-object p2, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -351,7 +318,6 @@
 
     goto/16 :goto_3
 
-    .line 10
     :cond_3
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewHeight:I
 
@@ -361,7 +327,6 @@
 
     div-int v3, p1, v3
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -372,7 +337,6 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 12
     iget-boolean v7, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsFrontCamera:Z
 
     if-eqz v7, :cond_4
@@ -384,12 +348,10 @@
 
     if-eqz p2, :cond_a
 
-    .line 13
     invoke-virtual {v1, v6, v4}, Landroid/graphics/Matrix;->setScale(FF)V
 
     goto :goto_3
 
-    .line 14
     :cond_5
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewHeight:I
 
@@ -399,7 +361,6 @@
 
     div-int v2, p1, v2
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -412,17 +373,14 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    .line 16
     invoke-virtual {v1, v7}, Landroid/graphics/Matrix;->setRotate(F)V
 
     if-eqz p2, :cond_9
 
-    .line 17
     invoke-virtual {v1, v6, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     goto :goto_2
 
-    .line 18
     :cond_6
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewHeight:I
 
@@ -432,7 +390,6 @@
 
     div-int v3, p1, v3
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -443,7 +400,6 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 20
     iget-boolean v7, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsFrontCamera:Z
 
     if-eqz v7, :cond_7
@@ -458,12 +414,10 @@
 
     if-eqz p2, :cond_a
 
-    .line 21
     invoke-virtual {v1, v4, v6}, Landroid/graphics/Matrix;->setScale(FF)V
 
     goto :goto_3
 
-    .line 22
     :cond_8
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewHeight:I
 
@@ -473,7 +427,6 @@
 
     div-int v2, p1, v2
 
-    .line 23
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -486,12 +439,10 @@
 
     const/high16 v7, 0x43870000    # 270.0f
 
-    .line 24
     invoke-virtual {v1, v7}, Landroid/graphics/Matrix;->setRotate(F)V
 
     if-eqz p2, :cond_9
 
-    .line 25
     invoke-virtual {v1, v6, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     :cond_9
@@ -502,7 +453,6 @@
 
     move p1, v10
 
-    .line 26
     :cond_a
     :goto_3
     new-instance p2, Landroid/graphics/Rect;
@@ -511,7 +461,6 @@
 
     iput-object p2, v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->rect:Landroid/graphics/Rect;
 
-    .line 27
     iput-object v1, v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->matrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -520,21 +469,18 @@
 .method private getCropOperationForPreview(I)Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;
     .locals 9
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;-><init>(Lcom/android/camera/effect/renders/LightEffectRender;Lcom/android/camera/effect/renders/LightEffectRender$1;)V
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 3
     iget-object v3, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
@@ -557,7 +503,6 @@
 
     if-eq p1, v5, :cond_0
 
-    .line 4
     sget-object v5, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -580,7 +525,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
@@ -590,7 +534,6 @@
 
     div-int v3, p1, v1
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -601,19 +544,16 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 7
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     const/high16 v5, 0x42b40000    # 90.0f
 
-    .line 8
     invoke-virtual {v1, v5}, Landroid/graphics/Matrix;->setRotate(F)V
 
     goto :goto_1
 
-    .line 9
     :cond_1
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
@@ -623,7 +563,6 @@
 
     div-int v2, p1, v1
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -634,19 +573,16 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 11
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     const/high16 v5, 0x43340000    # 180.0f
 
-    .line 12
     invoke-virtual {v1, v5}, Landroid/graphics/Matrix;->setRotate(F)V
 
     goto :goto_0
 
-    .line 13
     :cond_2
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
@@ -656,7 +592,6 @@
 
     div-int v3, p1, v1
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -667,19 +602,16 @@
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 15
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     const/high16 v5, 0x43870000    # 270.0f
 
-    .line 16
     invoke-virtual {v1, v5}, Landroid/graphics/Matrix;->setRotate(F)V
 
     goto :goto_1
 
-    .line 17
     :cond_3
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
@@ -689,7 +621,6 @@
 
     div-int v2, p1, v2
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -707,7 +638,6 @@
 
     move p1, v8
 
-    .line 19
     :goto_1
     new-instance v5, Landroid/graphics/Rect;
 
@@ -715,7 +645,6 @@
 
     iput-object v5, v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->rect:Landroid/graphics/Rect;
 
-    .line 20
     iput-object v1, v0, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->matrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -765,7 +694,6 @@
     :pswitch_6
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedNoise:Z
 
     const-string v0, "effect/light_effect/NOSTALGIA"
@@ -789,7 +717,6 @@
 
     move-object v0, v4
 
-    .line 2
     :goto_1
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -799,7 +726,6 @@
 
     if-nez v2, :cond_0
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -818,7 +744,6 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
-    .line 4
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -826,7 +751,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -845,7 +769,6 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseBitmap:Landroid/graphics/Bitmap;
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -867,7 +790,6 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkBitmap:Landroid/graphics/Bitmap;
 
-    .line 7
     sget-object v0, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -923,7 +845,6 @@
 
     aput p1, v1, v2
 
-    .line 1
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
     return-void
@@ -938,12 +859,10 @@
 
     const/16 v2, 0xab
 
-    .line 1
     invoke-static {v2}, Lcom/android/camera/CameraSettings;->isCinematicAspectRatioEnabled(I)Z
 
     move-result v2
 
-    .line 2
     iget-boolean v3, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsSnapshot:Z
 
     if-eqz v3, :cond_0
@@ -959,7 +878,6 @@
 
     move-result-object v3
 
-    .line 3
     :goto_0
     iget-object v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
@@ -967,7 +885,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 4
     iget-object v5, v3, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->rect:Landroid/graphics/Rect;
 
     iget v6, v5, Landroid/graphics/Rect;->left:I
@@ -998,23 +915,19 @@
 
     move-result-object v4
 
-    .line 5
     iget v5, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
     if-eqz v5, :cond_1
 
-    .line 6
     invoke-direct {v0, v5}, Lcom/android/camera/effect/renders/LightEffectRender;->safeDeleteTexture(I)V
 
-    .line 7
     :cond_1
-    invoke-static {v11, v4}, Lcom/android/camera/network/util/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
+    invoke-static {v11, v4}, Lcom/android/camera/sticker/glutils/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
 
     move-result v4
 
     iput v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
-    .line 8
     :cond_2
     iget-boolean v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedNoise:Z
 
@@ -1024,7 +937,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 9
     iget-object v4, v3, Lcom/android/camera/effect/renders/LightEffectRender$CropOperation;->rect:Landroid/graphics/Rect;
 
     iget v13, v4, Landroid/graphics/Rect;->left:I
@@ -1047,23 +959,19 @@
 
     move-result-object v4
 
-    .line 10
     iget v5, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
     if-eqz v5, :cond_3
 
-    .line 11
     invoke-direct {v0, v5}, Lcom/android/camera/effect/renders/LightEffectRender;->safeDeleteTexture(I)V
 
-    .line 12
     :cond_3
-    invoke-static {v11, v4}, Lcom/android/camera/network/util/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
+    invoke-static {v11, v4}, Lcom/android/camera/sticker/glutils/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
 
     move-result v4
 
     iput v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
-    .line 13
     :cond_4
     iget-object v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkBitmap:Landroid/graphics/Bitmap;
 
@@ -1073,18 +981,15 @@
 
     if-nez v5, :cond_5
 
-    .line 14
-    invoke-static {v11, v4}, Lcom/android/camera/network/util/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
+    invoke-static {v11, v4}, Lcom/android/camera/sticker/glutils/GlUtil;->createTexture(ILandroid/graphics/Bitmap;)I
 
     move-result v4
 
     iput v4, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkTexture:I
 
-    .line 15
     :cond_5
     iput v1, v0, Lcom/android/camera/effect/renders/LightEffectRender;->mLastRotation:I
 
-    .line 16
     sget-object v4, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     const/16 v5, 0xa
@@ -1093,7 +998,6 @@
 
     const/4 v6, 0x0
 
-    .line 17
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1200,7 +1104,6 @@
 
     const-string/jumbo v1, "updateLightTexture rotation(%d) bitmap(%d,%d,%d,%d) preview(%d,%d) mIsSnapshot(%b) isCinematicEnabled(%b) hash(%d)"
 
-    .line 18
     invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -1215,7 +1118,6 @@
 .method public destroy()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1238,44 +1140,34 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/effect/renders/LightEffectRender;->safeDeleteTexture(I)V
 
-    .line 4
     iput v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
-    .line 5
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera/effect/renders/LightEffectRender;->safeDeleteTexture(I)V
 
-    .line 7
     iput v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
-    .line 8
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkTexture:I
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-direct {p0, v0}, Lcom/android/camera/effect/renders/LightEffectRender;->safeDeleteTexture(I)V
 
-    .line 10
     iput v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkTexture:I
 
-    .line 11
     :cond_2
     iget-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
@@ -1283,37 +1175,28 @@
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 13
     iput-object v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightBitmap:Landroid/graphics/Bitmap;
 
-    .line 14
     :cond_3
     iget-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_4
 
-    .line 15
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 16
     iput-object v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseBitmap:Landroid/graphics/Bitmap;
 
-    .line 17
     :cond_4
     iget-object v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_5
 
-    .line 18
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 19
     iput-object v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkBitmap:Landroid/graphics/Bitmap;
 
-    .line 20
     :cond_5
     invoke-super {p0}, Lcom/android/camera/effect/renders/ShaderRender;->destroy()V
 
@@ -1323,7 +1206,6 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
     .locals 5
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/effect/draw_mode/DrawAttribute;->getTarget()I
 
     move-result v0
@@ -1338,7 +1220,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -1348,7 +1229,6 @@
 
     move-result v0
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/effect/draw_mode/DrawAttribute;->getTarget()I
 
     move-result v2
@@ -1361,7 +1241,6 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 4
     sget-object v2, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1386,31 +1265,26 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     move-object v2, p1
 
     check-cast v2, Lcom/android/camera/effect/draw_mode/DrawIntTexAttribute;
 
-    .line 6
     iget v3, v2, Lcom/android/camera/effect/draw_mode/DrawIntTexAttribute;->mTexId:I
 
     iput v3, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mFilterTexture:I
 
-    .line 7
     iget-boolean v2, v2, Lcom/android/camera/effect/draw_mode/DrawIntTexAttribute;->mIsSnapshot:Z
 
     iput-boolean v2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsSnapshot:Z
 
     goto :goto_0
 
-    .line 8
     :cond_2
     move-object v2, p1
 
     check-cast v2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
-    .line 9
     iget-object v3, v2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;->mBasicTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
@@ -1419,12 +1293,10 @@
 
     iput v3, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mFilterTexture:I
 
-    .line 10
     iget-boolean v2, v2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;->mIsSnapshot:Z
 
     iput-boolean v2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mIsSnapshot:Z
 
-    .line 11
     :goto_0
     iget-boolean v2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedUpdateTexture:Z
 
@@ -1434,14 +1306,11 @@
 
     if-eq v2, v0, :cond_4
 
-    .line 12
     :cond_3
     invoke-direct {p0, v0}, Lcom/android/camera/effect/renders/LightEffectRender;->updateLightTexture(I)V
 
-    .line 13
     iput-boolean v1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedUpdateTexture:Z
 
-    .line 14
     :cond_4
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
 
@@ -1455,7 +1324,6 @@
 
     const-string v0, "frag_light.c"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/effect/ShaderUtil;->loadFromAssetsFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1466,10 +1334,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "text_filter"
@@ -1480,7 +1346,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformFilterTexture:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "text_light"
@@ -1491,7 +1356,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformLightTexture:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "text_noise"
@@ -1502,7 +1366,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNoiseTexture:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "text_dark"
@@ -1513,10 +1376,9 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformDarkTexture:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
-    const-string v1, "needFilter"
+    const-string/jumbo v1, "needFilter"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -1524,10 +1386,9 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedFilter:I
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
-    const-string v1, "needNoise"
+    const-string/jumbo v1, "needNoise"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -1535,10 +1396,9 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedNoise:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
-    const-string v1, "needBlur"
+    const-string/jumbo v1, "needBlur"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -1546,10 +1406,9 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedBlur:I
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
-    const-string v1, "needColorSeparation"
+    const-string/jumbo v1, "needColorSeparation"
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
@@ -1557,7 +1416,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedColorSeparation:I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "verticalScreen"
@@ -1574,27 +1432,22 @@
 .method public initShaderValue(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mFilterTexture:I
 
     if-eqz p1, :cond_0
 
     const v0, 0x84c1
 
-    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/effect/renders/ShaderRender;->bindTexture(II)Z
 
-    .line 4
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformFilterTexture:I
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 5
     :cond_0
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mLightTexture:I
 
@@ -1602,17 +1455,14 @@
 
     const v0, 0x84c2
 
-    .line 6
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/effect/renders/ShaderRender;->bindTexture(II)Z
 
-    .line 7
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformLightTexture:I
 
     const/4 v0, 0x2
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 8
     :cond_1
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNoiseTexture:I
 
@@ -1620,17 +1470,14 @@
 
     const v0, 0x84c3
 
-    .line 9
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/effect/renders/ShaderRender;->bindTexture(II)Z
 
-    .line 10
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNoiseTexture:I
 
     const/4 v0, 0x3
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 11
     :cond_2
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mDarkTexture:I
 
@@ -1638,17 +1485,14 @@
 
     const v0, 0x84c4
 
-    .line 12
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/effect/renders/ShaderRender;->bindTexture(II)Z
 
-    .line 13
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformDarkTexture:I
 
     const/4 v0, 0x4
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 14
     :cond_3
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedFilter:I
 
@@ -1656,28 +1500,24 @@
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 15
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedNoise:I
 
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedNoise:Z
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 16
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedBlur:I
 
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedBlur:Z
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 17
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformNeedColorSeparation:I
 
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedColorSeparation:Z
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 18
     iget p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mUniformVerticalScreen:I
 
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mVerticalScreen:Z
@@ -1690,10 +1530,8 @@
 .method public setPreviewSize(II)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
     if-ne v0, p1, :cond_0
@@ -1702,7 +1540,6 @@
 
     if-eq v0, p2, :cond_2
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
@@ -1724,13 +1561,10 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mNeedUpdateTexture:Z
 
-    .line 4
     iput p1, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewWidth:I
 
-    .line 5
     iput p2, p0, Lcom/android/camera/effect/renders/LightEffectRender;->mPreviewHeight:I
 
-    .line 6
     sget-object v0, Lcom/android/camera/effect/renders/LightEffectRender;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

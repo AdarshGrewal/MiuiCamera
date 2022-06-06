@@ -17,17 +17,14 @@
 .method public constructor <init>(Lcom/google/zxing/pdf417/decoder/BoundingBox;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/google/zxing/pdf417/decoder/BoundingBox;
 
     invoke-direct {v0, p1}, Lcom/google/zxing/pdf417/decoder/BoundingBox;-><init>(Lcom/google/zxing/pdf417/decoder/BoundingBox;)V
 
     iput-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->boundingBox:Lcom/google/zxing/pdf417/decoder/BoundingBox;
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/zxing/pdf417/decoder/BoundingBox;->getMaxY()I
 
     move-result v0
@@ -52,7 +49,6 @@
 .method public final getBoundingBox()Lcom/google/zxing/pdf417/decoder/BoundingBox;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->boundingBox:Lcom/google/zxing/pdf417/decoder/BoundingBox;
 
     return-object v0
@@ -61,7 +57,6 @@
 .method public final getCodeword(I)Lcom/google/zxing/pdf417/decoder/Codeword;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
     invoke-virtual {p0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->imageRowToCodewordIndex(I)I
@@ -76,7 +71,6 @@
 .method public final getCodewordNearby(I)Lcom/google/zxing/pdf417/decoder/Codeword;
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->getCodeword(I)Lcom/google/zxing/pdf417/decoder/Codeword;
 
     move-result-object v0
@@ -93,7 +87,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->imageRowToCodewordIndex(I)I
 
     move-result v1
@@ -102,7 +95,6 @@
 
     if-ltz v1, :cond_1
 
-    .line 3
     iget-object v2, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
     aget-object v1, v2, v1
@@ -111,7 +103,6 @@
 
     return-object v1
 
-    .line 4
     :cond_1
     invoke-virtual {p0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->imageRowToCodewordIndex(I)I
 
@@ -119,14 +110,12 @@
 
     add-int/2addr v1, v0
 
-    .line 5
     iget-object v2, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
     array-length v3, v2
 
     if-ge v1, v3, :cond_2
 
-    .line 6
     aget-object v1, v2, v1
 
     if-eqz v1, :cond_2
@@ -147,7 +136,6 @@
 .method public final getCodewords()[Lcom/google/zxing/pdf417/decoder/Codeword;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
     return-object v0
@@ -156,7 +144,6 @@
 .method public final imageRowToCodewordIndex(I)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->boundingBox:Lcom/google/zxing/pdf417/decoder/BoundingBox;
 
     invoke-virtual {v0}, Lcom/google/zxing/pdf417/decoder/BoundingBox;->getMinY()I
@@ -171,7 +158,6 @@
 .method public final setCodeword(ILcom/google/zxing/pdf417/decoder/Codeword;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
     invoke-virtual {p0, p1}, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->imageRowToCodewordIndex(I)I
@@ -186,12 +172,10 @@
 .method public toString()Ljava/lang/String;
     .locals 11
 
-    .line 1
     new-instance v0, Ljava/util/Formatter;
 
     invoke-direct {v0}, Ljava/util/Formatter;-><init>()V
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/zxing/pdf417/decoder/DetectionResultColumn;->codewords:[Lcom/google/zxing/pdf417/decoder/Codeword;
 
@@ -218,7 +202,6 @@
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 3
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -240,7 +223,6 @@
 
     add-int/lit8 v10, v5, 0x1
 
-    .line 4
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -278,7 +260,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {v0}, Ljava/util/Formatter;->toString()Ljava/lang/String;
 
@@ -286,7 +267,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     invoke-virtual {v0}, Ljava/util/Formatter;->close()V
 
     return-object v1
@@ -294,7 +274,6 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     :try_start_1
     throw v1
     :try_end_1
@@ -303,7 +282,6 @@
     :catchall_1
     move-exception v2
 
-    .line 8
     :try_start_2
     invoke-virtual {v0}, Ljava/util/Formatter;->close()V
     :try_end_2

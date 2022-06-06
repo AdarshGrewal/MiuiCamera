@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,12 +28,11 @@
 .method public onCameraOpened(ILandroid/content/Context;)V
     .locals 3
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0oo0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0Ooo()Z
 
     move-result v0
 
@@ -44,12 +42,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/module/video/DecibelController;->mAudioCalculateDecibels:Lcom/android/camera/AudioCalculateDecibels;
 
     if-nez v1, :cond_0
 
-    .line 3
     new-instance v1, Lcom/android/camera/AudioCalculateDecibels;
 
     const/4 v2, 0x1
@@ -58,10 +54,8 @@
 
     iput-object v1, p0, Lcom/android/camera/module/video/DecibelController;->mAudioCalculateDecibels:Lcom/android/camera/AudioCalculateDecibels;
 
-    .line 4
     invoke-virtual {v1, p0}, Lcom/android/camera/AudioCalculateDecibels;->setOnVolumeListener(Lcom/android/camera/AudioCalculateDecibels$OnVolumeValueListener;)V
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/android/camera/module/video/DecibelController;->mAudioCalculateDecibels:Lcom/android/camera/AudioCalculateDecibels;
 
@@ -69,7 +63,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->getGainValueReset()F
 
     move-result p1
@@ -80,7 +73,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/SoundSetting;->setGainState(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/video/DecibelController;->mAudioCalculateDecibels:Lcom/android/camera/AudioCalculateDecibels;
 
     invoke-virtual {p1}, Lcom/android/camera/AudioCalculateDecibels;->start()V
@@ -90,7 +82,6 @@
     :cond_1
     const-string p1, "50"
 
-    .line 8
     invoke-static {p2, p1}, Lcom/android/camera/SoundSetting;->setGainState(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_2
@@ -101,7 +92,6 @@
 .method public onVolumeValue([F)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -116,7 +106,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->setVolumeValue([F)V
 
     :cond_0
@@ -126,12 +115,10 @@
 .method public release()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/DecibelController;->mAudioCalculateDecibels:Lcom/android/camera/AudioCalculateDecibels;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/AudioCalculateDecibels;->release()V
 
     :cond_0

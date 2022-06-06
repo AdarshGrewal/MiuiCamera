@@ -22,10 +22,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FloatPropertyCompat;->mPropertyName:Ljava/lang/String;
 
     return-void
@@ -45,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/FloatPropertyCompat$1;
 
     invoke-virtual {p0}, Landroid/util/FloatProperty;->getName()Ljava/lang/String;

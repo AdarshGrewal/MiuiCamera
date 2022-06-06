@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/Menu;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/internal/widget/PopupMenuAdapter;-><init>(Landroid/content/Context;Landroid/view/Menu;)V
 
     return-void
@@ -22,14 +21,12 @@
 .method public checkMenuItem(Landroid/view/MenuItem;)Z
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/internal/widget/PopupMenuAdapter;->checkMenuItem(Landroid/view/MenuItem;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {p1}, Landroid/view/MenuItem;->getOrder()I
 
     move-result v1
@@ -38,19 +35,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuAdapter;->mLastCategorySystemOrderMenuItem:Landroid/view/MenuItem;
 
     if-nez v0, :cond_0
 
-    .line 4
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuAdapter;->mLastCategorySystemOrderMenuItem:Landroid/view/MenuItem;
 
     const/4 p1, 0x0
 
     return p1
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -67,7 +61,6 @@
 .method public getLastCategorySystemOrderMenuItem()Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuAdapter;->mLastCategorySystemOrderMenuItem:Landroid/view/MenuItem;
 
     return-object v0

@@ -26,16 +26,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mWidth:I
 
-    .line 3
     iput p2, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mHeight:I
 
-    .line 4
     iput p3, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mFormat:I
 
     return-void
@@ -46,15 +42,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p1, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;
 
     if-eqz v0, :cond_1
 
-    .line 2
     check-cast p1, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;
 
-    .line 3
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mWidth:I
 
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getWidth()I
@@ -65,7 +58,6 @@
 
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mHeight:I
 
-    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getHeight()I
 
     move-result v1
@@ -74,7 +66,6 @@
 
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mFormat:I
 
-    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getFormat()I
 
     move-result p1
@@ -91,7 +82,6 @@
     :goto_0
     return p1
 
-    .line 6
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -103,7 +93,6 @@
 .method public getFormat()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mFormat:I
 
     return v0
@@ -112,7 +101,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mHeight:I
 
     return v0
@@ -121,7 +109,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mWidth:I
 
     return v0
@@ -130,7 +117,6 @@
 .method public hashCode()I
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mWidth:I
 
     shl-int/lit8 v1, v0, 0x8
@@ -139,7 +125,6 @@
 
     or-int/2addr v0, v1
 
-    .line 2
     iget v1, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mHeight:I
 
     shl-int/lit8 v2, v1, 0x10
@@ -148,7 +133,6 @@
 
     or-int/2addr v1, v2
 
-    .line 3
     iget v2, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->mFormat:I
 
     xor-int/2addr v0, v2

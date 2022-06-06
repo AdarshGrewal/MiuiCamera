@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/aiwatermark/parser/AbstractParser;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/parser/AbstractParser;-><init>()V
 
     return-void
@@ -45,12 +43,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -62,14 +58,12 @@
 
     const-string/jumbo v2, "watermarks"
 
-    .line 3
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 4
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -77,47 +71,40 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 5
     invoke-virtual {v1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
 
     const-string v4, "key"
 
-    .line 6
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     const-string/jumbo v4, "type"
 
-    .line 7
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v7
 
     const-string v4, "id"
 
-    .line 8
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v9
 
     const-string v4, "location"
 
-    .line 9
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v10
 
     const-string v4, "country"
 
-    .line 10
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v11
 
-    .line 11
     new-instance v3, Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     const/4 v8, 0x0
@@ -137,7 +124,6 @@
     :catch_0
     move-exception v1
 
-    .line 12
     invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
 
     :cond_0
@@ -159,13 +145,11 @@
 
     const-string v0, "drawable"
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 2
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -176,38 +160,32 @@
 
     move-result-object v3
 
-    .line 3
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v4
 
-    .line 4
     invoke-virtual {v4}, Lorg/xmlpull/v1/XmlPullParserFactory;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v4
 
-    .line 5
     new-instance v5, Ljava/io/InputStreamReader;
 
     invoke-direct {v5, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
     invoke-interface {v4, v5}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v3
 
-    invoke-virtual {v3}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000o0()I
+    invoke-virtual {v3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000OO0()I
 
     move-result v3
 
-    .line 7
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v5
 
-    .line 8
     sget-object v6, Lcom/android/camera/aiwatermark/parser/AIWatermarkParser;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -270,7 +248,6 @@
 
     goto/16 :goto_3
 
-    .line 9
     :cond_0
     :try_start_1
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -283,7 +260,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 10
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -308,24 +284,20 @@
 
     move-result-object v8
 
-    .line 11
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 12
     invoke-virtual {v5, v8, v0, v9}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v13, :cond_1
 
-    .line 13
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setResId(I)V
 
-    .line 14
     :cond_1
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -351,24 +323,20 @@
 
     move-result-object v8
 
-    .line 15
     invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 16
     invoke-virtual {v5, v8, v0, v9}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
 
     if-eq v5, v13, :cond_2
 
-    .line 17
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setResRvItem(I)V
 
-    .line 18
     :cond_2
     iget-object v5, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -398,7 +366,6 @@
 
     if-ne v5, v8, :cond_4
 
-    .line 19
     :cond_3
     iget-object v5, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->watermarkItems:Ljava/util/ArrayList;
 
@@ -406,7 +373,6 @@
 
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 20
     :cond_4
     iput-object v6, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -415,7 +381,6 @@
     :cond_5
     const-string/jumbo v5, "watermarks"
 
-    .line 21
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v8
@@ -426,7 +391,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 22
     sget-object v0, Lcom/android/camera/aiwatermark/parser/AIWatermarkParser;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -451,12 +415,10 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     iget-object v0, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->watermarkItems:Ljava/util/ArrayList;
 
     return-object v0
 
-    .line 24
     :cond_6
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -466,7 +428,6 @@
 
     goto/16 :goto_3
 
-    .line 25
     :cond_7
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -576,13 +537,11 @@
 
     goto/16 :goto_3
 
-    .line 26
     :pswitch_0
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 27
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setText(Ljava/lang/String;)V
@@ -591,7 +550,6 @@
 
     goto :goto_3
 
-    .line 28
     :pswitch_1
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
@@ -601,7 +559,6 @@
 
     move-result v5
 
-    .line 29
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setCountry(I)V
@@ -610,7 +567,6 @@
 
     goto :goto_3
 
-    .line 30
     :pswitch_2
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
@@ -620,7 +576,6 @@
 
     move-result v5
 
-    .line 31
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setLocation(I)V
@@ -629,7 +584,6 @@
 
     goto :goto_3
 
-    .line 32
     :pswitch_3
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
@@ -639,7 +593,6 @@
 
     move-result v5
 
-    .line 33
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setResId(I)V
@@ -648,7 +601,6 @@
 
     goto :goto_3
 
-    .line 34
     :pswitch_4
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
@@ -658,7 +610,6 @@
 
     move-result v5
 
-    .line 35
     iget-object v8, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v8, v5}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setType(I)V
@@ -667,20 +618,17 @@
 
     goto :goto_3
 
-    .line 36
     :pswitch_5
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 37
     iget-object v5, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->markItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-virtual {v5, v15}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setKey(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 38
     :pswitch_6
     new-instance v5, Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -704,13 +652,11 @@
 
     goto :goto_3
 
-    .line 39
     :cond_9
     iget-object v5, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->watermarkItems:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 40
     :cond_a
     :goto_3
     sget-object v5, Lcom/android/camera/aiwatermark/parser/AIWatermarkParser;->TAG:Ljava/lang/String;
@@ -719,7 +665,6 @@
 
     invoke-static {v5, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v5
@@ -732,7 +677,6 @@
     :catch_0
     move-exception v0
 
-    .line 42
     sget-object v2, Lcom/android/camera/aiwatermark/parser/AIWatermarkParser;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -755,7 +699,6 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     invoke-virtual {v0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
 
     goto :goto_4
@@ -763,17 +706,14 @@
     :catch_1
     move-exception v0
 
-    .line 44
     sget-object v2, Lcom/android/camera/aiwatermark/parser/AIWatermarkParser;->TAG:Ljava/lang/String;
 
     const-string v3, "ioexception"
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 46
     :cond_b
     :goto_4
     iget-object v0, v1, Lcom/android/camera/aiwatermark/parser/AbstractParser;->watermarkItems:Ljava/util/ArrayList;
@@ -808,14 +748,12 @@
 .method public readJson()Ljava/lang/String;
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -834,7 +772,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 3
     :try_start_1
     new-instance v3, Ljava/io/InputStreamReader;
 
@@ -843,7 +780,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4
     :try_start_2
     new-instance v4, Ljava/io/BufferedReader;
 
@@ -852,7 +788,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 5
     :goto_0
     :try_start_3
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -861,34 +796,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 8
     invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
 
-    .line 9
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 10
     :try_start_4
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
-    .line 11
     invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
 
     if-eqz v2, :cond_3
 
-    .line 12
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
@@ -954,7 +882,6 @@
 
     move-object v2, v4
 
-    .line 13
     :goto_1
     :try_start_5
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
@@ -963,7 +890,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 14
     :try_start_6
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
@@ -978,24 +904,20 @@
     :goto_2
     if-eqz v3, :cond_2
 
-    .line 15
     invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
 
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 16
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
     goto :goto_4
 
-    .line 17
     :goto_3
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 18
     :cond_3
     :goto_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1012,7 +934,6 @@
     :goto_5
     if-eqz v1, :cond_4
 
-    .line 19
     :try_start_7
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
@@ -1027,24 +948,20 @@
     :goto_6
     if-eqz v3, :cond_5
 
-    .line 20
     invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
 
     :cond_5
     if-eqz v2, :cond_6
 
-    .line 21
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
     goto :goto_8
 
-    .line 22
     :goto_7
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 23
     :cond_6
     :goto_8
     throw v0

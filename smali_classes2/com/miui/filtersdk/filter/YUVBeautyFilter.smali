@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static synthetic access$000(Lcom/miui/filtersdk/filter/YUVBeautyFilter;)Ljava/nio/ByteBuffer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mYBuffer:Ljava/nio/ByteBuffer;
 
     return-object p0
@@ -47,7 +45,6 @@
 .method public static synthetic access$100(Lcom/miui/filtersdk/filter/YUVBeautyFilter;)Ljava/nio/ByteBuffer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mUVBuffer:Ljava/nio/ByteBuffer;
 
     return-object p0
@@ -56,7 +53,6 @@
 .method public static synthetic access$200(Lcom/miui/filtersdk/filter/YUVBeautyFilter;)[I
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->yuvTextureIds:[I
 
     return-object p0
@@ -65,7 +61,6 @@
 .method private initBeauty()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->mBeautyProcessor:Lcom/miui/filtersdk/beauty/BeautyProcessor;
 
     iget v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mWindowWidth:I
@@ -82,7 +77,6 @@
 .method public genYUVTextures([BII)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->mBeautyProcessor:Lcom/miui/filtersdk/beauty/BeautyProcessor;
 
     const/4 v2, 0x0
@@ -101,32 +95,27 @@
 
     mul-int v0, p2, p3
 
-    .line 2
     iget-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mYBuffer:Ljava/nio/ByteBuffer;
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mYBuffer:Ljava/nio/ByteBuffer;
 
-    .line 4
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mUVBuffer:Ljava/nio/ByteBuffer;
 
     if-nez v1, :cond_1
 
-    .line 6
     div-int/lit8 v1, v0, 0x2
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
@@ -135,14 +124,12 @@
 
     iput-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mUVBuffer:Ljava/nio/ByteBuffer;
 
-    .line 7
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 8
     :cond_1
     iget-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mYBuffer:Ljava/nio/ByteBuffer;
 
@@ -154,7 +141,6 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 9
     iget-object v1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mUVBuffer:Ljava/nio/ByteBuffer;
 
     shr-int/lit8 v3, v0, 0x1
@@ -165,7 +151,6 @@
 
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 10
     new-instance p1, Lcom/miui/filtersdk/filter/YUVBeautyFilter$1;
 
     invoke-direct {p1, p0, p2, p3}, Lcom/miui/filtersdk/filter/YUVBeautyFilter$1;-><init>(Lcom/miui/filtersdk/filter/YUVBeautyFilter;II)V
@@ -178,14 +163,12 @@
 .method public init()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->onInit()V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 2
     iput-object v0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->yuvTextureIds:[I
 
     const/4 v1, -0x1
@@ -198,7 +181,6 @@
 
     aput v1, v0, v2
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->initBeauty()V
 
     return-void
@@ -207,18 +189,15 @@
 .method public initBeautyProcessor(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->mBeautyProcessor:Lcom/miui/filtersdk/beauty/BeautyProcessor;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iput p1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mWindowWidth:I
 
-    .line 3
     iput p2, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mWindowHeight:I
 
     return-void
@@ -227,7 +206,6 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onDestroy()V
 
     return-void
@@ -236,7 +214,6 @@
 .method public onDrawFrame(ILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)I
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->yuvTextureIds:[I
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->onDrawFrame([ILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)I
@@ -249,15 +226,12 @@
 .method public onDrawFrame([ILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)I
     .locals 8
 
-    .line 2
     iget v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLProgId:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->runPendingOnDrawTasks()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->isInitialized()Z
 
     move-result v0
@@ -271,10 +245,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p2, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 6
     iget v2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribPosition:I
 
     const/4 v3, 0x2
@@ -289,27 +261,22 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 7
     iget p2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribPosition:I
 
     invoke-static {p2}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 8
     invoke-virtual {p3, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 9
     iget v2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribTextureCoordinate:I
 
     move-object v7, p3
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 10
     iget p2, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribTextureCoordinate:I
 
     invoke-static {p2}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 11
     aget p2, p1, v0
 
     const/16 p3, 0xde1
@@ -318,15 +285,12 @@
 
     const p2, 0x84c0
 
-    .line 12
     invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 13
     aget p2, p1, v0
 
     invoke-static {p3, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 14
     iget p2, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mGLUniformYTexture:I
 
     invoke-static {p2, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
@@ -334,27 +298,22 @@
     :cond_1
     const/4 p2, 0x1
 
-    .line 15
     aget v2, p1, p2
 
     if-eq v2, v1, :cond_2
 
     const v1, 0x84c1
 
-    .line 16
     invoke-static {v1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 17
     aget p1, p1, p2
 
     invoke-static {p3, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 18
     iget p1, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mGLUniformUVTexture:I
 
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 19
     :cond_2
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onDrawArraysPre()V
 
@@ -362,20 +321,16 @@
 
     const/4 p3, 0x4
 
-    .line 20
     invoke-static {p1, v0, p3}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 21
     iget p1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribPosition:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 22
     iget p1, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribTextureCoordinate:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 23
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onDrawArraysAfter()V
 
     return p2
@@ -388,7 +343,6 @@
 
     const-string v1, "precision highp float;                             \nvarying vec2 v_texCoord;                           \nuniform sampler2D y_texture;                       \nuniform sampler2D uv_texture;                      \nvoid main (void){                                  \n   float r, g, b, y, u, v;                         \n   y = texture2D(y_texture, v_texCoord).r;         \n   u = texture2D(uv_texture, v_texCoord).a - 0.5;  \n   v = texture2D(uv_texture, v_texCoord).r - 0.5;  \n   r = y + 1.402 * v;\n   g = y - 0.34414 * u - 0.71414 * v;\n   b = y + 1.772 * u;\n   gl_FragColor = vec4(r, g, b, 1.0);              \n}                                                  \n"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/miui/filtersdk/utils/OpenGlUtils;->loadProgram(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -397,14 +351,12 @@
 
     const-string v1, "a_position"
 
-    .line 2
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLAttribPosition:I
 
-    .line 3
     iget v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLProgId:I
 
     const-string v1, "y_texture"
@@ -415,7 +367,6 @@
 
     iput v0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mGLUniformYTexture:I
 
-    .line 4
     iget v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLProgId:I
 
     const-string v1, "uv_texture"
@@ -426,7 +377,6 @@
 
     iput v0, p0, Lcom/miui/filtersdk/filter/YUVBeautyFilter;->mGLUniformUVTexture:I
 
-    .line 5
     iget v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mGLProgId:I
 
     const-string v1, "a_texCoord"
@@ -439,7 +389,6 @@
 
     const/4 v0, 0x1
 
-    .line 6
     iput-boolean v0, p0, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->mIsInitialized:Z
 
     return-void

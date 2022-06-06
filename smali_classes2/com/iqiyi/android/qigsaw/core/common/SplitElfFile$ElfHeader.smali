@@ -87,22 +87,18 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
-    .line 3
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     const-wide/16 v0, 0x0
 
-    .line 4
     invoke-virtual {p1, v0, v1}, Ljava/nio/channels/FileChannel;->position(J)Ljava/nio/channels/FileChannel;
 
-    .line 5
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -111,7 +107,6 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
 
-    .line 6
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     const/4 v1, 0x0
@@ -148,7 +143,6 @@
 
     if-ne v2, v7, :cond_4
 
-    .line 7
     aget-byte v0, v0, v5
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -171,7 +165,6 @@
 
     invoke-static {v0, v6, v4, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile;->access$300(IIILjava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     const/4 v1, 0x5
@@ -198,7 +191,6 @@
 
     invoke-static {v0, v6, v4, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile;->access$300(IIILjava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     aget-byte v0, v0, v5
@@ -217,7 +209,6 @@
 
     move-result-object v0
 
-    .line 10
     iget-object v2, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     aget-byte v1, v2, v1
@@ -236,31 +227,26 @@
 
     const-string v1, "failed to read rest part of ehdr."
 
-    .line 11
     invoke-static {p1, v0, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile;->readUntilLimit(Ljava/nio/channels/FileChannel;Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
-    .line 12
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eType:S
 
-    .line 13
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eMachine:S
 
-    .line 14
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
 
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eVersion:I
 
-    .line 15
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +265,6 @@
 
     invoke-static {p1, v6, v6, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile;->access$300(IIILjava/lang/String;)V
 
-    .line 16
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eIndent:[B
 
     aget-byte p1, p1, v5
@@ -288,21 +273,18 @@
 
     if-ne p1, v4, :cond_2
 
-    .line 17
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eEntry:J
 
-    .line 18
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->ePhOff:J
 
-    .line 19
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v1
@@ -311,7 +293,6 @@
 
     goto :goto_2
 
-    .line 20
     :cond_2
     new-instance p1, Ljava/io/IOException;
 
@@ -337,7 +318,6 @@
 
     throw p1
 
-    .line 21
     :cond_3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
@@ -347,7 +327,6 @@
 
     iput-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eEntry:J
 
-    .line 22
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -356,7 +335,6 @@
 
     iput-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->ePhOff:J
 
-    .line 23
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -365,7 +343,6 @@
 
     iput-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eShOff:J
 
-    .line 24
     :goto_2
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
 
@@ -373,42 +350,36 @@
 
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eFlags:I
 
-    .line 25
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eEhSize:S
 
-    .line 26
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->ePhEntSize:S
 
-    .line 27
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->ePhNum:S
 
-    .line 28
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eShEntSize:S
 
-    .line 29
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
 
     iput-short p1, p0, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;->eShNum:S
 
-    .line 30
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result p1
@@ -417,7 +388,6 @@
 
     return-void
 
-    .line 31
     :cond_4
     new-instance p1, Ljava/io/IOException;
 
@@ -482,7 +452,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/common/SplitElfFile$ElfHeader;-><init>(Ljava/nio/channels/FileChannel;)V
 
     return-void

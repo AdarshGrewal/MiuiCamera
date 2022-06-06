@@ -14,19 +14,19 @@
 
 
 # static fields
-.field public static final miuix_animation_tag_foreground_color:I = 0x7f0a0289
+.field public static final miuix_animation_tag_foreground_color:I = 0x7f0a029a
 
-.field public static final miuix_animation_tag_init_layout:I = 0x7f0a028a
+.field public static final miuix_animation_tag_init_layout:I = 0x7f0a029b
 
-.field public static final miuix_animation_tag_is_dragging:I = 0x7f0a028b
+.field public static final miuix_animation_tag_is_dragging:I = 0x7f0a029c
 
-.field public static final miuix_animation_tag_listview_pos:I = 0x7f0a028c
+.field public static final miuix_animation_tag_listview_pos:I = 0x7f0a029d
 
-.field public static final miuix_animation_tag_set_height:I = 0x7f0a028d
+.field public static final miuix_animation_tag_set_height:I = 0x7f0a029e
 
-.field public static final miuix_animation_tag_set_width:I = 0x7f0a028e
+.field public static final miuix_animation_tag_set_width:I = 0x7f0a029f
 
-.field public static final miuix_animation_tag_touch_listener:I = 0x7f0a028f
+.field public static final miuix_animation_tag_touch_listener:I = 0x7f0a02a0
 
 
 # direct methods

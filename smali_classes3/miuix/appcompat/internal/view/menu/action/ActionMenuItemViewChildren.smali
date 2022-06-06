@@ -13,28 +13,22 @@
 .method public constructor <init>(Landroid/widget/LinearLayout;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 4
     invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 5
     sget v2, Lmiuix/appcompat/R$layout;->miuix_appcompat_action_menu_item_child_layout:I
 
     invoke-static {v0, v2, p1}, Landroid/widget/LinearLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 6
     sget v2, Lmiuix/appcompat/R$id;->action_menu_item_child_icon:I
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -45,7 +39,6 @@
 
     iput-object v2, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mImageView:Landroid/widget/ImageView;
 
-    .line 7
     sget v2, Lmiuix/appcompat/R$id;->action_menu_item_child_text:I
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -56,7 +49,6 @@
 
     iput-object v2, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
-    .line 8
     invoke-direct {p0, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->initConfiguration(Landroid/content/Context;)V
 
     new-array v0, v1, [Landroid/view/View;
@@ -65,7 +57,6 @@
 
     aput-object p1, v0, v1
 
-    .line 9
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -100,7 +91,6 @@
 .method private initConfiguration(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -119,14 +109,12 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
     const/4 v0, 0x0
@@ -135,7 +123,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
@@ -150,12 +137,10 @@
 .method public setEnabled(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
@@ -166,7 +151,6 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -175,7 +159,6 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -187,12 +170,10 @@
 .method public setSelected(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setSelected(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setSelected(Z)V
@@ -203,7 +184,6 @@
 .method public setText(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuItemViewChildren;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V

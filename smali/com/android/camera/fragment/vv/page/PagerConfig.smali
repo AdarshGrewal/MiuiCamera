@@ -10,7 +10,7 @@
 
 .field public static sMillisecondsPreInch:F = 60.0f
 
-.field public static sShowLog:Z = false
+.field public static sShowLog:Z
 
 
 # direct methods
@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public static getFlingThreshold()I
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sFlingThreshold:I
 
     return v0
@@ -41,7 +39,6 @@
 .method public static getMillisecondsPreInch()F
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sMillisecondsPreInch:F
 
     return v0
@@ -50,7 +47,6 @@
 .method public static isShowLog()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sShowLog:Z
 
     return v0
@@ -59,7 +55,6 @@
 .method public static setFlingThreshold(I)V
     .locals 0
 
-    .line 1
     sput p0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sFlingThreshold:I
 
     return-void
@@ -68,7 +63,6 @@
 .method public static setMillisecondsPreInch(F)V
     .locals 0
 
-    .line 1
     sput p0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sMillisecondsPreInch:F
 
     return-void
@@ -77,7 +71,6 @@
 .method public static setShowLog(Z)V
     .locals 0
 
-    .line 1
     sput-boolean p0, Lcom/android/camera/fragment/vv/page/PagerConfig;->sShowLog:Z
 
     return-void

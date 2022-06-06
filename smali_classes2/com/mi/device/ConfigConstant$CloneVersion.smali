@@ -29,5 +29,3 @@
 .field public static final OooO0o:Ljava/lang/String; = "1.53.1_8450"
 
 .field public static final OooO0o0:Ljava/lang/String; = "1.50_2622"
-
-.field public static final OooO0oO:Ljava/lang/String; = "1.54.3_8450"

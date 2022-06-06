@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/xiaomi/protocol/IImageReaderParameterSets$1;
 
     invoke-direct {v0}, Lcom/xiaomi/protocol/IImageReaderParameterSets$1;-><init>()V
@@ -55,35 +54,26 @@
 .method public constructor <init>(IIIIII)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->mPhysicCameraId:I
 
-    .line 4
     iput p1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->width:I
 
-    .line 5
     iput p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->height:I
 
-    .line 6
     iput p3, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->format:I
 
-    .line 7
     iput p4, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->maxImages:I
 
-    .line 8
     iput p5, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->imageType:I
 
-    .line 9
     iput p6, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->cameraType:I
 
     return-void
@@ -92,55 +82,46 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 11
     iput-boolean v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
     const/4 v1, -0x1
 
-    .line 12
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->mPhysicCameraId:I
 
-    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->width:I
 
-    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->height:I
 
-    .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->format:I
 
-    .line 16
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->maxImages:I
 
-    .line 17
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->imageType:I
 
-    .line 18
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -159,7 +140,6 @@
     :goto_0
     iput-boolean v1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
-    .line 19
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -174,14 +154,12 @@
     :goto_1
     iput-boolean v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->isParallel:Z
 
-    .line 20
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->cameraType:I
 
-    .line 21
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -204,15 +182,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p1, Lcom/xiaomi/protocol/IImageReaderParameterSets;
 
     if-eqz v0, :cond_1
 
-    .line 2
     check-cast p1, Lcom/xiaomi/protocol/IImageReaderParameterSets;
 
-    .line 3
     iget v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->imageType:I
 
     iget v1, p1, Lcom/xiaomi/protocol/IImageReaderParameterSets;->imageType:I
@@ -271,7 +246,6 @@
     :goto_0
     return p1
 
-    .line 4
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -283,7 +257,6 @@
 .method public getPhysicCameraId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->mPhysicCameraId:I
 
     return v0
@@ -292,7 +265,6 @@
 .method public isShouldHoldImages()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
     return v0
@@ -301,7 +273,6 @@
 .method public setPhysicCameraId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->mPhysicCameraId:I
 
     return-void
@@ -310,7 +281,6 @@
 .method public setShouldHoldImages(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
     return-void
@@ -319,7 +289,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/16 v1, 0x8
@@ -328,7 +297,6 @@
 
     iget v2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->width:I
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -409,7 +377,6 @@
 
     const-string v2, "IImageReaderParameterSets[ %d, %d, %d, %d, %s, %s, %s, %d]"
 
-    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -420,47 +387,38 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->width:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->height:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->format:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->maxImages:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 5
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->imageType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6
     iget-boolean p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->shouldHoldImages:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 7
     iget-boolean p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->isParallel:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 8
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->cameraType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 9
     iget p2, p0, Lcom/xiaomi/protocol/IImageReaderParameterSets;->mPhysicCameraId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

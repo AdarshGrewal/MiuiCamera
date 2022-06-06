@@ -33,7 +33,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -42,15 +41,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 3
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setBaselineAligned(Z)V
 
-    .line 4
     new-instance p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;
 
     invoke-direct {p1, p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;-><init>(Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;)V
@@ -59,7 +55,6 @@
 
     const/4 p1, 0x0
 
-    .line 5
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
     return-void
@@ -72,7 +67,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     instance-of p1, p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     if-eqz p1, :cond_0
@@ -134,7 +128,6 @@
 .method public computeTranslationY(FZZ)F
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->getCollapsedHeight()I
 
     move-result v0
@@ -191,15 +184,12 @@
 .method public filterLeftoverView(I)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 3
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     const/4 p1, 0x1
@@ -210,7 +200,6 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateDefaultLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object v0
@@ -221,7 +210,6 @@
 .method public bridge synthetic generateDefaultLayoutParams()Landroid/widget/LinearLayout$LayoutParams;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateDefaultLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object v0
@@ -232,7 +220,6 @@
 .method public generateDefaultLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
     .locals 2
 
-    .line 3
     new-instance v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     const/4 v1, -0x2
@@ -245,7 +232,6 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateLayoutParams(Landroid/util/AttributeSet;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object p1
@@ -256,7 +242,6 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 0
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object p1
@@ -267,7 +252,6 @@
 .method public bridge synthetic generateLayoutParams(Landroid/util/AttributeSet;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
-    .line 3
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateLayoutParams(Landroid/util/AttributeSet;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object p1
@@ -278,7 +262,6 @@
 .method public bridge synthetic generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/widget/LinearLayout$LayoutParams;
     .locals 0
 
-    .line 4
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object p1
@@ -289,7 +272,6 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
     .locals 2
 
-    .line 5
     new-instance v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -304,12 +286,10 @@
 .method public generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
     .locals 1
 
-    .line 6
     instance-of v0, p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 7
     new-instance v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     check-cast p1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
@@ -318,7 +298,6 @@
 
     return-object v0
 
-    .line 8
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateDefaultLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
@@ -330,14 +309,12 @@
 .method public generateOverflowButtonLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->generateDefaultLayoutParams()Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 2
     iput-boolean v1, v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$LayoutParams;->isOverflowButton:Z
 
     return-object v0
@@ -349,7 +326,6 @@
 .method public getPresenter()Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mPresenter:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 
     return-object v0
@@ -384,17 +360,14 @@
 
     add-int/lit8 v0, p1, -0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v2
@@ -407,7 +380,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     check-cast v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$ActionMenuChildView;
 
     invoke-interface {v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$ActionMenuChildView;->needsDividerAfter()Z
@@ -419,12 +391,10 @@
     :cond_0
     if-lez p1, :cond_1
 
-    .line 5
     instance-of p1, v1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$ActionMenuChildView;
 
     if-eqz p1, :cond_1
 
-    .line 6
     check-cast v1, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$ActionMenuChildView;
 
     invoke-interface {v1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$ActionMenuChildView;->needsDividerBefore()Z
@@ -440,7 +410,6 @@
 .method public initialize(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     return-void
@@ -449,7 +418,6 @@
 .method public invokeItem(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v1, 0x0
@@ -464,7 +432,6 @@
 .method public isOverflowReserved()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mReserveOverflow:Z
 
     return v0
@@ -473,17 +440,14 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mPresenter:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;->updateMenuView(Z)V
 
     :cond_0
@@ -493,10 +457,8 @@
 .method public onDetachedFromWindow()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mPresenter:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 
     const/4 v1, 0x0
@@ -509,7 +471,6 @@
 .method public onMeasure(II)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -518,12 +479,10 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, p1}, Landroid/widget/LinearLayout;->setMeasuredDimension(II)V
 
     return-void
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
@@ -533,21 +492,18 @@
 .method public onPageScrolled(IFZZ)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lmiuix/internal/util/DeviceHelper;->isFeatureWholeAnim()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p0, p2, p3, p4}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->computeAlpha(FZZ)F
 
     move-result p1
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p2, p3, p4}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->computeTranslationY(FZZ)F
 
@@ -557,7 +513,6 @@
 
     if-eqz p4, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getTranslationY()F
 
     move-result p2
@@ -568,11 +523,9 @@
 
     if-eqz p2, :cond_2
 
-    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setTranslationY(F)V
 
-    .line 6
     :cond_2
     iget-object p2, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mOpenCloseAnimator:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;
 
@@ -584,7 +537,6 @@
 .method public playCloseAnimator()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mOpenCloseAnimator:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;->close()V
@@ -595,7 +547,6 @@
 .method public playOpenAnimator()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mOpenCloseAnimator:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;->open()V
@@ -606,7 +557,6 @@
 .method public setOverflowReserved(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mReserveOverflow:Z
 
     return-void
@@ -615,7 +565,6 @@
 .method public setPresenter(Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->mPresenter:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 
     return-void

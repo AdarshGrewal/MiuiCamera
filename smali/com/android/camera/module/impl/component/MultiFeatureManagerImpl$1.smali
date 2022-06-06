@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onStateUpdate(Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;)V
     .locals 6
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$000(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$000(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;
@@ -56,7 +53,6 @@
 
     invoke-interface {v0, p1}, Lcom/google/android/play/core/listener/StateUpdatedListener;->onStateUpdate(Ljava/lang/Object;)V
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->moduleNames()Ljava/util/List;
 
@@ -70,7 +66,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$100(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -79,7 +74,6 @@
 
     if-nez v1, :cond_1
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     new-instance v2, Ljava/util/concurrent/ConcurrentHashMap;
@@ -88,7 +82,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$102(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/util/concurrent/ConcurrentHashMap;)Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
@@ -104,7 +97,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 8
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -113,7 +105,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$100(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -130,14 +121,12 @@
 
     invoke-virtual {v1, v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$200(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)V
 
     return-void
 
-    .line 11
     :cond_2
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
@@ -155,7 +144,6 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->status()I
 
     move-result v1
@@ -172,10 +160,8 @@
     :pswitch_1
     const-string p1, "CANCELING"
 
-    .line 13
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -193,10 +179,8 @@
     :pswitch_2
     const-string p1, "CANCELED"
 
-    .line 15
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$400(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)Ljava/lang/String;
@@ -207,7 +191,6 @@
 
     invoke-static {v0, p1, v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackFeatureInstallResult(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -220,7 +203,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/data/observeable/VMFeature;->updateState(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -233,20 +215,17 @@
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$500(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 20
     :pswitch_3
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->errorCode()I
 
     move-result p1
 
-    .line 21
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$400(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)Ljava/lang/String;
@@ -255,7 +234,6 @@
 
     invoke-static {v0, v1, p1}, Lcom/android/camera/statistic/CameraStatUtils;->trackFeatureInstallResult(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 22
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,7 +279,6 @@
     :goto_0
     move p1, v3
 
-    .line 23
     :cond_4
     :goto_1
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
@@ -316,7 +293,6 @@
 
     invoke-virtual {v1, v0, p1}, Lcom/android/camera/data/observeable/VMFeature;->updateState(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -325,14 +301,12 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/data/observeable/VMFeature;->removeFeature(Ljava/lang/String;)V
 
-    .line 25
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
-    invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$700(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$500(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 26
     :pswitch_5
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
@@ -344,7 +318,6 @@
 
     invoke-static {v0, p1, v1}, Lcom/android/camera/statistic/CameraStatUtils;->trackFeatureInstallResult(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 27
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -359,7 +332,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/data/observeable/VMFeature;->updateState(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 28
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -368,7 +340,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/data/observeable/VMFeature;->removeFeature(Ljava/lang/String;)V
 
-    .line 29
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1, v0}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$600(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;Ljava/lang/String;)V
@@ -378,12 +349,10 @@
     :pswitch_6
     const-string p1, "INSTALLING"
 
-    .line 30
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 31
     :pswitch_7
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
@@ -401,12 +370,10 @@
 
     const-string p1, "DOWNLOADED"
 
-    .line 32
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 33
     :pswitch_8
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
@@ -414,7 +381,6 @@
 
     move-result-wide v1
 
-    .line 34
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->bytesDownloaded()J
 
     move-result-wide v4
@@ -433,7 +399,6 @@
 
     move-result p1
 
-    .line 35
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {v1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -450,7 +415,6 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/android/camera/data/observeable/VMFeature;->updateState(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -472,10 +436,8 @@
     :pswitch_9
     const-string p1, "PENDING"
 
-    .line 37
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-static {p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;->access$300(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)Lcom/android/camera/data/observeable/VMFeature;
@@ -517,7 +479,6 @@
 .method public bridge synthetic onStateUpdate(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$1;->onStateUpdate(Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;)V

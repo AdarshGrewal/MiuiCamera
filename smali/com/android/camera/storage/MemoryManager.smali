@@ -23,7 +23,7 @@
 
 .field public static final SDCARD_SAVE_TASK_MEMORY_LIMIT_RATIO:F = 0.5f
 
-.field public static final TAG:Ljava/lang/String; = "MemoryManager"
+.field public static final TAG:Ljava/lang/String; = "CameraMemoryManager"
 
 
 # instance fields
@@ -41,19 +41,11 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -66,8 +58,7 @@
 .method private getBaseMemory()J
     .locals 4
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
@@ -83,7 +74,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/storage/MemoryManager;->mRuntime:Ljava/lang/Runtime;
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->totalMemory()J
@@ -119,14 +109,12 @@
 .method private getTotalUsedMemory()I
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/MemoryManager;->mRuntime:Ljava/lang/Runtime;
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->totalMemory()J
 
     move-result-wide v0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/storage/MemoryManager;->mRuntime:Ljava/lang/Runtime;
 
     invoke-virtual {v2}, Ljava/lang/Runtime;->freeMemory()J
@@ -135,7 +123,6 @@
 
     sub-long v4, v0, v2
 
-    .line 3
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,7 +167,6 @@
 .method private initLimit()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/storage/MemoryManager;->mMaxMemory:J
 
     invoke-direct {p0}, Lcom/android/camera/storage/MemoryManager;->getBaseMemory()J
@@ -189,7 +175,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUsePhoneStorage()Z
 
     move-result v2
@@ -204,7 +189,6 @@
 
     float-to-int v0, v0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
 
     goto :goto_0
@@ -218,17 +202,14 @@
 
     float-to-int v0, v0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
 
     const/high16 v1, 0x3c00000
 
     if-ge v1, v0, :cond_1
 
-    .line 5
     iput v1, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
 
-    .line 6
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
@@ -243,26 +224,25 @@
 
     iput v0, p0, Lcom/android/camera/storage/MemoryManager;->mSavedQueueMemoryLimit:I
 
-    .line 7
-    sget-object v0, Lcom/android/camera/storage/MemoryManager;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "initLimit: mSavedQueueMemoryLimit = "
 
-    const-string v2, "initLimit: mSavedQueueMemoryLimit = "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lcom/android/camera/storage/MemoryManager;->mSavedQueueMemoryLimit:I
 
-    iget v2, p0, Lcom/android/camera/storage/MemoryManager;->mSavedQueueMemoryLimit:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "CameraMemoryManager"
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -270,7 +250,6 @@
 .method private isReachedMemoryLimit()Z
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,7 +268,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/camera/storage/MemoryManager;->log(Ljava/lang/String;)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
     iget v1, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
@@ -310,13 +288,11 @@
 .method private log(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/Util;->sIsDumpLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
-    sget-object v0, Lcom/android/camera/storage/MemoryManager;->TAG:Ljava/lang/String;
+    const-string v0, "CameraMemoryManager"
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -329,7 +305,6 @@
 .method public addUsedMemory(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
     add-int/2addr v0, p1
@@ -342,7 +317,6 @@
 .method public getBurstDelay()I
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/MemoryManager;->isNeedSlowDown()Z
 
     move-result v0
@@ -357,7 +331,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
     iget v5, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
@@ -375,7 +348,6 @@
     :cond_0
     mul-int/lit8 v2, v5, 0x5
 
-    .line 3
     div-int/lit8 v2, v2, 0x6
 
     if-lt v0, v2, :cond_1
@@ -387,7 +359,6 @@
     :cond_1
     mul-int/lit8 v2, v5, 0x4
 
-    .line 4
     div-int/2addr v2, v4
 
     if-lt v0, v2, :cond_2
@@ -399,7 +370,6 @@
     :cond_2
     mul-int/2addr v5, v1
 
-    .line 5
     div-int/2addr v5, v3
 
     if-lt v0, v5, :cond_3
@@ -414,7 +384,6 @@
     :cond_4
     const/4 v1, 0x0
 
-    .line 6
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -438,9 +407,8 @@
 .end method
 
 .method public initMemory()V
-    .locals 4
+    .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/MemoryManager;->mRuntime:Ljava/lang/Runtime;
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
@@ -457,40 +425,35 @@
 
     float-to-int v0, v0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/storage/MemoryManager;->mMaxTotalMemory:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/storage/MemoryManager;->initLimit()V
 
-    .line 5
     invoke-static {p0}, Lcom/android/camera/storage/Storage;->setStorageListener(Lcom/android/camera/storage/Storage$StorageListener;)V
 
-    .line 6
-    sget-object v0, Lcom/android/camera/storage/MemoryManager;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "initMemory: maxMemory="
 
-    const-string v2, "initMemory: maxMemory="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lcom/android/camera/storage/MemoryManager;->mMaxMemory:J
 
-    iget-wide v2, p0, Lcom/android/camera/storage/MemoryManager;->mMaxMemory:J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "CameraMemoryManager"
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -498,8 +461,7 @@
 .method public isNeedSlowDown()Z
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result v0
 
@@ -509,7 +471,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
     iget v3, p0, Lcom/android/camera/storage/MemoryManager;->mSaveTaskMemoryLimit:I
@@ -527,7 +488,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
@@ -537,7 +497,6 @@
 
     if-lt v0, v3, :cond_0
 
-    .line 4
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -577,7 +536,6 @@
 .method public isNeedStopCapture()Z
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/storage/MemoryManager;->isReachedMemoryLimit()Z
 
     move-result v0
@@ -586,14 +544,12 @@
 
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mMaxTotalMemory:I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/storage/MemoryManager;->getTotalUsedMemory()I
 
     move-result v1
 
     if-le v0, v1, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/storage/Storage;->getLeftSpace()J
 
     move-result-wide v0
@@ -617,24 +573,23 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 4
-    sget-object v1, Lcom/android/camera/storage/MemoryManager;->TAG:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "isNeedStopCapture: needStop="
 
-    const-string v3, "isNeedStopCapture: needStop="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "CameraMemoryManager"
 
-    invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
     return v0
@@ -645,7 +600,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
@@ -660,7 +614,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -696,7 +649,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return v0
@@ -712,7 +664,6 @@
 .method public onStoragePathChanged()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/storage/MemoryManager;->initMemory()V
 
     return-void
@@ -721,7 +672,6 @@
 .method public reduceUsedMemory(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/storage/MemoryManager;->mSaverMemoryUse:I
 
     sub-int/2addr v0, p1

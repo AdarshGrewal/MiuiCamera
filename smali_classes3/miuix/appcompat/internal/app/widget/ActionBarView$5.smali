@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$5;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
-    .line 1
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$5;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-static {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$400(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;

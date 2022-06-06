@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$2;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onGlobalLayout()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$2;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-static {v0}, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->access$000(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Landroidx/recyclerview/widget/RecyclerView;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$2;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-static {v0}, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->access$000(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Landroidx/recyclerview/widget/RecyclerView;
@@ -80,7 +77,6 @@
 
     if-lez v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$2;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-static {v1}, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->access$000(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Landroidx/recyclerview/widget/RecyclerView;
@@ -95,7 +91,6 @@
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$2;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-static {v1}, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->access$000(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Landroidx/recyclerview/widget/RecyclerView;

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/miui/extravideo/common/MediaEncoderAsync;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$1;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$1;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaEncoderAsync$1;->this$0:Lcom/miui/extravideo/common/MediaEncoderAsync;
 
     invoke-static {v0}, Lcom/miui/extravideo/common/MediaEncoderAsync;->access$100(Lcom/miui/extravideo/common/MediaEncoderAsync;)Lcom/miui/extravideo/common/MediaEncoderAsync$EncodeUpdateListener;

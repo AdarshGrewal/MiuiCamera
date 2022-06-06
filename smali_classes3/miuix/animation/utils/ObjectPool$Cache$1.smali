@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/animation/utils/ObjectPool$Cache;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/utils/ObjectPool$Cache$1;->this$0:Lmiuix/animation/utils/ObjectPool$Cache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache$1;->this$0:Lmiuix/animation/utils/ObjectPool$Cache;
 
     invoke-virtual {v0}, Lmiuix/animation/utils/ObjectPool$Cache;->shrink()V

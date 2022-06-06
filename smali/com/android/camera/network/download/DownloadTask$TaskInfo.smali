@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/network/download/DownloadTask$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/network/download/DownloadTask$TaskInfo;-><init>()V
 
     return-void

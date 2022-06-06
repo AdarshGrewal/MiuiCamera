@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->single()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -38,10 +37,8 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Scheduler;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -52,7 +49,6 @@
 .method public createWorker()Lio/reactivex/Scheduler$Worker;
     .locals 2
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker;
 
     iget-object v1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
@@ -65,12 +61,10 @@
 .method public scheduleDirect(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
     .locals 1
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
@@ -78,12 +72,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/schedulers/ScheduledDirectTask;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/schedulers/ScheduledDirectTask;-><init>(Ljava/lang/Runnable;)V
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     check-cast p1, Ljava/util/concurrent/ExecutorService;
@@ -92,18 +84,15 @@
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {v0, p1}, Lio/reactivex/internal/schedulers/AbstractDirectTask;->setFuture(Ljava/util/concurrent/Future;)V
 
     return-object v0
 
-    .line 6
     :cond_0
     new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$BooleanRunnable;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$ExecutorWorker$BooleanRunnable;-><init>(Ljava/lang/Runnable;)V
 
-    .line 7
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
@@ -115,10 +104,8 @@
     :catch_0
     move-exception p1
 
-    .line 8
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 9
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object p1
@@ -127,25 +114,21 @@
 .method public scheduleDirect(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 2
 
-    .line 10
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
-    .line 11
     iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     instance-of v0, v0, Ljava/util/concurrent/ScheduledExecutorService;
 
     if-eqz v0, :cond_0
 
-    .line 12
     :try_start_0
     new-instance v0, Lio/reactivex/internal/schedulers/ScheduledDirectTask;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/schedulers/ScheduledDirectTask;-><init>(Ljava/lang/Runnable;)V
 
-    .line 13
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
@@ -154,7 +137,6 @@
 
     move-result-object p1
 
-    .line 14
     invoke-virtual {v0, p1}, Lio/reactivex/internal/schedulers/AbstractDirectTask;->setFuture(Ljava/util/concurrent/Future;)V
     :try_end_0
     .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
@@ -164,21 +146,17 @@
     :catch_0
     move-exception p1
 
-    .line 15
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 16
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object p1
 
-    .line 17
     :cond_0
     new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;-><init>(Ljava/lang/Runnable;)V
 
-    .line 18
     sget-object p1, Lio/reactivex/internal/schedulers/ExecutorScheduler;->HELPER:Lio/reactivex/Scheduler;
 
     new-instance v1, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedDispose;
@@ -189,7 +167,6 @@
 
     move-result-object p1
 
-    .line 19
     iget-object p2, v0, Lio/reactivex/internal/schedulers/ExecutorScheduler$DelayedRunnable;->timed:Lio/reactivex/internal/disposables/SequentialDisposable;
 
     invoke-virtual {p2, p1}, Lio/reactivex/internal/disposables/SequentialDisposable;->replace(Lio/reactivex/disposables/Disposable;)Z
@@ -200,25 +177,21 @@
 .method public schedulePeriodicallyDirect(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     instance-of v0, v0, Ljava/util/concurrent/ScheduledExecutorService;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
-    .line 3
     :try_start_0
     new-instance v7, Lio/reactivex/internal/schedulers/ScheduledDirectPeriodicTask;
 
     invoke-direct {v7, p1}, Lio/reactivex/internal/schedulers/ScheduledDirectPeriodicTask;-><init>(Ljava/lang/Runnable;)V
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/schedulers/ExecutorScheduler;->executor:Ljava/util/concurrent/Executor;
 
     move-object v0, p1
@@ -237,7 +210,6 @@
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {v7, p1}, Lio/reactivex/internal/schedulers/AbstractDirectTask;->setFuture(Ljava/util/concurrent/Future;)V
     :try_end_0
     .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
@@ -247,15 +219,12 @@
     :catch_0
     move-exception p1
 
-    .line 6
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 7
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object p1
 
-    .line 8
     :cond_0
     invoke-super/range {p0 .. p6}, Lio/reactivex/Scheduler;->schedulePeriodicallyDirect(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 

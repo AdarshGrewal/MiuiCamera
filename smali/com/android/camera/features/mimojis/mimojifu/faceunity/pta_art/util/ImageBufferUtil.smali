@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 
     const-string v0, "image null"
 
-    .line 1
     invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
@@ -54,12 +52,10 @@
 
     const-string/jumbo v0, "only support COLOR_FormatI420 and COLOR_FormatNV21"
 
-    .line 2
     invoke-static {v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 3
     :cond_1
     invoke-static/range {p0 .. p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->isImageFormatSupported(Landroid/media/Image;)Z
 
@@ -67,7 +63,6 @@
 
     if-nez v4, :cond_2
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,33 +88,27 @@
     :cond_2
     const/4 v4, 0x0
 
-    .line 5
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Landroid/media/Image;->getCropRect()Landroid/graphics/Rect;
 
     move-result-object v5
 
-    .line 6
     invoke-virtual/range {p0 .. p0}, Landroid/media/Image;->getFormat()I
 
     move-result v6
 
-    .line 7
     invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
-    .line 8
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
     move-result v8
 
-    .line 9
     invoke-virtual/range {p0 .. p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v9
 
-    .line 10
     sget v10, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->imageWidth:I
 
     if-ne v10, v7, :cond_3
@@ -131,7 +120,6 @@
     :cond_3
     mul-int v10, v7, v8
 
-    .line 11
     invoke-static {v6}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
 
     move-result v6
@@ -144,7 +132,6 @@
 
     sput-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->data:[B
 
-    .line 12
     aget-object v6, v9, v4
 
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getRowStride()I
@@ -155,10 +142,8 @@
 
     sput-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->rowData:[B
 
-    .line 13
     sput v7, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->imageWidth:I
 
-    .line 14
     sput v8, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->imageHeight:I
 
     :cond_4
@@ -168,7 +153,6 @@
 
     move v10, v6
 
-    .line 15
     :goto_0
     array-length v12, v9
 
@@ -231,7 +215,6 @@
 
     move v10, v4
 
-    .line 16
     :cond_a
     :goto_3
     aget-object v12, v9, v6
@@ -240,14 +223,12 @@
 
     move-result-object v12
 
-    .line 17
     aget-object v13, v9, v6
 
     invoke-virtual {v13}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v13
 
-    .line 18
     aget-object v14, v9, v6
 
     invoke-virtual {v14}, Landroid/media/Image$Plane;->getPixelStride()I
@@ -270,7 +251,6 @@
 
     shr-int v1, v8, v15
 
-    .line 19
     :try_start_1
     iget v4, v5, Landroid/graphics/Rect;->top:I
 
@@ -299,7 +279,6 @@
 
     if-ne v11, v4, :cond_c
 
-    .line 20
     sget-object v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->data:[B
 
     invoke-virtual {v12, v4, v10, v2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
@@ -319,7 +298,6 @@
 
     add-int/2addr v4, v15
 
-    .line 21
     sget-object v15, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->rowData:[B
 
     const/4 v0, 0x0
@@ -331,7 +309,6 @@
     :goto_6
     if-ge v0, v2, :cond_d
 
-    .line 22
     sget-object v15, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->data:[B
 
     sget-object v16, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->rowData:[B
@@ -354,7 +331,6 @@
 
     if-ge v3, v0, :cond_e
 
-    .line 23
     invoke-virtual {v12}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
@@ -397,19 +373,15 @@
     :catch_1
     move-object v0, v1
 
-    .line 24
     :goto_8
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->data:[B
 
     const/4 v0, 0x0
 
-    .line 25
     sput v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->imageWidth:I
 
-    .line 26
     sput v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->imageHeight:I
 
-    .line 27
     :cond_10
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->data:[B
 
@@ -421,7 +393,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/ImageBufferUtil;->getDataFromImage(Landroid/media/Image;I)[B
 
     move-result-object p0
@@ -432,7 +403,6 @@
 .method public static isImageFormatSupported(Landroid/media/Image;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/Image;->getFormat()I
 
     move-result p0

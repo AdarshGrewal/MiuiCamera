@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,9 +36,8 @@
 
     const/4 v3, 0x0
 
-    .line 1
     :try_start_0
-    invoke-static {p0}, LOooO00o/OooO0o0/OooO00o/OooO0o0;->OooO00o(Ljava/lang/String;)[[Ljava/security/cert/X509Certificate;
+    invoke-static {p0}, LOooO0O0/OooO0o0/OooO00o/OooO0o0;->OooO00o(Ljava/lang/String;)[[Ljava/security/cert/X509Certificate;
 
     move-result-object v4
     :try_end_0
@@ -47,7 +45,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 2
     array-length v5, v4
 
     if-eqz v5, :cond_5
@@ -58,7 +55,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -69,18 +65,15 @@
 
     const-string p1, "No certificates found for app."
 
-    .line 4
     invoke-static {v2, p1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v3
 
-    .line 5
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 6
     :cond_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -92,7 +85,6 @@
 
     return v0
 
-    .line 7
     :cond_2
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -100,7 +92,6 @@
 
     check-cast p0, Ljava/security/cert/X509Certificate;
 
-    .line 8
     array-length v1, v4
 
     move v5, v3
@@ -108,7 +99,6 @@
     :goto_0
     if-ge v5, v1, :cond_4
 
-    .line 9
     aget-object v6, v4, v5
 
     aget-object v6, v6, v3
@@ -136,12 +126,10 @@
 
     const-string p1, "There\'s an app certificate that doesn\'t sign the split."
 
-    .line 10
     invoke-static {v2, p1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v3
 
-    .line 11
     :cond_5
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -166,7 +154,6 @@
     :catch_0
     move-exception p1
 
-    .line 12
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -192,7 +179,6 @@
     :try_start_0
     const-string v0, "X509"
 
-    .line 1
     invoke-static {v0}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0
@@ -222,7 +208,6 @@
 
     const-string v1, "Cannot decode certificate."
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
@@ -233,7 +218,6 @@
 .method public static getAppSignature(Landroid/content/Context;)[Landroid/content/pm/Signature;
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -264,7 +248,6 @@
 .method public static validateSplit(Landroid/content/Context;Ljava/io/File;)Z
     .locals 5
 
-    .line 1
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SignatureValidator;->getAppSignature(Landroid/content/Context;)[Landroid/content/pm/Signature;
 
     move-result-object p0
@@ -277,13 +260,11 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     array-length v2, p0
 
     move v3, v0
@@ -293,14 +274,12 @@
 
     aget-object v4, p0, v3
 
-    .line 4
     invoke-static {v4}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SignatureValidator;->decodeCertificate(Landroid/content/pm/Signature;)Ljava/security/cert/X509Certificate;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 5
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
@@ -314,14 +293,12 @@
     :goto_1
     if-eqz p0, :cond_3
 
-    .line 6
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 7
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1

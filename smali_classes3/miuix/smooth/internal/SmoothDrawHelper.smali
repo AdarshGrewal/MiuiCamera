@@ -33,18 +33,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
-    .line 3
     iput v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 4
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -53,40 +49,34 @@
 
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
-    .line 5
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
-    .line 6
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 7
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
 
-    .line 8
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
-    .line 9
     new-instance v0, Lmiuix/smooth/SmoothPathProvider;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothPathProvider;-><init>()V
 
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
 
-    .line 10
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
@@ -101,20 +91,17 @@
 
     if-nez p3, :cond_0
 
-    .line 1
     iget-object p3, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
 
     invoke-virtual {p3, p2, p4, p5, p6}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;FFF)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p4, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
 
     invoke-virtual {p4, p2, p3, p5, p6}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;[FFF)V
 
-    .line 3
     :goto_0
     iget-object p2, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
 
@@ -130,19 +117,16 @@
 .method public drawMask(Landroid/graphics/Canvas;Landroid/graphics/Xfermode;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 2
     iget-object p2, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 3
     iget-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     const/4 p2, 0x0
@@ -155,7 +139,6 @@
 .method public drawStroke(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     if-eqz v0, :cond_0
@@ -170,7 +153,6 @@
 
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 2
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -187,10 +169,8 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
@@ -199,21 +179,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 5
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 6
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 7
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_1
@@ -223,7 +200,6 @@
 .method public getAlpha()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
@@ -236,7 +212,6 @@
 .method public getRadii()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mRadii:[F
 
     return-object v0
@@ -245,7 +220,6 @@
 .method public getRadius()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mRadius:F
 
     return v0
@@ -254,7 +228,6 @@
 .method public getSmoothPath(Landroid/graphics/Rect;)Landroid/graphics/Path;
     .locals 9
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     if-eqz v0, :cond_0
@@ -269,7 +242,6 @@
 
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 2
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -288,7 +260,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     int-to-float v0, v0
@@ -302,12 +273,10 @@
     :cond_1
     move v8, v1
 
-    .line 4
     new-instance v3, Landroid/graphics/Path;
 
     invoke-direct {v3}, Landroid/graphics/Path;-><init>()V
 
-    .line 5
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
@@ -330,7 +299,6 @@
 .method public getStrokeColor()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
     return v0
@@ -339,7 +307,6 @@
 .method public getStrokeWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     return v0
@@ -348,7 +315,6 @@
 .method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mLayer:Landroid/graphics/RectF;
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -379,7 +345,6 @@
 
     invoke-virtual {v0, v1, v3, v4, p1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 2
     iget p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     if-eqz p1, :cond_0
@@ -394,7 +359,6 @@
 
     iget p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 3
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result p1
@@ -411,7 +375,6 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 4
     iget p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     int-to-float p1, p1
@@ -425,7 +388,6 @@
     :cond_1
     move v9, v2
 
-    .line 5
     iget-object v4, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
 
     iget-object v5, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mLayer:Landroid/graphics/RectF;
@@ -444,17 +406,14 @@
 
     iput-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
 
-    .line 6
     iget-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
     if-eqz p1, :cond_2
 
-    .line 7
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
     goto :goto_1
 
-    .line 8
     :cond_2
     new-instance p1, Landroid/graphics/Path;
 
@@ -462,7 +421,6 @@
 
     iput-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
-    .line 9
     :goto_1
     iget-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
@@ -472,7 +430,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 10
     iget-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
@@ -487,7 +444,6 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -498,7 +454,6 @@
 .method public setRadii([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mRadii:[F
 
     return-void
@@ -507,7 +462,6 @@
 .method public setRadius(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mRadius:F
 
     return-void
@@ -516,7 +470,6 @@
 .method public setStrokeColor(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
     return-void
@@ -525,7 +478,6 @@
 .method public setStrokeWidth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     return-void

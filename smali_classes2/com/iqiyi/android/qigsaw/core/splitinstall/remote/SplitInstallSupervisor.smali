@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,14 +27,12 @@
 .method public static bundleErrorCode(I)Landroid/os/Bundle;
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "error_code"
 
-    .line 2
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     return-object v0
@@ -44,18 +41,15 @@
 .method public static createSessionId(Ljava/lang/String;)I
     .locals 5
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :try_start_0
     const-string p0, "MD5"
 
-    .line 6
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p0
@@ -77,7 +71,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     array-length v1, p0
@@ -86,7 +79,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 8
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -104,10 +96,8 @@
 
     const-string v4, "0"
 
-    .line 9
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 10
     :cond_0
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -119,7 +109,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -134,7 +123,6 @@
     :catch_0
     move-exception p0
 
-    .line 12
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "UnsupportedEncodingException"
@@ -146,7 +134,6 @@
     :catch_1
     move-exception p0
 
-    .line 13
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "NoSuchAlgorithmException"
@@ -167,7 +154,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -187,7 +173,6 @@
 
     check-cast v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,7 +205,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;->createSessionId(Ljava/lang/String;)I
 
     move-result v1
@@ -238,7 +222,6 @@
 
     const-string v0, "connectivity"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -249,14 +232,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result p0
@@ -274,7 +255,6 @@
 
     const-string v0, "connectivity"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -285,17 +265,14 @@
 
     if-eqz p0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getAllNetworkInfo()[Landroid/net/NetworkInfo;
 
     move-result-object p0
 
-    .line 3
     array-length v1, p0
 
     if-lez v1, :cond_1
 
-    .line 4
     array-length v1, p0
 
     move v2, v0
@@ -305,7 +282,6 @@
 
     aget-object v3, p0, v2
 
-    .line 5
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v3
@@ -341,7 +317,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -350,7 +325,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -370,12 +344,10 @@
 
     const-string v2, "module_name"
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -476,17 +448,14 @@
 .method public final startUninstall(Landroid/content/Context;)V
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitPendingUninstallManager;
 
     invoke-direct {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitPendingUninstallManager;-><init>()V
 
-    .line 2
     invoke-virtual {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitPendingUninstallManager;->readPendingUninstallSplits()Ljava/util/List;
 
     move-result-object v0
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;
 
     move-result-object v1
@@ -495,17 +464,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-interface {v1, p1, v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;->getSplitInfos(Landroid/content/Context;Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/common/ProcessUtil;->killAllOtherProcess(Landroid/content/Context;)V
 
-    .line 6
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -514,7 +480,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 7
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -533,7 +498,6 @@
 
     check-cast v2, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 8
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;->require()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitPathManager;
 
     move-result-object v3
@@ -542,14 +506,12 @@
 
     move-result-object v3
 
-    .line 9
     invoke-static {v3}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteFileSafely(Ljava/io/File;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 10
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -560,14 +522,12 @@
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 11
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -593,10 +553,8 @@
 
     const-string v2, "No splits need to uninstall!"
 
-    .line 13
     invoke-static {v1, v2, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 14
     :goto_1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;
 
@@ -604,14 +562,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 15
     invoke-interface {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;->getAllSplitInfo(Landroid/content/Context;)Ljava/util/Collection;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 16
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1

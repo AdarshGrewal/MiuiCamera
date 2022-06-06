@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,14 +19,12 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     new-instance v2, Landroid/view/animation/AnimationSet;
 
     const/4 v3, 0x1
 
     invoke-direct {v2, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 2
     array-length v4, v1
 
     const/4 v5, 0x0
@@ -63,7 +60,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v16, Landroid/view/animation/TranslateAnimation;
 
@@ -89,7 +85,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     new-instance v16, Landroid/view/animation/TranslateAnimation;
 
@@ -117,7 +112,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     new-instance v7, Landroid/view/animation/AlphaAnimation;
 
@@ -125,7 +119,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
     new-instance v7, Landroid/view/animation/AlphaAnimation;
 
@@ -136,7 +129,6 @@
 
     if-nez v6, :cond_4
 
-    .line 7
     invoke-virtual {v7, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     move v6, v3
@@ -144,15 +136,12 @@
     :cond_4
     const-wide/16 v8, 0xc8
 
-    .line 8
     invoke-virtual {v7, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 9
     sget-object v8, Lcom/android/camera/animation/AnimationDelegate;->DEFAULT_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v7, v8}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 10
     invoke-virtual {v2, v7}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
     add-int/lit8 v5, v5, 0x1
@@ -168,7 +157,6 @@
 
     const/4 v0, 0x0
 
-    .line 11
     invoke-static {v0, p0}, Lcom/android/camera/animation/FragmentAnimationFactory;->wrapperAnimation(Landroid/view/animation/Animation$AnimationListener;[I)Landroid/view/animation/Animation;
 
     move-result-object p0

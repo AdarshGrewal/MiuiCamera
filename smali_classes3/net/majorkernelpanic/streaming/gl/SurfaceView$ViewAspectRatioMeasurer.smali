@@ -28,17 +28,14 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/gl/SurfaceView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->this$0:Lnet/majorkernelpanic/streaming/gl/SurfaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredWidth:Ljava/lang/Integer;
 
-    .line 3
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredHeight:Ljava/lang/Integer;
 
     return-void
@@ -49,7 +46,6 @@
 .method public getAspectRatio()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->aspectRatio:D
 
     return-wide v0
@@ -58,19 +54,16 @@
 .method public getMeasuredHeight()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredHeight:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -84,19 +77,16 @@
 .method public getMeasuredWidth()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredWidth:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -110,7 +100,6 @@
 .method public measure(II)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->aspectRatio:D
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measure(IID)V
@@ -121,7 +110,6 @@
 .method public measure(IID)V
     .locals 6
 
-    .line 2
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -134,13 +122,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 4
     :goto_0
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -150,7 +136,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -163,14 +148,12 @@
 
     if-ne v0, p2, :cond_2
 
-    .line 6
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredWidth:Ljava/lang/Integer;
 
-    .line 7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -188,7 +171,6 @@
 
     mul-double/2addr v0, p3
 
-    .line 8
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide p1
@@ -201,7 +183,6 @@
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredWidth:Ljava/lang/Integer;
 
-    .line 9
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -229,7 +210,6 @@
 
     div-double/2addr p1, p3
 
-    .line 10
     invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide p1
@@ -242,7 +222,6 @@
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredHeight:Ljava/lang/Integer;
 
-    .line 11
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -272,14 +251,12 @@
 
     if-lez p2, :cond_5
 
-    .line 12
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredHeight:Ljava/lang/Integer;
 
-    .line 13
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -298,7 +275,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_5
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -306,7 +282,6 @@
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->measuredWidth:Ljava/lang/Integer;
 
-    .line 15
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -330,7 +305,6 @@
 .method public setAspectRatio(D)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lnet/majorkernelpanic/streaming/gl/SurfaceView$ViewAspectRatioMeasurer;->aspectRatio:D
 
     return-void

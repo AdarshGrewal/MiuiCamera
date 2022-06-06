@@ -75,19 +75,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->sessionId:I
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->moduleNames:Ljava/util/List;
 
-    .line 4
     iput-object p3, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->needInstalledSplits:Ljava/util/List;
 
-    .line 5
     iput-object p4, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->downloadRequests:Ljava/util/List;
 
     return-void
@@ -96,7 +91,6 @@
 .method public static transform2Bundle(Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;)Landroid/os/Bundle;
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -109,7 +103,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->status()I
 
     move-result v1
@@ -118,28 +111,24 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 3
     iget v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->errorCode:I
 
     const-string v2, "error_code"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 4
     iget-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->totalBytesToDownload:J
 
     const-string v3, "total_bytes_to_download"
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 5
     iget-wide v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->bytesDownloaded:J
 
     const-string v3, "bytes_downloaded"
 
     invoke-virtual {v0, v3, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 6
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->moduleNames()Ljava/util/List;
 
     move-result-object v1
@@ -150,14 +139,12 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 7
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->userConfirmationIntent:Landroid/app/PendingIntent;
 
     const-string v2, "user_confirmation_intent"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 8
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->splitFileIntents:Ljava/util/List;
 
     check-cast p0, Ljava/util/ArrayList;
@@ -182,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->moduleNames:Ljava/util/List;
 
     return-object v0
@@ -191,7 +177,6 @@
 .method public sessionId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->sessionId:I
 
     return v0
@@ -200,14 +185,12 @@
 .method public setBytesDownloaded(J)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->bytesDownloaded:J
 
     cmp-long v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 2
     iput-wide p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->bytesDownloaded:J
 
     :cond_0
@@ -217,7 +200,6 @@
 .method public setErrorCode(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->errorCode:I
 
     return-void
@@ -226,7 +208,6 @@
 .method public setSessionId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->sessionId:I
 
     return-void
@@ -243,7 +224,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->splitFileIntents:Ljava/util/List;
 
     return-void
@@ -252,12 +232,10 @@
 .method public setStatus(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->status:I
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iput p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->status:I
 
     :cond_0
@@ -267,7 +245,6 @@
 .method public setTotalBytesToDownload(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->totalBytesToDownload:J
 
     return-void
@@ -276,7 +253,6 @@
 .method public setUserConfirmationIntent(Landroid/app/PendingIntent;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->userConfirmationIntent:Landroid/app/PendingIntent;
 
     return-void
@@ -285,7 +261,6 @@
 .method public status()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallInternalSessionState;->status:I
 
     return v0

@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentDescription;-><init>()V
 
     return-void
@@ -38,19 +37,16 @@
 
     new-array v1, v1, [Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionItem;
 
-    .line 1
     new-instance v9, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionItem;
 
-    const v2, 0x7f1206cb
+    const v2, 0x7f12068f
 
-    .line 2
     invoke-virtual {v0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    const v2, 0x7f1206d1
+    const v2, 0x7f120695
 
-    .line 3
     invoke-virtual {v0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v8
@@ -77,9 +73,8 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f1206ce
+    const v4, 0x7f120692
 
-    .line 4
     invoke-virtual {v0, v4}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -98,7 +93,7 @@
 
     const v12, 0x7f11002d
 
-    const v14, 0x7f080181
+    const v14, 0x7f08017e
 
     const-string v15, ""
 
@@ -118,9 +113,8 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f1206d0
+    const v4, 0x7f120694
 
-    .line 5
     invoke-virtual {v0, v4}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -139,7 +133,7 @@
 
     const v6, 0x7f11002f
 
-    const v8, 0x7f080183
+    const v8, 0x7f080180
 
     const-string v9, ""
 
@@ -159,9 +153,8 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f1206cc
+    const v4, 0x7f120690
 
-    .line 6
     invoke-virtual {v0, v4}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -178,7 +171,7 @@
 
     const v6, 0x7f11002b
 
-    const v8, 0x7f08017f
+    const v8, 0x7f08017c
 
     const-string v9, ""
 
@@ -198,9 +191,8 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f1206cf
+    const v4, 0x7f120693
 
-    .line 7
     invoke-virtual {v0, v4}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -217,7 +209,7 @@
 
     const v6, 0x7f11002e
 
-    const v8, 0x7f080182
+    const v8, 0x7f08017f
 
     const-string v9, ""
 
@@ -237,9 +229,8 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f1206cd
+    const v4, 0x7f120691
 
-    .line 8
     invoke-virtual {v0, v4}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -256,7 +247,7 @@
 
     const v6, 0x7f11002c
 
-    const v8, 0x7f080180
+    const v8, 0x7f08017d
 
     const-string v9, ""
 
@@ -272,16 +263,14 @@
 
     new-instance v2, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionItem;
 
-    const v3, 0x7f1206c8
+    const v3, 0x7f12068c
 
-    .line 9
     invoke-virtual {v0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    const v3, 0x7f1206c9
+    const v3, 0x7f12068d
 
-    .line 10
     invoke-virtual {v0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -302,7 +291,6 @@
 
     aput-object v2, v1, v3
 
-    .line 11
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -319,22 +307,18 @@
 .method public initView(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/FragmentDescription;->initView(Landroid/view/View;)V
 
     const-string p1, "fastmotion_user_guide"
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mMistatsName:Ljava/lang/String;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f12024b
+    const v0, 0x7f12023b
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 4
     new-instance p1, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -347,12 +331,10 @@
 
     invoke-direct {p1, v0, v1}, Lcom/android/camera/fragment/fastmotion/FastMotionDescriptionAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/android/camera/fragment/fastmotion/FragmentFastMotionDescription$FastmotionDescriptionItemDecoration;

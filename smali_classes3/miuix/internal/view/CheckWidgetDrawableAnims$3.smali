@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/internal/view/CheckWidgetDrawableAnims;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/view/CheckWidgetDrawableAnims$3;->this$0:Lmiuix/internal/view/CheckWidgetDrawableAnims;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +42,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;
 
     invoke-virtual {p0, p1}, Lmiuix/internal/view/CheckWidgetDrawableAnims$3;->getValue(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;)F
@@ -56,7 +54,6 @@
 .method public getValue(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;)F
     .locals 0
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->getContentAlpha()F
 
     move-result p1
@@ -67,7 +64,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/internal/view/CheckWidgetDrawableAnims$3;->setValue(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;F)V
@@ -95,7 +91,6 @@
 
     move p2, v0
 
-    .line 2
     :cond_1
     invoke-virtual {p1, p2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->setContentAlpha(F)V
 

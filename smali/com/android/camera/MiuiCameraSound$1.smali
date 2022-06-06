@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/MiuiCameraSound;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/MiuiCameraSound$1;->this$0:Lcom/android/camera/MiuiCameraSound;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +82,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/MiuiCameraSound$PlayConfig;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/MiuiCameraSound$1;->accept(Lcom/android/camera/MiuiCameraSound$PlayConfig;)V

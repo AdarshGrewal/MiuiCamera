@@ -39,7 +39,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +51,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     iput v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
     return-void
@@ -63,7 +61,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
     return-void
@@ -72,7 +69,6 @@
 .method public animateSlide()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
     const/4 v1, 0x2
@@ -84,10 +80,8 @@
     :cond_0
     const/4 v0, 0x3
 
-    .line 2
     iput v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
-    .line 3
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -102,7 +96,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
     return-void
@@ -123,7 +116,6 @@
 
     move v5, p5
 
-    .line 1
     invoke-virtual/range {v0 .. v5}, Lcom/android/gallery3d/ui/BasicTexture;->draw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
 
     return-void
@@ -138,7 +130,6 @@
 
     move-object/from16 v2, p2
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
@@ -147,7 +138,6 @@
 
     sub-long/2addr v3, v5
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v5
@@ -160,15 +150,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 3
     invoke-virtual {v5}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->isNightPreviewAnimEnabled()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 4
-    invoke-virtual {v5}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->getCaptureExpTime()I
+    invoke-virtual {v5}, Lcom/android/camera2/vendortag/struct/MiviSuperNightData;->getNightCaptureAnimDuration()I
 
     move-result v5
 
@@ -177,7 +165,6 @@
     :cond_0
     move v5, v6
 
-    .line 5
     :goto_0
     iget v7, v0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
@@ -205,7 +192,6 @@
 
     return v6
 
-    .line 6
     :cond_2
     iget v7, v0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
@@ -228,9 +214,8 @@
 
     return v6
 
-    .line 7
     :cond_4
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v7
 
@@ -245,7 +230,6 @@
     :cond_5
     const v7, 0x3e99999a    # 0.3f
 
-    .line 8
     :goto_2
     iget v11, v0, Lcom/android/camera/CaptureAnimManager;->mAnimType:I
 
@@ -270,7 +254,6 @@
     :goto_3
     if-ne v11, v12, :cond_8
 
-    .line 9
     new-instance v3, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     iget v4, v0, Lcom/android/camera/CaptureAnimManager;->mX:F
@@ -310,14 +293,12 @@
 
     div-float/2addr v3, v4
 
-    .line 10
     invoke-static {v3, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v3
 
     sub-float/2addr v8, v3
 
-    .line 11
     new-instance v3, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     iget v4, v0, Lcom/android/camera/CaptureAnimManager;->mX:F
@@ -340,21 +321,18 @@
 
     invoke-interface {v1, v3}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 12
     invoke-interface/range {p1 .. p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 13
     invoke-interface/range {p1 .. p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v2
 
     invoke-virtual {v2, v8}, Lcom/android/camera/effect/GLCanvasState;->setBlendAlpha(F)V
 
-    .line 14
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     iget v3, v0, Lcom/android/camera/CaptureAnimManager;->mX:F
@@ -373,7 +351,6 @@
 
     float-to-int v3, v7
 
-    .line 15
     invoke-static {v3, v6, v6, v6}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v16
@@ -382,10 +359,8 @@
 
     invoke-direct/range {v11 .. v16}, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;-><init>(IIIII)V
 
-    .line 16
     invoke-interface {v1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 17
     invoke-interface/range {p1 .. p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v1
@@ -394,7 +369,6 @@
 
     goto :goto_4
 
-    .line 18
     :cond_9
     new-instance v3, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
@@ -418,7 +392,6 @@
 
     invoke-interface {v1, v3}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 19
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;
 
     iget v3, v0, Lcom/android/camera/CaptureAnimManager;->mX:F
@@ -437,7 +410,6 @@
 
     float-to-int v3, v7
 
-    .line 20
     invoke-static {v3, v6, v6, v6}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v16
@@ -446,7 +418,6 @@
 
     invoke-direct/range {v11 .. v16}, Lcom/android/camera/effect/draw_mode/DrawFillRectAttribute;-><init>(IIIII)V
 
-    .line 21
     invoke-interface {v1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
     :goto_4
@@ -459,7 +430,6 @@
 .method public drawPreview(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/gallery3d/ui/RawTexture;)V
     .locals 5
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     iget v1, p0, Lcom/android/camera/CaptureAnimManager;->mX:F
@@ -488,27 +458,22 @@
 .method public startAnimation(IIII)V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/CaptureAnimManager;->mAnimStartTime:J
 
-    .line 2
     iput p3, p0, Lcom/android/camera/CaptureAnimManager;->mDrawWidth:I
 
-    .line 3
     iput p4, p0, Lcom/android/camera/CaptureAnimManager;->mDrawHeight:I
 
     int-to-float p1, p1
 
-    .line 4
     iput p1, p0, Lcom/android/camera/CaptureAnimManager;->mX:F
 
     int-to-float p1, p2
 
-    .line 5
     iput p1, p0, Lcom/android/camera/CaptureAnimManager;->mY:F
 
     return-void

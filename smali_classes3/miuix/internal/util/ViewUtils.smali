@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,28 +19,24 @@
 .method public static containsPoint(Landroid/view/View;II)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
     if-le p1, v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getRight()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
     move-result p1
 
     if-le p2, p1, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result p0
@@ -62,14 +57,12 @@
 .method public static getBackgroundHeight(Landroid/view/View;)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result p0
@@ -85,14 +78,12 @@
 .method public static getBackgroundWidth(Landroid/view/View;)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result p0
@@ -108,7 +99,6 @@
 .method public static getContentRect(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getScrollX()I
 
     move-result v0
@@ -121,7 +111,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getScrollY()I
 
     move-result v0
@@ -134,7 +123,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -151,7 +139,6 @@
 
     iput v0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v0
@@ -176,7 +163,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -201,7 +187,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getBottom()I
 
     move-result p0
@@ -224,7 +209,6 @@
 .method public static isLayoutRtl(Landroid/view/View;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
 
     move-result p0
@@ -245,7 +229,6 @@
 .method public static isNightMode(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -254,7 +237,6 @@
 
     move-result-object p0
 
-    .line 2
     iget p0, p0, Landroid/content/res/Configuration;->uiMode:I
 
     and-int/lit8 p0, p0, 0x30
@@ -277,12 +259,10 @@
 .method public static layoutChildView(Landroid/view/ViewGroup;Landroid/view/View;IIII)V
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p0
@@ -301,7 +281,6 @@
 
     sub-int p4, p0, p2
 
-    .line 3
     :cond_1
     invoke-virtual {p1, v1, p3, p4, p5}, Landroid/view/View;->layout(IIII)V
 

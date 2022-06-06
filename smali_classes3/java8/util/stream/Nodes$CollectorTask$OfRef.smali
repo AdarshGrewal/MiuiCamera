@@ -45,7 +45,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/stream/Nodes$CollectorTask$OfRef$$Lambda$1;->lambdaFactory$(Ljava8/util/function/IntFunction;)Ljava8/util/function/LongFunction;
 
     move-result-object p2
@@ -62,7 +61,6 @@
 .method public static synthetic lambda$new$109(Ljava8/util/function/IntFunction;J)Ljava8/util/stream/Node$Builder;
     .locals 0
 
-    .line 1
     invoke-static {p1, p2, p0}, Ljava8/util/stream/Nodes;->builder(JLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$Builder;
 
     move-result-object p0
@@ -75,7 +73,6 @@
 .method public bridge synthetic doLeaf()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/Nodes$CollectorTask;->doLeaf()Ljava8/util/stream/Node;
 
     move-result-object v0
@@ -86,7 +83,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Nodes$CollectorTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/Nodes$CollectorTask;
 
     move-result-object p1

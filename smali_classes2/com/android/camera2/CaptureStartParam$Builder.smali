@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/android/camera/CameraSize;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera2/CaptureStartParam;
 
     const/4 v1, 0x0
@@ -42,7 +40,6 @@
 .method public build()Lcom/android/camera2/CaptureStartParam;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam$Builder;->mParameter:Lcom/android/camera2/CaptureStartParam;
 
     return-object v0
@@ -51,7 +48,6 @@
 .method public setPictureSize(Lcom/android/camera/CameraSize;)Lcom/android/camera2/CaptureStartParam$Builder;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam$Builder;->mParameter:Lcom/android/camera2/CaptureStartParam;
 
     new-instance v1, Lcom/android/camera/CameraSize;
@@ -66,7 +62,6 @@
 .method public setQuickViewParam(Lcom/android/camera2/QuickViewParam;)Lcom/android/camera2/CaptureStartParam$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam$Builder;->mParameter:Lcom/android/camera2/CaptureStartParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/CaptureStartParam;->access$202(Lcom/android/camera2/CaptureStartParam;Lcom/android/camera2/QuickViewParam;)Lcom/android/camera2/QuickViewParam;
@@ -77,7 +72,6 @@
 .method public setSatCameraId(I)Lcom/android/camera2/CaptureStartParam$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam$Builder;->mParameter:Lcom/android/camera2/CaptureStartParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/CaptureStartParam;->access$302(Lcom/android/camera2/CaptureStartParam;I)I

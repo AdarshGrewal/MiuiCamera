@@ -84,44 +84,32 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/view/menu/MenuBuilder;IIIILjava/lang/CharSequence;I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconResId:I
 
     const/16 v1, 0x10
 
-    .line 3
     iput v1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
-    .line 4
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
-    .line 5
     iput-boolean v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIsActionViewExpanded:Z
 
-    .line 6
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 7
     iput p3, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mId:I
 
-    .line 8
     iput p2, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mGroup:I
 
-    .line 9
     iput p4, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mCategoryOrder:I
 
-    .line 10
     iput p5, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mOrdering:I
 
-    .line 11
     iput-object p6, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitle:Ljava/lang/CharSequence;
 
-    .line 12
     iput p7, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     return-void
@@ -130,7 +118,6 @@
 .method public static synthetic access$000(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     return-object p0
@@ -141,7 +128,6 @@
 .method public actionFormatChanged()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->onItemActionRequestChanged(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)V
@@ -152,7 +138,6 @@
 .method public collapseActionView()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     and-int/lit8 v0, v0, 0x8
@@ -167,7 +152,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -177,7 +161,6 @@
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 3
     invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->collapseItemActionView(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Z
 
     move-result v0
@@ -199,7 +182,6 @@
 .method public expandActionView()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     and-int/lit8 v0, v0, 0x8
@@ -214,7 +196,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionExpand(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -224,7 +205,6 @@
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 3
     invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->expandItemActionView(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)Z
 
     move-result v0
@@ -245,7 +225,6 @@
 .method public getActionProvider()Landroid/view/ActionProvider;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Implementation should use getSupportActionProvider!"
@@ -258,20 +237,17 @@
 .method public getActionView()Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, p0}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
@@ -289,7 +265,6 @@
 .method public getAlphabeticShortcut()C
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutAlphabeticChar:C
 
     return v0
@@ -298,7 +273,6 @@
 .method public getCallback()Ljava/lang/Runnable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mItemCallback:Ljava/lang/Runnable;
 
     return-object v0
@@ -307,7 +281,6 @@
 .method public getGroupId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mGroup:I
 
     return v0
@@ -316,20 +289,17 @@
 .method public getIcon()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 2
     :cond_0
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconResId:I
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getResources()Landroid/content/res/Resources;
@@ -344,10 +314,8 @@
 
     const/4 v1, 0x0
 
-    .line 4
     iput v1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconResId:I
 
-    .line 5
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -361,7 +329,6 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIntent:Landroid/content/Intent;
 
     return-object v0
@@ -372,7 +339,6 @@
     .annotation runtime Landroid/view/ViewDebug$CapturedViewProperty;
     .end annotation
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mId:I
 
     return v0
@@ -381,7 +347,6 @@
 .method public getMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
     return-object v0
@@ -390,7 +355,6 @@
 .method public getNumericShortcut()C
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutNumericChar:C
 
     return v0
@@ -399,7 +363,6 @@
 .method public getOrder()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mCategoryOrder:I
 
     return v0
@@ -408,7 +371,6 @@
 .method public getOrdering()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mOrdering:I
 
     return v0
@@ -417,7 +379,6 @@
 .method public getShortcut()C
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutAlphabeticChar:C
 
     return v0
@@ -426,7 +387,6 @@
 .method public getShortcutLabel()Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getShortcut()C
 
     move-result v0
@@ -437,7 +397,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -457,12 +416,10 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object v0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->sSpaceShortcutLabel:Ljava/lang/String;
 
@@ -470,7 +427,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     sget-object v0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->sEnterShortcutLabel:Ljava/lang/String;
 
@@ -478,13 +434,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_3
     sget-object v0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->sDeleteShortcutLabel:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
     :goto_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -496,7 +450,6 @@
 .method public getSubMenu()Landroid/view/SubMenu;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mSubMenu:Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;
 
     return-object v0
@@ -505,7 +458,6 @@
 .method public getSupportActionProvider()Landroid/view/ActionProvider;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
     return-object v0
@@ -516,7 +468,6 @@
     .annotation runtime Landroid/view/ViewDebug$CapturedViewProperty;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitle:Ljava/lang/CharSequence;
 
     return-object v0
@@ -525,7 +476,6 @@
 .method public getTitleCondensed()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitleCondensed:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -544,21 +494,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-interface {p1}, Lmiuix/appcompat/internal/view/menu/MenuView$ItemView;->prefersCondensedTitle()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getTitleCondensed()Ljava/lang/CharSequence;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getTitle()Ljava/lang/CharSequence;
 
@@ -571,7 +518,6 @@
 .method public hasCollapsibleActionView()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     and-int/lit8 v0, v0, 0x8
@@ -596,7 +542,6 @@
 .method public hasSubMenu()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mSubMenu:Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;
 
     if-eqz v0, :cond_0
@@ -615,14 +560,12 @@
 .method public invoke()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -631,7 +574,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
@@ -647,24 +589,20 @@
 
     return v1
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mItemCallback:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return v1
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_3
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
@@ -687,10 +625,8 @@
 
     const-string v3, "Can\'t find activity to handle intent; ignoring"
 
-    .line 8
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
@@ -714,7 +650,6 @@
 .method public isActionButton()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     const/16 v1, 0x20
@@ -737,7 +672,6 @@
 .method public isActionViewExpanded()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIsActionViewExpanded:Z
 
     return v0
@@ -746,7 +680,6 @@
 .method public isCheckable()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     const/4 v1, 0x1
@@ -767,7 +700,6 @@
 .method public isChecked()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     const/4 v1, 0x2
@@ -790,7 +722,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -811,7 +742,6 @@
 .method public isExclusiveCheckable()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -832,7 +762,6 @@
 .method public isVisible()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
     const/4 v1, 0x1
@@ -847,7 +776,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v0, v0, 0x8
@@ -870,7 +798,6 @@
     :goto_0
     return v1
 
-    .line 3
     :cond_1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
@@ -890,7 +817,6 @@
 .method public requestsActionButton()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     const/4 v1, 0x1
@@ -911,7 +837,6 @@
 .method public requiresActionButton()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     const/4 v1, 0x2
@@ -934,7 +859,6 @@
 .method public setActionProvider(Landroid/view/ActionProvider;)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Implementation should use setSupportActionProvider!"
@@ -947,19 +871,16 @@
 .method public setActionView(I)Landroid/view/MenuItem;
     .locals 3
 
-    .line 6
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 7
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 8
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -978,17 +899,14 @@
 .method public setActionView(Landroid/view/View;)Landroid/view/MenuItem;
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionView:Landroid/view/View;
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -1001,10 +919,8 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
@@ -1016,10 +932,8 @@
 .method public setActionViewExpanded(Z)V
     .locals 1
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIsActionViewExpanded:Z
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1032,14 +946,12 @@
 .method public setAlphabeticShortcut(C)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutAlphabeticChar:C
 
     if-ne v0, p1, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
 
@@ -1047,7 +959,6 @@
 
     iput-char p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutAlphabeticChar:C
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1060,7 +971,6 @@
 .method public setCallback(Ljava/lang/Runnable;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mItemCallback:Ljava/lang/Runnable;
 
     return-object p0
@@ -1069,19 +979,16 @@
 .method public setCheckable(Z)Landroid/view/MenuItem;
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v1, v0, -0x2
 
     or-int/2addr p1, v1
 
-    .line 2
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     if-eq v0, p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1095,21 +1002,18 @@
 .method public setChecked(Z)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v0, v0, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->setExclusiveItemChecked(Landroid/view/MenuItem;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->setCheckedInt(Z)V
 
@@ -1120,7 +1024,6 @@
 .method public setCheckedInt(Z)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v1, v0, -0x3
@@ -1139,12 +1042,10 @@
     :goto_0
     or-int/2addr p1, v1
 
-    .line 2
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     if-eq v0, p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
@@ -1158,7 +1059,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     or-int/lit8 p1, p1, 0x10
@@ -1167,7 +1067,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
@@ -1175,7 +1074,6 @@
 
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
-    .line 3
     :goto_0
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
@@ -1189,7 +1087,6 @@
 .method public setExclusiveCheckable(Z)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v0, v0, -0x5
@@ -1216,13 +1113,10 @@
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconResId:I
 
-    .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1237,13 +1131,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconResId:I
 
-    .line 2
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
@@ -1254,7 +1145,6 @@
 .method public setIntent(Landroid/content/Intent;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mIntent:Landroid/content/Intent;
 
     return-object p0
@@ -1265,7 +1155,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     or-int/lit8 p1, p1, 0x20
@@ -1274,7 +1163,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
@@ -1289,7 +1177,6 @@
 .method public setMenuInfo(Landroid/view/ContextMenu$ContextMenuInfo;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenuInfo:Landroid/view/ContextMenu$ContextMenuInfo;
 
     return-void
@@ -1298,18 +1185,15 @@
 .method public setNumericShortcut(C)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     iget-char v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutNumericChar:C
 
     if-ne v0, p1, :cond_0
 
     return-object p0
 
-    .line 2
     :cond_0
     iput-char p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutNumericChar:C
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1322,7 +1206,6 @@
 .method public setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Implementation should use setSupportOnActionExpandListener!"
@@ -1335,7 +1218,6 @@
 .method public setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mClickListener:Landroid/view/MenuItem$OnMenuItemClickListener;
 
     return-object p0
@@ -1344,17 +1226,14 @@
 .method public setShortcut(CC)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-char p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutNumericChar:C
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result p1
 
     iput-char p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShortcutAlphabeticChar:C
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 p2, 0x0
@@ -1381,7 +1260,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1391,12 +1269,10 @@
 
     throw p1
 
-    .line 2
     :cond_1
     :goto_0
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->onItemActionRequestChanged(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)V
@@ -1407,7 +1283,6 @@
 .method public setShowAsActionFlags(I)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->setShowAsAction(I)V
 
     return-object p0
@@ -1416,10 +1291,8 @@
 .method public setSubMenu(Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mSubMenu:Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -1432,7 +1305,6 @@
 .method public setSupportActionProvider(Landroid/view/ActionProvider;)Landroid/view/MenuItem;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
     if-ne v0, p1, :cond_0
@@ -1442,19 +1314,15 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 2
     iput-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
 
-    .line 4
     :cond_1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mActionProvider:Landroid/view/ActionProvider;
 
-    .line 5
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v1, 0x1
@@ -1463,7 +1331,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 6
     new-instance v0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl$1;
 
     invoke-direct {v0, p0}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl$1;-><init>(Lmiuix/appcompat/internal/view/menu/MenuItemImpl;)V
@@ -1477,7 +1344,6 @@
 .method public setSupportOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mOnActionExpandListener:Landroid/view/MenuItem$OnActionExpandListener;
 
     return-object p0
@@ -1486,7 +1352,6 @@
 .method public setTitle(I)Landroid/view/MenuItem;
     .locals 1
 
-    .line 5
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
@@ -1507,22 +1372,18 @@
 .method public setTitle(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitle:Ljava/lang/CharSequence;
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->onItemsChanged(Z)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mSubMenu:Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
 
     :cond_0
@@ -1532,10 +1393,8 @@
 .method public setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitleCondensed:Ljava/lang/CharSequence;
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     const/4 v0, 0x0
@@ -1548,7 +1407,6 @@
 .method public setVisible(Z)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->setVisibleInt(Z)Z
 
     move-result p1
@@ -1566,7 +1424,6 @@
 .method public setVisibleInt(Z)Z
     .locals 3
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     and-int/lit8 v1, v0, -0x9
@@ -1585,7 +1442,6 @@
     :goto_0
     or-int/2addr p1, v1
 
-    .line 2
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mFlags:I
 
     if-eq v0, p1, :cond_1
@@ -1599,7 +1455,6 @@
 .method public shouldShowIcon()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getOptionalIconsVisible()Z
@@ -1612,7 +1467,6 @@
 .method public shouldShowShortcut()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->isShortcutsVisible()Z
@@ -1641,7 +1495,6 @@
 .method public showsTextAsAction()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mShowAsAction:I
 
     const/4 v1, 0x4
@@ -1664,7 +1517,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuItemImpl;->mTitle:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;

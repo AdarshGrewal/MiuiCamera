@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/slidingwidget/widget/SlidingLinearLayout;IIII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->this$0:Lmiuix/slidingwidget/widget/SlidingLinearLayout;
 
     iput p2, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->val$transientCount:I
@@ -51,7 +50,6 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     iget p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->val$transientCount:I
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->val$end:I
@@ -60,7 +58,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->this$0:Lmiuix/slidingwidget/widget/SlidingLinearLayout;
 
     iget v0, p0, Lmiuix/slidingwidget/widget/SlidingLinearLayout$3;->val$start:I

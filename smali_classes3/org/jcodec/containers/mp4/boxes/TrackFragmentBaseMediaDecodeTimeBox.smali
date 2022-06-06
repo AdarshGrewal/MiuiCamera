@@ -19,7 +19,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static synthetic access$000(Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     return-wide v0
@@ -37,7 +35,6 @@
 .method public static synthetic access$002(Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;J)J
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     return-wide p1
@@ -46,7 +43,6 @@
 .method public static copy(Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;)Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox$Factory;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox$Factory;
 
     invoke-direct {v0, p0}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox$Factory;-><init>(Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;)V
@@ -57,7 +53,6 @@
 .method public static createTrackFragmentBaseMediaDecodeTimeBox(J)Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -70,7 +65,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-wide p0, v0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     const-wide/32 v1, 0x7fffffff
@@ -81,7 +75,6 @@
 
     const/4 p0, 0x1
 
-    .line 3
     iput-byte p0, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->version:B
 
     :cond_0
@@ -101,15 +94,12 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-byte v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->version:B
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     long-to-int v0, v0
@@ -123,7 +113,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
@@ -131,7 +120,6 @@
     :goto_0
     return-void
 
-    .line 5
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -153,7 +141,6 @@
 .method public getBaseMediaDecodeTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     return-wide v0
@@ -162,15 +149,12 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-byte v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->version:B
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -186,7 +170,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
@@ -196,7 +179,6 @@
     :goto_0
     return-void
 
-    .line 5
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -210,7 +192,6 @@
 .method public setBaseMediaDecodeTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/TrackFragmentBaseMediaDecodeTimeBox;->baseMediaDecodeTime:J
 
     return-void

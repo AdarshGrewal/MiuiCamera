@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+.implements Lcom/android/camera/protocol/ModeProtocol$ZoomActive;
 
 
 # annotations
@@ -31,7 +32,10 @@
 .method public abstract enableStopButton(ZZ)V
 .end method
 
-.method public abstract pauseRecording()V
+.method public abstract forceSwitchFront()Z
+.end method
+
+.method public abstract isShowLightingView()Z
 .end method
 
 .method public abstract processingAudioCapture(Z)V
@@ -49,7 +53,10 @@
 .method public abstract processingLongExposeStart()V
 .end method
 
-.method public abstract processingMimojiCreate()V
+.method public abstract processingMimojiBack()V
+.end method
+
+.method public abstract processingMimojiPrepare()V
 .end method
 
 .method public abstract processingPause()V
@@ -76,16 +83,25 @@
 .method public abstract setBackgroundColor(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$BackgroundType;)V
 .end method
 
+.method public abstract setLightingViewStatus(Z)V
+.end method
+
 .method public abstract showDocumentReviewViews(Landroid/graphics/Bitmap;[FLandroid/util/Size;)V
 .end method
 
 .method public abstract showOrHideBottom(Z)V
 .end method
 
+.method public abstract showOrHideLightingView()Z
+.end method
+
 .method public abstract showOrHideLoadingProgress(ZZ)V
 .end method
 
 .method public abstract showOrHideMimojiProgress(Z)V
+.end method
+
+.method public abstract switchModeOrExternalTipLayout(Z)V
 .end method
 
 .method public abstract switchThumbnailFunction(Z)V

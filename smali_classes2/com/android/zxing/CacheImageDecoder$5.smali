@@ -35,7 +35,6 @@
 .method public constructor <init>(Lcom/android/zxing/CacheImageDecoder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/CacheImageDecoder$5;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/android/zxing/CacheImageDecoder$5;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     iget-wide v1, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mTimestamp:J
@@ -62,7 +60,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1, v0}, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->setImage(Lcom/android/zxing/CacheImageDecoder$ImageWrapper;)V
 
     return-object p1
@@ -76,7 +73,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/zxing/CacheImageDecoder$5;->apply(Lcom/android/zxing/CacheImageDecoder$FrameInfo;)Lcom/android/zxing/CacheImageDecoder$FrameInfo;

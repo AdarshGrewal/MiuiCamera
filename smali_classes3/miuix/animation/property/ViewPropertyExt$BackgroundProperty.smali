@@ -32,7 +32,6 @@
 
     const-string v0, "background"
 
-    .line 2
     invoke-direct {p0, v0}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -41,7 +40,6 @@
 .method public synthetic constructor <init>(Lmiuix/animation/property/ViewPropertyExt$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;-><init>()V
 
     return-void
@@ -52,17 +50,14 @@
 .method public getIntValue(Landroid/view/View;)I
     .locals 1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 3
     instance-of v0, p1, Landroid/graphics/drawable/ColorDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 4
     check-cast p1, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
@@ -80,7 +75,6 @@
 .method public bridge synthetic getIntValue(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->getIntValue(Landroid/view/View;)I
@@ -101,7 +95,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->getValue(Landroid/view/View;)F
@@ -114,7 +107,6 @@
 .method public setIntValue(Landroid/view/View;I)V
     .locals 0
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
     return-void
@@ -123,7 +115,6 @@
 .method public bridge synthetic setIntValue(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->setIntValue(Landroid/view/View;I)V
@@ -140,7 +131,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->setValue(Landroid/view/View;F)V

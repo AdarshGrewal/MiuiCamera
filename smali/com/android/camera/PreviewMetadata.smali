@@ -94,45 +94,38 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPreviewMeatadataList:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialPreviewMeatadataList:Ljava/util/List;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialDisposables:Ljava/util/List;
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
-    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -150,7 +143,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -180,7 +172,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -205,7 +196,6 @@
 .method public static synthetic access$000(Lcom/android/camera/PreviewMetadata;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
     return-object p0
@@ -214,7 +204,6 @@
 .method public static synthetic access$100(Lcom/android/camera/PreviewMetadata;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
     return-object p0
@@ -223,7 +212,6 @@
 .method private initMetadataFlowable()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPreviewMeatadataList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -235,7 +223,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -247,7 +235,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v2, Lcom/android/camera/PreviewMetadata$2;
 
@@ -261,12 +248,10 @@
 
     sget-object v3, Lcom/xiaomi/camera/rx/CameraSchedulers;->sCameraSetupScheduler:Lio/reactivex/Scheduler;
 
-    .line 3
     invoke-virtual {v2, v3}, Lio/reactivex/Flowable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    .line 4
     invoke-interface {v1}, Lcom/android/camera/IPreviewMetadataListener;->getSamplePeriod()J
 
     move-result-wide v3
@@ -277,7 +262,6 @@
 
     if-lez v3, :cond_1
 
-    .line 5
     invoke-interface {v1}, Lcom/android/camera/IPreviewMetadataListener;->getSamplePeriod()J
 
     move-result-wide v3
@@ -288,13 +272,11 @@
 
     move-result-object v2
 
-    .line 6
     :cond_1
     invoke-virtual {v2, v1}, Lio/reactivex/Flowable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    .line 7
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v3
@@ -303,41 +285,23 @@
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {v2}, Lio/reactivex/Flowable;->onTerminateDetach()Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    .line 9
-    sget-boolean v3, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0O0:Z
-
-    if-eqz v3, :cond_2
-
-    .line 10
-    invoke-virtual {v2, v1}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    .line 11
-    :cond_2
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/OooOOo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OooOOo;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/OooOo0o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooOo0o;
 
     invoke-virtual {v2, v1, v3}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    .line 12
-    :goto_1
     iget-object v2, p0, Lcom/android/camera/PreviewMetadata;->mPartialDisposables:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 13
-    :cond_3
+    :cond_2
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
     const-string v1, "<preview metadata> init metadata flowable"
@@ -350,7 +314,6 @@
 .method private initPartialMetadataFlowable()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialPreviewMeatadataList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -374,7 +337,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v2, Lcom/android/camera/PreviewMetadata$1;
 
@@ -388,12 +350,10 @@
 
     sget-object v3, Lcom/xiaomi/camera/rx/CameraSchedulers;->sCameraSetupScheduler:Lio/reactivex/Scheduler;
 
-    .line 3
     invoke-virtual {v2, v3}, Lio/reactivex/Flowable;->observeOn(Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    .line 4
     invoke-interface {v1}, Lcom/android/camera/IPreviewMetadataListener;->getSamplePeriod()J
 
     move-result-wide v3
@@ -404,7 +364,6 @@
 
     if-lez v3, :cond_1
 
-    .line 5
     invoke-interface {v1}, Lcom/android/camera/IPreviewMetadataListener;->getSamplePeriod()J
 
     move-result-wide v3
@@ -419,13 +378,11 @@
 
     move-result-object v2
 
-    .line 6
     :cond_1
     invoke-virtual {v2, v1}, Lio/reactivex/Flowable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    .line 7
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v3
@@ -434,26 +391,22 @@
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {v2}, Lio/reactivex/Flowable;->onTerminateDetach()Lio/reactivex/Flowable;
 
     move-result-object v2
 
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/OooOOoo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OooOOoo;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/OooOo0O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OooOo0O;
 
-    .line 9
     invoke-virtual {v2, v1, v3}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/PreviewMetadata;->mDisposables:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 11
     :cond_2
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
@@ -469,7 +422,6 @@
 .method public onPartialPreviewMetadata(Landroid/hardware/camera2/CaptureResult;)V
     .locals 6
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
     if-eqz v0, :cond_5
@@ -482,7 +434,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
@@ -506,12 +457,10 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 4
     instance-of v5, v3, Lio/reactivex/FlowableEmitter;
 
     if-eqz v5, :cond_2
 
-    .line 5
     move-object v4, v3
 
     check-cast v4, Lio/reactivex/FlowableEmitter;
@@ -521,7 +470,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
     invoke-interface {v4, p1}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
@@ -530,7 +478,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_4
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
@@ -562,7 +509,6 @@
 .method public bridge synthetic onPartialPreviewMetadata(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/PreviewMetadata;->onPartialPreviewMetadata(Landroid/hardware/camera2/CaptureResult;)V
@@ -573,7 +519,6 @@
 .method public onPreviewMetadata(Landroid/hardware/camera2/CaptureResult;)V
     .locals 6
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
     if-eqz v0, :cond_5
@@ -586,7 +531,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
@@ -610,12 +554,10 @@
     :cond_1
     const/4 v4, 0x0
 
-    .line 4
     instance-of v5, v3, Lio/reactivex/FlowableEmitter;
 
     if-eqz v5, :cond_2
 
-    .line 5
     move-object v4, v3
 
     check-cast v4, Lio/reactivex/FlowableEmitter;
@@ -625,7 +567,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
     invoke-interface {v4, p1}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
@@ -634,7 +575,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_4
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
@@ -666,7 +606,6 @@
 .method public bridge synthetic onPreviewMetadata(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/PreviewMetadata;->onPreviewMetadata(Landroid/hardware/camera2/CaptureResult;)V
@@ -685,22 +624,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
     const-string v1, "<preview metadata> register metadata listener"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPreviewMeatadataList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/PreviewMetadata;->initMetadataFlowable()V
 
@@ -718,22 +653,18 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 
     const-string v1, "<preview metadata> register partial metadata listener"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialPreviewMeatadataList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/PreviewMetadata;->initPartialMetadataFlowable()V
 
@@ -743,7 +674,6 @@
 .method public unregisterPreviewMetadata()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPreviewMeatadataList:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -754,12 +684,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPreviewMeatadataList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialPreviewMeatadataList:Ljava/util/List;
 
@@ -771,12 +699,10 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialPreviewMeatadataList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
@@ -788,12 +714,10 @@
 
     if-nez v0, :cond_2
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialFlowableEmitters:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialDisposables:Ljava/util/List;
 
@@ -805,12 +729,10 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mPartialDisposables:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
@@ -822,12 +744,10 @@
 
     if-nez v0, :cond_4
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mFlowableEmitters:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 11
     :cond_4
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mDisposables:Ljava/util/List;
 
@@ -839,12 +759,10 @@
 
     if-nez v0, :cond_5
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata;->mDisposables:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 13
     :cond_5
     sget-object v0, Lcom/android/camera/PreviewMetadata;->TAG:Ljava/lang/String;
 

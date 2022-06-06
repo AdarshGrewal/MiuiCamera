@@ -96,10 +96,8 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/FaceType;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/EnumMap;
 
     const-class v1, Lcom/android/camera/dualvideo/render/ContentType;
@@ -110,15 +108,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsPressedInGridWindow:Z
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,15 +136,12 @@
 
     const-string/jumbo v0, "shrink_group"
 
-    .line 6
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_GROUP:Ljava/lang/String;
 
     const-string/jumbo v0, "shrink_tag"
 
-    .line 7
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_TAG:Ljava/lang/String;
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,15 +164,12 @@
 
     const-string v0, "attri_group"
 
-    .line 9
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->CHANGE_ATTRI_ANIM_GROUP:Ljava/lang/String;
 
     const-string v0, "attri_tag"
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->CHANGE_ATTRI_ANIM_TAG:Ljava/lang/String;
 
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,10 +192,8 @@
 
     const-string/jumbo v0, "scale_tag"
 
-    .line 12
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SCALE_ANIM_TAG:Ljava/lang/String;
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,10 +216,8 @@
 
     const-string v0, "alpha_tag"
 
-    .line 14
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->ALPHA_ANIM_TAG:Ljava/lang/String;
 
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -255,32 +240,24 @@
 
     const-string/jumbo v0, "visible_group"
 
-    .line 16
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->VISIBLE_ANIM_GROUP:Ljava/lang/String;
 
     const-string/jumbo v0, "visible_tag"
 
-    .line 17
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->VISIBLE_ANIM_TAG:Ljava/lang/String;
 
-    .line 18
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 19
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mRenderLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 20
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mLastLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 21
     iput-object p3, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mFaceType:Lcom/android/camera/dualvideo/render/FaceType;
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 22
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
-    .line 23
     sget-object p1, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedType:Lcom/android/camera/dualvideo/util/SelectIndex;
@@ -291,7 +268,6 @@
 .method public static synthetic access$000(Lcom/android/camera/dualvideo/render/CameraItem;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderRect()Landroid/graphics/Rect;
 
     move-result-object p0
@@ -302,7 +278,6 @@
 .method public static synthetic access$100(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SCALE_ANIM_TAG:Ljava/lang/String;
 
     return-object p0
@@ -311,7 +286,6 @@
 .method public static synthetic access$1002(Lcom/android/camera/dualvideo/render/CameraItem;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsPressedInGridWindow:Z
 
     return p1
@@ -320,7 +294,6 @@
 .method public static synthetic access$1100(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->CHANGE_ATTRI_ANIM_TAG:Ljava/lang/String;
 
     return-object p0
@@ -329,7 +302,6 @@
 .method public static synthetic access$200(Lcom/android/camera/dualvideo/render/CameraItem;Landroid/graphics/Rect;F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->scale(Landroid/graphics/Rect;F)V
 
     return-void
@@ -338,7 +310,6 @@
 .method public static synthetic access$300(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->ALPHA_ANIM_TAG:Ljava/lang/String;
 
     return-object p0
@@ -347,7 +318,6 @@
 .method public static synthetic access$402(Lcom/android/camera/dualvideo/render/CameraItem;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
     return p1
@@ -356,7 +326,6 @@
 .method public static synthetic access$500(Lcom/android/camera/dualvideo/render/CameraItem;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->clampAlpha()V
 
     return-void
@@ -365,7 +334,6 @@
 .method public static synthetic access$602(Lcom/android/camera/dualvideo/render/CameraItem;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     return p1
@@ -374,7 +342,6 @@
 .method public static synthetic access$702(Lcom/android/camera/dualvideo/render/CameraItem;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     return p1
@@ -383,7 +350,6 @@
 .method public static synthetic access$800(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->VISIBLE_ANIM_TAG:Ljava/lang/String;
 
     return-object p0
@@ -392,7 +358,6 @@
 .method public static synthetic access$900(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_TAG:Ljava/lang/String;
 
     return-object p0
@@ -401,7 +366,6 @@
 .method private animShrink()V
     .locals 11
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,7 +388,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     const/high16 v1, 0x43480000    # 200.0f
@@ -433,7 +396,6 @@
 
     const/high16 v3, 0x447a0000    # 1000.0f
 
-    .line 3
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
@@ -448,7 +410,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_VALUE:Ljava/lang/String;
 
     invoke-static {v0}, Lmiuix/animation/Folme;->getValueTarget(Ljava/lang/Object;)Lmiuix/animation/ValueTarget;
@@ -463,7 +424,6 @@
 
     new-array v8, v7, [Ljava/lang/Object;
 
-    .line 5
     iget-object v9, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v9, v8, v6
@@ -474,7 +434,6 @@
 
     iget-object v9, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_GROUP:Ljava/lang/String;
 
-    .line 6
     invoke-interface {v8, v9}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v8
@@ -485,7 +444,6 @@
 
     aput-object v10, v9, v6
 
-    .line 7
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
@@ -504,7 +462,6 @@
 
     aput-object v3, v4, v7
 
-    .line 8
     new-instance v3, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v3}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -513,7 +470,6 @@
 
     aput v1, v8, v6
 
-    .line 9
     invoke-virtual {v3, v2, v8}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
@@ -524,23 +480,19 @@
 
     aput-object v3, v2, v6
 
-    .line 10
     invoke-virtual {v1, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    .line 11
     invoke-interface {v0, v4}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     goto :goto_0
 
-    .line 12
     :cond_0
     iput-boolean v7, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
-    .line 13
     new-instance v0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;
 
     invoke-direct {v0, p0}, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
@@ -549,7 +501,6 @@
 
     new-array v0, v7, [Ljava/lang/Object;
 
-    .line 14
     iget-object v8, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v8, v0, v6
@@ -560,7 +511,6 @@
 
     iget-object v8, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_GROUP:Ljava/lang/String;
 
-    .line 15
     invoke-interface {v0, v8}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -573,7 +523,6 @@
 
     const/4 v9, 0x0
 
-    .line 16
     invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v9
@@ -592,7 +541,6 @@
 
     aput-object v3, v4, v7
 
-    .line 17
     new-instance v3, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v3}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -601,7 +549,6 @@
 
     aput v1, v8, v6
 
-    .line 18
     invoke-virtual {v3, v2, v8}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
@@ -612,14 +559,12 @@
 
     aput-object v3, v2, v6
 
-    .line 19
     invoke-virtual {v1, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    .line 20
     invoke-interface {v0, v4}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     :goto_0
@@ -629,7 +574,6 @@
 .method private clampAlpha()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
     const/4 v1, 0x0
@@ -638,7 +582,6 @@
 
     if-gez v2, :cond_0
 
-    .line 2
     iput v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
     goto :goto_0
@@ -650,7 +593,6 @@
 
     if-lez v0, :cond_1
 
-    .line 3
     iput v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
     :cond_1
@@ -661,7 +603,6 @@
 .method private drawBlurCover(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -670,7 +611,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$render$FaceType:[I
 
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
@@ -701,7 +641,6 @@
 
     const-string p1, "drawBlurCover: face type error!!"
 
-    .line 3
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -709,14 +648,12 @@
     :cond_0
     const-string/jumbo v1, "r_b"
 
-    .line 4
     invoke-virtual {p2, v1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v1
 
     if-nez v1, :cond_3
 
-    .line 5
     invoke-virtual {p2, v4}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v1
@@ -726,14 +663,12 @@
     :cond_1
     const-string v1, "f_b"
 
-    .line 6
     invoke-virtual {p2, v1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {p2, v4}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
@@ -743,7 +678,6 @@
     :goto_0
     if-nez v1, :cond_4
 
-    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -766,7 +700,6 @@
 
     return-void
 
-    .line 9
     :cond_4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -780,7 +713,6 @@
 
     move-result-object p2
 
-    .line 10
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
@@ -795,7 +727,6 @@
 .method private drawDarkCorner(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -808,7 +739,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
@@ -816,14 +746,12 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v2, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-direct {v1, v2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 4
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -861,7 +789,6 @@
     :cond_2
     const-string v3, "d_c_t"
 
-    .line 5
     :goto_1
     invoke-virtual {p2, v3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
@@ -876,13 +803,11 @@
     :cond_3
     const-string v2, "d_c_b"
 
-    .line 6
     :goto_2
     invoke-virtual {p2, v2}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p2
 
-    .line 7
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -893,19 +818,16 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 8
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {v2, v3, v1}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
 
     invoke-interface {p1, v2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 9
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 10
     iget v0, v1, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p2}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -916,7 +838,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 11
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {v0, p2, v1}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
@@ -929,7 +850,6 @@
 .method private drawGridLine(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -942,7 +862,6 @@
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->isAnimating()Z
 
     move-result v1
@@ -961,7 +880,6 @@
     :cond_1
     return-void
 
-    .line 3
     :cond_2
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
@@ -969,7 +887,6 @@
 
     move-result-object v0
 
-    .line 4
     sget-object v1, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -992,10 +909,8 @@
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 5
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawHorizontalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
-    .line 6
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawVerticalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
     goto :goto_0
@@ -1003,18 +918,14 @@
     :cond_3
     const v1, 0x3eaaaaab
 
-    .line 7
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawHorizontalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
-    .line 8
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawVerticalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
     const v1, 0x3f2aaaab
 
-    .line 9
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawHorizontalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
-    .line 10
     invoke-static {p1, v0, v1}, Lcom/android/camera/dualvideo/render/RenderUtil;->drawVerticalLine(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;F)V
 
     :cond_4
@@ -1025,7 +936,6 @@
 .method private drawLabel(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -1036,12 +946,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->drawLabelLeftDown(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
@@ -1051,7 +959,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawTopCenter(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
 
     :cond_1
@@ -1062,7 +969,6 @@
 .method private drawLabelLeftDown(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -1075,10 +981,9 @@
 
     move-result-object v0
 
-    .line 2
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO0oo;
 
-    invoke-direct {v1, p0, p2, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/MiscTextureManager;Lcom/android/gallery3d/ui/GLCanvas;)V
+    invoke-direct {v1, p0, p2, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO0oo;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/MiscTextureManager;Lcom/android/gallery3d/ui/GLCanvas;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1088,7 +993,6 @@
 .method private drawPreview(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1097,7 +1001,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     invoke-interface {p1, v0}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
     return-void
@@ -1106,7 +1009,6 @@
 .method private drawScalingHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -1119,7 +1021,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
@@ -1158,7 +1059,6 @@
     :cond_1
     const-string v0, "exp"
 
-    .line 3
     invoke-direct {p0, p1, p2, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->drawScalingHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;Ljava/lang/String;)V
 
     goto :goto_0
@@ -1166,7 +1066,6 @@
     :cond_2
     const-string/jumbo v0, "shr"
 
-    .line 4
     invoke-direct {p0, p1, p2, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->drawScalingHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;Ljava/lang/String;)V
 
     :goto_0
@@ -1176,12 +1075,10 @@
 .method private drawScalingHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;Ljava/lang/String;)V
     .locals 2
 
-    .line 5
     invoke-virtual {p0, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->getScalingHandleArea(Lcom/android/camera/dualvideo/render/MiscTextureManager;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-virtual {p2, p3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
@@ -1198,21 +1095,18 @@
 .method private drawSelectedBorder(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-direct {v1, v0}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 3
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1250,13 +1144,11 @@
     :cond_1
     const-string/jumbo v0, "s_frame_s"
 
-    .line 4
     :goto_1
     invoke-virtual {p2, v0}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p2
 
-    .line 5
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {v0, p2, v1}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
@@ -1269,7 +1161,6 @@
 .method private drawSelectedFrame(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 6
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getSelectFrameAlpha()F
 
     move-result v0
@@ -1282,7 +1173,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -1292,7 +1182,6 @@
 
     move-result v0
 
-    .line 3
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v1
@@ -1305,36 +1194,30 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/effect/GLCanvasState;->setAlpha(F)V
 
-    .line 4
     sget-object v1, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
 
     move-result-object v1
 
-    .line 5
     new-instance v2, Landroid/graphics/Rect;
 
     iget-object v3, v1, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-direct {v2, v3}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 6
     invoke-direct {p0, p1, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->drawSelectedBorder(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
-    .line 7
     iget-object v3, v1, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     const-string/jumbo v3, "s_bg"
 
-    .line 8
     invoke-virtual {p2, v3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v3
 
-    .line 9
     iget v4, v2, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -1345,7 +1228,6 @@
 
     iput v4, v2, Landroid/graphics/Rect;->left:I
 
-    .line 10
     iget v4, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -1356,14 +1238,12 @@
 
     iput v4, v2, Landroid/graphics/Rect;->top:I
 
-    .line 11
     new-instance v4, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {v4, v3, v2}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
 
     invoke-interface {p1, v4}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 12
     sget-object v3, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$util$SelectIndex:[I
 
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
@@ -1389,7 +1269,6 @@
     :cond_1
     const-string/jumbo v3, "s_2"
 
-    .line 13
     invoke-virtual {p2, v3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v3
@@ -1399,12 +1278,10 @@
     :cond_2
     const-string/jumbo v3, "s_1"
 
-    .line 14
     invoke-virtual {p2, v3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v3
 
-    .line 15
     :goto_0
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -1412,7 +1289,6 @@
 
     invoke-virtual {v4}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 16
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v4
@@ -1423,12 +1299,10 @@
 
     invoke-virtual {v4, p2}, Lcom/android/camera/effect/GLCanvasState;->setTexMatrix([F)V
 
-    .line 17
     iget-object p2, v1, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-virtual {v2, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 18
     iget p2, v2, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -1439,7 +1313,6 @@
 
     iput p2, v2, Landroid/graphics/Rect;->left:I
 
-    .line 19
     iget p2, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v3}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -1450,21 +1323,18 @@
 
     iput p2, v2, Landroid/graphics/Rect;->top:I
 
-    .line 20
     new-instance p2, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {p2, v3, v2}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
 
     invoke-interface {p1, p2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 21
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p2
 
     invoke-virtual {p2}, Lcom/android/camera/effect/GLCanvasState;->popState()V
 
-    .line 22
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p1
@@ -1477,7 +1347,6 @@
 .method private drawSwitchHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -1498,13 +1367,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->getSwitchHandleArea(Lcom/android/camera/dualvideo/render/MiscTextureManager;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     const-string/jumbo v2, "s_c"
@@ -1525,7 +1392,6 @@
 .method private drawTopCenter(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -1538,10 +1404,9 @@
 
     move-result-object v0
 
-    .line 2
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO0oo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO;
 
-    invoke-direct {v1, p0, p2, p3, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000oo/OooO0oo;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/MiscTextureManager;ILcom/android/gallery3d/ui/GLCanvas;)V
+    invoke-direct {v1, p0, p2, p3, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000oo/OooO;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/MiscTextureManager;ILcom/android/gallery3d/ui/GLCanvas;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1551,7 +1416,6 @@
 .method private genPreviewAttri(Lcom/android/camera/dualvideo/render/RegionHelper;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -1560,7 +1424,6 @@
 
     move-result-object p1
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1569,12 +1432,10 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     new-instance v1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iget-object v2, v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
 
     move-result-object v3
@@ -1597,7 +1458,6 @@
 .method private getRenderRect()Landroid/graphics/Rect;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1606,7 +1466,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
@@ -1619,17 +1478,14 @@
 .method private getSelectFrameAlpha()F
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAlpha:F
 
     return v0
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/render/EaseOutAnim;->isFinished()Z
 
@@ -1637,19 +1493,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameDstAlpha:F
 
     iput v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAlpha:F
 
     const/4 v1, 0x0
 
-    .line 5
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
     return v0
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
@@ -1657,7 +1510,6 @@
 
     move-result v0
 
-    .line 7
     iget v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAlpha:F
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -1678,7 +1530,6 @@
 .method private needAnim(Lcom/android/camera/dualvideo/render/RegionHelper;)Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1687,14 +1538,12 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 2
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     invoke-direct {v1, v0}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v0
@@ -1703,7 +1552,6 @@
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {v1, p1}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -1716,7 +1564,6 @@
 .method private restoreAnimShrink()V
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1743,7 +1590,6 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_VALUE:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -1756,7 +1602,6 @@
 
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SHRINK_ANIM_GROUP:Ljava/lang/String;
 
-    .line 3
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
@@ -1769,7 +1614,6 @@
 
     aput-object v4, v2, v3
 
-    .line 4
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1788,7 +1632,6 @@
 
     const/4 v6, 0x6
 
-    .line 5
     invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
@@ -1799,7 +1642,6 @@
 
     aput-object v5, v0, v3
 
-    .line 6
     invoke-virtual {v4, v0}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
@@ -1808,7 +1650,6 @@
 
     aput-object v0, v2, v3
 
-    .line 7
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -1817,10 +1658,8 @@
 .method private scale(Landroid/graphics/Rect;F)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/dualvideo/render/RectUtil;->centerScale(Landroid/graphics/Rect;F)V
 
-    .line 2
     sget-object p2, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -1837,7 +1676,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/render/MiscTextureManager;ILcom/android/gallery3d/ui/GLCanvas;Ljava/lang/String;)V
     .locals 5
 
-    .line 1
     invoke-virtual {p1, p4}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v0
@@ -1846,7 +1684,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1872,7 +1709,6 @@
     :cond_0
     const/4 p4, 0x0
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v2
@@ -1881,7 +1717,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v2
@@ -1890,7 +1725,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v2
@@ -1904,7 +1738,6 @@
     :cond_1
     move p2, p4
 
-    .line 6
     :cond_2
     :goto_0
     invoke-interface {p3}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -1913,7 +1746,6 @@
 
     invoke-virtual {p4}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 7
     invoke-interface {p3}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p4
@@ -1924,7 +1756,6 @@
 
     invoke-virtual {p4, v2}, Lcom/android/camera/effect/GLCanvasState;->setTexMatrix([F)V
 
-    .line 8
     new-instance p4, Landroid/graphics/Rect;
 
     sget-object v2, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
@@ -1937,12 +1768,10 @@
 
     invoke-direct {p4, v2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 9
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexOrientation()I
 
     move-result p1
@@ -1965,16 +1794,13 @@
 
     const-string p1, "invalid orientation"
 
-    .line 11
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 12
     :cond_3
     iget p1, p4, Landroid/graphics/Rect;->right:I
 
-    .line 13
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result v1
@@ -1991,7 +1817,6 @@
 
     iget p2, p4, Landroid/graphics/Rect;->top:I
 
-    .line 14
     invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
 
     move-result p4
@@ -2008,28 +1833,23 @@
 
     sub-int/2addr p2, p4
 
-    .line 15
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result p4
 
-    .line 16
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result v1
 
-    .line 17
     invoke-static {p1, p2, p4, v1}, Lcom/android/camera/dualvideo/render/RectUtil;->createLTWH(IIII)Landroid/graphics/Rect;
 
     move-result-object v2
 
     goto :goto_1
 
-    .line 18
     :cond_4
     iget p1, p4, Landroid/graphics/Rect;->left:I
 
-    .line 19
     invoke-static {v3}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v1
@@ -2040,7 +1860,6 @@
 
     iget p2, p4, Landroid/graphics/Rect;->top:I
 
-    .line 20
     invoke-virtual {p4}, Landroid/graphics/Rect;->height()I
 
     move-result p4
@@ -2057,24 +1876,20 @@
 
     sub-int/2addr p2, p4
 
-    .line 21
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result p4
 
-    .line 22
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result v1
 
-    .line 23
     invoke-static {p1, p2, p4, v1}, Lcom/android/camera/dualvideo/render/RectUtil;->createLTWH(IIII)Landroid/graphics/Rect;
 
     move-result-object v2
 
     goto :goto_1
 
-    .line 24
     :cond_5
     iget p1, p4, Landroid/graphics/Rect;->left:I
 
@@ -2096,7 +1911,6 @@
 
     iget p4, p4, Landroid/graphics/Rect;->top:I
 
-    .line 25
     invoke-static {v3}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v1
@@ -2105,22 +1919,18 @@
 
     add-int/2addr p4, p2
 
-    .line 26
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result p2
 
-    .line 27
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result v1
 
-    .line 28
     invoke-static {p1, p4, p2, v1}, Lcom/android/camera/dualvideo/render/RectUtil;->createLTWH(IIII)Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 29
     :goto_1
     new-instance p1, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
@@ -2128,7 +1938,6 @@
 
     invoke-interface {p3, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 30
     invoke-interface {p3}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p1
@@ -2141,14 +1950,12 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/render/MiscTextureManager;Lcom/android/gallery3d/ui/GLCanvas;Ljava/lang/String;)V
     .locals 3
 
-    .line 31
     invoke-virtual {p1, p3}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 32
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2173,7 +1980,6 @@
 
     return-void
 
-    .line 33
     :cond_0
     invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -2181,7 +1987,6 @@
 
     invoke-virtual {p3}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 34
     invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p3
@@ -2196,7 +2001,6 @@
 
     invoke-virtual {p3, v1}, Lcom/android/camera/effect/GLCanvasState;->setAlpha(F)V
 
-    .line 35
     invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object p3
@@ -2207,7 +2011,6 @@
 
     invoke-virtual {p3, v1}, Lcom/android/camera/effect/GLCanvasState;->setTexMatrix([F)V
 
-    .line 36
     new-instance p3, Landroid/graphics/Rect;
 
     sget-object v1, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
@@ -2220,7 +2023,6 @@
 
     invoke-direct {p3, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 37
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexOrientation()I
 
     move-result p1
@@ -2241,7 +2043,6 @@
 
     goto :goto_0
 
-    .line 38
     :cond_1
     iget p1, p3, Landroid/graphics/Rect;->left:I
 
@@ -2255,7 +2056,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->left:I
 
-    .line 39
     iget p1, p3, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {v1}, Lcom/android/camera/Util;->dpToPixel(F)I
@@ -2272,7 +2072,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->top:I
 
-    .line 40
     iget p1, p3, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -2283,7 +2082,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->right:I
 
-    .line 41
     iget p1, p3, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -2294,7 +2092,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 42
     new-instance p1, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {p1, v0, p3}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
@@ -2303,7 +2100,6 @@
 
     goto :goto_0
 
-    .line 43
     :cond_2
     iget p1, p3, Landroid/graphics/Rect;->left:I
 
@@ -2317,7 +2113,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->left:I
 
-    .line 44
     iget p1, p3, Landroid/graphics/Rect;->bottom:I
 
     const v1, 0x408b851f    # 4.36f
@@ -2336,7 +2131,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->top:I
 
-    .line 45
     iget p1, p3, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -2347,7 +2141,6 @@
 
     iput p1, p3, Landroid/graphics/Rect;->right:I
 
-    .line 46
     iget p1, p3, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -2358,14 +2151,12 @@
 
     iput p1, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 47
     new-instance p1, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;
 
     invoke-direct {p1, v0, p3}, Lcom/android/camera/effect/draw_mode/DrawBasicTexAttribute;-><init>(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
 
     invoke-interface {p2, p1}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 48
     :goto_0
     invoke-interface {p2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -2379,7 +2170,6 @@
 .method public alphaInGridWindowFlag(Z)V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
     if-eqz p1, :cond_0
@@ -2400,7 +2190,6 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 2
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagDstAlpha:F
 
     goto :goto_1
@@ -2408,7 +2197,6 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 3
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagDstAlpha:F
 
     :goto_1
@@ -2418,7 +2206,6 @@
 .method public alphaInSelectedFrame(Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
 
     move-result-object v0
@@ -2431,7 +2218,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
@@ -2453,7 +2239,6 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 3
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameDstAlpha:F
 
     goto :goto_1
@@ -2461,7 +2246,6 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameDstAlpha:F
 
     :goto_1
@@ -2473,7 +2257,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->draw(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/ContentType;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
 
     return-void
@@ -2482,7 +2265,6 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/ContentType;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$render$ContentType:[I
 
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
@@ -2495,43 +2277,36 @@
 
     goto :goto_0
 
-    .line 3
     :pswitch_0
     invoke-direct {p0, p1, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawSwitchHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 4
     :pswitch_1
     invoke-direct {p0, p1, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawScalingHandle(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 5
     :pswitch_2
     invoke-direct {p0, p1, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawDarkCorner(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 6
     :pswitch_3
     invoke-direct {p0, p1, p3, p4}, Lcom/android/camera/dualvideo/render/CameraItem;->drawLabel(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;I)V
 
     goto :goto_0
 
-    .line 7
     :pswitch_4
     invoke-direct {p0, p1, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawSelectedFrame(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 8
     :pswitch_5
     invoke-direct {p0, p1, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->drawBlurCover(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/dualvideo/render/MiscTextureManager;)V
 
     goto :goto_0
 
-    .line 9
     :pswitch_6
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->drawPreview(Lcom/android/gallery3d/ui/GLCanvas;)V
 
@@ -2561,7 +2336,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     const/4 v1, 0x0
@@ -2576,14 +2350,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Lio/reactivex/SingleEmitter;->onSuccess(Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
@@ -2601,12 +2373,10 @@
 
     move-result-object v0
 
-    .line 4
     new-instance v3, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v3}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    .line 5
     iget-boolean v5, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     const/16 v6, 0x3e8
@@ -2617,7 +2387,6 @@
 
     new-array v5, v2, [F
 
-    .line 6
     fill-array-data v5, :array_1
 
     invoke-virtual {v3, v4, v5}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
@@ -2635,23 +2404,19 @@
 
     aput v8, v5, v1
 
-    .line 7
     invoke-virtual {v3, v4, v5}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move v4, v6
 
     move v6, v1
 
-    .line 8
     :goto_0
     iput-boolean v7, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
-    .line 9
     iput-boolean v7, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     new-array v5, v7, [Ljava/lang/Object;
 
-    .line 10
     iget-object v8, p0, Lcom/android/camera/dualvideo/render/CameraItem;->SCALE_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v8, v5, v1
@@ -2666,7 +2431,6 @@
 
     aput-object v9, v8, v1
 
-    .line 11
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -2685,7 +2449,6 @@
 
     aput-object v10, v9, v1
 
-    .line 12
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v10
@@ -2700,19 +2463,16 @@
 
     aput-object v11, v10, v1
 
-    .line 13
     invoke-virtual {v0, v10}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
 
     aput-object v0, v9, v2
 
-    .line 14
     invoke-interface {v5, v9}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     new-array v0, v7, [Ljava/lang/Object;
 
-    .line 15
     iget-object v5, p0, Lcom/android/camera/dualvideo/render/CameraItem;->ALPHA_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v5, v0, v1
@@ -2727,7 +2487,6 @@
 
     aput-object v9, v5, v1
 
-    .line 16
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -2744,7 +2503,6 @@
 
     aput-object v6, v5, v1
 
-    .line 17
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -2759,14 +2517,12 @@
 
     aput-object v6, v4, v1
 
-    .line 18
     invoke-virtual {v3, v4}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     aput-object p1, v5, v2
 
-    .line 19
     invoke-interface {v0, v5}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -2789,7 +2545,6 @@
 .method public getAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
     return v0
@@ -2798,7 +2553,6 @@
 .method public getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mFaceType:Lcom/android/camera/dualvideo/render/FaceType;
 
     return-object v0
@@ -2807,17 +2561,14 @@
 .method public getGridWindowFlagAlpha()F
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAlpha:F
 
     return v0
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/render/EaseOutAnim;->isFinished()Z
 
@@ -2825,19 +2576,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagDstAlpha:F
 
     iput v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAlpha:F
 
     const/4 v1, 0x0
 
-    .line 5
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
     return v0
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAnim:Lcom/android/camera/dualvideo/render/EaseOutAnim;
 
@@ -2845,7 +2593,6 @@
 
     move-result v0
 
-    .line 7
     iget v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowFlagAlpha:F
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -2866,7 +2613,6 @@
 .method public getGridWindowLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mGridWindowLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object v0
@@ -2875,7 +2621,6 @@
 .method public getLastRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mLastLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object v0
@@ -2884,7 +2629,6 @@
 .method public getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mDrawAttriList:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2899,7 +2643,6 @@
 .method public getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mRenderLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object v0
@@ -2908,7 +2651,6 @@
 .method public getScalingHandleArea(Lcom/android/camera/dualvideo/render/MiscTextureManager;)Landroid/graphics/Rect;
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/CameraItem$4;->$SwitchMap$com$android$camera$dualvideo$render$LayoutType:[I
 
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
@@ -2943,7 +2685,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
@@ -2953,14 +2694,12 @@
 
     const-string v1, "exp"
 
-    .line 3
     invoke-virtual {p1, v1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 4
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
@@ -2975,7 +2714,6 @@
 
     invoke-direct {v1, v3, v3, v2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 5
     iget-object p1, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     iget v0, p1, Landroid/graphics/Rect;->left:I
@@ -2986,7 +2724,6 @@
 
     const/16 p1, 0xa
 
-    .line 6
     invoke-virtual {v1, p1, p1}, Landroid/graphics/Rect;->offset(II)V
 
     return-object v1
@@ -3001,7 +2738,6 @@
 .method public getSelectedIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedType:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     return-object v0
@@ -3010,7 +2746,6 @@
 .method public getSwitchHandleArea(Lcom/android/camera/dualvideo/render/MiscTextureManager;)Landroid/graphics/Rect;
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -3019,12 +2754,10 @@
 
     const-string/jumbo v1, "s_c"
 
-    .line 2
     invoke-virtual {p1, v1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->getTexture(Ljava/lang/String;)Lcom/android/gallery3d/ui/BasicTexture;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object v1
@@ -3042,7 +2775,6 @@
     :cond_0
     const/16 v1, 0x64
 
-    .line 4
     :goto_0
     new-instance v2, Landroid/graphics/Rect;
 
@@ -3056,7 +2788,6 @@
 
     invoke-direct {v2, v3, v3, v4, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 5
     iget-object p1, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
 
     iget v0, p1, Landroid/graphics/Rect;->left:I
@@ -3069,7 +2800,6 @@
 
     add-int/2addr v1, p1
 
-    .line 6
     invoke-virtual {v2, p1, v1}, Landroid/graphics/Rect;->offset(II)V
 
     return-object v2
@@ -3078,7 +2808,6 @@
 .method public isAnimating()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     if-nez v0, :cond_1
@@ -3107,7 +2836,6 @@
 .method public isPressedInGridWindow()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsPressedInGridWindow:Z
 
     return v0
@@ -3116,7 +2844,6 @@
 .method public isVisible()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     return v0
@@ -3125,7 +2852,6 @@
 .method public onKeyDown()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     if-eqz v0, :cond_0
@@ -3139,17 +2865,14 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsPressedInGridWindow:Z
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->animShrink()V
 
     const-string v0, "CameraItem"
 
     const-string/jumbo v1, "onKeyDown: "
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3158,12 +2881,10 @@
 .method public onKeyUp()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsPressedInGridWindow:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/dualvideo/render/CameraItem;->restoreAnimShrink()V
 
     :cond_0
@@ -3171,7 +2892,6 @@
 
     const-string/jumbo v1, "onKeyUp: "
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -3180,7 +2900,6 @@
 .method public setLastRenderLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mLastLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-void
@@ -3189,7 +2908,6 @@
 .method public setRenderAttri(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;Lcom/android/camera/dualvideo/render/ContentType;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mDrawAttriList:Ljava/util/Map;
 
     invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -3200,14 +2918,12 @@
 .method public setRenderLayoutTypeWithAnim(Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/RegionHelper;Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mRenderLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
@@ -3215,14 +2931,11 @@
 
     return-void
 
-    .line 3
     :cond_1
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mLastLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mRenderLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3251,7 +2964,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-virtual {p0, p2, p3}, Lcom/android/camera/dualvideo/render/CameraItem;->updateRenderAttri(Lcom/android/camera/dualvideo/render/RegionHelper;Z)V
 
     return-void
@@ -3260,7 +2972,6 @@
 .method public setSelectTypeWithAnim(Lcom/android/camera/dualvideo/util/SelectIndex;Z)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3279,14 +2990,12 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedType:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -3294,25 +3003,21 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedType:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     return-void
 
-    .line 5
     :cond_1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedType:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     if-eqz p2, :cond_3
 
-    .line 6
     sget-object p2, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     if-ne p1, p2, :cond_2
 
     const/4 p1, 0x0
 
-    .line 7
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->alphaInSelectedFrame(Z)V
 
     goto :goto_0
@@ -3320,12 +3025,10 @@
     :cond_2
     const/4 p1, 0x1
 
-    .line 8
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->alphaInSelectedFrame(Z)V
 
     goto :goto_0
 
-    .line 9
     :cond_3
     sget-object p2, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -3333,7 +3036,6 @@
 
     const/4 p1, 0x0
 
-    .line 10
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAlpha:F
 
     goto :goto_0
@@ -3341,7 +3043,6 @@
     :cond_4
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 11
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mSelectedFrameAlpha:F
 
     :goto_0
@@ -3351,7 +3052,6 @@
 .method public setVisibilityWithAnim(ZZ)V
     .locals 7
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     if-ne v0, p1, :cond_0
@@ -3363,7 +3063,6 @@
 
     const/4 p2, 0x1
 
-    .line 2
     iput-boolean p2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
     if-eqz p1, :cond_1
@@ -3400,7 +3099,6 @@
     :goto_2
     new-array p1, p2, [Ljava/lang/Object;
 
-    .line 3
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/CameraItem;->VISIBLE_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v4, p1, v2
@@ -3411,7 +3109,6 @@
 
     iget-object v4, p0, Lcom/android/camera/dualvideo/render/CameraItem;->VISIBLE_ANIM_GROUP:Ljava/lang/String;
 
-    .line 4
     invoke-interface {p1, v4}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -3424,7 +3121,6 @@
 
     aput-object v6, v5, v2
 
-    .line 5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -3443,7 +3139,6 @@
 
     aput-object v5, v3, v2
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -3462,7 +3157,6 @@
 
     aput v0, v6, v2
 
-    .line 7
     invoke-virtual {v1, v5, v6}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
@@ -3475,19 +3169,16 @@
 
     aput-object v1, p2, v2
 
-    .line 8
     invoke-virtual {v0, p2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p2
 
     aput-object p2, v3, v4
 
-    .line 9
     invoke-interface {p1, v3}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     goto :goto_4
 
-    .line 10
     :cond_4
     iput-boolean p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsVisible:Z
 
@@ -3500,7 +3191,6 @@
     :cond_5
     const/4 p1, 0x0
 
-    .line 11
     :goto_3
     iput p1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mAlpha:F
 
@@ -3511,7 +3201,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3588,7 +3277,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->needAnim(Lcom/android/camera/dualvideo/render/RegionHelper;)Z
 
     move-result p2
@@ -3597,10 +3285,8 @@
 
     const/4 p2, 0x1
 
-    .line 2
     iput-boolean p2, p0, Lcom/android/camera/dualvideo/render/CameraItem;->mIsAnimating:Z
 
-    .line 3
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -3611,12 +3297,10 @@
 
     new-array v3, v2, [F
 
-    .line 4
     fill-array-data v3, :array_0
 
     invoke-virtual {v0, v1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
-    .line 5
     new-instance v1, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;
 
     invoke-direct {v1, p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;-><init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/RegionHelper;)V
@@ -3627,12 +3311,10 @@
 
     aput-object v1, p1, v3
 
-    .line 6
     invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     new-array p1, p2, [Ljava/lang/Object;
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->CHANGE_ATTRI_ANIM_VALUE:Ljava/lang/String;
 
     aput-object v1, p1, v3
@@ -3643,7 +3325,6 @@
 
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem;->CHANGE_ATTRI_ANIM_GROUP:Ljava/lang/String;
 
-    .line 8
     invoke-interface {p1, v1}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -3656,7 +3337,6 @@
 
     const/4 v4, 0x0
 
-    .line 9
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
@@ -3677,7 +3357,6 @@
 
     const/high16 v3, 0x447a0000    # 1000.0f
 
-    .line 10
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
@@ -3690,7 +3369,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem;->genPreviewAttri(Lcom/android/camera/dualvideo/render/RegionHelper;)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 

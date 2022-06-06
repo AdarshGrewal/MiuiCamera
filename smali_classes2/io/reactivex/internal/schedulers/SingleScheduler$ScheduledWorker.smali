@@ -26,13 +26,10 @@
 .method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Scheduler$Worker;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->executor:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 3
     new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
@@ -47,17 +44,14 @@
 .method public dispose()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->disposed:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->disposed:Z
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->tasks:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->dispose()V
@@ -69,7 +63,6 @@
 .method public isDisposed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->disposed:Z
 
     return v0
@@ -78,30 +71,25 @@
 .method public schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->disposed:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/schedulers/ScheduledRunnable;
 
     iget-object v1, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->tasks:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-direct {v0, p1, v1}, Lio/reactivex/internal/schedulers/ScheduledRunnable;-><init>(Ljava/lang/Runnable;Lio/reactivex/internal/disposables/DisposableContainer;)V
 
-    .line 5
     iget-object p1, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->tasks:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -112,7 +100,6 @@
 
     if-gtz p1, :cond_1
 
-    .line 6
     :try_start_0
     iget-object p1, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->executor:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -122,7 +109,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object p1, p0, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->executor:Ljava/util/concurrent/ScheduledExecutorService;
 
@@ -130,7 +116,6 @@
 
     move-result-object p1
 
-    .line 8
     :goto_0
     invoke-virtual {v0, p1}, Lio/reactivex/internal/schedulers/ScheduledRunnable;->setFuture(Ljava/util/concurrent/Future;)V
     :try_end_0
@@ -141,13 +126,10 @@
     :catch_0
     move-exception p1
 
-    .line 9
     invoke-virtual {p0}, Lio/reactivex/internal/schedulers/SingleScheduler$ScheduledWorker;->dispose()V
 
-    .line 10
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 11
     sget-object p1, Lio/reactivex/internal/disposables/EmptyDisposable;->INSTANCE:Lio/reactivex/internal/disposables/EmptyDisposable;
 
     return-object p1

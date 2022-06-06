@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/android/camera/customization/PreferenceCustomSound;Landroid/content/Context;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/customization/PreferenceCustomSound$MyGridLayoutManager;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;
 
-    .line 2
     invoke-direct {p0, p2, p3}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
 
     return-void

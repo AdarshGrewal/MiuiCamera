@@ -8,17 +8,16 @@
 # instance fields
 .field public final synthetic a:Landroid/content/Context;
 
-.field public final synthetic b:Lcom/xiaomi/onetrack/api/f;
+.field public final synthetic b:Lcom/xiaomi/onetrack/a/f;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/xiaomi/onetrack/api/f;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/xiaomi/onetrack/a/f;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->b:Lcom/xiaomi/onetrack/api/f;
+    iput-object p2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->b:Lcom/xiaomi/onetrack/a/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,26 +31,27 @@
 
     const-string v0, "CrashAnalysis"
 
-    .line 1
     :try_start_0
     new-instance v1, Lcom/xiaomi/onetrack/CrashAnalysis;
 
     iget-object v2, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->a:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->b:Lcom/xiaomi/onetrack/api/f;
+    iget-object v3, p0, Lcom/xiaomi/onetrack/CrashAnalysis$1;->b:Lcom/xiaomi/onetrack/a/f;
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/xiaomi/onetrack/CrashAnalysis;-><init>(Landroid/content/Context;Lcom/xiaomi/onetrack/api/f;Lcom/xiaomi/onetrack/CrashAnalysis$1;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/xiaomi/onetrack/CrashAnalysis;-><init>(Landroid/content/Context;Lcom/xiaomi/onetrack/a/f;Lcom/xiaomi/onetrack/CrashAnalysis$1;)V
 
-    .line 2
+    const-string v2, "CrashAnalysis create success"
+
+    invoke-static {v0, v2}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-static {v1}, Lcom/xiaomi/onetrack/CrashAnalysis;->a(Lcom/xiaomi/onetrack/CrashAnalysis;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 3
     invoke-static {v1}, Lcom/xiaomi/onetrack/CrashAnalysis;->b(Lcom/xiaomi/onetrack/CrashAnalysis;)V
 
     goto :goto_0
@@ -59,8 +59,7 @@
     :cond_0
     const-string v1, "no crash file found"
 
-    .line 4
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/h/q;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -69,7 +68,6 @@
     :catchall_0
     move-exception v1
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +86,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/h/q;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

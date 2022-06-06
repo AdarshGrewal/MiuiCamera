@@ -13,12 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x3a
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -27,7 +25,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -36,7 +33,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
@@ -48,10 +44,8 @@
     :cond_0
     const-string v0, ""
 
-    .line 5
     iput-object v0, p0, Lcom/adobe/xmp/impl/QName;->prefix:Ljava/lang/String;
 
-    .line 6
     iput-object p1, p0, Lcom/adobe/xmp/impl/QName;->localName:Ljava/lang/String;
 
     :goto_0
@@ -61,13 +55,10 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput-object p1, p0, Lcom/adobe/xmp/impl/QName;->prefix:Ljava/lang/String;
 
-    .line 9
     iput-object p2, p0, Lcom/adobe/xmp/impl/QName;->localName:Ljava/lang/String;
 
     return-void
@@ -78,7 +69,6 @@
 .method public getLocalName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/QName;->localName:Ljava/lang/String;
 
     return-object v0
@@ -87,7 +77,6 @@
 .method public getPrefix()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/QName;->prefix:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +85,6 @@
 .method public hasPrefix()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/QName;->prefix:Ljava/lang/String;
 
     if-eqz v0, :cond_0

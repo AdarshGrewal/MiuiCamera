@@ -55,7 +55,6 @@
 
     const/16 v0, 0x9c4
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -76,7 +75,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;-><init>(Lcom/bumptech/glide/load/model/ModelCache;)V
 
     return-void
@@ -94,10 +92,8 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->modelCache:Lcom/bumptech/glide/load/model/ModelCache;
 
     return-void
@@ -120,14 +116,12 @@
         }
     .end annotation
 
-    .line 2
     iget-object p2, p0, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->modelCache:Lcom/bumptech/glide/load/model/ModelCache;
 
     if-eqz p2, :cond_1
 
     const/4 p3, 0x0
 
-    .line 3
     invoke-virtual {p2, p1, p3, p3}, Lcom/bumptech/glide/load/model/ModelCache;->get(Ljava/lang/Object;II)Ljava/lang/Object;
 
     move-result-object p2
@@ -136,7 +130,6 @@
 
     if-nez p2, :cond_0
 
-    .line 4
     iget-object p2, p0, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->modelCache:Lcom/bumptech/glide/load/model/ModelCache;
 
     invoke-virtual {p2, p1, p3, p3, p1}, Lcom/bumptech/glide/load/model/ModelCache;->put(Ljava/lang/Object;IILjava/lang/Object;)V
@@ -146,7 +139,6 @@
     :cond_0
     move-object p1, p2
 
-    .line 5
     :cond_1
     :goto_0
     sget-object p2, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->TIMEOUT:Lcom/bumptech/glide/load/Option;
@@ -161,7 +153,6 @@
 
     move-result p2
 
-    .line 6
     new-instance p3, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     new-instance p4, Lcom/bumptech/glide/load/data/HttpUrlFetcher;
@@ -176,7 +167,6 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/bumptech/glide/load/model/GlideUrl;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->buildLoadData(Lcom/bumptech/glide/load/model/GlideUrl;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -197,7 +187,6 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/bumptech/glide/load/model/GlideUrl;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->handles(Lcom/bumptech/glide/load/model/GlideUrl;)Z

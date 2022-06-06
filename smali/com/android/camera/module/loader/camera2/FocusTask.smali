@@ -43,8 +43,6 @@
 
 .field public mIsDepthFocus:Z
 
-.field public mOnlyAe:Z
-
 .field public mRequestHash:I
 
 .field public mSuccess:Z
@@ -56,7 +54,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/module/loader/camera2/FocusTask;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -65,7 +62,6 @@
 
     sput-object v0, Lcom/android/camera/module/loader/camera2/FocusTask;->TAG:Ljava/lang/String;
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/loader/camera2/FocusTask$1;
 
     invoke-direct {v0}, Lcom/android/camera/module/loader/camera2/FocusTask$1;-><init>()V
@@ -78,26 +74,20 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mIsDepthFocus:Z
 
-    .line 5
     iput p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusBy:I
 
-    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -110,44 +100,36 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 8
     iput v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
     const/4 v0, 0x0
 
-    .line 9
     iput-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
-    .line 10
     iput-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mIsDepthFocus:Z
 
-    .line 11
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusBy:I
 
-    .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusStartTime:J
 
-    .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mElapsedTime:J
 
-    .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -166,14 +148,12 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mSuccess:Z
 
-    .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
-    .line 16
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -190,7 +170,6 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
-    .line 17
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result p1
@@ -208,7 +187,6 @@
 .method public static final create(I)Lcom/android/camera/module/loader/camera2/FocusTask;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/module/loader/camera2/FocusTask;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/loader/camera2/FocusTask;-><init>(I)V
@@ -229,7 +207,6 @@
 .method public getElapsedTime()J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusStartTime:J
 
     const-wide/16 v2, 0x0
@@ -238,12 +215,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mElapsedTime:J
 
     return-wide v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -257,39 +232,14 @@
 .method public getFocusTrigger()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusBy:I
 
-    return v0
-.end method
-
-.method public isAeSuccess()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mSuccess:Z
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mOnlyAe:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
 .method public isFocusing()Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mElapsedTime:J
 
     const-wide/16 v2, 0x0
@@ -312,7 +262,6 @@
 .method public isIsDepthFocus()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mIsDepthFocus:Z
 
     return v0
@@ -321,7 +270,6 @@
 .method public isSuccess()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mSuccess:Z
 
     return v0
@@ -330,7 +278,6 @@
 .method public isTaskProcessed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
     return v0
@@ -339,7 +286,6 @@
 .method public processResult(Landroid/hardware/camera2/CaptureResult;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object p1
@@ -348,17 +294,14 @@
 
     move-result p1
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     sget-object v0, Lcom/android/camera/module/loader/camera2/FocusTask;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -390,7 +333,6 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
     :cond_1
@@ -400,36 +342,7 @@
 .method public setIsDepthFocus(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mIsDepthFocus:Z
-
-    return-void
-.end method
-
-.method public setOnlyAe(Z)V
-    .locals 2
-
-    .line 1
-    iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusBy:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 2
-    sget-object v0, Lcom/android/camera/module/loader/camera2/FocusTask;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "warning. set the focus result before the request is processed."
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
-    :cond_0
-    iput-boolean p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mOnlyAe:Z
 
     return-void
 .end method
@@ -437,14 +350,12 @@
 .method public setRequest(Landroid/hardware/camera2/CaptureRequest;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->hashCode()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
-    .line 2
     sget-object p1, Lcom/android/camera/module/loader/camera2/FocusTask;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -481,7 +392,6 @@
 .method public setResult(Z)V
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
     if-nez v0, :cond_0
@@ -492,18 +402,15 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/module/loader/camera2/FocusTask;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "warning. set the focus result before the request is processed."
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iput-boolean p1, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mSuccess:Z
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -520,37 +427,30 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 1
     iget p2, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusBy:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mFocusStartTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 3
     iget-wide v0, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mElapsedTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 4
     iget-boolean p2, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mSuccess:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 5
     iget p2, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mRequestHash:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6
     iget-boolean p2, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mTaskProcessed:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 7
     iget-boolean p2, p0, Lcom/android/camera/module/loader/camera2/FocusTask;->mIsDepthFocus:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V

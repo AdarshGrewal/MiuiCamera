@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$1;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onScrolled(Lmiuix/springback/view/SpringBackLayout;II)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$1;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$000(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
@@ -51,7 +49,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$002(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
 
-    .line 2
     invoke-static {}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getInstance()Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     move-result-object p1
@@ -66,7 +63,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$1;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     const/4 p2, 0x0

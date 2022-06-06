@@ -36,10 +36,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -56,20 +54,16 @@
 
     const-string v1, "checkRunningAnimations"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 3
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 
     invoke-virtual {v3}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
@@ -94,7 +88,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 5
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
@@ -109,7 +102,6 @@
 
     if-lez v5, :cond_0
 
-    .line 6
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -118,7 +110,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -135,7 +126,6 @@
 
     move-result-object v1
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -149,7 +139,6 @@
 .method public static get()Lcom/android/camera/animation/AnimationMonitor;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/animation/AnimationMonitor$AnimationMonitorContainer;->access$000()Lcom/android/camera/animation/AnimationMonitor;
 
     move-result-object v0
@@ -162,7 +151,6 @@
 .method public animationStart(Ljava/lang/Object;I)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +175,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 
     int-to-long v1, p2
@@ -214,10 +201,8 @@
 
     const-string v1, "animationStop"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -228,7 +213,6 @@
 .method public hasAnimationRunning()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Ljava/util/WeakHashMap;->isEmpty()Z
@@ -241,7 +225,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -257,17 +240,14 @@
 
     if-lez v0, :cond_1
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/animation/AnimationMonitor;->checkRunningAnimations()V
 
-    .line 4
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/animation/AnimationMonitor;->mLastCheckTime:J
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/animation/AnimationMonitor;->mRunningAnimations:Ljava/util/WeakHashMap;
 

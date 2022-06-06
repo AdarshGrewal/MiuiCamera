@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera2/MiCamera2;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/MiCamera2$4;->this$0:Lcom/android/camera2/MiCamera2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onImageReleased(Landroid/media/ImageWriter;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/MiCamera2;->access$000()Ljava/lang/String;
 
     move-result-object p1

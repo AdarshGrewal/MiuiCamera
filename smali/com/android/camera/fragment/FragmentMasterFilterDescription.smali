@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentDescription;-><init>()V
 
     return-void
@@ -32,23 +31,21 @@
 
     new-array v0, v0, [Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 1
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f1209c6
+    const v3, 0x7f120977
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f1209c5
+    const v3, 0x7f120976
 
-    const v4, 0x7f080577
+    const v4, 0x7f080575
 
     invoke-direct {v1, v3, v4, v2}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -58,20 +55,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202eb
+    const v4, 0x7f1202d3
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202ea
+    const v4, 0x7f1202d2
 
-    const v5, 0x7f080574
+    const v5, 0x7f080572
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -81,20 +77,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202e1
+    const v4, 0x7f1202c9
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202e0
+    const v4, 0x7f1202c8
 
-    const v5, 0x7f080580
+    const v5, 0x7f08057e
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -104,20 +99,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202ed
+    const v4, 0x7f1202d5
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202ec
+    const v4, 0x7f1202d4
 
-    const v5, 0x7f08057d
+    const v5, 0x7f08057b
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -127,20 +121,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202e3
+    const v4, 0x7f1202cb
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202e2
+    const v4, 0x7f1202ca
 
-    const v5, 0x7f080578
+    const v5, 0x7f080576
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -150,20 +143,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202e5
+    const v4, 0x7f1202cd
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202e4
+    const v4, 0x7f1202cc
 
-    const v5, 0x7f080579
+    const v5, 0x7f080577
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -173,20 +165,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202e7
+    const v4, 0x7f1202cf
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202e6
+    const v4, 0x7f1202ce
 
-    const v5, 0x7f08057b
+    const v5, 0x7f080579
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -196,20 +187,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202e9
+    const v4, 0x7f1202d1
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202e8
+    const v4, 0x7f1202d0
 
-    const v5, 0x7f080576
+    const v5, 0x7f080574
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -219,20 +209,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1209d4
+    const v4, 0x7f120985
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1209d3
+    const v4, 0x7f120984
 
-    const v5, 0x7f08057f
+    const v5, 0x7f08057d
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -242,20 +231,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1202d4
+    const v4, 0x7f1202bc
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1202d3
+    const v4, 0x7f1202bb
 
-    const v5, 0x7f080575
+    const v5, 0x7f080573
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -265,20 +253,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1209cd
+    const v4, 0x7f12097e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1209cc
+    const v4, 0x7f12097d
 
-    const v5, 0x7f08057a
+    const v5, 0x7f080578
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -288,20 +275,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 13
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1209cf
+    const v4, 0x7f120980
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1209ce
+    const v4, 0x7f12097f
 
-    const v5, 0x7f08057c
+    const v5, 0x7f08057a
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -311,20 +297,19 @@
 
     new-instance v1, Lcom/android/camera/data/data/AmbilightDescriptionItem;
 
-    .line 14
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f1209d2
+    const v4, 0x7f120983
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f1209d1
+    const v4, 0x7f120982
 
-    const v5, 0x7f08057e
+    const v5, 0x7f08057c
 
     invoke-direct {v1, v4, v5, v3}, Lcom/android/camera/data/data/AmbilightDescriptionItem;-><init>(IILjava/lang/String;)V
 
@@ -332,7 +317,6 @@
 
     aput-object v1, v0, v3
 
-    .line 15
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -341,7 +325,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMasterFilterDescription;->mFilter:Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;
 
     invoke-virtual {v0}, Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;->IsSupportColorRentention()Z
@@ -350,7 +333,6 @@
 
     if-nez v0, :cond_0
 
-    .line 17
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_0
@@ -362,22 +344,18 @@
 .method public initView(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/FragmentDescription;->initView(Landroid/view/View;)V
 
     const-string p1, "masterfilter_user_guide"
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mMistatsName:Ljava/lang/String;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f1204c9
+    const v0, 0x7f120498
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -388,7 +366,6 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentMasterFilterDescription;->mFilter:Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/android/camera/fragment/FragmentDescription$DescriptionItemDecoration;
@@ -401,7 +378,6 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 6
     new-instance p1, Lcom/android/camera/fragment/manually/adapter/AmbilightDescriptionAdapter;
 
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMasterFilterDescription;->getParameterData()Ljava/util/ArrayList;
@@ -410,7 +386,6 @@
 
     invoke-direct {p1, v0}, Lcom/android/camera/fragment/manually/adapter/AmbilightDescriptionAdapter;-><init>(Ljava/util/ArrayList;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
@@ -421,10 +396,8 @@
 .method public onActivityCreated(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/dialog/BaseDialogFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p1
@@ -433,21 +406,18 @@
 
     move-result p1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMasterFilterDescription;->mFilter:Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMasterFilterDescription;->mFilter:Lcom/android/camera/data/data/config/ComponentRunningMasterFilter;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/data/data/ComponentData;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     add-int/lit8 p1, p1, -0x1

@@ -43,7 +43,6 @@
 
     const-string v10, "com.videofilter.gray"
 
-    .line 1
     filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
 
     move-result-object v0
@@ -56,7 +55,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -65,14 +63,12 @@
 .method public static AddGrayscaleFilter()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddGrayscaleFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddGrayscaleFilterJni()I
 
     move-result v0
@@ -86,14 +82,12 @@
 .method public static AddMotionFlowFilter()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddMotionFlowFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddMotionFlowFilterJni()I
 
     move-result v0
@@ -107,14 +101,12 @@
 .method public static AddMp3MixFilter(Ljava/lang/String;JJFFJ)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddMp3MixFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static/range {p0 .. p8}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddMp3MixFilterJni(Ljava/lang/String;JJFFJ)I
 
     move-result p0
@@ -128,14 +120,12 @@
 .method public static AddPhotoFilter(Ljava/lang/String;F)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddPhotoFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddPhotoFilterJni(Ljava/lang/String;F)I
 
     move-result p0
@@ -149,14 +139,12 @@
 .method public static AddPngMixFilter(Ljava/lang/String;FFFF)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddPngMixFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1, p2, p3, p4}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddPngMixFilterJni(Ljava/lang/String;FFFF)I
 
     move-result p0
@@ -170,14 +158,12 @@
 .method public static AddRotateFilter(I)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddRotateFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddRotateFilterJni(I)I
 
     move-result p0
@@ -191,14 +177,12 @@
 .method public static AddScaleFilter(II)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddScaleFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddScaleFilterJni(II)I
 
     move-result p0
@@ -212,14 +196,12 @@
 .method public static AddShakeFilter()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddShakeFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddShakeFilterJni()I
 
     move-result v0
@@ -233,14 +215,12 @@
 .method public static AddSobelEdgeDetectionFilter()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddSobeEdgeDetectionFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddSobelEdgeDetectionFilterJni()I
 
     move-result v0
@@ -254,14 +234,12 @@
 .method public static AddSoulFilter()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddSoulFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddSoulFilterJni()I
 
     move-result v0
@@ -275,14 +253,12 @@
 .method public static AddVideoMapFilter(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "AddVideoMapFilter"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1, p2}, Lcom/xiaomi/mediaprocess/MediaProcess;->AddVideoMapFilterJni(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -296,14 +272,12 @@
 .method public static Convert(Ljava/lang/String;JLjava/lang/String;ZIIJJFLcom/xiaomi/mediaprocess/MediaProcess$Callback;)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "Convert"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static/range {p0 .. p12}, Lcom/xiaomi/mediaprocess/MediaProcess;->ConvertJni(Ljava/lang/String;JLjava/lang/String;ZIIJJFLcom/xiaomi/mediaprocess/MediaProcess$Callback;)I
 
     move-result p0
@@ -317,14 +291,12 @@
 .method public static cancelmediaconvert(Ljava/lang/String;)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "cancel mediaconvert "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/mediaprocess/MediaProcess;->cancelmediaconvertJni(Ljava/lang/String;)I
 
     move-result p0
@@ -338,14 +310,12 @@
 .method public static mediaconvert(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;FLjava/lang/String;FFFFZ[Lcom/xiaomi/mediaprocess/PngShowInfo;DIJJFLjava/lang/String;JJFFLcom/xiaomi/mediaprocess/MediaProcess$Callback;)I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaProcess;->TAG:Ljava/lang/String;
 
     const-string v1, "mediaconvert"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static/range {p0 .. p28}, Lcom/xiaomi/mediaprocess/MediaProcess;->mediaconvertJni(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;FLjava/lang/String;FFFFZ[Lcom/xiaomi/mediaprocess/PngShowInfo;DIJJFLjava/lang/String;JJFFLcom/xiaomi/mediaprocess/MediaProcess$Callback;)I
 
     move-result v0

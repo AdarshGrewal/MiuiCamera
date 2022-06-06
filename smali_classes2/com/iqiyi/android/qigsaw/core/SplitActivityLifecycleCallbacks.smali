@@ -40,10 +40,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/LruCache;
 
     const/16 v1, 0x14
@@ -52,7 +50,6 @@
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->splitActivityNameCache:Landroid/util/LruCache;
 
-    .line 3
     new-instance v0, Landroid/util/LruCache;
 
     const/16 v1, 0xa
@@ -67,21 +64,18 @@
 .method private getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
     .locals 4
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitNameForActivityName(Landroid/app/Activity;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "base"
 
-    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->splitBriefInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {v1, v0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -92,21 +86,18 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 5
     invoke-interface {v2, p1, v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;->getSplitInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 6
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
@@ -123,7 +114,6 @@
 
     invoke-direct {v1, v2, v3, p1}, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 7
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->splitBriefInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {p1, v0, v1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -140,7 +130,6 @@
 .method private getSplitNameForActivityName(Landroid/app/Activity;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -149,7 +138,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->splitActivityNameCache:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -160,7 +148,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;->getInstance()Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;
 
     move-result-object v0
@@ -173,7 +160,6 @@
 
     const-string v0, "base"
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->splitActivityNameCache:Landroid/util/LruCache;
 
@@ -188,14 +174,12 @@
 .method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityCreated(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;Landroid/os/Bundle;)V
 
     const/4 p2, 0x2
@@ -204,7 +188,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -236,14 +219,12 @@
 .method public onActivityDestroyed(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityDestroyed(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;)V
 
     const/4 v1, 0x2
@@ -252,7 +233,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -284,14 +264,12 @@
 .method public onActivityPaused(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityPaused(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;)V
 
     const/4 v1, 0x2
@@ -300,7 +278,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -332,14 +309,12 @@
 .method public onActivityResumed(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityResumed(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;)V
 
     const/4 v1, 0x2
@@ -348,7 +323,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -380,14 +354,12 @@
 .method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivitySaveInstanceState(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;Landroid/os/Bundle;)V
 
     const/4 p2, 0x2
@@ -396,7 +368,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -428,14 +399,12 @@
 .method public onActivityStarted(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityStarted(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;)V
 
     const/4 v1, 0x2
@@ -444,7 +413,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -476,14 +444,12 @@
 .method public onActivityStopped(Landroid/app/Activity;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->getSplitBriefInfoForActivity(Landroid/app/Activity;)Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/iqiyi/android/qigsaw/core/SplitActivityLifecycleCallbacks;->onSplitActivityStopped(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitBriefInfo;Landroid/app/Activity;)V
 
     const/4 v1, 0x2
@@ -492,7 +458,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment$1;->this$0:Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment$1;->this$0:Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/DialogFragment;->dismiss()V

@@ -13,13 +13,10 @@
 .method public constructor <init>(JD)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->duration:J
 
-    .line 3
     iput-wide p3, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->speed:D
 
     return-void
@@ -70,7 +67,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -82,7 +78,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -102,7 +97,6 @@
 
     int-to-long v2, v0
 
-    .line 3
     iget-wide v4, v1, Lcom/android/camera/module/impl/component/TimeSpeedModel;->duration:J
 
     iget-wide v0, v1, Lcom/android/camera/module/impl/component/TimeSpeedModel;->speed:D
@@ -134,7 +128,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->duration:J
 
     return-wide v0
@@ -143,7 +136,6 @@
 .method public getSpeed()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->speed:D
 
     return-wide v0
@@ -154,7 +146,6 @@
 
     int-to-long v0, p1
 
-    .line 1
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->duration:J
 
     return-void
@@ -165,7 +156,6 @@
 
     float-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lcom/android/camera/module/impl/component/TimeSpeedModel;->speed:D
 
     return-void

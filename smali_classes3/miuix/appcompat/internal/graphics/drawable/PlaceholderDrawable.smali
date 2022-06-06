@@ -15,15 +15,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mWidth:I
 
-    .line 3
     iput v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mHeight:I
 
     return-void
@@ -40,7 +37,6 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mHeight:I
 
     return v0
@@ -49,7 +45,6 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mWidth:I
 
     return v0
@@ -66,19 +61,16 @@
 .method public getPadding(Landroid/graphics/Rect;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mPadding:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x1
 
     return p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
@@ -96,7 +88,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -105,7 +96,6 @@
 
     add-int/2addr v0, v1
 
-    .line 2
     :goto_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -113,7 +103,6 @@
 
     if-eq v2, v1, :cond_5
 
-    .line 3
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -136,7 +125,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -144,21 +132,18 @@
 
     const-string v3, "size"
 
-    .line 5
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 6
     sget-object v2, Lmiuix/appcompat/R$styleable;->PlaceholderDrawableSize:[I
 
     invoke-virtual {p1, p3, v2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
-    .line 7
     sget v3, Lmiuix/appcompat/R$styleable;->PlaceholderDrawableSize_android_width:I
 
     const/4 v4, -0x1
@@ -169,7 +154,6 @@
 
     iput v3, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mWidth:I
 
-    .line 8
     sget v3, Lmiuix/appcompat/R$styleable;->PlaceholderDrawableSize_android_height:I
 
     invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -178,7 +162,6 @@
 
     iput v3, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mHeight:I
 
-    .line 9
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
@@ -186,21 +169,18 @@
     :cond_3
     const-string v3, "padding"
 
-    .line 10
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 11
     sget-object v2, Lmiuix/appcompat/R$styleable;->PlaceholderDrawablePadding:[I
 
     invoke-virtual {p1, p3, v2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
-    .line 12
     new-instance v3, Landroid/graphics/Rect;
 
     sget v4, Lmiuix/appcompat/R$styleable;->PlaceholderDrawablePadding_android_left:I
@@ -213,21 +193,18 @@
 
     sget v6, Lmiuix/appcompat/R$styleable;->PlaceholderDrawablePadding_android_top:I
 
-    .line 13
     invoke-virtual {v2, v6, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v6
 
     sget v7, Lmiuix/appcompat/R$styleable;->PlaceholderDrawablePadding_android_right:I
 
-    .line 14
     invoke-virtual {v2, v7, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v7
 
     sget v8, Lmiuix/appcompat/R$styleable;->PlaceholderDrawablePadding_android_bottom:I
 
-    .line 15
     invoke-virtual {v2, v8, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v5
@@ -236,12 +213,10 @@
 
     iput-object v3, p0, Lmiuix/appcompat/internal/graphics/drawable/PlaceholderDrawable;->mPadding:Landroid/graphics/Rect;
 
-    .line 16
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     goto :goto_0
 
-    .line 17
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 

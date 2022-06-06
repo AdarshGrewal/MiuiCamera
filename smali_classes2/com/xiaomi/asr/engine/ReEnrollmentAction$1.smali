@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$1;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->isFile()Z
 
     move-result p1

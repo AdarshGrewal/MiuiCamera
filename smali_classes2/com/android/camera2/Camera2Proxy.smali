@@ -98,8 +98,6 @@
 
 .field public volatile mIsFixedShotTimeEnabled:Z
 
-.field public volatile mIsHdrDegradeMFNREnabled:Z
-
 .field public volatile mIsHighQualityQuickShotEnabled:Z
 
 .field public mMagneticDetectedCallback:Ljava/lang/ref/WeakReference;
@@ -135,10 +133,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -147,16 +143,10 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsFixedShotTimeEnabled:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsHighQualityQuickShotEnabled:Z
 
-    .line 5
-    iput-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsHdrDegradeMFNREnabled:Z
-
-    .line 6
     iput p1, p0, Lcom/android/camera2/Camera2Proxy;->mActualCameraId:I
 
     return-void
@@ -218,12 +208,10 @@
 .method public getAnchorCallback()Lcom/android/camera2/Camera2Proxy$PreviewCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mAnchorCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
@@ -234,7 +222,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -287,12 +274,10 @@
 .method public getFocusCallback()Lcom/android/camera2/Camera2Proxy$FocusCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mFocusCallback:Ljava/lang/ref/WeakReference;
 
@@ -319,7 +304,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -336,7 +320,6 @@
 .method public getId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/Camera2Proxy;->mActualCameraId:I
 
     return v0
@@ -345,7 +328,6 @@
 .method public getMagneticDetectedCallback()Lcom/android/camera2/Camera2Proxy$MagneticDetectedCallback;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mMagneticDetectedCallback:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -368,18 +350,15 @@
 .method public getMetadataCallback()Lcom/android/camera2/Camera2Proxy$CameraMetaDataCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mMetadataCallback:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mMetadataCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -392,7 +371,6 @@
 
     return-object v1
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -410,18 +388,13 @@
     throw v1
 .end method
 
-.method public abstract getMiCamera2ShotQueueSize()I
-.end method
-
 .method public getParallelCallback()Lcom/xiaomi/camera/core/ParallelCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mParallelCallback:Lcom/xiaomi/camera/core/ParallelCallback;
 
@@ -432,7 +405,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -449,12 +421,10 @@
 .method public getPictureCallback()Lcom/android/camera2/Camera2Proxy$PictureCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mPictureCallBack:Lcom/android/camera2/Camera2Proxy$PictureCallback;
 
@@ -465,7 +435,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -488,12 +457,10 @@
 .method public getPreviewCallback()Lcom/android/camera2/Camera2Proxy$PreviewCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mPreviewCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
@@ -504,7 +471,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -560,12 +526,10 @@
 .method public getScreenLightCallback()Lcom/android/camera2/Camera2Proxy$ScreenLightCallback;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mScreenLightCallback:Lcom/android/camera2/Camera2Proxy$ScreenLightCallback;
 
@@ -576,7 +540,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -625,31 +588,14 @@
 .method public isFixShotTime()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsFixedShotTimeEnabled:Z
 
     return v0
 .end method
 
-.method public isHdrDegradeMFNREnabled()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsHdrDegradeMFNREnabled:Z
-
-    return v0
-.end method
-
-.method public abstract isHighQualityQuickShot(J)Z
-.end method
-
-.method public abstract isHighQualityQuickShotBusy()Z
-.end method
-
 .method public isHighQualityQuickShotEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/Camera2Proxy;->mIsHighQualityQuickShotEnabled:Z
 
     return v0
@@ -703,12 +649,10 @@
 .method public notifyOnError(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mErrorCallback:Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0, p1}, Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;->onCameraError(Lcom/android/camera2/Camera2Proxy;I)V
 
     :cond_0
@@ -820,16 +764,13 @@
 .method public setAnchorCallback(Lcom/android/camera2/Camera2Proxy$PreviewCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mAnchorCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -845,9 +786,6 @@
 .end method
 
 .method public abstract setAntiBanding(I)V
-.end method
-
-.method public abstract setAsdAlgorithmEnable(I)V
 .end method
 
 .method public abstract setAsdDirtyEnable(Z)V
@@ -878,12 +816,6 @@
 .end method
 
 .method public abstract setBokehDepthSize(Lcom/android/camera/CameraSize;)V
-.end method
-
-.method public abstract setBokehMainRawSize(Lcom/android/camera/CameraSize;)V
-.end method
-
-.method public abstract setBokehSubRawSize(Lcom/android/camera/CameraSize;)V
 .end method
 
 .method public abstract setBurstShotSpeed(I)V
@@ -952,7 +884,6 @@
 .method public setErrorCallback(Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mErrorCallback:Lcom/android/camera2/Camera2Proxy$CameraErrorCallback;
 
     return-void
@@ -1012,7 +943,6 @@
 .method public setFixShotTimeEnabled(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/Camera2Proxy;->mIsFixedShotTimeEnabled:Z
 
     return-void
@@ -1030,12 +960,10 @@
 .method public setFocusCallback(Lcom/android/camera2/Camera2Proxy$FocusCallback;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -1043,7 +971,6 @@
 
     iput-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mFocusCallback:Ljava/lang/ref/WeakReference;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1064,7 +991,6 @@
 .method public setFocusFrameAvailable(Lcom/android/camera2/Camera2Proxy$IFirstCaptureFocus;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mFocusFrameAvailable:Lcom/android/camera2/Camera2Proxy$IFirstCaptureFocus;
 
     return-void
@@ -1117,19 +1043,9 @@
 .method public abstract setHdr10VideoMode(Z)V
 .end method
 
-.method public setHdrDegradeMFNREnabled(Z)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/android/camera2/Camera2Proxy;->mIsHdrDegradeMFNREnabled:Z
-
-    return-void
-.end method
-
 .method public setHighQualityQuickShotEnabled(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/Camera2Proxy;->mIsHighQualityQuickShotEnabled:Z
 
     return-void
@@ -1165,9 +1081,6 @@
 .method public abstract setLensDirtyDetect(Z)V
 .end method
 
-.method public abstract setLimitMfnrNumFramesEnabled(Z)V
-.end method
-
 .method public abstract setMFLockAfAe(Z)V
 .end method
 
@@ -1177,7 +1090,6 @@
 .method public setMagneticDetectedCallback(Lcom/android/camera2/Camera2Proxy$MagneticDetectedCallback;)V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -1193,12 +1105,10 @@
 .method public setMetaDataCallback(Lcom/android/camera2/Camera2Proxy$CameraMetaDataCallback;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -1206,7 +1116,6 @@
 
     iput-object v1, p0, Lcom/android/camera2/Camera2Proxy;->mMetadataCallback:Ljava/lang/ref/WeakReference;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1260,16 +1169,13 @@
 .method public setParallelCallback(Lcom/xiaomi/camera/core/ParallelCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mParallelCallback:Lcom/xiaomi/camera/core/ParallelCallback;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1290,16 +1196,13 @@
 .method public setPictureCallback(Lcom/android/camera2/Camera2Proxy$PictureCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mPictureCallBack:Lcom/android/camera2/Camera2Proxy$PictureCallback;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1329,16 +1232,13 @@
 .method public setPreviewCallback(Lcom/android/camera2/Camera2Proxy$PreviewCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mPreviewCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1401,16 +1301,13 @@
 .method public setScreenLightCallback(Lcom/android/camera2/Camera2Proxy$ScreenLightCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/Camera2Proxy;->mCallbackLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera2/Camera2Proxy;->mScreenLightCallback:Lcom/android/camera2/Camera2Proxy$ScreenLightCallback;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -1485,9 +1382,6 @@
 .end method
 
 .method public abstract setTimeWatermarkValue(Ljava/lang/String;)V
-.end method
-
-.method public abstract setTrackEyeEnable(Z)V
 .end method
 
 .method public abstract setTrackFocusEnable(Z)V
@@ -1649,7 +1543,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -38,10 +38,8 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/vendortag/struct/AECFrameControl$MarshalQueryableAECFrameControl$MarshalAECFrameControl;->this$0:Lcom/android/camera2/vendortag/struct/AECFrameControl$MarshalQueryableAECFrameControl;
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -52,7 +50,7 @@
 .method public getNativeSize()I
     .locals 1
 
-    const/16 v0, 0xde
+    const/16 v0, 0x48
 
     return v0
 .end method
@@ -67,7 +65,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->access$000(Lcom/android/camera2/vendortag/struct/AECFrameControl;)[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v1
@@ -80,7 +77,6 @@
 
     invoke-virtual {p2, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->access$000(Lcom/android/camera2/vendortag/struct/AECFrameControl;)[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v1
@@ -93,7 +89,6 @@
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 4
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->access$000(Lcom/android/camera2/vendortag/struct/AECFrameControl;)[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v1
@@ -106,7 +101,6 @@
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->access$000(Lcom/android/camera2/vendortag/struct/AECFrameControl;)[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v1
@@ -130,7 +124,6 @@
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera2/vendortag/struct/AECFrameControl;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/vendortag/struct/AECFrameControl$MarshalQueryableAECFrameControl$MarshalAECFrameControl;->marshal(Lcom/android/camera2/vendortag/struct/AECFrameControl;Ljava/nio/ByteBuffer;)V
@@ -150,14 +143,12 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 2
     new-instance v3, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     invoke-direct {v3}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;-><init>()V
 
     aput-object v3, v1, v2
 
-    .line 3
     aget-object v3, v1, v2
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
@@ -166,7 +157,6 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->access$102(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;J)J
 
-    .line 4
     aget-object v3, v1, v2
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
@@ -175,7 +165,6 @@
 
     invoke-static {v3, v4}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->access$202(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
 
-    .line 5
     aget-object v3, v1, v2
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
@@ -184,7 +173,6 @@
 
     invoke-static {v3, v4}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->access$302(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
 
-    .line 6
     aget-object v3, v1, v2
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
@@ -193,33 +181,23 @@
 
     invoke-static {v3, v4}, Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;->access$402(Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)F
 
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
+
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/16 v0, 0x78
+    new-instance p1, Lcom/android/camera2/vendortag/struct/AECFrameControl;
 
-    .line 7
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-direct {p1, v1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;-><init>([Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;)V
 
-    .line 8
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
-
-    move-result p1
-
-    .line 9
-    new-instance v0, Lcom/android/camera2/vendortag/struct/AECFrameControl;
-
-    invoke-direct {v0, v1, p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl;-><init>([Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;F)V
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/vendortag/struct/AECFrameControl$MarshalQueryableAECFrameControl$MarshalAECFrameControl;->unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/AECFrameControl;
 
     move-result-object p1

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,151 +21,126 @@
 
     return p0
 
-    .line 1
     :pswitch_0
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowShapeID:I
 
     return p0
 
-    .line 2
     :pswitch_1
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarShapeID:I
 
     return p0
 
-    .line 3
     :pswitch_2
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNoseShapeID:I
 
     return p0
 
-    .line 4
     :pswitch_3
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configMouthShapeID:I
 
     return p0
 
-    .line 5
     :pswitch_4
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeShapeID:I
 
     return p0
 
-    .line 6
     :pswitch_5
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceShapeID:I
 
     return p0
 
-    .line 7
     :pswitch_6
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowColorID:I
 
     return p0
 
-    .line 8
     :pswitch_7
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyelashStyleID:I
 
     return p0
 
-    .line 9
     :pswitch_8
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringColorID:I
 
     return p0
 
-    .line 10
     :pswitch_9
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringStyleID:I
 
     return p0
 
-    .line 11
     :pswitch_a
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardColorID:I
 
     return p0
 
-    .line 12
     :pswitch_b
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardStyleID:I
 
     return p0
 
-    .line 13
     :pswitch_c
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearColorID:I
 
     return p0
 
-    .line 14
     :pswitch_d
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearStyleID:I
 
     return p0
 
-    .line 15
     :pswitch_e
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearLensesID:I
 
     return p0
 
-    .line 16
     :pswitch_f
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearFrameID:I
 
     return p0
 
-    .line 17
     :pswitch_10
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearStyleID:I
 
     return p0
 
-    .line 18
     :pswitch_11
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNevusID:I
 
     return p0
 
-    .line 19
     :pswitch_12
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFrecklesID:I
 
     return p0
 
-    .line 20
     :pswitch_13
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairHighlightColorID:I
 
     return p0
 
-    .line 21
     :pswitch_14
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configLipColorID:I
 
     return p0
 
-    .line 22
     :pswitch_15
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeColorID:I
 
     return p0
 
-    .line 23
     :pswitch_16
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceColorID:I
 
     return p0
 
-    .line 24
     :pswitch_17
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairColorID:I
 
     return p0
 
-    .line 25
     :pswitch_18
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairStyleID:I
 
@@ -212,103 +186,86 @@
 
     return p0
 
-    .line 1
     :pswitch_1
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowShapeValue:F
 
     return p0
 
-    .line 2
     :pswitch_2
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarShapeValue:F
 
     return p0
 
-    .line 3
     :pswitch_3
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNoseShapeValue:F
 
     return p0
 
-    .line 4
     :pswitch_4
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configMouthShapeValue:F
 
     return p0
 
-    .line 5
     :pswitch_5
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeShapeValue:F
 
     return p0
 
-    .line 6
     :pswitch_6
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceShapeValue:F
 
     return p0
 
-    .line 7
     :pswitch_7
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowColorValue:F
 
     return p0
 
-    .line 8
     :pswitch_8
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringColorValue:F
 
     return p0
 
-    .line 9
     :pswitch_9
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardColorValue:F
 
     return p0
 
-    .line 10
     :pswitch_a
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearColorValue:F
 
     return p0
 
-    .line 11
     :pswitch_b
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearLensesValue:F
 
     return p0
 
-    .line 12
     :pswitch_c
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearFrameValue:F
 
     return p0
 
-    .line 13
     :pswitch_d
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairHighlightColorValue:F
 
     return p0
 
-    .line 14
     :pswitch_e
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configLipColorValue:F
 
     return p0
 
-    .line 15
     :pswitch_f
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeColorValue:F
 
     return p0
 
-    .line 16
     :pswitch_10
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceColorValue:F
 
     return p0
 
-    .line 17
     :pswitch_11
     iget p0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairColorValue:F
 
@@ -486,7 +443,6 @@
 .method public static isSupportContinuousConfigInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
     const/16 v1, 0x14
@@ -515,7 +471,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-boolean p0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->isSupportContinuous:Z
 
@@ -535,163 +490,136 @@
 
     goto/16 :goto_0
 
-    .line 1
     :pswitch_0
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configCustomExpressionID:I
 
     goto/16 :goto_0
 
-    .line 2
     :pswitch_1
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configGenderID:I
 
     goto :goto_0
 
-    .line 3
     :pswitch_2
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowShapeID:I
 
     goto :goto_0
 
-    .line 4
     :pswitch_3
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarShapeID:I
 
     goto :goto_0
 
-    .line 5
     :pswitch_4
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNoseShapeID:I
 
     goto :goto_0
 
-    .line 6
     :pswitch_5
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configMouthShapeID:I
 
     goto :goto_0
 
-    .line 7
     :pswitch_6
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeShapeID:I
 
     goto :goto_0
 
-    .line 8
     :pswitch_7
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceShapeID:I
 
     goto :goto_0
 
-    .line 9
     :pswitch_8
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowColorID:I
 
     goto :goto_0
 
-    .line 10
     :pswitch_9
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyelashStyleID:I
 
     goto :goto_0
 
-    .line 11
     :pswitch_a
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringColorID:I
 
     goto :goto_0
 
-    .line 12
     :pswitch_b
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringStyleID:I
 
     goto :goto_0
 
-    .line 13
     :pswitch_c
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardColorID:I
 
     goto :goto_0
 
-    .line 14
     :pswitch_d
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardStyleID:I
 
     goto :goto_0
 
-    .line 15
     :pswitch_e
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearColorID:I
 
     goto :goto_0
 
-    .line 16
     :pswitch_f
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearStyleID:I
 
     goto :goto_0
 
-    .line 17
     :pswitch_10
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearLensesID:I
 
     goto :goto_0
 
-    .line 18
     :pswitch_11
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearFrameID:I
 
     goto :goto_0
 
-    .line 19
     :pswitch_12
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearStyleID:I
 
     goto :goto_0
 
-    .line 20
     :pswitch_13
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNevusID:I
 
     goto :goto_0
 
-    .line 21
     :pswitch_14
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFrecklesID:I
 
     goto :goto_0
 
-    .line 22
     :pswitch_15
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairHighlightColorID:I
 
     goto :goto_0
 
-    .line 23
     :pswitch_16
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configLipColorID:I
 
     goto :goto_0
 
-    .line 24
     :pswitch_17
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeColorID:I
 
     goto :goto_0
 
-    .line 25
     :pswitch_18
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceColorID:I
 
     goto :goto_0
 
-    .line 26
     :pswitch_19
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairColorID:I
 
     goto :goto_0
 
-    .line 27
     :pswitch_1a
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairStyleID:I
 
@@ -740,103 +668,86 @@
     :pswitch_0
     goto :goto_0
 
-    .line 1
     :pswitch_1
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowShapeValue:F
 
     goto :goto_0
 
-    .line 2
     :pswitch_2
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarShapeValue:F
 
     goto :goto_0
 
-    .line 3
     :pswitch_3
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configNoseShapeValue:F
 
     goto :goto_0
 
-    .line 4
     :pswitch_4
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configMouthShapeValue:F
 
     goto :goto_0
 
-    .line 5
     :pswitch_5
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeShapeValue:F
 
     goto :goto_0
 
-    .line 6
     :pswitch_6
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceShapeValue:F
 
     goto :goto_0
 
-    .line 7
     :pswitch_7
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyebrowColorValue:F
 
     goto :goto_0
 
-    .line 8
     :pswitch_8
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEarringColorValue:F
 
     goto :goto_0
 
-    .line 9
     :pswitch_9
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configBeardColorValue:F
 
     goto :goto_0
 
-    .line 10
     :pswitch_a
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearColorValue:F
 
     goto :goto_0
 
-    .line 11
     :pswitch_b
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearLensesValue:F
 
     goto :goto_0
 
-    .line 12
     :pswitch_c
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyewearFrameValue:F
 
     goto :goto_0
 
-    .line 13
     :pswitch_d
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairHighlightColorValue:F
 
     goto :goto_0
 
-    .line 14
     :pswitch_e
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configLipColorValue:F
 
     goto :goto_0
 
-    .line 15
     :pswitch_f
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configEyeColorValue:F
 
     goto :goto_0
 
-    .line 16
     :pswitch_10
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceColorValue:F
 
     goto :goto_0
 
-    .line 17
     :pswitch_11
     iput p1, p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHairColorValue:F
 

@@ -23,10 +23,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     new-instance p1, Ljava/util/LinkedList;
 
     invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
@@ -50,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -63,13 +60,10 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->majorBrand:Ljava/lang/String;
 
-    .line 3
     iput p1, v0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->minorVersion:I
 
-    .line 4
     iput-object p2, v0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->compBrands:Ljava/util/Collection;
 
     return-object v0
@@ -88,7 +82,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->majorBrand:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
@@ -97,12 +90,10 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->minorVersion:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->compBrands:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -122,7 +113,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4
     invoke-static {v1}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -138,7 +128,6 @@
 .method public estimateSize()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->compBrands:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -160,7 +149,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2
     invoke-static {v2}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
 
     move-result-object v2
@@ -186,7 +174,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->compBrands:Ljava/util/Collection;
 
     return-object v0
@@ -195,7 +182,6 @@
 .method public getMajorBrand()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->majorBrand:Ljava/lang/String;
 
     return-object v0
@@ -206,21 +192,18 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->majorBrand:Ljava/lang/String;
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->minorVersion:I
 
-    .line 3
     :goto_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
@@ -234,7 +217,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/FileTypeBox;->compBrands:Ljava/util/Collection;
 
     invoke-interface {v2, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z

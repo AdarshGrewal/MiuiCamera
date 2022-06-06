@@ -34,19 +34,16 @@
 .method public constructor <init>(Ljava8/util/stream/SliceOps$3;Ljava8/util/stream/Sink;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/SliceOps$3$1;->this$0:Ljava8/util/stream/SliceOps$3;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedLong;-><init>(Ljava8/util/stream/Sink;)V
 
-    .line 2
     iget-object p1, p0, Ljava8/util/stream/SliceOps$3$1;->this$0:Ljava8/util/stream/SliceOps$3;
 
     iget-wide v0, p1, Ljava8/util/stream/SliceOps$3;->val$skip:J
 
     iput-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->n:J
 
-    .line 3
     iget-wide p1, p1, Ljava8/util/stream/SliceOps$3;->val$limit:J
 
     const-wide/16 v0, 0x0
@@ -71,7 +68,6 @@
 .method public accept(J)V
     .locals 7
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->n:J
 
     const-wide/16 v2, 0x0
@@ -82,7 +78,6 @@
 
     if-nez v4, :cond_0
 
-    .line 2
     iget-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->m:J
 
     cmp-long v2, v0, v2
@@ -91,10 +86,8 @@
 
     sub-long/2addr v0, v5
 
-    .line 3
     iput-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->m:J
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/stream/Sink;->accept(J)V
@@ -104,7 +97,6 @@
     :cond_0
     sub-long/2addr v0, v5
 
-    .line 5
     iput-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->n:J
 
     :cond_1
@@ -115,7 +107,6 @@
 .method public begin(J)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedLong;->downstream:Ljava8/util/stream/Sink;
 
     iget-object v1, p0, Ljava8/util/stream/SliceOps$3$1;->this$0:Ljava8/util/stream/SliceOps$3;
@@ -138,7 +129,6 @@
 .method public cancellationRequested()Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/SliceOps$3$1;->m:J
 
     const-wide/16 v2, 0x0

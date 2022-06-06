@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
 .method public getAge()[Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->age:[Ljava/lang/String;
 
     return-object v0
@@ -45,7 +43,6 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -54,7 +51,6 @@
 .method public getBody_visible_parts()[Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->body_visible_parts:[Ljava/lang/Integer;
 
     return-object v0
@@ -63,7 +59,6 @@
 .method public getBundle()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bundle:Ljava/lang/String;
 
     return-object v0
@@ -72,7 +67,6 @@
 .method public getBundlePath()Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bundle:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -105,7 +99,6 @@
 .method public getGender()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->gender:I
 
     return v0
@@ -114,7 +107,6 @@
 .method public getGender_match()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->gender_match:I
 
     return v0
@@ -123,7 +115,6 @@
 .method public getIcon()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->icon:I
 
     return v0
@@ -132,7 +123,6 @@
 .method public getLabel()[Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->label:[Ljava/lang/Integer;
 
     return-object v0
@@ -143,11 +133,9 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;->setSelect(Z)V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
@@ -160,7 +148,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -177,7 +164,6 @@
 .method public setAge([Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->age:[Ljava/lang/String;
 
     return-void
@@ -186,7 +172,6 @@
 .method public setBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bitmap:Landroid/graphics/Bitmap;
 
     return-void
@@ -195,7 +180,6 @@
 .method public setBody_visible_parts([Ljava/lang/Integer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->body_visible_parts:[Ljava/lang/Integer;
 
     return-void
@@ -204,7 +188,6 @@
 .method public setBundle(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->bundle:Ljava/lang/String;
 
     return-void
@@ -213,7 +196,6 @@
 .method public setGender(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->gender:I
 
     return-void
@@ -222,7 +204,6 @@
 .method public setGender_match(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->gender_match:I
 
     return-void
@@ -231,7 +212,6 @@
 .method public setIcon(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->icon:I
 
     return-void
@@ -240,7 +220,6 @@
 .method public setLabel([Ljava/lang/Integer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuItem;->label:[Ljava/lang/Integer;
 
     return-void

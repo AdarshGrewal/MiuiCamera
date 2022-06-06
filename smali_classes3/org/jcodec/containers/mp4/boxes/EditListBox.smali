@@ -19,7 +19,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -37,7 +36,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/EditListBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -50,7 +48,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/EditListBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     return-object v0
@@ -69,10 +66,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -81,7 +76,6 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -101,7 +95,6 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/Edit;
 
-    .line 4
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/Edit;->getDuration()J
 
     move-result-wide v2
@@ -110,7 +103,6 @@
 
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 5
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/Edit;->getMediaTime()J
 
     move-result-wide v2
@@ -119,7 +111,6 @@
 
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 6
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/Edit;->getRate()F
 
     move-result v1
@@ -141,7 +132,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -166,7 +156,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     return-object v0
@@ -175,17 +164,14 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 13
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
@@ -201,17 +187,14 @@
 
     if-gez v3, :cond_0
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v5
@@ -222,7 +205,6 @@
 
     div-float v12, v5, v6
 
-    .line 7
     iget-object v5, p0, Lorg/jcodec/containers/mp4/boxes/EditListBox;->edits:Ljava/util/List;
 
     new-instance v6, Lorg/jcodec/containers/mp4/boxes/Edit;

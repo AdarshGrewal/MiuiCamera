@@ -7,10 +7,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No instances!"
@@ -47,7 +45,6 @@
 
     sub-int/2addr p0, v0
 
-    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
 
     move-result p0

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera2/autozoom/AutoZoomView;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/autozoom/AutoZoomView$1;->this$0:Lcom/android/camera2/autozoom/AutoZoomView;
 
     iput p2, p0, Lcom/android/camera2/autozoom/AutoZoomView$1;->val$visibility:I
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/autozoom/AutoZoomView$1;->this$0:Lcom/android/camera2/autozoom/AutoZoomView;
 
     iget v1, p0, Lcom/android/camera2/autozoom/AutoZoomView$1;->val$visibility:I

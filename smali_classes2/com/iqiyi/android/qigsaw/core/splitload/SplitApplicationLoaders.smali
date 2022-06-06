@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -44,10 +43,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -64,7 +61,6 @@
 .method public static getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->sInstance:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -73,7 +69,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->sInstance:Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->sInstance:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -100,7 +94,6 @@
 .method public addClassLoader(Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->splitDexClassLoaders:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -111,7 +104,6 @@
 .method public getClassLoader(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->splitDexClassLoaders:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -131,7 +123,6 @@
 
     check-cast v1, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 2
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName()Ljava/lang/String;
 
     move-result-object v2
@@ -161,7 +152,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->splitDexClassLoaders:Ljava/util/Set;
 
     return-object v0
@@ -187,7 +177,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
@@ -197,7 +186,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 3
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->splitDexClassLoaders:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -218,7 +206,6 @@
 
     check-cast v2, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     invoke-virtual {v2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName()Ljava/lang/String;
 
     move-result-object v3
@@ -229,7 +216,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 5
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -241,7 +227,6 @@
 .method public removeClassLoader(Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->splitDexClassLoaders:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z

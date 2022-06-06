@@ -29,7 +29,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/android/camera/module/Module;",
+            "Lcom/android/camera/module/BaseModule;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -77,34 +76,29 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/camera/module/Module;)V
+.method public constructor <init>(Lcom/android/camera/module/BaseModule;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mResultParseList:Landroid/util/SparseArray;
 
-    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
-    .line 4
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SEMANTIC_SCENE:Lcom/android/camera2/vendortag/VendorTag;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->NON_SEMANTIC_SCENE:Lcom/android/camera2/vendortag/VendorTag;
@@ -113,7 +107,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->STATE_SCENE:Lcom/android/camera2/vendortag/VendorTag;
@@ -122,7 +115,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 7
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -135,12 +127,10 @@
 .method public static LOGD(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -152,7 +142,6 @@
     :cond_0
     const-string v0, "MI_ALGO_ASD_SCENE"
 
-    .line 3
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -164,7 +153,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
@@ -174,14 +162,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mVendorTagArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -190,7 +176,6 @@
 
     check-cast v2, Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 4
     invoke-static {p1, v2}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
 
     move-result-object v3
@@ -199,7 +184,6 @@
 
     if-nez v3, :cond_0
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +210,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-direct {p0, v1, v3}, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->parseMiAlgoASDSceneResult(I[Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;)V
 
@@ -242,7 +225,6 @@
 .method private parseMiAlgoASDSceneResult(I[Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mResultParseList:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -266,7 +248,6 @@
     :cond_0
     if-nez v0, :cond_3
 
-    .line 2
     new-instance v0, Lcom/android/camera/scene/StateClassResultParse;
 
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mModule:Ljava/lang/ref/WeakReference;
@@ -278,7 +259,6 @@
     :cond_1
     if-nez v0, :cond_3
 
-    .line 3
     new-instance v0, Lcom/android/camera/scene/NoneSemanticsClassResultParse;
 
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mModule:Ljava/lang/ref/WeakReference;
@@ -290,7 +270,6 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 4
     new-instance v0, Lcom/android/camera/scene/SemanticsClassResultParse;
 
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mModule:Ljava/lang/ref/WeakReference;
@@ -301,12 +280,10 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mResultParseList:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6
     invoke-interface {v0, p2}, Lcom/android/camera/scene/IResultParse;->parseMiAlgoAsdResult(Ljava/lang/Object;)V
 
     :cond_4
@@ -318,22 +295,20 @@
 .method public apply(Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->mModule:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/module/Module;
+    check-cast v0, Lcom/android/camera/module/BaseModule;
 
     if-nez v0, :cond_0
 
     return-object p1
 
-    .line 3
     :cond_0
-    invoke-interface {v0}, Lcom/android/camera/module/Module;->getModuleIndex()I
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getModuleIndex()I
 
     move-result v1
 
@@ -341,8 +316,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 4
-    invoke-interface {v0}, Lcom/android/camera/module/Module;->getModuleIndex()I
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getModuleIndex()I
 
     move-result v1
 
@@ -350,8 +324,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 5
-    invoke-interface {v0}, Lcom/android/camera/module/Module;->getModuleIndex()I
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getModuleIndex()I
 
     move-result v1
 
@@ -359,20 +332,14 @@
 
     if-eq v1, v2, :cond_1
 
-    const-string v0, "no capture mode!"
+    const-string/jumbo v0, "no capture mode!"
 
-    .line 6
     invoke-static {v0}, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->LOGD(Ljava/lang/String;)V
 
     return-object p1
 
-    .line 7
     :cond_1
-    invoke-interface {v0}, Lcom/android/camera/module/Module;->getCameraManager()Lcom/android/camera/module/common/ICameraMgr;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/android/camera/module/common/ICameraMgr;->getCameraCapabilities()Lcom/android/camera2/CameraCapabilities;
+    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getCameraCapabilities()Lcom/android/camera2/CameraCapabilities;
 
     move-result-object v0
 
@@ -380,13 +347,11 @@
 
     return-object p1
 
-    .line 8
     :cond_2
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->getMiAlgoASDVersion()F
 
     move-result v0
 
-    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -411,7 +376,6 @@
 
     return-object p1
 
-    .line 10
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->parseCaptureResult(Landroid/hardware/camera2/CaptureResult;)V
 
@@ -426,7 +390,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/scene/FunctionMiAlgoASDEngine;->apply(Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;

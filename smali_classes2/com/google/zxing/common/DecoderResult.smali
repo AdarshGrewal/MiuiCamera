@@ -60,7 +60,6 @@
 
     move-object v4, p4
 
-    .line 1
     invoke-direct/range {v0 .. v6}, Lcom/google/zxing/common/DecoderResult;-><init>([BLjava/lang/String;Ljava/util/List;Ljava/lang/String;II)V
 
     return-void
@@ -79,10 +78,8 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/google/zxing/common/DecoderResult;->rawBytes:[B
 
     if-nez p1, :cond_0
@@ -91,7 +88,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     array-length p1, p1
 
@@ -100,19 +96,14 @@
     :goto_0
     iput p1, p0, Lcom/google/zxing/common/DecoderResult;->numBits:I
 
-    .line 5
     iput-object p2, p0, Lcom/google/zxing/common/DecoderResult;->text:Ljava/lang/String;
 
-    .line 6
     iput-object p3, p0, Lcom/google/zxing/common/DecoderResult;->byteSegments:Ljava/util/List;
 
-    .line 7
     iput-object p4, p0, Lcom/google/zxing/common/DecoderResult;->ecLevel:Ljava/lang/String;
 
-    .line 8
     iput p6, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendParity:I
 
-    .line 9
     iput p5, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
 
     return-void
@@ -130,7 +121,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->byteSegments:Ljava/util/List;
 
     return-object v0
@@ -139,7 +129,6 @@
 .method public getECLevel()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->ecLevel:Ljava/lang/String;
 
     return-object v0
@@ -148,7 +137,6 @@
 .method public getErasures()Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->erasures:Ljava/lang/Integer;
 
     return-object v0
@@ -157,7 +145,6 @@
 .method public getErrorsCorrected()Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->errorsCorrected:Ljava/lang/Integer;
 
     return-object v0
@@ -166,7 +153,6 @@
 .method public getNumBits()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/common/DecoderResult;->numBits:I
 
     return v0
@@ -175,7 +161,6 @@
 .method public getOther()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->other:Ljava/lang/Object;
 
     return-object v0
@@ -184,7 +169,6 @@
 .method public getRawBytes()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->rawBytes:[B
 
     return-object v0
@@ -193,7 +177,6 @@
 .method public getStructuredAppendParity()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendParity:I
 
     return v0
@@ -202,7 +185,6 @@
 .method public getStructuredAppendSequenceNumber()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendSequenceNumber:I
 
     return v0
@@ -211,7 +193,6 @@
 .method public getText()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/common/DecoderResult;->text:Ljava/lang/String;
 
     return-object v0
@@ -220,7 +201,6 @@
 .method public hasStructuredAppend()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/common/DecoderResult;->structuredAppendParity:I
 
     if-ltz v0, :cond_0
@@ -242,7 +222,6 @@
 .method public setErasures(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/common/DecoderResult;->erasures:Ljava/lang/Integer;
 
     return-void
@@ -251,7 +230,6 @@
 .method public setErrorsCorrected(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/common/DecoderResult;->errorsCorrected:Ljava/lang/Integer;
 
     return-void
@@ -260,7 +238,6 @@
 .method public setNumBits(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/google/zxing/common/DecoderResult;->numBits:I
 
     return-void
@@ -269,7 +246,6 @@
 .method public setOther(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/zxing/common/DecoderResult;->other:Ljava/lang/Object;
 
     return-void

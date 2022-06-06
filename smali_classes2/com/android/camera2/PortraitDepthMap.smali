@@ -51,7 +51,6 @@
 
     const/16 v1, -0x7770
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->defineTag(IS)I
 
     move-result v1
@@ -60,7 +59,6 @@
 
     const/16 v1, -0x776f
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/gallery3d/exif/ExifInterface;->defineTag(IS)I
 
     move-result v0
@@ -73,12 +71,10 @@
 .method public constructor <init>([B)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera2/PortraitDepthMap;->getHeaderTag([B)I
 
     move-result v0
@@ -87,10 +83,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapOriginalData:[B
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/PortraitDepthMap;->getDepthMapHeader()[B
 
     move-result-object p1
@@ -99,7 +93,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -121,7 +114,6 @@
 
     throw p1
 
-    .line 6
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -139,24 +131,20 @@
 
     if-ltz p1, :cond_0
 
-    .line 1
     array-length v0, p0
 
     sub-int/2addr v0, p1
 
     if-gt p2, v0, :cond_0
 
-    .line 2
     new-array v0, p2, [B
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {p0, p1, v0, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -192,7 +180,6 @@
 
     const/4 v1, 0x4
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/android/camera2/PortraitDepthMap;->getBytes([BII)[B
 
     move-result-object p0
@@ -207,7 +194,6 @@
 .method public static getInteger([B)I
     .locals 5
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x4
@@ -221,7 +207,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 2
     aget-byte v3, p0, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -239,7 +224,6 @@
     :cond_0
     return v2
 
-    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -255,7 +239,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x4
@@ -280,7 +263,6 @@
     :goto_0
     if-nez p0, :cond_1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     const-string v1, "Illegal depthmap format"
@@ -296,7 +278,6 @@
 .method public getBlurLevel()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/16 v1, 0x10
@@ -317,7 +298,6 @@
 .method public getDepthDataSize()Landroid/graphics/Point;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/4 v1, 0x4
@@ -332,7 +312,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/16 v3, 0x18
@@ -345,7 +324,6 @@
 
     move-result v1
 
-    .line 3
     new-instance v2, Landroid/graphics/Point;
 
     invoke-direct {v2, v0, v1}, Landroid/graphics/Point;-><init>(II)V
@@ -356,7 +334,6 @@
 .method public getDepthMapData()[B
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapOriginalData:[B
 
     invoke-virtual {p0}, Lcom/android/camera2/PortraitDepthMap;->getDepthMapLength()I
@@ -375,7 +352,6 @@
 .method public getDepthMapHeader()[B
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapOriginalData:[B
 
     const/4 v1, 0x4
@@ -388,7 +364,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapOriginalData:[B
 
     const/4 v2, 0x0
@@ -403,7 +378,6 @@
 .method public getDepthMapLength()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/16 v1, 0x94
@@ -424,7 +398,6 @@
 .method public getFocusPoint()Landroid/graphics/Point;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/4 v1, 0x4
@@ -439,7 +412,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera2/PortraitDepthMap;->mDepthMapHeader:[B
 
     const/16 v3, 0xc
@@ -452,7 +424,6 @@
 
     move-result v1
 
-    .line 3
     new-instance v2, Landroid/graphics/Point;
 
     invoke-direct {v2, v0, v1}, Landroid/graphics/Point;-><init>(II)V
@@ -477,32 +448,26 @@
 
     const-string v3, "depthmap"
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera2/PortraitDepthMap;->getFocusPoint()Landroid/graphics/Point;
 
     move-result-object v4
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera2/PortraitDepthMap;->getBlurLevel()I
 
     move-result v5
 
-    .line 3
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera2/PortraitDepthMap;->getDepthDataSize()Landroid/graphics/Point;
 
     move-result-object v6
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getPortraitLightingVersioin()I
 
     move-result v7
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCameraPreferredMode()I
 
     move-result v8
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getPictureInfo()Lcom/xiaomi/camera/core/PictureInfo;
 
     move-result-object v0
@@ -511,7 +476,6 @@
 
     move-result v0
 
-    .line 7
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->isSupportZeroDegreeOrientationImage()Z
 
     move-result v9
@@ -522,13 +486,12 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v9
 
-    invoke-virtual {v9}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OoooO0O()I
+    invoke-virtual {v9}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooo0o()I
 
     move-result v9
 
@@ -543,7 +506,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getPictureInfo()Lcom/xiaomi/camera/core/PictureInfo;
 
     move-result-object v0
@@ -576,7 +538,6 @@
 
     goto :goto_2
 
-    .line 10
     :cond_2
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getPictureInfo()Lcom/xiaomi/camera/core/PictureInfo;
 
@@ -616,7 +577,6 @@
 
     if-le v9, v13, :cond_5
 
-    .line 11
     invoke-virtual/range {p0 .. p0}, Lcom/android/camera2/PortraitDepthMap;->getVendor()I
 
     move-result v0
@@ -628,7 +588,6 @@
     :cond_5
     move v14, v13
 
-    .line 12
     :goto_4
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
@@ -636,7 +595,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "writePortraitExif: focusPoint: "
+    const-string/jumbo v10, "writePortraitExif: focusPoint: "
 
     invoke-virtual {v15, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -648,14 +607,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: blurLevel: "
+    const-string/jumbo v15, "writePortraitExif: blurLevel: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -667,14 +625,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: depthDataSize: "
+    const-string/jumbo v15, "writePortraitExif: depthDataSize: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -686,14 +643,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: shineThreshold: "
+    const-string/jumbo v15, "writePortraitExif: shineThreshold: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -705,14 +661,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: shineLevel: "
+    const-string/jumbo v15, "writePortraitExif: shineLevel: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -724,14 +679,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: lightingPattern: "
+    const-string/jumbo v15, "writePortraitExif: lightingPattern: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -747,14 +701,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: isCinematicAspectRatio: "
+    const-string/jumbo v15, "writePortraitExif: isCinematicAspectRatio: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -770,14 +723,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: rotation: "
+    const-string/jumbo v15, "writePortraitExif: rotation: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -793,14 +745,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: vendor: "
+    const-string/jumbo v15, "writePortraitExif: vendor: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -812,14 +763,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: portraitLightingVersion: "
+    const-string/jumbo v15, "writePortraitExif: portraitLightingVersion: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -831,14 +781,13 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "writePortraitExif: cameraPreferredMode: "
+    const-string/jumbo v15, "writePortraitExif: cameraPreferredMode: "
 
     invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -850,7 +799,6 @@
 
     invoke-static {v0, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     :try_start_0
     new-instance v15, Ljava/io/ByteArrayOutputStream;
 
@@ -858,40 +806,33 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
     :try_start_1
     new-instance v0, Lcom/android/gallery3d/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/android/gallery3d/exif/ExifInterface;-><init>()V
 
-    .line 25
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
 
     move-result-object v13
 
     invoke-virtual {v0, v13}, Lcom/android/gallery3d/exif/ExifInterface;->readExif([B)V
 
-    .line 26
     invoke-virtual {v0, v9}, Lcom/android/gallery3d/exif/ExifInterface;->addXiaomiDepthmapVersion(I)Z
 
-    .line 27
     invoke-virtual {v0, v5}, Lcom/android/gallery3d/exif/ExifInterface;->addDepthMapBlurLevel(I)Z
 
-    .line 28
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getLightingPattern()I
 
     move-result v13
 
     invoke-virtual {v0, v13}, Lcom/android/gallery3d/exif/ExifInterface;->addPortraitLighting(I)Z
 
-    .line 29
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->isBokehFrontCamera()Z
 
     move-result v13
 
     if-eqz v13, :cond_7
 
-    .line 30
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->isFrontMirror()Z
 
     move-result v13
@@ -908,7 +849,6 @@
     :goto_5
     invoke-virtual {v0, v13}, Lcom/android/gallery3d/exif/ExifInterface;->addFrontMirror(I)Z
 
-    .line 31
     :cond_7
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
 
@@ -916,14 +856,12 @@
 
     invoke-virtual {v0, v13, v15}, Lcom/android/gallery3d/exif/ExifInterface;->writeExif([BLjava/io/OutputStream;)V
 
-    .line 32
     invoke-virtual {v15}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 33
     :try_start_2
     invoke-virtual {v15}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2
@@ -936,7 +874,6 @@
 
     move-object v13, v0
 
-    .line 34
     :try_start_3
     throw v13
     :try_end_3
@@ -947,7 +884,6 @@
 
     move-object/from16 v17, v0
 
-    .line 35
     :try_start_4
     invoke-virtual {v15}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_4
@@ -971,11 +907,10 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 36
     :catch_1
     sget-object v13, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v15, "writePortraitExif(): Failed to write depthmap associated exif metadata"
+    const-string/jumbo v15, "writePortraitExif(): Failed to write depthmap associated exif metadata"
 
     invoke-static {v13, v15}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -984,7 +919,6 @@
 
     if-eqz v13, :cond_1c
 
-    .line 37
     array-length v0, v13
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
@@ -995,18 +929,17 @@
 
     if-gt v0, v15, :cond_8
 
-    .line 38
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result v0
 
     if-eqz v0, :cond_1c
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0OOo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00o0o()Z
 
     move-result v0
 
@@ -1014,13 +947,12 @@
 
     goto/16 :goto_17
 
-    .line 39
     :cond_8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v15, "sdcard/DCIM/Camera/evZeroMainImage"
+    const-string/jumbo v15, "sdcard/DCIM/Camera/evZeroMainImage"
 
     invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1040,14 +972,13 @@
 
     move-result-object v0
 
-    .line 40
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
     move-object/from16 v18, v13
 
-    const-string v13, "sdcard/DCIM/Camera/evZeroSubImage"
+    const-string/jumbo v13, "sdcard/DCIM/Camera/evZeroSubImage"
 
     invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1067,12 +998,11 @@
 
     move-result-object v7
 
-    .line 41
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "sdcard/DCIM/Camera/evMinusMainImage"
+    const-string/jumbo v11, "sdcard/DCIM/Camera/evMinusMainImage"
 
     invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1092,17 +1022,14 @@
 
     move-result-object v8
 
-    .line 42
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 43
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 44
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
     move-result v7
@@ -1121,17 +1048,14 @@
 
     const/4 v7, 0x0
 
-    .line 45
     invoke-static {v10, v7}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v14
 
-    .line 46
     invoke-static {v10, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v7
 
-    .line 47
     invoke-virtual {v10}, Ljava/io/File;->length()J
 
     move-result-wide v25
@@ -1146,24 +1070,20 @@
 
     const/4 v10, 0x0
 
-    .line 48
     invoke-static {v0, v10}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v1
 
-    .line 49
     invoke-static {v0, v13}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v10
 
-    .line 50
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v29
 
     sub-long v29, v29, v21
 
-    .line 51
     sget-object v13, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
     move-object/from16 v31, v0
@@ -1227,13 +1147,11 @@
 
     const/4 v14, 0x0
 
-    .line 52
     :goto_8
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v8
@@ -1242,19 +1160,16 @@
 
     const/4 v8, 0x0
 
-    .line 54
     invoke-static {v0, v8}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v11
 
     const/4 v8, 0x4
 
-    .line 55
     invoke-static {v0, v8}, Lcom/android/camera/Util;->getHeader2Int(Ljava/io/File;I)I
 
     move-result v13
 
-    .line 56
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v33
@@ -1272,7 +1187,6 @@
 
     const/4 v13, 0x0
 
-    .line 57
     :goto_9
     :try_start_6
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
@@ -1283,13 +1197,11 @@
 
     move-object/from16 v21, v0
 
-    .line 58
     :try_start_7
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 59
     invoke-interface {v8, v0}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/Writer;)V
 
     move-object/from16 v22, v0
@@ -1300,7 +1212,6 @@
 
     const/16 v16, 0x1
 
-    .line 60
     invoke-static/range {v16 .. v16}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v13
@@ -1311,13 +1222,11 @@
 
     const/4 v13, 0x0
 
-    .line 61
     :try_start_8
     invoke-interface {v8, v13, v3}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "version"
+    const-string/jumbo v0, "version"
 
-    .line 62
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v9
@@ -1329,7 +1238,6 @@
     :try_start_9
     const-string v0, "focuspoint"
 
-    .line 63
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1357,7 +1265,6 @@
 
     const-string v0, "blurlevel"
 
-    .line 64
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1369,7 +1276,6 @@
     :try_start_b
     const-string v0, "depthsize"
 
-    .line 65
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1395,27 +1301,24 @@
     :try_start_c
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "shinethreshold"
+    const-string/jumbo v0, "shinethreshold"
 
-    .line 66
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "shinelevel"
+    const-string/jumbo v0, "shinelevel"
 
-    .line 67
     invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "rawlength"
+    const-string/jumbo v0, "rawlength"
 
-    .line 68
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v2
@@ -1428,7 +1331,6 @@
 
     const-string v0, "depthlength"
 
-    .line 69
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v2
@@ -1441,7 +1343,6 @@
 
     const-string v0, "mimovie"
 
-    .line 70
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->isCinematicAspectRatio()Z
 
     move-result v2
@@ -1454,7 +1355,6 @@
 
     const-string v0, "depthOrientation"
 
-    .line 71
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRotation()I
 
     move-result v2
@@ -1465,18 +1365,16 @@
 
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "vendor"
+    const-string/jumbo v0, "vendor"
 
-    .line 72
     invoke-static/range {v32 .. v32}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "portraitLightingVersion"
+    const-string/jumbo v0, "portraitLightingVersion"
 
-    .line 73
     invoke-static/range {v20 .. v20}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1485,14 +1383,12 @@
 
     const-string v0, "cameraPreferredMode"
 
-    .line 74
     invoke-static/range {v19 .. v19}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v8, v4, v0, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 75
     invoke-interface {v8, v4, v3}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_5
@@ -1505,29 +1401,26 @@
 
     const-string v5, "height"
 
-    const-string v6, "width"
+    const-string/jumbo v6, "width"
 
     const-string v9, "length"
 
-    const-string v12, "offset"
+    const-string/jumbo v12, "offset"
 
     if-eqz v0, :cond_b
 
     move-object/from16 v13, v28
 
-    .line 76
     :try_start_d
     invoke-interface {v8, v4, v13}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_5
 
-    .line 77
     :try_start_e
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v0
 
-    .line 78
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v4
@@ -1542,7 +1435,6 @@
 
     add-long/2addr v10, v2
 
-    .line 79
     invoke-static {v10, v11}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1551,48 +1443,40 @@
 
     const/4 v10, 0x0
 
-    .line 80
     :try_start_f
     invoke-interface {v8, v10, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 81
     invoke-static/range {v25 .. v26}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v10, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 82
     invoke-static {v14}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v10, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 83
     invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v10, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 84
     invoke-interface {v8, v10, v13}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "subyuv"
+    const-string/jumbo v0, "subyuv"
 
-    .line 85
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_f
     .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_3
 
-    .line 86
     :try_start_10
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v0
 
-    .line 87
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v7
@@ -1605,7 +1489,6 @@
 
     add-long v10, v10, v33
 
-    .line 88
     invoke-static {v10, v11}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1614,34 +1497,29 @@
 
     const/4 v7, 0x0
 
-    .line 89
     :try_start_11
     invoke-interface {v8, v7, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 90
     invoke-static/range {v29 .. v30}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v7, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 91
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v7, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 92
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v7, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "subyuv"
+    const-string/jumbo v0, "subyuv"
 
-    .line 93
     invoke-interface {v8, v7, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_11
     .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_2
@@ -1673,19 +1551,16 @@
 
     const/4 v1, 0x0
 
-    .line 94
     :try_start_13
     invoke-interface {v8, v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_13
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_4
 
-    .line 95
     :try_start_14
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v0
 
-    .line 96
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v1
@@ -1696,7 +1571,6 @@
 
     add-long v0, v0, v33
 
-    .line 97
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1705,25 +1579,21 @@
 
     const/4 v1, 0x0
 
-    .line 98
     :try_start_15
     invoke-interface {v8, v1, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 99
     invoke-static/range {v33 .. v34}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v1, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 100
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {v8, v1, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 101
     invoke-static/range {v35 .. v35}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1732,7 +1602,6 @@
 
     const-string v0, "evminusyuv"
 
-    .line 102
     invoke-interface {v8, v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_15
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_4
@@ -1744,7 +1613,6 @@
 
     goto/16 :goto_10
 
-    .line 103
     :cond_c
     :goto_b
     :try_start_16
@@ -1756,13 +1624,12 @@
 
     const/4 v1, 0x3
 
-    const-string v4, "paddingy"
+    const-string/jumbo v4, "paddingy"
 
-    const-string v7, "paddingx"
+    const-string/jumbo v7, "paddingx"
 
     if-eqz v0, :cond_f
 
-    .line 104
     :try_start_17
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
@@ -1772,14 +1639,12 @@
 
     if-lez v0, :cond_f
 
-    .line 105
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
 
     if-eqz v0, :cond_f
 
-    .line 106
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -1790,19 +1655,17 @@
 
     if-lt v0, v10, :cond_f
 
-    const-string v0, "subimage"
+    const-string/jumbo v0, "subimage"
     :try_end_17
     .catch Ljava/io/IOException; {:try_start_17 .. :try_end_17} :catch_8
 
     const/4 v10, 0x0
 
-    .line 107
     :try_start_18
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_18
     .catch Ljava/io/IOException; {:try_start_18 .. :try_end_18} :catch_3
 
-    .line 108
     :try_start_19
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
@@ -1810,7 +1673,6 @@
 
     array-length v0, v0
 
-    .line 109
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
 
     move-result-object v10
@@ -1831,7 +1693,6 @@
     :goto_c
     add-int/2addr v0, v10
 
-    .line 110
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
     move-result-object v10
@@ -1856,7 +1717,6 @@
 
     add-long/2addr v10, v2
 
-    .line 111
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v0
@@ -1865,7 +1725,6 @@
 
     add-long/2addr v10, v13
 
-    .line 112
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v0
@@ -1874,7 +1733,6 @@
 
     add-long/2addr v10, v13
 
-    .line 113
     invoke-static {v10, v11}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1883,11 +1741,9 @@
 
     const/4 v10, 0x0
 
-    .line 114
     :try_start_1a
     invoke-interface {v8, v10, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 115
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
     move-result-object v0
@@ -1900,7 +1756,6 @@
 
     invoke-interface {v8, v10, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 116
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -1915,7 +1770,6 @@
 
     invoke-interface {v8, v10, v7, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 117
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -1930,7 +1784,6 @@
 
     invoke-interface {v8, v10, v4, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 118
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -1945,7 +1798,6 @@
 
     invoke-interface {v8, v10, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 119
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -1958,9 +1810,8 @@
 
     invoke-interface {v8, v10, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "rotation"
+    const-string/jumbo v0, "rotation"
 
-    .line 120
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRotation()I
 
     move-result v11
@@ -1971,14 +1822,12 @@
 
     invoke-interface {v8, v10, v0, v11}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "subimage"
+    const-string/jumbo v0, "subimage"
 
-    .line 121
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_1a
     .catch Ljava/io/IOException; {:try_start_1a .. :try_end_1a} :catch_3
 
-    .line 122
     :cond_f
     :try_start_1b
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
@@ -2001,13 +1850,11 @@
 
     const/4 v10, 0x0
 
-    .line 123
     :try_start_1c
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_1c
     .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_3
 
-    .line 124
     :try_start_1d
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
 
@@ -2015,7 +1862,6 @@
 
     array-length v0, v0
 
-    .line 125
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
     move-result-object v10
@@ -2040,7 +1886,6 @@
 
     add-long/2addr v10, v2
 
-    .line 126
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getRawLength()I
 
     move-result v0
@@ -2049,7 +1894,6 @@
 
     add-long/2addr v10, v13
 
-    .line 127
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDepthLength()I
 
     move-result v0
@@ -2058,7 +1902,6 @@
 
     add-long/2addr v10, v13
 
-    .line 128
     invoke-static {v10, v11}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -2067,11 +1910,9 @@
 
     const/4 v10, 0x0
 
-    .line 129
     :try_start_1e
     invoke-interface {v8, v10, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 130
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
 
     move-result-object v0
@@ -2084,7 +1925,6 @@
 
     invoke-interface {v8, v10, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 131
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulCameraWaterMarkLocation()[I
 
     move-result-object v0
@@ -2099,7 +1939,6 @@
 
     invoke-interface {v8, v10, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 132
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulCameraWaterMarkLocation()[I
 
     move-result-object v0
@@ -2114,7 +1953,6 @@
 
     invoke-interface {v8, v10, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 133
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulCameraWaterMarkLocation()[I
 
     move-result-object v0
@@ -2129,7 +1967,6 @@
 
     invoke-interface {v8, v10, v7, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 134
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulCameraWaterMarkLocation()[I
 
     move-result-object v0
@@ -2144,12 +1981,10 @@
 
     const-string v0, "lenswatermark"
 
-    .line 135
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_1e
     .catch Ljava/io/IOException; {:try_start_1e .. :try_end_1e} :catch_3
 
-    .line 136
     :cond_11
     :try_start_1f
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
@@ -2166,19 +2001,17 @@
 
     if-lez v0, :cond_12
 
-    const-string v0, "timewatermark"
+    const-string/jumbo v0, "timewatermark"
     :try_end_1f
     .catch Ljava/io/IOException; {:try_start_1f .. :try_end_1f} :catch_8
 
     const/4 v10, 0x0
 
-    .line 137
     :try_start_20
     invoke-interface {v8, v10, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
     :try_end_20
     .catch Ljava/io/IOException; {:try_start_20 .. :try_end_20} :catch_3
 
-    .line 138
     :try_start_21
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
@@ -2214,11 +2047,9 @@
 
     const/4 v13, 0x0
 
-    .line 139
     :try_start_22
     invoke-interface {v8, v13, v12, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 140
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
     move-result-object v0
@@ -2231,7 +2062,6 @@
 
     invoke-interface {v8, v13, v9, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 141
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMarkLocation()[I
 
     move-result-object v0
@@ -2246,7 +2076,6 @@
 
     invoke-interface {v8, v13, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 142
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMarkLocation()[I
 
     move-result-object v0
@@ -2261,7 +2090,6 @@
 
     invoke-interface {v8, v13, v5, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 143
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMarkLocation()[I
 
     move-result-object v0
@@ -2276,7 +2104,6 @@
 
     invoke-interface {v8, v13, v7, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 144
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMarkLocation()[I
 
     move-result-object v0
@@ -2289,9 +2116,8 @@
 
     invoke-interface {v8, v13, v4, v0}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string v0, "timewatermark"
+    const-string/jumbo v0, "timewatermark"
 
-    .line 145
     invoke-interface {v8, v13, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_f
@@ -2299,11 +2125,9 @@
     :cond_12
     const/4 v13, 0x0
 
-    .line 146
     :goto_f
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 147
     invoke-virtual/range {v22 .. v22}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -2328,12 +2152,11 @@
     :catch_8
     const/4 v13, 0x0
 
-    .line 148
     :catch_9
     :goto_10
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v1, "writePortraitExif(): Failed to generate depthmap associated xmp metadata"
+    const-string/jumbo v1, "writePortraitExif(): Failed to generate depthmap associated xmp metadata"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2342,21 +2165,18 @@
     :goto_11
     if-nez v0, :cond_13
 
-    .line 149
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v1, "writePortraitExif(): #2: return original jpeg"
+    const-string/jumbo v1, "writePortraitExif(): #2: return original jpeg"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
 
     move-result-object v0
 
     return-object v0
 
-    .line 151
     :cond_13
     :try_start_23
     new-instance v1, Ljava/io/ByteArrayInputStream;
@@ -2372,7 +2192,6 @@
     .catch Ljava/io/IOException; {:try_start_24 .. :try_end_24} :catch_b
     .catch Lcom/adobe/xmp/XMPException; {:try_start_24 .. :try_end_24} :catch_b
 
-    .line 152
     :try_start_25
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
@@ -2380,7 +2199,6 @@
     :try_end_25
     .catchall {:try_start_25 .. :try_end_25} :catchall_7
 
-    .line 153
     :try_start_26
     invoke-static {}, Lcom/android/camera/XmpHelper;->createXMPMeta()Lcom/adobe/xmp/XMPMeta;
 
@@ -2390,20 +2208,16 @@
 
     const-string v6, "XMPMeta"
 
-    .line 154
     invoke-interface {v4, v5, v6, v0}, Lcom/adobe/xmp/XMPMeta;->setProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 155
     invoke-static {v1, v3, v4}, Lcom/android/camera/XmpHelper;->writeXMPMeta(Ljava/io/InputStream;Ljava/io/OutputStream;Lcom/adobe/xmp/XMPMeta;)Z
 
-    .line 156
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
     move-result-object v0
 
     if-eqz v0, :cond_14
 
-    .line 157
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
     move-result-object v0
@@ -2412,14 +2226,12 @@
 
     if-lez v0, :cond_14
 
-    .line 158
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
 
     if-eqz v0, :cond_14
 
-    .line 159
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getCoordinatesOfOfTheRegionUnderWatermarks()[I
 
     move-result-object v0
@@ -2430,14 +2242,12 @@
 
     if-lt v0, v4, :cond_14
 
-    .line 160
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpegDataOfTheRegionUnderWatermarks()[B
 
     move-result-object v0
 
     invoke-virtual {v3, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 161
     :cond_14
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
 
@@ -2445,14 +2255,12 @@
 
     if-eqz v0, :cond_15
 
-    .line 162
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getDulWaterMark()[B
 
     move-result-object v0
 
     invoke-virtual {v3, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 163
     :cond_15
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
@@ -2460,7 +2268,6 @@
 
     if-eqz v0, :cond_16
 
-    .line 164
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getTimeWaterMark()[B
 
     move-result-object v0
@@ -2476,10 +2283,8 @@
 
     move-object/from16 v0, v27
 
-    .line 165
     invoke-static {v0, v3, v4}, Lcom/android/camera/Util;->writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 166
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_17
@@ -2489,10 +2294,8 @@
 
     move-object/from16 v0, v31
 
-    .line 167
     invoke-static {v0, v3, v4}, Lcom/android/camera/Util;->writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 168
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_18
@@ -2502,24 +2305,19 @@
 
     move-object/from16 v0, v21
 
-    .line 169
     invoke-static {v0, v3, v4}, Lcom/android/camera/Util;->writeFile2Stream(Ljava/io/File;Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 170
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 171
     :cond_19
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 172
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v15
     :try_end_26
     .catchall {:try_start_26 .. :try_end_26} :catchall_4
 
-    .line 173
     :try_start_27
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_27
@@ -2545,7 +2343,6 @@
 
     move-object v4, v0
 
-    .line 174
     :try_start_29
     throw v4
     :try_end_29
@@ -2556,7 +2353,6 @@
 
     move-object v5, v0
 
-    .line 175
     :try_start_2a
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2a
@@ -2584,7 +2380,6 @@
 
     move-object v15, v13
 
-    .line 176
     :goto_13
     :try_start_2c
     throw v3
@@ -2596,7 +2391,6 @@
 
     move-object v4, v0
 
-    .line 177
     :try_start_2d
     invoke-virtual {v1}, Ljava/io/ByteArrayInputStream;->close()V
     :try_end_2d
@@ -2624,18 +2418,16 @@
     :catch_b
     move-object v15, v13
 
-    .line 178
     :catch_c
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v1, "writePortraitExif(): Failed to insert depthmap associated xmp metadata"
+    const-string/jumbo v1, "writePortraitExif(): Failed to insert depthmap associated xmp metadata"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_15
     if-eqz v15, :cond_1b
 
-    .line 179
     array-length v0, v15
 
     array-length v1, v2
@@ -2647,32 +2439,28 @@
     :cond_1a
     return-object v15
 
-    .line 180
     :cond_1b
     :goto_16
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v1, "writePortraitExif(): #3: return original jpeg"
+    const-string/jumbo v1, "writePortraitExif(): #3: return original jpeg"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
 
     move-result-object v0
 
     return-object v0
 
-    .line 182
     :cond_1c
     :goto_17
     sget-object v0, Lcom/android/camera2/PortraitDepthMap;->TAG:Ljava/lang/String;
 
-    const-string v1, "writePortraitExif(): #1: return original jpeg"
+    const-string/jumbo v1, "writePortraitExif(): #1: return original jpeg"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/PortraitDepthMapExif;->getJpeg()[B
 
     move-result-object v0

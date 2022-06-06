@@ -57,15 +57,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
-    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -76,7 +73,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     return-void
@@ -85,7 +81,6 @@
 .method public static synthetic access$1000(Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->clearV()V
 
     return-void
@@ -94,7 +89,6 @@
 .method public static synthetic access$800()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     return-object v0
@@ -103,7 +97,6 @@
 .method public static synthetic access$900(Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->setV(F)V
 
     return-void
@@ -114,7 +107,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->v_:F
 
     return-void
@@ -123,7 +115,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     return-object v0
@@ -132,7 +123,6 @@
 .method public static newBuilder()Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -147,7 +137,6 @@
 .method public static newBuilder(Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;)Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -167,7 +156,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -187,7 +175,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -207,7 +194,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -227,7 +213,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -247,7 +232,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -267,7 +251,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -287,7 +270,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -307,7 +289,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -327,7 +308,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -347,7 +327,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -367,7 +346,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -387,7 +365,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -410,7 +387,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->getParserForType()Lcom/google/protobuf/Parser;
@@ -423,7 +399,6 @@
 .method private setV(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->v_:F
 
     return-void
@@ -434,7 +409,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     sget-object p2, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -449,7 +423,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -459,7 +432,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -467,34 +439,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -513,7 +479,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
@@ -528,7 +493,6 @@
 
     aput-object p3, p1, p2
 
-    .line 11
     sget-object p2, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
     const-string p3, "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0001"
@@ -539,7 +503,6 @@
 
     return-object p1
 
-    .line 12
     :pswitch_5
     new-instance p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float$Builder;
 
@@ -547,7 +510,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_6
     new-instance p1, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;
 
@@ -570,7 +532,6 @@
 .method public getV()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/proto/RMIBasicDataType$Float;->v_:F
 
     return v0

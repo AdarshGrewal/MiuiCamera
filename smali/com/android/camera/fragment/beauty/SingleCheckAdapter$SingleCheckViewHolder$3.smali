@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder;Lcom/android/camera/ui/ColorImageView;Landroid/widget/TextView;Landroid/widget/ImageView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->this$1:Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder;
 
     iput-object p2, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->val$imageView:Lcom/android/camera/ui/ColorImageView;
@@ -47,19 +46,16 @@
 .method public getInterpolation(F)F
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Landroid/view/animation/LinearInterpolator;->getInterpolation(F)F
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->val$imageView:Lcom/android/camera/ui/ColorImageView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->this$1:Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder;
 
     iget-object v1, v1, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder;->this$0:Lcom/android/camera/fragment/beauty/SingleCheckAdapter;
 
-    .line 3
     invoke-static {v1}, Lcom/android/camera/fragment/beauty/SingleCheckAdapter;->access$700(Lcom/android/camera/fragment/beauty/SingleCheckAdapter;)Landroid/animation/ArgbEvaluator;
 
     move-result-object v1
@@ -68,7 +64,6 @@
 
     iget-object v2, v2, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder;->this$0:Lcom/android/camera/fragment/beauty/SingleCheckAdapter;
 
-    .line 4
     invoke-virtual {v2}, Lcom/android/camera/fragment/beauty/SingleCheckAdapter;->baseNormalColor()I
 
     move-result v2
@@ -85,7 +80,6 @@
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v1, p1, v2, v3}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -96,17 +90,14 @@
 
     move-result v1
 
-    .line 6
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ColorImageView;->setColorAndRefresh(I)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->val$textImage:Landroid/widget/TextView;
 
     const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/SingleCheckAdapter$SingleCheckViewHolder$3;->val$iconView:Landroid/widget/ImageView;
 
     check-cast v0, Lcom/android/camera/ui/ColorImageView;

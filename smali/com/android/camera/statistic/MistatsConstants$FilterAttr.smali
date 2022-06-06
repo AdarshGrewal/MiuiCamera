@@ -163,18 +163,6 @@
 
 .field public static final ML_YEARS:Ljava/lang/String; = "ml_years"
 
-.field public static final M_COOL_MAKEUP:Ljava/lang/String; = "m_cool_makeup"
-
-.field public static final M_HARDLINE_MAKEUP:Ljava/lang/String; = "m_hardline_makeup"
-
-.field public static final M_NEUTRAL_MAKEUP:Ljava/lang/String; = "m_neutral_makeup"
-
-.field public static final M_NUDE_MAKEUP:Ljava/lang/String; = "m_nude_makeup"
-
-.field public static final M_SOFT_MAKEUP:Ljava/lang/String; = "m_soft_makeup"
-
-.field public static final M_SWEET_MAKEUP:Ljava/lang/String; = "m_sweet_makeup"
-
 .field public static final N_BERRY:Ljava/lang/String; = "n_berry"
 
 .field public static final N_BLACKGOLD:Ljava/lang/String; = "n_blackgold"
@@ -189,15 +177,9 @@
 
 .field public static final N_FADE:Ljava/lang/String; = "n_fade"
 
-.field public static final N_FAIRYTALE:Ljava/lang/String; = "n_fairytale"
-
 .field public static final N_FILM:Ljava/lang/String; = "n_film"
 
 .field public static final N_FIRST:Ljava/lang/String; = "n_first"
-
-.field public static final N_HOLIDAY:Ljava/lang/String; = "n_holiday"
-
-.field public static final N_JAPANESE:Ljava/lang/String; = "n_japanese"
 
 .field public static final N_KOIZORA:Ljava/lang/String; = "n_koizora"
 
@@ -205,27 +187,17 @@
 
 .field public static final N_LIGHT:Ljava/lang/String; = "n_light"
 
-.field public static final N_LILT:Ljava/lang/String; = "n_lilt"
-
 .field public static final N_LIVELY:Ljava/lang/String; = "n_lively"
 
-.field public static final N_MINT:Ljava/lang/String; = "n_mint"
-
-.field public static final N_MOVIE:Ljava/lang/String; = "n_movie"
-
-.field public static final N_NATURE:Ljava/lang/String; = "n_nature"
-
-.field public static final N_ORIGINAL:Ljava/lang/String; = "n_original"
-
-.field public static final N_OXYGEN:Ljava/lang/String; = "n_oxygen"
-
-.field public static final N_PINK:Ljava/lang/String; = "n_pink"
-
-.field public static final N_PINK_ORANGE:Ljava/lang/String; = "n_pink_orange"
+.field public static final N_ORANGE:Ljava/lang/String; = "n_orange"
 
 .field public static final N_QUIET:Ljava/lang/String; = "n_quiet"
 
 .field public static final N_SIBOPENK:Ljava/lang/String; = "n_sibopenk"
+
+.field public static final N_SODA:Ljava/lang/String; = "n_soda"
+
+.field public static final N_TRAVAEL:Ljava/lang/String; = "n_travel"
 
 .field public static final N_WARM:Ljava/lang/String; = "n_warm"
 

@@ -38,10 +38,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/SimpleMainThreadMediaPlayerListener;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/clone/BaseVideoItem$VideoPlayerListener;->videoViewHolder:Ljava/lang/ref/WeakReference;
 
     return-void
@@ -52,7 +50,6 @@
 .method public onVideoPreparedMainThread()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem$VideoPlayerListener;->videoViewHolder:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, v0, Lcom/android/camera/fragment/clone/VideoViewHolder;->mCover:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
@@ -77,7 +73,6 @@
 .method public onVideoStoppedMainThread()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/BaseVideoItem$VideoPlayerListener;->videoViewHolder:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -88,7 +83,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, v0, Lcom/android/camera/fragment/clone/VideoViewHolder;->mCover:Landroid/widget/ImageView;
 
     const/4 v1, 0x0

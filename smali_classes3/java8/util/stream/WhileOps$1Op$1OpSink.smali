@@ -47,14 +47,12 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->this$0:Ljava8/util/stream/WhileOps$1Op;
 
     iput-object p2, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->val$sink:Ljava8/util/stream/Sink;
 
     iput-boolean p3, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->val$retainAndCountDroppedElements:Z
 
-    .line 2
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedReference;-><init>(Ljava8/util/stream/Sink;)V
 
     return-void
@@ -70,7 +68,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->take:Z
 
     const/4 v1, 0x1
@@ -96,7 +93,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 2
     :cond_1
     :goto_0
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->val$retainAndCountDroppedElements:Z
@@ -105,7 +101,6 @@
 
     if-nez v1, :cond_2
 
-    .line 3
     iget-wide v2, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->dropCount:J
 
     const-wide/16 v4, 0x1
@@ -114,7 +109,6 @@
 
     iput-wide v2, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->dropCount:J
 
-    .line 4
     :cond_2
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->val$retainAndCountDroppedElements:Z
 
@@ -122,7 +116,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 5
     :cond_3
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
@@ -135,7 +128,6 @@
 .method public getDropCount()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/WhileOps$1Op$1OpSink;->dropCount:J
 
     return-wide v0

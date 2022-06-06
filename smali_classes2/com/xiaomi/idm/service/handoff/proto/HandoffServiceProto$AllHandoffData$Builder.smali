@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;->access$400()Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;-><init>()V
 
     return-void
@@ -65,10 +63,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -81,10 +77,8 @@
 .method public addHandoffDataList(ILcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData$Builder;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 7
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 8
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -97,10 +91,8 @@
 .method public addHandoffDataList(ILcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -113,10 +105,8 @@
 .method public addHandoffDataList(Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData$Builder;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 5
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -129,10 +119,8 @@
 .method public addHandoffDataList(Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -145,10 +133,8 @@
 .method public clearHandoffDataList()Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -161,10 +147,8 @@
 .method public clearIdHash()Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -177,7 +161,6 @@
 .method public getHandoffDataList(I)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -192,7 +175,6 @@
 .method public getHandoffDataListCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -215,17 +197,14 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;->getHandoffDataListList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -236,7 +215,6 @@
 .method public getIdHash()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -251,7 +229,6 @@
 .method public getIdHashBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -266,10 +243,8 @@
 .method public removeHandoffDataList(I)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -282,10 +257,8 @@
 .method public setHandoffDataList(ILcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData$Builder;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -298,10 +271,8 @@
 .method public setHandoffDataList(ILcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffData;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -314,10 +285,8 @@
 .method public setIdHash(Ljava/lang/String;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;
@@ -330,10 +299,8 @@
 .method public setIdHashBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$AllHandoffData;

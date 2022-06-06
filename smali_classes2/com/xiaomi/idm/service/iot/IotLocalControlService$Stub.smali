@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMClient;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService;-><init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     return-void
@@ -41,12 +39,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->exeScenesAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -63,14 +59,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -96,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$ExeScenes;
@@ -118,12 +111,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getDeviceInformationsAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -140,14 +131,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -173,7 +162,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDeviceInformations;
@@ -195,12 +183,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getDevicePropertiesAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -217,14 +203,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -250,7 +234,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDeviceProperties;
@@ -272,12 +255,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getDevicesAsync(Ljava/lang/String;Ljava/lang/String;Z)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -294,14 +275,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -326,7 +305,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetDevices;
@@ -348,12 +326,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getHomeFastCommandsAsync(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -370,14 +346,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -402,7 +376,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetHomeFastCommands;
@@ -424,12 +397,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getHomesAsync(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -446,14 +417,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -478,7 +447,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetHomes;
@@ -500,12 +468,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getSceneAliasAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -522,14 +488,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -555,7 +519,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetSceneAlias;
@@ -577,12 +540,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->getScenesAsync(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -599,14 +560,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -631,7 +590,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$GetScenes;
@@ -653,12 +611,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->invokeActionAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -675,14 +631,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -708,7 +662,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$InvokeAction;
@@ -730,12 +683,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->setDevicePropertiesAsync(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -752,14 +703,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -785,7 +734,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v7, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$SetDeviceProperties;
@@ -819,12 +767,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->setTokenAsync(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -841,14 +787,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -873,7 +817,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$SetToken;
@@ -895,12 +838,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->stopAsync(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava8/util/concurrent/CompletableFuture;->get()Ljava/lang/Object;
 
@@ -917,14 +858,12 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-static {p1}, Lcom/xiaomi/idm/api/RmiException;->createException(Ljava/util/concurrent/ExecutionException;)Lcom/xiaomi/idm/api/RmiException;
 
     move-result-object p1
 
     throw p1
 
-    .line 4
     :catch_1
     new-instance p1, Lcom/xiaomi/idm/api/RequestException;
 
@@ -949,7 +888,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Stub;->mIDMClient:Lcom/xiaomi/idm/api/IDMClient;
 
     new-instance v1, Lcom/xiaomi/idm/service/iot/IotLocalControlService$Actions$Stop;

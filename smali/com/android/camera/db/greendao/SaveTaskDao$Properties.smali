@@ -38,7 +38,6 @@
 .method public static constructor <clinit>()V
     .locals 13
 
-    .line 1
     new-instance v6, Lorg/greenrobot/greendao/Property;
 
     const-class v2, Ljava/lang/Long;
@@ -57,7 +56,6 @@
 
     sput-object v6, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->Id:Lorg/greenrobot/greendao/Property;
 
-    .line 2
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     const-class v9, Ljava/lang/Long;
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->StartTime:Lorg/greenrobot/greendao/Property;
 
-    .line 3
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     const-class v3, Ljava/lang/Long;
@@ -95,7 +92,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->MediaStoreId:Lorg/greenrobot/greendao/Property;
 
-    .line 4
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     const-class v9, Ljava/lang/String;
@@ -112,7 +108,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->Path:Lorg/greenrobot/greendao/Property;
 
-    .line 5
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -129,7 +124,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->Status:Lorg/greenrobot/greendao/Property;
 
-    .line 6
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -146,7 +140,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->Percentage:Lorg/greenrobot/greendao/Property;
 
-    .line 7
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -163,16 +156,15 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->JpegRotation:Lorg/greenrobot/greendao/Property;
 
-    .line 8
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v8, 0x7
 
-    const-string v10, "noGaussian"
+    const-string/jumbo v10, "noGaussian"
 
-    const-string v12, "no_gaussian"
+    const-string/jumbo v12, "no_gaussian"
 
     move-object v7, v0
 
@@ -180,7 +172,6 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->NoGaussian:Lorg/greenrobot/greendao/Property;
 
-    .line 9
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -203,7 +194,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance p2, Lcom/bumptech/glide/load/resource/file/FileResource;
 
     invoke-direct {p2, p1}, Lcom/bumptech/glide/load/resource/file/FileResource;-><init>(Ljava/io/File;)V
@@ -61,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/file/FileDecoder;->decode(Ljava/io/File;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -87,7 +84,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/io/File;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/file/FileDecoder;->handles(Ljava/io/File;Lcom/bumptech/glide/load/Options;)Z

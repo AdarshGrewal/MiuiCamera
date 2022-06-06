@@ -33,10 +33,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;
 
     invoke-direct {v0}, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;-><init>()V
@@ -51,7 +49,6 @@
 .method public getDebugInfo()Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mDebugInfo:Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;
 
     return-object v0
@@ -60,7 +57,6 @@
 .method public getScore()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mScore:F
 
     return v0
@@ -69,7 +65,6 @@
 .method public getVoconPhrase()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mVoconPhrase:Ljava/lang/String;
 
     return-object v0
@@ -78,7 +73,6 @@
 .method public getWakeupEndTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mWakeupEndTime:J
 
     return-wide v0
@@ -87,7 +81,6 @@
 .method public getWakeupStartTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mWakeupStartTime:J
 
     return-wide v0
@@ -96,7 +89,6 @@
 .method public isAec()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isAec:Z
 
     return v0
@@ -105,7 +97,6 @@
 .method public isVBPassed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isVBPassed:Z
 
     return v0
@@ -114,7 +105,6 @@
 .method public isVoconWakeupPassed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isVoconWakeupPassed:Z
 
     return v0
@@ -123,7 +113,6 @@
 .method public setAec(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isAec:Z
 
     return-void
@@ -132,7 +121,6 @@
 .method public setDebugInfo(Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mDebugInfo:Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;
 
     return-void
@@ -141,7 +129,6 @@
 .method public setScore(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mScore:F
 
     return-void
@@ -150,7 +137,6 @@
 .method public setVBPassed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isVBPassed:Z
 
     return-void
@@ -159,7 +145,6 @@
 .method public setVoconPhrase(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mVoconPhrase:Ljava/lang/String;
 
     return-void
@@ -168,7 +153,6 @@
 .method public setVoconWakeupPassed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->isVoconWakeupPassed:Z
 
     return-void
@@ -177,7 +161,6 @@
 .method public setWakeupEndTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mWakeupEndTime:J
 
     return-void
@@ -186,7 +169,6 @@
 .method public setWakeupStartTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->mWakeupStartTime:J
 
     return-void
@@ -195,7 +177,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

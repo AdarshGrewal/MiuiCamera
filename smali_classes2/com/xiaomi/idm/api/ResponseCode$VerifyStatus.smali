@@ -50,7 +50,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     const/4 v1, 0x0
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->NOT_VERIFIED:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     const/4 v2, 0x1
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->VERIFIED_UNKNOWN:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     const/4 v3, 0x2
@@ -91,7 +88,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->VERIFIED_SUCCEED:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     const/4 v4, 0x3
@@ -104,7 +100,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->VERIFIED_FAILED:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     const/4 v5, 0x4
@@ -123,7 +118,6 @@
 
     new-array v6, v6, [Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
-    .line 6
     sget-object v7, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->NOT_VERIFIED:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     aput-object v7, v6, v1
@@ -157,13 +151,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->code:I
 
-    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->msg:Ljava/lang/String;
 
     return-void
@@ -172,7 +163,6 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->values()[Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     move-result-object v0
@@ -186,7 +176,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget v4, v3, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->code:I
 
     if-ne v4, p0, :cond_0
@@ -198,7 +187,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->VF_UNKNOWN:Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
@@ -208,7 +196,6 @@
 .method public static getResponseMsg(I)Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->values()[Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     move-result-object v0
@@ -224,12 +211,10 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     iget v5, v4, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->code:I
 
     if-ne v5, p0, :cond_0
 
-    .line 3
     iget-object p0, v4, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->msg:Ljava/lang/String;
 
     return-object p0
@@ -239,7 +224,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -265,7 +249,6 @@
 
     invoke-static {v2, v0, v1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -290,7 +273,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -305,7 +287,6 @@
 .method public static values()[Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->$VALUES:[Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->clone()Ljava/lang/Object;
@@ -322,7 +303,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->code:I
 
     return v0
@@ -331,7 +311,6 @@
 .method public getMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/ResponseCode$VerifyStatus;->msg:Ljava/lang/String;
 
     return-object v0

@@ -45,7 +45,6 @@
 
     const-string v4, "key_video_bokeh_color_point_ratio"
 
-    .line 1
     filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +57,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,7 +65,6 @@
 .method public static getDefaultValueByKey(Ljava/lang/String;)I
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -170,7 +167,6 @@
 .method public static getVideoBokehMode(Ljava/lang/String;)I
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0

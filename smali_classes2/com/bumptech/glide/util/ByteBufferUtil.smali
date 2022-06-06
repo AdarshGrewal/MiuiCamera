@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -42,7 +41,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
@@ -76,7 +73,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2
     new-instance v7, Ljava/io/RandomAccessFile;
 
     const-string v1, "r"
@@ -85,13 +81,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v0
 
-    .line 4
     sget-object v2, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     const-wide/16 v3, 0x0
@@ -110,13 +104,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     :try_start_2
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 6
     :catch_0
     :cond_0
     :try_start_3
@@ -132,7 +124,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     :try_start_4
     new-instance p0, Ljava/io/IOException;
@@ -143,7 +134,6 @@
 
     throw p0
 
-    .line 8
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -163,7 +153,6 @@
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 9
     :try_start_5
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_5
@@ -173,13 +162,11 @@
     :cond_3
     if-eqz v7, :cond_4
 
-    .line 10
     :try_start_6
     invoke-virtual {v7}, Ljava/io/RandomAccessFile;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 11
     :catch_3
     :cond_4
     throw p0
@@ -193,14 +180,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     const/16 v1, 0x4000
 
     invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 2
     sget-object v2, Lcom/bumptech/glide/util/ByteBufferUtil;->BUFFER_REF:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v3, 0x0
@@ -215,7 +200,6 @@
 
     new-array v2, v1, [B
 
-    .line 3
     :cond_0
     :goto_0
     invoke-virtual {p0, v2}, Ljava/io/InputStream;->read([B)I
@@ -226,23 +210,19 @@
 
     if-ltz v1, :cond_1
 
-    .line 4
     invoke-virtual {v0, v2, v3, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object p0, Lcom/bumptech/glide/util/ByteBufferUtil;->BUFFER_REF:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 6
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
-    .line 7
     array-length v0, p0
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
@@ -265,7 +245,6 @@
 .method public static getSafeArray(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->isReadOnly()Z
 
     move-result v0
@@ -278,7 +257,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
@@ -306,14 +284,12 @@
 .method public static toBytes(Ljava/nio/ByteBuffer;)[B
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/bumptech/glide/util/ByteBufferUtil;->getSafeArray(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget v1, v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->offset:I
 
     if-nez v1, :cond_0
@@ -326,20 +302,17 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    .line 5
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
@@ -348,10 +321,8 @@
 
     const/4 v1, 0x0
 
-    .line 6
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 7
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     move-object p0, v0
@@ -370,12 +341,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     new-instance v2, Ljava/io/RandomAccessFile;
 
@@ -385,35 +354,28 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v1, p0}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
 
-    .line 5
     invoke-virtual {v1, v0}, Ljava/nio/channels/FileChannel;->force(Z)V
 
-    .line 6
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 7
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v1, :cond_0
 
-    .line 8
     :try_start_2
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 9
     :catch_0
     :cond_0
     :try_start_3
@@ -437,7 +399,6 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 10
     :try_start_4
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_4
@@ -447,13 +408,11 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 11
     :try_start_5
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 12
     :catch_3
     :cond_2
     throw p0
@@ -462,7 +421,6 @@
 .method public static toStream(Ljava/nio/ByteBuffer;)Ljava/io/InputStream;
     .locals 1
 
-    .line 9
     new-instance v0, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/util/ByteBufferUtil$ByteBufferStream;-><init>(Ljava/nio/ByteBuffer;)V
@@ -478,14 +436,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/bumptech/glide/util/ByteBufferUtil;->getSafeArray(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object p0, v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->data:[B
 
     iget v1, v0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->offset:I
@@ -498,7 +454,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/bumptech/glide/util/ByteBufferUtil;->BUFFER_REF:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -516,7 +471,6 @@
 
     new-array v0, v0, [B
 
-    .line 4
     :cond_1
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -525,7 +479,6 @@
 
     if-lez v1, :cond_2
 
-    .line 5
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -538,15 +491,12 @@
 
     const/4 v2, 0x0
 
-    .line 6
     invoke-virtual {p0, v0, v2, v1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 7
     invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     sget-object p0, Lcom/bumptech/glide/util/ByteBufferUtil;->BUFFER_REF:Ljava/util/concurrent/atomic/AtomicReference;
 

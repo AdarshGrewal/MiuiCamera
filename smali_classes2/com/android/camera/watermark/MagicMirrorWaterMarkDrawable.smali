@@ -29,7 +29,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;-><init>(Ljava/util/List;)V
 
     return-void
@@ -40,7 +39,6 @@
 .method public getFaceRectPaint(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/Paint;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     return-object p1
@@ -49,7 +47,6 @@
 .method public getHonPadding(Lcom/android/camera/watermark/WaterMarkData;)I
     .locals 0
 
-    .line 1
     iget p1, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mHonPadding:I
 
     return p1
@@ -58,7 +55,6 @@
 .method public getTopBackgroundDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mMagicMirrorInfoPop:Landroid/graphics/drawable/Drawable;
 
     return-object p1
@@ -67,7 +63,6 @@
 .method public getTopIndicatorDrawable(Lcom/android/camera/watermark/WaterMarkData;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mBeautyScoreIc:Landroid/graphics/drawable/Drawable;
 
     return-object p1
@@ -76,14 +71,13 @@
 .method public initBeforeDraw()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f08056e
+    const v1, 0x7f08056c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -91,14 +85,13 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mMagicMirrorInfoPop:Landroid/graphics/drawable/Drawable;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080200
+    const v1, 0x7f0801fc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -106,7 +99,6 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mBeautyScoreIc:Landroid/graphics/drawable/Drawable;
 
-    .line 3
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -115,10 +107,8 @@
 
     const/4 v1, 0x1
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -139,21 +129,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mFaceRectPaint:Landroid/graphics/Paint;
 
     const/16 v1, -0x47c9
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mMagicMirrorInfoPop:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -170,7 +157,6 @@
 
     iput v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mFacePopupBottom:I
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -185,7 +171,6 @@
 
     iput v0, p0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;->mHonPadding:I
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

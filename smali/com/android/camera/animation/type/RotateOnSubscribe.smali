@@ -18,7 +18,6 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/animation/type/BaseOnSubScribe;-><init>(Landroid/view/View;)V
 
     return-void
@@ -31,10 +30,8 @@
 
     const/16 v0, 0x12c
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/animation/type/BaseOnSubScribe;->setDurationTime(I)Lcom/android/camera/animation/type/BaseOnSubScribe;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mAniView:Landroid/view/View;
 
     iget v1, p0, Lcom/android/camera/animation/type/RotateOnSubscribe;->mOriginDegree:I
@@ -43,7 +40,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-static {v0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
@@ -64,10 +60,8 @@
 .method public setRotateDegree(II)Lcom/android/camera/animation/type/RotateOnSubscribe;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/animation/type/RotateOnSubscribe;->mOriginDegree:I
 
-    .line 2
     iput p2, p0, Lcom/android/camera/animation/type/RotateOnSubscribe;->mTargetDegree:I
 
     return-object p0

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static createMdtaBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/MdtaBox;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/MdtaBox;
 
     const-string v1, "mdta"
@@ -37,7 +35,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/MdtaBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/MdtaBox;->key:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +53,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/MdtaBox;->key:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -71,7 +67,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/MdtaBox;->key:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -86,7 +81,6 @@
 .method public getKey()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/MdtaBox;->key:Ljava/lang/String;
 
     return-object v0
@@ -95,7 +89,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->readBuf(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p1

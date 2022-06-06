@@ -33,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -46,7 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +62,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/message/MessageFactory;->mCacheMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -77,17 +74,14 @@
 
     const/16 v0, 0xa
 
-    .line 2
     invoke-static {p0, v0}, Lmiuix/internal/log/message/MessageFactory$MessageCache;->createInstance(Ljava/lang/Class;I)Lmiuix/internal/log/message/MessageFactory$MessageCache;
 
     move-result-object v0
 
-    .line 3
     sget-object v1, Lmiuix/internal/log/message/MessageFactory;->mCacheMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lmiuix/internal/log/message/MessageFactory$MessageCache;->obtain()Lmiuix/internal/log/message/Message;
 
@@ -106,7 +100,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/internal/log/message/MessageFactory;->mCacheMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -121,7 +114,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p0}, Lmiuix/internal/log/message/MessageFactory$MessageCache;->recycle(Lmiuix/internal/log/message/Message;)V
 
     :cond_0

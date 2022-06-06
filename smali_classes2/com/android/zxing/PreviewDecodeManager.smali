@@ -38,17 +38,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Lcom/android/zxing/PreviewDecodeManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/zxing/PreviewDecodeManager$1;-><init>(Lcom/android/zxing/PreviewDecodeManager;)V
 
     iput-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mPreviewCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -61,7 +58,6 @@
 .method public synthetic constructor <init>(Lcom/android/zxing/PreviewDecodeManager$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/zxing/PreviewDecodeManager;-><init>()V
 
     return-void
@@ -70,7 +66,6 @@
 .method public static synthetic access$000(Lcom/android/zxing/PreviewDecodeManager;)Ljava/util/concurrent/ConcurrentHashMap;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -79,7 +74,6 @@
 .method public static getInstance()Lcom/android/zxing/PreviewDecodeManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/zxing/PreviewDecodeManager$Singleton;->INSTANCE:Lcom/android/zxing/PreviewDecodeManager;
 
     return-object v0
@@ -90,7 +84,6 @@
 .method public getDecoder(I)Lcom/android/zxing/Decoder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -109,7 +102,6 @@
 .method public getPreviewCallback()Lcom/android/camera2/Camera2Proxy$PreviewCallback;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mPreviewCallback:Lcom/android/camera2/Camera2Proxy$PreviewCallback;
 
     return-object v0
@@ -118,7 +110,6 @@
 .method public getScanResult()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/4 v1, 0x0
@@ -137,7 +128,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -169,7 +159,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iget-object p2, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -183,15 +172,12 @@
 
     if-nez p2, :cond_3
 
-    .line 2
     new-instance p2, Lcom/android/zxing/DocumentDecoder;
 
     invoke-direct {p2}, Lcom/android/zxing/DocumentDecoder;-><init>()V
 
-    .line 3
     invoke-virtual {p2, p1}, Lcom/android/zxing/DocumentDecoder;->init(I)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -202,7 +188,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p2, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -216,15 +201,12 @@
 
     if-nez p2, :cond_3
 
-    .line 6
     new-instance p2, Lcom/android/zxing/HandGestureDecoder;
 
     invoke-direct {p2}, Lcom/android/zxing/HandGestureDecoder;-><init>()V
 
-    .line 7
     invoke-virtual {p2, p1}, Lcom/android/zxing/HandGestureDecoder;->init(I)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -235,7 +217,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iget-object p2, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -251,15 +232,12 @@
 
     if-nez p2, :cond_3
 
-    .line 10
     new-instance p2, Lcom/android/zxing/QrDecoder;
 
     invoke-direct {p2}, Lcom/android/zxing/QrDecoder;-><init>()V
 
-    .line 11
     invoke-virtual {p2, p1}, Lcom/android/zxing/QrDecoder;->init(I)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -276,7 +254,6 @@
 .method public quit()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -300,15 +277,12 @@
 
     check-cast v1, Lcom/android/zxing/Decoder;
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/zxing/Decoder;->stopDecode()V
 
-    .line 3
     invoke-virtual {v1}, Lcom/android/zxing/Decoder;->quit()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -320,7 +294,6 @@
 .method public reset()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -344,7 +317,6 @@
 
     check-cast v1, Lcom/android/zxing/Decoder;
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/zxing/Decoder;->reset()V
 
     goto :goto_0
@@ -356,7 +328,6 @@
 .method public resetScanResult()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/4 v1, 0x0
@@ -373,7 +344,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast v0, Lcom/android/zxing/QrDecoder;
 
     invoke-virtual {v0}, Lcom/android/zxing/QrDecoder;->resetScanResult()V
@@ -385,7 +355,6 @@
 .method public startDecode()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -409,7 +378,6 @@
 
     check-cast v1, Lcom/android/zxing/Decoder;
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/zxing/Decoder;->startDecode()V
 
     goto :goto_0
@@ -421,7 +389,6 @@
 .method public stopDecode(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/PreviewDecodeManager;->mDecoders:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -436,7 +403,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/zxing/Decoder;->stopDecode()V
 
     :cond_0

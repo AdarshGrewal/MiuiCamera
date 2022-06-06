@@ -58,10 +58,8 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,27 +90,22 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
-    .line 5
     new-instance v0, Lcom/android/camera/module/impl/component/MiLivePlayer$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/impl/component/MiLivePlayer$1;-><init>(Lcom/android/camera/module/impl/component/MiLivePlayer;)V
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerNotifier:Lcom/xiaomi/recordmediaprocess/EffectNotifier;
 
-    .line 6
     new-instance v0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/impl/component/MiLivePlayer$2;-><init>(Lcom/android/camera/module/impl/component/MiLivePlayer;)V
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeNotifier:Lcom/xiaomi/recordmediaprocess/EffectNotifier;
 
-    .line 7
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -129,7 +122,6 @@
 .method public static synthetic access$000(Lcom/android/camera/module/impl/component/MiLivePlayer;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     return-object p0
@@ -138,7 +130,6 @@
 .method public static synthetic access$100(Lcom/android/camera/module/impl/component/MiLivePlayer;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
     return-void
@@ -147,7 +138,6 @@
 .method public static synthetic access$200(Lcom/android/camera/module/impl/component/MiLivePlayer;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setComposeState(I)V
 
     return-void
@@ -156,7 +146,6 @@
 .method public static synthetic access$300(Lcom/android/camera/module/impl/component/MiLivePlayer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->closeFileDescriptor()V
 
     return-void
@@ -165,19 +154,16 @@
 .method private closeFileDescriptor()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "close fd"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
@@ -190,7 +176,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -312,7 +297,6 @@
 .method private initEffectGraph()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
     if-eqz v0, :cond_2
@@ -325,11 +309,9 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->releaseAllLibs()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -358,7 +340,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -367,7 +348,6 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -380,7 +360,6 @@
 
     move v3, v2
 
-    .line 6
     :goto_0
     iget-object v4, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
@@ -390,7 +369,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 7
     iget-object v4, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -405,7 +383,6 @@
 
     aput-object v4, v0, v3
 
-    .line 8
     iget-object v4, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -424,7 +401,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     new-instance v3, Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
@@ -432,15 +408,12 @@
 
     iput-object v3, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
-    .line 10
     invoke-virtual {v3}, Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;->ConstructMediaEffectGraph()V
 
-    .line 11
     iget-object v3, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
     invoke-virtual {v3, v0, v1}, Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;->AddSourcesAndEffectBySourcesPath([Ljava/lang/String;[F)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mAudioPath:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -449,14 +422,12 @@
 
     if-nez v0, :cond_2
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;->SetAudioMute(Z)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mAudioPath:Ljava/lang/String;
@@ -471,7 +442,6 @@
 .method private initMediaCompose()V
     .locals 7
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoHeight:I
 
     if-lez v0, :cond_1
@@ -482,11 +452,9 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->initEffectGraph()V
 
-    .line 3
     new-instance v1, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
@@ -495,7 +463,6 @@
 
     iput-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
-    .line 4
     iget v2, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoWidth:I
 
     iget v3, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoHeight:I
@@ -510,7 +477,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
@@ -525,7 +491,6 @@
 .method private initMediaPlayer(II)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoHeight:I
 
     if-lez v0, :cond_1
@@ -540,11 +505,9 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->initEffectGraph()V
 
-    .line 3
     new-instance v0, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
@@ -553,41 +516,34 @@
 
     iput-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->ConstructMediaPlayer()Z
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     iget-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerNotifier:Lcom/xiaomi/recordmediaprocess/EffectNotifier;
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->SetPlayerNotify(Lcom/xiaomi/recordmediaprocess/EffectNotifier;)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->SetPlayLoop(Z)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     sget-object v2, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer$SurfaceGravity;->SurfaceGravityResizeAspectFit:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer$SurfaceGravity;
 
     invoke-virtual {v0, v2, p1, p2}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->setGravity(Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer$SurfaceGravity;II)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1, v1}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->SetGraphLoop(Z)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1, v1}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->EnableUserAdjustRotatePlay(Z)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string p2, "initMediaPlayer"
@@ -596,7 +552,6 @@
 
     return-void
 
-    .line 11
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
@@ -611,41 +566,32 @@
 .method private releaseAllLibs()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->DestructMediaPlayer()V
 
-    .line 3
     iput-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->DestructMediaComposeFile()V
 
-    .line 6
     iput-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
     if-eqz v0, :cond_2
 
-    .line 8
     invoke-virtual {v0}, Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;->DestructMediaEffectGraph()V
 
-    .line 9
     iput-object v1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaEffectGraph:Lcom/xiaomi/recordmediaprocess/MediaEffectGraph;
 
     :cond_2
@@ -655,12 +601,10 @@
 .method private setComposeState(I)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -683,7 +627,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->getComposeStateString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -694,18 +637,14 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iput p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mStateListener:Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-interface {v0, p1}, Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;->onComposeStateChange(I)V
 
     :cond_0
@@ -715,12 +654,10 @@
 .method private setPlayerState(I)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -743,7 +680,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->getPlayerStateString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -754,18 +690,14 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iput p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mStateListener:Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-interface {v0, p1}, Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;->onPlayStateChange(I)V
 
     :cond_0
@@ -777,14 +709,12 @@
 .method public cancelCompose()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     invoke-virtual {v0}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->CancelCompose()V
@@ -806,7 +736,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -839,7 +768,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-interface {p5}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object v2
@@ -860,41 +788,32 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoWidth:I
 
-    .line 5
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mVideoHeight:I
 
-    .line 6
     iput p3, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPreviewWidth:I
 
-    .line 7
     iput p4, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPreviewHeight:I
 
-    .line 8
     iput-object p5, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mSegmentData:Ljava/util/List;
 
-    .line 9
     iput-object p6, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mAudioPath:Ljava/lang/String;
 
     const/4 p1, 0x1
 
-    .line 10
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
-    .line 11
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setComposeState(I)V
 
     return-void
@@ -903,7 +822,6 @@
 .method public pausePlayer()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     const/4 v1, 0x3
@@ -912,7 +830,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
@@ -920,7 +837,6 @@
 
     const/4 v0, 0x4
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
     return-void
@@ -929,20 +845,16 @@
 .method public release()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "release"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->releaseAllLibs()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->reset()V
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -955,23 +867,19 @@
 .method public reset()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-direct {p0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setComposeState(I)V
 
     :cond_1
@@ -981,7 +889,6 @@
 .method public resumePlayer()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     const/4 v1, 0x4
@@ -990,7 +897,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
@@ -998,7 +904,6 @@
 
     const/4 v0, 0x3
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
     return-void
@@ -1007,7 +912,6 @@
 .method public setStateListener(Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mStateListener:Lcom/android/camera/module/impl/component/ILive$ILivePlayerStateListener;
 
     return-void
@@ -1016,7 +920,6 @@
 .method public startCompose(Lcom/android/camera/storage/mediastore/VideoFile;)V
     .locals 3
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1047,7 +950,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
     const/4 v1, 0x1
@@ -1062,40 +964,33 @@
 
     return-void
 
-    .line 11
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->initMediaCompose()V
 
     const/4 v0, 0x2
 
-    .line 12
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setComposeState(I)V
 
-    .line 13
     invoke-virtual {p1}, Lcom/android/camera/storage/mediastore/VideoFile;->getCurrentFd()Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "startCompose E "
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz p1, :cond_1
 
-    .line 16
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p1
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1118,17 +1013,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->SetComposeFileFd(Ljava/io/FileDescriptor;)V
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     invoke-virtual {p1}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->BeginCompose()V
 
-    .line 20
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
@@ -1142,7 +1034,6 @@
 .method public startCompose(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1173,7 +1064,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mComposeState:I
 
     const/4 v1, 0x1
@@ -1188,33 +1078,27 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->initMediaCompose()V
 
     const/4 v0, 0x2
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setComposeState(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startCompose +"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->SetComposeFileName(Ljava/lang/String;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mMediaComposeFile:Lcom/xiaomi/recordmediaprocess/MediaComposeFile;
 
     invoke-virtual {p1}, Lcom/xiaomi/recordmediaprocess/MediaComposeFile;->BeginCompose()V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "startCompose -"
@@ -1227,7 +1111,6 @@
 .method public startPlayer(Landroid/graphics/SurfaceTexture;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1258,7 +1141,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     const/4 v1, 0x1
@@ -1267,7 +1149,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPreviewWidth:I
 
@@ -1275,7 +1156,6 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->initMediaPlayer(II)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     new-instance v1, Landroid/view/Surface;
@@ -1286,17 +1166,14 @@
 
     const/4 p1, 0x2
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
     invoke-virtual {p1}, Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;->StartPreView()V
 
     const/4 p1, 0x3
 
-    .line 7
     invoke-direct {p0, p1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
     return-void
@@ -1305,7 +1182,6 @@
 .method public stopPlayer()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1330,7 +1206,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mPlayerState:I
 
     const/4 v1, 0x3
@@ -1343,7 +1218,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer;->mEffectMediaPlayer:Lcom/xiaomi/recordmediaprocess/EffectMediaPlayer;
 
@@ -1351,7 +1225,6 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->setPlayerState(I)V
 
     return-void

@@ -45,10 +45,8 @@
         }
     .end annotation
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration$SlowMotionVideoConfigurationMarshaler;->this$0:Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration;
 
-    .line 3
     invoke-direct {p0, p2, p3, p4}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -57,7 +55,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration;Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;ILcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration$SlowMotionVideoConfigurationMarshaler;-><init>(Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration;Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -76,22 +73,18 @@
 .method public marshal(Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 2
     iget v0, p1, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;->width:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget v0, p1, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;->height:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget v0, p1, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;->maxFps:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget p1, p1, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;->batchNbr:I
 
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
@@ -102,7 +95,6 @@
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration$SlowMotionVideoConfigurationMarshaler;->marshal(Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;Ljava/nio/ByteBuffer;)V
@@ -113,27 +105,22 @@
 .method public unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;
     .locals 4
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
 
-    .line 6
     new-instance v3, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;
 
     invoke-direct {v3, v0, v1, v2, p1}, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;-><init>(IIII)V
@@ -144,7 +131,6 @@
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration$MarshalQueryableSlowMotionVideoConfiguration$SlowMotionVideoConfigurationMarshaler;->unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/SlowMotionVideoConfiguration;
 
     move-result-object p1

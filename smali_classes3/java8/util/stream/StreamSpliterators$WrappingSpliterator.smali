@@ -41,7 +41,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Z)V
 
     return-void
@@ -60,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/function/Supplier;Z)V
 
     return-void
@@ -69,7 +67,6 @@
 .method public static synthetic lambda$initPartialTraversalState$144(Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->spliterator:Ljava8/util/Spliterator;
 
     iget-object p0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->bufferSink:Ljava8/util/stream/Sink;
@@ -93,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
     if-nez v0, :cond_0
@@ -102,13 +98,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->init()V
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -123,12 +116,10 @@
 
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->finished:Z
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;->tryAdvance(Ljava8/util/function/Consumer;)Z
 
@@ -143,15 +134,12 @@
 .method public initPartialTraversalState()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SpinedBuffer;
 
     invoke-direct {v0}, Ljava8/util/stream/SpinedBuffer;-><init>()V
 
-    .line 2
     iput-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -166,7 +154,6 @@
 
     iput-object v0, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->bufferSink:Ljava8/util/stream/Sink;
 
-    .line 4
     invoke-static {p0}, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator$$Lambda$2;->lambdaFactory$(Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;)Ljava8/util/function/BooleanSupplier;
 
     move-result-object v0
@@ -186,17 +173,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->doAdvance()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->buffer:Ljava8/util/stream/AbstractSpinedBuffer;
 
     check-cast v1, Ljava8/util/stream/SpinedBuffer;
@@ -216,7 +200,6 @@
 .method public bridge synthetic wrap(Ljava8/util/Spliterator;)Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;->wrap(Ljava8/util/Spliterator;)Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;
 
     move-result-object p1
@@ -236,7 +219,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;
 
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$AbstractWrappingSpliterator;->ph:Ljava8/util/stream/PipelineHelper;

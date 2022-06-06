@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/adobe/xmp/impl/XMPMetaImpl;Ljava/lang/Object;Lcom/adobe/xmp/impl/XMPNode;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/impl/XMPMetaImpl$2;->this$0:Lcom/adobe/xmp/impl/XMPMetaImpl;
 
     iput-object p2, p0, Lcom/adobe/xmp/impl/XMPMetaImpl$2;->val$value:Ljava/lang/Object;
@@ -54,7 +53,6 @@
 .method public getOptions()Lcom/adobe/xmp/options/PropertyOptions;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPMetaImpl$2;->val$propNode:Lcom/adobe/xmp/impl/XMPNode;
 
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
@@ -67,7 +65,6 @@
 .method public getValue()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPMetaImpl$2;->val$value:Ljava/lang/Object;
 
     return-object v0
@@ -76,7 +73,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/XMPMetaImpl$2;->val$value:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

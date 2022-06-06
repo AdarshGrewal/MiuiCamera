@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -54,14 +52,12 @@
     :goto_0
     const/4 v3, -0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v4
 
     if-eq v3, v4, :cond_0
 
-    .line 2
     invoke-virtual {p1, v0, v1, v4}, Ljava/io/OutputStream;->write([BII)V
 
     add-int/2addr v2, v4

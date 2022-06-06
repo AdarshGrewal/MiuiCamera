@@ -58,7 +58,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/VolumeControlPanel;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -75,7 +74,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/VolumeControlPanel;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -84,15 +82,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/VolumeControlPanel;->mSwitchAnimator:Z
 
-    .line 4
     invoke-direct {p0, p1, p2}, Lcom/android/camera/VolumeControlPanel;->Init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -103,13 +98,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setClipToOutline(Z)V
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/VolumeControlPanel;->initConfig(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/VolumeControlPanel;->initPaint()V
 
     return-void
@@ -118,12 +110,10 @@
 .method private drawRectHorizontal(Landroid/graphics/Canvas;)V
     .locals 7
 
-    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 2
     iget v2, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectLeft:F
 
     iget v3, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectTop:F
@@ -138,7 +128,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -147,7 +136,6 @@
 .method private initConfig(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -158,14 +146,12 @@
 
     const-string/jumbo v2, "pro_set_gain_value"
 
-    .line 2
     invoke-virtual {v0, v2, v1}, Lcom/android/camera/data/data/DataItemBase;->getFloat(Ljava/lang/String;F)F
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/VolumeControlPanel;->mTemporaryValue:F
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/R$styleable;->VolumeControl:[I
 
@@ -177,7 +163,6 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
@@ -188,19 +173,17 @@
 
     const/4 v0, -0x1
 
-    .line 5
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mDialColor:I
 
-    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0707b1
+    const p2, 0x7f07079e
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -210,12 +193,11 @@
 
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectTop:F
 
-    .line 7
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f0707b2
+    const v0, 0x7f07079f
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -225,7 +207,6 @@
 
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectBottom:F
 
-    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -238,12 +219,11 @@
 
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectLeft:F
 
-    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0707b0
+    const p2, 0x7f07079d
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -257,12 +237,10 @@
 
     div-float/2addr p1, p2
 
-    .line 10
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mUnitLength:F
 
     mul-float/2addr p1, v1
 
-    .line 11
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
     return-void
@@ -271,19 +249,16 @@
 .method private initPaint()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/VolumeControlPanel;->mDialPaint:Landroid/graphics/Paint;
 
-    .line 2
     iget-boolean v1, p0, Lcom/android/camera/VolumeControlPanel;->antiAlias:Z
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/VolumeControlPanel;->mDialPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/camera/VolumeControlPanel;->mDialColor:I
@@ -298,14 +273,12 @@
 .method public gainValueResetHorizontal(F)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mUnitLength:F
 
     mul-float/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
-    .line 2
     iget p1, p0, Lcom/android/camera/VolumeControlPanel;->mTemporaryValue:F
 
     const/4 v0, 0x0
@@ -314,7 +287,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     const/4 v0, 0x1
@@ -328,14 +300,12 @@
 
     if-lez p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->setSilenceUpSwitchTarget(Z)V
 
-    .line 5
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -346,10 +316,8 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/VolumeControlPanel;->drawRectHorizontal(Landroid/graphics/Canvas;)V
 
     return-void
@@ -358,7 +326,6 @@
 .method public onMeasure(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
     return-void
@@ -367,7 +334,6 @@
 .method public onSizeChanged(IIII)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
     return-void
@@ -376,12 +342,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
@@ -398,7 +362,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     iget v1, p0, Lcom/android/camera/VolumeControlPanel;->mLastX:F
 
@@ -406,10 +369,8 @@
 
     iput v1, p0, Lcom/android/camera/VolumeControlPanel;->mOffsetX:F
 
-    .line 4
     iput v0, p0, Lcom/android/camera/VolumeControlPanel;->mLastX:F
 
-    .line 5
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
     sub-float/2addr v0, v1
@@ -426,17 +387,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     iput-boolean v1, p0, Lcom/android/camera/VolumeControlPanel;->mSwitchAnimator:Z
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     invoke-interface {v0, v2}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->setSilenceUpSwitchTarget(Z)V
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
@@ -454,15 +412,12 @@
 
     if-nez v0, :cond_2
 
-    .line 9
     iput-boolean v2, p0, Lcom/android/camera/VolumeControlPanel;->mSwitchAnimator:Z
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     invoke-interface {v0, v1}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->setSilenceUpSwitchTarget(Z)V
 
-    .line 11
     :cond_2
     :goto_0
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mOffsetX:F
@@ -471,13 +426,11 @@
 
     goto :goto_1
 
-    .line 12
     :cond_3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 13
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -486,7 +439,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     iget v1, p0, Lcom/android/camera/VolumeControlPanel;->mTemporaryValue:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -499,15 +451,12 @@
 
     const-string v1, "M_proVideo_"
 
-    .line 15
     invoke-static {v1, v0}, Lcom/android/camera/statistic/MistatsWrapper;->mistatEvent(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     invoke-interface {v0}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->setPostDelayedTime()V
 
-    .line 17
     :goto_1
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -520,13 +469,10 @@
 
     const-string/jumbo v1, "onTouchEvent:ACTION_DOWN"
 
-    .line 18
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     iput v0, p0, Lcom/android/camera/VolumeControlPanel;->mLastX:F
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     invoke-interface {p1}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->removePostDelayedTime()V
@@ -537,14 +483,12 @@
 .method public setOnVolumeControlListener(Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/VolumeControlPanel;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "setOnVolumeListener()"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     return-void
@@ -553,14 +497,12 @@
 .method public setOnVolumePressAnimatorListener(Lcom/android/camera/VolumeControlPanel$OnVolumePressAnimatorListener;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/VolumeControlPanel;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "setOnVolumePressAnimatorListener()"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumePressAnimatorListener:Lcom/android/camera/VolumeControlPanel$OnVolumePressAnimatorListener;
 
     return-void
@@ -569,19 +511,16 @@
 .method public setValueHorizontal(F)V
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
     sub-float/2addr v0, p1
 
     iput v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/VolumeControlPanel;->mOnVolumeControlListener:Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;
 
     invoke-interface {p1, v0}, Lcom/android/camera/VolumeControlPanel$OnVolumeControlListener;->putVolumeControlValue(F)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectWidth:F
@@ -592,7 +531,6 @@
 
     if-lez v1, :cond_0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
     goto :goto_0
@@ -602,10 +540,8 @@
 
     if-gtz p1, :cond_1
 
-    .line 5
     iput v2, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
 
-    .line 6
     :cond_1
     :goto_0
     iget p1, p0, Lcom/android/camera/VolumeControlPanel;->mVolumeRectRight:F
@@ -628,7 +564,6 @@
     :goto_1
     iput v2, p0, Lcom/android/camera/VolumeControlPanel;->mTemporaryValue:F
 
-    .line 7
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -643,7 +578,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 8
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -656,12 +590,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 9
     iget v0, p0, Lcom/android/camera/VolumeControlPanel;->mTemporaryValue:F
 
     invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$ChangeGainProtocol;->setGainValue(F)V
 
-    .line 10
     :cond_3
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -671,21 +603,18 @@
 .method public setVolumeControlBackGround()Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/ui/drawable/RoundRectDrawable;
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f060353
+    const v2, 0x7f060352
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2

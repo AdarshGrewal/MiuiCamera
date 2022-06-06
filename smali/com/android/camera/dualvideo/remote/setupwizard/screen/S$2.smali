@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +37,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
-    const v0, 0x7f1208c1
+    const v0, 0x7f120872
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardScreen;->setAlertDialogTitle(I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;->access$300(Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;)Landroid/view/View;
@@ -56,7 +53,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
     const/4 v1, -0x1
@@ -67,12 +63,10 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 4
     invoke-static {}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->current()Lcom/android/camera/dualvideo/remote/RemoteOnlineController;
 
     move-result-object p1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;->access$500(Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;)Landroid/view/View;
@@ -89,13 +83,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->stopNetworkServer()V
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/remote/RemoteOnlineController;->startNetworkServer()V
 
-    .line 8
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/S$2;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/S;
 

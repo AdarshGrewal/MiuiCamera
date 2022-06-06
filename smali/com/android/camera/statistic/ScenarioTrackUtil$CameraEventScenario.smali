@@ -32,22 +32,18 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->isTrackStarted:Z
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->initE2EScenario(Ljava/lang/String;)Landroid/os/statistics/E2EScenario;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->e2eScenario:Landroid/os/statistics/E2EScenario;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->mEventName:Ljava/lang/String;
 
     return-void
@@ -56,7 +52,6 @@
 .method private initE2EScenario(Ljava/lang/String;)Landroid/os/statistics/E2EScenario;
     .locals 3
 
-    .line 1
     :try_start_0
     new-instance v0, Landroid/os/statistics/E2EScenario;
 
@@ -73,7 +68,6 @@
     :catchall_0
     move-exception v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/statistic/ScenarioTrackUtil;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -111,7 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/statistic/ScenarioTrackUtil$CameraEventScenario;->mEventName:Ljava/lang/String;
 
     return-object v0

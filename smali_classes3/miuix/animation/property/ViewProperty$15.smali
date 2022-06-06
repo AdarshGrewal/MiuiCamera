@@ -18,7 +18,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result p1
@@ -40,7 +38,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewProperty$15;->getValue(Landroid/view/View;)F
@@ -53,10 +50,8 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 3
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 3
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -76,7 +71,6 @@
     :cond_0
     move v0, v1
 
-    .line 4
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
@@ -92,7 +86,6 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
@@ -102,7 +95,6 @@
 
     const/16 p2, 0x8
 
-    .line 6
     invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_2
@@ -113,7 +105,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewProperty$15;->setValue(Landroid/view/View;F)V

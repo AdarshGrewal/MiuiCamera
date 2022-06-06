@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$11;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert$TopAlertRunnable;-><init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
@@ -35,7 +34,6 @@
 .method public runToSafe()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$11;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$1800(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/android/camera/customization/BGTintTextView;

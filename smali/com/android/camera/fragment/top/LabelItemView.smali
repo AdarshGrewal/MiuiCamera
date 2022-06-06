@@ -15,7 +15,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/top/LabelItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -24,10 +23,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/top/LabelItemView;->init()V
 
     return-void
@@ -36,7 +33,6 @@
 .method private init()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -53,9 +49,8 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0253
+    const v1, 0x7f0a0264
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -64,9 +59,8 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
-    const v1, 0x7f0a01f1
+    const v1, 0x7f0a01fe
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -83,7 +77,6 @@
 .method public getLabelView()Lcom/android/camera/ui/ColorImageView;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
     return-object v0
@@ -92,7 +85,6 @@
 .method public getMainView()Lcom/android/camera/ui/ColorImageView;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
     return-object v0
@@ -101,7 +93,6 @@
 .method public isLabelVisible()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
@@ -124,7 +115,6 @@
 .method public setColorAndRefresh(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
@@ -133,12 +123,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/ColorImageView;->setColorAndRefresh(I)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
@@ -148,7 +136,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/ColorImageView;->setColorAndRefresh(I)V
@@ -164,7 +151,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
@@ -178,7 +164,6 @@
 
     if-gez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
     const/4 v0, 0x0
@@ -187,7 +172,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
@@ -199,7 +183,6 @@
 .method public setLabelViewVisibility(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mLabelImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -214,7 +197,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
@@ -228,7 +210,6 @@
 
     if-gez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
     const/4 v0, 0x0
@@ -237,7 +218,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
@@ -249,7 +229,6 @@
 .method public setMainViewVisibility(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/LabelItemView;->mMainImageView:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setVisibility(I)V

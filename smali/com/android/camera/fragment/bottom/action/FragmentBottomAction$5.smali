@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$5;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationCancel(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$5;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$100(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/view/ViewGroup;
@@ -49,7 +47,6 @@
 
     invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$5;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$100(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/view/ViewGroup;
@@ -58,7 +55,6 @@
 
     invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->setScaleX(Landroid/view/View;F)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$5;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$100(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/view/ViewGroup;

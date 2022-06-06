@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -35,22 +34,18 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
 
-    .line 1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;
 
-    .line 2
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    .line 3
     iget p1, p1, Landroid/os/Message;->what:I
 
     const-string v2, "WideSelfieEngine"
 
     if-eqz v1, :cond_0
 
-    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,7 +62,6 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_0
     iget-object v3, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
@@ -83,7 +77,6 @@
 
     if-nez p1, :cond_9
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     invoke-static {p1}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$300(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)I
@@ -96,7 +89,6 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 7
     new-instance p1, Landroid/graphics/Rect;
 
     iget-object v4, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->progressBarThumbOffset:Landroid/graphics/Point;
@@ -105,7 +97,6 @@
 
     iget-object v5, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 8
     invoke-static {v5}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
 
     move-result-object v5
@@ -120,7 +111,6 @@
 
     iget-object v6, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 9
     invoke-static {v6}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
 
     move-result-object v6
@@ -137,7 +127,6 @@
 
     iget-object v7, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 10
     invoke-static {v7}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
 
     move-result-object v7
@@ -166,7 +155,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     new-instance p1, Landroid/graphics/Rect;
 
@@ -190,7 +178,6 @@
 
     iget-object v6, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 12
     invoke-static {v6}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
 
     move-result-object v6
@@ -217,7 +204,6 @@
 
     iget-object v7, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 13
     invoke-static {v7}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
 
     move-result-object v7
@@ -239,7 +225,6 @@
 
     if-eqz v3, :cond_a
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     invoke-static {p1}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$300(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)I
@@ -268,7 +253,6 @@
 
     if-lez p1, :cond_4
 
-    .line 15
     iget-object v4, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     invoke-static {v4}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
@@ -300,7 +284,6 @@
     :cond_4
     neg-int v4, p1
 
-    .line 16
     iget-object v5, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     invoke-static {v5}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$400(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)Landroid/graphics/Rect;
@@ -324,7 +307,6 @@
 
     add-int/2addr p1, v4
 
-    .line 17
     :goto_3
     iget-object v4, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
@@ -349,7 +331,6 @@
 
     neg-int v2, v2
 
-    .line 18
     :goto_4
     iget-object v5, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->progressBarThumbArray:[B
 
@@ -363,7 +344,6 @@
 
     invoke-interface/range {v4 .. v9}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$WideSelfStateCallback;->onPreviewUpdate([BIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 19
     iget v4, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->progress:I
 
     const/16 v5, 0x64
@@ -387,7 +367,6 @@
 
     move v9, v1
 
-    .line 20
     :goto_6
     iget v5, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->direction:I
 
@@ -410,7 +389,6 @@
 
     if-ne p1, v1, :cond_a
 
-    .line 21
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -435,7 +413,6 @@
 
     invoke-static {v2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     iget-object p1, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
     const/4 v1, -0x1
@@ -444,24 +421,20 @@
 
     if-eqz v3, :cond_a
 
-    .line 23
     iget-object p1, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->resultImageArray:[B
 
     if-eqz p1, :cond_a
 
-    .line 24
     iget v1, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->resultImageWidth:I
 
     iget v0, v0, Lcom/arcsoft/camera/wideselfie/ProcessResult;->resultImageHeight:I
 
     iget-object v2, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$2;->this$0:Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;
 
-    .line 25
     invoke-static {v2}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$600(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)I
 
     move-result v2
 
-    .line 26
     invoke-interface {v3, p1, v1, v0, v2}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$WideSelfStateCallback;->onNv21Available([BIII)V
 
     :cond_a

@@ -65,7 +65,6 @@
 
     new-array v1, v0, [I
 
-    .line 1
     sput-object v1, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->WB_VALUES:[I
 
     const/4 v1, 0x0
@@ -77,7 +76,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 2
     sget-object v2, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->WB_VALUES:[I
 
     mul-int/lit16 v3, v1, 0xc8
@@ -88,7 +86,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     sget-object v2, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->WB_VALUES:[I
 
@@ -105,7 +102,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->WB_VALUES:[I
 
@@ -137,7 +133,6 @@
 
     const-string v3, "8000"
 
-    .line 5
     filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
@@ -150,35 +145,27 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/android/camera/data/data/config/ComponentManuallyWB;IZLcom/android/camera/fragment/manually/ManuallyListener;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/manually/adapter/AbstractZoomSliderAdapter;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentIndex:I
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyWB:Lcom/android/camera/data/data/config/ComponentManuallyWB;
 
-    .line 4
     iput p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentMode:I
 
-    .line 5
     iput-boolean p4, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mEnableGradient:Z
 
-    .line 6
     iput-object p5, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyListener:Lcom/android/camera/fragment/manually/ManuallyListener;
 
-    .line 7
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->initStyle(Landroid/content/Context;)V
 
-    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const p3, 0x7f0703c4
+    const p3, 0x7f0703c3
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -192,24 +179,6 @@
 
     iput p2, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineSelectMovingHalfHeight:F
 
-    .line 9
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    const p4, 0x7f0703c3
-
-    invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    div-float/2addr p2, p3
-
-    iput p2, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineMovingHalfHeight:F
-
-    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
@@ -224,14 +193,29 @@
 
     div-float/2addr p2, p3
 
+    iput p2, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineMovingHalfHeight:F
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    const p4, 0x7f0703c1
+
+    invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float/2addr p2, p3
+
     iput p2, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineHalfHeight:F
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0703bf
+    const p2, 0x7f0703be
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -239,7 +223,6 @@
 
     iput p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineTextGap:I
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mTextPaint:Landroid/text/TextPaint;
 
     sget-object p2, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
@@ -254,7 +237,6 @@
 
     int-to-float p1, p1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mapPositionToValue(F)Ljava/lang/Integer;
 
     move-result-object p1
@@ -263,7 +245,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyWB:Lcom/android/camera/data/data/config/ComponentManuallyWB;
 
     iget v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentMode:I
@@ -274,26 +255,22 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyWB:Lcom/android/camera/data/data/config/ComponentManuallyWB;
 
     iget v2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentMode:I
 
     invoke-virtual {v1, v2, p1}, Lcom/android/camera/data/data/config/ComponentManuallyWB;->setCustomWB(II)V
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyListener:Lcom/android/camera/fragment/manually/ManuallyListener;
 
     if-eqz v3, :cond_0
 
-    .line 5
     iget-object v4, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mManuallyWB:Lcom/android/camera/data/data/config/ComponentManuallyWB;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 6
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v6
@@ -302,7 +279,6 @@
 
     iget v8, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentMode:I
 
-    .line 7
     invoke-interface/range {v3 .. v8}, Lcom/android/camera/fragment/manually/ManuallyListener;->onManuallyDataChanged(Lcom/android/camera/data/data/ComponentData;Ljava/lang/String;Ljava/lang/String;ZI)V
 
     :cond_0
@@ -312,7 +288,6 @@
 .method private drawText(FILandroid/graphics/Canvas;I)V
     .locals 7
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mLables:[Ljava/lang/String;
 
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mapIndexToTextPosition(I)I
@@ -321,12 +296,10 @@
 
     aget-object p2, v0, p2
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mTextPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -337,7 +310,6 @@
 
     invoke-virtual {v1, p2, v3, v2, v0}, Landroid/text/TextPaint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 4
     invoke-virtual {p3}, Landroid/graphics/Canvas;->save()I
 
     const/high16 v1, 0x43870000    # 270.0f
@@ -350,7 +322,6 @@
 
     if-ne p4, v4, :cond_2
 
-    .line 5
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mDegree:F
 
     iget v5, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineTextGap:I
@@ -375,14 +346,12 @@
 
     invoke-virtual {p3, p4, p1, v5}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 6
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mDegree:F
 
     cmpl-float v2, p4, v2
 
     if-nez v2, :cond_0
 
-    .line 7
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p4
@@ -410,7 +379,6 @@
 
     if-nez p4, :cond_1
 
-    .line 8
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p4
@@ -429,7 +397,6 @@
 
     invoke-virtual {p3, p4, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 9
     :cond_1
     :goto_0
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineTextGap:I
@@ -454,7 +421,6 @@
 
     goto :goto_2
 
-    .line 10
     :cond_2
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mDegree:F
 
@@ -480,14 +446,12 @@
 
     invoke-virtual {p3, p4, p1, v5}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 11
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mDegree:F
 
     cmpl-float v2, p4, v2
 
     if-nez v2, :cond_3
 
-    .line 12
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p4
@@ -515,7 +479,6 @@
 
     if-nez p4, :cond_4
 
-    .line 13
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p4
@@ -534,7 +497,6 @@
 
     invoke-virtual {p3, p4, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 14
     :cond_4
     :goto_1
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineTextGap:I
@@ -557,7 +519,6 @@
 
     invoke-virtual {p3, p2, p1, p4, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 15
     :goto_2
     invoke-virtual {p3}, Landroid/graphics/Canvas;->restore()V
 
@@ -611,10 +572,8 @@
 .method public draw(ILandroid/graphics/Canvas;ZIF)V
     .locals 8
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->draw(ILandroid/graphics/Canvas;ZIF)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->isTextPoint(I)Z
 
     move-result p5
@@ -623,10 +582,8 @@
 
     const/4 p5, 0x0
 
-    .line 3
     invoke-direct {p0, p5, p1, p2, p4}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->drawText(FILandroid/graphics/Canvas;I)V
 
-    .line 4
     iget p4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineStopPointWidth:I
 
     neg-int p4, p4
@@ -637,7 +594,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->measureWidth(I)F
 
@@ -654,7 +610,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 6
     iget v4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mCurrentLineSelectHalfHeight:F
 
     neg-float v2, v4
@@ -677,7 +632,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->isStopPoint(I)Z
 
@@ -685,7 +639,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 8
     iget v4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mCurrentLineHalfHeight:F
 
     neg-float v2, v4
@@ -708,7 +661,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_2
     iget v4, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mCurrentLineHalfHeight:F
 
@@ -761,7 +713,6 @@
 .method public isStopPoint(I)Z
     .locals 1
 
-    .line 1
     rem-int/lit8 v0, p1, 0x8
 
     if-eqz v0, :cond_1
@@ -787,7 +738,6 @@
 .method public isTextPoint(I)Z
     .locals 0
 
-    .line 1
     rem-int/lit8 p1, p1, 0x8
 
     if-nez p1, :cond_0
@@ -805,12 +755,10 @@
 .method public mapPositionToValue(F)Ljava/lang/Integer;
     .locals 2
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->getCount()I
 
     move-result v0
@@ -823,7 +771,6 @@
 
     move-result p1
 
-    .line 4
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->wbValues:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -838,7 +785,6 @@
 .method public bridge synthetic mapPositionToValue(F)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mapPositionToValue(F)Ljava/lang/Integer;
 
     move-result-object p1
@@ -849,7 +795,6 @@
 .method public mapValueToPosition(Ljava/lang/Integer;)F
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->wbValues:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -864,7 +809,6 @@
 .method public bridge synthetic mapValueToPosition(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mapValueToPosition(Ljava/lang/Integer;)F
@@ -877,14 +821,12 @@
 .method public measureWidth(I)F
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->isStopPoint(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineStopPointWidth:I
 
     :goto_0
@@ -892,7 +834,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineWidth:I
 
@@ -920,7 +861,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->getCount()I
 
@@ -936,7 +876,6 @@
 
     move-result p2
 
-    .line 2
     :cond_1
     iget p1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentIndex:I
 
@@ -944,11 +883,9 @@
 
     return-void
 
-    .line 3
     :cond_2
     iput p2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->mCurrentIndex:I
 
-    .line 4
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/manually/adapter/ExtraCustomWBListAdapter;->changeValue(I)V
 
     return-void

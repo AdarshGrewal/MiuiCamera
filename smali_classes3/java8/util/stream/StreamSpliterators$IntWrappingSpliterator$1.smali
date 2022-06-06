@@ -27,7 +27,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator;Ljava8/util/stream/SpinedBuffer$OfInt;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator$1;->this$0:Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator;
 
     iput-object p2, p0, Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator$1;->val$b:Ljava8/util/stream/SpinedBuffer$OfInt;
@@ -42,7 +41,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -51,7 +49,6 @@
 .method public accept(I)V
     .locals 1
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator$1;->val$b:Ljava8/util/stream/SpinedBuffer$OfInt;
 
     invoke-virtual {v0, p1}, Ljava8/util/stream/SpinedBuffer$OfInt;->accept(I)V
@@ -62,7 +59,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -71,7 +67,6 @@
 .method public accept(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -84,7 +79,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$IntWrappingSpliterator$1;->accept(Ljava/lang/Integer;)V

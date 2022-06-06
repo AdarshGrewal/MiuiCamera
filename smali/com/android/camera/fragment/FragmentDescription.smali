@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/fragment/FragmentDescription;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -44,12 +43,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/BaseDialogFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mLastCanScrollVertically:Z
 
     return-void
@@ -58,7 +55,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/FragmentDescription;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/fragment/FragmentDescription;->mLastCanScrollVertically:Z
 
     return p0
@@ -67,7 +63,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/FragmentDescription;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mLastCanScrollVertically:Z
 
     return p1
@@ -78,7 +73,6 @@
 .method public synthetic OooO00o(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -93,7 +87,6 @@
 .method public initView(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -108,16 +101,14 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    const v0, 0x7f0a0109
+    const v0, 0x7f0a0110
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -130,20 +121,17 @@
 
     const/high16 v2, 0x43340000    # 180.0f
 
-    .line 4
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setRotation(F)V
 
-    .line 5
     :cond_0
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOOo;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOOo;
 
-    invoke-direct {v2, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOOo;-><init>(Lcom/android/camera/fragment/FragmentDescription;)V
+    invoke-direct {v2, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOOo;-><init>(Lcom/android/camera/fragment/FragmentDescription;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a010b
+    const v0, 0x7f0a0112
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -152,9 +140,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a010a
+    const v0, 0x7f0a0111
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -163,10 +150,8 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 8
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    .line 9
     new-instance p1, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -177,12 +162,10 @@
 
     invoke-direct {p1, v0, v1}, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/android/camera/fragment/DefaultItemAnimator;
@@ -191,7 +174,6 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentDescription;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/android/camera/fragment/FragmentDescription$1;
@@ -206,16 +188,14 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0067
+    const p3, 0x7f0d0066
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/FragmentDescription;->initView(Landroid/view/View;)V
 
     return-object p1
@@ -224,17 +204,14 @@
 .method public onDestroyView()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v0, Lcom/android/camera/animation/type/AlphaOutOnSubscribe;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
@@ -262,10 +239,8 @@
 .method public onPause()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->dismiss()V
 
     return-void
@@ -274,12 +249,10 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     if-eqz p1, :cond_0
 
-    .line 2
     new-instance p2, Lcom/android/camera/animation/type/AlphaInOnSubscribe;
 
     invoke-direct {p2, p1}, Lcom/android/camera/animation/type/AlphaInOnSubscribe;-><init>(Landroid/view/View;)V

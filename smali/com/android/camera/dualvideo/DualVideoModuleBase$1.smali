@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/DualVideoModuleBase;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/DualVideoModuleBase$1;->this$0:Lcom/android/camera/dualvideo/DualVideoModuleBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +37,12 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0x1af
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -54,14 +51,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$ModuleContent;->getParent()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_0

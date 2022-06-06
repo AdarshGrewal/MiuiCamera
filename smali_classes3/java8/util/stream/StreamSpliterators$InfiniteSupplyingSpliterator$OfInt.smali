@@ -34,10 +34,8 @@
 .method public constructor <init>(JLjava8/util/function/IntSupplier;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;-><init>(J)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->s:Ljava8/util/function/IntSupplier;
 
     return-void
@@ -48,7 +46,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->forEachRemaining(Ljava8/util/function/IntConsumer;)V
@@ -68,7 +65,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfInt;->forEachRemaining(Ljava8/util/Spliterator$OfInt;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -77,7 +73,6 @@
 .method public forEachRemaining(Ljava8/util/function/IntConsumer;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfInt;->forEachRemaining(Ljava8/util/Spliterator$OfInt;Ljava8/util/function/IntConsumer;)V
 
     return-void
@@ -86,7 +81,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
@@ -108,7 +102,6 @@
         }
     .end annotation
 
-    .line 4
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfInt;->tryAdvance(Ljava8/util/Spliterator$OfInt;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -119,10 +112,8 @@
 .method public tryAdvance(Ljava8/util/function/IntConsumer;)Z
     .locals 1
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->s:Ljava8/util/function/IntSupplier;
 
     invoke-interface {v0}, Ljava8/util/function/IntSupplier;->getAsInt()I
@@ -139,7 +130,6 @@
 .method public trySplit()Ljava8/util/Spliterator$OfInt;
     .locals 4
 
-    .line 3
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;->estimate:J
 
     const-wide/16 v2, 0x0
@@ -152,7 +142,6 @@
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v2, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;
 
@@ -172,7 +161,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->trySplit()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -183,7 +171,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;->trySplit()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0

@@ -96,7 +96,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -105,7 +104,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 2
     sget v0, Lmiuix/miuixbasewidget/R$attr;->miuixAppcompatAlphabetIndexerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -116,15 +114,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, -0x1
 
-    .line 4
     iput p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->INVALID_INDEX:I
 
-    .line 5
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -133,20 +128,16 @@
 
     const/4 p1, 0x0
 
-    .line 6
     iput p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mListScrollState:I
 
-    .line 7
     new-instance p1, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$4;
 
     invoke-direct {p1, p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$4;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
 
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mHandler:Landroid/os/Handler;
 
-    .line 8
     invoke-direct {p0, p2, p3}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->parseAttrs(Landroid/util/AttributeSet;I)V
 
-    .line 9
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->init()V
 
     return-void
@@ -163,7 +154,6 @@
 .method public static synthetic access$000(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->checkItemHeight()V
 
     return-void
@@ -172,7 +162,6 @@
 .method public static synthetic access$100(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->stop(I)V
 
     return-void
@@ -181,7 +170,6 @@
 .method public static synthetic access$200(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->updateOverlayTranslationX(F)V
 
     return-void
@@ -190,7 +178,6 @@
 .method public static synthetic access$300(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mCancelOverlayTextColorAnim:Z
 
     return p0
@@ -199,7 +186,6 @@
 .method public static synthetic access$302(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mCancelOverlayTextColorAnim:Z
 
     return p1
@@ -208,7 +194,6 @@
 .method public static synthetic access$400(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->updateOverlayTextAlpha(F)V
 
     return-void
@@ -217,7 +202,6 @@
 .method public static synthetic access$500(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->hideOverlay()V
 
     return-void
@@ -226,7 +210,6 @@
 .method public static synthetic access$600(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->setChecked(I)V
 
     return-void
@@ -235,7 +218,6 @@
 .method public static synthetic access$700(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)Landroid/widget/SectionIndexer;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getSectionIndexer()Landroid/widget/SectionIndexer;
 
     move-result-object p0
@@ -246,7 +228,6 @@
 .method public static synthetic access$800(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;ILandroid/widget/SectionIndexer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->scrollToSelection(ILandroid/widget/SectionIndexer;)V
 
     return-void
@@ -255,12 +236,10 @@
 .method private calculateIndex(FI)I
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
     move-result v1
@@ -273,7 +252,6 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    .line 3
     :goto_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -281,12 +259,10 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
     move-result v1
@@ -304,7 +280,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -321,12 +296,10 @@
     :goto_1
     if-lez v0, :cond_3
 
-    .line 7
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v1
@@ -351,12 +324,10 @@
 .method private calculateOverlayPosition(I)I
     .locals 4
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->normalizeIndex(I)I
 
     move-result p1
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -367,7 +338,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -391,7 +361,6 @@
 
     add-double/2addr v0, v2
 
-    .line 4
     iget p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemHeight:I
 
     int-to-double v2, p1
@@ -408,7 +377,6 @@
 
     double-to-int v1, v0
 
-    .line 5
     :cond_1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getMarginTop()I
 
@@ -424,7 +392,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -435,14 +402,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 2
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemHeight:I
 
     if-ge v1, v2, :cond_0
 
     sub-int/2addr v2, v1
 
-    .line 3
     iget v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemMargin:I
 
     mul-int/lit8 v1, v1, 0x2
@@ -451,36 +416,30 @@
 
     move-result v1
 
-    .line 4
     div-int/lit8 v1, v1, 0x2
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 7
     iget v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v3, v1
 
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 8
     iget v3, v2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
     sub-int/2addr v3, v1
 
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
-    .line 9
     invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
@@ -488,7 +447,6 @@
     :cond_0
     if-eq v1, v2, :cond_1
 
-    .line 10
     iput v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemHeight:I
 
     :cond_1
@@ -501,7 +459,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -509,14 +466,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 3
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget v2, v2, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mNormalColor:I
@@ -534,7 +489,6 @@
 .method private constructItem()V
     .locals 10
 
-    .line 1
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -545,10 +499,8 @@
 
     const/4 v2, 0x1
 
-    .line 2
     iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 3
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemMargin:I
 
     iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
@@ -557,19 +509,16 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 4
     iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     const/4 v2, 0x0
 
     const-string v3, "mipro-medium"
 
-    .line 5
     invoke-static {v3, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v3
 
-    .line 6
     iget-object v4, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget-object v4, v4, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mIndexes:[Ljava/lang/String;
@@ -583,7 +532,6 @@
 
     aget-object v7, v4, v6
 
-    .line 7
     new-instance v8, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -592,27 +540,22 @@
 
     invoke-direct {v8, v9}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 8
     invoke-virtual {v8, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     const/16 v9, 0x11
 
-    .line 9
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 10
     iget v9, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemHeight:I
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setHeight(I)V
 
-    .line 11
     iget-object v9, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget v9, v9, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mNormalColor:I
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 12
     iget-object v9, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget v9, v9, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mIndexerTextSize:I
@@ -623,7 +566,6 @@
 
     const-string v9, "!"
 
-    .line 13
     invoke-static {v7, v9}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v9
@@ -635,7 +577,6 @@
     :cond_0
     invoke-virtual {v8, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 14
     invoke-virtual {p0, v8, v1, v0}, Landroid/widget/LinearLayout;->attachViewToParent(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     add-int/lit8 v6, v6, 0x1
@@ -649,19 +590,16 @@
 .method private constructOverlay()V
     .locals 5
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mDrawOverlay:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 3
     new-instance v1, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -672,7 +610,6 @@
 
     iput-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
-    .line 4
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayWidth:I
@@ -683,7 +620,6 @@
 
     invoke-direct {v1, v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -694,7 +630,6 @@
 
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 6
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexWidth:I
 
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getMarinEnd()I
@@ -707,33 +642,28 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout$LayoutParams;->setMarginEnd(I)V
 
-    .line 7
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 8
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     const/4 v2, 0x5
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextAlignment(I)V
 
-    .line 9
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 10
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     const/16 v2, 0x10
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 11
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextSize:I
@@ -744,50 +674,42 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 12
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextColor:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 13
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 14
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 15
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 16
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 17
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x17
 
     if-lt v1, v2, :cond_0
 
-    .line 18
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     iget v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextAppearanceRes:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    .line 19
     :cond_0
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
@@ -797,7 +719,6 @@
 
     iput-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextPaint:Landroid/text/TextPaint;
 
-    .line 20
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
@@ -809,14 +730,12 @@
 .method private drawThumb(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -825,7 +744,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getIndex(Ljava/lang/String;)I
 
     move-result p1
@@ -834,10 +752,8 @@
 
     move-result p1
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->clearLastChecked()V
 
-    .line 5
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->setChecked(I)V
 
     :cond_0
@@ -847,14 +763,12 @@
 .method private drawThumbInternal(Ljava/lang/CharSequence;F)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
@@ -862,12 +776,10 @@
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mCancelOverlayTextColorAnim:Z
 
     const-string v0, "!"
 
-    .line 4
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -876,7 +788,6 @@
 
     const-string p1, "\u2665"
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
@@ -890,12 +801,10 @@
 
     if-nez v0, :cond_2
 
-    .line 6
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_NORMAL:I
 
     invoke-static {p0, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
@@ -911,15 +820,12 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 8
     invoke-direct {p0, p2}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->updateOverlayTextAlpha(F)V
 
-    .line 9
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 10
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextPaint:Landroid/text/TextPaint;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -932,26 +838,22 @@
 
     float-to-int p1, p1
 
-    .line 11
     iget p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayHeight:I
 
     sub-int/2addr p2, p1
 
     div-int/lit8 p2, p2, 0x2
 
-    .line 12
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0, v0, v0}, Landroid/widget/TextView;->setPaddingRelative(IIII)V
 
-    .line 13
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 14
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->showOverlay()V
 
     :cond_3
@@ -961,14 +863,12 @@
 .method private getIndex(Ljava/lang/String;)I
     .locals 5
 
-    .line 1
     iget v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastAlphabetIndex:I
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 2
     :goto_0
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
@@ -978,7 +878,6 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 3
     aget-object v3, v3, v2
 
     invoke-static {p1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1011,7 +910,6 @@
 .method private getListOffset()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     invoke-interface {v0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;->getListHeaderCount()I
@@ -1024,7 +922,6 @@
 .method private getMarginTop()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1039,7 +936,6 @@
 .method private getMarinEnd()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1056,7 +952,6 @@
 .method private getPosition(ILandroid/widget/SectionIndexer;)I
     .locals 6
 
-    .line 1
     invoke-interface {p2}, Landroid/widget/SectionIndexer;->getSections()[Ljava/lang/Object;
 
     move-result-object p2
@@ -1067,7 +962,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
 
@@ -1094,7 +988,6 @@
 
     return v0
 
-    .line 3
     :cond_2
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
@@ -1104,12 +997,10 @@
 
     if-lt p1, v0, :cond_3
 
-    .line 4
     array-length p1, p2
 
     return p1
 
-    .line 5
     :cond_3
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mSectionMap:Ljava/util/HashMap;
 
@@ -1119,13 +1010,11 @@
 
     move v1, v0
 
-    .line 6
     :goto_0
     array-length v2, p2
 
     if-ge v1, v2, :cond_4
 
-    .line 7
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mSectionMap:Ljava/util/HashMap;
 
     aget-object v3, p2, v1
@@ -1148,7 +1037,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_4
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
@@ -1159,7 +1047,6 @@
     :goto_1
     add-int v2, v1, p1
 
-    .line 9
     array-length v3, p2
 
     if-lt v2, v3, :cond_5
@@ -1169,7 +1056,6 @@
     :cond_5
     sub-int v3, p1, v1
 
-    .line 10
     array-length v4, p2
 
     if-ge v2, v4, :cond_6
@@ -1184,7 +1070,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 11
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mSectionMap:Ljava/util/HashMap;
 
     aget-object p2, p2, v2
@@ -1204,7 +1089,6 @@
     :cond_6
     if-ltz v3, :cond_8
 
-    .line 12
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mSectionMap:Ljava/util/HashMap;
 
     aget-object v4, p2, v3
@@ -1215,7 +1099,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 13
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mSectionMap:Ljava/util/HashMap;
 
     aget-object p2, p2, v3
@@ -1243,7 +1126,6 @@
 .method private getSectionIndexer()Landroid/widget/SectionIndexer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexer:Landroid/widget/SectionIndexer;
 
     return-object v0
@@ -1252,7 +1134,6 @@
 .method private hasShown()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -1289,7 +1170,6 @@
 .method private hideOverlay()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -1302,7 +1182,6 @@
 
     aput-object v0, v2, v3
 
-    .line 2
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -1325,7 +1204,6 @@
 
     aput-object v5, v4, v3
 
-    .line 3
     invoke-interface {v0, v2, v4}, Lmiuix/animation/IVisibleStyle;->setScale(F[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -1338,7 +1216,6 @@
 
     aput-object v5, v4, v3
 
-    .line 4
     invoke-interface {v0, v2, v4}, Lmiuix/animation/IVisibleStyle;->setScale(F[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -1349,7 +1226,6 @@
 
     aput-object v2, v1, v3
 
-    .line 5
     invoke-interface {v0, v1}, Lmiuix/animation/IVisibleStyle;->hide([Lmiuix/animation/base/AnimConfig;)V
 
     :cond_0
@@ -1361,48 +1237,38 @@
 
     const v0, 0x800005
 
-    .line 1
     iput v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mVerticalPosition:I
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->initAnimConfig()V
 
-    .line 5
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->constructItem()V
 
-    .line 6
-    new-instance v1, LOooO0OO/OooO0Oo/OooO00o/OooO00o;
+    new-instance v1, LOooO0Oo/OooO0Oo/OooO00o/OooO00o;
 
-    invoke-direct {v1, p0}, LOooO0OO/OooO0Oo/OooO00o/OooO00o;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
+    invoke-direct {v1, p0}, LOooO0Oo/OooO0Oo/OooO00o/OooO00o;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
 
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
 
-    .line 7
     new-instance v1, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$1;
 
     invoke-direct {v1, p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$1;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
 
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 8
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
-    .line 9
     new-instance v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;
 
     invoke-direct {v0, p0, p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;Landroid/view/View;)V
 
     iput-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexerTouchHelper:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;
 
-    .line 10
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->setAccessibilityDelegate(Landroid/view/View;Landroidx/core/view/AccessibilityDelegateCompat;)V
 
     return-void
@@ -1411,7 +1277,6 @@
 .method private initAnimConfig()V
     .locals 5
 
-    .line 1
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -1422,7 +1287,6 @@
 
     new-array v2, v1, [Lmiuix/animation/listener/TransitionListener;
 
-    .line 2
     new-instance v3, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$2;
 
     invoke-direct {v3, p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$2;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
@@ -1433,7 +1297,6 @@
 
     invoke-virtual {v0, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    .line 3
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -1442,7 +1305,6 @@
 
     new-array v1, v1, [Lmiuix/animation/listener/TransitionListener;
 
-    .line 4
     new-instance v2, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$3;
 
     invoke-direct {v2, p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$3;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
@@ -1463,7 +1325,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -1471,7 +1332,6 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result p1
@@ -1486,7 +1346,6 @@
 .method private parseAttrs(Landroid/util/AttributeSet;I)V
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1495,7 +1354,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1508,7 +1366,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance p2, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -1519,7 +1376,6 @@
 
     iput-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
-    .line 4
     sget p2, Lmiuix/miuixbasewidget/R$styleable;->MiuixAppcompatAlphabetIndexer_miuixAppcompatDrawOverlay:I
 
     const/4 v1, 0x1
@@ -1532,41 +1388,34 @@
 
     if-eqz p2, :cond_0
 
-    .line 5
     sget p2, Lmiuix/miuixbasewidget/R$styleable;->MiuixAppcompatAlphabetIndexer_miuixAppcompatOverlayTextSize:I
 
     sget v1, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_indexer_overlay_text_size:I
 
-    .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 7
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p2
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextSize:I
 
-    .line 8
     sget p2, Lmiuix/miuixbasewidget/R$styleable;->MiuixAppcompatAlphabetIndexer_miuixAppcompatOverlayTextColor:I
 
     sget v1, Lmiuix/miuixbasewidget/R$color;->miuix_appcompat_alphabet_indexer_overlay_text_color:I
 
-    .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    .line 10
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextColor:I
 
-    .line 11
     sget p2, Lmiuix/miuixbasewidget/R$styleable;->MiuixAppcompatAlphabetIndexer_miuixAppCompatOverlayTextAppearance:I
 
     sget v1, Lmiuix/miuixbasewidget/R$style;->Widget_TextAppearance_AlphabetIndexer_Overlay:I
@@ -1577,7 +1426,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayTextAppearanceRes:I
 
-    .line 12
     sget p2, Lmiuix/miuixbasewidget/R$styleable;->MiuixAppcompatAlphabetIndexer_miuixAppcompatOverlayBackground:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1586,7 +1434,6 @@
 
     iput-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 13
     sget p2, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_indexer_item_height:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -1595,7 +1442,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemHeight:I
 
-    .line 14
     sget p2, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_indexer_item_margin:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -1604,7 +1450,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mItemMargin:I
 
-    .line 15
     sget p2, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_overlay_width:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -1613,7 +1458,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayWidth:I
 
-    .line 16
     sget p2, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_overlay_height:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -1622,7 +1466,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayHeight:I
 
-    .line 17
     sget p2, Lmiuix/miuixbasewidget/R$dimen;->miuix_appcompat_alphabet_indexer_min_width:I
 
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -1631,7 +1474,6 @@
 
     iput p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexWidth:I
 
-    .line 18
     :cond_0
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -1641,14 +1483,12 @@
 .method private refreshMask()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getSectionIndexer()Landroid/widget/SectionIndexer;
 
@@ -1658,7 +1498,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
@@ -1672,7 +1511,6 @@
 
     sub-int/2addr v1, v2
 
-    .line 4
     invoke-interface {v0, v1}, Landroid/widget/SectionIndexer;->getSectionForPosition(I)I
 
     move-result v1
@@ -1681,7 +1519,6 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 5
     invoke-interface {v0}, Landroid/widget/SectionIndexer;->getSections()[Ljava/lang/Object;
 
     move-result-object v0
@@ -1690,21 +1527,18 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 6
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 8
     :goto_0
     iget-object v3, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
@@ -1714,7 +1548,6 @@
 
     if-ge v1, v4, :cond_3
 
-    .line 9
     aget-object v3, v3, v1
 
     invoke-static {v0, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1736,17 +1569,14 @@
     :goto_1
     if-eq v1, v2, :cond_4
 
-    .line 10
     iget v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastAlphabetIndex:I
 
     if-eq v0, v1, :cond_4
 
-    .line 11
     invoke-direct {p0, v1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->normalizeIndex(I)I
 
     move-result v0
 
-    .line 12
     iput v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastAlphabetIndex:I
 
     :cond_4
@@ -1762,25 +1592,21 @@
 
     move/from16 v2, p2
 
-    .line 1
     iget-object v3, v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     if-nez v3, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {v3}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;->stopScroll()V
 
-    .line 3
     iget-object v3, v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     invoke-interface {v3}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;->getItemCount()I
 
     move-result v3
 
-    .line 4
     invoke-direct/range {p0 .. p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getListOffset()I
 
     move-result v4
@@ -1795,21 +1621,18 @@
 
     div-float/2addr v5, v6
 
-    .line 5
     invoke-interface/range {p1 .. p1}, Landroid/widget/SectionIndexer;->getSections()[Ljava/lang/Object;
 
     move-result-object v6
 
     if-eqz v6, :cond_a
 
-    .line 6
     array-length v7, v6
 
     const/4 v8, 0x1
 
     if-le v7, v8, :cond_a
 
-    .line 7
     array-length v7, v6
 
     if-lt v2, v7, :cond_1
@@ -1821,7 +1644,6 @@
     :cond_1
     move v9, v2
 
-    .line 8
     :goto_0
     invoke-interface {v1, v9}, Landroid/widget/SectionIndexer;->getPositionForSection(I)I
 
@@ -1833,7 +1655,6 @@
 
     if-ge v9, v12, :cond_2
 
-    .line 9
     invoke-interface {v1, v11}, Landroid/widget/SectionIndexer;->getPositionForSection(I)I
 
     move-result v12
@@ -1855,7 +1676,6 @@
 
     add-int/lit8 v13, v13, -0x1
 
-    .line 10
     invoke-interface {v1, v13}, Landroid/widget/SectionIndexer;->getPositionForSection(I)I
 
     move-result v14
@@ -1892,7 +1712,6 @@
     :goto_4
     if-ge v15, v7, :cond_7
 
-    .line 11
     invoke-interface {v1, v15}, Landroid/widget/SectionIndexer;->getPositionForSection(I)I
 
     move-result v8
@@ -1945,7 +1764,6 @@
 
     div-float/2addr v5, v8
 
-    .line 12
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v1
@@ -1961,7 +1779,6 @@
 
     move v10, v3
 
-    .line 13
     :cond_9
     iget-object v1, v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
@@ -1976,12 +1793,10 @@
 
     int-to-float v1, v1
 
-    .line 14
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v1
 
-    .line 15
     iget-object v2, v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     add-int/2addr v1, v4
@@ -1990,7 +1805,6 @@
 
     const/4 v14, -0x1
 
-    .line 16
     :goto_6
     invoke-direct {v0, v14, v6}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->updateOverlay(I[Ljava/lang/Object;)V
 
@@ -2000,14 +1814,12 @@
 .method private scrollToSelection(ILandroid/widget/SectionIndexer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getPosition(ILandroid/widget/SectionIndexer;)I
 
     move-result p1
 
     if-gez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     const/4 p2, 0x0
@@ -2016,7 +1828,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-direct {p0, p2, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->scrollTo(Landroid/widget/SectionIndexer;I)V
 
@@ -2027,19 +1838,16 @@
 .method private setChecked(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastSelectedItem:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget v1, v1, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mNormalColor:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -2049,7 +1857,6 @@
 
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastSelectedItem:Landroid/widget/TextView;
 
-    .line 4
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mTextHighlighter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;
 
     iget v0, v0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$TextHighlighter;->mHighlightColor:I
@@ -2062,7 +1869,6 @@
 .method private showOverlay()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -2075,7 +1881,6 @@
 
     aput-object v0, v2, v3
 
-    .line 2
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -2098,7 +1903,6 @@
 
     aput-object v5, v4, v3
 
-    .line 3
     invoke-interface {v0, v2, v4}, Lmiuix/animation/IVisibleStyle;->setScale(F[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -2111,7 +1915,6 @@
 
     aput-object v5, v4, v3
 
-    .line 4
     invoke-interface {v0, v2, v4}, Lmiuix/animation/IVisibleStyle;->setScale(F[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -2122,7 +1925,6 @@
 
     aput-object v2, v1, v3
 
-    .line 5
     invoke-interface {v0, v1}, Lmiuix/animation/IVisibleStyle;->show([Lmiuix/animation/base/AnimConfig;)V
 
     :cond_0
@@ -2132,21 +1934,18 @@
 .method private stop(I)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mHandler:Landroid/os/Handler;
 
     if-gtz p1, :cond_0
@@ -2171,21 +1970,18 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     aget-object p1, p2, p1
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object p1
@@ -2194,12 +1990,10 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p1, p2, v0}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    .line 5
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getIndex(Ljava/lang/String;)I
 
     move-result p1
@@ -2219,7 +2013,6 @@
 .method private updateOverlayTextAlpha(F)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
@@ -2244,7 +2037,6 @@
 .method private updateOverlayTranslationX(F)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getWidth()I
@@ -2261,7 +2053,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 2
     invoke-static {p0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result p1
@@ -2272,7 +2063,6 @@
 
     mul-float/2addr v0, p1
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
@@ -2286,7 +2076,6 @@
 .method public synthetic OooO00o()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->checkItemHeight()V
 
     return-void
@@ -2295,14 +2084,12 @@
 .method public attach(Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->detach()V
 
@@ -2313,30 +2100,24 @@
     :cond_1
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mLastAlphabetIndex:I
 
-    .line 4
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
-    .line 5
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->constructOverlay()V
 
-    .line 6
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 7
     iget v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mVerticalPosition:I
 
     or-int/lit8 v0, v0, 0x30
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 8
     iget v0, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
     iget v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlayHeight:I
@@ -2349,7 +2130,6 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 9
     iget v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     div-int/lit8 v1, v1, 0x2
@@ -2360,7 +2140,6 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 10
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -2369,40 +2148,33 @@
 .method public detach()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, v0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->stop(I)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 4
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mOverlay:Landroid/widget/TextView;
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     :cond_0
     const/16 v0, 0x8
 
-    .line 6
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     const/4 v0, 0x0
 
-    .line 7
     iput-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     :cond_1
@@ -2412,7 +2184,6 @@
 .method public dispatchHoverEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexerTouchHelper:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;
 
     if-eqz v0, :cond_0
@@ -2427,7 +2198,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
@@ -2439,14 +2209,12 @@
 .method public getIndexerIntrinsicWidth()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -2463,13 +2231,11 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
-    new-instance p1, LOooO0OO/OooO0Oo/OooO00o/OooO0O0;
+    new-instance p1, LOooO0Oo/OooO0Oo/OooO00o/OooO0O0;
 
-    invoke-direct {p1, p0}, LOooO0OO/OooO0Oo/OooO00o/OooO0O0;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
+    invoke-direct {p1, p0}, LOooO0Oo/OooO0Oo/OooO00o/OooO0O0;-><init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)V
 
     invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
 
@@ -2479,7 +2245,6 @@
 .method public onScrollStateChanged(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mListScrollState:I
 
     return-void
@@ -2488,17 +2253,14 @@
 .method public onScrolled(II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->refreshMask()V
 
-    .line 2
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     invoke-interface {p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;->getFirstVisibleItemPosition()I
 
     move-result p1
 
-    .line 3
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getSectionIndexer()Landroid/widget/SectionIndexer;
 
     move-result-object p2
@@ -2507,7 +2269,6 @@
 
     move-result p1
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getSectionIndexer()Landroid/widget/SectionIndexer;
 
     move-result-object p2
@@ -2520,7 +2281,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 5
     invoke-direct {p0, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->drawThumb(Ljava/lang/CharSequence;)V
 
     return-void
@@ -2529,19 +2289,16 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mAdapter:Lmiuix/miuixbasewidget/widget/AlphabetIndexer$Adapter;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0, v1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->stop(I)V
 
     return v1
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->getSectionIndexer()Landroid/widget/SectionIndexer;
 
@@ -2549,18 +2306,15 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     invoke-direct {p0, v1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->stop(I)V
 
     return v1
 
-    .line 5
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
@@ -2584,7 +2338,6 @@
     :cond_2
     move v3, v4
 
-    .line 7
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -2630,7 +2383,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -2644,23 +2396,19 @@
 
     goto :goto_1
 
-    .line 9
     :cond_4
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setPressed(Z)V
 
-    .line 10
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->hasShown()Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    .line 11
     invoke-direct {p0, v1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->stop(I)V
 
     goto :goto_1
 
-    .line 12
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -2674,18 +2422,14 @@
 
     goto :goto_1
 
-    .line 13
     :cond_6
     invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->setPressed(Z)V
 
-    .line 14
     :cond_7
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->clearLastChecked()V
 
-    .line 15
     invoke-direct {p0, v3}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->setChecked(I)V
 
-    .line 16
     invoke-direct {p0, v3, v0}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->scrollToSelection(ILandroid/widget/SectionIndexer;)V
 
     :cond_8
@@ -2696,7 +2440,6 @@
 .method public setSectionIndexer(Landroid/widget/SectionIndexer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mIndexer:Landroid/widget/SectionIndexer;
 
     return-void
@@ -2714,7 +2457,6 @@
     :cond_0
     const p1, 0x800003
 
-    .line 1
     :goto_0
     iput p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->mVerticalPosition:I
 

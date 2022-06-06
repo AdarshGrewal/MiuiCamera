@@ -100,7 +100,6 @@
 
     const-wide v0, 0x3fe8f5c28f5c28f6L    # 0.78
 
-    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v0
@@ -121,12 +120,10 @@
 
     new-array v1, v0, [F
 
-    .line 2
     sput-object v1, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_POSITION:[F
 
     new-array v0, v0, [F
 
-    .line 3
     sput-object v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_TIME:[F
 
     const/4 v0, 0x0
@@ -189,7 +186,6 @@
 
     sub-float v15, v12, v5
 
-    .line 4
     invoke-static {v15}, Ljava/lang/Math;->abs(F)F
 
     move-result v15
@@ -204,7 +200,6 @@
 
     if-gez v11, :cond_2
 
-    .line 5
     sget-object v3, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_POSITION:[F
 
     const/high16 v11, 0x3f000000    # 0.5f
@@ -248,7 +243,6 @@
 
     sub-float v15, v12, v5
 
-    .line 6
     invoke-static {v15}, Ljava/lang/Math;->abs(F)F
 
     move-result v15
@@ -259,7 +253,6 @@
 
     if-gez v7, :cond_0
 
-    .line 7
     sget-object v3, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_TIME:[F
 
     const v7, 0x3e333333    # 0.175f
@@ -315,7 +308,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_4
     sget-object v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_POSITION:[F
 
@@ -331,10 +323,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Landroid/view/ViewConfiguration;->getScrollFriction()F
 
     move-result v0
@@ -343,18 +333,14 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
-    .line 4
     iput-object p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
-    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -377,7 +363,6 @@
 
     mul-float/2addr p1, v0
 
-    .line 7
     iput p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mPhysicalCoeff:F
 
     return-void
@@ -386,7 +371,6 @@
 .method public static synthetic access$000(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return p0
@@ -395,7 +379,6 @@
 .method public static synthetic access$002(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return p1
@@ -404,7 +387,6 @@
 .method public static synthetic access$100(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     return-wide v0
@@ -413,7 +395,6 @@
 .method public static synthetic access$200(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     return-wide v0
@@ -422,7 +403,6 @@
 .method public static synthetic access$300(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     return-wide v0
@@ -431,7 +411,6 @@
 .method public static synthetic access$400(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     return-wide v0
@@ -440,7 +419,6 @@
 .method public static synthetic access$500(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     return p0
@@ -449,7 +427,6 @@
 .method public static synthetic access$600(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     return-wide v0
@@ -458,7 +435,6 @@
 .method public static synthetic access$700(Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     return p0
@@ -477,7 +453,6 @@
 
     div-float/2addr p1, p2
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -502,12 +477,10 @@
 
     div-float/2addr v2, p2
 
-    .line 2
     sget-object p2, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_TIME:[F
 
     aget p3, p2, p3
 
-    .line 3
     aget p2, p2, v1
 
     sub-float/2addr p1, v0
@@ -522,7 +495,6 @@
 
     add-float/2addr p3, p1
 
-    .line 4
     iget p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     int-to-float p1, p1
@@ -544,7 +516,6 @@
 
     int-to-float v0, v0
 
-    .line 1
     iget v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     div-float/2addr v0, v1
@@ -557,7 +528,6 @@
 
     div-float/2addr p3, v2
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -566,7 +536,6 @@
 
     sub-int p1, p2, p1
 
-    .line 3
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -581,10 +550,8 @@
 
     mul-double/2addr v1, v3
 
-    .line 4
     iget p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
-    .line 5
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -593,14 +560,12 @@
 
     div-double/2addr v1, v3
 
-    .line 6
     invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v1
 
     double-to-float p1, v1
 
-    .line 7
     iget-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     sub-float p3, p1, v0
@@ -619,12 +584,10 @@
 
     int-to-double p2, p2
 
-    .line 8
     iput-wide p2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iput-wide p2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
-    .line 9
     iget p2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     neg-float p2, p2
@@ -659,7 +622,6 @@
 .method private getSplineDeceleration(I)D
     .locals 2
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -690,12 +652,10 @@
 .method private getSplineFlingDistance(I)D
     .locals 8
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getSplineDeceleration(I)D
 
     move-result-wide v0
 
-    .line 2
     sget p1, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->DECELERATION_RATE:F
 
     float-to-double v2, p1
@@ -704,7 +664,6 @@
 
     sub-double/2addr v2, v4
 
-    .line 3
     iget v4, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFlingFriction:F
 
     iget v5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mPhysicalCoeff:F
@@ -731,12 +690,10 @@
 .method private getSplineFlingDuration(I)I
     .locals 6
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getSplineDeceleration(I)D
 
     move-result-wide v0
 
-    .line 2
     sget p1, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->DECELERATION_RATE:F
 
     float-to-double v2, p1
@@ -747,7 +704,6 @@
 
     div-double/2addr v0, v2
 
-    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide v0
@@ -764,7 +720,6 @@
 .method private onEdgeReached()V
     .locals 7
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     double-to-float v2, v0
@@ -773,7 +728,6 @@
 
     mul-float/2addr v2, v0
 
-    .line 2
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
@@ -786,7 +740,6 @@
 
     div-float v0, v2, v0
 
-    .line 3
     iget-wide v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     double-to-float v3, v3
@@ -795,7 +748,6 @@
 
     move-result v3
 
-    .line 4
     iget v4, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
     int-to-float v5, v4
@@ -814,7 +766,6 @@
 
     div-float/2addr v0, v2
 
-    .line 5
     iput v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     int-to-float v0, v4
@@ -822,15 +773,12 @@
     :cond_0
     float-to-int v1, v0
 
-    .line 6
     iput v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
     const/4 v1, 0x2
 
-    .line 7
     iput v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
-    .line 8
     iget-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iget-wide v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
@@ -857,7 +805,6 @@
 
     const-wide v0, 0x408f400000000000L    # 1000.0
 
-    .line 9
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     mul-double/2addr v2, v0
@@ -890,10 +837,8 @@
 
     const-string p2, "startAfterEdge called from a valid position"
 
-    .line 1
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return-void
@@ -935,18 +880,15 @@
     :goto_2
     if-eqz v0, :cond_4
 
-    .line 3
     invoke-direct {p0, p1, v3, p4}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->startBounceAfterEdge(III)V
 
     goto :goto_5
 
-    .line 4
     :cond_4
     invoke-direct {p0, p4}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getSplineFlingDistance(I)D
 
     move-result-wide v0
 
-    .line 5
     invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     move-result v4
@@ -976,7 +918,6 @@
     :cond_6
     move v8, p3
 
-    .line 6
     :goto_4
     iget v9, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
@@ -990,7 +931,6 @@
 
     goto :goto_5
 
-    .line 7
     :cond_7
     invoke-direct {p0, p1, v3, p4}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->startSpringback(III)V
 
@@ -1010,7 +950,6 @@
     :cond_0
     move v0, p3
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getDeceleration(I)F
 
@@ -1018,10 +957,8 @@
 
     iput v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->fitOnBounceCurve(III)V
 
-    .line 3
     invoke-direct {p0}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->onEdgeReached()V
 
     return-void
@@ -1032,29 +969,24 @@
 
     const/4 p3, 0x0
 
-    .line 1
     iput-boolean p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     const/4 p3, 0x1
 
-    .line 2
     iput p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     int-to-double v0, p1
 
-    .line 3
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     int-to-double v0, p2
 
-    .line 4
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     sub-int/2addr p1, p2
 
-    .line 5
     invoke-static {p1}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getDeceleration(I)F
 
     move-result p2
@@ -1065,10 +997,8 @@
 
     int-to-double p2, p2
 
-    .line 6
     iput-wide p2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
-    .line 7
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p2
@@ -1081,7 +1011,6 @@
 
     mul-double/2addr p1, v0
 
-    .line 8
     iget p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     float-to-double v0, p3
@@ -1110,7 +1039,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSpringOperator:Lmiuix/animation/physics/SpringOperator;
 
     const/4 v2, 0x0
@@ -1123,7 +1051,6 @@
 
     goto :goto_2
 
-    .line 2
     :cond_0
     iget-boolean v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mLastStep:Z
 
@@ -1131,23 +1058,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     iput-boolean v3, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
-    .line 4
     iget-wide v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     iput-wide v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     return v3
 
-    .line 5
     :cond_1
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v4
 
-    .line 6
     iget-wide v6, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     sub-long v6, v4, v6
@@ -1162,7 +1085,6 @@
 
     const-wide v8, 0x3f90624de0000000L    # 0.01600000075995922
 
-    .line 7
     invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v6
@@ -1178,11 +1100,9 @@
     :cond_2
     move-wide v8, v6
 
-    .line 8
     :goto_0
     iput-wide v4, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
-    .line 9
     iget-object v10, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSpringOperator:Lmiuix/animation/physics/SpringOperator;
 
     iget-wide v11, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
@@ -1213,7 +1133,6 @@
 
     move-result-wide v1
 
-    .line 10
     iget-wide v4, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     mul-double/2addr v8, v1
@@ -1222,10 +1141,8 @@
 
     iput-wide v4, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
-    .line 11
     iput-wide v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
-    .line 12
     iget-wide v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     invoke-virtual {v0, v4, v5, v1, v2}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->isAtEquilibrium(DD)Z
@@ -1234,12 +1151,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 13
     iput-boolean v3, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mLastStep:Z
 
     goto :goto_1
 
-    .line 14
     :cond_3
     iget-wide v1, v0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
@@ -1256,7 +1171,6 @@
 .method public continueWhenFinished()Z
     .locals 7
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     const/4 v1, 0x1
@@ -1273,7 +1187,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-wide v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
@@ -1285,7 +1198,6 @@
 
     iput-wide v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
-    .line 3
     iget-wide v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     double-to-int v0, v3
@@ -1301,7 +1213,6 @@
     :cond_1
     return v2
 
-    .line 4
     :cond_2
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
@@ -1309,14 +1220,12 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 5
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     iput-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iput-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
-    .line 6
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     double-to-int v0, v2
@@ -1327,14 +1236,12 @@
 
     double-to-int v0, v2
 
-    .line 7
     invoke-static {v0}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getDeceleration(I)F
 
     move-result v0
 
     iput v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
-    .line 8
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
@@ -1345,10 +1252,8 @@
 
     iput-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
-    .line 9
     invoke-direct {p0}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->onEdgeReached()V
 
-    .line 10
     :goto_0
     invoke-virtual {p0}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->update()Z
 
@@ -1361,12 +1266,10 @@
 .method public extendDuration(I)V
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     sub-long/2addr v0, v2
@@ -1375,12 +1278,10 @@
 
     add-int/2addr v0, p1
 
-    .line 3
     iput v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     const/4 p1, 0x0
 
-    .line 4
     iput-boolean p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return-void
@@ -1389,14 +1290,12 @@
 .method public finish()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return-void
@@ -1405,27 +1304,22 @@
 .method public fling(IIIII)V
     .locals 4
 
-    .line 1
     iput p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
     const/4 p5, 0x0
 
-    .line 2
     iput-boolean p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     int-to-double v0, p2
 
-    .line 3
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
-    .line 4
     iput p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSplineDuration:I
 
     iput p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
-    .line 5
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v0
@@ -1434,7 +1328,6 @@
 
     int-to-double v0, p1
 
-    .line 6
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
@@ -1445,7 +1338,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iput p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
@@ -1453,7 +1345,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 8
     invoke-direct {p0, p2}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getSplineFlingDuration(I)I
 
     move-result p5
@@ -1462,7 +1353,6 @@
 
     iput p5, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
-    .line 9
     invoke-direct {p0, p2}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->getSplineFlingDistance(I)D
 
     move-result-wide v0
@@ -1470,7 +1360,6 @@
     :cond_1
     int-to-float p2, p2
 
-    .line 10
     invoke-static {p2}, Ljava/lang/Math;->signum(F)F
 
     move-result p2
@@ -1487,7 +1376,6 @@
 
     int-to-double p1, p1
 
-    .line 11
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     int-to-double v0, p3
@@ -1496,7 +1384,6 @@
 
     if-gez p5, :cond_2
 
-    .line 12
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     double-to-int p5, v2
@@ -1505,10 +1392,8 @@
 
     invoke-direct {p0, p5, p1, p3}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->adjustDuration(III)V
 
-    .line 13
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
-    .line 14
     :cond_2
     iget-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
@@ -1518,7 +1403,6 @@
 
     if-lez p3, :cond_3
 
-    .line 15
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     double-to-int p3, v2
@@ -1527,13 +1411,11 @@
 
     invoke-direct {p0, p3, p1, p4}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->adjustDuration(III)V
 
-    .line 16
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     :cond_3
     return-void
 
-    .line 17
     :cond_4
     :goto_0
     invoke-direct {p0, p1, p3, p4, p2}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->startAfterEdge(IIII)V
@@ -1544,7 +1426,6 @@
 .method public final getCurrVelocity()F
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     double-to-float v0, v0
@@ -1555,7 +1436,6 @@
 .method public final getCurrentPosition()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     double-to-int v0, v0
@@ -1566,7 +1446,6 @@
 .method public final getDuration()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     return v0
@@ -1575,7 +1454,6 @@
 .method public final getFinal()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     double-to-int v0, v0
@@ -1586,7 +1464,6 @@
 .method public final getStart()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     double-to-int v0, v0
@@ -1597,7 +1474,6 @@
 .method public final getStartTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     return-wide v0
@@ -1606,7 +1482,6 @@
 .method public final getState()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     return v0
@@ -1617,7 +1492,6 @@
 
     sub-double/2addr p1, p3
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p1
@@ -1642,7 +1516,6 @@
 .method public final isFinished()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return v0
@@ -1651,22 +1524,18 @@
 .method public notifyEdgeReached(III)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     if-nez v0, :cond_0
 
-    .line 2
     iput p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
-    .line 3
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
-    .line 4
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     double-to-int p3, v0
@@ -1682,7 +1551,6 @@
 
     float-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     return-void
@@ -1693,7 +1561,6 @@
 
     int-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
 
     return-void
@@ -1702,7 +1569,6 @@
 .method public final setDuration(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     return-void
@@ -1713,7 +1579,6 @@
 
     int-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     return-void
@@ -1724,12 +1589,10 @@
 
     int-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return-void
@@ -1738,7 +1601,6 @@
 .method public final setFinished(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     return-void
@@ -1747,7 +1609,6 @@
 .method public setFriction(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFlingFriction:F
 
     return-void
@@ -1758,7 +1619,6 @@
 
     int-to-double v0, p1
 
-    .line 1
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     return-void
@@ -1767,7 +1627,6 @@
 .method public final setStartTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     return-void
@@ -1776,7 +1635,6 @@
 .method public final setState(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     return-void
@@ -1787,12 +1645,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     int-to-double v1, p1
 
-    .line 2
     iput-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
     iput-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
@@ -1801,10 +1657,8 @@
 
     const-wide/16 v1, 0x0
 
-    .line 3
     iput-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
-    .line 4
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v1
@@ -1813,12 +1667,10 @@
 
     const/4 v1, 0x0
 
-    .line 5
     iput v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     if-ge p1, p2, :cond_0
 
-    .line 6
     invoke-direct {p0, p1, p2, v1}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->startSpringback(III)V
 
     goto :goto_0
@@ -1826,10 +1678,8 @@
     :cond_0
     if-le p1, p3, :cond_1
 
-    .line 7
     invoke-direct {p0, p1, p3, v1}, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->startSpringback(III)V
 
-    .line 8
     :cond_1
     :goto_0
     iget-boolean p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
@@ -1844,12 +1694,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
     int-to-double v0, p1
 
-    .line 2
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrentPosition:D
@@ -1858,27 +1706,22 @@
 
     int-to-double p1, p1
 
-    .line 3
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
-    .line 4
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
-    .line 5
     iput p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     const/4 p1, 0x0
 
-    .line 6
     iput p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
     const-wide/16 p1, 0x0
 
-    .line 7
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     return-void
@@ -1889,15 +1732,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinished:Z
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mLastStep:Z
 
     float-to-double v0, p1
 
-    .line 3
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOriginStart:D
 
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
@@ -1910,10 +1750,8 @@
 
     float-to-double p1, p1
 
-    .line 4
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mFinal:D
 
-    .line 5
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
@@ -1922,12 +1760,10 @@
 
     int-to-double p1, p3
 
-    .line 6
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     iput-wide p1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
-    .line 7
     new-instance p1, Lmiuix/animation/physics/SpringOperator;
 
     invoke-direct {p1}, Lmiuix/animation/physics/SpringOperator;-><init>()V
@@ -1938,12 +1774,10 @@
 
     new-array p3, p2, [D
 
-    .line 8
     iput-object p3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSpringParams:[D
 
     new-array p2, p2, [F
 
-    .line 9
     fill-array-data p2, :array_0
 
     invoke-virtual {p1, p2, p3}, Lmiuix/animation/physics/SpringOperator;->getParameters([F[D)V
@@ -1962,12 +1796,10 @@
 .method public update()Z
     .locals 9
 
-    .line 1
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStartTime:J
 
     sub-long/2addr v0, v2
@@ -1982,7 +1814,6 @@
 
     if-nez v2, :cond_1
 
-    .line 3
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
     if-lez v0, :cond_0
@@ -1992,7 +1823,6 @@
     :cond_0
     return v3
 
-    .line 4
     :cond_1
     iget v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDuration:I
 
@@ -2007,7 +1837,6 @@
     :cond_2
     const-wide/16 v5, 0x0
 
-    .line 5
     iget v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mState:I
 
     const/high16 v7, 0x447a0000    # 1000.0f
@@ -2029,7 +1858,6 @@
 
     div-float/2addr v0, v7
 
-    .line 6
     iget-wide v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     iget v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mDeceleration:F
@@ -2067,7 +1895,6 @@
 
     mul-float v1, v0, v0
 
-    .line 7
     iget-wide v2, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mVelocity:D
 
     double-to-float v2, v2
@@ -2076,7 +1903,6 @@
 
     move-result v2
 
-    .line 8
     iget v3, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mOver:I
 
     int-to-float v5, v3
@@ -2113,7 +1939,6 @@
 
     float-to-double v0, v2
 
-    .line 9
     iput-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mCurrVelocity:D
 
     goto :goto_0
@@ -2121,7 +1946,6 @@
     :cond_5
     long-to-float v0, v0
 
-    .line 10
     iget v1, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSplineDuration:I
 
     int-to-float v1, v1
@@ -2152,12 +1976,10 @@
 
     div-float/2addr v6, v1
 
-    .line 11
     sget-object v1, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->SPLINE_POSITION:[F
 
     aget v2, v1, v2
 
-    .line 12
     aget v1, v1, v5
 
     sub-float/2addr v1, v2
@@ -2172,7 +1994,6 @@
 
     add-float v3, v2, v0
 
-    .line 13
     :cond_6
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSplineDistance:I
 
@@ -2186,7 +2007,6 @@
 
     mul-float/2addr v5, v0
 
-    .line 14
     iget v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mSplineDuration:I
 
     int-to-float v0, v0
@@ -2201,7 +2021,6 @@
 
     move-wide v5, v1
 
-    .line 15
     :goto_0
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
@@ -2223,7 +2042,6 @@
 .method public updateScroll(F)V
     .locals 6
 
-    .line 1
     iget-wide v0, p0, Lmiuix/overscroller/widget/OverScroller$SplineOverScroller;->mStart:D
 
     float-to-double v2, p1

@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;->values()[Lcom/android/camera/videoplayer/ui/MediaPlayerWrapper$State;
 
     move-result-object v0

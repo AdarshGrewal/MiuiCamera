@@ -29,29 +29,24 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/media/MediaRecorder;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mEle:D
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/aiaudio/AiAudioParameterManager;->isSupportAiAudioNew(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4
     new-instance v2, Landroid/media/AudioParaManger;
 
     invoke-direct {v2, p2, p1}, Landroid/media/AudioParaManger;-><init>(Landroid/media/MediaRecorder;Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mEle:D
 
     goto :goto_0
@@ -59,7 +54,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     :goto_0
@@ -73,7 +67,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/android/camera/aiaudio/AiAudioParameterManager;->sSupported:Ljava/lang/Boolean;
 
@@ -81,7 +74,6 @@
 
     const-string v1, "audio"
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -90,14 +82,12 @@
 
     const-string v1, "audio_camera_zoom_support"
 
-    .line 3
     invoke-virtual {p0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v1, "audio_camera_zoom_support=true"
 
-    .line 4
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -106,21 +96,18 @@
 
     if-nez p0, :cond_0
 
-    .line 5
     sget-object p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->TAG:Ljava/lang/String;
 
     const-string v2, "isSupportAiAudioNew: parameter not supported"
 
     invoke-static {p0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
     sput-object p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->sSupported:Ljava/lang/Boolean;
 
-    .line 7
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -135,7 +122,6 @@
     :try_start_1
     const-string p0, "android.media.AudioParaManger"
 
-    .line 8
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
     :try_end_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -143,7 +129,6 @@
 
     const/4 p0, 0x1
 
-    .line 9
     :try_start_2
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -153,7 +138,6 @@
 
     goto :goto_0
 
-    .line 10
     :catch_0
     sget-object p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->TAG:Ljava/lang/String;
 
@@ -161,14 +145,12 @@
 
     invoke-static {p0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
     sput-object p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->sSupported:Ljava/lang/Boolean;
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -179,7 +161,6 @@
 
     return p0
 
-    .line 13
     :cond_1
     :goto_0
     :try_start_3
@@ -203,7 +184,6 @@
 
     invoke-static {p0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     sget-object p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->sSupported:Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -229,7 +209,6 @@
 .method public getEleValue()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mEle:D
 
     return-wide v0
@@ -240,7 +219,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v1, :cond_0
@@ -249,7 +227,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     check-cast v1, Landroid/media/AudioParaManger;
 
@@ -275,7 +252,6 @@
 
     move/from16 v16, p15
 
-    .line 3
     invoke-virtual/range {v2 .. v16}, Landroid/media/AudioParaManger;->init(IIIDDDDDZ)Z
 
     move-result v1
@@ -321,12 +297,10 @@
 
     move/from16 p15, v15
 
-    .line 4
     invoke-virtual/range {p1 .. p15}, Landroid/media/AudioParaManger;->init(IIIDDDDDZ)Z
 
     move-result v1
 
-    .line 5
     :goto_0
     sget-object v2, Lcom/android/camera/aiaudio/AiAudioParameterManager;->TAG:Ljava/lang/String;
 
@@ -352,18 +326,15 @@
 .method public prepare()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0}, Landroid/media/AudioParaManger;->prepare()V
 
     return-void
@@ -372,18 +343,15 @@
 .method public setAudioFocusAzimuth(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioParaManger;->setAudioFocusAzimuth(D)V
 
     return-void
@@ -392,18 +360,15 @@
 .method public setAudioFocusElevation(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioParaManger;->setAudioFocusElevation(D)V
 
     return-void
@@ -412,18 +377,15 @@
 .method public setAudioFocusHeight(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioParaManger;->setAudioFocusHeight(D)V
 
     return-void
@@ -432,18 +394,15 @@
 .method public setAudioFocusWidth(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioParaManger;->setAudioFocusWidth(D)V
 
     return-void
@@ -452,18 +411,15 @@
 .method public setAudioWindNoise(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/media/AudioParaManger;->setAudioWindNoise(Z)V
 
     return-void
@@ -472,18 +428,15 @@
 .method public setAudioZoomLevel(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Landroid/media/AudioParaManger;->setAudioZoomLevel(D)V
 
     return-void
@@ -492,18 +445,15 @@
 .method public setMaxSupportLevel(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/media/AudioParaManger;->setMaxSupportLevel(I)V
 
     return-void
@@ -512,18 +462,15 @@
 .method public setRecordType(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/media/AudioParaManger;->setRecordType(I)V
 
     return-void
@@ -532,18 +479,15 @@
 .method public start()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiaudio/AiAudioParameterManager;->mAudioParaManager:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     check-cast v0, Landroid/media/AudioParaManger;
 
-    .line 3
     invoke-virtual {v0}, Landroid/media/AudioParaManger;->start()V
 
     return-void

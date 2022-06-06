@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/recorder/RecordType;->values()[Lcom/android/camera/dualvideo/recorder/RecordType;
 
     move-result-object v0

@@ -231,7 +231,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f04029a
+    const v2, 0x7f040296
 
     aput v2, v0, v1
 
@@ -250,12 +250,12 @@
 
     :array_1
     .array-data 4
+        0x7f040162
+        0x7f040163
+        0x7f040164
+        0x7f040165
         0x7f040166
         0x7f040167
-        0x7f040168
-        0x7f040169
-        0x7f04016a
-        0x7f04016b
     .end array-data
 
     :array_2
@@ -265,11 +265,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f040164
-        0x7f04016c
-        0x7f04016d
-        0x7f04016e
-        0x7f040343
+        0x7f040160
+        0x7f040168
+        0x7f040169
+        0x7f04016a
+        0x7f04033f
     .end array-data
 
     :array_3
@@ -296,43 +296,43 @@
 
     :array_5
     .array-data 4
-        0x7f040218
-        0x7f040223
-        0x7f0402f3
+        0x7f040214
+        0x7f04021f
+        0x7f0402ef
     .end array-data
 
     :array_6
     .array-data 4
-        0x7f0401e2
-        0x7f040246
-        0x7f040248
+        0x7f0401de
+        0x7f040242
+        0x7f040244
     .end array-data
 
     :array_7
     .array-data 4
-        0x7f04010e
-        0x7f040218
-        0x7f040223
-        0x7f040248
-        0x7f0402f3
+        0x7f04010c
+        0x7f040214
+        0x7f04021f
+        0x7f040244
+        0x7f0402ef
     .end array-data
 
     :array_8
     .array-data 4
-        0x7f040218
-        0x7f040223
-        0x7f0402f3
+        0x7f040214
+        0x7f04021f
+        0x7f0402ef
     .end array-data
 
     :array_9
     .array-data 4
-        0x7f040176
-        0x7f040177
-        0x7f040178
-        0x7f04028f
-        0x7f040340
-        0x7f040341
-        0x7f040342
+        0x7f040172
+        0x7f040173
+        0x7f040174
+        0x7f04028b
+        0x7f04033c
+        0x7f04033d
+        0x7f04033e
     .end array-data
 .end method
 

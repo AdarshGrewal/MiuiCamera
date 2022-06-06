@@ -30,7 +30,6 @@
 .method public constructor <init>(Lcom/android/camera/SurfaceTextureScreenNail;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/SurfaceTextureScreenNail$ExternalProcessorType;->this$0:Lcom/android/camera/SurfaceTextureScreenNail;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

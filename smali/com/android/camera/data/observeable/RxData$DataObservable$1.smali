@@ -36,7 +36,6 @@
 .method public constructor <init>(Lcom/android/camera/data/observeable/RxData$DataCheck;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$1;->val$dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +57,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/observeable/RxData$DataObservable;
 
     iget-object v1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$1;->val$dataCheck:Lcom/android/camera/data/observeable/RxData$DataCheck;
@@ -76,7 +74,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/Observable;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/observeable/RxData$DataObservable$1;->apply(Lio/reactivex/Observable;)Lcom/android/camera/data/observeable/RxData$DataObservable;

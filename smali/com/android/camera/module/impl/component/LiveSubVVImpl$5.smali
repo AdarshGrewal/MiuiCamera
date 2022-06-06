@@ -41,7 +41,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
     iput-object p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->val$thumbPath:Ljava/lang/String;
@@ -63,7 +62,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/camera/module/loader/NullHolder;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->apply(Lcom/android/camera/module/loader/NullHolder;)Ljava/lang/String;
@@ -91,7 +89,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/module/loader/NullHolder;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -104,7 +101,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->val$thumbPath:Ljava/lang/String;
 
@@ -114,14 +110,12 @@
 
     invoke-static {p1, v0, v1, v2}, Lcom/android/camera/Util;->saveToFile(Landroid/graphics/Bitmap;Ljava/lang/String;ILandroid/graphics/Bitmap$CompressFormat;)Z
 
-    .line 4
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->val$rawInfoPath:Ljava/lang/String;
 
     invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -138,11 +132,10 @@
 
     if-gez v0, :cond_2
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
-    invoke-static {v0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$800(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/fragment/vv/VVItem;
+    invoke-static {v0}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$900(Lcom/android/camera/module/impl/component/LiveSubVVImpl;)Lcom/android/camera/fragment/vv/VVItem;
 
     move-result-object v0
 
@@ -150,7 +143,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/Util;->saveToFile(Ljava/lang/String;Ljava/io/File;)Z
 
-    .line 7
     :cond_2
     iget-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$5;->val$thumbPath:Ljava/lang/String;
 

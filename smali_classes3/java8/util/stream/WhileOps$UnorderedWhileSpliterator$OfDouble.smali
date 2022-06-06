@@ -46,10 +46,8 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfDouble;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;)V
 
-    .line 4
     iget-object p1, p2, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;->p:Ljava8/util/function/DoublePredicate;
 
     iput-object p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;->p:Ljava8/util/function/DoublePredicate;
@@ -60,10 +58,8 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfDouble;ZLjava8/util/function/DoublePredicate;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;-><init>(Ljava8/util/Spliterator;Z)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;->p:Ljava8/util/function/DoublePredicate;
 
     return-void
@@ -74,7 +70,6 @@
 .method public accept(D)V
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
     add-int/lit8 v0, v0, 0x1
@@ -83,7 +78,6 @@
 
     iput v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->count:I
 
-    .line 2
     iput-wide p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;->t:D
 
     return-void
@@ -92,7 +86,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfDouble;->forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
@@ -112,7 +105,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfDouble;->forEachRemaining(Ljava8/util/Spliterator$OfDouble;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -121,7 +113,6 @@
 .method public forEachRemaining(Ljava8/util/function/DoubleConsumer;)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfDouble;->forEachRemaining(Ljava8/util/Spliterator$OfDouble;Ljava8/util/function/DoubleConsumer;)V
 
     return-void
@@ -130,7 +121,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -150,7 +140,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfDouble;->tryAdvance(Ljava8/util/Spliterator$OfDouble;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -161,7 +150,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfDouble;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -174,7 +162,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 2
     invoke-super {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

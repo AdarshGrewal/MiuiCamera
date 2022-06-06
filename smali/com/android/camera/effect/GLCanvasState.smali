@@ -43,10 +43,8 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
@@ -57,62 +55,50 @@
 
     new-array v1, v0, [F
 
-    .line 3
     iput-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     new-array v2, v0, [F
 
-    .line 4
     iput-object v2, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     new-array v2, v0, [F
 
-    .line 5
     iput-object v2, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     new-array v2, v0, [F
 
-    .line 6
     iput-object v2, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     new-array v2, v0, [F
 
-    .line 7
     iput-object v2, p0, Lcom/android/camera/effect/GLCanvasState;->mMVPMatrix:[F
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 8
     iput v2, p0, Lcom/android/camera/effect/GLCanvasState;->mAlpha:F
 
     const/high16 v2, -0x40800000    # -1.0f
 
-    .line 9
     iput v2, p0, Lcom/android/camera/effect/GLCanvasState;->mBlendAlpha:F
 
     new-array v0, v0, [F
 
-    .line 10
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mIdentityMatrix:[F
 
     const/4 v0, 0x0
 
-    .line 11
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 12
     iget-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 13
     iget-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 14
     iget-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
@@ -147,7 +133,6 @@
 .method public frustum(FFFF)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     const/4 v1, 0x0
@@ -172,7 +157,6 @@
 .method public getAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/GLCanvasState;->mAlpha:F
 
     return v0
@@ -181,7 +165,6 @@
 .method public getBlendAlpha()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/GLCanvasState;->mBlendAlpha:F
 
     return v0
@@ -190,7 +173,6 @@
 .method public getFinalMatrix()[F
     .locals 12
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mMVPMatrix:[F
 
     iget-object v2, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
@@ -205,7 +187,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2
     iget-object v10, p0, Lcom/android/camera/effect/GLCanvasState;->mMVPMatrix:[F
 
     iget-object v8, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
@@ -220,7 +201,6 @@
 
     invoke-static/range {v6 .. v11}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mMVPMatrix:[F
 
     return-object v0
@@ -229,7 +209,6 @@
 .method public getIdentityMatrix()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mIdentityMatrix:[F
 
     return-object v0
@@ -238,7 +217,6 @@
 .method public getModelMatrix()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     return-object v0
@@ -247,7 +225,6 @@
 .method public getProjectionMatrix()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     return-object v0
@@ -256,7 +233,6 @@
 .method public getTexMatrix()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     return-object v0
@@ -265,7 +241,6 @@
 .method public getViewMatrix()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     return-object v0
@@ -274,24 +249,20 @@
 .method public identityAllM()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
@@ -302,7 +273,6 @@
 .method public identityModelM()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
@@ -315,7 +285,6 @@
 .method public identityProjectionM()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
@@ -328,7 +297,6 @@
 .method public identityTexM()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     const/4 v1, 0x0
@@ -341,7 +309,6 @@
 .method public identityViewM()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     const/4 v1, 0x0
@@ -373,11 +340,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lcom/android/gallery3d/ui/Utils;->assertTrue(Z)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/GLCanvasState;->mAlpha:F
 
     mul-float/2addr v0, p1
@@ -394,7 +359,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     iget-object v3, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v2, 0x0
@@ -409,7 +373,6 @@
 
     invoke-static/range {v1 .. v6}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     return-void
@@ -418,7 +381,6 @@
 .method public ortho(FFFF)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mProjectionMatrix:[F
 
     const/4 v1, 0x0
@@ -443,7 +405,6 @@
 .method public popState()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mCanvasStateStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->isEmpty()Z
@@ -454,7 +415,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mCanvasStateStack:Ljava/util/Stack;
 
@@ -466,28 +426,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState$CanvasStateConfig;->getModelMatrix()[F
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState$CanvasStateConfig;->getTexMatrix()[F
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState$CanvasStateConfig;->getAlpha()F
 
     move-result v1
 
     iput v1, p0, Lcom/android/camera/effect/GLCanvasState;->mAlpha:F
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState$CanvasStateConfig;->getBlendAlpha()F
 
     move-result v0
@@ -496,7 +452,6 @@
 
     return-void
 
-    .line 7
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -514,7 +469,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1
     invoke-static {p7}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -610,10 +564,8 @@
 
     aput v3, v1, p5
 
-    .line 2
     invoke-virtual {p0, v1, v2}, Lcom/android/camera/effect/GLCanvasState;->multiplyMatrix([FI)V
 
-    .line 3
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/camera/effect/GLCanvasState;->rotate(FFFF)V
 
     :cond_1
@@ -624,7 +576,6 @@
 .method public pushState()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mCanvasStateStack:Ljava/util/Stack;
 
     new-instance v1, Lcom/android/camera/effect/GLCanvasState$CanvasStateConfig;
@@ -655,7 +606,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v1, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
@@ -677,7 +627,6 @@
 .method public scale(FFF)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
@@ -709,11 +658,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lcom/android/gallery3d/ui/Utils;->assertTrue(Z)V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/GLCanvasState;->mAlpha:F
 
     return-void
@@ -741,11 +688,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     invoke-static {v0}, Lcom/android/gallery3d/ui/Utils;->assertTrue(Z)V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/GLCanvasState;->mBlendAlpha:F
 
     return-void
@@ -754,7 +699,6 @@
 .method public setIdentity()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
@@ -769,7 +713,6 @@
 
     move-object v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/android/camera/effect/GLCanvasState;->mViewMatrix:[F
 
     const/4 v2, 0x0
@@ -800,14 +743,12 @@
 .method public setTexMatrix(FFFF)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     sub-float/2addr p3, p1
@@ -818,29 +759,24 @@
 
     const/4 p3, 0x5
 
-    .line 3
     aput p4, v0, p3
 
     const/high16 p3, 0x3f800000    # 1.0f
 
     const/16 p4, 0xa
 
-    .line 4
     aput p3, v0, p4
 
     const/16 p4, 0xc
 
-    .line 5
     aput p1, v0, p4
 
     const/16 p1, 0xd
 
-    .line 6
     aput p2, v0, p1
 
     const/16 p1, 0xf
 
-    .line 7
     aput p3, v0, p1
 
     return-void
@@ -849,7 +785,6 @@
 .method public setTexMatrix([F)V
     .locals 3
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mTexMatrix:[F
 
     const/4 v1, 0x0
@@ -864,7 +799,6 @@
 .method public translate(FF)V
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0
@@ -879,7 +813,6 @@
 .method public translate(FFF)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/GLCanvasState;->mModelMatrix:[F
 
     const/4 v1, 0x0

@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public varargs abstract delegateEvent(I[I)V
+.method public abstract delegateEvent(I)V
 .end method
 
 .method public abstract delegateMode(Lio/reactivex/Completable;Lcom/android/camera/module/loader/StartControl;Lcom/android/camera/fragment/lifeCircle/BaseLifecycleListener;)Lio/reactivex/disposables/CompositeDisposable;

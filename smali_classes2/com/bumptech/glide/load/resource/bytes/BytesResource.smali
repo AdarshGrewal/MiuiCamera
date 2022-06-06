@@ -24,10 +24,8 @@
 .method public constructor <init>([B)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -44,7 +42,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bytes/BytesResource;->get()[B
 
     move-result-object v0
@@ -55,7 +52,6 @@
 .method public get()[B
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bytes/BytesResource;->bytes:[B
 
     return-object v0
@@ -71,7 +67,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, [B
 
     return-object v0
@@ -80,7 +75,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bytes/BytesResource;->bytes:[B
 
     array-length v0, v0

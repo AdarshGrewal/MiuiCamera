@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/DisplayGuideImp;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/DisplayGuideImp$2;->this$0:Lcom/android/camera/module/impl/component/DisplayGuideImp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->setUltraPixelSelf(Z)V
 
     return-void

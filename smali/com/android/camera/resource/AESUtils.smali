@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,12 +30,10 @@
 
     const-string v0, "AES/ECB/PKCS5Padding"
 
-    .line 4
     invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
 
-    .line 5
     invoke-static {p0}, Lcom/android/camera/resource/AESUtils;->toKey(Ljava/lang/String;)Ljava/security/Key;
 
     move-result-object p0
@@ -47,7 +44,6 @@
 
     const-string/jumbo p0, "utf-8"
 
-    .line 6
     invoke-virtual {p1, p0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -75,12 +71,10 @@
 
     const-string v0, "AES/ECB/PKCS5Padding"
 
-    .line 1
     invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/resource/AESUtils;->toKey([B)Ljava/security/Key;
 
     move-result-object p0
@@ -91,7 +85,6 @@
 
     const-string/jumbo p0, "utf-8"
 
-    .line 3
     invoke-virtual {p1, p0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -112,7 +105,6 @@
 .method public static getEncryString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +135,6 @@
 
     move-result-object p0
 
-    .line 2
     :try_start_0
     invoke-static {p2, p0}, Lcom/android/camera/resource/AESUtils;->encry(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -156,7 +147,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -169,7 +159,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p0
@@ -184,7 +173,6 @@
 .method public static toKey([B)Ljava/security/Key;
     .locals 2
 
-    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v1, "AES"

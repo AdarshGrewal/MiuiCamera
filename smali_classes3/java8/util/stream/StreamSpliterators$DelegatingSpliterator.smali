@@ -74,10 +74,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->supplier:Ljava8/util/function/Supplier;
 
     return-void
@@ -88,7 +86,6 @@
 .method public characteristics()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -103,7 +100,6 @@
 .method public estimateSize()J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -125,7 +121,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -144,12 +139,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->s:Ljava8/util/Spliterator;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->supplier:Ljava8/util/function/Supplier;
 
     invoke-interface {v0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -160,7 +153,6 @@
 
     iput-object v0, p0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->s:Ljava8/util/Spliterator;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->s:Ljava8/util/Spliterator;
 
@@ -177,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -192,7 +183,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -207,7 +197,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -218,7 +207,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +252,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -285,7 +272,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0

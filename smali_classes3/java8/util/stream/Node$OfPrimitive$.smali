@@ -35,7 +35,6 @@
 .method public static bridge synthetic getChild(Ljava8/util/stream/Node$OfPrimitive;I)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1}, Ljava8/util/stream/Node$OfPrimitive;->getChild(I)Ljava8/util/stream/Node$OfPrimitive;
 
     move-result-object p0
@@ -46,7 +45,6 @@
 .method public static bridge synthetic spliterator(Ljava8/util/stream/Node$OfPrimitive;)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Node$OfPrimitive;->spliterator()Ljava8/util/Spliterator$OfPrimitive;
 
     move-result-object p0
@@ -57,7 +55,6 @@
 .method public static bridge synthetic truncate(Ljava8/util/stream/Node$OfPrimitive;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 1
     invoke-interface/range {p0 .. p5}, Ljava8/util/stream/Node$OfPrimitive;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfPrimitive;
 
     move-result-object p0

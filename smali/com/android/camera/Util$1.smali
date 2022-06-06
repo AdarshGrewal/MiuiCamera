@@ -27,7 +27,6 @@
 .method public constructor <init>(ZLandroid/app/Activity;)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/Util$1;->val$isCameraError:Z
 
     iput-object p2, p0, Lcom/android/camera/Util$1;->val$activity:Landroid/app/Activity;
@@ -42,15 +41,12 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/Util$1;->val$isCameraError:Z
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->dumpBugReportLog()V
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -58,7 +54,6 @@
 
     invoke-virtual {p1}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->reset()V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/Util$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V

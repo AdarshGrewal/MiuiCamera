@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/ProximitySensorLock;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/ProximitySensorLock$3;->this$0:Lcom/android/camera/ProximitySensorLock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/ProximitySensorLock$3;->this$0:Lcom/android/camera/ProximitySensorLock;
 
     invoke-static {v0}, Lcom/android/camera/ProximitySensorLock;->access$600(Lcom/android/camera/ProximitySensorLock;)Landroid/view/View;
@@ -49,7 +47,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ProximitySensorLock$3;->this$0:Lcom/android/camera/ProximitySensorLock;
 
@@ -65,7 +62,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/ProximitySensorLock$3;->this$0:Lcom/android/camera/ProximitySensorLock;
 
     invoke-static {v1}, Lcom/android/camera/ProximitySensorLock;->access$600(Lcom/android/camera/ProximitySensorLock;)Landroid/view/View;

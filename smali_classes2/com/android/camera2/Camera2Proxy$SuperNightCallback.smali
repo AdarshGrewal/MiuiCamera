@@ -15,9 +15,6 @@
 
 
 # virtual methods
-.method public abstract isCaptureExpTimeDefined()Z
-.end method
-
 .method public abstract isMiviSatSuperNightSupported()Z
 .end method
 

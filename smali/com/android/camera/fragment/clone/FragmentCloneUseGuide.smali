@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragmentUseGuide;-><init>()V
 
     return-void
@@ -32,12 +31,10 @@
 
     move-object/from16 v0, p1
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v3
@@ -53,7 +50,6 @@
     :try_start_0
     const-string v4, "cn"
 
-    .line 3
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v5
@@ -75,7 +71,6 @@
     :cond_0
     const-string v4, "clone_freeze_frame_mode_use_guide_en.mp4"
 
-    .line 4
     :goto_0
     new-instance v13, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
@@ -85,9 +80,8 @@
 
     iget-object v7, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v4, 0x7f1202be
+    const v4, 0x7f1202a6
 
-    .line 5
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -108,9 +102,8 @@
 
     move-result-object v9
 
-    const v4, 0x7f1202b6
+    const v4, 0x7f12029e
 
-    .line 6
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -119,9 +112,8 @@
 
     new-array v5, v4, [Ljava/lang/String;
 
-    const v11, 0x7f1202b7
+    const v11, 0x7f12029f
 
-    .line 7
     invoke-virtual {v2, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v11
@@ -132,7 +124,6 @@
 
     const/4 v12, 0x2
 
-    .line 8
     invoke-virtual {v2, v11, v12}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v11
@@ -151,18 +142,16 @@
 
     aput-object v4, v5, v14
 
-    const v4, 0x7f1202b2
+    const v4, 0x7f12029a
 
-    .line 9
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v5, v12
 
-    const v4, 0x7f1202b9
+    const v4, 0x7f1202a1
 
-    .line 10
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -171,7 +160,6 @@
 
     aput-object v4, v5, v11
 
-    .line 11
     invoke-static {v5}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -180,7 +168,7 @@
 
     move-object v5, v13
 
-    const v8, 0x7f080129
+    const v8, 0x7f08012b
 
     move-object v11, v4
 
@@ -190,10 +178,8 @@
 
     invoke-direct/range {v5 .. v12}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 12
     invoke-interface {v0, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 13
     new-instance v5, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
     const-string v6, "clone_freeze_frame_mode_samples.mp4"
@@ -204,11 +190,10 @@
 
     iget-object v3, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v20, 0x7f08012a
+    const v20, 0x7f08012c
 
-    const v6, 0x7f1202c0
+    const v6, 0x7f1202a8
 
-    .line 14
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -225,9 +210,8 @@
 
     move-result-object v21
 
-    const v6, 0x7f1202c1
+    const v6, 0x7f1202a9
 
-    .line 15
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v22
@@ -236,34 +220,30 @@
 
     new-array v6, v6, [Ljava/lang/String;
 
-    const v7, 0x7f1202b4
+    const v7, 0x7f12029c
 
-    .line 16
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v6, v15
 
-    const v7, 0x7f1202b5
+    const v7, 0x7f12029d
 
-    .line 17
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v6, v14
 
-    const v7, 0x7f1202bd
+    const v7, 0x7f1202a5
 
-    .line 18
     invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v6, v4
 
-    .line 19
     invoke-static {v6}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v23
@@ -276,7 +256,6 @@
 
     invoke-direct/range {v17 .. v24}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 20
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -290,7 +269,6 @@
 
     const-string v3, "fillCopyUseGuide "
 
-    .line 21
     invoke-static {v2, v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -312,12 +290,10 @@
 
     move-object/from16 v2, p1
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v0
@@ -330,7 +306,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
@@ -365,7 +340,6 @@
 
     const/4 v9, 0x1
 
-    .line 4
     :try_start_0
     new-instance v15, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
@@ -375,9 +349,8 @@
 
     iget-object v12, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v0, 0x7f1202be
+    const v0, 0x7f1202a6
 
-    .line 5
     invoke-virtual {v3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -394,18 +367,16 @@
 
     move-result-object v14
 
-    const v0, 0x7f1202bf
+    const v0, 0x7f1202a7
 
-    .line 6
     invoke-virtual {v3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     new-array v4, v7, [Ljava/lang/String;
 
-    const v10, 0x7f1202b7
+    const v10, 0x7f12029f
 
-    .line 7
     invoke-virtual {v3, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -414,7 +385,6 @@
 
     const v10, 0x7f10000d
 
-    .line 8
     invoke-virtual {v3, v10, v7}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v10
@@ -433,25 +403,22 @@
 
     aput-object v10, v4, v9
 
-    const v10, 0x7f1202b8
+    const v10, 0x7f1202a0
 
-    .line 9
     invoke-virtual {v3, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
     aput-object v10, v4, v6
 
-    const v10, 0x7f1202b9
+    const v10, 0x7f1202a1
 
-    .line 10
     invoke-virtual {v3, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
     aput-object v10, v4, v5
 
-    .line 11
     invoke-static {v4}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -460,7 +427,7 @@
 
     move-object v10, v15
 
-    const v13, 0x7f08012b
+    const v13, 0x7f08012d
 
     move-object v5, v15
 
@@ -470,7 +437,6 @@
 
     invoke-direct/range {v10 .. v17}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 12
     invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -484,10 +450,8 @@
 
     const-string v5, "fillPhotoUseGuide "
 
-    .line 13
     invoke-static {v4, v5, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 14
     :goto_1
     new-instance v0, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
@@ -495,11 +459,10 @@
 
     iget-object v12, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v13, 0x7f08012c
+    const v13, 0x7f08012e
 
-    const v4, 0x7f1202c0
+    const v4, 0x7f1202a8
 
-    .line 15
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -516,45 +479,40 @@
 
     move-result-object v14
 
-    const v4, 0x7f1202c1
+    const v4, 0x7f1202a9
 
-    .line 16
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
     new-array v4, v7, [Ljava/lang/String;
 
-    const v5, 0x7f1202ba
+    const v5, 0x7f1202a2
 
-    .line 17
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v8
 
-    const v5, 0x7f1202bb
+    const v5, 0x7f1202a3
 
-    .line 18
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v9
 
-    const v5, 0x7f1202bc
+    const v5, 0x7f1202a4
 
-    .line 19
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v6
 
-    const v5, 0x7f1202bd
+    const v5, 0x7f1202a5
 
-    .line 20
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -563,7 +521,6 @@
 
     aput-object v3, v4, v5
 
-    .line 21
     invoke-static {v4}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v16
@@ -574,7 +531,6 @@
 
     invoke-direct/range {v10 .. v17}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 22
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -595,12 +551,10 @@
 
     move-object/from16 v0, p1
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v3
@@ -613,7 +567,6 @@
 
     move-result-object v3
 
-    .line 3
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
@@ -637,7 +590,6 @@
     :cond_0
     const-string v4, "clone_video_mode_use_guide_en.mp4"
 
-    .line 4
     :goto_0
     :try_start_0
     new-instance v13, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
@@ -648,11 +600,10 @@
 
     iget-object v7, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v8, 0x7f08012e
+    const v8, 0x7f080130
 
-    const v4, 0x7f1202be
+    const v4, 0x7f1202a6
 
-    .line 5
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -673,9 +624,8 @@
 
     move-result-object v9
 
-    const v4, 0x7f1202c2
+    const v4, 0x7f1202aa
 
-    .line 6
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -684,9 +634,8 @@
 
     new-array v5, v4, [Ljava/lang/String;
 
-    const v11, 0x7f1202b7
+    const v11, 0x7f12029f
 
-    .line 7
     invoke-virtual {v2, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v11
@@ -697,7 +646,6 @@
 
     const/4 v12, 0x2
 
-    .line 8
     invoke-virtual {v2, v11, v12}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v11
@@ -716,18 +664,16 @@
 
     aput-object v4, v5, v14
 
-    const v4, 0x7f1202b8
+    const v4, 0x7f1202a0
 
-    .line 9
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v5, v12
 
-    const v4, 0x7f1202b9
+    const v4, 0x7f1202a1
 
-    .line 10
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -736,7 +682,6 @@
 
     aput-object v4, v5, v16
 
-    .line 11
     invoke-static {v5}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
@@ -751,10 +696,8 @@
 
     invoke-direct/range {v5 .. v12}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 12
     invoke-interface {v0, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 13
     new-instance v4, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
     const-string v5, "clone_video_mode_samples.mp4"
@@ -765,11 +708,10 @@
 
     iget-object v3, v1, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v21, 0x7f08012f
+    const v21, 0x7f080131
 
-    const v5, 0x7f1202c0
+    const v5, 0x7f1202a8
 
-    .line 14
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -786,9 +728,8 @@
 
     move-result-object v22
 
-    const v5, 0x7f1202c1
+    const v5, 0x7f1202a9
 
-    .line 15
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v23
@@ -797,43 +738,38 @@
 
     new-array v5, v5, [Ljava/lang/String;
 
-    const v6, 0x7f1202ba
+    const v6, 0x7f1202a2
 
-    .line 16
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v15
 
-    const v6, 0x7f1202bb
+    const v6, 0x7f1202a3
 
-    .line 17
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v14
 
-    const v6, 0x7f1202bc
+    const v6, 0x7f1202a4
 
-    .line 18
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v17
 
-    const v6, 0x7f1202bd
+    const v6, 0x7f1202a5
 
-    .line 19
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v5, v16
 
-    .line 20
     invoke-static {v5}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v24
@@ -846,7 +782,6 @@
 
     invoke-direct/range {v18 .. v25}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 21
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -860,7 +795,6 @@
 
     const-string v3, "fillVideoUseGuide "
 
-    .line 22
     invoke-static {v2, v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -870,12 +804,10 @@
 .method public static varargs mergeTextAddBlankLineIfChinese([Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/fragment/clone/Utils;->mergeText([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/fragment/clone/Utils;->isChineseLanguage()Z
 
     move-result v0
@@ -913,7 +845,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/clone/Config;->getCloneMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     move-result-object v0
@@ -922,12 +853,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->fillPhotoUseGuide(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/fragment/clone/Config;->getCloneMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
@@ -937,12 +866,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->fillVideoUseGuide(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/fragment/clone/Config;->getCloneMode()Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
@@ -952,7 +879,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 6
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/FragmentCloneUseGuide;->fillCopyUseGuide(Ljava/util/List;)V
 
     :cond_2
@@ -969,9 +895,8 @@
 .end method
 
 .method public onBackEvent(I)Z
-    .locals 2
+    .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -984,14 +909,9 @@
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;
 
-    const/4 v0, 0x0
+    const/16 v0, 0x17
 
-    new-array v0, v0, [I
-
-    const/16 v1, 0x17
-
-    .line 2
-    invoke-interface {p1, v1, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->delegateEvent(I[I)V
+    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->delegateEvent(I)V
 
     const/4 p1, 0x1
 

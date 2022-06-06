@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,12 +39,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -63,7 +60,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_1;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_1;->v0:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -94,12 +90,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -117,7 +111,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_1;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_1;->v0:Ljava/lang/Object;
 
     invoke-interface {p1, v1}, Lorg/jcodec/common/Tuple$Mapper;->map(Ljava/lang/Object;)Ljava/lang/Object;
@@ -153,12 +146,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -176,7 +167,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_2;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -204,12 +194,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -227,7 +215,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_2;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_2;->v1:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -260,12 +247,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -283,7 +268,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_2;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     invoke-interface {p1, v2}, Lorg/jcodec/common/Tuple$Mapper;->map(Ljava/lang/Object;)Ljava/lang/Object;
@@ -326,12 +310,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -349,7 +331,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_2;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_2;->v1:Ljava/lang/Object;
@@ -391,12 +372,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -414,7 +393,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_3;->v0:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -446,12 +424,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -469,7 +445,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_3;->v1:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -501,12 +476,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -524,7 +497,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_3;->v2:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -559,12 +531,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -582,7 +552,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_3;->v0:Ljava/lang/Object;
 
     invoke-interface {p1, v2}, Lorg/jcodec/common/Tuple$Mapper;->map(Ljava/lang/Object;)Ljava/lang/Object;
@@ -629,12 +598,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -652,7 +619,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_3;->v0:Ljava/lang/Object;
 
     iget-object v3, v1, Lorg/jcodec/common/Tuple$_3;->v1:Ljava/lang/Object;
@@ -699,12 +665,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -722,7 +686,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_3;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_3;->v0:Ljava/lang/Object;
 
     iget-object v3, v1, Lorg/jcodec/common/Tuple$_3;->v1:Ljava/lang/Object;
@@ -766,12 +729,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -789,7 +750,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -821,12 +781,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -844,7 +802,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_4;->v1:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -876,12 +833,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -899,7 +854,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_4;->v2:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -931,12 +885,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -954,7 +906,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_4;->v3:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -991,12 +942,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1014,7 +963,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
     invoke-interface {p1, v2}, Lorg/jcodec/common/Tuple$Mapper;->map(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1065,12 +1013,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1088,7 +1034,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
     iget-object v3, v1, Lorg/jcodec/common/Tuple$_4;->v1:Ljava/lang/Object;
@@ -1139,12 +1084,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1162,7 +1105,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
     iget-object v3, v1, Lorg/jcodec/common/Tuple$_4;->v1:Ljava/lang/Object;
@@ -1213,12 +1155,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1236,7 +1176,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_4;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_4;->v0:Ljava/lang/Object;
 
     iget-object v3, v1, Lorg/jcodec/common/Tuple$_4;->v1:Ljava/lang/Object;
@@ -1277,23 +1216,19 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 3
     aget-object v2, p0, v1
 
-    .line 4
     iget-object v3, v2, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     iget-object v2, v2, Lorg/jcodec/common/Tuple$_2;->v1:Ljava/lang/Object;
@@ -1325,17 +1260,14 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1353,7 +1285,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 4
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1391,12 +1322,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1414,7 +1343,6 @@
 
     check-cast v1, Lorg/jcodec/common/Tuple$_2;
 
-    .line 3
     iget-object v2, v1, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     iget-object v1, v1, Lorg/jcodec/common/Tuple$_2;->v1:Ljava/lang/Object;
@@ -1441,7 +1369,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/Tuple$_2;
 
     invoke-direct {v0, p0, p1}, Lorg/jcodec/common/Tuple$_2;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -1467,7 +1394,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/Tuple$_4;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lorg/jcodec/common/Tuple$_4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
@@ -1487,7 +1413,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/Tuple$_1;
 
     invoke-direct {v0, p0}, Lorg/jcodec/common/Tuple$_1;-><init>(Ljava/lang/Object;)V
@@ -1511,7 +1436,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lorg/jcodec/common/Tuple$_3;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/jcodec/common/Tuple$_3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/recorder/MiRecorder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$ErrorListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onError(Landroid/media/MediaRecorder;II)V
     .locals 1
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +69,6 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$ErrorListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
@@ -81,7 +78,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$ErrorListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->access$100(Lcom/android/camera/dualvideo/recorder/MiRecorder;)Lcom/android/camera/dualvideo/recorder/MiRecorder$MiRecorderListener;

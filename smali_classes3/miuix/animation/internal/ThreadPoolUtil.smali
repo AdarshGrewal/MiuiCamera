@@ -21,7 +21,6 @@
 .method public static constructor <clinit>()V
     .locals 10
 
-    .line 1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -36,7 +35,6 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 2
     sput v1, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
 
     const/4 v1, 0x4
@@ -47,7 +45,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     div-int/lit8 v0, v0, 0x2
 
@@ -56,7 +53,6 @@
     :goto_0
     sput v0, Lmiuix/animation/internal/ThreadPoolUtil;->KEEP_POOL_SIZE:I
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v2, Lmiuix/animation/internal/ThreadPoolUtil;->KEEP_POOL_SIZE:I
@@ -75,7 +71,6 @@
 
     const-string v1, "AnimThread"
 
-    .line 5
     invoke-static {v1}, Lmiuix/animation/internal/ThreadPoolUtil;->getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v8
@@ -92,7 +87,6 @@
 
     const-string v0, "WorkThread"
 
-    .line 6
     invoke-static {v0}, Lmiuix/animation/internal/ThreadPoolUtil;->getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
@@ -109,7 +103,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -118,7 +111,6 @@
 .method public static synthetic access$000()Ljava/util/concurrent/Executor;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/internal/ThreadPoolUtil;->sSingleThread:Ljava/util/concurrent/Executor;
 
     return-object v0
@@ -127,17 +119,14 @@
 .method public static getSplitCount(I[I)V
     .locals 4
 
-    .line 1
     div-int/lit16 v0, p0, 0xfa0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 3
     sget v2, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
 
     if-le v0, v2, :cond_0
@@ -153,7 +142,6 @@
 
     float-to-double v2, p0
 
-    .line 4
     invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v2
@@ -162,10 +150,8 @@
 
     const/4 v2, 0x0
 
-    .line 5
     aput v0, p1, v2
 
-    .line 6
     aput p0, p1, v1
 
     return-void
@@ -174,7 +160,6 @@
 .method public static getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/animation/internal/ThreadPoolUtil$2;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/ThreadPoolUtil$2;-><init>(Ljava/lang/String;)V
@@ -185,7 +170,6 @@
 .method public static post(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/internal/ThreadPoolUtil;->sCacheThread:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V

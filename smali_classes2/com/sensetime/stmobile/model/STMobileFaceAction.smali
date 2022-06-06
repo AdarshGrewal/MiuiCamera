@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public getFace()Lcom/sensetime/stmobile/model/STMobile106;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/sensetime/stmobile/model/STMobileFaceAction;->face:Lcom/sensetime/stmobile/model/STMobile106;
 
     return-object v0
@@ -33,7 +31,6 @@
 .method public getFace_action()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/sensetime/stmobile/model/STMobileFaceAction;->face_action:I
 
     return v0
@@ -42,7 +39,6 @@
 .method public setFace(Lcom/sensetime/stmobile/model/STMobile106;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/sensetime/stmobile/model/STMobileFaceAction;->face:Lcom/sensetime/stmobile/model/STMobile106;
 
     return-void
@@ -51,7 +47,6 @@
 .method public setFace_action(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/sensetime/stmobile/model/STMobileFaceAction;->face_action:I
 
     return-void

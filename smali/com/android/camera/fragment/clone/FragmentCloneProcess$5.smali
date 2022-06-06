@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/clone/FragmentCloneProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneProcess$5;->this$0:Lcom/android/camera/fragment/clone/FragmentCloneProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneProcess$5;->this$0:Lcom/android/camera/fragment/clone/FragmentCloneProcess;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/clone/FragmentCloneProcess;->hideShareSheet()Z

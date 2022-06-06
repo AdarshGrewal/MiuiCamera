@@ -15,10 +15,7 @@
 
 
 # virtual methods
-.method public onPrepared(Lcom/android/camera/module/encoder/MediaEncoder;)V
-    .locals 0
-
-    return-void
+.method public abstract onPrepared(Lcom/android/camera/module/encoder/MediaEncoder;)V
 .end method
 
 .method public abstract onStopped(Lcom/android/camera/module/encoder/MediaEncoder;Z)V

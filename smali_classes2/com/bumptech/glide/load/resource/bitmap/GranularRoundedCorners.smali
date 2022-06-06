@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/load/Key;->CHARSET:Ljava/nio/charset/Charset;
 
     const-string v1, "com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners"
@@ -40,19 +39,14 @@
 .method public constructor <init>(FFFF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
 
-    .line 3
     iput p2, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topRight:F
 
-    .line 4
     iput p3, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomRight:F
 
-    .line 5
     iput p4, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomLeft:F
 
     return-void
@@ -63,17 +57,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;
 
-    .line 3
     iget v0, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
 
     iget v2, p1, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
@@ -115,7 +106,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->hashCode(F)I
@@ -128,21 +118,18 @@
 
     move-result v0
 
-    .line 2
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topRight:F
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(FI)I
 
     move-result v0
 
-    .line 3
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomRight:F
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(FI)I
 
     move-result v0
 
-    .line 4
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomLeft:F
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(FI)I
@@ -155,7 +142,6 @@
 .method public transform(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 6
 
-    .line 1
     iget v2, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
 
     iget v3, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topRight:F
@@ -178,52 +164,44 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->ID_BYTES:[B
 
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
     const/16 v0, 0x10
 
-    .line 2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topLeft:F
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->topRight:F
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomRight:F
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/bumptech/glide/load/resource/bitmap/GranularRoundedCorners;->bottomLeft:F
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
     return-void

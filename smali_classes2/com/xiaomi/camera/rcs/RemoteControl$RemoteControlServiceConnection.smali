@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/RemoteControl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/rcs/RemoteControl;Lcom/xiaomi/camera/rcs/RemoteControl$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;-><init>(Lcom/xiaomi/camera/rcs/RemoteControl;)V
 
     return-void
@@ -47,7 +45,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
     move-result-object p1
@@ -56,12 +53,10 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     monitor-enter p1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
@@ -75,14 +70,12 @@
 
     const/4 p2, 0x4
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$402(Lcom/xiaomi/camera/rcs/RemoteControl;Lcom/xiaomi/camera/rcs/IRemoteControl;)Lcom/xiaomi/camera/rcs/IRemoteControl;
 
     goto :goto_1
 
-    .line 5
     :cond_0
     invoke-static {p2}, Lcom/xiaomi/camera/rcs/IRemoteControl$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/camera/rcs/IRemoteControl;
 
@@ -90,7 +83,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
@@ -124,7 +116,6 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 7
     :try_start_2
     iget-object v2, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
@@ -133,7 +124,6 @@
     :cond_1
     move p2, v0
 
-    .line 8
     :goto_1
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
@@ -157,7 +147,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 9
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$300(Lcom/xiaomi/camera/rcs/RemoteControl;)Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;
@@ -168,7 +157,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 10
     :try_start_3
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
@@ -178,7 +166,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$600(Lcom/xiaomi/camera/rcs/RemoteControl;)Landroid/content/Context;
@@ -193,7 +180,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 12
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$302(Lcom/xiaomi/camera/rcs/RemoteControl;Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;)Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;
@@ -201,7 +187,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 13
     :catch_2
     :cond_2
     :try_start_4
@@ -209,14 +194,12 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 14
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$500(Lcom/xiaomi/camera/rcs/RemoteControl;)Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;
 
     move-result-object p1
 
-    .line 15
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -239,10 +222,8 @@
 
     if-eqz p1, :cond_3
 
-    .line 16
     invoke-virtual {p1, p2}, Lcom/xiaomi/camera/rcs/RemoteControl$CallbackHandler;->connectionStatus(I)V
 
-    .line 17
     :cond_3
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
@@ -257,7 +238,6 @@
     :catchall_1
     move-exception p2
 
-    .line 18
     :try_start_5
     monitor-exit p1
     :try_end_5
@@ -269,7 +249,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$200()Ljava/lang/String;
 
     move-result-object p1
@@ -278,12 +257,10 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
     monitor-enter p1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/RemoteControl$RemoteControlServiceConnection;->this$0:Lcom/xiaomi/camera/rcs/RemoteControl;
 
@@ -291,7 +268,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/RemoteControl;->access$402(Lcom/xiaomi/camera/rcs/RemoteControl;Lcom/xiaomi/camera/rcs/IRemoteControl;)Lcom/xiaomi/camera/rcs/IRemoteControl;
 
-    .line 4
     monitor-exit p1
 
     return-void

@@ -35,10 +35,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;)V
 
-    .line 2
     new-instance p1, Lmiuix/popupwidget/widget/GuidePopupWindow$1;
 
     invoke-direct {p1, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow$1;-><init>(Lmiuix/popupwidget/widget/GuidePopupWindow;)V
@@ -51,10 +49,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
     new-instance p1, Lmiuix/popupwidget/widget/GuidePopupWindow$1;
 
     invoke-direct {p1, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow$1;-><init>(Lmiuix/popupwidget/widget/GuidePopupWindow;)V
@@ -67,10 +63,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1, p2, p3}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 6
     new-instance p1, Lmiuix/popupwidget/widget/GuidePopupWindow$1;
 
     invoke-direct {p1, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow$1;-><init>(Lmiuix/popupwidget/widget/GuidePopupWindow;)V
@@ -83,10 +77,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 7
     invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/popupwidget/widget/ArrowPopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 8
     new-instance p1, Lmiuix/popupwidget/widget/GuidePopupWindow$1;
 
     invoke-direct {p1, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow$1;-><init>(Lmiuix/popupwidget/widget/GuidePopupWindow;)V
@@ -99,7 +91,6 @@
 .method private addGuideTextView(Ljava/lang/String;)V
     .locals 6
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -111,27 +102,23 @@
     :cond_0
     const-string v0, "\n"
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 3
     array-length v0, p1
 
     if-nez v0, :cond_1
 
     goto :goto_1
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 5
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -141,7 +128,6 @@
 
     aget-object v3, p1, v2
 
-    .line 6
     sget v4, Lmiuix/popupwidget/R$layout;->miuix_appcompat_guide_popup_text_view:I
 
     const/4 v5, 0x0
@@ -152,10 +138,8 @@
 
     check-cast v4, Landroidx/appcompat/widget/AppCompatTextView;
 
-    .line 7
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 8
     iget-object v3, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mGuideView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
@@ -174,25 +158,20 @@
 .method public onPrepareWindow()V
     .locals 4
 
-    .line 1
     invoke-super {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->onPrepareWindow()V
 
     const/16 v0, 0x1388
 
-    .line 2
     iput v0, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mShowDuration:I
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 5
     sget v1, Lmiuix/popupwidget/R$layout;->miuix_appcompat_guide_popup_content_view:I
 
     const/4 v2, 0x0
@@ -207,10 +186,8 @@
 
     iput-object v0, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mGuideView:Landroid/widget/LinearLayout;
 
-    .line 6
     invoke-virtual {p0, v0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 7
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, v2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->enableShowingAnimation(Z)V
@@ -221,7 +198,6 @@
 .method public setGuideText(I)V
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -230,7 +206,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p0, p1}, Lmiuix/popupwidget/widget/GuidePopupWindow;->setGuideText(Ljava/lang/String;)V
 
     return-void
@@ -239,7 +214,6 @@
 .method public setGuideText(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/popupwidget/widget/GuidePopupWindow;->addGuideTextView(Ljava/lang/String;)V
 
     return-void
@@ -248,7 +222,6 @@
 .method public setOffset(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->setOffset(II)V
@@ -259,7 +232,6 @@
 .method public setShowDuration(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mShowDuration:I
 
     return-void
@@ -268,15 +240,12 @@
 .method public show(Landroid/view/View;IIZ)V
     .locals 2
 
-    .line 2
     invoke-virtual {p0, p4}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->setAutoDismiss(Z)V
 
-    .line 3
     invoke-virtual {p0, p1, p2, p3}, Lmiuix/popupwidget/widget/ArrowPopupWindow;->show(Landroid/view/View;II)V
 
     if-eqz p4, :cond_0
 
-    .line 4
     iget-object p2, p0, Lmiuix/popupwidget/widget/ArrowPopupWindow;->mArrowPopupView:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     iget-object p3, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mDismissRunnable:Ljava/lang/Runnable;
@@ -287,7 +256,6 @@
 
     invoke-virtual {p2, p3, v0, v1}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 5
     :cond_0
     sget p2, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_LIGHT:I
 
@@ -301,7 +269,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0, v0, p2}, Lmiuix/popupwidget/widget/GuidePopupWindow;->show(Landroid/view/View;IIZ)V
 
     return-void

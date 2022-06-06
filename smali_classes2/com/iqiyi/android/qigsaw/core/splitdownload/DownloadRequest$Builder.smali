@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
 .method public static synthetic access$100(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileDir:Ljava/lang/String;
 
     return-object p0
@@ -48,7 +46,6 @@
 .method public static synthetic access$200(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->url:Ljava/lang/String;
 
     return-object p0
@@ -57,7 +54,6 @@
 .method public static synthetic access$300(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileName:Ljava/lang/String;
 
     return-object p0
@@ -66,7 +62,6 @@
 .method public static synthetic access$400(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->moduleName:Ljava/lang/String;
 
     return-object p0
@@ -75,7 +70,6 @@
 .method public static synthetic access$500(Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileMD5:Ljava/lang/String;
 
     return-object p0
@@ -86,7 +80,6 @@
 .method public build()Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest;
 
     const/4 v1, 0x0
@@ -99,7 +92,6 @@
 .method public fileDir(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileDir:Ljava/lang/String;
 
     return-object p0
@@ -108,7 +100,6 @@
 .method public fileMD5(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileMD5:Ljava/lang/String;
 
     return-object p0
@@ -117,7 +108,6 @@
 .method public fileName(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->fileName:Ljava/lang/String;
 
     return-object p0
@@ -126,7 +116,6 @@
 .method public moduleName(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->moduleName:Ljava/lang/String;
 
     return-object p0
@@ -135,7 +124,6 @@
 .method public url(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitdownload/DownloadRequest$Builder;->url:Ljava/lang/String;
 
     return-object p0

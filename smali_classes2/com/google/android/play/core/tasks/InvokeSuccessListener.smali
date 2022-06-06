@@ -46,20 +46,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->lock:Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 4
     iput-object p2, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->mListener:Lcom/google/android/play/core/tasks/OnSuccessListener;
 
     return-void
@@ -77,36 +73,30 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Lcom/google/android/play/core/tasks/Task;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->mListener:Lcom/google/android/play/core/tasks/OnSuccessListener;
 
     if-nez v1, :cond_0
 
-    .line 4
     monitor-exit v0
 
     return-void
 
-    .line 5
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     iget-object v0, p0, Lcom/google/android/play/core/tasks/InvokeSuccessListener;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/play/core/tasks/TaskSuccessRunnable;
@@ -120,7 +110,6 @@
     :catchall_0
     move-exception p1
 
-    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1

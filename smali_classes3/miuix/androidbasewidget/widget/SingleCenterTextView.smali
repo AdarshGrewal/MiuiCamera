@@ -11,7 +11,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -29,7 +27,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -40,10 +37,8 @@
 .method public onMeasure(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->onMeasure(II)V
 
-    .line 2
     iget-boolean p1, p0, Lmiuix/androidbasewidget/widget/SingleCenterTextView;->mEnableSingleCenter:Z
 
     if-eqz p1, :cond_0
@@ -66,7 +61,6 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 3
     invoke-virtual {p0, p2}, Landroid/widget/TextView;->setGravity(I)V
 
     :cond_0
@@ -76,7 +70,6 @@
 .method public setEnableSingleCenter(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/androidbasewidget/widget/SingleCenterTextView;->mEnableSingleCenter:Z
 
     return-void

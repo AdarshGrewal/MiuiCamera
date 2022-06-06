@@ -33,7 +33,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopConfig;IIII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     iput p2, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->val$startHeight:I
@@ -54,7 +53,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -65,7 +63,6 @@
 
     move-result p1
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->val$startHeight:I
 
     int-to-float v0, v0
@@ -80,7 +77,6 @@
 
     float-to-int p1, v0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$400(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/ui/ShapeBackGroundView;
@@ -89,7 +85,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->setTopVerticalOffset(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$400(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/ui/ShapeBackGroundView;
@@ -106,7 +101,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->setCurrentHeight(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$400(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/ui/ShapeBackGroundView;
@@ -115,7 +109,6 @@
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$900(Lcom/android/camera/fragment/top/FragmentTopConfig;)Landroidx/recyclerview/widget/RecyclerView;
@@ -142,7 +135,6 @@
 
     iget-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$5;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
-    .line 7
     invoke-static {p1}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$900(Lcom/android/camera/fragment/top/FragmentTopConfig;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
@@ -161,7 +153,6 @@
 
     move-result v3
 
-    .line 8
     invoke-virtual {v0, v1, v2, p1, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     return-void

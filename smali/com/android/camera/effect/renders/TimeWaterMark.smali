@@ -33,21 +33,16 @@
 .method public constructor <init>(Ljava/lang/String;IIIZZ)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p2, p3, p4}, Lcom/android/camera/effect/renders/WaterMark;-><init>(III)V
 
-    .line 2
     iput-boolean p5, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mIsCinematicAspectRatio:Z
 
-    .line 3
     iput-boolean p6, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mIsLTR:Z
 
-    .line 4
     invoke-static {p2, p3}, Lcom/android/camera/Util;->getWatermarkRatio(II)F
 
     move-result p5
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingX()F
 
     move-result p6
@@ -62,7 +57,6 @@
 
     iput p6, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
-    .line 6
     invoke-static {}, Lcom/android/camera/Util;->getWaterMarkPaddingY()F
 
     move-result p6
@@ -77,7 +71,6 @@
 
     iput p6, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
-    .line 7
     iget-boolean p6, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mIsCinematicAspectRatio:Z
 
     if-eqz p6, :cond_3
@@ -99,7 +92,6 @@
 
     move p2, v0
 
-    .line 8
     :cond_1
     invoke-static {p2, p3}, Lcom/android/camera/Util;->getWatermarkCinematicAspectMargin(II)I
 
@@ -107,7 +99,6 @@
 
     if-ge p2, p3, :cond_2
 
-    .line 9
     iget p2, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
     add-int/2addr p2, p4
@@ -116,7 +107,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     iget p2, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
@@ -124,26 +114,22 @@
 
     iput p2, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
-    .line 11
     :cond_3
     :goto_0
     iput-object p1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterText:Ljava/lang/String;
 
-    .line 12
     invoke-static {p1, p5}, Lcom/android/gallery3d/ui/TimeWaterMarkTexture;->newInstance(Ljava/lang/String;F)Lcom/android/gallery3d/ui/TimeWaterMarkTexture;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
-    .line 13
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterWidth:I
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
@@ -152,10 +138,8 @@
 
     iput p1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterHeight:I
 
-    .line 15
     invoke-direct {p0}, Lcom/android/camera/effect/renders/TimeWaterMark;->calcCenterAxis()V
 
-    .line 16
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/TimeWaterMark;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -170,7 +154,6 @@
 .method private calcCenterAxis()V
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mIsLTR:Z
 
     const/16 v1, 0x10e
@@ -181,7 +164,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
     if-eqz v0, :cond_3
@@ -194,7 +176,6 @@
 
     goto/16 :goto_0
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
@@ -206,7 +187,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
@@ -223,7 +203,6 @@
 
     goto/16 :goto_0
 
-    .line 5
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
@@ -235,7 +214,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterHeight:I
@@ -248,7 +226,6 @@
 
     goto/16 :goto_0
 
-    .line 7
     :cond_2
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -264,7 +241,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterWidth:I
@@ -277,7 +253,6 @@
 
     goto/16 :goto_0
 
-    .line 9
     :cond_3
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -293,7 +268,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
@@ -310,7 +284,6 @@
 
     goto/16 :goto_0
 
-    .line 11
     :cond_4
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mOrientation:I
 
@@ -324,7 +297,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_5
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
@@ -338,7 +310,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 13
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/TimeWaterMark;->getWidth()I
@@ -353,7 +324,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_6
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -371,7 +341,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 15
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/TimeWaterMark;->getHeight()I
@@ -386,7 +355,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_7
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureWidth:I
 
@@ -404,7 +372,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 17
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
@@ -423,7 +390,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_8
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
@@ -437,7 +403,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
-    .line 19
     iget v0, p0, Lcom/android/camera/effect/renders/WaterMark;->mPictureHeight:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
@@ -463,7 +428,6 @@
 .method public getCenterX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterX:I
 
     return v0
@@ -472,7 +436,6 @@
 .method public getCenterY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mCenterY:I
 
     return v0
@@ -481,7 +444,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterHeight:I
 
     return v0
@@ -490,7 +452,6 @@
 .method public getPaddingX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingX:I
 
     return v0
@@ -499,7 +460,6 @@
 .method public getPaddingY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mPaddingY:I
 
     return v0
@@ -508,7 +468,6 @@
 .method public getTexture()Lcom/android/gallery3d/ui/BasicTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterTexture:Lcom/android/gallery3d/ui/BasicTexture;
 
     return-object v0
@@ -517,7 +476,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/TimeWaterMark;->mWaterWidth:I
 
     return v0
@@ -526,7 +484,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

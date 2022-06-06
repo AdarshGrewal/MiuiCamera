@@ -142,14 +142,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->CONCURRENT:Ljava8/util/stream/Collector$Characteristics;
 
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->UNORDERED:Ljava8/util/stream/Collector$Characteristics;
 
     sget-object v2, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 2
     invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -160,12 +158,10 @@
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_CONCURRENT_ID:Ljava/util/Set;
 
-    .line 3
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->CONCURRENT:Ljava8/util/stream/Collector$Characteristics;
 
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->UNORDERED:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 4
     invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -176,10 +172,8 @@
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_CONCURRENT_NOID:Ljava/util/Set;
 
-    .line 5
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 6
     invoke-static {v0}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -190,12 +184,10 @@
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_ID:Ljava/util/Set;
 
-    .line 7
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->UNORDERED:Ljava8/util/stream/Collector$Characteristics;
 
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 8
     invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -206,17 +198,14 @@
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_UNORDERED_ID:Ljava/util/Set;
 
-    .line 9
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
 
-    .line 10
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->UNORDERED:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 11
     invoke-static {v0}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
@@ -227,42 +216,36 @@
 
     sput-object v0, Ljava8/util/stream/Collectors;->CH_UNORDERED_NOID:Ljava/util/Set;
 
-    .line 12
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$91;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->DBL_SUM_STATS:Ljava8/util/function/Supplier;
 
-    .line 13
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$92;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->INT_SUM_STATS:Ljava8/util/function/Supplier;
 
-    .line 14
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$93;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->LNG_SUM_STATS:Ljava8/util/function/Supplier;
 
-    .line 15
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$94;->lambdaFactory$()Ljava8/util/function/Function;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->UNMOD_MAP_FINISHER:Ljava8/util/function/Function;
 
-    .line 16
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$95;->lambdaFactory$()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/Collectors;->LIST_ADD:Ljava8/util/function/BiConsumer;
 
-    .line 17
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$96;->lambdaFactory$()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
@@ -275,7 +258,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -294,7 +276,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$3;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -318,7 +299,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$49;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -362,7 +342,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$41;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -406,7 +385,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$45;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -446,7 +424,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$56;->lambdaFactory$(Ljava/lang/Object;)Ljava8/util/function/Supplier;
 
     move-result-object p0
@@ -476,12 +453,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -490,7 +465,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -499,23 +473,19 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 4
     sget-object v0, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {v0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
 
     move-result-object v0
 
-    .line 6
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -524,24 +494,20 @@
     :goto_0
     move-object v6, v0
 
-    .line 8
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-interface {p0}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object v2
 
-    .line 9
     invoke-interface {p0}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v3
 
-    .line 10
     invoke-interface {p0}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v4
 
-    .line 11
     invoke-interface {p0}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object p0
@@ -562,7 +528,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p0, v0
 
     const/4 v2, 0x1
@@ -571,14 +536,12 @@
 
     sub-double/2addr v0, v3
 
-    .line 2
     array-length v3, p0
 
     sub-int/2addr v3, v2
 
     aget-wide v2, p0, v3
 
-    .line 3
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result p0
@@ -612,7 +575,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$2;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -635,7 +597,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors;->concHashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -657,7 +618,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$28;->lambdaFactory$()Ljava8/util/function/ToLongFunction;
 
     move-result-object v0
@@ -672,7 +632,6 @@
 .method public static duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/IllegalStateException;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const/4 v1, 0x3
@@ -722,12 +681,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
 
-    .line 2
     new-instance v7, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-interface {p1}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
@@ -738,7 +695,6 @@
 
     move-result-object v3
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v4
@@ -747,7 +703,6 @@
 
     move-result-object v5
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v6
@@ -783,12 +738,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
 
-    .line 2
     new-instance v7, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-interface {p1}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
@@ -799,7 +752,6 @@
 
     move-result-object v3
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v4
@@ -808,7 +760,6 @@
 
     move-result-object v5
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v6
@@ -840,7 +791,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors;->toList()Ljava8/util/stream/Collector;
 
     move-result-object v0
@@ -878,22 +828,18 @@
         }
     .end annotation
 
-    .line 3
     invoke-interface {p2}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {p2}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v1
 
-    .line 5
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors$$Lambda$64;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;)Ljava8/util/function/BiConsumer;
 
     move-result-object v4
 
-    .line 6
     invoke-interface {p2}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
@@ -902,7 +848,6 @@
 
     move-result-object v5
 
-    .line 7
     invoke-interface {p2}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object p0
@@ -915,7 +860,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 8
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object p2, Ljava8/util/stream/Collectors;->CH_ID:Ljava/util/Set;
@@ -924,18 +868,15 @@
 
     return-object p0
 
-    .line 9
     :cond_0
     invoke-interface {p2}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object p0
 
-    .line 10
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$65;->lambdaFactory$(Ljava8/util/function/Function;)Ljava8/util/function/Function;
 
     move-result-object v6
 
-    .line 11
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v7, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
@@ -973,7 +914,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/Collectors;->hashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1005,7 +945,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors;->concHashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1047,17 +986,14 @@
         }
     .end annotation
 
-    .line 3
     invoke-interface {p2}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
-    .line 4
     invoke-interface {p2}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v1
 
-    .line 5
     invoke-interface {p2}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v2
@@ -1066,7 +1002,6 @@
 
     move-result-object v6
 
-    .line 6
     invoke-interface {p2}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v2
@@ -1079,14 +1014,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 7
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors$$Lambda$66;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors$$Lambda$67;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;)Ljava8/util/function/BiConsumer;
 
@@ -1095,7 +1028,6 @@
     :goto_0
     move-object v5, p0
 
-    .line 9
     invoke-interface {p2}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object p0
@@ -1108,7 +1040,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 10
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object p2, Ljava8/util/stream/Collectors;->CH_CONCURRENT_ID:Ljava/util/Set;
@@ -1117,18 +1048,15 @@
 
     return-object p0
 
-    .line 11
     :cond_1
     invoke-interface {p2}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object p0
 
-    .line 12
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$68;->lambdaFactory$(Ljava8/util/function/Function;)Ljava8/util/function/Function;
 
     move-result-object v7
 
-    .line 13
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v8, Ljava8/util/stream/Collectors;->CH_CONCURRENT_NOID:Ljava/util/Set;
@@ -1166,7 +1094,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/Collectors;->concHashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1193,7 +1120,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$1;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1214,7 +1140,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$4;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -1235,7 +1160,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$15;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -1280,7 +1204,6 @@
 
     const-string v0, ""
 
-    .line 2
     invoke-static {p0, v0, v0}, Ljava8/util/stream/Collectors;->joining(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava8/util/stream/Collector;
 
     move-result-object p0
@@ -1305,7 +1228,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors$$Lambda$19;->lambdaFactory$(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava8/util/function/Supplier;
@@ -1346,7 +1268,6 @@
 .method public static synthetic lambda$averagingDouble$41(Ljava8/util/function/ToDoubleFunction;[DLjava/lang/Object;)V
     .locals 6
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/ToDoubleFunction;->applyAsDouble(Ljava/lang/Object;)D
 
     move-result-wide v0
@@ -1379,7 +1300,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p1, v0
 
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
@@ -1420,7 +1340,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     aget-wide v1, p0, v0
 
     const-wide/16 v3, 0x0
@@ -1463,7 +1382,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p1, v0
 
     invoke-interface {p0, p2}, Ljava8/util/function/ToIntFunction;->applyAsInt(Ljava/lang/Object;)I
@@ -1494,7 +1412,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -1521,7 +1438,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     aget-wide v1, p0, v0
 
     const-wide/16 v3, 0x0
@@ -1570,7 +1486,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p1, v0
 
     invoke-interface {p0, p2}, Ljava8/util/function/ToLongFunction;->applyAsLong(Ljava/lang/Object;)J
@@ -1599,7 +1514,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -1626,7 +1540,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     aget-wide v1, p0, v0
 
     const-wide/16 v3, 0x0
@@ -1685,14 +1598,12 @@
 .method public static synthetic lambda$filtering$18(Ljava8/util/function/Predicate;Ljava8/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p3}, Ljava8/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-interface {p1, p2, p3}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_0
@@ -1704,7 +1615,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-interface {p0, p3}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1716,7 +1626,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     :try_start_1
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->sequential()Ljava8/util/stream/BaseStream;
 
@@ -1745,7 +1654,6 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    .line 3
     :try_start_2
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->close()V
     :try_end_2
@@ -1766,7 +1674,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 4
     :catch_1
     :cond_2
     throw p1
@@ -1775,7 +1682,6 @@
 .method public static synthetic lambda$groupingBy$55(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava/util/Map;Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-interface {p0, p4}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1786,7 +1692,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/Collectors$$Lambda$89;->lambdaFactory$(Ljava8/util/function/Supplier;)Ljava8/util/function/Function;
 
     move-result-object p1
@@ -1795,7 +1700,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p2, p0, p4}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -1804,7 +1708,6 @@
 .method public static synthetic lambda$groupingBy$57(Ljava8/util/function/Function;Ljava/util/Map;)Ljava/util/Map;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$88;->lambdaFactory$(Ljava8/util/function/Function;)Ljava8/util/function/BiFunction;
 
     move-result-object p0
@@ -1817,7 +1720,6 @@
 .method public static synthetic lambda$groupingByConcurrent$59(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-interface {p0, p4}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1828,7 +1730,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/Collectors$$Lambda$87;->lambdaFactory$(Ljava8/util/function/Supplier;)Ljava8/util/function/Function;
 
     move-result-object p1
@@ -1837,7 +1738,6 @@
 
     move-result-object p0
 
-    .line 3
     invoke-interface {p2, p0, p4}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -1846,7 +1746,6 @@
 .method public static synthetic lambda$groupingByConcurrent$61(Ljava8/util/function/Function;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;)V
     .locals 1
 
-    .line 1
     invoke-interface {p0, p4}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1857,7 +1756,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/Collectors$$Lambda$86;->lambdaFactory$(Ljava8/util/function/Supplier;)Ljava8/util/function/Function;
 
     move-result-object p1
@@ -1866,14 +1764,11 @@
 
     move-result-object p0
 
-    .line 3
     monitor-enter p0
 
-    .line 4
     :try_start_0
     invoke-interface {p2, p0, p4}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 5
     monitor-exit p0
 
     return-void
@@ -1891,7 +1786,6 @@
 .method public static synthetic lambda$groupingByConcurrent$63(Ljava8/util/function/Function;Ljava/util/concurrent/ConcurrentMap;)Ljava/util/concurrent/ConcurrentMap;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$85;->lambdaFactory$(Ljava8/util/function/Function;)Ljava8/util/function/BiFunction;
 
     move-result-object p0
@@ -1904,7 +1798,6 @@
 .method public static synthetic lambda$joining$11(Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     return-object p0
@@ -1913,7 +1806,6 @@
 .method public static synthetic lambda$joining$12(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava8/util/StringJoiner;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/StringJoiner;
 
     invoke-direct {v0, p0, p1, p2}, Ljava8/util/StringJoiner;-><init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
@@ -1924,7 +1816,6 @@
 .method public static synthetic lambda$mapMerger$13(Ljava8/util/function/BinaryOperator;Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;
     .locals 2
 
-    .line 1
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -1946,7 +1837,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1966,7 +1856,6 @@
 .method public static synthetic lambda$mapMergerConcurrent$14(Ljava8/util/function/BinaryOperator;Ljava/util/concurrent/ConcurrentMap;Ljava/util/concurrent/ConcurrentMap;)Ljava/util/concurrent/ConcurrentMap;
     .locals 2
 
-    .line 1
     invoke-interface {p2}, Ljava/util/concurrent/ConcurrentMap;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -1988,7 +1877,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -2008,7 +1896,6 @@
 .method public static synthetic lambda$mapping$15(Ljava8/util/function/BiConsumer;Ljava8/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p1, p3}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2021,7 +1908,6 @@
 .method public static synthetic lambda$null$16(Ljava8/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1, p2}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -2030,7 +1916,6 @@
 .method public static synthetic lambda$null$54(Ljava8/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -2041,7 +1926,6 @@
 .method public static synthetic lambda$null$56(Ljava8/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2052,7 +1936,6 @@
 .method public static synthetic lambda$null$58(Ljava8/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -2063,7 +1946,6 @@
 .method public static synthetic lambda$null$60(Ljava8/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -2074,7 +1956,6 @@
 .method public static synthetic lambda$null$62(Ljava8/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2085,7 +1966,6 @@
 .method public static synthetic lambda$partitioningBy$64(Ljava8/util/function/BiConsumer;Ljava8/util/function/Predicate;Ljava8/util/stream/Collectors$Partition;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p1, p3}, Ljava8/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result p1
@@ -2108,7 +1988,6 @@
 .method public static synthetic lambda$partitioningBy$65(Ljava8/util/function/BinaryOperator;Ljava8/util/stream/Collectors$Partition;Ljava8/util/stream/Collectors$Partition;)Ljava8/util/stream/Collectors$Partition;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$Partition;
 
     iget-object v1, p1, Ljava8/util/stream/Collectors$Partition;->forTrue:Ljava/lang/Object;
@@ -2123,7 +2002,6 @@
 
     iget-object p2, p2, Ljava8/util/stream/Collectors$Partition;->forFalse:Ljava/lang/Object;
 
-    .line 2
     invoke-interface {p0, p1, p2}, Ljava8/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2136,7 +2014,6 @@
 .method public static synthetic lambda$partitioningBy$66(Ljava8/util/stream/Collector;)Ljava8/util/stream/Collectors$Partition;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$Partition;
 
     invoke-interface {p0}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
@@ -2147,7 +2024,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object p0
@@ -2164,7 +2040,6 @@
 .method public static synthetic lambda$partitioningBy$67(Ljava8/util/stream/Collector;Ljava8/util/stream/Collectors$Partition;)Ljava/util/Map;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$Partition;
 
     invoke-interface {p0}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
@@ -2177,7 +2052,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-interface {p0}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object p0
@@ -2198,7 +2072,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object v1, p1, v0
 
     invoke-interface {p0, v1, p2}, Ljava8/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2215,7 +2088,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object v1, p1, v0
 
     aget-object p2, p2, v0
@@ -2234,7 +2106,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object p0, p0, v0
 
     return-object p0
@@ -2243,7 +2114,6 @@
 .method public static synthetic lambda$reducing$48(Ljava8/util/function/BinaryOperator;)Ljava8/util/stream/Collectors$1OptionalBox;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$1OptionalBox;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Collectors$1OptionalBox;-><init>(Ljava8/util/function/BinaryOperator;)V
@@ -2254,7 +2124,6 @@
 .method public static synthetic lambda$reducing$49(Ljava8/util/stream/Collectors$1OptionalBox;Ljava8/util/stream/Collectors$1OptionalBox;)Ljava8/util/stream/Collectors$1OptionalBox;
     .locals 1
 
-    .line 1
     iget-boolean v0, p1, Ljava8/util/stream/Collectors$1OptionalBox;->present:Z
 
     if-eqz v0, :cond_0
@@ -2270,7 +2139,6 @@
 .method public static synthetic lambda$reducing$50(Ljava8/util/stream/Collectors$1OptionalBox;)Ljava8/util/Optional;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Ljava8/util/stream/Collectors$1OptionalBox;->value:Ljava/lang/Object;
 
     invoke-static {p0}, Ljava8/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava8/util/Optional;
@@ -2285,7 +2153,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object v1, p2, v0
 
     invoke-interface {p1, p3}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2306,7 +2173,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object v1, p1, v0
 
     aget-object p2, p2, v0
@@ -2325,7 +2191,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-object p0, p0, v0
 
     return-object p0
@@ -2334,7 +2199,6 @@
 .method public static synthetic lambda$static$0(Ljava/util/Map;)Ljava/util/Map;
     .locals 1
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -2359,7 +2223,6 @@
 .method public static synthetic lambda$summarizingDouble$74(Ljava8/util/function/ToDoubleFunction;Ljava8/util/DoubleSummaryStatistics;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/ToDoubleFunction;->applyAsDouble(Ljava/lang/Object;)D
 
     move-result-wide v0
@@ -2372,7 +2235,6 @@
 .method public static synthetic lambda$summarizingDouble$75(Ljava8/util/DoubleSummaryStatistics;Ljava8/util/DoubleSummaryStatistics;)Ljava8/util/DoubleSummaryStatistics;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/DoubleSummaryStatistics;->combine(Ljava8/util/DoubleSummaryStatistics;)V
 
     return-object p0
@@ -2381,7 +2243,6 @@
 .method public static synthetic lambda$summarizingInt$70(Ljava8/util/function/ToIntFunction;Ljava8/util/IntSummaryStatistics;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/ToIntFunction;->applyAsInt(Ljava/lang/Object;)I
 
     move-result p0
@@ -2394,7 +2255,6 @@
 .method public static synthetic lambda$summarizingInt$71(Ljava8/util/IntSummaryStatistics;Ljava8/util/IntSummaryStatistics;)Ljava8/util/IntSummaryStatistics;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/IntSummaryStatistics;->combine(Ljava8/util/IntSummaryStatistics;)V
 
     return-object p0
@@ -2403,7 +2263,6 @@
 .method public static synthetic lambda$summarizingLong$72(Ljava8/util/function/ToLongFunction;Ljava8/util/LongSummaryStatistics;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/ToLongFunction;->applyAsLong(Ljava/lang/Object;)J
 
     move-result-wide v0
@@ -2416,7 +2275,6 @@
 .method public static synthetic lambda$summarizingLong$73(Ljava8/util/LongSummaryStatistics;Ljava8/util/LongSummaryStatistics;)Ljava8/util/LongSummaryStatistics;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/LongSummaryStatistics;->combine(Ljava8/util/LongSummaryStatistics;)V
 
     return-object p0
@@ -2435,17 +2293,14 @@
 .method public static synthetic lambda$summingDouble$29(Ljava8/util/function/ToDoubleFunction;[DLjava/lang/Object;)V
     .locals 4
 
-    .line 1
     invoke-interface {p0, p2}, Ljava8/util/function/ToDoubleFunction;->applyAsDouble(Ljava/lang/Object;)D
 
     move-result-wide v0
 
-    .line 2
     invoke-static {p1, v0, v1}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 p0, 0x2
 
-    .line 3
     aget-wide v2, p1, p0
 
     add-double/2addr v2, v0
@@ -2460,14 +2315,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p1, v0
 
     invoke-static {p0, v0, v1}, Ljava8/util/stream/Collectors;->sumWithCompensation([DD)[D
 
     const/4 v0, 0x2
 
-    .line 2
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -2478,7 +2331,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     aget-wide v0, p1, v0
 
     neg-double v0, v0
@@ -2493,7 +2345,6 @@
 .method public static synthetic lambda$summingDouble$31([D)Ljava/lang/Double;
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors;->computeFinalSum([D)D
 
     move-result-wide v0
@@ -2520,7 +2371,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget v1, p1, v0
 
     invoke-interface {p0, p2}, Ljava8/util/function/ToIntFunction;->applyAsInt(Ljava/lang/Object;)I
@@ -2539,7 +2389,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget v1, p0, v0
 
     aget p1, p1, v0
@@ -2556,7 +2405,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget p0, p0, v0
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2581,7 +2429,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p1, v0
 
     invoke-interface {p0, p2}, Ljava8/util/function/ToLongFunction;->applyAsLong(Ljava/lang/Object;)J
@@ -2600,7 +2447,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v1, p0, v0
 
     aget-wide v3, p1, v0
@@ -2617,7 +2463,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-wide v0, p0, v0
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2630,7 +2475,6 @@
 .method public static synthetic lambda$teeing0$76(Ljava8/util/function/Supplier;Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava8/util/function/BiConsumer;Ljava8/util/function/BinaryOperator;Ljava8/util/function/BinaryOperator;Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava8/util/function/BiFunction;)Ljava8/util/stream/Collectors$1PairBox;
     .locals 11
 
-    .line 1
     new-instance v10, Ljava8/util/stream/Collectors$1PairBox;
 
     move-object v0, v10
@@ -2661,7 +2505,6 @@
 .method public static synthetic lambda$toCollection$4(Ljava/util/Collection;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
 
     return-object p0
@@ -2670,7 +2513,6 @@
 .method public static synthetic lambda$toConcurrentMap$69(Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava8/util/function/BinaryOperator;Ljava/util/concurrent/ConcurrentMap;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p4}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2687,7 +2529,6 @@
 .method public static synthetic lambda$toList$5(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     return-object p0
@@ -2696,7 +2537,6 @@
 .method public static synthetic lambda$toMap$68(Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava8/util/function/BinaryOperator;Ljava/util/Map;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p4}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2713,7 +2553,6 @@
 .method public static synthetic lambda$toSet$8(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
     .locals 2
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -2724,12 +2563,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     invoke-interface {p1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
@@ -2739,7 +2576,6 @@
 .method public static synthetic lambda$toUnmodifiableList$6(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     return-object p0
@@ -2748,7 +2584,6 @@
 .method public static synthetic lambda$toUnmodifiableList$7(Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
@@ -2763,7 +2598,6 @@
 .method public static synthetic lambda$toUnmodifiableSet$10(Ljava/util/Set;)Ljava/util/Set;
     .locals 0
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
@@ -2778,7 +2612,6 @@
 .method public static synthetic lambda$toUnmodifiableSet$9(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
     .locals 2
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
     move-result v0
@@ -2789,12 +2622,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     invoke-interface {p1, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
@@ -2804,12 +2635,10 @@
 .method public static synthetic lambda$uniqKeysMapAccumulator$2(Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava/util/Map;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p3}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 2
     invoke-interface {p1, p3}, Ljava8/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2818,12 +2647,10 @@
 
     move-result-object p1
 
-    .line 3
     instance-of p3, p2, Ljava/util/concurrent/ConcurrentMap;
 
     if-eqz p3, :cond_0
 
-    .line 4
     check-cast p2, Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {p2, p0, p1}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2832,7 +2659,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {p2, p0, p1}, Ljava8/util/Maps;->putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2843,7 +2669,6 @@
 
     return-void
 
-    .line 6
     :cond_1
     invoke-static {p0, p2, p1}, Ljava8/util/stream/Collectors;->duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/IllegalStateException;
 
@@ -2855,7 +2680,6 @@
 .method public static synthetic lambda$uniqKeysMapMerger$1(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;
     .locals 3
 
-    .line 1
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -2877,12 +2701,10 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -2891,12 +2713,10 @@
 
     move-result-object v0
 
-    .line 4
     instance-of v2, p0, Ljava/util/concurrent/ConcurrentMap;
 
     if-eqz v2, :cond_0
 
-    .line 5
     move-object v2, p0
 
     check-cast v2, Ljava/util/concurrent/ConcurrentMap;
@@ -2907,7 +2727,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-static {p0, v1, v0}, Ljava8/util/Maps;->putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2918,7 +2737,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-static {v1, v2, v0}, Ljava8/util/stream/Collectors;->duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/IllegalStateException;
 
@@ -2943,7 +2761,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Collectors;->LIST_ADD:Ljava8/util/function/BiConsumer;
 
     return-object v0
@@ -2967,7 +2784,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$23;->lambdaFactory$(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
@@ -2993,7 +2809,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$24;->lambdaFactory$(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
@@ -3023,12 +2838,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
 
-    .line 2
     new-instance v7, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-interface {p1}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
@@ -3039,7 +2852,6 @@
 
     move-result-object v3
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v4
@@ -3048,7 +2860,6 @@
 
     move-result-object v5
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v6
@@ -3076,7 +2887,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/function/BinaryOperators;->maxBy(Ljava/util/Comparator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
@@ -3104,7 +2914,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/function/BinaryOperators;->minBy(Ljava/util/Comparator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
@@ -3142,40 +2951,30 @@
         }
     .end annotation
 
-    .line 8
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p3}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p4}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     sget-object v0, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
 
-    .line 14
     array-length v1, p4
 
     if-lez v1, :cond_0
 
-    .line 15
     const-class v0, Ljava8/util/stream/Collector$Characteristics;
 
     invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object v0
 
-    .line 16
     invoke-static {v0, p4}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 17
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -3183,7 +2982,6 @@
     :cond_0
     move-object v6, v0
 
-    .line 18
     new-instance p4, Ljava8/util/stream/Collectors$CollectorImpl;
 
     move-object v1, p4
@@ -3223,19 +3021,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p3}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     array-length v0, p3
 
     if-nez v0, :cond_0
@@ -3247,7 +3040,6 @@
     :cond_0
     sget-object v0, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
-    .line 6
     invoke-static {v0, p3}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;[Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object p3
@@ -3256,7 +3048,6 @@
 
     move-result-object p3
 
-    .line 7
     :goto_0
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
@@ -3283,7 +3074,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors;->toList()Ljava8/util/stream/Collector;
 
     move-result-object v0
@@ -3318,32 +3108,26 @@
         }
     .end annotation
 
-    .line 2
     invoke-interface {p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v0, p0}, Ljava8/util/stream/Collectors$$Lambda$69;->lambdaFactory$(Ljava8/util/function/BiConsumer;Ljava8/util/function/Predicate;)Ljava8/util/function/BiConsumer;
 
     move-result-object v3
 
-    .line 4
     invoke-interface {p1}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object p0
 
-    .line 5
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$70;->lambdaFactory$(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object v4
 
-    .line 6
     invoke-static {p1}, Ljava8/util/stream/Collectors$$Lambda$71;->lambdaFactory$(Ljava8/util/stream/Collector;)Ljava8/util/function/Supplier;
 
     move-result-object v2
 
-    .line 7
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object p0
@@ -3356,7 +3140,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 8
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object p1, Ljava8/util/stream/Collectors;->CH_ID:Ljava/util/Set;
@@ -3365,13 +3148,11 @@
 
     return-object p0
 
-    .line 9
     :cond_0
     invoke-static {p1}, Ljava8/util/stream/Collectors$$Lambda$72;->lambdaFactory$(Ljava8/util/stream/Collector;)Ljava8/util/function/Function;
 
     move-result-object v5
 
-    .line 10
     new-instance p0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v6, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
@@ -3397,10 +3178,8 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
-    .line 2
     invoke-static {p0}, Ljava8/util/stream/Collectors;->boxSupplier(Ljava/lang/Object;)Ljava8/util/function/Supplier;
 
     move-result-object v1
@@ -3444,10 +3223,8 @@
         }
     .end annotation
 
-    .line 4
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
-    .line 5
     invoke-static {p0}, Ljava8/util/stream/Collectors;->boxSupplier(Ljava/lang/Object;)Ljava8/util/function/Supplier;
 
     move-result-object v1
@@ -3489,7 +3266,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {p0}, Ljava8/util/stream/Collectors$$Lambda$57;->lambdaFactory$(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/Supplier;
@@ -3530,7 +3306,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Collectors;->SET_ADD:Ljava8/util/function/BiConsumer;
 
     return-object v0
@@ -3541,14 +3316,12 @@
 
     const/4 v0, 0x1
 
-    .line 1
     aget-wide v1, p0, v0
 
     sub-double/2addr p1, v1
 
     const/4 v1, 0x0
 
-    .line 2
     aget-wide v2, p0, v1
 
     add-double v4, v2, p1
@@ -3557,10 +3330,8 @@
 
     sub-double/2addr v2, p1
 
-    .line 3
     aput-wide v2, p0, v0
 
-    .line 4
     aput-wide v4, p0, v1
 
     return-object p0
@@ -3582,7 +3353,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v1, Ljava8/util/stream/Collectors;->DBL_SUM_STATS:Ljava8/util/function/Supplier;
@@ -3618,7 +3388,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v1, Ljava8/util/stream/Collectors;->INT_SUM_STATS:Ljava8/util/function/Supplier;
@@ -3654,7 +3423,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     sget-object v1, Ljava8/util/stream/Collectors;->LNG_SUM_STATS:Ljava8/util/function/Supplier;
@@ -3690,7 +3458,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$37;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -3734,7 +3501,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$29;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -3778,7 +3544,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$33;->lambdaFactory$()Ljava8/util/function/Supplier;
@@ -3830,7 +3595,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors;->teeing0(Ljava8/util/stream/Collector;Ljava8/util/stream/Collector;Ljava8/util/function/BiFunction;)Ljava8/util/stream/Collector;
 
     move-result-object p0
@@ -3870,24 +3634,20 @@
 
     move-object/from16 v1, p0
 
-    .line 1
     invoke-static {v1, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "downstream2"
 
     move-object/from16 v2, p1
 
-    .line 2
     invoke-static {v2, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "merger"
 
     move-object/from16 v9, p2
 
-    .line 3
     invoke-static {v9, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     invoke-interface/range {p0 .. p0}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -3900,7 +3660,6 @@
 
     check-cast v0, Ljava8/util/function/Supplier;
 
-    .line 5
     invoke-interface/range {p1 .. p1}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
     move-result-object v3
@@ -3913,7 +3672,6 @@
 
     check-cast v3, Ljava8/util/function/Supplier;
 
-    .line 6
     invoke-interface/range {p0 .. p0}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v4
@@ -3926,7 +3684,6 @@
 
     check-cast v4, Ljava8/util/function/BiConsumer;
 
-    .line 7
     invoke-interface/range {p1 .. p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v5
@@ -3939,7 +3696,6 @@
 
     check-cast v5, Ljava8/util/function/BiConsumer;
 
-    .line 8
     invoke-interface/range {p0 .. p0}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v6
@@ -3952,7 +3708,6 @@
 
     check-cast v6, Ljava8/util/function/BinaryOperator;
 
-    .line 9
     invoke-interface/range {p1 .. p1}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v7
@@ -3965,7 +3720,6 @@
 
     check-cast v7, Ljava8/util/function/BinaryOperator;
 
-    .line 10
     invoke-interface/range {p0 .. p0}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object v8
@@ -3978,7 +3732,6 @@
 
     check-cast v8, Ljava8/util/function/Function;
 
-    .line 11
     invoke-interface/range {p1 .. p1}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
     move-result-object v10
@@ -3991,17 +3744,14 @@
 
     check-cast v10, Ljava8/util/function/Function;
 
-    .line 12
     invoke-interface/range {p0 .. p0}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 13
     invoke-interface/range {p1 .. p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 14
     sget-object v11, Ljava8/util/stream/Collectors;->CH_ID:Ljava/util/Set;
 
     invoke-interface {v11, v1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
@@ -4020,7 +3770,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_0
     const-class v11, Ljava8/util/stream/Collector$Characteristics;
 
@@ -4028,25 +3777,20 @@
 
     move-result-object v11
 
-    .line 16
     invoke-virtual {v11, v1}, Ljava/util/EnumSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 17
     invoke-virtual {v11, v2}, Ljava/util/EnumSet;->retainAll(Ljava/util/Collection;)Z
 
-    .line 18
     sget-object v1, Ljava8/util/stream/Collector$Characteristics;->IDENTITY_FINISH:Ljava8/util/stream/Collector$Characteristics;
 
     invoke-virtual {v11, v1}, Ljava/util/EnumSet;->remove(Ljava/lang/Object;)Z
 
-    .line 19
     invoke-static {v11}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 20
     :cond_1
     :goto_0
     sget-object v1, Ljava8/util/stream/Collectors;->CH_NOID:Ljava/util/Set;
@@ -4054,7 +3798,6 @@
     :goto_1
     move-object/from16 v16, v1
 
-    .line 21
     new-instance v17, Ljava8/util/stream/Collectors$CollectorImpl;
 
     move-object v1, v0
@@ -4114,7 +3857,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$7;->lambdaFactory$()Ljava8/util/function/BiConsumer;
@@ -4154,19 +3896,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->concHashMapNew2()Ljava8/util/function/Supplier;
 
     move-result-object v1
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors;->uniqKeysMapAccumulator(Ljava8/util/function/Function;Ljava8/util/function/Function;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/Collectors;->uniqKeysMapMerger()Ljava8/util/function/BinaryOperator;
 
     move-result-object p1
@@ -4202,7 +3941,6 @@
         }
     .end annotation
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/Collectors;->concHashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -4240,12 +3978,10 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors$$Lambda$74;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
 
-    .line 6
     new-instance p1, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {p2}, Ljava8/util/stream/Collectors;->mapMergerConcurrent(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BinaryOperator;
@@ -4273,7 +4009,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->arrayListNew()Ljava8/util/function/Supplier;
@@ -4317,19 +4052,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->hashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v1
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors;->uniqKeysMapAccumulator(Ljava8/util/function/Function;Ljava8/util/function/Function;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/Collectors;->uniqKeysMapMerger()Ljava8/util/function/BinaryOperator;
 
     move-result-object p1
@@ -4365,7 +4097,6 @@
         }
     .end annotation
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/Collectors;->hashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -4403,12 +4134,10 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Collectors$$Lambda$73;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Function;Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
 
-    .line 6
     new-instance p1, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {p2}, Ljava8/util/stream/Collectors;->mapMerger(Ljava8/util/function/BinaryOperator;)Ljava8/util/function/BinaryOperator;
@@ -4436,7 +4165,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->hashSetNew()Ljava8/util/function/Supplier;
@@ -4472,7 +4200,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->arrayListNew()Ljava8/util/function/Supplier;
@@ -4524,25 +4251,20 @@
 
     const-string v0, "keyMapper"
 
-    .line 1
     invoke-static {p0, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueMapper"
 
-    .line 2
     invoke-static {p1, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors;->toMap(Ljava8/util/function/Function;Ljava8/util/function/Function;)Ljava8/util/stream/Collector;
 
     move-result-object p0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/Collectors;->unmodMapFinisher()Ljava8/util/function/Function;
 
     move-result-object p1
 
-    .line 5
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors;->collectingAndThen(Ljava8/util/stream/Collector;Ljava8/util/function/Function;)Ljava8/util/stream/Collector;
 
     move-result-object p0
@@ -4576,20 +4298,16 @@
 
     const-string v0, "keyMapper"
 
-    .line 6
     invoke-static {p0, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueMapper"
 
-    .line 7
     invoke-static {p1, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "mergeFunction"
 
-    .line 8
     invoke-static {p2, v0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 9
     invoke-static {}, Ljava8/util/stream/Collectors;->hashMapNew()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -4598,12 +4316,10 @@
 
     move-result-object p0
 
-    .line 10
     invoke-static {}, Ljava8/util/stream/Collectors;->unmodMapFinisher()Ljava8/util/function/Function;
 
     move-result-object p1
 
-    .line 11
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors;->collectingAndThen(Ljava8/util/stream/Collector;Ljava8/util/function/Function;)Ljava8/util/stream/Collector;
 
     move-result-object p0
@@ -4625,7 +4341,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v6, Ljava8/util/stream/Collectors$CollectorImpl;
 
     invoke-static {}, Ljava8/util/stream/Collectors;->hashSetNew()Ljava8/util/function/Supplier;
@@ -4674,7 +4389,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/Collectors$$Lambda$6;->lambdaFactory$(Ljava8/util/function/Function;Ljava8/util/function/Function;)Ljava8/util/function/BiConsumer;
 
     move-result-object p0
@@ -4698,7 +4412,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Collectors$$Lambda$5;->lambdaFactory$()Ljava8/util/function/BinaryOperator;
 
     move-result-object v0
@@ -4723,7 +4436,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/Collectors;->UNMOD_MAP_FINISHER:Ljava8/util/function/Function;
 
     return-object v0

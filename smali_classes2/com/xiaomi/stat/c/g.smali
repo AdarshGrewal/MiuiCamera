@@ -38,15 +38,12 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     const p1, 0x493e0
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/stat/c/g;->j:I
 
-    .line 3
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
@@ -57,20 +54,16 @@
 
     const/16 p1, 0x3a98
 
-    .line 4
     iput p1, p0, Lcom/xiaomi/stat/c/g;->k:I
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Lcom/xiaomi/stat/c/g;->l:J
 
-    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/stat/c/g;->m:Z
 
-    .line 7
     new-instance p1, Lcom/xiaomi/stat/c/h;
 
     invoke-direct {p1, p0}, Lcom/xiaomi/stat/c/h;-><init>(Lcom/xiaomi/stat/c/g;)V
@@ -79,22 +72,18 @@
 
     const p1, 0xea60
 
-    .line 8
     iput p1, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     int-to-long v1, p1
 
-    .line 9
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 10
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/xiaomi/stat/c/g;->a(Landroid/content/Context;)V
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +143,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     :try_start_0
     new-instance v0, Landroid/content/IntentFilter;
@@ -163,10 +151,8 @@
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 6
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 7
     iget-object v1, p0, Lcom/xiaomi/stat/c/g;->b:Landroid/content/BroadcastReceiver;
 
     const/4 v2, 0x0
@@ -180,7 +166,6 @@
     :catch_0
     move-exception p1
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -206,7 +191,6 @@
 .method private f()I
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b;->m()I
 
     move-result v0
@@ -221,7 +205,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/b;->j()I
 
@@ -246,14 +229,12 @@
 .method private g()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/c/i;->a()Lcom/xiaomi/stat/c/i;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/xiaomi/stat/c/i;->c()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/stat/c/g;->e()V
 
     return-void
@@ -262,14 +243,12 @@
 .method private h()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/d/l;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/stat/c/g;->b()V
 
     :cond_0
@@ -279,7 +258,6 @@
 .method private i()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/a/c;->a()Lcom/xiaomi/stat/a/c;
 
     move-result-object v0
@@ -299,10 +277,8 @@
     :cond_0
     if-lez v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/stat/c/g;->b()V
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/stat/c/g;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -311,7 +287,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/stat/c/g;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -319,7 +294,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 5
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -353,7 +327,6 @@
 .method public a()J
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     int-to-long v0, v0
@@ -366,18 +339,15 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-boolean p1, p0, Lcom/xiaomi/stat/c/g;->m:Z
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/stat/c/g;->b()V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 4
     iput-boolean p1, p0, Lcom/xiaomi/stat/c/g;->m:Z
 
     return-void
@@ -386,7 +356,6 @@
 .method public b()V
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     iget v1, p0, Lcom/xiaomi/stat/c/g;->n:I
@@ -395,7 +364,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/xiaomi/stat/c/g;->f()I
 
@@ -403,10 +371,8 @@
 
     iput v0, p0, Lcom/xiaomi/stat/c/g;->n:I
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/stat/c/g;->k:I
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v0
@@ -435,24 +401,20 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-virtual {p0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 6
     iget v0, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     int-to-long v2, v0
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/stat/c/g;->l:J
 
-    .line 8
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -482,10 +444,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 9
     invoke-virtual {p0}, Lcom/xiaomi/stat/c/g;->b()V
 
-    .line 10
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/a/c;->a()Lcom/xiaomi/stat/a/c;
 
@@ -501,14 +461,12 @@
 
     if-nez v2, :cond_1
 
-    .line 11
     iget-object v3, p0, Lcom/xiaomi/stat/c/g;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 12
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -534,7 +492,6 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget v0, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     iget v1, p0, Lcom/xiaomi/stat/c/g;->j:I
@@ -548,7 +505,6 @@
 
     if-nez p1, :cond_4
 
-    .line 14
     :cond_3
     iget p1, p0, Lcom/xiaomi/stat/c/g;->k:I
 
@@ -563,7 +519,6 @@
 .method public c()V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/stat/c/g;->j:I
 
     iput v0, p0, Lcom/xiaomi/stat/c/g;->k:I
@@ -574,7 +529,6 @@
 .method public d()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/c/g;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -588,7 +542,6 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
@@ -597,23 +550,19 @@
 .method public e()V
     .locals 11
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Lcom/xiaomi/stat/d/p;->n(Landroid/content/Context;)J
 
     move-result-wide v1
 
-    .line 3
     invoke-static {v0}, Lcom/xiaomi/stat/d/p;->m(Landroid/content/Context;)J
 
     move-result-wide v3
 
-    .line 4
     invoke-static {}, Landroid/net/TrafficStats;->getTotalRxBytes()J
 
     move-result-wide v5
@@ -637,7 +586,6 @@
 
     div-long/2addr v5, v7
 
-    .line 5
     :goto_0
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
@@ -657,13 +605,10 @@
 
     div-float/2addr v3, v1
 
-    .line 6
     invoke-static {v0, v7, v8}, Lcom/xiaomi/stat/d/p;->e(Landroid/content/Context;J)V
 
-    .line 7
     invoke-static {v0, v5, v6}, Lcom/xiaomi/stat/d/p;->d(Landroid/content/Context;J)V
 
-    .line 8
     invoke-static {v0, v3}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;F)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -675,20 +620,16 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/xiaomi/stat/c/g;->g()V
 
-    .line 4
     iget p1, p0, Lcom/xiaomi/stat/c/g;->k:I
 
     int-to-long v1, p1
@@ -702,7 +643,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 5
     invoke-direct {p0}, Lcom/xiaomi/stat/c/g;->i()V
 
     goto :goto_0
@@ -712,7 +652,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 6
     invoke-direct {p0}, Lcom/xiaomi/stat/c/g;->h()V
 
     :cond_2

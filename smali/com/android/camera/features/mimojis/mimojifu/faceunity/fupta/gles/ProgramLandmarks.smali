@@ -41,7 +41,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->color:[F
@@ -66,19 +65,16 @@
 
     const-string/jumbo v1, "precision mediump float;uniform vec4 vColor;void main() {  gl_FragColor = vColor;}"
 
-    .line 1
     invoke-direct {p0, v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v0, 0x40c00000    # 6.0f
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPointSize:F
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mvpMtx:[F
 
     return-void
@@ -105,7 +101,6 @@
 
     move v7, p4
 
-    .line 11
     invoke-virtual/range {v0 .. v7}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->drawFrame(I[F[FIIII)V
 
     return-void
@@ -114,22 +109,18 @@
 .method public drawFrame(I[F[F)V
     .locals 6
 
-    .line 1
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mProgramHandle:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPositionHandle:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPositionHandle:I
 
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mDrawable2d:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;->vertexArray()Ljava/nio/FloatBuffer;
 
     move-result-object v5
@@ -142,10 +133,8 @@
 
     const/16 v4, 0x8
 
-    .line 5
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 6
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mColorHandle:I
 
     sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->color:[F
@@ -156,21 +145,18 @@
 
     invoke-static {p1, p3, p2, v0}, Landroid/opengl/GLES20;->glUniform4fv(II[FI)V
 
-    .line 7
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mMVPMatrixHandle:I
 
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mvpMtx:[F
 
     invoke-static {p1, p3, v0, p2, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 8
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPointSizeHandle:I
 
     iget p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPointSize:F
 
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mDrawable2d:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;->vertexCount()I
@@ -179,7 +165,6 @@
 
     invoke-static {v0, v0, p1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 10
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPositionHandle:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
@@ -190,7 +175,6 @@
 .method public getDrawable2d()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/Drawable2dLandmarks;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/Drawable2dLandmarks;-><init>()V
@@ -201,7 +185,6 @@
 .method public getLocations()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mProgramHandle:I
 
     const-string/jumbo v1, "vPosition"
@@ -212,10 +195,8 @@
 
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPositionHandle:I
 
-    .line 2
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mProgramHandle:I
 
     const-string/jumbo v1, "vColor"
@@ -226,10 +207,8 @@
 
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mColorHandle:I
 
-    .line 4
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 5
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mProgramHandle:I
 
     const-string/jumbo v1, "uMVPMatrix"
@@ -242,10 +221,8 @@
 
     const-string v0, "glGetUniformLocation"
 
-    .line 6
     invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 7
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Program;->mProgramHandle:I
 
     const-string/jumbo v1, "uPointSize"
@@ -256,7 +233,6 @@
 
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mPointSizeHandle:I
 
-    .line 8
     invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
     return-void
@@ -277,7 +253,6 @@
 
     move/from16 v5, p5
 
-    .line 1
     iget v6, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mWidth:I
 
     if-ne v6, v2, :cond_0
@@ -329,7 +304,6 @@
 
     move/from16 v14, v17
 
-    .line 2
     invoke-static/range {v7 .. v14}, Landroid/opengl/Matrix;->orthoM([FIFFFFFF)V
 
     const/high16 v9, 0x43340000    # 180.0f
@@ -340,21 +314,18 @@
 
     move-object/from16 v7, v16
 
-    .line 3
     invoke-static/range {v7 .. v12}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
 
     const/4 v7, 0x0
 
     move-object/from16 v13, v18
 
-    .line 4
     invoke-static {v13, v7}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     const/high16 v8, -0x40800000    # -1.0f
 
     const/high16 v9, 0x3f800000    # 1.0f
 
-    .line 5
     invoke-static {v13, v7, v8, v9, v9}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
     const/4 v8, 0x0
@@ -369,10 +340,8 @@
 
     move-object v11, v15
 
-    .line 6
     invoke-static/range {v7 .. v12}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 7
     iget-object v7, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mvpMtx:[F
 
     move-object v9, v13
@@ -381,19 +350,14 @@
 
     invoke-static/range {v7 .. v12}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
-    .line 8
     iput v2, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mWidth:I
 
-    .line 9
     iput v3, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mHeight:I
 
-    .line 10
     iput v4, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mOrientation:I
 
-    .line 11
     iput v5, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/ProgramLandmarks;->mCameraType:I
 
-    .line 12
     :cond_1
     array-length v2, v1
 

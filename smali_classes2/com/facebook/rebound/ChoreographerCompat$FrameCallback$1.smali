@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$1;->this$0:Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public doFrame(J)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback$1;->this$0:Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;
 
     invoke-virtual {v0, p1, p2}, Lcom/facebook/rebound/ChoreographerCompat$FrameCallback;->doFrame(J)V

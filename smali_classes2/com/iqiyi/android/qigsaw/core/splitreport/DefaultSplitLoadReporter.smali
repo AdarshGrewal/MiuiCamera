@@ -18,10 +18,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitreport/DefaultSplitLoadReporter;->context:Landroid/content/Context;
 
     return-void
@@ -44,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -62,7 +59,6 @@
 
     check-cast p3, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitLoadError;
 
-    .line 2
     iget-object v0, p3, Lcom/iqiyi/android/qigsaw/core/splitreport/SplitLoadError;->cause:Ljava/lang/Throwable;
 
     const/4 v1, 0x4
@@ -81,7 +77,6 @@
 
     const/4 v2, 0x2
 
-    .line 3
     invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -102,7 +97,6 @@
 
     const-string v2, "Failed to load split %s in process %s cost %d ms, error code: %d!"
 
-    .line 4
     invoke-static {p3, v0, v2, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
@@ -135,7 +129,6 @@
 
     aput-object p1, v0, p2
 
-    .line 1
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1

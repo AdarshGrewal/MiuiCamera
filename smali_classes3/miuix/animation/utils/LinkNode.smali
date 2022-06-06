@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,13 +50,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v1, v0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
     if-nez v1, :cond_1
 
-    .line 2
     iput-object p1, v0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
     return-void
@@ -76,7 +73,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lmiuix/animation/utils/LinkNode;->remove()Lmiuix/animation/utils/LinkNode;
 
@@ -97,12 +93,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
     const/4 v1, 0x0
 
-    .line 2
     iput-object v1, p0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
     return-object v0
@@ -115,7 +109,6 @@
 
     move-object v1, p0
 
-    .line 1
     :goto_0
     iget-object v1, v1, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 

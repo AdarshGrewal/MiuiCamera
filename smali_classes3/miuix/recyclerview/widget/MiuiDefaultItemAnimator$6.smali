@@ -29,7 +29,6 @@
 .method public constructor <init>(Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$6;->this$0:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
     iput-object p2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$6;->val$view:Landroid/view/View;
@@ -50,7 +49,6 @@
 
     new-array v1, v0, [Landroid/view/View;
 
-    .line 1
     iget-object v2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$6;->val$view:Landroid/view/View;
 
     const/4 v3, 0x0
@@ -91,7 +89,6 @@
 
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    .line 2
     iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$6;->this$0:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
     iget-object v1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$6;->val$newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;

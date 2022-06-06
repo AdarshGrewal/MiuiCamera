@@ -26,16 +26,12 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p4}, Landroid/support/v4/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 2
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;->mQuery:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;->mExtras:Landroid/os/Bundle;
 
-    .line 4
     iput-object p3, p0, Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
 
     return-void
@@ -46,7 +42,6 @@
 .method public onReceiveResult(ILandroid/os/Bundle;)V
     .locals 3
 
-    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
     if-nez p1, :cond_2
@@ -55,7 +50,6 @@
 
     const-string/jumbo p1, "search_results"
 
-    .line 2
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
@@ -64,7 +58,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
@@ -74,12 +67,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -89,7 +80,6 @@
 
     aget-object v2, p1, v1
 
-    .line 6
     check-cast v2, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     invoke-interface {p2, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -98,7 +88,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;
 
@@ -110,7 +99,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     :goto_1
     iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$SearchResultReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;

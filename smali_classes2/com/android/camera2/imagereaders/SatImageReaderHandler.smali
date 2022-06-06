@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera2/imagereaders/ImageReaderParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera2/imagereaders/ImageReaderHandler;-><init>(Lcom/android/camera2/imagereaders/ImageReaderParam;)V
 
     return-void
@@ -38,7 +37,6 @@
 .method private getIdCameraSize(II)Lcom/android/camera/CameraSize;
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -55,7 +53,6 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -73,7 +70,6 @@
     :cond_0
     if-ne p2, v2, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -88,7 +84,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -104,7 +99,6 @@
 
     return-object p1
 
-    .line 5
     :cond_2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -118,7 +112,6 @@
 
     if-ne p2, v1, :cond_3
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -136,7 +129,6 @@
     :cond_3
     if-ne p2, v2, :cond_4
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -151,7 +143,6 @@
 
     return-object p1
 
-    .line 8
     :cond_4
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -167,7 +158,6 @@
 
     return-object p1
 
-    .line 9
     :cond_5
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -181,7 +171,6 @@
 
     if-ne p2, v1, :cond_6
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -199,7 +188,6 @@
     :cond_6
     if-ne p2, v2, :cond_7
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -214,7 +202,6 @@
 
     return-object p1
 
-    .line 12
     :cond_7
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -230,7 +217,6 @@
 
     return-object p1
 
-    .line 13
     :cond_8
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -244,7 +230,6 @@
 
     if-ne p2, v1, :cond_9
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -262,7 +247,6 @@
     :cond_9
     if-ne p2, v2, :cond_a
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -277,7 +261,6 @@
 
     return-object p1
 
-    .line 16
     :cond_a
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -293,7 +276,6 @@
 
     return-object p1
 
-    .line 17
     :cond_b
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -307,7 +289,6 @@
 
     if-ne p2, v2, :cond_c
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast p1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -322,7 +303,6 @@
 
     return-object p1
 
-    .line 19
     :cond_c
     iget-object p1, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -347,7 +327,6 @@
 .method private mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
     .locals 8
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -407,7 +386,6 @@
     :cond_4
     move p1, v3
 
-    .line 2
     :goto_0
     new-instance p2, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
@@ -415,7 +393,6 @@
 
     return-object p2
 
-    .line 3
     :cond_5
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -468,7 +445,6 @@
 
     const/16 v2, 0x1f
 
-    .line 4
     :cond_b
     :goto_1
     new-instance p1, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
@@ -477,7 +453,6 @@
 
     return-object p1
 
-    .line 5
     :cond_c
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -521,7 +496,6 @@
 
     const/16 v5, 0x1d
 
-    .line 6
     :cond_11
     :goto_2
     new-instance p1, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
@@ -530,7 +504,6 @@
 
     return-object p1
 
-    .line 7
     :cond_12
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -574,7 +547,6 @@
 
     const/16 v4, 0x1e
 
-    .line 8
     :cond_17
     :goto_3
     new-instance p1, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
@@ -583,7 +555,6 @@
 
     return-object p1
 
-    .line 9
     :cond_18
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -599,7 +570,6 @@
 
     const/16 v6, 0x16
 
-    .line 10
     :cond_19
     new-instance p1, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
@@ -618,7 +588,6 @@
 .method public couldProcess()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -633,7 +602,6 @@
 
     const-string v1, "could sat handle"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
@@ -651,7 +619,6 @@
 
     move-object/from16 v0, p0
 
-    .line 2
     iget-object v1, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -679,10 +646,8 @@
     :cond_0
     const-string v1, "could not get physical ids for sat"
 
-    .line 3
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_1
     new-instance v1, Lcom/android/camera2/imagereaders/ImageReaderSurface;
 
@@ -690,7 +655,6 @@
 
     const/4 v3, 0x0
 
-    .line 5
     iget-object v4, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -699,7 +663,6 @@
 
     move-result-object v4
 
-    .line 6
     iget-object v5, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v5, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -721,7 +684,6 @@
 
     aget v15, v5, v8
 
-    .line 7
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -738,7 +700,6 @@
 
     invoke-static {v2, v10}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v10
@@ -758,7 +719,6 @@
     :cond_2
     move/from16 v19, v7
 
-    .line 9
     :goto_1
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -777,13 +737,11 @@
     :cond_3
     move/from16 v20, v7
 
-    .line 10
     :goto_2
     invoke-direct {v0, v15, v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v21
 
-    .line 11
     invoke-direct {v0, v15, v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->getIdCameraSize(II)Lcom/android/camera/CameraSize;
 
     move-result-object v13
@@ -794,13 +752,11 @@
 
     goto/16 :goto_9
 
-    .line 12
     :cond_4
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 13
     invoke-virtual {v13}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v12
@@ -815,12 +771,10 @@
 
     check-cast v10, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 14
     invoke-virtual {v10}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v18
 
-    .line 15
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v22
@@ -853,19 +807,16 @@
 
     move/from16 v18, v24
 
-    .line 16
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v15
 
-    .line 17
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v10
 
     invoke-virtual {v1, v10, v15}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 18
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -898,20 +849,17 @@
 
     const/4 v10, 0x0
 
-    .line 19
     :goto_3
     array-length v11, v4
 
     if-ge v10, v11, :cond_7
 
-    .line 20
     aget v11, v4, v10
 
     if-ne v5, v11, :cond_6
 
     const/4 v11, 0x5
 
-    .line 21
     invoke-direct {v0, v5, v11}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v21
@@ -920,18 +868,15 @@
 
     const-string v11, "fusion index null"
 
-    .line 22
     invoke-static {v2, v11}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 23
     :cond_5
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 24
     invoke-virtual {v7}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v12
@@ -946,12 +891,10 @@
 
     check-cast v10, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 25
     invoke-virtual {v10}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v17
 
-    .line 26
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v18
@@ -980,24 +923,20 @@
 
     move/from16 v18, v23
 
-    .line 27
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v10
 
     const/4 v11, 0x1
 
-    .line 28
     invoke-virtual {v10, v11}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->setForMTKFusion(Z)V
 
-    .line 29
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
     invoke-virtual {v1, v11, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 30
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1049,7 +988,6 @@
 
     move-object/from16 v26, v15
 
-    .line 31
     :goto_5
     iget-object v10, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -1069,29 +1007,25 @@
 
     const/4 v10, 0x1
 
-    .line 32
     invoke-direct {v0, v5, v10}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v21
 
     if-nez v21, :cond_8
 
-    const-string v4, "tile index null"
+    const-string/jumbo v4, "tile index null"
 
-    .line 33
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move/from16 v27, v6
 
     goto/16 :goto_a
 
-    .line 34
     :cond_8
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 35
     invoke-virtual {v7}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v10
@@ -1108,12 +1042,10 @@
 
     check-cast v10, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 36
     invoke-virtual {v10}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v17
 
-    .line 37
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v18
@@ -1142,19 +1074,16 @@
 
     move/from16 v18, v23
 
-    .line 38
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v10
 
-    .line 39
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
     invoke-virtual {v1, v11, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 40
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1189,12 +1118,10 @@
     :goto_6
     const/4 v10, 0x2
 
-    .line 41
     invoke-direct {v0, v5, v10}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v21
 
-    .line 42
     invoke-direct {v0, v5, v10}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->getIdCameraSize(II)Lcom/android/camera/CameraSize;
 
     move-result-object v15
@@ -1207,18 +1134,15 @@
 
     const-string v4, "fake index null"
 
-    .line 43
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_a
 
-    .line 44
     :cond_a
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 45
     invoke-virtual {v15}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v12
@@ -1233,12 +1157,10 @@
 
     check-cast v10, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 46
     invoke-virtual {v10}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v16
 
-    .line 47
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v17
@@ -1261,19 +1183,16 @@
 
     move/from16 v18, v22
 
-    .line 48
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v10
 
-    .line 49
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
     invoke-virtual {v1, v11, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 50
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -1298,7 +1217,6 @@
 
     invoke-static {v2, v11}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     invoke-virtual {v6, v7}, Lcom/android/camera/CameraSize;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -1307,10 +1225,8 @@
 
     const/4 v6, 0x0
 
-    .line 52
     invoke-virtual {v10, v6}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->setNeedImageReader(Z)V
 
-    .line 53
     invoke-virtual/range {v21 .. v21}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v10
@@ -1319,12 +1235,11 @@
 
     invoke-virtual {v11, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->setAliasIndex(I)V
 
-    .line 54
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "set fake spec for alias"
+    const-string/jumbo v11, "set fake spec for alias"
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1345,7 +1260,6 @@
     :cond_b
     const/4 v6, 0x0
 
-    .line 55
     :goto_7
     iget-object v10, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -1361,27 +1275,23 @@
 
     const/4 v10, 0x3
 
-    .line 56
     invoke-direct {v0, v5, v10}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v19
 
     if-nez v19, :cond_c
 
-    const-string v4, "vt index null"
+    const-string/jumbo v4, "vt index null"
 
-    .line 57
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_a
 
-    .line 58
     :cond_c
     invoke-virtual/range {v19 .. v19}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 59
     invoke-virtual {v7}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v12
@@ -1396,12 +1306,10 @@
 
     check-cast v7, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 60
     invoke-virtual {v7}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v15
 
-    .line 61
     invoke-virtual/range {v19 .. v19}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v16
@@ -1414,39 +1322,32 @@
 
     move v10, v5
 
-    .line 62
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v7
 
     const/4 v10, 0x1
 
-    .line 63
     invoke-virtual {v7, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->setForParallelVT(Z)V
 
-    .line 64
     invoke-virtual/range {v19 .. v19}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v10
 
     invoke-virtual {v1, v10, v7}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 65
     invoke-static {}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->getInstance()Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     move-result-object v7
 
-    .line 66
     invoke-static {v5}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->mapPhysicalIdToSatMasterId(I)I
 
     move-result v10
 
     add-int/lit8 v11, v9, 0x1
 
-    .line 67
     invoke-virtual {v7, v10, v9}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->setSurfaceIndex(II)V
 
-    .line 68
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1469,7 +1370,6 @@
 
     move v9, v11
 
-    .line 69
     :cond_d
     iget-object v7, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -1483,7 +1383,6 @@
 
     const/4 v7, 0x4
 
-    .line 70
     invoke-direct {v0, v5, v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->getIdCameraSize(II)Lcom/android/camera/CameraSize;
 
     move-result-object v4
@@ -1492,7 +1391,6 @@
 
     if-eqz v3, :cond_e
 
-    .line 71
     invoke-virtual {v3, v4}, Lcom/android/camera/CameraSize;->compareTo(Lcom/android/camera/CameraSize;)I
 
     move-result v7
@@ -1500,16 +1398,14 @@
     if-gez v7, :cond_11
 
     :cond_e
-    const-string v3, "need largest single raw"
+    const-string/jumbo v3, "need largest single raw"
 
-    .line 72
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v3, v4
 
     goto/16 :goto_8
 
-    .line 73
     :cond_f
     iget-object v7, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
@@ -1523,34 +1419,29 @@
 
     const/4 v7, 0x4
 
-    .line 74
     invoke-direct {v0, v5, v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->getIdCameraSize(II)Lcom/android/camera/CameraSize;
 
     move-result-object v15
 
     if-eqz v15, :cond_11
 
-    .line 75
     invoke-direct {v0, v5, v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v7
 
     if-nez v7, :cond_10
 
-    const-string v4, "raw index null"
+    const-string/jumbo v4, "raw index null"
 
-    .line 76
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_a
 
-    .line 77
     :cond_10
     invoke-virtual {v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 78
     invoke-virtual {v15}, Lcom/android/camera/CameraSize;->getWidth()I
 
     move-result v12
@@ -1565,12 +1456,10 @@
 
     check-cast v10, Lcom/android/camera2/imagereaders/ImageReaderParam;
 
-    .line 79
     invoke-virtual {v10}, Lcom/android/camera2/imagereaders/ImageReaderParam;->getMaxBufferSize()I
 
     move-result v16
 
-    .line 80
     invoke-virtual {v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v17
@@ -1593,24 +1482,21 @@
 
     move/from16 v18, v19
 
-    .line 81
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v10
 
-    .line 82
     invoke-virtual {v7}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v7
 
     invoke-virtual {v1, v7, v10}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 83
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "need multi raw: "
+    const-string/jumbo v11, "need multi raw: "
 
     invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1634,7 +1520,6 @@
     :goto_8
     if-eqz v20, :cond_13
 
-    .line 84
     iget-object v4, v0, Lcom/android/camera/module/shottype/ChainHandler;->mParam:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/camera2/imagereaders/ImageReaderParam;
@@ -1649,7 +1534,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 85
     invoke-virtual {v4}, Lcom/android/camera2/vendortag/struct/BinningSrData;->isBinningSrEnabled()Z
 
     move-result v6
@@ -1658,19 +1542,16 @@
 
     const/4 v6, 0x6
 
-    .line 86
     invoke-direct {v0, v5, v6}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->mapIdToIndexInfo(II)Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;
 
     move-result-object v6
 
     if-eqz v6, :cond_13
 
-    .line 87
     invoke-virtual {v6}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v11
 
-    .line 88
     invoke-virtual {v4}, Lcom/android/camera2/vendortag/struct/BinningSrData;->getBinningSrInputSize()Lcom/android/camera/CameraSize;
 
     move-result-object v7
@@ -1689,12 +1570,10 @@
 
     const/16 v14, 0x23
 
-    .line 89
     invoke-virtual {v4}, Lcom/android/camera2/vendortag/struct/BinningSrData;->getMaxBinningSrBufferSize()I
 
     move-result v15
 
-    .line 90
     invoke-virtual {v6}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getImageType()I
 
     move-result v16
@@ -1707,24 +1586,21 @@
 
     move v10, v5
 
-    .line 91
     invoke-static/range {v10 .. v18}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->generateSpec(IIIIIIIIZ)Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
     move-result-object v5
 
-    .line 92
     invoke-virtual {v6}, Lcom/android/camera2/imagereaders/SatImageReaderHandler$IndexInfo;->getIndex()I
 
     move-result v6
 
     invoke-virtual {v1, v6, v5}, Lcom/android/camera2/imagereaders/ImageReaderSurface;->addSpec(ILcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;)V
 
-    .line 93
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "need binning sr: "
+    const-string/jumbo v7, "need binning sr: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1766,7 +1642,6 @@
 
     const-string v4, "error happens when config sat handler, could not find index or size"
 
-    .line 94
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_13
@@ -1783,11 +1658,9 @@
 
     goto/16 :goto_0
 
-    .line 95
     :cond_14
     invoke-virtual {v0, v1}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->checkBinningSize(Lcom/android/camera2/imagereaders/ImageReaderSurface;)V
 
-    .line 96
     invoke-virtual {v0, v1, v3}, Lcom/android/camera2/imagereaders/ImageReaderHandler;->checkMTKIspHidl(Lcom/android/camera2/imagereaders/ImageReaderSurface;Lcom/android/camera/CameraSize;)V
 
     return-object v1
@@ -1796,7 +1669,6 @@
 .method public bridge synthetic process()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/imagereaders/SatImageReaderHandler;->process()Lcom/android/camera2/imagereaders/ImageReaderSurface;
 
     move-result-object v0

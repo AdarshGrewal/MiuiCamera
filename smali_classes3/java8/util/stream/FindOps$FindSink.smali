@@ -55,7 +55,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,7 +65,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 6
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -75,7 +73,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -84,7 +81,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -98,17 +94,14 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/FindOps$FindSink;->hasValue:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Ljava8/util/stream/FindOps$FindSink;->hasValue:Z
 
-    .line 3
     iput-object p1, p0, Ljava8/util/stream/FindOps$FindSink;->value:Ljava/lang/Object;
 
     :cond_0
@@ -124,7 +117,6 @@
 .method public cancellationRequested()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/FindOps$FindSink;->hasValue:Z
 
     return v0

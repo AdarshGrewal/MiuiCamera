@@ -26,17 +26,14 @@
 .method public constructor <init>(Lmiuix/viewpager/widget/PagerAdapter;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
-    .line 3
     iput-object p1, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mPagerAdapter:Lmiuix/viewpager/widget/PagerAdapter;
 
     return-void
@@ -53,7 +50,6 @@
 
     move/from16 v3, p6
 
-    .line 1
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getLeft()I
 
     move-result v4
@@ -66,7 +62,6 @@
 
     int-to-float v4, v4
 
-    .line 2
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTop()I
 
     move-result v5
@@ -79,7 +74,6 @@
 
     int-to-float v5, v5
 
-    .line 3
     invoke-virtual/range {p4 .. p4}, Landroid/view/View;->getLeft()I
 
     move-result v6
@@ -92,28 +86,24 @@
 
     int-to-float v6, v6
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getWidth()I
 
     move-result v7
 
     int-to-float v7, v7
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getHeight()I
 
     move-result v8
 
     int-to-float v8, v8
 
-    .line 6
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getWidth()I
 
     move-result v9
 
     int-to-float v9, v9
 
-    .line 7
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getHeight()I
 
     move-result v10
@@ -124,12 +114,10 @@
 
     sub-float v12, v10, v8
 
-    .line 8
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getId()I
 
     move-result v13
 
-    .line 9
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getId()I
 
     move-result v14
@@ -164,7 +152,6 @@
 
     mul-float/2addr v4, v3
 
-    .line 10
     invoke-virtual {v2, v13}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
@@ -173,10 +160,8 @@
 
     if-eqz v6, :cond_2
 
-    .line 11
     invoke-virtual {v0, v4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 12
     invoke-virtual {v0, v5}, Landroid/view/View;->setTranslationY(F)V
 
     cmpl-float v6, v7, v13
@@ -210,14 +195,11 @@
 
     div-float/2addr v7, v8
 
-    .line 13
     :goto_1
     invoke-virtual {v0, v6}, Landroid/view/View;->setScaleX(F)V
 
-    .line 14
     invoke-virtual {v0, v7}, Landroid/view/View;->setScaleY(F)V
 
-    .line 15
     :cond_2
     invoke-virtual {v2, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -225,10 +207,8 @@
 
     if-eqz v0, :cond_5
 
-    .line 16
     invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 17
     invoke-virtual {v1, v5}, Landroid/view/View;->setTranslationY(F)V
 
     cmpl-float v0, v9, v13
@@ -260,11 +240,9 @@
 
     div-float v15, v12, v10
 
-    .line 18
     :goto_3
     invoke-virtual {v1, v11}, Landroid/view/View;->setScaleX(F)V
 
-    .line 19
     invoke-virtual {v1, v15}, Landroid/view/View;->setScaleY(F)V
 
     :cond_5
@@ -274,19 +252,16 @@
 .method private resetView(I)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mPagerAdapter:Lmiuix/viewpager/widget/PagerAdapter;
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-interface {v0, p1}, Lmiuix/viewpager/widget/PagerAdapter;->getView(I)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 3
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -307,7 +282,6 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 4
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -320,7 +294,6 @@
 
     move-result-object v2
 
-    .line 5
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
@@ -339,31 +312,23 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-virtual {v2, v4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 7
     invoke-virtual {v2, v4}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 8
     invoke-virtual {v2, v3}, Landroid/view/View;->setScaleX(F)V
 
-    .line 9
     invoke-virtual {v2, v3}, Landroid/view/View;->setScaleY(F)V
 
     :cond_1
     if-eqz v1, :cond_0
 
-    .line 10
     invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 11
     invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 12
     invoke-virtual {v1, v3}, Landroid/view/View;->setScaleX(F)V
 
-    .line 13
     invoke-virtual {v1, v3}, Landroid/view/View;->setScaleY(F)V
 
     goto :goto_0
@@ -377,7 +342,6 @@
 .method public addElement(II)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
     new-instance v1, Landroid/util/Pair;
@@ -400,7 +364,6 @@
 .method public clearElements()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
@@ -419,14 +382,12 @@
 
     add-int/lit8 p3, p1, 0x1
 
-    .line 1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mPagerAdapter:Lmiuix/viewpager/widget/PagerAdapter;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {v0}, Lmiuix/viewpager/widget/PagerAdapter;->getCount()I
 
@@ -434,12 +395,10 @@
 
     if-lt p3, v0, :cond_1
 
-    .line 3
     invoke-direct {p0, p1}, Lmiuix/viewpager/widget/SharedElementTransformer;->resetView(I)V
 
     return-void
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
@@ -461,24 +420,20 @@
 
     check-cast v1, Landroid/util/Pair;
 
-    .line 5
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 6
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 7
     iget-object v3, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mPagerAdapter:Lmiuix/viewpager/widget/PagerAdapter;
 
     invoke-interface {v3, p1}, Lmiuix/viewpager/widget/PagerAdapter;->getView(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 8
     iget-object v4, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mPagerAdapter:Lmiuix/viewpager/widget/PagerAdapter;
 
     invoke-interface {v4, p3}, Lmiuix/viewpager/widget/PagerAdapter;->getView(I)Landroid/view/View;
@@ -491,7 +446,6 @@
 
     if-eqz v11, :cond_5
 
-    .line 9
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -500,7 +454,6 @@
 
     move-result-object v2
 
-    .line 10
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -550,7 +503,6 @@
 
     move-object v9, v3
 
-    .line 11
     invoke-direct/range {v4 .. v10}, Lmiuix/viewpager/widget/SharedElementTransformer;->modifyPositions(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;F)V
 
     const/high16 v4, 0x3f800000    # 1.0f
@@ -561,7 +513,6 @@
 
     move-object v9, v11
 
-    .line 12
     invoke-direct/range {v4 .. v10}, Lmiuix/viewpager/widget/SharedElementTransformer;->modifyPositions(Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;F)V
 
     goto :goto_0
@@ -579,7 +530,6 @@
 .method public removeElement(II)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/viewpager/widget/SharedElementTransformer;->mSharedElementIds:Ljava/util/Set;
 
     new-instance v1, Landroid/util/Pair;

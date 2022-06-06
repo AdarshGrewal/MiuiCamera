@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem$1;->this$0:Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     const-string/jumbo v1, "yes"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -55,7 +53,6 @@
 
     const-string/jumbo v1, "yes"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

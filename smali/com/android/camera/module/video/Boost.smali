@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,19 +27,16 @@
 .method public static getBoost()Lcom/xiaomi/camera/core/BoostFrameworkImpl;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/video/Boost;->mBoostFramework:Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/core/BoostFrameworkImpl;-><init>()V
 
     sput-object v0, Lcom/android/camera/module/video/Boost;->mBoostFramework:Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/module/video/Boost;->mBoostFramework:Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
@@ -54,9 +50,8 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooO0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Ooooo0o()Z
 
     move-result v1
 
@@ -64,7 +59,6 @@
 
     const-string v1, "Boost"
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +81,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/video/Boost;->getBoost()Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
     move-result-object v1
@@ -96,7 +89,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
     monitor-exit v0
 
@@ -117,9 +109,8 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooO0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Ooooo0o()Z
 
     move-result v1
 
@@ -129,10 +120,8 @@
 
     const-string/jumbo v2, "stopBoost: "
 
-    .line 2
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/video/Boost;->getBoost()Lcom/xiaomi/camera/core/BoostFrameworkImpl;
 
     move-result-object v1
@@ -141,7 +130,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
     monitor-exit v0
 

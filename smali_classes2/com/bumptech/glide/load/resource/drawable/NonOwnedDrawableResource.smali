@@ -17,7 +17,6 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/resource/drawable/DrawableResource;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -38,7 +37,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/drawable/NonOwnedDrawableResource;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/load/resource/drawable/NonOwnedDrawableResource;-><init>(Landroid/graphics/drawable/Drawable;)V
@@ -65,7 +63,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/drawable/DrawableResource;->drawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -78,7 +75,6 @@
 .method public getSize()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/drawable/DrawableResource;->drawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I

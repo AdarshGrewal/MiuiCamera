@@ -19,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -37,7 +35,6 @@
 .method public cancel()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -46,7 +43,6 @@
 
     if-nez v0, :cond_2
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -69,12 +65,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lmiuix/animation/physics/DynamicAnimation;->cancel()V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
@@ -87,7 +81,6 @@
 .method public endAnimation()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -96,7 +89,6 @@
 
     if-nez v0, :cond_2
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -119,12 +111,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lmiuix/animation/physics/SpringAnimation;->skipToEnd()V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
@@ -139,7 +129,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -151,7 +140,6 @@
 .method public varargs playTogether([Lmiuix/animation/physics/SpringAnimation;)V
     .locals 4
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -163,7 +151,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     iget-object v3, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -180,7 +167,6 @@
 .method public start()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -189,7 +175,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimationSet;->mAnimationContainer:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -212,7 +197,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
     goto :goto_0

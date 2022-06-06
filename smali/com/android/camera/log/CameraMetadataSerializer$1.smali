@@ -27,7 +27,6 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureRequest;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/log/CameraMetadataSerializer$1;->val$metadata:Landroid/hardware/camera2/CaptureRequest;
 
     iput-object p2, p0, Lcom/android/camera/log/CameraMetadataSerializer$1;->val$title:Ljava/lang/String;
@@ -47,14 +46,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/log/CameraMetadataSerializer$1;->val$metadata:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest;->getKeys()Ljava/util/List;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +70,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -91,7 +87,6 @@
 
     check-cast v1, Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/log/CameraMetadataSerializer$1;->val$metadata:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-virtual {v2, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
@@ -107,7 +102,6 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 5
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -126,10 +120,8 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 6
     iget-object v3, p0, Lcom/android/camera/log/CameraMetadataSerializer$1;->val$metadata:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 7
     invoke-virtual {v3, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
 
     move-result-object v1
@@ -142,7 +134,6 @@
 
     const-string v1, "        %s\n"
 
-    .line 8
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

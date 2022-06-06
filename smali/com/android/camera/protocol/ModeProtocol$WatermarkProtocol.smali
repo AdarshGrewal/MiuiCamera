@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Lcom/android/camera/protocol/ModeProtocol$Expandable;
-.implements Lcom/android/camera/protocol/ModeProtocol$MenuSwitch;
 
 
 # annotations
@@ -29,11 +28,11 @@
 .method public abstract isWatermarkPanelShow()Z
 .end method
 
-.method public abstract requestLocationPermission(Lcom/android/camera/aiwatermark/lisenter/IPermissionListener;)Z
-.end method
-
-.method public abstract setGoDetailsSettings(Z)V
+.method public abstract requestLocationPermission(Lcom/android/camera/aiwatermark/lisenter/IPermissionListener;)V
 .end method
 
 .method public abstract startDottedLineAnimation(Landroid/view/View;)V
+.end method
+
+.method public abstract switchType(Ljava/lang/String;Z)V
 .end method

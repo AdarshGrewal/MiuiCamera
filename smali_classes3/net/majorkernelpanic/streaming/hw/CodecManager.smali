@@ -29,17 +29,14 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lnet/majorkernelpanic/streaming/hw/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     const/4 v0, 0x0
 
-    .line 2
     sput-object v0, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sEncoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
-    .line 3
     sput-object v0, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     return-void
@@ -57,7 +54,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +66,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
@@ -84,14 +79,12 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     :try_start_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v2
@@ -103,12 +96,10 @@
 
     if-ltz v2, :cond_7
 
-    .line 4
     invoke-static {v2}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v4
 
-    .line 5
     invoke-virtual {v4}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v5
@@ -117,7 +108,6 @@
 
     goto :goto_5
 
-    .line 6
     :cond_1
     invoke-virtual {v4}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -125,13 +115,11 @@
 
     move v6, v3
 
-    .line 7
     :goto_1
     array-length v7, v5
 
     if-ge v6, v7, :cond_6
 
-    .line 8
     aget-object v7, v5, v6
 
     invoke-virtual {v7, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -142,20 +130,17 @@
 
     if-eqz v7, :cond_5
 
-    .line 9
     :try_start_2
     invoke-virtual {v4, p0}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v7
 
-    .line 10
     new-instance v8, Ljava/util/HashSet;
 
     invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
 
     move v9, v3
 
-    .line 11
     :goto_2
     iget-object v10, v7, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
@@ -163,14 +148,12 @@
 
     if-ge v9, v10, :cond_4
 
-    .line 12
     iget-object v10, v7, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
     aget v10, v10, v9
 
     move v11, v3
 
-    .line 13
     :goto_3
     sget-object v12, Lnet/majorkernelpanic/streaming/hw/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
@@ -178,14 +161,12 @@
 
     if-ge v11, v12, :cond_3
 
-    .line 14
     sget-object v12, Lnet/majorkernelpanic/streaming/hw/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     aget v12, v12, v11
 
     if-ne v10, v12, :cond_2
 
-    .line 15
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -202,16 +183,13 @@
 
     goto :goto_2
 
-    .line 16
     :cond_4
     new-instance v7, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
-    .line 17
     invoke-virtual {v4}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 18
     invoke-interface {v8}, Ljava/util/Set;->size()I
 
     move-result v10
@@ -224,14 +202,12 @@
 
     check-cast v8, [Ljava/lang/Integer;
 
-    .line 19
     invoke-static {v4}, Lnet/majorkernelpanic/streaming/hw/CodecManager;->isHardwareAccelerated(Landroid/media/MediaCodecInfo;)Z
 
     move-result v10
 
     invoke-direct {v7, v9, v8, v10}, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;-><init>(Ljava/lang/String;[Ljava/lang/Integer;Z)V
 
-    .line 20
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -245,7 +221,6 @@
     :try_start_3
     const-string v8, "CodecManager"
 
-    .line 21
     invoke-static {v8, v7}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_5
@@ -260,7 +235,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_7
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -278,7 +252,6 @@
 
     move p0, v3
 
-    .line 23
     :goto_6
     sget-object v1, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
@@ -286,7 +259,6 @@
 
     if-ge p0, v1, :cond_9
 
-    .line 24
     sget-object v1, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     aget-object v1, v1, p0
@@ -301,12 +273,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 25
     sget-object v1, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     aget-object v1, v1, v3
 
-    .line 26
     sget-object v2, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     sget-object v4, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
@@ -315,7 +285,6 @@
 
     aput-object v4, v2, v3
 
-    .line 27
     sget-object v2, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     aput-object v1, v2, p0
@@ -325,7 +294,6 @@
 
     goto :goto_6
 
-    .line 28
     :cond_9
     sget-object p0, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sDecoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
     :try_end_3
@@ -350,7 +318,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lnet/majorkernelpanic/streaming/hw/CodecManager;->sEncoders:[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
@@ -364,14 +331,12 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     :try_start_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v2
@@ -381,12 +346,10 @@
     :goto_0
     if-ltz v2, :cond_7
 
-    .line 4
     invoke-static {v2}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v4
@@ -395,7 +358,6 @@
 
     goto :goto_5
 
-    .line 6
     :cond_1
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -405,13 +367,11 @@
 
     move v6, v5
 
-    .line 7
     :goto_1
     array-length v7, v4
 
     if-ge v6, v7, :cond_6
 
-    .line 8
     aget-object v7, v4, v6
 
     invoke-virtual {v7, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -422,20 +382,17 @@
 
     if-eqz v7, :cond_5
 
-    .line 9
     :try_start_2
     invoke-virtual {v3, p0}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v7
 
-    .line 10
     new-instance v8, Ljava/util/HashSet;
 
     invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
 
     move v9, v5
 
-    .line 11
     :goto_2
     iget-object v10, v7, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
@@ -443,14 +400,12 @@
 
     if-ge v9, v10, :cond_4
 
-    .line 12
     iget-object v10, v7, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
     aget v10, v10, v9
 
     move v11, v5
 
-    .line 13
     :goto_3
     sget-object v12, Lnet/majorkernelpanic/streaming/hw/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
@@ -458,14 +413,12 @@
 
     if-ge v11, v12, :cond_3
 
-    .line 14
     sget-object v12, Lnet/majorkernelpanic/streaming/hw/CodecManager;->SUPPORTED_COLOR_FORMATS:[I
 
     aget v12, v12, v11
 
     if-ne v10, v12, :cond_2
 
-    .line 15
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v12
@@ -482,16 +435,13 @@
 
     goto :goto_2
 
-    .line 16
     :cond_4
     new-instance v7, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
-    .line 17
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 18
     invoke-interface {v8}, Ljava/util/Set;->size()I
 
     move-result v10
@@ -504,14 +454,12 @@
 
     check-cast v8, [Ljava/lang/Integer;
 
-    .line 19
     invoke-static {v3}, Lnet/majorkernelpanic/streaming/hw/CodecManager;->isHardwareAccelerated(Landroid/media/MediaCodecInfo;)Z
 
     move-result v10
 
     invoke-direct {v7, v9, v8, v10}, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;-><init>(Ljava/lang/String;[Ljava/lang/Integer;Z)V
 
-    .line 20
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -525,7 +473,6 @@
     :try_start_3
     const-string v8, "CodecManager"
 
-    .line 21
     invoke-static {v8, v7}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_5
@@ -540,7 +487,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_7
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -558,7 +504,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 23
     monitor-exit v0
 
     return-object p0
@@ -574,21 +519,18 @@
 .method public static isHardwareAccelerated(Landroid/media/MediaCodecInfo;)Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isHardwareAccelerated()Z
 
     move-result p0
 
     return p0
 
-    .line 3
     :cond_0
     invoke-static {p0}, Lnet/majorkernelpanic/streaming/hw/CodecManager;->isSoftwareOnly(Landroid/media/MediaCodecInfo;)Z
 
@@ -602,21 +544,18 @@
 .method public static isSoftwareOnly(Landroid/media/MediaCodecInfo;)Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isSoftwareOnly()Z
 
     move-result p0
 
     return p0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
@@ -630,7 +569,6 @@
 
     const-string v0, "arc."
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -644,7 +582,6 @@
     :cond_1
     const-string v0, "omx.google."
 
-    .line 5
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -653,7 +590,6 @@
 
     const-string v0, "omx.ffmpeg."
 
-    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -662,7 +598,6 @@
 
     const-string v0, "omx.sec."
 
-    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -680,7 +615,6 @@
     :cond_2
     const-string v0, "omx.qcom.video.decoder.hevcswvdec"
 
-    .line 8
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -689,7 +623,6 @@
 
     const-string v0, "c2.android."
 
-    .line 9
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -698,7 +631,6 @@
 
     const-string v0, "c2.google."
 
-    .line 10
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -707,7 +639,6 @@
 
     const-string v0, "omx."
 
-    .line 11
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0

@@ -51,7 +51,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -62,7 +61,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_48k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -73,7 +71,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_44k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -84,7 +81,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_22k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -95,7 +91,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_16k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_11k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -117,7 +111,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->PCM_8k:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->SPEEX:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->SPEEX_WB:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->SPEEX:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -135,7 +127,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->SPEEX_NB:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->OPUS:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -144,7 +135,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->OPUS_WB:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->OPUS:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -153,7 +143,6 @@
 
     sput-object v0, Lcom/xiaomi/asr/engine/record/AudioType;->OPUS_NB:Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 11
     new-instance v0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->UNKNOWN:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -172,7 +161,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/asr/engine/record/AudioType;-><init>(Lcom/xiaomi/asr/engine/record/AudioType$Encoding;I[B)V
 
     return-void
@@ -181,16 +169,12 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/record/AudioType$Encoding;I[B)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput p2, p0, Lcom/xiaomi/asr/engine/record/AudioType;->frequency:I
 
-    .line 4
     iput-object p1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->encoding:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
 
-    .line 5
     iput-object p3, p0, Lcom/xiaomi/asr/engine/record/AudioType;->sse:[B
 
     return-void
@@ -206,19 +190,16 @@
 
     const-string v0, "freq"
 
-    .line 1
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "enc"
 
-    .line 2
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->values()[Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
 
     move-result-object v1
@@ -230,7 +211,6 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 4
     aget-object v4, v1, v3
 
     invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -243,7 +223,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 5
     new-instance p0, Lcom/xiaomi/asr/engine/record/AudioType;
 
     invoke-direct {p0, v4, v0}, Lcom/xiaomi/asr/engine/record/AudioType;-><init>(Lcom/xiaomi/asr/engine/record/AudioType$Encoding;I)V
@@ -255,7 +234,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v0, Lorg/json/JSONException;
 
@@ -300,7 +278,6 @@
 
     return v0
 
-    .line 1
     :cond_1
     const-class v1, Lcom/xiaomi/asr/engine/record/AudioType;
 
@@ -312,11 +289,9 @@
 
     return v0
 
-    .line 2
     :cond_2
     check-cast p1, Lcom/xiaomi/asr/engine/record/AudioType;
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->encoding:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
 
     iget-object v2, p1, Lcom/xiaomi/asr/engine/record/AudioType;->encoding:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -325,7 +300,6 @@
 
     return v0
 
-    .line 4
     :cond_3
     iget v1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->frequency:I
 
@@ -335,7 +309,6 @@
 
     return v0
 
-    .line 5
     :cond_4
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/AudioType;->sse:[B
 
@@ -351,7 +324,6 @@
 .method public getDuration(I)I
     .locals 4
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/AudioType;->encoding:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
 
     sget-object v1, Lcom/xiaomi/asr/engine/record/AudioType$Encoding;->PCM_16:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
@@ -364,7 +336,6 @@
 
     mul-long/2addr v0, v2
 
-    .line 3
     iget p1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->frequency:I
 
     int-to-long v2, p1
@@ -375,7 +346,6 @@
 
     return p1
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -409,7 +379,6 @@
 .method public getDuration([S)I
     .locals 0
 
-    .line 1
     array-length p1, p1
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/asr/engine/record/AudioType;->getDuration(I)I
@@ -422,7 +391,6 @@
 .method public getSampleCount(I)I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/asr/engine/record/AudioType;->frequency:I
 
     mul-int/2addr v0, p1
@@ -435,7 +403,6 @@
 .method public final hashCode()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/AudioType;->encoding:Lcom/xiaomi/asr/engine/record/AudioType$Encoding;
 
     if-nez v0, :cond_0
@@ -454,14 +421,12 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 2
     iget v1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->frequency:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/AudioType;->sse:[B
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
@@ -476,7 +441,6 @@
 .method public toJSON()Lorg/json/JSONObject;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -487,7 +451,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

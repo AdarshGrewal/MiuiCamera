@@ -46,7 +46,6 @@
 
     const-string v0, "video_extra_interpolator"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -55,15 +54,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,10 +68,8 @@
 
     const/16 v0, 0x1e
 
-    .line 4
     iput v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->MOTION_LIST_MAX_NUM:I
 
-    .line 5
     new-instance v0, Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;
 
     invoke-direct {v0, p0}, Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;-><init>(Lcom/miui/extravideo/interpolation/InterpolatorJNI;)V
@@ -117,7 +111,6 @@
 .method public clearMotion()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->motionAve:Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;
 
     const-wide/16 v1, 0x0
@@ -126,7 +119,6 @@
 
     iput-wide v1, v0, Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;->x:D
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->motionList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -137,7 +129,6 @@
 .method public finalize()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -146,7 +137,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->finishJNI(J)I
 
     :cond_0
@@ -156,7 +146,6 @@
 .method public finish()V
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -165,10 +154,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 2
     iput-wide v2, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
-    .line 3
     invoke-direct {p0, v0, v1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->finishJNI(J)I
 
     :cond_0
@@ -180,7 +167,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, p1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->getDefaultParamsJNI(JLcom/miui/extravideo/interpolation/InterpolatorJNI$Params;)I
 
     move-result p1
@@ -191,7 +177,6 @@
 .method public getFailureCode()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     return-object v0
@@ -200,7 +185,6 @@
 .method public getImageBuffer(II)Ljava/nio/ByteBuffer;
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -209,7 +193,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->getImageBufferJNI(JII)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -225,7 +208,6 @@
 .method public getImageIndex([I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -234,7 +216,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->getImageIndexJNI(J[I)I
 
     move-result p1
@@ -250,7 +231,6 @@
 .method public getMotionX()D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->motionAve:Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;
 
     iget-wide v0, v0, Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;->x:D
@@ -261,7 +241,6 @@
 .method public getMotionY()D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->motionAve:Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;
 
     iget-wide v0, v0, Lcom/miui/extravideo/interpolation/InterpolatorJNI$TypicalMotion;->y:D
@@ -272,7 +251,6 @@
 .method public initialize(IIIII)I
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->initializeJNI(IIIII)J
 
     move-result-wide p1
@@ -295,7 +273,6 @@
     :goto_0
     const-string p2, ""
 
-    .line 2
     iput-object p2, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     return p1
@@ -306,7 +283,6 @@
 
     move-object v9, p0
 
-    .line 1
     iget-wide v0, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -323,12 +299,10 @@
 
     new-array v7, v12, [D
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v13
 
-    .line 3
     iget-wide v1, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     move-object v0, p0
@@ -351,7 +325,6 @@
 
     or-int/2addr v0, v1
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
@@ -364,7 +337,6 @@
 
     div-double/2addr v2, v4
 
-    .line 5
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,7 +371,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     aget v1, v11, v1
 
     if-eq v1, v10, :cond_2
@@ -412,7 +383,6 @@
 
     const-string v1, ""
 
-    .line 7
     iput-object v1, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     goto :goto_0
@@ -420,7 +390,6 @@
     :cond_0
     const-string v1, "Scene change"
 
-    .line 8
     iput-object v1, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     goto :goto_0
@@ -428,7 +397,6 @@
     :cond_1
     const-string v1, "Global motion"
 
-    .line 9
     iput-object v1, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     goto :goto_0
@@ -436,7 +404,6 @@
     :cond_2
     const-string v1, "Local motion"
 
-    .line 10
     iput-object v1, v9, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->failureCode:Ljava/lang/String;
 
     goto :goto_0
@@ -451,7 +418,6 @@
 .method public setDividePosition(I)I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -460,7 +426,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->setDividePositionJNI(JI)I
 
     move-result p1
@@ -477,7 +442,6 @@
 .method public start()I
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     const-wide/16 v2, 0x0
@@ -486,10 +450,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->clearMotion()V
 
-    .line 3
     iget-wide v0, p0, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->handler:J
 
     invoke-direct {p0, v0, v1}, Lcom/miui/extravideo/interpolation/InterpolatorJNI;->startJNI(J)I

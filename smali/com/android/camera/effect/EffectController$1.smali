@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/miui/filtersdk/filter/helper/FilterType;->values()[Lcom/miui/filtersdk/filter/helper/FilterType;
 
     move-result-object v0
@@ -690,7 +689,7 @@
     :try_start_29
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_ORIGINAL:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_NATURE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -706,7 +705,7 @@
     :try_start_2a
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_HOLIDAY:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_JAPANESE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -722,7 +721,7 @@
     :try_start_2b
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_OXYGEN:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_KOIZORA:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -738,7 +737,7 @@
     :try_start_2c
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_MINT:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_PINK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -754,7 +753,7 @@
     :try_start_2d
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_PINK_ORANGE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_FAIRYTALE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -770,7 +769,7 @@
     :try_start_2e
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_NATURE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_SODA:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -786,7 +785,7 @@
     :try_start_2f
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_JAPANESE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_FIRST:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -802,7 +801,7 @@
     :try_start_30
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_PINK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_TRAVEL:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -818,7 +817,7 @@
     :try_start_31
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_FIRST:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_LILT:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -834,7 +833,7 @@
     :try_start_32
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_LILT:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_MOVIE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -898,7 +897,7 @@
     :try_start_36
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_WHITEANDBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_ORANGE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -914,7 +913,7 @@
     :try_start_37
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_CLASSIC:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_WHITEANDBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -930,7 +929,7 @@
     :try_start_38
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_NUDE_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_CLASSIC:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -946,7 +945,7 @@
     :try_start_39
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_SWEET_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_NUDE_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -962,7 +961,7 @@
     :try_start_3a
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_COOL_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_SWEET_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -978,7 +977,7 @@
     :try_start_3b
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_NEUTRAL_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_COOL_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -994,7 +993,7 @@
     :try_start_3c
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_HARDLINE_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_NEUTRAL_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1010,7 +1009,7 @@
     :try_start_3d
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_SOFT_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_HARDLINE_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1026,7 +1025,7 @@
     :try_start_3e
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_DELICACY:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->M_SOFT_MAKEUP:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1042,7 +1041,7 @@
     :try_start_3f
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_SIBOPENK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_DELICACY:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1058,7 +1057,7 @@
     :try_start_40
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_BLACKICE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_SIBOPENK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1074,7 +1073,7 @@
     :try_start_41
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_FILM:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->N_BLACKICE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1090,7 +1089,7 @@
     :try_start_42
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_YEARS:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_FILM:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1106,7 +1105,7 @@
     :try_start_43
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_POLAROID:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_YEARS:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1122,7 +1121,7 @@
     :try_start_44
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_FOREST:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_POLAROID:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1138,7 +1137,7 @@
     :try_start_45
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_BYGONE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_FOREST:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1154,7 +1153,7 @@
     :try_start_46
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_WHITEANDBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_BYGONE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1170,7 +1169,7 @@
     :try_start_47
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_FAIR:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->S_WHITEANDBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1186,7 +1185,7 @@
     :try_start_48
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_MOUSSE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_FAIR:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1202,7 +1201,7 @@
     :try_start_49
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_SOLAR:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_MOUSSE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1218,7 +1217,7 @@
     :try_start_4a
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_BLUE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_SOLAR:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1234,7 +1233,7 @@
     :try_start_4b
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_CONTRAST:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_BLUE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1250,7 +1249,7 @@
     :try_start_4c
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_YEARS:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_CONTRAST:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1266,7 +1265,7 @@
     :try_start_4d
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_DEEPBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_YEARS:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1282,7 +1281,7 @@
     :try_start_4e
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_BLACKGOLD:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->ML_DEEPBLACK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1298,7 +1297,7 @@
     :try_start_4f
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_ORANGE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_BLACKGOLD:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1314,7 +1313,7 @@
     :try_start_50
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_SUMMER_DAY:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_ORANGE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1330,7 +1329,7 @@
     :try_start_51
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_FANTASY:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_SUMMER_DAY:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1346,7 +1345,7 @@
     :try_start_52
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_MEET:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_FANTASY:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1362,7 +1361,7 @@
     :try_start_53
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_WIND_SING:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_MEET:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1378,7 +1377,7 @@
     :try_start_54
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_LOST:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_WIND_SING:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1394,7 +1393,7 @@
     :try_start_55
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_CENTRAL:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_LOST:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1410,7 +1409,7 @@
     :try_start_56
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_NORTHERN_EUROPE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_CENTRAL:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1426,7 +1425,7 @@
     :try_start_57
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_CYBERPINK:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_NORTHERN_EUROPE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1442,7 +1441,7 @@
     :try_start_58
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_BLACKICE:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_CYBERPINK:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1458,7 +1457,7 @@
     :try_start_59
     sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
 
-    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_ROME:Lcom/miui/filtersdk/filter/helper/FilterType;
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_BLACKICE:Lcom/miui/filtersdk/filter/helper/FilterType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1471,5 +1470,21 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_59 .. :try_end_59} :catch_59
 
     :catch_59
+    :try_start_5a
+    sget-object v0, Lcom/android/camera/effect/EffectController$1;->$SwitchMap$com$miui$filtersdk$filter$helper$FilterType:[I
+
+    sget-object v1, Lcom/miui/filtersdk/filter/helper/FilterType;->V_ROME:Lcom/miui/filtersdk/filter/helper/FilterType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x5b
+
+    aput v2, v0, v1
+    :try_end_5a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5a .. :try_end_5a} :catch_5a
+
+    :catch_5a
     return-void
 .end method

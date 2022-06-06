@@ -53,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     const-string v1, "http"
@@ -64,7 +63,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -92,10 +90,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->urlLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     return-void
@@ -118,7 +114,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->urlLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     new-instance v1, Lcom/bumptech/glide/load/model/GlideUrl;
@@ -139,7 +134,6 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->buildLoadData(Landroid/net/Uri;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -152,7 +146,6 @@
 .method public handles(Landroid/net/Uri;)Z
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->SCHEMES:Ljava/util/Set;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -169,7 +162,6 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->handles(Landroid/net/Uri;)Z

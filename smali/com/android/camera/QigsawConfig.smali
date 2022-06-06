@@ -12,7 +12,7 @@
 
 .field public static final QIGSAW_MODE:Z
 
-.field public static final VERSION_NAME:Ljava/lang/String; = "4.3.002610.9"
+.field public static final VERSION_NAME:Ljava/lang/String; = "4.3.001292.0"
 
 
 # direct methods
@@ -21,7 +21,6 @@
 
     const-string/jumbo v0, "true"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -46,11 +45,10 @@
 
     const-string/jumbo v9, "videosky"
 
-    const-string v10, "movielens"
+    const-string/jumbo v10, "movielens"
 
     const-string/jumbo v11, "supernight"
 
-    .line 2
     filled-new-array/range {v1 .. v11}, [Ljava/lang/String;
 
     move-result-object v0
@@ -63,7 +61,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

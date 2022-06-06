@@ -48,10 +48,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$1;
 
     const-string v1, "cornerRadius"
@@ -60,7 +58,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mRadiusProp:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     new-instance v0, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
@@ -81,19 +78,16 @@
 .method public static getInstance()Lcom/android/camera/fragment/mode/MoreModeListAnimation;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->sAnimation:Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;-><init>()V
 
     sput-object v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->sAnimation:Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->sAnimation:Lcom/android/camera/fragment/mode/MoreModeListAnimation;
 
@@ -115,14 +109,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mSpringState:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     const-string v0, "MoreModeAnimation"
 
     const-string v1, "clearSpring"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -131,7 +123,6 @@
 .method public initSpring(Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;)V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     invoke-direct {v0, p1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;-><init>(Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;)V
@@ -142,7 +133,6 @@
 
     const-string v0, "initSpring"
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -151,13 +141,10 @@
 .method public initSwitchAnimation(Lcom/android/camera/fragment/mode/IMoreMode;Lcom/android/camera/fragment/mode/IMoreMode;I)V
     .locals 0
 
-    .line 1
     iput-object p2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeNew:Lcom/android/camera/fragment/mode/IMoreMode;
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeOld:Lcom/android/camera/fragment/mode/IMoreMode;
 
-    .line 3
     iput p3, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mSize:I
 
     return-void
@@ -168,10 +155,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeNew:Lcom/android/camera/fragment/mode/IMoreMode;
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeOld:Lcom/android/camera/fragment/mode/IMoreMode;
 
     return-void
@@ -184,36 +169,30 @@
 
     const/4 p2, 0x0
 
-    .line 1
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 3
     invoke-virtual {p1, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 4
     invoke-virtual {p1, p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->alpha(F)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
 
     const-wide/16 v0, 0xc8
 
-    .line 5
     invoke-virtual {p1, v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 
     return-void
@@ -222,12 +201,10 @@
 .method public startInnerEnterAnim()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mSpringState:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->startEnter()V
 
     :cond_0
@@ -237,12 +214,10 @@
 .method public startInnerSpringAnim()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mSpringState:Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->updateInnerSpringAnim()V
 
     :cond_0
@@ -252,7 +227,6 @@
 .method public startShowNewAnimation(Landroid/view/View;I)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeNew:Lcom/android/camera/fragment/mode/IMoreMode;
 
     if-eqz v0, :cond_1
@@ -263,7 +237,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -295,7 +268,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -324,7 +296,6 @@
 
     move-result-object p2
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -349,7 +320,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -378,7 +348,6 @@
 
     sub-float/2addr v1, v3
 
-    .line 6
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -405,7 +374,6 @@
 
     sub-float/2addr v3, v4
 
-    .line 7
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -420,7 +388,6 @@
 
     div-float/2addr v4, p2
 
-    .line 8
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result p2
@@ -429,18 +396,16 @@
 
     div-float/2addr p2, v2
 
-    .line 9
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0705b3
+    const v2, 0x7f0705b0
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    .line 10
     new-instance v2, Lmiuix/animation/controller/AnimState;
 
     const-string v5, "from"
@@ -451,7 +416,6 @@
 
     float-to-double v6, v1
 
-    .line 11
     invoke-virtual {v2, v5, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -460,7 +424,6 @@
 
     float-to-double v5, v3
 
-    .line 12
     invoke-virtual {v1, v2, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -469,14 +432,12 @@
 
     float-to-double v3, v4
 
-    .line 13
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 14
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -485,7 +446,6 @@
 
     const-wide/16 v3, 0x0
 
-    .line 15
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -494,12 +454,10 @@
 
     float-to-double v5, p2
 
-    .line 16
     invoke-virtual {v1, v2, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
-    .line 17
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v2, "to"
@@ -508,14 +466,12 @@
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 18
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 19
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -524,21 +480,18 @@
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    .line 20
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 21
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 22
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -547,12 +500,10 @@
 
     float-to-double v3, v0
 
-    .line 23
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 24
     new-instance v1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v1}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -577,7 +528,6 @@
 
     aput-object p1, v3, v4
 
-    .line 25
     invoke-static {v3}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -610,7 +560,6 @@
 .method public startShowOldAnimation(Landroid/view/View;I)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mMoreModeNew:Lcom/android/camera/fragment/mode/IMoreMode;
 
     if-eqz v0, :cond_1
@@ -621,7 +570,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -653,7 +601,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -682,7 +629,6 @@
 
     move-result-object p2
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,7 +653,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -736,7 +681,6 @@
 
     sub-float/2addr v1, v3
 
-    .line 6
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -763,7 +707,6 @@
 
     sub-float/2addr v3, v4
 
-    .line 7
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -778,12 +721,11 @@
 
     div-float/2addr v4, v5
 
-    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f0705b3
+    const v6, 0x7f0705b0
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -805,7 +747,6 @@
 
     div-float/2addr v5, v0
 
-    .line 9
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result p2
@@ -814,7 +755,6 @@
 
     div-float/2addr p2, v2
 
-    .line 10
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v2, "from"
@@ -825,7 +765,6 @@
 
     float-to-double v6, v1
 
-    .line 11
     invoke-virtual {v0, v2, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -834,7 +773,6 @@
 
     float-to-double v2, v3
 
-    .line 12
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -843,14 +781,12 @@
 
     float-to-double v2, v4
 
-    .line 13
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 14
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -859,7 +795,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 15
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -868,12 +803,10 @@
 
     float-to-double v4, v5
 
-    .line 16
     invoke-virtual {v0, v1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 17
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v4, "to"
@@ -882,14 +815,12 @@
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 18
     invoke-virtual {v1, v4, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 19
     invoke-virtual {v1, v4, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -898,21 +829,18 @@
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    .line 20
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 21
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 22
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -921,12 +849,10 @@
 
     float-to-double v3, p2
 
-    .line 23
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
-    .line 24
     new-instance v1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v1}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -947,7 +873,6 @@
 
     new-array v3, v2, [Lmiuix/animation/listener/TransitionListener;
 
-    .line 25
     new-instance v4, Lcom/android/camera/fragment/mode/MoreModeListAnimation$2;
 
     invoke-direct {v4, p0}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$2;-><init>(Lcom/android/camera/fragment/mode/MoreModeListAnimation;)V
@@ -962,7 +887,6 @@
 
     aput-object p1, v3, v5
 
-    .line 26
     invoke-static {v3}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -1013,12 +937,10 @@
 
     if-ne p3, v2, :cond_0
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getRow(I)I
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1028,7 +950,6 @@
 
     throw p1
 
-    .line 3
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getRow(I)I
 
@@ -1036,7 +957,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getCol(I)I
 
@@ -1044,7 +964,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->getCol(I)I
 
@@ -1054,7 +973,6 @@
 
     move v0, v4
 
-    .line 6
     :goto_0
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -1074,21 +992,18 @@
 
     invoke-static {p3, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p2
 
     iget-object p3, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 8
     invoke-virtual {p2, p3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p2
 
     const-wide/16 v2, 0xc8
 
-    .line 9
     invoke-virtual {p2, v2, v3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p2
@@ -1108,11 +1023,9 @@
     :cond_4
     move v2, v3
 
-    .line 10
     :goto_1
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 11
     invoke-virtual {p2, p3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->translationX(F)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     goto :goto_3
@@ -1125,14 +1038,11 @@
     :cond_6
     move v2, v3
 
-    .line 12
     :goto_2
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 13
     invoke-virtual {p2, p3}, Landroidx/core/view/ViewPropertyAnimatorCompat;->translationY(F)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
-    .line 14
     :goto_3
     invoke-virtual {p2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 

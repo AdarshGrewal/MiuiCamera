@@ -40,10 +40,8 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;)V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -60,7 +58,6 @@
 
     const/16 v3, 0x12
 
-    .line 3
     invoke-virtual {v0, v3, v2}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
@@ -73,14 +70,12 @@
 
     aput-object v3, v2, v4
 
-    .line 4
     invoke-virtual {v0, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mUpdateYConfig:Lmiuix/animation/base/AnimConfig;
 
-    .line 5
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -93,7 +88,6 @@
 
     const/4 v3, 0x6
 
-    .line 6
     invoke-virtual {v0, v3, v2}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
@@ -106,14 +100,12 @@
 
     aput-object v2, v1, v4
 
-    .line 7
     invoke-virtual {v0, v1}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mEnterConfig:Lmiuix/animation/base/AnimConfig;
 
-    .line 8
     iput-object p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
     return-void
@@ -122,7 +114,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mFollowY:F
 
     return p0
@@ -131,7 +122,6 @@
 .method public static synthetic access$002(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mFollowY:F
 
     return p1
@@ -140,7 +130,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranY:F
 
     return p0
@@ -149,7 +138,6 @@
 .method public static synthetic access$102(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranY:F
 
     return p1
@@ -158,7 +146,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
     return-object p0
@@ -167,7 +154,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranX:F
 
     return p0
@@ -176,7 +162,6 @@
 .method public static synthetic access$302(Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;F)F
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranX:F
 
     return p1
@@ -187,7 +172,6 @@
 .method public startEnter()V
     .locals 6
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "from"
@@ -198,12 +182,10 @@
 
     const-wide/high16 v2, 0x4049000000000000L    # 50.0
 
-    .line 2
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v2, "to"
@@ -214,7 +196,6 @@
 
     const-wide/16 v3, 0x0
 
-    .line 4
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -223,7 +204,6 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {v3}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v3
@@ -244,7 +224,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +290,6 @@
 .method public updateInnerSpringAnim()V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
     invoke-interface {v0}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;->canScrollUp()Z
@@ -332,34 +310,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
     invoke-interface {v0, v2, v2}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;->onUpdate(FF)V
 
-    .line 3
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mLeadY:F
 
-    .line 4
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mFollowY:F
 
-    .line 5
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranY:F
 
-    .line 6
     iput-boolean v1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mIsStart:Z
 
-    .line 7
     iput-boolean v1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mDragging:Z
 
     const/4 v0, 0x0
 
-    .line 8
     iput-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mInnerSpringState:Lmiuix/animation/IStateStyle;
 
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
@@ -377,7 +347,6 @@
 
     if-nez v0, :cond_3
 
-    .line 10
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mIsStart:Z
 
@@ -389,19 +358,14 @@
 
     if-nez v0, :cond_2
 
-    .line 11
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mLeadY:F
 
-    .line 12
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mFollowY:F
 
-    .line 13
     iput v2, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mTranY:F
 
-    .line 14
     iput-boolean v5, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mDragging:Z
 
-    .line 15
     iput-boolean v5, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mIsStart:Z
 
     new-array v0, v5, [Ljava/lang/Object;
@@ -410,14 +374,12 @@
 
     aput-object v2, v0, v1
 
-    .line 16
     invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
 
     const-string/jumbo v2, "spring_group"
 
-    .line 17
     invoke-interface {v0, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -428,7 +390,6 @@
 
     iget v1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mFollowY:F
 
-    .line 18
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -443,13 +404,11 @@
 
     goto :goto_0
 
-    .line 19
     :cond_2
     iget-boolean v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mDragging:Z
 
     if-eqz v0, :cond_3
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mInnerSpringState:Lmiuix/animation/IStateStyle;
 
     if-eqz v0, :cond_3
@@ -460,7 +419,6 @@
 
     aput-object v3, v2, v1
 
-    .line 21
     iget-object v1, p0, Lcom/android/camera/fragment/mode/MoreModeListAnimation$SpringState;->mListener:Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;
 
     invoke-interface {v1}, Lcom/android/camera/fragment/mode/MoreModeListAnimation$OnSpringUpdateListener;->getOverScrollY()F

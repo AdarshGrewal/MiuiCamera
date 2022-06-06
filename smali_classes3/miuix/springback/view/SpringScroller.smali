@@ -49,12 +49,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mFinished:Z
 
     return-void
@@ -65,7 +63,6 @@
 .method public computeScrollOffset()Z
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/view/SpringScroller;->mSpringOperator:Lmiuix/springback/view/SpringOperator;
 
     const/4 v1, 0x0
@@ -78,7 +75,6 @@
 
     goto/16 :goto_3
 
-    .line 2
     :cond_0
     iget v0, p0, Lmiuix/springback/view/SpringScroller;->mFirstStep:I
 
@@ -86,19 +82,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     iget v3, p0, Lmiuix/springback/view/SpringScroller;->mOrientation:I
 
     if-ne v3, v2, :cond_1
 
     int-to-double v3, v0
 
-    .line 4
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mCurrX:D
 
     int-to-double v3, v0
 
-    .line 5
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mStartX:D
 
     goto :goto_0
@@ -106,32 +99,26 @@
     :cond_1
     int-to-double v3, v0
 
-    .line 6
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
     int-to-double v3, v0
 
-    .line 7
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mStartY:D
 
-    .line 8
     :goto_0
     iput v1, p0, Lmiuix/springback/view/SpringScroller;->mFirstStep:I
 
     return v2
 
-    .line 9
     :cond_2
     iget-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mLastStep:Z
 
     if-eqz v0, :cond_3
 
-    .line 10
     iput-boolean v2, p0, Lmiuix/springback/view/SpringScroller;->mFinished:Z
 
     return v2
 
-    .line 11
     :cond_3
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
@@ -139,7 +126,6 @@
 
     iput-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrentTime:J
 
-    .line 12
     iget-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mStartTime:J
 
     sub-long/2addr v0, v3
@@ -152,7 +138,6 @@
 
     const v1, 0x3c83126f    # 0.016f
 
-    .line 13
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -168,20 +153,17 @@
     :cond_4
     move v1, v0
 
-    .line 14
     :goto_1
     iget-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mCurrentTime:J
 
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mStartTime:J
 
-    .line 15
     iget v0, p0, Lmiuix/springback/view/SpringScroller;->mOrientation:I
 
     const/4 v3, 0x2
 
     if-ne v0, v3, :cond_6
 
-    .line 16
     iget-object v4, p0, Lmiuix/springback/view/SpringScroller;->mSpringOperator:Lmiuix/springback/view/SpringOperator;
 
     iget-wide v5, p0, Lmiuix/springback/view/SpringScroller;->mVelocity:D
@@ -196,7 +178,6 @@
 
     move-result-wide v3
 
-    .line 17
     iget-wide v5, p0, Lmiuix/springback/view/SpringScroller;->mStartY:D
 
     float-to-double v0, v1
@@ -207,10 +188,8 @@
 
     iput-wide v8, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
-    .line 18
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mVelocity:D
 
-    .line 19
     iget-wide v10, p0, Lmiuix/springback/view/SpringScroller;->mOriginStartY:D
 
     iget-wide v12, p0, Lmiuix/springback/view/SpringScroller;->mEndY:D
@@ -223,17 +202,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 20
     iput-boolean v2, p0, Lmiuix/springback/view/SpringScroller;->mLastStep:Z
 
-    .line 21
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mEndY:D
 
     iput-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
     goto :goto_2
 
-    .line 22
     :cond_5
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
@@ -241,7 +217,6 @@
 
     goto :goto_2
 
-    .line 23
     :cond_6
     iget-object v4, p0, Lmiuix/springback/view/SpringScroller;->mSpringOperator:Lmiuix/springback/view/SpringOperator;
 
@@ -257,7 +232,6 @@
 
     move-result-wide v3
 
-    .line 24
     iget-wide v5, p0, Lmiuix/springback/view/SpringScroller;->mStartX:D
 
     float-to-double v0, v1
@@ -268,10 +242,8 @@
 
     iput-wide v8, p0, Lmiuix/springback/view/SpringScroller;->mCurrX:D
 
-    .line 25
     iput-wide v3, p0, Lmiuix/springback/view/SpringScroller;->mVelocity:D
 
-    .line 26
     iget-wide v10, p0, Lmiuix/springback/view/SpringScroller;->mOriginStartX:D
 
     iget-wide v12, p0, Lmiuix/springback/view/SpringScroller;->mEndX:D
@@ -284,17 +256,14 @@
 
     if-eqz v0, :cond_7
 
-    .line 27
     iput-boolean v2, p0, Lmiuix/springback/view/SpringScroller;->mLastStep:Z
 
-    .line 28
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mEndX:D
 
     iput-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrX:D
 
     goto :goto_2
 
-    .line 29
     :cond_7
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrX:D
 
@@ -313,12 +282,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mFinished:Z
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lmiuix/springback/view/SpringScroller;->mFirstStep:I
 
     return-void
@@ -327,7 +294,6 @@
 .method public final getCurrX()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrX:D
 
     double-to-int v0, v0
@@ -338,7 +304,6 @@
 .method public final getCurrY()I
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
     double-to-int v0, v0
@@ -375,14 +340,12 @@
     :cond_1
     if-nez p3, :cond_2
 
-    .line 1
     iget-wide p3, p0, Lmiuix/springback/view/SpringScroller;->mOriginVelocity:D
 
     invoke-static {p3, p4}, Ljava/lang/Math;->signum(D)D
 
     move-result-wide p3
 
-    .line 2
     invoke-static {p1, p2}, Ljava/lang/Math;->signum(D)D
 
     move-result-wide v2
@@ -396,7 +359,6 @@
     :cond_2
     sub-double/2addr p1, p5
 
-    .line 3
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p1
@@ -419,7 +381,6 @@
 .method public final isFinished()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mFinished:Z
 
     return v0
@@ -430,54 +391,42 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mFinished:Z
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/springback/view/SpringScroller;->mLastStep:Z
 
     float-to-double v0, p1
 
-    .line 3
     iput-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mStartX:D
 
-    .line 4
     iput-wide v0, p0, Lmiuix/springback/view/SpringScroller;->mOriginStartX:D
 
     float-to-double p1, p2
 
-    .line 5
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mEndX:D
 
     float-to-double p1, p3
 
-    .line 6
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mStartY:D
 
-    .line 7
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mOriginStartY:D
 
     double-to-int p1, p1
 
     int-to-double p1, p1
 
-    .line 8
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mCurrY:D
 
     float-to-double p1, p4
 
-    .line 9
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mEndY:D
 
     float-to-double p1, p5
 
-    .line 10
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mOriginVelocity:D
 
-    .line 11
     iput-wide p1, p0, Lmiuix/springback/view/SpringScroller;->mVelocity:D
 
-    .line 12
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p1
@@ -494,7 +443,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     new-instance p1, Lmiuix/springback/view/SpringOperator;
 
@@ -506,7 +454,6 @@
 
     goto :goto_1
 
-    .line 14
     :cond_1
     :goto_0
     new-instance p1, Lmiuix/springback/view/SpringOperator;
@@ -517,11 +464,9 @@
 
     iput-object p1, p0, Lmiuix/springback/view/SpringScroller;->mSpringOperator:Lmiuix/springback/view/SpringOperator;
 
-    .line 15
     :goto_1
     iput p6, p0, Lmiuix/springback/view/SpringScroller;->mOrientation:I
 
-    .line 16
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
@@ -534,7 +479,6 @@
 .method public setFirstStep(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/springback/view/SpringScroller;->mFirstStep:I
 
     return-void

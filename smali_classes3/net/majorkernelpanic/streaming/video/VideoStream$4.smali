@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/video/VideoStream;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$4;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,22 +45,18 @@
 
     const-string p1, "Media server died !"
 
-    .line 1
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream$4;->this$0:Lnet/majorkernelpanic/streaming/video/VideoStream;
 
     const/4 p2, 0x0
 
     iput-boolean p2, p1, Lnet/majorkernelpanic/streaming/video/VideoStream;->mCameraOpenedManually:Z
 
-    .line 3
     invoke-virtual {p1}, Lnet/majorkernelpanic/streaming/video/VideoStream;->stop()V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

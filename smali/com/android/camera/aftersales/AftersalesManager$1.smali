@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/aftersales/AftersalesManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aftersales/AftersalesManager$1;->this$0:Lcom/android/camera/aftersales/AftersalesManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "aftersales"
@@ -47,7 +45,6 @@
 
     const/4 p1, 0x1
 
-    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
 
     return-object v0

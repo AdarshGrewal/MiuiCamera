@@ -51,24 +51,20 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/Render;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
-    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
-    .line 4
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -81,24 +77,20 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 6
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
-    .line 7
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
-    .line 8
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -113,17 +105,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mOrientation:I
 
     invoke-virtual {p1, v0}, Lcom/android/camera/effect/renders/Render;->setOrientation(I)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mJpegOrientation:I
 
     invoke-virtual {p1, v0}, Lcom/android/camera/effect/renders/Render;->setJpegOrientation(I)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mShootRotation:F
 
     invoke-virtual {p1, v0}, Lcom/android/camera/effect/renders/Render;->setShootRotation(F)V
@@ -137,7 +126,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     goto :goto_0
@@ -147,7 +135,6 @@
 
     move-result v0
 
-    .line 2
     :goto_0
     iget-object v1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
@@ -157,7 +144,6 @@
 
     if-gez v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -166,7 +152,6 @@
 
     return p1
 
-    .line 4
     :cond_1
     sget-object p1, Lcom/android/camera/effect/renders/RenderGroup;->TAG:Ljava/lang/String;
 
@@ -204,7 +189,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     if-nez v0, :cond_0
@@ -213,7 +197,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
@@ -221,7 +204,6 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 3
     :cond_1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportWidth:I
 
@@ -231,7 +213,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4
     :cond_2
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportWidth:I
 
@@ -248,7 +229,6 @@
 .method public addPartRender(Lcom/android/camera/effect/renders/Render;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -259,22 +239,18 @@
 .method public addRender(Lcom/android/camera/effect/renders/Render;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RenderGroup;->recordRender(Lcom/android/camera/effect/renders/Render;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RenderGroup;->setSize(Lcom/android/camera/effect/renders/Render;)V
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RenderGroup;->initOrientation(Lcom/android/camera/effect/renders/Render;)V
 
     :cond_0
@@ -286,10 +262,8 @@
 
     const v0, 0x8d40
 
-    .line 1
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v0}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -298,7 +272,6 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v0}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -307,25 +280,20 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->identityAllM()V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportWidth:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportWidth:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportHeight:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportHeight:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mParentFrameBufferId:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mParentFrameBufferIdOld:I
 
-    .line 7
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/RenderGroup;->setParentFrameBufferId(I)V
 
-    .line 8
     invoke-virtual {p0, p2, p3}, Lcom/android/camera/effect/renders/RenderGroup;->setViewportSize(II)V
 
     return-void
@@ -334,7 +302,6 @@
 .method public beginBindFrameBuffer(Lcom/android/camera/effect/FrameBuffer;)V
     .locals 5
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/effect/FrameBuffer;->getId()I
 
     move-result v0
@@ -343,7 +310,6 @@
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 10
     invoke-virtual {p1}, Lcom/android/camera/effect/FrameBuffer;->getTexture()Lcom/android/gallery3d/ui/RawTexture;
 
     move-result-object v0
@@ -358,10 +324,8 @@
 
     const/4 v4, 0x0
 
-    .line 11
     invoke-static {v1, v2, v3, v0, v4}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v0}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -370,7 +334,6 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v0}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -379,29 +342,24 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->identityAllM()V
 
-    .line 14
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportWidth:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportWidth:I
 
-    .line 15
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mViewportHeight:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportHeight:I
 
-    .line 16
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mParentFrameBufferId:I
 
     iput v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mParentFrameBufferIdOld:I
 
-    .line 17
     invoke-virtual {p1}, Lcom/android/camera/effect/FrameBuffer;->getId()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/renders/RenderGroup;->setParentFrameBufferId(I)V
 
-    .line 18
     invoke-virtual {p1}, Lcom/android/camera/effect/FrameBuffer;->getWidth()I
 
     move-result v0
@@ -418,7 +376,6 @@
 .method public clearPartRenders()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -429,12 +386,10 @@
 .method public clearRenders()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
@@ -445,10 +400,8 @@
 .method public deleteBuffer()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/Render;->deleteBuffer()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -457,7 +410,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -480,7 +432,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/effect/renders/Render;->deleteBuffer()V
 
     goto :goto_0
@@ -492,7 +443,6 @@
 .method public destroy()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -515,12 +465,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/camera/effect/renders/Render;->destroy()V
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/RenderGroup;->clearRenders()V
 
@@ -530,7 +478,6 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -552,7 +499,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
 
     move-result v1
@@ -573,7 +519,6 @@
 .method public endBindFrameBuffer()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v0}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -582,21 +527,18 @@
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->popState()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mParentFrameBufferIdOld:I
 
     const v1, 0x8d40
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportWidth:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/Render;->mOldViewportHeight:I
 
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/effect/renders/RenderGroup;->setViewportSize(II)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mParentFrameBufferIdOld:I
 
     invoke-virtual {p0, v0}, Lcom/android/camera/effect/renders/RenderGroup;->setParentFrameBufferId(I)V
@@ -609,7 +551,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -620,7 +561,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
@@ -644,7 +584,6 @@
 
     if-gez p1, :cond_0
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/renders/RenderGroup;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -671,7 +610,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
@@ -689,7 +627,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -702,7 +639,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
@@ -714,7 +650,6 @@
 
     return-object p1
 
-    .line 3
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/effect/renders/RenderGroup;->TAG:Ljava/lang/String;
@@ -755,7 +690,6 @@
 .method public getRenderSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -776,7 +710,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     return-object v0
@@ -791,7 +724,6 @@
 
     if-le p1, v1, :cond_1
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
@@ -813,7 +745,6 @@
 .method public isPartComplete(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mPartRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -836,7 +767,6 @@
 .method public removeRender(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
@@ -845,24 +775,20 @@
 
     if-ltz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/RenderGroup;->getRender(I)Lcom/android/camera/effect/renders/Render;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRendersMap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->delete(I)V
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/effect/renders/Render;->destroy()V
 
     :cond_0
@@ -872,10 +798,8 @@
 .method public setEffectRangeAttribute(Lcom/android/camera/effect/EffectController$EffectRectAttribute;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setEffectRangeAttribute(Lcom/android/camera/effect/EffectController$EffectRectAttribute;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -884,7 +808,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -907,7 +830,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setEffectRangeAttribute(Lcom/android/camera/effect/EffectController$EffectRectAttribute;)V
 
     goto :goto_0
@@ -919,7 +841,6 @@
 .method public setFrameBufferCallback(Lcom/android/camera/effect/renders/Render$FrameBufferCallback;I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -942,7 +863,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, p1, p2}, Lcom/android/camera/effect/renders/Render;->setFrameBufferCallback(Lcom/android/camera/effect/renders/Render$FrameBufferCallback;I)V
 
     goto :goto_0
@@ -954,18 +874,15 @@
 .method public setJpegOrientation(I)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mJpegOrientation:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setJpegOrientation(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -974,7 +891,6 @@
 
     if-nez v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -997,7 +913,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setJpegOrientation(I)V
 
     goto :goto_0
@@ -1009,7 +924,6 @@
 .method public setKaleidoscope(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1032,7 +946,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setKaleidoscope(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1044,10 +957,8 @@
 .method public setMirror(Z)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setMirror(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1056,7 +967,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1079,7 +989,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setMirror(Z)V
 
     goto :goto_0
@@ -1091,18 +1000,15 @@
 .method public setOrientation(I)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mOrientation:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setOrientation(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1111,7 +1017,6 @@
 
     if-nez v0, :cond_2
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1134,7 +1039,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setOrientation(I)V
 
     goto :goto_0
@@ -1146,10 +1050,8 @@
 .method public setParentFrameBufferId(I)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setParentFrameBufferId(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1158,7 +1060,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1181,7 +1082,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setParentFrameBufferId(I)V
 
     goto :goto_0
@@ -1193,10 +1093,8 @@
 .method public setPreviewSize(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1205,7 +1103,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1228,7 +1125,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
     goto :goto_0
@@ -1240,7 +1136,6 @@
 .method public setPreviousFrameBufferInfo(III)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1263,7 +1158,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, p1, p2, p3}, Lcom/android/camera/effect/renders/Render;->setPreviousFrameBufferInfo(III)V
 
     goto :goto_0
@@ -1275,10 +1169,8 @@
 .method public setShootRotation(F)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/Render;->setShootRotation(F)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1287,7 +1179,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1310,7 +1201,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setShootRotation(F)V
 
     goto :goto_0
@@ -1322,10 +1212,8 @@
 .method public setSnapshotSize(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setSnapshotSize(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1334,7 +1222,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1357,7 +1244,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1, p2}, Lcom/android/camera/effect/renders/Render;->setSnapshotSize(II)V
 
     goto :goto_0
@@ -1369,7 +1255,6 @@
 .method public setSticker(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1392,7 +1277,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, p1}, Lcom/android/camera/effect/renders/Render;->setSticker(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1404,10 +1288,8 @@
 .method public setViewportSize(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setViewportSize(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1416,7 +1298,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/RenderGroup;->mRenders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1439,7 +1320,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1, p2}, Lcom/android/camera/effect/renders/Render;->setViewportSize(II)V
 
     goto :goto_0

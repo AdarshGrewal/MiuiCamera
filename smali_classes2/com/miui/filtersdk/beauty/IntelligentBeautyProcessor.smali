@@ -13,12 +13,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/beauty/BeautyProcessor;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->mExtraSpan:F
 
     return-void
@@ -32,7 +30,6 @@
 .method public getExtraSpan()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->mExtraSpan:F
 
     return v0
@@ -50,25 +47,21 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/miui/filtersdk/beauty/BeautyProcessor;->getSupportedBeautyParamTypes()[Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 3
     :goto_0
     array-length v3, v1
 
     if-ge v2, v3, :cond_0
 
-    .line 4
     aget-object v3, v1, v2
 
     iget-object v4, p0, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->mLevelParameters:[[F
@@ -94,7 +87,6 @@
 .method public setExtraSpan(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->mExtraSpan:F
 
     return-void

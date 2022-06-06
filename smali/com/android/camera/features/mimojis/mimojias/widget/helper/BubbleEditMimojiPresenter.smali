@@ -57,48 +57,39 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View$OnClickListener;Landroid/widget/RelativeLayout;I)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingEmoticon:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingDele:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingEdit:Z
 
     const/4 v1, 0x3
 
     new-array v1, v1, [I
 
-    .line 5
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mShowBubbleState:[I
 
     const/4 v1, -0x1
 
-    .line 6
     iput v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mHashCodeBubble:I
 
-    .line 7
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mContext:Landroid/content/Context;
 
-    .line 8
     invoke-static {p1}, Lcom/android/camera/Util;->isLayoutRTL(Landroid/content/Context;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mIsRTL:Z
 
-    .line 9
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0OO()I
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O00OoO()I
 
     move-result p1
 
@@ -111,10 +102,8 @@
     :cond_0
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mIsAddEmoticon:Z
 
-    .line 10
     iput p4, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mScreenWidth:I
 
-    .line 11
     new-instance p1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
 
     iget-object p4, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mContext:Landroid/content/Context;
@@ -129,7 +118,6 @@
 .method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mIsAddEmoticon:Z
 
     return p0
@@ -138,7 +126,6 @@
 .method public static synthetic access$100(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingEdit:Z
 
     return p0
@@ -147,7 +134,6 @@
 .method public static synthetic access$102(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingEdit:Z
 
     return p1
@@ -156,7 +142,6 @@
 .method public static synthetic access$1102(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingEmoticon:Z
 
     return p1
@@ -165,7 +150,6 @@
 .method public static synthetic access$1200(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->downMove:I
 
     return p0
@@ -174,7 +158,6 @@
 .method public static synthetic access$200(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingDele:Z
 
     return p0
@@ -183,7 +166,6 @@
 .method public static synthetic access$202(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->isAnimationingDele:Z
 
     return p1
@@ -192,7 +174,6 @@
 .method public static synthetic access$300(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mScreenWidth:I
 
     return p0
@@ -201,7 +182,6 @@
 .method public static synthetic access$400(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mIsRTL:Z
 
     return p0
@@ -210,7 +190,6 @@
 .method public static synthetic access$500(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->rightMove:D
 
     return-wide v0
@@ -219,7 +198,6 @@
 .method public static synthetic access$600(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->leftMove:D
 
     return-wide v0
@@ -228,7 +206,6 @@
 .method public static synthetic access$700(Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->topMove:I
 
     return p0
@@ -239,7 +216,6 @@
 .method public getBubblePop()Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->bubblePop:Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
 
     return-object v0
@@ -254,7 +230,6 @@
 
     if-ne v0, p2, :cond_1
 
-    .line 1
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->bubblePop:Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
 
     invoke-virtual {p3}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;->getProcessState()I
@@ -265,7 +240,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 2
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->bubblePop:Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
 
     invoke-virtual {p3}, Ljava/lang/Object;->hashCode()I
@@ -277,21 +251,18 @@
     :cond_0
     return-void
 
-    .line 3
     :cond_1
     iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mTargetView:Landroid/view/View;
 
-    .line 4
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
-    .line 5
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    const v0, 0x7f0703d2
+    const v0, 0x7f0703d1
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -299,7 +270,6 @@
 
     int-to-double v0, p3
 
-    .line 6
     iget-boolean v2, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mIsAddEmoticon:Z
 
     if-eqz v2, :cond_2
@@ -318,20 +288,16 @@
 
     neg-double v0, v0
 
-    .line 7
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->leftMove:D
 
     neg-int v0, p3
 
-    .line 8
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->topMove:I
 
-    .line 9
     div-int/lit8 p3, p3, 0x2
 
     iput p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->downMove:I
 
-    .line 10
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -376,7 +342,6 @@
 
     invoke-static {v0, p3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->bubblePop:Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter$BubblePop;
 
     invoke-virtual {p3}, Ljava/lang/Object;->hashCode()I
@@ -391,7 +356,6 @@
 .method public setmHashCodeBubble(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/BubbleEditMimojiPresenter;->mHashCodeBubble:I
 
     return-void

@@ -33,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -59,19 +58,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/writer/SampleWriter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mMediaMuxer:Landroid/media/MediaMuxer;
 
-    .line 3
     iput-object p2, p0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
-    .line 4
     iput p3, p0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoTrackId:I
 
-    .line 5
     iput-object p4, p0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     return-void
@@ -84,28 +78,22 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v2, "writeVideoSamples: E"
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-wide v2, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->head:J
 
-    .line 3
     iget-wide v4, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->tail:J
 
-    .line 4
     iget-wide v6, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->time:J
 
-    .line 5
     iget v1, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->filterId:I
 
-    .line 6
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -134,7 +122,6 @@
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -161,7 +148,6 @@
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -188,7 +174,6 @@
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -231,14 +216,12 @@
     :goto_1
     if-nez v14, :cond_e
 
-    .line 10
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v9, "writeVideoSamples: take: E"
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :try_start_0
     iget-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
@@ -252,7 +235,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     sget-object v9, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v11, "writeVideoSamples: take: X"
@@ -261,7 +243,6 @@
 
     if-nez v8, :cond_0
 
-    .line 13
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v2, "sample null return"
@@ -270,17 +251,13 @@
 
     goto/16 :goto_9
 
-    .line 14
     :cond_0
     iget-object v9, v8, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->data:Ljava/nio/ByteBuffer;
 
-    .line 15
     iget-object v11, v8, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->info:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 16
     iget-object v8, v8, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->livePhotoResult:Lcom/xiaomi/camera/liveshot/LivePhotoResult;
 
-    .line 17
     sget-object v10, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     move/from16 v20, v14
@@ -303,7 +280,6 @@
 
     invoke-static {v10, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     invoke-virtual {v9}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v4
@@ -323,7 +299,6 @@
     :cond_1
     move-object v4, v9
 
-    .line 19
     iget-wide v9, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     sub-long v9, v6, v9
@@ -338,14 +313,12 @@
 
     if-nez v19, :cond_3
 
-    .line 20
     invoke-static {v8, v1}, Lcom/android/camera/Util;->isLivePhotoStable(Lcom/xiaomi/camera/liveshot/LivePhotoResult;I)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 21
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -368,7 +341,6 @@
 
     goto :goto_2
 
-    .line 22
     :cond_2
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
@@ -398,7 +370,6 @@
 
     goto :goto_3
 
-    .line 23
     :cond_3
     invoke-static {v8, v1}, Lcom/android/camera/Util;->isLivePhotoStable(Lcom/xiaomi/camera/liveshot/LivePhotoResult;I)Z
 
@@ -406,7 +377,6 @@
 
     if-nez v4, :cond_4
 
-    .line 24
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -436,7 +406,6 @@
 
     goto/16 :goto_0
 
-    .line 25
     :cond_4
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
@@ -469,7 +438,6 @@
 
     goto/16 :goto_1
 
-    .line 26
     :cond_5
     iget v8, v11, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -481,7 +449,6 @@
 
     if-nez v18, :cond_6
 
-    .line 27
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -504,7 +471,6 @@
 
     goto/16 :goto_7
 
-    .line 28
     :cond_6
     iget-wide v9, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -520,7 +486,6 @@
 
     if-nez v18, :cond_8
 
-    .line 29
     iget-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-wide v12, v8, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->head:J
@@ -529,12 +494,10 @@
 
     iput-wide v12, v8, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->offset:J
 
-    .line 30
     iget-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     if-eqz v8, :cond_7
 
-    .line 31
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v12
@@ -543,10 +506,8 @@
 
     const/4 v8, 0x0
 
-    .line 32
     iput-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
-    .line 33
     :cond_7
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
@@ -570,7 +531,6 @@
 
     const/16 v18, 0x1
 
-    .line 34
     :cond_8
     iget-wide v8, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -580,7 +540,6 @@
 
     goto :goto_4
 
-    .line 35
     :cond_9
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
@@ -588,10 +547,8 @@
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     iput v5, v11, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    .line 37
     :goto_4
     iget-wide v8, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -599,17 +556,14 @@
 
     iput-wide v8, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 38
     iget-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     iget v9, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoTrackId:I
 
     invoke-virtual {v8, v9, v4, v11}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 39
     iget-wide v8, v11, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 40
     sget-object v10, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -634,7 +588,6 @@
 
     move-wide v12, v8
 
-    .line 41
     :cond_a
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->limit()I
 
@@ -661,7 +614,6 @@
 
     goto :goto_8
 
-    .line 42
     :cond_d
     :goto_6
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
@@ -677,7 +629,6 @@
 
     move/from16 v20, v14
 
-    .line 43
     sget-object v4, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v5, "writeVideoSamples: take: meet interrupted exception"
@@ -692,7 +643,6 @@
 
     goto/16 :goto_1
 
-    .line 44
     :cond_e
     :goto_9
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
@@ -709,12 +659,10 @@
 
     iput-wide v2, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->time:J
 
-    .line 45
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     if-eqz v1, :cond_f
 
-    .line 46
     iget-object v2, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-wide v2, v2, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->offset:J
@@ -727,10 +675,8 @@
 
     const/4 v1, 0x0
 
-    .line 47
     iput-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
-    .line 48
     :cond_f
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
@@ -754,7 +700,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -773,7 +718,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -796,7 +740,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/VideoSampleWriter;->mVideoSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     invoke-virtual {v1}, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->clear()V

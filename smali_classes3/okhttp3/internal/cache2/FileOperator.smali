@@ -19,24 +19,20 @@
 .method public constructor <init>(Ljava/nio/channels/FileChannel;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
-    .line 2
     iput-object v0, p0, Lokhttp3/internal/cache2/FileOperator;->byteArray:[B
 
-    .line 3
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 4
     iput-object p1, p0, Lokhttp3/internal/cache2/FileOperator;->fileChannel:Ljava/nio/channels/FileChannel;
 
     return-void
@@ -63,7 +59,6 @@
 
     if-lez v2, :cond_1
 
-    .line 1
     :try_start_0
     iget-object v2, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
@@ -77,7 +72,6 @@
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 2
     iget-object v2, p0, Lokhttp3/internal/cache2/FileOperator;->fileChannel:Ljava/nio/channels/FileChannel;
 
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
@@ -90,14 +84,12 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 3
     iget-object v2, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
 
-    .line 4
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->byteArray:[B
 
     const/4 v4, 0x0
@@ -112,14 +104,12 @@
 
     sub-long/2addr p4, v2
 
-    .line 5
     iget-object v2, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     goto :goto_0
 
-    .line 6
     :cond_0
     :try_start_1
     new-instance p1, Ljava/io/EOFException;
@@ -133,7 +123,6 @@
     :catchall_0
     move-exception p1
 
-    .line 7
     iget-object p2, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -143,7 +132,6 @@
     :cond_1
     return-void
 
-    .line 8
     :cond_2
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -166,7 +154,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 1
     invoke-virtual {p3}, Lokio/Buffer;->size()J
 
     move-result-wide v2
@@ -182,7 +169,6 @@
 
     const-wide/16 v2, 0x2000
 
-    .line 2
     :try_start_0
     invoke-static {v2, v3, p4, p5}, Ljava/lang/Math;->min(JJ)J
 
@@ -190,19 +176,16 @@
 
     long-to-int v2, v2
 
-    .line 3
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->byteArray:[B
 
     const/4 v4, 0x0
 
     invoke-virtual {p3, v3, v4, v2}, Lokio/Buffer;->read([BII)I
 
-    .line 4
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 5
     :cond_0
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->fileChannel:Ljava/nio/channels/FileChannel;
 
@@ -216,7 +199,6 @@
 
     add-long/2addr p1, v3
 
-    .line 6
     iget-object v3, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -231,7 +213,6 @@
 
     sub-long/2addr p4, v2
 
-    .line 7
     iget-object v2, p0, Lokhttp3/internal/cache2/FileOperator;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -250,7 +231,6 @@
     :cond_1
     return-void
 
-    .line 8
     :cond_2
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 

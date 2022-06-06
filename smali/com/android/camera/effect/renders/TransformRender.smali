@@ -33,7 +33,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/ShaderRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -42,7 +41,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/ShaderRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -51,22 +49,18 @@
 .method private drawTexture(IIIII[F[FZ)V
     .locals 6
 
-    .line 1
     iget p2, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     invoke-static {p2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
     const-string p2, "glUseProgram"
 
-    .line 2
     invoke-static {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
-    .line 3
     invoke-virtual {p0, p2}, Lcom/android/camera/effect/renders/ShaderRender;->setBlendEnabled(Z)V
 
-    .line 4
     iget-object p3, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p3}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -77,20 +71,16 @@
 
     const-string p3, "draw start"
 
-    .line 5
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
     const p3, 0x84c0
 
-    .line 6
     invoke-static {p3}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 p3, 0xde1
 
-    .line 7
     invoke-static {p3, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 8
     iget p1, p0, Lcom/android/camera/effect/renders/TransformRender;->muMVPMatrixLoc:I
 
     const/4 p4, 0x1
@@ -99,33 +89,26 @@
 
     const-string p1, "glUniformMatrix4fv"
 
-    .line 9
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 10
     iget p5, p0, Lcom/android/camera/effect/renders/TransformRender;->muTexMatrixLoc:I
 
     invoke-static {p5, p4, p2, p7, p2}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 11
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 12
     iget p1, p0, Lcom/android/camera/effect/renders/TransformRender;->maPositionLoc:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string p1, "glEnableVertexAttribArray"
 
-    .line 13
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 14
     iget v0, p0, Lcom/android/camera/effect/renders/TransformRender;->maPositionLoc:I
 
     iget-object p4, p0, Lcom/android/camera/effect/renders/TransformRender;->mDrawable2d:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
 
-    .line 15
     invoke-virtual {p4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;->vertexArray()Ljava/nio/FloatBuffer;
 
     move-result-object v5
@@ -138,39 +121,30 @@
 
     const/16 v4, 0x8
 
-    .line 16
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     const-string p4, "glVertexAttribPointer"
 
-    .line 17
     invoke-static {p4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 18
     iget p5, p0, Lcom/android/camera/effect/renders/TransformRender;->maTextureCoordLoc:I
 
     invoke-static {p5}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 19
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 20
     iget v0, p0, Lcom/android/camera/effect/renders/TransformRender;->maTextureCoordLoc:I
 
     iget-object p1, p0, Lcom/android/camera/effect/renders/TransformRender;->mDrawable2d:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
 
-    .line 21
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;->texCoordArray()Ljava/nio/FloatBuffer;
 
     move-result-object v5
 
-    .line 22
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 23
     invoke-static {p4}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/effect/renders/TransformRender;->mDrawable2d:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;
 
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/Drawable2d;->vertexCount()I
@@ -183,26 +157,20 @@
 
     const-string p1, "glDrawArrays"
 
-    .line 25
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkGlError(Ljava/lang/String;)V
 
-    .line 26
     iget p1, p0, Lcom/android/camera/effect/renders/TransformRender;->maPositionLoc:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 27
     iget p1, p0, Lcom/android/camera/effect/renders/TransformRender;->maTextureCoordLoc:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 28
     invoke-static {p3, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 29
     invoke-static {p2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 30
     iget-object p1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -219,7 +187,6 @@
 .method public destroy()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/ShaderRender;->destroy()V
 
     return-void
@@ -228,7 +195,6 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
     .locals 9
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/effect/draw_mode/DrawAttribute;->getTarget()I
 
     move-result v0
@@ -239,7 +205,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/effect/renders/TransformRender;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -266,7 +231,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/effect/draw_mode/DrawAttribute;->getTarget()I
 
@@ -276,10 +240,8 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     check-cast p1, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;
 
-    .line 5
     iget v1, p1, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;->mTexId:I
 
     iget-object v0, p1, Lcom/android/camera/effect/draw_mode/DrawTransformAttribute;->mDrawRect:Landroid/graphics/Rect;
@@ -327,7 +289,6 @@
 .method public initShader()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/TransformRender;->getVertexShaderString()Ljava/lang/String;
 
     move-result-object v0
@@ -344,10 +305,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string v1, "aPosition"
@@ -358,10 +317,8 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TransformRender;->maPositionLoc:I
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkLocation(ILjava/lang/String;)V
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string v1, "aTextureCoord"
@@ -372,10 +329,8 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TransformRender;->maTextureCoordLoc:I
 
-    .line 6
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkLocation(ILjava/lang/String;)V
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uMVPMatrix"
@@ -386,10 +341,8 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TransformRender;->muMVPMatrixLoc:I
 
-    .line 8
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkLocation(ILjava/lang/String;)V
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uTexMatrix"
@@ -400,12 +353,10 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/TransformRender;->muTexMatrixLoc:I
 
-    .line 10
     invoke-static {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/core/GlUtil;->checkLocation(ILjava/lang/String;)V
 
     return-void
 
-    .line 11
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -433,7 +384,6 @@
 .method public initSupportAttriList()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttriSupportedList:Ljava/util/ArrayList;
 
     const/16 v1, 0xe
@@ -450,7 +400,6 @@
 .method public initVertexData()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/Drawable2dFull;
 
     invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/gles/Drawable2dFull;-><init>()V

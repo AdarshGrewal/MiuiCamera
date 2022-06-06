@@ -67,10 +67,8 @@
 .method public constructor <init>(Lcom/facebook/rebound/BaseSpringSystem;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/facebook/rebound/Spring$PhysicsState;
 
     const/4 v1, 0x0
@@ -79,14 +77,12 @@
 
     iput-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
-    .line 3
     new-instance v0, Lcom/facebook/rebound/Spring$PhysicsState;
 
     invoke-direct {v0, v1}, Lcom/facebook/rebound/Spring$PhysicsState;-><init>(Lcom/facebook/rebound/Spring$1;)V
 
     iput-object v0, p0, Lcom/facebook/rebound/Spring;->mPreviousState:Lcom/facebook/rebound/Spring$PhysicsState;
 
-    .line 4
     new-instance v0, Lcom/facebook/rebound/Spring$PhysicsState;
 
     invoke-direct {v0, v1}, Lcom/facebook/rebound/Spring$PhysicsState;-><init>(Lcom/facebook/rebound/Spring$1;)V
@@ -95,18 +91,14 @@
 
     const/4 v0, 0x1
 
-    .line 5
     iput-boolean v0, p0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
     const-wide v0, 0x3f747ae147ae147bL    # 0.005
 
-    .line 6
     iput-wide v0, p0, Lcom/facebook/rebound/Spring;->mRestSpeedThreshold:D
 
-    .line 7
     iput-wide v0, p0, Lcom/facebook/rebound/Spring;->mDisplacementFromRestThreshold:D
 
-    .line 8
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
@@ -115,15 +107,12 @@
 
     const-wide/16 v0, 0x0
 
-    .line 9
     iput-wide v0, p0, Lcom/facebook/rebound/Spring;->mTimeAccumulator:D
 
     if-eqz p1, :cond_0
 
-    .line 10
     iput-object p1, p0, Lcom/facebook/rebound/Spring;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,14 +135,12 @@
 
     iput-object p1, p0, Lcom/facebook/rebound/Spring;->mId:Ljava/lang/String;
 
-    .line 12
     sget-object p1, Lcom/facebook/rebound/SpringConfig;->defaultConfig:Lcom/facebook/rebound/SpringConfig;
 
     invoke-virtual {p0, p1}, Lcom/facebook/rebound/Spring;->setSpringConfig(Lcom/facebook/rebound/SpringConfig;)Lcom/facebook/rebound/Spring;
 
     return-void
 
-    .line 13
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -167,7 +154,6 @@
 .method private getDisplacementDistanceForState(Lcom/facebook/rebound/Spring$PhysicsState;)D
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
     iget-wide v2, p1, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
@@ -184,7 +170,6 @@
 .method private interpolate(D)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
@@ -205,7 +190,6 @@
 
     iput-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 2
     iget-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
     mul-double/2addr v1, p1
@@ -228,14 +212,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -251,14 +233,12 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-virtual/range {p0 .. p0}, Lcom/facebook/rebound/Spring;->isAtRest()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget-boolean v2, v0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
     if-eqz v2, :cond_0
@@ -277,7 +257,6 @@
     :cond_1
     move-wide/from16 v2, p1
 
-    .line 3
     :goto_0
     iget-wide v4, v0, Lcom/facebook/rebound/Spring;->mTimeAccumulator:D
 
@@ -285,33 +264,26 @@
 
     iput-wide v4, v0, Lcom/facebook/rebound/Spring;->mTimeAccumulator:D
 
-    .line 4
     iget-object v2, v0, Lcom/facebook/rebound/Spring;->mSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     iget-wide v3, v2, Lcom/facebook/rebound/SpringConfig;->tension:D
 
-    .line 5
     iget-wide v5, v2, Lcom/facebook/rebound/SpringConfig;->friction:D
 
-    .line 6
     iget-object v2, v0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v7, v2, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 7
     iget-wide v9, v2, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
-    .line 8
     iget-object v2, v0, Lcom/facebook/rebound/Spring;->mTempState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v11, v2, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 9
     iget-wide v13, v2, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
     move v15, v1
 
-    .line 10
     :goto_1
     iget-wide v1, v0, Lcom/facebook/rebound/Spring;->mTimeAccumulator:D
 
@@ -323,22 +295,18 @@
 
     sub-double v1, v1, v16
 
-    .line 11
     iput-wide v1, v0, Lcom/facebook/rebound/Spring;->mTimeAccumulator:D
 
     cmpg-double v1, v1, v16
 
     if-gez v1, :cond_2
 
-    .line 12
     iget-object v1, v0, Lcom/facebook/rebound/Spring;->mPreviousState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide v7, v1, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 13
     iput-wide v9, v1, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
-    .line 14
     :cond_2
     iget-wide v1, v0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
@@ -446,21 +414,17 @@
 
     goto :goto_1
 
-    .line 15
     :cond_3
     iget-object v5, v0, Lcom/facebook/rebound/Spring;->mTempState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide v11, v5, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 16
     iput-wide v13, v5, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
-    .line 17
     iget-object v5, v0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide v7, v5, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 18
     iput-wide v9, v5, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
     const-wide/16 v5, 0x0
@@ -471,10 +435,8 @@
 
     div-double v1, v1, v16
 
-    .line 19
     invoke-direct {v0, v1, v2}, Lcom/facebook/rebound/Spring;->interpolate(D)V
 
-    .line 20
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/facebook/rebound/Spring;->isAtRest()Z
 
@@ -507,19 +469,16 @@
 
     if-lez v1, :cond_7
 
-    .line 21
     iget-wide v3, v0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
     iput-wide v3, v0, Lcom/facebook/rebound/Spring;->mStartValue:D
 
-    .line 22
     iget-object v1, v0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide v3, v1, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
     goto :goto_3
 
-    .line 23
     :cond_7
     iget-object v1, v0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
@@ -527,16 +486,13 @@
 
     iput-wide v3, v0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
-    .line 24
     iput-wide v3, v0, Lcom/facebook/rebound/Spring;->mStartValue:D
 
-    .line 25
     :goto_3
     invoke-virtual {v0, v5, v6}, Lcom/facebook/rebound/Spring;->setVelocity(D)Lcom/facebook/rebound/Spring;
 
     move v1, v2
 
-    .line 26
     :goto_4
     iget-boolean v3, v0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
@@ -544,7 +500,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 27
     iput-boolean v4, v0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
     move v3, v2
@@ -557,7 +512,6 @@
     :goto_5
     if-eqz v1, :cond_9
 
-    .line 28
     iput-boolean v2, v0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
     goto :goto_6
@@ -565,7 +519,6 @@
     :cond_9
     move v2, v4
 
-    .line 29
     :goto_6
     iget-object v1, v0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -589,16 +542,13 @@
 
     if-eqz v3, :cond_b
 
-    .line 30
     invoke-interface {v4, v0}, Lcom/facebook/rebound/SpringListener;->onSpringActivate(Lcom/facebook/rebound/Spring;)V
 
-    .line 31
     :cond_b
     invoke-interface {v4, v0}, Lcom/facebook/rebound/SpringListener;->onSpringUpdate(Lcom/facebook/rebound/Spring;)V
 
     if-eqz v2, :cond_a
 
-    .line 32
     invoke-interface {v4, v0}, Lcom/facebook/rebound/SpringListener;->onSpringAtRest(Lcom/facebook/rebound/Spring;)V
 
     goto :goto_7
@@ -610,7 +560,6 @@
 .method public currentValueIsApproximately(D)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->getCurrentValue()D
 
     move-result-wide v0
@@ -643,12 +592,10 @@
 .method public destroy()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     invoke-virtual {v0, p0}, Lcom/facebook/rebound/BaseSpringSystem;->deregisterSpring(Lcom/facebook/rebound/Spring;)V
@@ -659,7 +606,6 @@
 .method public getCurrentDisplacementDistance()D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     invoke-direct {p0, v0}, Lcom/facebook/rebound/Spring;->getDisplacementDistanceForState(Lcom/facebook/rebound/Spring$PhysicsState;)D
@@ -672,7 +618,6 @@
 .method public getCurrentValue()D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v0, v0, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
@@ -683,7 +628,6 @@
 .method public getEndValue()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
     return-wide v0
@@ -692,7 +636,6 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mId:Ljava/lang/String;
 
     return-object v0
@@ -701,7 +644,6 @@
 .method public getRestDisplacementThreshold()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mDisplacementFromRestThreshold:D
 
     return-wide v0
@@ -710,7 +652,6 @@
 .method public getRestSpeedThreshold()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mRestSpeedThreshold:D
 
     return-wide v0
@@ -719,7 +660,6 @@
 .method public getSpringConfig()Lcom/facebook/rebound/SpringConfig;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     return-object v0
@@ -728,7 +668,6 @@
 .method public getStartValue()D
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mStartValue:D
 
     return-wide v0
@@ -737,7 +676,6 @@
 .method public getVelocity()D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v0, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
@@ -748,7 +686,6 @@
 .method public isAtRest()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v0, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
@@ -800,7 +737,6 @@
 .method public isOvershootClampingEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/facebook/rebound/Spring;->mOvershootClampingEnabled:Z
 
     return v0
@@ -809,7 +745,6 @@
 .method public isOvershooting()Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     iget-wide v0, v0, Lcom/facebook/rebound/SpringConfig;->tension:D
@@ -872,7 +807,6 @@
 .method public removeAllListeners()Lcom/facebook/rebound/Spring;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
@@ -885,14 +819,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -906,21 +838,18 @@
 .method public setAtRest()Lcom/facebook/rebound/Spring;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
     iput-wide v1, p0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
-    .line 2
     iget-object v3, p0, Lcom/facebook/rebound/Spring;->mTempState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide v1, v3, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
     const-wide/16 v1, 0x0
 
-    .line 3
     iput-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
     return-object p0
@@ -931,7 +860,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, p2, v0}, Lcom/facebook/rebound/Spring;->setCurrentValue(DZ)Lcom/facebook/rebound/Spring;
 
     move-result-object p1
@@ -942,15 +870,12 @@
 .method public setCurrentValue(DZ)Lcom/facebook/rebound/Spring;
     .locals 1
 
-    .line 2
     iput-wide p1, p0, Lcom/facebook/rebound/Spring;->mStartValue:D
 
-    .line 3
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iput-wide p1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->position:D
 
-    .line 4
     iget-object p1, p0, Lcom/facebook/rebound/Spring;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -959,7 +884,6 @@
 
     invoke-virtual {p1, p2}, Lcom/facebook/rebound/BaseSpringSystem;->activateSpring(Ljava/lang/String;)V
 
-    .line 5
     iget-object p1, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -979,7 +903,6 @@
 
     check-cast p2, Lcom/facebook/rebound/SpringListener;
 
-    .line 6
     invoke-interface {p2, p0}, Lcom/facebook/rebound/SpringListener;->onSpringUpdate(Lcom/facebook/rebound/Spring;)V
 
     goto :goto_0
@@ -987,7 +910,6 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 7
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->setAtRest()Lcom/facebook/rebound/Spring;
 
     :cond_1
@@ -997,7 +919,6 @@
 .method public setEndValue(D)Lcom/facebook/rebound/Spring;
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
     cmpl-double v0, v0, p1
@@ -1012,7 +933,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->getCurrentValue()D
 
@@ -1020,10 +940,8 @@
 
     iput-wide v0, p0, Lcom/facebook/rebound/Spring;->mStartValue:D
 
-    .line 3
     iput-wide p1, p0, Lcom/facebook/rebound/Spring;->mEndValue:D
 
-    .line 4
     iget-object p1, p0, Lcom/facebook/rebound/Spring;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -1032,7 +950,6 @@
 
     invoke-virtual {p1, p2}, Lcom/facebook/rebound/BaseSpringSystem;->activateSpring(Ljava/lang/String;)V
 
-    .line 5
     iget-object p1, p0, Lcom/facebook/rebound/Spring;->mListeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -1052,7 +969,6 @@
 
     check-cast p2, Lcom/facebook/rebound/SpringListener;
 
-    .line 6
     invoke-interface {p2, p0}, Lcom/facebook/rebound/SpringListener;->onSpringEndStateChange(Lcom/facebook/rebound/Spring;)V
 
     goto :goto_0
@@ -1064,7 +980,6 @@
 .method public setOvershootClampingEnabled(Z)Lcom/facebook/rebound/Spring;
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/facebook/rebound/Spring;->mOvershootClampingEnabled:Z
 
     return-object p0
@@ -1073,7 +988,6 @@
 .method public setRestDisplacementThreshold(D)Lcom/facebook/rebound/Spring;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/facebook/rebound/Spring;->mDisplacementFromRestThreshold:D
 
     return-object p0
@@ -1082,7 +996,6 @@
 .method public setRestSpeedThreshold(D)Lcom/facebook/rebound/Spring;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/facebook/rebound/Spring;->mRestSpeedThreshold:D
 
     return-object p0
@@ -1093,12 +1006,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/Spring;->mSpringConfig:Lcom/facebook/rebound/SpringConfig;
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1112,7 +1023,6 @@
 .method public setVelocity(D)Lcom/facebook/rebound/Spring;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/Spring;->mCurrentState:Lcom/facebook/rebound/Spring$PhysicsState;
 
     iget-wide v1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
@@ -1123,11 +1033,9 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     iput-wide p1, v0, Lcom/facebook/rebound/Spring$PhysicsState;->velocity:D
 
-    .line 3
     iget-object p1, p0, Lcom/facebook/rebound/Spring;->mSpringSystem:Lcom/facebook/rebound/BaseSpringSystem;
 
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->getId()Ljava/lang/String;
@@ -1142,7 +1050,6 @@
 .method public systemShouldAdvance()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/facebook/rebound/Spring;->isAtRest()Z
 
     move-result v0
@@ -1173,7 +1080,6 @@
 .method public wasAtRest()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/facebook/rebound/Spring;->mWasAtRest:Z
 
     return v0

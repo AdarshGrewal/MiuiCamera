@@ -30,10 +30,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,7 +44,6 @@
 .method public synthetic constructor <init>(Lcom/google/android/play/core/splitinstall/SplitInstallRequest$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallRequest$Builder;-><init>()V
 
     return-void
@@ -55,7 +52,6 @@
 .method public static synthetic access$100(Lcom/google/android/play/core/splitinstall/SplitInstallRequest$Builder;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallRequest$Builder;->moduleNames:Ljava/util/List;
 
     return-object p0
@@ -66,7 +62,6 @@
 .method public addModule(Ljava/lang/String;)Lcom/google/android/play/core/splitinstall/SplitInstallRequest$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallRequest$Builder;->moduleNames:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -77,7 +72,6 @@
 .method public build()Lcom/google/android/play/core/splitinstall/SplitInstallRequest;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/google/android/play/core/splitinstall/SplitInstallRequest;
 
     const/4 v1, 0x0

@@ -7,7 +7,6 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/MiCamera2Preview;-><init>(II)V
 
     return-void

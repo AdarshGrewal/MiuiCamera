@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/recorder/MiRecorder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$InfoListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onInfo(Landroid/media/MediaRecorder;II)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$InfoListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->access$000(Lcom/android/camera/dualvideo/recorder/MiRecorder;)Z
@@ -49,7 +47,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +74,6 @@
 
     if-eq p2, p1, :cond_1
 
-    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,10 +95,8 @@
     :cond_1
     const-string/jumbo p1, "reached max size."
 
-    .line 4
     invoke-static {p3, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/recorder/MiRecorder$InfoListener;->this$0:Lcom/android/camera/dualvideo/recorder/MiRecorder;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->access$100(Lcom/android/camera/dualvideo/recorder/MiRecorder;)Lcom/android/camera/dualvideo/recorder/MiRecorder$MiRecorderListener;

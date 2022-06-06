@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension$3;->this$0:Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/videoplayer/utils/HandlerThreadExtension;->access$000()Z
 
     move-result v0
@@ -53,7 +51,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 

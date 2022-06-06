@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,14 +42,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     array-length v0, p1
 
     if-lez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 2
     aget-object p1, p1, v0
 
     invoke-virtual {p0, p1}, Lcom/android/camera/network/net/base/SimpleResponseListener;->onResponse(Ljava/lang/Object;)V
@@ -60,7 +57,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/network/net/base/SimpleResponseListener;->onResponse(Ljava/lang/Object;)V
 
     :goto_0

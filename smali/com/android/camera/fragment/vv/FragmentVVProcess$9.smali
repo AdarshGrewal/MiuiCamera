@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$9;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$9;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$1300(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Landroid/widget/ImageView;
@@ -51,7 +49,6 @@
 
     invoke-static {v0, v3, v2, v1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$1400(Lcom/android/camera/fragment/vv/FragmentVVProcess;IZLandroid/view/View;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$9;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$1500(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Landroid/widget/ImageView;

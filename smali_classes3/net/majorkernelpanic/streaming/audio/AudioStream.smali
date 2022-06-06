@@ -19,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/MediaStream;-><init>()V
 
-    .line 2
     sget-object v0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->DEFAULT_AUDIO_QUALITY:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->copyOf(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
@@ -31,7 +29,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mRequestedQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
-    .line 3
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->copyOf(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     move-result-object v0
@@ -40,7 +37,6 @@
 
     const/4 v0, 0x5
 
-    .line 4
     invoke-virtual {p0, v0}, Lnet/majorkernelpanic/streaming/audio/AudioStream;->setAudioSource(I)V
 
     return-void
@@ -56,10 +52,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->createSockets()V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,40 +98,34 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance v0, Landroid/media/MediaRecorder;
 
     invoke-direct {v0}, Landroid/media/MediaRecorder;-><init>()V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
-    .line 4
     iget v1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mAudioSource:I
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioSource(I)V
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mOutputFormat:I
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
 
-    .line 6
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mAudioEncoder:I
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioChannels(I)V
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
@@ -146,7 +134,6 @@
 
     invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setAudioSamplingRate(I)V
 
-    .line 9
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
@@ -155,14 +142,12 @@
 
     invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setAudioEncodingBitRate(I)V
 
-    .line 10
     sget-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     const/4 v2, 0x2
 
     if-ne v0, v2, :cond_0
 
-    .line 11
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelWrite:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -171,7 +156,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSender:Landroid/net/LocalSocket;
 
@@ -179,33 +163,27 @@
 
     move-result-object v0
 
-    .line 13
     :goto_0
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v3, v0}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/io/FileDescriptor;)V
 
-    .line 14
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v3, v0}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/io/FileDescriptor;)V
 
-    .line 15
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->prepare()V
 
-    .line 16
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->start()V
 
-    .line 17
     sget-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     if-ne v0, v2, :cond_1
 
-    .line 18
     new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelRead:Landroid/os/ParcelFileDescriptor;
@@ -214,7 +192,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_1
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
@@ -225,27 +202,22 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 20
     :goto_1
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v2, v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->setInputStream(Ljava/io/InputStream;)V
 
-    .line 21
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->start()V
 
-    .line 22
     iput-boolean v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     return-void
 
-    .line 23
     :catch_0
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->stop()V
 
-    .line 24
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Something happened with the local sockets :/ Start failed !"
@@ -258,7 +230,6 @@
 .method public getAudioQuality()Lnet/majorkernelpanic/streaming/audio/AudioQuality;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     return-object v0
@@ -267,7 +238,6 @@
 .method public setAudioEncoder(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mAudioEncoder:I
 
     return-void
@@ -276,7 +246,6 @@
 .method public setAudioQuality(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mRequestedQuality:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     return-void
@@ -285,7 +254,6 @@
 .method public setAudioSource(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mAudioSource:I
 
     return-void
@@ -294,7 +262,6 @@
 .method public setOutputFormat(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/audio/AudioStream;->mOutputFormat:I
 
     return-void

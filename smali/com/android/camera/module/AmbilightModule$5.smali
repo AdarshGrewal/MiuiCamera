@@ -1,14 +1,11 @@
 .class public Lcom/android/camera/module/AmbilightModule$5;
-.super Ljava/lang/Object;
+.super Landroid/os/CountDownTimer;
 .source "AmbilightModule.java"
-
-# interfaces
-.implements Lcom/android/camera2/Camera2Proxy$PictureCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/AmbilightModule;->startAmbilightShooting()V
+    value = Lcom/android/camera/module/AmbilightModule;->updateRecordingTime()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,215 +19,49 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/AmbilightModule;)V
+.method public constructor <init>(Lcom/android/camera/module/AmbilightModule;JJ)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCaptureProgress(Lcom/android/camera2/QuickViewParam;Landroid/hardware/camera2/CaptureResult;)V
-    .locals 3
+.method public onFinish()V
+    .locals 0
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+    return-void
+.end method
 
-    move-result p1
+.method public onTick(J)V
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    sget-boolean p1, Lcom/android/camera/module/AmbilightModule;->mSupportAutoAe:Z
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    sget-object p1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AMBILIGHT_AE_EXPOSURE:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-static {p2, p1}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
+    invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Long;
-
-    if-eqz p1, :cond_0
-
-    const/4 p2, 0x4
-
-    .line 3
-    sget-object v0, Lcom/android/camera/module/AmbilightModule;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "onCaptureProgress: [exposureTime] "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p2, v0, v1}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 4
     iget-object p2, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
 
-    iget-object p2, p2, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
-
-    const/16 v0, 0x6b
-
-    invoke-virtual {p2, v0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onCaptureStart(Lcom/xiaomi/camera/core/ParallelTaskData;Lcom/android/camera2/CaptureStartParam;)Lcom/xiaomi/camera/core/ParallelTaskData;
-    .locals 3
-
-    .line 1
-    sget-object v0, Lcom/android/camera/module/AmbilightModule;->TAG:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    .line 2
-    invoke-virtual {p2}, Lcom/android/camera2/CaptureStartParam;->getPictureSize()Lcom/android/camera/CameraSize;
+    invoke-static {p2}, Lcom/android/camera/module/AmbilightModule;->access$200(Lcom/android/camera/module/AmbilightModule;)Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
     move-result-object p2
-
-    const/4 v2, 0x0
-
-    aput-object p2, v1, v2
-
-    const-string/jumbo p2, "onCaptureStart pictureSize= %s"
-
-    .line 3
-    invoke-static {p2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 v1, 0x4
-
-    invoke-static {v1, v0, p2}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
-
-    return-object p1
-.end method
-
-.method public onPictureTaken([BLandroid/hardware/camera2/CaptureResult;)V
-    .locals 2
-
-    .line 1
-    sget-object p1, Lcom/android/camera/module/AmbilightModule;->TAG:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    const-string/jumbo v1, "onPictureTaken"
-
-    invoke-static {v0, p1, v1}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
-
-    .line 2
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    invoke-static {p1}, Lcom/android/camera/module/AmbilightModule;->access$300(Lcom/android/camera/module/AmbilightModule;)Landroid/hardware/camera2/CaptureResult;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    invoke-static {p1}, Lcom/android/camera/module/AmbilightModule;->access$400(Lcom/android/camera/module/AmbilightModule;)[B
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    invoke-static {p1, p2}, Lcom/android/camera/module/AmbilightModule;->access$302(Lcom/android/camera/module/AmbilightModule;Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;
-
-    .line 4
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    iget-object p2, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
-
-    const/16 v0, 0x66
-
-    invoke-static {p1}, Lcom/android/camera/module/AmbilightModule;->access$400(Lcom/android/camera/module/AmbilightModule;)[B
-
-    move-result-object p1
-
-    invoke-virtual {p2, v0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPictureTakenImageConsumed(Landroid/media/Image;Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    const/4 v1, 0x2
-
-    invoke-static {p1, v1}, LOooO00o/OooO0OO/OooO00o/OooO00o/OooO0OO;->OooO00o(Landroid/media/Image;I)[B
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/module/AmbilightModule;->access$402(Lcom/android/camera/module/AmbilightModule;[B)[B
-
-    .line 2
-    invoke-virtual {p1}, Landroid/media/Image;->close()V
 
     if-eqz p2, :cond_0
 
-    .line 3
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
+    iget-object p2, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
 
-    invoke-static {p1, p2}, Lcom/android/camera/module/AmbilightModule;->access$302(Lcom/android/camera/module/AmbilightModule;Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;
+    invoke-static {p2}, Lcom/android/camera/module/AmbilightModule;->access$200(Lcom/android/camera/module/AmbilightModule;)Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 4
-    iget-object p1, p0, Lcom/android/camera/module/AmbilightModule$5;->this$0:Lcom/android/camera/module/AmbilightModule;
+    move-result-object p2
 
-    iget-object p2, p1, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
-
-    const/16 v0, 0x66
-
-    invoke-static {p1}, Lcom/android/camera/module/AmbilightModule;->access$400(Lcom/android/camera/module/AmbilightModule;)[B
-
-    move-result-object p1
-
-    invoke-virtual {p2, v0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+    invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
 
     :cond_0
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

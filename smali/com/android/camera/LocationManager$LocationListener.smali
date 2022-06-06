@@ -31,20 +31,16 @@
 .method public constructor <init>(Lcom/android/camera/LocationManager;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/LocationManager$LocationListener;->mProvider:Ljava/lang/String;
 
-    .line 4
     new-instance p1, Landroid/location/Location;
 
     iget-object p2, p0, Lcom/android/camera/LocationManager$LocationListener;->mProvider:Ljava/lang/String;
@@ -61,7 +57,6 @@
 .method public current()Landroid/location/Location;
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
     if-eqz v0, :cond_0
@@ -80,7 +75,6 @@
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 4
 
-    .line 1
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -101,7 +95,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
@@ -123,12 +116,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {v0}, Lcom/android/camera/LocationManager;->access$400(Lcom/android/camera/LocationManager;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {v0}, Lcom/android/camera/LocationManager;->access$500(Lcom/android/camera/LocationManager;)Lcom/android/camera/LocationManager$Listener;
@@ -137,7 +128,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {v0}, Lcom/android/camera/LocationManager;->access$500(Lcom/android/camera/LocationManager;)Lcom/android/camera/LocationManager$Listener;
@@ -146,7 +136,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/camera/LocationManager$Listener;->showGpsOnScreenIndicator(Z)V
 
-    .line 6
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
@@ -154,7 +143,6 @@
 
     if-nez v0, :cond_2
 
-    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +163,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -195,20 +182,17 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :goto_0
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->mLastLocation:Landroid/location/Location;
 
     invoke-virtual {v0, p1}, Landroid/location/Location;->set(Landroid/location/Location;)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     iget-object v0, p0, Lcom/android/camera/LocationManager$LocationListener;->mLastLocation:Landroid/location/Location;
 
     invoke-static {p1, v0}, Lcom/android/camera/LocationManager;->access$600(Lcom/android/camera/LocationManager;Landroid/location/Location;)V
 
-    .line 11
     iput-boolean v1, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
     return-void
@@ -219,7 +203,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
     return-void
@@ -245,10 +228,8 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/LocationManager$LocationListener;->mValid:Z
 
-    .line 2
     iget-object p3, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {p3}, Lcom/android/camera/LocationManager;->access$500(Lcom/android/camera/LocationManager;)Lcom/android/camera/LocationManager$Listener;
@@ -267,14 +248,12 @@
 
     const-string p3, "gps"
 
-    .line 3
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/LocationManager$LocationListener;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {p1}, Lcom/android/camera/LocationManager;->access$500(Lcom/android/camera/LocationManager;)Lcom/android/camera/LocationManager$Listener;

@@ -58,7 +58,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     sget v0, Ljava8/util/stream/StreamOpFlag;->NOT_SIZED:I
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->IS_SHORT_CIRCUIT:I
@@ -67,26 +66,22 @@
 
     sput v0, Ljava8/util/stream/WhileOps;->TAKE_FLAGS:I
 
-    .line 2
     sget v0, Ljava8/util/stream/StreamOpFlag;->NOT_SIZED:I
 
     sput v0, Ljava8/util/stream/WhileOps;->DROP_FLAGS:I
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/WhileOps$$Lambda$1;->lambdaFactory$()Ljava8/util/function/IntFunction;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/WhileOps;->INT_ARR_GEN:Ljava8/util/function/IntFunction;
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/WhileOps$$Lambda$2;->lambdaFactory$()Ljava8/util/function/IntFunction;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/WhileOps;->LONG_ARR_GEN:Ljava8/util/function/IntFunction;
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/WhileOps$$Lambda$3;->lambdaFactory$()Ljava8/util/function/IntFunction;
 
     move-result-object v0
@@ -99,7 +94,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -108,7 +102,6 @@
 .method public static synthetic lambda$static$154(I)[Ljava/lang/Integer;
     .locals 0
 
-    .line 1
     new-array p0, p0, [Ljava/lang/Integer;
 
     return-object p0
@@ -117,7 +110,6 @@
 .method public static synthetic lambda$static$155(I)[Ljava/lang/Long;
     .locals 0
 
-    .line 1
     new-array p0, p0, [Ljava/lang/Long;
 
     return-object p0
@@ -126,7 +118,6 @@
 .method public static synthetic lambda$static$156(I)[Ljava/lang/Double;
     .locals 0
 
-    .line 1
     new-array p0, p0, [Ljava/lang/Double;
 
     return-object p0
@@ -147,10 +138,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$4Op;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -177,10 +166,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$2Op;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -207,10 +194,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$3Op;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -238,10 +223,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$1Op;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -268,10 +251,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$4;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -298,10 +279,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$2;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -328,10 +307,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$3;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -359,10 +336,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$1;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;

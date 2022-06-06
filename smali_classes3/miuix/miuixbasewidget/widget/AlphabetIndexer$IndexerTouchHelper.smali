@@ -22,10 +22,8 @@
 .method public constructor <init>(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
-    .line 2
     invoke-direct {p0, p2}, Landroidx/customview/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public getVirtualViewAt(FF)I
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -48,14 +45,12 @@
     :goto_0
     if-ge v0, p1, :cond_1
 
-    .line 2
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v2
@@ -100,7 +95,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -112,7 +106,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -138,13 +131,11 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-static {p2, p1}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->access$600(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;I)V
 
-    .line 2
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-static {p2}, Lmiuix/miuixbasewidget/widget/AlphabetIndexer;->access$700(Lmiuix/miuixbasewidget/widget/AlphabetIndexer;)Landroid/widget/SectionIndexer;
@@ -155,7 +146,6 @@
 
     const/4 p2, 0x1
 
-    .line 3
     invoke-virtual {p0, p1, p2}, Landroidx/customview/widget/ExploreByTouchHelper;->sendEventForVirtualView(II)Z
 
     return p2
@@ -164,7 +154,6 @@
 .method public onPopulateNodeForVirtualView(ILandroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/AlphabetIndexer$IndexerTouchHelper;->this$0:Lmiuix/miuixbasewidget/widget/AlphabetIndexer;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -173,7 +162,6 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 2
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -182,10 +170,8 @@
 
     const/16 v0, 0x10
 
-    .line 3
     invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->addAction(I)V
 
-    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getLeft()I
@@ -206,7 +192,6 @@
 
     invoke-direct {v0, v1, v2, v3, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 5
     invoke-virtual {p2, v0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setBoundsInParent(Landroid/graphics/Rect;)V
 
     return-void

@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,14 +23,12 @@
 .method public init(J)V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/camera/dualvideo/render/DualVideoTimer;->mStartTime:J
 
-    .line 2
     iput-wide p1, p0, Lcom/android/camera/dualvideo/render/DualVideoTimer;->mDuration:J
 
     return-void
@@ -40,7 +37,6 @@
 .method public isValid()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -49,7 +45,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 2
     iget-wide v2, p0, Lcom/android/camera/dualvideo/render/DualVideoTimer;->mDuration:J
 
     cmp-long v0, v2, v0

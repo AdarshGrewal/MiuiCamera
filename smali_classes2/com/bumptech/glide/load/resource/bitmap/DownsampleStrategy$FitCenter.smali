@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;-><init>()V
 
     return-void
@@ -29,17 +28,14 @@
 .method public getSampleSizeRounding(IIII)Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
     .locals 0
 
-    .line 1
     sget-boolean p1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->IS_BITMAP_FACTORY_SCALING_SUPPORTED:Z
 
     if-eqz p1, :cond_0
 
-    .line 2
     sget-object p1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;->QUALITY:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
     return-object p1
 
-    .line 3
     :cond_0
     sget-object p1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;->MEMORY:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
@@ -49,7 +45,6 @@
 .method public getScaleFactor(IIII)F
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->IS_BITMAP_FACTORY_SCALING_SUPPORTED:Z
 
     if-eqz v0, :cond_0
@@ -66,20 +61,17 @@
 
     div-float/2addr p1, p2
 
-    .line 2
     invoke-static {p3, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
 
     return p1
 
-    .line 3
     :cond_0
     div-int/2addr p2, p4
 
     div-int/2addr p1, p3
 
-    .line 4
     invoke-static {p2, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -90,7 +82,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 

@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public getRecorderManager(Lcom/android/camera/storage/ImageSaver;)Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/StandaloneRecorderProtocolImpl;->mRecordManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     if-nez v0, :cond_1
@@ -40,7 +38,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/recorder/StandaloneRecorderProtocolImpl;->mRecordManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
-    .line 3
     :cond_1
     iget-object p1, p0, Lcom/android/camera/dualvideo/recorder/StandaloneRecorderProtocolImpl;->mRecordManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
@@ -62,10 +58,8 @@
 
     const-string/jumbo v1, "registerProtocol: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -84,10 +78,8 @@
 
     const-string/jumbo v1, "unRegisterProtocol: "
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -96,17 +88,14 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/StandaloneRecorderProtocolImpl;->mRecordManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 4
     invoke-virtual {v0, v1}, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->stopRecorder(Lio/reactivex/SingleEmitter;)V
 
-    .line 5
     iput-object v1, p0, Lcom/android/camera/dualvideo/recorder/StandaloneRecorderProtocolImpl;->mRecordManager:Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;
 
     :cond_0

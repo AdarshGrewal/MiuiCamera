@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/FilmDreamImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,8 +37,7 @@
 .method public OnReceiveFailed()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$200()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
@@ -47,17 +45,15 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$602(Lcom/android/camera/module/impl/component/FilmDreamImpl;Z)Z
+    invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$702(Lcom/android/camera/module/impl/component/FilmDreamImpl;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
-    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Lcom/android/camera/protocol/ModeProtocol$FilmDreamProcess;
+    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$400(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Lcom/android/camera/protocol/ModeProtocol$FilmDreamProcess;
 
     move-result-object v0
 
@@ -71,8 +67,7 @@
 .method public OnReceiveFinish()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$200()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
@@ -80,17 +75,15 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$602(Lcom/android/camera/module/impl/component/FilmDreamImpl;Z)Z
+    invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$702(Lcom/android/camera/module/impl/component/FilmDreamImpl;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
-    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Lcom/android/camera/protocol/ModeProtocol$FilmDreamProcess;
+    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$400(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Lcom/android/camera/protocol/ModeProtocol$FilmDreamProcess;
 
     move-result-object v0
 
@@ -102,8 +95,7 @@
 .method public OnReceiveFirstFrame()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$200()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
@@ -111,10 +103,9 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/FilmDreamImpl$5;->this$0:Lcom/android/camera/module/impl/component/FilmDreamImpl;
 
-    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$800(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/camera/module/impl/component/FilmDreamImpl;->access$900(Lcom/android/camera/module/impl/component/FilmDreamImpl;)Landroid/os/Handler;
 
     move-result-object v0
 

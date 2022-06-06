@@ -27,7 +27,6 @@
 .method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/Streams$1;->val$a:Ljava/lang/Runnable;
 
     iput-object p2, p0, Ljava8/util/stream/Streams$1;->val$b:Ljava/lang/Runnable;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Ljava8/util/stream/Streams$1;->val$a:Ljava/lang/Runnable;
 
@@ -50,7 +48,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$1;->val$b:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
@@ -60,7 +57,6 @@
     :catchall_0
     move-exception v0
 
-    .line 3
     :try_start_1
     iget-object v1, p0, Ljava8/util/stream/Streams$1;->val$b:Ljava/lang/Runnable;
 
@@ -68,23 +64,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4
     :catchall_1
     instance-of v1, v0, Ljava/lang/RuntimeException;
 
     if-nez v1, :cond_1
 
-    .line 5
     instance-of v1, v0, Ljava/lang/Error;
 
     if-eqz v1, :cond_0
 
-    .line 6
     check-cast v0, Ljava/lang/Error;
 
     throw v0
 
-    .line 7
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -92,7 +84,6 @@
 
     throw v1
 
-    .line 8
     :cond_1
     check-cast v0, Ljava/lang/RuntimeException;
 

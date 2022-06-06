@@ -42,7 +42,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/miui/extravideo/common/MediaDecoderAsync;-><init>(Ljava/lang/String;Landroid/os/Handler;)V
 
     return-void
@@ -51,40 +50,32 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/os/Handler;)V
     .locals 5
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 3
     iput v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mSkipFrameTimes:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecodeFrameIndex:I
 
-    .line 5
     iput-object p2, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mHandler:Landroid/os/Handler;
 
-    .line 6
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mTargetFile:Ljava/lang/String;
 
-    .line 7
     new-instance p1, Lcom/miui/extravideo/common/MediaParamsHolder;
 
     invoke-direct {p1}, Lcom/miui/extravideo/common/MediaParamsHolder;-><init>()V
 
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
-    .line 8
     new-instance p1, Landroid/media/MediaExtractor;
 
     invoke-direct {p1}, Landroid/media/MediaExtractor;-><init>()V
 
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
-    .line 9
     :try_start_0
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mTargetFile:Ljava/lang/String;
 
@@ -92,7 +83,6 @@
 
     move p1, v0
 
-    .line 10
     :goto_0
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
@@ -102,7 +92,6 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 11
     iget-object v1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v1, p1}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
@@ -111,21 +100,18 @@
 
     const-string v2, "mime"
 
-    .line 12
     invoke-virtual {v1, v2}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "video/"
 
-    .line 13
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 14
     iget-object v3, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
     const-string v4, "width"
@@ -136,7 +122,6 @@
 
     iput v4, v3, Lcom/miui/extravideo/common/MediaParamsHolder;->videoWidth:I
 
-    .line 15
     iget-object v3, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
     const-string v4, "height"
@@ -147,7 +132,6 @@
 
     iput v4, v3, Lcom/miui/extravideo/common/MediaParamsHolder;->videoHeight:I
 
-    .line 16
     iget-object v3, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
     const-string v4, "rotation-degrees"
@@ -158,24 +142,20 @@
 
     iput v4, v3, Lcom/miui/extravideo/common/MediaParamsHolder;->videoDegree:I
 
-    .line 17
     iget-object v3, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
     iput-object v2, v3, Lcom/miui/extravideo/common/MediaParamsHolder;->mimeType:Ljava/lang/String;
 
-    .line 18
     iget-object v3, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v3, p1}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
-    .line 19
     invoke-static {v2}, Landroid/media/MediaCodec;->createDecoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
-    .line 20
     new-instance v2, Lcom/miui/extravideo/common/MediaDecoderAsync$CustomCallback;
 
     const/4 v3, 0x0
@@ -184,7 +164,6 @@
 
     invoke-virtual {p1, v2, p2}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;Landroid/os/Handler;)V
 
-    .line 21
     iget-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {p1, v1, v3, v3, v0}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
@@ -201,7 +180,6 @@
     :catch_0
     move-exception p1
 
-    .line 22
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mInitException:Ljava/lang/Exception;
 
     :cond_1
@@ -212,7 +190,6 @@
 .method public static synthetic access$100(Lcom/miui/extravideo/common/MediaDecoderAsync;)Landroid/media/MediaExtractor;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     return-object p0
@@ -221,7 +198,6 @@
 .method public static synthetic access$200(Lcom/miui/extravideo/common/MediaDecoderAsync;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecodeFrameIndex:I
 
     return p0
@@ -230,7 +206,6 @@
 .method public static synthetic access$208(Lcom/miui/extravideo/common/MediaDecoderAsync;)I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecodeFrameIndex:I
 
     add-int/lit8 v1, v0, 0x1
@@ -243,7 +218,6 @@
 .method public static synthetic access$300(Lcom/miui/extravideo/common/MediaDecoderAsync;)Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mListener:Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
 
     return-object p0
@@ -252,7 +226,6 @@
 .method public static synthetic access$400(Lcom/miui/extravideo/common/MediaDecoderAsync;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mSkipFrameTimes:I
 
     return p0
@@ -261,7 +234,6 @@
 .method public static final getInteger(Landroid/media/MediaFormat;Ljava/lang/String;I)I
     .locals 0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
@@ -281,7 +253,6 @@
 .method public getMediaParamsHolder()Lcom/miui/extravideo/common/MediaParamsHolder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaParamsHolder:Lcom/miui/extravideo/common/MediaParamsHolder;
 
     return-object v0
@@ -290,31 +261,25 @@
 .method public release()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
-    .line 3
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0}, Landroid/media/MediaExtractor;->release()V
 
     :cond_1
@@ -324,7 +289,6 @@
 .method public setListener(Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mListener:Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
 
     return-void
@@ -333,7 +297,6 @@
 .method public setSkipFrameTimes(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mSkipFrameTimes:I
 
     return-void
@@ -347,19 +310,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mInitException:Ljava/lang/Exception;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
     return-void
 
-    .line 3
     :cond_0
     throw v0
 .end method
@@ -367,17 +327,14 @@
 .method public stop()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
-    .line 2
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mListener:Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -392,7 +349,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/miui/extravideo/common/MediaDecoderAsync$1;
@@ -403,7 +359,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/miui/extravideo/common/MediaDecoderAsync;->mListener:Lcom/miui/extravideo/common/MediaDecoderAsync$DecodeUpdateListener;
 

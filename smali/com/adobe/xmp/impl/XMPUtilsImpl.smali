@@ -42,7 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,19 +55,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertImplementation(Lcom/adobe/xmp/XMPMeta;)V
 
-    .line 2
     invoke-static {p1}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertImplementation(Lcom/adobe/xmp/XMPMeta;)V
 
-    .line 3
     check-cast p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
-    .line 4
     check-cast p1, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
-    .line 5
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -85,26 +79,22 @@
 
     if-eqz v0, :cond_6
 
-    .line 6
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 7
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 9
     invoke-static {v1, v2, v3}, Lcom/adobe/xmp/impl/XMPNodeUtils;->findSchemaNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;Z)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v1
@@ -113,7 +103,6 @@
 
     if-nez v1, :cond_1
 
-    .line 10
     new-instance v1, Lcom/adobe/xmp/impl/XMPNode;
 
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
@@ -128,14 +117,12 @@
 
     invoke-direct {v5}, Lcom/adobe/xmp/options/PropertyOptions;-><init>()V
 
-    .line 11
     invoke-virtual {v5, v2}, Lcom/adobe/xmp/options/PropertyOptions;->setSchemaNode(Z)Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v5
 
     invoke-direct {v1, v3, v4, v5}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 12
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v3
@@ -144,7 +131,6 @@
 
     move v3, v2
 
-    .line 13
     :cond_1
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
@@ -158,7 +144,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 14
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -167,7 +152,6 @@
 
     if-nez p2, :cond_3
 
-    .line 15
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -182,13 +166,11 @@
 
     if-nez v5, :cond_2
 
-    .line 16
     :cond_3
     invoke-static {p1, v4, v1, p3, p4}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->appendSubtree(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/XMPNode;ZZ)V
 
     goto :goto_1
 
-    .line 17
     :cond_4
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
@@ -200,7 +182,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 18
     :cond_5
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
@@ -222,7 +203,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -237,7 +217,6 @@
 
     if-eqz p4, :cond_2
 
-    .line 2
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v3
@@ -248,7 +227,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v3
@@ -267,7 +245,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
@@ -291,7 +268,6 @@
 
     if-eqz v0, :cond_13
 
-    .line 5
     invoke-virtual {p2, v0}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto/16 :goto_7
@@ -299,7 +275,6 @@
     :cond_3
     if-nez v0, :cond_4
 
-    .line 6
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->clone()Ljava/lang/Object;
 
     move-result-object p0
@@ -313,7 +288,6 @@
     :cond_4
     if-eqz p3, :cond_5
 
-    .line 7
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object p3
@@ -324,28 +298,23 @@
 
     invoke-virtual {p0, v0, p3, p4, v2}, Lcom/adobe/xmp/impl/XMPMetaImpl;->setNode(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/Object;Lcom/adobe/xmp/options/PropertyOptions;Z)V
 
-    .line 8
     invoke-virtual {p2, v0}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
-    .line 9
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->clone()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 10
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/XMPNode;->addChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto/16 :goto_7
 
-    .line 11
     :cond_5
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v3
 
-    .line 12
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v4
@@ -354,7 +323,6 @@
 
     return-void
 
-    .line 13
     :cond_6
     invoke-virtual {v3}, Lcom/adobe/xmp/options/PropertyOptions;->isStruct()Z
 
@@ -362,7 +330,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 14
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object p1
@@ -375,31 +342,26 @@
 
     if-eqz v1, :cond_13
 
-    .line 15
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 16
     invoke-static {p0, v1, v0, p3, p4}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->appendSubtree(Lcom/adobe/xmp/impl/XMPMetaImpl;Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/XMPNode;ZZ)V
 
     if-eqz p4, :cond_7
 
-    .line 17
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
     move-result v1
 
     if-nez v1, :cond_7
 
-    .line 18
     invoke-virtual {p2, v0}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_2
 
-    .line 19
     :cond_8
     invoke-virtual {v3}, Lcom/adobe/xmp/options/PropertyOptions;->isArrayAltText()Z
 
@@ -407,7 +369,6 @@
 
     if-eqz p0, :cond_f
 
-    .line 20
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object p0
@@ -420,21 +381,18 @@
 
     if-eqz p1, :cond_13
 
-    .line 21
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 22
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->hasQualifier()Z
 
     move-result p3
 
     if-eqz p3, :cond_9
 
-    .line 23
     invoke-virtual {p1, v2}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p3
@@ -453,7 +411,6 @@
 
     goto :goto_3
 
-    .line 24
     :cond_a
     invoke-virtual {p1, v2}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
@@ -463,7 +420,6 @@
 
     move-result-object p3
 
-    .line 25
     invoke-static {v0, p3}, Lcom/adobe/xmp/impl/XMPNodeUtils;->lookupLanguageItem(Lcom/adobe/xmp/impl/XMPNode;Ljava/lang/String;)I
 
     move-result p3
@@ -472,14 +428,12 @@
 
     if-eqz p4, :cond_c
 
-    .line 26
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_b
 
-    .line 27
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v3
@@ -493,17 +447,14 @@
     :cond_b
     if-eq p3, v1, :cond_9
 
-    .line 28
     invoke-virtual {v0, p3}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(I)V
 
-    .line 29
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
     move-result p1
 
     if-nez p1, :cond_9
 
-    .line 30
     invoke-virtual {p2, v0}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto :goto_3
@@ -511,7 +462,6 @@
     :cond_c
     if-ne p3, v1, :cond_9
 
-    .line 31
     invoke-virtual {p1, v2}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p3
@@ -528,7 +478,6 @@
 
     if-eqz p3, :cond_e
 
-    .line 32
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
     move-result p3
@@ -537,43 +486,35 @@
 
     goto :goto_4
 
-    .line 33
     :cond_d
     new-instance p3, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 34
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 35
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 36
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v4
 
     invoke-direct {p3, v1, v3, v4}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 37
     invoke-virtual {p1, p3}, Lcom/adobe/xmp/impl/XMPNode;->cloneSubtree(Lcom/adobe/xmp/impl/XMPNode;)V
 
-    .line 38
     invoke-virtual {v0, v2, p3}, Lcom/adobe/xmp/impl/XMPNode;->addChild(ILcom/adobe/xmp/impl/XMPNode;)V
 
     goto/16 :goto_3
 
-    .line 39
     :cond_e
     :goto_4
     invoke-virtual {p1, v0}, Lcom/adobe/xmp/impl/XMPNode;->cloneSubtree(Lcom/adobe/xmp/impl/XMPNode;)V
 
     goto/16 :goto_3
 
-    .line 40
     :cond_f
     invoke-virtual {v3}, Lcom/adobe/xmp/options/PropertyOptions;->isArray()Z
 
@@ -581,7 +522,6 @@
 
     if-eqz p0, :cond_13
 
-    .line 41
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object p0
@@ -594,14 +534,12 @@
 
     if-eqz p1, :cond_13
 
-    .line 42
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 43
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object p3
@@ -616,14 +554,12 @@
 
     if-eqz v3, :cond_12
 
-    .line 44
     invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 45
     invoke-static {p1, v3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->itemValuesMatch(Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/XMPNode;)Z
 
     move-result v3
@@ -637,14 +573,12 @@
     :cond_12
     if-nez p4, :cond_10
 
-    .line 46
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->clone()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 47
     invoke-virtual {p2, p1}, Lcom/adobe/xmp/impl/XMPNode;->addChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     move-object v0, p1
@@ -670,7 +604,6 @@
 
     move v2, v1
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -682,12 +615,10 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 3
     invoke-static {v3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result v3
@@ -735,7 +666,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_5
     :goto_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -744,7 +674,6 @@
 
     if-ge v1, p3, :cond_a
 
-    .line 5
     new-instance p3, Ljava/lang/StringBuffer;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -760,7 +689,6 @@
     :goto_3
     if-gt v2, v1, :cond_7
 
-    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -778,7 +706,6 @@
 
     goto :goto_3
 
-    .line 7
     :cond_7
     :goto_4
     invoke-virtual {p3, p1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
@@ -789,7 +716,6 @@
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 8
     :goto_5
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -797,14 +723,12 @@
 
     if-ge v2, v0, :cond_9
 
-    .line 9
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 10
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -815,7 +739,6 @@
 
     if-ne v0, v5, :cond_8
 
-    .line 11
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -826,7 +749,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 12
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -838,11 +760,9 @@
 
     goto :goto_5
 
-    .line 13
     :cond_9
     invoke-virtual {p3, p2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 14
     invoke-virtual {p3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -859,18 +779,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertSchemaNS(Ljava/lang/String;)V
 
-    .line 2
     invoke-static {p2}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertArrayName(Ljava/lang/String;)V
 
-    .line 3
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertImplementation(Lcom/adobe/xmp/XMPMeta;)V
 
     if-eqz p3, :cond_0
 
-    .line 4
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -883,7 +799,6 @@
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 5
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -893,16 +808,13 @@
     :cond_2
     const-string p4, "\""
 
-    .line 6
     :cond_3
     check-cast p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
-    .line 7
     invoke-static {p1, p2}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->expandXPath(Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/xpath/XMPPath;
 
     move-result-object p1
 
-    .line 8
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -921,7 +833,6 @@
 
     return-object p0
 
-    .line 9
     :cond_4
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
@@ -945,25 +856,20 @@
 
     if-nez p1, :cond_8
 
-    .line 10
     invoke-static {p3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->checkSeparator(Ljava/lang/String;)V
 
-    .line 11
     invoke-virtual {p4, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
 
-    .line 12
     invoke-static {p4, p1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->checkQuotes(Ljava/lang/String;C)C
 
     move-result p4
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 14
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object p0
@@ -976,14 +882,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 15
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 16
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v2
@@ -994,7 +898,6 @@
 
     if-nez v2, :cond_6
 
-    .line 17
     invoke-virtual {v1}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v1
@@ -1003,22 +906,18 @@
 
     move-result-object v1
 
-    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 19
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 20
     invoke-virtual {v0, p3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
 
-    .line 21
     :cond_6
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1028,7 +927,6 @@
 
     throw p0
 
-    .line 22
     :cond_7
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -1036,7 +934,6 @@
 
     return-object p0
 
-    .line 23
     :cond_8
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1055,7 +952,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result v0
@@ -1066,7 +962,6 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1079,20 +974,17 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
 
-    .line 4
     invoke-static {p0}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result v0
 
     if-ne v0, v2, :cond_2
 
-    .line 5
     :goto_0
     invoke-static {p1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->getClosingQuote(C)C
 
@@ -1102,7 +994,6 @@
 
     return p0
 
-    .line 6
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1112,7 +1003,6 @@
 
     throw p0
 
-    .line 7
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1120,7 +1010,6 @@
 
     throw p0
 
-    .line 8
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1141,7 +1030,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -1151,7 +1039,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -1172,7 +1059,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1190,7 +1076,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1205,7 +1090,6 @@
 
     return-void
 
-    .line 5
     :cond_4
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1221,7 +1105,6 @@
 
     const-string v0, " \u3000\u303f"
 
-    .line 1
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1241,7 +1124,6 @@
     :cond_0
     const-string v0, ",\uff0c\uff64\ufe50\ufe51\u3001\u060c\u055d"
 
-    .line 2
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1255,7 +1137,6 @@
     :cond_1
     const-string v0, ";\uff1b\ufe54\u061b\u037e"
 
-    .line 3
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1269,7 +1150,6 @@
     :cond_2
     const-string v0, "\"[]\u00ab\u00bb\u301d\u301e\u301f\u2015\u2039\u203a"
 
-    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1302,7 +1182,6 @@
 
     const-string/jumbo v0, "\u2028\u2029"
 
-    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result p0
@@ -1485,7 +1364,6 @@
 
     if-eq p0, p1, :cond_1
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->isClosingingQuote(CCC)Z
 
     move-result p0
@@ -1515,17 +1393,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v0, v1}, Lcom/adobe/xmp/options/Options;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1536,7 +1411,6 @@
 
     return v2
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/adobe/xmp/options/Options;->getOptions()I
 
@@ -1546,7 +1420,6 @@
 
     if-nez v1, :cond_3
 
-    .line 5
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getValue()Ljava/lang/String;
 
     move-result-object v0
@@ -1563,7 +1436,6 @@
 
     return v2
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
@@ -1585,7 +1457,6 @@
 
     return v2
 
-    .line 7
     :cond_2
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
@@ -1597,7 +1468,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 8
     invoke-virtual {p0, v3}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -1606,7 +1476,6 @@
 
     move-result-object p0
 
-    .line 9
     invoke-virtual {p1, v3}, Lcom/adobe/xmp/impl/XMPNode;->getQualifier(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
@@ -1615,7 +1484,6 @@
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1624,7 +1492,6 @@
 
     return v2
 
-    .line 11
     :cond_3
     invoke-virtual {v0}, Lcom/adobe/xmp/options/PropertyOptions;->isStruct()Z
 
@@ -1632,7 +1499,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 12
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getChildrenLength()I
 
     move-result v0
@@ -1645,7 +1511,6 @@
 
     return v2
 
-    .line 13
     :cond_4
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
@@ -1658,14 +1523,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 14
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 15
     invoke-virtual {v0}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -1676,7 +1539,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 16
     invoke-static {v0, v1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->itemValuesMatch(Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/XMPNode;)Z
 
     move-result v0
@@ -1686,7 +1548,6 @@
     :cond_6
     return v2
 
-    .line 17
     :cond_7
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
@@ -1699,14 +1560,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 18
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 19
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1718,14 +1577,12 @@
 
     if-eqz v4, :cond_a
 
-    .line 20
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 21
     invoke-static {v0, v4}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->itemValuesMatch(Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/XMPNode;)Z
 
     move-result v4
@@ -1756,10 +1613,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertImplementation(Lcom/adobe/xmp/XMPMeta;)V
 
-    .line 2
     check-cast p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
     const/4 v0, 0x0
@@ -1768,7 +1623,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 3
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1777,19 +1631,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p4
 
     if-eqz p4, :cond_1
 
-    .line 5
     invoke-static {p1, p2}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->expandXPath(Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/xpath/XMPPath;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -1802,12 +1653,10 @@
 
     if-nez p3, :cond_0
 
-    .line 7
     invoke-virtual {p1, v1}, Lcom/adobe/xmp/impl/xpath/XMPPath;->getSegment(I)Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     move-result-object p2
 
-    .line 8
     invoke-virtual {p2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -1822,23 +1671,19 @@
 
     move-result-object p1
 
-    .line 9
     invoke-static {p2, p1}, Lcom/adobe/xmp/impl/Utils;->isInternalProperty(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
 
     if-nez p1, :cond_7
 
-    .line 10
     :cond_0
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getParent()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1, p0}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
-    .line 12
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p0
@@ -1855,7 +1700,6 @@
 
     if-nez p0, :cond_7
 
-    .line 13
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getParent()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
@@ -1864,7 +1708,6 @@
 
     goto/16 :goto_2
 
-    .line 14
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1879,14 +1722,12 @@
     :cond_2
     if-eqz p1, :cond_5
 
-    .line 15
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p2
 
     if-lez p2, :cond_5
 
-    .line 16
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p2
@@ -1897,14 +1738,12 @@
 
     if-eqz p2, :cond_3
 
-    .line 17
     invoke-static {p2, p3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->removeSchemaChildren(Lcom/adobe/xmp/impl/XMPNode;Z)Z
 
     move-result p3
 
     if-eqz p3, :cond_3
 
-    .line 18
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p3
@@ -1914,7 +1753,6 @@
     :cond_3
     if-eqz p4, :cond_7
 
-    .line 19
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object p2
@@ -1925,31 +1763,25 @@
 
     move p2, v1
 
-    .line 20
     :goto_0
     array-length p3, p1
 
     if-ge p2, p3, :cond_7
 
-    .line 21
     aget-object p3, p1, p2
 
-    .line 22
     invoke-interface {p3}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getNamespace()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 23
     invoke-interface {p3}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getPropName()Ljava/lang/String;
 
     move-result-object p3
 
-    .line 24
     invoke-static {p4, p3}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->expandXPath(Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/xpath/XMPPath;
 
     move-result-object p3
 
-    .line 25
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p4
@@ -1960,12 +1792,10 @@
 
     if-eqz p3, :cond_4
 
-    .line 26
     invoke-virtual {p3}, Lcom/adobe/xmp/impl/XMPNode;->getParent()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p4
 
-    .line 27
     invoke-virtual {p4, p3}, Lcom/adobe/xmp/impl/XMPNode;->removeChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     :cond_4
@@ -1973,7 +1803,6 @@
 
     goto :goto_0
 
-    .line 28
     :cond_5
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
@@ -1991,21 +1820,18 @@
 
     if-eqz p1, :cond_7
 
-    .line 29
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/adobe/xmp/impl/XMPNode;
 
-    .line 30
     invoke-static {p1, p3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->removeSchemaChildren(Lcom/adobe/xmp/impl/XMPNode;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 31
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
@@ -2018,7 +1844,6 @@
 .method public static removeSchemaChildren(Lcom/adobe/xmp/impl/XMPNode;Z)Z
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->iterateChildren()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2031,7 +1856,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -2040,7 +1864,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -2055,13 +1878,11 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 5
     :cond_2
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->hasChildren()Z
 
@@ -2080,28 +1901,22 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertSchemaNS(Ljava/lang/String;)V
 
-    .line 2
     invoke-static {p2}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertArrayName(Ljava/lang/String;)V
 
     const/4 v0, 0x4
 
     if-eqz p3, :cond_12
 
-    .line 3
     invoke-static {p0}, Lcom/adobe/xmp/impl/ParameterAsserts;->assertImplementation(Lcom/adobe/xmp/XMPMeta;)V
 
-    .line 4
     check-cast p0, Lcom/adobe/xmp/impl/XMPMetaImpl;
 
-    .line 5
     invoke-static {p1, p2, p4, p0}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->separateFindCreateArray(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;Lcom/adobe/xmp/impl/XMPMetaImpl;)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p0
 
-    .line 6
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -2118,12 +1933,10 @@
     :goto_1
     if-ge p2, p1, :cond_1
 
-    .line 7
     invoke-virtual {p3, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 8
     invoke-static {v1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result p4
@@ -2155,12 +1968,10 @@
     :goto_3
     if-ge v3, p1, :cond_6
 
-    .line 9
     invoke-virtual {p3, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 10
     invoke-static {v1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result p4
@@ -2187,12 +1998,10 @@
 
     if-ge v5, p1, :cond_6
 
-    .line 11
     invoke-virtual {p3, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 12
     invoke-static {v1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result v5
@@ -2211,7 +2020,6 @@
 
     goto :goto_3
 
-    .line 13
     :cond_6
     :goto_5
     invoke-virtual {p3, p2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -2220,7 +2028,6 @@
 
     goto/16 :goto_a
 
-    .line 14
     :cond_7
     invoke-static {v1}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->getClosingQuote(C)C
 
@@ -2235,19 +2042,16 @@
     :goto_6
     if-ge p2, p1, :cond_d
 
-    .line 15
     invoke-virtual {p3, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
-    .line 16
     invoke-static {v5}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     move-result p4
 
     if-ne p4, v0, :cond_c
 
-    .line 17
     invoke-static {v5, v1, v3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->isSurroundingQuote(CCC)Z
 
     move-result v6
@@ -2261,12 +2065,10 @@
 
     if-ge v6, p1, :cond_9
 
-    .line 18
     invoke-virtual {p3, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
 
-    .line 19
     invoke-static {v7}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->classifyCharacter(C)I
 
     goto :goto_7
@@ -2277,7 +2079,6 @@
     :goto_7
     if-ne v5, v7, :cond_a
 
-    .line 20
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2296,7 +2097,6 @@
 
     goto :goto_9
 
-    .line 21
     :cond_a
     invoke-static {v5, v1, v3}, Lcom/adobe/xmp/impl/XMPUtilsImpl;->isClosingingQuote(CCC)Z
 
@@ -2304,7 +2104,6 @@
 
     if-nez v7, :cond_b
 
-    .line 22
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2328,7 +2127,6 @@
 
     goto :goto_a
 
-    .line 23
     :cond_c
     :goto_8
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2358,7 +2156,6 @@
     :goto_a
     const/4 v4, -0x1
 
-    .line 24
     :goto_b
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/XMPNode;->getChildrenLength()I
 
@@ -2366,7 +2163,6 @@
 
     if-gt v2, v5, :cond_f
 
-    .line 25
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/XMPNode;->getChild(I)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object v5
@@ -2394,7 +2190,6 @@
     :goto_c
     if-gez v4, :cond_10
 
-    .line 26
     new-instance v2, Lcom/adobe/xmp/impl/XMPNode;
 
     const/4 v4, 0x0
@@ -2403,7 +2198,6 @@
 
     invoke-direct {v2, v5, p2, v4}, Lcom/adobe/xmp/impl/XMPNode;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/adobe/xmp/options/PropertyOptions;)V
 
-    .line 27
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/XMPNode;->addChild(Lcom/adobe/xmp/impl/XMPNode;)V
 
     :cond_10
@@ -2415,7 +2209,6 @@
     :goto_d
     return-void
 
-    .line 28
     :cond_12
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2436,24 +2229,20 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p2, v0}, Lcom/adobe/xmp/impl/XMPNodeUtils;->verifySetOptions(Lcom/adobe/xmp/options/PropertyOptions;Ljava/lang/Object;)Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p2
 
-    .line 2
     invoke-virtual {p2}, Lcom/adobe/xmp/options/PropertyOptions;->isOnlyArrayOptions()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 3
     invoke-static {p0, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->expandXPath(Ljava/lang/String;Ljava/lang/String;)Lcom/adobe/xmp/impl/xpath/XMPPath;
 
     move-result-object p0
 
-    .line 4
     invoke-virtual {p3}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
@@ -2468,12 +2257,10 @@
 
     if-eqz p1, :cond_2
 
-    .line 5
     invoke-virtual {p1}, Lcom/adobe/xmp/impl/XMPNode;->getOptions()Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p0
 
-    .line 6
     invoke-virtual {p0}, Lcom/adobe/xmp/options/PropertyOptions;->isArray()Z
 
     move-result p3
@@ -2486,7 +2273,6 @@
 
     if-nez p3, :cond_1
 
-    .line 7
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/options/PropertyOptions;->equalArrayTypes(Lcom/adobe/xmp/options/PropertyOptions;)Z
 
     move-result p0
@@ -2495,7 +2281,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2505,7 +2290,6 @@
 
     throw p0
 
-    .line 9
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2515,7 +2299,6 @@
 
     throw p0
 
-    .line 10
     :cond_2
     invoke-virtual {p3}, Lcom/adobe/xmp/impl/XMPMetaImpl;->getRoot()Lcom/adobe/xmp/impl/XMPNode;
 
@@ -2523,12 +2306,10 @@
 
     const/4 p3, 0x1
 
-    .line 11
     invoke-virtual {p2, p3}, Lcom/adobe/xmp/options/PropertyOptions;->setArray(Z)Lcom/adobe/xmp/options/PropertyOptions;
 
     move-result-object p2
 
-    .line 12
     invoke-static {p1, p0, p3, p2}, Lcom/adobe/xmp/impl/XMPNodeUtils;->findNode(Lcom/adobe/xmp/impl/XMPNode;Lcom/adobe/xmp/impl/xpath/XMPPath;ZLcom/adobe/xmp/options/PropertyOptions;)Lcom/adobe/xmp/impl/XMPNode;
 
     move-result-object p1
@@ -2538,7 +2319,6 @@
     :goto_0
     return-object p1
 
-    .line 13
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -2548,7 +2328,6 @@
 
     throw p0
 
-    .line 14
     :cond_4
     new-instance p0, Lcom/adobe/xmp/XMPException;
 

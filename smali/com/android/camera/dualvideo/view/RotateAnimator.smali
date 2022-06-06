@@ -29,10 +29,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -41,7 +39,6 @@
 
     add-int/lit16 p1, p1, 0x168
 
-    .line 3
     rem-int/lit16 p1, p1, 0x168
 
     iput p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViewOrientation:I
@@ -56,7 +53,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 1
     rem-int/2addr p1, v0
 
     goto :goto_0
@@ -66,7 +62,6 @@
 
     add-int/2addr p1, v0
 
-    .line 2
     :goto_0
     iget v1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViewOrientation:I
 
@@ -74,7 +69,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget v2, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mCurrentDegree:I
 
@@ -108,19 +102,15 @@
     :cond_4
     move v1, v4
 
-    .line 4
     :goto_2
     iput p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViewOrientation:I
 
-    .line 5
     rem-int/2addr p1, v0
 
-    .line 6
     iget-object v5, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v5, :cond_5
 
-    .line 7
     invoke-virtual {v5}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_5
@@ -160,7 +150,6 @@
 
     move v0, v4
 
-    .line 8
     :goto_5
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -186,7 +175,6 @@
 
     invoke-static {v5, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,35 +201,30 @@
 
     aput v0, p1, v3
 
-    .line 10
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
-    .line 11
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0Oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0Oo;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000O0/OooO0Oo;-><init>(Lcom/android/camera/dualvideo/view/RotateAnimator;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000O0/OooO0Oo;-><init>(Lcom/android/camera/dualvideo/view/RotateAnimator;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -254,7 +237,6 @@
 .method public synthetic OooO00o(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -267,7 +249,6 @@
 
     iput p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mCurrentDegree:I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViews:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -291,7 +272,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget v1, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mCurrentDegree:I
 
@@ -312,7 +292,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget v0, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViewOrientation:I
 
@@ -320,12 +299,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setRotation(F)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViewOrientation:I
 
     iput v0, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mCurrentDegree:I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViews:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -336,7 +313,6 @@
 .method public clear()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/view/RotateAnimator;->mViews:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -349,7 +325,6 @@
 
     rsub-int p1, p1, 0x168
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/dualvideo/view/RotateAnimator;->disposeRotation(I)V
 
     return-void

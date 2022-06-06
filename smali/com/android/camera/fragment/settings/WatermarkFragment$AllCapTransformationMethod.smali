@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/text/method/ReplacementTransformationMethod;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/fragment/settings/WatermarkFragment$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/settings/WatermarkFragment$AllCapTransformationMethod;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
 
     new-array v0, v0, [C
 
-    .line 1
     fill-array-data v0, :array_0
 
     return-object v0
@@ -85,7 +82,6 @@
 
     new-array v0, v0, [C
 
-    .line 1
     fill-array-data v0, :array_0
 
     return-object v0

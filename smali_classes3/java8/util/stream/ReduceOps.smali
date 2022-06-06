@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,10 +38,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$14;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -66,10 +63,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljava8/util/stream/ReduceOps$15;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -98,16 +93,12 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Ljava8/util/stream/ReduceOps$16;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -129,7 +120,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/ReduceOps$17;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -153,10 +143,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$6;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -180,10 +168,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljava8/util/stream/ReduceOps$7;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -212,16 +198,12 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Ljava8/util/stream/ReduceOps$8;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -243,7 +225,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/ReduceOps$9;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -267,10 +248,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$10;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -294,10 +273,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljava8/util/stream/ReduceOps$11;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -326,16 +303,12 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Ljava8/util/stream/ReduceOps$12;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -357,7 +330,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/ReduceOps$13;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -385,13 +357,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/ReduceOps$1;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -417,10 +386,8 @@
         }
     .end annotation
 
-    .line 4
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Ljava8/util/stream/ReduceOps$2;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -450,16 +417,12 @@
         }
     .end annotation
 
-    .line 10
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     new-instance v0, Ljava8/util/stream/ReduceOps$4;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -485,7 +448,6 @@
         }
     .end annotation
 
-    .line 6
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -496,17 +458,14 @@
 
     move-result-object v5
 
-    .line 7
     invoke-interface {p0}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v4
 
-    .line 8
     invoke-interface {p0}, Ljava8/util/stream/Collector;->combiner()Ljava8/util/function/BinaryOperator;
 
     move-result-object v3
 
-    .line 9
     new-instance v0, Ljava8/util/stream/ReduceOps$3;
 
     sget-object v2, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -534,7 +493,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/ReduceOps$5;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;

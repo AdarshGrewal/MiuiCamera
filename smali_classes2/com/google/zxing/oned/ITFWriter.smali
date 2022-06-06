@@ -23,7 +23,6 @@
 
     new-array v1, v0, [I
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/zxing/oned/ITFWriter;->START_PATTERN:[I
@@ -32,7 +31,6 @@
 
     new-array v2, v1, [I
 
-    .line 2
     fill-array-data v2, :array_1
 
     sput-object v2, Lcom/google/zxing/oned/ITFWriter;->END_PATTERN:[I
@@ -45,7 +43,6 @@
 
     new-array v4, v3, [I
 
-    .line 3
     fill-array-data v4, :array_2
 
     const/4 v5, 0x0
@@ -233,7 +230,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;-><init>()V
 
     return-void
@@ -244,12 +240,10 @@
 .method public encode(Ljava/lang/String;)[Z
     .locals 13
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 2
     rem-int/lit8 v1, v0, 0x2
 
     if-nez v1, :cond_3
@@ -258,17 +252,14 @@
 
     if-gt v0, v1, :cond_2
 
-    .line 3
     invoke-static {p1}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->checkNumeric(Ljava/lang/String;)V
 
     mul-int/lit8 v1, v0, 0x9
 
     add-int/lit8 v1, v1, 0x9
 
-    .line 4
     new-array v1, v1, [Z
 
-    .line 5
     sget-object v2, Lcom/google/zxing/oned/ITFWriter;->START_PATTERN:[I
 
     const/4 v3, 0x0
@@ -284,7 +275,6 @@
     :goto_0
     if-ge v5, v0, :cond_1
 
-    .line 6
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -297,7 +287,6 @@
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 7
     invoke-virtual {p1, v8}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -317,7 +306,6 @@
 
     mul-int/lit8 v10, v9, 0x2
 
-    .line 8
     sget-object v11, Lcom/google/zxing/oned/ITFWriter;->PATTERNS:[[I
 
     aget-object v12, v11, v6
@@ -328,7 +316,6 @@
 
     add-int/2addr v10, v4
 
-    .line 9
     aget-object v11, v11, v8
 
     aget v11, v11, v9
@@ -339,7 +326,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_0
     invoke-static {v1, v2, v7, v4}, Lcom/google/zxing/oned/OneDimensionalCodeWriter;->appendPattern([ZI[IZ)I
 
@@ -351,7 +337,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     sget-object p1, Lcom/google/zxing/oned/ITFWriter;->END_PATTERN:[I
 
@@ -359,7 +344,6 @@
 
     return-object v1
 
-    .line 12
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -377,7 +361,6 @@
 
     throw p1
 
-    .line 13
     :cond_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -399,7 +382,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/google/zxing/BarcodeFormat;->ITF:Lcom/google/zxing/BarcodeFormat;
 
     invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;

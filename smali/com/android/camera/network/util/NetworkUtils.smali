@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public static bind(Landroid/app/Application;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/android/camera/network/util/NetworkUtils;->sApp:Landroid/app/Application;
 
     return-void
@@ -39,7 +37,6 @@
 .method public static getActiveNetworkInfo()Landroid/net/NetworkInfo;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/network/util/NetworkUtils;->sApp:Landroid/app/Application;
 
     const-string v1, "connectivity"
@@ -56,7 +53,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -69,7 +65,6 @@
 .method public static isActiveNetworkMetered()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/network/util/NetworkUtils;->sApp:Landroid/app/Application;
 
     const-string v1, "connectivity"
@@ -86,7 +81,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
 
@@ -98,7 +92,6 @@
 .method public static isNetworkConnected()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/network/util/NetworkUtils;->sApp:Landroid/app/Application;
 
     const-string v1, "connectivity"
@@ -115,7 +108,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -123,7 +115,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
@@ -140,4 +131,42 @@
     :cond_2
     :goto_0
     return v1
+.end method
+
+.method public static requestConfig()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static tryRequestTTSticker()V
+    .locals 3
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isLiveStickerInternalChannel()Z
+
+    move-result v0
+
+    const-string v1, "default"
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "local_test"
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    new-instance v2, Lcom/android/camera/network/live/TTLiveStickerResourceRequest;
+
+    invoke-direct {v2, v0, v1}, Lcom/android/camera/network/live/TTLiveStickerResourceRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/android/camera/network/util/NetworkUtils$1;
+
+    invoke-direct {v0}, Lcom/android/camera/network/util/NetworkUtils$1;-><init>()V
+
+    invoke-virtual {v2, v0}, Lcom/android/camera/network/live/TTLiveStickerResourceRequest;->execute(Lcom/android/camera/network/net/base/ResponseListener;)V
+
+    return-void
 .end method

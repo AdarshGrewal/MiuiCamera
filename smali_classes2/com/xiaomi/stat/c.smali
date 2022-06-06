@@ -36,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,10 +44,8 @@
 .method public static a(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/c;->c()V
 
-    .line 3
     sget-object v0, Lcom/xiaomi/stat/c;->e:Landroid/os/Handler;
 
     new-instance v1, Lcom/xiaomi/stat/c$a;
@@ -63,7 +60,6 @@
 .method public static synthetic a()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/c;->d()Z
 
     move-result v0
@@ -74,7 +70,6 @@
 .method public static synthetic b()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/c;->e()V
 
     return-void
@@ -83,33 +78,27 @@
 .method public static c()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/c;->e:Landroid/os/Handler;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/xiaomi/stat/c;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/xiaomi/stat/c;->e:Landroid/os/Handler;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Landroid/os/HandlerThread;
 
     sget-object v2, Lcom/xiaomi/stat/c;->b:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 6
     new-instance v2, Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -120,7 +109,6 @@
 
     sput-object v2, Lcom/xiaomi/stat/c;->e:Landroid/os/Handler;
 
-    .line 7
     :cond_0
     monitor-exit v0
 
@@ -147,7 +135,6 @@
 
     const-string v1, "DBExecutor"
 
-    .line 1
     new-instance v2, Ljava/io/File;
 
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
@@ -162,17 +149,14 @@
 
     invoke-direct {v2, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 3
     invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
 
-    .line 4
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -182,7 +166,6 @@
 
     const/4 v2, 0x0
 
-    .line 5
     :try_start_0
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -190,7 +173,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 6
     :try_start_1
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -198,7 +180,6 @@
 
     sput-object v3, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
 
-    .line 7
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->lock()Ljava/nio/channels/FileLock;
 
     move-result-object v3
@@ -207,7 +188,6 @@
 
     const-string v3, "acquire lock for db"
 
-    .line 8
     invoke-static {v1, v3}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -219,7 +199,6 @@
     :catch_0
     move-exception v3
 
-    .line 9
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -234,7 +213,6 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     :try_start_2
     sget-object v0, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
 
@@ -242,7 +220,6 @@
 
     const/4 v0, 0x0
 
-    .line 11
     sput-object v0, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -252,7 +229,6 @@
     :catch_1
     move-exception v0
 
-    .line 12
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,7 +251,6 @@
     :catch_2
     move-exception v3
 
-    .line 13
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,24 +275,20 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     sget-object v2, Lcom/xiaomi/stat/c;->f:Ljava/nio/channels/FileLock;
 
     if-eqz v2, :cond_0
 
-    .line 2
     sget-object v2, Lcom/xiaomi/stat/c;->f:Ljava/nio/channels/FileLock;
 
     invoke-virtual {v2}, Ljava/nio/channels/FileLock;->release()V
 
-    .line 3
     sput-object v1, Lcom/xiaomi/stat/c;->f:Ljava/nio/channels/FileLock;
 
     :cond_0
     const-string v2, "release sDBFileLock for db"
 
-    .line 4
     invoke-static {v0, v2}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -327,7 +298,6 @@
     :catch_0
     move-exception v2
 
-    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,25 +314,21 @@
 
     invoke-static {v0, v2}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     :goto_0
     :try_start_1
     sget-object v2, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
 
     if-eqz v2, :cond_1
 
-    .line 7
     sget-object v2, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 8
     sput-object v1, Lcom/xiaomi/stat/c;->g:Ljava/nio/channels/FileChannel;
 
     :cond_1
     const-string v1, "release sLockFileChannel for db"
 
-    .line 9
     invoke-static {v0, v1}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -372,7 +338,6 @@
     :catch_1
     move-exception v1
 
-    .line 10
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

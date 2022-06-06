@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public getMaxLevel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/module/Dependency$Level;->maxLevel:I
 
     return v0
@@ -46,7 +44,6 @@
 .method public getMinLevel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/module/Dependency$Level;->minLevel:I
 
     return v0
@@ -55,7 +52,6 @@
 .method public getTargetLevel()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/module/Dependency$Level;->targetLevel:I
 
     return v0
@@ -64,7 +60,6 @@
 .method public setMaxLevel(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/module/Dependency$Level;->maxLevel:I
 
     return-void
@@ -73,7 +68,6 @@
 .method public setMinLevel(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/module/Dependency$Level;->minLevel:I
 
     return-void
@@ -82,7 +76,6 @@
 .method public setTargetLevel(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/module/Dependency$Level;->targetLevel:I
 
     return-void

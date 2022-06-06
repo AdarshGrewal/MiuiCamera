@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static buildResponse(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getResponseMsg(I)Ljava/lang/String;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 .method public static buildResponse(ILcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 1
 
-    .line 4
     invoke-static {p0}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getResponseMsg(I)Ljava/lang/String;
 
     move-result-object v0
@@ -48,7 +45,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {p0, p1, v0, v0}, Lcom/xiaomi/idm/utils/ResponseHelper;->buildResponse(ILjava/lang/String;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p0
@@ -72,7 +68,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getRequestId()Ljava/lang/String;
 
@@ -85,7 +80,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_2
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getUuid()Ljava/lang/String;
 
@@ -96,7 +90,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_3
     invoke-virtual {p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->getClientId()Ljava/lang/String;
 
@@ -109,38 +102,31 @@
 
     new-array p3, p2, [B
 
-    .line 10
     :cond_4
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p2
 
-    .line 11
     invoke-virtual {p2, p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->setCode(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p0
 
-    .line 12
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->setMsg(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p0
 
-    .line 13
     invoke-virtual {p0, v1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->setRequestId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p0
 
-    .line 14
     invoke-virtual {p0, v2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->setUuid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p0
 
-    .line 15
     invoke-virtual {p0, v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->setClientId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;
 
     move-result-object p0
 
-    .line 16
     invoke-static {p3}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object p1
@@ -149,7 +135,6 @@
 
     move-result-object p0
 
-    .line 17
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p0
@@ -162,7 +147,6 @@
 .method public static buildResponse(Lcom/xiaomi/idm/api/ResponseCode$RequestCode;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getCode()I
 
     move-result v0
@@ -181,7 +165,6 @@
 .method public static buildResponse(Lcom/xiaomi/idm/api/ResponseCode$RequestCode;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 1
 
-    .line 5
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getCode()I
 
     move-result v0
@@ -200,7 +183,6 @@
 .method public static buildResponse(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;[B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
     .locals 2
 
-    .line 6
     sget-object v0, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->REQUEST_SUCCEED:Lcom/xiaomi/idm/api/ResponseCode$RequestCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/ResponseCode$RequestCode;->getCode()I

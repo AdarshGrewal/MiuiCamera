@@ -11,7 +11,6 @@
 .method public constructor <init>(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x20
@@ -30,7 +29,6 @@
 
     invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 2
     iput p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallException;->errorCode:I
 
     return-void
@@ -41,7 +39,6 @@
 .method public getErrorCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallException;->errorCode:I
 
     return v0

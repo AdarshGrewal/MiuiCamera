@@ -59,18 +59,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMapCompletable;->source:Lio/reactivex/ObservableSource;
 
-    .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMapCompletable;->mapper:Lio/reactivex/functions/Function;
 
     const/16 p1, 0x8
 
-    .line 4
     invoke-static {p1, p3}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -85,7 +81,6 @@
 .method public subscribeActual(Lio/reactivex/CompletableObserver;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableConcatMapCompletable;->source:Lio/reactivex/ObservableSource;
 
     new-instance v1, Lio/reactivex/internal/operators/observable/ObservableConcatMapCompletable$SourceObserver;

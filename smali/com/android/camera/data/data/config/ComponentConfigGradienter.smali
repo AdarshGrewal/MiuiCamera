@@ -33,10 +33,8 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->mCameraId:I
 
     return-void
@@ -47,7 +45,6 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->mCameraId:I
 
     const-string/jumbo v1, "off"
@@ -58,7 +55,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->getKey(I)Ljava/lang/String;
 
@@ -74,7 +70,6 @@
 
     return-object v1
 
-    .line 3
     :cond_1
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -110,7 +105,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "CCGradienter#getItems() not supported"
@@ -167,7 +161,6 @@
 .method public isSwitchOn(I)Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -184,7 +177,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->getComponentValue(I)Ljava/lang/String;
 
@@ -202,10 +194,8 @@
 .method public reInit(II)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->mCapturingMode:I
 
-    .line 2
     iput p2, p0, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->mCameraId:I
 
     return-void
@@ -214,7 +204,6 @@
 .method public setComponentValue(ILjava/lang/String;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->mCameraId:I
 
     const/4 v1, 0x1
@@ -223,7 +212,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->getKey(I)Ljava/lang/String;
 
@@ -239,7 +227,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
@@ -251,7 +238,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     sget-object p2, Lcom/android/camera/data/data/config/ComponentConfigGradienter;->VALUE_GRADIENTER_ON:Ljava/lang/String;
 
     goto :goto_0

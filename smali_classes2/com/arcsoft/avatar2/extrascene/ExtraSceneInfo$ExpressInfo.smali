@@ -46,28 +46,22 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->a:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->b:[I
 
-    .line 3
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->c:Ljava/util/ArrayList;
 
     const/4 p1, 0x0
 
-    .line 4
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->d:Z
 
-    .line 5
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->e:I
 
-    .line 6
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->f:Z
 
     return-void
@@ -78,7 +72,6 @@
 .method public getExpressIndex()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->b:[I
 
     return-object v0
@@ -95,7 +88,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->c:Ljava/util/ArrayList;
 
     return-object v0
@@ -104,7 +96,6 @@
 .method public getLoopStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->e:I
 
     return v0
@@ -113,7 +104,6 @@
 .method public isLoopFrame()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->d:Z
 
     return v0
@@ -122,7 +112,6 @@
 .method public isPauseFrame()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->f:Z
 
     return v0
@@ -131,7 +120,6 @@
 .method public setExpressIndex([I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->b:[I
 
     return-void
@@ -140,19 +128,16 @@
 .method public setExpressValue(F)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->c:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->c:Ljava/util/ArrayList;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->c:Ljava/util/ArrayList;
 
@@ -168,7 +153,6 @@
 .method public setLoopFrame(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->d:Z
 
     return-void
@@ -177,7 +161,6 @@
 .method public setLoopStatus(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->e:I
 
     return-void
@@ -186,7 +169,6 @@
 .method public setPauseStatus(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->f:Z
 
     return-void

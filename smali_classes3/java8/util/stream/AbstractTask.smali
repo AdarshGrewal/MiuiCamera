@@ -75,7 +75,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/concurrent/ForkJoinPool;->getCommonPoolParallelism()I
 
     move-result v0
@@ -97,18 +96,14 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0, p1}, Ljava8/util/concurrent/CountedCompleter;-><init>(Ljava8/util/concurrent/CountedCompleter;)V
 
-    .line 6
     iput-object p2, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 7
     iget-object p2, p1, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iput-object p2, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 8
     iget-wide p1, p1, Ljava8/util/stream/AbstractTask;->targetSize:J
 
     iput-wide p1, p0, Ljava8/util/stream/AbstractTask;->targetSize:J
@@ -130,18 +125,14 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ljava8/util/concurrent/CountedCompleter;-><init>(Ljava8/util/concurrent/CountedCompleter;)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
     const-wide/16 p1, 0x0
 
-    .line 4
     iput-wide p1, p0, Ljava8/util/stream/AbstractTask;->targetSize:J
 
     return-void
@@ -150,17 +141,14 @@
 .method public static getLeafTarget()I
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Ljava8/util/concurrent/ForkJoinWorkerThread;
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Ljava8/util/concurrent/ForkJoinWorkerThread;
 
     invoke-virtual {v0}, Ljava8/util/concurrent/ForkJoinWorkerThread;->getPool()Ljava8/util/concurrent/ForkJoinPool;
@@ -175,7 +163,6 @@
 
     return v0
 
-    .line 4
     :cond_0
     sget v0, Ljava8/util/stream/AbstractTask;->LEAF_TARGET:I
 
@@ -185,7 +172,6 @@
 .method public static suggestTargetSize(J)J
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/AbstractTask;->getLeafTarget()I
 
     move-result v0
@@ -214,15 +200,12 @@
 .method public compute()V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 2
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v1
 
-    .line 3
     invoke-virtual {p0, v1, v2}, Ljava8/util/stream/AbstractTask;->getTargetSize(J)J
 
     move-result-wide v3
@@ -236,21 +219,18 @@
 
     if-lez v1, :cond_1
 
-    .line 4
     invoke-interface {v0}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-virtual {v6, v1}, Ljava8/util/stream/AbstractTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
 
     move-result-object v2
 
     iput-object v2, v6, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
-    .line 6
     invoke-virtual {v6, v0}, Ljava8/util/stream/AbstractTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
 
     move-result-object v7
@@ -259,7 +239,6 @@
 
     const/4 v8, 0x1
 
-    .line 7
     invoke-virtual {v6, v8}, Ljava8/util/concurrent/CountedCompleter;->setPendingCount(I)V
 
     if-eqz v5, :cond_0
@@ -278,17 +257,14 @@
     :goto_1
     xor-int/lit8 v5, v5, 0x1
 
-    .line 8
     invoke-virtual {v2}, Ljava8/util/concurrent/ForkJoinTask;->fork()Ljava8/util/concurrent/ForkJoinTask;
 
-    .line 9
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v1
 
     goto :goto_0
 
-    .line 10
     :cond_1
     invoke-virtual {v6}, Ljava8/util/stream/AbstractTask;->doLeaf()Ljava/lang/Object;
 
@@ -296,7 +272,6 @@
 
     invoke-virtual {v6, v0}, Ljava8/util/stream/AbstractTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 11
     invoke-virtual {v6}, Ljava8/util/concurrent/CountedCompleter;->tryComplete()V
 
     return-void
@@ -318,7 +293,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->localResult:Ljava/lang/Object;
 
     return-object v0
@@ -332,7 +306,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/concurrent/CountedCompleter;->getCompleter()Ljava8/util/concurrent/CountedCompleter;
 
     move-result-object v0
@@ -350,7 +323,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->localResult:Ljava/lang/Object;
 
     return-object v0
@@ -359,7 +331,6 @@
 .method public final getTargetSize(J)J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/AbstractTask;->targetSize:J
 
     const-wide/16 v2, 0x0
@@ -370,7 +341,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {p1, p2}, Ljava8/util/stream/AbstractTask;->suggestTargetSize(J)J
 
@@ -385,7 +355,6 @@
 .method public isLeaf()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     if-nez v0, :cond_0
@@ -409,14 +378,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1
     invoke-virtual {v0}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget-object v2, v1, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     if-eq v2, v0, :cond_0
@@ -439,7 +406,6 @@
 .method public isRoot()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->getParent()Ljava8/util/stream/AbstractTask;
 
     move-result-object v0
@@ -479,10 +445,8 @@
 
     const/4 p1, 0x0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
     iput-object p1, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
@@ -498,7 +462,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/AbstractTask;->localResult:Ljava/lang/Object;
 
     return-void
@@ -516,7 +479,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 

@@ -46,10 +46,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;-><init>(J)V
 
-    .line 2
     iput-object p3, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfRef;->s:Ljava8/util/function/Supplier;
 
     return-void
@@ -67,7 +65,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->forEachRemaining(Ljava8/util/Spliterator;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -83,10 +80,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfRef;->s:Ljava8/util/function/Supplier;
 
     invoke-interface {v0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -110,7 +105,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator;->estimate:J
 
     const-wide/16 v2, 0x0
@@ -123,7 +117,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance v2, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfRef;
 

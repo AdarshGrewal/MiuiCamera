@@ -179,63 +179,54 @@
 .method public static constructor <clinit>()V
     .locals 13
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$1;->lambdaFactory$()Ljava8/util/function/Predicate;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->REF_IS_PRESENT:Ljava8/util/function/Predicate;
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$2;->lambdaFactory$()Ljava8/util/function/Predicate;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->INT_IS_PRESENT:Ljava8/util/function/Predicate;
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$3;->lambdaFactory$()Ljava8/util/function/Predicate;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->LONG_IS_PRESENT:Ljava8/util/function/Predicate;
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$4;->lambdaFactory$()Ljava8/util/function/Predicate;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->DOUBLE_IS_PRESENT:Ljava8/util/function/Predicate;
 
-    .line 5
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$5;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->REF_SINK_SUPP:Ljava8/util/function/Supplier;
 
-    .line 6
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$6;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->INT_SINK_SUPP:Ljava8/util/function/Supplier;
 
-    .line 7
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$7;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->LONG_SINK_SUPP:Ljava8/util/function/Supplier;
 
-    .line 8
     invoke-static {}, Ljava8/util/stream/FindOps$$Lambda$8;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
 
     sput-object v0, Ljava8/util/stream/FindOps;->DOUBLE_SINK_SUPP:Ljava8/util/function/Supplier;
 
-    .line 9
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -256,7 +247,6 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->FIRST_REF:Ljava8/util/stream/TerminalOp;
 
-    .line 10
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v9, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -277,12 +267,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->ANY_REF:Ljava8/util/stream/TerminalOp;
 
-    .line 11
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 12
     invoke-static {}, Ljava8/util/OptionalInt;->empty()Ljava8/util/OptionalInt;
 
     move-result-object v4
@@ -297,12 +285,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->FIRST_INT:Ljava8/util/stream/TerminalOp;
 
-    .line 13
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v9, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 14
     invoke-static {}, Ljava8/util/OptionalInt;->empty()Ljava8/util/OptionalInt;
 
     move-result-object v10
@@ -317,12 +303,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->ANY_INT:Ljava8/util/stream/TerminalOp;
 
-    .line 15
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 16
     invoke-static {}, Ljava8/util/OptionalLong;->empty()Ljava8/util/OptionalLong;
 
     move-result-object v4
@@ -337,12 +321,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->FIRST_LONG:Ljava8/util/stream/TerminalOp;
 
-    .line 17
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v9, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 18
     invoke-static {}, Ljava8/util/OptionalLong;->empty()Ljava8/util/OptionalLong;
 
     move-result-object v10
@@ -357,12 +339,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->ANY_LONG:Ljava8/util/stream/TerminalOp;
 
-    .line 19
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 20
     invoke-static {}, Ljava8/util/OptionalDouble;->empty()Ljava8/util/OptionalDouble;
 
     move-result-object v4
@@ -377,12 +357,10 @@
 
     sput-object v0, Ljava8/util/stream/FindOps;->FIRST_DOUBLE:Ljava8/util/stream/TerminalOp;
 
-    .line 21
     new-instance v0, Ljava8/util/stream/FindOps$FindOp;
 
     sget-object v9, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 22
     invoke-static {}, Ljava8/util/OptionalDouble;->empty()Ljava8/util/OptionalDouble;
 
     move-result-object v10
@@ -403,7 +381,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -423,7 +400,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object p0, Ljava8/util/stream/FindOps;->FIRST_DOUBLE:Ljava8/util/stream/TerminalOp;
 
     goto :goto_0
@@ -449,7 +425,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object p0, Ljava8/util/stream/FindOps;->FIRST_INT:Ljava8/util/stream/TerminalOp;
 
     goto :goto_0
@@ -475,7 +450,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object p0, Ljava8/util/stream/FindOps;->FIRST_LONG:Ljava8/util/stream/TerminalOp;
 
     goto :goto_0
@@ -503,7 +477,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object p0, Ljava8/util/stream/FindOps;->FIRST_REF:Ljava8/util/stream/TerminalOp;
 
     goto :goto_0

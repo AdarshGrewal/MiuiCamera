@@ -17,10 +17,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mediaprocess/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "construction"
@@ -50,7 +48,6 @@
 .method public RenderFrame()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mediaprocess/OpenGlRender;->RenderFrameJni()V
 
     return-void
@@ -59,7 +56,6 @@
 .method public SetCurrentGLContext(I)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/OpenGlRender;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +74,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/OpenGlRender;->SetCurrentGLContextJni(I)V
 
     return-void
@@ -87,14 +82,12 @@
 .method public SetOpengGlRenderParams(IIIII[B[B)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/OpenGlRender;->TAG:Ljava/lang/String;
 
     const-string v1, "SetOpengGlRenderParams"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static/range {p1 .. p7}, Lcom/xiaomi/mediaprocess/OpenGlRender;->SetOpengGlRenderParamsJni(IIIII[B[B)V
 
     return-void
@@ -103,7 +96,6 @@
 .method public SetWindowSize(IIII)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/xiaomi/mediaprocess/OpenGlRender;->SetWindowSizeJni(IIII)V
 
     return-void
@@ -112,7 +104,6 @@
 .method public onFrameAvailable()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mediaprocess/OpenGlRender;->FrameAvailableJni()V
 
     return-void

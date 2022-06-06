@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/RecyclerAdapterWrapper;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper$2;->this$0:Lcom/android/camera/fragment/RecyclerAdapterWrapper;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V

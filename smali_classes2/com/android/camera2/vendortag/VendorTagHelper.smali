@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 .method public static getPreferredAction()I
     .locals 2
 
-    .line 1
     sget v0, Lcom/android/camera2/vendortag/VendorTagHelper;->sPreferredAction:I
 
     const/4 v1, -0x1
@@ -45,19 +43,17 @@
 
     const-string v1, "VENDOR_TAG_NFE_RETHROW"
 
-    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0O0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O00O()Z
 
     move-result v0
 
@@ -73,7 +69,6 @@
     :goto_0
     sput v0, Lcom/android/camera2/vendortag/VendorTagHelper;->sPreferredAction:I
 
-    .line 4
     :cond_1
     sget v0, Lcom/android/camera2/vendortag/VendorTagHelper;->sPreferredAction:I
 
@@ -94,7 +89,6 @@
         }
     .end annotation
 
-    .line 4
     invoke-static {}, Lcom/android/camera2/vendortag/VendorTagHelper;->getPreferredAction()I
 
     move-result v0
@@ -120,7 +114,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {}, Lcom/android/camera2/vendortag/VendorTagHelper;->getPreferredAction()I
 
     move-result v0
@@ -146,7 +139,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {}, Lcom/android/camera2/vendortag/VendorTagHelper;->getPreferredAction()I
 
     move-result v0
@@ -172,7 +164,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/vendortag/VendorTagHelper;->getPreferredAction()I
 
     move-result v0
@@ -200,7 +191,6 @@
 
     const v0, 0xdead
 
-    .line 8
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CameraCharacteristics;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -224,32 +214,7 @@
 
     const p2, 0xdead
 
-    .line 7
     invoke-static {p0, p1, p2}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static getValueQuietly(Landroid/hardware/camera2/CaptureRequest;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/hardware/camera2/CaptureRequest;",
-            "Lcom/android/camera2/vendortag/VendorTag<",
-            "Landroid/hardware/camera2/CaptureRequest$Key<",
-            "TT;>;>;)TT;"
-        }
-    .end annotation
-
-    const v0, 0xdead
-
-    .line 1
-    invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureRequest;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -272,7 +237,6 @@
 
     const v0, 0xdead
 
-    .line 2
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -302,7 +266,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -311,7 +274,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -328,7 +290,6 @@
 
     return-object p0
 
-    .line 5
     :catch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -356,7 +317,6 @@
     :goto_0
     const-string p0, "caution: failed to try get value from capture result: <NULL>"
 
-    .line 6
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -378,7 +338,6 @@
 
     const v0, 0xbabe
 
-    .line 4
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CameraCharacteristics;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -402,7 +361,6 @@
 
     const v0, 0xbabe
 
-    .line 2
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -426,7 +384,6 @@
 
     const v0, 0xbabe
 
-    .line 3
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureRequest;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -450,7 +407,6 @@
 
     const v0, 0xbabe
 
-    .line 1
     invoke-static {p0, p1, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->tryGetValue(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -472,7 +428,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera2/vendortag/VendorTagHelper;->getPreferredAction()I
 
     move-result v0
@@ -498,7 +453,6 @@
 
     const v0, 0xdead
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->trySetValue(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;Ljava/lang/Object;I)V
 
     return-void
@@ -520,7 +474,6 @@
 
     const v0, 0xbabe
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->trySetValue(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;Ljava/lang/Object;I)V
 
     return-void
@@ -541,7 +494,6 @@
 
     const v0, 0xbabe
 
-    .line 3
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->trySetValue(Landroid/hardware/camera2/impl/CameraMetadataNative;Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;I)V
 
     return-void
@@ -563,7 +515,6 @@
 
     const v0, 0xbabe
 
-    .line 2
     invoke-static {p0, p1, p2, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->trySetValue(Landroid/hardware/camera2/impl/CameraMetadataNative;Lcom/android/camera2/vendortag/VendorTag;Ljava/lang/Object;I)V
 
     return-void
@@ -591,7 +542,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 16
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -600,7 +550,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -628,7 +577,6 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 18
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -652,7 +600,6 @@
     :cond_1
     return-object v0
 
-    .line 19
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -664,7 +611,6 @@
     :goto_0
     const-string p0, "caution: failed to try get value from camera characteristics: <NULL>"
 
-    .line 20
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -692,7 +638,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -701,7 +646,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -729,7 +673,6 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 8
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -753,7 +696,6 @@
     :cond_1
     return-object v0
 
-    .line 9
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -765,7 +707,6 @@
     :goto_0
     const-string p0, "caution: failed to try get value from capture request: <NULL>"
 
-    .line 10
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -793,7 +734,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 11
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -802,7 +742,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -830,7 +769,6 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 13
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -854,7 +792,6 @@
     :cond_1
     return-object v0
 
-    .line 14
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -866,7 +803,6 @@
     :goto_0
     const-string p0, "caution: failed to try get value from capture request: <NULL>"
 
-    .line 15
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -894,7 +830,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -903,7 +838,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -931,7 +865,6 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -955,7 +888,6 @@
     :cond_1
     return-object v0
 
-    .line 4
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -967,7 +899,6 @@
     :goto_0
     const-string p0, "caution: failed to try get value from capture result: <NULL>"
 
-    .line 5
     invoke-static {v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -993,7 +924,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1002,7 +932,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -1028,7 +957,6 @@
 
     if-ne p3, p0, :cond_1
 
-    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1053,7 +981,6 @@
     :goto_0
     return-void
 
-    .line 4
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -1065,7 +992,6 @@
     :goto_1
     const-string p0, "caution: failed to update capture request: <NULL>"
 
-    .line 5
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1092,7 +1018,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/impl/CameraMetadataNative;->set(Landroid/hardware/camera2/CaptureResult$Key;Ljava/lang/Object;)V
@@ -1112,7 +1037,6 @@
 
     if-ne p3, p0, :cond_1
 
-    .line 12
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1137,7 +1061,6 @@
     :goto_0
     return-void
 
-    .line 13
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -1149,7 +1072,6 @@
     :goto_1
     const-string p0, "caution: failed to update capture request: <NULL>"
 
-    .line 14
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1175,7 +1097,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1184,7 +1105,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/android/camera2/vendortag/VendorTag;->getKey()Ljava/lang/Object;
@@ -1210,7 +1130,6 @@
 
     if-ne p3, p0, :cond_1
 
-    .line 8
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1235,7 +1154,6 @@
     :goto_0
     return-void
 
-    .line 9
     :cond_2
     new-instance p1, Lcom/android/camera2/vendortag/VendorTagNotFoundException;
 
@@ -1247,7 +1165,6 @@
     :goto_1
     const-string p0, "caution: failed to update capture request: <NULL>"
 
-    .line 10
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

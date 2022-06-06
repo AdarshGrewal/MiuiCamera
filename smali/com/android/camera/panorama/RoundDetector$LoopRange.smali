@@ -44,7 +44,6 @@
 .method public constructor <init>(Lcom/android/camera/panorama/RoundDetector;III)V
     .locals 4
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->this$0:Lcom/android/camera/panorama/RoundDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
 
     new-array p1, p1, [Z
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
     const/4 p1, 0x1
@@ -62,7 +60,6 @@
 
     if-gt p2, p3, :cond_0
 
-    .line 3
     new-instance p4, Landroid/util/Range;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -77,7 +74,6 @@
 
     iput-object p4, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
-    .line 4
     new-instance p2, Landroid/util/Range;
 
     const/4 p3, -0x1
@@ -94,17 +90,14 @@
 
     iput-object p2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
     aput-boolean v0, p2, v0
 
-    .line 6
     aput-boolean p1, p2, p1
 
     return-void
 
-    .line 7
     :cond_0
     new-instance v1, Landroid/util/Range;
 
@@ -126,7 +119,6 @@
 
     iput-object v1, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
-    .line 8
     new-instance p3, Landroid/util/Range;
 
     add-int/lit8 v1, p4, -0x5
@@ -147,12 +139,10 @@
 
     iput-object p3, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
-    .line 9
     iget-object p2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
     aput-boolean v0, p2, v0
 
-    .line 10
     aput-boolean v0, p2, p1
 
     return-void
@@ -163,7 +153,6 @@
 .method public contains(I)Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
     const/4 v1, 0x0
@@ -172,7 +161,6 @@
 
     if-nez v2, :cond_0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -185,7 +173,6 @@
 
     aput-boolean v2, v0, v1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
@@ -195,7 +182,6 @@
 
     if-nez v3, :cond_1
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -208,7 +194,6 @@
 
     aput-boolean v3, v0, v2
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
@@ -228,10 +213,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     aput-boolean v1, p1, v1
 
-    .line 7
     :cond_2
     iget-object p1, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangePassed:[Z
 
@@ -252,7 +235,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -267,7 +249,6 @@
 
     if-gez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->toString()Ljava/lang/String;
@@ -283,7 +264,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
     invoke-virtual {v2}, Landroid/util/Range;->toString()Ljava/lang/String;

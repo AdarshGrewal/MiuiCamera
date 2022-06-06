@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,12 +31,10 @@
 .method public static getRegularCodecList()Landroid/media/MediaCodecList;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->sRegularCodecList:Landroid/media/MediaCodecList;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/media/MediaCodecList;
 
     const/4 v1, 0x0
@@ -46,7 +43,6 @@
 
     sput-object v0, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->sRegularCodecList:Landroid/media/MediaCodecList;
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->sRegularCodecList:Landroid/media/MediaCodecList;
 
@@ -56,12 +52,10 @@
 .method public static isFormatSupported(Landroid/media/MediaFormat;Ljava/lang/String;)Z
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->getRegularCodecList()Landroid/media/MediaCodecList;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object v0
@@ -72,7 +66,6 @@
 
     move v3, v2
 
-    .line 3
     :goto_0
     array-length v4, v0
 
@@ -80,7 +73,6 @@
 
     if-nez v3, :cond_2
 
-    .line 4
     aget-object v4, v0, v2
 
     invoke-virtual {v4}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
@@ -89,7 +81,6 @@
 
     move v5, v1
 
-    .line 5
     :goto_1
     array-length v6, v4
 
@@ -97,7 +88,6 @@
 
     if-nez v3, :cond_1
 
-    .line 6
     aget-object v6, v4, v5
 
     invoke-virtual {v6, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -106,15 +96,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 7
     aget-object v3, v0, v2
 
-    .line 8
     invoke-virtual {v3, p1}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {v3, p0}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFormatSupported(Landroid/media/MediaFormat;)Z
 
     move-result v3
@@ -129,7 +116,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     sget-object v0, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->TAG:Ljava/lang/String;
 
@@ -167,12 +153,10 @@
 .method public static isH265EncodingSupported()Z
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->getRegularCodecList()Landroid/media/MediaCodecList;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object v0
@@ -181,7 +165,6 @@
 
     move v2, v1
 
-    .line 3
     :goto_0
     array-length v3, v0
 
@@ -189,10 +172,8 @@
 
     if-nez v2, :cond_1
 
-    .line 4
     aget-object v3, v0, v1
 
-    .line 5
     sget-object v4, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -215,7 +196,6 @@
 
     invoke-static {v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -235,7 +215,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     sget-object v0, Lcom/xiaomi/camera/liveshot/MediaCodecCapability;->TAG:Ljava/lang/String;
 

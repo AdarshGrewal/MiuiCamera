@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,14 +15,12 @@
 .method public static parse(Lcom/xiaomi/engine/ResultData;)Ljava/lang/String;
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/engine/ResultData;->getMetaResult()Ljava/util/Map;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    .line 2
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -32,7 +29,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -40,7 +36,6 @@
 
     const/4 v1, 0x0
 
-    .line 4
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -65,7 +60,6 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 5
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v3
@@ -95,12 +88,10 @@
 
     const-string v3, ","
 
-    .line 7
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

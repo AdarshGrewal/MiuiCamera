@@ -60,16 +60,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/MatchOps$MatchOp;->inputShape:Ljava8/util/stream/StreamShape;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/MatchOps$MatchOp;->matchKind:Ljava8/util/stream/MatchOps$MatchKind;
 
-    .line 4
     iput-object p3, p0, Ljava8/util/stream/MatchOps$MatchOp;->sinkSupplier:Ljava8/util/function/Supplier;
 
     return-void
@@ -92,7 +88,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/MatchOps$MatchTask;
 
     invoke-direct {v0, p0, p1, p2}, Ljava8/util/stream/MatchOps$MatchTask;-><init>(Ljava8/util/stream/MatchOps$MatchOp;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
@@ -109,7 +104,6 @@
 .method public bridge synthetic evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/MatchOps$MatchOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -132,7 +126,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/MatchOps$MatchOp;->sinkSupplier:Ljava8/util/function/Supplier;
 
     invoke-interface {v0}, Ljava8/util/function/Supplier;->get()Ljava/lang/Object;
@@ -161,7 +154,6 @@
 .method public bridge synthetic evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/MatchOps$MatchOp;->evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -172,7 +164,6 @@
 .method public getOpFlags()I
     .locals 2
 
-    .line 1
     sget v0, Ljava8/util/stream/StreamOpFlag;->IS_SHORT_CIRCUIT:I
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->NOT_ORDERED:I
@@ -185,7 +176,6 @@
 .method public inputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/MatchOps$MatchOp;->inputShape:Ljava8/util/stream/StreamShape;
 
     return-object v0

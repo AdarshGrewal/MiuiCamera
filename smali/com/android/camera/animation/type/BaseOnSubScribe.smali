@@ -27,15 +27,12 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xc8
 
-    .line 2
     iput v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mDurationTime:I
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mAniView:Landroid/view/View;
 
     return-void
@@ -44,7 +41,6 @@
 .method public static final setAnimateViewVisible(Landroid/view/View;I)V
     .locals 1
 
-    .line 1
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v0
@@ -53,14 +49,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
-    .line 3
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
@@ -81,7 +75,6 @@
 .method public setDurationTime(I)Lcom/android/camera/animation/type/BaseOnSubScribe;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mDurationTime:I
 
     return-object p0
@@ -90,7 +83,6 @@
 .method public setInterpolator(Landroid/view/animation/Interpolator;)Lcom/android/camera/animation/type/BaseOnSubScribe;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mInterpolator:Landroid/view/animation/Interpolator;
 
     return-object p0
@@ -99,7 +91,6 @@
 .method public setStartDelayTime(I)Lcom/android/camera/animation/type/BaseOnSubScribe;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mStartDelayTime:I
 
     return-object p0
@@ -108,7 +99,6 @@
 .method public final startAnimationImmediately()V
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
     move-result-object v0
@@ -126,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/animation/type/BaseOnSubScribe;->getAnimation()Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v0
@@ -135,7 +124,6 @@
 
     int-to-long v1, v1
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setStartDelay(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v0
@@ -144,7 +132,6 @@
 
     int-to-long v1, v1
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v0
@@ -158,7 +145,6 @@
     :cond_0
     sget-object v1, Lcom/android/camera/animation/AnimationDelegate;->DEFAULT_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
-    .line 4
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
@@ -168,12 +154,10 @@
 
     invoke-direct {v1, p0, p1}, Lcom/android/camera/animation/type/BaseOnSubScribe$1;-><init>(Lcom/android/camera/animation/type/BaseOnSubScribe;Lio/reactivex/CompletableEmitter;)V
 
-    .line 5
     invoke-virtual {v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->withEndAction(Ljava/lang/Runnable;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->start()V
 
     return-void
@@ -184,7 +168,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/animation/type/BaseOnSubScribe;->mTargetGone:Z
 
     return-object p0

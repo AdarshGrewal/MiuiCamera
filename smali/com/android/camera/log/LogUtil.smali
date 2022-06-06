@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/log/LogUtil$1;
 
     invoke-direct {v0}, Lcom/android/camera/log/LogUtil$1;-><init>()V
@@ -32,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public static addTags(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -74,7 +71,6 @@
 .method public static addTags(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +111,6 @@
 
     const-string v0, "[\\x00-\\x1F\\x28-\\x29\\x2C\\x2F\\x3B-\\x3F\\x5B-\\x5D\\x7B-\\x7D]"
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -124,15 +119,12 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 4
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -151,12 +143,10 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 5
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -165,7 +155,6 @@
 
     const-string v2, "["
 
-    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -176,7 +165,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -190,11 +178,10 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "null"
+    const-string/jumbo p0, "null"
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
@@ -211,7 +198,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +226,6 @@
 .method public static isMainThread()Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/log/LogUtil;->sIsMainThread:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -259,7 +244,6 @@
 .method public static mainThreadTag()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/log/LogUtil;->isMainThread()Z
 
     move-result v0

@@ -15,7 +15,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     const-class v0, Lcom/android/camera2/CaptureResultParser;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -24,7 +23,6 @@
 
     const/4 v1, 0x3
 
-    .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -37,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,14 +45,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     if-nez p0, :cond_0
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v2, "checkNeedDump, capture result is null"
@@ -64,7 +59,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->PERFORMANCE_DUMP_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -81,7 +75,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -97,7 +90,6 @@
 .method public static getAECFrameControl(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/AECFrameControl;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AEC_FRAME_CONTROL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -112,7 +104,6 @@
 .method public static getAFFrameControl(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/AFFrameControl;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AF_FRAME_CONTROL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -127,7 +118,6 @@
 .method public static getAWBFrameControl(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/AWBFrameControl;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AWB_FRAME_CONTROL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -142,7 +132,6 @@
 .method public static getAecLux(Landroid/hardware/camera2/CaptureResult;)F
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AEC_LUX:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -157,7 +146,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
@@ -170,7 +158,6 @@
 .method public static getAsdDetectedModes(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AI_SCENE_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -181,7 +168,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -199,7 +185,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v0, "getAwbCct, capture result is null"
@@ -210,7 +195,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->USE_CUSTOM_WB:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -226,7 +210,6 @@
 .method public static getBeautyBodySlimCountResult(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->BEAUTY_BODY_SLIM_COUNT:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -237,7 +220,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -259,7 +241,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_RESULT:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -275,7 +256,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_RESULT:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -287,7 +267,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -303,7 +282,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SUPER_NIGHT_SE_CAPTURE_TIME:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -312,19 +290,14 @@
 
     invoke-virtual {p0, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p0
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isCaptureExpTimeDefined()Z
-
-    move-result p0
-
-    invoke-static {p1, p0}, Lcom/android/camera2/vendortag/struct/CaptureExpTimes;->parseCaptureExpTimes(Landroid/hardware/camera2/CaptureResult;Z)Lcom/android/camera2/vendortag/struct/CaptureExpTimes;
+    invoke-static {p1}, Lcom/android/camera2/vendortag/struct/CaptureExpTimes;->parseCaptureExpTimes(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/CaptureExpTimes;
 
     move-result-object p0
 
@@ -346,7 +319,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->DXO_ASD_SCENE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -360,7 +332,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -385,14 +356,12 @@
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
     invoke-direct {p0}, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;-><init>()V
 
     return-object p0
 
-    .line 4
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->DXO_ASD_SCENE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -404,14 +373,12 @@
 
     if-nez p0, :cond_2
 
-    .line 5
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string p1, "getDxoAsdScene, scene is null"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
     invoke-direct {p0}, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;-><init>()V
@@ -419,7 +386,6 @@
     :cond_2
     return-object p0
 
-    .line 7
     :cond_3
     :goto_0
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
@@ -428,7 +394,6 @@
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;
 
     invoke-direct {p0}, Lcom/android/camera2/vendortag/struct/MarshalQueryableDxoAsdScene$ASDScene;-><init>()V
@@ -439,7 +404,6 @@
 .method public static getExifValues(Landroid/hardware/camera2/CaptureResult;)[B
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->EXIF_INFO_VALUES:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -452,7 +416,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->DEBUG_INFO_VALUES:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -480,7 +443,6 @@
     :cond_0
     if-eqz p0, :cond_1
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_FALLBACKROLE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -495,7 +457,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_FALLBACKROLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -509,7 +470,6 @@
 
     return v0
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
@@ -521,7 +481,6 @@
 .method public static getFastZoomResult(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->FAST_ZOOM_RESULT:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -530,7 +489,6 @@
 
     check-cast p0, Ljava/lang/Byte;
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -553,7 +511,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -580,7 +537,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HHT_FRAMENUMBER:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -594,7 +550,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string p1, "getHHTFrameNumber, tag not define"
@@ -603,7 +558,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HHT_FRAMENUMBER:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -615,7 +569,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -625,7 +578,6 @@
     :cond_2
     return v0
 
-    .line 5
     :cond_3
     :goto_0
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
@@ -640,7 +592,6 @@
 .method public static getHdrCaptureRequestSettings(Landroid/hardware/camera2/CaptureResult;)[I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_CAPTURE_REQUEST_SETTINGS:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -655,7 +606,6 @@
 .method public static getHdrCheckerAdrc(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_CHECKER_ADRC:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -666,7 +616,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -682,7 +631,6 @@
 .method public static getHdrCheckerSceneType(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_CHECKER_SCENETYPE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -693,7 +641,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -709,7 +656,6 @@
 .method public static getHdrCheckerValues(Landroid/hardware/camera2/CaptureResult;)[B
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_CHECKER_EV_VALUES:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -724,7 +670,6 @@
 .method public static getHdrDetectedScene(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AI_HDR_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -735,7 +680,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -751,7 +695,6 @@
 .method public static getHdrMode(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -762,7 +705,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -778,7 +720,6 @@
 .method public static getHdrSrDetectedScene(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AI_HDRSR_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -789,7 +730,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -802,25 +742,9 @@
     return p0
 .end method
 
-.method public static getHdrSrRequestExpandRules(Landroid/hardware/camera2/CaptureResult;)[B
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AI_HDRSR_REQUEST_EXPAND_NUMBER:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [B
-
-    return-object p0
-.end method
-
 .method public static getHistogramStats(Landroid/hardware/camera2/CaptureResult;)[I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HISTOGRAM_STATS:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -837,7 +761,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v0, "getLaserDist, capture result is null"
@@ -848,7 +771,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->LASER_DIST:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -866,7 +788,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v0, "getLaserDist, capture result is null"
@@ -877,7 +798,6 @@
 
     return-object p0
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MI_AI_TOF:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -893,7 +813,6 @@
 .method public static getMiMotionSKipVelocity(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/MiMotionVelocity;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MI_MOTION_SKIP_VELOCITY:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -908,7 +827,6 @@
 .method public static getMiMotionVelocity(Landroid/hardware/camera2/CaptureResult;)Lcom/android/camera2/vendortag/struct/MiMotionVelocity;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MI_MOTION_VELOCITY:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -923,7 +841,6 @@
 .method public static getRealBV(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->REAL_BV:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -938,7 +855,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -955,7 +871,6 @@
 .method public static getSatDbgInfo(Landroid/hardware/camera2/CaptureResult;)[B
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_DBG_INFO:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -972,19 +887,17 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     if-eqz p0, :cond_5
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v2
 
-    invoke-virtual {v2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0OO0()Z
+    invoke-virtual {v2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O00Oo()Z
 
     move-result v2
 
@@ -992,7 +905,6 @@
 
     sget-object v2, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_MASTER_PHYSICAL_CAMERA_ID:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 3
     invoke-static {p0, v2}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
 
     move-result-object v2
@@ -1001,7 +913,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 4
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object p0
@@ -1014,14 +925,12 @@
 
     move-result p0
 
-    .line 5
     sget-boolean v3, Lcom/android/camera2/CaptureResultParser;->DEBUG_ENABLED:Z
 
     const/4 v4, 0x1
 
     if-eqz v3, :cond_0
 
-    .line 6
     sget-object v3, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -1051,7 +960,6 @@
 
     if-ne p0, v0, :cond_1
 
-    .line 7
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1072,7 +980,6 @@
 
     const/4 p0, 0x3
 
-    .line 8
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1086,14 +993,12 @@
 
     const/4 p0, 0x4
 
-    .line 9
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 10
     :cond_4
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_MATER_CAMERA_ID:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1107,12 +1012,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 11
     sget-boolean p0, Lcom/android/camera2/CaptureResultParser;->DEBUG_ENABLED:Z
 
     if-eqz p0, :cond_6
 
-    .line 12
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1140,12 +1043,10 @@
     :goto_0
     if-nez v2, :cond_7
 
-    .line 13
     sget-boolean p0, Lcom/android/camera2/CaptureResultParser;->DEBUG_ENABLED:Z
 
     if-eqz p0, :cond_8
 
-    .line 14
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v0, "getSatMasterCameraId: not found, default to WIDE"
@@ -1157,7 +1058,6 @@
     :cond_7
     move-object v1, v2
 
-    .line 15
     :cond_8
     :goto_1
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -1174,7 +1074,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SNAPSHOT_REQ_INFO:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -1192,7 +1091,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string p1, "getSnapshotReqInfo, capture result is null"
@@ -1203,7 +1101,6 @@
 
     return-object p0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SNAPSHOT_REQ_INFO:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1230,7 +1127,6 @@
 .method public static getSuperNightCheckerEv(Landroid/hardware/camera2/CaptureResult;)[B
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SUPER_NIGHT_CHECKER_EV:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1245,7 +1141,6 @@
 .method public static getSuperNightInfo(Landroid/hardware/camera2/CaptureResult;Z)Lcom/android/camera2/vendortag/struct/MarshalQueryableSuperNightExif$SuperNightExif;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera2/vendortag/struct/MarshalQueryableSuperNightExif;->getSuperNightExif(Landroid/hardware/camera2/CaptureResult;Z)Lcom/android/camera2/vendortag/struct/MarshalQueryableSuperNightExif$SuperNightExif;
 
     move-result-object p0
@@ -1260,7 +1155,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_ALGO_DISABLE_MASK:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -1275,7 +1169,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_ALGO_DISABLE_MASK:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1289,7 +1182,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
@@ -1309,7 +1201,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -1324,7 +1215,6 @@
 .method public static getUltraWideDetectedResult(Landroid/hardware/camera2/CaptureResult;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ULTRA_WIDE_RECOMMENDED_RESULT:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1335,7 +1225,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -1359,7 +1248,6 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ZOOM_MAP_ROI:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1373,21 +1261,18 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string p1, "getZoomMapRIO, tag not define"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;
 
     invoke-direct {p0, v0, v0, v0, v0}, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;-><init>(IIII)V
 
     return-object p0
 
-    .line 4
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ZOOM_MAP_ROI:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1401,7 +1286,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;
 
@@ -1410,7 +1294,6 @@
     :goto_0
     return-object p0
 
-    .line 6
     :cond_3
     :goto_1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
@@ -1419,7 +1302,6 @@
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     new-instance p0, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;
 
     invoke-direct {p0, v0, v0, v0, v0}, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;-><init>(IIII)V
@@ -1430,7 +1312,6 @@
 .method public static isASDEnable(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AI_SCENE_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1443,7 +1324,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     sget-object v1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1462,7 +1342,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -1480,12 +1359,10 @@
 .method public static isAishutExistMotion(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 2
 
-    .line 1
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOo0:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOo0:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AISHUT_EXIST_MOTION:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1496,7 +1373,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MTK_3A_FEATURE_AISHUT_CAPTURE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1513,7 +1389,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     aget p0, p0, v1
 
     if-ne p0, v0, :cond_1
@@ -1525,30 +1400,6 @@
 
     :goto_1
     return v0
-.end method
-
-.method public static isCupCaptureDisabled(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)Z
-    .locals 1
-
-    .line 1
-    invoke-static {p0, p1}, Lcom/android/camera2/CaptureResultParser;->getThermalAlgoDisableMask(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)I
-
-    move-result p0
-
-    const/4 p1, 0x0
-
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_0
-
-    and-int/lit8 p0, p0, 0x8
-
-    if-eqz p0, :cond_0
-
-    const/4 p1, 0x1
-
-    :cond_0
-    return p1
 .end method
 
 .method public static isDepthFocus(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/CameraCapabilities;)Z
@@ -1563,7 +1414,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->IS_DEPTH_FOCUS:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -1578,7 +1428,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->IS_DEPTH_FOCUS:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1592,7 +1441,6 @@
 
     return v0
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -1620,7 +1468,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AF_TYPE_FOR_MTK:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -1635,7 +1482,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AF_TYPE_FOR_MTK:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1649,7 +1495,6 @@
 
     return v0
 
-    .line 3
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -1662,90 +1507,6 @@
     move v0, p1
 
     :cond_3
-    return v0
-.end method
-
-.method public static isDisableMfnrForMfnrHDR(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_3
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MFNR_HDR_DISABLE_MFRN:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    return v0
-
-    .line 2
-    :cond_1
-    sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MFNR_HDR_DISABLE_MFRN:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-static {p1, p0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    if-nez p0, :cond_2
-
-    .line 3
-    sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
-
-    const-string p1, "DisableMfnrForMfnrHDR:NULL"
-
-    invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v0
-
-    .line 4
-    :cond_2
-    sget-object p1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "DisableMfnrForMfnrHDR:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 5
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    const/4 p1, 0x1
-
-    if-ne p0, p1, :cond_3
-
-    move v0, p1
-
-    :cond_3
-    :goto_0
     return v0
 .end method
 
@@ -1756,7 +1517,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->FAKE_SAT_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v1}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1769,7 +1529,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -1793,7 +1552,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HHT_DISABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1807,7 +1565,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string p1, "isHHTDisabled, tag not define"
@@ -1816,7 +1573,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HHT_DISABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1828,7 +1584,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -1838,7 +1593,6 @@
     :cond_2
     return v0
 
-    .line 5
     :cond_3
     :goto_0
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
@@ -1853,7 +1607,6 @@
 .method public static isHdrMotionDetected(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HDR_MOTION_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValue(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1864,7 +1617,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -1893,7 +1645,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HISTOGRAM_STATS_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1909,7 +1660,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->HISTOGRAM_STATS_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1923,7 +1673,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Byte;->byteValue()B
 
     move-result p0
@@ -1940,7 +1689,6 @@
 .method public static isLLSNeeded(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->IS_LLS_NEEDED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1953,7 +1701,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -1972,7 +1719,6 @@
 .method public static isLensDirtyDetected(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->LENS_DIRTY_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -1985,7 +1731,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2007,7 +1752,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v1, "isMiviAlgoBypassRequired, capture result is null"
@@ -2016,7 +1760,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->MIVI_ALGO_DISABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2026,7 +1769,6 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 3
     sget-object v1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2049,7 +1791,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2069,7 +1810,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SUPER_NIGHT_CAPTURE_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -2084,7 +1824,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SUPER_NIGHT_CAPTURE_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2094,7 +1833,6 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 3
     sget-object p1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2115,7 +1853,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2132,7 +1869,6 @@
 .method public static isP2doneReady(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->P2_KEY_NOTIFICATION_RESULT:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueQuietly(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -2145,7 +1881,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     array-length v1, p0
 
     if-lez v1, :cond_0
@@ -2165,16 +1900,14 @@
 .method public static isQuadCfaRunning(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o000O()Z
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2197,7 +1930,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->AEC_FRAME_CONTROL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -2208,14 +1940,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object v0
@@ -2224,7 +1954,6 @@
 
     if-lez v0, :cond_0
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera2/vendortag/struct/AECFrameControl;->getAecExposureDatas()[Lcom/android/camera2/vendortag/struct/AECFrameControl$AECExposureData;
 
     move-result-object p0
@@ -2240,7 +1969,6 @@
     :cond_0
     const/high16 p0, 0x40400000    # 3.0f
 
-    .line 7
     :goto_0
     sget-object v0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
@@ -2275,7 +2003,6 @@
 .method public static isRemosaicDetected(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->REMOSAIC_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -2284,7 +2011,6 @@
 
     check-cast p0, Ljava/lang/Boolean;
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2305,7 +2031,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -2326,7 +2051,6 @@
 .method public static isSREnable(Landroid/hardware/camera2/CaptureResult;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->IS_SR_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -2337,7 +2061,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -2364,7 +2087,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->SAT_FALLBACK_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2378,7 +2100,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -2391,7 +2112,6 @@
 .method public static isSpecshotDetected(Landroid/hardware/camera2/CaptureResult;)Ljava/lang/Integer;
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->CONTROL_ENABLE_SPECSHOT_DETECTED:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-static {p0, v0}, Lcom/android/camera2/vendortag/VendorTagHelper;->getValueSafely(Landroid/hardware/camera2/CaptureResult;Lcom/android/camera2/vendortag/VendorTag;)Ljava/lang/Object;
@@ -2400,7 +2120,6 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2429,7 +2148,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_LEVEL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v1}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -2444,7 +2162,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_LEVEL:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2454,7 +2171,6 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 3
     sget-object p1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2477,7 +2193,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2498,7 +2213,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     const-string v1, "isZslHdrEnabled, capture result is null"
@@ -2507,7 +2221,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     sget-object v1, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->ASD_IS_ZSL_HDR:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2521,7 +2234,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -2537,7 +2249,6 @@
 .method public static showThermalOverheatTipNeeded(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)Z
     .locals 4
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera2/CaptureResultParser;->getThermalAlgoDisableMask(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureResult;)I
 
     move-result v0
@@ -2562,7 +2273,6 @@
     :cond_1
     if-eqz p0, :cond_3
 
-    .line 2
     sget-object v0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_LEVEL:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -2577,7 +2287,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_2
     sget-object p0, Lcom/android/camera2/vendortag/CaptureResultVendorTags;->THERMAL_LEVEL:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2587,14 +2296,13 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 4
     sget-object p1, Lcom/android/camera2/CaptureResultParser;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "showThermalOverheatTipNeeded : "
+    const-string/jumbo v3, "showThermalOverheatTipNeeded : "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2608,7 +2316,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0

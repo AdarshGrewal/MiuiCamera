@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl$4;->this$0:Lcom/android/camera/module/impl/component/MultiFeatureManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onFailure(Ljava/lang/Exception;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1

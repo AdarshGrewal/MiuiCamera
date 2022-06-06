@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static synthetic access$000(JJ)J
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2, p3}, Ljava8/util/stream/SliceOps;->calcSliceFence(JJ)J
 
     move-result-wide p0
@@ -35,7 +33,6 @@
 .method public static synthetic access$100(Ljava8/util/stream/StreamShape;Ljava8/util/Spliterator;JJ)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/SliceOps;->sliceSpliterator(Ljava8/util/stream/StreamShape;Ljava8/util/Spliterator;JJ)Ljava8/util/Spliterator;
 
     move-result-object p0
@@ -46,7 +43,6 @@
 .method public static synthetic access$200(JJJ)J
     .locals 0
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/SliceOps;->calcSize(JJJ)J
 
     move-result-wide p0
@@ -67,7 +63,6 @@
 
     sub-long/2addr p0, p2
 
-    .line 1
     invoke-static {p0, p1, p4, p5}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
@@ -112,7 +107,6 @@
 .method public static flags(J)I
     .locals 3
 
-    .line 1
     sget v0, Ljava8/util/stream/StreamOpFlag;->NOT_SIZED:I
 
     const-wide/16 v1, -0x1
@@ -153,12 +147,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SliceOps$4;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 2
     invoke-static {p3, p4}, Ljava8/util/stream/SliceOps;->flags(J)I
 
     move-result v4
@@ -175,7 +167,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -217,12 +208,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SliceOps$2;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 2
     invoke-static {p3, p4}, Ljava8/util/stream/SliceOps;->flags(J)I
 
     move-result v4
@@ -239,7 +228,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -281,12 +269,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SliceOps$3;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
 
-    .line 2
     invoke-static {p3, p4}, Ljava8/util/stream/SliceOps;->flags(J)I
 
     move-result v4
@@ -303,7 +289,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -346,12 +331,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava8/util/stream/SliceOps$1;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
-    .line 2
     invoke-static {p3, p4}, Ljava8/util/stream/SliceOps;->flags(J)I
 
     move-result v4
@@ -368,7 +351,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -406,12 +388,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2, p3, p4, p5}, Ljava8/util/stream/SliceOps;->calcSliceFence(JJ)J
 
     move-result-wide v4
 
-    .line 2
     sget-object p4, Ljava8/util/stream/SliceOps$5;->$SwitchMap$java8$util$stream$StreamShape:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -436,7 +416,6 @@
 
     if-ne p4, p5, :cond_0
 
-    .line 3
     new-instance p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfDouble;
 
     move-object v1, p1
@@ -451,7 +430,6 @@
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -473,7 +451,6 @@
 
     throw p1
 
-    .line 5
     :cond_1
     new-instance p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfLong;
 
@@ -489,7 +466,6 @@
 
     return-object p0
 
-    .line 6
     :cond_2
     new-instance p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfInt;
 
@@ -505,7 +481,6 @@
 
     return-object p0
 
-    .line 7
     :cond_3
     new-instance p0, Ljava8/util/stream/StreamSpliterators$SliceSpliterator$OfRef;
 

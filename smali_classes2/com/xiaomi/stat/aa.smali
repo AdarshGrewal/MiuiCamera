@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;ZLcom/xiaomi/stat/MiStatParams;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/aa;->c:Lcom/xiaomi/stat/e;
 
     iput-boolean p2, p0, Lcom/xiaomi/stat/aa;->a:Z
@@ -34,7 +33,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b;->a()Z
 
     move-result v0
@@ -43,7 +41,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/stat/aa;->c:Lcom/xiaomi/stat/e;
 
@@ -57,7 +54,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/stat/aa;->c:Lcom/xiaomi/stat/e;
 

@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public beautyEnable()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->mBeautyProcessor:Lcom/miui/filtersdk/beauty/BeautyProcessor;
 
     if-eqz v0, :cond_0
@@ -44,7 +42,6 @@
 .method public setBeautyProcessor(Lcom/miui/filtersdk/beauty/BeautyProcessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/miui/filtersdk/filter/base/BaseBeautyFilter;->mBeautyProcessor:Lcom/miui/filtersdk/beauty/BeautyProcessor;
 
     return-void

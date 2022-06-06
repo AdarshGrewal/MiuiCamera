@@ -35,17 +35,14 @@
 .method public constructor <init>(Lcom/android/camera/storage/ImageSaver;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mLock:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,13 +51,10 @@
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatPausedTimes:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatResumeTimes:I
 
-    .line 6
     iput-object p1, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mImageSaver:Lcom/android/camera/storage/ImageSaver;
 
     return-void
@@ -74,12 +68,11 @@
         }
     .end annotation
 
-    .line 10
     invoke-static {p0}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0o;
+    sget-object v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0oO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0oO;
 
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->allMatch(Ljava/util/function/Predicate;)Z
 
@@ -95,7 +88,6 @@
 .method public static synthetic OooO00o(Landroid/util/SparseArray;Lcom/android/camera/dualvideo/recorder/MiRecorder;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->getId()I
 
     move-result v0
@@ -117,7 +109,6 @@
         }
     .end annotation
 
-    .line 11
     invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p3
@@ -134,14 +125,12 @@
 
     const/4 p3, 0x1
 
-    .line 12
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p3
 
     invoke-interface {p0, p3}, Lio/reactivex/SingleEmitter;->onSuccess(Ljava/lang/Object;)V
 
-    .line 13
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -173,7 +162,6 @@
 .method public static synthetic OooO00o(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 9
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -198,16 +186,14 @@
 .method public synthetic OooO00o(Lcom/android/camera/dualvideo/recorder/MiRecorder;)Lio/reactivex/Observable;
     .locals 1
 
-    .line 2
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0o;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0oo;-><init>(Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;Lcom/android/camera/dualvideo/recorder/MiRecorder;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0o;-><init>(Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;Lcom/android/camera/dualvideo/recorder/MiRecorder;)V
 
     invoke-static {v0}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -227,7 +213,6 @@
         }
     .end annotation
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,20 +235,16 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->stop()V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mImageSaver:Lcom/android/camera/storage/ImageSaver;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->save(Lcom/android/camera/storage/ImageSaver;)V
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/recorder/MiRecorder;->release()V
 
     const/4 p1, 0x1
 
-    .line 8
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -276,7 +257,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -305,17 +285,15 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0oO;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0Oo;
 
-    invoke-direct {v2, v0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0oO;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v2, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0Oo;-><init>(Landroid/util/SparseArray;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -325,7 +303,6 @@
 .method public isRecording()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
 
     return v0
@@ -334,7 +311,6 @@
 .method public isRecordingPaused()Z
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
 
     if-eqz v0, :cond_0
@@ -345,7 +321,7 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0o;
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 
@@ -369,11 +345,10 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0O;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0O;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0O;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0O;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
     :try_end_0
@@ -393,14 +368,12 @@
     :try_start_1
     const-string v1, "MultiRecorderManager"
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :goto_0
     iget v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatPausedTimes:I
 
@@ -410,7 +383,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
@@ -431,24 +403,20 @@
 
     const-string/jumbo v1, "releaseRecorder"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooOO0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooOO0;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
@@ -466,15 +434,13 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0O0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0O0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0O0;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatResumeTimes:I
 
     add-int/lit8 v0, v0, 0x1
@@ -483,7 +449,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
@@ -510,22 +475,18 @@
 
     const-string/jumbo v3, "startRecorder: "
 
-    .line 1
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 3
     iget-object v4, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4
     :try_start_1
     iget-object v5, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
@@ -535,7 +496,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 5
     array-length v5, v0
 
     const/4 v7, 0x0
@@ -545,7 +505,6 @@
 
     aget v9, v0, v7
 
-    .line 6
     iget-object v15, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
     new-instance v14, Lcom/android/camera/dualvideo/recorder/MiRecorder;
@@ -576,7 +535,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     monitor-exit v4
     :try_end_1
@@ -584,28 +542,23 @@
 
     const/4 v0, 0x1
 
-    .line 8
     :try_start_2
     iput-boolean v0, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
 
-    .line 9
     iget-object v0, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
-    sget-object v4, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO00o;
+    sget-object v4, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO00o;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO00o;
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
 
     const/4 v0, 0x0
 
-    .line 10
     iput v0, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatPausedTimes:I
 
-    .line 11
     iput v0, v1, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mStatResumeTimes:I
 
     const-string v0, "MultiRecorderManager"
 
-    .line 12
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -630,7 +583,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 13
     monitor-exit p0
 
     return-void
@@ -638,7 +590,6 @@
     :catchall_0
     move-exception v0
 
-    .line 14
     :try_start_3
     monitor-exit v4
     :try_end_3
@@ -670,7 +621,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
     :try_end_0
@@ -678,7 +628,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     monitor-exit p0
 
     return-void
@@ -689,20 +638,16 @@
 
     const-string/jumbo v1, "stopRecorder: "
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 5
     iput-boolean v2, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mIsRecording:Z
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
@@ -711,26 +656,22 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 7
     iget-object v3, p0, Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;->mRecorderList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 8
     invoke-virtual {v2}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0OO;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0oo;
 
-    invoke-direct {v3, p0}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0OO;-><init>(Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;)V
+    invoke-direct {v3, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0oo;-><init>(Lcom/android/camera/dualvideo/recorder/MultiRecorderManager;)V
 
-    .line 9
     invoke-interface {v2, v3}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v2
 
-    .line 10
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v3
@@ -741,23 +682,20 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 11
-    sget-object v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0Oo;->OooO00o:LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0Oo;
+    sget-object v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0o0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0o0;
 
     invoke-static {v2, v3}, Lio/reactivex/Observable;->zip(Ljava/lang/Iterable;Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0o0;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0OO;
 
-    invoke-direct {v3, p1, v0, v1}, LOooO00o/OooO0O0/OooO00o/Oooo0oo/o0000/OooO0o0;-><init>(Lio/reactivex/SingleEmitter;J)V
+    invoke-direct {v3, p1, v0, v1}, LOooO0O0/OooO0O0/OooO00o/Oooo0oO/o0000/OooO0OO;-><init>(Lio/reactivex/SingleEmitter;J)V
 
-    .line 12
     invoke-virtual {v2, v3}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 13
     monitor-exit p0
 
     return-void

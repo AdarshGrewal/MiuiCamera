@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/module/WideSelfieModule;Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/WideSelfieModule$1;->this$0:Lcom/android/camera/module/WideSelfieModule;
 
     iput-object p2, p0, Lcom/android/camera/module/WideSelfieModule$1;->val$result:Landroid/graphics/Bitmap;
@@ -50,14 +49,12 @@
 .method public run()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xd8
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -66,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/WideSelfieModule$1;->val$result:Landroid/graphics/Bitmap;
 
     iget-object v2, p0, Lcom/android/camera/module/WideSelfieModule$1;->val$bmpRect:Landroid/graphics/Rect;

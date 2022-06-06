@@ -25,10 +25,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
@@ -53,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -64,7 +61,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -72,7 +68,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -102,12 +97,10 @@
     :goto_0
     if-ge v6, v0, :cond_1
 
-    .line 4
     invoke-virtual {p1, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 5
     invoke-static {v7}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
@@ -126,7 +119,6 @@
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     invoke-static {v7}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
@@ -141,7 +133,6 @@
 
     iget-object v9, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;->mCubicEaseOut:Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    .line 7
     invoke-virtual {v8, v9}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
@@ -150,15 +141,12 @@
 
     invoke-direct {v9, p0, v7}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider$1;-><init>(Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;Landroid/view/View;)V
 
-    .line 8
     invoke-virtual {v8, v9}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
 
-    .line 9
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 10
     invoke-virtual {v7, v2}, Landroid/view/View;->setEnabled(Z)V
 
     add-int/lit8 v6, v6, 0x1
@@ -182,7 +170,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -193,7 +180,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -201,12 +187,10 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v4
@@ -227,7 +211,6 @@
 
     int-to-float v4, v4
 
-    .line 5
     invoke-static {v3}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v3
@@ -249,12 +232,10 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 6
     invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 7
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v7
@@ -275,7 +256,6 @@
 
     int-to-float v7, v7
 
-    .line 8
     invoke-static {v6}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
@@ -294,7 +274,6 @@
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9
     invoke-static {v6}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v8
@@ -309,7 +288,6 @@
 
     iget-object v8, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;->mCubicEaseOut:Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    .line 10
     invoke-virtual {v7, v8}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setInterpolator(Landroid/view/animation/Interpolator;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v7
@@ -318,15 +296,12 @@
 
     invoke-direct {v8, p0, v6}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider$2;-><init>(Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;Landroid/view/View;)V
 
-    .line 11
     invoke-virtual {v7, v8}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object v7
 
-    .line 12
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 13
     invoke-virtual {v6, v2}, Landroid/view/View;->setEnabled(Z)V
 
     add-int/lit8 v3, v3, 0x1

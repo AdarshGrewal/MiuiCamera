@@ -41,27 +41,22 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mAudioZoomMin:D
 
     const-wide/high16 v0, 0x4014000000000000L    # 5.0
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mAudioZoomMax:D
 
     const-wide/high16 v0, 0x4059000000000000L    # 100.0
 
-    .line 4
     iput-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mFocusWidthMax:D
 
     const-wide/high16 v0, 0x404e000000000000L    # 60.0
 
-    .line 5
     iput-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mFocusWidthMin:D
 
     return-void
@@ -76,12 +71,10 @@
 
     const/16 v1, 0xa2
 
-    .line 1
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     const/16 v1, 0xb4
 
-    .line 2
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void
@@ -90,25 +83,20 @@
 .method public getCurrentParameters(IZI)V
     .locals 5
 
-    if-eqz p2, :cond_c
+    if-eqz p2, :cond_a
 
     const/4 p2, 0x1
 
-    .line 1
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mShot:I
 
-    .line 2
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mWndns:I
 
-    .line 5
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v1
@@ -117,7 +105,6 @@
 
     move-result v1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v2
@@ -128,38 +115,31 @@
 
     if-eqz v2, :cond_0
 
-    .line 7
     iput v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mShot:I
 
-    .line 8
-    invoke-static {v1}, Lcom/android/camera/CameraSettings;->isAiAudioSingleEnabled(I)Z
+    invoke-static {v1}, Lcom/android/camera/CameraSettings;->isAiAudioSingEnabled(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 9
     iput v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
     goto :goto_0
 
-    .line 10
     :cond_0
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mShot:I
 
-    .line 11
     invoke-static {v1}, Lcom/android/camera/CameraSettings;->isAiAudioNewEnabled(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 12
     iput v4, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
     goto :goto_0
 
-    .line 13
     :cond_1
     invoke-static {}, Lcom/android/camera/CameraSettings;->is3DAudioOn()Z
 
@@ -167,12 +147,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 14
     iput v3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
     goto :goto_0
 
-    .line 15
     :cond_2
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
@@ -194,19 +172,16 @@
 
     goto :goto_1
 
-    .line 16
     :cond_4
     iput v4, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
     goto :goto_1
 
-    .line 17
     :cond_5
     iput v3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
     goto :goto_1
 
-    .line 18
     :cond_6
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
@@ -215,10 +190,8 @@
     :cond_7
     const/4 p3, 0x4
 
-    .line 19
     iput p3, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
-    .line 20
     :goto_1
     invoke-static {}, Lcom/android/camera/CameraSettings;->getAiNoiseReductionState()Z
 
@@ -226,73 +199,27 @@
 
     if-eqz p3, :cond_8
 
-    .line 21
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mWndns:I
 
-    .line 22
     :cond_8
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    const-string v1, "audio"
-
-    invoke-virtual {p3, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/media/AudioManager;
-
-    .line 23
-    invoke-virtual {p3}, Landroid/media/AudioManager;->getMode()I
-
-    move-result v1
-
-    if-eq v1, v3, :cond_a
-
-    .line 24
-    invoke-virtual {p3}, Landroid/media/AudioManager;->getMode()I
+    invoke-static {}, Lcom/android/camera/Util;->isWiredHeadsetOn()Z
 
     move-result p3
 
-    if-ne p3, v4, :cond_9
+    if-nez p3, :cond_9
 
-    goto :goto_2
-
-    :cond_9
-    move p3, v0
-
-    goto :goto_3
-
-    :cond_a
-    :goto_2
-    move p3, p2
-
-    .line 25
-    :goto_3
-    invoke-static {}, Lcom/android/camera/Util;->isWiredHeadsetOn()Z
-
-    move-result v1
-
-    if-nez v1, :cond_b
-
-    .line 26
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMacroLensOn(I)Z
 
     move-result p1
 
-    if-nez p1, :cond_b
+    if-eqz p1, :cond_a
 
-    if-eqz p3, :cond_c
-
-    .line 27
-    :cond_b
+    :cond_9
     iput p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
-    .line 28
     iput v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mWndns:I
 
-    :cond_c
+    :cond_a
     return-void
 .end method
 
@@ -315,7 +242,6 @@
 .method public getFocusGain(DD)D
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -340,7 +266,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mAudioZoomMin:D
 
     iget-wide v2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mAudioZoomMax:D
@@ -367,7 +292,6 @@
 .method public getFocusSectorWidth(DD)D
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mFocusWidthMax:D
 
     iget-wide v2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mFocusWidthMin:D
@@ -395,7 +319,6 @@
 
     move-wide p1, v3
 
-    .line 2
     :cond_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->getFocusGain(DD)D
 
@@ -409,7 +332,6 @@
 
     const-wide/high16 p3, 0x4000000000000000L    # 2.0
 
-    .line 3
     :cond_2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -425,7 +347,6 @@
 
     const-wide/high16 p3, 0x4008000000000000L    # 3.0
 
-    .line 4
     :cond_3
     iget-wide p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mFocusWidthMax:D
 
@@ -433,7 +354,6 @@
 
     sub-double/2addr p1, v0
 
-    .line 5
     sget-object v0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -488,7 +408,6 @@
 .method public getRecType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mRecType:I
 
     return v0
@@ -497,7 +416,7 @@
 .method public getResText()I
     .locals 1
 
-    const v0, 0x7f120766
+    const v0, 0x7f12072a
 
     return v0
 .end method
@@ -505,7 +424,6 @@
 .method public getScene()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mScene:I
 
     return v0
@@ -514,7 +432,6 @@
 .method public getShot()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mShot:I
 
     return v0
@@ -523,7 +440,6 @@
 .method public getWindns()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mWndns:I
 
     const/4 v1, 0x1
@@ -542,7 +458,6 @@
 .method public isSwitchOn(I)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -568,7 +483,6 @@
 
     return v1
 
-    .line 2
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mIsNormalIntent:Z
 
@@ -576,7 +490,6 @@
 
     return v1
 
-    .line 3
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -594,7 +507,6 @@
 .method public reInit(IZ)V
     .locals 0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->mIsNormalIntent:Z
 
     return-void
@@ -616,7 +528,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1
     sget-object p2, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioNew;->VALUE_ON:Ljava/lang/String;
 
     goto :goto_0

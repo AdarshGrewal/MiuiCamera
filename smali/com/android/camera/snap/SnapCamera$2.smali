@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/snap/SnapCamera;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
@@ -35,7 +34,6 @@
 .method public onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/snap/SnapCamera;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -44,7 +42,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-virtual {p1}, Lcom/android/camera/snap/SnapCamera;->release()V
@@ -55,7 +52,6 @@
 .method public onError(Landroid/hardware/camera2/CameraDevice;I)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/snap/SnapCamera;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -76,7 +72,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-virtual {p1}, Lcom/android/camera/snap/SnapCamera;->release()V
@@ -87,23 +82,19 @@
 .method public onOpened(Landroid/hardware/camera2/CameraDevice;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {v1, p1}, Lcom/android/camera/snap/SnapCamera;->access$002(Lcom/android/camera/snap/SnapCamera;Landroid/hardware/camera2/CameraDevice;)Landroid/hardware/camera2/CameraDevice;
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {p1}, Lcom/android/camera/snap/SnapCamera;->access$400(Lcom/android/camera/snap/SnapCamera;)Lcom/android/camera/snap/SnapCamera$SnapStatusListener;
@@ -112,7 +103,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/snap/SnapCamera$2;->this$0:Lcom/android/camera/snap/SnapCamera;
 
     invoke-static {p1}, Lcom/android/camera/snap/SnapCamera;->access$400(Lcom/android/camera/snap/SnapCamera;)Lcom/android/camera/snap/SnapCamera$SnapStatusListener;
@@ -127,7 +117,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1

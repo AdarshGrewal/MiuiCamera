@@ -13,13 +13,10 @@
 .method public constructor <init>(ILandroid/graphics/RectF;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera2/autozoom/AutoZoomTracker;->id:I
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera2/autozoom/AutoZoomTracker;->mBounds:Landroid/graphics/RectF;
 
     return-void
@@ -30,7 +27,6 @@
 .method public getBounds()Landroid/graphics/RectF;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/autozoom/AutoZoomTracker;->mBounds:Landroid/graphics/RectF;
 
     return-object v0
@@ -39,7 +35,6 @@
 .method public getId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/autozoom/AutoZoomTracker;->id:I
 
     return v0

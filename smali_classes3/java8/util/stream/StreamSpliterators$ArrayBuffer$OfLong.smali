@@ -34,10 +34,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;-><init>()V
 
-    .line 2
     new-array p1, p1, [J
 
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfLong;->array:[J
@@ -50,7 +48,6 @@
 .method public accept(J)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfLong;->array:[J
 
     iget v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;->index:I
@@ -67,7 +64,6 @@
 .method public bridge synthetic forEach(Ljava/lang/Object;J)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/LongConsumer;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfLong;->forEach(Ljava8/util/function/LongConsumer;J)V
@@ -87,7 +83,6 @@
 
     if-gez v1, :cond_0
 
-    .line 2
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfLong;->array:[J
 
     aget-wide v1, v1, v0

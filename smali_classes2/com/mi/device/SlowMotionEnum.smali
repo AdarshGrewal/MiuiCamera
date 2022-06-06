@@ -37,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 1
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v1, 0x0
@@ -48,7 +47,6 @@
 
     sput-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0O0:Lcom/mi/device/SlowMotionEnum;
 
-    .line 2
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v2, 0x1
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0OO:Lcom/mi/device/SlowMotionEnum;
 
-    .line 3
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v3, 0x2
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0Oo:Lcom/mi/device/SlowMotionEnum;
 
-    .line 4
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v4, 0x3
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0o0:Lcom/mi/device/SlowMotionEnum;
 
-    .line 5
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v5, 0x4
@@ -100,7 +95,6 @@
 
     sput-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0o:Lcom/mi/device/SlowMotionEnum;
 
-    .line 6
     new-instance v0, Lcom/mi/device/SlowMotionEnum;
 
     const/4 v6, 0x5
@@ -117,7 +111,6 @@
 
     new-array v7, v7, [Lcom/mi/device/SlowMotionEnum;
 
-    .line 7
     sget-object v8, Lcom/mi/device/SlowMotionEnum;->OooO0O0:Lcom/mi/device/SlowMotionEnum;
 
     aput-object v8, v7, v1
@@ -153,15 +146,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-short p1, p0, Lcom/mi/device/SlowMotionEnum;->OooO00o:S
 
-    .line 3
     iput-short p3, p0, Lcom/mi/device/SlowMotionEnum;->OooO00o:S
 
     return-void
@@ -170,7 +160,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/mi/device/SlowMotionEnum;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/mi/device/SlowMotionEnum;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -185,7 +174,6 @@
 .method public static values()[Lcom/mi/device/SlowMotionEnum;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/mi/device/SlowMotionEnum;->OooO0oo:[Lcom/mi/device/SlowMotionEnum;
 
     invoke-virtual {v0}, [Lcom/mi/device/SlowMotionEnum;->clone()Ljava/lang/Object;
@@ -202,7 +190,6 @@
 .method public OooO00o()S
     .locals 1
 
-    .line 1
     iget-short v0, p0, Lcom/mi/device/SlowMotionEnum;->OooO00o:S
 
     return v0

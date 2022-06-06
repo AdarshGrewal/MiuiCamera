@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->updateScene()V
+    value = Lcom/android/camera/module/Camera2Module;->findBestWatermarkItem(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,16 @@
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/module/Camera2Module;
 
+.field public final synthetic val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
+
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
+.method public constructor <init>(Lcom/android/camera/module/Camera2Module;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$15;->this$0:Lcom/android/camera/module/Camera2Module;
+
+    iput-object p2, p0, Lcom/android/camera/module/Camera2Module$15;->val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +39,36 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    .line 1
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->getComponentRunningAIWatermark()Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getIWatermarkEnable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$15;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$6400(Lcom/android/camera/module/Camera2Module;)V
+    iget-object v1, p0, Lcom/android/camera/module/Camera2Module$15;->val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
+    invoke-static {v0, v1}, Lcom/android/camera/module/Camera2Module;->access$5400(Lcom/android/camera/module/Camera2Module;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
+
+    :cond_0
     return-void
 .end method

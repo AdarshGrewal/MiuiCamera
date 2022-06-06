@@ -1,14 +1,11 @@
 .class public Lcom/android/camera/Camera$7;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "Camera.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/Camera;->onAwaken()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/camera/Camera;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,38 +22,35 @@
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/Camera$7;->this$0:Lcom/android/camera/Camera;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+    iget-object v0, p0, Lcom/android/camera/Camera$7;->this$0:Lcom/android/camera/Camera;
 
-    move-result-object v0
-
-    const/16 v1, 0x3b1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$PresentationDisplay;
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->mCurrentModule:Lcom/android/camera/module/Module;
 
     if-eqz v0, :cond_0
 
-    const/4 v1, 0x1
+    invoke-interface {v0}, Lcom/android/camera/module/Module;->isDeparted()Z
 
-    .line 2
-    invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$PresentationDisplay;->show(I)V
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/Camera$7;->this$0:Lcom/android/camera/Camera;
+
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->mCurrentModule:Lcom/android/camera/module/Module;
+
+    invoke-interface {v0, p1, p2}, Lcom/android/camera/module/Module;->onBroadcastReceived(Landroid/content/Context;Landroid/content/Intent;)V
 
     :cond_0
     return-void

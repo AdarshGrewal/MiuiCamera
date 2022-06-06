@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/features/gif/GifMediaPlayer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;->this$0:Lcom/android/camera/features/gif/GifMediaPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/gif/GifMediaPlayer;Lcom/android/camera/features/gif/GifMediaPlayer$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;-><init>(Lcom/android/camera/features/gif/GifMediaPlayer;)V
 
     return-void
@@ -51,7 +49,6 @@
 .method public getImageFile()Lcom/android/camera/storage/mediastore/ImageFile;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;->imageFile:Lcom/android/camera/storage/mediastore/ImageFile;
 
     return-object v0
@@ -60,7 +57,6 @@
 .method public getTarget()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;->target:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +65,6 @@
 .method public setImageFile(Lcom/android/camera/storage/mediastore/ImageFile;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;->imageFile:Lcom/android/camera/storage/mediastore/ImageFile;
 
     return-void
@@ -78,7 +73,6 @@
 .method public setTarget(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/gif/GifMediaPlayer$MiMediaProcessCallback;->target:Ljava/lang/String;
 
     return-void

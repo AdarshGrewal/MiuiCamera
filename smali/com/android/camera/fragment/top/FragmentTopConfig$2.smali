@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/fragment/top/FragmentTopConfig;->initReferenceLineMenu(Landroid/view/View;)V
+    value = Lcom/android/camera/fragment/top/FragmentTopConfig;->initReferenceLineMenu()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,16 @@
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
-.field public final synthetic val$backColumnCount:I
+.field public final synthetic val$count:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopConfig;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
-    iput p2, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->val$backColumnCount:I
+    iput p2, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->val$count:I
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
 
@@ -39,7 +38,6 @@
 .method public getSpanSize(I)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$100(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/fragment/top/ExtraAdapter;
@@ -54,8 +52,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
-    iget p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->val$backColumnCount:I
+    iget p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$2;->val$count:I
 
     return p1
 

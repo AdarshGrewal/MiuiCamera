@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$1;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed$1;->this$0:Lcom/android/camera/fragment/live/FragmentLiveSpeed;
 
     invoke-virtual {p1, p3}, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->onItemSelected(I)V

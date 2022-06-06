@@ -24,7 +24,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -35,15 +34,12 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter$ItemView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_0
@@ -53,7 +49,6 @@
 .method public onMeasure(II)V
     .locals 1
 
-    .line 1
     iget p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter$ItemView;->mWidth:I
 
     invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumHeight()I
@@ -72,15 +67,13 @@
 .method public setDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 3
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter$ItemView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070600
+    const v1, 0x7f0705fc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -102,7 +95,6 @@
 .method public setWidth(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter$ItemView;->mWidth:I
 
     return-void

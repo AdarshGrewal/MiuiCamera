@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static isUserOwner()Z
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/compat/common/UserHandleCompat;->myUserId()I
 
     move-result v0
@@ -37,7 +35,6 @@
 .method public static myUserId()I
     .locals 1
 
-    .line 1
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0

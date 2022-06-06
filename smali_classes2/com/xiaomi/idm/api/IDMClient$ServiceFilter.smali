@@ -40,17 +40,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;->types:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -63,7 +60,6 @@
 .method public static synthetic access$000(Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;->uuids:Ljava/util/List;
 
     return-object p0
@@ -72,7 +68,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;)Ljava/util/List;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;->types:Ljava/util/List;
 
     return-object p0
@@ -83,7 +78,6 @@
 .method public addType(Ljava/lang/String;)Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;->types:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -94,7 +88,6 @@
 .method public addUUID(Ljava/lang/String;)Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;->uuids:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseViewPagerFragment;-><init>()V
 
     return-void
@@ -24,15 +23,12 @@
 .method public enterAnim(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 3
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
@@ -71,10 +67,8 @@
 .method public exitAnim(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 2
     invoke-static {p1}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p1
@@ -110,7 +104,6 @@
 .method public onViewCreatedAndJumpOut()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseViewPagerFragment;->onViewCreatedAndJumpOut()V
 
     return-void
@@ -119,7 +112,6 @@
 .method public onViewCreatedAndVisibleToUser(Z)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseViewPagerFragment;->onViewCreatedAndVisibleToUser(Z)V
 
     return-void
@@ -136,7 +128,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/beauty/BaseBeautyFragment;->mScreenOrientation:I
 
     return-void
@@ -153,7 +144,6 @@
         }
     .end annotation
 
-    .line 1
     iput p2, p0, Lcom/android/camera/fragment/beauty/BaseBeautyFragment;->mDegree:I
 
     return-void
@@ -162,7 +152,6 @@
 .method public setDegree(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/beauty/BaseBeautyFragment;->mDegree:I
 
     return-void
@@ -171,7 +160,6 @@
 .method public setScreenOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/beauty/BaseBeautyFragment;->mScreenOrientation:I
 
     return-void

@@ -20,7 +20,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, v0, v0}, Lmiuix/util/Log$Facade;-><init>(Lmiuix/internal/log/Logger;Lmiuix/util/Log$1;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public synthetic constructor <init>(Lmiuix/util/Log$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/util/Log$FullFacade;-><init>()V
 
     return-void
@@ -40,7 +38,6 @@
 .method public doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
     .locals 7
 
-    .line 1
     sget-object v0, Lmiuix/util/Log$LogcatLoggerInstance;->INSTANCE:Lmiuix/util/Log$Facade;
 
     move-object v1, p1
@@ -55,7 +52,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lmiuix/util/Log$Facade;->doLog(Lmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Lmiuix/internal/log/message/Message;)V
 
-    .line 2
     invoke-static {}, Lmiuix/util/Log$FileLoggerInstance;->instance()Lmiuix/util/Log$Facade;
 
     move-result-object v1

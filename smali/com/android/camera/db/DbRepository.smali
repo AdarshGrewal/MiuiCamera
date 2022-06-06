@@ -19,10 +19,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Lcom/android/camera/db/provider/DbProviderMgr;
 
     invoke-direct {v0}, Lcom/android/camera/db/provider/DbProviderMgr;-><init>()V
@@ -35,7 +33,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/db/DbRepository$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/db/DbRepository;-><init>()V
 
     return-void
@@ -44,7 +41,6 @@
 .method public static dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/db/DbRepository;->provider()Lcom/android/camera/db/provider/DbProvider;
 
     move-result-object v0
@@ -61,7 +57,6 @@
 .method public static getInstance()Lcom/android/camera/db/DbRepository;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/db/DbRepository$DbRepositoryContainer;->access$100()Lcom/android/camera/db/DbRepository;
 
     move-result-object v0
@@ -72,7 +67,6 @@
 .method public static provider()Lcom/android/camera/db/provider/DbProvider;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/db/DbRepository;->getInstance()Lcom/android/camera/db/DbRepository;
 
     move-result-object v0

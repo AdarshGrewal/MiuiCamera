@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/aiwatermark/FragmentWatermark;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/aiwatermark/FragmentWatermark$1;->this$0:Lcom/android/camera/fragment/aiwatermark/FragmentWatermark;
 
     iput-object p2, p0, Lcom/android/camera/fragment/aiwatermark/FragmentWatermark$1;->val$drawable:Landroid/graphics/drawable/Drawable;
@@ -42,7 +41,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -53,7 +51,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/aiwatermark/FragmentWatermark$1;->val$drawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V

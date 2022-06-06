@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/app/DatePickerDialog;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$1;->this$0:Lmiuix/appcompat/app/DatePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onDateChanged(Lmiuix/pickerwidget/widget/DatePicker;IIIZ)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$1;->this$0:Lmiuix/appcompat/app/DatePickerDialog;
 
     invoke-static {p1}, Lmiuix/appcompat/app/DatePickerDialog;->access$000(Lmiuix/appcompat/app/DatePickerDialog;)Z
@@ -47,7 +45,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$1;->this$0:Lmiuix/appcompat/app/DatePickerDialog;
 
     invoke-static {p1, p2, p3, p4}, Lmiuix/appcompat/app/DatePickerDialog;->access$100(Lmiuix/appcompat/app/DatePickerDialog;III)V

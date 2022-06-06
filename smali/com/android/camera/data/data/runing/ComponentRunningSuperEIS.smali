@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -72,7 +71,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,12 +101,11 @@
 .method public isEnabled(I)Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0OO0()Z
 
     move-result v0
 
@@ -118,7 +115,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningSuperEIS;->mIsNormalIntent:Z
 
@@ -126,7 +122,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -144,7 +139,6 @@
 .method public reInit(IZ)V
     .locals 0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningSuperEIS;->mIsNormalIntent:Z
 
     return-void
@@ -155,7 +149,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     sget-object p2, Lcom/android/camera/data/data/runing/ComponentRunningSuperEIS;->VALUE_ON:Ljava/lang/String;
 
     goto :goto_0

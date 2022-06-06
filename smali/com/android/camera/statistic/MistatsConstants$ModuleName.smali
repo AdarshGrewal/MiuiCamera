@@ -88,3 +88,5 @@
 .field public static final VALUE_TARGET_MODE:Ljava/lang/String; = "target_mode"
 
 .field public static final VIDEO_HFR:Ljava/lang/String; = "M_videoHfr_"
+
+.field public static final WIDE_SELFIE:Ljava/lang/String; = "M_wideSelfie_"

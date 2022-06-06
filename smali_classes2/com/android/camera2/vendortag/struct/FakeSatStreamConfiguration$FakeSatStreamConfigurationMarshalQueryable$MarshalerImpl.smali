@@ -41,7 +41,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -50,7 +49,6 @@
 .method public synthetic constructor <init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;ILcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration$FakeSatStreamConfigurationMarshalQueryable$MarshalerImpl;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
     return-void
@@ -69,32 +67,26 @@
 .method public marshal(Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 2
     iget v0, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->zoomStart:F
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget v0, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->zoomStop:F
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget v0, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->type:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget v0, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->width:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 6
     iget v0, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->height:I
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 7
     iget p1, p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;->unused:I
 
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
@@ -105,7 +97,6 @@
 .method public bridge synthetic marshal(Ljava/lang/Object;Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration$FakeSatStreamConfigurationMarshalQueryable$MarshalerImpl;->marshal(Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;Ljava/nio/ByteBuffer;)V
@@ -116,37 +107,30 @@
 .method public unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;
     .locals 7
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v1
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v2
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v5
 
-    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v6
 
-    .line 8
     new-instance p1, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;
 
     move-object v0, p1
@@ -159,7 +143,6 @@
 .method public bridge synthetic unmarshal(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration$FakeSatStreamConfigurationMarshalQueryable$MarshalerImpl;->unmarshal(Ljava/nio/ByteBuffer;)Lcom/android/camera2/vendortag/struct/FakeSatStreamConfiguration;
 
     move-result-object p1

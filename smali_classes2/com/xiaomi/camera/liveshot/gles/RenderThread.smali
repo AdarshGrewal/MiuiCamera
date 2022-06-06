@@ -75,7 +75,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -90,17 +89,14 @@
 .method public constructor <init>(Ljava/lang/String;IILandroid/opengl/EGLContext;Landroid/view/Surface;Z)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
-    .line 3
     new-instance p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-direct {p1}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>()V
@@ -109,76 +105,54 @@
 
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
-    .line 5
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
 
-    .line 6
     iput-boolean p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mReady:Z
 
-    .line 7
     iput-boolean p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestRelease:Z
 
-    .line 8
     iput-boolean p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglContextPrepared:Z
 
-    .line 9
     new-instance v0, Landroid/os/ConditionVariable;
 
     invoke-direct {v0}, Landroid/os/ConditionVariable;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglThreadBlockVar:Landroid/os/ConditionVariable;
 
-    .line 10
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetX:I
 
-    .line 11
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetY:I
 
-    .line 12
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureWidth:I
 
-    .line 13
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureHeight:I
 
     const/4 v0, 0x1
 
-    .line 14
     iput-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mIsOrientationLocked:Z
 
-    .line 15
     iput p2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mStreamWidth:I
 
-    .line 16
     iput p3, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mStreamHeight:I
 
-    .line 17
     iput p2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
-    .line 18
     iput p3, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
 
-    .line 19
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetX:I
 
-    .line 20
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetY:I
 
-    .line 21
     iput p2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureWidth:I
 
-    .line 22
     iput p3, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureHeight:I
 
-    .line 23
     iput-object p4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mShardContext:Landroid/opengl/EGLContext;
 
-    .line 24
     iput-object p5, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mSurface:Landroid/view/Surface;
 
-    .line 25
     iput-boolean p6, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mIsRecordable:Z
 
     return-void
@@ -187,7 +161,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/camera/liveshot/gles/RenderThread;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->doDraw()V
 
     return-void
@@ -196,7 +169,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/camera/liveshot/gles/RenderThread;)Landroid/os/ConditionVariable;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglThreadBlockVar:Landroid/os/ConditionVariable;
 
     return-object p0
@@ -205,7 +177,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/camera/liveshot/gles/RenderThread;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->applyFilterId(I)V
 
     return-void
@@ -214,7 +185,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/camera/liveshot/gles/RenderThread;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->doQuit()V
 
     return-void
@@ -223,7 +193,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/camera/liveshot/gles/RenderThread;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->updateCinematic()V
 
     return-void
@@ -232,7 +201,6 @@
 .method private applyFilterId(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     if-eqz v0, :cond_0
@@ -241,7 +209,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/effect/VideoRecorderCanvas;->applyFilterId(I)V
@@ -253,14 +220,12 @@
 .method private doDraw()V
     .locals 8
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestRelease:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglContextPrepared:Z
 
@@ -268,13 +233,11 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestDraw:I
 
@@ -292,7 +255,6 @@
     :goto_0
     if-eqz v1, :cond_3
 
-    .line 5
     iget v3, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestDraw:I
 
     sub-int/2addr v3, v2
@@ -302,17 +264,14 @@
     :cond_3
     if-eqz v1, :cond_7
 
-    .line 6
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglCore:Lcom/xiaomi/camera/liveshot/gles/EglCore;
 
     if-eqz v1, :cond_7
 
-    .line 7
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
     invoke-virtual {v1}, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;->makeCurrent()Z
 
-    .line 8
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     iget v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
@@ -321,7 +280,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/camera/effect/VideoRecorderCanvas;->setSize(II)V
 
-    .line 9
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -330,12 +288,10 @@
 
     invoke-virtual {v1}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 10
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iget v1, v1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mRotation:I
 
-    .line 11
     iget-boolean v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mIsOrientationLocked:Z
 
     if-nez v2, :cond_6
@@ -350,7 +306,6 @@
 
     const/16 v1, -0x5a
 
-    .line 12
     iget v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
     iget v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
@@ -383,7 +338,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 13
     iget v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
     iget v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
@@ -409,7 +363,6 @@
     :cond_5
     move v2, v3
 
-    .line 14
     :goto_2
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
@@ -433,7 +386,6 @@
 
     invoke-virtual {v4, v5, v7}, Lcom/android/camera/effect/GLCanvasState;->translate(FF)V
 
-    .line 15
     iget-object v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v4}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -446,7 +398,6 @@
 
     invoke-virtual {v4, v1, v5, v5, v3}, Lcom/android/camera/effect/GLCanvasState;->rotate(FFFF)V
 
-    .line 16
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -455,7 +406,6 @@
 
     invoke-virtual {v1, v2, v2, v3}, Lcom/android/camera/effect/GLCanvasState;->scale(FFF)V
 
-    .line 17
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -480,20 +430,17 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/camera/effect/GLCanvasState;->translate(FF)V
 
-    .line 18
     :cond_6
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->clearBuffer()V
 
-    .line 19
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     iget-object v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-virtual {v1, v2}, Lcom/android/gallery3d/ui/BaseGLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 20
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BaseGLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -502,12 +449,10 @@
 
     invoke-virtual {v1}, Lcom/android/camera/effect/GLCanvasState;->popState()V
 
-    .line 21
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
     invoke-virtual {v1}, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;->swapBuffers()Z
 
-    .line 22
     :cond_7
     monitor-exit v0
 
@@ -526,7 +471,6 @@
 .method private doQuit()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestRelease:Z
 
     if-eqz v0, :cond_0
@@ -536,13 +480,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestRelease:Z
 
-    .line 3
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->release()V
 
-    .line 4
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -555,7 +496,6 @@
 .method private prepare()V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mIsRecordable:Z
 
     if-eqz v0, :cond_0
@@ -567,7 +507,6 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 2
     :goto_0
     new-instance v1, Lcom/xiaomi/camera/liveshot/gles/EglCore;
 
@@ -577,7 +516,6 @@
 
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglCore:Lcom/xiaomi/camera/liveshot/gles/EglCore;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglCore:Lcom/xiaomi/camera/liveshot/gles/EglCore;
@@ -586,24 +524,20 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
-    .line 4
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;->createWindowSurface(Ljava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;->makeCurrent()Z
 
-    .line 6
     new-instance v0, Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-direct {v0}, Lcom/android/camera/effect/VideoRecorderCanvas;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
-    .line 7
     iget v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
     iget v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
@@ -616,58 +550,45 @@
 .method private release()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;->releaseEglSurface()V
 
-    .line 3
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglSurfaceBase:Lcom/xiaomi/camera/liveshot/gles/EglSurfaceBase;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 6
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mSurface:Landroid/view/Surface;
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     if-eqz v0, :cond_2
 
-    .line 8
     invoke-virtual {v0}, Lcom/android/camera/effect/VideoRecorderCanvas;->deleteProgram()V
 
-    .line 9
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BaseGLCanvas;->recycledResources()V
 
-    .line 10
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
-    .line 11
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglCore:Lcom/xiaomi/camera/liveshot/gles/EglCore;
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-virtual {v0}, Lcom/xiaomi/camera/liveshot/gles/EglCore;->release()V
 
-    .line 13
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglCore:Lcom/xiaomi/camera/liveshot/gles/EglCore;
 
     :cond_3
@@ -677,12 +598,10 @@
 .method private updateCinematic()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvas:Lcom/android/camera/effect/VideoRecorderCanvas;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/effect/VideoRecorderCanvas;->updateCinematic()V
 
     :cond_0
@@ -692,7 +611,6 @@
 .method private updateCropRect()V
     .locals 9
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mStreamHeight:I
 
     iget v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
@@ -713,7 +631,6 @@
 
     if-le v2, v5, :cond_0
 
-    .line 2
     iput v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureWidth:I
 
     mul-int/2addr v1, v0
@@ -728,10 +645,8 @@
 
     float-to-int v0, v0
 
-    .line 3
     iput v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureHeight:I
 
-    .line 4
     iput v8, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetX:I
 
     sub-int/2addr v0, v4
@@ -744,7 +659,6 @@
 
     neg-int v0, v0
 
-    .line 5
     iput v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetY:I
 
     goto :goto_0
@@ -756,16 +670,12 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 6
     iput v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureWidth:I
 
-    .line 7
     iput v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureHeight:I
 
-    .line 8
     iput v8, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetX:I
 
-    .line 9
     iput v8, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetY:I
 
     goto :goto_0
@@ -783,10 +693,8 @@
 
     float-to-int v0, v2
 
-    .line 10
     iput v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureWidth:I
 
-    .line 11
     iput v4, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureHeight:I
 
     sub-int/2addr v0, v1
@@ -799,10 +707,8 @@
 
     neg-int v0, v0
 
-    .line 12
     iput v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetX:I
 
-    .line 13
     iput v8, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mTextureOffsetY:I
 
     :goto_0
@@ -816,7 +722,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->draw(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;I)V
 
     return-void
@@ -825,34 +730,28 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;I)V
     .locals 8
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-boolean v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestRelease:Z
 
     if-eqz v1, :cond_0
 
-    .line 4
     monitor-exit v0
 
     return-void
 
-    .line 5
     :cond_0
     iget-boolean v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglContextPrepared:Z
 
     if-nez v1, :cond_1
 
-    .line 6
     monitor-exit v0
 
     return-void
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
@@ -870,19 +769,16 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FIIII)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 8
     iget-object p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mDrawExtTexAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iput p2, p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mRotation:I
 
-    .line 9
     iget p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestDraw:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mRequestDraw:I
 
-    .line 10
     iget-object p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     const/16 p2, 0x10
@@ -893,7 +789,6 @@
 
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 11
     monitor-exit v0
 
     return-void
@@ -911,28 +806,23 @@
 .method public getHandler()Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mReady:Z
 
     if-eqz v1, :cond_0
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     return-object v0
 
-    .line 5
     :cond_0
     :try_start_1
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -946,7 +836,6 @@
     :catchall_0
     move-exception v1
 
-    .line 6
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -957,7 +846,6 @@
 .method public quit()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     const/16 v1, 0x30
@@ -974,10 +862,8 @@
 .method public run()V
     .locals 6
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     const/4 v1, 0x0
@@ -986,7 +872,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
-    .line 3
     sget-object v0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->TAG:Ljava/lang/String;
 
     const-string v2, "prepare render thread: E"
@@ -997,14 +882,11 @@
 
     const/4 v2, 0x0
 
-    .line 4
     :try_start_0
     iput-boolean v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglContextPrepared:Z
 
-    .line 5
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->prepare()V
 
-    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglContextPrepared:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1014,57 +896,45 @@
     :catch_0
     move-exception v3
 
-    .line 7
     sget-object v4, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->TAG:Ljava/lang/String;
 
     const-string v5, "FATAL: failed to prepare render thread"
 
     invoke-static {v4, v5, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 8
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->release()V
 
-    .line 9
     :goto_0
     iget-object v3, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 10
     :try_start_1
     iput-boolean v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mReady:Z
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 12
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 13
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 14
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 15
     :try_start_2
     iput-boolean v2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mReady:Z
 
-    .line 16
     iput-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
-    .line 17
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 18
     sget-object v0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->TAG:Ljava/lang/String;
 
     const-string v1, "prepare render thread: X"
@@ -1076,7 +946,6 @@
     :catchall_0
     move-exception v1
 
-    .line 19
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -1087,7 +956,6 @@
     :catchall_1
     move-exception v0
 
-    .line 20
     :try_start_4
     monitor-exit v3
     :try_end_4
@@ -1099,13 +967,10 @@
 .method public setCanvasSize(II)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasWidth:I
 
-    .line 2
     iput p2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mCanvasHeight:I
 
-    .line 3
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->updateCropRect()V
 
     return-void
@@ -1114,7 +979,6 @@
 .method public setCinematicEnable(Z)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     const/16 v0, 0x40
@@ -1123,7 +987,6 @@
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -1132,7 +995,6 @@
 .method public setFilterId(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mHandler:Lcom/xiaomi/camera/liveshot/gles/RenderThread$RenderHandler;
 
     const/16 v1, 0x20
@@ -1141,10 +1003,8 @@
 
     move-result-object v0
 
-    .line 2
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 3
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -1153,7 +1013,6 @@
 .method public setOrientationLocked(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mIsOrientationLocked:Z
 
     return-void
@@ -1162,13 +1021,10 @@
 .method public setStreamSize(II)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mStreamWidth:I
 
-    .line 2
     iput p2, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mStreamHeight:I
 
-    .line 3
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->updateCropRect()V
 
     return-void
@@ -1177,15 +1033,12 @@
 .method public syncDraw(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglThreadBlockVar:Landroid/os/ConditionVariable;
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->close()V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->draw(Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)V
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mEglThreadBlockVar:Landroid/os/ConditionVariable;
 
     invoke-virtual {p1}, Landroid/os/ConditionVariable;->block()V
@@ -1196,12 +1049,10 @@
 .method public waitUntilReady()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :goto_0
     :try_start_0
     iget-boolean v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mReady:Z
@@ -1210,7 +1061,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     :try_start_1
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->mLock:Ljava/lang/Object;
 
@@ -1224,7 +1074,6 @@
     :catch_0
     move-exception v1
 
-    .line 4
     :try_start_2
     sget-object v2, Lcom/xiaomi/camera/liveshot/gles/RenderThread;->TAG:Ljava/lang/String;
 
@@ -1246,7 +1095,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     monitor-exit v0
 

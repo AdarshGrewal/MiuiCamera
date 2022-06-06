@@ -20,7 +20,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -29,7 +28,6 @@
 .method public static createCompositionOffsetsBox([Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;)Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -42,7 +40,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     return-object v0
@@ -61,10 +58,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     array-length v0, v0
@@ -73,7 +68,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
@@ -81,14 +75,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 4
     aget-object v1, v1, v0
 
     iget v1, v1, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;->count:I
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     aget-object v1, v1, v0
@@ -108,7 +100,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     array-length v0, v0
@@ -123,7 +114,6 @@
 .method public getEntries()[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     return-object v0
@@ -132,15 +122,12 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 6
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 3
     new-array v1, v0, [Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
@@ -150,7 +137,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 4
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;->entries:[Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;
 
     new-instance v3, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$Entry;

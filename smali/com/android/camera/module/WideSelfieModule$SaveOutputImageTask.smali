@@ -62,43 +62,30 @@
 .method public constructor <init>(Lcom/android/camera/Camera;Ljava/lang/String;[BIIZIIILcom/android/camera/fragment/beauty/BeautyValues;Ljava/lang/String;Lcom/android/camera/module/WideSelfieModule$SaveStateCallback;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
 
-    .line 3
     iput-object p3, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
 
-    .line 4
     iput p4, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
 
-    .line 5
     iput p5, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mHeight:I
 
-    .line 6
     iput-boolean p6, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mMirror:Z
 
-    .line 7
     iput p8, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mActualCameraId:I
 
-    .line 8
     iput p7, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mOrientation:I
 
-    .line 9
     iput p9, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mTriggerMode:I
 
-    .line 10
     iput-object p10, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mBeautyValues:Lcom/android/camera/fragment/beauty/BeautyValues;
 
-    .line 11
     iput-object p11, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mStopMode:Ljava/lang/String;
 
-    .line 12
     iput-object p12, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mCallback:Lcom/android/camera/module/WideSelfieModule$SaveStateCallback;
 
-    .line 13
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -109,54 +96,24 @@
 .end method
 
 .method private addImageAsApplication(Ljava/lang/String;Ljava/lang/String;[BIII)V
-    .locals 23
+    .locals 26
 
     move-object/from16 v8, p1
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v6
+    move-result-wide v11
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/LocationManager;->getCurrentLocation()Landroid/location/Location;
 
-    move-result-object v5
+    move-result-object v13
 
     if-eqz p3, :cond_0
 
-    const/4 v12, 0x0
-
-    const/4 v14, 0x0
-
-    const/16 v19, 0x0
-
-    const/16 v20, 0x1
-
-    const-string v13, ""
-
-    move-object/from16 v9, p3
-
-    move-wide v10, v6
-
-    move/from16 v15, p6
-
-    move/from16 v16, p4
-
-    move/from16 v17, p5
-
-    move-object/from16 v18, v5
-
-    .line 3
-    invoke-static/range {v9 .. v20}, Lcom/android/camera/ExifTool;->updateExif([BJZLjava/lang/String;Lcom/xiaomi/camera/core/PictureInfo;IIILandroid/location/Location;Landroid/hardware/camera2/impl/CameraMetadataNative;Z)[B
-
-    move-result-object v15
-
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v9
@@ -169,27 +126,30 @@
 
     const/16 v21, 0x0
 
-    const/16 v22, 0x0
+    const/16 v22, 0x1
+
+    const/16 v23, 0x0
+
+    const/16 v25, 0x0
+
+    const-string v24, ""
 
     move-object/from16 v10, p2
 
-    move-wide v11, v6
-
-    move-object v13, v5
-
     move/from16 v14, p6
+
+    move-object/from16 v15, p3
 
     move/from16 v17, p4
 
     move/from16 v18, p5
 
-    invoke-static/range {v9 .. v22}, Lcom/android/camera/storage/Storage;->addImage(Landroid/content/Context;Ljava/lang/String;JLandroid/location/Location;I[BZIIZZZZ)Landroid/net/Uri;
+    invoke-static/range {v9 .. v25}, Lcom/android/camera/storage/Storage;->addImage(Landroid/content/Context;Ljava/lang/String;JLandroid/location/Location;I[BZIIZZZZZLjava/lang/String;Lcom/xiaomi/camera/core/PictureInfo;)Landroid/net/Uri;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -199,11 +159,9 @@
 
     move/from16 v2, p6
 
-    move-wide v3, v6
+    move-wide v3, v11
 
-    move-object v9, v5
-
-    move-wide v10, v6
+    move-object v5, v13
 
     move/from16 v6, p4
 
@@ -215,13 +173,11 @@
 
     move/from16 v1, p6
 
-    .line 6
-    invoke-static {v8, v1, v9, v10, v11}, Lcom/android/gallery3d/exif/ExifHelper;->writeExifByFilePath(Ljava/lang/String;ILandroid/location/Location;J)V
+    invoke-static {v8, v1, v13, v11, v12}, Lcom/android/gallery3d/exif/ExifHelper;->writeExifByFilePath(Ljava/lang/String;ILandroid/location/Location;J)V
 
     :goto_0
     if-nez v0, :cond_1
 
-    .line 7
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -242,7 +198,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -251,7 +206,6 @@
 
     move-result-object v0
 
-    .line 9
     :cond_1
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
@@ -281,7 +235,6 @@
 
     move-object/from16 v1, p0
 
-    .line 10
     iget-object v2, v1, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -292,7 +245,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 11
     invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->getScreenHint()Lcom/android/camera/ui/ScreenHint;
 
     move-result-object v3
@@ -303,17 +255,14 @@
 
     move-object/from16 v3, p2
 
-    .line 12
     invoke-virtual {v2, v0, v3}, Lcom/android/camera/ActivityBase;->onNewUriArrived(Landroid/net/Uri;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
-    .line 13
     invoke-static {v2, v0, v3}, Lcom/android/camera/Thumbnail;->createThumbnailFromUri(Landroid/content/Context;Landroid/net/Uri;Z)Lcom/android/camera/Thumbnail;
 
     move-result-object v4
 
-    .line 14
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v5
@@ -334,10 +283,8 @@
 
     invoke-static {v5, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     invoke-static {v2, v0}, Lcom/android/camera/Util;->broadcastNewPicture(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 16
     invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->getThumbnailUpdater()Lcom/android/camera/ThumbnailUpdater;
 
     move-result-object v0
@@ -357,7 +304,6 @@
 
     move-object/from16 v7, p0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -366,7 +312,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->supportBeautyLevel()Z
 
     move-result v1
@@ -375,7 +320,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/CameraSettings;->getBeautyShowLevel()I
 
     move-result v0
@@ -384,7 +328,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningShine;->supportSmoothLevel()Z
 
@@ -394,7 +337,6 @@
 
     const-string/jumbo v0, "pref_beautify_skin_smooth_ratio_key"
 
-    .line 6
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->getFaceBeautyRatio(Ljava/lang/String;)I
 
     move-result v0
@@ -417,13 +359,12 @@
 
     if-lez v14, :cond_7
 
-    .line 7
     :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000o0oo()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000o00()Z
 
     move-result v1
 
@@ -435,7 +376,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_3
     invoke-static {}, Lcom/android/camera/Util;->isGlobalVersion()Z
 
@@ -450,25 +390,21 @@
     :cond_4
     move/from16 v21, v15
 
-    .line 9
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 10
     new-instance v1, Lcom/android/camera/beautyshot/BeautyShot;
 
     invoke-direct {v1}, Lcom/android/camera/beautyshot/BeautyShot;-><init>()V
 
-    .line 11
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v5
 
     invoke-virtual {v1, v5}, Lcom/android/camera/beautyshot/BeautyShot;->init(Landroid/content/Context;)V
 
-    .line 12
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v5
@@ -503,7 +439,6 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 13
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v5
@@ -524,7 +459,6 @@
 
     invoke-static {v5, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     iget-object v5, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
 
     iget v6, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
@@ -550,7 +484,6 @@
     :cond_5
     if-lez v14, :cond_6
 
-    .line 15
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -571,7 +504,6 @@
 
     invoke-static {v0, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     iget-object v9, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
 
     iget v10, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
@@ -586,12 +518,10 @@
 
     invoke-virtual/range {v8 .. v14}, Lcom/android/camera/beautyshot/BeautyShot;->processBySmoothLevel([BIIIII)I
 
-    .line 17
     :cond_6
     :goto_2
     invoke-virtual {v1}, Lcom/android/camera/beautyshot/BeautyShot;->uninit()V
 
-    .line 18
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -618,13 +548,11 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     :cond_7
     iget-boolean v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mMirror:Z
 
     if-eqz v0, :cond_9
 
-    .line 20
     iget v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mOrientation:I
 
     rem-int/lit16 v0, v0, 0xb4
@@ -633,7 +561,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 21
     iget-object v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
 
     iget v1, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
@@ -644,7 +571,6 @@
 
     goto :goto_3
 
-    .line 22
     :cond_8
     iget-object v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
 
@@ -654,7 +580,6 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/camera/beautyshot/BeautyShot;->flipYuvHorizontal([BII)V
 
-    .line 23
     :cond_9
     :goto_3
     iget-object v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mNv21Data:[B
@@ -679,7 +604,6 @@
 
     if-nez v3, :cond_a
 
-    .line 24
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -690,7 +614,6 @@
 
     return-object v8
 
-    .line 25
     :cond_a
     iget-object v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
 
@@ -698,33 +621,50 @@
 
     move-result-object v1
 
-    .line 26
     invoke-static {v1}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->useScopedStorage(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-eqz v0, :cond_b
 
-    .line 27
+    iget-object v2, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
+
+    iget v4, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
+
+    iget v5, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mHeight:I
+
+    iget v6, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mOrientation:I
+
+    move-object/from16 v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->addImageAsApplication(Ljava/lang/String;Ljava/lang/String;[BIII)V
+
+    goto :goto_4
+
+    :cond_b
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_c
+    if-eqz v0, :cond_c
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v2, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
 
-    const/16 v2, 0x1d
+    iget v4, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
 
-    if-le v0, v2, :cond_b
+    iget v5, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mHeight:I
+
+    iget v6, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mOrientation:I
+
+    move-object/from16 v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->addImageAsApplication(Ljava/lang/String;Ljava/lang/String;[BIII)V
 
     goto :goto_4
 
-    .line 28
-    :cond_b
-    invoke-static {v1, v3}, LOooO00o/OooO0OO/OooO00o/OooO00o/OooO0OO;->OooO00o(Ljava/lang/String;[B)I
+    :cond_c
+    invoke-static {v1, v3}, LOooO0O0/OooO0OO/OooO00o/OooO00o/OooO0OO;->OooO00o(Ljava/lang/String;[B)I
 
-    .line 29
     iget-object v2, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -739,30 +679,11 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->addImageAsApplication(Ljava/lang/String;Ljava/lang/String;[BIII)V
 
-    goto :goto_5
-
-    .line 30
-    :cond_c
     :goto_4
-    iget-object v2, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mFileName:Ljava/lang/String;
-
-    iget v4, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mWidth:I
-
-    iget v5, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mHeight:I
-
-    iget v6, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mOrientation:I
-
-    move-object/from16 v0, p0
-
-    invoke-direct/range {v0 .. v6}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->addImageAsApplication(Ljava/lang/String;Ljava/lang/String;[BIII)V
-
-    .line 31
-    :goto_5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 32
     invoke-static {v15}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
@@ -777,7 +698,6 @@
 
     const/16 v19, 0xb0
 
-    .line 33
     iget v1, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mTriggerMode:I
 
     const/16 v21, 0x1
@@ -800,7 +720,6 @@
 
     invoke-static/range {v16 .. v25}, Lcom/android/camera/statistic/CameraStatUtils;->trackGeneralInfo(Ljava/util/Map;ZZIIZILcom/android/camera/fragment/beauty/BeautyValues;Lcom/android/camera/MutexModeManager;Ljava/lang/String;)V
 
-    .line 34
     iget-object v0, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mStopMode:Ljava/lang/String;
 
     iget-object v1, v7, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mBeautyValues:Lcom/android/camera/fragment/beauty/BeautyValues;
@@ -813,7 +732,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
@@ -826,15 +744,12 @@
 .method public onPostExecute(Ljava/lang/Integer;)V
     .locals 0
 
-    .line 2
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->mCallback:Lcom/android/camera/module/WideSelfieModule$SaveStateCallback;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-interface {p1}, Lcom/android/camera/module/WideSelfieModule$SaveStateCallback;->onSaveCompleted()V
 
     :cond_0
@@ -844,7 +759,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/WideSelfieModule$SaveOutputImageTask;->onPostExecute(Ljava/lang/Integer;)V
@@ -855,10 +769,8 @@
 .method public onPreExecute()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroid/os/AsyncTask;->onPreExecute()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -867,7 +779,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -882,7 +793,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/module/WideSelfieModule;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -896,7 +806,6 @@
     :cond_0
     const/4 v1, 0x2
 
-    .line 5
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$RecordState;->onPostSavingStart(I)V
 
     return-void

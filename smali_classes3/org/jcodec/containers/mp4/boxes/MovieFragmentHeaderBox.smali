@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createMovieFragmentHeaderBox()Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -49,10 +47,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;->sequenceNumber:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
@@ -71,7 +67,6 @@
 .method public getSequenceNumber()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;->sequenceNumber:I
 
     return v0
@@ -80,10 +75,8 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
@@ -96,7 +89,6 @@
 .method public setSequenceNumber(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/MovieFragmentHeaderBox;->sequenceNumber:I
 
     return-void

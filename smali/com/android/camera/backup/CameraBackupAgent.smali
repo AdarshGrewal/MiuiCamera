@@ -13,7 +13,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiui/app/backup/FullBackupAgent;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method private backupFile(Ljava/io/File;)V
     .locals 3
 
-    .line 5
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -31,7 +29,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->isFile()Z
 
@@ -45,7 +42,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p1
@@ -54,7 +50,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -69,7 +64,6 @@
 
     aget-object v2, p1, v1
 
-    .line 9
     invoke-direct {p0, v2}, Lcom/android/camera/backup/CameraBackupAgent;->backupFile(Ljava/io/File;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -86,7 +80,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -95,20 +88,17 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/android/camera/backup/CameraBackupAgent;->backupFile(Ljava/io/File;)V
 
     :cond_1
@@ -119,26 +109,22 @@
 .method private correctFileName(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/storage/Storage;->switchStoragePathIfNeeded()V
 
     if-ltz v0, :cond_4
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
@@ -155,7 +141,6 @@
 
     if-nez v1, :cond_0
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,18 +155,15 @@
 
     move-result-object v0
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/storage/Storage;->getPrimaryStoragePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 7
     invoke-static {}, Lcom/android/camera/storage/Storage;->getSecondaryStoragePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8
     sget-object v3, Lcom/android/camera/storage/Storage;->DIRECTORY:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -192,7 +174,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -202,14 +183,12 @@
     :cond_1
     if-eqz v2, :cond_4
 
-    .line 10
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 11
     :cond_2
     invoke-static {v0}, Lcom/android/camera/storage/Storage;->getAvailableSpace(Ljava/lang/String;)J
 
@@ -227,7 +206,6 @@
     :cond_4
     const-string v0, ""
 
-    .line 12
     invoke-static {p1, v0}, Lcom/android/camera/storage/Storage;->generateFilepath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -240,12 +218,10 @@
 .method public getVersion(I)I
     .locals 1
 
-    .line 1
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->ooOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OoOo0:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-super {p0, p1}, Lmiui/app/backup/FullBackupAgent;->getVersion(I)I
 
     move-result p1
@@ -270,15 +246,12 @@
 
     const-string/jumbo v1, "onAttachRestore"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->ooOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OoOo0:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-super {p0, p1, p2, p3}, Lmiui/app/backup/FullBackupAgent;->onAttachRestore(Lmiui/app/backup/BackupMeta;Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)I
 
     move-result p1
@@ -290,7 +263,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -300,7 +272,6 @@
 
     invoke-direct {v1, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     new-instance p3, Ljava/io/FileOutputStream;
 
     invoke-direct {p3, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -309,7 +280,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 6
     :try_start_1
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -328,7 +298,6 @@
     :try_start_2
     new-array p2, p2, [B
 
-    .line 7
     :goto_0
     invoke-virtual {v1, p2}, Ljava/io/InputStream;->read([B)I
 
@@ -336,7 +305,6 @@
 
     if-lez v0, :cond_1
 
-    .line 8
     invoke-virtual {p3, p2, p1, v0}, Ljava/io/OutputStream;->write([BII)V
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_4
@@ -345,14 +313,12 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     :try_start_3
     invoke-virtual {p3}, Ljava/io/OutputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 10
     :catch_0
     :goto_1
     :try_start_4
@@ -412,7 +378,6 @@
 
     move-object v1, v0
 
-    .line 11
     :goto_4
     :try_start_5
     invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
@@ -421,7 +386,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 12
     :try_start_6
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_6
@@ -448,13 +412,11 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 13
     :try_start_8
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_8
 
-    .line 14
     :catch_8
     :cond_4
     throw p1
@@ -465,7 +427,6 @@
     :goto_6
     if-eqz v0, :cond_5
 
-    .line 15
     :try_start_9
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_9
@@ -495,28 +456,23 @@
 
     const-string/jumbo v1, "onDataRestore"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->ooOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OoOo0:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-super {p0, p1, p2}, Lmiui/app/backup/FullBackupAgent;->onDataRestore(Lmiui/app/backup/BackupMeta;Landroid/os/ParcelFileDescriptor;)I
 
     move-result p1
 
     return p1
 
-    .line 4
     :cond_0
     new-instance p1, Lcom/android/camera/backup/CameraSettingsBackupImpl;
 
     invoke-direct {p1}, Lcom/android/camera/backup/CameraSettingsBackupImpl;-><init>()V
 
-    .line 5
     invoke-virtual {p0}, Lmiui/app/backup/FullBackupAgent;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -540,22 +496,18 @@
 
     const-string/jumbo v1, "onFullBackup"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->ooOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OoOo0:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-super {p0, p1, p2}, Lmiui/app/backup/FullBackupAgent;->onFullBackup(Landroid/os/ParcelFileDescriptor;I)I
 
     move-result p1
 
     return p1
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Lmiui/app/backup/FullBackupAgent;->getApplicationContext()Landroid/content/Context;
 
@@ -567,14 +519,12 @@
 
     invoke-static {p2, p1, v0}, Lmiui/cloud/backup/SettingsBackupHelper;->backupSettings(Landroid/content/Context;Landroid/os/ParcelFileDescriptor;Lmiui/cloud/backup/ICloudBackup;)V
 
-    .line 5
     invoke-static {}, Lcom/android/camera/storage/Storage;->getPrimaryStoragePath()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/camera/backup/CameraBackupAgent;->backupFile(Ljava/lang/String;)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/storage/Storage;->getSecondaryStoragePath()Ljava/lang/String;
 
     move-result-object p1
@@ -598,36 +548,29 @@
 
     const-string/jumbo v1, "onRestoreEnd: update watermark for vendor"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->generateMainWatermark2File()Landroid/graphics/Bitmap;
 
-    .line 3
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->ooOO:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OoOo0:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-super {p0, p1}, Lmiui/app/backup/FullBackupAgent;->onRestoreEnd(Lmiui/app/backup/BackupMeta;)I
 
     move-result p1
 
     return p1
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/storage/Storage;->getPrimaryStoragePath()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/storage/Storage;->getSecondaryStoragePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "miui.intent.action.MEDIA_SCANNER_SCAN_FOLDER"
@@ -636,12 +579,10 @@
 
     const/high16 v2, 0x1000000
 
-    .line 8
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     if-eqz p1, :cond_1
 
-    .line 9
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -652,7 +593,6 @@
 
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 10
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -662,7 +602,6 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 11
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -673,7 +612,6 @@
 
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 12
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1

@@ -35,17 +35,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/32 v0, 0xfe502b
 
-    .line 2
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitMinTime:J
 
     const-wide/32 v0, 0x1fca056
 
-    .line 3
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitMinTime30:J
 
     return-void
@@ -54,12 +51,10 @@
 .method public static fps()D
     .locals 5
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
-    .line 2
     sget-wide v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLastFrameTimeStamp:J
 
     sub-long v2, v0, v2
@@ -72,10 +67,8 @@
 
     float-to-double v2, v3
 
-    .line 3
     sput-wide v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLastFrameTimeStamp:J
 
-    .line 4
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -100,7 +93,6 @@
 .method public static fpsAVG(I)D
     .locals 5
 
-    .line 1
     sget-wide v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mStartTime:J
 
     const-wide/16 v2, 0x0
@@ -111,10 +103,8 @@
 
     const/4 p0, 0x0
 
-    .line 2
     sput p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mFPSFrameRate:I
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -125,7 +115,6 @@
 
     return-wide v0
 
-    .line 4
     :cond_0
     sget v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mFPSFrameRate:I
 
@@ -139,7 +128,6 @@
 
     mul-float/2addr v0, p0
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
@@ -162,12 +150,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     sput v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mFPSFrameRate:I
 
     const-wide/16 v0, 0x0
 
-    .line 2
     sput-wide v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mStartTime:J
 
     return-void
@@ -178,7 +164,6 @@
 .method public limit()V
     .locals 6
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitFrameRate:I
 
@@ -190,7 +175,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -200,10 +184,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitFrameRate:I
 
-    .line 4
     :cond_1
     iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitMinTime:J
 
@@ -235,7 +217,6 @@
 
     const-wide/32 v2, 0xf4240
 
-    .line 5
     div-long v4, v0, v2
 
     rem-long/2addr v0, v2
@@ -251,7 +232,6 @@
     :catch_0
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :cond_2
@@ -262,7 +242,6 @@
 .method public limit30()V
     .locals 6
 
-    .line 1
     :try_start_0
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitFrameRate:I
 
@@ -274,7 +253,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -284,10 +262,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitFrameRate:I
 
-    .line 4
     :cond_1
     iget-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitMinTime30:J
 
@@ -319,7 +295,6 @@
 
     const-wide/32 v2, 0xf4240
 
-    .line 5
     div-long v4, v0, v2
 
     rem-long/2addr v0, v2
@@ -335,7 +310,6 @@
     :catch_0
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :cond_2
@@ -348,12 +322,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     iput-wide v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitStartTime:J
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitFrameRate:I
 
     return-void
@@ -362,7 +334,6 @@
 .method public setLimitMinTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/FPSUtil;->mLimitMinTime:J
 
     return-void

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/fullscreen/FragmentFullScreen;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/fullscreen/FragmentFullScreen$2;->this$0:Lcom/android/camera/fragment/fullscreen/FragmentFullScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/fullscreen/FragmentFullScreen$2;->this$0:Lcom/android/camera/fragment/fullscreen/FragmentFullScreen;
 
     invoke-static {v0}, Lcom/android/camera/fragment/fullscreen/FragmentFullScreen;->access$000(Lcom/android/camera/fragment/fullscreen/FragmentFullScreen;)Landroid/view/View;
@@ -54,18 +52,16 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000Oo0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000O0oO()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->hideCoveredBlackView()V
 
     :cond_0

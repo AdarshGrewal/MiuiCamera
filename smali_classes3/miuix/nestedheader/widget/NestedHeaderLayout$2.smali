@@ -24,7 +24,6 @@
 .method public constructor <init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     iput-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->val$tag:Ljava/lang/String;
@@ -48,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->val$tag:Ljava/lang/String;
 
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
@@ -57,7 +55,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->val$tag:Ljava/lang/String;
@@ -68,7 +65,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3
     iget-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$2;->this$0:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getIntValue()I

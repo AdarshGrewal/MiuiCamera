@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/DefaultTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onActionComplete(Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$000(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
@@ -51,7 +49,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$200(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
@@ -91,7 +88,6 @@
 .method public onActionStart(Lmiuix/springback/trigger/BaseTrigger$IndeterminateAction;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$000(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/ProgressBar;
@@ -102,7 +98,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$100(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/view/View;
@@ -111,7 +106,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$200(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;
@@ -122,7 +116,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lmiuix/springback/trigger/DefaultTrigger$1;->this$0:Lmiuix/springback/trigger/DefaultTrigger;
 
     invoke-static {v0}, Lmiuix/springback/trigger/DefaultTrigger;->access$200(Lmiuix/springback/trigger/DefaultTrigger;)Landroid/widget/TextView;

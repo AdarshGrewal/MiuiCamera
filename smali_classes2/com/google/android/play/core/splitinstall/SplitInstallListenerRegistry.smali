@@ -23,7 +23,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/google/android/play/core/splitinstall/SplitSessionLoaderSingleton;->get()Lcom/google/android/play/core/splitinstall/SplitSessionLoader;
 
     move-result-object v0
@@ -36,7 +35,6 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/play/core/splitinstall/SplitSessionLoader;)V
     .locals 3
 
-    .line 2
     new-instance v0, Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const-string v1, "SplitInstallListenerRegistry"
@@ -51,7 +49,6 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;-><init>(Lcom/google/android/play/core/splitcompat/util/PlayCore;Landroid/content/IntentFilter;Landroid/content/Context;)V
 
-    .line 3
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -62,7 +59,6 @@
 
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;->mMainHandler:Landroid/os/Handler;
 
-    .line 4
     iput-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;->mLoader:Lcom/google/android/play/core/splitinstall/SplitSessionLoader;
 
     return-void
@@ -75,7 +71,6 @@
 
     const-string v0, "session_state"
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -84,7 +79,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v1, 0x1
@@ -99,7 +93,6 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->info(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->status()I
 
     move-result v0
@@ -112,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v1, p1, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->splitFileIntents:Ljava/util/List;
 
     new-instance v2, Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
@@ -123,7 +115,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->notifyListeners(Ljava/lang/Object;)V
 

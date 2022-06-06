@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/bumptech/glide/GlideBuilder;Lcom/bumptech/glide/request/RequestOptions;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/GlideBuilder$2;->this$0:Lcom/bumptech/glide/GlideBuilder;
 
     iput-object p2, p0, Lcom/bumptech/glide/GlideBuilder$2;->val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
@@ -42,7 +41,6 @@
 .method public build()Lcom/bumptech/glide/request/RequestOptions;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/GlideBuilder$2;->val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
     if-eqz v0, :cond_0

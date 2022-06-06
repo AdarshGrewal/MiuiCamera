@@ -57,7 +57,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/animation/property/ViewProperty$1;
 
     const-string v1, "translationX"
@@ -66,7 +65,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 2
     new-instance v0, Lmiuix/animation/property/ViewProperty$2;
 
     const-string v1, "translationY"
@@ -75,7 +73,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     new-instance v0, Lmiuix/animation/property/ViewProperty$3;
 
     const-string v1, "translationZ"
@@ -84,7 +81,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Z:Lmiuix/animation/property/ViewProperty;
 
-    .line 4
     new-instance v0, Lmiuix/animation/property/ViewProperty$4;
 
     const-string v1, "scaleX"
@@ -93,7 +89,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 5
     new-instance v0, Lmiuix/animation/property/ViewProperty$5;
 
     const-string v1, "scaleY"
@@ -102,7 +97,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     new-instance v0, Lmiuix/animation/property/ViewProperty$6;
 
     const-string v1, "rotation"
@@ -111,7 +105,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->ROTATION:Lmiuix/animation/property/ViewProperty;
 
-    .line 7
     new-instance v0, Lmiuix/animation/property/ViewProperty$7;
 
     const-string v1, "rotationX"
@@ -120,7 +113,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->ROTATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 8
     new-instance v0, Lmiuix/animation/property/ViewProperty$8;
 
     const-string v1, "rotationY"
@@ -129,7 +121,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->ROTATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 9
     new-instance v0, Lmiuix/animation/property/ViewProperty$9;
 
     const-string v1, "x"
@@ -138,7 +129,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     new-instance v0, Lmiuix/animation/property/ViewProperty$10;
 
     const-string v1, "y"
@@ -147,7 +137,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 11
     new-instance v0, Lmiuix/animation/property/ViewProperty$11;
 
     const-string v1, "z"
@@ -156,7 +145,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->Z:Lmiuix/animation/property/ViewProperty;
 
-    .line 12
     new-instance v0, Lmiuix/animation/property/ViewProperty$12;
 
     const-string v1, "height"
@@ -165,7 +153,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->HEIGHT:Lmiuix/animation/property/ViewProperty;
 
-    .line 13
     new-instance v0, Lmiuix/animation/property/ViewProperty$13;
 
     const-string v1, "width"
@@ -174,7 +161,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
 
-    .line 14
     new-instance v0, Lmiuix/animation/property/ViewProperty$14;
 
     const-string v1, "alpha"
@@ -183,7 +169,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 15
     new-instance v0, Lmiuix/animation/property/ViewProperty$15;
 
     const-string v1, "autoAlpha"
@@ -192,7 +177,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 16
     new-instance v0, Lmiuix/animation/property/ViewProperty$16;
 
     const-string v1, "scrollX"
@@ -201,7 +185,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->SCROLL_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 17
     new-instance v0, Lmiuix/animation/property/ViewProperty$17;
 
     const-string v1, "scrollY"
@@ -210,7 +193,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->SCROLL_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 18
     new-instance v0, Lmiuix/animation/property/ViewProperty$18;
 
     const-string v1, "deprecated_foreground"
@@ -219,7 +201,6 @@
 
     sput-object v0, Lmiuix/animation/property/ViewProperty;->FOREGROUND:Lmiuix/animation/property/ViewProperty;
 
-    .line 19
     new-instance v0, Lmiuix/animation/property/ViewProperty$19;
 
     const-string v1, "deprecated_background"
@@ -234,7 +215,6 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -243,7 +223,6 @@
 .method public static synthetic access$000(Landroid/view/View;)Z
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/animation/property/ViewProperty;->isInInitLayout(Landroid/view/View;)Z
 
     move-result p0
@@ -254,7 +233,6 @@
 .method public static isInInitLayout(Landroid/view/View;)Z
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/animation/R$id;->miuix_animation_tag_init_layout:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -279,7 +257,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

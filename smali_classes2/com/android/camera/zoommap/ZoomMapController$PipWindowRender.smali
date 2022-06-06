@@ -33,10 +33,8 @@
 .method public constructor <init>(Lcom/android/camera/zoommap/ZoomMapController;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +49,6 @@
 .method public onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/zoommap/ZoomMapController$PipWindowRender;->mZoomMapControllerRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -62,7 +59,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/zoommap/ZoomMapController;->access$400(Lcom/android/camera/zoommap/ZoomMapController;)V
 
     :cond_0

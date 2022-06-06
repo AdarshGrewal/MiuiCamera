@@ -24,7 +24,6 @@
 .method public constructor <init>(Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;Ljava/lang/String;Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$15;->this$0:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation;
 
     iput-object p3, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;
@@ -39,7 +38,6 @@
 .method public getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;
 
     invoke-virtual {p1}, Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;->getValue()F
@@ -52,7 +50,6 @@
 .method public setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;
 
     invoke-virtual {p1, p2}, Lmiuix/overscroller/internal/dynamicanimation/animation/FloatValueHolder;->setValue(F)V

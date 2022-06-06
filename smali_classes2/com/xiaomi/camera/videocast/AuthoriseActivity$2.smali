@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/AuthoriseActivity;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$2;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -35,7 +34,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$2;->this$0:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;->REJECTED:Lcom/xiaomi/camera/videocast/VideoCastService$AuthorisationResult;

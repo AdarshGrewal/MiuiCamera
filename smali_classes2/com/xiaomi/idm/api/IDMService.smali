@@ -54,7 +54,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -67,10 +66,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IIDMService;-><init>()V
 
-    .line 13
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object v0
@@ -89,10 +86,8 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 14
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IIDMService;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     return-void
@@ -101,35 +96,28 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IIDMService;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setUuid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0, p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setName(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p2
 
-    .line 5
     invoke-virtual {p2, p3}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setType(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p2
 
-    .line 6
     invoke-virtual {p2, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setOriginalUuid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
@@ -144,22 +132,18 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 8
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->newBuilder(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1, p4}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setSuperType(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
@@ -174,7 +158,6 @@
 .method public static getCallingClient()Lcom/xiaomi/idm/api/ClientInfo;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/IDMService;->sCallingClientInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -189,7 +172,6 @@
 .method public static setCallingClient(Lcom/xiaomi/idm/api/ClientInfo;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/IDMService;->sCallingClientInfo:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -210,7 +192,6 @@
 .method public getEndpoint()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getEndpoint()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
@@ -223,7 +204,6 @@
 .method public getIDMServiceProto()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     return-object v0
@@ -232,7 +212,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getName()Ljava/lang/String;
@@ -245,7 +224,6 @@
 .method public getOriginalUuid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getOriginalUuid()Ljava/lang/String;
@@ -258,7 +236,6 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getType()Ljava/lang/String;
@@ -271,7 +248,6 @@
 .method public getUUID()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getUuid()Ljava/lang/String;
@@ -284,7 +260,6 @@
 .method public getUseSuper()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getSuperType()Ljava/lang/String;
@@ -297,7 +272,6 @@
 .method public isEventEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     return v0
@@ -306,7 +280,6 @@
 .method public notifyEvent(I[B)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mEventCallback:Lcom/xiaomi/idm/api/IDMService$IDMEventCallback;
 
     if-eqz v0, :cond_0
@@ -315,17 +288,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent$Builder;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent$Builder;->setEid(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent$Builder;
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getUUID()Ljava/lang/String;
 
     move-result-object v0
@@ -334,7 +304,6 @@
 
     move-result-object p1
 
-    .line 5
     invoke-static {p2}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object p2
@@ -343,14 +312,12 @@
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 
     check-cast p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;
 
-    .line 7
     iget-object p2, p0, Lcom/xiaomi/idm/api/IDMService;->mEventCallback:Lcom/xiaomi/idm/api/IDMService$IDMEventCallback;
 
     invoke-interface {p2, p0, p1}, Lcom/xiaomi/idm/api/IDMService$IDMEventCallback;->onEvent(Lcom/xiaomi/idm/api/IDMService;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
@@ -362,7 +329,6 @@
 .method public onAdvertisingResult(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,7 +365,6 @@
 
     const-string p3, "onServiceChanged"
 
-    .line 13
     invoke-static {p2, p3, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -416,10 +381,8 @@
 
     const-string v3, "onServiceChanged"
 
-    .line 1
     invoke-static {v2, v3, v1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;->parseFrom([B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;
 
@@ -432,7 +395,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -448,18 +410,15 @@
 
     const-string v0, "    onServiceChangeResult proto from native is null!"
 
-    .line 4
     invoke-static {v2, v0, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;->getOldServiceId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getUUID()Ljava/lang/String;
 
     move-result-object v3
@@ -474,21 +433,17 @@
 
     const-string v4, "    oldServiceId from native does not match current serviceId!"
 
-    .line 7
     invoke-static {v2, v4, v3}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 8
     :cond_1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;->getNewServiceId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnServiceChangeResult;->getSubChangeTypeValue()I
 
     move-result v4
 
-    .line 10
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,10 +486,8 @@
 
     invoke-static {v2, p1, v0}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 11
     invoke-virtual {p0, v3}, Lcom/xiaomi/idm/api/IDMService;->setUUID(Ljava/lang/String;)V
 
-    .line 12
     invoke-virtual {p0, v4, v1, v3}, Lcom/xiaomi/idm/api/IDMService;->onServiceChanged(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -551,7 +504,6 @@
 
     const-string p4, "onServiceConnectStatus request: default "
 
-    .line 9
     invoke-static {p3, p4, p2}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return p1
@@ -562,7 +514,6 @@
 
     const-string v0, "IDMService"
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;->parseFrom([B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;
 
@@ -575,7 +526,6 @@
     :catch_0
     move-exception p1
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -593,23 +543,19 @@
 
     const-string v2, " onConnectServiceRequest Called but param is null"
 
-    .line 3
     invoke-static {v0, v2, v1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return p1
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;->getStatus()I
 
     move-result v0
 
-    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;->getClientId()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;->getEndpoint()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v2
@@ -618,7 +564,6 @@
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMConnectServiceRequest;->getConnParam()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam;
 
     move-result-object p1
@@ -627,7 +572,6 @@
 
     move-result-object p1
 
-    .line 8
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/xiaomi/idm/api/IDMService;->onServiceConnectStatus(ILjava/lang/String;Lcom/xiaomi/idm/api/conn/EndPoint;Lcom/xiaomi/idm/api/conn/ConnParam;)Z
 
     move-result p1
@@ -645,7 +589,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;->parseFrom([B)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;
 
@@ -658,7 +601,6 @@
     :catch_0
     move-exception p1
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -676,12 +618,10 @@
 
     const-string v2, "request Called but bytes is null"
 
-    .line 3
     invoke-static {v0, v2, p1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
 
-    .line 4
     :cond_0
     new-instance v0, Lcom/xiaomi/idm/api/ClientInfo;
 
@@ -697,15 +637,12 @@
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMService;->setCallingClient(Lcom/xiaomi/idm/api/ClientInfo;)V
 
-    .line 5
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/api/IDMService;->request(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
     move-result-object p1
 
-    .line 6
     invoke-static {v1}, Lcom/xiaomi/idm/api/IDMService;->setCallingClient(Lcom/xiaomi/idm/api/ClientInfo;)V
 
-    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->toByteArray()[B
 
     move-result-object p1
@@ -716,7 +653,6 @@
 .method public setEventCallback(Lcom/xiaomi/idm/api/IDMService$IDMEventCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventCallback:Lcom/xiaomi/idm/api/IDMService$IDMEventCallback;
 
     return-void
@@ -725,19 +661,16 @@
 .method public setUUID(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->newBuilder(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->setUuid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
@@ -752,7 +685,6 @@
 .method public toByteArray()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     if-nez v0, :cond_0
@@ -773,7 +705,6 @@
 .method public update(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMService;->mService:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     return-void

@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -59,10 +58,8 @@
 .method public constructor <init>(Lcom/android/camera/network/download/Request;)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;-><init>(Lcom/android/camera/network/download/DownloadTask;Lcom/android/camera/network/download/Request;)V
@@ -75,17 +72,14 @@
 .method public constructor <init>(Lcom/android/camera/network/download/Request;Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-direct {v0, p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;-><init>(Lcom/android/camera/network/download/DownloadTask;Lcom/android/camera/network/download/Request;)V
 
     iput-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/network/download/DownloadTask;->mOnCompleteListener:Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
 
     return-void
@@ -94,7 +88,6 @@
 .method public static synthetic access$200(Lcom/android/camera/network/download/DownloadTask;Lcom/android/camera/network/download/Request;)I
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/network/download/DownloadTask;->performRequest(Lcom/android/camera/network/download/Request;)I
 
     move-result p0
@@ -105,7 +98,6 @@
 .method public static synthetic access$300(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/network/download/DownloadTask;->mOnCompleteListener:Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
 
     return-object p0
@@ -114,7 +106,6 @@
 .method public static synthetic access$400(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/network/download/DownloadTask;->mOnProgressListener:Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
 
     return-object p0
@@ -125,19 +116,16 @@
 
     const/16 v0, 0x2710
 
-    .line 1
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     const/16 v0, 0x3a98
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     const-string v0, "Accept-Encoding"
 
     const-string v1, "identity"
 
-    .line 3
     invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -146,7 +134,6 @@
 .method public static getTempFile(Ljava/io/File;)Ljava/io/File;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->getParent()Ljava/lang/String;
@@ -205,12 +192,10 @@
 .method public static openOutputStream(Ljava/io/File;)Ljava/io/OutputStream;
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -233,7 +218,6 @@
 
     const-string v0, "create folder failed"
 
-    .line 3
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -242,7 +226,6 @@
 
     return-object v2
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -250,7 +233,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -261,7 +243,6 @@
 
     const-string/jumbo v0, "output file is a directory"
 
-    .line 6
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -275,20 +256,17 @@
 
     const-string/jumbo v1, "output file will be overwritten"
 
-    .line 7
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :cond_2
     invoke-static {p0}, Lcom/android/camera/network/download/DownloadTask;->getTempFile(Ljava/io/File;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 9
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -299,14 +277,12 @@
 
     const-string/jumbo v1, "temp file exists, try delete"
 
-    .line 10
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result v0
@@ -317,14 +293,12 @@
 
     const-string/jumbo v1, "temp file delete failed, will overwrite"
 
-    .line 12
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v4, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     :cond_3
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
@@ -338,7 +312,6 @@
     :catch_0
     move-exception p0
 
-    .line 14
     invoke-static {v4, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v2
@@ -347,7 +320,6 @@
 .method private performProgressUpdate([BI)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mTaskInfo:Lcom/android/camera/network/download/DownloadTask$TaskInfo;
 
     iget-wide v1, v0, Lcom/android/camera/network/download/DownloadTask$TaskInfo;->mDownloadSize:J
@@ -356,20 +328,16 @@
 
     add-long/2addr v3, v1
 
-    .line 2
     iput-wide v3, v0, Lcom/android/camera/network/download/DownloadTask$TaskInfo;->mDownloadSize:J
 
-    .line 3
     iget-object v0, v0, Lcom/android/camera/network/download/DownloadTask$TaskInfo;->mDigest:Ljava/security/MessageDigest;
 
     if-eqz v0, :cond_0
 
     const/4 v3, 0x0
 
-    .line 4
     invoke-virtual {v0, p1, v3, p2}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/network/download/DownloadTask;->mOnProgressListener:Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
 
@@ -385,7 +353,6 @@
 
     if-lez p2, :cond_1
 
-    .line 6
     iget-wide p1, p1, Lcom/android/camera/network/download/DownloadTask$TaskInfo;->mDownloadSize:J
 
     long-to-double p1, p1
@@ -412,7 +379,6 @@
 
     if-eq p2, p1, :cond_1
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-virtual {p2, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->publishProgress(I)V
@@ -428,7 +394,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getTag()Ljava/lang/String;
 
     move-result-object v1
@@ -463,23 +428,19 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/network/download/DownloadTask;->preRequest()V
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getMaxRetryTimes()I
 
     move-result v0
 
     move v4, v2
 
-    .line 4
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera/network/download/DownloadTask;->process(Lcom/android/camera/network/download/Request;)I
 
     move-result v5
 
-    .line 5
     invoke-static {v5}, Lcom/android/camera/network/download/DownloadTask;->isRetryState(I)Z
 
     move-result v6
@@ -488,7 +449,6 @@
 
     new-array v6, v3, [Ljava/lang/Object;
 
-    .line 6
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -503,7 +463,6 @@
 
     invoke-static {v1, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :try_start_0
     sget-wide v6, Lcom/android/camera/network/download/DownloadTask;->RETRY_INTERVAL_MILLI:J
 
@@ -520,7 +479,6 @@
     :catch_0
     const/4 v5, 0x5
 
-    .line 8
     :cond_1
     :goto_0
     invoke-direct {p0, v5}, Lcom/android/camera/network/download/DownloadTask;->postRequest(I)I
@@ -533,7 +491,6 @@
 .method private postDownload()I
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-static {v0}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->access$100(Lcom/android/camera/network/download/DownloadTask$CoreTask;)Lcom/android/camera/network/download/Request;
@@ -581,7 +538,6 @@
 
     const-string/jumbo v2, "verify fail"
 
-    .line 2
     invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -598,7 +554,6 @@
 
     const-string/jumbo v3, "verify success"
 
-    .line 3
     invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -617,7 +572,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v2, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-static {v2}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->access$100(Lcom/android/camera/network/download/DownloadTask$CoreTask;)Lcom/android/camera/network/download/Request;
@@ -628,12 +582,10 @@
 
     move-result-object v2
 
-    .line 2
     invoke-static {v2}, Lcom/android/camera/network/download/DownloadTask;->getTempFile(Ljava/io/File;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -654,7 +606,6 @@
 
     const-string v0, "delete tmp file failed %s"
 
-    .line 4
     invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -663,7 +614,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v2, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
@@ -675,12 +625,10 @@
 
     move-result-object v2
 
-    .line 6
     invoke-static {v2}, Lcom/android/camera/network/download/DownloadTask;->getTempFile(Ljava/io/File;)Ljava/io/File;
 
     move-result-object v3
 
-    .line 7
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -693,7 +641,6 @@
 
     const-string v0, "downloaded file missing"
 
-    .line 8
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -702,7 +649,6 @@
 
     return v5
 
-    .line 9
     :cond_1
     invoke-virtual {v3, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -714,7 +660,6 @@
 
     const-string v0, "downloaded file rename failed"
 
-    .line 10
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -728,7 +673,6 @@
 
     const-string/jumbo v2, "rename tmp file success"
 
-    .line 11
     invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -743,7 +687,6 @@
 .method private preDownload(Lcom/android/camera/network/download/Request;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getVerifier()Lcom/android/camera/network/download/Verifier;
 
     move-result-object p1
@@ -754,9 +697,8 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const-string v1, "need verify, try to get MessageDigest"
+    const-string/jumbo v1, "need verify, try to get MessageDigest"
 
-    .line 2
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -765,7 +707,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mTaskInfo:Lcom/android/camera/network/download/DownloadTask$TaskInfo;
 
     invoke-virtual {p1}, Lcom/android/camera/network/download/Verifier;->getInstance()Ljava/security/MessageDigest;
@@ -781,7 +722,6 @@
 .method private preRequest()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/download/DownloadTask$TaskInfo;
 
     const/4 v1, 0x0
@@ -796,7 +736,6 @@
 .method private process(Lcom/android/camera/network/download/Request;)I
     .locals 8
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getUri()Landroid/net/Uri;
 
     move-result-object v0
@@ -809,7 +748,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, v0, Lcom/android/camera/network/download/ConnectionHelper$Holder;->value:Ljava/lang/Object;
 
     check-cast v1, Ljava/net/HttpURLConnection;
@@ -824,14 +762,12 @@
 
     const-string/jumbo v1, "open connection failed"
 
-    .line 3
     invoke-static {v1, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget p1, v0, Lcom/android/camera/network/download/ConnectionHelper$Holder;->reason:I
 
     invoke-static {p1}, Lcom/android/camera/network/download/DownloadTask;->translateErrorCode(I)I
@@ -843,14 +779,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 5
     :try_start_0
     invoke-direct {p0, v1}, Lcom/android/camera/network/download/DownloadTask;->configure(Ljava/net/HttpURLConnection;)V
 
-    .line 6
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 7
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v4
@@ -865,7 +798,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 8
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -875,17 +807,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 9
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     return v4
 
-    .line 10
     :cond_1
     :try_start_1
     invoke-direct {p0, v1}, Lcom/android/camera/network/download/DownloadTask;->processHeader(Ljava/net/HttpURLConnection;)V
 
-    .line 11
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v4
@@ -893,7 +822,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 12
     :try_start_2
     invoke-virtual {p1}, Lcom/android/camera/network/download/Request;->getDestination()Ljava/io/File;
 
@@ -909,7 +837,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 13
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -921,12 +848,10 @@
 
     const/4 p1, 0x4
 
-    .line 14
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     if-eqz v4, :cond_2
 
-    .line 15
     :try_start_3
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -937,14 +862,12 @@
     :catch_0
     move-exception v1
 
-    .line 16
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 17
     :try_start_4
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_4
@@ -955,14 +878,12 @@
     :catch_1
     move-exception v0
 
-    .line 18
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3
     :goto_1
     return p1
 
-    .line 19
     :cond_4
     :try_start_5
     invoke-direct {p0, p1}, Lcom/android/camera/network/download/DownloadTask;->preDownload(Lcom/android/camera/network/download/Request;)V
@@ -971,7 +892,6 @@
 
     new-array v5, v2, [Ljava/lang/Object;
 
-    .line 20
     invoke-static {p1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -984,7 +904,6 @@
 
     move v5, v2
 
-    .line 21
     :goto_2
     iget-object v6, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
@@ -1002,10 +921,8 @@
 
     if-eq v5, v7, :cond_5
 
-    .line 22
     invoke-virtual {v0, p1, v2, v5}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 23
     invoke-direct {p0, p1, v5}, Lcom/android/camera/network/download/DownloadTask;->performProgressUpdate([BI)V
 
     goto :goto_2
@@ -1017,14 +934,12 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 24
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     invoke-direct {p0}, Lcom/android/camera/network/download/DownloadTask;->postDownload()I
 
     move-result p1
@@ -1032,12 +947,10 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_6
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 26
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     if-eqz v4, :cond_6
 
-    .line 27
     :try_start_6
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -1048,14 +961,12 @@
     :catch_2
     move-exception v1
 
-    .line 28
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_6
     :goto_3
     if-eqz v0, :cond_7
 
-    .line 29
     :try_start_7
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_7
@@ -1066,7 +977,6 @@
     :catch_3
     move-exception v0
 
-    .line 30
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_7
@@ -1079,7 +989,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 31
     invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -1091,12 +1000,10 @@
 
     const/4 p1, 0x5
 
-    .line 32
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     if-eqz v4, :cond_9
 
-    .line 33
     :try_start_9
     invoke-virtual {v4}, Ljava/io/InputStream;->close()V
     :try_end_9
@@ -1107,14 +1014,12 @@
     :catch_4
     move-exception v1
 
-    .line 34
     invoke-static {v3, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_9
     :goto_5
     if-eqz v0, :cond_a
 
-    .line 35
     :try_start_a
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_a
@@ -1125,7 +1030,6 @@
     :catch_5
     move-exception v0
 
-    .line 36
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_a
@@ -1162,7 +1066,6 @@
 
     move-object v2, v0
 
-    .line 37
     :goto_7
     :try_start_b
     invoke-static {v3, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -1171,12 +1074,10 @@
 
     const/16 p1, 0xb
 
-    .line 38
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     if-eqz v0, :cond_b
 
-    .line 39
     :try_start_c
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_c
@@ -1187,14 +1088,12 @@
     :catch_8
     move-exception v0
 
-    .line 40
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_b
     :goto_8
     if-eqz v2, :cond_c
 
-    .line 41
     :try_start_d
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_d
@@ -1205,7 +1104,6 @@
     :catch_9
     move-exception v0
 
-    .line 42
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_c
@@ -1215,13 +1113,11 @@
     :catchall_2
     move-exception p1
 
-    .line 43
     :goto_a
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     if-eqz v0, :cond_d
 
-    .line 44
     :try_start_e
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_e
@@ -1232,14 +1128,12 @@
     :catch_a
     move-exception v0
 
-    .line 45
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_d
     :goto_b
     if-eqz v2, :cond_e
 
-    .line 46
     :try_start_f
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_f
@@ -1250,10 +1144,8 @@
     :catch_b
     move-exception v0
 
-    .line 47
     invoke-static {v3, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 48
     :cond_e
     :goto_c
     throw p1
@@ -1262,7 +1154,6 @@
 .method private processHeader(Ljava/net/HttpURLConnection;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mTaskInfo:Lcom/android/camera/network/download/DownloadTask$TaskInfo;
 
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getContentLength()I
@@ -1277,7 +1168,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mTaskInfo:Lcom/android/camera/network/download/DownloadTask$TaskInfo;
 
     iget-wide v0, v0, Lcom/android/camera/network/download/DownloadTask$TaskInfo;->mContentLength:J
@@ -1348,7 +1238,6 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1363,7 +1252,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     div-int/lit8 v0, p0, 0x64
 
     const/4 v1, 0x3
@@ -1419,7 +1307,6 @@
 
     const-string v2, "http status is ok"
 
-    .line 3
     invoke-static {v2, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1434,7 +1321,6 @@
 .method public cancel(Z)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     invoke-virtual {v0, p1}, Landroid/os/AsyncTask;->cancel(Z)Z
@@ -1447,7 +1333,6 @@
 .method public execute()I
     .locals 2
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     const/4 v1, 0x0
@@ -1468,7 +1353,6 @@
 .method public execute(Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mCoreTask:Lcom/android/camera/network/download/DownloadTask$CoreTask;
 
     const/4 v1, 0x0
@@ -1483,7 +1367,6 @@
 .method public getOnProgressListener()Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask;->mOnProgressListener:Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
 
     return-object v0
@@ -1492,7 +1375,6 @@
 .method public setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/download/DownloadTask;->mOnProgressListener:Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
 
     return-void

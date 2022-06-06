@@ -105,7 +105,6 @@
 
     const/16 v1, 0x101
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -114,7 +113,6 @@
 
     const/16 v1, 0x102
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -123,7 +121,6 @@
 
     const/16 v1, 0x103
 
-    .line 3
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -132,7 +129,6 @@
 
     const/16 v1, 0x104
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -141,7 +137,6 @@
 
     const/16 v1, 0x105
 
-    .line 5
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -150,7 +145,6 @@
 
     const/16 v1, 0x106
 
-    .line 6
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -159,7 +153,6 @@
 
     const/16 v1, 0x107
 
-    .line 7
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -168,7 +161,6 @@
 
     const/16 v1, 0x108
 
-    .line 8
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -177,7 +169,6 @@
 
     const/16 v1, 0x109
 
-    .line 9
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -186,7 +177,6 @@
 
     const/16 v1, 0x10a
 
-    .line 10
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -195,7 +185,6 @@
 
     const/16 v1, 0x10b
 
-    .line 11
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -204,7 +193,6 @@
 
     const/16 v1, 0x10c
 
-    .line 12
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -213,7 +201,6 @@
 
     const/16 v1, 0x10d
 
-    .line 13
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v1
@@ -222,7 +209,6 @@
 
     const/16 v1, 0x10e
 
-    .line 14
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v0
@@ -233,7 +219,6 @@
 
     const/16 v1, 0x200
 
-    .line 15
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v0
@@ -244,14 +229,12 @@
 
     const/16 v1, 0x301
 
-    .line 16
     invoke-static {v0, v1}, Lcom/android/camera/effect/FilterInfo;->getId(II)I
 
     move-result v0
 
     sput v0, Lcom/android/camera/effect/FilterInfo;->RENDER_ID_MAKEUP:I
 
-    .line 17
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     sput v0, Lcom/android/camera/effect/FilterInfo;->AI_SCENE_FILTER_ID_0_NONE:I
@@ -264,7 +247,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0, v0, p2}, Lcom/android/camera/effect/FilterInfo;-><init>(IIII)V
 
     return-void
@@ -273,7 +255,6 @@
 .method public constructor <init>(IIII)V
     .locals 6
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/effect/FilterInfo;->getCategory(I)I
 
     move-result v1
@@ -298,22 +279,16 @@
 .method public constructor <init>(IIIII)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput p1, p0, Lcom/android/camera/effect/FilterInfo;->mCategory:I
 
-    .line 5
     iput p2, p0, Lcom/android/camera/effect/FilterInfo;->mIndex:I
 
-    .line 6
     iput p5, p0, Lcom/android/camera/effect/FilterInfo;->mOrder:I
 
-    .line 7
     iput p3, p0, Lcom/android/camera/effect/FilterInfo;->mNameResId:I
 
-    .line 8
     iput p4, p0, Lcom/android/camera/effect/FilterInfo;->mIconResId:I
 
     return-void
@@ -352,7 +327,6 @@
 .method public compareTo(Lcom/android/camera/effect/FilterInfo;)I
     .locals 1
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->mOrder:I
 
     iget p1, p1, Lcom/android/camera/effect/FilterInfo;->mOrder:I
@@ -380,7 +354,6 @@
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/effect/FilterInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/FilterInfo;->compareTo(Lcom/android/camera/effect/FilterInfo;)I
@@ -397,14 +370,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     instance-of v1, p1, Lcom/android/camera/effect/FilterInfo;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget v1, p0, Lcom/android/camera/effect/FilterInfo;->mCategory:I
 
@@ -430,7 +401,6 @@
 .method public getIconResId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->mIconResId:I
 
     return v0
@@ -439,7 +409,6 @@
 .method public getId()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->mCategory:I
 
     shl-int/lit8 v0, v0, 0x10
@@ -454,7 +423,6 @@
 .method public getNameResId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->mNameResId:I
 
     return v0
@@ -463,7 +431,6 @@
 .method public getOrder()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->mOrder:I
 
     return v0
@@ -472,7 +439,6 @@
 .method public getTagUniqueFilterId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/FilterInfo;->tagUniqueFilterId:I
 
     return v0
@@ -481,7 +447,6 @@
 .method public isNeedRect()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/effect/FilterInfo;->mIsNeedRect:Z
 
     return v0
@@ -490,7 +455,6 @@
 .method public setIconResId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/FilterInfo;->mIconResId:I
 
     return-void
@@ -499,7 +463,6 @@
 .method public setNameResId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/FilterInfo;->mNameResId:I
 
     return-void
@@ -508,7 +471,6 @@
 .method public setNeedRect(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/effect/FilterInfo;->mIsNeedRect:Z
 
     return-void
@@ -517,7 +479,6 @@
 .method public setOrder(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/FilterInfo;->mOrder:I
 
     return-void
@@ -526,7 +487,6 @@
 .method public setTagUniqueFilterId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/FilterInfo;->tagUniqueFilterId:I
 
     return-void

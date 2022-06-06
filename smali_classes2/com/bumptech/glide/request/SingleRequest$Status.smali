@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 9
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v1, 0x0
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->PENDING:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v2, 0x1
@@ -64,7 +62,6 @@
 
     sput-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->RUNNING:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 3
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v3, 0x2
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->WAITING_FOR_SIZE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 4
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v4, 0x3
@@ -86,7 +82,6 @@
 
     sput-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->COMPLETE:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 5
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v5, 0x4
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->FAILED:Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 6
     new-instance v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     const/4 v6, 0x5
@@ -112,7 +106,6 @@
 
     new-array v7, v7, [Lcom/bumptech/glide/request/SingleRequest$Status;
 
-    .line 7
     sget-object v8, Lcom/bumptech/glide/request/SingleRequest$Status;->PENDING:Lcom/bumptech/glide/request/SingleRequest$Status;
 
     aput-object v8, v7, v1
@@ -148,7 +141,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -157,7 +149,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/bumptech/glide/request/SingleRequest$Status;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/bumptech/glide/request/SingleRequest$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -172,7 +163,6 @@
 .method public static values()[Lcom/bumptech/glide/request/SingleRequest$Status;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/request/SingleRequest$Status;->$VALUES:[Lcom/bumptech/glide/request/SingleRequest$Status;
 
     invoke-virtual {v0}, [Lcom/bumptech/glide/request/SingleRequest$Status;->clone()Ljava/lang/Object;

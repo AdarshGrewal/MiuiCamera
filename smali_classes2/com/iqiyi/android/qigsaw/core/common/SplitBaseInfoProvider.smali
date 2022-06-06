@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static getDefaultSplitInfoVersion()Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawConfigClass()Ljava/lang/Class;
 
@@ -52,12 +50,10 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -81,7 +77,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawConfigClass()Ljava/lang/Class;
 
@@ -95,10 +90,8 @@
 
     const/4 v2, 0x1
 
-    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -123,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -152,7 +144,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +172,6 @@
 
     invoke-static {v3, v1, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     throw v0
 .end method
 
@@ -196,7 +186,6 @@
 .method public static getVersionName()Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawConfigClass()Ljava/lang/Class;
 
@@ -210,12 +199,10 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -237,7 +224,6 @@
 .method public static isQigsawMode()Z
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->getQigsawConfigClass()Ljava/lang/Class;
 
@@ -251,12 +237,10 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -282,7 +266,6 @@
 .method public static setPackageName(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     sput-object p0, Lcom/iqiyi/android/qigsaw/core/common/SplitBaseInfoProvider;->sPackageName:Ljava/lang/String;
 
     return-void

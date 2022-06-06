@@ -28,15 +28,12 @@
 .method public constructor <init>(Lcom/android/camera/module/encoder/EGLBase;II)V
     .locals 2
 
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     iput-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 13
     invoke-static {}, Lcom/android/camera/module/encoder/EGLBase;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -45,20 +42,16 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     iput-object p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
-    .line 15
     invoke-static {p1, p2, p3}, Lcom/android/camera/module/encoder/EGLBase;->access$200(Lcom/android/camera/module/encoder/EGLBase;II)Landroid/opengl/EGLSurface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 16
     iput p2, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mWidth:I
 
-    .line 17
     iput p3, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mHeight:I
 
     return-void
@@ -67,15 +60,12 @@
 .method public constructor <init>(Lcom/android/camera/module/encoder/EGLBase;Ljava/lang/Object;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     iput-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/encoder/EGLBase;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -84,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     instance-of v0, p2, Landroid/view/SurfaceView;
 
     if-nez v0, :cond_1
@@ -103,7 +92,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -113,19 +101,16 @@
 
     throw p1
 
-    .line 6
     :cond_1
     :goto_0
     iput-object p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
-    .line 7
     invoke-static {p1, p2}, Lcom/android/camera/module/encoder/EGLBase;->access$100(Lcom/android/camera/module/encoder/EGLBase;Ljava/lang/Object;)Landroid/opengl/EGLSurface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
 
-    .line 8
     iget-object p2, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     const/16 v0, 0x3057
@@ -136,7 +121,6 @@
 
     iput p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mWidth:I
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     iget-object p2, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
@@ -149,7 +133,6 @@
 
     iput p1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mHeight:I
 
-    .line 10
     invoke-static {}, Lcom/android/camera/module/encoder/EGLBase;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -194,7 +177,6 @@
 .method public getContext()Landroid/opengl/EGLContext;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     invoke-virtual {v0}, Lcom/android/camera/module/encoder/EGLBase;->getContext()Landroid/opengl/EGLContext;
@@ -207,7 +189,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mHeight:I
 
     return v0
@@ -216,7 +197,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mWidth:I
 
     return v0
@@ -225,7 +205,6 @@
 .method public makeCurrent()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     iget-object v1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
@@ -238,7 +217,6 @@
 .method public release()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/encoder/EGLBase;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -247,14 +225,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     iget-object v1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
 
     invoke-static {v0, v1}, Lcom/android/camera/module/encoder/EGLBase;->access$500(Lcom/android/camera/module/encoder/EGLBase;Landroid/opengl/EGLSurface;)V
 
-    .line 3
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     iput-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;
@@ -265,7 +241,6 @@
 .method public swap()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEgl:Lcom/android/camera/module/encoder/EGLBase;
 
     iget-object v1, p0, Lcom/android/camera/module/encoder/EGLBase$EglSurface;->mEglSurface:Landroid/opengl/EGLSurface;

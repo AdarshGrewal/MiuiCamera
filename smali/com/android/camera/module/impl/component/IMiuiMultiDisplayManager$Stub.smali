@@ -39,12 +39,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "miui.hardware.display.IMiuiMultiDisplayManager"
 
-    .line 2
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -59,7 +57,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     new-instance v0, Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager$Stub$Proxy;
 
@@ -71,7 +68,6 @@
 .method public static getDefaultImpl()Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager$Stub$Proxy;->sDefaultImpl:Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager;
 
     return-object v0
@@ -80,14 +76,12 @@
 .method public static setDefaultImpl(Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager;)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager$Stub$Proxy;->sDefaultImpl:Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager;
 
     if-nez v0, :cond_0
 
     if-eqz p0, :cond_0
 
-    .line 2
     sput-object p0, Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager$Stub$Proxy;->sDefaultImpl:Lcom/android/camera/module/impl/component/IMiuiMultiDisplayManager;
 
     const/4 p0, 0x1

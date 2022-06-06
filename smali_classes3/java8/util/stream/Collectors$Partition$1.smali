@@ -31,7 +31,6 @@
 .method public constructor <init>(Ljava8/util/stream/Collectors$Partition;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/Collectors$Partition$1;->this$0:Ljava8/util/stream/Collectors$Partition;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -53,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
 
     const/4 v1, 0x0
@@ -68,7 +66,6 @@
 
     invoke-direct {v0, v2, v3}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2
     new-instance v2, Ljava/util/AbstractMap$SimpleImmutableEntry;
 
     const/4 v3, 0x1
@@ -91,7 +88,6 @@
 
     aput-object v2, v4, v3
 
-    .line 3
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

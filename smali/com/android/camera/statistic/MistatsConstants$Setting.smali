@@ -37,8 +37,6 @@
 
 .field public static final PARAM_AUDIO_MAP:Ljava/lang/String; = "attr_audio_map"
 
-.field public static final PARAM_AUTO_BOOT:Ljava/lang/String; = "attr_auto_boot"
-
 .field public static final PARAM_AUTO_HIBERNATION:Ljava/lang/String; = "attr_auto_hibernation"
 
 .field public static final PARAM_CAMERA_ASD_NIGHT:Ljava/lang/String; = "attr_camera_asd_night"
@@ -51,17 +49,15 @@
 
 .field public static final PARAM_CENTER_MARK:Ljava/lang/String; = "attr_center_mark"
 
-.field public static final PARAM_CUP_CAMERA_POSITION_HINT:Ljava/lang/String; = "attr_cup_camera_position_hint"
-
 .field public static final PARAM_DEVICE_WATERMARK:Ljava/lang/String; = "attr_watermark_device"
 
 .field public static final PARAM_DOCUMENT_MODE:Ljava/lang/String; = "attr_document_mode"
 
-.field public static final PARAM_FEATURE_AUTO_DOWNLOAD:Ljava/lang/String; = "attr_feature_auto_download"
-
 .field public static final PARAM_FINGERPRINT_CAPTURE:Ljava/lang/String; = "attr_fingerprint_capture"
 
 .field public static final PARAM_FLAW_TIP:Ljava/lang/String; = "attr_flaw_tip"
+
+.field public static final PARAM_FOCUS_SHOOT:Ljava/lang/String; = "attr_focus_shoot"
 
 .field public static final PARAM_FRONT_MIRROR:Ljava/lang/String; = "attr_front_mirror"
 
@@ -101,23 +97,13 @@
 
 .field public static final PARAM_PRO_MODE_MOVIE_SOLID:Ljava/lang/String; = "attr_pro_mode_movie_solid"
 
-.field public static final PARAM_RETAIN_AI_SCENE:Ljava/lang/String; = "attr_retain_ai_scene"
-
-.field public static final PARAM_RETAIN_BEAUTY:Ljava/lang/String; = "attr_retain_beauty"
-
 .field public static final PARAM_RETAIN_CAMERA_MODE:Ljava/lang/String; = "attr_retain_camera_mode"
-
-.field public static final PARAM_RETAIN_CAMERA_STATUS:Ljava/lang/String; = "attr_retain_camera_status"
-
-.field public static final PARAM_RETAIN_LIVE_SHOT:Ljava/lang/String; = "attr_retain_live_shot"
 
 .field public static final PARAM_SAVE_LOCATION:Ljava/lang/String; = "attr_save_location"
 
 .field public static final PARAM_SCAN_QRCODE:Ljava/lang/String; = "attr_scan_qrcode"
 
 .field public static final PARAM_SUB_MODULE:Ljava/lang/String; = "attr_sub_module"
-
-.field public static final PARAM_TAP_SHOOT:Ljava/lang/String; = "attr_tap_shoot"
 
 .field public static final PARAM_TILTSHIFT:Ljava/lang/String; = "attr_tiltshift"
 
@@ -137,9 +123,7 @@
 
 .field public static final PARAM_VIDEO_FRONT_DENOISE:Ljava/lang/String; = "attr_video_front_denoise"
 
-.field public static final PARAM_VIDEO_HDR10PLUS_VIDEO_ENCODER:Ljava/lang/String; = "attr_video_hdr10_plus"
-
-.field public static final PARAM_VIDEO_HDR10PRO_VIDEO_ENCODER:Ljava/lang/String; = "attr_video_hlg"
+.field public static final PARAM_VIDEO_HDR10PLUS_VIDEO_ENCODER:Ljava/lang/String; = "attr_video_hdr10+"
 
 .field public static final PARAM_VIDEO_HDR10_VIDEO_ENCODER:Ljava/lang/String; = "attr_video_hdr10"
 

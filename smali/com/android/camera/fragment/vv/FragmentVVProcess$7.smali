@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     const/4 v0, 0x0
@@ -57,7 +55,6 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +83,6 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +117,6 @@
 .method public onSurfaceReady(Landroid/view/Surface;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$700(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Z
@@ -130,14 +125,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$702(Lcom/android/camera/fragment/vv/FragmentVVProcess;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$800(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Lcom/android/camera/ui/TextureVideoView;
@@ -150,7 +143,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/TextureVideoView;->setVideoSpecifiedSize(II)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$7;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$900(Lcom/android/camera/fragment/vv/FragmentVVProcess;Landroid/view/Surface;)V

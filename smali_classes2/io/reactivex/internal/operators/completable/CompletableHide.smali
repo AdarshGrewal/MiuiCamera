@@ -19,10 +19,8 @@
 .method public constructor <init>(Lio/reactivex/CompletableSource;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Completable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableHide;->source:Lio/reactivex/CompletableSource;
 
     return-void
@@ -33,7 +31,6 @@
 .method public subscribeActual(Lio/reactivex/CompletableObserver;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableHide;->source:Lio/reactivex/CompletableSource;
 
     new-instance v1, Lio/reactivex/internal/operators/completable/CompletableHide$HideCompletableObserver;

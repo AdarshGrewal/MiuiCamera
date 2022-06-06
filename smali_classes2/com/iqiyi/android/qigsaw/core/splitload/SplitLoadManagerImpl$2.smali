@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerImpl$2;->this$0:Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     const-string p1, ".zip"
 
-    .line 1
     invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p1

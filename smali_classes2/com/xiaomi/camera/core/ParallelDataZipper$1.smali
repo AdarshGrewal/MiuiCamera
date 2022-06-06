@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/ParallelDataZipper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$1;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -35,7 +34,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -54,7 +52,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -79,13 +76,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_3
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$1;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     check-cast p1, Ljava/lang/Long;
@@ -98,13 +93,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_3
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$1;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     check-cast p1, Lcom/xiaomi/camera/core/CaptureData;
@@ -113,16 +106,13 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz p1, :cond_3
 
-    .line 8
     check-cast p1, Lcom/xiaomi/camera/core/ReleaseDataParameter;
 
-    .line 9
     iget-object v0, p0, Lcom/xiaomi/camera/core/ParallelDataZipper$1;->this$0:Lcom/xiaomi/camera/core/ParallelDataZipper;
 
     invoke-static {v0, p1}, Lcom/xiaomi/camera/core/ParallelDataZipper;->access$000(Lcom/xiaomi/camera/core/ParallelDataZipper;Lcom/xiaomi/camera/core/ReleaseDataParameter;)V

@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->a:Lcom/arcsoft/supernight/SuperNightProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

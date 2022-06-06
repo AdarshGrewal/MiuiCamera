@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final miuix_blurdrawable_view_fg_dark:I = 0x7f0602ac
+.field public static final miuix_blurdrawable_view_fg_dark:I = 0x7f0602aa
 
-.field public static final miuix_blurdrawable_view_fg_light:I = 0x7f0602ad
+.field public static final miuix_blurdrawable_view_fg_light:I = 0x7f0602ab
 
 
 # direct methods

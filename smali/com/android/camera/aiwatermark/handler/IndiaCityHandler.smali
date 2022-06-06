@@ -7,7 +7,6 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/aiwatermark/handler/CityHandler;-><init>(Z)V
 
     return-void
@@ -18,7 +17,6 @@
 .method public findWatermark()Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/aiwatermark/handler/CityHandler;->findWatermark()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v0
@@ -45,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

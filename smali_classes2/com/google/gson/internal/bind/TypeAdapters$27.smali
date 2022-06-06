@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$typeAdapter:Lcom/google/gson/TypeAdapter;
@@ -54,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/google/gson/reflect/TypeToken;
 
     invoke-virtual {p2, p1}, Lcom/google/gson/reflect/TypeToken;->equals(Ljava/lang/Object;)Z

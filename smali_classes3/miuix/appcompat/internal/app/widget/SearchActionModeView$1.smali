@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$1;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$1;->this$0:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->access$000(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Z

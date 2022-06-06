@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-direct {v0}, Lcom/android/camera/module/video/VideoTrackInfo;-><init>()V
@@ -40,7 +38,6 @@
 .method public build()Lcom/android/camera/module/video/VideoTrackInfo;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     return-object v0
@@ -49,7 +46,6 @@
 .method public setActualCameraId(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1002(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -60,7 +56,6 @@
 .method public setAiAudioTrackParams([Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$602(Lcom/android/camera/module/video/VideoTrackInfo;[Ljava/lang/String;)[Ljava/lang/String;
@@ -71,7 +66,6 @@
 .method public setAutoHibernation(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$802(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -82,7 +76,6 @@
 .method public setAutoHibernationCount(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$902(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -93,7 +86,6 @@
 .method public setBeautyValues(Lcom/android/camera/fragment/beauty/BeautyValues;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$2002(Lcom/android/camera/module/video/VideoTrackInfo;Lcom/android/camera/fragment/beauty/BeautyValues;)Lcom/android/camera/fragment/beauty/BeautyValues;
@@ -104,7 +96,6 @@
 .method public setDuration(J)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1, p2}, Lcom/android/camera/module/video/VideoTrackInfo;->access$2102(Lcom/android/camera/module/video/VideoTrackInfo;J)J
@@ -115,7 +106,6 @@
 .method public setEV(Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$402(Lcom/android/camera/module/video/VideoTrackInfo;Ljava/lang/String;)Ljava/lang/String;
@@ -126,7 +116,6 @@
 .method public setExposureTime(Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$302(Lcom/android/camera/module/video/VideoTrackInfo;Ljava/lang/String;)Ljava/lang/String;
@@ -137,7 +126,6 @@
 .method public setFlashMode(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1702(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -148,7 +136,6 @@
 .method public setFrameRate(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1802(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -159,7 +146,6 @@
 .method public setISO(Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$502(Lcom/android/camera/module/video/VideoTrackInfo;Ljava/lang/String;)Ljava/lang/String;
@@ -170,7 +156,6 @@
 .method public setIsAutoZoom(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1202(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -181,7 +166,6 @@
 .method public setIsBluetoothScoOn(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$702(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -192,7 +176,6 @@
 .method public setIsFrontCamera(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$002(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -203,7 +186,6 @@
 .method public setIsSuperEis(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1302(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -214,7 +196,6 @@
 .method public setIsUltraWide(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1402(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -225,7 +206,6 @@
 .method public setLapseCaptureTime(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1902(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -236,7 +216,6 @@
 .method public setModuleIndex(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1102(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -247,7 +226,6 @@
 .method public setSubtitleSupported(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$2202(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -258,7 +236,6 @@
 .method public setVideoHdr(Z)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$102(Lcom/android/camera/module/video/VideoTrackInfo;Z)Z
@@ -269,7 +246,6 @@
 .method public setVideoMode(Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1502(Lcom/android/camera/module/video/VideoTrackInfo;Ljava/lang/String;)Ljava/lang/String;
@@ -280,7 +256,6 @@
 .method public setVideoQuality(I)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$1602(Lcom/android/camera/module/video/VideoTrackInfo;I)I
@@ -291,7 +266,6 @@
 .method public setWhiteBalance(Ljava/lang/String;)Lcom/android/camera/module/video/VideoTrackInfo$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/video/VideoTrackInfo$Builder;->mVideoTrackInfo:Lcom/android/camera/module/video/VideoTrackInfo;
 
     invoke-static {v0, p1}, Lcom/android/camera/module/video/VideoTrackInfo;->access$202(Lcom/android/camera/module/video/VideoTrackInfo;Ljava/lang/String;)Ljava/lang/String;

@@ -14,7 +14,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -25,7 +24,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120782
+    const v0, 0x7f120746
 
     return v0
 .end method
@@ -33,7 +32,6 @@
 .method public initTypeElements(Landroid/content/Context;ILcom/android/camera2/CameraCapabilities;I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/setting/ComponentSettingMultipleCommon;->getDisplayTitleString()I
 
     move-result p2
@@ -42,23 +40,21 @@
 
     move-result-object p1
 
-    .line 2
     new-instance p2, Lcom/android/camera/data/data/TypeItem;
 
     sget-object p3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const p4, 0x7f12076b
+    const p4, 0x7f12072f
 
     const-string/jumbo v0, "pref_camera_recordlocation_key"
 
     invoke-direct {p2, p4, p1, v0, p3}, Lcom/android/camera/data/data/TypeItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 3
     new-instance p3, Lcom/android/camera/data/data/TypeItem;
 
     sget-object p4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const v0, 0x7f120799
+    const v0, 0x7f12075d
 
     const-string/jumbo v1, "pref_camerasound_key"
 
@@ -76,7 +72,6 @@
 
     aput-object p3, p1, p2
 
-    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentMultiple;->insert([Lcom/android/camera/data/data/TypeItem;)V
 
     return-void

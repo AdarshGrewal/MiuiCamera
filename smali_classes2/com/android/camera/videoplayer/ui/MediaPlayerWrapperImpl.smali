@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     new-instance v0, Landroid/media/MediaPlayer;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V

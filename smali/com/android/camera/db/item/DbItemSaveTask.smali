@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/db/item/DbItemBase;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
 .method private clearTask(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera/db/element/SaveTask;->isValid()Z
 
     move-result v0
@@ -40,7 +38,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,7 +60,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -85,8 +81,9 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
-    invoke-static {p1, p2}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
+    const/4 v0, 0x0
+
+    invoke-static {p1, p2, v0}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;Z)V
 
     :goto_0
     return-void
@@ -101,7 +98,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/db/item/DbItemSaveTask;->getItemByPath(Ljava/lang/String;)Lcom/android/camera/db/element/SaveTask;
 
@@ -109,7 +105,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,7 +123,6 @@
 
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -142,25 +136,21 @@
 .method public createItem(J)Lcom/android/camera/db/element/SaveTask;
     .locals 2
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/db/item/DbItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     new-instance v1, Lcom/android/camera/db/element/SaveTask;
 
     invoke-direct {v1}, Lcom/android/camera/db/element/SaveTask;-><init>()V
 
-    .line 4
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
     invoke-virtual {v1, p1}, Lcom/android/camera/db/element/SaveTask;->setStartTime(Ljava/lang/Long;)V
 
-    .line 5
     monitor-exit v0
 
     return-object v1
@@ -168,7 +158,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -179,7 +168,6 @@
 .method public bridge synthetic createItem(J)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/item/DbItemSaveTask;->createItem(J)Lcom/android/camera/db/element/SaveTask;
 
     move-result-object p1
@@ -196,7 +184,6 @@
 .method public bridge synthetic endItem(Ljava/lang/Object;J)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/db/element/SaveTask;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/db/item/DbItemSaveTask;->endItem(Lcom/android/camera/db/element/SaveTask;J)Lcom/android/camera/db/element/SaveTask;
@@ -218,7 +205,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/db/item/DbItemBase;->getDaoSession()Lcom/android/camera/db/greendao/DaoSession;
 
     move-result-object v0
@@ -233,12 +219,10 @@
 .method public getItemByMediaId(Ljava/lang/Long;)Lcom/android/camera/db/element/SaveTask;
     .locals 4
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/db/item/DbItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera/db/item/DbItemSaveTask;->getDao()Lorg/greenrobot/greendao/AbstractDao;
 
@@ -274,7 +258,6 @@
 
     const-string v1, "DbItemSaveTask"
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,7 +274,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     monitor-exit v0
 
     return-object p1
@@ -299,7 +281,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -310,7 +291,6 @@
 .method public bridge synthetic getItemByMediaId(Ljava/lang/Long;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/db/item/DbItemSaveTask;->getItemByMediaId(Ljava/lang/Long;)Lcom/android/camera/db/element/SaveTask;
 
     move-result-object p1
@@ -321,12 +301,10 @@
 .method public getItemByPath(Ljava/lang/String;)Lcom/android/camera/db/element/SaveTask;
     .locals 4
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/db/item/DbItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera/db/item/DbItemSaveTask;->getDao()Lorg/greenrobot/greendao/AbstractDao;
 
@@ -368,7 +346,6 @@
 
     const-string v1, "DbItemSaveTask"
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,7 +362,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     monitor-exit v0
 
     return-object p1
@@ -393,7 +369,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -404,7 +379,6 @@
 .method public bridge synthetic getItemByPath(Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/db/item/DbItemSaveTask;->getItemByPath(Ljava/lang/String;)Lcom/android/camera/db/element/SaveTask;
 
     move-result-object p1
@@ -415,18 +389,15 @@
 .method public getItemWithExistedQuery(Lorg/greenrobot/greendao/query/Query;Ljava/lang/String;)Lcom/android/camera/db/element/SaveTask;
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/db/item/DbItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     invoke-virtual {p1, v1, p2}, Lorg/greenrobot/greendao/query/Query;->setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/db/item/DbItemSaveTask;->getDao()Lorg/greenrobot/greendao/AbstractDao;
 
     move-result-object p1
@@ -465,7 +436,6 @@
 
     const-string p2, "DbItemSaveTask"
 
-    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -482,7 +452,6 @@
 
     invoke-static {p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     monitor-exit v0
 
     return-object p1
@@ -490,7 +459,6 @@
     :catchall_0
     move-exception p1
 
-    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -501,7 +469,6 @@
 .method public bridge synthetic getItemWithExistedQuery(Lorg/greenrobot/greendao/query/Query;Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/item/DbItemSaveTask;->getItemWithExistedQuery(Lorg/greenrobot/greendao/query/Query;Ljava/lang/String;)Lcom/android/camera/db/element/SaveTask;
 
     move-result-object p1
@@ -512,7 +479,6 @@
 .method public getOrderProperty()Lorg/greenrobot/greendao/Property;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/db/greendao/SaveTaskDao$Properties;->Id:Lorg/greenrobot/greendao/Property;
 
     return-object v0
@@ -521,12 +487,10 @@
 .method public markAllDepartedTask(I)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/db/item/DbItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera/db/item/DbItemBase;->getAllItems()Ljava/util/List;
 
@@ -534,7 +498,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 3
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -543,18 +506,15 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
 
-    .line 6
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -573,25 +533,21 @@
 
     check-cast v5, Lcom/android/camera/db/element/SaveTask;
 
-    .line 7
     invoke-virtual {v5, v3, v4, p1}, Lcom/android/camera/db/element/SaveTask;->isDeparted(JI)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 8
     invoke-direct {p0, v2, v5}, Lcom/android/camera/db/item/DbItemSaveTask;->clearTask(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
 
     goto :goto_0
 
-    .line 9
     :cond_2
     monitor-exit v0
 
     return-void
 
-    .line 10
     :cond_3
     :goto_1
     monitor-exit v0
@@ -601,7 +557,6 @@
     :catchall_0
     move-exception p1
 
-    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

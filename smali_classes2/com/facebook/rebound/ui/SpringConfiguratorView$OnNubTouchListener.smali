@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$OnNubTouchListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;Lcom/facebook/rebound/ui/SpringConfiguratorView$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/rebound/ui/SpringConfiguratorView$OnNubTouchListener;-><init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;)V
 
     return-void
@@ -47,14 +45,12 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$OnNubTouchListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {p1}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$1200(Lcom/facebook/rebound/ui/SpringConfiguratorView;)V

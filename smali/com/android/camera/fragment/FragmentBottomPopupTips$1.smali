@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentBottomPopupTips;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$1;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,7 +34,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -44,7 +42,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x2
@@ -57,7 +54,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$1;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$1;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 

@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/r;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/s;->a:Lcom/xiaomi/stat/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +25,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/c/i;->a()Lcom/xiaomi/stat/c/i;
 
     move-result-object v0

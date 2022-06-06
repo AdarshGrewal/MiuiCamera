@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -32,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public static doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
     .locals 20
 
-    .line 1
     sget-object v0, Lmiuix/animation/internal/AnimRunnerTask;->animDataLocal:Ljava/lang/ThreadLocal;
 
     const-class v1, Lmiuix/animation/internal/AnimData;
@@ -52,14 +49,12 @@
 
     check-cast v0, Lmiuix/animation/internal/AnimData;
 
-    .line 2
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v1
 
     iput-boolean v1, v0, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
-    .line 3
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v1
@@ -73,14 +68,12 @@
     :goto_0
     if-eqz v12, :cond_6
 
-    .line 4
     iget-object v1, v12, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     const/4 v2, 0x0
 
     iput v2, v1, Lmiuix/animation/internal/AnimStats;->updateCount:I
 
-    .line 5
     invoke-virtual {v1}, Lmiuix/animation/internal/AnimStats;->isStarted()Z
 
     move-result v1
@@ -89,19 +82,16 @@
 
     xor-int/lit8 v14, v1, 0x1
 
-    .line 6
     iget-object v1, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     iget-object v15, v1, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
-    .line 7
     iget-object v1, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     iget-object v1, v1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     instance-of v9, v1, Lmiuix/animation/ViewTarget;
 
-    .line 8
     iget v1, v12, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     invoke-virtual {v12}, Lmiuix/animation/internal/AnimTask;->getAnimCount()I
@@ -115,7 +105,6 @@
     :goto_1
     if-ge v8, v7, :cond_5
 
-    .line 9
     invoke-interface {v15, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -134,7 +123,6 @@
 
     goto/16 :goto_4
 
-    .line 10
     :cond_0
     iget-object v1, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
@@ -150,7 +138,6 @@
 
     move-result-object v4
 
-    .line 11
     iget-object v1, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     iget-object v1, v1, Lmiuix/animation/internal/TransitionInfo;->config:Lmiuix/animation/base/AnimConfig;
@@ -159,7 +146,6 @@
 
     if-eqz v14, :cond_1
 
-    .line 12
     iget-object v3, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     move-object v1, v12
@@ -187,13 +173,11 @@
 
     move/from16 v18, v8
 
-    .line 13
     :goto_2
     iget-byte v1, v0, Lmiuix/animation/internal/AnimData;->op:B
 
     if-ne v1, v13, :cond_2
 
-    .line 14
     iget-object v3, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     move-object v1, v12
@@ -206,7 +190,6 @@
 
     invoke-static/range {v1 .. v7}, Lmiuix/animation/internal/AnimRunnerTask;->startAnim(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;Lmiuix/animation/internal/TransitionInfo;JJ)V
 
-    .line 15
     :cond_2
     iget-byte v1, v0, Lmiuix/animation/internal/AnimData;->op:B
 
@@ -214,7 +197,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 16
     iget-object v3, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     move-object v1, v12
@@ -239,7 +221,6 @@
     :goto_3
     move-object/from16 v1, v16
 
-    .line 17
     invoke-virtual {v0, v1}, Lmiuix/animation/internal/AnimData;->to(Lmiuix/animation/listener/UpdateInfo;)V
 
     if-eqz p5, :cond_4
@@ -248,7 +229,6 @@
 
     if-nez v19, :cond_4
 
-    .line 18
     iget-wide v2, v0, Lmiuix/animation/internal/AnimData;->value:D
 
     invoke-static {v2, v3}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
@@ -257,7 +237,6 @@
 
     if-nez v2, :cond_4
 
-    .line 19
     iget-object v2, v12, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
     iget-object v2, v2, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
@@ -274,7 +253,6 @@
 
     goto/16 :goto_1
 
-    .line 20
     :cond_5
     invoke-virtual {v12}, Lmiuix/animation/utils/LinkNode;->remove()Lmiuix/animation/utils/LinkNode;
 
@@ -293,26 +271,22 @@
 .method public static evaluateValue(Lmiuix/animation/internal/AnimData;F)D
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
     invoke-static {v0}, Lmiuix/animation/internal/AnimRunnerTask;->getEvaluator(Lmiuix/animation/property/FloatProperty;)Landroid/animation/TypeEvaluator;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Landroid/animation/IntEvaluator;
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Landroid/animation/IntEvaluator;
 
     iget-wide v1, p0, Lmiuix/animation/internal/AnimData;->startValue:D
 
     double-to-int v1, v1
 
-    .line 4
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -321,24 +295,20 @@
 
     double-to-int p0, v2
 
-    .line 5
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    .line 6
     invoke-virtual {v0, p1, v1, p0}, Landroid/animation/IntEvaluator;->evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
 
     move-result-object p0
 
-    .line 7
     invoke-virtual {p0}, Ljava/lang/Integer;->doubleValue()D
 
     move-result-wide p0
 
     return-wide p0
 
-    .line 8
     :cond_0
     check-cast v0, Landroid/animation/FloatEvaluator;
 
@@ -346,7 +316,6 @@
 
     double-to-float v1, v1
 
-    .line 9
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -355,17 +324,14 @@
 
     double-to-float p0, v2
 
-    .line 10
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
 
-    .line 11
     invoke-virtual {v0, p1, v1, p0}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
 
     move-result-object p0
 
-    .line 12
     invoke-virtual {p0}, Ljava/lang/Float;->doubleValue()D
 
     move-result-wide p0
@@ -378,10 +344,8 @@
 
     const/4 v0, 0x5
 
-    .line 1
     invoke-virtual {p1, v0}, Lmiuix/animation/internal/AnimData;->setOp(B)V
 
-    .line 2
     iget-object p0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget p1, p0, Lmiuix/animation/internal/AnimStats;->failCount:I
@@ -396,7 +360,6 @@
 .method public static getEvaluator(Lmiuix/animation/property/FloatProperty;)Landroid/animation/TypeEvaluator;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/property/ViewPropertyExt;->BACKGROUND:Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;
 
     if-ne p0, v0, :cond_0
@@ -405,25 +368,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object p0, Lmiuix/animation/utils/CommonUtils;->sArgbEvaluator:Landroid/animation/ArgbEvaluator;
 
     return-object p0
 
-    .line 3
     :cond_0
     instance-of p0, p0, Lmiuix/animation/property/IIntValueProperty;
 
     if-eqz p0, :cond_1
 
-    .line 4
     new-instance p0, Landroid/animation/IntEvaluator;
 
     invoke-direct {p0}, Landroid/animation/IntEvaluator;-><init>()V
 
     return-object p0
 
-    .line 5
     :cond_1
     new-instance p0, Landroid/animation/FloatEvaluator;
 
@@ -435,7 +394,6 @@
 .method public static initAnimation(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;JJ)Z
     .locals 5
 
-    .line 1
     invoke-static {p1}, Lmiuix/animation/internal/AnimRunnerTask;->setValues(Lmiuix/animation/internal/AnimData;)Z
 
     move-result v0
@@ -450,12 +408,10 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-boolean p2, p1, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
     if-eqz p2, :cond_0
 
-    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -474,7 +430,6 @@
 
     iget-object p3, p1, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 4
     invoke-virtual {p3}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object p3
@@ -507,16 +462,13 @@
 
     move-result-object p2
 
-    .line 5
     invoke-static {v3, p2}, Lmiuix/animation/utils/LogUtils;->logThread(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     :cond_0
     invoke-static {p0, p1}, Lmiuix/animation/internal/AnimRunnerTask;->finishProperty(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;)V
 
     return v4
 
-    .line 7
     :cond_1
     invoke-static {p1}, Lmiuix/animation/internal/AnimRunnerTask;->isValueInvalid(Lmiuix/animation/internal/AnimData;)Z
 
@@ -524,12 +476,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 8
     iget-boolean p2, p1, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
     if-eqz p2, :cond_2
 
-    .line 9
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -548,7 +498,6 @@
 
     iget-object p3, p1, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 10
     invoke-virtual {p3}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object p3
@@ -589,14 +538,11 @@
 
     move-result-object p2
 
-    .line 11
     invoke-static {v3, p2}, Lmiuix/animation/utils/LogUtils;->logThread(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     :cond_2
     invoke-virtual {p1}, Lmiuix/animation/internal/AnimData;->reset()V
 
-    .line 13
     invoke-static {p0, p1}, Lmiuix/animation/internal/AnimRunnerTask;->finishProperty(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;)V
 
     return v4
@@ -604,15 +550,12 @@
     :cond_3
     sub-long/2addr p2, p4
 
-    .line 14
     iput-wide p2, p1, Lmiuix/animation/internal/AnimData;->startTime:J
 
-    .line 15
     iput v4, p1, Lmiuix/animation/internal/AnimData;->frameCount:I
 
     const/4 p0, 0x2
 
-    .line 16
     invoke-virtual {p1, p0}, Lmiuix/animation/internal/AnimData;->setOp(B)V
 
     const/4 p0, 0x1
@@ -623,7 +566,6 @@
 .method public static isValueInvalid(Lmiuix/animation/internal/AnimData;)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lmiuix/animation/internal/AnimData;->startValue:D
 
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->targetValue:D
@@ -634,7 +576,6 @@
 
     iget-wide v0, p0, Lmiuix/animation/internal/AnimData;->velocity:D
 
-    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v0
@@ -685,18 +626,14 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     iput-wide v0, p1, Lmiuix/animation/internal/AnimData;->progress:D
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/animation/internal/AnimData;->reset()V
 
-    .line 3
     iget-boolean v0, p1, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -727,7 +664,6 @@
 
     iget-object p0, p1, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 5
     invoke-virtual {p0}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -806,7 +742,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 6
     invoke-static {p0, p1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0
@@ -816,7 +751,6 @@
 .method public static setValues(Lmiuix/animation/internal/AnimData;)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lmiuix/animation/internal/AnimData;->value:D
 
     invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
@@ -827,7 +761,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->startValue:D
 
     invoke-static {v2, v3}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
@@ -836,7 +769,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->value:D
 
     iput-wide v2, p0, Lmiuix/animation/internal/AnimData;->startValue:D
@@ -844,7 +776,6 @@
     :cond_0
     return v1
 
-    .line 4
     :cond_1
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->startValue:D
 
@@ -854,7 +785,6 @@
 
     if-nez v0, :cond_2
 
-    .line 5
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->startValue:D
 
     iput-wide v2, p0, Lmiuix/animation/internal/AnimData;->value:D
@@ -870,7 +800,6 @@
 .method public static setup(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;Lmiuix/animation/internal/TransitionInfo;Lmiuix/animation/base/AnimSpecialConfig;JJ)V
     .locals 5
 
-    .line 1
     iget-wide v0, p1, Lmiuix/animation/internal/AnimData;->startValue:D
 
     invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
@@ -879,10 +808,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p1, Lmiuix/animation/internal/AnimData;->startValue:D
 
-    .line 3
     iget-object v2, p2, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object v3, p1, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
@@ -896,10 +823,8 @@
     :cond_0
     sub-long/2addr p4, p6
 
-    .line 4
     iput-wide p4, p1, Lmiuix/animation/internal/AnimData;->initTime:J
 
-    .line 5
     iget-object p6, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget p7, p6, Lmiuix/animation/internal/AnimStats;->initCount:I
@@ -910,7 +835,6 @@
 
     iput p7, p6, Lmiuix/animation/internal/AnimStats;->initCount:I
 
-    .line 6
     iget-byte p7, p1, Lmiuix/animation/internal/AnimData;->op:B
 
     const/4 v1, 0x2
@@ -927,31 +851,25 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iput-wide p4, p1, Lmiuix/animation/internal/AnimData;->startTime:J
 
-    .line 8
     iput-wide v3, p1, Lmiuix/animation/internal/AnimData;->delay:J
 
-    .line 9
     iget p2, p6, Lmiuix/animation/internal/AnimStats;->startCount:I
 
     sub-int/2addr p2, v0
 
     iput p2, p6, Lmiuix/animation/internal/AnimStats;->startCount:I
 
-    .line 10
     invoke-static {p0, p1}, Lmiuix/animation/internal/AnimRunnerTask;->setStartData(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;)V
 
     goto :goto_1
 
-    .line 11
     :cond_2
     :goto_0
     invoke-virtual {p1, v0}, Lmiuix/animation/internal/AnimData;->setOp(B)V
 
-    .line 12
     iget-object p0, p2, Lmiuix/animation/internal/TransitionInfo;->config:Lmiuix/animation/base/AnimConfig;
 
     invoke-static {p0, p3}, Lmiuix/animation/internal/AnimConfigUtils;->getFromSpeed(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)F
@@ -966,7 +884,6 @@
 
     float-to-double p2, p0
 
-    .line 13
     iput-wide p2, p1, Lmiuix/animation/internal/AnimData;->velocity:D
 
     :cond_3
@@ -977,7 +894,6 @@
 .method public static startAnim(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;Lmiuix/animation/internal/TransitionInfo;JJ)V
     .locals 6
 
-    .line 1
     iget-wide v0, p1, Lmiuix/animation/internal/AnimData;->delay:J
 
     const-wide/16 v2, 0x0
@@ -986,12 +902,10 @@
 
     if-lez v0, :cond_2
 
-    .line 2
     iget-boolean v0, p1, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1012,7 +926,6 @@
 
     iget-object v1, p1, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 4
     invoke-virtual {v1}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -1049,10 +962,8 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 6
     :cond_0
     iget-wide v0, p1, Lmiuix/animation/internal/AnimData;->initTime:J
 
@@ -1066,7 +977,6 @@
 
     return-void
 
-    .line 7
     :cond_1
     iget-object p2, p2, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
@@ -1082,10 +992,8 @@
 
     if-eqz p2, :cond_2
 
-    .line 8
     iput-wide v3, p1, Lmiuix/animation/internal/AnimData;->startValue:D
 
-    .line 9
     :cond_2
     iget-object p2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -1103,7 +1011,6 @@
 
     move-wide v4, p5
 
-    .line 10
     invoke-static/range {v0 .. v5}, Lmiuix/animation/internal/AnimRunnerTask;->initAnimation(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;JJ)Z
 
     move-result p2
@@ -1112,7 +1019,6 @@
 
     return-void
 
-    .line 11
     :cond_3
     invoke-static {p0, p1}, Lmiuix/animation/internal/AnimRunnerTask;->setStartData(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimData;)V
 
@@ -1128,7 +1034,6 @@
 
     move-object/from16 v1, p2
 
-    .line 1
     iget-object v2, v0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v3, v2, Lmiuix/animation/internal/AnimStats;->updateCount:I
@@ -1139,14 +1044,12 @@
 
     iput v3, v2, Lmiuix/animation/internal/AnimStats;->updateCount:I
 
-    .line 2
     iget v2, v9, Lmiuix/animation/internal/AnimData;->frameCount:I
 
     add-int/2addr v2, v10
 
     iput v2, v9, Lmiuix/animation/internal/AnimData;->frameCount:I
 
-    .line 3
     iget-object v2, v9, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
     sget-object v3, Lmiuix/animation/property/ViewPropertyExt;->FOREGROUND:Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
@@ -1163,7 +1066,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v1, v1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
@@ -1177,7 +1079,6 @@
 
     invoke-static/range {v1 .. v8}, Lmiuix/animation/styles/PropertyStyle;->doAnimationFrame(Lmiuix/animation/IAnimTarget;Lmiuix/animation/internal/AnimData;JJJ)V
 
-    .line 5
     iget-object v1, v9, Lmiuix/animation/internal/AnimData;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     iget v1, v1, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -1188,7 +1089,6 @@
 
     if-nez v1, :cond_2
 
-    .line 6
     iget-wide v1, v9, Lmiuix/animation/internal/AnimData;->progress:D
 
     double-to-float v1, v1
@@ -1201,30 +1101,24 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     :goto_0
     iget-wide v11, v9, Lmiuix/animation/internal/AnimData;->startValue:D
 
-    .line 8
     iget-wide v13, v9, Lmiuix/animation/internal/AnimData;->targetValue:D
 
     const-wide/16 v2, 0x0
 
-    .line 9
     iput-wide v2, v9, Lmiuix/animation/internal/AnimData;->startValue:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 10
     iput-wide v2, v9, Lmiuix/animation/internal/AnimData;->targetValue:D
 
-    .line 11
     iget-wide v2, v9, Lmiuix/animation/internal/AnimData;->progress:D
 
     iput-wide v2, v9, Lmiuix/animation/internal/AnimData;->value:D
 
-    .line 12
     iget-object v1, v1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     move-object/from16 v2, p1
@@ -1237,7 +1131,6 @@
 
     invoke-static/range {v1 .. v8}, Lmiuix/animation/styles/PropertyStyle;->doAnimationFrame(Lmiuix/animation/IAnimTarget;Lmiuix/animation/internal/AnimData;JJJ)V
 
-    .line 13
     iget-wide v1, v9, Lmiuix/animation/internal/AnimData;->value:D
 
     double-to-float v1, v1
@@ -1250,20 +1143,16 @@
 
     iput-wide v1, v9, Lmiuix/animation/internal/AnimData;->progress:D
 
-    .line 14
     iput-wide v11, v9, Lmiuix/animation/internal/AnimData;->startValue:D
 
-    .line 15
     iput-wide v13, v9, Lmiuix/animation/internal/AnimData;->targetValue:D
 
-    .line 16
     sget-object v3, Lmiuix/animation/utils/CommonUtils;->sArgbEvaluator:Landroid/animation/ArgbEvaluator;
 
     double-to-float v1, v1
 
     double-to-int v2, v11
 
-    .line 17
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1282,14 +1171,12 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 18
     invoke-virtual {v1}, Ljava/lang/Integer;->doubleValue()D
 
     move-result-wide v1
 
     iput-wide v1, v9, Lmiuix/animation/internal/AnimData;->value:D
 
-    .line 19
     :cond_2
     :goto_1
     iget-byte v1, v9, Lmiuix/animation/internal/AnimData;->op:B
@@ -1298,10 +1185,8 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 20
     iput-boolean v10, v9, Lmiuix/animation/internal/AnimData;->justEnd:Z
 
-    .line 21
     iget-object v1, v0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v2, v1, Lmiuix/animation/internal/AnimStats;->endCount:I
@@ -1310,13 +1195,11 @@
 
     iput v2, v1, Lmiuix/animation/internal/AnimStats;->endCount:I
 
-    .line 22
     :cond_3
     iget-boolean v1, v9, Lmiuix/animation/internal/AnimData;->logEnabled:Z
 
     if-eqz v1, :cond_4
 
-    .line 23
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1347,7 +1230,6 @@
 
     iget-object v0, v9, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 24
     invoke-virtual {v0}, Landroid/util/Property;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1434,7 +1316,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 25
     invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_4

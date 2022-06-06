@@ -40,17 +40,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
@@ -63,7 +60,6 @@
 .method public static synthetic access$000(Lcom/android/camera/data/data/DataItemBase;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     return-object p0
@@ -72,7 +68,6 @@
 .method public static synthetic access$100(Lcom/android/camera/data/data/DataItemBase;)Landroidx/collection/SimpleArrayMap;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     return-object p0
@@ -81,7 +76,6 @@
 .method private getSharedPreferences()Landroid/content/SharedPreferences;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mPreferences:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
@@ -96,10 +90,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->initPreferences()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mPreferences:Landroid/content/SharedPreferences;
 
@@ -109,19 +101,16 @@
 .method private initPreferences()V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 3
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->provideKey()Ljava/lang/String;
 
     move-result-object v1
@@ -143,35 +132,29 @@
 .method public apply()V
     .locals 3
 
-    .line 1
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 5
     monitor-exit v0
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -184,14 +167,12 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v1
 
-    .line 8
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -205,12 +186,10 @@
 .method public arrayMapContainsKey(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -218,7 +197,6 @@
 
     move-result p1
 
-    .line 3
     monitor-exit v0
 
     return p1
@@ -236,18 +214,15 @@
 .method public arrayMapRemove(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -265,28 +240,23 @@
 .method public clear()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1}, Landroidx/collection/SimpleArrayMap;->clear()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -295,7 +265,6 @@
     :catchall_0
     move-exception v1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -306,18 +275,15 @@
 .method public clearArrayMap()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1}, Landroidx/collection/SimpleArrayMap;->clear()V
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -335,23 +301,19 @@
 .method public cloneValues()Landroidx/collection/SimpleArrayMap;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     new-instance v1, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v1}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1, v2}, Landroidx/collection/SimpleArrayMap;->putAll(Landroidx/collection/SimpleArrayMap;)V
 
-    .line 4
     monitor-exit v0
 
     return-object v1
@@ -359,7 +321,6 @@
     :catchall_0
     move-exception v1
 
-    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -370,18 +331,15 @@
 .method public commit()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -395,7 +353,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     monitor-exit v0
 
     return v1
@@ -403,7 +360,6 @@
     :catchall_0
     move-exception v1
 
-    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -414,14 +370,12 @@
 .method public concurrentEditor()Lcom/android/camera/data/data/DataItemBase$ConcurrentEditor;
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->isMutable()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -430,7 +384,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -444,7 +397,6 @@
     :cond_0
     move-object v0, v1
 
-    .line 4
     :goto_0
     new-instance v2, Lcom/android/camera/data/data/DataItemBase$ConcurrentEditor;
 
@@ -464,11 +416,10 @@
 
     return-object v2
 
-    .line 5
     :cond_2
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v1, "not allowed to modify"
+    const-string/jumbo v1, "not allowed to modify"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -478,12 +429,10 @@
 .method public contains(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
@@ -491,7 +440,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -505,7 +453,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 4
     :goto_0
     monitor-exit v0
 
@@ -524,12 +471,10 @@
 .method public editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->isMutable()Z
 
@@ -537,7 +482,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v1
@@ -554,7 +498,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -565,17 +508,15 @@
 
     iput-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
     return-object p0
 
-    .line 6
     :cond_1
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string v2, "not allowed to modify"
+    const-string/jumbo v2, "not allowed to modify"
 
     invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -584,7 +525,6 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -595,23 +535,19 @@
 .method public getBoolean(Ljava/lang/String;Z)Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mDataCloudItem:Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->getCloudBoolean(Ljava/lang/String;Z)Z
 
     move-result p2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -623,7 +559,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v2
@@ -636,7 +571,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -654,7 +588,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -668,7 +601,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -679,12 +611,10 @@
 .method public getDoubleFromValues(Ljava/lang/String;D)D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -698,7 +628,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
 
@@ -712,7 +641,6 @@
     :catchall_0
     move-exception p1
 
-    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -723,23 +651,19 @@
 .method public getFloat(Ljava/lang/String;F)F
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mDataCloudItem:Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->getCloudFloat(Ljava/lang/String;F)F
 
     move-result p2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -751,7 +675,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v2
@@ -764,7 +687,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -782,7 +704,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
@@ -796,7 +717,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -807,23 +727,19 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mDataCloudItem:Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->getCloudInt(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -835,7 +751,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v2
@@ -848,7 +763,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -866,7 +780,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -880,7 +793,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -891,23 +803,19 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mDataCloudItem:Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2, p3}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->getCloudLong(Ljava/lang/String;J)J
 
     move-result-wide p2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -919,7 +827,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v2
@@ -932,7 +839,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -950,7 +856,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
@@ -964,7 +869,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -975,23 +879,19 @@
 .method public getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mDataCloudItem:Lcom/android/camera/data/cloud/DataCloud$CloudItem;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1, p2}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->getCloudString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1003,7 +903,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Lcom/android/camera/data/provider/DataProvider$ProviderEvent;->isTransient()Z
 
     move-result v2
@@ -1016,7 +915,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -1033,7 +931,6 @@
     :cond_2
     move-object p2, v1
 
-    .line 7
     :goto_0
     monitor-exit v0
 
@@ -1042,7 +939,6 @@
     :catchall_0
     move-exception p1
 
-    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1062,12 +958,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1078,7 +972,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1097,12 +990,10 @@
 .method public putBoolean(Ljava/lang/String;Z)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1112,17 +1003,14 @@
 
     invoke-virtual {v1, p1, v2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1131,7 +1019,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1142,12 +1029,10 @@
 .method public putFloat(Ljava/lang/String;F)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1157,17 +1042,14 @@
 
     invoke-virtual {v1, p1, v2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1176,7 +1058,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1187,12 +1068,10 @@
 .method public putInt(Ljava/lang/String;I)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1202,17 +1081,14 @@
 
     invoke-virtual {v1, p1, v2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1221,7 +1097,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1232,12 +1107,10 @@
 .method public putLong(Ljava/lang/String;J)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -1247,17 +1120,14 @@
 
     invoke-virtual {v1, p1, v2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1266,7 +1136,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1277,28 +1146,23 @@
 .method public putString(Ljava/lang/String;Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1, p1, p2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1307,7 +1171,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1318,28 +1181,23 @@
 .method public remove(Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v1, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/data/data/DataItemBase;->mEditor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v1, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1348,7 +1206,6 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1368,16 +1225,13 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/DataItemBase;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iput-object p1, p0, Lcom/android/camera/data/data/DataItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
-    .line 3
     monitor-exit v0
 
     return-void

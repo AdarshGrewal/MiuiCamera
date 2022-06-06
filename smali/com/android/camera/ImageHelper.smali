@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static compressYuv([BII[IILjava/io/OutputStream;)V
     .locals 7
 
-    .line 1
     new-instance v6, Landroid/graphics/YuvImage;
 
     const/16 v2, 0x11
@@ -37,7 +35,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
 
-    .line 2
     new-instance p0, Landroid/graphics/Rect;
 
     const/4 p3, 0x0
@@ -54,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     new-instance v7, Ljava/io/ByteArrayOutputStream;
 
@@ -75,11 +71,9 @@
 
     move-object v6, v7
 
-    .line 2
     :try_start_1
     invoke-static/range {v1 .. v6}, Lcom/android/camera/ImageHelper;->compressYuv([BII[IILjava/io/OutputStream;)V
 
-    .line 3
     invoke-virtual {v7}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -87,7 +81,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4
     invoke-static {v7}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
     return-object p0
@@ -111,7 +104,6 @@
     :try_start_2
     const-string p1, "ImageHelper"
 
-    .line 5
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +126,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 6
     invoke-static {v7}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
     return-object v0
@@ -159,12 +150,10 @@
 
     const-string/jumbo p0, "saveYuvToJpg: null data"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -184,7 +173,6 @@
 
     move-result-object p4
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,7 +191,6 @@
 
     const/4 v1, 0x0
 
-    .line 4
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -214,7 +201,6 @@
 
     const/16 v7, 0x64
 
-    .line 5
     :try_start_1
     new-instance v8, Ljava/io/FileOutputStream;
 
@@ -233,7 +219,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     invoke-static {v2}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
     goto :goto_1
@@ -260,7 +245,6 @@
     :catch_1
     move-exception p0
 
-    .line 7
     :goto_0
     :try_start_2
     invoke-virtual {p0}, Ljava/io/FileNotFoundException;->getMessage()Ljava/lang/String;
@@ -271,7 +255,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8
     invoke-static {v1}, Lcom/android/camera/Util;->closeSafely(Ljava/io/Closeable;)V
 
     :goto_1

@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
@@ -20,9 +19,8 @@
 .method private initWebPage(Ljava/lang/String;)V
     .locals 2
 
-    const v0, 0x7f0a00f8
+    const v0, 0x7f0a00ff
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -31,7 +29,6 @@
 
     iput-object v0, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
-    .line 2
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
@@ -40,7 +37,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     new-instance v1, Lcom/android/camera/WebViewActivity$1;
@@ -49,7 +45,6 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
@@ -62,15 +57,12 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
     const p1, 0x7f0d001c
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -83,10 +75,8 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -98,7 +88,6 @@
 
     move-result-object p1
 
-    .line 6
     invoke-direct {p0, p1}, Lcom/android/camera/WebViewActivity;->initWebPage(Ljava/lang/String;)V
 
     return-void
@@ -111,7 +100,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
@@ -120,7 +108,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
@@ -135,12 +122,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/WebViewActivity;->mWebView:Landroid/webkit/WebView;
 
@@ -148,7 +133,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -162,11 +146,9 @@
 .method public onPause()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000OO()Z
 
     move-result v0
 
@@ -174,7 +156,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v1
@@ -188,11 +169,9 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onResume()V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000O()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o000OO()Z
 
     move-result v0
 
@@ -200,7 +179,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v1

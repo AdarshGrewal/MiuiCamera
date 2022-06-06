@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/ReduceOps$CountingSink;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/ReduceOps$CountingSink;->count:J
 
     const-wide/16 v2, 0x1
@@ -59,7 +57,6 @@
 .method public bridge synthetic combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/stream/ReduceOps$CountingSink;
 
     invoke-super {p0, p1}, Ljava8/util/stream/ReduceOps$CountingSink;->combine(Ljava8/util/stream/ReduceOps$CountingSink;)V
@@ -70,7 +67,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/ReduceOps$CountingSink;->get()Ljava/lang/Long;
 
     move-result-object v0

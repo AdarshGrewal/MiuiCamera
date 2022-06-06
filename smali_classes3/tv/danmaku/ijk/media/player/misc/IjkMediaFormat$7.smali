@@ -22,7 +22,6 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$7;->this$0:Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;
 
     const/4 p1, 0x0
@@ -39,14 +38,12 @@
 
     const-string v0, "fps_num"
 
-    .line 1
     invoke-virtual {p1, v0}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
 
     const-string v1, "fps_den"
 
-    .line 2
     invoke-virtual {p1, v1}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result p1
@@ -64,7 +61,6 @@
 
     div-float/2addr v0, p1
 
-    .line 3
     invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object p1

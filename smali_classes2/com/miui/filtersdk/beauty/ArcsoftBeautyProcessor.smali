@@ -41,14 +41,12 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;-><init>()V
 
     const/16 v0, 0xb
 
     new-array v1, v0, [I
 
-    .line 2
     iput-object v1, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mBeautyParameters:[I
 
     const/4 v1, 0x0
@@ -58,7 +56,6 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 3
     iget-object v3, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mBeautyParameters:[I
 
     aput v1, v3, v2
@@ -70,7 +67,6 @@
     :cond_0
     const/high16 v0, 0x42480000    # 50.0f
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->setExtraSpan(F)V
 
     const/4 v0, 0x6
@@ -81,7 +77,6 @@
 
     new-array v3, v2, [F
 
-    .line 5
     fill-array-data v3, :array_0
 
     aput-object v3, v0, v1
@@ -230,7 +225,6 @@
 .method private isParametersEmpty()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mBrightEyeRatio:I
 
     if-nez v0, :cond_0
@@ -297,7 +291,6 @@
 
     move-object/from16 v0, p0
 
-    .line 3
     invoke-direct/range {p0 .. p0}, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->isParametersEmpty()Z
 
     move-result v1
@@ -308,7 +301,6 @@
 
     return v2
 
-    .line 4
     :cond_0
     iget v6, v0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
@@ -360,7 +352,6 @@
 
     move-object/from16 v0, p0
 
-    .line 5
     invoke-direct/range {p0 .. p0}, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->isParametersEmpty()Z
 
     move-result v1
@@ -369,7 +360,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     iget v5, v0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
@@ -413,7 +403,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-direct/range {p0 .. p0}, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->isParametersEmpty()Z
 
     move-result v1
@@ -422,7 +411,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget v5, v0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
@@ -466,40 +454,28 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mBrightEyeRatio:I
 
-    .line 2
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mSmoothStrength:I
 
-    .line 3
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
-    .line 4
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mShrinkFaceRatio:I
 
-    .line 5
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mEnlargeEyeRatio:I
 
-    .line 6
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mIrisShineRatio:I
 
-    .line 7
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mDeblemish:I
 
-    .line 8
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mDepouchRatio:I
 
-    .line 9
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mRelightingRatio:I
 
-    .line 10
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mLipBeautyRatio:I
 
-    .line 11
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mRuddyRatio:I
 
-    .line 12
     iput v0, p0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor;->mShrinkNooseRatio:I
 
     return-void
@@ -512,7 +488,6 @@
 
     new-array v0, v0, [Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 1
     sget-object v1, Lcom/miui/filtersdk/beauty/BeautyParameterType;->WHITEN_STRENGTH:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v2, 0x0
@@ -591,7 +566,6 @@
 .method public getSupportedParamRange(Lcom/miui/filtersdk/beauty/BeautyParameterType;)[F
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -613,7 +587,6 @@
     :pswitch_0
     new-array p1, v0, [F
 
-    .line 2
     fill-array-data p1, :array_0
 
     return-object p1
@@ -621,7 +594,6 @@
     :pswitch_1
     new-array p1, v0, [F
 
-    .line 3
     fill-array-data p1, :array_1
 
     return-object p1
@@ -629,7 +601,6 @@
     :pswitch_2
     new-array p1, v0, [F
 
-    .line 4
     fill-array-data p1, :array_2
 
     return-object p1
@@ -637,7 +608,6 @@
     :pswitch_3
     new-array p1, v0, [F
 
-    .line 5
     fill-array-data p1, :array_3
 
     return-object p1
@@ -645,7 +615,6 @@
     :pswitch_4
     new-array p1, v0, [F
 
-    .line 6
     fill-array-data p1, :array_4
 
     return-object p1
@@ -653,7 +622,6 @@
     :pswitch_5
     new-array p1, v0, [F
 
-    .line 7
     fill-array-data p1, :array_5
 
     return-object p1
@@ -661,7 +629,6 @@
     :pswitch_6
     new-array p1, v0, [F
 
-    .line 8
     fill-array-data p1, :array_6
 
     return-object p1
@@ -669,7 +636,6 @@
     :pswitch_7
     new-array p1, v0, [F
 
-    .line 9
     fill-array-data p1, :array_7
 
     return-object p1
@@ -677,7 +643,6 @@
     :pswitch_8
     new-array p1, v0, [F
 
-    .line 10
     fill-array-data p1, :array_8
 
     return-object p1
@@ -685,7 +650,6 @@
     :pswitch_9
     new-array p1, v0, [F
 
-    .line 11
     fill-array-data p1, :array_9
 
     return-object p1
@@ -693,7 +657,6 @@
     :pswitch_a
     new-array p1, v0, [F
 
-    .line 12
     fill-array-data p1, :array_a
 
     return-object p1
@@ -701,7 +664,6 @@
     :pswitch_b
     new-array p1, v0, [F
 
-    .line 13
     fill-array-data p1, :array_b
 
     return-object p1
@@ -816,7 +778,6 @@
 .method public setBeautyParamDegree(Lcom/miui/filtersdk/beauty/BeautyParameterType;Ljava/lang/Float;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/beauty/ArcsoftBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -829,7 +790,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :pswitch_0
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -843,7 +803,6 @@
 
     goto/16 :goto_0
 
-    .line 3
     :pswitch_1
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -857,7 +816,6 @@
 
     goto/16 :goto_0
 
-    .line 4
     :pswitch_2
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -871,7 +829,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_3
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -885,7 +842,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_4
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -899,7 +855,6 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_5
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -913,7 +868,6 @@
 
     goto :goto_0
 
-    .line 8
     :pswitch_6
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -927,7 +881,6 @@
 
     goto :goto_0
 
-    .line 9
     :pswitch_7
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -941,7 +894,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_8
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -955,7 +907,6 @@
 
     goto :goto_0
 
-    .line 11
     :pswitch_9
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -969,7 +920,6 @@
 
     goto :goto_0
 
-    .line 12
     :pswitch_a
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -983,7 +933,6 @@
 
     goto :goto_0
 
-    .line 13
     :pswitch_b
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
@@ -1029,7 +978,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1051,7 +999,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1

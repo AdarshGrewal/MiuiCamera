@@ -14,10 +14,8 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitcompat/SplitSessionLoaderImpl;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -38,14 +36,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/google/android/play/core/splitcompat/SplitCompat;->hasInstance()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/google/android/play/core/splitcompat/SplitSessionLoaderImpl;->mExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;
@@ -56,7 +52,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 

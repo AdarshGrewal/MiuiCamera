@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;->values()[Lcom/android/camera/visibilityutils/scroll_utils/ScrollDirectionDetector$ScrollDirection;
 
     move-result-object v0

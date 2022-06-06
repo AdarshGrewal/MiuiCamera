@@ -37,7 +37,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 1
     new-instance v0, Lcom/android/camera/EncodingQuality;
 
     const/4 v1, 0x0
@@ -52,7 +51,6 @@
 
     sput-object v0, Lcom/android/camera/EncodingQuality;->LOW:Lcom/android/camera/EncodingQuality;
 
-    .line 2
     new-instance v0, Lcom/android/camera/EncodingQuality;
 
     const/4 v2, 0x1
@@ -67,7 +65,6 @@
 
     sput-object v0, Lcom/android/camera/EncodingQuality;->NORMAL:Lcom/android/camera/EncodingQuality;
 
-    .line 3
     new-instance v0, Lcom/android/camera/EncodingQuality;
 
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
@@ -98,7 +95,6 @@
 
     new-array v3, v3, [Lcom/android/camera/EncodingQuality;
 
-    .line 4
     sget-object v5, Lcom/android/camera/EncodingQuality;->LOW:Lcom/android/camera/EncodingQuality;
 
     aput-object v5, v3, v1
@@ -122,13 +118,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/android/camera/EncodingQuality;->jpegQuality:I
 
-    .line 3
     iput p4, p0, Lcom/android/camera/EncodingQuality;->heicQuality:I
 
     return-void
@@ -137,7 +130,6 @@
 .method public static enumOf(Ljava/lang/String;)Lcom/android/camera/EncodingQuality;
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/EncodingQuality;->values()[Lcom/android/camera/EncodingQuality;
 
     move-result-object v0
@@ -153,7 +145,6 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v5
@@ -178,7 +169,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/EncodingQuality;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/EncodingQuality;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -193,7 +183,6 @@
 .method public static values()[Lcom/android/camera/EncodingQuality;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/EncodingQuality;->$VALUES:[Lcom/android/camera/EncodingQuality;
 
     invoke-virtual {v0}, [Lcom/android/camera/EncodingQuality;->clone()Ljava/lang/Object;
@@ -212,7 +201,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget p1, p0, Lcom/android/camera/EncodingQuality;->heicQuality:I
 
     goto :goto_0

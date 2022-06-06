@@ -76,25 +76,20 @@
 .method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x100
 
     new-array v0, v0, [I
 
-    .line 5
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pct:[I
 
-    .line 6
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 7
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
-    .line 8
     new-instance p1, Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     invoke-direct {p1}, Lcom/bumptech/glide/gifdecoder/GifHeader;-><init>()V
@@ -109,7 +104,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;-><init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;Lcom/bumptech/glide/gifdecoder/GifHeader;Ljava/nio/ByteBuffer;I)V
 
     return-void
@@ -118,10 +112,8 @@
 .method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;Lcom/bumptech/glide/gifdecoder/GifHeader;Ljava/nio/ByteBuffer;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;-><init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;)V
 
-    .line 3
     invoke-virtual {p0, p2, p3, p4}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->setData(Lcom/bumptech/glide/gifdecoder/GifHeader;Ljava/nio/ByteBuffer;I)V
 
     return-void
@@ -144,7 +136,6 @@
 
     move v6, v5
 
-    .line 1
     :goto_0
     iget v7, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->sampleSize:I
 
@@ -160,12 +151,10 @@
 
     if-ge v1, p2, :cond_1
 
-    .line 2
     aget-byte v7, v7, v1
 
     and-int/lit16 v7, v7, 0xff
 
-    .line 3
     iget-object v8, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->act:[I
 
     aget v7, v8, v7
@@ -206,7 +195,6 @@
 
     move p3, p1
 
-    .line 4
     :goto_1
     iget v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->sampleSize:I
 
@@ -222,12 +210,10 @@
 
     if-ge p3, p2, :cond_3
 
-    .line 5
     aget-byte v1, v1, p3
 
     and-int/lit16 v1, v1, 0xff
 
-    .line 6
     iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->act:[I
 
     aget v1, v7, v1
@@ -268,7 +254,6 @@
 
     return v0
 
-    .line 7
     :cond_4
     div-int/2addr v2, v6
 
@@ -300,37 +285,30 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainScratch:[I
 
-    .line 2
     iget v3, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->ih:I
 
     iget v4, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->sampleSize:I
 
     div-int/2addr v3, v4
 
-    .line 3
     iget v5, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iy:I
 
     div-int/2addr v5, v4
 
-    .line 4
     iget v6, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
     div-int/2addr v6, v4
 
-    .line 5
     iget v7, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->ix:I
 
     div-int/2addr v7, v4
 
-    .line 6
     iget v4, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     const/4 v9, 0x1
 
-    .line 7
     invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
@@ -344,23 +322,17 @@
     :cond_0
     const/4 v4, 0x0
 
-    .line 8
     :goto_0
     iget v11, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->sampleSize:I
 
-    .line 9
     iget v12, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
-    .line 10
     iget v13, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledHeight:I
 
-    .line 11
     iget-object v14, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
-    .line 12
     iget-object v15, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->act:[I
 
-    .line 13
     iget-object v8, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
     const/16 v16, 0x8
@@ -378,7 +350,6 @@
 
     move-object/from16 v20, v8
 
-    .line 14
     iget-boolean v8, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->interlace:Z
 
     if-eqz v8, :cond_5
@@ -483,7 +454,6 @@
 
     move/from16 v23, v3
 
-    .line 15
     iget v3, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
     mul-int/2addr v10, v3
@@ -497,17 +467,14 @@
 
     move/from16 v17, v5
 
-    .line 16
     aget-byte v5, v14, v10
 
     and-int/lit16 v5, v5, 0xff
 
-    .line 17
     aget v5, v15, v5
 
     if-eqz v5, :cond_8
 
-    .line 18
     aput v5, v2, v3
 
     goto :goto_6
@@ -545,7 +512,6 @@
 
     if-ge v5, v8, :cond_f
 
-    .line 19
     iget v6, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
     invoke-direct {v0, v10, v3, v6}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->averageColorsNear(III)I
@@ -554,7 +520,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 20
     aput v6, v2, v5
 
     goto :goto_8
@@ -602,7 +567,6 @@
     :cond_10
     move-object/from16 v20, v8
 
-    .line 21
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
     if-nez v1, :cond_12
@@ -613,13 +577,11 @@
 
     goto :goto_9
 
-    .line 22
     :cond_11
     invoke-virtual/range {v20 .. v20}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v8
 
-    .line 23
     :goto_9
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -638,22 +600,16 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainScratch:[I
 
-    .line 2
     iget v3, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->ih:I
 
-    .line 3
     iget v4, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iy:I
 
-    .line 4
     iget v5, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
-    .line 5
     iget v6, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->ix:I
 
-    .line 6
     iget v7, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     if-nez v7, :cond_0
@@ -665,14 +621,11 @@
     :cond_0
     const/4 v7, 0x0
 
-    .line 7
     :goto_0
     iget v10, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
-    .line 8
     iget-object v11, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
-    .line 9
     iget-object v12, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->act:[I
 
     const/4 v14, 0x0
@@ -696,7 +649,6 @@
 
     move v8, v9
 
-    .line 10
     :cond_1
     iget v9, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
@@ -707,7 +659,6 @@
     :goto_2
     if-ge v13, v8, :cond_4
 
-    .line 11
     aget-byte v1, v11, v9
 
     move/from16 v17, v3
@@ -716,12 +667,10 @@
 
     if-eq v3, v15, :cond_3
 
-    .line 12
     aget v3, v12, v3
 
     if-eqz v3, :cond_2
 
-    .line 13
     aput v3, v2, v13
 
     goto :goto_3
@@ -750,13 +699,11 @@
 
     goto :goto_1
 
-    .line 14
     :cond_5
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
     if-eqz v1, :cond_6
 
-    .line 15
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -801,7 +748,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
     iget v3, v1, Lcom/bumptech/glide/gifdecoder/GifFrame;->bufferFrameStart:I
@@ -811,7 +757,6 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 2
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v2, v1, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
@@ -828,7 +773,6 @@
     :goto_0
     mul-int/2addr v2, v1
 
-    .line 3
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
     if-eqz v1, :cond_2
@@ -837,7 +781,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 4
     :cond_2
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
@@ -847,11 +790,9 @@
 
     iput-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
-    .line 5
     :cond_3
     iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
-    .line 6
     iget-object v3, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->prefix:[S
 
     const/16 v4, 0x1000
@@ -860,28 +801,22 @@
 
     new-array v3, v4, [S
 
-    .line 7
     iput-object v3, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->prefix:[S
 
-    .line 8
     :cond_4
     iget-object v3, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->prefix:[S
 
-    .line 9
     iget-object v5, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->suffix:[B
 
     if-nez v5, :cond_5
 
     new-array v5, v4, [B
 
-    .line 10
     iput-object v5, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->suffix:[B
 
-    .line 11
     :cond_5
     iget-object v5, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->suffix:[B
 
-    .line 12
     iget-object v6, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pixelStack:[B
 
     if-nez v6, :cond_6
@@ -890,14 +825,11 @@
 
     new-array v6, v6, [B
 
-    .line 13
     iput-object v6, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pixelStack:[B
 
-    .line 14
     :cond_6
     iget-object v6, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pixelStack:[B
 
-    .line 15
     invoke-direct/range {p0 .. p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->readByte()I
 
     move-result v7
@@ -923,19 +855,16 @@
     :goto_1
     if-ge v14, v9, :cond_7
 
-    .line 16
     aput-short v13, v3, v14
 
     int-to-byte v15, v14
 
-    .line 17
     aput-byte v15, v5, v14
 
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 18
     :cond_7
     iget-object v14, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->block:[B
 
@@ -968,7 +897,6 @@
 
     if-nez v16, :cond_9
 
-    .line 19
     invoke-direct/range {p0 .. p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->readBlock()I
 
     move-result v16
@@ -977,7 +905,6 @@
 
     const/4 v3, 0x3
 
-    .line 20
     iput v3, v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
     goto/16 :goto_6
@@ -985,7 +912,6 @@
     :cond_8
     const/16 v17, 0x0
 
-    .line 21
     :cond_9
     aget-byte v4, v14, v17
 
@@ -1072,7 +998,6 @@
 
     if-ne v0, v4, :cond_c
 
-    .line 22
     aget-byte v0, v5, v11
 
     aput-byte v0, v1, v20
@@ -1096,7 +1021,6 @@
 
     int-to-byte v7, v7
 
-    .line 23
     aput-byte v7, v6, v26
 
     add-int/lit8 v26, v26, 0x1
@@ -1111,19 +1035,16 @@
     :goto_4
     if-lt v7, v9, :cond_e
 
-    .line 24
     aget-byte v21, v5, v7
 
     aput-byte v21, v6, v26
 
     add-int/lit8 v26, v26, 0x1
 
-    .line 25
     aget-short v7, v3, v7
 
     goto :goto_4
 
-    .line 26
     :cond_e
     aget-byte v7, v5, v7
 
@@ -1131,7 +1052,6 @@
 
     int-to-byte v4, v7
 
-    .line 27
     aput-byte v4, v1, v20
 
     :goto_5
@@ -1143,7 +1063,6 @@
 
     add-int/lit8 v26, v26, -0x1
 
-    .line 28
     aget-byte v27, v6, v26
 
     aput-byte v27, v1, v20
@@ -1159,10 +1078,8 @@
 
     int-to-short v0, v0
 
-    .line 29
     aput-short v0, v3, v8
 
-    .line 30
     aput-byte v4, v5, v8
 
     add-int/lit8 v8, v8, 0x1
@@ -1221,7 +1138,6 @@
 
     const/4 v0, 0x0
 
-    .line 31
     invoke-static {v1, v13, v2, v0}, Ljava/util/Arrays;->fill([BIIB)V
 
     return-void
@@ -1230,19 +1146,16 @@
 .method private getHeaderParser()Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->parser:Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
     invoke-direct {v0}, Lcom/bumptech/glide/gifdecoder/GifHeaderParser;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->parser:Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->parser:Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
@@ -1252,7 +1165,6 @@
 .method private getNextBitmap()Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_1
@@ -1274,7 +1186,6 @@
     :goto_0
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 2
     :goto_1
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
@@ -1288,7 +1199,6 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
 
     return-object v0
@@ -1297,7 +1207,6 @@
 .method private readBlock()I
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->readByte()I
 
     move-result v0
@@ -1306,7 +1215,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
@@ -1330,7 +1238,6 @@
 .method private readByte()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
@@ -1345,19 +1252,16 @@
 .method private setPixels(Lcom/bumptech/glide/gifdecoder/GifFrame;Lcom/bumptech/glide/gifdecoder/GifFrame;)Landroid/graphics/Bitmap;
     .locals 9
 
-    .line 1
     iget-object v8, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainScratch:[I
 
     const/4 v0, 0x0
 
     if-nez p2, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     invoke-interface {v2, v1}, Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;->release(Landroid/graphics/Bitmap;)V
@@ -1365,10 +1269,8 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     iput-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
-    .line 5
     invoke-static {v8, v0}, Ljava/util/Arrays;->fill([II)V
 
     :cond_1
@@ -1376,7 +1278,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 6
     iget v2, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->dispose:I
 
     if-ne v2, v1, :cond_2
@@ -1385,13 +1286,11 @@
 
     if-nez v2, :cond_2
 
-    .line 7
     invoke-static {v8, v0}, Ljava/util/Arrays;->fill([II)V
 
     :cond_2
     if-eqz p2, :cond_7
 
-    .line 8
     iget v2, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->dispose:I
 
     if-lez v2, :cond_7
@@ -1400,17 +1299,14 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 9
     iget-boolean v1, p1, Lcom/bumptech/glide/gifdecoder/GifFrame;->transparency:Z
 
     if-nez v1, :cond_4
 
-    .line 10
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v2, v1, Lcom/bumptech/glide/gifdecoder/GifHeader;->bgColor:I
 
-    .line 11
     iget-object v3, p1, Lcom/bumptech/glide/gifdecoder/GifFrame;->lct:[I
 
     if-eqz v3, :cond_3
@@ -1426,7 +1322,6 @@
     :cond_3
     move v0, v2
 
-    .line 12
     :cond_4
     :goto_0
     iget v1, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->ih:I
@@ -1435,22 +1330,18 @@
 
     div-int/2addr v1, v2
 
-    .line 13
     iget v3, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->iy:I
 
     div-int/2addr v3, v2
 
-    .line 14
     iget v4, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->iw:I
 
     div-int/2addr v4, v2
 
-    .line 15
     iget p2, p2, Lcom/bumptech/glide/gifdecoder/GifFrame;->ix:I
 
     div-int/2addr p2, v2
 
-    .line 16
     iget v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
     mul-int/2addr v3, v2
@@ -1471,14 +1362,12 @@
     :goto_2
     if-ge v2, p2, :cond_5
 
-    .line 17
     aput v0, v8, v2
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 18
     :cond_5
     iget p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
@@ -1489,14 +1378,12 @@
     :cond_6
     if-ne v2, v1, :cond_7
 
-    .line 19
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_7
 
     const/4 v2, 0x0
 
-    .line 20
     iget v6, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
     const/4 v4, 0x0
@@ -1511,11 +1398,9 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 21
     :cond_7
     invoke-direct {p0, p1}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->decodeBitmapData(Lcom/bumptech/glide/gifdecoder/GifFrame;)V
 
-    .line 22
     iget-boolean p2, p1, Lcom/bumptech/glide/gifdecoder/GifFrame;->interlace:Z
 
     const/4 v0, 0x1
@@ -1528,18 +1413,15 @@
 
     goto :goto_3
 
-    .line 23
     :cond_8
     invoke-direct {p0, p1}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->copyIntoScratchFast(Lcom/bumptech/glide/gifdecoder/GifFrame;)V
 
     goto :goto_4
 
-    .line 24
     :cond_9
     :goto_3
     invoke-direct {p0, p1}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->copyCopyIntoScratchRobust(Lcom/bumptech/glide/gifdecoder/GifFrame;)V
 
-    .line 25
     :goto_4
     iget-boolean p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->savePrevious:Z
 
@@ -1551,20 +1433,17 @@
 
     if-ne p1, v0, :cond_c
 
-    .line 26
     :cond_a
     iget-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
     if-nez p1, :cond_b
 
-    .line 27
     invoke-direct {p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->getNextBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
-    .line 28
     :cond_b
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
@@ -1584,7 +1463,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    .line 29
     :cond_c
     invoke-direct {p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->getNextBitmap()Landroid/graphics/Bitmap;
 
@@ -1592,7 +1470,6 @@
 
     const/4 v2, 0x0
 
-    .line 30
     iget v6, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
     const/4 v4, 0x0
@@ -1617,7 +1494,6 @@
 .method public advance()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1638,57 +1514,45 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     invoke-interface {v2, v1}, Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;->release([B)V
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainScratch:[I
 
     if-eqz v1, :cond_1
 
-    .line 5
     iget-object v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     invoke-interface {v2, v1}, Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;->release([I)V
 
-    .line 6
     :cond_1
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
 
-    .line 7
     iget-object v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     invoke-interface {v2, v1}, Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;->release(Landroid/graphics/Bitmap;)V
 
-    .line 8
     :cond_2
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->previousImage:Landroid/graphics/Bitmap;
 
-    .line 9
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
-    .line 10
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
-    .line 11
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->block:[B
 
     if-eqz v0, :cond_3
 
-    .line 12
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     invoke-interface {v1, v0}, Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;->release([B)V
@@ -1700,7 +1564,6 @@
 .method public getByteSize()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
@@ -1727,7 +1590,6 @@
 .method public getCurrentFrameIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     return v0
@@ -1736,7 +1598,6 @@
 .method public getData()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -1747,14 +1608,12 @@
 
     if-ltz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v1, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
     if-ge p1, v1, :cond_0
 
-    .line 2
     iget-object v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frames:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1777,7 +1636,6 @@
 .method public getFrameCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
@@ -1788,7 +1646,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->height:I
@@ -1801,7 +1658,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
@@ -1819,7 +1675,6 @@
 .method public getNetscapeLoopCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
@@ -1830,7 +1685,6 @@
 .method public getNextDelay()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
@@ -1843,7 +1697,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->getDelay(I)I
 
@@ -1863,7 +1716,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
@@ -1879,7 +1731,6 @@
 
     if-gez v0, :cond_2
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
@@ -1889,7 +1740,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1920,11 +1770,9 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_1
     iput v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
-    .line 5
     :cond_2
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
@@ -1943,15 +1791,12 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 6
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
-    .line 7
     iget-object v5, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->block:[B
 
     if-nez v5, :cond_4
 
-    .line 8
     iget-object v5, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     const/16 v6, 0xff
@@ -1962,7 +1807,6 @@
 
     iput-object v5, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->block:[B
 
-    .line 9
     :cond_4
     iget-object v5, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
@@ -1976,14 +1820,12 @@
 
     check-cast v5, Lcom/bumptech/glide/gifdecoder/GifFrame;
 
-    .line 10
     iget v6, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     sub-int/2addr v6, v2
 
     if-ltz v6, :cond_5
 
-    .line 11
     iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget-object v7, v7, Lcom/bumptech/glide/gifdecoder/GifHeader;->frames:Ljava/util/List;
@@ -1999,7 +1841,6 @@
     :cond_5
     move-object v6, v3
 
-    .line 12
     :goto_0
     iget-object v7, v5, Lcom/bumptech/glide/gifdecoder/GifFrame;->lct:[I
 
@@ -2019,7 +1860,6 @@
 
     if-nez v7, :cond_8
 
-    .line 13
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -2028,7 +1868,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 14
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2049,42 +1888,35 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_7
     iput v2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     monitor-exit p0
 
     return-object v3
 
-    .line 17
     :cond_8
     :try_start_1
     iget-boolean v1, v5, Lcom/bumptech/glide/gifdecoder/GifFrame;->transparency:Z
 
     if-eqz v1, :cond_9
 
-    .line 18
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pct:[I
 
     array-length v3, v7
 
     invoke-static {v7, v0, v1, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 19
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->pct:[I
 
     iput-object v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->act:[I
 
-    .line 20
     iget v3, v5, Lcom/bumptech/glide/gifdecoder/GifFrame;->transIndex:I
 
     aput v0, v1, v3
 
-    .line 21
     iget v0, v5, Lcom/bumptech/glide/gifdecoder/GifFrame;->dispose:I
 
     if-ne v0, v4, :cond_9
@@ -2093,14 +1925,12 @@
 
     if-nez v0, :cond_9
 
-    .line 22
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->isFirstFrameTransparent:Ljava/lang/Boolean;
 
-    .line 23
     :cond_9
     invoke-direct {p0, v5, v6}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->setPixels(Lcom/bumptech/glide/gifdecoder/GifFrame;Lcom/bumptech/glide/gifdecoder/GifFrame;)Landroid/graphics/Bitmap;
 
@@ -2112,7 +1942,6 @@
 
     return-object v0
 
-    .line 24
     :cond_a
     :goto_2
     :try_start_2
@@ -2124,7 +1953,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 25
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2147,7 +1975,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 26
     :cond_b
     monitor-exit p0
 
@@ -2164,7 +1991,6 @@
 .method public getStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
     return v0
@@ -2173,7 +1999,6 @@
 .method public getTotalIterationCount()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
@@ -2202,7 +2027,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
@@ -2226,7 +2050,6 @@
     :cond_0
     move p2, v0
 
-    .line 1
     :goto_0
     :try_start_0
     new-instance v1, Ljava/io/ByteArrayOutputStream;
@@ -2238,7 +2061,6 @@
     :goto_1
     const/4 v2, 0x0
 
-    .line 2
     invoke-virtual {p1, p2, v2, v0}, Ljava/io/InputStream;->read([BII)I
 
     move-result v3
@@ -2247,16 +2069,13 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 3
     invoke-virtual {v1, p2, v2, v3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_1
 
-    .line 4
     :cond_1
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 5
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p2
@@ -2270,7 +2089,6 @@
     :catch_0
     move-exception p2
 
-    .line 6
     sget-object v0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     const-string v1, "Error reading data from stream"
@@ -2282,13 +2100,11 @@
     :cond_2
     const/4 p2, 0x2
 
-    .line 7
     iput p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
     :goto_2
     if-eqz p1, :cond_3
 
-    .line 8
     :try_start_1
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -2299,14 +2115,12 @@
     :catch_1
     move-exception p1
 
-    .line 9
     sget-object p2, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->TAG:Ljava/lang/String;
 
     const-string v0, "Error closing stream"
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10
     :cond_3
     :goto_3
     iget p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
@@ -2319,7 +2133,6 @@
 
     monitor-enter p0
 
-    .line 11
     :try_start_0
     invoke-direct {p0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->getHeaderParser()Lcom/bumptech/glide/gifdecoder/GifHeaderParser;
 
@@ -2337,10 +2150,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 12
     invoke-virtual {p0, v0, p1}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->setData(Lcom/bumptech/glide/gifdecoder/GifHeader;[B)V
 
-    .line 13
     :cond_0
     iget p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
     :try_end_0
@@ -2363,7 +2174,6 @@
 
     const/4 v0, -0x1
 
-    .line 1
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
     return-void
@@ -2376,13 +2186,11 @@
 
     const/4 v0, 0x1
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, p1, p2, v0}, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->setData(Lcom/bumptech/glide/gifdecoder/GifHeader;Ljava/nio/ByteBuffer;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
@@ -2402,7 +2210,6 @@
 
     if-lez p3, :cond_2
 
-    .line 5
     :try_start_0
     invoke-static {p3}, Ljava/lang/Integer;->highestOneBit(I)I
 
@@ -2410,38 +2217,30 @@
 
     const/4 v0, 0x0
 
-    .line 6
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->status:I
 
-    .line 7
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->header:Lcom/bumptech/glide/gifdecoder/GifHeader;
 
     const/4 v1, -0x1
 
-    .line 8
     iput v1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->framePointer:I
 
-    .line 9
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
-    .line 10
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 11
     iget-object p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->rawData:Ljava/nio/ByteBuffer;
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 12
     iput-boolean v0, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->savePrevious:Z
 
-    .line 13
     iget-object p2, p1, Lcom/bumptech/glide/gifdecoder/GifHeader;->frames:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2461,7 +2260,6 @@
 
     check-cast v0, Lcom/bumptech/glide/gifdecoder/GifFrame;
 
-    .line 14
     iget v0, v0, Lcom/bumptech/glide/gifdecoder/GifFrame;->dispose:I
 
     const/4 v1, 0x3
@@ -2470,28 +2268,23 @@
 
     const/4 p2, 0x1
 
-    .line 15
     iput-boolean p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->savePrevious:Z
 
-    .line 16
     :cond_1
     iput p3, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->sampleSize:I
 
-    .line 17
     iget p2, p1, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
 
     div-int/2addr p2, p3
 
     iput p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
 
-    .line 18
     iget p2, p1, Lcom/bumptech/glide/gifdecoder/GifHeader;->height:I
 
     div-int/2addr p2, p3
 
     iput p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledHeight:I
 
-    .line 19
     iget-object p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     iget p3, p1, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
@@ -2506,7 +2299,6 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->mainPixels:[B
 
-    .line 20
     iget-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapProvider:Lcom/bumptech/glide/gifdecoder/GifDecoder$BitmapProvider;
 
     iget p2, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->downsampledWidth:I
@@ -2523,7 +2315,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
     monitor-exit p0
 
     return-void
@@ -2533,7 +2324,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_2
     :try_start_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -2569,7 +2359,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
@@ -2579,7 +2368,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     monitor-exit p0
 
     return-void
@@ -2595,7 +2383,6 @@
 .method public setDefaultBitmapConfig(Landroid/graphics/Bitmap$Config;)V
     .locals 3
 
-    .line 1
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     if-eq p1, v0, :cond_1
@@ -2606,7 +2393,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2644,7 +2430,6 @@
 
     throw v0
 
-    .line 3
     :cond_1
     :goto_0
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/StandardGifDecoder;->bitmapConfig:Landroid/graphics/Bitmap$Config;

@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
 
     if-eqz p1, :cond_6
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -52,7 +50,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -71,7 +68,6 @@
 
     if-le v3, v5, :cond_3
 
-    .line 3
     :cond_2
     :try_start_0
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V25;->access$000(Ljava/lang/ClassLoader;Ljava/io/File;)V
@@ -85,10 +81,8 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 4
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 5
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -103,10 +97,8 @@
 
     const-string v0, "load, v25 fail, sdk: %d, error: %s, try to fallback to V23"
 
-    .line 6
     invoke-static {v2, v0, v4}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 7
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V23;->access$100(Ljava/lang/ClassLoader;Ljava/io/File;)V
 
     goto :goto_0
@@ -116,7 +108,6 @@
 
     if-lt v3, v5, :cond_4
 
-    .line 8
     :try_start_1
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V23;->access$100(Ljava/lang/ClassLoader;Ljava/io/File;)V
     :try_end_1
@@ -129,10 +120,8 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 9
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 10
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -147,10 +136,8 @@
 
     const-string v0, "load, v23 fail, sdk: %d, error: %s, try to fallback to V14"
 
-    .line 11
     invoke-static {v2, v0, v4}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 12
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V14;->access$200(Ljava/lang/ClassLoader;Ljava/io/File;)V
 
     goto :goto_0
@@ -160,13 +147,11 @@
 
     if-lt v3, v0, :cond_5
 
-    .line 13
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatLibraryLoader$V14;->access$200(Ljava/lang/ClassLoader;Ljava/io/File;)V
 
     :goto_0
     return-void
 
-    .line 14
     :cond_5
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -184,7 +169,6 @@
 
     const-string p1, "load, folder %s is illegal"
 
-    .line 15
     invoke-static {v2, p1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void

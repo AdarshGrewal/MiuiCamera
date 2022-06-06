@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$23;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$23;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3100(Lcom/android/camera/fragment/top/FragmentTopAlert;)Landroid/widget/LinearLayout;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$23;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$23;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$3200(Lcom/android/camera/fragment/top/FragmentTopAlert;)I

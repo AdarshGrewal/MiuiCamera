@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
@@ -80,12 +77,10 @@
 
     invoke-static {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2202(Lmiuix/appcompat/internal/app/widget/ActionBarView;I)I
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    .line 4
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->access$2100(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
@@ -98,14 +93,12 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->postOnAnimation(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -125,7 +118,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 7
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     const/4 v1, 0x0
@@ -134,7 +126,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
@@ -166,7 +157,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 9
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$7;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     const/4 v1, 0x1

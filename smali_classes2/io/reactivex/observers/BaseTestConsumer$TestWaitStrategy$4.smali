@@ -20,7 +20,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lio/reactivex/observers/BaseTestConsumer$TestWaitStrategy;-><init>(Ljava/lang/String;ILio/reactivex/observers/BaseTestConsumer$1;)V
 
     return-void
@@ -33,7 +32,6 @@
 
     const/16 v0, 0xa
 
-    .line 1
     invoke-static {v0}, Lio/reactivex/observers/BaseTestConsumer$TestWaitStrategy;->sleep(I)V
 
     return-void

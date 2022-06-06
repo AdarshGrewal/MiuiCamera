@@ -28,7 +28,6 @@
 .method public constructor <init>(JILjava8/util/function/IntUnaryOperator;I)V
     .locals 0
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/IntStreams$1;->val$f:Ljava8/util/function/IntUnaryOperator;
 
     iput p5, p0, Ljava8/util/stream/IntStreams$1;->val$seed:I
@@ -43,7 +42,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/IntStreams$1;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
@@ -56,17 +54,14 @@
 .method public tryAdvance(Ljava8/util/function/IntConsumer;)Z
     .locals 3
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/IntStreams$1;->started:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/IntStreams$1;->val$f:Ljava8/util/function/IntUnaryOperator;
 
     iget v2, p0, Ljava8/util/stream/IntStreams$1;->prev:I
@@ -77,14 +72,11 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget v0, p0, Ljava8/util/stream/IntStreams$1;->val$seed:I
 
-    .line 6
     iput-boolean v1, p0, Ljava8/util/stream/IntStreams$1;->started:Z
 
-    .line 7
     :goto_0
     iput v0, p0, Ljava8/util/stream/IntStreams$1;->prev:I
 

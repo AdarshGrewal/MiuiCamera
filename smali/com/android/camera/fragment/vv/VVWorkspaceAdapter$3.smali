@@ -36,7 +36,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$3;->this$0:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,22 +64,18 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
     const-wide/16 v1, 0x0
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(J)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera/module/loader/NullHolder;->ofNullable(Ljava/lang/Object;)Lcom/android/camera/module/loader/NullHolder;
 
     move-result-object p1
@@ -96,7 +91,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter$3;->apply(Ljava/lang/String;)Lcom/android/camera/module/loader/NullHolder;

@@ -27,12 +27,10 @@
 .method public constructor <init>(Lcom/android/camera/network/download/GalleryDownloadManager;Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/download/GalleryDownloadManager$TaskMonitor;->this$0:Lcom/android/camera/network/download/GalleryDownloadManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/network/download/GalleryDownloadManager$TaskMonitor;->mWrapped:Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
 
     return-void
@@ -43,7 +41,6 @@
 .method public onRequestComplete(Lcom/android/camera/network/download/Request;I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager$TaskMonitor;->this$0:Lcom/android/camera/network/download/GalleryDownloadManager;
 
     invoke-static {v0}, Lcom/android/camera/network/download/GalleryDownloadManager;->access$000(Lcom/android/camera/network/download/GalleryDownloadManager;)Ljava/util/Map;
@@ -64,10 +61,8 @@
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/network/download/DownloadTask;->setOnProgressListener(Lcom/android/camera/network/download/DownloadTask$OnProgressListener;)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/network/download/GalleryDownloadManager$TaskMonitor;->mWrapped:Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
 

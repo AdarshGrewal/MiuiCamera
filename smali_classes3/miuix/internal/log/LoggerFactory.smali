@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,12 +27,10 @@
 .method public static getFileLogger(Landroid/content/Context;)Lmiuix/internal/log/Logger;
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/log/util/Config;->getDefaultCacheLogDir(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lmiuix/internal/log/util/Config;->LOG_NAME:Ljava/lang/String;
 
     invoke-static {p0, v0, v1}, Lmiuix/internal/log/LoggerFactory;->getFileLogger(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lmiuix/internal/log/Logger;
@@ -46,35 +43,29 @@
 .method public static getFileLogger(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lmiuix/internal/log/Logger;
     .locals 5
 
-    .line 3
     new-instance v0, Lmiuix/internal/log/Logger;
 
     invoke-direct {v0, p2}, Lmiuix/internal/log/Logger;-><init>(Ljava/lang/String;)V
 
-    .line 4
     new-instance v1, Lmiuix/internal/log/appender/FileAppender;
 
     invoke-direct {v1}, Lmiuix/internal/log/appender/FileAppender;-><init>()V
 
-    .line 5
     new-instance v2, Lmiuix/internal/log/format/SimpleFormatter;
 
     invoke-direct {v2}, Lmiuix/internal/log/format/SimpleFormatter;-><init>()V
 
     invoke-virtual {v1, v2}, Lmiuix/internal/log/appender/FileAppender;->setFormatter(Lmiuix/internal/log/format/Formatter;)V
 
-    .line 6
     new-instance v2, Lmiuix/internal/log/appender/rolling/FileRolloverStrategy;
 
     invoke-direct {v2}, Lmiuix/internal/log/appender/rolling/FileRolloverStrategy;-><init>()V
 
-    .line 7
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 8
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -85,7 +76,6 @@
 
     move-result-object p0
 
-    .line 9
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -95,7 +85,6 @@
     :catch_0
     move-exception p0
 
-    .line 10
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -106,7 +95,6 @@
 
     const/4 p0, 0x0
 
-    .line 11
     :goto_0
     invoke-static {p0}, Lmiuix/internal/log/LoggerFactory;->obtainMaxBackup(Landroid/os/Bundle;)I
 
@@ -116,40 +104,32 @@
 
     invoke-virtual {v2, v3}, Lmiuix/internal/log/appender/rolling/FileRolloverStrategy;->setMaxBackupIndex(I)V
 
-    .line 12
     invoke-static {p0}, Lmiuix/internal/log/LoggerFactory;->obtainMaxFileSize(Landroid/os/Bundle;)I
 
     move-result p0
 
     invoke-virtual {v2, p0}, Lmiuix/internal/log/appender/rolling/FileRolloverStrategy;->setMaxFileSize(I)V
 
-    .line 13
     new-instance p0, Lmiuix/internal/log/appender/rolling/RollingFileManager;
 
     invoke-direct {p0, p1, p2}, Lmiuix/internal/log/appender/rolling/RollingFileManager;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     invoke-virtual {p0, v2}, Lmiuix/internal/log/appender/rolling/RollingFileManager;->setRolloverStrategy(Lmiuix/internal/log/appender/rolling/RolloverStrategy;)V
 
-    .line 15
     invoke-virtual {v1, p0}, Lmiuix/internal/log/appender/FileAppender;->setFileManager(Lmiuix/internal/log/appender/FileManager;)V
 
-    .line 16
     invoke-virtual {v0, v1}, Lmiuix/internal/log/Logger;->addAppender(Lmiuix/internal/log/appender/Appender;)V
 
-    .line 17
     sget-boolean p0, Lmiuix/internal/util/DeviceHelper;->IS_DEBUGGABLE:Z
 
     if-eqz p0, :cond_0
 
-    .line 18
     sget-object p0, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     invoke-virtual {v0, p0}, Lmiuix/internal/log/Logger;->setLevel(Lmiuix/internal/log/Level;)V
 
     goto :goto_1
 
-    .line 19
     :cond_0
     sget-object p0, Lmiuix/internal/log/Level;->INFO:Lmiuix/internal/log/Level;
 
@@ -162,33 +142,28 @@
 .method public static getLogcatLogger()Lmiuix/internal/log/Logger;
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/internal/log/Logger;
 
     sget-object v1, Lmiuix/internal/log/util/Config;->LOG_NAME:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lmiuix/internal/log/Logger;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Lmiuix/internal/log/appender/LogcatAppender;
 
     invoke-direct {v1}, Lmiuix/internal/log/appender/LogcatAppender;-><init>()V
 
     invoke-virtual {v0, v1}, Lmiuix/internal/log/Logger;->addAppender(Lmiuix/internal/log/appender/Appender;)V
 
-    .line 3
     sget-boolean v1, Lmiuix/internal/util/DeviceHelper;->IS_DEBUGGABLE:Z
 
     if-eqz v1, :cond_0
 
-    .line 4
     sget-object v1, Lmiuix/internal/log/Level;->VERBOSE:Lmiuix/internal/log/Level;
 
     invoke-virtual {v0, v1}, Lmiuix/internal/log/Logger;->setLevel(Lmiuix/internal/log/Level;)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     sget-object v1, Lmiuix/internal/log/Level;->INFO:Lmiuix/internal/log/Level;
 
@@ -205,19 +180,16 @@
 
     const-string v0, "maxBackup"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 3
     instance-of v0, p0, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
@@ -232,7 +204,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -244,7 +215,6 @@
 
     const-string v0, "Log config error:maxBackup must be int type and smaller than 20"
 
-    .line 5
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -261,26 +231,22 @@
 
     const-string v0, "maxFileMbSize"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 3
     instance-of v0, p0, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -289,7 +255,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -305,7 +270,6 @@
 
     const-string v0, "Log config error:maxFileMbSize must be int type and smaller than 10"
 
-    .line 6
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1

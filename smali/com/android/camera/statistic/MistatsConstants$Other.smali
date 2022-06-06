@@ -27,12 +27,6 @@
 
 .field public static final KEY_CTA_CLICK_DIALOG_DISAGREE:Ljava/lang/String; = "key_cta_dialog_disagree"
 
-.field public static final KEY_FEATURE_AUTO_DOWNLOAD_CANCEL:Ljava/lang/String; = "key_feature_auto_download_cancel"
-
-.field public static final KEY_FEATURE_AUTO_DOWNLOAD_CONFIRM:Ljava/lang/String; = "key_feature_auto_download_confirm"
-
-.field public static final KEY_FEATURE_AUTO_DOWNLOAD_DIALOG:Ljava/lang/String; = "key_feature_auto_download_dialog"
-
 .field public static final KEY_LONG_PRESS_DIALOG:Ljava/lang/String; = "key_lp_dialog"
 
 .field public static final KEY_LONG_PRESS_DIALOG_BURST:Ljava/lang/String; = "key_lp_dialog_burst"

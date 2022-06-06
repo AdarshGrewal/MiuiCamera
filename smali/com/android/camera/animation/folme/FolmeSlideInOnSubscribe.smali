@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;-><init>(Landroid/view/View;)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/animation/folme/FolmeSlideInOnSubscribe;->mGravity:I
 
     return-void
@@ -31,7 +29,6 @@
 
     aput-object p0, p1, v0
 
-    .line 1
     invoke-static {p1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -44,18 +41,14 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 3
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
@@ -70,7 +63,6 @@
 
     new-array p1, p1, [Landroid/view/View;
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -98,17 +90,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->subscribe(Lio/reactivex/CompletableEmitter;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -127,7 +116,6 @@
 
     move-result p1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
@@ -146,7 +134,6 @@
 
     move-result v1
 
-    .line 5
     iget v2, p0, Lcom/android/camera/animation/folme/FolmeSlideInOnSubscribe;->mGravity:I
 
     const/4 v3, 0x3
@@ -185,7 +172,6 @@
     :cond_3
     move v1, v0
 
-    .line 6
     :goto_0
     new-instance v2, Lmiuix/animation/controller/AnimState;
 
@@ -197,7 +183,6 @@
 
     int-to-double v4, p1
 
-    .line 7
     invoke-virtual {v2, v3, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -206,12 +191,10 @@
 
     int-to-double v3, v1
 
-    .line 8
     invoke-virtual {p1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 9
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string v2, "Slide in to"
@@ -222,14 +205,12 @@
 
     const-wide/16 v3, 0x0
 
-    .line 10
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 11
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -238,7 +219,6 @@
 
     new-array v3, v2, [Landroid/view/View;
 
-    .line 12
     iget-object v4, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     aput-object v4, v3, v0

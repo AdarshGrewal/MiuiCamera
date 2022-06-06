@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p1}, Lmiuix/appcompat/app/AlertController;->access$500(Lmiuix/appcompat/app/AlertController;)Landroid/view/View;
@@ -55,7 +53,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 2
     invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result p1
@@ -64,12 +61,10 @@
 
     move-result-object p1
 
-    .line 3
     iget p2, p1, Landroid/graphics/Insets;->bottom:I
 
     if-lez p2, :cond_2
 
-    .line 4
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$000(Lmiuix/appcompat/app/AlertController;)Z
@@ -88,7 +83,6 @@
 
     if-nez p2, :cond_0
 
-    .line 5
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$400(Lmiuix/appcompat/app/AlertController;)I
@@ -101,7 +95,6 @@
 
     invoke-static {p2, v1}, Lmiuix/appcompat/app/AlertController;->access$102(Lmiuix/appcompat/app/AlertController;I)I
 
-    .line 6
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p2}, Lmiuix/appcompat/app/AlertController;->access$100(Lmiuix/appcompat/app/AlertController;)I
@@ -110,12 +103,10 @@
 
     if-gez p2, :cond_0
 
-    .line 7
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-static {p2, v0}, Lmiuix/appcompat/app/AlertController;->access$102(Lmiuix/appcompat/app/AlertController;I)I
 
-    .line 8
     :cond_0
     iget p1, p1, Landroid/graphics/Insets;->bottom:I
 
@@ -136,14 +127,12 @@
     :cond_1
     sub-int/2addr p1, v0
 
-    .line 9
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$3;->this$0:Lmiuix/appcompat/app/AlertController;
 
     neg-int p1, p1
 
     invoke-static {p2, p1}, Lmiuix/appcompat/app/AlertController;->access$300(Lmiuix/appcompat/app/AlertController;I)V
 
-    .line 10
     :cond_2
     sget-object p1, Landroid/view/WindowInsets;->CONSUMED:Landroid/view/WindowInsets;
 

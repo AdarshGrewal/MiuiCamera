@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -22,7 +21,6 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningMakeups;->isClosed()Z
 
     move-result v0
@@ -33,7 +31,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -85,7 +82,6 @@
 .method public isClosed()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningMakeups;->mIsClosed:Z
 
     return v0
@@ -94,7 +90,6 @@
 .method public setClosed(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningMakeups;->mIsClosed:Z
 
     return-void

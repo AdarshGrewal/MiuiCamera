@@ -77,21 +77,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
-    .line 5
     invoke-interface {p1}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v1
@@ -124,12 +119,10 @@
 .method public characteristics()I
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->characteristics()I
@@ -164,7 +157,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -178,12 +170,10 @@
 .method public estimateSize()J
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
@@ -212,7 +202,6 @@
     :goto_0
     return-wide v0
 
-    .line 3
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -233,17 +222,14 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator;->forEachRemaining(Ljava8/util/function/Consumer;)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -262,12 +248,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0}, Ljava8/util/Spliterator;->getComparator()Ljava/util/Comparator;
@@ -276,7 +260,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -295,12 +278,10 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->aSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator;->tryAdvance(Ljava8/util/function/Consumer;)Z
@@ -311,10 +292,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
     invoke-interface {v0, p1}, Ljava8/util/Spliterator;->tryAdvance(Ljava8/util/function/Consumer;)Z
@@ -323,7 +302,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->bSpliterator:Ljava8/util/Spliterator;
 
@@ -345,7 +323,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     if-eqz v0, :cond_0
@@ -364,7 +341,6 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 2
     iput-boolean v1, p0, Ljava8/util/stream/Streams$ConcatSpliterator;->beforeSplit:Z
 
     return-object v0

@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -32,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public static getInstallReporter()Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallReporter;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallReporterManager;->sInstallReporterRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -56,7 +53,6 @@
 .method public static install(Lcom/iqiyi/android/qigsaw/core/splitreport/SplitInstallReporter;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstallReporterManager;->sInstallReporterRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0

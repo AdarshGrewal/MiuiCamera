@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$2;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;
 
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$2;->val$inputImageOrientation:I
@@ -42,14 +41,12 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$2;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController$2;->val$inputImageOrientation:I
 
     iput v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->mInputImageOrientation:I
 
-    .line 2
     invoke-static {}, Lcom/faceunity/wrapper/faceunity;->fuOnCameraChange()V
 
     return-void

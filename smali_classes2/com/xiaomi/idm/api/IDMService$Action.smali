@@ -33,13 +33,10 @@
 .method public constructor <init>(ILcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/idm/api/IDMService$Action;->aid:I
 
-    .line 3
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
     return-void
@@ -50,7 +47,6 @@
 .method public getAid()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/IDMService$Action;->aid:I
 
     return v0
@@ -59,7 +55,6 @@
 .method public getServiceUUID()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/IDMService;->getUUID()Ljava/lang/String;

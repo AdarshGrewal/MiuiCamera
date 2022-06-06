@@ -137,7 +137,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "FrameListener"
@@ -152,10 +151,8 @@
 .method public constructor <init>(Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -166,31 +163,24 @@
 
     new-array v0, v0, [F
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTransform:[F
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHasTexture:Z
 
     const/4 v1, 0x1
 
-    .line 5
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsRatio16_9:Z
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 6
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 7
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
-    .line 8
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->currentFrameCount:I
 
-    .line 9
     new-instance v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-direct {v0}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;-><init>()V
@@ -199,17 +189,14 @@
 
     const/4 v0, -0x1
 
-    .line 10
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
-    .line 11
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mLock:Ljava/lang/Object;
 
-    .line 12
     iput-object p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
     return-void
@@ -218,7 +205,6 @@
 .method private checkThreadPriority()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->currentFrameCount:I
 
     sget v1, Lcom/android/camera/SurfaceTextureScreenNail;->sMaxHighPriorityFrameCount:I
@@ -227,12 +213,10 @@
 
     const-string v0, "STScreenNail"
 
-    const-string v1, "normalHandlerCapacity:set normal"
+    const-string/jumbo v1, "normalHandlerCapacity:set normal"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     sget-object v0, Lcom/android/camera/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadId()I
@@ -243,7 +227,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Process;->setThreadPriority(II)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->currentFrameCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -257,7 +240,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 5
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->currentFrameCount:I
 
     :cond_1
@@ -268,7 +250,6 @@
 .method private computeRatio()V
     .locals 9
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
@@ -295,7 +276,6 @@
 
     iget v6, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
 
-    .line 2
     invoke-static {v0, v4, v5, v6}, Lcom/android/camera/CameraSettings;->isNearAspectRatio(IIII)Z
 
     move-result v0
@@ -304,7 +284,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraWidth:I
 
@@ -314,7 +293,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 4
     iget v5, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
     if-eqz v5, :cond_2
@@ -329,7 +307,6 @@
 
     if-eq v7, v8, :cond_2
 
-    .line 5
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
     mul-int v7, v0, v6
@@ -338,12 +315,10 @@
 
     if-le v7, v8, :cond_1
 
-    .line 6
     iput v4, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
     mul-int/2addr v4, v5
 
-    .line 7
     div-int/2addr v4, v6
 
     iput v4, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
@@ -354,26 +329,21 @@
 
     div-float/2addr v4, v0
 
-    .line 8
     iput v4, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 9
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
     mul-int/2addr v0, v6
 
-    .line 11
     div-int/2addr v0, v5
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
-    .line 12
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     int-to-float v0, v0
@@ -382,32 +352,25 @@
 
     div-float/2addr v0, v2
 
-    .line 13
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     goto :goto_0
 
-    .line 14
     :cond_2
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 15
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 16
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
-    .line 17
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraWidth:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
-    .line 18
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraHeight:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
-    .line 19
     :goto_0
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
 
@@ -419,13 +382,13 @@
 
     div-float/2addr v0, v2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v4
 
@@ -448,15 +411,12 @@
 
     goto/16 :goto_6
 
-    .line 20
     :cond_4
     :goto_1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraWidth:I
 
-    .line 21
     iget v4, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraHeight:I
 
-    .line 22
     iget v5, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
     const/high16 v6, 0x41100000    # 9.0f
@@ -473,19 +433,15 @@
 
     goto :goto_2
 
-    .line 23
     :cond_5
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsFullScreen:Z
 
-    .line 24
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsRatio16_9:Z
 
     if-eq v0, v4, :cond_6
 
-    .line 25
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 26
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     int-to-float v1, v0
@@ -494,40 +450,32 @@
 
     div-float/2addr v1, v2
 
-    .line 27
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     move v1, v0
 
     goto/16 :goto_5
 
-    .line 28
     :cond_6
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 29
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 30
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     goto :goto_2
 
-    .line 31
     :cond_7
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsRatio16_9:Z
 
-    .line 32
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsFullScreen:Z
 
-    .line 33
     invoke-static {v0, v4}, Lcom/android/camera/CameraSettings;->isAspectRatio16_9(II)Z
 
     move-result v5
 
     if-nez v5, :cond_9
 
-    .line 34
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
     mul-int/lit8 v1, v0, 0x10
@@ -550,7 +498,6 @@
 
     div-float/2addr v2, v0
 
-    .line 35
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     move v0, v1
@@ -572,19 +519,15 @@
 
     div-float/2addr v2, v3
 
-    .line 36
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
-    goto/16 :goto_5
+    goto :goto_5
 
-    .line 37
     :cond_9
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 38
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 39
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     :goto_2
@@ -592,14 +535,11 @@
 
     goto :goto_5
 
-    .line 40
     :cond_a
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsFullScreen:Z
 
-    .line 41
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsRatio16_9:Z
 
-    .line 42
     invoke-static {v0, v4}, Lcom/android/camera/CameraSettings;->isAspectRatio123(II)Z
 
     move-result v5
@@ -608,20 +548,7 @@
 
     if-nez v5, :cond_c
 
-    .line 43
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
-
-    move-result-object v1
-
-    const-class v2, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v1, v2}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->isInMimojiGif()Z
+    invoke-static {}, Lcom/android/camera/CameraSettings;->isGifOn()Z
 
     move-result v1
 
@@ -647,7 +574,6 @@
 
     div-float/2addr v2, v0
 
-    .line 44
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     move v0, v1
@@ -673,36 +599,28 @@
 
     div-float/2addr v2, v4
 
-    .line 45
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     move v4, v1
 
     goto :goto_3
 
-    .line 46
     :cond_c
     iput-boolean v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 47
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
-    .line 48
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
-    .line 49
     :goto_3
     sget-boolean v1, Lcom/android/camera/CameraSettings;->sCroppedIfNeeded:Z
 
     if-eqz v1, :cond_d
 
-    .line 50
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsFullScreen:Z
 
-    .line 51
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
-    .line 52
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsRatio16_9:Z
 
     int-to-float v1, v0
@@ -713,7 +631,6 @@
 
     float-to-int v1, v1
 
-    .line 53
     iget v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     mul-float/2addr v2, v8
@@ -725,31 +642,25 @@
     :cond_d
     move v1, v4
 
-    .line 54
     :goto_4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOo0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    .line 55
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mIsFullScreen:Z
 
-    .line 56
     :cond_e
     :goto_5
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
-    .line 57
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
-    .line 58
     :cond_f
     :goto_6
     invoke-direct {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->updateRenderSize()V
 
-    .line 59
     invoke-virtual {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->updateRenderRect()V
 
     return-void
@@ -758,19 +669,16 @@
 .method private initializePreviewTexture()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/gallery3d/ui/ExtTexture;
 
     invoke-direct {v0}, Lcom/android/gallery3d/ui/ExtTexture;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
@@ -780,8 +688,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/gallery3d/ui/BasicTexture;->setSize(II)V
 
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooooOO()Z
 
     move-result v0
 
@@ -795,18 +702,15 @@
 
     if-nez v0, :cond_1
 
-    .line 5
     sget-object v0, Lcom/android/camera/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-nez v0, :cond_2
 
-    .line 7
     new-instance v0, Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
@@ -819,7 +723,6 @@
 
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 8
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -827,7 +730,6 @@
 
     iput-wide v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceCreatedTimestamp:J
 
-    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -856,27 +758,23 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
     iget v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
     if-le v0, v2, :cond_3
 
-    .line 11
     iget-object v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
     goto :goto_0
 
-    .line 12
     :cond_3
     iget-object v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v3, v2, v0}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 13
     :goto_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -884,36 +782,30 @@
 
     if-lt v0, v2, :cond_4
 
-    .line 14
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooooOO()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     new-instance v2, Landroid/os/Handler;
 
     sget-object v3, Lcom/android/camera/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
-    .line 16
     invoke-virtual {v3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 17
     invoke-static {v0, p0, v2}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->setSurfaceTextureOnFrameAvailableListener(Landroid/graphics/SurfaceTexture;Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
 
     const-string v0, "fullHandlerCapacity:set urgent display"
 
-    .line 18
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     sget-object v0, Lcom/android/camera/SurfaceTextureScreenNail;->sFrameListener:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadId()I
@@ -926,24 +818,20 @@
 
     const/4 v0, 0x0
 
-    .line 20
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->currentFrameCount:I
 
     goto :goto_1
 
-    .line 21
     :cond_4
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 22
     :goto_1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
     if-eqz v0, :cond_5
 
-    .line 23
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-interface {v0, v1}, Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;->onSurfaceTextureCreated(Landroid/graphics/SurfaceTexture;)V
@@ -955,14 +843,12 @@
 .method private updateRenderSize()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
     const/4 v1, 0x2
 
     if-eq v1, v0, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
     int-to-float v0, v0
@@ -975,7 +861,6 @@
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mUncroppedRenderWidth:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
 
     int-to-float v0, v0
@@ -990,7 +875,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
@@ -1006,7 +890,6 @@
 
     int-to-float v0, v0
 
-    .line 5
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     div-float/2addr v0, v1
@@ -1024,7 +907,6 @@
 .method public acquireSurfaceTexture()V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1045,30 +927,24 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     monitor-enter p0
 
-    .line 3
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHasTexture:Z
 
     if-eqz v0, :cond_0
 
-    .line 4
     monitor-exit p0
 
     return-void
 
-    .line 5
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->initializePreviewTexture()V
 
-    .line 7
     new-instance v0, Lcom/android/gallery3d/ui/RawTexture;
 
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
@@ -1085,7 +961,6 @@
 
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
-    .line 8
     new-instance v0, Lcom/android/gallery3d/ui/RawTexture;
 
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
@@ -1104,28 +979,21 @@
 
     const/4 v0, 0x0
 
-    .line 9
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mFrameBuffer:Lcom/android/camera/effect/FrameBuffer;
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCaptureAnimFrameBuffer:Lcom/android/camera/effect/FrameBuffer;
 
-    .line 11
     monitor-enter p0
 
-    .line 12
     :try_start_1
     iput-boolean v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHasTexture:Z
 
     const/4 v0, 0x0
 
-    .line 13
     iput-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mModuleSwitching:Z
 
-    .line 14
     iput-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSkipFirstFrame:Z
 
-    .line 15
     monitor-exit p0
 
     return-void
@@ -1142,7 +1010,6 @@
     :catchall_1
     move-exception v0
 
-    .line 16
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -1154,50 +1021,43 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 7
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSkipFirstFrame:Z
 
     if-eqz v0, :cond_0
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSkipFirstFrame:Z
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExternalFrameProcessor:Lcom/android/camera/SurfaceTextureScreenNail$ExternalFrameProcessor;
 
     if-eqz v0, :cond_2
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0OoO0o()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o000O00()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->isAnimationRunning()Z
 
     move-result v1
@@ -1219,7 +1079,6 @@
 
     return-void
 
-    .line 8
     :cond_2
     iget v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTx:I
 
@@ -1241,35 +1100,29 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;IIII)V
     .locals 8
 
-    .line 9
     monitor-enter p0
 
-    .line 10
     :try_start_0
     iget-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHasTexture:Z
 
     if-nez v0, :cond_0
 
-    .line 11
     monitor-exit p0
 
     return-void
 
-    .line 12
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooooOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooooOO()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 13
     invoke-direct {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->checkThreadPriority()V
 
     :cond_1
     const-string v0, "STScreenNail"
 
-    .line 14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1288,7 +1141,6 @@
 
     const/4 v5, 0x0
 
-    .line 15
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1359,7 +1211,6 @@
 
     aput-object v6, v4, v5
 
-    .line 16
     invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -1370,46 +1221,38 @@
 
     move-result-object v1
 
-    .line 17
     invoke-static {v0, v1}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
     invoke-interface {p1, v0, v1}, Lcom/android/gallery3d/ui/GLCanvas;->setPreviewSize(II)V
 
-    .line 19
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTransform:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 21
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTransform:[F
 
     invoke-virtual {p0, v0}, Lcom/android/camera/SurfaceTextureScreenNail;->updateTransformMatrix([F)V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTransform:[F
 
     invoke-virtual {p0, v0}, Lcom/android/camera/SurfaceTextureScreenNail;->updateExtraTransformMatrix([F)V
 
-    .line 24
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDrawAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     iget-object v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
@@ -1426,19 +1269,16 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->init(Lcom/android/gallery3d/ui/ExtTexture;[FIIII)Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 25
     iget-object p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
     if-nez p2, :cond_2
 
-    .line 26
     iget-object p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDrawAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-interface {p1, p2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
     goto :goto_0
 
-    .line 27
     :cond_2
     iget-object p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
@@ -1450,12 +1290,10 @@
 
     if-nez p2, :cond_3
 
-    .line 28
     iget-object p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDrawAttribute:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
     invoke-interface {p1, p2}, Lcom/android/gallery3d/ui/GLCanvas;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)V
 
-    .line 29
     :cond_3
     iget-object p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
@@ -1463,7 +1301,6 @@
 
     invoke-interface {p2, p1, p3}, Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;->onSurfaceTextureUpdated(Lcom/android/gallery3d/ui/GLCanvas;Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;)V
 
-    .line 30
     :goto_0
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
 
@@ -1475,10 +1312,8 @@
 
     const-string p2, "SurfaceTextureScreenNail draw end"
 
-    .line 31
     invoke-static {p1, p2}, Lcom/android/camera/effect/framework/gles/OpenGlUtils;->checkGlErrorAndWarning(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 32
     monitor-exit p0
 
     return-void
@@ -1496,7 +1331,6 @@
 .method public draw(Lcom/android/gallery3d/ui/GLCanvas;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
     .locals 0
 
-    .line 33
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1507,7 +1341,6 @@
 .method public getCurrentTransform()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTransform:[F
 
     return-object v0
@@ -1516,12 +1349,10 @@
 .method public getExtTexture()Lcom/android/gallery3d/ui/ExtTexture;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
@@ -1532,7 +1363,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1543,7 +1373,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHeight:I
 
     return v0
@@ -1552,7 +1381,6 @@
 .method public getReadPixelsHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsHeight:I
 
     return v0
@@ -1561,7 +1389,6 @@
 .method public getReadPixelsWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsWidth:I
 
     return v0
@@ -1570,7 +1397,6 @@
 .method public getRenderHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mUncroppedRenderHeight:I
 
     return v0
@@ -1579,7 +1405,6 @@
 .method public getRenderTargetRatio()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
     return v0
@@ -1588,7 +1413,6 @@
 .method public getRenderWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mUncroppedRenderWidth:I
 
     return v0
@@ -1597,7 +1421,6 @@
 .method public getSurfaceCreatedTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceCreatedTimestamp:J
 
     return-wide v0
@@ -1606,12 +1429,10 @@
 .method public getSurfaceTexture()Landroid/graphics/SurfaceTexture;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
@@ -1622,7 +1443,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1633,7 +1453,6 @@
 .method public getTranslateY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTy:I
 
     return v0
@@ -1642,7 +1461,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mWidth:I
 
     return v0
@@ -1679,7 +1497,6 @@
 .method public releaseSurfaceTexture()V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1700,96 +1517,74 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 3
     :try_start_0
     iput-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mHasTexture:Z
 
-    .line 4
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->recycle()V
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_1
 
-    .line 9
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 11
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     const-wide/16 v2, 0x0
 
-    .line 12
     iput-wide v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceCreatedTimestamp:J
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScreenNailCallback:Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;
 
     if-eqz v0, :cond_2
 
-    .line 14
     invoke-interface {v0}, Lcom/android/camera/SurfaceTextureScreenNail$SurfaceTextureScreenNailCallback;->onSurfaceTextureReleased()V
 
-    .line 15
     :cond_2
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
     if-eqz v0, :cond_3
 
-    .line 16
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->recycle()V
 
-    .line 17
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
-    .line 18
     :cond_3
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCaptureAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
     if-eqz v0, :cond_4
 
-    .line 19
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->recycle()V
 
-    .line 20
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCaptureAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
-    .line 21
     :cond_4
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mFrameBuffer:Lcom/android/camera/effect/FrameBuffer;
 
-    .line 22
     iput-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCaptureAnimFrameBuffer:Lcom/android/camera/effect/FrameBuffer;
 
-    .line 23
     invoke-virtual {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->releaseBitmapIfNeeded()V
 
     return-void
@@ -1797,7 +1592,6 @@
     :catchall_0
     move-exception v0
 
-    .line 24
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -1809,34 +1603,28 @@
 .method public setDisplayArea(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDisplayRect:Landroid/graphics/Rect;
 
-    .line 2
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderOffsetX:I
 
-    .line 3
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderOffsetY:I
 
-    .line 4
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
-    .line 5
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->computeRatio()V
 
     return-void
@@ -1845,7 +1633,6 @@
 .method public setDisplayOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDisplayOrientation:I
 
     return-void
@@ -1862,22 +1649,17 @@
 
     if-le p1, p2, :cond_0
 
-    .line 1
     iput p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraWidth:I
 
-    .line 2
     iput p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraHeight:I
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iput p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraWidth:I
 
-    .line 4
     iput p2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCameraHeight:I
 
-    .line 5
     :goto_0
     invoke-static {p1, p2}, Lcom/android/camera/CameraSettings;->getRenderAspectRatio(II)I
 
@@ -1885,15 +1667,12 @@
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->computeRatio()V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_1
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1918,12 +1697,10 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/gallery3d/ui/BasicTexture;->setSize(II)V
@@ -1935,14 +1712,12 @@
 .method public setVideoStabilizationCropped(Z)V
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->oo0o0Oo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0OO00O()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mVideoStabilizationCropped:Z
 
     goto :goto_0
@@ -1950,7 +1725,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mVideoStabilizationCropped:Z
 
     :goto_0
@@ -1966,7 +1740,6 @@
 .method public updateReadPixelsSize()V
     .locals 6
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTwidth:I
 
     if-lez v0, :cond_2
@@ -1981,20 +1754,17 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/android/gallery3d/ui/BasicTexture;->getWidth()I
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mCaptureAnimTexture:Lcom/android/gallery3d/ui/RawTexture;
 
     invoke-virtual {v1}, Lcom/android/gallery3d/ui/BasicTexture;->getHeight()I
 
     move-result v1
 
-    .line 4
     iget v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTwidth:I
 
     mul-int v3, v2, v1
@@ -2005,12 +1775,10 @@
 
     if-le v3, v5, :cond_1
 
-    .line 5
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsWidth:I
 
     mul-int/2addr v4, v0
 
-    .line 6
     div-int/2addr v4, v2
 
     iput v4, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsHeight:I
@@ -2020,15 +1788,12 @@
     :cond_1
     mul-int/2addr v2, v1
 
-    .line 7
     div-int/2addr v2, v4
 
     iput v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsWidth:I
 
-    .line 8
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsHeight:I
 
-    .line 9
     :goto_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -2040,7 +1805,6 @@
 
     iget v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mReadPixelsWidth:I
 
-    .line 10
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -2059,7 +1823,6 @@
 
     const-string/jumbo v2, "updateReadPixelsSize: %dx%d"
 
-    .line 11
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -2076,7 +1839,6 @@
 .method public updateRenderRect()V
     .locals 8
 
-    .line 1
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTargetRatio:I
 
     const/4 v1, 0x2
@@ -2085,7 +1847,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
     if-nez v0, :cond_0
@@ -2106,7 +1867,6 @@
     :goto_0
     iput v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTx:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceHeight:I
 
     iget v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceWidth:I
@@ -2133,15 +1893,12 @@
 
     iput v3, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTy:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceWidth:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTwidth:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTheight:I
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderLayoutRect:Landroid/graphics/Rect;
 
     iget v2, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderOffsetX:I
@@ -2172,7 +1929,6 @@
 
     goto :goto_4
 
-    .line 7
     :cond_2
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
 
@@ -2194,7 +1950,6 @@
     :goto_2
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTx:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderHeight:I
 
     if-nez v0, :cond_4
@@ -2215,17 +1970,14 @@
     :goto_3
     iput v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTy:I
 
-    .line 9
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceWidth:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTwidth:I
 
-    .line 10
     iget v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mSurfaceHeight:I
 
     iput v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mTheight:I
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderLayoutRect:Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mRenderWidth:I
@@ -2234,7 +1986,6 @@
 
     invoke-virtual {v0, v2, v2, v1, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 12
     :goto_4
     invoke-virtual {p0}, Lcom/android/camera/SurfaceTextureScreenNail;->updateReadPixelsSize()V
 
@@ -2244,7 +1995,6 @@
 .method public updateTransformMatrix([F)V
     .locals 12
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mVideoStabilizationCropped:Z
 
     const/4 v1, 0x1
@@ -2276,25 +2026,21 @@
 
     move v5, v3
 
-    .line 2
     :goto_0
     iget-boolean v6, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mNeedCropped:Z
 
     if-eqz v6, :cond_1
 
-    .line 3
     iget v5, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleX:F
 
     mul-float/2addr v0, v5
 
-    .line 4
     iget v5, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mScaleY:F
 
     mul-float/2addr v4, v5
 
     move v5, v1
 
-    .line 5
     :cond_1
     iget v6, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDisplayOrientation:I
 
@@ -2312,12 +2058,10 @@
 
     const/high16 v5, 0x3f000000    # 0.5f
 
-    .line 6
     invoke-static {p1, v3, v5, v5, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     const/4 v7, 0x0
 
-    .line 7
     iget v5, p0, Lcom/android/camera/SurfaceTextureScreenNail;->mDisplayOrientation:I
 
     int-to-float v8, v5
@@ -2332,12 +2076,10 @@
 
     invoke-static/range {v6 .. v11}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    .line 8
     invoke-static {p1, v3, v0, v4, v2}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
     const/high16 v0, -0x41000000    # -0.5f
 
-    .line 9
     invoke-static {p1, v3, v0, v0, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     :cond_3
@@ -2349,7 +2091,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     array-length v0, p1
 
     const/16 v1, 0x10
@@ -2378,7 +2119,6 @@
 
     const-string/jumbo p2, "updateTransformMatrixForMirror unknown orientation"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
@@ -2386,7 +2126,6 @@
     :cond_0
     const/4 p2, 0x4
 
-    .line 3
     aget v2, p1, p2
 
     neg-float v2, v2
@@ -2395,7 +2134,6 @@
 
     const/16 v2, 0xc
 
-    .line 4
     aget p2, p1, p2
 
     cmpg-float p2, p2, v1
@@ -2415,7 +2153,6 @@
     :cond_2
     const/4 p2, 0x1
 
-    .line 5
     aget v2, p1, p2
 
     neg-float v2, v2
@@ -2424,7 +2161,6 @@
 
     const/16 v2, 0xd
 
-    .line 6
     aget p2, p1, p2
 
     cmpg-float p2, p2, v1

@@ -36,7 +36,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
     iput-wide p2, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->val$totalTime:J
@@ -51,8 +50,7 @@
 .method public onComplete()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$200()Ljava/lang/String;
+    invoke-static {}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
@@ -72,7 +70,6 @@
 .method public onNext(Ljava/lang/Long;)V
     .locals 7
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
     iget-wide v1, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->val$totalTime:J
@@ -87,7 +84,7 @@
 
     sub-long/2addr v1, v3
 
-    invoke-static {v0, v1, v2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$700(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
+    invoke-static {v0, v1, v2}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$800(Lcom/android/camera/module/impl/component/LiveSubVVImpl;J)V
 
     return-void
 .end method
@@ -95,7 +92,6 @@
 .method public bridge synthetic onNext(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->onNext(Ljava/lang/Long;)V
@@ -106,10 +102,9 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/LiveSubVVImpl$4;->this$0:Lcom/android/camera/module/impl/component/LiveSubVVImpl;
 
-    invoke-static {v0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$602(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, p1}, Lcom/android/camera/module/impl/component/LiveSubVVImpl;->access$702(Lcom/android/camera/module/impl/component/LiveSubVVImpl;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

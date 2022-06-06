@@ -75,24 +75,20 @@
     :try_start_0
     const-string v0, "android.media.MediaCodec"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     const/4 v0, 0x5
 
-    .line 2
     sput-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sSuggestedMode:B
 
     const-string v0, "MediaStream"
 
     const-string v1, "Phone supports the MediaCoded API"
 
-    .line 3
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x14
@@ -101,7 +97,6 @@
 
     const/4 v0, 0x2
 
-    .line 5
     sput-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     goto :goto_0
@@ -109,13 +104,11 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 6
     sput-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -129,49 +122,38 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     const/4 v1, 0x0
 
-    .line 3
     iput-boolean v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     iput-boolean v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mConfigured:Z
 
-    .line 4
     iput v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
     iput v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtcpPort:I
 
-    .line 5
     iput-byte v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mChannelIdentifier:B
 
-    .line 6
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 7
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSender:Landroid/net/LocalSocket;
 
-    .line 8
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mLss:Landroid/net/LocalServerSocket;
 
     const/16 v0, 0x40
 
-    .line 9
     iput v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mTTL:I
 
-    .line 10
     sget-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sSuggestedMode:B
 
     iput-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRequestedMode:B
 
-    .line 11
     iput-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
 
     return-void
@@ -182,14 +164,12 @@
 .method public closeSockets()V
     .locals 2
 
-    .line 1
     sget-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
 
@@ -202,10 +182,8 @@
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 4
     :goto_0
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSender:Landroid/net/LocalSocket;
@@ -219,10 +197,8 @@
     :catch_1
     move-exception v0
 
-    .line 5
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 6
     :goto_1
     :try_start_2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mLss:Landroid/net/LocalServerSocket;
@@ -236,31 +212,25 @@
     :catch_2
     move-exception v0
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_2
     const/4 v0, 0x0
 
-    .line 8
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mLss:Landroid/net/LocalServerSocket;
 
-    .line 9
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSender:Landroid/net/LocalSocket;
 
-    .line 10
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
 
     goto :goto_4
 
-    .line 11
     :cond_0
     :try_start_3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelRead:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_1
 
-    .line 12
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelRead:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -272,10 +242,8 @@
     :catch_3
     move-exception v0
 
-    .line 13
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 14
     :cond_1
     :goto_3
     :try_start_4
@@ -283,7 +251,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 15
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelWrite:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -295,7 +262,6 @@
     :catch_4
     move-exception v0
 
-    .line 16
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -314,18 +280,15 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mDestination:Ljava/net/InetAddress;
@@ -336,7 +299,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->setDestination(Ljava/net/InetAddress;II)V
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->getRtpSocket()Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
@@ -349,7 +311,6 @@
 
     invoke-virtual {v0, v1, v2}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->setOutputStream(Ljava/io/OutputStream;B)V
 
-    .line 5
     :cond_0
     iget-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRequestedMode:B
 
@@ -357,17 +318,14 @@
 
     const/4 v0, 0x1
 
-    .line 6
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mConfigured:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     monitor-exit p0
 
     return-void
 
-    .line 8
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -396,7 +354,6 @@
         }
     .end annotation
 
-    .line 1
     sget-byte v0, Lnet/majorkernelpanic/streaming/MediaStream;->sPipeApi:B
 
     const/4 v1, 0x0
@@ -412,7 +369,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 2
     :try_start_0
     new-instance v0, Ljava/util/Random;
 
@@ -424,7 +380,6 @@
 
     iput v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSocketId:I
 
-    .line 3
     new-instance v0, Landroid/net/LocalServerSocket;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -454,7 +409,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :goto_1
     new-instance v0, Landroid/net/LocalSocket;
@@ -463,7 +417,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
 
-    .line 5
     new-instance v1, Landroid/net/LocalSocketAddress;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -484,21 +437,18 @@
 
     invoke-virtual {v0, v1}, Landroid/net/LocalSocket;->connect(Landroid/net/LocalSocketAddress;)V
 
-    .line 6
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
 
     const v1, 0x7a120
 
     invoke-virtual {v0, v1}, Landroid/net/LocalSocket;->setReceiveBufferSize(I)V
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mReceiver:Landroid/net/LocalSocket;
 
     const/16 v2, 0xbb8
 
     invoke-virtual {v0, v2}, Landroid/net/LocalSocket;->setSoTimeout(I)V
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mLss:Landroid/net/LocalServerSocket;
 
     invoke-virtual {v0}, Landroid/net/LocalServerSocket;->accept()Landroid/net/LocalSocket;
@@ -507,7 +457,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mSender:Landroid/net/LocalSocket;
 
-    .line 9
     invoke-virtual {v0, v1}, Landroid/net/LocalSocket;->setSendBufferSize(I)V
 
     goto :goto_2
@@ -517,17 +466,14 @@
 
     const-string v3, "parcelFileDescriptors createPipe version = Lollipop"
 
-    .line 10
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-static {}, Landroid/os/ParcelFileDescriptor;->createPipe()[Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelFileDescriptors:[Landroid/os/ParcelFileDescriptor;
 
-    .line 12
     new-instance v0, Landroid/os/ParcelFileDescriptor;
 
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelFileDescriptors:[Landroid/os/ParcelFileDescriptor;
@@ -538,7 +484,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelRead:Landroid/os/ParcelFileDescriptor;
 
-    .line 13
     new-instance v0, Landroid/os/ParcelFileDescriptor;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mParcelFileDescriptors:[Landroid/os/ParcelFileDescriptor;
@@ -572,7 +517,6 @@
 .method public getBitrate()J
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     if-nez v0, :cond_0
@@ -603,7 +547,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     iget v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
     const/4 v2, 0x0
@@ -622,7 +565,6 @@
 .method public getLocalPorts()[I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->getRtpSocket()Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
@@ -639,7 +581,6 @@
 .method public getPacketizer()Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     return-object v0
@@ -648,7 +589,6 @@
 .method public getSSRC()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->getPacketizer()Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     move-result-object v0
@@ -666,7 +606,6 @@
 .method public getStreamingMethod()B
     .locals 1
 
-    .line 1
     iget-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
 
     return v0
@@ -675,7 +614,6 @@
 .method public isStreaming()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     return v0
@@ -684,7 +622,6 @@
 .method public setDestinationAddress(Ljava/net/InetAddress;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mDestination:Ljava/net/InetAddress;
 
     return-void
@@ -693,7 +630,6 @@
 .method public setDestinationPorts(I)V
     .locals 2
 
-    .line 1
     rem-int/lit8 v0, p1, 0x2
 
     const/4 v1, 0x1
@@ -702,21 +638,17 @@
 
     add-int/lit8 v0, p1, -0x1
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
-    .line 3
     iput p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtcpPort:I
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iput p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
     add-int/2addr p1, v1
 
-    .line 5
     iput p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtcpPort:I
 
     :goto_0
@@ -726,15 +658,12 @@
 .method public setDestinationPorts(II)V
     .locals 0
 
-    .line 6
     iput p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
-    .line 7
     iput p2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtcpPort:I
 
     const/4 p1, 0x0
 
-    .line 8
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mOutputStream:Ljava/io/OutputStream;
 
     return-void
@@ -743,10 +672,8 @@
 .method public setOutputStream(Ljava/io/OutputStream;B)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 2
     iput-byte p2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mChannelIdentifier:B
 
     return-void
@@ -755,7 +682,6 @@
 .method public setStreamingMethod(B)V
     .locals 0
 
-    .line 1
     iput-byte p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRequestedMode:B
 
     return-void
@@ -769,7 +695,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mTTL:I
 
     return-void
@@ -786,13 +711,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mDestination:Ljava/net/InetAddress;
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mRtpPort:I
 
     if-lez v0, :cond_1
@@ -801,38 +724,32 @@
 
     if-lez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mTTL:I
 
     invoke-virtual {v0, v1}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->setTimeToLive(I)V
 
-    .line 4
     iget-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->encodeWithMediaCodec()V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->encodeWithMediaRecorder()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 8
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -843,7 +760,6 @@
 
     throw v0
 
-    .line 9
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -868,7 +784,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
     :try_end_0
@@ -876,7 +791,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     :try_start_1
     iget-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
 
@@ -886,46 +800,37 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->stop()V
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
     invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
 
-    .line 5
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaRecorder:Landroid/media/MediaRecorder;
 
-    .line 6
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/MediaStream;->closeSockets()V
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->stop()V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mPacketizer:Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->stop()V
 
-    .line 9
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
-    .line 10
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
-    .line 11
     iput-object v2, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMediaCodec:Landroid/media/MediaCodec;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -936,19 +841,16 @@
     :catch_0
     move-exception v0
 
-    .line 12
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
     const/4 v0, 0x0
 
-    .line 13
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 14
     :cond_1
     monitor-exit p0
 

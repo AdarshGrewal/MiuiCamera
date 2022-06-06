@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/util/State;-><init>()V
@@ -35,7 +34,6 @@
 .method public enter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     const-string v1, "entering standby state"
@@ -48,7 +46,6 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x200
@@ -89,7 +86,6 @@
 
     packed-switch v0, :pswitch_data_2
 
-    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -112,13 +108,11 @@
 
     throw v0
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$500(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$StandbyState;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$600(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$BindingInitiatedState;

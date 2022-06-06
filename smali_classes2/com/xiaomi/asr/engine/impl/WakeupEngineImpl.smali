@@ -66,42 +66,32 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->init:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->running:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->pause:Z
 
-    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isWakeup:Z
 
-    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
-    .line 7
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->saveRecord:Z
 
     const-string v1, "ModelPath"
 
-    .line 8
     iput-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->ModelPath:Ljava/lang/String;
 
-    .line 9
     new-instance v1, Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;
 
     invoke-direct {v1}, Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;-><init>()V
 
     iput-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWakeupEngineInterface:Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;
 
-    .line 10
     new-instance v1, Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     new-instance v2, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl$VoiceRecordListener;
@@ -114,10 +104,8 @@
 
     const/4 v2, 0x1
 
-    .line 11
     invoke-virtual {v1, v2, v2}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->setParam(II)V
 
-    .line 12
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mVoiceRecord:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     const/4 v2, 0x2
@@ -126,14 +114,12 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->setParam(II)V
 
-    .line 13
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mVoiceRecord:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     const/16 v2, 0xc
 
     invoke-virtual {v1, v0, v2}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->setParam(II)V
 
-    .line 14
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "wakeup-engine-impl-thread"
@@ -142,10 +128,8 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandlerThread:Landroid/os/HandlerThread;
 
-    .line 15
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 16
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandlerThread:Landroid/os/HandlerThread;
@@ -162,7 +146,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
-    .line 17
     new-instance v0, Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
     const v1, 0xfa00
@@ -171,7 +154,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mForwardData:Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
-    .line 18
     new-instance v0, Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
     const/16 v1, 0x4b00
@@ -180,7 +162,6 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mBackwardData:Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
-    .line 19
     new-instance v0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
     invoke-direct {v0}, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;-><init>()V
@@ -189,7 +170,6 @@
 
     const-string v1, "/sdcard/miasr/asr/record"
 
-    .line 20
     invoke-virtual {v0, v1}, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->setSaveDir(Ljava/lang/String;)V
 
     return-void
@@ -198,7 +178,6 @@
 .method public static synthetic access$000(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
     return p0
@@ -207,7 +186,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->ModelPath:Ljava/lang/String;
 
     return-object p0
@@ -216,7 +194,6 @@
 .method public static synthetic access$1000(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isWakeup:Z
 
     return p0
@@ -225,7 +202,6 @@
 .method public static synthetic access$1002(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isWakeup:Z
 
     return p1
@@ -234,7 +210,6 @@
 .method public static synthetic access$1100(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)[B
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mCacheData:[B
 
     return-object p0
@@ -243,7 +218,6 @@
 .method public static synthetic access$1102(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;[B)[B
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mCacheData:[B
 
     return-object p1
@@ -252,7 +226,6 @@
 .method public static synthetic access$1200(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isWriteBackward:Z
 
     return p0
@@ -261,7 +234,6 @@
 .method public static synthetic access$1202(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isWriteBackward:Z
 
     return p1
@@ -270,7 +242,6 @@
 .method public static synthetic access$1300(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/utils/CircleBuffer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mBackwardData:Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
     return-object p0
@@ -279,7 +250,6 @@
 .method public static synthetic access$1400(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->pause:Z
 
     return p0
@@ -288,7 +258,6 @@
 .method public static synthetic access$1500(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     return-object p0
@@ -297,7 +266,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWakeupEngineInterface:Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;
 
     return-object p0
@@ -306,7 +274,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->init:Z
 
     return p0
@@ -315,7 +282,6 @@
 .method public static synthetic access$302(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->init:Z
 
     return p1
@@ -324,7 +290,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mOutListener:Lcom/xiaomi/asr/engine/WVPListener;
 
     return-object p0
@@ -333,7 +298,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->running:Z
 
     return p0
@@ -342,7 +306,6 @@
 .method public static synthetic access$502(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->running:Z
 
     return p1
@@ -351,7 +314,6 @@
 .method public static synthetic access$600(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/record/VoiceRecord;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mVoiceRecord:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     return-object p0
@@ -360,7 +322,6 @@
 .method public static synthetic access$700(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/utils/CircleBuffer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mForwardData:Lcom/xiaomi/asr/engine/utils/CircleBuffer;
 
     return-object p0
@@ -369,7 +330,6 @@
 .method public static synthetic access$800(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->saveRecord:Z
 
     return p0
@@ -378,7 +338,6 @@
 .method public static synthetic access$900(Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;)Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->saveVoiceUtil:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
     return-object p0
@@ -387,30 +346,25 @@
 .method public static getInstance()Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mInstance:Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mInstance:Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
     invoke-direct {v1}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;-><init>()V
 
     sput-object v1, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mInstance:Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -425,7 +379,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mInstance:Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;
@@ -438,7 +391,6 @@
 .method public init(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -447,20 +399,16 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 3
     iget-object v2, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->ModelPath:Ljava/lang/String;
 
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -471,7 +419,6 @@
 .method public loadLibraryWrapper(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -480,7 +427,6 @@
 .method public openLog(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
     return-void
@@ -489,7 +435,6 @@
 .method public release()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
     if-eqz v0, :cond_0
@@ -498,10 +443,8 @@
 
     const-string v1, "call release, releaseRecordMs:0"
 
-    .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
@@ -511,12 +454,10 @@
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
@@ -531,12 +472,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->stop(J)V
 
     const/16 v0, 0x1f4
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->start(I)V
 
     return-void
@@ -545,7 +484,6 @@
 .method public saveRecord(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->saveRecord:Z
 
     return-void
@@ -554,7 +492,6 @@
 .method public setListener(Lcom/xiaomi/asr/engine/WVPListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mOutListener:Lcom/xiaomi/asr/engine/WVPListener;
 
     return-void
@@ -563,12 +500,10 @@
 .method public start(I)V
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -590,14 +525,12 @@
     :cond_0
     if-gtz p1, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
@@ -607,10 +540,8 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->pause:Z
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -619,7 +550,6 @@
 
     move-result-object v0
 
-    .line 7
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     int-to-long v2, p1
@@ -632,12 +562,10 @@
 .method public stop(J)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->isPrintLog:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,17 +587,14 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->pause:Z
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
@@ -678,7 +603,6 @@
 
     move-result-object v0
 
-    .line 6
     iget-object v1, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->mWorkHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0, p1, p2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
@@ -689,12 +613,10 @@
 .method public wakeupVersion()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/WakeupEngineImpl;->init:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

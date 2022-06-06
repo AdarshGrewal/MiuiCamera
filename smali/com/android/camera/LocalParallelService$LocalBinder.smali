@@ -48,63 +48,54 @@
 .method public constructor <init>(Lcom/android/camera/LocalParallelService;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
-    .line 4
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->init(Landroid/content/Context;)V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/LocalParallelService$LocalBinder;->updateVirtualCameraIds()V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->init(Landroid/content/Context;)V
 
-    .line 7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O000Oo()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooo0o()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 8
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OooOOO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OooOOo0;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OooOOO;-><init>(Lcom/android/camera/LocalParallelService$LocalBinder;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/OooOOo0;-><init>(Lcom/android/camera/LocalParallelService$LocalBinder;)V
 
     invoke-virtual {p1, v0}, Lio/reactivex/Scheduler;->scheduleDirect(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/LocalParallelService$LocalBinder;->initMiviEngine()V
 
@@ -123,7 +114,6 @@
 .method public static synthetic access$200(Lcom/android/camera/LocalParallelService$LocalBinder;Lcom/xiaomi/camera/core/PostProcessor;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/LocalParallelService$LocalBinder;->onPostProcessorClosed(Lcom/xiaomi/camera/core/PostProcessor;)V
 
     return-void
@@ -132,19 +122,16 @@
 .method private checkMiviEngine()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :goto_0
     :try_start_0
     iget-boolean v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mMiviEngineInited:Z
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -155,7 +142,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :try_start_1
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
@@ -171,7 +157,6 @@
     :catch_0
     move-exception v1
 
-    .line 5
     :try_start_2
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -185,7 +170,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     monitor-exit v0
 
@@ -204,12 +188,10 @@
 .method private initMiviEngine()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -219,40 +201,34 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v1
 
     const-string v2, "initMiviEngine"
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/performance/PerformanceManager;->startAction(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/camera/log/PerformanceManager;->startAction(Ljava/lang/String;)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-static {v1}, Lcom/xiaomi/engine/MiCameraAlgo;->init(Landroid/content/Context;)V
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v1
 
     const-string v2, "initMiviEngine"
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/performance/PerformanceManager;->endAction(Ljava/lang/String;)J
+    invoke-virtual {v1, v2}, Lcom/android/camera/log/PerformanceManager;->endAction(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
-    .line 6
     iput-boolean v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mMiviEngineInited:Z
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 8
     monitor-exit v0
 
     return-void
@@ -270,19 +246,16 @@
 .method private initPostProcessor()Lcom/xiaomi/camera/core/PostProcessor;
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/core/PostProcessor;
 
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
-    .line 2
     invoke-static {v1}, Lcom/android/camera/LocalParallelService;->access$600(Lcom/android/camera/LocalParallelService;)Lcom/xiaomi/camera/core/PostProcessor$PostProcessStatusCallback;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/xiaomi/camera/core/PostProcessor;-><init>(Landroid/content/Context;Lcom/xiaomi/camera/core/PostProcessor$PostProcessStatusCallback;)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-static {v1}, Lcom/android/camera/LocalParallelService;->access$400(Lcom/android/camera/LocalParallelService;)I
@@ -291,7 +264,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PostProcessor;->setMaxParallelRequestNumber(I)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-static {v1}, Lcom/android/camera/LocalParallelService;->access$500(Lcom/android/camera/LocalParallelService;)Z
@@ -300,7 +272,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PostProcessor;->setSRRequireReprocess(Z)V
 
-    .line 5
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -327,7 +298,6 @@
 
     iget-object v3, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
-    .line 6
     invoke-static {v3}, Lcom/android/camera/LocalParallelService;->access$500(Lcom/android/camera/LocalParallelService;)Z
 
     move-result v3
@@ -338,7 +308,6 @@
 
     move-result-object v2
 
-    .line 7
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -366,7 +335,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -382,7 +350,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_1
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -401,7 +368,6 @@
 
     move v2, v1
 
-    .line 8
     :goto_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -409,12 +375,10 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 9
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 10
     invoke-virtual {p2, v3}, Landroid/util/SparseArray;->indexOfKey(I)I
 
     move-result v4
@@ -423,7 +387,6 @@
 
     return v0
 
-    .line 11
     :cond_3
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -431,14 +394,12 @@
 
     check-cast v4, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
-    .line 12
     invoke-virtual {p2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;
 
-    .line 13
     invoke-virtual {v4, v3}, Lcom/android/camera2/imagereaders/ImageReaderSurfaceSpec;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -454,7 +415,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_5
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -491,7 +451,6 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -505,7 +464,6 @@
 
     return v0
 
-    .line 2
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -527,7 +485,6 @@
 
     check-cast v3, Lcom/xiaomi/protocol/IImageReaderParameterSets;
 
-    .line 3
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -545,7 +502,6 @@
 
     check-cast v5, Lcom/xiaomi/protocol/IImageReaderParameterSets;
 
-    .line 4
     invoke-virtual {v3, v5}, Lcom/xiaomi/protocol/IImageReaderParameterSets;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -556,7 +512,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -576,7 +531,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -598,14 +552,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
@@ -642,7 +594,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -650,10 +601,8 @@
 
     if-lez v0, :cond_6
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/LocalParallelService$LocalBinder;->checkMiviEngine()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentParams:Landroid/util/SparseArray;
 
     invoke-direct {p0, p1, v0}, Lcom/android/camera/LocalParallelService$LocalBinder;->isSetsEquals(Landroid/util/SparseArray;Landroid/util/SparseArray;)Z
@@ -668,14 +617,12 @@
 
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->checkAndSetResue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object p1
@@ -698,12 +645,10 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {p1, p2}, Lcom/xiaomi/camera/core/PostProcessor;->setToken(I)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {p1}, Lcom/xiaomi/camera/core/PostProcessor;->getSpecList()Landroid/util/SparseArray;
@@ -720,7 +665,6 @@
 
     return-object p1
 
-    .line 8
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
@@ -751,7 +695,6 @@
 
     const/4 v0, 0x0
 
-    .line 9
     :goto_0
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
@@ -761,7 +704,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -770,7 +712,6 @@
 
     check-cast v1, Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 11
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PostProcessor;->isStopped()Z
 
     move-result v2
@@ -779,27 +720,23 @@
 
     goto :goto_1
 
-    .line 12
     :cond_1
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PostProcessor;->getSpecList()Landroid/util/SparseArray;
 
     move-result-object v2
 
-    .line 13
     invoke-direct {p0, p1, v2}, Lcom/android/camera/LocalParallelService$LocalBinder;->isSetsEquals(Landroid/util/SparseArray;Landroid/util/SparseArray;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 14
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PostProcessor;->checkAndSetResue()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 15
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -820,10 +757,8 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     invoke-virtual {v1, p2}, Lcom/xiaomi/camera/core/PostProcessor;->setToken(I)V
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_2
@@ -832,19 +767,15 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0, p2}, Lcom/xiaomi/camera/core/PostProcessor;->destroyWhenTasksFinished(I)V
 
-    .line 19
     :cond_2
     iput-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentParams:Landroid/util/SparseArray;
 
-    .line 20
     iput-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 21
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PostProcessor;->getSpecList()Landroid/util/SparseArray;
 
     move-result-object p1
@@ -865,22 +796,18 @@
 
     goto :goto_0
 
-    .line 22
     :cond_4
     :try_start_2
     invoke-direct {p0}, Lcom/android/camera/LocalParallelService$LocalBinder;->initPostProcessor()Lcom/xiaomi/camera/core/PostProcessor;
 
     move-result-object v0
 
-    .line 23
     invoke-virtual {v0, p2}, Lcom/xiaomi/camera/core/PostProcessor;->setToken(I)V
 
-    .line 24
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 25
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -901,24 +828,19 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v1, :cond_5
 
-    .line 27
     iget-object v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v1, p2}, Lcom/xiaomi/camera/core/PostProcessor;->destroyWhenTasksFinished(I)V
 
-    .line 28
     :cond_5
     iput-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentParams:Landroid/util/SparseArray;
 
-    .line 29
     iput-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 30
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->configHALOutputSurface(Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     move-result-object p1
@@ -929,7 +851,6 @@
 
     return-object p1
 
-    .line 31
     :cond_6
     :try_start_3
     new-instance p1, Landroid/os/RemoteException;
@@ -955,13 +876,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object p1
@@ -972,12 +891,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
@@ -988,7 +905,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object p1
@@ -1013,26 +929,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     monitor-exit p0
 
     return-void
 
-    .line 7
     :cond_1
     :try_start_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v2, p1}, Lcom/xiaomi/camera/core/PostProcessor;->configCaptureSession(Lcom/xiaomi/engine/BufferFormat;)V
 
     const/4 p1, 0x4
 
-    .line 9
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v2
@@ -1061,7 +973,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void
@@ -1079,18 +990,15 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-static {v0, p1}, Lcom/android/camera/LocalParallelService;->access$402(Lcom/android/camera/LocalParallelService;I)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
@@ -1103,7 +1011,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1115,7 +1022,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :goto_0
     monitor-exit p0
 
@@ -1132,7 +1038,6 @@
 .method public customizeReprocessor(Ljava/util/HashMap;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
@@ -1147,13 +1052,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getFrontProcessingCount()I
@@ -1166,7 +1069,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
@@ -1181,7 +1083,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     monitor-exit p0
 
     return v0
@@ -1199,13 +1100,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->isAnyRequestBlocked()Z
@@ -1218,7 +1117,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
@@ -1233,7 +1131,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     monitor-exit p0
 
     return v0
@@ -1251,13 +1148,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->isAnyRequestIsHWMFNRProcessing()Z
@@ -1270,7 +1165,6 @@
 
     return v0
 
-    .line 3
     :cond_0
     :try_start_1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
@@ -1285,7 +1179,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     monitor-exit p0
 
     return v0
@@ -1303,7 +1196,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mAlivePostProcessorList:Ljava/util/List;
 
@@ -1324,7 +1216,6 @@
 
     check-cast v1, Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 2
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PostProcessor;->isIdle()Z
 
     move-result v1
@@ -1335,7 +1226,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     monitor-exit p0
 
     return v0
@@ -1343,7 +1233,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 4
     monitor-exit p0
 
     return v0
@@ -1361,7 +1250,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
@@ -1369,7 +1257,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->needWaitImageClose()Z
@@ -1380,7 +1267,6 @@
 
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 3
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->needWaitAlgorithmEngine()Z
 
     move-result v0
@@ -1394,19 +1280,17 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "needWaitProcess: null processor"
+    const-string/jumbo v2, "needWaitProcess: null processor"
 
     invoke-static {v0, v2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :cond_2
     :goto_0
     monitor-exit p0
@@ -1426,16 +1310,13 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -1456,19 +1337,16 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getToken()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/core/PostProcessor;->destroyWhenTasksFinished(I)V
 
-    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->clearFrontProcessingTask()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_0
     monitor-exit p0
 
@@ -1487,13 +1365,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getCaptureStatusListener()Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;
@@ -1504,7 +1380,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1516,7 +1391,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1535,13 +1409,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getCaptureStatusListener()Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;
@@ -1552,7 +1424,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1564,7 +1435,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1583,13 +1453,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getCaptureStatusListener()Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;
@@ -1600,7 +1468,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1612,7 +1479,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1624,108 +1490,11 @@
     monitor-exit p0
 
     throw p1
-.end method
-
-.method public declared-synchronized onPreCapture(Lcom/xiaomi/engine/PreProcessData;)V
-    .locals 1
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
-
-    invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getCaptureStatusListener()Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;->onPreCapture(Lcom/xiaomi/engine/PreProcessData;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string/jumbo v0, "onPreCapture: null processor"
-
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized onRepeatingCaptureEnd()V
-    .locals 2
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
-
-    invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->getCaptureStatusListener()Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor$CaptureStatusListener;->onRepeatingCaptureEnd()V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "onRepeatingCaptureEnd: null processor"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
 .method public onServiceDestroy()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -1734,33 +1503,27 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->deInit()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     invoke-static {}, Lcom/xiaomi/engine/MiCameraAlgo;->deInit()V
 
     const/4 v1, 0x0
 
-    .line 5
     iput-boolean v1, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mMiviEngineInited:Z
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -1774,7 +1537,6 @@
     :catchall_0
     move-exception v1
 
-    .line 8
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1788,20 +1550,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->configParallelCaptureSession()Z
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1813,7 +1572,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1830,7 +1588,6 @@
 .method public queryFeatureSetting(Lcom/xiaomi/camera/isp/IspInterfaceIO;Landroid/os/Parcelable;Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;Z)Lcom/xiaomi/camera/imagecodec/FeatureSetting;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
@@ -1847,20 +1604,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/core/PostProcessor;->resetFrontProcessingTaskQueue()V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1872,7 +1626,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1891,20 +1644,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->setImageSaver(Lcom/android/camera/storage/ImageSaver;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1916,7 +1666,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1933,7 +1682,6 @@
 .method public setOnPictureTakenListener(Lcom/android/camera/LocalParallelService$ServiceStatusListener;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -1950,20 +1698,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->setOnSessionStatusCallBackListener(Lcom/xiaomi/protocol/ISessionStatusCallBackListener;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -1975,7 +1720,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1992,7 +1736,6 @@
 .method public setOutputPictureSpec(III)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
@@ -2005,12 +1748,10 @@
 .method public setResultDataCallbackListener(Lcom/xiaomi/camera/core/IResultDataCallbackListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->setResultDataCallbackListener(Lcom/xiaomi/camera/core/IResultDataCallbackListener;)V
 
     :cond_0
@@ -2022,25 +1763,21 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->this$0:Lcom/android/camera/LocalParallelService;
 
     invoke-static {v0, p1}, Lcom/android/camera/LocalParallelService;->access$502(Lcom/android/camera/LocalParallelService;Z)Z
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->setSRRequireReprocess(Z)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -2052,7 +1789,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :goto_0
     monitor-exit p0
 
@@ -2071,13 +1807,11 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -2100,14 +1834,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/LocalParallelService$LocalBinder;->mCurrentPostProcessor:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/core/PostProcessor;->destroyWhenTasksFinished(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/LocalParallelService;->access$300()Ljava/lang/String;
 
@@ -2119,7 +1851,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :goto_0
     monitor-exit p0
 
@@ -2136,12 +1867,10 @@
 .method public updateVirtualCameraIds()V
     .locals 3
 
-    .line 1
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooOo00:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooOo00:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v0
@@ -2154,15 +1883,13 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Oooooo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Oooooo0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -2175,7 +1902,6 @@
 
     move-result-object v0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v1
@@ -2188,7 +1914,6 @@
 
     move-result-object v1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/LocalParallelService;->getReprocessor()Lcom/xiaomi/camera/imagecodec/Reprocessor;
 
     move-result-object v2

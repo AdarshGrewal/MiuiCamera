@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +37,10 @@
 .method public onImageAvailable(Landroid/media/ImageReader;)V
     .locals 9
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$500(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Ljava/lang/Object;
@@ -52,7 +49,6 @@
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
@@ -66,7 +62,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 4
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {v1}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$600(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
@@ -81,22 +76,18 @@
 
     move-result-wide v4
 
-    .line 5
     invoke-virtual {p1, v4, v5}, Landroid/media/Image;->setTimestamp(J)V
 
-    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 7
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->queueImage(Landroid/media/Image;)V
 
-    .line 8
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object p1
@@ -105,7 +96,6 @@
 
     move-result-object p1
 
-    .line 9
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -132,14 +122,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->holdImage(Landroid/media/Image;)V
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$500(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Ljava/lang/Object;
@@ -148,7 +136,6 @@
 
     monitor-enter v1
 
-    .line 12
     :try_start_1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
@@ -158,7 +145,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 13
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$600(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
@@ -171,7 +157,6 @@
 
     iget-object v4, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
-    .line 14
     invoke-static {v4}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$600(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
     move-result-object v4
@@ -180,10 +165,8 @@
 
     move-result-object v4
 
-    .line 15
     invoke-interface {v0, p1, v4, v3}, Lcom/xiaomi/camera/imagecodec/ReprocessData$OnDataAvailableListener;->onTuningImageAvailable(Landroid/media/Image;Ljava/lang/String;Z)V
 
-    .line 16
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$200()Ljava/lang/String;
 
     move-result-object p1
@@ -196,7 +179,6 @@
 
     iget-object v5, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
-    .line 17
     invoke-static {v5}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$600(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
     move-result-object v5
@@ -207,7 +189,6 @@
 
     aput-object v5, v4, v2
 
-    .line 18
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -226,14 +207,12 @@
 
     aput-object v5, v4, v3
 
-    .line 19
     invoke-static {v0, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$800(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Ljava/util/HashMap;
@@ -252,17 +231,14 @@
 
     check-cast p1, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;
 
-    .line 21
     iput-boolean v3, p1, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;->isTuningBufferReady:Z
 
-    .line 22
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;->isDone()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 23
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
@@ -273,7 +249,6 @@
 
     invoke-static {p1, v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$900(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;Lcom/xiaomi/camera/imagecodec/ReprocessData;)V
 
-    .line 24
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$800(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)Ljava/util/HashMap;
@@ -288,7 +263,6 @@
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     const/4 v0, 0x0
@@ -299,7 +273,6 @@
 
     goto :goto_0
 
-    .line 26
     :cond_0
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$200()Ljava/lang/String;
 
@@ -309,7 +282,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     :cond_1
     :goto_0
     monitor-exit v1
@@ -318,7 +290,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 28
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$3;->this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$1000(Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;)V
@@ -329,7 +300,6 @@
     :catchall_0
     move-exception p1
 
-    .line 29
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -337,14 +307,12 @@
 
     throw p1
 
-    .line 30
     :cond_3
     :try_start_3
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v4
 
-    .line 31
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->access$200()Ljava/lang/String;
 
     move-result-object v1
@@ -365,10 +333,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 32
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
-    .line 33
     monitor-exit v0
 
     return-void
@@ -376,7 +342,6 @@
     :catchall_1
     move-exception p1
 
-    .line 34
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1

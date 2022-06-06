@@ -24,13 +24,10 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
-    .line 3
     iput-wide p2, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->offset:J
 
     return-void
@@ -39,7 +36,6 @@
 .method public static synthetic access$100(Lorg/jcodec/containers/mp4/MP4Util$Atom;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->offset:J
 
     return-wide v0
@@ -55,12 +51,10 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->offset:J
 
     invoke-interface {p1, v0, v1}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getSize()J
@@ -75,7 +69,6 @@
 .method public getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     return-object v0
@@ -84,7 +77,6 @@
 .method public getOffset()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->offset:J
 
     return-wide v0
@@ -98,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->offset:J
 
     iget-object v2, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->header:Lorg/jcodec/containers/mp4/boxes/Header;
@@ -111,7 +102,6 @@
 
     invoke-interface {p1, v0, v1}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/MP4Util$Atom;->header:Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Header;->getBodySize()J

@@ -34,41 +34,32 @@
 .method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View$OnClickListener;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mParent:Landroid/view/View;
 
     const/4 v1, 0x4
 
     new-array v1, v1, [I
 
-    .line 3
     iput-object v1, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocation:[I
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mAIWatermark:Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
     const/4 v1, 0x0
 
-    .line 5
     iput-boolean v1, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
-    .line 6
     iput-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mListener:Landroid/view/View$OnClickListener;
 
     const v0, 0x3dcccccd    # 0.1f
 
-    .line 7
     iput v0, p0, Lcom/android/camera/aiwatermark/DragListener;->MOVE_TOLERANCE:F
 
-    .line 8
     iput-object p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mRect:Landroid/graphics/Rect;
 
-    .line 9
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -79,7 +70,6 @@
 
     iput-object p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mAIWatermark:Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
-    .line 10
     iput-object p2, p0, Lcom/android/camera/aiwatermark/DragListener;->mListener:Landroid/view/View$OnClickListener;
 
     return-void
@@ -88,42 +78,36 @@
 .method private fixLocation(Landroid/view/View;)V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x2
 
     invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 5
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -136,7 +120,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -145,40 +128,34 @@
 .method private getNewLocation(Landroid/view/View;FFLandroid/graphics/Rect;)[I
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocationLeft:F
 
     add-float/2addr v0, p2
 
     float-to-int p2, v0
 
-    .line 2
     iget v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocationTop:F
 
     add-float/2addr v0, p3
 
     float-to-int p3, v0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
     add-int/2addr v0, p2
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
     add-int/2addr v1, p3
 
-    .line 5
     iget v2, p4, Landroid/graphics/Rect;->left:I
 
     if-gt p2, v2, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p2
@@ -187,13 +164,11 @@
 
     move p2, v2
 
-    .line 7
     :cond_0
     iget v2, p4, Landroid/graphics/Rect;->top:I
 
     if-gt p3, v2, :cond_1
 
-    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p3
@@ -202,13 +177,11 @@
 
     move p3, v2
 
-    .line 9
     :cond_1
     iget v2, p4, Landroid/graphics/Rect;->right:I
 
     if-lt v0, v2, :cond_2
 
-    .line 10
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p2
@@ -217,13 +190,11 @@
 
     move v0, v2
 
-    .line 11
     :cond_2
     iget p4, p4, Landroid/graphics/Rect;->bottom:I
 
     if-lt v1, p4, :cond_3
 
-    .line 12
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -259,7 +230,6 @@
 .method private updateLocation(Landroid/view/MotionEvent;Landroid/view/View;)V
     .locals 7
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
@@ -268,7 +238,6 @@
 
     sub-float/2addr v0, v1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
@@ -277,7 +246,6 @@
 
     sub-float/2addr v1, v2
 
-    .line 3
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v2
@@ -298,13 +266,11 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v2, p0, Lcom/android/camera/aiwatermark/DragListener;->mRect:Landroid/graphics/Rect;
 
     if-eqz v2, :cond_1
 
-    .line 5
     invoke-direct {p0, p2, v0, v1, v2}, Lcom/android/camera/aiwatermark/DragListener;->getNewLocation(Landroid/view/View;FFLandroid/graphics/Rect;)[I
 
     move-result-object v0
@@ -313,13 +279,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v2, p0, Lcom/android/camera/aiwatermark/DragListener;->mParent:Landroid/view/View;
 
     if-nez v2, :cond_2
 
-    .line 7
     invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -328,7 +292,6 @@
 
     iput-object v2, p0, Lcom/android/camera/aiwatermark/DragListener;->mParent:Landroid/view/View;
 
-    .line 8
     :cond_2
     new-instance v2, Landroid/graphics/Rect;
 
@@ -352,7 +315,6 @@
 
     iget-object v6, p0, Lcom/android/camera/aiwatermark/DragListener;->mParent:Landroid/view/View;
 
-    .line 9
     invoke-virtual {v6}, Landroid/view/View;->getBottom()I
 
     move-result v6
@@ -361,14 +323,12 @@
 
     iput-object v2, p0, Lcom/android/camera/aiwatermark/DragListener;->mRect:Landroid/graphics/Rect;
 
-    .line 10
     invoke-direct {p0, p2, v0, v1, v2}, Lcom/android/camera/aiwatermark/DragListener;->getNewLocation(Landroid/view/View;FFLandroid/graphics/Rect;)[I
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocation:[I
 
-    .line 11
     :goto_0
     iget-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocation:[I
 
@@ -390,17 +350,14 @@
 
     invoke-virtual {p2, v1, v3, v4, v0}, Landroid/view/View;->layout(IIII)V
 
-    .line 12
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
 
     if-ne p1, v2, :cond_3
 
-    .line 13
     invoke-direct {p0, p2}, Lcom/android/camera/aiwatermark/DragListener;->fixLocation(Landroid/view/View;)V
 
-    .line 14
     :cond_3
     iget-object p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mAIWatermark:Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
@@ -412,7 +369,6 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->updateLocation([ILandroid/graphics/Rect;I)V
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mAIWatermark:Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
     invoke-virtual {p1, v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->setHasMove(Z)V
@@ -425,7 +381,6 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -448,27 +403,22 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iput-boolean v2, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
-    .line 3
     invoke-direct {p0, p2, p1}, Lcom/android/camera/aiwatermark/DragListener;->updateLocation(Landroid/view/MotionEvent;Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    .line 5
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v3
 
-    .line 6
     iget v4, p0, Lcom/android/camera/aiwatermark/DragListener;->mOriginalX:F
 
     sub-float/2addr v0, v4
@@ -487,7 +437,6 @@
 
     sub-float/2addr v3, v0
 
-    .line 7
     invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -496,24 +445,19 @@
 
     if-gez v0, :cond_2
 
-    .line 8
     iput-boolean v1, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
-    .line 9
     :cond_2
     iget-boolean v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
     if-eqz v0, :cond_3
 
-    .line 10
     invoke-direct {p0, p2, p1}, Lcom/android/camera/aiwatermark/DragListener;->updateLocation(Landroid/view/MotionEvent;Landroid/view/View;)V
 
-    .line 11
     iput-boolean v1, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
     goto :goto_0
 
-    .line 12
     :cond_3
     iget-object p2, p0, Lcom/android/camera/aiwatermark/DragListener;->mListener:Landroid/view/View$OnClickListener;
 
@@ -521,7 +465,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -529,14 +472,12 @@
 
     iput v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mOriginalX:F
 
-    .line 14
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p2
 
     iput p2, p0, Lcom/android/camera/aiwatermark/DragListener;->mOriginalY:F
 
-    .line 15
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result p2
@@ -545,7 +486,6 @@
 
     iput p2, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocationLeft:F
 
-    .line 16
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p1
@@ -554,7 +494,6 @@
 
     iput p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocationTop:F
 
-    .line 17
     iput-boolean v1, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
     :goto_0
@@ -564,18 +503,14 @@
 .method public reInit(Landroid/graphics/Rect;[I)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/aiwatermark/DragListener;->mRect:Landroid/graphics/Rect;
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mIsDragging:Z
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/aiwatermark/DragListener;->mLocation:[I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/aiwatermark/DragListener;->mAIWatermark:Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
 
     const/4 v1, -0x1

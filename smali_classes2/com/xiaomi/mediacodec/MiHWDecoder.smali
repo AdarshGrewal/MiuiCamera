@@ -110,80 +110,58 @@
 .method public constructor <init>(Z)V
     .locals 5
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     const-string v0, ""
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSourceFile:Ljava/lang/String;
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     const/4 v2, 0x0
 
-    .line 5
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderWidth:I
 
-    .line 6
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderHeight:I
 
-    .line 7
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayerExit:Z
 
     const-wide/16 v3, -0x1
 
-    .line 8
     iput-wide v3, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekStartMS:J
 
-    .line 9
     iput-wide v3, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekEndMS:J
 
-    .line 10
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mlastCount:I
 
-    .line 11
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSourceWidth:I
 
-    .line 12
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSourceHeight:I
 
-    .line 13
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mError:Z
 
-    .line 14
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsQcomm:Z
 
-    .line 15
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mLoop:Z
 
-    .line 16
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mVideoOnly:Z
 
-    .line 17
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mFrameNums:I
 
-    .line 18
     iput-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
-    .line 19
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mCaptureOne:I
 
-    .line 20
     iput v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mNums:I
 
-    .line 21
     iput-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mStartTime:J
 
-    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,14 +182,12 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 23
     invoke-static {}, Lcom/xiaomi/mediacodec/EglBase;->getCurrentContext()Lcom/xiaomi/mediacodec/EglBase$Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->shader_egl_context:Lcom/xiaomi/mediacodec/EglBase$Context;
 
-    .line 24
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mVideoOnly:Z
 
     return-void
@@ -220,7 +196,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/mediacodec/MiHWDecoder;)Lcom/xiaomi/mediacodec/EglBase$Context;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->shader_egl_context:Lcom/xiaomi/mediacodec/EglBase$Context;
 
     return-object p0
@@ -229,7 +204,6 @@
 .method public static synthetic access$1008(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mNums:I
 
     add-int/lit8 v1, v0, 0x1
@@ -242,7 +216,6 @@
 .method public static synthetic access$1100(Lcom/xiaomi/mediacodec/MiHWDecoder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekStartMS:J
 
     return-wide v0
@@ -251,7 +224,6 @@
 .method public static synthetic access$1200(Lcom/xiaomi/mediacodec/MiHWDecoder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekEndMS:J
 
     return-wide v0
@@ -260,7 +232,6 @@
 .method public static synthetic access$1300(Lcom/xiaomi/mediacodec/MiHWDecoder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     return-wide v0
@@ -269,7 +240,6 @@
 .method public static synthetic access$1400(Lcom/xiaomi/mediacodec/MiHWDecoder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayerExit:Z
 
     return p0
@@ -278,7 +248,6 @@
 .method public static synthetic access$1402(Lcom/xiaomi/mediacodec/MiHWDecoder;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayerExit:Z
 
     return p1
@@ -287,7 +256,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/mediacodec/MiHWDecoder;)Lcom/xiaomi/mediacodec/EglBase;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mEgl:Lcom/xiaomi/mediacodec/EglBase;
 
     return-object p0
@@ -296,7 +264,6 @@
 .method public static synthetic access$202(Lcom/xiaomi/mediacodec/MiHWDecoder;Lcom/xiaomi/mediacodec/EglBase;)Lcom/xiaomi/mediacodec/EglBase;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mEgl:Lcom/xiaomi/mediacodec/EglBase;
 
     return-object p1
@@ -305,7 +272,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mFrameBuffer:I
 
     return p0
@@ -314,7 +280,6 @@
 .method public static synthetic access$302(Lcom/xiaomi/mediacodec/MiHWDecoder;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mFrameBuffer:I
 
     return p1
@@ -323,7 +288,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderWidth:I
 
     return p0
@@ -332,7 +296,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderHeight:I
 
     return p0
@@ -341,7 +304,6 @@
 .method public static synthetic access$600(Lcom/xiaomi/mediacodec/MiHWDecoder;)Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mOriginalDrawer:Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
 
     return-object p0
@@ -350,7 +312,6 @@
 .method public static synthetic access$602(Lcom/xiaomi/mediacodec/MiHWDecoder;Lcom/xiaomi/mediacodec/OriginalRenderDrawer;)Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mOriginalDrawer:Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
 
     return-object p1
@@ -359,7 +320,6 @@
 .method public static synthetic access$700(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mCameraTextureId:I
 
     return p0
@@ -368,7 +328,6 @@
 .method public static synthetic access$702(Lcom/xiaomi/mediacodec/MiHWDecoder;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mCameraTextureId:I
 
     return p1
@@ -377,7 +336,6 @@
 .method public static synthetic access$800(Lcom/xiaomi/mediacodec/MiHWDecoder;)Landroid/graphics/SurfaceTexture;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-object p0
@@ -386,7 +344,6 @@
 .method public static synthetic access$802(Lcom/xiaomi/mediacodec/MiHWDecoder;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-object p1
@@ -395,7 +352,6 @@
 .method public static synthetic access$900(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mCaptureOne:I
 
     return p0
@@ -404,7 +360,6 @@
 .method public static synthetic access$908(Lcom/xiaomi/mediacodec/MiHWDecoder;)I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mCaptureOne:I
 
     add-int/lit8 v1, v0, 0x1
@@ -421,18 +376,15 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     invoke-static/range {p2 .. p3}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 2
     invoke-static/range {p2 .. p3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
-    .line 3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -451,7 +403,6 @@
 
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 4
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x10
@@ -463,7 +414,6 @@
     :cond_0
     move v4, v1
 
-    .line 5
     :goto_0
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
@@ -477,7 +427,6 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 6
     :try_start_1
     invoke-static {v4}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
@@ -485,7 +434,6 @@
 
     if-eqz p5, :cond_1
 
-    .line 7
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v8
@@ -494,7 +442,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
@@ -508,7 +455,6 @@
 
     goto :goto_4
 
-    .line 9
     :cond_3
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -523,7 +469,6 @@
 
     aget-object v11, v8, v10
 
-    .line 10
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -548,7 +493,6 @@
 
     invoke-static {v11}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 11
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v11
@@ -565,7 +509,6 @@
 
     move-object v11, p0
 
-    .line 12
     :try_start_2
     iput-boolean v7, v11, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsQcomm:Z
 
@@ -589,7 +532,6 @@
 
     move v4, v1
 
-    .line 13
     :goto_5
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
@@ -597,14 +539,12 @@
 
     if-ge v4, v5, :cond_f
 
-    .line 14
     invoke-static {v4}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v5
 
     if-eqz p5, :cond_6
 
-    .line 15
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v8
@@ -613,7 +553,6 @@
 
     goto :goto_8
 
-    .line 16
     :cond_6
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
@@ -626,7 +565,6 @@
     :cond_7
     const/4 v8, 0x0
 
-    .line 17
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
     move-result-object v9
@@ -640,7 +578,6 @@
 
     aget-object v13, v9, v12
 
-    .line 18
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -655,14 +592,12 @@
 
     invoke-static {v14}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 19
     invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v13
 
     if-eqz v13, :cond_8
 
-    .line 20
     invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v8
@@ -683,7 +618,6 @@
 
     goto :goto_5
 
-    .line 21
     :cond_a
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -701,12 +635,10 @@
 
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 22
     invoke-virtual {v5, v0}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v0
 
-    .line 23
     iget-object v4, v0, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
     array-length v5, v4
@@ -718,7 +650,6 @@
 
     aget v8, v4, v6
 
-    .line 24
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -743,18 +674,15 @@
 
     goto :goto_9
 
-    .line 25
     :cond_b
     invoke-virtual {v0}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
 
     move-result-object v0
 
-    .line 26
     invoke-virtual {v0}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getSupportedWidths()Landroid/util/Range;
 
     move-result-object v4
 
-    .line 27
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,7 +713,6 @@
 
     invoke-static {v5}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {v4}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v5
@@ -810,12 +737,10 @@
 
     if-lt v2, v4, :cond_c
 
-    .line 29
     invoke-virtual {v0, v2}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getSupportedHeightsFor(I)Landroid/util/Range;
 
     move-result-object v4
 
-    .line 30
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -846,7 +771,6 @@
 
     invoke-static {v5}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 31
     invoke-virtual {v4}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v5
@@ -885,7 +809,6 @@
     :goto_a
     float-to-double v8, v4
 
-    .line 32
     invoke-virtual {v0, v2, v3, v8, v9}, Landroid/media/MediaCodecInfo$VideoCapabilities;->areSizeAndRateSupported(IID)Z
 
     move-result v4
@@ -894,7 +817,6 @@
 
     const-string v4, "videoCapblility.areSizeAndRateSupported OK"
 
-    .line 33
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     goto :goto_b
@@ -902,10 +824,8 @@
     :cond_d
     const-string v4, "videoCapblility.areSizeAndRateSupported failed"
 
-    .line 34
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 35
     :goto_b
     invoke-virtual {v0, v2, v3}, Landroid/media/MediaCodecInfo$VideoCapabilities;->isSizeSupported(II)Z
 
@@ -915,13 +835,10 @@
 
     const-string v0, "videoCapblility.isSizeSupported OK, :"
 
-    .line 36
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 37
     sput p2, Lcom/xiaomi/mediacodec/GlUtil;->mWidht:I
 
-    .line 38
     sput p3, Lcom/xiaomi/mediacodec/GlUtil;->mHeight:I
 
     return v7
@@ -931,13 +848,10 @@
 
     const-string v0, "videoCapblility.isSizeSupported failed but resolution OK"
 
-    .line 39
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 40
     sput p2, Lcom/xiaomi/mediacodec/GlUtil;->mWidht:I
 
-    .line 41
     sput p3, Lcom/xiaomi/mediacodec/GlUtil;->mHeight:I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -957,7 +871,6 @@
 
     move-object v11, p0
 
-    .line 42
     :goto_c
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -981,7 +894,6 @@
 .method public static selectTrack(Landroid/media/MediaExtractor;)I
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Landroid/media/MediaExtractor;->getTrackCount()I
 
     move-result v0
@@ -991,28 +903,24 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 2
     invoke-virtual {p0, v1}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
     move-result-object v2
 
     const-string v3, "mime"
 
-    .line 3
     invoke-virtual {v2, v3}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "video/"
 
-    .line 4
     invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1059,14 +967,12 @@
 .method public Play()V
     .locals 9
 
-    .line 1
     new-instance v7, Landroid/view/Surface;
 
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {v7, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    .line 2
     :try_start_0
     new-instance v8, Lcom/xiaomi/mediacodec/MoviePlayer;
 
@@ -1092,7 +998,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     iget v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderWidth:I
 
     if-eqz v0, :cond_0
@@ -1101,7 +1006,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
@@ -1111,7 +1015,6 @@
 
     iput v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderWidth:I
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->getVideoHeight()I
@@ -1120,7 +1023,6 @@
 
     iput v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mRecoderHeight:I
 
-    .line 6
     :cond_1
     new-instance v0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
@@ -1130,14 +1032,12 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
-    .line 7
     iget-boolean v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mLoop:Z
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->setLoopMode(Z)V
 
     const-string v0, "start play"
 
-    .line 8
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -1145,7 +1045,6 @@
     :catch_0
     move-exception v0
 
-    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1162,7 +1061,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogE(Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v7}, Landroid/view/Surface;->release()V
 
     return-void
@@ -1173,15 +1071,12 @@
 
     const-string v0, "MiHWDecoder frameReceived! "
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->frameReceived()V
 
     :cond_0
@@ -1191,7 +1086,6 @@
 .method public getPlayer()Lcom/xiaomi/mediacodec/MoviePlayer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     return-object v0
@@ -1200,7 +1094,6 @@
 .method public getVideoHeight()I
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1219,7 +1112,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     sget v0, Lcom/xiaomi/mediacodec/GlUtil;->mHeight:I
 
     return v0
@@ -1230,7 +1122,6 @@
 
     const-string v0, "rotation-degrees"
 
-    .line 1
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -1239,7 +1130,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     :try_start_0
     new-instance v3, Landroid/media/MediaExtractor;
 
@@ -1247,7 +1137,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -1255,7 +1144,6 @@
 
     invoke-virtual {v3, v2}, Landroid/media/MediaExtractor;->setDataSource(Ljava/lang/String;)V
 
-    .line 4
     invoke-static {v3}, Lcom/xiaomi/mediacodec/MiHWDecoder;->selectTrack(Landroid/media/MediaExtractor;)I
 
     move-result v2
@@ -1264,26 +1152,21 @@
 
     return p1
 
-    .line 5
     :cond_0
     invoke-virtual {v3, v2}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
-    .line 6
     invoke-virtual {v3, v2}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
     move-result-object v2
 
-    .line 7
     sput p1, Lcom/xiaomi/mediacodec/GlUtil;->mPictureRotation:I
 
-    .line 8
     invoke-virtual {v2, v0}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 9
     invoke-virtual {v2, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
@@ -1293,7 +1176,6 @@
     :cond_1
     const-string v0, "width"
 
-    .line 10
     invoke-virtual {v2, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
@@ -1302,14 +1184,12 @@
 
     const-string v0, "height"
 
-    .line 11
     invoke-virtual {v2, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
 
     sput v0, Lcom/xiaomi/mediacodec/GlUtil;->mHeight:I
 
-    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1354,7 +1234,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 13
     invoke-virtual {v3}, Landroid/media/MediaExtractor;->release()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1369,7 +1248,6 @@
     :catch_1
     if-eqz v2, :cond_2
 
-    .line 14
     invoke-virtual {v2}, Landroid/media/MediaExtractor;->release()V
 
     :cond_2
@@ -1379,7 +1257,6 @@
 .method public getVideoWidth()I
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1398,7 +1275,6 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     sget v0, Lcom/xiaomi/mediacodec/GlUtil;->mWidht:I
 
     return v0
@@ -1407,7 +1283,6 @@
 .method public isAvcDecoderSupported(IIF)Z
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1448,7 +1323,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-direct/range {v1 .. v6}, Lcom/xiaomi/mediacodec/MiHWDecoder;->findHwCodec(Ljava/lang/String;IIFZ)Z
 
     move-result p1
@@ -1459,7 +1333,6 @@
 .method public isHevcDecoderSupported(IIF)Z
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1500,7 +1373,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-direct/range {v1 .. v6}, Lcom/xiaomi/mediacodec/MiHWDecoder;->findHwCodec(Ljava/lang/String;IIFZ)Z
 
     move-result p1
@@ -1511,7 +1383,6 @@
 .method public isMpeg4DecoderSupported(IIF)Z
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1552,7 +1423,6 @@
 
     move v5, p3
 
-    .line 2
     invoke-direct/range {v1 .. v6}, Lcom/xiaomi/mediacodec/MiHWDecoder;->findHwCodec(Ljava/lang/String;IIFZ)Z
 
     move-result p1
@@ -1569,7 +1439,6 @@
 .method public onAudioFormat(Landroid/media/MediaFormat;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     const/4 v1, 0x6
@@ -1578,7 +1447,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1592,7 +1460,6 @@
 .method public onAudioFrame(Lcom/xiaomi/mediacodec/MoviePlayer$MediaFrame;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     const/4 v1, 0x7
@@ -1601,7 +1468,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1617,10 +1483,8 @@
 
     const-string v0, "onDecoderFinished! "
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogE(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/mediacodec/MiHWDecoder;->onDecoderFinishedJni(J)V
@@ -1636,17 +1500,14 @@
 
     const-string p1, "MiHWDecoder onFrameAvailable "
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
@@ -1654,7 +1515,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -1665,7 +1525,6 @@
 .method public onStreamDuration(J)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/xiaomi/mediacodec/MiHWDecoder;->onStreamDurationJni(JJ)V
@@ -1679,7 +1538,6 @@
 .method public onVideoCrop(IIIIII)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mOriginalDrawer:Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
 
     move v1, p1
@@ -1702,7 +1560,6 @@
 .method public onVideoFrame(I)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mlastCount:I
 
     if-ge p1, v0, :cond_0
@@ -1711,11 +1568,9 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iput p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mlastCount:I
 
-    .line 3
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
@@ -1729,7 +1584,6 @@
 
     move-result-object p1
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -1745,23 +1599,19 @@
 
     const-string v0, "pauseDecoder"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->requestPause()V
 
     :cond_1
@@ -1771,7 +1621,6 @@
 .method public playbackStopped(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1792,10 +1641,8 @@
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mError:Z
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
@@ -1803,10 +1650,8 @@
 
     const/4 v0, 0x5
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     const/4 v0, 0x4
@@ -1834,23 +1679,19 @@
 
     const-string v0, "resumeDecoder"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->requestResume()V
 
     :cond_1
@@ -1860,7 +1701,6 @@
 .method public seekTo(JI)Z
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1883,28 +1723,23 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     iput-wide p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekStartMS:J
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSourceFile:Ljava/lang/String;
 
     iget-wide v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/xiaomi/mediacodec/MiHWDecoder;->startDecoder(Ljava/lang/String;J)V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0, p1, p2, p3}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->seekTo(JI)Z
 
     move-result p1
@@ -1920,7 +1755,6 @@
 .method public setLoopMode(Z)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1937,15 +1771,12 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mLoop:Z
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0, p1}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;->setLoopMode(Z)V
 
     :cond_0
@@ -1955,7 +1786,6 @@
 .method public setTransferDurationTime(JJ)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1978,13 +1808,10 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iput-wide p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekStartMS:J
 
-    .line 3
     iput-wide p3, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSeekEndMS:J
 
-    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2013,7 +1840,6 @@
 .method public startDecoder(Ljava/lang/String;J)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -2022,12 +1848,10 @@
 
     const-string p1, " startDecoder sourcePath is empty !"
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2051,33 +1875,26 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
 
     invoke-direct {v0}, Lcom/xiaomi/mediacodec/OriginalRenderDrawer;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mOriginalDrawer:Lcom/xiaomi/mediacodec/OriginalRenderDrawer;
 
-    .line 5
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mSourceFile:Ljava/lang/String;
 
-    .line 6
     iput-wide p2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mContext:J
 
     const/4 p1, 0x0
 
-    .line 7
     iput p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mlastCount:I
 
     const/4 p2, 0x1
 
-    .line 8
     iput-boolean p2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
-    .line 9
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mError:Z
 
-    .line 10
     new-instance p3, Landroid/os/HandlerThread;
 
     const-string v0, "GL thread"
@@ -2086,10 +1903,8 @@
 
     iput-object p3, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mThread:Landroid/os/HandlerThread;
 
-    .line 11
     invoke-virtual {p3}, Landroid/os/HandlerThread;->start()V
 
-    .line 12
     new-instance p3, Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mThread:Landroid/os/HandlerThread;
@@ -2104,27 +1919,22 @@
 
     iput-object p3, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
-    .line 13
     invoke-virtual {p3, p2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object p3
 
-    .line 14
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {v0, p2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 15
     iget-object p2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {p2, p3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     const-string p2, " startDecoder done"
 
-    .line 16
     invoke-static {p2}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 17
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayerExit:Z
 
     return-void
@@ -2135,43 +1945,35 @@
 
     const-string v0, "stopDecoder"
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
-    .line 2
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/mediacodec/MoviePlayer;->requestStop()V
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mIsStarted:Z
 
-    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 7
     :cond_2
     iget-boolean v2, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayerExit:Z
 
     if-nez v2, :cond_3
 
-    .line 8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -2184,7 +1986,6 @@
 
     if-lez v2, :cond_2
 
-    .line 9
     :cond_3
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mThread:Landroid/os/HandlerThread;
 
@@ -2192,42 +1993,33 @@
 
     if-eqz v0, :cond_4
 
-    .line 10
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 11
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 12
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mThread:Landroid/os/HandlerThread;
 
-    .line 13
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mGlHandler:Lcom/xiaomi/mediacodec/MiHWDecoder$GLHandler;
 
-    .line 14
     :cond_4
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     if-eqz v0, :cond_5
 
-    .line 15
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->player:Lcom/xiaomi/mediacodec/MoviePlayer;
 
-    .line 16
     :cond_5
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
     if-eqz v0, :cond_6
 
-    .line 17
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MiHWDecoder;->mPlayTask:Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask;
 
     :cond_6
     const-string v0, "stopDecoder done"
 
-    .line 18
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void

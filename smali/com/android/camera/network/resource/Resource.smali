@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     instance-of v1, p1, Lcom/android/camera/network/resource/Resource;
 
@@ -52,11 +50,9 @@
 
     return v2
 
-    .line 2
     :cond_1
     check-cast p1, Lcom/android/camera/network/resource/Resource;
 
-    .line 3
     iget-wide v3, p0, Lcom/android/camera/network/resource/Resource;->id:J
 
     iget-wide v5, p1, Lcom/android/camera/network/resource/Resource;->id:J
@@ -83,7 +79,6 @@
 
     iget-object v3, p1, Lcom/android/camera/network/resource/Resource;->type:Ljava/lang/String;
 
-    .line 4
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -94,7 +89,6 @@
 
     iget-object v3, p1, Lcom/android/camera/network/resource/Resource;->label:Ljava/lang/String;
 
-    .line 5
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -105,7 +99,6 @@
 
     iget-object v3, p1, Lcom/android/camera/network/resource/Resource;->icon:Ljava/lang/String;
 
-    .line 6
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -116,7 +109,6 @@
 
     iget-object v3, p1, Lcom/android/camera/network/resource/Resource;->extra:Ljava/lang/String;
 
-    .line 7
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -127,7 +119,6 @@
 
     iget-object p1, p1, Lcom/android/camera/network/resource/Resource;->content:Ljava/lang/String;
 
-    .line 8
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -146,7 +137,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

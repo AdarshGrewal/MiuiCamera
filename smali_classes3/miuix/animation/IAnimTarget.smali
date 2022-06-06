@@ -53,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const v1, 0x7fffffff
@@ -68,24 +67,20 @@
 .method public constructor <init>()V
     .locals 6
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/animation/internal/TargetHandler;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/TargetHandler;-><init>(Lmiuix/animation/IAnimTarget;)V
 
     iput-object v0, p0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
-    .line 3
     new-instance v0, Lmiuix/animation/internal/AnimManager;
 
     invoke-direct {v0}, Lmiuix/animation/internal/AnimManager;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
-    .line 4
     new-instance v0, Lmiuix/animation/internal/NotifyManager;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/NotifyManager;-><init>(Lmiuix/animation/IAnimTarget;)V
@@ -94,17 +89,14 @@
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 5
     iput v0, p0, Lmiuix/animation/IAnimTarget;->mDefaultMinVisible:F
 
-    .line 6
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/IAnimTarget;->mMinVisibleChanges:Ljava/util/Map;
 
-    .line 7
     sget-object v0, Lmiuix/animation/IAnimTarget;->sTargetIds:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -113,14 +105,12 @@
 
     iput v0, p0, Lmiuix/animation/IAnimTarget;->id:I
 
-    .line 8
     new-instance v0, Lmiuix/animation/internal/TargetVelocityTracker;
 
     invoke-direct {v0}, Lmiuix/animation/internal/TargetVelocityTracker;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/IAnimTarget;->mTracker:Lmiuix/animation/internal/TargetVelocityTracker;
 
-    .line 9
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v0, p0}, Lmiuix/animation/internal/AnimManager;->setTarget(Lmiuix/animation/IAnimTarget;)V
@@ -129,7 +119,6 @@
 
     new-array v1, v0, [Lmiuix/animation/property/FloatProperty;
 
-    .line 10
     sget-object v2, Lmiuix/animation/property/ViewProperty;->ROTATION:Lmiuix/animation/property/ViewProperty;
 
     const/4 v3, 0x0
@@ -156,7 +145,6 @@
 
     new-array v1, v1, [Lmiuix/animation/property/FloatProperty;
 
-    .line 11
     sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
     aput-object v2, v1, v3
@@ -179,7 +167,6 @@
 
     new-array v0, v5, [Lmiuix/animation/property/FloatProperty;
 
-    .line 12
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
     aput-object v1, v0, v3
@@ -211,7 +198,6 @@
 .method public executeOnInitialized(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->post(Ljava/lang/Runnable;)V
 
     return-void
@@ -228,7 +214,6 @@
 .method public getId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/animation/IAnimTarget;->id:I
 
     return v0
@@ -237,14 +222,12 @@
 .method public getIntValue(Lmiuix/animation/property/IIntValueProperty;)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {p1, v0}, Lmiuix/animation/property/IIntValueProperty;->getIntValue(Ljava/lang/Object;)I
 
     move-result p1
@@ -264,7 +247,6 @@
 
     const/4 v1, 0x1
 
-    .line 1
     aput v0, p1, v1
 
     aput v0, p1, v0
@@ -275,7 +257,6 @@
 .method public getMinVisibleChange(Ljava/lang/Object;)F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->mMinVisibleChanges:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -286,14 +267,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
     return p1
 
-    .line 3
     :cond_0
     iget p1, p0, Lmiuix/animation/IAnimTarget;->mDefaultMinVisible:F
 
@@ -305,7 +284,6 @@
 
     return p1
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getDefaultMinVisible()F
 
@@ -317,7 +295,6 @@
 .method public getNotifier()Lmiuix/animation/listener/ListenerNotifier;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->notifyManager:Lmiuix/animation/internal/NotifyManager;
 
     invoke-virtual {v0}, Lmiuix/animation/internal/NotifyManager;->getNotifier()Lmiuix/animation/listener/ListenerNotifier;
@@ -338,14 +315,12 @@
 .method public getValue(Lmiuix/animation/property/FloatProperty;)F
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1, v0}, Lmiuix/animation/property/FloatProperty;->getValue(Ljava/lang/Object;)F
 
     move-result p1
@@ -361,7 +336,6 @@
 .method public getVelocity(Lmiuix/animation/property/FloatProperty;)D
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/internal/AnimManager;->getVelocity(Lmiuix/animation/property/FloatProperty;)D
@@ -374,7 +348,6 @@
 .method public hasFlags(J)Z
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/animation/IAnimTarget;->mFlags:J
 
     invoke-static {v0, v1, p1, p2}, Lmiuix/animation/utils/CommonUtils;->hasFlags(JJ)Z
@@ -387,7 +360,6 @@
 .method public varargs isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/internal/AnimManager;->isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
@@ -408,7 +380,6 @@
 .method public isValidFlag()Z
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -443,7 +414,6 @@
 .method public post(Ljava/lang/Runnable;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     iget-wide v0, v0, Lmiuix/animation/internal/TargetHandler;->threadId:J
@@ -460,12 +430,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
@@ -478,7 +446,6 @@
 .method public setDefaultMinVisibleChange(F)Lmiuix/animation/IAnimTarget;
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/IAnimTarget;->mDefaultMinVisible:F
 
     return-object p0
@@ -487,10 +454,8 @@
 .method public setFlags(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/animation/IAnimTarget;->mFlags:J
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
@@ -503,14 +468,12 @@
 .method public setIntValue(Lmiuix/animation/property/IIntValueProperty;I)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -519,7 +482,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 3
     invoke-interface {p1, v0, p2}, Lmiuix/animation/property/IIntValueProperty;->setIntValue(Ljava/lang/Object;I)V
 
     :cond_0
@@ -529,7 +491,6 @@
 .method public varargs setMinVisibleChange(F[Ljava/lang/String;)Lmiuix/animation/IAnimTarget;
     .locals 4
 
-    .line 4
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -539,7 +500,6 @@
 
     aget-object v2, p2, v1
 
-    .line 5
     new-instance v3, Lmiuix/animation/property/ValueProperty;
 
     invoke-direct {v3, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;)V
@@ -557,7 +517,6 @@
 .method public varargs setMinVisibleChange(F[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IAnimTarget;
     .locals 5
 
-    .line 1
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -567,7 +526,6 @@
 
     aget-object v2, p2, v1
 
-    .line 2
     iget-object v3, p0, Lmiuix/animation/IAnimTarget;->mMinVisibleChanges:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -587,7 +545,6 @@
 .method public setMinVisibleChange(Ljava/lang/Object;F)Lmiuix/animation/IAnimTarget;
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->mMinVisibleChanges:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -602,7 +559,6 @@
 .method public setToNotify(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->notifyManager:Lmiuix/animation/internal/NotifyManager;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/animation/internal/NotifyManager;->setToNotify(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
@@ -613,14 +569,12 @@
 .method public setValue(Lmiuix/animation/property/FloatProperty;F)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -631,7 +585,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {p1, v0, p2}, Lmiuix/animation/property/FloatProperty;->setValue(Ljava/lang/Object;F)V
 
     :cond_0
@@ -647,7 +600,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     double-to-float p2, p2
@@ -661,7 +613,6 @@
 .method public shouldUseIntValue(Lmiuix/animation/property/FloatProperty;)Z
     .locals 0
 
-    .line 1
     instance-of p1, p1, Lmiuix/animation/property/IIntValueProperty;
 
     return p1
@@ -670,7 +621,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +649,6 @@
 .method public trackVelocity(Lmiuix/animation/property/FloatProperty;D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/IAnimTarget;->mTracker:Lmiuix/animation/internal/TargetVelocityTracker;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lmiuix/animation/internal/TargetVelocityTracker;->trackVelocity(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)V

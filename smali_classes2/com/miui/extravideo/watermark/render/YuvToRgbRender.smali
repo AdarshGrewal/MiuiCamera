@@ -29,14 +29,12 @@
 .method public constructor <init>()V
     .locals 8
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x8
 
     new-array v1, v0, [B
 
-    .line 2
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->FULL_QUAD_COORDINATES:[B
@@ -45,25 +43,20 @@
 
     new-array v2, v1, [F
 
-    .line 3
     iput-object v2, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->orientationMatrix:[F
 
     new-array v1, v1, [F
 
-    .line 4
     iput-object v1, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->transformMatrix:[F
 
-    .line 5
     iget-object v1, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    .line 6
     iput-object v1, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
-    .line 7
     :cond_0
     new-instance v1, Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
@@ -75,17 +68,14 @@
 
     const-string v3, "precision highp float; \nvarying vec2 vTexCoord; \nuniform sampler2D uYTexture;\nuniform sampler2D uUvTexture;\nvoid main (void){ \n   float r, g, b, y, u, v; \n   y = texture2D(uYTexture, vTexCoord).r; \n   v = texture2D(uUvTexture, vTexCoord).a - 0.5; \n   u = texture2D(uUvTexture, vTexCoord).r - 0.5; \n   r = y + 1.402 * v;\n   g = y - 0.34414 * u - 0.71414 * v;\n   b = y + 1.772 * u;\n   gl_FragColor = vec4(r , g , b ,1.0);\n} \n"
 
-    .line 8
     invoke-virtual {v1, v2, v3}, Lcom/miui/extravideo/watermark/gles/ShaderProgram;->create(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->fullQuadVertices:Ljava/nio/ByteBuffer;
 
-    .line 10
     iget-object v1, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->FULL_QUAD_COORDINATES:[B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
@@ -96,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 11
     iget-object v2, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->orientationMatrix:[F
 
     const/4 v3, 0x0
@@ -111,19 +100,16 @@
 
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
 
-    .line 12
     iget-object v0, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->transformMatrix:[F
 
     invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 13
     invoke-static {}, Lcom/miui/extravideo/watermark/gles/OpenGlUtils;->genTexture()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->mTextureY:I
 
-    .line 14
     invoke-static {}, Lcom/miui/extravideo/watermark/gles/OpenGlUtils;->genTexture()I
 
     move-result v0
@@ -148,7 +134,6 @@
 .method private renderQuad(I)V
     .locals 6
 
-    .line 1
     iget-object v5, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->fullQuadVertices:Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x2
@@ -163,7 +148,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 2
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const/4 p1, 0x5
@@ -172,7 +156,6 @@
 
     const/4 v1, 0x4
 
-    .line 3
     invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
     return-void
@@ -185,12 +168,10 @@
 
     move-object v0, p0
 
-    .line 1
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     invoke-virtual {v1}, Lcom/miui/extravideo/watermark/gles/ShaderProgram;->use()V
 
-    .line 2
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     const-string v2, "uYTexture"
@@ -199,7 +180,6 @@
 
     move-result v10
 
-    .line 3
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     const-string v2, "uUvTexture"
@@ -208,7 +188,6 @@
 
     move-result v11
 
-    .line 4
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     const-string v2, "uOrientationM"
@@ -217,7 +196,6 @@
 
     move-result v1
 
-    .line 5
     iget-object v2, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     const-string v3, "uTransformM"
@@ -226,7 +204,6 @@
 
     move-result v2
 
-    .line 6
     iget-object v3, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->orientationMatrix:[F
 
     const/4 v7, 0x1
@@ -235,7 +212,6 @@
 
     invoke-static {v1, v7, v8, v3, v8}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 7
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->transformMatrix:[F
 
     invoke-static {v2, v7, v8, v1, v8}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
@@ -252,10 +228,8 @@
 
     move v6, p2
 
-    .line 8
     invoke-static/range {v1 .. v6}, Lcom/miui/extravideo/watermark/render/YuvTextureJNI;->setup(IIIIII)V
 
-    .line 9
     aget v1, p4, v7
 
     mul-int/2addr v1, p2
@@ -264,7 +238,6 @@
 
     add-int v4, v1, v2
 
-    .line 10
     aget v1, p4, v7
 
     shr-int/2addr v1, v7
@@ -277,7 +250,6 @@
 
     const/4 v1, 0x2
 
-    .line 11
     aget v6, p4, v1
 
     const/4 v1, 0x3
@@ -292,7 +264,6 @@
 
     invoke-static/range {v3 .. v11}, Lcom/miui/extravideo/watermark/render/YuvTextureJNI;->texture([BIIIIIIII)V
 
-    .line 12
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     const-string v2, "aPosition"
@@ -303,7 +274,6 @@
 
     invoke-direct {p0, v1}, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->renderQuad(I)V
 
-    .line 13
     iget-object v1, v0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
     invoke-virtual {v1}, Lcom/miui/extravideo/watermark/gles/ShaderProgram;->unUse()V
@@ -316,10 +286,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->shader:Lcom/miui/extravideo/watermark/gles/ShaderProgram;
 
-    .line 2
     iput-object v0, p0, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->fullQuadVertices:Ljava/nio/ByteBuffer;
 
     return-void

@@ -55,7 +55,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -68,10 +67,8 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$1;
@@ -82,7 +79,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$2;
@@ -93,7 +89,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$3;
@@ -104,7 +99,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$4;
@@ -115,7 +109,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$5;
@@ -126,7 +119,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$6;
@@ -137,7 +129,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$7;
@@ -148,7 +139,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$8;
@@ -159,7 +149,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     new-instance v1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$9;
@@ -170,7 +159,6 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->mMediaFormat:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
     return-void
@@ -181,7 +169,6 @@
 .method public getInteger(Ljava/lang/String;)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->mMediaFormat:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
     if-nez v0, :cond_0
@@ -190,7 +177,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-virtual {v0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
@@ -202,7 +188,6 @@
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->mMediaFormat:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
     if-nez v0, :cond_0
@@ -211,7 +196,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
@@ -221,7 +205,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     sget-object v0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->sFormatterMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -230,14 +213,12 @@
 
     check-cast p1, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$Formatter;
 
-    .line 4
     invoke-virtual {p1, p0}, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat$Formatter;->format(Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/misc/IjkMediaFormat;->mMediaFormat:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 

@@ -22,10 +22,8 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 2
     new-instance p1, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {p1}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
@@ -38,7 +36,6 @@
 .method public static synthetic OooO00o(Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;Ljava/lang/Object;ILandroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1, p2, p3}, Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;->OnRecyclerItemClickListener(Ljava/lang/Object;ILandroid/view/View;)V
 
     return-void
@@ -51,14 +48,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     goto :goto_2
 
-    .line 2
     :cond_0
     array-length v0, p1
 
@@ -78,7 +73,6 @@
     :cond_1
     const/4 v4, 0x1
 
-    .line 3
     invoke-static {v3, v1, v4}, Lcom/android/camera/Util;->updateSelectIndicator(Landroid/view/View;ZZ)V
 
     :goto_1
@@ -96,14 +90,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     goto :goto_2
 
-    .line 2
     :cond_0
     array-length v0, p1
 
@@ -116,7 +108,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 3
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -128,7 +119,6 @@
     :cond_1
     const/4 v3, 0x1
 
-    .line 4
     invoke-static {v2, v3, v3}, Lcom/android/camera/Util;->updateSelectIndicator(Landroid/view/View;ZZ)V
 
     :cond_2
@@ -145,7 +135,6 @@
 .method public getCubicEaseOut()Lmiuix/view/animation/CubicEaseOutInterpolator;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerViewHolder;->mCubicEaseOut:Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     return-object v0
@@ -164,14 +153,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     goto :goto_2
 
-    .line 2
     :cond_0
     array-length v0, p1
 
@@ -186,7 +173,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_1
     invoke-static {v2}, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->directSetResult(Landroid/view/View;)V
 
@@ -212,12 +198,11 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0o0/OooO0O0/OooO00o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0Oo/OooO0O0/OooO00o;
 
-    invoke-direct {v1, p1, p2, p3, p4}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO00o/OooO0o0/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;Ljava/lang/Object;ILandroid/view/View;)V
+    invoke-direct {v1, p1, p2, p3, p4}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO00o/OooO0Oo/OooO0O0/OooO00o;-><init>(Lcom/android/camera/features/mimojis/commen/widget/baseview/OnRecyclerItemClickListener;Ljava/lang/Object;ILandroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -237,14 +222,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     goto :goto_2
 
-    .line 2
     :cond_0
     array-length v0, p1
 
@@ -259,7 +242,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_1
     new-instance v3, Lcom/android/camera/animation/folme/FolmeAlphaInOnSubscribe;
 

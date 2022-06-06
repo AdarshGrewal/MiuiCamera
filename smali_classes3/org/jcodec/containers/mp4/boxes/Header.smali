@@ -25,7 +25,6 @@
 
     new-array v0, v0, [B
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/Header;->FOURCC_FREE:[B
@@ -46,10 +45,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
     return-void
@@ -58,12 +55,10 @@
 .method public static createHeader(Ljava/lang/String;J)Lorg/jcodec/containers/mp4/boxes/Header;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-direct {v0, p0}, Lorg/jcodec/containers/mp4/boxes/Header;-><init>(Ljava/lang/String;)V
 
-    .line 2
     iput-wide p1, v0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     return-object v0
@@ -93,15 +88,12 @@
 .method public static newHeader(Ljava/lang/String;JZ)Lorg/jcodec/containers/mp4/boxes/Header;
     .locals 1
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/Header;
 
     invoke-direct {v0, p0}, Lorg/jcodec/containers/mp4/boxes/Header;-><init>(Ljava/lang/String;)V
 
-    .line 2
     iput-wide p1, v0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
-    .line 3
     iput-boolean p3, v0, Lorg/jcodec/containers/mp4/boxes/Header;->lng:Z
 
     return-object v0
@@ -114,7 +106,6 @@
 
     move-wide v2, v0
 
-    .line 1
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -138,7 +129,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -162,7 +152,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_1
     invoke-static {p0, v5}, Lorg/jcodec/common/io/NIOUtils;->readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
@@ -174,7 +163,6 @@
 
     if-nez v5, :cond_3
 
-    .line 4
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -185,7 +173,6 @@
 
     const/4 v4, 0x1
 
-    .line 5
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v2
@@ -195,7 +182,6 @@
     :cond_2
     return-object v1
 
-    .line 6
     :cond_3
     :goto_1
     invoke-static {v0, v2, v3, v4}, Lorg/jcodec/containers/mp4/boxes/Header;->newHeader(Ljava/lang/String;JZ)Lorg/jcodec/containers/mp4/boxes/Header;
@@ -227,7 +213,6 @@
 
     return v1
 
-    .line 1
     :cond_1
     const-class v2, Lorg/jcodec/containers/mp4/boxes/Header;
 
@@ -239,23 +224,19 @@
 
     return v1
 
-    .line 2
     :cond_2
     check-cast p1, Lorg/jcodec/containers/mp4/boxes/Header;
 
-    .line 3
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
     if-nez v2, :cond_3
 
-    .line 4
     iget-object p1, p1, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
     if-eqz p1, :cond_4
 
     return v1
 
-    .line 5
     :cond_3
     iget-object p1, p1, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
@@ -274,7 +255,6 @@
 .method public getBodySize()J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->headerSize()J
@@ -289,7 +269,6 @@
 .method public getFourcc()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
     return-object v0
@@ -298,7 +277,6 @@
 .method public getSize()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     return-wide v0
@@ -307,7 +285,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -332,7 +309,6 @@
 .method public headerSize()J
     .locals 4
 
-    .line 1
     iget-boolean v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->lng:Z
 
     if-nez v0, :cond_1
@@ -368,7 +344,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -378,7 +353,6 @@
     :goto_0
     int-to-long v2, v1
 
-    .line 2
     iget-wide v4, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->headerSize()J
@@ -391,7 +365,6 @@
 
     if-gez v2, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result v2
@@ -402,7 +375,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -416,7 +388,6 @@
 
     int-to-long v0, p1
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->headerSize()J
 
     move-result-wide v2
@@ -436,7 +407,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/Header;->headerSize()J
@@ -453,7 +423,6 @@
 .method public write(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
     const-wide v2, 0x100000000L
@@ -464,7 +433,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     goto :goto_0
@@ -472,10 +440,8 @@
     :cond_0
     long-to-int v0, v0
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     :goto_0
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->fourcc:Ljava/lang/String;
 
@@ -485,25 +451,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     array-length v1, v0
 
     const/4 v4, 0x4
 
     if-ne v1, v4, :cond_1
 
-    .line 6
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     goto :goto_1
 
-    .line 7
     :cond_1
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/Header;->FOURCC_FREE:[B
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 8
     :goto_1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Header;->size:J
 
@@ -511,7 +473,6 @@
 
     if-lez v2, :cond_2
 
-    .line 9
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     :cond_2
@@ -528,18 +489,14 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/Header;->write(Ljava/nio/ByteBuffer;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 4
     invoke-interface {p1, v0}, Ljava/nio/channels/ByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
     return-void

@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createMovieExtendsBox()Lorg/jcodec/containers/mp4/boxes/MovieExtendsBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/MovieExtendsBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$11;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onPageSelect(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$11;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$1600(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Lcom/android/camera/fragment/vv/page/PageIndicatorView;

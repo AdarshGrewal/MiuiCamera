@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->access$800(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -59,7 +57,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/CameraItem;->access$800(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -72,7 +69,6 @@
 
     iget-boolean p2, p2, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     const/high16 v1, 0x447a0000    # 1000.0f
@@ -81,14 +77,12 @@
 
     invoke-static {v0, v2}, Lcom/android/camera/dualvideo/render/CameraItem;->access$402(Lcom/android/camera/dualvideo/render/CameraItem;F)F
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/CameraItem;->access$500(Lcom/android/camera/dualvideo/render/CameraItem;)V
 
     if-eqz p2, :cond_1
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/CameraItem$3;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     cmpl-float p1, p1, v1

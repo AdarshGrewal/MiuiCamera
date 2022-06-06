@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/AbBottomMenu;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu$1;->this$0:Lcom/android/camera/fragment/bottom/AbBottomMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,17 +37,14 @@
 .method public onGlobalLayout()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu$1;->this$0:Lcom/android/camera/fragment/bottom/AbBottomMenu;
 
     iget-object v0, v0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mBeautyMenuAnimator:Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator;->shrinkImmediately()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/AbBottomMenu$1;->this$0:Lcom/android/camera/fragment/bottom/AbBottomMenu;
 
     iget-object v0, v0, Lcom/android/camera/fragment/bottom/AbBottomMenu;->mContainerView:Landroid/widget/LinearLayout;

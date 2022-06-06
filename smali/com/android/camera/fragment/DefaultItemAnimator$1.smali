@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/DefaultItemAnimator;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->this$0:Lcom/android/camera/fragment/DefaultItemAnimator;
 
     iput-object p2, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->val$moves:Ljava/util/ArrayList;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->val$moves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -62,7 +60,6 @@
 
     check-cast v1, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->this$0:Lcom/android/camera/fragment/DefaultItemAnimator;
 
     iget-object v3, v1, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -79,13 +76,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->val$moves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator$1;->this$0:Lcom/android/camera/fragment/DefaultItemAnimator;
 
     iget-object v0, v0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;

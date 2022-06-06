@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/iqiyi/android/qigsaw/core/Qigsaw;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/Qigsaw$1;->this$0:Lcom/iqiyi/android/qigsaw/core/Qigsaw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public queueIdle()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/Qigsaw$1;->this$0:Lcom/iqiyi/android/qigsaw/core/Qigsaw;
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/Qigsaw;->access$000(Lcom/iqiyi/android/qigsaw/core/Qigsaw;)Landroid/content/Context;

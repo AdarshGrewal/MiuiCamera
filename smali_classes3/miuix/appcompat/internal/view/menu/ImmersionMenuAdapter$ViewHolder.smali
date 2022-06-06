@@ -24,7 +24,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lmiuix/appcompat/internal/view/menu/ImmersionMenuAdapter$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/ImmersionMenuAdapter$ViewHolder;-><init>()V
 
     return-void

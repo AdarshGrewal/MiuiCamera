@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -43,7 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/FeatureLoader;->sBuildInEntries:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -70,12 +67,10 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/FeatureLoader;->sBuildInEntries:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
@@ -93,7 +88,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -117,7 +111,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     :try_start_1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -132,10 +125,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 4
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v1
@@ -144,7 +135,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
@@ -152,7 +142,6 @@
 
     move-object v2, v1
 
-    .line 6
     :cond_2
     :goto_1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -185,11 +174,9 @@
     :goto_2
     move-object v2, v0
 
-    .line 7
     :goto_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 8
     :cond_3
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -199,7 +186,6 @@
 
     return-object v0
 
-    .line 9
     :cond_4
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -221,7 +207,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -231,7 +216,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object p1
@@ -242,7 +226,6 @@
 
     const-string p1, "UTF-8"
 
-    .line 3
     invoke-interface {v0, p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
@@ -258,7 +241,6 @@
     :catch_1
     move-exception p0
 
-    .line 4
     :try_start_1
     invoke-virtual {p0}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
     :try_end_1
@@ -266,7 +248,6 @@
 
     goto :goto_1
 
-    .line 5
     :goto_0
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -288,12 +269,11 @@
         }
     .end annotation
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o000O()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00Ooo0o()Z
 
     move-result v0
 
@@ -306,42 +286,36 @@
     :cond_0
     const-string v0, "features/cam_plugin.xml"
 
-    .line 2
     :goto_0
     invoke-static {v0, p0}, Lcom/android/camera/features/FeatureLoader;->getFeaturesParse(Ljava/lang/String;Landroid/content/Context;)Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v0}, Lcom/android/camera/features/FeatureLoader;->getFeatureNames(Lorg/xmlpull/v1/XmlPullParser;)[Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 4
     sget-object p0, Lcom/android/camera/features/FeatureLoader;->TAG:Ljava/lang/String;
 
     const-string v0, "[load] three is no feature plug in"
 
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     sget-object p0, Lcom/android/camera/features/FeatureLoader;->sBuildInEntries:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
 
-    .line 6
     :cond_1
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object v1
 
     const-string v2, "feature load"
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/performance/PerformanceManager;->startAction(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/camera/log/PerformanceManager;->startAction(Ljava/lang/String;)V
 
-    .line 7
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0, p0}, Lcom/android/camera/features/FeatureLoader;->loadClasses([Ljava/lang/String;Landroid/content/Context;)Ljava/util/LinkedHashMap;
@@ -352,14 +326,12 @@
 
     sput-object v1, Lcom/android/camera/features/FeatureLoader;->sBuildInEntries:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/performance/PerformanceManager;->getInstance()Lcom/android/camera/performance/PerformanceManager;
+    invoke-static {}, Lcom/android/camera/log/PerformanceManager;->getInstance()Lcom/android/camera/log/PerformanceManager;
 
     move-result-object p0
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/performance/PerformanceManager;->endAction(Ljava/lang/String;)J
+    invoke-virtual {p0, v2}, Lcom/android/camera/log/PerformanceManager;->endAction(Ljava/lang/String;)V
 
-    .line 9
     sget-object p0, Lcom/android/camera/features/FeatureLoader;->sBuildInEntries:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -380,19 +352,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 2
     const-class v1, Lcom/android/camera/features/FeatureLoader;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v1
 
-    .line 3
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -406,13 +375,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 4
     :try_start_0
     invoke-virtual {v1, v5}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 5
     invoke-virtual {v5}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v5
@@ -432,7 +399,6 @@
 
     aput-object p1, v7, v3
 
-    .line 6
     invoke-virtual {v5, v7}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -451,21 +417,18 @@
     :catch_0
     move-exception v5
 
-    .line 7
     :try_start_2
     invoke-virtual {v5}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     :goto_1
     if-eqz v6, :cond_0
 
-    .line 8
     invoke-interface {v6}, Lcom/android/camera/module/entry/IModuleEntry;->support()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 9
     invoke-interface {v6}, Lcom/android/camera/module/entry/IModuleEntry;->getModuleId()I
 
     move-result v5
@@ -474,7 +437,6 @@
 
     move-result-object v5
 
-    .line 10
     sget-object v7, Lcom/android/camera/features/FeatureLoader;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -503,7 +465,6 @@
 
     invoke-static {v7, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     invoke-virtual {v0, v5, v6}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_2
     .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_3
@@ -525,7 +486,6 @@
     :catch_3
     move-exception v5
 
-    .line 12
     :goto_2
     invoke-virtual {v5}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 

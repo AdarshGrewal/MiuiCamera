@@ -52,10 +52,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/functions/Functions$CastToClass;->clazz:Ljava/lang/Class;
 
     return-void
@@ -77,7 +75,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/functions/Functions$CastToClass;->clazz:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;

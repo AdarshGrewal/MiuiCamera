@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public create()Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
     .locals 2
 
-    .line 2
     new-instance v0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
     const/4 v1, 0x0
@@ -50,7 +48,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$1;->create()Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
     move-result-object v0

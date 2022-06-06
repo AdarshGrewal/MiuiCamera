@@ -1,14 +1,11 @@
 .class public Lcom/android/camera/module/VideoModule$4;
-.super Ljava/lang/Object;
+.super Landroid/os/CountDownTimer;
 .source "VideoModule.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/VideoModule;->startVideoRecordingIfNeeded()V
+    value = Lcom/android/camera/module/VideoModule;->countDownForVideoBokeh()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,30 +19,55 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/VideoModule;)V
+.method public constructor <init>(Lcom/android/camera/module/VideoModule;JJ)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoModule$4;->this$0:Lcom/android/camera/module/VideoModule;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onFinish()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoModule$4;->this$0:Lcom/android/camera/module/VideoModule;
 
-    invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->getTriggerMode()I
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/android/camera/module/VideoModule;->stopVideoRecording(Z)V
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/module/VideoModule;->onShutterButtonClick(I)V
+    return-void
+.end method
 
+.method public onTick(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x3b6
+
+    add-long/2addr p1, v0
+
+    const-wide/16 v0, 0x1c2
+
+    sub-long/2addr p1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/android/camera/module/VideoModule$4;->this$0:Lcom/android/camera/module/VideoModule;
+
+    iget-object p2, p2, Lcom/android/camera/module/BaseModule;->mTopAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method

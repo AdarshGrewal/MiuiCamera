@@ -25,16 +25,12 @@
 .method public constructor <init>(Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter$KaleidoItemHolder;->this$0:Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter;
 
-    .line 2
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/CommonRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 3
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 4
     invoke-static {p2}, Lcom/android/camera/animation/FolmeUtils;->touchItemScale(Landroid/view/View;)V
 
     return-void
@@ -45,12 +41,10 @@
 .method public onClick(Landroid/view/View;)V
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter$KaleidoItemHolder;->this$0:Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter;
 
     iget v1, v0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter;->mSelectIndex:I
@@ -59,7 +53,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, v0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$KaleidoscopeAdapter;->mListener:Landroid/widget/AdapterView$OnItemClickListener;
 

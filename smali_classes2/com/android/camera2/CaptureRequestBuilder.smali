@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -52,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -71,7 +68,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getAERegions()[Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -79,7 +75,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,14 +101,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -121,7 +114,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     sget-object v0, Lcom/android/camera2/MiCamera2;->ZERO_WEIGHT_3A_REGION:[Landroid/hardware/camera2/params/MeteringRectangle;
@@ -139,7 +131,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getAFRegions()[Landroid/hardware/camera2/params/MeteringRectangle;
 
@@ -147,7 +138,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -174,14 +164,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -189,7 +177,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_REGIONS:Landroid/hardware/camera2/CaptureRequest$Key;
 
     sget-object v0, Lcom/android/camera2/MiCamera2;->ZERO_WEIGHT_3A_REGION:[Landroid/hardware/camera2/params/MeteringRectangle;
@@ -207,7 +194,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->ASD_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -223,7 +209,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isASDEnabled()Z
 
@@ -243,7 +228,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isASDSceneSupported()Z
 
@@ -251,7 +235,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyASDScene(): unsupported"
@@ -260,13 +243,11 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getASDScene()I
 
     move-result p0
 
-    .line 4
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -285,7 +266,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {p1, p0}, Lcom/android/camera2/compat/MiCameraCompat;->applyASDScene(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_2
@@ -300,7 +280,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -320,7 +299,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AWB_LOCK:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -339,7 +317,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AWB_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -362,10 +339,8 @@
     :cond_0
     if-eqz p0, :cond_2
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->AI_AIIE_PREVIEWENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -378,18 +353,15 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isAIIEPreviewEnabled()Z
 
     move-result p0
 
-    .line 4
     invoke-static {p1, p0}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiAIIEPreviewEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
 
-    .line 5
     :cond_2
     :goto_0
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
@@ -408,13 +380,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->isAiASDEnabled()Z
 
     move-result p1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -433,7 +403,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiASDEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -446,7 +415,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isAiMoonEffectEnableSupported()Z
 
@@ -454,7 +422,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyAiMoonEffectEnable: is not Support"
@@ -463,13 +430,11 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isAiMoonEffectEnabled()Z
 
     move-result p0
 
-    .line 4
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -488,7 +453,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {p1, p0}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiMoonEffectEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -501,7 +465,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->ENABLE_AI_PORTRAIT_DEBLUR:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -517,7 +480,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiPortraitDeblur(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -531,13 +493,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getAiSceneDetectPeriod()I
 
     move-result p1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiScenePeriod(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -550,7 +510,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportAiShutter()Z
 
@@ -560,13 +519,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isAiShutterEnable()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -585,7 +542,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiShutterEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -605,7 +561,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportAiShutter()Z
 
@@ -615,13 +570,11 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isAiShutterEnable()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -644,13 +597,11 @@
 
     return-void
 
-    .line 4
     :cond_3
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isAiShutterExistMotion()Z
 
     move-result p1
 
-    .line 5
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -669,7 +620,6 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAiShutterExistMotion(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -682,7 +632,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->AMBILIGHT_AE_TARGET:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -698,7 +647,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getAmbilightMode()I
 
@@ -708,13 +656,11 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getmAmbilightAeTarget()I
 
     move-result p1
 
-    .line 4
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -733,7 +679,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAmbilightAeTarget(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -746,7 +691,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->AMBILIGHT_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -762,13 +706,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getAmbilightMode()I
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -787,7 +729,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAmbilightMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -807,7 +748,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportAiShutter()Z
 
@@ -817,13 +757,11 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isAiShutterEnable()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -846,13 +784,11 @@
 
     return-void
 
-    .line 4
     :cond_3
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getAnchorTimeStamp()Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 5
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -871,7 +807,6 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyAnchorTimeStamp(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/Long;)V
 
     return-void
@@ -884,7 +819,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getAntiBanding()I
 
@@ -894,7 +828,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_ANTIBANDING_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -914,13 +847,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isEISEnabled()Z
 
     move-result v0
 
-    .line 2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isOISEnabled()Z
 
     move-result p2
@@ -929,7 +860,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->isDebugOsBuild()Z
 
     move-result v1
@@ -938,7 +868,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -948,7 +877,6 @@
 
     throw p0
 
-    .line 5
     :cond_2
     :goto_0
     sget-object v1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
@@ -961,9 +889,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "on"
+    const-string/jumbo v3, "on"
 
-    const-string v4, "off"
+    const-string/jumbo v4, "off"
 
     if-eqz v0, :cond_3
 
@@ -983,25 +911,20 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_VIDEO_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 7
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {p0, v1, v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportOIS()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 10
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1030,7 +953,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->LENS_OPTICAL_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     if-nez v0, :cond_5
@@ -1044,74 +966,14 @@
     :cond_5
     const/4 p2, 0x0
 
-    .line 12
     :goto_3
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    .line 13
     invoke-virtual {p0, p1, p2}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
     :cond_6
-    return-void
-.end method
-
-.method public static applyAsdAlgorithmEnable(Lcom/android/camera2/CameraCapabilities;Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraConfigs;)V
-    .locals 2
-
-    if-eqz p1, :cond_2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->ASD_ALGORITHM_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    return-void
-
-    .line 2
-    :cond_1
-    invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getAsdAlgorithmEnable()I
-
-    move-result p0
-
-    .line 3
-    sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "applyAsdAlgorithmEnable: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 4
-    invoke-static {p1, p0}, Lcom/android/camera2/compat/MiCameraCompat;->applyAsdAlgorithmEnable(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
-
-    :cond_2
-    :goto_0
     return-void
 .end method
 
@@ -1127,7 +989,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->ASD_DIRTY_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1143,7 +1004,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isAsdDirtyEnable()Z
 
@@ -1161,7 +1021,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getAutoZoomMode()I
 
@@ -1179,7 +1038,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getAutoZoomScaleOffset()F
 
@@ -1197,7 +1055,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isBackSoftLightSupported()Z
 
@@ -1205,7 +1062,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyBackSoftLight(): unsupported"
@@ -1214,7 +1070,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1234,7 +1089,6 @@
 
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyBackSoftLight(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -1247,7 +1101,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isBackwardCaptureSupported()Z
 
@@ -1255,7 +1108,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyBackwardCaptureHint(): unsupported"
@@ -1264,7 +1116,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1284,7 +1135,6 @@
 
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyBackwardCaptureHint(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -1297,7 +1147,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportedBeautyLens()Z
 
@@ -1307,7 +1156,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getBeautyLens()I
 
@@ -1327,7 +1175,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportBeauty()Z
 
@@ -1337,7 +1184,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getBeautyValues()Lcom/android/camera/fragment/beauty/BeautyValues;
 
@@ -1347,7 +1193,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getCaptureRequestVendorKeys()Ljava/util/HashSet;
 
@@ -1369,7 +1214,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object p2, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->BOKEH_ROLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1383,22 +1227,20 @@
 
     if-nez p1, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
-    const-string p1, "not support bokeh role"
+    const-string/jumbo p1, "not support bokeh role"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
 
-    const-string p2, "pref_ultra_wide_bokeh_enabled"
+    const-string/jumbo p2, "pref_ultra_wide_bokeh_enabled"
 
     invoke-virtual {p1, p2}, Lcom/android/camera/data/data/runing/DataItemRunning;->isSwitchOn(Ljava/lang/String;)Z
 
@@ -1406,11 +1248,11 @@
 
     if-nez p1, :cond_3
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00oo000()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0o0O()Z
 
     move-result p1
 
@@ -1440,7 +1282,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportCameraAi30()Z
 
@@ -1450,13 +1291,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isCameraAi30Enabled()Z
 
     move-result p1
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyCameraAi30Enable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -1465,7 +1304,6 @@
 .method public static applyCinematicPhoto(Landroid/hardware/camera2/CaptureRequest$Builder;ILcom/android/camera2/CameraCapabilities;Lcom/android/camera2/CameraConfigs;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isCinematicPhotoEnabled()Z
 
     move-result p3
@@ -1482,7 +1320,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isCinematicPhotoSupported()Z
 
@@ -1499,7 +1336,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1519,7 +1355,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p3}, Lcom/android/camera2/compat/MiCameraCompat;->applyCinematicPhoto(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -1532,7 +1367,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isCinematicVideoSupported()Z
 
@@ -1542,13 +1376,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isCinematicVideoEnabled()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1567,7 +1399,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyCinematicVideo(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -1580,7 +1411,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getColorEffect()I
 
@@ -1590,7 +1420,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_EFFECT_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1610,7 +1439,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->COLOR_ENHANCE_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -1626,7 +1454,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getColorEnhanceEnabled()Z
 
@@ -1644,7 +1471,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
@@ -1654,7 +1480,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportColorRetentionBackRequestTag()Z
 
@@ -1664,7 +1489,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getVideoFilterColorRetentionBack()Z
 
@@ -1682,7 +1506,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
@@ -1692,7 +1515,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportColorRetentionFrontRequestTag()Z
 
@@ -1702,7 +1524,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getVideoFilterColorRetentionFront()Z
 
@@ -1720,7 +1541,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportContrast()Z
 
@@ -1730,7 +1550,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getContrastLevel()I
 
@@ -1740,7 +1559,6 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyContrast(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_2
@@ -1750,7 +1568,6 @@
 .method public static applyCustomAWB(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyCustomAWB(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -1763,7 +1580,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isDodepurpleEnabled()Z
 
@@ -1780,7 +1596,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isSuperNightEnabled()Z
 
@@ -1790,7 +1605,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_2
     :goto_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportDepurple()Z
@@ -1799,7 +1613,6 @@
 
     if-nez p1, :cond_3
 
-    .line 4
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyDepurpleEnable: is not Support  "
@@ -1808,7 +1621,6 @@
 
     return-void
 
-    .line 5
     :cond_3
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1828,7 +1640,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, v0}, Lcom/android/camera2/compat/MiCameraCompat;->applyDepurpleEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -1839,7 +1650,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportDeviceOrientation()Z
 
     move-result p1
@@ -1848,7 +1658,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1872,7 +1681,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getDeviceOrientation()I
 
     move-result p1
@@ -1889,7 +1697,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportDualBokeh()Z
 
     move-result p1
@@ -1898,7 +1705,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -1922,7 +1728,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isDualBokehEnabled()Z
 
     move-result p1
@@ -1941,14 +1746,12 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureCompensationIndex()I
 
     move-result v0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000OO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000OO0()Z
 
     move-result v1
 
@@ -1956,7 +1759,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isProModule()Z
 
     move-result v1
@@ -1967,14 +1769,12 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getISO()I
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 5
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
     move-result-wide v4
@@ -1983,7 +1783,6 @@
 
     if-lez p1, :cond_1
 
-    .line 6
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
     move-result-wide v0
@@ -1998,7 +1797,6 @@
 
     float-to-double v0, p1
 
-    .line 7
     invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v0
@@ -2011,7 +1809,6 @@
 
     div-double/2addr v0, v4
 
-    .line 8
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2030,12 +1827,10 @@
 
     invoke-static {p1, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getExposureCompensationRational()Landroid/util/Rational;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p1}, Landroid/util/Rational;->getDenominator()I
 
     move-result v4
@@ -2054,7 +1849,6 @@
 
     double-to-int p1, v0
 
-    .line 11
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getMaxExposureCompensation()I
 
     move-result p2
@@ -2063,7 +1857,6 @@
 
     move-result v0
 
-    .line 12
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
@@ -2087,7 +1880,6 @@
 
     const/4 v0, 0x0
 
-    .line 13
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2107,7 +1899,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2126,7 +1917,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getExposureMeteringMode()I
 
@@ -2136,7 +1926,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyExposureMeteringMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_1
@@ -2150,14 +1939,12 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
     move-result-wide v0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000OO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000OO0()Z
 
     move-result p2
 
@@ -2169,14 +1956,12 @@
 
     const-wide/32 v2, 0x7735940
 
-    .line 3
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
-    .line 4
     :cond_1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000OO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000OO0()Z
 
     move-result p2
 
@@ -2186,7 +1971,6 @@
 
     if-ne p1, p2, :cond_3
 
-    .line 5
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2206,7 +1990,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, v0, v1}, Lcom/android/camera2/compat/MiCameraCompat;->applyExposureTime(Landroid/hardware/camera2/CaptureRequest$Builder;J)V
 
     :cond_3
@@ -2220,13 +2003,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getExtendSceneMode()I
 
     move-result p1
 
-    .line 2
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2245,7 +2026,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->applyExtendSceneMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -2258,7 +2038,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->EXTENDED_MAX_ZOOM:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2274,7 +2053,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2294,7 +2072,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyExtendedMaxZoom(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -2307,7 +2084,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportBokehAdjust()Z
 
@@ -2315,16 +2091,14 @@
 
     if-nez p1, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
-    const-string p1, "set f number on unsupported devices"
+    const-string/jumbo p1, "set f number on unsupported devices"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getFNumber()Ljava/lang/String;
 
@@ -2334,7 +2108,6 @@
 
     return-void
 
-    .line 4
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getFNumber()Ljava/lang/String;
 
@@ -2352,7 +2125,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportFaceAgeAnalyze()Z
 
@@ -2362,7 +2134,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isFaceAgeAnalyzeEnabled()Z
 
@@ -2380,7 +2151,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->isFaceDetectionEnabled()Z
 
@@ -2398,7 +2168,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportFaceScore()Z
 
@@ -2408,7 +2177,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isFaceScoreEnabled()Z
 
@@ -2426,7 +2194,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->FLASH_CURRENT:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2442,7 +2209,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getFlashCurrent()I
 
@@ -2456,12 +2222,11 @@
 .method public static applyFlashMode(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera2/CameraConfigs;)V
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0o0O()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0OOoo()Z
 
     move-result v0
 
@@ -2474,7 +2239,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->FLASH_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2490,7 +2254,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
 
@@ -2513,7 +2276,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->FLAW_DETECT_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2529,7 +2291,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-static {p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyFlawDetectEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -2543,7 +2304,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getFocusMode()I
 
@@ -2553,7 +2313,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getFocusDistance()F
 
@@ -2565,7 +2324,6 @@
 
     if-lez v0, :cond_2
 
-    .line 3
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -2585,7 +2343,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -2599,10 +2356,8 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/CaptureRequestBuilder;->applyAFRegions(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraConfigs;)V
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/CaptureRequestBuilder;->applyAERegions(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraConfigs;)V
 
     return-void
@@ -2615,7 +2370,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->FORCE_DISABLE_LLS:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2631,7 +2385,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isLLSForceDisabled()Z
 
@@ -2649,13 +2402,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getPreviewFpsRange()Landroid/util/Range;
 
     move-result-object p1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2678,7 +2429,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -2694,7 +2444,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->FRAME_RATIO:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2710,7 +2459,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2730,7 +2478,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyFrameRatio(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -2743,7 +2490,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportFrontMirror()Z
 
@@ -2760,7 +2506,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2784,7 +2529,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isFrontMirror()Z
 
     move-result p1
@@ -2801,7 +2545,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHdr()Z
 
@@ -2818,12 +2561,10 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyHDR(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
 
-    .line 3
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -2845,9 +2586,8 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isHDREnabled()Z
 
     move-result p1
@@ -2864,7 +2604,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->HDR10_VIDEO:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -2880,7 +2619,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getHDR10Video()I
 
@@ -2900,7 +2638,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportAutoHdr()Z
 
     move-result p1
@@ -2909,7 +2646,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isHDRCheckerEnabled()Z
 
@@ -2931,7 +2667,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHdrCheckerStatus()Z
 
     move-result p1
@@ -2940,7 +2675,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getHDRCheckerStatus()I
 
@@ -2962,7 +2696,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHdrMode()Z
 
     move-result p1
@@ -2971,7 +2704,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getHDRMode()I
 
@@ -2996,7 +2728,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHFRDeflicker()Z
 
@@ -3006,13 +2737,11 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isHFRDeflicker()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -3031,7 +2760,6 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyHFRDeflicker(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -3051,7 +2779,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHHT()Z
 
@@ -3061,7 +2788,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isHHTEnabled()Z
 
@@ -3079,7 +2805,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportHdrBokeh()Z
 
@@ -3096,7 +2821,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -3116,7 +2840,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p3}, Lcom/android/camera2/compat/MiCameraCompat;->applyHdrBokeh(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -3129,7 +2852,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportHighQualityPreferred()Z
 
@@ -3139,13 +2861,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isHighQualityPreferred()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3164,7 +2884,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyHighQualityPreferred(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -3177,7 +2896,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isHistogramStatsSupported()Z
 
@@ -3187,13 +2905,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isHistogramStatsEnabled()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3212,7 +2928,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyHistogramStats(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -3225,7 +2940,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportMfnr()Z
 
@@ -3242,12 +2956,10 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyMfnrEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isMfnrEnabled()Z
 
@@ -3255,7 +2967,6 @@
 
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyMfnrEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
-    .line 4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isMfnrEnabled()Z
 
     move-result p1
@@ -3268,18 +2979,16 @@
 
     if-nez p1, :cond_3
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00Ooo()I
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->Oooooo()I
 
     move-result p1
 
     if-lez p1, :cond_3
 
-    .line 6
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -3298,47 +3007,9 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyMfnrFrameNum(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_3
-    return-void
-.end method
-
-.method public static applyInsensorZoomEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;I)V
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->INSENSORZOOM_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    .line 2
-    sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    const-string p1, "not support insensorzoom enable"
-
-    invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    .line 3
-    :cond_1
-    invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyInsensorZoomEnable(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
-
     return-void
 .end method
 
@@ -3349,14 +3020,12 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getISO()I
 
     move-result v0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000OO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000OO0()Z
 
     move-result v1
 
@@ -3368,7 +3037,6 @@
 
     if-lez v0, :cond_1
 
-    .line 3
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
     move-result-wide v1
@@ -3379,7 +3047,6 @@
 
     if-lez p1, :cond_1
 
-    .line 4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getExposureTime()J
 
     move-result-wide v1
@@ -3398,7 +3065,6 @@
 
     float-to-int p1, p3
 
-    .line 5
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->getMaxIso()I
 
     move-result p2
@@ -3407,7 +3073,6 @@
 
     move-result v0
 
-    .line 6
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -3427,7 +3092,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {p0, v0}, Lcom/android/camera2/compat/MiCameraCompat;->applyISO(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -3440,7 +3104,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportLensDirtyDetect()Z
 
@@ -3450,7 +3113,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isLensDirtyDetectEnabled()Z
 
@@ -3470,7 +3132,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportMacroMode()Z
 
@@ -3480,13 +3141,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isMacroMode()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -3505,7 +3164,6 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyMacroMode(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     :cond_2
@@ -3522,7 +3180,6 @@
 
     goto :goto_2
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isMiviSatSuperNightSupported()Z
 
@@ -3532,7 +3189,6 @@
 
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->MIVI_SUPER_NIGHT_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -3545,7 +3201,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getMiviSuperNightMode()I
 
@@ -3570,7 +3225,6 @@
     :cond_2
     const/4 p0, 0x0
 
-    .line 4
     :cond_3
     :goto_0
     sget-object p3, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
@@ -3597,12 +3251,10 @@
 
     invoke-static {p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-static {p2, p0}, Lcom/android/camera2/compat/MiCameraCompat;->applyMiviSuperNightMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
 
-    .line 6
     :cond_4
     :goto_1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
@@ -3619,15 +3271,12 @@
 .method public static applyMtkPipDevices(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraConfigs;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->MTK_STREAMING_FEATURE_PIP_DEVICES:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getmMtkPipDevices()[I
 
     move-result-object p1
 
-    .line 3
     invoke-static {p0, v0, p1}, Lcom/android/camera2/vendortag/VendorTagHelper;->setValueSafely(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;Ljava/lang/Object;)V
 
     return-void
@@ -3643,7 +3292,6 @@
     :cond_0
     const/4 v0, 0x2
 
-    .line 1
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3662,7 +3310,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportNormalWideLDC()Z
 
@@ -3672,7 +3319,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getNormalWideLDCEnabled()Z
 
@@ -3684,7 +3330,6 @@
 
     const/4 p2, 0x0
 
-    .line 3
     :cond_2
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyNormalWideLDC(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -3700,7 +3345,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getOnTripodScenes()[Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;
 
@@ -3710,7 +3354,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getOnTripodScenes()[Lcom/android/camera2/vendortag/struct/MarshalQueryableASDScene$ASDScene;
 
@@ -3730,7 +3373,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->IMAGE_NAME:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -3746,7 +3388,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -3766,7 +3407,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyParallelImageName(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/String;)V
 
     return-void
@@ -3779,7 +3419,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->IS_PARALLEL_SNAPSHOT:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -3795,7 +3434,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -3815,7 +3453,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyParallelSnapshot(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -3833,12 +3470,11 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooOOOo()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooOOO0()Z
 
     move-result p1
 
@@ -3846,7 +3482,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportPortraitLighting()Z
 
@@ -3856,7 +3491,6 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getPortraitLightingPattern()I
 
@@ -3877,7 +3511,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyPureViewEnabled(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -3890,7 +3523,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->supportSATUltraWideLDCEnable()Z
 
@@ -3900,7 +3532,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySATUltraWideLDC(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -3914,7 +3545,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->SAT_FALLBACK_ENABLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -3930,7 +3560,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySatFallback(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -3942,7 +3571,6 @@
 
     if-nez p0, :cond_0
 
-    .line 1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applySatFallbackDisable: request null"
@@ -3951,7 +3579,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->SAT_FALLBACK_DISABLE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -3965,7 +3592,6 @@
 
     if-nez p1, :cond_1
 
-    .line 3
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const/4 p1, 0x1
@@ -3988,7 +3614,6 @@
 
     return-void
 
-    .line 4
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySatFallbackDisable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
@@ -4007,13 +3632,11 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->isSatIsZooming()Z
 
     move-result p1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applySatIsZooming(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -4026,7 +3649,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getSaturationLevel()I
 
@@ -4036,7 +3658,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applySaturation(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_1
@@ -4050,13 +3671,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getSceneMode()I
 
     move-result p1
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
@@ -4069,7 +3688,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4078,7 +3696,6 @@
 
     invoke-virtual {p0, v0, p1}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 4
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v0, 0x2
@@ -4091,7 +3708,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -4114,7 +3730,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isScreenLightHintSupported()Z
 
@@ -4122,7 +3737,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyScreenLightHint(): unsupported"
@@ -4131,7 +3745,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4151,7 +3764,6 @@
 
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyScreenLightHint(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -4164,7 +3776,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/CameraCapabilities;->isScreenLightLevelSupported()Z
 
@@ -4172,7 +3783,6 @@
 
     if-nez p0, :cond_1
 
-    .line 2
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     const-string p1, "applyScreenLightLevel(): unsupported"
@@ -4181,7 +3791,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4201,7 +3810,6 @@
 
     invoke-static {p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyScreenLightLevel(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -4216,7 +3824,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p1, p0}, Lcom/android/camera2/CaptureSessionConfigurations;->apply(Landroid/hardware/camera2/CaptureRequest$Builder;)V
 
@@ -4232,7 +3839,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getSharpnessLevel()I
 
@@ -4242,7 +3848,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applySharpness(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_1
@@ -4256,7 +3861,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -4264,7 +3868,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 2
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->SHRINK_MEMORY_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
     invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
@@ -4279,7 +3882,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyShrinkMemoryMode(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
@@ -4299,7 +3901,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->SHUTTER_TIMESTAMP:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -4315,7 +3916,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4339,7 +3939,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getShutterTimestamp()J
 
     move-result-wide p1
@@ -4354,7 +3953,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportMiBokeh()Z
 
     move-result p1
@@ -4363,7 +3961,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4387,7 +3984,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isSingleBokehEnabled()Z
 
     move-result p1
@@ -4406,7 +4002,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportSkinColor()Z
 
@@ -4416,7 +4011,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getSkinColorType()I
 
@@ -4426,7 +4020,6 @@
 
     const/4 p1, 0x0
 
-    .line 3
     invoke-static {p0, p1, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applySkinColor(Landroid/hardware/camera2/CaptureRequest$Builder;II)V
 
     goto :goto_0
@@ -4434,7 +4027,6 @@
     :cond_2
     const/16 p2, 0x64
 
-    .line 4
     invoke-static {p0, p1, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySkinColor(Landroid/hardware/camera2/CaptureRequest$Builder;II)V
 
     :goto_0
@@ -4448,7 +4040,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->ST_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -4464,61 +4055,9 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySmoothTransition(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
-    return-void
-.end method
-
-.method public static applySuperNightBokeh(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Z)V
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    .line 1
-    invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isMiviBokehSuperNightSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->SUPER_NIGHT_BOKEH_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "applySuperNightBokeh: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 4
-    invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySuperNightBokeh(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
-
-    :cond_0
     return-void
 .end method
 
@@ -4534,7 +4073,6 @@
 
     return-void
 
-    .line 1
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportSuperNight()Z
 
@@ -4544,7 +4082,6 @@
 
     return-void
 
-    .line 2
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getShotType()I
 
@@ -4556,234 +4093,52 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 3
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "PARALLEL_REPEATING: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_3
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_4
 
-    .line 4
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
+    goto :goto_0
 
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "APPLY_PREVIEW: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_0
-
-    .line 5
     :cond_4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isNeedFlash()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_5
-
-    .line 6
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
-
-    move-result v0
-
-    const/16 v1, 0x69
-
-    if-eq v0, v1, :cond_5
-
-    .line 7
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
-
-    move-result v0
-
-    const/16 v1, 0x68
-
-    if-eq v0, v1, :cond_5
-
-    .line 8
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
-
-    move-result v0
-
-    const/16 v1, 0x6a
-
-    if-eq v0, v1, :cond_5
-
-    .line 9
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "isNeedFlash: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
-
-    move-result p3
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz p1, :cond_5
 
     goto :goto_0
 
-    .line 10
     :cond_5
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isMiviSatSuperNightSupported()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_6
+    if-eqz p1, :cond_6
 
-    .line 11
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getMiviSuperNightMode()I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    .line 12
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getMiviSuperNightMode()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_6
-
-    .line 13
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "isMiviSatSuperNightSupported: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    .line 14
-    :cond_6
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooOOO0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_7
-
-    .line 15
-    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isAELocked()Z
 
     move-result p1
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
-    .line 16
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getMiviSuperNightMode()I
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const/16 v0, 0xa
 
-    const-string v0, "disableSuperNightWhenEvChanged && APPLY_CAPTURE && aeLocked: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eq p1, v0, :cond_6
 
     goto :goto_0
 
-    .line 17
-    :cond_7
+    :cond_6
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isSuperNightEnabled()Z
 
     move-result v2
 
-    .line 18
-    sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "isSuperNightEnabled: "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 19
     :goto_0
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4803,29 +4158,25 @@
 
     invoke-static {p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     invoke-static {p0, v2}, Lcom/android/camera2/compat/MiCameraCompat;->applySuperNightScene(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
-    .line 21
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isDebugInfoAsWatermarkSupported()Z
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_7
 
-    .line 22
     invoke-static {}, Lcom/android/camera/CameraSettings;->isDebugInfoAsWatermarkEnabled()Z
 
     move-result p1
 
-    .line 23
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "show debug info as watermark: "
+    const-string/jumbo v0, "show debug info as watermark: "
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4837,18 +4188,15 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     sget-object p2, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->DEBUG_INFO_AS_WATERMARK:Lcom/android/camera2/vendortag/VendorTag;
 
-    .line 25
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    .line 26
     invoke-static {p0, p2, p1}, Lcom/android/camera2/vendortag/VendorTagHelper;->setValueSafely(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/vendortag/VendorTag;Ljava/lang/Object;)V
 
-    :cond_8
+    :cond_7
     return-void
 .end method
 
@@ -4857,7 +4205,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportSuperResolution()Z
 
     move-result p2
@@ -4866,14 +4213,12 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_0
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isSuperResolutionEnabled()Z
 
     move-result p2
 
-    .line 3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
 
     move-result v0
 
@@ -4887,7 +4232,6 @@
 
     if-eq p1, v3, :cond_1
 
-    .line 4
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -4908,11 +4252,10 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 5
     :cond_1
     sget-object p3, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -4932,24 +4275,21 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySuperResolution(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     goto :goto_1
 
-    .line 7
     :cond_2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000o0O()Z
 
     move-result v0
 
-    .line 8
     sget-object v4, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -4966,11 +4306,10 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_3
 
-    .line 9
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isProPhotoModule()Z
 
     move-result v0
@@ -4990,7 +4329,6 @@
     :goto_0
     and-int/2addr p2, v0
 
-    .line 10
     :cond_5
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -5028,9 +4366,8 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applySuperResolution(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     :cond_6
@@ -5045,7 +4382,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportSwMfnr()Z
 
@@ -5062,12 +4398,10 @@
 
     const/4 p1, 0x0
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applySwMfnrEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isSwMfnrEnabled()Z
 
@@ -5085,7 +4419,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportTargetZoom()Z
 
@@ -5095,13 +4428,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getTargetZoom()F
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5120,7 +4451,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyTargetZoom(Landroid/hardware/camera2/CaptureRequest$Builder;F)V
 
     return-void
@@ -5135,7 +4465,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->THERMAL_LEVEL:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -5151,13 +4480,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getThermalLevel()I
 
     move-result p1
 
-    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -5169,54 +4496,6 @@
     return-void
 .end method
 
-.method public static applyTrackEyeEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera2/CameraConfigs;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportTrackEye()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    return-void
-
-    .line 2
-    :cond_1
-    invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isTrackEyeEnabled()Z
-
-    move-result p1
-
-    .line 3
-    sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "applyTrackEyeEnable: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 4
-    invoke-static {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusRequestTag;->applyTrackEyeEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
-
-    return-void
-.end method
-
 .method public static applyTrackFocusArea(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Landroid/graphics/Rect;)V
     .locals 2
 
@@ -5224,7 +4503,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportTrackFocus()Z
 
@@ -5234,7 +4512,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     sget-object p1, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
@@ -5254,7 +4531,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p2}, Lcom/android/camera/trackfocus/TrackFocusRequestTag;->applyTrackFocusArea(Landroid/hardware/camera2/CaptureRequest$Builder;Landroid/graphics/Rect;)V
 
     return-void
@@ -5267,7 +4543,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportTrackFocus()Z
 
@@ -5277,13 +4552,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isTrackFocusEnabled()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5302,7 +4575,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusRequestTag;->applyTrackFocusEnable(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -5315,7 +4587,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->MI_TUNING_MODE:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -5331,13 +4602,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getTuringMode()B
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -5356,7 +4625,6 @@
 
     invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyTuningMode(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
     return-void
@@ -5371,7 +4639,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isUltraPixelPortraitTagDefined()Z
 
@@ -5381,13 +4648,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isUltraPixelPortraitEnabled()Z
 
     move-result p1
 
-    .line 3
     sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -5406,7 +4671,6 @@
 
     invoke-static {p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyUltraPixelPortrait(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     :cond_2
@@ -5421,7 +4685,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportUltraWideLDC()Z
 
@@ -5431,13 +4694,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isUltraWideLDCEnabled()Z
 
     move-result p1
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyUltraWideLDC(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void
@@ -5450,7 +4711,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1, p3}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoBokehColorRetentionTag(Z)Z
 
@@ -5460,13 +4720,11 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2, p3}, Lcom/android/camera2/CameraConfigs;->getVideoBokehColorRetentionMode(Z)I
 
     move-result p1
 
-    .line 3
     invoke-static {p0, p1, p3}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoBokehColorRetentionMode(Landroid/hardware/camera2/CaptureRequest$Builder;IZ)V
 
     return-void
@@ -5479,7 +4737,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
@@ -5492,7 +4749,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoBokehRequestTag(Z)Z
 
     move-result p1
@@ -5501,13 +4757,11 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getVideoBokehLevelBack()I
 
     move-result p1
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoBokehBackLevel(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     return-void
@@ -5520,7 +4774,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getFacing()I
 
@@ -5533,7 +4786,6 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoBokehRequestTag(Z)Z
 
     move-result p1
@@ -5542,13 +4794,11 @@
 
     return-void
 
-    .line 3
     :cond_2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getVideoBokehLevelFront()F
 
     move-result p1
 
-    .line 4
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoBokehFrontLevel(Landroid/hardware/camera2/CaptureRequest$Builder;F)V
 
     return-void
@@ -5561,7 +4811,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoFilterRequestTag()Z
 
@@ -5571,7 +4820,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getVideoFilterId()I
 
@@ -5581,7 +4829,6 @@
 
     if-eq p1, p2, :cond_2
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoFilterId(Landroid/hardware/camera2/CaptureRequest$Builder;I)V
 
     :cond_2
@@ -5598,7 +4845,6 @@
     :cond_0
     const/4 v0, 0x5
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
 
     move-result v1
@@ -5616,7 +4862,6 @@
     :cond_1
     move v0, v3
 
-    .line 2
     :goto_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getFlashMode()I
 
@@ -5644,10 +4889,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 3
     invoke-static {p0, v2}, Lcom/android/camera2/compat/MiCameraCompat;->applyBackSoftLight(Landroid/hardware/camera2/CaptureRequest$Builder;B)V
 
-    .line 4
     :cond_4
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -5659,7 +4902,6 @@
 
     goto :goto_3
 
-    .line 5
     :cond_5
     sget-object p1, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -5680,13 +4922,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->getVideoFpsRange()Landroid/util/Range;
 
     move-result-object p1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5709,7 +4949,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -5719,57 +4958,52 @@
 .end method
 
 .method public static applyVideoHdrMode(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera2/CameraConfigs;)V
-    .locals 3
+    .locals 2
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isSupportVideoHdr()Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_1
+    if-nez p1, :cond_1
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isVideoHdrEnable()Z
 
+    move-result p1
+
+    sget-object p2, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "applyVideoHdrMode: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooOOO()Z
+
     move-result p2
 
-    .line 3
-    sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
+    if-eqz p2, :cond_3
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_2
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "applyVideoHdrMode: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 4
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OoooOOo()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    if-eqz p2, :cond_2
-
-    .line 5
     sget-object p1, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->MTK_HDR_FEATURE_HDR_MODE_VIDEO_ON:[I
 
     goto :goto_0
@@ -5782,43 +5016,9 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->XIAOMI_VIDEO_HDR_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
+    invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoHdrMode(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
-    invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 7
-    invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoHdrMode(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
-
-    goto :goto_1
-
-    .line 8
-    :cond_4
-    sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->QCOM_VIDEO_MFHDR_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
-
-    invoke-virtual {v0}, Lcom/android/camera2/vendortag/VendorTag;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/android/camera2/CameraCapabilities;->isTagDefined(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    .line 9
-    invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyVideoMFHdrMode(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
-
-    :cond_5
     :goto_1
     return-void
 .end method
@@ -5830,7 +5030,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lcom/android/camera2/vendortag/CaptureRequestVendorTags;->PRO_VIDEO_LOG_ENABLED:Lcom/android/camera2/vendortag/VendorTag;
 
@@ -5846,7 +5045,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->isVideoLogEnabled()Z
 
@@ -5864,7 +5062,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p2}, Lcom/android/camera2/CameraCapabilities;->isSupportWatermark()Z
 
@@ -5885,19 +5082,17 @@
 
     const-string p1, ""
 
-    .line 2
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyWaterMarkAppliedList(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/String;)V
 
     :cond_2
     return-void
 
-    .line 3
     :cond_3
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0Oo0()Z
+    invoke-virtual {p1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0oO0O0o()Z
 
     move-result p1
 
@@ -5905,7 +5100,6 @@
 
     return-void
 
-    .line 4
     :cond_4
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getWaterMarkAppliedList()Ljava/util/List;
 
@@ -5917,7 +5111,6 @@
 
     move-result-object p1
 
-    .line 5
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5936,15 +5129,13 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyWaterMarkAppliedList(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/String;)V
 
-    .line 7
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oo00()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o00O()Z
 
     move-result v0
 
@@ -5958,14 +5149,12 @@
 
     const-string p2, "device"
 
-    .line 8
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    .line 9
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->isCinematicPhotoEnabled()Z
 
     move-result p2
@@ -5974,7 +5163,6 @@
 
     move-result-object p2
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5992,16 +5180,14 @@
     invoke-static {p0, p2}, Lcom/android/camera2/compat/MiCameraCompat;->applyCustomWaterMark(Landroid/hardware/camera2/CaptureRequest$Builder;Ljava/lang/String;)V
 
     :cond_5
-    const-string p2, "watermark"
+    const-string/jumbo p2, "watermark"
 
-    .line 11
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-eqz p2, :cond_6
 
-    .line 12
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getTimeWaterMarkValue()Ljava/lang/String;
 
     move-result-object p2
@@ -6011,14 +5197,12 @@
     :cond_6
     const-string p2, "beautify"
 
-    .line 13
     invoke-virtual {p1, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    .line 14
     invoke-virtual {p3}, Lcom/android/camera2/CameraConfigs;->getFaceWaterMarkFormat()Ljava/lang/String;
 
     move-result-object p1
@@ -6028,7 +5212,6 @@
     :cond_7
     const/4 p0, 0x0
 
-    .line 15
     invoke-virtual {p3, p0}, Lcom/android/camera2/CameraConfigs;->setNewWatermark(Z)V
 
     return-void
@@ -6041,13 +5224,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/android/camera2/CaptureRequestBuilder;->applyTargetZoom(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CameraCapabilities;Lcom/android/camera2/CameraConfigs;)V
 
     if-eqz p2, :cond_1
 
-    .line 2
     invoke-virtual {p2}, Lcom/android/camera2/CameraConfigs;->getZoomRatio()F
 
     move-result p2
@@ -6057,7 +5238,6 @@
     :cond_1
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 3
     :goto_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->isZoomRatioSupported()Z
 
@@ -6065,23 +5245,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
     invoke-static {p0, p2}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->applyZoomRatio(Landroid/hardware/camera2/CaptureRequest$Builder;F)V
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getActiveArraySize()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 6
     invoke-static {p2, v0}, Lcom/android/camera/HybridZoomingSystem;->toCropRegion(FLandroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 7
     invoke-static {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusRequestTag;->applyCropRegion(Landroid/hardware/camera2/CaptureRequest$Builder;Landroid/graphics/Rect;)V
 
-    .line 8
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -6112,26 +5287,21 @@
 
     goto :goto_1
 
-    .line 9
     :cond_2
     invoke-virtual {p1}, Lcom/android/camera2/CameraCapabilities;->getActiveArraySize()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 10
     invoke-static {p2, v0}, Lcom/android/camera/HybridZoomingSystem;->toCropRegion(FLandroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 11
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {p0, v2, v1}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 12
     invoke-static {p0, v1}, Lcom/android/camera/trackfocus/TrackFocusRequestTag;->applyCropRegion(Landroid/hardware/camera2/CaptureRequest$Builder;Landroid/graphics/Rect;)V
 
-    .line 13
     sget-object p0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6183,13 +5353,11 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/CameraConfigs;->isZslEnabled()Z
 
     move-result p1
 
-    .line 2
     sget-object v0, Lcom/android/camera2/CaptureRequestBuilder;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6208,7 +5376,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p1}, Lcom/android/camera2/compat/MiCameraCompat;->applyZsl(Landroid/hardware/camera2/CaptureRequest$Builder;Z)V
 
     return-void

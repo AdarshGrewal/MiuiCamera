@@ -40,17 +40,14 @@
 .method public constructor <init>(Landroidx/lifecycle/LifecycleOwner;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/observeable/RxData$DataCheck$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/observeable/RxData$DataCheck$1;-><init>(Lcom/android/camera/data/observeable/RxData$DataCheck;)V
 
     iput-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataCheck;->predicateCheck:Lio/reactivex/functions/Predicate;
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataCheck;->owner:Landroidx/lifecycle/LifecycleOwner;
 
     return-void
@@ -59,7 +56,6 @@
 .method public static synthetic access$000(Lcom/android/camera/data/observeable/RxData$DataCheck;)Landroidx/lifecycle/LifecycleOwner;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$DataCheck;->owner:Landroidx/lifecycle/LifecycleOwner;
 
     return-object p0
@@ -77,7 +73,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/observeable/RxData$DataCheck;->predicateCheck:Lio/reactivex/functions/Predicate;
 
     return-object v0

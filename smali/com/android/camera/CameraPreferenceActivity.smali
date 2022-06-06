@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final FROM_WHERE:Ljava/lang/String; = "from_where"
+
 .field public static final TAG:Ljava/lang/String;
 
 
@@ -11,7 +13,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/CameraPreferenceActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,99 +27,80 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
 .end method
 
 .method private dispatchPreferenceActivity()V
-    .locals 5
+    .locals 4
 
-    .line 1
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const-string v1, "from_where"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
-    move-result-object v2
+    move-result-object v1
 
-    .line 3
-    invoke-virtual {v2}, Lcom/android/camera/data/data/global/DataItemGlobal;->getIntentType()I
+    invoke-virtual {v1}, Lcom/android/camera/data/data/global/DataItemGlobal;->getCurrentMode()I
 
-    move-result v3
+    move-result v2
 
-    .line 4
-    new-instance v4, Landroid/content/Intent;
+    const-string v3, "from_where"
 
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 5
-    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v1}, Lcom/android/camera/data/data/global/DataItemGlobal;->getIntentType()I
 
-    const-string v0, "intent_type"
+    move-result v2
 
-    .line 6
-    invoke-virtual {v4, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const-string v3, "intent_type"
 
-    const/4 v0, 0x2
+    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    if-ne v3, v0, :cond_0
+    const/4 v3, 0x2
 
-    .line 7
-    invoke-virtual {v2}, Lcom/android/camera/data/data/global/DataItemGlobal;->getIntentVideoQuality()I
+    if-ne v2, v3, :cond_0
 
-    move-result v0
+    invoke-virtual {v1}, Lcom/android/camera/data/data/global/DataItemGlobal;->getIntentVideoQuality()I
 
-    const-string v1, "intent_video_quality"
+    move-result v1
 
-    invoke-virtual {v4, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const-string v2, "intent_video_quality"
 
-    .line 8
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/android/camera/CameraIntentManager;->isStartActivityWhenLocked(Landroid/content/Intent;)Z
+    invoke-static {v1}, Lcom/android/camera/CameraIntentManager;->isStartActivityWhenLocked(Landroid/content/Intent;)Z
 
-    move-result v0
+    move-result v1
 
-    invoke-static {v4, v0}, Lcom/android/camera/CameraIntentManager;->setStartActivityWhenLocked(Landroid/content/Intent;Z)V
+    invoke-static {v0, v1}, Lcom/android/camera/CameraIntentManager;->setStartActivityWhenLocked(Landroid/content/Intent;Z)V
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 10
-    const-class v0, Lcom/android/camera/PreferencePadActivity;
+    const-class v1, Lcom/android/camera/PreferencePadActivity;
 
-    invoke-virtual {v4, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 11
     :cond_1
-    const-class v0, Lcom/android/camera/PreferencePhoneActivity;
+    const-class v1, Lcom/android/camera/PreferencePhoneActivity;
 
-    invoke-virtual {v4, p0, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 12
     :goto_0
-    invoke-virtual {p0, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -128,13 +110,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/CameraPreferenceActivity;->dispatchPreferenceActivity()V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void

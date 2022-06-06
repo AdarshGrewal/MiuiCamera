@@ -31,17 +31,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mChinaMap:Ljava/util/HashMap;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -63,12 +60,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2
     new-instance v10, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v2, 0x40442d2d666a9824L    # 40.352948
@@ -87,7 +82,6 @@
 
     invoke-virtual {v0, v1, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v12, 0x4043f4b5b2d4d402L    # 39.911795
@@ -106,7 +100,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x4043efde05037500L    # 39.873963
@@ -125,7 +118,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x4043fd765fd8adacL    # 39.980175
@@ -144,7 +136,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403e3b40d4dc65c7L    # 30.231458
@@ -163,7 +154,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403f4c33b5393251L    # 31.297664
@@ -182,7 +172,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403e155821294574L    # 30.083376
@@ -197,11 +186,10 @@
 
     invoke-direct/range {v3 .. v11}, Lcom/android/camera/aiwatermark/data/Region;-><init>(DDDD)V
 
-    const-string v2, "mount_huang"
+    const-string/jumbo v2, "mount_huang"
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x404130d9ad85dfa8L    # 34.381643
@@ -220,7 +208,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403d01df00abf76aL    # 29.007309
@@ -239,7 +226,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403d8fa6266fd652L    # 29.561129
@@ -258,7 +244,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x40411ac753e707e1L    # 34.209208
@@ -277,7 +262,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x40386fccaf709b74L    # 24.436717
@@ -296,7 +280,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403da70d413122b8L    # 29.652546
@@ -315,7 +298,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403f3b3de1e2de87L    # 31.231413
@@ -334,7 +316,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x4036484ed6fda837L    # 22.282453
@@ -368,12 +349,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2
     new-instance v10, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v2, 0x403b2b823c85c24cL    # 27.169956
@@ -392,7 +371,6 @@
 
     invoke-virtual {v0, v1, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v12, 0x403ca699b6f5caf3L    # 28.650783
@@ -411,7 +389,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x4032ebf7164c729fL    # 18.921739
@@ -430,7 +407,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403c9cdd1e53a81eL    # 28.612749
@@ -449,7 +425,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x4032f07d912556d2L    # 18.939416
@@ -468,7 +443,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403b2d15df6555c5L    # 27.176115
@@ -487,7 +461,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403afaec5b078d93L    # 26.980169
@@ -506,7 +479,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v1, Lcom/android/camera/aiwatermark/data/Region;
 
     const-wide v4, 0x403aec61a60d4563L    # 26.923365
@@ -543,7 +515,6 @@
 
     const/4 v0, 0x5
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -564,7 +535,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getWatermarkByType(I)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -596,7 +566,6 @@
 
     return-object p1
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mIndiaMap:Ljava/util/HashMap;
 
@@ -606,20 +575,17 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->getIndiaRegion()Ljava/util/HashMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mIndiaMap:Ljava/util/HashMap;
 
-    .line 3
     :cond_1
     iget-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mIndiaMap:Ljava/util/HashMap;
 
     return-object p1
 
-    .line 4
     :cond_2
     iget-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mChinaMap:Ljava/util/HashMap;
 
@@ -629,14 +595,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->getChinaRegion()Ljava/util/HashMap;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mChinaMap:Ljava/util/HashMap;
 
-    .line 6
     :cond_3
     iget-object p1, p0, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;->mChinaMap:Ljava/util/HashMap;
 

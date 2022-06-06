@@ -21,10 +21,8 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/effect/renders/RegionEffectRender;->init()V
 
     return-void
@@ -33,10 +31,8 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/effect/renders/RegionEffectRender;->init()V
 
     return-void
@@ -45,15 +41,12 @@
 .method private getChangeMatrix()Landroid/graphics/Matrix;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 3
     iget v1, p0, Lcom/android/camera/effect/renders/Render;->mOrientation:I
 
     iget v2, p0, Lcom/android/camera/effect/renders/Render;->mJpegOrientation:I
@@ -66,12 +59,10 @@
 
     const/high16 v1, -0x41000000    # -0.5f
 
-    .line 4
     invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 5
     invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     return-object v0
@@ -94,14 +85,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/effect/renders/RegionEffectRender;->getChangeMatrix()Landroid/graphics/Matrix;
 
     move-result-object v6
 
     new-array p1, v5, [F
 
-    .line 2
     iget-object v5, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget-object v7, v5, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint1:Landroid/graphics/PointF;
@@ -138,12 +127,10 @@
 
     move-object v9, p1
 
-    .line 3
     invoke-virtual/range {v6 .. v11}, Landroid/graphics/Matrix;->mapPoints([FI[FII)V
 
     return-object p1
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -155,7 +142,6 @@
 
     new-array v5, v5, [F
 
-    .line 5
     iget-object v6, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mPoint1:Landroid/graphics/PointF;
 
     iget v7, v6, Landroid/graphics/PointF;->x:F
@@ -186,7 +172,6 @@
 .method private init()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -197,7 +182,6 @@
 
     const v1, 0x7f070268
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
@@ -206,7 +190,6 @@
 
     const v1, 0x7f070263
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
@@ -229,31 +212,26 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v4, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
 
     iget v5, p1, Landroid/graphics/RectF;->left:F
 
     aput v5, v4, v3
 
-    .line 2
     iget v3, p1, Landroid/graphics/RectF;->top:F
 
     aput v3, v4, v2
 
-    .line 3
     iget v2, p1, Landroid/graphics/RectF;->right:F
 
     aput v2, v4, v1
 
-    .line 4
     iget p1, p1, Landroid/graphics/RectF;->bottom:F
 
     aput p1, v4, v0
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
 
@@ -261,15 +239,12 @@
 
     aput v4, p1, v3
 
-    .line 6
     aput v4, p1, v2
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 7
     aput v2, p1, v1
 
-    .line 8
     aput v2, p1, v0
 
     :goto_0
@@ -283,7 +258,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/effect/renders/Render;->mMirror:Z
 
     const/4 v0, 0x3
@@ -296,7 +270,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/Render;->mOrientation:I
 
     rem-int/lit16 p1, p1, 0xb4
@@ -305,7 +278,6 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     new-instance p1, Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
@@ -326,7 +298,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p1, Landroid/graphics/RectF;
 
@@ -348,7 +319,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     new-instance p1, Landroid/graphics/RectF;
 
@@ -364,40 +334,33 @@
 
     invoke-direct {p1, v5, v6, v7, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 6
     :goto_0
     invoke-direct {p0}, Lcom/android/camera/effect/renders/RegionEffectRender;->getChangeMatrix()Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    .line 7
     invoke-virtual {v4, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 8
     iget-object v4, p0, Lcom/android/camera/effect/renders/ShaderRender;->mSnapshotEffectRect:[F
 
     iget v5, p1, Landroid/graphics/RectF;->left:F
 
     aput v5, v4, v3
 
-    .line 9
     iget v3, p1, Landroid/graphics/RectF;->top:F
 
     aput v3, v4, v2
 
-    .line 10
     iget v2, p1, Landroid/graphics/RectF;->right:F
 
     aput v2, v4, v1
 
-    .line 11
     iget p1, p1, Landroid/graphics/RectF;->bottom:F
 
     aput p1, v4, v0
 
     return-object v4
 
-    .line 12
     :cond_2
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -407,7 +370,6 @@
 
     move-result-object p1
 
-    .line 13
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     iget v1, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mThresholdWidth:I
@@ -420,7 +382,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 14
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->setEffectRectF(Landroid/graphics/RectF;)V
 
     goto :goto_1
@@ -428,10 +389,8 @@
     :cond_3
     const/4 p1, 0x0
 
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->setEffectRectF(Landroid/graphics/RectF;)V
 
-    .line 16
     :goto_1
     iget-object p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
 
@@ -443,14 +402,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     iget p1, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mInvertFlag:I
 
     return p1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
@@ -466,7 +423,6 @@
 .method public initEffectRect(Z)V
     .locals 4
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mUniformEffectRectH:I
 
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->getEffectRect(Z)[F
@@ -479,7 +435,6 @@
 
     invoke-static {v0, v3, v1, v2}, Landroid/opengl/GLES20;->glUniform4fv(II[FI)V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mUniformInvertRectH:I
 
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->getInvertFlag(Z)I
@@ -488,7 +443,6 @@
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mUniformEffectParameterH:I
 
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->getEffectArray(Z)[F
@@ -505,10 +459,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uEffectRect"
@@ -519,7 +471,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mUniformEffectRectH:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uInvertRect"
@@ -530,7 +481,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mUniformInvertRectH:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uEffectArray"
@@ -547,10 +497,8 @@
 .method public initShaderValue(Z)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShaderValue(Z)V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->initEffectRect(Z)V
 
     return-void
@@ -559,10 +507,8 @@
 .method public setEffectRangeAttribute(Lcom/android/camera/effect/EffectController$EffectRectAttribute;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/renders/RegionEffectRender;->mAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
-    .line 2
     iget-object p1, p1, Lcom/android/camera/effect/EffectController$EffectRectAttribute;->mRectF:Landroid/graphics/RectF;
 
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/RegionEffectRender;->setEffectRectF(Landroid/graphics/RectF;)V

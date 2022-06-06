@@ -19,7 +19,6 @@
 
     const-string v0, "FUP2AHelper"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -28,17 +27,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     const/4 v0, 0x1
 
-    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->b:I
 
     return-void
@@ -64,14 +60,12 @@
 .method public close()V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeClose(J)V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     return-void
@@ -80,7 +74,6 @@
 .method public encodeFrame(Landroid/graphics/Bitmap;I)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     const-wide/16 v2, 0x0
@@ -93,7 +86,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -113,14 +105,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 3
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeEncodeFrame(JLandroid/graphics/Bitmap;I)Z
 
     return v3
 
-    .line 4
     :cond_1
     sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -174,7 +164,6 @@
 
     move-result-object p1
 
-    .line 5
     new-instance p2, Ljava/lang/RuntimeException;
 
     invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
@@ -185,7 +174,6 @@
 .method public init(IILjava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/gif/EncodingType;->ENCODING_TYPE_NORMAL_LOW_MEMORY:Lcom/faceunity/pta_helper/gif/EncodingType;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/faceunity/pta_helper/gif/GifEncoder;->init(IILjava/lang/String;Lcom/faceunity/pta_helper/gif/EncodingType;)V
@@ -196,7 +184,6 @@
 .method public init(IILjava/lang/String;Lcom/faceunity/pta_helper/gif/EncodingType;)V
     .locals 10
 
-    .line 2
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     const-wide/16 v2, 0x0
@@ -205,17 +192,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/gif/GifEncoder;->close()V
 
-    .line 4
     :cond_0
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->c:I
 
-    .line 5
     iput p2, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->d:I
 
-    .line 6
     iget v8, p4, Lcom/faceunity/pta_helper/gif/EncodingType;->a:I
 
     iget v9, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->b:I
@@ -240,7 +223,6 @@
 
     return-void
 
-    .line 7
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -254,7 +236,6 @@
 .method public setDither(Z)V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     const-wide/16 v2, 0x0
@@ -265,7 +246,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeSetDither(JZ)V
 
@@ -275,10 +255,8 @@
 .method public setThreadCount(I)V
     .locals 4
 
-    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->b:I
 
-    .line 2
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->a:J
 
     const-wide/16 v2, 0x0
@@ -289,7 +267,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeSetThreadCount(JI)V
 

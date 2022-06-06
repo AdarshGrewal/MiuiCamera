@@ -93,34 +93,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/DialogFragment;-><init>()V
 
     const-string v0, "hh:mm"
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTimeFormat:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOrientation:I
 
     const/16 v1, 0xa9
 
-    .line 4
     iput v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
-    .line 6
     iput v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTargetDegree:I
 
-    .line 7
     iput v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mStartDegree:I
 
-    .line 8
     iput-boolean v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mhasDismissed:Z
 
     return-void
@@ -129,7 +121,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)Landroid/widget/FrameLayout;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mContentFrameLayout:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -138,7 +129,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)Landroid/widget/ImageView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationRedIndicator:Landroid/widget/ImageView;
 
     return-object p0
@@ -147,7 +137,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)Lcom/android/camera/ui/AutoHibernationBatteryView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationBatteryView:Lcom/android/camera/ui/AutoHibernationBatteryView;
 
     return-object p0
@@ -156,7 +145,6 @@
 .method public static synthetic access$400(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
     return p0
@@ -165,7 +153,6 @@
 .method public static synthetic access$402(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
     return p1
@@ -174,22 +161,18 @@
 .method private adjustViewSize(Landroid/view/View;)V
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    .line 4
     iget v2, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-ne v2, v0, :cond_0
@@ -198,11 +181,9 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 5
     :cond_0
     iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 6
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_1
@@ -216,7 +197,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -227,10 +207,8 @@
 
     const-wide/16 v1, 0x3e8
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$3;
@@ -239,14 +217,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatMode(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, -0x1
@@ -265,7 +241,6 @@
 .method private resumeMode()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -278,17 +253,14 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$BackStack;
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->removeBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera/Camera;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
 
     move-result v1
@@ -297,7 +269,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/Camera;->exitAutoHibernationMode()V
 
@@ -307,7 +278,6 @@
 .method private setTranslationY(Landroid/view/View;FF)V
     .locals 8
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v1, "translateFrom"
@@ -318,12 +288,10 @@
 
     const-wide/high16 v2, 0x4059000000000000L    # 100.0
 
-    .line 2
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 3
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v2, "translateTo"
@@ -334,7 +302,6 @@
 
     const-wide/16 v3, 0x0
 
-    .line 4
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -347,7 +314,6 @@
 
     aput-object p1, v3, v4
 
-    .line 5
     invoke-static {v3}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v3
@@ -372,7 +338,6 @@
 
     const/4 p2, -0x2
 
-    .line 6
     invoke-virtual {v6, p2, v7}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p2
@@ -385,14 +350,12 @@
 
     aput-object v2, p3, v4
 
-    .line 7
     invoke-virtual {p2, p3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     aput-object p1, v5, v4
 
-    .line 8
     invoke-interface {v3, v0, v1, v5}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -401,7 +364,6 @@
 .method private startAnimator()V
     .locals 11
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v1, "scalefrom"
@@ -412,19 +374,16 @@
 
     const-wide v2, 0x3ff3333340000000L    # 1.2000000476837158
 
-    .line 2
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v2, "scaleto"
@@ -435,19 +394,16 @@
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
-    .line 5
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 7
     new-instance v2, Lmiuix/animation/controller/AnimState;
 
     const-string v5, "alphafrom"
@@ -458,12 +414,10 @@
 
     const-wide/16 v6, 0x0
 
-    .line 8
     invoke-virtual {v2, v5, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
 
-    .line 9
     new-instance v5, Lmiuix/animation/controller/AnimState;
 
     const-string v6, "alphato"
@@ -472,7 +426,6 @@
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     invoke-virtual {v5, v6, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -481,7 +434,6 @@
 
     new-array v5, v4, [Landroid/view/View;
 
-    .line 11
     iget-object v6, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mContentFrameLayout:Landroid/widget/FrameLayout;
 
     const/4 v7, 0x0
@@ -506,7 +458,6 @@
 
     const/16 v10, 0x10
 
-    .line 12
     invoke-virtual {v8, v10, v9}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v8
@@ -531,7 +482,6 @@
 
     const/4 v8, -0x2
 
-    .line 13
     invoke-virtual {v5, v8, v6}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
@@ -544,17 +494,14 @@
 
     aput-object v6, v4, v7
 
-    .line 14
     invoke-virtual {v5, v4}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
 
     aput-object v4, v3, v7
 
-    .line 15
     invoke-interface {v2, v0, v1, v3}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 16
     iget v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const v1, 0x3f8ccccd    # 1.1f
@@ -569,40 +516,33 @@
 
     if-ne v0, v5, :cond_0
 
-    .line 17
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v2, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v1, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
-    .line 19
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v3, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationBatteryView:Lcom/android/camera/ui/AutoHibernationBatteryView;
 
     invoke-direct {p0, v0, v3, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
     goto :goto_0
 
-    .line 21
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeContent:Landroid/widget/LinearLayout;
 
     invoke-direct {p0, v0, v2, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, v1, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationBatteryView:Lcom/android/camera/ui/AutoHibernationBatteryView;
 
     invoke-direct {p0, v0, v3, v4}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->setTranslationY(Landroid/view/View;FF)V
@@ -622,14 +562,12 @@
 .method private updateFirstVideoRecordingTime()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const/16 v1, 0xa9
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFirstTimeStr:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -638,14 +576,12 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFirstTimeStr:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mSecondTimeStr:Ljava/lang/String;
 
@@ -655,7 +591,6 @@
 
     if-nez v0, :cond_3
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mSecondTimeStr:Ljava/lang/String;
@@ -677,7 +612,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFirstTimeStr:Ljava/lang/String;
 
@@ -687,7 +621,6 @@
 
     if-nez v0, :cond_3
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFirstTimeStr:Ljava/lang/String;
@@ -702,7 +635,6 @@
 .method private updateSystemTime()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCalendar:Ljava/util/Calendar;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -711,7 +643,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCalendar:Ljava/util/Calendar;
 
@@ -719,21 +650,18 @@
 
     move-result v0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->isLocaleChinese()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mWeekdayShortDes:[Ljava/lang/String;
 
     aget-object v0, v1, v0
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mWeekdayDes:[Ljava/lang/String;
 
@@ -746,7 +674,6 @@
     :catch_0
     const-string v0, ""
 
-    .line 6
     :goto_0
     invoke-static {}, Lcom/android/camera/Util;->isLocaleChinese()Z
 
@@ -754,7 +681,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -785,7 +711,6 @@
 
     move-result-object v0
 
-    .line 8
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -807,7 +732,6 @@
 
     move-result-object v0
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -820,7 +744,6 @@
 .method public final canProvide()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -835,10 +758,8 @@
 
     const-string v1, "dismissAutoHibernation"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -853,10 +774,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$PresentationDisplay;->hideAutoHibernation()V
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
@@ -866,12 +785,10 @@
 .method public initOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOrientation:I
 
     rsub-int p1, p1, 0x168
 
-    .line 2
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
     return-void
@@ -880,7 +797,6 @@
 .method public onActivityCreated(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
@@ -889,12 +805,11 @@
 
     move-result-object v0
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0000ooO()Z
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000o0()Z
 
     move-result v1
 
@@ -902,29 +817,23 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/Window;->requestFeature(I)Z
 
-    .line 4
     :cond_0
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     const/4 p1, -0x1
 
-    .line 5
     invoke-virtual {v0, p1, p1}, Landroid/view/Window;->setLayout(II)V
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/display/Display;->isContentViewExtendToTopEdges()Z
+    invoke-static {}, Lcom/android/camera/Display;->isContentViewExtendToTopEdges()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 7
     invoke-static {v0}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->setCutoutModeShortEdges(Landroid/view/Window;)V
 
-    .line 8
     :cond_1
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -932,7 +841,6 @@
 
     const/16 v0, 0x1006
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     return-void
@@ -947,14 +855,12 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mhasDismissed:Z
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -970,19 +876,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$PresentationDisplay;->hideAutoHibernation()V
 
     :cond_1
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mhasDismissed:Z
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->resumeMode()V
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
     :cond_2
@@ -993,10 +895,8 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->resumeMode()V
 
     return-void
@@ -1005,7 +905,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -1019,7 +918,6 @@
     :cond_0
     const/4 p1, 0x5
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->onBackEvent(I)Z
 
     :goto_0
@@ -1029,19 +927,16 @@
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     const/16 v1, 0x30
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
     return-object p1
@@ -1052,16 +947,14 @@
 
     const/4 p3, 0x0
 
-    const v0, 0x7f0d0065
+    const v0, 0x7f0d0064
 
-    .line 1
     invoke-virtual {p1, v0, p2, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     const p2, 0x7f0a0070
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1070,7 +963,6 @@
 
     const p2, 0x7f0a006f
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1081,7 +973,6 @@
 
     const p2, 0x7f0a0078
 
-    .line 4
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1092,7 +983,6 @@
 
     const p2, 0x7f0a0079
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1103,7 +993,6 @@
 
     const p2, 0x7f0a0071
 
-    .line 6
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1114,7 +1003,6 @@
 
     const p2, 0x7f0a0072
 
-    .line 7
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1125,7 +1013,6 @@
 
     const p2, 0x7f0a0074
 
-    .line 8
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1136,7 +1023,6 @@
 
     const p2, 0x7f0a0075
 
-    .line 9
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1147,7 +1033,6 @@
 
     const p2, 0x7f0a0077
 
-    .line 10
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1156,12 +1041,11 @@
 
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
-    .line 11
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p2
 
-    invoke-virtual {p2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o000Ooo()Z
+    invoke-virtual {p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0000oO0()Z
 
     move-result p2
 
@@ -1169,27 +1053,22 @@
 
     const-string p2, "mitype-mono-light"
 
-    .line 12
     invoke-static {p2, p3}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p2
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
@@ -1199,27 +1078,22 @@
     :cond_0
     const-string p2, "miclock-mono"
 
-    .line 17
     invoke-static {p2, p3}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p2
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 19
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 21
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
@@ -1227,7 +1101,6 @@
     :goto_0
     const p2, 0x7f0a0076
 
-    .line 22
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1238,7 +1111,6 @@
 
     const p2, 0x7f0a007a
 
-    .line 23
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1249,7 +1121,6 @@
 
     const p2, 0x7f0a006e
 
-    .line 24
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1260,64 +1131,54 @@
 
     const p2, 0x7f0a0073
 
-    .line 25
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->adjustViewSize(Landroid/view/View;)V
 
-    .line 26
     new-instance p2, Ljava/text/DateFormatSymbols;
 
     invoke-direct {p2}, Ljava/text/DateFormatSymbols;-><init>()V
 
-    .line 27
     invoke-virtual {p2}, Ljava/text/DateFormatSymbols;->getWeekdays()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mWeekdayDes:[Ljava/lang/String;
 
-    .line 28
     invoke-virtual {p2}, Ljava/text/DateFormatSymbols;->getShortWeekdays()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mWeekdayShortDes:[Ljava/lang/String;
 
-    .line 29
     invoke-virtual {p2}, Ljava/text/DateFormatSymbols;->getAmPmStrings()[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 30
     aget-object v0, p2, p3
 
     iput-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAmString:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 31
     aget-object p2, p2, v0
 
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mPmString:Ljava/lang/String;
 
-    .line 32
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCalendar:Ljava/util/Calendar;
 
-    .line 33
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
     if-eqz p2, :cond_6
 
-    .line 34
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1335,25 +1196,21 @@
     :cond_1
     const-string p2, "hh:mm"
 
-    .line 35
     :goto_1
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTimeFormat:Ljava/lang/String;
 
-    .line 36
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mContentFrameLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
-    .line 37
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 38
     iget-object v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1362,7 +1219,6 @@
 
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 39
     iget-object v2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationBatteryView:Lcom/android/camera/ui/AutoHibernationBatteryView;
 
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1371,7 +1227,6 @@
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 40
     iget v3, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const/16 v4, 0xa9
@@ -1380,7 +1235,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 41
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1397,7 +1251,6 @@
 
     iput v3, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 42
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1412,7 +1265,6 @@
 
     iput v3, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 43
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1427,7 +1279,6 @@
 
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 44
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1442,22 +1293,18 @@
 
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 45
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 46
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 47
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {p2, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 48
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1474,7 +1321,6 @@
 
     iput p2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 49
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1491,7 +1337,6 @@
 
     iput p2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 50
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1512,7 +1357,6 @@
 
     goto/16 :goto_3
 
-    .line 51
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1530,7 +1374,6 @@
 
     iput v3, p2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 52
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1545,7 +1388,6 @@
 
     iput v3, p2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 53
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1560,7 +1402,6 @@
 
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 54
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1575,22 +1416,18 @@
 
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 55
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-virtual {p2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 56
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-virtual {p2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 57
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {p2, p3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 58
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1607,7 +1444,6 @@
 
     iput p2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 59
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1624,7 +1460,6 @@
 
     iput p2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 60
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSystemTime:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1643,7 +1478,6 @@
 
     invoke-virtual {p2, p3, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 61
     iget p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const/16 v0, 0xb4
@@ -1669,44 +1503,37 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 62
     :cond_4
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 63
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeDivider:Landroid/widget/ImageView;
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 64
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_3
 
-    .line 65
     :cond_5
     :goto_2
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 66
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeDivider:Landroid/widget/ImageView;
 
     const/16 p3, 0x8
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 67
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 68
     :cond_6
     :goto_3
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mContentFrameLayout:Landroid/widget/FrameLayout;
@@ -1719,7 +1546,6 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/FrameLayout;->setRotation(F)V
 
-    .line 69
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->initRedIndicatorAnimator()V
 
     return-object p1
@@ -1728,7 +1554,6 @@
 .method public onDestroyView()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -1743,17 +1568,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->removeBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->unRegisterProtocol()V
 
-    .line 4
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1783,7 +1604,6 @@
 
     return p1
 
-    .line 1
     :cond_1
     :goto_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
@@ -1796,7 +1616,6 @@
 
     const/4 p1, 0x5
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->onBackEvent(I)Z
 
     :cond_2
@@ -1806,25 +1625,20 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     :cond_0
@@ -1834,24 +1648,20 @@
 .method public onResume()V
     .locals 10
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
@@ -1869,7 +1679,6 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -1879,7 +1688,6 @@
 
     move-result v0
 
-    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1896,7 +1704,6 @@
 
     invoke-static {v1, v3}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     iget v3, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const/4 v4, 0x0
@@ -1907,7 +1714,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -1923,7 +1729,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 9
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$AmbilightProtocol;->getDuration()I
 
     move-result v2
@@ -1950,7 +1755,6 @@
 
     if-lez v3, :cond_4
 
-    .line 10
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
     int-to-long v2, v2
@@ -1961,11 +1765,9 @@
 
     goto :goto_1
 
-    .line 11
     :cond_4
     iget-object v3, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
-    .line 12
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v4
@@ -1974,10 +1776,8 @@
 
     move-result v4
 
-    .line 13
     invoke-virtual {v3, v2, v0, v4}, Lcom/android/camera/ui/AutoHibernationView;->startRecordForFastmotion(IFZ)V
 
-    .line 14
     :cond_5
     :goto_1
     iget v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
@@ -1990,7 +1790,6 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 15
     :cond_6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -2000,7 +1799,6 @@
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0}, Lcom/android/camera/timerburst/TimerBurstController;->getCaptureIndex()I
 
     move-result v0
@@ -2029,13 +1827,11 @@
 
     invoke-virtual {p0, v0, v2}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updateRecordingTimeOrCaptureCount(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     :cond_7
     iget v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     if-ne v0, v3, :cond_8
 
-    .line 18
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -2058,7 +1854,6 @@
 
     sub-long/2addr v4, v6
 
-    .line 19
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -2067,14 +1862,12 @@
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {v0, v3}, Lcom/android/camera/data/data/config/ComponentManuallyET;->isLongExpose(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 21
     invoke-virtual {v0, v3}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -2099,7 +1892,6 @@
 
     if-lez v0, :cond_8
 
-    .line 22
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
     long-to-float v8, v4
@@ -2112,7 +1904,6 @@
 
     invoke-virtual {v0, v6, v7, v8, v9}, Lcom/android/camera/ui/AutoHibernationView;->startRecord(JFZ)V
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2135,14 +1926,11 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     :cond_8
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updateSystemTime()V
 
-    .line 25
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updateFirstVideoRecordingTime()V
 
-    .line 26
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->startAnimator()V
 
     return-void
@@ -2151,10 +1939,8 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -2169,10 +1955,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-interface {p1, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->addInBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
-    .line 4
     :cond_0
     new-instance p1, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$BatteryReceiver;
 
@@ -2182,7 +1966,6 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mBatteryReceiver:Lcom/android/camera/fragment/dialog/AutoHibernationFragment$BatteryReceiver;
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2203,7 +1986,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2218,7 +2000,6 @@
 .method public setModeIndex(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     return-void
@@ -2227,7 +2008,6 @@
 .method public setOrientation(I)V
     .locals 6
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
@@ -2241,7 +2021,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 2
     rem-int/2addr p1, v0
 
     goto :goto_0
@@ -2251,7 +2030,6 @@
 
     add-int/2addr p1, v0
 
-    .line 3
     :goto_0
     iget v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOrientation:I
 
@@ -2275,7 +2053,6 @@
     :cond_3
     move v1, v4
 
-    .line 4
     :goto_1
     iget v2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOrientation:I
 
@@ -2305,13 +2082,11 @@
     :cond_6
     move v2, v4
 
-    .line 5
     :goto_3
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOrientation:I
 
     if-nez p1, :cond_7
 
-    .line 6
     iget v5, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
     if-nez v5, :cond_7
@@ -2321,17 +2096,14 @@
     :cond_7
     rsub-int p1, p1, 0x168
 
-    .line 7
     rem-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTargetDegree:I
 
     if-nez v1, :cond_8
 
-    .line 8
     iput p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mContentFrameLayout:Landroid/widget/FrameLayout;
 
     int-to-float p1, p1
@@ -2340,16 +2112,13 @@
 
     return-void
 
-    .line 10
     :cond_8
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p1, :cond_9
 
-    .line 11
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 12
     :cond_9
     iget p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mCurrentDegree:I
 
@@ -2361,7 +2130,6 @@
 
     move p1, v4
 
-    .line 13
     :cond_a
     iget v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTargetDegree:I
 
@@ -2379,7 +2147,6 @@
 
     move p1, v0
 
-    .line 14
     :cond_d
     iget v1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mTargetDegree:I
 
@@ -2396,26 +2163,22 @@
 
     aput v0, v1, v3
 
-    .line 15
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
-    .line 16
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 17
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$4;
@@ -2424,7 +2187,6 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mRotationAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -2435,14 +2197,12 @@
 .method public startAutoHibernationCaptureDelayNumber()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->startRedIndicatorAnimator()V
 
     :cond_0
@@ -2452,30 +2212,25 @@
 .method public startRedIndicatorAnimator()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/ui/AutoHibernationView;->reset()V
 
     :cond_1
@@ -2485,14 +2240,12 @@
 .method public stopAutoHibernationCaptureDelayNumber()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->stopRedIndicatorAnimator()V
 
     :cond_0
@@ -2502,19 +2255,16 @@
 .method public stopRedIndicatorAnimator()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mIndicatorAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
@@ -2526,7 +2276,6 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -2541,7 +2290,6 @@
 .method public updataTimerBurstAnimator()V
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
 
     move-result-object v0
@@ -2552,7 +2300,6 @@
 
     const/16 v1, 0xa7
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/data/data/config/ComponentManuallyET;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -2565,7 +2312,6 @@
 
     div-long/2addr v0, v2
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mAutoHibernationView:Lcom/android/camera/ui/AutoHibernationView;
 
     const/4 v3, 0x0
@@ -2580,10 +2326,8 @@
 .method public updateAutoHibernationFirstRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFirstTimeStr:Ljava/lang/String;
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mSecondTimeStr:Ljava/lang/String;
 
     return-void
@@ -2592,14 +2336,12 @@
 .method public updateAutoHibernationRecordingTimeOrCaptureCount(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updateRecordingTimeOrCaptureCount(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -2609,19 +2351,16 @@
 .method public updateRecordingTimeOrCaptureCount(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mModeIndex:I
 
     const/16 v1, 0xa9
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionFirstTime:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mFastmotionSecondTime:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -2652,27 +2391,23 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeSecond:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    .line 6
     :cond_3
     :goto_0
     iget-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->mOthersTimeFirst:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 7
     :cond_4
     :goto_1
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updateSystemTime()V
@@ -2683,14 +2418,12 @@
 .method public updateTimerBurstAnimator()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->updataTimerBurstAnimator()V
 
     :cond_0

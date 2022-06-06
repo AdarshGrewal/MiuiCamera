@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/Session;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/Session$15;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$15;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->isStreaming()Z
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$15;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->getBitrate()J
@@ -56,7 +53,6 @@
 
     invoke-static {v0, v1, v2}, Lnet/majorkernelpanic/streaming/Session;->access$400(Lnet/majorkernelpanic/streaming/Session;J)V
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$15;->this$0:Lnet/majorkernelpanic/streaming/Session;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/Session;->access$600(Lnet/majorkernelpanic/streaming/Session;)Landroid/os/Handler;
@@ -75,7 +71,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/Session$15;->this$0:Lnet/majorkernelpanic/streaming/Session;
 

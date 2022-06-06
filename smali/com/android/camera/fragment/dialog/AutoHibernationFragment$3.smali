@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$3;->this$0:Lcom/android/camera/fragment/dialog/AutoHibernationFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,7 +47,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$3;->this$0:Lcom/android/camera/fragment/dialog/AutoHibernationFragment;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/AutoHibernationFragment;->access$100(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;)Landroid/widget/ImageView;

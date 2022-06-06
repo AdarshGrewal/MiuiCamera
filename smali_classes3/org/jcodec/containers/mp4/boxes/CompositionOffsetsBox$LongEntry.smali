@@ -24,13 +24,10 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$LongEntry;->count:J
 
-    .line 3
     iput-wide p3, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$LongEntry;->offset:J
 
     return-void
@@ -41,7 +38,6 @@
 .method public getCount()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$LongEntry;->count:J
 
     return-wide v0
@@ -50,7 +46,6 @@
 .method public getOffset()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox$LongEntry;->offset:J
 
     return-wide v0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/imagecodec/ImagePool;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onImageAvailable(Landroid/media/ImageReader;)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/ImagePool;->access$000(Lcom/xiaomi/camera/imagecodec/ImagePool;)Ljava/lang/Object;
@@ -47,18 +45,15 @@
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object p1
 
-    .line 3
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v1
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->access$100()Ljava/lang/String;
 
     move-result-object v3
@@ -85,7 +80,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     invoke-static {v3}, Lcom/xiaomi/camera/imagecodec/ImagePool;->access$200(Lcom/xiaomi/camera/imagecodec/ImagePool;)Landroid/util/LongSparseArray;
@@ -94,7 +88,6 @@
 
     invoke-virtual {v3, v1, v2, p1}, Landroid/util/LongSparseArray;->append(JLjava/lang/Object;)V
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImagePool$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->access$000(Lcom/xiaomi/camera/imagecodec/ImagePool;)Ljava/lang/Object;
@@ -103,7 +96,6 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->notify()V
 
-    .line 7
     monitor-exit v0
 
     return-void

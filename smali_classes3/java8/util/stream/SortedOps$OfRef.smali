@@ -48,7 +48,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->IS_ORDERED:I
@@ -61,15 +60,12 @@
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/SortedOps$OfRef;->isNaturalSort:Z
 
-    .line 3
     invoke-static {}, Ljava8/util/Comparators;->naturalOrder()Ljava/util/Comparator;
 
     move-result-object p1
 
-    .line 4
     iput-object p1, p0, Ljava8/util/stream/SortedOps$OfRef;->comparator:Ljava/util/Comparator;
 
     return-void
@@ -87,7 +83,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
     sget v1, Ljava8/util/stream/StreamOpFlag;->IS_ORDERED:I
@@ -100,10 +95,8 @@
 
     const/4 p1, 0x0
 
-    .line 6
     iput-boolean p1, p0, Ljava8/util/stream/SortedOps$OfRef;->isNaturalSort:Z
 
-    .line 7
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -135,7 +128,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -154,7 +146,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, p2, v0, p3}, Ljava8/util/stream/PipelineHelper;->evaluate(Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -164,7 +155,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     invoke-virtual {p1, p2, v0, p3}, Ljava8/util/stream/PipelineHelper;->evaluate(Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -173,12 +163,10 @@
 
     move-result-object p1
 
-    .line 4
     iget-object p2, p0, Ljava8/util/stream/SortedOps$OfRef;->comparator:Ljava/util/Comparator;
 
     invoke-static {p1, p2}, Ljava8/util/J8Arrays;->parallelSort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 5
     invoke-static {p1}, Ljava8/util/stream/Nodes;->node([Ljava/lang/Object;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -198,10 +186,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {v0, p1}, Ljava8/util/stream/StreamOpFlag;->isKnown(I)Z
@@ -216,7 +202,6 @@
 
     return-object p2
 
-    .line 3
     :cond_0
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SIZED:Ljava8/util/stream/StreamOpFlag;
 
@@ -226,7 +211,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     new-instance p1, Ljava8/util/stream/SortedOps$SizedRefSortingSink;
 
     iget-object v0, p0, Ljava8/util/stream/SortedOps$OfRef;->comparator:Ljava/util/Comparator;
@@ -235,7 +219,6 @@
 
     return-object p1
 
-    .line 5
     :cond_1
     new-instance p1, Ljava8/util/stream/SortedOps$RefSortingSink;
 

@@ -98,7 +98,6 @@
         }
     .end annotation
 
-    .line 7
     invoke-static {}, Ljava8/util/stream/Collectors$CollectorImpl$$Lambda$1;->lambdaFactory$()Ljava8/util/function/Function;
 
     move-result-object v4
@@ -137,22 +136,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Collectors$CollectorImpl;->supplier:Ljava8/util/function/Supplier;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Collectors$CollectorImpl;->accumulator:Ljava8/util/function/BiConsumer;
 
-    .line 4
     iput-object p3, p0, Ljava8/util/stream/Collectors$CollectorImpl;->combiner:Ljava8/util/function/BinaryOperator;
 
-    .line 5
     iput-object p4, p0, Ljava8/util/stream/Collectors$CollectorImpl;->finisher:Ljava8/util/function/Function;
 
-    .line 6
     iput-object p5, p0, Ljava8/util/stream/Collectors$CollectorImpl;->characteristics:Ljava/util/Set;
 
     return-void
@@ -176,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$CollectorImpl;->accumulator:Ljava8/util/function/BiConsumer;
 
     return-object v0
@@ -193,7 +185,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$CollectorImpl;->characteristics:Ljava/util/Set;
 
     return-object v0
@@ -209,7 +200,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$CollectorImpl;->combiner:Ljava8/util/function/BinaryOperator;
 
     return-object v0
@@ -225,7 +215,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$CollectorImpl;->finisher:Ljava8/util/function/Function;
 
     return-object v0
@@ -241,7 +230,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Collectors$CollectorImpl;->supplier:Ljava8/util/function/Supplier;
 
     return-object v0

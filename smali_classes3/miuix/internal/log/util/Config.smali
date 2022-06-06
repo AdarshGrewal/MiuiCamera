@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -34,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,14 +41,12 @@
 .method public static getApplicationCacheLogDir(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +72,6 @@
 
     const-string v0, "Fail to getCacheDir"
 
-    .line 3
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -87,7 +82,6 @@
 .method public static getDefaultCacheLogDir(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/log/util/Config;->getApplicationCacheLogDir(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
@@ -98,19 +92,16 @@
 .method public static getDefaultSdcardLogDir(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
     invoke-static {}, Lmiuix/os/Environment;->getExternalStorageMiuiDirectory()Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +133,6 @@
 
     const-string v0, "Fail to getExternalStorageMiuiDirectory"
 
-    .line 4
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

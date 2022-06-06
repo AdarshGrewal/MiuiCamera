@@ -30,7 +30,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -81,7 +80,6 @@
 .method public isSupportTipShow()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     const/4 v1, 0x1
@@ -100,7 +98,6 @@
 .method public isSupportTopMenu()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     const/4 v1, 0x2
@@ -121,7 +118,6 @@
 .method public isSupported()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     if-eqz v0, :cond_0
@@ -140,7 +136,6 @@
 .method public isSwitchOn()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->isSupported()Z
 
     move-result v0
@@ -154,7 +149,6 @@
     :cond_0
     const/16 v0, 0xa0
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -173,20 +167,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     if-nez p3, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p3
 
-    invoke-virtual {p3}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o00oO()Z
+    invoke-virtual {p3}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0000()Z
 
     move-result p3
 
@@ -199,16 +191,14 @@
 
     return-void
 
-    .line 3
     :cond_2
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result p2
 
     if-eqz p2, :cond_6
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result p2
 
@@ -286,16 +276,14 @@
     :cond_4
     const/4 p1, 0x2
 
-    .line 5
     iput p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     :cond_5
     :goto_0
     return-void
 
-    .line 6
     :cond_6
-    invoke-static {}, Lcom/android/camera/display/Display;->isNormalMuiltDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isNormalMuiltDisplayType()Z
 
     move-result p2
 
@@ -336,7 +324,6 @@
     :cond_7
     const/4 p1, 0x1
 
-    .line 7
     iput p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->mSupporteType:I
 
     :cond_8
@@ -348,7 +335,6 @@
 
     const/16 v0, 0xa0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v1
@@ -363,7 +349,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     sget-object p1, Lcom/android/camera/data/data/runing/ComponentRunningESPDisplay;->VALUE_ON:Ljava/lang/String;
 
     goto :goto_0

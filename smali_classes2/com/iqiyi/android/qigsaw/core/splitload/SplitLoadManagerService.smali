@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -32,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +39,6 @@
 .method public static create(Landroid/content/Context;IZZLjava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
     .locals 9
 
-    .line 1
     new-instance v8, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerImpl;
 
     move-object v0, v8
@@ -68,7 +65,6 @@
 .method public static getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->sReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -77,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->sReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -88,7 +83,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -102,7 +96,6 @@
 .method public static hasInstance()Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->sReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -125,7 +118,6 @@
 .method public static install(Landroid/content/Context;IZZLjava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->sReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static/range {p0 .. p6}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->create(Landroid/content/Context;IZZLjava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;

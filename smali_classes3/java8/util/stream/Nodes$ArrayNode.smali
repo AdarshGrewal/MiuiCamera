@@ -51,7 +51,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/32 v0, 0x7ffffff7
@@ -62,7 +61,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-interface {p3, p1}, Ljava8/util/function/IntFunction;->apply(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -73,12 +71,10 @@
 
     const/4 p1, 0x0
 
-    .line 3
     iput p1, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -97,13 +93,10 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput-object p1, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
-    .line 7
     array-length p1, p1
 
     iput p1, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
@@ -123,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
     array-length v0, p1
@@ -134,7 +126,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -151,7 +142,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
     iget v1, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
@@ -166,7 +156,6 @@
 .method public count()J
     .locals 2
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
 
     int-to-long v0, v0
@@ -186,13 +175,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :goto_0
     iget v1, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     iget-object v1, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
@@ -217,7 +204,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChild()Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -228,7 +214,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChildCount()I
 
     move-result v0
@@ -239,7 +224,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0
@@ -257,7 +241,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
     iget v1, p0, Ljava8/util/stream/Nodes$ArrayNode;->curSize:I
@@ -278,7 +261,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget-object v1, p0, Ljava8/util/stream/Nodes$ArrayNode;->array:[Ljava/lang/Object;
 
     array-length v1, v1
@@ -287,7 +269,6 @@
 
     sub-int/2addr v1, v2
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -308,7 +289,6 @@
 
     const-string v1, "ArrayNode[%d][%s]"
 
-    .line 3
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -328,7 +308,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes;->truncate(Ljava8/util/stream/Node;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1

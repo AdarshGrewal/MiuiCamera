@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public canScrollDown()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$500(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroidx/recyclerview/widget/RecyclerView;
@@ -57,7 +55,6 @@
 .method public canScrollUp()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$500(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroidx/recyclerview/widget/RecyclerView;
@@ -84,7 +81,6 @@
 .method public getOverScrollY()F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$000(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
@@ -97,7 +93,6 @@
 .method public getRotate()F
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$500(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroidx/recyclerview/widget/RecyclerView;
@@ -108,12 +103,10 @@
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Lcom/android/camera/fragment/mode/ModeAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/fragment/mode/ModeAdapter;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/mode/ModeAdapter;->getRotate()F
@@ -131,7 +124,6 @@
 .method public onUpdate(FF)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$300(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)F
@@ -152,18 +144,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$302(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {p1, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$402(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;F)F
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;
 
     invoke-static {p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;->access$500(Lcom/android/camera/fragment/mode/FragmentMoreModeTabV2;)Landroidx/recyclerview/widget/RecyclerView;

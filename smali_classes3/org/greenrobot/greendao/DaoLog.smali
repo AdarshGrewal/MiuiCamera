@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -47,7 +45,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 2
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -60,7 +57,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -73,7 +69,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 2
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -84,7 +79,6 @@
 .method public static getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/log/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p0
@@ -97,7 +91,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -110,7 +103,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 2
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -123,7 +115,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -136,7 +127,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {p0, v0, p1}, Lcom/android/camera/log/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -149,7 +139,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -162,7 +151,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 2
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -175,7 +163,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 1
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -188,7 +175,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 2
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0
@@ -201,7 +187,6 @@
 
     const-string v0, "greenDAO"
 
-    .line 3
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-result p0

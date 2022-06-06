@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$8;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$8;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     invoke-static {v0}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->access$600(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)I

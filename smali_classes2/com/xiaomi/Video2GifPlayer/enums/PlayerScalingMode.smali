@@ -33,7 +33,6 @@
 .method public static constructor <clinit>()V
     .locals 7
 
-    .line 1
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     const/4 v1, 0x0
@@ -44,7 +43,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->PlayerScalingModeNone:Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     const/4 v2, 0x1
@@ -55,7 +53,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->PlayerScalingModeAspectFit:Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     const/4 v3, 0x2
@@ -66,7 +63,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->PlayerScalingModeAspectFill:Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     const/4 v4, 0x3
@@ -81,7 +77,6 @@
 
     new-array v5, v5, [Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
-    .line 5
     sget-object v6, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->PlayerScalingModeNone:Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     aput-object v6, v5, v1
@@ -109,10 +104,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->nCode:I
 
     return-void
@@ -121,10 +114,8 @@
 .method public static int2enum(I)Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->PlayerScalingModeNone:Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->values()[Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     move-result-object v1
@@ -138,7 +129,6 @@
 
     aget-object v4, v1, v3
 
-    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -159,7 +149,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +163,6 @@
 .method public static values()[Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->$VALUES:[Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->clone()Ljava/lang/Object;
@@ -191,7 +179,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/Video2GifPlayer/enums/PlayerScalingMode;->nCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

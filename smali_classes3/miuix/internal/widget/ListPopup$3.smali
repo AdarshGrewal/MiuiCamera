@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -44,7 +42,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -60,14 +57,12 @@
 
     invoke-virtual {p2, v0}, Landroid/graphics/Outline;->setAlpha(F)V
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1

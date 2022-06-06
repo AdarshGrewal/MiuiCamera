@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$2;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iput p2, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$2;->val$appId:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$2;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iget-object v0, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;

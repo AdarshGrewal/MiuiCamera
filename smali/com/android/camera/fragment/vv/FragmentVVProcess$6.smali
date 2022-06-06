@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVProcess;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     iput-object p2, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->val$savePath:Ljava/lang/String;
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->val$savePath:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->useScopedStorage(Ljava/lang/String;)Z
@@ -71,7 +68,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$500(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Lcom/android/camera/storage/mediastore/VideoFile;
@@ -80,7 +76,6 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -91,7 +86,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
@@ -101,7 +95,6 @@
 
     invoke-virtual {v1}, Lcom/android/camera/storage/mediastore/VideoFile;->insertContentValues()Landroid/net/Uri;
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->this$0:Lcom/android/camera/fragment/vv/FragmentVVProcess;
 
     invoke-static {v1}, Lcom/android/camera/fragment/vv/FragmentVVProcess;->access$500(Lcom/android/camera/fragment/vv/FragmentVVProcess;)Lcom/android/camera/storage/mediastore/VideoFile;
@@ -112,13 +105,11 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/vv/FragmentVVProcess$6;->val$savePath:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$LiveVVExternal;->combineVideoAudio(Ljava/lang/String;)V
 
-    .line 8
     :cond_2
     :goto_0
     invoke-interface {p1}, Lio/reactivex/CompletableEmitter;->onComplete()V

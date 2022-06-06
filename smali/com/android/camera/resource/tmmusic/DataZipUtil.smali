@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 
     const-string v0, "0123456789ABCDEF"
 
-    .line 1
     invoke-virtual {v0, p0}, Ljava/lang/String;->indexOf(I)I
 
     move-result p0
@@ -40,7 +38,6 @@
         }
     .end annotation
 
-    .line 8
     new-instance v0, Ljava/util/zip/GZIPOutputStream;
 
     invoke-direct {v0, p1}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
@@ -52,7 +49,6 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 9
     invoke-virtual {p0, v1, v2, p1}, Ljava/io/InputStream;->read([BII)I
 
     move-result v3
@@ -61,19 +57,15 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 10
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/zip/GZIPOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->finish()V
 
-    .line 12
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->flush()V
 
-    .line 13
     invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->close()V
 
     return-void
@@ -87,31 +79,24 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 2
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 3
     invoke-static {v0, p0}, Lcom/android/camera/resource/tmmusic/DataZipUtil;->compress(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/ByteArrayInputStream;->close()V
 
     return-object v1
@@ -127,7 +112,6 @@
 
     const/4 v0, 0x0
 
-    .line 8
     :try_start_0
     new-instance v1, Ljava/util/zip/GZIPInputStream;
 
@@ -143,7 +127,6 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 9
     invoke-virtual {v1, v0, v2, p0}, Ljava/util/zip/GZIPInputStream;->read([BII)I
 
     move-result v3
@@ -152,14 +135,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 10
     invoke-virtual {p1, v0, v2, v3}, Ljava/io/OutputStream;->write([BII)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {v1}, Ljava/util/zip/GZIPInputStream;->close()V
 
@@ -192,31 +173,24 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 2
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 3
     invoke-static {v0, p0}, Lcom/android/camera/resource/tmmusic/DataZipUtil;->decompress(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
-    .line 4
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->flush()V
 
-    .line 6
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 7
     invoke-virtual {v0}, Ljava/io/ByteArrayInputStream;->close()V
 
     return-object v1
@@ -229,7 +203,6 @@
 
     const-string v0, ""
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -238,7 +211,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -246,19 +218,16 @@
 
     move-result-object p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p0
 
-    .line 5
     new-array v1, v0, [B
 
     const/4 v2, 0x0
@@ -268,7 +237,6 @@
 
     mul-int/lit8 v3, v2, 0x2
 
-    .line 6
     aget-char v4, p0, v3
 
     invoke-static {v4}, Lcom/android/camera/resource/tmmusic/DataZipUtil;->charToByte(C)B

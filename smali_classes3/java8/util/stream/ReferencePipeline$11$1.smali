@@ -29,7 +29,6 @@
 .method public constructor <init>(Ljava8/util/stream/ReferencePipeline$11;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/ReferencePipeline$11$1;->this$1:Ljava8/util/stream/ReferencePipeline$11;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedReference;-><init>(Ljava8/util/stream/Sink;)V
@@ -47,14 +46,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/ReferencePipeline$11$1;->this$1:Ljava8/util/stream/ReferencePipeline$11;
 
     iget-object v0, v0, Ljava8/util/stream/ReferencePipeline$11;->val$action:Ljava8/util/function/Consumer;
 
     invoke-interface {v0, p1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedReference;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0, p1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static convertDecodeColorToEncode([B[BLcom/miui/extravideo/common/MediaParamsHolder;)V
     .locals 9
 
-    .line 1
     iget v0, p2, Lcom/miui/extravideo/common/MediaParamsHolder;->videoWidth:I
 
     iget v1, p2, Lcom/miui/extravideo/common/MediaParamsHolder;->videoHeight:I
@@ -45,24 +43,19 @@
 
     mul-int/2addr p1, p2
 
-    .line 1
     :goto_0
     array-length p2, p0
 
     if-ge p1, p2, :cond_0
 
-    .line 2
     aget-byte p2, p0, p1
 
     add-int/lit8 v0, p1, 0x1
 
-    .line 3
     aget-byte v1, p0, v0
 
-    .line 4
     aput-byte v1, p0, p1
 
-    .line 5
     aput-byte p2, p0, v0
 
     add-int/lit8 p1, p1, 0x2

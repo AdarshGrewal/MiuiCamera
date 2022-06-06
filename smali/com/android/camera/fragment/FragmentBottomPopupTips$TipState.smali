@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentBottomPopupTips;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +34,6 @@
 .method public activeTip()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     iget-object v0, v0, Lcom/android/camera/fragment/FragmentBottomPopupTips;->mImageTipHandler:Landroid/os/Handler;
@@ -50,14 +48,12 @@
 .method public deactivateTip()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$802(Lcom/android/camera/fragment/FragmentBottomPopupTips;Ljava/lang/Integer;)Ljava/lang/Integer;
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$900(Lcom/android/camera/fragment/FragmentBottomPopupTips;)V
@@ -68,7 +64,6 @@
 .method public deactivatingTip()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {v0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$800(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Ljava/lang/Integer;
@@ -121,7 +116,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
@@ -137,7 +131,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$TipState;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     iget-object v0, v0, Lcom/android/camera/fragment/FragmentBottomPopupTips;->mImageTipHandler:Landroid/os/Handler;

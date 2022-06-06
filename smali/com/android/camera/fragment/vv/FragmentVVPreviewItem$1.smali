@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;
 
     iput-boolean p2, p0, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem$1;->val$init:Z
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;
 
     invoke-static {v0}, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;->access$000(Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;)Lcom/android/camera/fragment/vv/VVItem;
@@ -53,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem$1;->val$init:Z
 
     if-nez v0, :cond_0
@@ -66,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem$1;->this$0:Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/FragmentVVPreviewItem;->startPlay()V

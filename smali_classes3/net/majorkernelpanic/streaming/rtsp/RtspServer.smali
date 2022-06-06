@@ -89,20 +89,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
 
     const/16 v0, 0x1f96
 
-    .line 3
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPort:I
 
-    .line 4
     new-instance v0, Ljava/util/WeakHashMap;
 
     const/4 v1, 0x2
@@ -111,7 +107,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSessions:Ljava/util/WeakHashMap;
 
-    .line 5
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$LocalBinder;
 
     invoke-direct {v0, p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$LocalBinder;-><init>(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;)V
@@ -120,17 +115,14 @@
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mRestart:Z
 
-    .line 7
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
-    .line 8
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$1;
 
     invoke-direct {v0, p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$1;-><init>(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;)V
@@ -143,7 +135,6 @@
 .method public static synthetic access$002(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;Z)Z
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mRestart:Z
 
     return p1
@@ -152,7 +143,6 @@
 .method public static synthetic access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mUsername:Ljava/lang/String;
 
     return-object p0
@@ -161,7 +151,6 @@
 .method public static synthetic access$200(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPassword:Ljava/lang/String;
 
     return-object p0
@@ -172,12 +161,10 @@
 .method public addCallbackListener(Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
@@ -187,7 +174,6 @@
 
     if-nez v1, :cond_1
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
@@ -209,18 +195,15 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 4
     monitor-exit v0
 
     return-void
 
-    .line 5
     :cond_1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     invoke-virtual {v1, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     monitor-exit v0
 
     return-void
@@ -238,7 +221,6 @@
 .method public getBitrate()J
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSessions:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
@@ -267,14 +249,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 2
     invoke-virtual {v3}, Lnet/majorkernelpanic/streaming/Session;->isStreaming()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 3
     invoke-virtual {v3}, Lnet/majorkernelpanic/streaming/Session;->getBitrate()J
 
     move-result-wide v3
@@ -290,7 +270,6 @@
 .method public getPort()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPort:I
 
     return v0
@@ -305,12 +284,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lnet/majorkernelpanic/streaming/rtsp/UriParser;->parse(Ljava/lang/String;)Lnet/majorkernelpanic/streaming/Session;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p2}, Ljava/net/Socket;->getLocalAddress()Ljava/net/InetAddress;
 
     move-result-object v0
@@ -321,14 +298,12 @@
 
     invoke-virtual {p1, v0}, Lnet/majorkernelpanic/streaming/Session;->setOrigin(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p1}, Lnet/majorkernelpanic/streaming/Session;->getDestination()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-virtual {p2}, Ljava/net/Socket;->getInetAddress()Ljava/net/InetAddress;
 
     move-result-object p2
@@ -346,7 +321,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
 
     return v0
@@ -355,7 +329,6 @@
 .method public isStreaming()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSessions:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
@@ -381,7 +354,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1}, Lnet/majorkernelpanic/streaming/Session;->isStreaming()Z
 
     move-result v1
@@ -401,7 +373,6 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mBinder:Landroid/os/IBinder;
 
     return-object p1
@@ -410,14 +381,12 @@
 .method public onCreate()V
     .locals 3
 
-    .line 1
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 2
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPort:I
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -436,7 +405,6 @@
 
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPort:I
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     iget-boolean v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
@@ -449,14 +417,12 @@
 
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
 
-    .line 4
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mOnSharedPreferenceChangeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 5
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->start()V
 
     return-void
@@ -465,10 +431,8 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->stop()V
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mOnSharedPreferenceChangeListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
@@ -489,12 +453,10 @@
 .method public postError(Ljava/lang/Exception;I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
@@ -504,7 +466,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
@@ -524,12 +485,10 @@
 
     check-cast v2, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;
 
-    .line 4
     invoke-interface {v2, p0, p1, p2}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;->onError(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;Ljava/lang/Exception;I)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -548,12 +507,10 @@
 .method public postMessage(I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
@@ -563,7 +520,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
@@ -583,12 +539,10 @@
 
     check-cast v2, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;
 
-    .line 4
     invoke-interface {v2, p0, p1}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;->onMessage(Lnet/majorkernelpanic/streaming/rtsp/RtspServer;I)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -607,18 +561,15 @@
 .method public removeCallbackListener(Lnet/majorkernelpanic/streaming/rtsp/RtspServer$CallbackListener;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListeners:Ljava/util/LinkedList;
 
     invoke-virtual {v1, p1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -636,10 +587,8 @@
 .method public setAuthorization(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mUsername:Ljava/lang/String;
 
-    .line 2
     iput-object p2, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mPassword:Ljava/lang/String;
 
     return-void
@@ -648,14 +597,12 @@
 .method public setPort(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -664,7 +611,6 @@
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 3
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -673,7 +619,6 @@
 .method public start()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
 
     if-eqz v0, :cond_0
@@ -685,7 +630,6 @@
     :cond_0
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->stop()V
 
-    .line 2
     :cond_1
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mEnabled:Z
 
@@ -695,7 +639,6 @@
 
     if-nez v0, :cond_2
 
-    .line 3
     :try_start_0
     new-instance v0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;
 
@@ -710,14 +653,12 @@
     :catch_0
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListenerThread:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;
 
     :cond_2
     :goto_0
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mRestart:Z
 
     return-void
@@ -726,18 +667,15 @@
 .method public stop()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListenerThread:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;
 
     if-eqz v0, :cond_2
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;->kill()V
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mSessions:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
@@ -764,14 +702,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     invoke-virtual {v2}, Lnet/majorkernelpanic/streaming/Session;->isStreaming()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 5
     invoke-virtual {v2}, Lnet/majorkernelpanic/streaming/Session;->stop()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -782,7 +718,6 @@
     :catchall_0
     move-exception v0
 
-    .line 6
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspServer;->mListenerThread:Lnet/majorkernelpanic/streaming/rtsp/RtspServer$RequestListener;
 
     throw v0

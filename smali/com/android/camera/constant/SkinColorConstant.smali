@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static getSkinColor(Ljava/lang/String;)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -193,47 +191,47 @@
     return v2
 
     :pswitch_9
-    const p0, 0x7f06003e
-
-    return p0
-
-    :pswitch_a
-    const p0, 0x7f06003d
-
-    return p0
-
-    :pswitch_b
-    const p0, 0x7f060041
-
-    return p0
-
-    :pswitch_c
-    const p0, 0x7f060042
-
-    return p0
-
-    :pswitch_d
-    const p0, 0x7f060044
-
-    return p0
-
-    :pswitch_e
-    const p0, 0x7f06003f
-
-    return p0
-
-    :pswitch_f
-    const p0, 0x7f060043
-
-    return p0
-
-    :pswitch_10
     const p0, 0x7f06003c
 
     return p0
 
-    :pswitch_11
+    :pswitch_a
+    const p0, 0x7f06003b
+
+    return p0
+
+    :pswitch_b
+    const p0, 0x7f06003f
+
+    return p0
+
+    :pswitch_c
     const p0, 0x7f060040
+
+    return p0
+
+    :pswitch_d
+    const p0, 0x7f060042
+
+    return p0
+
+    :pswitch_e
+    const p0, 0x7f06003d
+
+    return p0
+
+    :pswitch_f
+    const p0, 0x7f060041
+
+    return p0
+
+    :pswitch_10
+    const p0, 0x7f06003a
+
+    return p0
+
+    :pswitch_11
+    const p0, 0x7f06003e
 
     return p0
 
@@ -275,7 +273,6 @@
 .method public static getString(Ljava/lang/String;)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -430,52 +427,52 @@
     return v2
 
     :pswitch_9
-    const p0, 0x7f120238
+    const p0, 0x7f120228
 
     return p0
 
     :pswitch_a
-    const p0, 0x7f120237
+    const p0, 0x7f120227
 
     return p0
 
     :pswitch_b
-    const p0, 0x7f12023a
+    const p0, 0x7f12022a
 
     return p0
 
     :pswitch_c
-    const p0, 0x7f12023b
+    const p0, 0x7f12022b
 
     return p0
 
     :pswitch_d
-    const p0, 0x7f12023d
+    const p0, 0x7f12022d
 
     return p0
 
     :pswitch_e
-    const p0, 0x7f120239
+    const p0, 0x7f120229
 
     return p0
 
     :pswitch_f
-    const p0, 0x7f12023c
+    const p0, 0x7f12022c
 
     return p0
 
     :pswitch_10
-    const p0, 0x7f120236
+    const p0, 0x7f120226
 
     return p0
 
     :pswitch_11
-    const p0, 0x7f120232
+    const p0, 0x7f120222
 
     return p0
 
     :pswitch_12
-    const p0, 0x7f1204cd
+    const p0, 0x7f12049c
 
     return p0
 

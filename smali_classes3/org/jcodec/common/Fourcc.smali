@@ -21,7 +21,6 @@
 
     const-string v0, "ftyp"
 
-    .line 1
     invoke-static {v0}, Lorg/jcodec/common/Fourcc;->intFourcc(Ljava/lang/String;)I
 
     move-result v0
@@ -30,7 +29,6 @@
 
     const-string v0, "free"
 
-    .line 2
     invoke-static {v0}, Lorg/jcodec/common/Fourcc;->intFourcc(Ljava/lang/String;)I
 
     move-result v0
@@ -39,7 +37,6 @@
 
     const-string v0, "moov"
 
-    .line 3
     invoke-static {v0}, Lorg/jcodec/common/Fourcc;->intFourcc(Ljava/lang/String;)I
 
     move-result v0
@@ -48,7 +45,6 @@
 
     const-string v0, "mdat"
 
-    .line 4
     invoke-static {v0}, Lorg/jcodec/common/Fourcc;->intFourcc(Ljava/lang/String;)I
 
     move-result v0
@@ -57,7 +53,6 @@
 
     const-string v0, "wide"
 
-    .line 5
     invoke-static {v0}, Lorg/jcodec/common/Fourcc;->intFourcc(Ljava/lang/String;)I
 
     move-result v0
@@ -70,7 +65,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,14 +73,12 @@
 .method public static intFourcc(Ljava/lang/String;)I
     .locals 4
 
-    .line 1
     invoke-static {p0}, Lorg/jcodec/platform/Platform;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 2
     aget-byte v0, p0, v0
 
     const/4 v1, 0x1

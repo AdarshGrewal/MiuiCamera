@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/backup/CameraSettingsBackupImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/backup/CameraSettingsBackupImpl$2;->this$0:Lcom/android/camera/backup/CameraSettingsBackupImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public handle(Landroid/content/SharedPreferences;Lmiui/cloud/backup/data/DataPackage;[Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2, p3}, Lmiui/cloud/backup/data/PrefsBackupHelper;->restore(Landroid/content/SharedPreferences;Lmiui/cloud/backup/data/DataPackage;[Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;)V
 
     return-void

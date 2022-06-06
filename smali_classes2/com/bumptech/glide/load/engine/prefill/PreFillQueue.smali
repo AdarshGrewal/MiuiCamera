@@ -43,13 +43,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsPerType:Ljava/util/Map;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyList:Ljava/util/List;
 
-    .line 4
     invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object p1
@@ -82,7 +78,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 5
     iget v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsRemaining:I
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -104,7 +99,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsRemaining:I
 
     return v0
@@ -113,7 +107,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsRemaining:I
 
     if-nez v0, :cond_0
@@ -132,7 +125,6 @@
 .method public remove()Lcom/bumptech/glide/load/engine/prefill/PreFillType;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyList:Ljava/util/List;
 
     iget v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyIndex:I
@@ -143,7 +135,6 @@
 
     check-cast v0, Lcom/bumptech/glide/load/engine/prefill/PreFillType;
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsPerType:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -152,7 +143,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 3
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -161,12 +151,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsPerType:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyList:Ljava/util/List;
 
     iget v2, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyIndex:I
@@ -175,7 +163,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsPerType:Ljava/util/Map;
 
@@ -191,7 +178,6 @@
 
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     :goto_0
     iget v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsRemaining:I
 
@@ -199,7 +185,6 @@
 
     iput v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->bitmapsRemaining:I
 
-    .line 8
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillQueue;->keyList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z

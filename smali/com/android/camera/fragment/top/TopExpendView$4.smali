@@ -26,7 +26,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/TopExpendView;Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
     iput-object p2, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$view:Landroid/view/View;
@@ -43,29 +42,24 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera/fragment/top/TopExpendView;->access$102(Lcom/android/camera/fragment/top/TopExpendView;Z)Z
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$view:Landroid/view/View;
 
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$animatorEnd:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
@@ -79,29 +73,24 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera/fragment/top/TopExpendView;->access$102(Lcom/android/camera/fragment/top/TopExpendView;Z)Z
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$view:Landroid/view/View;
 
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$animatorEnd:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
@@ -115,14 +104,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->val$view:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/top/TopExpendView$4;->this$0:Lcom/android/camera/fragment/top/TopExpendView;
 
     const/4 v0, 0x1

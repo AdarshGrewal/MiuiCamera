@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static checkGlError(Ljava/lang/String;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
     move-result v0
@@ -29,7 +27,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -51,7 +48,6 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -78,7 +74,6 @@
 
     const v0, 0x8b31
 
-    .line 1
     invoke-static {v0, p0}, Lcom/miui/extravideo/watermark/gles/ShaderUtils;->loadShader(ILjava/lang/String;)I
 
     move-result p0
@@ -92,7 +87,6 @@
     :cond_0
     const v1, 0x8b30
 
-    .line 2
     invoke-static {v1, p1}, Lcom/miui/extravideo/watermark/gles/ShaderUtils;->loadShader(ILjava/lang/String;)I
 
     move-result p1
@@ -101,7 +95,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
 
@@ -109,21 +102,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 4
     invoke-static {v1, p0}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
     const-string p0, "glAttachShader"
 
-    .line 5
     invoke-static {p0}, Lcom/miui/extravideo/watermark/gles/ShaderUtils;->checkGlError(Ljava/lang/String;)V
 
-    .line 6
     invoke-static {v1, p1}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
-    .line 7
     invoke-static {p0}, Lcom/miui/extravideo/watermark/gles/ShaderUtils;->checkGlError(Ljava/lang/String;)V
 
-    .line 8
     invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
     const/4 p0, 0x1
@@ -132,41 +120,24 @@
 
     const v2, 0x8b82
 
-    .line 9
     invoke-static {v1, v2, p1, v0}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
-    .line 10
     aget p1, p1, v0
 
     if-eq p1, p0, :cond_2
 
-    .line 11
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p0, "ShaderUtils"
 
     const-string p1, "Could not link program: "
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "ShaderUtils"
-
-    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 12
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
     goto :goto_0
@@ -181,7 +152,6 @@
 .method public static loadShader(ILjava/lang/String;)I
     .locals 3
 
-    .line 1
     invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result v0
@@ -190,10 +160,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    .line 3
     invoke-static {v0}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
     const/4 p1, 0x1
@@ -202,15 +170,12 @@
 
     const v2, 0x8b81
 
-    .line 4
     invoke-static {v0, v2, p1, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    .line 5
     aget p1, p1, v1
 
     if-nez p1, :cond_0
 
-    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,14 +198,12 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {v0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
 
     move v0, v1

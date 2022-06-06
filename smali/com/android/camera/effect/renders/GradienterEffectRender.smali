@@ -39,12 +39,10 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     return-void
@@ -53,12 +51,10 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 4
     iput p1, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     return-void
@@ -67,7 +63,6 @@
 .method private filteRotation(F)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     const/high16 v1, -0x40800000    # -1.0f
@@ -80,7 +75,6 @@
 
     sub-float v0, p1, v0
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -91,7 +85,6 @@
 
     if-lez v0, :cond_1
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     cmpg-float v1, p1, v0
@@ -105,10 +98,8 @@
     :cond_0
     add-float/2addr v0, v2
 
-    .line 4
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
-    .line 5
     :cond_1
     :goto_0
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
@@ -127,11 +118,9 @@
 
     goto :goto_1
 
-    .line 6
     :cond_2
     iput p1, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
-    .line 7
     :goto_1
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
@@ -141,12 +130,10 @@
 
     sub-float/2addr v0, v2
 
-    .line 8
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     goto :goto_1
 
-    .line 9
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -180,7 +167,6 @@
 .method private getRotation()F
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
     move-result-object v0
@@ -197,16 +183,13 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 2
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     return v1
 
-    .line 3
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/camera/effect/renders/GradienterEffectRender;->filteRotation(F)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mLastRotation:F
 
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
@@ -231,7 +214,6 @@
 
     sub-float/2addr v0, v2
 
-    .line 5
     :cond_1
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -252,21 +234,17 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 6
     :goto_0
     iget-boolean v4, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mKeepZero:Z
 
     if-eq v2, v4, :cond_3
 
-    .line 7
     iput-boolean v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mKeepZero:Z
 
-    .line 8
     iput v3, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mShiftTimes:I
 
     goto :goto_1
 
-    .line 9
     :cond_3
     iget v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mShiftTimes:I
 
@@ -276,21 +254,17 @@
 
     add-int/2addr v2, v3
 
-    .line 10
     iput v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mShiftTimes:I
 
-    .line 11
     :cond_4
     iget v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mShiftTimes:I
 
     if-ne v2, v4, :cond_5
 
-    .line 12
     iget-boolean v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mKeepZero:Z
 
     iput-boolean v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mZero:Z
 
-    .line 13
     :cond_5
     :goto_1
     iget-boolean v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mZero:Z
@@ -319,10 +293,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "sAngle"
@@ -333,7 +305,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformAngle:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTexSize"
@@ -344,7 +315,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTexSize:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTargetSize"
@@ -355,7 +325,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTargetSize:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "vTargetCenter"
@@ -366,7 +335,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTargetCenter:I
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -375,7 +343,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0706ee
+    const v1, 0x7f0706ea
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -389,10 +357,8 @@
 .method public initShaderValue(Z)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTexSize:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
@@ -405,7 +371,6 @@
 
     invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     int-to-float p1, p1
@@ -414,21 +379,18 @@
 
     mul-float/2addr p1, v0
 
-    .line 4
     iget v1, p0, Lcom/android/camera/effect/renders/Render;->mPreviewHeight:I
 
     int-to-float v1, v1
 
     mul-float/2addr v1, v0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isSquareModule()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     iget v2, p0, Lcom/android/camera/effect/renders/Render;->mPreviewHeight:I
@@ -437,21 +399,19 @@
 
     move-result v0
 
-    .line 7
     iget v2, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTargetSize:I
 
     int-to-float v0, v0
 
     invoke-static {v2, v0, v0}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mSquareModeExtraMargin:I
 
     iget v2, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     mul-int/2addr v0, v2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v2
 
@@ -463,7 +423,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTargetSize:I
 
@@ -477,13 +436,11 @@
 
     invoke-static {v0, v2, v3}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 10
     :goto_0
     iget v0, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformTargetCenter:I
 
     invoke-static {v0, p1, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 11
     iget p1, p0, Lcom/android/camera/effect/renders/GradienterEffectRender;->mUniformAngle:I
 
     invoke-direct {p0}, Lcom/android/camera/effect/renders/GradienterEffectRender;->getRotation()F

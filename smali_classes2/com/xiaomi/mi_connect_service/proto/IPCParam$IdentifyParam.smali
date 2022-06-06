@@ -85,15 +85,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
-    .line 3
     const-class v1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -104,33 +101,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->userId_:Ljava/lang/String;
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->sid_:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->cUserId_:Ljava/lang/String;
 
-    .line 5
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->serviceToken_:Ljava/lang/String;
 
-    .line 6
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->ssecurity_:Ljava/lang/String;
 
-    .line 7
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->timeDiff_:Ljava/lang/String;
 
-    .line 8
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->domain_:Ljava/lang/String;
 
-    .line 9
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->appId_:Ljava/lang/String;
 
     return-void
@@ -139,7 +127,6 @@
 .method public static synthetic access$000()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     return-object v0
@@ -148,7 +135,6 @@
 .method public static synthetic access$100(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setUserId(Ljava/lang/String;)V
 
     return-void
@@ -157,7 +143,6 @@
 .method public static synthetic access$1000(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setServiceToken(Ljava/lang/String;)V
 
     return-void
@@ -166,7 +151,6 @@
 .method public static synthetic access$1100(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearServiceToken()V
 
     return-void
@@ -175,7 +159,6 @@
 .method public static synthetic access$1200(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setServiceTokenBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -184,7 +167,6 @@
 .method public static synthetic access$1300(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setSsecurity(Ljava/lang/String;)V
 
     return-void
@@ -193,7 +175,6 @@
 .method public static synthetic access$1400(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearSsecurity()V
 
     return-void
@@ -202,7 +183,6 @@
 .method public static synthetic access$1500(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setSsecurityBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -211,7 +191,6 @@
 .method public static synthetic access$1600(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setTimeDiff(Ljava/lang/String;)V
 
     return-void
@@ -220,7 +199,6 @@
 .method public static synthetic access$1700(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearTimeDiff()V
 
     return-void
@@ -229,7 +207,6 @@
 .method public static synthetic access$1800(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setTimeDiffBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -238,7 +215,6 @@
 .method public static synthetic access$1900(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setDomain(Ljava/lang/String;)V
 
     return-void
@@ -247,7 +223,6 @@
 .method public static synthetic access$200(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearUserId()V
 
     return-void
@@ -256,7 +231,6 @@
 .method public static synthetic access$2000(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearDomain()V
 
     return-void
@@ -265,7 +239,6 @@
 .method public static synthetic access$2100(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setDomainBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -274,7 +247,6 @@
 .method public static synthetic access$2200(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setAppId(Ljava/lang/String;)V
 
     return-void
@@ -283,7 +255,6 @@
 .method public static synthetic access$2300(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearAppId()V
 
     return-void
@@ -292,7 +263,6 @@
 .method public static synthetic access$2400(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setAppIdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -301,7 +271,6 @@
 .method public static synthetic access$300(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setUserIdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -310,7 +279,6 @@
 .method public static synthetic access$400(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setSid(Ljava/lang/String;)V
 
     return-void
@@ -319,7 +287,6 @@
 .method public static synthetic access$500(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearSid()V
 
     return-void
@@ -328,7 +295,6 @@
 .method public static synthetic access$600(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setSidBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -337,7 +303,6 @@
 .method public static synthetic access$700(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setCUserId(Ljava/lang/String;)V
 
     return-void
@@ -346,7 +311,6 @@
 .method public static synthetic access$800(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->clearCUserId()V
 
     return-void
@@ -355,7 +319,6 @@
 .method public static synthetic access$900(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->setCUserIdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -364,7 +327,6 @@
 .method private clearAppId()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -381,7 +343,6 @@
 .method private clearCUserId()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -398,7 +359,6 @@
 .method private clearDomain()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -415,7 +375,6 @@
 .method private clearServiceToken()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -432,7 +391,6 @@
 .method private clearSid()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -449,7 +407,6 @@
 .method private clearSsecurity()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -466,7 +423,6 @@
 .method private clearTimeDiff()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -483,7 +439,6 @@
 .method private clearUserId()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     move-result-object v0
@@ -500,7 +455,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     return-object v0
@@ -509,7 +463,6 @@
 .method public static newBuilder()Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -524,7 +477,6 @@
 .method public static newBuilder(Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;)Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -544,7 +496,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -564,7 +515,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -584,7 +534,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -604,7 +553,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -624,7 +572,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -644,7 +591,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -664,7 +610,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -684,7 +629,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -704,7 +648,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -724,7 +667,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -744,7 +686,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -764,7 +705,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -787,7 +727,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->getParserForType()Lcom/google/protobuf/Parser;
@@ -802,7 +741,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->appId_:Ljava/lang/String;
 
     return-void
@@ -810,7 +748,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -819,10 +756,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -834,7 +769,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -843,7 +777,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->cUserId_:Ljava/lang/String;
 
     return-void
@@ -851,7 +784,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -860,10 +792,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -875,7 +805,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -884,7 +813,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->domain_:Ljava/lang/String;
 
     return-void
@@ -892,7 +820,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -901,10 +828,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -916,7 +841,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -925,7 +849,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->serviceToken_:Ljava/lang/String;
 
     return-void
@@ -933,7 +856,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -942,10 +864,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -957,7 +877,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -966,7 +885,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->sid_:Ljava/lang/String;
 
     return-void
@@ -974,7 +892,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -983,10 +900,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -998,7 +913,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1007,7 +921,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->ssecurity_:Ljava/lang/String;
 
     return-void
@@ -1015,7 +928,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1024,10 +936,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1039,7 +949,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1048,7 +957,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->timeDiff_:Ljava/lang/String;
 
     return-void
@@ -1056,7 +964,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1065,10 +972,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1080,7 +985,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1089,7 +993,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->userId_:Ljava/lang/String;
 
     return-void
@@ -1097,7 +1000,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -1106,10 +1008,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -1121,7 +1021,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -1130,7 +1029,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -1145,7 +1043,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1155,7 +1052,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -1163,34 +1059,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -1209,7 +1099,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
@@ -1266,7 +1155,6 @@
 
     aput-object p3, p1, p2
 
-    .line 11
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
     const-string p3, "\u0000\u0008\u0000\u0000\u0001\u0008\u0008\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208\u0007\u0208\u0008\u0208"
@@ -1277,7 +1165,6 @@
 
     return-object p1
 
-    .line 12
     :pswitch_5
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam$Builder;
 
@@ -1285,7 +1172,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_6
     new-instance p1, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;
 
@@ -1308,7 +1194,6 @@
 .method public getAppId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->appId_:Ljava/lang/String;
 
     return-object v0
@@ -1317,7 +1202,6 @@
 .method public getAppIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->appId_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1330,7 +1214,6 @@
 .method public getCUserId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->cUserId_:Ljava/lang/String;
 
     return-object v0
@@ -1339,7 +1222,6 @@
 .method public getCUserIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->cUserId_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1352,7 +1234,6 @@
 .method public getDomain()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->domain_:Ljava/lang/String;
 
     return-object v0
@@ -1361,7 +1242,6 @@
 .method public getDomainBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->domain_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1374,7 +1254,6 @@
 .method public getServiceToken()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->serviceToken_:Ljava/lang/String;
 
     return-object v0
@@ -1383,7 +1262,6 @@
 .method public getServiceTokenBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->serviceToken_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1396,7 +1274,6 @@
 .method public getSid()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->sid_:Ljava/lang/String;
 
     return-object v0
@@ -1405,7 +1282,6 @@
 .method public getSidBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->sid_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1418,7 +1294,6 @@
 .method public getSsecurity()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->ssecurity_:Ljava/lang/String;
 
     return-object v0
@@ -1427,7 +1302,6 @@
 .method public getSsecurityBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->ssecurity_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1440,7 +1314,6 @@
 .method public getTimeDiff()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->timeDiff_:Ljava/lang/String;
 
     return-object v0
@@ -1449,7 +1322,6 @@
 .method public getTimeDiffBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->timeDiff_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1462,7 +1334,6 @@
 .method public getUserId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->userId_:Ljava/lang/String;
 
     return-object v0
@@ -1471,7 +1342,6 @@
 .method public getUserIdBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IPCParam$IdentifyParam;->userId_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;

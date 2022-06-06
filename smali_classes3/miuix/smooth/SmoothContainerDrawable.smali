@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_OUT:Landroid/graphics/PorterDuff$Mode;
@@ -44,17 +43,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 3
     new-instance v0, Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-direct {v0}, Lmiuix/smooth/internal/SmoothDrawHelper;-><init>()V
 
     iput-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
-    .line 4
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;-><init>()V
@@ -67,45 +63,38 @@
 .method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/smooth/SmoothContainerDrawable$ContainerState;)V
     .locals 1
 
-    .line 5
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 6
     new-instance v0, Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-direct {v0}, Lmiuix/smooth/internal/SmoothDrawHelper;-><init>()V
 
     iput-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
-    .line 7
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-direct {v0, p3, p0, p1, p2}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;-><init>(Lmiuix/smooth/SmoothContainerDrawable$ContainerState;Lmiuix/smooth/SmoothContainerDrawable;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
 
     iput-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
-    .line 8
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     iget p2, p3, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
 
     invoke-virtual {p1, p2}, Lmiuix/smooth/internal/SmoothDrawHelper;->setStrokeWidth(I)V
 
-    .line 9
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     iget p2, p3, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
 
     invoke-virtual {p1, p2}, Lmiuix/smooth/internal/SmoothDrawHelper;->setStrokeColor(I)V
 
-    .line 10
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     iget-object p2, p3, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
 
     invoke-virtual {p1, p2}, Lmiuix/smooth/internal/SmoothDrawHelper;->setRadii([F)V
 
-    .line 11
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     iget p2, p3, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadius:F
@@ -118,7 +107,6 @@
 .method public synthetic constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/smooth/SmoothContainerDrawable$ContainerState;Lmiuix/smooth/SmoothContainerDrawable$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lmiuix/smooth/SmoothContainerDrawable;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/smooth/SmoothContainerDrawable$ContainerState;)V
 
     return-void
@@ -133,7 +121,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -142,7 +129,6 @@
 
     add-int/2addr v0, v1
 
-    .line 2
     :cond_0
     :goto_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -151,7 +137,6 @@
 
     if-eq v2, v1, :cond_7
 
-    .line 3
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
@@ -172,7 +157,6 @@
     :cond_2
     if-gt v3, v0, :cond_0
 
-    .line 4
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -187,7 +171,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     :goto_1
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -203,19 +186,16 @@
     :cond_4
     if-ne v0, v4, :cond_6
 
-    .line 6
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;-><init>()V
 
-    .line 7
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-lt v1, v2, :cond_5
 
-    .line 8
     invoke-static {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -224,7 +204,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_5
     invoke-static {p1, p2, p3}, Landroid/graphics/drawable/Drawable;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;)Landroid/graphics/drawable/Drawable;
 
@@ -232,20 +211,17 @@
 
     iput-object p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 10
     :goto_2
     iget-object p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 11
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iput-object v0, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     return-void
 
-    .line 12
     :cond_6
     new-instance p1, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -284,7 +260,6 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     invoke-virtual {p1, p3, p4}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
@@ -294,7 +269,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p2, p3, p4, p1, p1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
@@ -307,17 +281,14 @@
 .method public applyTheme(Landroid/content/res/Resources$Theme;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
@@ -333,7 +304,6 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     if-eqz v0, :cond_0
@@ -364,25 +334,15 @@
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
-    .locals 9
+    .locals 8
 
-    .line 1
-    invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getLayerType()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    .line 2
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
 
     move-result-object v0
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
 
-    int-to-float v3, v0
+    int-to-float v2, v0
 
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
 
@@ -390,16 +350,15 @@
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
-    int-to-float v4, v0
+    int-to-float v3, v0
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
 
     move-result-object v0
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
 
-    int-to-float v5, v0
+    int-to-float v4, v0
 
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
 
@@ -407,53 +366,34 @@
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    int-to-float v6, v0
+    int-to-float v5, v0
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    const/16 v8, 0x1f
+    const/16 v7, 0x1f
 
-    move-object v2, p1
+    move-object v1, p1
 
-    .line 4
-    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
 
     move-result v0
 
-    goto :goto_0
+    iget-object v1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
-    :cond_0
-    const/4 v0, -0x1
+    iget-object v1, v1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
-    .line 5
-    :goto_0
-    iget-object v2, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
+    iget-object v1, v1, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    iget-object v2, v2, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    iget-object v2, v2, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
-    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    sget-object v2, Lmiuix/smooth/SmoothContainerDrawable;->XFERMODE_DST_OUT:Landroid/graphics/PorterDuffXfermode;
 
-    .line 6
-    iget-object v2, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
+    invoke-virtual {v1, p1, v2}, Lmiuix/smooth/internal/SmoothDrawHelper;->drawMask(Landroid/graphics/Canvas;Landroid/graphics/Xfermode;)V
 
-    sget-object v3, Lmiuix/smooth/SmoothContainerDrawable;->XFERMODE_DST_OUT:Landroid/graphics/PorterDuffXfermode;
-
-    invoke-virtual {v2, p1, v3}, Lmiuix/smooth/internal/SmoothDrawHelper;->drawMask(Landroid/graphics/Canvas;Landroid/graphics/Xfermode;)V
-
-    .line 7
-    invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getLayerType()I
-
-    move-result v2
-
-    if-eq v2, v1, :cond_1
-
-    .line 8
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 9
-    :cond_1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->drawStroke(Landroid/graphics/Canvas;)V
@@ -464,7 +404,6 @@
 .method public getAlpha()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getAlpha()I
@@ -477,7 +416,6 @@
 .method public final getBoundsInner()Landroid/graphics/Rect;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getBounds()Landroid/graphics/Rect;
@@ -490,12 +428,10 @@
 .method public getChildDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -511,7 +447,6 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     return-object v0
@@ -520,7 +455,6 @@
 .method public getCornerRadii()[F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
@@ -545,7 +479,6 @@
 .method public getCornerRadius()F
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadius:F
@@ -556,7 +489,6 @@
 .method public getDirtyBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getDirtyBounds()Landroid/graphics/Rect;
@@ -569,7 +501,6 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getIntrinsicHeight()I
@@ -582,7 +513,6 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getIntrinsicWidth()I
@@ -592,21 +522,9 @@
     return v0
 .end method
 
-.method public getLayerType()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
-
-    iget v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mLayerType:I
-
-    return v0
-.end method
-
 .method public getOpacity()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getOpacity()I
@@ -619,14 +537,12 @@
 .method public getOutline(Landroid/graphics/Outline;)V
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
@@ -646,7 +562,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable;->getBoundsInner()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -665,7 +580,6 @@
 .method public getPadding(Landroid/graphics/Rect;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->getPadding(Landroid/graphics/Rect;)Z
@@ -678,7 +592,6 @@
 .method public getStrokeColor()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
@@ -689,7 +602,6 @@
 .method public getStrokeWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
@@ -706,17 +618,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 2
     sget-object v0, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable:[I
 
     invoke-direct {p0, p1, p4, p3, v0}, Lmiuix/smooth/SmoothContainerDrawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 3
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_radius:I
 
     const/4 v2, 0x0
@@ -727,10 +636,8 @@
 
     int-to-float v1, v1
 
-    .line 4
     invoke-virtual {p0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setCornerRadius(F)V
 
-    .line 5
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_topLeftRadius:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -741,7 +648,6 @@
 
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_topRightRadius:I
 
-    .line 6
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
@@ -750,7 +656,6 @@
 
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_bottomRightRadius:I
 
-    .line 7
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
@@ -759,14 +664,12 @@
 
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_bottomLeftRadius:I
 
-    .line 8
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 9
     :cond_0
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_topLeftRadius:I
 
@@ -776,7 +679,6 @@
 
     int-to-float v1, v1
 
-    .line 10
     sget v3, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_topRightRadius:I
 
     invoke-virtual {v0, v3, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -785,7 +687,6 @@
 
     int-to-float v3, v3
 
-    .line 11
     sget v4, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_bottomRightRadius:I
 
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -794,7 +695,6 @@
 
     int-to-float v4, v4
 
-    .line 12
     sget v5, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_bottomLeftRadius:I
 
     invoke-virtual {v0, v5, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -837,10 +737,8 @@
 
     aput v5, v6, v1
 
-    .line 13
     invoke-virtual {p0, v6}, Lmiuix/smooth/SmoothContainerDrawable;->setCornerRadii([F)V
 
-    .line 14
     :cond_1
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_miuix_strokeWidth:I
 
@@ -848,33 +746,18 @@
 
     move-result v1
 
-    .line 15
     invoke-virtual {p0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setStrokeWidth(I)V
 
-    .line 16
     sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_miuix_strokeColor:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v1
 
-    .line 17
     invoke-virtual {p0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setStrokeColor(I)V
 
-    .line 18
-    sget v1, Lmiuix/smooth/R$styleable;->MiuixSmoothContainerDrawable_android_layerType:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v1
-
-    .line 19
-    invoke-virtual {p0, v1}, Lmiuix/smooth/SmoothContainerDrawable;->setLayerType(I)V
-
-    .line 20
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 21
     invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/smooth/SmoothContainerDrawable;->inflateInnerDrawable(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
     return-void
@@ -883,7 +766,6 @@
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -892,7 +774,6 @@
 .method public isStateful()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->isStateful()Z
@@ -905,7 +786,6 @@
 .method public jumpToCurrentState()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->jumpToCurrentState()V
@@ -916,12 +796,10 @@
 .method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->onBoundsChange(Landroid/graphics/Rect;)V
@@ -932,7 +810,6 @@
 .method public onStateChange([I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->onStateChange([I)Z
@@ -945,7 +822,6 @@
 .method public scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
     return-void
@@ -954,17 +830,14 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->setAlpha(I)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setAlpha(I)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -973,7 +846,6 @@
 .method public setChangingConfigurations(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->setChangingConfigurations(I)V
@@ -984,23 +856,18 @@
 .method public setChildDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;-><init>()V
 
-    .line 3
     iput-object p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 4
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 5
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iput-object v0, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
@@ -1012,7 +879,6 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->setColorFilter(Landroid/graphics/ColorFilter;)V
@@ -1023,31 +889,26 @@
 .method public setCornerRadii([F)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iput-object p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
 
-    .line 2
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setRadii([F)V
 
     if-nez p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     const/4 v0, 0x0
 
     iput v0, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadius:F
 
-    .line 4
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {p1, v0}, Lmiuix/smooth/internal/SmoothDrawHelper;->setRadius(F)V
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -1057,7 +918,6 @@
 .method public setCornerRadius(F)V
     .locals 2
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
@@ -1075,7 +935,6 @@
 
     move p1, v0
 
-    .line 2
     :cond_1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
@@ -1083,20 +942,16 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iput-object v1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
 
-    .line 4
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setRadius(F)V
 
-    .line 5
     iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {p1, v1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setRadii([F)V
 
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
@@ -1105,7 +960,6 @@
 .method public setDither(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->setDither(Z)V
@@ -1116,7 +970,6 @@
 .method public setFilterBitmap(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->setFilterBitmap(Z)V
@@ -1124,61 +977,21 @@
     return-void
 .end method
 
-.method public setLayerType(I)V
-    .locals 2
-
-    if-ltz p1, :cond_1
-
-    const/4 v0, 0x2
-
-    if-gt p1, v0, :cond_1
-
-    .line 1
-    iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
-
-    iget v1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mLayerType:I
-
-    if-eq v1, p1, :cond_0
-
-    .line 2
-    iput p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mLayerType:I
-
-    .line 3
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_0
-    return-void
-
-    .line 4
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Layer type can only be one of: LAYER_TYPE_NONE, LAYER_TYPE_SOFTWARE or LAYER_TYPE_HARDWARE"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
 .method public setStrokeColor(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget v1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
 
     if-eq v1, p1, :cond_0
 
-    .line 2
     iput p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setStrokeColor(I)V
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
@@ -1188,22 +1001,18 @@
 .method public setStrokeWidth(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mContainerState:Lmiuix/smooth/SmoothContainerDrawable$ContainerState;
 
     iget v1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
 
     if-eq v1, p1, :cond_0
 
-    .line 2
     iput p1, v0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->setStrokeWidth(I)V
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
@@ -1213,7 +1022,6 @@
 .method public unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
     return-void

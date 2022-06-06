@@ -15,22 +15,18 @@
 
     const-string v0, "arcsoft_supernight_jni"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "arcsoft_sn_mtk_apu"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "arcsoft_super_night_raw_mtk"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "arcsoft_super_night_raw_mpbase"
 
-    .line 4
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -39,12 +35,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     return-void
@@ -87,10 +81,8 @@
     :try_start_0
     const-string v0, "SN addOneInputInfo"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v0, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/arcsoft/supernight/SuperNightJni;->nativeAddOneInputInfo(JLcom/arcsoft/supernight/SuperNightProcess$RawInfo;Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;)I
@@ -99,12 +91,10 @@
 
     const-string p2, "SN addOneInputInfo"
 
-    .line 3
     invoke-static {p2}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return p1
@@ -120,7 +110,6 @@
 .method public cancelSuperNight()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/arcsoft/supernight/SuperNightJni;->nativeCancelSuperNight()I
 
     return-void
@@ -131,17 +120,14 @@
 
     const-string v0, "SN init"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/arcsoft/supernight/SuperNightJni;->nativeInit(IIII)J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
-    .line 3
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
 
     return-void
@@ -152,17 +138,14 @@
 
     const-string v0, "SN postProcess"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v1, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     invoke-direct {p0, v1, v2}, Lcom/arcsoft/supernight/SuperNightJni;->nativePostProcess(J)I
 
     move-result v1
 
-    .line 3
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
 
     return v1
@@ -173,17 +156,14 @@
 
     const-string v0, "SN preProcess"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v1, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     invoke-direct {p0, v1, v2}, Lcom/arcsoft/supernight/SuperNightJni;->nativePreProcess(J)I
 
     move-result v1
 
-    .line 3
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
 
     return v1
@@ -194,10 +174,8 @@
 
     const-string v0, "SN process"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v2, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     move-object v1, p0
@@ -216,7 +194,6 @@
 
     move-result p1
 
-    .line 3
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
 
     return p1
@@ -227,7 +204,6 @@
 
     move-object v11, p0
 
-    .line 1
     iget-wide v1, v11, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     move-object v0, p0
@@ -258,7 +234,6 @@
 .method public setDumpImageFile(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/arcsoft/supernight/SuperNightJni;->nativeSetDumpImageFile(Z)I
 
     return-void
@@ -269,17 +244,14 @@
 
     const-string v0, "SN unInit"
 
-    .line 1
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
-    .line 2
     iget-wide v1, p0, Lcom/arcsoft/supernight/SuperNightJni;->b:J
 
     invoke-direct {p0, v1, v2}, Lcom/arcsoft/supernight/SuperNightJni;->nativeUninit(J)I
 
     move-result v1
 
-    .line 3
     invoke-static {v0}, Lcom/arcsoft/supernight/TimeConsumingUtil;->stopTiming(Ljava/lang/String;)V
 
     return v1

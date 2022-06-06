@@ -22,8 +22,6 @@
 
 
 # static fields
-.field public static final BOKEH_MULTIPLE_RAW:I = 0x13
-
 .field public static final BURST_RAW:I = 0xb
 
 .field public static final CLEAR_SHOT:I = 0x2

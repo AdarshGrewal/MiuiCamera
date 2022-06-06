@@ -31,15 +31,12 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
-    .line 3
     check-cast p1, Lcom/android/camera/Camera;
 
     iput-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
@@ -52,7 +49,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/CameraPresentation;->cancel()V
 
     :cond_0
@@ -62,7 +58,6 @@
 .method private addRequestListener()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     if-eqz v0, :cond_0
@@ -73,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
@@ -89,7 +83,6 @@
 .method public static create(Lcom/android/camera/ActivityBase;)Lcom/android/camera/fragment/PresentationDisplay;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/PresentationDisplay;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/PresentationDisplay;-><init>(Lcom/android/camera/ActivityBase;)V
@@ -102,7 +95,6 @@
 
     const-string v0, "display"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -123,7 +115,6 @@
 .method private initCameraPresentation(Landroid/content/Context;II)Lcom/android/camera/fragment/CameraPresentation;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/CameraPresentation;
 
     invoke-static {p1}, Lcom/android/camera/fragment/PresentationDisplay;->getDisplay(Landroid/content/Context;)Landroid/view/Display;
@@ -138,7 +129,6 @@
 .method private removeRequestListener()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     if-eqz v0, :cond_0
@@ -149,7 +139,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCameraScreenNail()Lcom/android/camera/CameraScreenNail;
@@ -169,12 +158,10 @@
 .method public animateCapture()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->animateCapture()V
 
     :cond_0
@@ -192,12 +179,11 @@
 .method public cancel()V
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o00oO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0000()Z
 
     move-result v0
 
@@ -205,26 +191,21 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/PresentationDisplay;->removeRequestListener()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 4
-    invoke-static {v0}, Lcom/android/camera/display/Display;->switchPresentationDisplay(Z)V
+    invoke-static {v0}, Lcom/android/camera/Display;->switchPresentationDisplay(Z)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->cancel()V
 
-    .line 6
     sget-object v0, Lcom/android/camera/fragment/PresentationDisplay;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "presentation display cancel"
@@ -233,7 +214,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     iput-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     :cond_1
@@ -243,8 +223,7 @@
 .method public hideAutoHibernation()V
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -252,18 +231,15 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/PresentationDisplay;->show(I)V
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->hideAutoHibernation()V
 
     :cond_1
@@ -273,12 +249,10 @@
 .method public hideDelayNumber()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->hideDelayNumber()V
 
     :cond_0
@@ -304,14 +278,12 @@
 .method public notifyAfterFrameAvailable(I)V
     .locals 0
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraSettings;->isESPDisplayOn()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/PresentationDisplay;->cancel()V
 
     goto :goto_0
@@ -319,7 +291,6 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/PresentationDisplay;->show(I)V
 
     :goto_0
@@ -365,7 +336,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCurrentMode:I
 
     return-void
@@ -382,7 +352,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p2, p3}, Lcom/android/camera/fragment/PresentationDisplay;->provideRotateItem(Ljava/util/List;I)V
 
     return-void
@@ -405,7 +374,6 @@
 
     if-ltz p2, :cond_0
 
-    .line 1
     rem-int/2addr p2, p1
 
     goto :goto_0
@@ -415,7 +383,6 @@
 
     add-int/2addr p2, p1
 
-    .line 2
     :goto_0
     iget v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
@@ -423,7 +390,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
@@ -435,10 +401,8 @@
 
     if-nez v0, :cond_3
 
-    .line 4
     iput p2, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz p1, :cond_2
@@ -449,7 +413,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz p1, :cond_2
@@ -460,7 +423,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/CameraPresentation;->getDelayNumberTv()Landroid/widget/TextView;
@@ -476,7 +438,6 @@
     :cond_2
     return-void
 
-    .line 8
     :cond_3
     iget v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
@@ -511,10 +472,8 @@
     :goto_2
     add-int/lit16 v2, p2, 0x168
 
-    .line 9
     rem-int/2addr v2, p1
 
-    .line 10
     iget v3, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
     if-eqz v0, :cond_9
@@ -554,7 +513,6 @@
 
     move v1, v3
 
-    .line 11
     :goto_5
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
@@ -566,7 +524,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 12
     new-instance v0, Lcom/android/camera/animation/type/RotateOnSubscribe;
 
     iget-object v2, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
@@ -577,7 +534,6 @@
 
     invoke-direct {v0, v2}, Lcom/android/camera/animation/type/RotateOnSubscribe;-><init>(Landroid/view/View;)V
 
-    .line 13
     invoke-virtual {v0, v1, p1}, Lcom/android/camera/animation/type/RotateOnSubscribe;->setRotateDegree(II)Lcom/android/camera/animation/type/RotateOnSubscribe;
 
     move-result-object p1
@@ -586,36 +542,29 @@
 
     invoke-direct {v0}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
-    .line 14
     invoke-virtual {p1, v0}, Lcom/android/camera/animation/type/BaseOnSubScribe;->setInterpolator(Landroid/view/animation/Interpolator;)Lcom/android/camera/animation/type/BaseOnSubScribe;
 
     move-result-object p1
 
     const/16 v0, 0x12c
 
-    .line 15
     invoke-virtual {p1, v0}, Lcom/android/camera/animation/type/BaseOnSubScribe;->setDurationTime(I)Lcom/android/camera/animation/type/BaseOnSubScribe;
 
     move-result-object p1
 
-    .line 16
     invoke-static {p1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
     move-result-object p1
 
-    .line 17
     invoke-virtual {p1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
-    .line 18
     :cond_c
     iput p2, p0, Lcom/android/camera/fragment/PresentationDisplay;->mDegree:I
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz p1, :cond_d
 
-    .line 20
     invoke-virtual {p1, p2}, Lcom/android/camera/fragment/CameraPresentation;->setDegree(I)V
 
     :cond_d
@@ -632,13 +581,10 @@
     :cond_0
     const v0, 0xffffff1
 
-    .line 1
     invoke-virtual {p1, v0, p0}, Lcom/android/camera/animation/AnimationComposite;->put(ILcom/android/camera/animation/AnimationDelegate$AnimationResource;)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCurrentMode:I
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/animation/AnimationComposite;->getTargetDegree()I
 
     move-result p1
@@ -651,7 +597,6 @@
 .method public registerProtocol()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -660,7 +605,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -675,7 +619,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->addInBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     :cond_0
@@ -685,7 +628,6 @@
 .method public requestRender()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_0
@@ -696,7 +638,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->getTextureView()Lcom/android/camera/ui/GLTextureView;
@@ -718,8 +659,7 @@
 .method public setESPRecordingTimeState(I)V
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -727,13 +667,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/CameraPresentation;->setESPRecordingTimeState(I)V
 
     :cond_1
@@ -743,7 +681,6 @@
 .method public show(I)V
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->isActivityPaused()Z
@@ -754,7 +691,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->isESPDisplayOn()Z
 
@@ -767,13 +703,10 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 3
-    invoke-static {p1}, Lcom/android/camera/display/Display;->switchPresentationDisplay(Z)V
+    invoke-static {p1}, Lcom/android/camera/Display;->switchPresentationDisplay(Z)V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraActivity:Lcom/android/camera/Camera;
 
     iget v1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCurrentMode:I
@@ -786,22 +719,18 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
-    .line 6
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0o0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo0O0;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0o0;-><init>(Lcom/android/camera/fragment/CameraPresentation;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo0O0;-><init>(Lcom/android/camera/fragment/CameraPresentation;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Presentation;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     invoke-virtual {p1}, Landroid/app/Presentation;->show()V
 
-    .line 8
     invoke-direct {p0}, Lcom/android/camera/fragment/PresentationDisplay;->addRequestListener()V
 
-    .line 9
     sget-object p1, Lcom/android/camera/fragment/PresentationDisplay;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "presentation display show"
@@ -814,25 +743,21 @@
 .method public showAutoHibernation()V
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/PresentationDisplay;->cancel()V
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/fragment/CameraPresentation;->showAutoHibernation()V
 
     :cond_1
@@ -842,8 +767,7 @@
 .method public showDelayNumber(IZ)V
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -853,13 +777,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/CameraPresentation;->showDelayNumber(IZ)V
 
     :cond_1
@@ -869,10 +791,8 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/PresentationDisplay;->cancel()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -881,7 +801,6 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -896,7 +815,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-interface {v0, p0}, Lcom/android/camera/protocol/ModeProtocol$BackStack;->removeBackStack(Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     :cond_0
@@ -906,8 +824,7 @@
 .method public updateRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
@@ -915,13 +832,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/PresentationDisplay;->mCameraPresentation:Lcom/android/camera/fragment/CameraPresentation;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/CameraPresentation;->updateRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1

@@ -50,6 +50,9 @@
 .method public abstract onLongExposeStart()V
 .end method
 
+.method public abstract onMimojiCreateBack()V
+.end method
+
 .method public abstract onPause()V
 .end method
 
@@ -69,4 +72,7 @@
 .end method
 
 .method public abstract onStart()V
+.end method
+
+.method public abstract prepareCreateMimoji()V
 .end method

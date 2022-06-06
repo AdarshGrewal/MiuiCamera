@@ -26,7 +26,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection;->ItemTypeName:[I
@@ -35,27 +34,26 @@
 
     :array_0
     .array-data 4
-        0x7f12051e
-        0x7f120514
-        0x7f12050d
-        0x7f120503
-        0x7f12052a
-        0x7f12052c
-        0x7f12050f
-        0x7f120512
-        0x7f12052b
-        0x7f120511
-        0x7f12051f
-        0x7f12050e
-        0x7f12052f
-        0x7f120529
+        0x7f1204ed
+        0x7f1204e3
+        0x7f1204dc
+        0x7f1204d2
+        0x7f1204f9
+        0x7f1204fb
+        0x7f1204de
+        0x7f1204e1
+        0x7f1204fa
+        0x7f1204e0
+        0x7f1204ee
+        0x7f1204dd
+        0x7f1204fe
+        0x7f1204f8
     .end array-data
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +62,6 @@
 .method public static getColorType(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$1;->$SwitchMap$com$android$camera$features$mimojis$mimojifu$faceunity$fupta$base$entity$LabelCollection$ItemType:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -79,43 +76,36 @@
 
     goto :goto_0
 
-    .line 2
     :pswitch_0
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->glass_frame_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 3
     :pswitch_1
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->hat_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 4
     :pswitch_2
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->beard_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 5
     :pswitch_3
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->lip_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 6
     :pswitch_4
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->eyebrow_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 7
     :pswitch_5
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->skin_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     goto :goto_0
 
-    .line 8
     :pswitch_6
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->hair_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
@@ -143,7 +133,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 

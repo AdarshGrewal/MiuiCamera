@@ -33,7 +33,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;)V
 
     return-void
@@ -55,10 +54,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p3}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 2
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
     check-cast v0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;
@@ -71,10 +68,8 @@
 .method public onError(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->ensureClassLoader(Landroid/os/Bundle;)V
 
-    .line 2
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;->mSubscriptionCallback:Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;
 
     check-cast v0, Landroid/support/v4/media/MediaBrowserCompatApi26$SubscriptionCallback;

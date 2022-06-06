@@ -21,10 +21,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lmiuix/internal/log/message/AbstractMessage;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/internal/log/util/AppendableFormatter;
 
     invoke-direct {v0}, Lmiuix/internal/log/util/AppendableFormatter;-><init>()V
@@ -37,7 +35,6 @@
 .method public static obtain()Lmiuix/internal/log/message/StringFormattedMessage;
     .locals 1
 
-    .line 1
     const-class v0, Lmiuix/internal/log/message/StringFormattedMessage;
 
     invoke-static {v0}, Lmiuix/internal/log/message/MessageFactory;->obtain(Ljava/lang/Class;)Lmiuix/internal/log/message/Message;
@@ -54,7 +51,6 @@
 .method public format(Ljava/lang/Appendable;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormat:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -69,13 +65,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormatter:Lmiuix/internal/log/util/AppendableFormatter;
 
     invoke-virtual {v0, p1}, Lmiuix/internal/log/util/AppendableFormatter;->setAppendable(Ljava/lang/Appendable;)V
 
-    .line 3
     iget-object p1, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormatter:Lmiuix/internal/log/util/AppendableFormatter;
 
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -88,7 +82,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     :goto_0
     :try_start_0
@@ -107,7 +100,6 @@
 
     const-string v1, "Fail to format message"
 
-    .line 5
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
@@ -117,7 +109,6 @@
 .method public getFormat()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormat:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +117,6 @@
 .method public getParameters()[Ljava/lang/Object;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mParameters:[Ljava/lang/Object;
 
     return-object v0
@@ -135,7 +125,6 @@
 .method public getThrowable()Ljava/lang/Throwable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mThrowable:Ljava/lang/Throwable;
 
     return-object v0
@@ -146,16 +135,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormat:Ljava/lang/String;
 
-    .line 2
     iput-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mParameters:[Ljava/lang/Object;
 
-    .line 3
     iput-object v0, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mThrowable:Ljava/lang/Throwable;
 
-    .line 4
     iget-object v1, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormatter:Lmiuix/internal/log/util/AppendableFormatter;
 
     invoke-virtual {v1, v0}, Lmiuix/internal/log/util/AppendableFormatter;->setAppendable(Ljava/lang/Appendable;)V
@@ -166,7 +151,6 @@
 .method public setFormat(Ljava/lang/String;)Lmiuix/internal/log/message/StringFormattedMessage;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mFormat:Ljava/lang/String;
 
     return-object p0
@@ -175,7 +159,6 @@
 .method public setParameters([Ljava/lang/Object;)Lmiuix/internal/log/message/StringFormattedMessage;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mParameters:[Ljava/lang/Object;
 
     return-object p0
@@ -184,7 +167,6 @@
 .method public setThrowable(Ljava/lang/Throwable;)Lmiuix/internal/log/message/StringFormattedMessage;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/internal/log/message/StringFormattedMessage;->mThrowable:Ljava/lang/Throwable;
 
     return-object p0

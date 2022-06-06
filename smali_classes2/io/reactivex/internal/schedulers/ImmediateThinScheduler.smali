@@ -23,28 +23,24 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;
 
     invoke-direct {v0}, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->INSTANCE:Lio/reactivex/Scheduler;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler$ImmediateThinWorker;
 
     invoke-direct {v0}, Lio/reactivex/internal/schedulers/ImmediateThinScheduler$ImmediateThinWorker;-><init>()V
 
     sput-object v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->WORKER:Lio/reactivex/Scheduler$Worker;
 
-    .line 3
     invoke-static {}, Lio/reactivex/disposables/Disposables;->empty()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     sput-object v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->DISPOSED:Lio/reactivex/disposables/Disposable;
 
-    .line 4
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
     return-void
@@ -53,7 +49,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Scheduler;-><init>()V
 
     return-void
@@ -64,7 +59,6 @@
 .method public createWorker()Lio/reactivex/Scheduler$Worker;
     .locals 1
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->WORKER:Lio/reactivex/Scheduler$Worker;
 
     return-object v0
@@ -73,10 +67,8 @@
 .method public scheduleDirect(Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 2
     sget-object p1, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->DISPOSED:Lio/reactivex/disposables/Disposable;
 
     return-object p1
@@ -85,7 +77,6 @@
 .method public scheduleDirect(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
-    .line 3
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "This scheduler doesn\'t support delayed execution"
@@ -98,7 +89,6 @@
 .method public schedulePeriodicallyDirect(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "This scheduler doesn\'t support periodic execution"

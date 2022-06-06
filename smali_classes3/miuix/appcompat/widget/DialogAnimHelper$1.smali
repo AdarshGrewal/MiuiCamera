@@ -29,7 +29,6 @@
 .method public constructor <init>(ZLandroid/view/View;Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/widget/DialogAnimHelper$1;->val$isLandscape:Z
 
     iput-object p2, p0, Lmiuix/appcompat/widget/DialogAnimHelper$1;->val$contentView:Landroid/view/View;
@@ -46,7 +45,6 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 1
     iget-boolean p2, p0, Lmiuix/appcompat/widget/DialogAnimHelper$1;->val$isLandscape:Z
 
     if-nez p2, :cond_0
@@ -61,11 +59,9 @@
 
     if-ne p5, p2, :cond_1
 
-    .line 2
     :cond_0
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 3
     iget-object p2, p0, Lmiuix/appcompat/widget/DialogAnimHelper$1;->val$contentView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
@@ -74,7 +70,6 @@
 
     invoke-static {p2, p3}, Lmiuix/appcompat/widget/DialogAnimHelper;->access$000(Landroid/view/View;I)V
 
-    .line 4
     iget-object p2, p0, Lmiuix/appcompat/widget/DialogAnimHelper$1;->val$contentView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
@@ -89,7 +84,6 @@
 
     invoke-static {p2, p3, p6, p4, p5}, Lmiuix/appcompat/widget/DialogAnimHelper;->access$100(Landroid/view/View;IIZLmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
 
-    .line 5
     invoke-virtual {p1, p6}, Landroid/view/View;->setVisibility(I)V
 
     :cond_1

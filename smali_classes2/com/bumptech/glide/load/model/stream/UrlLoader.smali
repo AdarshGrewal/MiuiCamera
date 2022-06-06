@@ -50,10 +50,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/UrlLoader;->glideUrlLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     return-void
@@ -64,7 +62,6 @@
 .method public bridge synthetic buildLoadData(Ljava/lang/Object;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/net/URL;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/model/stream/UrlLoader;->buildLoadData(Ljava/net/URL;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
@@ -89,7 +86,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/model/stream/UrlLoader;->glideUrlLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     new-instance v1, Lcom/bumptech/glide/load/model/GlideUrl;
@@ -106,7 +102,6 @@
 .method public bridge synthetic handles(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/net/URL;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/stream/UrlLoader;->handles(Ljava/net/URL;)Z

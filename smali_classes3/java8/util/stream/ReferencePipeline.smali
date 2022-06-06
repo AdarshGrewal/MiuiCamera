@@ -43,7 +43,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/Spliterator;IZ)V
 
     return-void
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/function/Supplier;IZ)V
 
     return-void
@@ -77,7 +75,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractPipeline;-><init>(Ljava8/util/stream/AbstractPipeline;I)V
 
     return-void
@@ -86,7 +83,6 @@
 .method public static synthetic lambda$collect$100(Ljava8/util/function/BiConsumer;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1, p2}, Ljava8/util/function/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
@@ -95,7 +91,6 @@
 .method public static synthetic lambda$toArray$99(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     new-array p0, p0, [Ljava/lang/Object;
 
     return-object p0
@@ -113,7 +108,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ALL:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeRef(Ljava8/util/function/Predicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -143,7 +137,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ANY:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeRef(Ljava8/util/function/Predicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -179,7 +172,6 @@
         }
     .end annotation
 
-    .line 10
     invoke-static {p1, p2, p3}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava8/util/function/BiConsumer;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -205,14 +197,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractPipeline;->isParallel()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
     move-result-object v0
@@ -225,7 +215,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/AbstractPipeline;->isOrdered()Z
 
     move-result v0
@@ -244,7 +233,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     :cond_0
     invoke-interface {p1}, Ljava8/util/stream/Collector;->supplier()Ljava8/util/function/Supplier;
 
@@ -254,12 +242,10 @@
 
     move-result-object v0
 
-    .line 5
     invoke-interface {p1}, Ljava8/util/stream/Collector;->accumulator()Ljava8/util/function/BiConsumer;
 
     move-result-object v1
 
-    .line 6
     invoke-static {v1, v0}, Ljava8/util/stream/ReferencePipeline$$Lambda$2;->lambdaFactory$(Ljava8/util/function/BiConsumer;Ljava/lang/Object;)Ljava8/util/function/Consumer;
 
     move-result-object v1
@@ -268,7 +254,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-static {p1}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava8/util/stream/Collector;)Ljava8/util/stream/TerminalOp;
 
@@ -278,7 +263,6 @@
 
     move-result-object v0
 
-    .line 8
     :goto_0
     invoke-interface {p1}, Ljava8/util/stream/Collector;->characteristics()Ljava/util/Set;
 
@@ -294,7 +278,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_2
     invoke-interface {p1}, Ljava8/util/stream/Collector;->finisher()Ljava8/util/function/Function;
 
@@ -311,7 +294,6 @@
 .method public final count()J
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/ReduceOps;->makeRefCounting()Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -339,7 +321,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/DistinctOps;->makeRef(Ljava8/util/stream/AbstractPipeline;)Ljava8/util/stream/ReferencePipeline;
 
     move-result-object v0
@@ -359,7 +340,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/WhileOps;->makeDropWhileRef(Ljava8/util/stream/AbstractPipeline;Ljava8/util/function/Predicate;)Ljava8/util/stream/Stream;
 
     move-result-object p1
@@ -385,7 +365,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2, p3, p4}, Ljava8/util/stream/Nodes;->collect(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -405,10 +384,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$2;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -440,7 +417,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Ljava8/util/stream/FindOps;->makeRef(Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -466,7 +442,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {v0}, Ljava8/util/stream/FindOps;->makeRef(Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
@@ -496,10 +471,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$7;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -540,10 +513,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$9;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -584,10 +555,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$8;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -628,10 +597,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$10;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -671,7 +638,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p1, v0}, Ljava8/util/stream/ForEachOps;->makeRef(Ljava8/util/function/Consumer;Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -693,7 +659,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p1, v0}, Ljava8/util/stream/ForEachOps;->makeRef(Ljava8/util/function/Consumer;Z)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -715,7 +680,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     invoke-interface {p2}, Ljava8/util/stream/Sink;->cancellationRequested()Z
 
@@ -736,7 +700,6 @@
 .method public final getOutputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
     return-object v0
@@ -752,7 +715,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractPipeline;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -778,7 +740,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;
 
     invoke-direct {v0, p1}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;-><init>(Ljava8/util/function/Supplier;)V
@@ -802,14 +763,12 @@
 
     if-ltz v2, :cond_0
 
-    .line 1
     invoke-static {p0, v0, v1, p1, p2}, Ljava8/util/stream/SliceOps;->makeRef(Ljava8/util/stream/AbstractPipeline;JJ)Ljava8/util/stream/Stream;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -834,7 +793,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2, p3}, Ljava8/util/stream/Nodes;->builder(JLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$Builder;
 
     move-result-object p1
@@ -856,10 +814,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$3;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -894,10 +850,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$6;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -932,10 +886,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$4;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -970,10 +922,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$5;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -1009,7 +959,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/function/BinaryOperators;->maxBy(Ljava/util/Comparator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p1
@@ -1033,7 +982,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/function/BinaryOperators;->minBy(Ljava/util/Comparator;)Ljava8/util/function/BinaryOperator;
 
     move-result-object p1
@@ -1055,7 +1003,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->NONE:Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {p1, v0}, Ljava8/util/stream/MatchOps;->makeRef(Ljava8/util/function/Predicate;Ljava8/util/stream/MatchOps$MatchKind;)Ljava8/util/stream/TerminalOp;
@@ -1087,10 +1034,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/ReferencePipeline$11;
 
     sget-object v3, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
@@ -1124,7 +1069,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p1, p2, p3}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava/lang/Object;Ljava8/util/function/BiFunction;Ljava8/util/function/BinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -1146,7 +1090,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2, p2}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava/lang/Object;Ljava8/util/function/BiFunction;Ljava8/util/function/BinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -1170,7 +1113,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p1}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava8/util/function/BinaryOperator;)Ljava8/util/stream/TerminalOp;
 
     move-result-object p1
@@ -1207,14 +1149,12 @@
     :cond_0
     const-wide/16 v0, -0x1
 
-    .line 1
     invoke-static {p0, p1, p2, v0, v1}, Ljava8/util/stream/SliceOps;->makeRef(Ljava8/util/stream/AbstractPipeline;JJ)Ljava8/util/stream/Stream;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1237,7 +1177,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/stream/SortedOps;->makeRef(Ljava8/util/stream/AbstractPipeline;)Ljava8/util/stream/Stream;
 
     move-result-object v0
@@ -1257,7 +1196,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/SortedOps;->makeRef(Ljava8/util/stream/AbstractPipeline;Ljava/util/Comparator;)Ljava8/util/stream/Stream;
 
     move-result-object p1
@@ -1277,7 +1215,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/WhileOps;->makeTakeWhileRef(Ljava8/util/stream/AbstractPipeline;Ljava8/util/function/Predicate;)Ljava8/util/stream/Stream;
 
     move-result-object p1
@@ -1288,7 +1225,6 @@
 .method public final toArray()[Ljava/lang/Object;
     .locals 1
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/ReferencePipeline$$Lambda$1;->lambdaFactory$()Ljava8/util/function/IntFunction;
 
     move-result-object v0
@@ -1312,7 +1248,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/AbstractPipeline;->evaluateToArrayNode(Ljava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object v0
@@ -1321,7 +1256,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0, p1}, Ljava8/util/stream/Node;->asArray(Ljava8/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -1332,7 +1266,6 @@
 .method public bridge synthetic unordered()Ljava8/util/stream/BaseStream;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReferencePipeline;->unordered()Ljava8/util/stream/Stream;
 
     move-result-object v0
@@ -1350,7 +1283,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/AbstractPipeline;->isOrdered()Z
 
     move-result v0
@@ -1359,7 +1291,6 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava8/util/stream/ReferencePipeline$1;
 
@@ -1389,7 +1320,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;
 
     invoke-direct {v0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$WrappingSpliterator;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/function/Supplier;Z)V

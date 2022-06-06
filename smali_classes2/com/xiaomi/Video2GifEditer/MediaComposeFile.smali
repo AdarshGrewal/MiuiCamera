@@ -23,10 +23,8 @@
 .method public constructor <init>(Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
     return-void
@@ -55,7 +53,6 @@
 .method public BeginComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->BeginComposeFileJni()V
 
     return-void
@@ -85,7 +81,6 @@
 .method public CancelComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +101,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->CancelComposeFileJni()V
 
     return-void
@@ -115,12 +109,10 @@
 .method public ConstructMediaComposeFile(IIII)Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     const-string p2, "effect graph is null, failed!"
@@ -131,7 +123,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;->GetGraphLine()J
 
@@ -147,7 +138,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->ConstructMediaComposeFileJni(JIIII)Z
 
-    .line 4
     sget-object p1, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -176,7 +166,6 @@
 .method public DestructMediaComposeFile()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -197,7 +186,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->DestructMediaComposeFileJni()V
 
     return-void
@@ -206,7 +194,6 @@
 .method public SetComposeFileName(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -225,7 +212,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->SetComposeFileNameJni(Ljava/lang/String;)V
 
     return-void
@@ -234,7 +220,6 @@
 .method public SetComposeNotify(Lcom/xiaomi/Video2GifEditer/EffectNotifier;)V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -255,7 +240,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p1}, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->SetComposeNotifyJni(Lcom/xiaomi/Video2GifEditer/EffectNotifier;)V
 
     return-void
@@ -264,7 +248,6 @@
 .method public SetMediaEffectGraph(Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/Video2GifEditer/MediaComposeFile;->mMediaEffectGraph:Lcom/xiaomi/Video2GifEditer/MediaEffectGraph;
 
     return-void

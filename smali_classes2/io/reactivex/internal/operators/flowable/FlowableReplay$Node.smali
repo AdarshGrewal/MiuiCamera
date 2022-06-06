@@ -36,13 +36,10 @@
 .method public constructor <init>(Ljava/lang/Object;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay$Node;->value:Ljava/lang/Object;
 
-    .line 3
     iput-wide p2, p0, Lio/reactivex/internal/operators/flowable/FlowableReplay$Node;->index:J
 
     return-void

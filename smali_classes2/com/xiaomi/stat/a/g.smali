@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/a/c;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/a/g;->a:Lcom/xiaomi/stat/a/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,7 +31,6 @@
 
     const-string v2, "EventManager"
 
-    .line 1
     :try_start_0
     iget-object v4, v1, Lcom/xiaomi/stat/a/g;->a:Lcom/xiaomi/stat/a/c;
 
@@ -44,12 +42,10 @@
 
     move-result-object v4
 
-    .line 2
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v13
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v5
@@ -58,7 +54,6 @@
 
     const/4 v5, 0x6
 
-    .line 4
     invoke-virtual {v13, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
@@ -71,20 +66,16 @@
 
     const/4 v14, 0x0
 
-    .line 5
     invoke-virtual {v13, v5, v14}, Ljava/util/Calendar;->set(II)V
 
     const/16 v5, 0xc
 
-    .line 6
     invoke-virtual {v13, v5, v14}, Ljava/util/Calendar;->set(II)V
 
     const/16 v5, 0xd
 
-    .line 7
     invoke-virtual {v13, v5, v14}, Ljava/util/Calendar;->set(II)V
 
-    .line 8
     invoke-virtual {v13}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v5
@@ -95,7 +86,6 @@
 
     new-array v11, v12, [Ljava/lang/String;
 
-    .line 9
     invoke-static {v5, v6}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v5
@@ -110,7 +100,6 @@
 
     const-string v6, "events"
 
-    .line 10
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v7
@@ -146,7 +135,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 11
     :try_start_1
     invoke-interface {v5}, Landroid/database/Cursor;->getCount()I
 
@@ -154,17 +142,14 @@
 
     if-eqz v6, :cond_4
 
-    .line 12
     new-instance v7, Lcom/xiaomi/stat/aj;
 
     invoke-direct {v7}, Lcom/xiaomi/stat/aj;-><init>()V
 
     const-string v8, "ca"
 
-    .line 13
     invoke-virtual {v7, v8, v6}, Lcom/xiaomi/stat/MiStatParams;->putInt(Ljava/lang/String;I)V
 
-    .line 14
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,7 +166,6 @@
 
     invoke-static {v2, v6}, Lcom/xiaomi/stat/d/k;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     invoke-interface {v5, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
@@ -190,7 +174,6 @@
 
     const/4 v8, 0x0
 
-    .line 16
     :goto_0
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -203,21 +186,17 @@
 
     if-eqz v9, :cond_2
 
-    .line 17
     :try_start_2
     invoke-interface {v5, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v11
 
-    .line 18
     invoke-virtual {v13, v11, v12}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 19
     invoke-virtual {v13, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v9
 
-    .line 20
     invoke-virtual {v13, v14}, Ljava/util/Calendar;->get(I)I
 
     move-result v11
@@ -226,7 +205,6 @@
 
     const/4 v12, 0x5
 
-    .line 21
     invoke-virtual {v13, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v12
@@ -237,7 +215,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 22
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -266,7 +243,6 @@
 
     move-result-object v3
 
-    .line 23
     invoke-static {v6, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v9
@@ -275,7 +251,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 24
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,7 +287,6 @@
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,7 +301,6 @@
 
     invoke-virtual {v7, v0, v8}, Lcom/xiaomi/stat/MiStatParams;->putInt(Ljava/lang/String;I)V
 
-    .line 26
     :cond_3
     iget-object v0, v1, Lcom/xiaomi/stat/a/g;->a:Lcom/xiaomi/stat/a/c;
 
@@ -341,7 +314,6 @@
 
     move-object/from16 v3, v19
 
-    .line 27
     invoke-virtual {v4, v0, v15, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -350,7 +322,6 @@
     :cond_4
     if-eqz v5, :cond_5
 
-    .line 28
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -381,7 +352,6 @@
 
     const/4 v3, 0x0
 
-    .line 29
     :goto_2
     :try_start_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -404,7 +374,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 30
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :cond_5

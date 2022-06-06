@@ -22,13 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput-boolean p2, p0, Lcom/xiaomi/stat/c/f;->d:Z
 
-    .line 6
     iput-object p1, p0, Lcom/xiaomi/stat/c/f;->f:Ljava/lang/String;
 
     return-void
@@ -37,13 +34,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/stat/c/f;->d:Z
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/stat/ak;->b()Ljava/lang/String;
 
     move-result-object p1
@@ -73,7 +67,6 @@
 .method private b()I
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
@@ -82,7 +75,6 @@
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,7 +117,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/b;->e()Z
 
@@ -135,7 +126,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-boolean v0, p0, Lcom/xiaomi/stat/c/f;->d:Z
 
     if-eqz v0, :cond_1
@@ -149,14 +139,12 @@
 .method private c()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/c/f;->f:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->e(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +178,6 @@
 .method private d()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/c/f;->f:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->d(Ljava/lang/String;)Z
@@ -199,14 +186,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/stat/c/f;->c()I
 
     move-result v0
 
     return v0
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/xiaomi/stat/c/f;->b()I
 
@@ -218,7 +203,6 @@
 .method private e()I
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
@@ -227,7 +211,6 @@
 
     move-result v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/stat/b;->l()I
 
     move-result v1
@@ -249,7 +232,6 @@
 
     move-result v1
 
-    .line 3
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -265,7 +247,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/b;->l()I
 
     move-result v3
@@ -276,7 +257,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/stat/b;->i()I
 
     move-result v3
@@ -309,7 +289,6 @@
 
     const-string v4, "UploadPolicy"
 
-    .line 6
     invoke-static {v4, v2}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-ne v1, v0, :cond_2
@@ -327,17 +306,14 @@
 .method public a()I
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/stat/c/f;->d()I
 
     move-result v0
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/stat/c/f;->e()I
 
     move-result v1
 
-    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0

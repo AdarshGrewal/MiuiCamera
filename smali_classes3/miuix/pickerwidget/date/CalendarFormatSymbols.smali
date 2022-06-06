@@ -23,10 +23,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -39,7 +37,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lmiuix/pickerwidget/date/CalendarFormatSymbols$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/pickerwidget/date/CalendarFormatSymbols;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -48,19 +45,16 @@
 .method public static getOrCreate(Landroid/content/Context;)Lmiuix/pickerwidget/date/CalendarFormatSymbols;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->INSTANCE:Lmiuix/core/util/SoftReferenceSingleton;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/pickerwidget/date/CalendarFormatSymbols$1;
 
     invoke-direct {v0}, Lmiuix/pickerwidget/date/CalendarFormatSymbols$1;-><init>()V
 
     sput-object v0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->INSTANCE:Lmiuix/core/util/SoftReferenceSingleton;
 
-    .line 3
     :cond_0
     sget-object v0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->INSTANCE:Lmiuix/core/util/SoftReferenceSingleton;
 
@@ -78,7 +72,6 @@
 .method public getAmPms()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->am_pms:I
@@ -93,7 +86,6 @@
 .method public getChineseDays()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->chinese_days:I
@@ -108,7 +100,6 @@
 .method public getChineseDigits()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->chinese_digits:I
@@ -123,7 +114,6 @@
 .method public getChineseLeapMonths()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->chinese_leap_months:I
@@ -138,7 +128,6 @@
 .method public getChineseMonths()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->chinese_months:I
@@ -153,7 +142,6 @@
 .method public getChineseSymbolAnimals()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->chinese_symbol_animals:I
@@ -168,7 +156,6 @@
 .method public getDetailedAmPms()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->detailed_am_pms:I
@@ -183,7 +170,6 @@
 .method public getEarthlyBranches()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->earthly_branches:I
@@ -198,7 +184,6 @@
 .method public getEras()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->eras:I
@@ -213,7 +198,6 @@
 .method public getHeavenlyStems()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->heavenly_stems:I
@@ -228,7 +212,6 @@
 .method public getLocale()Ljava/util/Locale;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -239,7 +222,6 @@
 .method public getMonths()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->months:I
@@ -254,7 +236,6 @@
 .method public getShortMonths()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->months_short:I
@@ -269,7 +250,6 @@
 .method public getShortWeekDays()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->week_days_short:I
@@ -284,7 +264,6 @@
 .method public getShortestMonths()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->months_shortest:I
@@ -299,7 +278,6 @@
 .method public getShortestWeekDays()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->week_days_shortest:I
@@ -314,7 +292,6 @@
 .method public getSolarTerms()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->solar_terms:I
@@ -329,7 +306,6 @@
 .method public getWeekDays()[Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/date/CalendarFormatSymbols;->mResources:Landroid/content/res/Resources;
 
     sget v1, Lmiuix/pickerwidget/R$array;->week_days:I

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-static {p0}, Ljava8/util/stream/StreamSupport$$Lambda$1;->lambdaFactory$(Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
@@ -37,10 +35,8 @@
 .method public static doubleStream(Ljava8/util/Spliterator$OfDouble;Z)Ljava8/util/stream/DoubleStream;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/DoublePipeline$Head;
 
-    .line 2
     invoke-static {p0}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(Ljava8/util/Spliterator;)I
 
     move-result v1
@@ -63,10 +59,8 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Ljava8/util/stream/DoublePipeline$Head;
 
-    .line 4
     invoke-static {p1}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(I)I
 
     move-result p1
@@ -79,10 +73,8 @@
 .method public static intStream(Ljava8/util/Spliterator$OfInt;Z)Ljava8/util/stream/IntStream;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/IntPipeline$Head;
 
-    .line 2
     invoke-static {p0}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(Ljava8/util/Spliterator;)I
 
     move-result v1
@@ -105,10 +97,8 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Ljava8/util/stream/IntPipeline$Head;
 
-    .line 4
     invoke-static {p1}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(I)I
 
     move-result p1
@@ -121,10 +111,8 @@
 .method public static longStream(Ljava8/util/Spliterator$OfLong;Z)Ljava8/util/stream/LongStream;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava8/util/stream/LongPipeline$Head;
 
-    .line 2
     invoke-static {p0}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(Ljava8/util/Spliterator;)I
 
     move-result v1
@@ -147,10 +135,8 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Ljava8/util/stream/LongPipeline$Head;
 
-    .line 4
     invoke-static {p1}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(I)I
 
     move-result p1
@@ -174,7 +160,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->spliterator(Ljava/util/Collection;)Ljava8/util/Spliterator;
 
     move-result-object p0
@@ -202,7 +187,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->spliterator(Ljava/util/Collection;)Ljava8/util/Spliterator;
 
     move-result-object p0
@@ -232,7 +216,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-static {p0, p1, v0}, Ljava8/util/stream/StreamSupport;->stream(Ljava/util/Collection;IZ)Ljava8/util/stream/Stream;
 
     move-result-object p0
@@ -254,10 +237,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava8/util/Spliterator;
 
     move-result-object p0
@@ -283,13 +264,10 @@
         }
     .end annotation
 
-    .line 5
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Ljava8/util/stream/ReferencePipeline$Head;
 
-    .line 7
     invoke-static {p0}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(Ljava8/util/Spliterator;)I
 
     move-result v1
@@ -315,13 +293,10 @@
         }
     .end annotation
 
-    .line 8
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v0, Ljava8/util/stream/ReferencePipeline$Head;
 
-    .line 10
     invoke-static {p1}, Ljava8/util/stream/StreamOpFlag;->fromCharacteristics(I)I
 
     move-result p1

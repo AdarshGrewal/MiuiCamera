@@ -60,18 +60,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/ThermalDetector;->mIsRegister:Z
 
-    .line 5
     new-instance v0, Landroid/content/IntentFilter;
 
     sget-object v1, Lcom/android/camera/ThermalDetector;->ACTION_TEMP_CHANGED:Ljava/lang/String;
@@ -80,7 +76,6 @@
 
     iput-object v0, p0, Lcom/android/camera/ThermalDetector;->mFilter:Landroid/content/IntentFilter;
 
-    .line 6
     new-instance v0, Lcom/android/camera/ThermalDetector$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/ThermalDetector$1;-><init>(Lcom/android/camera/ThermalDetector;)V
@@ -93,7 +88,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/ThermalDetector$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/ThermalDetector;-><init>()V
 
     return-void
@@ -102,7 +96,6 @@
 .method public static synthetic access$200()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -111,7 +104,6 @@
 .method public static synthetic access$300(Lcom/android/camera/ThermalDetector;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     return p0
@@ -120,7 +112,6 @@
 .method public static synthetic access$302(Lcom/android/camera/ThermalDetector;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     return p1
@@ -129,7 +120,6 @@
 .method public static synthetic access$400(Lcom/android/camera/ThermalDetector;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/ThermalDetector;->onThermalNotification(I)V
 
     return-void
@@ -138,7 +128,6 @@
 .method public static getInstance()Lcom/android/camera/ThermalDetector;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/ThermalDetector$InstanceHolder;->access$100()Lcom/android/camera/ThermalDetector;
 
     move-result-object v0
@@ -149,18 +138,16 @@
 .method private ignoreCloseFlash(I)Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO0oo()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -221,7 +208,6 @@
 .method private onThermalNotification(I)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -246,13 +232,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ThermalDetector;->mListener:Lcom/android/camera/ThermalDetector$OnThermalNotificationListener;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-interface {v0, p1}, Lcom/android/camera/ThermalDetector$OnThermalNotificationListener;->onThermalNotification(I)V
 
     :cond_1
@@ -264,7 +248,6 @@
 
     const-string v0, ""
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/io/BufferedReader;
 
@@ -286,13 +269,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
     :try_start_1
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 3
     :goto_0
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -300,12 +281,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 4
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -313,7 +292,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -324,7 +302,6 @@
     :catchall_0
     move-exception v2
 
-    .line 7
     :try_start_3
     throw v2
     :try_end_3
@@ -333,7 +310,6 @@
     :catchall_1
     move-exception v3
 
-    .line 8
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -352,7 +328,6 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
 
-    .line 9
     :catch_0
     sget-object v1, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
@@ -363,16 +338,13 @@
     :goto_2
     const/4 v1, 0x0
 
-    .line 10
     :try_start_6
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 11
     rem-int/lit8 v0, v0, 0xa
 
-    .line 12
     sget-object v2, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -407,7 +379,6 @@
     :catch_1
     move-exception v0
 
-    .line 13
     sget-object v2, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     const-string v3, "failed to readStageFromFile "
@@ -422,14 +393,12 @@
 .method public onCreate(Landroid/content/Context;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onCreate"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -442,7 +411,6 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onDestroy"
@@ -455,7 +423,6 @@
 .method public onThermalNotification()V
     .locals 1
 
-    .line 4
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     invoke-direct {p0, v0}, Lcom/android/camera/ThermalDetector;->onThermalNotification(I)V
@@ -466,30 +433,25 @@
 .method public registerReceiver(Lcom/android/camera/ThermalDetector$OnThermalNotificationListener;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "registerReceiver"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/ThermalDetector;->mListener:Lcom/android/camera/ThermalDetector$OnThermalNotificationListener;
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/ThermalDetector;->mContext:Landroid/content/Context;
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/ThermalDetector;->mIsRegister:Z
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/ThermalDetector;->mReceiver:Landroid/content/BroadcastReceiver;
 
     iget-object v1, p0, Lcom/android/camera/ThermalDetector;->mFilter:Landroid/content/IntentFilter;
@@ -498,7 +460,6 @@
 
     const/4 p1, 0x1
 
-    .line 6
     iput-boolean p1, p0, Lcom/android/camera/ThermalDetector;->mIsRegister:Z
 
     :cond_1
@@ -508,7 +469,6 @@
 .method public thermalCloseBoth()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     const/4 v1, 0x3
@@ -529,93 +489,41 @@
 .method public thermalCloseFlash()Z
     .locals 4
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_2
-
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00Oo00()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 3
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/config/DataItemConfig;->getComponentFlash()Lcom/android/camera/data/data/config/ComponentConfigFlash;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/config/ComponentConfigFlash;->isHardwareSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 4
-    iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
-
-    if-eq v0, v1, :cond_0
-
-    iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
-
-    if-ne v0, v3, :cond_1
-
-    :cond_0
-    move v2, v3
-
-    :cond_1
-    return v2
-
-    .line 5
-    :cond_2
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     invoke-direct {p0, v0}, Lcom/android/camera/ThermalDetector;->ignoreCloseFlash(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    const/4 v1, 0x0
 
-    return v2
+    if-eqz v0, :cond_0
 
-    .line 6
-    :cond_3
+    return v1
+
+    :cond_0
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
-    if-eq v0, v1, :cond_4
+    const/4 v2, 0x4
+
+    const/4 v3, 0x1
+
+    if-eq v0, v2, :cond_1
 
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
-    if-ne v0, v3, :cond_5
+    if-ne v0, v3, :cond_2
 
-    :cond_4
-    move v2, v3
+    :cond_1
+    move v1, v3
 
-    :cond_5
-    return v2
+    :cond_2
+    return v1
 .end method
 
 .method public thermalCloseFront()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     const/4 v1, 0x2
@@ -636,7 +544,6 @@
 .method public thermalCloseNightAlgo()Z
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     const/4 v1, 0x0
@@ -651,7 +558,6 @@
 
     const-string/jumbo v0, "thermalCloseNightAlgo"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -668,7 +574,6 @@
 .method public thermalConstrained()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     const/4 v1, 0x1
@@ -687,7 +592,6 @@
 .method public unregisterReceiver()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/ThermalDetector;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "unregisterReceiver"
@@ -696,33 +600,27 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/ThermalDetector;->mListener:Lcom/android/camera/ThermalDetector$OnThermalNotificationListener;
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/ThermalDetector;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 4
     :cond_0
     iget-boolean v1, p0, Lcom/android/camera/ThermalDetector;->mIsRegister:Z
 
     if-eqz v1, :cond_1
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/ThermalDetector;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/ThermalDetector;->mIsRegister:Z
 
-    .line 7
     iput v0, p0, Lcom/android/camera/ThermalDetector;->mTempStage:I
 
     :cond_1

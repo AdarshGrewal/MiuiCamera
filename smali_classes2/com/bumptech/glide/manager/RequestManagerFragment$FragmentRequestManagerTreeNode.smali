@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/bumptech/glide/manager/RequestManagerFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;->this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,14 +45,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;->this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getDescendantRequestManagerFragments()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/util/HashSet;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -62,7 +59,6 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 3
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -81,14 +77,12 @@
 
     check-cast v2, Lcom/bumptech/glide/manager/RequestManagerFragment;
 
-    .line 4
     invoke-virtual {v2}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getRequestManager()Lcom/bumptech/glide/RequestManager;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 5
     invoke-virtual {v2}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getRequestManager()Lcom/bumptech/glide/RequestManager;
 
     move-result-object v2
@@ -104,7 +98,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

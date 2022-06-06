@@ -60,16 +60,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
-    .line 3
     iput-wide p2, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
-    .line 4
     invoke-virtual {p0, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
 
     return-void
@@ -80,7 +76,6 @@
 .method public cancel()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->upstream:Lorg/reactivestreams/Subscription;
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscription;->cancel()V
@@ -91,7 +86,6 @@
 .method public onComplete()V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
     const-wide/16 v2, 0x0
@@ -100,10 +94,8 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     iput-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v0}, Lorg/reactivestreams/Subscriber;->onComplete()V
@@ -115,7 +107,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
     const-wide/16 v2, 0x0
@@ -124,17 +115,14 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     iput-wide v2, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v0, p1}, Lorg/reactivestreams/Subscriber;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
@@ -150,7 +138,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
     const-wide/16 v2, 0x0
@@ -163,10 +150,8 @@
 
     sub-long/2addr v0, v4
 
-    .line 2
     iput-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
-    .line 3
     iget-object v4, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {v4, p1}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
@@ -175,12 +160,10 @@
 
     if-nez p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->upstream:Lorg/reactivestreams/Subscription;
 
     invoke-interface {p1}, Lorg/reactivestreams/Subscription;->cancel()V
 
-    .line 5
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {p1}, Lorg/reactivestreams/Subscriber;->onComplete()V
@@ -192,7 +175,6 @@
 .method public onSubscribe(Lorg/reactivestreams/Subscription;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->upstream:Lorg/reactivestreams/Subscription;
 
     invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(Lorg/reactivestreams/Subscription;Lorg/reactivestreams/Subscription;)Z
@@ -201,7 +183,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-wide v0, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->remaining:J
 
     const-wide/16 v2, 0x0
@@ -210,21 +191,17 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-interface {p1}, Lorg/reactivestreams/Subscription;->cancel()V
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-static {p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->complete(Lorg/reactivestreams/Subscriber;)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->upstream:Lorg/reactivestreams/Subscription;
 
-    .line 6
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->actual:Lorg/reactivestreams/Subscriber;
 
     invoke-interface {p1, p0}, Lorg/reactivestreams/Subscriber;->onSubscribe(Lorg/reactivestreams/Subscription;)V
@@ -237,14 +214,12 @@
 .method public request(J)V
     .locals 6
 
-    .line 1
     invoke-static {p1, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -273,14 +248,12 @@
     :goto_0
     sub-long v4, v0, v2
 
-    .line 3
     invoke-virtual {p0, v0, v1, v4, v5}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableLimit$LimitSubscriber;->upstream:Lorg/reactivestreams/Subscription;
 
     invoke-interface {p1, v2, v3}, Lorg/reactivestreams/Subscription;->request(J)V

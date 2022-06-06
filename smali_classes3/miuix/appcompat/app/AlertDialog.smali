@@ -27,7 +27,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
     return-void
@@ -36,21 +35,18 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    .line 2
     invoke-static {p1, p2}, Lmiuix/appcompat/app/AlertDialog;->resolveDialogTheme(Landroid/content/Context;I)I
 
     move-result p2
 
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/app/AppCompatDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 3
-    new-instance p2, LOooO0OO/OooO0O0/OooO00o/OooO0O0;
+    new-instance p2, LOooO0Oo/OooO0O0/OooO00o/OooO0O0;
 
-    invoke-direct {p2, p0}, LOooO0OO/OooO0O0/OooO00o/OooO0O0;-><init>(Lmiuix/appcompat/app/AlertDialog;)V
+    invoke-direct {p2, p0}, LOooO0Oo/OooO0O0/OooO00o/OooO0O0;-><init>(Lmiuix/appcompat/app/AlertDialog;)V
 
     iput-object p2, p0, Lmiuix/appcompat/app/AlertDialog;->mOnDismiss:Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;
 
-    .line 4
     new-instance p2, Lmiuix/appcompat/app/AlertController;
 
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/AlertDialog;->parseContext(Landroid/content/Context;)Landroid/content/Context;
@@ -73,13 +69,10 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 6
     invoke-virtual {p0, p2}, Lmiuix/appcompat/app/AlertDialog;->setCancelable(Z)V
 
-    .line 7
     invoke-virtual {p0, p3}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     return-void
@@ -88,7 +81,6 @@
 .method public static synthetic access$000(Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AlertDialog;->mOnDismiss:Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;
 
     return-object p0
@@ -99,14 +91,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -130,7 +120,6 @@
 .method private realDismiss()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
 
     return-void
@@ -149,13 +138,11 @@
 
     return p1
 
-    .line 1
     :cond_0
     new-instance p1, Landroid/util/TypedValue;
 
     invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -164,7 +151,6 @@
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 3
     iget p0, p1, Landroid/util/TypedValue;->resourceId:I
 
     return p0
@@ -175,14 +161,12 @@
 .method public synthetic OooO00o()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -193,14 +177,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertDialog;->realDismiss()V
 
     :cond_0
@@ -210,7 +192,6 @@
 .method public dismiss()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
@@ -219,26 +200,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->getAssociatedActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -254,7 +231,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     iget-object v1, p0, Lmiuix/appcompat/app/AlertDialog;->mOnDismiss:Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;
@@ -263,7 +239,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -275,7 +250,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 8
     new-instance v1, Lmiuix/appcompat/app/AlertDialog$1;
 
     invoke-direct {v1, p0}, Lmiuix/appcompat/app/AlertDialog$1;-><init>(Lmiuix/appcompat/app/AlertDialog;)V
@@ -284,7 +258,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertDialog;->realDismiss()V
 
@@ -296,7 +269,6 @@
 .method public dismissWithoutAnimation()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertDialog;->realDismiss()V
 
     return-void
@@ -305,7 +277,6 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -318,7 +289,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -330,12 +300,10 @@
 .method public getAssociatedActivity()Landroid/app/Activity;
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Dialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -345,19 +313,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
     instance-of v2, v1, Landroid/app/Activity;
 
     if-eqz v2, :cond_0
 
-    .line 4
     move-object v0, v1
 
     check-cast v0, Landroid/app/Activity;
 
     goto :goto_0
 
-    .line 5
     :cond_0
     instance-of v2, v1, Landroid/content/ContextWrapper;
 
@@ -365,7 +330,6 @@
 
     check-cast v1, Landroid/content/ContextWrapper;
 
-    .line 6
     invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
@@ -384,7 +348,6 @@
 .method public getButton(I)Landroid/widget/Button;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->getButton(I)Landroid/widget/Button;
@@ -397,7 +360,6 @@
 .method public getListView()Landroid/widget/ListView;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->getListView()Landroid/widget/ListView;
@@ -410,7 +372,6 @@
 .method public getMessageView()Landroid/widget/TextView;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->getMessageView()Landroid/widget/TextView;
@@ -423,7 +384,6 @@
 .method public isChecked()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->isChecked()Z
@@ -436,10 +396,8 @@
 .method public onAttachedToWindow()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroid/app/Dialog;->onAttachedToWindow()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -450,14 +408,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     iget-boolean v1, v1, Lmiuix/appcompat/app/AlertController;->mHapticFeedbackEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 4
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_NORMAL:I
 
     invoke-static {v0, v1}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
@@ -469,10 +425,8 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
@@ -481,7 +435,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -490,7 +443,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setWindowAnimations(I)V
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
@@ -502,10 +454,8 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/app/Dialog;->onDetachedFromWindow()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->onDetachedFromWindow()V
@@ -516,7 +466,6 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertController;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -529,7 +478,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -541,7 +489,6 @@
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertController;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -554,7 +501,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -566,10 +512,8 @@
 .method public onStart()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->onStart()V
@@ -580,10 +524,8 @@
 .method public onStop()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatDialog;->onStop()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->onStop()V
@@ -594,7 +536,6 @@
 .method public setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     const/4 v1, 0x0
@@ -607,7 +548,6 @@
 .method public setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     const/4 v1, 0x0
@@ -620,10 +560,8 @@
 .method public setCancelable(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setCancelable(Z)V
@@ -634,10 +572,8 @@
 .method public setCanceledOnTouchOutside(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setCanceledOnTouchOutside(Z)V
@@ -648,7 +584,6 @@
 .method public setCustomTitle(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setCustomTitle(Landroid/view/View;)V
@@ -659,7 +594,6 @@
 .method public setEnableImmersive(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setEnableImmersive(Z)V
@@ -670,7 +604,6 @@
 .method public setHapticFeedbackEnabled(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     iput-boolean p1, v0, Lmiuix/appcompat/app/AlertController;->mHapticFeedbackEnabled:Z
@@ -681,7 +614,6 @@
 .method public setIcon(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setIcon(I)V
@@ -692,7 +624,6 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setIcon(Landroid/graphics/drawable/Drawable;)V
@@ -703,12 +634,10 @@
 .method public setIconAttribute(I)V
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -721,7 +650,6 @@
 
     invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 3
     iget-object p1, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     iget v0, v0, Landroid/util/TypedValue;->resourceId:I
@@ -734,7 +662,6 @@
 .method public setMessage(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setMessage(Ljava/lang/CharSequence;)V
@@ -745,7 +672,6 @@
 .method public setOnShowAnimListener(Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setShowAnimListener(Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
@@ -756,10 +682,8 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setTitle(Ljava/lang/CharSequence;)V
@@ -770,7 +694,6 @@
 .method public setView(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertDialog;->mAlert:Lmiuix/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertController;->setView(Landroid/view/View;)V

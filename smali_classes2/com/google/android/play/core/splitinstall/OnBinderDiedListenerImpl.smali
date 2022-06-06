@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/google/android/play/core/splitinstall/SplitInstallService;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/OnBinderDiedListenerImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     return-void
@@ -28,7 +26,6 @@
 .method public onBinderDied()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/OnBinderDiedListenerImpl;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {v0}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->onBinderDied()V

@@ -77,90 +77,73 @@
 .method public constructor <init>()V
     .locals 8
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mClock:J
 
-    .line 3
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOldTimestamp:J
 
     const/4 v2, 0x0
 
-    .line 4
     iput v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSeq:I
 
     const/4 v3, -0x1
 
     iput v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPort:I
 
-    .line 5
     iput v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCount:I
 
     const/4 v3, 0x0
 
-    .line 6
     iput-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 7
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCacheSize:J
 
     const/16 v0, 0x1f4
 
-    .line 8
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
 
     new-array v1, v0, [[B
 
-    .line 9
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     new-array v0, v0, [Ljava/net/DatagramPacket;
 
-    .line 10
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
-    .line 11
     new-instance v0, Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
     invoke-direct {v0}, Lnet/majorkernelpanic/streaming/rtcp/SenderReport;-><init>()V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
-    .line 12
     new-instance v0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;
 
     invoke-direct {v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;-><init>()V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mAverageBitrate:Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;
 
-    .line 13
     iput v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTransport:I
 
     const/4 v0, 0x4
 
     new-array v1, v0, [B
 
-    .line 14
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTcpHeader:[B
 
-    .line 15
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->resetFifo()V
 
     move v1, v2
 
-    .line 16
     :goto_0
     iget v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
 
     if-ge v1, v3, :cond_0
 
-    .line 17
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     const/16 v4, 0x514
@@ -169,7 +152,6 @@
 
     aput-object v4, v3, v1
 
-    .line 18
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
     new-instance v4, Ljava/net/DatagramPacket;
@@ -184,7 +166,6 @@
 
     aput-object v4, v3, v1
 
-    .line 19
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     aget-object v3, v3, v1
@@ -201,7 +182,6 @@
 
     aput-byte v5, v3, v2
 
-    .line 20
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     aget-object v5, v3, v1
@@ -210,49 +190,42 @@
 
     aput-byte v7, v5, v6
 
-    .line 21
     aget-object v5, v3, v1
 
     const/16 v7, 0xc
 
     aput-byte v2, v5, v7
 
-    .line 22
     aget-object v5, v3, v1
 
     const/16 v7, 0xd
 
     aput-byte v6, v5, v7
 
-    .line 23
     aget-object v5, v3, v1
 
     const/16 v7, 0xe
 
     aput-byte v2, v5, v7
 
-    .line 24
     aget-object v5, v3, v1
 
     const/16 v7, 0xf
 
     aput-byte v6, v5, v7
 
-    .line 25
     aget-object v5, v3, v1
 
     const/16 v7, 0x10
 
     aput-byte v6, v5, v7
 
-    .line 26
     aget-object v5, v3, v1
 
     const/16 v6, 0x11
 
     aput-byte v4, v5, v6
 
-    .line 27
     aget-object v4, v3, v1
 
     const/16 v5, 0x12
@@ -261,7 +234,6 @@
 
     aput-byte v6, v4, v5
 
-    .line 28
     aget-object v3, v3, v1
 
     const/16 v4, 0x13
@@ -272,7 +244,6 @@
 
     goto :goto_0
 
-    .line 29
     :cond_0
     :try_start_0
     new-instance v0, Ljava/net/MulticastSocket;
@@ -288,7 +259,6 @@
     :catch_0
     move-exception v0
 
-    .line 30
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -315,23 +285,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCount:I
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
-    .line 3
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
 
-    .line 4
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
 
     new-array v1, v1, [J
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
-    .line 5
     new-instance v1, Ljava/util/concurrent/Semaphore;
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
@@ -340,19 +305,16 @@
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferRequested:Ljava/util/concurrent/Semaphore;
 
-    .line 6
     new-instance v1, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCommitted:Ljava/util/concurrent/Semaphore;
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtcp/SenderReport;->reset()V
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mAverageBitrate:Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;->reset()V
@@ -363,12 +325,10 @@
 .method private sendTCP()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOutputStream:Ljava/io/OutputStream;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
@@ -382,7 +342,6 @@
 
     const-string v2, "RtpSocket"
 
-    .line 3
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,7 +358,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTcpHeader:[B
 
     const/4 v3, 0x2
@@ -410,7 +368,6 @@
 
     aput-byte v4, v2, v3
 
-    .line 5
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTcpHeader:[B
 
     const/4 v3, 0x3
@@ -423,7 +380,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :try_start_1
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOutputStream:Ljava/io/OutputStream;
 
@@ -431,7 +387,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/OutputStream;->write([B)V
 
-    .line 7
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOutputStream:Ljava/io/OutputStream;
 
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
@@ -447,7 +402,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8
     :catch_0
     :try_start_2
     monitor-exit v0
@@ -474,7 +428,6 @@
 
     const-wide/16 v0, 0x100
 
-    .line 1
     rem-long v0, p2, v0
 
     long-to-int v0, v0
@@ -502,7 +455,6 @@
 .method private updateSequence()V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
@@ -533,7 +485,6 @@
 .method public close()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSocket:Ljava/net/MulticastSocket;
 
     invoke-virtual {v0}, Ljava/net/MulticastSocket;->close()V
@@ -549,22 +500,18 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mThread:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mThread:Ljava/lang/Thread;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 4
     :cond_0
     iget v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
@@ -580,7 +527,6 @@
 
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCommitted:Ljava/util/concurrent/Semaphore;
 
@@ -597,13 +543,10 @@
         }
     .end annotation
 
-    .line 6
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->updateSequence()V
 
-    .line 7
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->updateHeaderExtension()V
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
@@ -612,12 +555,10 @@
 
     invoke-virtual {v0, p1}, Ljava/net/DatagramPacket;->setLength(I)V
 
-    .line 9
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mAverageBitrate:Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;
 
     invoke-virtual {v0, p1}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;->push(I)V
 
-    .line 10
     iget p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
     add-int/lit8 p1, p1, 0x1
@@ -632,25 +573,21 @@
 
     iput p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
-    .line 11
     :cond_0
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCommitted:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {p1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 12
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mThread:Ljava/lang/Thread;
 
     if-nez p1, :cond_1
 
-    .line 13
     new-instance p1, Ljava/lang/Thread;
 
     invoke-direct {p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mThread:Ljava/lang/Thread;
 
-    .line 14
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     :cond_1
@@ -660,7 +597,6 @@
 .method public getBitrate()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mAverageBitrate:Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$AverageBitrate;->average()I
@@ -679,10 +615,8 @@
 
     new-array v0, v0, [I
 
-    .line 1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSocket:Ljava/net/MulticastSocket;
 
-    .line 2
     invoke-virtual {v1}, Ljava/net/MulticastSocket;->getLocalPort()I
 
     move-result v1
@@ -693,7 +627,6 @@
 
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
-    .line 3
     invoke-virtual {v1}, Lnet/majorkernelpanic/streaming/rtcp/SenderReport;->getLocalPort()I
 
     move-result v1
@@ -708,7 +641,6 @@
 .method public getPort()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPort:I
 
     return v0
@@ -717,7 +649,6 @@
 .method public getSSRC()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSsrc:I
 
     return v0
@@ -726,7 +657,6 @@
 .method public markNextPacket()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
@@ -754,12 +684,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferRequested:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
@@ -776,7 +704,6 @@
 
     aput-byte v4, v2, v3
 
-    .line 3
     aget-object v0, v0, v1
 
     return-object v0
@@ -785,7 +712,6 @@
 .method public run()V
     .locals 13
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$Statistics;
 
     const/16 v1, 0x32
@@ -794,7 +720,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$Statistics;-><init>(IJ)V
 
-    .line 2
     :try_start_0
     iget-wide v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCacheSize:J
 
@@ -804,7 +729,6 @@
 
     move-wide v3, v1
 
-    .line 3
     :goto_0
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCommitted:Ljava/util/concurrent/Semaphore;
 
@@ -818,14 +742,12 @@
 
     if-eqz v5, :cond_7
 
-    .line 4
     iget-wide v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOldTimestamp:J
 
     cmp-long v5, v5, v1
 
     if-eqz v5, :cond_3
 
-    .line 5
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
     iget v6, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
@@ -840,7 +762,6 @@
 
     if-lez v5, :cond_0
 
-    .line 6
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
     iget v6, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
@@ -853,7 +774,6 @@
 
     invoke-virtual {v0, v5, v6}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$Statistics;->push(J)V
 
-    .line 7
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket$Statistics;->average()J
 
     move-result-wide v5
@@ -862,7 +782,6 @@
 
     div-long/2addr v5, v7
 
-    .line 8
     iget-wide v7, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCacheSize:J
 
     cmp-long v7, v7, v1
@@ -873,7 +792,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_0
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
@@ -891,7 +809,6 @@
 
     const-string v5, "RtpSocket"
 
-    .line 10
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -922,7 +839,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :cond_1
     :goto_1
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
@@ -950,7 +866,6 @@
     :cond_2
     move-wide v3, v1
 
-    .line 12
     :cond_3
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
@@ -988,7 +903,6 @@
 
     invoke-virtual {v5, v6, v7, v8}, Lnet/majorkernelpanic/streaming/rtcp/SenderReport;->update(IJ)V
 
-    .line 13
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
     iget v6, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
@@ -997,7 +911,6 @@
 
     iput-wide v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOldTimestamp:J
 
-    .line 14
     iget v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCount:I
 
     add-int/lit8 v6, v5, 0x1
@@ -1008,12 +921,10 @@
 
     if-le v5, v6, :cond_5
 
-    .line 15
     iget v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTransport:I
 
     if-nez v5, :cond_4
 
-    .line 16
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSocket:Ljava/net/MulticastSocket;
 
     iget-object v6, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
@@ -1026,11 +937,9 @@
 
     goto :goto_2
 
-    .line 17
     :cond_4
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->sendTCP()V
 
-    .line 18
     :cond_5
     :goto_2
     iget v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
@@ -1047,7 +956,6 @@
 
     iput v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferOut:I
 
-    .line 19
     :cond_6
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferRequested:Ljava/util/concurrent/Semaphore;
 
@@ -1060,16 +968,13 @@
     :catch_0
     move-exception v0
 
-    .line 20
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_7
     const/4 v0, 0x0
 
-    .line 21
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mThread:Ljava/lang/Thread;
 
-    .line 22
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->resetFifo()V
 
     return-void
@@ -1078,7 +983,6 @@
 .method public setCacheSize(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mCacheSize:J
 
     return-void
@@ -1087,7 +991,6 @@
 .method public setClockFrequency(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mClock:J
 
     return-void
@@ -1102,26 +1005,21 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTransport:I
 
-    .line 2
     iput p2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPort:I
 
-    .line 3
     :goto_0
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
 
     if-ge v0, v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p2}, Ljava/net/DatagramPacket;->setPort(I)V
 
-    .line 5
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mPackets:[Ljava/net/DatagramPacket;
 
     aget-object v1, v1, v0
@@ -1132,7 +1030,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object p2, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
@@ -1149,18 +1046,14 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTransport:I
 
-    .line 2
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTcpHeader:[B
 
     aput-byte p2, v1, v0
 
-    .line 4
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
     add-int/2addr p2, v0
@@ -1176,18 +1069,15 @@
 .method public setSSRC(I)V
     .locals 8
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSsrc:I
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferCount:I
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     aget-object v3, v1, v0
@@ -1206,7 +1096,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mReport:Lnet/majorkernelpanic/streaming/rtcp/SenderReport;
 
@@ -1225,7 +1114,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mSocket:Ljava/net/MulticastSocket;
 
     invoke-virtual {v0, p1}, Ljava/net/MulticastSocket;->setTimeToLive(I)V
@@ -1236,14 +1124,12 @@
 .method public updateTimestamp(J)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mTimestamps:[J
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBufferIn:I
 
     aput-wide p1, v0, v1
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->mBuffers:[[B
 
     aget-object v3, v0, v1

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/manually/FragmentParameterDescription;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/manually/FragmentParameterDescription$1;->this$0:Lcom/android/camera/fragment/manually/FragmentParameterDescription;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +37,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     sget-object p1, Lcom/android/camera/fragment/manually/FragmentParameterDescription;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onClick back"
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/manually/FragmentParameterDescription$1;->this$0:Lcom/android/camera/fragment/manually/FragmentParameterDescription;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;

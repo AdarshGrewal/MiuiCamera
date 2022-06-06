@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/network/live/BaseRequest;Lcom/android/camera/network/net/base/ResponseListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/live/BaseRequest$1;->this$0:Lcom/android/camera/network/live/BaseRequest;
 
     iput-object p2, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
@@ -46,10 +45,8 @@
 
     const-string v0, "execute failed"
 
-    .line 1
     invoke-static {p1, v0, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
 
     sget-object v0, Lcom/android/camera/network/net/base/ErrorCode;->NET_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
@@ -70,14 +67,12 @@
 
     const-string v0, "BaseRequest"
 
-    .line 1
     invoke-virtual {p2}, Lokhttp3/Response;->isSuccessful()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
 
     sget-object v0, Lcom/android/camera/network/net/base/ErrorCode;->SERVER_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
@@ -90,7 +85,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/network/live/BaseRequest$1;->this$0:Lcom/android/camera/network/live/BaseRequest;
@@ -107,7 +101,6 @@
 
     move-result-object v1
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
 
     const/4 v3, 0x1
@@ -128,10 +121,8 @@
     :catch_0
     move-exception v1
 
-    .line 5
     invoke-static {v0, p1, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
 
     sget-object v0, Lcom/android/camera/network/net/base/ErrorCode;->NET_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
@@ -147,10 +138,8 @@
     :catch_1
     move-exception v1
 
-    .line 7
     invoke-static {v0, p1, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/network/live/BaseRequest$1;->val$listener:Lcom/android/camera/network/net/base/ResponseListener;
 
     invoke-virtual {v1}, Lcom/android/camera/network/live/BaseRequestException;->getErrorCode()Lcom/android/camera/network/net/base/ErrorCode;
@@ -163,7 +152,6 @@
 
     invoke-interface {p1, v0, v1, p2}, Lcom/android/camera/network/net/base/ResponseListener;->onResponseError(Lcom/android/camera/network/net/base/ErrorCode;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 9
     :goto_0
     invoke-virtual {p2}, Lokhttp3/Response;->close()V
 

@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
 
     const/4 v0, 0x0
 
-    .line 19
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
@@ -48,10 +46,8 @@
 
     const/4 p1, 0x1
 
-    .line 20
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 21
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -67,7 +63,6 @@
 
     const-string v1, "getStaticVariableValue exception"
 
-    .line 22
     invoke-static {p1, v1, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
@@ -81,7 +76,6 @@
     :try_start_0
     const-string v1, "mitv.common.ConfigurationManager"
 
-    .line 8
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -92,14 +86,12 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    .line 9
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    .line 10
     invoke-virtual {v2, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -108,14 +100,12 @@
 
     new-array v5, v3, [Ljava/lang/Class;
 
-    .line 11
     invoke-virtual {v1, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 12
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -130,14 +120,12 @@
 
     const-string v2, "mitv.tv.TvContext"
 
-    .line 13
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "PRODUCT_CATEGORY_MITV"
 
-    .line 14
     invoke-static {v2, v3}, Lcom/xiaomi/stat/d/q;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -159,7 +147,6 @@
     :cond_0
     const-string v3, "PRODUCT_CATEGORY_MIBOX"
 
-    .line 15
     invoke-static {v2, v3}, Lcom/xiaomi/stat/d/q;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -181,7 +168,6 @@
     :cond_1
     const-string v3, "PRODUCT_CATEGORY_MITVBOX"
 
-    .line 16
     invoke-static {v2, v3}, Lcom/xiaomi/stat/d/q;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -203,7 +189,6 @@
     :cond_2
     const-string v3, "PRODUCT_CATEGORY_MIPROJECTOR"
 
-    .line 17
     invoke-static {v2, v3}, Lcom/xiaomi/stat/d/q;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -231,7 +216,6 @@
 
     const-string v3, "getMiTvProductCategory exception"
 
-    .line 18
     invoke-static {v2, v3, v1}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
@@ -245,7 +229,6 @@
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
-    .line 4
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -256,7 +239,6 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 5
     const-class v4, Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -273,7 +255,6 @@
 
     aput-object p0, v2, v5
 
-    .line 6
     invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -291,7 +272,6 @@
 
     const-string v1, "reflectGetSystemProperties exception"
 
-    .line 7
     invoke-static {v0, v1, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string p0, ""
@@ -305,7 +285,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -317,7 +296,6 @@
 
     move-result-object p0
 
-    .line 2
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -337,7 +315,6 @@
     :catch_0
     const-string p0, "Is not Mi Tv system!"
 
-    .line 3
     invoke-static {p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;)V
 
     :cond_0
@@ -348,7 +325,6 @@
 .method public static b(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/xiaomi/stat/d/q;->a(Landroid/content/Context;)Z
 
@@ -383,7 +359,6 @@
 
     const-string v1, "isMiTvIntlBuild"
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0

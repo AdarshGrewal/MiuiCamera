@@ -35,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
 .method public static synthetic a(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->a:Ljava/lang/String;
 
     return-object p0
@@ -53,7 +51,6 @@
 .method public static synthetic b(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->b:I
 
     return p0
@@ -62,7 +59,6 @@
 .method public static synthetic c(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->c:I
 
     return p0
@@ -71,7 +67,6 @@
 .method public static synthetic d(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->d:Ljava/lang/String;
 
     return-object p0
@@ -80,7 +75,6 @@
 .method public static synthetic e(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->e:I
 
     return p0
@@ -89,7 +83,6 @@
 .method public static synthetic f(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->f:J
 
     return-wide v0
@@ -98,7 +91,6 @@
 .method public static synthetic g(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->g:I
 
     return p0
@@ -107,7 +99,6 @@
 .method public static synthetic h(Lcom/xiaomi/stat/NetAvailableEvent$Builder;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->h:Ljava/lang/String;
 
     return-object p0
@@ -118,7 +109,6 @@
 .method public build()Lcom/xiaomi/stat/NetAvailableEvent;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/stat/NetAvailableEvent;
 
     const/4 v1, 0x0
@@ -131,7 +121,6 @@
 .method public exception(Ljava/lang/String;)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->d:Ljava/lang/String;
 
     return-object p0
@@ -140,7 +129,6 @@
 .method public ext(Ljava/lang/String;)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->h:Ljava/lang/String;
 
     return-object p0
@@ -149,7 +137,6 @@
 .method public flag(Ljava/lang/String;)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->a:Ljava/lang/String;
 
     return-object p0
@@ -158,7 +145,6 @@
 .method public requestStartTime(J)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->f:J
 
     return-object p0
@@ -167,7 +153,6 @@
 .method public responseCode(I)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->b:I
 
     return-object p0
@@ -176,7 +161,6 @@
 .method public resultType(I)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->e:I
 
     return-object p0
@@ -185,7 +169,6 @@
 .method public retryCount(I)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->g:I
 
     return-object p0
@@ -194,7 +177,6 @@
 .method public statusCode(I)Lcom/xiaomi/stat/NetAvailableEvent$Builder;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/stat/NetAvailableEvent$Builder;->c:I
 
     return-object p0

@@ -33,10 +33,8 @@
 .method public constructor <init>(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -57,12 +55,10 @@
 
     const-string/jumbo p1, "onProcessCallback data is null"
 
-    .line 1
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$MyWideSelfieCallback;->mOuterRef:Ljava/lang/ref/WeakReference;
 
@@ -74,7 +70,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-static {v1, p1, p2}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;->access$100(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper;ILcom/arcsoft/camera/wideselfie/ProcessResult;)V
 
     goto :goto_0
@@ -82,7 +77,6 @@
     :cond_1
     const-string/jumbo p1, "onProcessCallback wrapper is null"
 
-    .line 4
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

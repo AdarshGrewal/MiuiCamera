@@ -13,7 +13,7 @@
 
 
 # static fields
-.field public static final DEBUG:Z = false
+.field public static final DEBUG:Z
 
 .field public static sDefaultInterpolator:Landroid/animation/TimeInterpolator;
 
@@ -137,80 +137,68 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/SimpleItemAnimator;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
-    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
-    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
-    .line 9
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
-    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
-    .line 11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
-    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -223,20 +211,16 @@
 .method private animateRemoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 4
 
-    .line 1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getRemoveDuration()J
 
     move-result-wide v2
@@ -259,7 +243,6 @@
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -278,7 +261,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -288,21 +270,18 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;
 
-    .line 3
     invoke-direct {p0, v1, p2}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v2, v1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-nez v2, :cond_0
@@ -311,7 +290,6 @@
 
     if-nez v2, :cond_0
 
-    .line 5
     invoke-interface {p1, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     :cond_0
@@ -326,21 +304,17 @@
 .method private endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;)V
     .locals 1
 
-    .line 1
     iget-object v0, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
-    .line 3
     :cond_0
     iget-object v0, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
     :cond_1
@@ -350,7 +324,6 @@
 .method private endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 4
 
-    .line 5
     iget-object v0, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/4 v1, 0x1
@@ -361,23 +334,19 @@
 
     if-ne v0, p2, :cond_0
 
-    .line 6
     iput-object v2, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iget-object v0, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-ne v0, p2, :cond_1
 
-    .line 8
     iput-object v2, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move v3, v1
 
-    .line 9
     :goto_0
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -385,19 +354,16 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 10
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 11
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 12
     invoke-virtual {p0, p2, v3}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchChangeFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Z)V
 
     return v1
@@ -409,12 +375,10 @@
 .method private resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/DefaultItemAnimator;->sDefaultInterpolator:Landroid/animation/TimeInterpolator;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
@@ -425,7 +389,6 @@
 
     sput-object v0, Lcom/android/camera/fragment/DefaultItemAnimator;->sDefaultInterpolator:Landroid/animation/TimeInterpolator;
 
-    .line 3
     :cond_0
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -437,7 +400,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     return-void
@@ -448,17 +410,14 @@
 .method public animateAdd(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 2
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -471,22 +430,18 @@
 .method public animateAddImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 5
 
-    .line 1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 4
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
@@ -503,12 +458,10 @@
 
     invoke-direct {v3, p0, p1, v0, v1}, Lcom/android/camera/fragment/DefaultItemAnimator$5;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
 
-    .line 5
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -531,14 +484,12 @@
 
     move v5, p6
 
-    .line 1
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/DefaultItemAnimator;->animateMove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)Z
 
     move-result p1
 
     return p1
 
-    .line 2
     :cond_0
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -546,21 +497,18 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
 
     move-result v1
 
-    .line 4
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getAlpha()F
 
     move-result v2
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     sub-int v3, p5, p3
@@ -579,27 +527,22 @@
 
     float-to-int v4, v4
 
-    .line 6
     iget-object v5, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 7
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 8
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
     if-eqz p2, :cond_1
 
-    .line 9
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 10
     iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     neg-int v1, v3
@@ -608,7 +551,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 11
     iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     neg-int v1, v4
@@ -617,14 +559,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 12
     iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
@@ -656,7 +596,6 @@
 .method public animateChangeImpl(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;)V
     .locals 5
 
-    .line 1
     iget-object v0, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/4 v1, 0x0
@@ -667,45 +606,37 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 3
     :goto_0
     iget-object v2, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-eqz v2, :cond_1
 
-    .line 4
     iget-object v1, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
 
-    .line 6
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeDuration()J
 
     move-result-wide v3
 
-    .line 7
     invoke-virtual {v2, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
 
-    .line 8
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     iget-object v4, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9
     iget v3, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->toX:I
 
     iget v4, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->fromX:I
@@ -716,7 +647,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 10
     iget v3, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->toY:I
 
     iget v4, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->fromY:I
@@ -727,7 +657,6 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 11
     new-instance v3, Lcom/android/camera/fragment/DefaultItemAnimator$7;
 
     invoke-direct {v3, p0, p1, v2, v0}, Lcom/android/camera/fragment/DefaultItemAnimator$7;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
@@ -736,18 +665,15 @@
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 13
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 14
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     iget-object v3, p1, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -756,7 +682,6 @@
 
     const/4 v2, 0x0
 
-    .line 15
     invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
@@ -777,12 +702,10 @@
 
     invoke-direct {v3, p0, p1, v0, v1}, Lcom/android/camera/fragment/DefaultItemAnimator$8;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
 
-    .line 16
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 17
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_3
@@ -792,10 +715,8 @@
 .method public animateMove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)Z
     .locals 8
 
-    .line 1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getTranslationX()F
 
     move-result v1
@@ -804,7 +725,6 @@
 
     add-int v4, p2, v1
 
-    .line 3
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getTranslationY()F
@@ -815,7 +735,6 @@
 
     add-int v5, p3, p2
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     sub-int p2, p4, v4
@@ -826,7 +745,6 @@
 
     if-nez p3, :cond_0
 
-    .line 5
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     const/4 p1, 0x0
@@ -840,7 +758,6 @@
 
     int-to-float p2, p2
 
-    .line 6
     invoke-virtual {v0, p2}, Landroid/view/View;->setTranslationX(F)V
 
     :cond_1
@@ -850,10 +767,8 @@
 
     int-to-float p2, p2
 
-    .line 7
     invoke-virtual {v0, p2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 8
     :cond_2
     iget-object p2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
@@ -879,7 +794,6 @@
 .method public animateMoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
     .locals 7
 
-    .line 1
     iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     sub-int v3, p4, p2
@@ -890,7 +804,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2
     invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
@@ -900,25 +813,21 @@
     :cond_0
     if-eqz v5, :cond_1
 
-    .line 3
     invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
 
     invoke-virtual {p3, p2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 4
     :cond_1
     invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v6
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getMoveDuration()J
 
     move-result-wide p2
@@ -941,7 +850,6 @@
 
     move-result-object p1
 
-    .line 7
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     return-void
@@ -950,10 +858,8 @@
 .method public animateRemove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -975,7 +881,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -1014,7 +919,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1024,7 +928,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1050,14 +953,12 @@
 .method public dispatchFinishedWhenDone()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/DefaultItemAnimator;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->dispatchAnimationsFinished()V
 
     :cond_0
@@ -1067,17 +968,14 @@
 .method public endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 7
 
-    .line 1
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1091,7 +989,6 @@
 
     if-ltz v1, :cond_1
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1100,21 +997,16 @@
 
     check-cast v3, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;
 
-    .line 5
     iget-object v3, v3, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-ne v3, p1, :cond_0
 
-    .line 6
     invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 7
     invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 8
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1124,13 +1016,11 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimation(Ljava/util/List;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1141,13 +1031,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 12
     invoke-virtual {v0, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 13
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchRemoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 14
     :cond_2
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
@@ -1157,13 +1044,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 15
     invoke-virtual {v0, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 16
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 17
     :cond_3
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
@@ -1176,7 +1060,6 @@
     :goto_1
     if-ltz v1, :cond_5
 
-    .line 18
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1185,17 +1068,14 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 19
     invoke-direct {p0, v4, p1}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimation(Ljava/util/List;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 20
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 21
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1205,7 +1085,6 @@
 
     goto :goto_1
 
-    .line 22
     :cond_5
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
@@ -1218,7 +1097,6 @@
     :goto_2
     if-ltz v1, :cond_8
 
-    .line 23
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1227,7 +1105,6 @@
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 24
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v5
@@ -1237,38 +1114,30 @@
     :goto_3
     if-ltz v5, :cond_7
 
-    .line 25
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;
 
-    .line 26
     iget-object v6, v6, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-ne v6, p1, :cond_6
 
-    .line 27
     invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 28
     invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 29
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 30
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 31
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 32
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1286,7 +1155,6 @@
 
     goto :goto_2
 
-    .line 33
     :cond_8
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
@@ -1299,7 +1167,6 @@
     :goto_5
     if-ltz v1, :cond_a
 
-    .line 34
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1308,27 +1175,22 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 35
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_9
 
-    .line 36
     invoke-virtual {v0, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 37
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 38
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 39
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1338,28 +1200,23 @@
 
     goto :goto_5
 
-    .line 40
     :cond_a
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 41
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 42
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 43
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 44
     invoke-virtual {p0}, Lcom/android/camera/fragment/DefaultItemAnimator;->dispatchFinishedWhenDone()V
 
     return-void
@@ -1368,7 +1225,6 @@
 .method public endAnimations()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1382,7 +1238,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1391,23 +1246,18 @@
 
     check-cast v2, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;
 
-    .line 3
     iget-object v3, v2, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     iget-object v3, v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 4
     invoke-virtual {v3, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 5
     invoke-virtual {v3, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 6
     iget-object v1, v2, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1416,7 +1266,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
@@ -1429,7 +1278,6 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 9
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1438,10 +1286,8 @@
 
     check-cast v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 10
     invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchRemoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 11
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1450,7 +1296,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
@@ -1465,7 +1310,6 @@
 
     if-ltz v0, :cond_2
 
-    .line 13
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1474,15 +1318,12 @@
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 14
     iget-object v4, v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 15
     invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 16
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1491,7 +1332,6 @@
 
     goto :goto_2
 
-    .line 17
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
@@ -1504,7 +1344,6 @@
     :goto_3
     if-ltz v0, :cond_3
 
-    .line 18
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1519,13 +1358,11 @@
 
     goto :goto_3
 
-    .line 19
     :cond_3
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 20
     invoke-virtual {p0}, Lcom/android/camera/fragment/DefaultItemAnimator;->isRunning()Z
 
     move-result v0
@@ -1534,7 +1371,6 @@
 
     return-void
 
-    .line 21
     :cond_4
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
@@ -1547,7 +1383,6 @@
     :goto_4
     if-ltz v0, :cond_7
 
-    .line 22
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1556,7 +1391,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 23
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -1566,41 +1400,32 @@
     :goto_5
     if-ltz v4, :cond_6
 
-    .line 24
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;
 
-    .line 25
     iget-object v6, v5, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 26
     iget-object v6, v6, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 27
     invoke-virtual {v6, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 28
     invoke-virtual {v6, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 29
     iget-object v5, v5, Lcom/android/camera/fragment/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p0, v5}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 30
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 31
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 32
     iget-object v5, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1615,7 +1440,6 @@
 
     goto :goto_4
 
-    .line 33
     :cond_7
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
@@ -1628,7 +1452,6 @@
     :goto_6
     if-ltz v0, :cond_a
 
-    .line 34
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1637,7 +1460,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 35
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -1647,33 +1469,26 @@
     :goto_7
     if-ltz v3, :cond_9
 
-    .line 36
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 37
     iget-object v5, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 38
     invoke-virtual {v5, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 39
     invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 40
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 41
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-eqz v4, :cond_8
 
-    .line 42
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1688,7 +1503,6 @@
 
     goto :goto_6
 
-    .line 43
     :cond_a
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
@@ -1701,7 +1515,6 @@
     :goto_8
     if-ltz v0, :cond_d
 
-    .line 44
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1710,7 +1523,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 45
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -1720,7 +1532,6 @@
     :goto_9
     if-ltz v2, :cond_c
 
-    .line 46
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1729,14 +1540,12 @@
 
     invoke-direct {p0, v3}, Lcom/android/camera/fragment/DefaultItemAnimator;->endChangeAnimationIfNecessary(Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;)V
 
-    .line 47
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_b
 
-    .line 48
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1751,28 +1560,23 @@
 
     goto :goto_8
 
-    .line 49
     :cond_d
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 50
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 51
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 52
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 53
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->dispatchAnimationsFinished()V
 
     return-void
@@ -1781,7 +1585,6 @@
 .method public isRunning()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1792,7 +1595,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1801,7 +1603,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1810,7 +1611,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1819,7 +1619,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
-    .line 5
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1828,7 +1627,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
-    .line 6
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1837,7 +1635,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
-    .line 7
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1846,7 +1643,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
-    .line 8
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1855,7 +1651,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
-    .line 9
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1864,7 +1659,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
-    .line 10
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1873,7 +1667,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
-    .line 11
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
@@ -1898,7 +1691,6 @@
 .method public runPendingAnimations()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1907,7 +1699,6 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1916,7 +1707,6 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1925,7 +1715,6 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1944,7 +1733,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
@@ -1965,12 +1753,10 @@
 
     check-cast v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 6
     invoke-direct {p0, v5}, Lcom/android/camera/fragment/DefaultItemAnimator;->animateRemoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v4, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
@@ -1980,34 +1766,28 @@
 
     if-eqz v1, :cond_3
 
-    .line 8
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 10
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 12
     new-instance v6, Lcom/android/camera/fragment/DefaultItemAnimator$1;
 
     invoke-direct {v6, p0, v5}, Lcom/android/camera/fragment/DefaultItemAnimator$1;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Ljava/util/ArrayList;)V
 
     if-eqz v0, :cond_2
 
-    .line 13
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -2018,7 +1798,6 @@
 
     iget-object v5, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 14
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getRemoveDuration()J
 
     move-result-wide v7
@@ -2027,7 +1806,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_2
     invoke-interface {v6}, Ljava/lang/Runnable;->run()V
 
@@ -2035,34 +1813,28 @@
     :goto_1
     if-eqz v2, :cond_5
 
-    .line 16
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 17
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 18
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 19
     iget-object v6, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 20
     new-instance v6, Lcom/android/camera/fragment/DefaultItemAnimator$2;
 
     invoke-direct {v6, p0, v5}, Lcom/android/camera/fragment/DefaultItemAnimator$2;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Ljava/util/ArrayList;)V
 
     if-eqz v0, :cond_4
 
-    .line 21
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -2071,7 +1843,6 @@
 
     iget-object v5, v5, Lcom/android/camera/fragment/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 22
     iget-object v5, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getRemoveDuration()J
@@ -2082,7 +1853,6 @@
 
     goto :goto_2
 
-    .line 23
     :cond_4
     invoke-interface {v6}, Ljava/lang/Runnable;->run()V
 
@@ -2090,27 +1860,22 @@
     :goto_2
     if-eqz v3, :cond_b
 
-    .line 24
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 25
     iget-object v5, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 26
     iget-object v5, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 27
     iget-object v5, p0, Lcom/android/camera/fragment/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 28
     new-instance v5, Lcom/android/camera/fragment/DefaultItemAnimator$3;
 
     invoke-direct {v5, p0, v3}, Lcom/android/camera/fragment/DefaultItemAnimator$3;-><init>(Lcom/android/camera/fragment/DefaultItemAnimator;Ljava/util/ArrayList;)V
@@ -2123,7 +1888,6 @@
 
     goto :goto_3
 
-    .line 29
     :cond_6
     invoke-interface {v5}, Ljava/lang/Runnable;->run()V
 
@@ -2135,7 +1899,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 30
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getRemoveDuration()J
 
     move-result-wide v8
@@ -2148,7 +1911,6 @@
     :goto_4
     if-eqz v1, :cond_9
 
-    .line 31
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getMoveDuration()J
 
     move-result-wide v0
@@ -2161,12 +1923,10 @@
     :goto_5
     if-eqz v2, :cond_a
 
-    .line 32
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeDuration()J
 
     move-result-wide v6
 
-    .line 33
     :cond_a
     invoke-static {v0, v1, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
@@ -2174,7 +1934,6 @@
 
     add-long/2addr v8, v0
 
-    .line 34
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -2183,7 +1942,6 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 35
     invoke-static {v0, v5, v8, v9}, Landroidx/core/view/ViewCompat;->postOnAnimationDelayed(Landroid/view/View;Ljava/lang/Runnable;J)V
 
     :cond_b

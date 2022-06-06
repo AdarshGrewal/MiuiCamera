@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer;-><init>()V
 
     return-void
@@ -52,7 +51,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;->index:I
 
     return-void

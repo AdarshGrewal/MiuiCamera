@@ -74,7 +74,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -91,7 +90,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/pickerwidget/widget/DatePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -100,7 +98,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 2
     sget v0, Lmiuix/pickerwidget/R$attr;->datePickerStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/pickerwidget/widget/DatePicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -115,10 +112,8 @@
 
     move-object/from16 v1, p1
 
-    .line 3
     invoke-direct/range {p0 .. p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
     new-instance v2, Ljava/text/SimpleDateFormat;
 
     const-string v3, "MM/dd/yyyy"
@@ -129,46 +124,38 @@
 
     const/4 v2, 0x1
 
-    .line 5
     iput-boolean v2, v0, Lmiuix/pickerwidget/widget/DatePicker;->mIsEnabled:Z
 
     const/4 v3, 0x0
 
-    .line 6
     iput-boolean v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
-    .line 7
     invoke-direct/range {p0 .. p0}, Lmiuix/pickerwidget/widget/DatePicker;->initChineseDaysIfNeeded()V
 
-    .line 8
     new-instance v4, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v4}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
     iput-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 9
     new-instance v4, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v4}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
     iput-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 10
     new-instance v4, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v4}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
     iput-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 11
     new-instance v4, Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v4}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
     iput-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 12
     sget-object v4, Lmiuix/pickerwidget/R$styleable;->DatePicker:[I
 
     sget v5, Lmiuix/pickerwidget/R$style;->Widget_DatePicker:I
@@ -181,14 +168,12 @@
 
     move-result-object v4
 
-    .line 13
     sget v5, Lmiuix/pickerwidget/R$styleable;->DatePicker_spinnersShown:I
 
     invoke-virtual {v4, v5, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v5
 
-    .line 14
     sget v6, Lmiuix/pickerwidget/R$styleable;->DatePicker_startYear:I
 
     const/16 v7, 0x76c
@@ -197,7 +182,6 @@
 
     move-result v9
 
-    .line 15
     sget v6, Lmiuix/pickerwidget/R$styleable;->DatePicker_endYear:I
 
     const/16 v7, 0x834
@@ -206,24 +190,20 @@
 
     move-result v6
 
-    .line 16
     sget v7, Lmiuix/pickerwidget/R$styleable;->DatePicker_minDate:I
 
     invoke-virtual {v4, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 17
     sget v8, Lmiuix/pickerwidget/R$styleable;->DatePicker_maxDate:I
 
     invoke-virtual {v4, v8}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 18
     sget v8, Lmiuix/pickerwidget/R$layout;->miuix_appcompat_date_picker:I
 
-    .line 19
     sget v10, Lmiuix/pickerwidget/R$styleable;->DatePicker_lunarCalendar:I
 
     invoke-virtual {v4, v10, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -232,31 +212,26 @@
 
     iput-boolean v10, v0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
-    .line 20
     sget v10, Lmiuix/pickerwidget/R$styleable;->DatePicker_showYear:I
 
     invoke-virtual {v4, v10, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v10
 
-    .line 21
     sget v11, Lmiuix/pickerwidget/R$styleable;->DatePicker_showMonth:I
 
     invoke-virtual {v4, v11, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v11
 
-    .line 22
     sget v12, Lmiuix/pickerwidget/R$styleable;->DatePicker_showDay:I
 
     invoke-virtual {v4, v12, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v12
 
-    .line 23
     invoke-virtual {v4}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 24
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
@@ -265,22 +240,18 @@
 
     const-string v4, "layout_inflater"
 
-    .line 25
     invoke-virtual {v1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    .line 26
     invoke-virtual {v1, v8, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 27
     new-instance v1, Lmiuix/pickerwidget/widget/DatePicker$1;
 
     invoke-direct {v1, v0}, Lmiuix/pickerwidget/widget/DatePicker$1;-><init>(Lmiuix/pickerwidget/widget/DatePicker;)V
 
-    .line 28
     sget v4, Lmiuix/pickerwidget/R$id;->pickers:I
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -291,7 +262,6 @@
 
     iput-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
-    .line 29
     sget v4, Lmiuix/pickerwidget/R$id;->day:I
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -304,10 +274,8 @@
 
     const-wide/16 v13, 0x64
 
-    .line 30
     invoke-virtual {v4, v13, v14}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnLongPressUpdateInterval(J)V
 
-    .line 31
     iget-object v4, v0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v4, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnValueChangedListener(Lmiuix/pickerwidget/widget/NumberPicker$OnValueChangeListener;)V
@@ -316,12 +284,10 @@
 
     if-nez v12, :cond_0
 
-    .line 32
     iget-object v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v8, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 33
     :cond_0
     sget v8, Lmiuix/pickerwidget/R$id;->month:I
 
@@ -333,10 +299,8 @@
 
     iput-object v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    .line 34
     invoke-virtual {v8, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 35
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mNumberOfMonths:I
@@ -345,33 +309,28 @@
 
     invoke-virtual {v3, v8}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 36
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-object v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
     invoke-virtual {v3, v8}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 37
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     const-wide/16 v13, 0xc8
 
     invoke-virtual {v3, v13, v14}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnLongPressUpdateInterval(J)V
 
-    .line 38
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v3, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnValueChangedListener(Lmiuix/pickerwidget/widget/NumberPicker$OnValueChangeListener;)V
 
     if-nez v11, :cond_1
 
-    .line 39
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 40
     :cond_1
     sget v3, Lmiuix/pickerwidget/R$id;->year:I
 
@@ -385,37 +344,30 @@
 
     const-wide/16 v11, 0x64
 
-    .line 41
     invoke-virtual {v3, v11, v12}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnLongPressUpdateInterval(J)V
 
-    .line 42
     iget-object v3, v0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v3, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setOnValueChangedListener(Lmiuix/pickerwidget/widget/NumberPicker$OnValueChangeListener;)V
 
     if-nez v10, :cond_2
 
-    .line 43
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 44
     :cond_2
     invoke-direct/range {p0 .. p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateFormatters()V
 
     if-nez v5, :cond_3
 
-    .line 45
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/DatePicker;->setSpinnersShown(Z)V
 
     goto :goto_0
 
-    .line 46
     :cond_3
     invoke-virtual {v0, v5}, Lmiuix/pickerwidget/widget/DatePicker;->setSpinnersShown(Z)V
 
-    .line 47
     :goto_0
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -423,14 +375,12 @@
 
     invoke-virtual {v1, v3, v4}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 48
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 49
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v0, v7, v1}, Lmiuix/pickerwidget/widget/DatePicker;->parseDate(Ljava/lang/String;Lmiuix/pickerwidget/date/Calendar;)Z
@@ -439,7 +389,6 @@
 
     if-nez v1, :cond_4
 
-    .line 50
     iget-object v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v10, 0x0
@@ -470,7 +419,6 @@
     :cond_5
     move-object v5, v15
 
-    .line 51
     iget-object v8, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v10, 0x0
@@ -487,7 +435,6 @@
 
     invoke-virtual/range {v8 .. v15}, Lmiuix/pickerwidget/date/Calendar;->set(IIIIIII)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 52
     :goto_1
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -497,19 +444,16 @@
 
     invoke-virtual {v0, v7, v8}, Lmiuix/pickerwidget/widget/DatePicker;->setMinDate(J)V
 
-    .line 53
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v1, v3, v4}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 54
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_6
 
-    .line 55
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-direct {v0, v5, v1}, Lmiuix/pickerwidget/widget/DatePicker;->parseDate(Ljava/lang/String;Lmiuix/pickerwidget/date/Calendar;)Z
@@ -518,7 +462,6 @@
 
     if-nez v1, :cond_7
 
-    .line 56
     iget-object v10, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v12, 0xb
@@ -539,7 +482,6 @@
 
     goto :goto_2
 
-    .line 57
     :cond_6
     iget-object v10, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -559,7 +501,6 @@
 
     invoke-virtual/range {v10 .. v17}, Lmiuix/pickerwidget/date/Calendar;->set(IIIIIII)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 58
     :cond_7
     :goto_2
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
@@ -570,7 +511,6 @@
 
     invoke-virtual {v0, v3, v4}, Lmiuix/pickerwidget/widget/DatePicker;->setMaxDate(J)V
 
-    .line 59
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -579,7 +519,6 @@
 
     invoke-virtual {v1, v3, v4}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 60
     iget-object v1, v0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v1, v2}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
@@ -598,27 +537,22 @@
 
     const/16 v5, 0x9
 
-    .line 61
     invoke-virtual {v4, v5}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v4
 
     const/4 v5, 0x0
 
-    .line 62
     invoke-virtual {v0, v1, v3, v4, v5}, Lmiuix/pickerwidget/widget/DatePicker;->init(IIILmiuix/pickerwidget/widget/DatePicker$OnDateChangedListener;)V
 
-    .line 63
     invoke-direct/range {p0 .. p0}, Lmiuix/pickerwidget/widget/DatePicker;->reorderSpinners()V
 
-    .line 64
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getImportantForAccessibility()I
 
     move-result v1
 
     if-nez v1, :cond_8
 
-    .line 65
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setImportantForAccessibility(I)V
 
     :cond_8
@@ -628,7 +562,6 @@
 .method public static synthetic access$000(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     return-object p0
@@ -637,7 +570,6 @@
 .method public static synthetic access$100(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/date/Calendar;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     return-object p0
@@ -646,7 +578,6 @@
 .method public static synthetic access$200(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/widget/NumberPicker;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     return-object p0
@@ -655,7 +586,6 @@
 .method public static synthetic access$300(Lmiuix/pickerwidget/widget/DatePicker;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     return p0
@@ -664,7 +594,6 @@
 .method public static synthetic access$400(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/widget/NumberPicker;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     return-object p0
@@ -673,7 +602,6 @@
 .method public static synthetic access$500(Lmiuix/pickerwidget/widget/DatePicker;)Lmiuix/pickerwidget/widget/NumberPicker;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     return-object p0
@@ -682,7 +610,6 @@
 .method public static synthetic access$600(Lmiuix/pickerwidget/widget/DatePicker;III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lmiuix/pickerwidget/widget/DatePicker;->setDate(III)V
 
     return-void
@@ -691,7 +618,6 @@
 .method public static synthetic access$700(Lmiuix/pickerwidget/widget/DatePicker;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->resetMonthsDisplayedValues()V
 
     return-void
@@ -700,7 +626,6 @@
 .method public static synthetic access$800(Lmiuix/pickerwidget/widget/DatePicker;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
     return-void
@@ -709,7 +634,6 @@
 .method public static synthetic access$900(Lmiuix/pickerwidget/widget/DatePicker;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->notifyDateChanged()V
 
     return-void
@@ -718,12 +642,10 @@
 .method private initChineseDaysIfNeeded()V
     .locals 6
 
-    .line 1
     sget-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseDays:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -738,7 +660,6 @@
 
     sput-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseDays:[Ljava/lang/String;
 
-    .line 3
     :cond_0
     sget-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
@@ -746,7 +667,6 @@
 
     if-nez v0, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -761,7 +681,6 @@
 
     sput-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -772,7 +691,6 @@
 
     const/4 v2, 0x0
 
-    .line 6
     :goto_0
     sget-object v3, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
@@ -780,7 +698,6 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -809,7 +726,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     array-length v0, v3
 
@@ -819,13 +735,11 @@
 
     sput-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseLeapYearMonths:[Ljava/lang/String;
 
-    .line 9
     :cond_2
     sget-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseLeapMonthMark:Ljava/lang/String;
 
     if-nez v0, :cond_3
 
-    .line 10
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -849,7 +763,6 @@
 .method private isNewDate(III)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v1, 0x1
@@ -864,7 +777,6 @@
 
     const/4 v0, 0x5
 
-    .line 2
     invoke-virtual {p1, v0}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result p1
@@ -875,7 +787,6 @@
 
     const/16 p3, 0x9
 
-    .line 3
     invoke-virtual {p1, p3}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result p1
@@ -897,15 +808,12 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->sendAccessibilityEvent(I)V
 
-    .line 2
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mOnDateChangedListener:Lmiuix/pickerwidget/widget/DatePicker$OnDateChangedListener;
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/pickerwidget/widget/DatePicker;->getYear()I
 
     move-result v3
@@ -931,7 +839,6 @@
 .method private parseDate(Ljava/lang/String;Lmiuix/pickerwidget/date/Calendar;)Z
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDateFormat:Ljava/text/DateFormat;
 
@@ -951,7 +858,6 @@
 
     return p1
 
-    .line 2
     :catch_0
     sget-object p2, Lmiuix/pickerwidget/widget/DatePicker;->LOG_TAG:Ljava/lang/String;
 
@@ -987,17 +893,14 @@
 .method private reorderSpinners()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDateFormatOrder:[C
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1006,7 +909,6 @@
 
     move-result-object v0
 
-    .line 4
     :cond_0
     array-length v1, v0
 
@@ -1015,7 +917,6 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
-    .line 5
     aget-char v3, v0, v2
 
     const/16 v4, 0x4d
@@ -1030,21 +931,18 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 6
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
     iget-object v4, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 7
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0, v3, v1, v2}, Lmiuix/pickerwidget/widget/DatePicker;->setImeOptions(Lmiuix/pickerwidget/widget/NumberPicker;II)V
 
     goto :goto_1
 
-    .line 8
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1052,7 +950,6 @@
 
     throw v0
 
-    .line 9
     :cond_2
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
@@ -1060,14 +957,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 10
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0, v3, v1, v2}, Lmiuix/pickerwidget/widget/DatePicker;->setImeOptions(Lmiuix/pickerwidget/widget/NumberPicker;II)V
 
     goto :goto_1
 
-    .line 11
     :cond_3
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
@@ -1075,7 +970,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 12
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0, v3, v1, v2}, Lmiuix/pickerwidget/widget/DatePicker;->setImeOptions(Lmiuix/pickerwidget/widget/NumberPicker;II)V
@@ -1092,14 +986,12 @@
 .method private resetMonthsDisplayedValues()V
     .locals 5
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getChineseLeapMonth()I
@@ -1108,27 +1000,23 @@
 
     if-gez v0, :cond_0
 
-    .line 3
     sget-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
     iput-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
     goto :goto_1
 
-    .line 4
     :cond_0
     sget-object v2, Lmiuix/pickerwidget/widget/DatePicker;->sChineseLeapYearMonths:[Ljava/lang/String;
 
     iput-object v2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
-    .line 5
     sget-object v3, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
     add-int/lit8 v4, v0, 0x1
 
     invoke-static {v3, v1, v2, v1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 6
     sget-object v1, Lmiuix/pickerwidget/widget/DatePicker;->sChineseMonths:[Ljava/lang/String;
 
     iget-object v2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
@@ -1139,7 +1027,6 @@
 
     invoke-static {v1, v0, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 7
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1164,7 +1051,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentLocale:Ljava/util/Locale;
 
@@ -1184,7 +1070,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1206,10 +1091,8 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 10
     iput-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
-    .line 11
     :goto_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
@@ -1217,7 +1100,6 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 12
     sget-object v2, Lmiuix/pickerwidget/widget/NumberPicker;->TWO_DIGIT_FORMATTER:Lmiuix/pickerwidget/widget/NumberPicker$Formatter;
 
     add-int/lit8 v3, v1, 0x1
@@ -1240,7 +1122,6 @@
 .method private setCurrentLocale(Ljava/util/Locale;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentLocale:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -1251,11 +1132,9 @@
 
     return-void
 
-    .line 2
     :cond_0
     iput-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentLocale:Ljava/util/Locale;
 
-    .line 3
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v0, 0x5
@@ -1268,10 +1147,8 @@
 
     iput p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mNumberOfMonths:I
 
-    .line 4
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->resetMonthsDisplayedValues()V
 
-    .line 5
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateFormatters()V
 
     return-void
@@ -1280,7 +1157,6 @@
 .method private setDate(III)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v4, 0x0
@@ -1299,7 +1175,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lmiuix/pickerwidget/date/Calendar;->set(IIIIIII)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 2
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
@@ -1310,7 +1185,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
@@ -1323,7 +1197,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -1335,7 +1208,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
@@ -1365,7 +1237,6 @@
     :cond_0
     const/4 p2, 0x6
 
-    .line 1
     :goto_0
     sget p3, Lmiuix/pickerwidget/R$id;->number_picker_input:I
 
@@ -1375,7 +1246,6 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setImeOptions(I)V
 
     return-void
@@ -1384,7 +1254,6 @@
 .method private updateFormatters()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     if-eqz v0, :cond_1
@@ -1395,13 +1264,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object v1, Lmiuix/pickerwidget/widget/NumberPicker;->TWO_DIGIT_FORMATTER:Lmiuix/pickerwidget/widget/NumberPicker$Formatter;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setFormatter(Lmiuix/pickerwidget/widget/NumberPicker$Formatter;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     new-instance v1, Lmiuix/pickerwidget/widget/NumberPicker$NumberFormatter;
@@ -1418,31 +1285,26 @@
 .method private updateSpinners()V
     .locals 12
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
@@ -1458,7 +1320,6 @@
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -1473,7 +1334,6 @@
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
-    .line 7
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -1488,20 +1348,17 @@
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setLabel(Ljava/lang/String;)V
 
-    .line 8
     :goto_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 10
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1523,33 +1380,27 @@
     :cond_1
     iget-object v3, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 11
     invoke-virtual {v3, v5}, Lmiuix/pickerwidget/date/Calendar;->getActualMaximum(I)I
 
     move-result v3
 
-    .line 12
     :goto_1
     invoke-virtual {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 13
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 14
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 15
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 16
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v6, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1571,12 +1422,10 @@
     :cond_2
     invoke-virtual {v0, v7}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 17
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v2}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 18
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     const/4 v6, 0x2
@@ -1590,7 +1439,6 @@
     :cond_3
     move v0, v2
 
-    .line 19
     :goto_2
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -1610,7 +1458,6 @@
 
     if-ne v7, v8, :cond_7
 
-    .line 20
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v8, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1635,12 +1482,10 @@
     :goto_3
     invoke-virtual {v7, v8}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 21
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v7, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 22
     iget-boolean v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     if-eqz v7, :cond_5
@@ -1652,7 +1497,6 @@
     :cond_5
     move v7, v9
 
-    .line 23
     :goto_4
     iget-object v8, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -1668,7 +1512,6 @@
 
     if-ne v8, v7, :cond_7
 
-    .line 24
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v8, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1686,21 +1529,17 @@
     :cond_6
     iget-object v8, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 25
     invoke-virtual {v8, v5}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v8
 
-    .line 26
     :goto_5
     invoke-virtual {v7, v8}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 27
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v7, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 28
     :cond_7
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -1716,7 +1555,6 @@
 
     if-ne v7, v0, :cond_b
 
-    .line 29
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1741,17 +1579,14 @@
     :goto_6
     invoke-virtual {v0, v7}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 30
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 31
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 32
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     if-eqz v0, :cond_9
@@ -1763,7 +1598,6 @@
     :cond_9
     move v0, v9
 
-    .line 33
     :goto_7
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
@@ -1779,7 +1613,6 @@
 
     if-ne v1, v0, :cond_b
 
-    .line 34
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1797,21 +1630,17 @@
     :cond_a
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 35
     invoke-virtual {v1, v5}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
-    .line 36
     :goto_8
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 37
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 38
     :cond_b
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mShortMonths:[Ljava/lang/String;
 
@@ -1831,17 +1660,14 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 39
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 40
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     if-eqz v0, :cond_c
 
-    .line 41
     sget-object v0, Lmiuix/pickerwidget/widget/DatePicker;->sChineseDays:[Ljava/lang/String;
 
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
@@ -1862,12 +1688,10 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 42
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->setDisplayedValues([Ljava/lang/String;)V
 
-    .line 43
     :cond_c
     invoke-virtual {p0}, Lmiuix/pickerwidget/widget/DatePicker;->isLunarMode()Z
 
@@ -1882,7 +1706,6 @@
     :cond_d
     move v0, v2
 
-    .line 44
     :goto_9
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
@@ -1894,7 +1717,6 @@
 
     invoke-virtual {v1, v7}, Lmiuix/pickerwidget/widget/NumberPicker;->setMinValue(I)V
 
-    .line 45
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-object v7, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
@@ -1905,12 +1727,10 @@
 
     invoke-virtual {v1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->setMaxValue(I)V
 
-    .line 46
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, v3}, Lmiuix/pickerwidget/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    .line 47
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getChineseLeapMonth()I
@@ -1919,7 +1739,6 @@
 
     if-ltz v0, :cond_f
 
-    .line 48
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v1}, Lmiuix/pickerwidget/date/Calendar;->isChineseLeapMonth()Z
@@ -1939,7 +1758,6 @@
     :cond_e
     move v3, v2
 
-    .line 49
     :cond_f
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
@@ -1965,7 +1783,6 @@
     :goto_a
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setValue(I)V
 
-    .line 50
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -1984,7 +1801,6 @@
 
     goto :goto_b
 
-    .line 51
     :cond_11
     invoke-virtual {v1, v10}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
@@ -1999,11 +1815,9 @@
 
     move-result v1
 
-    .line 52
     :goto_b
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setValue(I)V
 
-    .line 53
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     iget-boolean v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -2021,12 +1835,10 @@
     :cond_13
     iget-object v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 54
     invoke-virtual {v1, v5}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
-    .line 55
     :goto_c
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setValue(I)V
 
@@ -2038,7 +1850,6 @@
 .method public dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/DatePicker;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
     const/4 p1, 0x1
@@ -2057,7 +1868,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
 
     return-void
@@ -2066,7 +1876,6 @@
 .method public getDayOfMonth()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-boolean v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -2091,7 +1900,6 @@
 .method public getMaxDate()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
@@ -2104,7 +1912,6 @@
 .method public getMinDate()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
@@ -2117,7 +1924,6 @@
 .method public getMonth()I
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     if-eqz v0, :cond_1
@@ -2134,7 +1940,6 @@
 
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 2
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -2157,7 +1962,6 @@
 
     const/4 v1, 0x5
 
-    .line 3
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -2169,7 +1973,6 @@
 .method public getSpinnersShown()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->isShown()Z
@@ -2182,7 +1985,6 @@
 .method public getYear()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-boolean v1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -2207,13 +2009,10 @@
 .method public init(IIILmiuix/pickerwidget/widget/DatePicker$OnDateChangedListener;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lmiuix/pickerwidget/widget/DatePicker;->setDate(III)V
 
-    .line 2
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
-    .line 3
     iput-object p4, p0, Lmiuix/pickerwidget/widget/DatePicker;->mOnDateChangedListener:Lmiuix/pickerwidget/widget/DatePicker$OnDateChangedListener;
 
     return-void
@@ -2222,7 +2021,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsEnabled:Z
 
     return v0
@@ -2231,7 +2029,6 @@
 .method public isLunarMode()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     return v0
@@ -2240,10 +2037,8 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
     iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     invoke-direct {p0, p1}, Lmiuix/pickerwidget/widget/DatePicker;->setCurrentLocale(Ljava/util/Locale;)V
@@ -2254,10 +2049,8 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 2
     const-class v0, Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -2272,10 +2065,8 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 2
     const-class v0, Lmiuix/pickerwidget/widget/DatePicker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -2290,10 +2081,8 @@
 .method public onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2310,7 +2099,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object p1
@@ -2323,17 +2111,14 @@
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 3
 
-    .line 1
     check-cast p1, Lmiuix/pickerwidget/widget/DatePicker$SavedState;
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View$BaseSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 3
     invoke-static {p1}, Lmiuix/pickerwidget/widget/DatePicker$SavedState;->access$1100(Lmiuix/pickerwidget/widget/DatePicker$SavedState;)I
 
     move-result v0
@@ -2348,14 +2133,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lmiuix/pickerwidget/widget/DatePicker;->setDate(III)V
 
-    .line 4
     invoke-static {p1}, Lmiuix/pickerwidget/widget/DatePicker$SavedState;->access$1400(Lmiuix/pickerwidget/widget/DatePicker$SavedState;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
-    .line 5
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
     return-void
@@ -2364,12 +2147,10 @@
 .method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 8
 
-    .line 1
     invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v1
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v2, 0x1
@@ -2378,7 +2159,6 @@
 
     move-result v2
 
-    .line 3
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v3, 0x5
@@ -2387,7 +2167,6 @@
 
     move-result v3
 
-    .line 4
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v4, 0x9
@@ -2396,7 +2175,6 @@
 
     move-result v4
 
-    .line 5
     new-instance v7, Lmiuix/pickerwidget/widget/DatePicker$SavedState;
 
     iget-boolean v5, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
@@ -2413,10 +2191,8 @@
 .method public setDateFormatOrder([C)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDateFormatOrder:[C
 
-    .line 2
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->reorderSpinners()V
 
     return-void
@@ -2425,33 +2201,27 @@
 .method public setEnabled(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsEnabled:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 5
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 6
     iput-boolean p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsEnabled:Z
 
     return-void
@@ -2460,18 +2230,14 @@
 .method public setLunarMode(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mIsLunarMode:Z
 
-    .line 3
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->resetMonthsDisplayedValues()V
 
-    .line 4
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
     :cond_0
@@ -2481,12 +2247,10 @@
 .method public setMaxDate(J)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v1, 0x1
@@ -2507,7 +2271,6 @@
 
     const/16 v1, 0xc
 
-    .line 3
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -2522,13 +2285,11 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 5
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
@@ -2539,7 +2300,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMaxDate:Lmiuix/pickerwidget/date/Calendar;
@@ -2550,7 +2310,6 @@
 
     invoke-virtual {p1, v0, v1}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 7
     :cond_1
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
@@ -2560,12 +2319,10 @@
 .method public setMinDate(J)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 2
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mTempDate:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v1, 0x1
@@ -2586,7 +2343,6 @@
 
     const/16 v1, 0xc
 
-    .line 3
     invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
@@ -2601,13 +2357,11 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 5
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
@@ -2618,7 +2372,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6
     iget-object p1, p0, Lmiuix/pickerwidget/widget/DatePicker;->mCurrentDate:Lmiuix/pickerwidget/date/Calendar;
 
     iget-object p2, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMinDate:Lmiuix/pickerwidget/date/Calendar;
@@ -2629,7 +2382,6 @@
 
     invoke-virtual {p1, v0, v1}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 7
     :cond_1
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
@@ -2639,7 +2391,6 @@
 .method public setSpinnersShown(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mSpinners:Landroid/widget/LinearLayout;
 
     if-eqz p1, :cond_0
@@ -2660,7 +2411,6 @@
 .method public showDayPicker(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mDaySpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     if-eqz p1, :cond_0
@@ -2681,7 +2431,6 @@
 .method public showMonthPicker(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mMonthSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     if-eqz p1, :cond_0
@@ -2702,7 +2451,6 @@
 .method public showYearPicker(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/pickerwidget/widget/DatePicker;->mYearSpinner:Lmiuix/pickerwidget/widget/NumberPicker;
 
     if-eqz p1, :cond_0
@@ -2723,7 +2471,6 @@
 .method public updateDate(III)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lmiuix/pickerwidget/widget/DatePicker;->isNewDate(III)Z
 
     move-result v0
@@ -2732,14 +2479,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lmiuix/pickerwidget/widget/DatePicker;->setDate(III)V
 
-    .line 3
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->updateSpinners()V
 
-    .line 4
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/DatePicker;->notifyDateChanged()V
 
     return-void

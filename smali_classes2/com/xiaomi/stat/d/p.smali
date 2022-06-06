@@ -42,7 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,10 +50,8 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;J)J
     .locals 0
 
-    .line 3
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 4
     sget-object p0, Lcom/xiaomi/stat/d/p;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -71,7 +68,6 @@
 
     const-string v1, ""
 
-    .line 9
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -82,10 +78,8 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 2
     sget-object p0, Lcom/xiaomi/stat/d/p;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -100,7 +94,6 @@
 
     const-string v0, "netSpeed"
 
-    .line 13
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;F)V
 
     return-void
@@ -111,7 +104,6 @@
 
     const-string v0, "s_t"
 
-    .line 11
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -122,7 +114,6 @@
 
     const-string v0, "imei1"
 
-    .line 10
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -131,10 +122,8 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;F)V
     .locals 0
 
-    .line 7
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 8
     sget-object p0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
@@ -151,7 +140,6 @@
 
     const-string v0, "od_checked"
 
-    .line 12
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -160,10 +148,8 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 5
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 6
     sget-object p0, Lcom/xiaomi/stat/d/p;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -176,10 +162,8 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;F)F
     .locals 0
 
-    .line 7
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 8
     sget-object p0, Lcom/xiaomi/stat/d/p;->d:Landroid/content/SharedPreferences;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
@@ -196,7 +180,6 @@
 
     const-string v1, ""
 
-    .line 9
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -209,7 +192,6 @@
 
     const-string v0, "l_t"
 
-    .line 11
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -220,7 +202,6 @@
 
     const-string v0, "imei2"
 
-    .line 10
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -229,10 +210,8 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;J)V
     .locals 0
 
-    .line 3
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 4
     sget-object p0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -247,10 +226,8 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 2
     sget-object p0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -265,10 +242,8 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 5
     invoke-static {p0}, Lcom/xiaomi/stat/d/p;->o(Landroid/content/Context;)V
 
-    .line 6
     sget-object p0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -285,7 +260,6 @@
 
     const-string v0, "resued_old_instanced_id"
 
-    .line 12
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -298,7 +272,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -311,7 +284,6 @@
 
     const-string v0, "e_t"
 
-    .line 3
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -322,7 +294,6 @@
 
     const-string v0, "meid"
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -335,7 +306,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -348,7 +318,6 @@
 
     const-string v0, "netSpeedTotalRxBytes"
 
-    .line 3
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -359,7 +328,6 @@
 
     const-string v0, "mac"
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -372,7 +340,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -385,7 +352,6 @@
 
     const-string v0, "net_speed_time_stamp"
 
-    .line 3
     invoke-static {p0, v0, p1, p2}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;J)V
 
     return-void
@@ -396,7 +362,6 @@
 
     const-string v0, "serial"
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -409,7 +374,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1, v2}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -422,7 +386,6 @@
 
     const-string v0, "od_v"
 
-    .line 2
     invoke-static {p0, v0, p1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -435,7 +398,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1, v2}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -450,7 +412,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1, v2}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -465,7 +426,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -480,7 +440,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -495,7 +454,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -510,7 +468,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;Ljava/lang/String;F)F
 
     move-result p0
@@ -525,7 +482,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1, v2}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -540,7 +496,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1, v2}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -551,20 +506,17 @@
 .method public static o(Landroid/content/Context;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     const-class v0, Lcom/xiaomi/stat/d/p;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
@@ -574,21 +526,18 @@
 
     const/4 v2, 0x0
 
-    .line 4
     invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
     sput-object p0, Lcom/xiaomi/stat/d/p;->d:Landroid/content/SharedPreferences;
 
-    .line 5
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     sput-object p0, Lcom/xiaomi/stat/d/p;->e:Landroid/content/SharedPreferences$Editor;
 
-    .line 6
     :cond_1
     monitor-exit v0
 

@@ -40,17 +40,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueue:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -65,12 +62,10 @@
 .method public release()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueueLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueue:Ljava/util/List;
 
@@ -91,7 +86,6 @@
 
     check-cast v2, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;
 
-    .line 3
     invoke-static {v2}, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;->access$100(Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;)Ljava/lang/Object;
 
     move-result-object v3
@@ -102,18 +96,15 @@
 
     const/4 v4, 0x1
 
-    .line 4
     :try_start_1
     iput-boolean v4, v2, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;->releaseRequested:Z
 
-    .line 5
     invoke-static {v2}, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;->access$100(Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
-    .line 6
     monitor-exit v3
 
     goto :goto_0
@@ -128,7 +119,6 @@
     :try_start_2
     throw v1
 
-    .line 7
     :cond_0
     monitor-exit v0
 
@@ -147,22 +137,18 @@
 .method public sendMessageAndAwaitResponse(Landroid/os/Message;)Ljava/lang/Object;
     .locals 7
 
-    .line 1
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ResponseReceiverThread"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 4
     new-instance v2, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -173,28 +159,23 @@
 
     invoke-direct {v2, v3, v1, v4}, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;-><init>(Landroid/os/Looper;Ljava/lang/Object;Lcom/xiaomi/camera/liveshot/util/HandlerHelper$1;)V
 
-    .line 5
     iget-object v3, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueueLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 6
     :try_start_0
     iget-object v5, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueue:Ljava/util/List;
 
     invoke-interface {v5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 8
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-eqz v3, :cond_0
 
-    .line 9
     new-instance v5, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ObjectX;
 
     invoke-direct {v5, v3, v2}, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ObjectX;-><init>(Ljava/lang/Object;Landroid/os/Handler;)V
@@ -203,21 +184,17 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     iput-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 11
     :goto_0
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 12
     monitor-enter v1
 
     :goto_1
     if-nez v4, :cond_1
 
-    .line 13
     :try_start_1
     iget-boolean p1, v2, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;->releaseRequested:Z
     :try_end_1
@@ -227,11 +204,9 @@
 
     const-wide/16 v5, 0xa
 
-    .line 14
     :try_start_2
     invoke-virtual {v1, v5, v6}, Ljava/lang/Object;->wait(J)V
 
-    .line 15
     iget-object v4, v2, Lcom/xiaomi/camera/liveshot/util/HandlerHelper$ResponseReceiverHandler;->reply:Ljava/lang/Object;
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -242,7 +217,6 @@
     :catch_0
     move-exception p1
 
-    .line 16
     :try_start_3
     sget-object v3, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->TAG:Ljava/lang/String;
 
@@ -264,27 +238,22 @@
 
     goto :goto_1
 
-    .line 17
     :cond_1
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 18
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 19
     iget-object p1, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueueLock:Ljava/lang/Object;
 
     monitor-enter p1
 
-    .line 20
     :try_start_4
     iget-object v0, p0, Lcom/xiaomi/camera/liveshot/util/HandlerHelper;->mPendingMessageQueue:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 21
     monitor-exit p1
 
     return-object v4
@@ -301,7 +270,6 @@
     :catchall_1
     move-exception p1
 
-    .line 22
     :try_start_5
     monitor-exit v1
     :try_end_5
@@ -312,7 +280,6 @@
     :catchall_2
     move-exception p1
 
-    .line 23
     :try_start_6
     monitor-exit v3
     :try_end_6

@@ -53,7 +53,6 @@
 
     const v0, 0x4168cccd    # 14.55f
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/Util;->dpToPixel(F)I
 
     move-result v0
@@ -66,31 +65,24 @@
 .method public constructor <init>(Landroid/view/View;Landroid/util/Size;Z)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsHovering:Z
 
-    .line 3
     new-instance v1, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v1}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/zoommap/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
-    .line 5
     iput-object p2, p0, Lcom/android/camera/zoommap/RegionHelper;->mWindowSize:Landroid/util/Size;
 
-    .line 6
     iput-boolean p3, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsCinematicAspectRatio:Z
 
-    .line 7
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -99,7 +91,6 @@
 
     move-result p1
 
-    .line 8
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isSquareModule()Z
 
     move-result p3
@@ -118,7 +109,6 @@
     :cond_1
     move v1, v0
 
-    .line 9
     :goto_0
     invoke-static {v1}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
 
@@ -126,7 +116,6 @@
 
     iput-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mPreviewRect:Landroid/graphics/Rect;
 
-    .line 10
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result p1
@@ -147,12 +136,10 @@
 
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
-    .line 11
     iget-boolean p3, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsCinematicAspectRatio:Z
 
     if-eqz p3, :cond_2
 
-    .line 12
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatioMargin()I
 
     move-result p3
@@ -163,11 +150,9 @@
 
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
-    .line 13
     :cond_2
     iput v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMax:I
 
-    .line 14
     iget p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
     add-int/2addr p1, v0
@@ -176,10 +161,8 @@
 
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMid:I
 
-    .line 15
     iput v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMin:I
 
-    .line 16
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mPreviewRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -202,7 +185,6 @@
 
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMax:I
 
-    .line 17
     iget p2, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMin:I
 
     add-int/2addr p2, p1
@@ -211,7 +193,6 @@
 
     iput p2, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMid:I
 
-    .line 18
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,7 +227,6 @@
 .method public static synthetic access$000(Lcom/android/camera/zoommap/RegionHelper;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
     return p0
@@ -255,7 +235,6 @@
 .method public static synthetic access$002(Lcom/android/camera/zoommap/RegionHelper;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
     return p1
@@ -264,7 +243,6 @@
 .method public static synthetic access$100(Lcom/android/camera/zoommap/RegionHelper;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
     return-object p0
@@ -273,7 +251,6 @@
 .method public static synthetic access$200(Lcom/android/camera/zoommap/RegionHelper;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
 
     return p0
@@ -282,7 +259,6 @@
 .method public static synthetic access$202(Lcom/android/camera/zoommap/RegionHelper;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
 
     return p1
@@ -293,7 +269,6 @@
 .method public getPipWindowDefaultLocation()Landroid/graphics/Rect;
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mPreviewRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -312,19 +287,16 @@
 
     sub-int/2addr v0, v1
 
-    .line 2
     iget-boolean v1, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsCinematicAspectRatio:Z
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatioMargin()I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lcom/android/camera/zoommap/RegionHelper;->mPreviewRect:Landroid/graphics/Rect;
 
@@ -334,7 +306,6 @@
 
     add-int/2addr v1, v2
 
-    .line 5
     new-instance v2, Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/android/camera/zoommap/RegionHelper;->mWindowSize:Landroid/util/Size;
@@ -361,7 +332,6 @@
 .method public initAnimConfig()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-virtual {v0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
@@ -376,25 +346,20 @@
 
     const-string v1, "initTranslation"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
@@ -405,7 +370,6 @@
 .method public isHovering()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsHovering:Z
 
     return v0
@@ -414,7 +378,6 @@
 .method public moveToEdge()Z
     .locals 13
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/zoommap/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 v1, 0x0
@@ -423,7 +386,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/zoommap/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 v3, 0x1
@@ -432,7 +394,6 @@
 
     move-result v2
 
-    .line 3
     iget-boolean v4, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsCinematicAspectRatio:Z
 
     if-eqz v4, :cond_0
@@ -446,7 +407,6 @@
     :cond_0
     move v4, v1
 
-    .line 4
     :goto_0
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
@@ -478,7 +438,6 @@
 
     if-ge v5, v6, :cond_1
 
-    .line 5
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
     sub-int/2addr v5, v4
@@ -502,7 +461,6 @@
 
     goto :goto_3
 
-    .line 6
     :cond_1
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
@@ -522,7 +480,6 @@
 
     if-le v5, v6, :cond_2
 
-    .line 7
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMax:I
 
     iget-object v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mWindowSize:Landroid/util/Size;
@@ -548,7 +505,6 @@
 
     if-lez v4, :cond_3
 
-    .line 8
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMax:I
 
     :goto_2
@@ -561,12 +517,10 @@
 
     if-gez v4, :cond_4
 
-    .line 9
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
     goto :goto_2
 
-    .line 10
     :cond_4
     iget v4, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
@@ -574,12 +528,10 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 11
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMin:I
 
     goto :goto_2
 
-    .line 12
     :cond_5
     iget v5, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationXMax:I
 
@@ -590,7 +542,6 @@
 
     if-lez v6, :cond_6
 
-    .line 13
     iget v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMax:I
 
     goto :goto_4
@@ -600,12 +551,10 @@
 
     if-gez v6, :cond_7
 
-    .line 14
     iget v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMin:I
 
     goto :goto_4
 
-    .line 15
     :cond_7
     iget v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
 
@@ -613,22 +562,19 @@
 
     if-ge v6, v7, :cond_8
 
-    .line 16
     iget v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMin:I
 
     goto :goto_4
 
-    .line 17
     :cond_8
     iget v6, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMax:I
 
-    .line 18
     :goto_4
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "moveToEdge mSpeedX: "
+    const-string/jumbo v9, "moveToEdge mSpeedX: "
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -666,7 +612,6 @@
 
     const-string v0, "RIGHT_TOP"
 
-    .line 19
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackZoomMapMoveWindow(Ljava/lang/String;)V
 
     goto :goto_5
@@ -678,7 +623,6 @@
 
     const-string v0, "RIGHT_BOTTOM"
 
-    .line 20
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackZoomMapMoveWindow(Ljava/lang/String;)V
 
     goto :goto_5
@@ -690,7 +634,6 @@
 
     const-string v0, "LEFT_TOP"
 
-    .line 21
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackZoomMapMoveWindow(Ljava/lang/String;)V
 
     goto :goto_5
@@ -702,10 +645,8 @@
 
     const-string v0, "LEFT_BOTTOM"
 
-    .line 22
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackZoomMapMoveWindow(Ljava/lang/String;)V
 
-    .line 23
     :cond_c
     :goto_5
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -718,7 +659,6 @@
 
     aput-object v7, v2, v1
 
-    .line 24
     invoke-static {v2}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v2
@@ -745,7 +685,6 @@
 
     aput-object v9, v7, v1
 
-    .line 25
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -774,14 +713,12 @@
 
     aput-object v12, v9, v1
 
-    .line 26
     invoke-virtual {v5, v9}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
 
     aput-object v0, v7, v10
 
-    .line 27
     invoke-interface {v2, v7}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     new-array v0, v3, [Ljava/lang/Object;
@@ -790,7 +727,6 @@
 
     aput-object v2, v0, v1
 
-    .line 28
     invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -817,7 +753,6 @@
 
     aput-object v5, v2, v1
 
-    .line 29
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -844,19 +779,15 @@
 
     aput-object v6, v3, v1
 
-    .line 30
     invoke-virtual {v5, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     aput-object v1, v2, v10
 
-    .line 31
     invoke-interface {v0, v2}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return v4
-
-    nop
 
     :array_0
     .array-data 4
@@ -874,7 +805,6 @@
 .method public setHovering(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mIsHovering:Z
 
     return-void
@@ -883,7 +813,6 @@
 .method public updateTranslation(II)V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -908,10 +837,8 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
 
-    .line 3
     iget p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationYMin:I
 
     sget v0, Lcom/android/camera/zoommap/RegionHelper;->MARGIN:I
@@ -928,7 +855,6 @@
 
     iput p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
     iget p2, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationX:I
@@ -937,7 +863,6 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mMapView:Landroid/view/View;
 
     iget p2, p0, Lcom/android/camera/zoommap/RegionHelper;->mTranslationY:I
@@ -946,7 +871,6 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     const/4 p2, 0x2
@@ -977,7 +901,6 @@
 
     aput-object v0, p1, v2
 
-    .line 7
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -1004,7 +927,6 @@
 
     aput-object v0, p1, v2
 
-    .line 8
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1

@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static convertToFocusMode(Ljava/lang/String;)I
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -193,12 +191,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -235,7 +231,6 @@
     :cond_0
     const-string v3, "edof"
 
-    .line 3
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -243,7 +238,6 @@
     :cond_1
     const-string v3, "continuous-picture"
 
-    .line 4
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -251,7 +245,6 @@
     :cond_2
     const-string v3, "continuous-video"
 
-    .line 5
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -259,7 +252,6 @@
     :cond_3
     const-string v3, "macro"
 
-    .line 6
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -267,7 +259,6 @@
     :cond_4
     const-string v3, "auto"
 
-    .line 7
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -275,7 +266,6 @@
     :cond_5
     const-string v3, "manual"
 
-    .line 8
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1

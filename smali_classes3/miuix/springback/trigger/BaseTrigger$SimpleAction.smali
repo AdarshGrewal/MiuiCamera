@@ -24,7 +24,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lmiuix/springback/trigger/BaseTrigger;->access$000()I
 
     move-result v0
@@ -41,7 +40,6 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lmiuix/springback/trigger/BaseTrigger$Action;-><init>(II)V
 
     return-void

@@ -13,13 +13,10 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/android/gallery3d/ui/BasicTexture;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/MiscRenderItem;->mName:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/MiscRenderItem;->mTex:Lcom/android/gallery3d/ui/BasicTexture;
 
     return-void
@@ -32,7 +29,6 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscRenderItem;->mTex:Lcom/android/gallery3d/ui/BasicTexture;
     :try_end_0
@@ -53,7 +49,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MiscRenderItem;->mName:Ljava/lang/String;
 
     return-object v0

@@ -48,7 +48,6 @@
 .method public static constructor <clinit>()V
     .locals 12
 
-    .line 1
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v1, 0x0
@@ -59,7 +58,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->BYTE:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 2
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v2, 0x1
@@ -70,7 +68,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->SHORT:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 3
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v3, 0x2
@@ -81,7 +78,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->INTEGER:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 4
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v4, 0x3
@@ -92,7 +88,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->LONG:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 5
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v5, 0x4
@@ -103,7 +98,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->STRING:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 6
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v6, 0x5
@@ -114,7 +108,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->BYTE_ARRAY:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 7
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v7, 0x6
@@ -125,7 +118,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->SHORT_ARRAY:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 8
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/4 v8, 0x7
@@ -136,7 +128,6 @@
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->INTEGER_ARRAY:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 9
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     const/16 v9, 0x8
@@ -151,7 +142,6 @@
 
     new-array v10, v10, [Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 10
     sget-object v11, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->BYTE:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     aput-object v11, v10, v1
@@ -199,7 +189,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -208,7 +197,6 @@
 .method public static valueOf(Ljava/lang/String;)Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
     .locals 1
 
-    .line 1
     const-class v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -223,7 +211,6 @@
 .method public static values()[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->$VALUES:[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     invoke-virtual {v0}, [Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->clone()Ljava/lang/Object;

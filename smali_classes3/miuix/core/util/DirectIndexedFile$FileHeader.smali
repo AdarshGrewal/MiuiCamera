@@ -34,7 +34,6 @@
 
     new-array v0, v0, [B
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->FILE_TAG:[B
@@ -55,15 +54,12 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-array p1, p1, [Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
     iput-object p1, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDescriptionOffsets:[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
-    .line 4
     iput p2, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDataVersion:I
 
     return-void
@@ -72,7 +68,6 @@
 .method public synthetic constructor <init>(IILmiuix/core/util/DirectIndexedFile$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$FileHeader;-><init>(II)V
 
     return-void
@@ -81,7 +76,6 @@
 .method public static synthetic access$1600(Lmiuix/core/util/DirectIndexedFile$FileHeader;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDataVersion:I
 
     return p0
@@ -95,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/DirectIndexedFile$FileHeader;->read(Ljava/io/DataInput;)Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
     move-result-object p0
@@ -106,7 +99,6 @@
 .method public static synthetic access$300(Lmiuix/core/util/DirectIndexedFile$FileHeader;)[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDescriptionOffsets:[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
     return-object p0
@@ -120,7 +112,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$FileHeader;->write(Ljava/io/DataOutput;)I
 
     move-result p0
@@ -136,7 +127,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->FILE_TAG:[B
 
     array-length v0, v0
@@ -150,7 +140,6 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    .line 2
     invoke-interface {p0}, Ljava/io/DataInput;->readByte()B
 
     move-result v4
@@ -161,7 +150,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->FILE_TAG:[B
 
@@ -171,7 +159,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
     move-result v0
@@ -180,17 +167,14 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 5
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
     move-result v0
 
-    .line 6
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
     move-result v1
 
-    .line 7
     new-instance v3, Lmiuix/core/util/DirectIndexedFile$FileHeader;
 
     invoke-direct {v3, v0, v1}, Lmiuix/core/util/DirectIndexedFile$FileHeader;-><init>(II)V
@@ -198,7 +182,6 @@
     :goto_1
     if-ge v2, v0, :cond_1
 
-    .line 8
     iget-object v1, v3, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDescriptionOffsets:[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
     invoke-static {p0}, Lmiuix/core/util/DirectIndexedFile$DescriptionPair;->access$000(Ljava/io/DataInput;)Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
@@ -214,7 +197,6 @@
     :cond_1
     return-object v3
 
-    .line 9
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -224,7 +206,6 @@
 
     throw p0
 
-    .line 10
     :cond_3
     new-instance p0, Ljava/io/IOException;
 
@@ -243,7 +224,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->FILE_TAG:[B
 
     array-length v1, v0
@@ -256,27 +236,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->write([B)V
 
     const/4 v0, 0x2
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDescriptionOffsets:[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
     array-length v0, v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 5
     iget v0, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDataVersion:I
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$FileHeader;->mDescriptionOffsets:[Lmiuix/core/util/DirectIndexedFile$DescriptionPair;
 
@@ -289,7 +264,6 @@
 
     aget-object v4, v0, v3
 
-    .line 7
     invoke-static {v4, p1}, Lmiuix/core/util/DirectIndexedFile$DescriptionPair;->access$100(Lmiuix/core/util/DirectIndexedFile$DescriptionPair;Ljava/io/DataOutput;)I
 
     move-result v4

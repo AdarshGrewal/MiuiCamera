@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -34,19 +33,17 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v9, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f0803e6
+    const v2, 0x7f0803e4
 
-    const v3, 0x7f0803e6
+    const v3, 0x7f0803e4
 
-    const v4, 0x7f12067d
+    const v4, 0x7f120641
 
     const v5, 0x7f120047
 
@@ -62,14 +59,13 @@
 
     invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v11, -0x1
 
     const/4 v12, -0x1
 
-    const v13, 0x7f12067a
+    const v13, 0x7f12063e
 
     const v14, 0x7f120045
 
@@ -85,14 +81,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v3, -0x1
 
     const/4 v4, -0x1
 
-    const v5, 0x7f12067b
+    const v5, 0x7f12063f
 
     const v6, 0x7f120046
 
@@ -108,10 +103,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v13, 0x7f120679
+    const v13, 0x7f12063d
 
     const v14, 0x7f120044
 
@@ -139,7 +133,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f12067d
+    const v0, 0x7f120641
 
     return v0
 .end method
@@ -155,19 +149,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/runing/ComponentRunningTimer;->initItems()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -187,14 +178,12 @@
 
     const/16 v0, 0xa0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "0"
 
-    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -205,7 +194,6 @@
 
     return-object v3
 
-    .line 3
     :cond_0
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -217,7 +205,6 @@
 
     return-object v3
 
-    .line 4
     :cond_1
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -234,7 +221,6 @@
 
     const/16 v0, 0xa0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -255,7 +241,6 @@
 
     const/16 v0, 0xa0
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
@@ -278,7 +263,6 @@
 
     const-string v1, "0"
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void

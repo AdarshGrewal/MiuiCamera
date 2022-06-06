@@ -24,7 +24,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/facebook/rebound/SpringConfigRegistry;
 
     const/4 v1, 0x1
@@ -39,10 +38,8 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -51,7 +48,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     sget-object p1, Lcom/facebook/rebound/SpringConfig;->defaultConfig:Lcom/facebook/rebound/SpringConfig;
 
     const-string v0, "default config"
@@ -65,7 +61,6 @@
 .method public static getInstance()Lcom/facebook/rebound/SpringConfigRegistry;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/facebook/rebound/SpringConfigRegistry;->INSTANCE:Lcom/facebook/rebound/SpringConfigRegistry;
 
     return-object v0
@@ -80,7 +75,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringConfigRegistry;->mSpringConfigMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -93,7 +87,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/facebook/rebound/SpringConfigRegistry;->mSpringConfigMap:Ljava/util/Map;
 
@@ -103,7 +96,6 @@
 
     return p1
 
-    .line 3
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -113,7 +105,6 @@
 
     throw p1
 
-    .line 4
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -136,7 +127,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringConfigRegistry;->mSpringConfigMap:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -149,7 +139,6 @@
 .method public removeAllSpringConfig()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringConfigRegistry;->mSpringConfigMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
@@ -162,7 +151,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lcom/facebook/rebound/SpringConfigRegistry;->mSpringConfigMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -181,7 +169,6 @@
     :goto_0
     return p1
 
-    .line 2
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljava8/util/stream/DoublePipeline;Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DoublePipeline$6;->this$0:Ljava8/util/stream/DoublePipeline;
 
     invoke-direct {p0, p2, p3, p4}, Ljava8/util/stream/DoublePipeline$StatelessOp;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V

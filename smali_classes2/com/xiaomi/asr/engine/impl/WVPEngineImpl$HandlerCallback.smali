@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -53,7 +51,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,7 +69,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget v2, v1, Landroid/os/Message;->what:I
 
@@ -92,7 +88,6 @@
 
     goto/16 :goto_3
 
-    .line 4
     :pswitch_0
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -102,7 +97,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 5
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -113,7 +107,6 @@
 
     goto/16 :goto_3
 
-    .line 6
     :pswitch_1
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -123,10 +116,8 @@
 
     if-eqz v2, :cond_19
 
-    .line 7
     iget v2, v1, Landroid/os/Message;->arg1:I
 
-    .line 8
     iget-object v4, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -137,13 +128,11 @@
 
     goto/16 :goto_3
 
-    .line 9
     :pswitch_2
     iget v2, v1, Landroid/os/Message;->arg1:I
 
     if-ne v2, v7, :cond_1
 
-    .line 10
     iget-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
@@ -156,10 +145,8 @@
 
     const-string v2, "wakeup level two"
 
-    .line 11
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1602(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
@@ -169,10 +156,8 @@
     :cond_1
     const-string v2, "end cal sv"
 
-    .line 13
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     iget-object v4, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -181,7 +166,6 @@
 
     invoke-static {v2, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1702(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 15
     :cond_2
     :goto_0
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
@@ -194,7 +178,6 @@
 
     invoke-static {v2, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1502(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;I)I
 
-    .line 16
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1500(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)I
@@ -203,7 +186,6 @@
 
     if-lt v2, v6, :cond_19
 
-    .line 17
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1600(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -212,7 +194,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 18
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1700(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Ljava/lang/String;
@@ -255,7 +236,6 @@
 
     if-nez v2, :cond_4
 
-    .line 19
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -264,7 +244,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 20
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +266,6 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     :cond_3
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -297,28 +275,22 @@
 
     if-eqz v2, :cond_19
 
-    .line 22
     new-instance v2, Lcom/xiaomi/asr/engine/PhraseWakeupResult;
 
     invoke-direct {v2}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;-><init>()V
 
-    .line 23
     invoke-virtual {v2, v7}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setVoconWakeupPassed(Z)V
 
     const-string v4, "\u5c0f\u7231\u540c\u5b66"
 
-    .line 24
     invoke-virtual {v2, v4}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setVoconPhrase(Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
-    .line 25
     invoke-virtual {v2, v4}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setScore(F)V
 
-    .line 26
     invoke-virtual {v2, v5}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setAec(Z)V
 
-    .line 27
     iget-object v4, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -329,7 +301,6 @@
 
     goto/16 :goto_3
 
-    .line 28
     :cond_4
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -339,7 +310,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 29
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -364,7 +334,6 @@
 
     goto/16 :goto_3
 
-    .line 30
     :pswitch_3
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -374,7 +343,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 31
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$800(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/record/VoiceRecord;
@@ -383,14 +351,12 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->stopRecord()V
 
-    .line 32
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$702(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
     goto/16 :goto_3
 
-    .line 33
     :pswitch_4
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -400,7 +366,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 34
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$700(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -409,7 +374,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 35
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$800(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/record/VoiceRecord;
@@ -418,12 +382,10 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->stopRecord()V
 
-    .line 36
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$702(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 37
     :cond_5
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -433,7 +395,6 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;->wakeupDestroy()I
 
-    .line 38
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -442,17 +403,14 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->release()V
 
-    .line 39
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$602(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 40
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$902(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 41
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -461,7 +419,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 42
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -472,7 +429,6 @@
 
     goto/16 :goto_3
 
-    .line 43
     :pswitch_5
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -482,14 +438,12 @@
 
     if-eqz v2, :cond_19
 
-    .line 44
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$902(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
     goto/16 :goto_3
 
-    .line 45
     :pswitch_6
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -501,7 +455,6 @@
 
     goto/16 :goto_3
 
-    .line 46
     :cond_6
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -513,7 +466,6 @@
 
     goto/16 :goto_3
 
-    .line 47
     :cond_7
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -521,20 +473,16 @@
 
     const-string v8, "data"
 
-    .line 48
     invoke-virtual {v2, v8}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
     move-result-object v2
 
-    .line 49
     iget v8, v1, Landroid/os/Message;->arg1:I
 
-    .line 50
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v9
 
-    .line 51
     div-int/lit8 v11, v8, 0x2
 
     new-array v12, v11, [B
@@ -546,7 +494,6 @@
     :goto_1
     if-ge v13, v8, :cond_8
 
-    .line 52
     aget-byte v15, v2, v13
 
     aput-byte v15, v12, v14
@@ -555,7 +502,6 @@
 
     add-int/lit8 v16, v13, 0x1
 
-    .line 53
     aget-byte v16, v2, v16
 
     aput-byte v16, v12, v15
@@ -566,7 +512,6 @@
 
     goto :goto_1
 
-    .line 54
     :cond_8
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -576,7 +521,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 55
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1000(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)J
@@ -593,7 +537,6 @@
 
     invoke-static {v2, v13, v14}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1002(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 56
     :cond_9
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -603,12 +546,10 @@
 
     invoke-virtual {v2, v12}, Lcom/xiaomi/asr/engine/utils/CircleBuffer;->writeBuffer([B)V
 
-    .line 57
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 58
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$500(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;
@@ -619,7 +560,6 @@
 
     move-result v2
 
-    .line 59
     iget-object v10, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v10}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -628,7 +568,6 @@
 
     if-eqz v10, :cond_a
 
-    .line 60
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -645,7 +584,6 @@
 
     invoke-static {v3, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     iget-object v10, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v10}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)J
@@ -662,7 +600,6 @@
 
     invoke-static {v10, v13, v14}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1202(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 62
     iget-object v8, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v8}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)J
@@ -680,7 +617,6 @@
 
     if-ne v2, v7, :cond_d
 
-    .line 63
     iget-object v9, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v9}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -689,7 +625,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 64
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -822,7 +757,6 @@
 
     move-result-object v5
 
-    .line 65
     iget-object v6, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -831,7 +765,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 66
     iget-object v6, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -852,7 +785,6 @@
 
     invoke-interface {v6, v5}, Lcom/xiaomi/asr/engine/WVPListener;->onDebug(Ljava/lang/String;)V
 
-    .line 67
     :cond_b
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -862,24 +794,20 @@
 
     invoke-static {v5, v6, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1402(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 68
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const-wide/16 v6, 0x0
 
     invoke-static {v5, v6, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1202(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 69
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5, v6, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1002(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 70
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5, v6, v7}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1302(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;J)J
 
-    .line 71
     :cond_c
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -887,22 +815,18 @@
 
     invoke-static {v5, v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1502(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;I)I
 
-    .line 72
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5, v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1602(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 73
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1702(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 74
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1800(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)V
 
-    .line 75
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/utils/CircleBuffer;
@@ -915,7 +839,6 @@
 
     invoke-static {v5, v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1902(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;[B)[B
 
-    .line 76
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/utils/CircleBuffer;
@@ -924,7 +847,6 @@
 
     invoke-virtual {v5}, Lcom/xiaomi/asr/engine/utils/CircleBuffer;->reset()V
 
-    .line 77
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const/4 v6, 0x1
@@ -941,7 +863,6 @@
     :goto_2
     if-ne v2, v5, :cond_f
 
-    .line 78
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -950,7 +871,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -977,7 +897,6 @@
 
     move-result-object v2
 
-    .line 80
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -986,7 +905,6 @@
 
     if-eqz v5, :cond_e
 
-    .line 81
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1007,7 +925,6 @@
 
     invoke-interface {v5, v2}, Lcom/xiaomi/asr/engine/WVPListener;->onDebug(Ljava/lang/String;)V
 
-    .line 82
     :cond_e
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1015,7 +932,6 @@
 
     invoke-static {v2, v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1602(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 83
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Landroid/os/Handler;
@@ -1028,15 +944,12 @@
 
     move-result-object v2
 
-    .line 84
     iput v5, v2, Landroid/os/Message;->arg1:I
 
     const-string v5, "keyword detected"
 
-    .line 85
     iput-object v5, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 86
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Landroid/os/Handler;
@@ -1045,7 +958,6 @@
 
     invoke-virtual {v5, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 87
     :cond_f
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1055,7 +967,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 88
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$2100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/utils/CircleBuffer;
@@ -1064,7 +975,6 @@
 
     invoke-virtual {v2, v12}, Lcom/xiaomi/asr/engine/utils/CircleBuffer;->writeBuffer([B)V
 
-    .line 89
     :cond_10
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1078,7 +988,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 90
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1600(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -1087,7 +996,6 @@
 
     if-nez v2, :cond_12
 
-    .line 91
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1096,20 +1004,16 @@
 
     if-eqz v2, :cond_11
 
-    .line 92
     new-instance v2, Lcom/xiaomi/asr/engine/PhraseWakeupResult;
 
     invoke-direct {v2}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;-><init>()V
 
     const/4 v5, 0x0
 
-    .line 93
     invoke-virtual {v2, v5}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setVoconWakeupPassed(Z)V
 
-    .line 94
     invoke-virtual {v2, v4}, Lcom/xiaomi/asr/engine/PhraseWakeupResult;->setVoconPhrase(Ljava/lang/String;)V
 
-    .line 95
     iget-object v4, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1118,7 +1022,6 @@
 
     invoke-interface {v4, v2}, Lcom/xiaomi/asr/engine/WVPListener;->onPhraseSpotted(Lcom/xiaomi/asr/engine/PhraseWakeupResult;)V
 
-    .line 96
     :cond_11
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1128,7 +1031,6 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/jni/WakeupEngineInterface;->wakeupReset()I
 
-    .line 97
     :cond_12
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1140,7 +1042,6 @@
 
     move-result-object v2
 
-    .line 98
     iget-object v4, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1149,7 +1050,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 99
     iget-object v4, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1900(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)[B
@@ -1164,7 +1064,6 @@
 
     new-array v4, v4, [B
 
-    .line 100
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1900(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)[B
@@ -1183,7 +1082,6 @@
 
     invoke-static {v5, v7, v4, v7, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 101
     iget-object v5, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v5}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1900(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)[B
@@ -1196,7 +1094,6 @@
 
     invoke-static {v2, v7, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 102
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1205,7 +1102,6 @@
 
     invoke-interface {v2, v4}, Lcom/xiaomi/asr/engine/WVPListener;->onAudioData([B)V
 
-    .line 103
     :cond_13
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1215,14 +1111,12 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/utils/CircleBuffer;->reset()V
 
-    .line 104
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const/4 v4, 0x0
 
     invoke-static {v2, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$1902(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;[B)[B
 
-    .line 105
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const/4 v4, 0x0
@@ -1231,7 +1125,6 @@
 
     goto/16 :goto_3
 
-    .line 106
     :pswitch_7
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1241,7 +1134,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 107
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Landroid/os/Handler;
@@ -1252,7 +1144,6 @@
 
     invoke-virtual {v2, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 108
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$700(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -1261,7 +1152,6 @@
 
     if-nez v2, :cond_14
 
-    .line 109
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$800(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/record/VoiceRecord;
@@ -1270,14 +1160,12 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->startRecord()V
 
-    .line 110
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const/4 v4, 0x1
 
     invoke-static {v2, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$702(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 111
     :cond_14
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1287,7 +1175,6 @@
 
     goto/16 :goto_3
 
-    .line 112
     :pswitch_8
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -1295,19 +1182,16 @@
 
     const-string v5, "path"
 
-    .line 113
     invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "name"
 
-    .line 114
     invoke-virtual {v2, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 115
     iget-object v6, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Z
@@ -1316,7 +1200,6 @@
 
     if-eqz v6, :cond_15
 
-    .line 116
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1339,7 +1222,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_15
     iget-object v6, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1351,7 +1233,6 @@
 
     move-result v4
 
-    .line 118
     iget-object v6, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -1366,14 +1247,12 @@
 
     if-nez v4, :cond_16
 
-    .line 119
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     const/4 v4, 0x1
 
     invoke-static {v2, v4}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$602(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;Z)Z
 
-    .line 120
     :cond_16
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1385,10 +1264,8 @@
 
     const-string v2, "init failed"
 
-    .line 121
     invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     :cond_17
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1398,7 +1275,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 123
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -1415,7 +1291,6 @@
 
     goto :goto_3
 
-    .line 124
     :cond_18
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
@@ -1425,7 +1300,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 125
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
 
     invoke-static {v2}, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;)Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -1434,7 +1308,6 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->generateModel()V
 
-    .line 126
     :cond_19
     :goto_3
     iget-object v2, v0, Lcom/xiaomi/asr/engine/impl/WVPEngineImpl$HandlerCallback;->this$0:Lcom/xiaomi/asr/engine/impl/WVPEngineImpl;
@@ -1445,7 +1318,6 @@
 
     if-eqz v2, :cond_1a
 
-    .line 127
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

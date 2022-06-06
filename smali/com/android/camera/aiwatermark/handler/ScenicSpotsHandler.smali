@@ -17,10 +17,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/aiwatermark/handler/AbstractHandler;-><init>(Z)V
 
-    .line 2
     new-instance p1, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;
 
     invoke-direct {p1}, Lcom/android/camera/aiwatermark/data/ScenicSpotsWatermark;-><init>()V
@@ -33,17 +31,14 @@
 .method private getLocation()Landroid/location/Location;
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/LocationManager;->recordLocation(Z)V
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/LocationManager;->getCurrentLocationDirectly()Landroid/location/Location;
 
     move-result-object v0
@@ -56,12 +51,10 @@
 .method public findScenicSpot()Ljava/lang/String;
     .locals 10
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->getLocation()Landroid/location/Location;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -82,7 +75,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-static {}, Lcom/android/camera/aiwatermark/handler/AbstractHandler;->debugGPS()Z
 
     move-result v1
@@ -93,7 +85,6 @@
 
     const-string/jumbo v1, "test.gps.latitude"
 
-    .line 4
     invoke-static {v1, v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -108,7 +99,6 @@
 
     const-string/jumbo v3, "test.gps.longtitude"
 
-    .line 5
     invoke-static {v3, v0}, Lcom/xiaomi/camera/util/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -123,18 +113,15 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v1
 
-    .line 7
     invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v3
 
-    .line 8
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->getRegionMap()Ljava/util/HashMap;
 
@@ -142,24 +129,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
-    .line 10
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 11
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 12
     :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -167,14 +150,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 13
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 14
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->getRegionMap()Ljava/util/HashMap;
 
     move-result-object v6
@@ -185,12 +166,10 @@
 
     check-cast v6, Lcom/android/camera/aiwatermark/data/Region;
 
-    .line 15
     invoke-virtual {v6, v1, v2, v3, v4}, Lcom/android/camera/aiwatermark/data/Region;->isInRegion(DD)Z
 
     move-result v6
 
-    .line 16
     sget-object v7, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -228,14 +207,12 @@
 .method public findWatermark()Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->findScenicSpot()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/aiwatermark/handler/ScenicSpotsHandler;->getWatermarkList()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -257,7 +234,6 @@
 
     check-cast v2, Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v3

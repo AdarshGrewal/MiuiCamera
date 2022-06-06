@@ -49,7 +49,6 @@
 .method public static constructor <clinit>()V
     .locals 15
 
-    .line 1
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v1, 0x0
@@ -60,7 +59,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorStreamNotFound:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v2, 0x1
@@ -71,7 +69,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorDecoderNotFound:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v3, 0x2
@@ -82,7 +79,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorHttpBadRequest:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v4, 0x3
@@ -93,7 +89,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorHttpUnauthorized:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v5, 0x4
@@ -104,7 +99,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorHttpForbidden:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v6, 0x5
@@ -115,7 +109,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorHttpNotFound:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v7, 0x6
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorTimedOut:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/4 v8, 0x7
@@ -137,7 +129,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorNoEntrance:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/16 v9, 0x8
@@ -148,7 +139,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorNoMemory:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/16 v10, 0x9
@@ -159,7 +149,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorIO:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 11
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/16 v11, 0xa
@@ -170,7 +159,6 @@
 
     sput-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorAccess:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 12
     new-instance v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     const/16 v12, 0xb
@@ -185,7 +173,6 @@
 
     new-array v13, v13, [Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 13
     sget-object v14, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorStreamNotFound:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     aput-object v14, v13, v1
@@ -245,10 +232,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->nCode:I
 
     return-void
@@ -257,10 +242,8 @@
 .method public static int2enum(I)Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
     .locals 6
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->AVErrorStreamNotFound:Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->values()[Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     move-result-object v1
@@ -274,7 +257,6 @@
 
     aget-object v4, v1, v3
 
-    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -295,7 +277,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -310,7 +291,6 @@
 .method public static values()[Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->$VALUES:[Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;
 
     invoke-virtual {v0}, [Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->clone()Ljava/lang/Object;
@@ -327,7 +307,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->nCode:I
 
     return v0
@@ -336,7 +315,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/Video2GifPlayer/enums/AVErrorState;->nCode:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

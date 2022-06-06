@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$5;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$5;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     const/4 v0, 0x0
@@ -57,7 +55,6 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +83,6 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +117,6 @@
 .method public onSurfaceReady(Landroid/view/Surface;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$5;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$500(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)Z
@@ -130,14 +125,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$5;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$502(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;Z)Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$5;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;->access$600(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;Landroid/view/Surface;)V

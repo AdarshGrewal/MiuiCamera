@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentMainContent;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent$1;->this$0:Lcom/android/camera/fragment/FragmentMainContent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -55,7 +53,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -73,7 +70,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -89,7 +85,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -111,7 +106,6 @@
     :cond_2
     return v1
 
-    .line 5
     :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent$1;->this$0:Lcom/android/camera/fragment/FragmentMainContent;
 
@@ -123,7 +117,6 @@
 
     return v1
 
-    .line 6
     :cond_4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent$1;->this$0:Lcom/android/camera/fragment/FragmentMainContent;
 
@@ -141,21 +134,18 @@
 
     return v1
 
-    .line 7
     :cond_5
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v2
 
-    .line 8
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
 
     float-to-int p2, p2
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v3
 
@@ -165,9 +155,8 @@
 
     return v1
 
-    .line 10
     :cond_6
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v2
 
@@ -181,7 +170,6 @@
 
     return v1
 
-    .line 11
     :cond_7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

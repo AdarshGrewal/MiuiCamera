@@ -33,10 +33,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
@@ -49,7 +47,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/device/CameraHandlerThread$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;-><init>()V
 
     return-void
@@ -58,7 +55,6 @@
 .method public static synthetic OooO00o(Ljava/lang/String;)Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;
 
     const/4 v1, 0x0
@@ -73,10 +69,9 @@
 .method public getCookie(Ljava/lang/String;)Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;->mCookies:Ljava/util/Map;
 
-    sget-object v1, LOooO00o/OooO0o/OooO00o/OooO0O0/OooO0O0;->OooO00o:LOooO00o/OooO0o/OooO00o/OooO0O0/OooO0O0;
+    sget-object v1, LOooO0O0/OooO0o/OooO00o/OooO0O0/OooO0O0;->OooO00o:LOooO0O0/OooO0o/OooO00o/OooO0O0/OooO0O0;
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
@@ -98,7 +93,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p0, Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;->mCookies:Ljava/util/Map;

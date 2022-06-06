@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/FilmDreamModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public isWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
@@ -75,7 +73,6 @@
 .method public onDeviceBecomeStable()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/FilmDreamModule;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -96,7 +93,6 @@
 .method public onDeviceKeepMoving(D)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
@@ -115,7 +111,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -136,14 +131,12 @@
 
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/module/FilmDreamModule;->is3ALocked()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -156,7 +149,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/FilmDreamModule;->isRecording()Z
@@ -165,7 +157,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
@@ -191,7 +182,6 @@
 .method public onDeviceOrientationChanged(FZ)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/FilmDreamModule;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -212,7 +202,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     if-nez p2, :cond_0
@@ -227,14 +216,12 @@
     :goto_0
     iput p1, v0, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$1;->this$0:Lcom/android/camera/module/FilmDreamModule;
 
     iget-boolean p1, p1, Lcom/android/camera/module/BaseModule;->isGradienterOn:Z
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/effect/EffectController;->getInstance()Lcom/android/camera/effect/EffectController;
 
     move-result-object p1
@@ -245,12 +232,10 @@
 
     iget v0, v0, Lcom/android/camera/module/BaseModule;->mDeviceRotation:F
 
-    .line 5
     invoke-static {v1, v0}, Lcom/android/camera/Util;->getShootRotation(Landroid/app/Activity;F)F
 
     move-result v0
 
-    .line 6
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/effect/EffectController;->setDeviceRotation(ZF)V
 
     :cond_1

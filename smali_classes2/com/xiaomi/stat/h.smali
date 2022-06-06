@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/h;->b:Lcom/xiaomi/stat/e;
 
     iput-object p2, p0, Lcom/xiaomi/stat/h;->a:Ljava/lang/String;
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b;->a()Z
 
     move-result v0
@@ -39,13 +37,11 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/xiaomi/stat/b;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lcom/xiaomi/stat/h;->a:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -56,13 +52,11 @@
 
     return-void
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/stat/h;->a:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/stat/b;->b(Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/stat/h;->b:Lcom/xiaomi/stat/e;
 
     invoke-static {v0}, Lcom/xiaomi/stat/e;->q(Lcom/xiaomi/stat/e;)Z
@@ -73,7 +67,6 @@
 
     return-void
 
-    .line 6
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/stat/h;->b:Lcom/xiaomi/stat/e;
 

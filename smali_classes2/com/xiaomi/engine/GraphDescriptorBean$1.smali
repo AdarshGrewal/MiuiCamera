@@ -1,4 +1,4 @@
-.class public final Lcom/xiaomi/engine/GraphDescriptorBean$1;
+.class public Lcom/xiaomi/engine/GraphDescriptorBean$1;
 .super Ljava/lang/Object;
 .source "GraphDescriptorBean.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -30,7 +30,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/engine/GraphDescriptorBean;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/xiaomi/engine/GraphDescriptorBean;
 
     invoke-direct {v0, p1}, Lcom/xiaomi/engine/GraphDescriptorBean;-><init>(Landroid/os/Parcel;)V
@@ -52,7 +50,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/engine/GraphDescriptorBean$1;->createFromParcel(Landroid/os/Parcel;)Lcom/xiaomi/engine/GraphDescriptorBean;
 
     move-result-object p1
@@ -63,7 +60,6 @@
 .method public newArray(I)[Lcom/xiaomi/engine/GraphDescriptorBean;
     .locals 0
 
-    .line 2
     new-array p1, p1, [Lcom/xiaomi/engine/GraphDescriptorBean;
 
     return-object p1
@@ -72,7 +68,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/engine/GraphDescriptorBean$1;->newArray(I)[Lcom/xiaomi/engine/GraphDescriptorBean;
 
     move-result-object p1

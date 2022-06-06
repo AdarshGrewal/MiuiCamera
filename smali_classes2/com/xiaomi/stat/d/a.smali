@@ -24,7 +24,6 @@
 
     const-string v0, "AES"
 
-    .line 1
     :try_start_0
     invoke-static {v0}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
 
@@ -34,12 +33,10 @@
 
     const/16 v2, 0x80
 
-    .line 2
     invoke-virtual {v1, v2}, Ljavax/crypto/KeyGenerator;->init(I)V
 
     const-string v1, "AES/CBC/PKCS5Padding"
 
-    .line 3
     invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v1
@@ -55,7 +52,6 @@
 
     const-string v2, "AesUtils e"
 
-    .line 4
     invoke-static {v0, v2, v1}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -65,7 +61,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,13 +71,11 @@
 
     const-string v0, "AES"
 
-    .line 12
     :try_start_0
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-direct {v1, p1, v0}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 13
     new-instance p1, Ljavax/crypto/spec/IvParameterSpec;
 
     sget-object v2, Lcom/xiaomi/stat/d/a;->e:Ljava/lang/String;
@@ -93,14 +86,12 @@
 
     invoke-direct {p1, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 14
     sget-object v2, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x2
 
     invoke-virtual {v2, v3, v1, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 15
     sget-object p1, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     invoke-static {p0}, Lcom/xiaomi/stat/d/a;->a(Ljava/lang/String;)[B
@@ -111,7 +102,6 @@
 
     move-result-object p0
 
-    .line 16
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, p0}, Ljava/lang/String;-><init>([B)V
@@ -125,7 +115,6 @@
 
     const-string p1, "decrypt exception:"
 
-    .line 17
     invoke-static {v0, p1, p0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
@@ -136,7 +125,6 @@
 .method public static a()[B
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/stat/d/a;->f:Ljavax/crypto/KeyGenerator;
 
     invoke-virtual {v0}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
@@ -155,7 +143,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 18
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -166,7 +153,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -178,7 +164,6 @@
 
     const/4 v1, 0x0
 
-    .line 20
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -192,7 +177,6 @@
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 21
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -205,7 +189,6 @@
 
     add-int/lit8 v2, v2, 0x2
 
-    .line 22
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
@@ -220,7 +203,6 @@
 
     int-to-byte v2, v4
 
-    .line 23
     aput-byte v2, v0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -242,7 +224,6 @@
 
     const-string v0, "AES"
 
-    .line 7
     :try_start_0
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -252,7 +233,6 @@
 
     invoke-direct {v1, p1, v0}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 8
     new-instance p1, Ljavax/crypto/spec/IvParameterSpec;
 
     sget-object v2, Lcom/xiaomi/stat/d/a;->e:Ljava/lang/String;
@@ -263,14 +243,12 @@
 
     invoke-direct {p1, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 9
     sget-object v2, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3, v1, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 10
     sget-object p1, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
@@ -286,7 +264,6 @@
 
     const-string p1, "encrypt exception:"
 
-    .line 11
     invoke-static {v0, p1, p0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
@@ -298,14 +275,12 @@
 .method public static a([B[B)[B
     .locals 4
 
-    .line 2
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v1, "AES"
 
     invoke-direct {v0, p1, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 3
     :try_start_0
     new-instance p1, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -317,14 +292,12 @@
 
     invoke-direct {p1, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 4
     sget-object v2, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3, v0, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 5
     sget-object p1, Lcom/xiaomi/stat/d/a;->g:Ljavax/crypto/Cipher;
 
     invoke-virtual {p1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
@@ -340,7 +313,6 @@
 
     const-string p1, "encrypt exception:"
 
-    .line 6
     invoke-static {v1, p1, p0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/ReferencePipeline$StatefulOp;-><init>(Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;I)V
 
     return-void
@@ -38,12 +37,10 @@
 
     const/4 p1, 0x1
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
@@ -73,7 +70,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -88,14 +84,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1, p2, v1, p3}, Ljava8/util/stream/PipelineHelper;->evaluate(Ljava8/util/Spliterator;ZLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1
 
     return-object p1
 
-    .line 3
     :cond_0
     sget-object p3, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
@@ -109,25 +103,21 @@
 
     if-eqz p3, :cond_1
 
-    .line 4
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/DistinctOps$1;->reduce(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava8/util/stream/Node;
 
     move-result-object p1
 
     return-object p1
 
-    .line 5
     :cond_1
     new-instance p3, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {p3, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 6
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v2, 0x200
 
-    .line 7
     invoke-static {}, Ljava8/util/concurrent/ForkJoinPool;->getCommonPoolParallelism()I
 
     move-result v3
@@ -138,7 +128,6 @@
 
     invoke-direct {v0, v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
 
-    .line 8
     invoke-static {p3, v0}, Ljava8/util/stream/DistinctOps$1$$Lambda$4;->lambdaFactory$(Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/ConcurrentMap;)Ljava8/util/function/Consumer;
 
     move-result-object v2
@@ -147,22 +136,18 @@
 
     move-result-object v1
 
-    .line 9
     invoke-interface {v1, p1, p2}, Ljava8/util/stream/TerminalOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
 
-    .line 10
     invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->keySet()Ljava/util/Set;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 12
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
     move-result p2
@@ -171,14 +156,12 @@
 
     if-lt p2, p3, :cond_2
 
-    .line 13
     new-instance p3, Ljava8/util/stream/DistinctOps$KeysAndNullSet;
 
     invoke-direct {p3, p1, p2}, Ljava8/util/stream/DistinctOps$KeysAndNullSet;-><init>(Ljava/util/Set;I)V
 
     goto :goto_0
 
-    .line 14
     :cond_2
     new-instance p3, Ljava/util/HashSet;
 
@@ -200,18 +183,15 @@
 
     invoke-direct {p3, p2}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 15
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
     const/4 p1, 0x0
 
-    .line 16
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     :goto_0
     move-object p1, p3
 
-    .line 17
     :cond_3
     invoke-static {p1}, Ljava8/util/stream/Nodes;->node(Ljava/util/Collection;)Ljava8/util/stream/Node;
 
@@ -236,7 +216,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p1}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -249,14 +228,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p1, p2}, Ljava8/util/stream/PipelineHelper;->wrapSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
 
     move-result-object p1
 
     return-object p1
 
-    .line 3
     :cond_0
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
@@ -270,7 +247,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/DistinctOps$1;->reduce(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -281,7 +257,6 @@
 
     return-object p1
 
-    .line 5
     :cond_1
     new-instance v0, Ljava8/util/stream/StreamSpliterators$DistinctSpliterator;
 
@@ -306,10 +281,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->DISTINCT:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {v0, p1}, Ljava8/util/stream/StreamOpFlag;->isKnown(I)Z
@@ -320,7 +293,6 @@
 
     return-object p2
 
-    .line 3
     :cond_0
     sget-object v0, Ljava8/util/stream/StreamOpFlag;->SORTED:Ljava8/util/stream/StreamOpFlag;
 
@@ -330,14 +302,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     new-instance p1, Ljava8/util/stream/DistinctOps$1$1;
 
     invoke-direct {p1, p0, p2}, Ljava8/util/stream/DistinctOps$1$1;-><init>(Ljava8/util/stream/DistinctOps$1;Ljava8/util/stream/Sink;)V
 
     return-object p1
 
-    .line 5
     :cond_1
     new-instance p1, Ljava8/util/stream/DistinctOps$1$2;
 
@@ -362,7 +332,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/DistinctOps$1$$Lambda$1;->lambdaFactory$()Ljava8/util/function/Supplier;
 
     move-result-object v0
@@ -375,12 +344,10 @@
 
     move-result-object v2
 
-    .line 2
     invoke-static {v0, v1, v2}, Ljava8/util/stream/ReduceOps;->makeRef(Ljava8/util/function/Supplier;Ljava8/util/function/BiConsumer;Ljava8/util/function/BiConsumer;)Ljava8/util/stream/TerminalOp;
 
     move-result-object v0
 
-    .line 3
     invoke-interface {v0, p1, p2}, Ljava8/util/stream/TerminalOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
 
     move-result-object p1

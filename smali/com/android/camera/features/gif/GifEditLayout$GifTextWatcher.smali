@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/gif/GifEditLayout;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {p1}, Lcom/android/camera/features/gif/GifEditLayout;->access$200(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/AdaptiveEditText;
@@ -53,7 +51,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
@@ -63,7 +60,6 @@
 
     if-nez v1, :cond_2
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -80,7 +76,6 @@
 
     if-nez p1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {p1}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -98,7 +93,6 @@
     :cond_1
     return-void
 
-    .line 5
     :cond_2
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
@@ -106,7 +100,6 @@
 
     if-lez v1, :cond_3
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v1}, Lcom/android/camera/features/gif/GifEditLayout;->access$200(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/AdaptiveEditText;
@@ -119,17 +112,14 @@
 
     const/high16 v2, 0x41400000    # 12.0f
 
-    .line 7
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setStrokeWidth(F)V
 
-    .line 8
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     goto :goto_0
 
-    .line 9
     :cond_3
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
@@ -143,15 +133,12 @@
 
     const/high16 v2, 0x40400000    # 3.0f
 
-    .line 10
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setStrokeWidth(F)V
 
-    .line 11
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 12
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
@@ -180,7 +167,6 @@
 
     move v4, v2
 
-    .line 13
     :goto_1
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
@@ -192,7 +178,6 @@
 
     if-ge v1, v5, :cond_8
 
-    .line 14
     invoke-interface {p1, v1}, Landroid/text/Editable;->charAt(I)C
 
     move-result v5
@@ -203,7 +188,6 @@
 
     goto :goto_3
 
-    .line 15
     :cond_4
     iget-object v9, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
@@ -229,7 +213,6 @@
 
     goto :goto_4
 
-    .line 16
     :cond_6
     iget-object v6, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
@@ -245,7 +228,6 @@
 
     if-lt v2, v5, :cond_7
 
-    .line 17
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
     move-result v5
@@ -254,7 +236,6 @@
 
     if-eq v1, v5, :cond_7
 
-    .line 18
     iget-object v4, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v4}, Lcom/android/camera/features/gif/GifEditLayout;->access$400(Lcom/android/camera/features/gif/GifEditLayout;)Ljava/lang/StringBuilder;
@@ -271,7 +252,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_8
     :goto_4
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
@@ -287,7 +267,6 @@
     :cond_9
     invoke-static {v1, v3}, Lcom/android/camera/features/gif/GifEditLayout;->access$600(Lcom/android/camera/features/gif/GifEditLayout;Z)V
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {p1}, Lcom/android/camera/features/gif/GifEditLayout;->access$400(Lcom/android/camera/features/gif/GifEditLayout;)Ljava/lang/StringBuilder;
@@ -300,7 +279,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 21
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v1}, Lcom/android/camera/features/gif/GifEditLayout;->access$200(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/AdaptiveEditText;
@@ -323,7 +301,6 @@
 
     goto :goto_5
 
-    .line 22
     :cond_a
     iget-object v0, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
@@ -333,7 +310,6 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v0}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -342,7 +318,6 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 24
     iget-object v0, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v0}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -361,7 +336,6 @@
     :goto_5
     if-ne v2, v6, :cond_c
 
-    .line 25
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v1}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -382,7 +356,6 @@
 
     if-nez v1, :cond_c
 
-    .line 26
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v1}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -391,7 +364,6 @@
 
     invoke-virtual {v1, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 27
     iget-object v1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {v1}, Lcom/android/camera/features/gif/GifEditLayout;->access$300(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/LimitInputEditText;
@@ -407,7 +379,6 @@
     :cond_c
     if-nez v2, :cond_d
 
-    .line 28
     iget-object p1, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {p1}, Lcom/android/camera/features/gif/GifEditLayout;->access$200(Lcom/android/camera/features/gif/GifEditLayout;)Lcom/android/camera/features/gif/AdaptiveEditText;
@@ -424,7 +395,6 @@
     :catch_0
     move-exception p1
 
-    .line 29
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_6
@@ -434,7 +404,6 @@
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     invoke-static {p2}, Lcom/android/camera/features/gif/GifEditLayout;->access$000(Lcom/android/camera/features/gif/GifEditLayout;)Z
@@ -443,7 +412,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/features/gif/GifEditLayout$GifTextWatcher;->this$0:Lcom/android/camera/features/gif/GifEditLayout;
 
     if-nez p1, :cond_0
@@ -467,22 +435,21 @@
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
-    .line 1
-    sget-object p2, Lcom/android/camera/features/gif/GifEditLayout;->TAG:Ljava/lang/String;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p1, ""
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    const-string p2, "gif"
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

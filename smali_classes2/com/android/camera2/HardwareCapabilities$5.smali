@@ -28,7 +28,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera2/HardwareCapabilities$TypedValue;-><init>(Lcom/android/camera2/HardwareCapabilities$1;)V
 
     return-void
@@ -39,7 +38,6 @@
 .method public create()Ljava/lang/Integer;
     .locals 8
 
-    .line 2
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -59,19 +56,17 @@
 
     const/4 v4, 0x0
 
-    .line 4
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     if-eq v0, v3, :cond_9
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v6
 
-    invoke-virtual {v6}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oOo0()Z
+    invoke-virtual {v6}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0o0()Z
 
     move-result v6
 
@@ -79,7 +74,6 @@
 
     goto :goto_3
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -93,7 +87,6 @@
 
     return-object v5
 
-    .line 7
     :cond_1
     invoke-virtual {v0}, Lcom/android/camera2/CameraCapabilities;->getPhysicalCameraIds()Ljava/util/Set;
 
@@ -101,7 +94,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 8
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v3
@@ -112,7 +104,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_2
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -134,7 +125,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 10
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
 
     move-result v7
@@ -143,7 +133,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_4
     :try_start_0
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -152,7 +141,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     invoke-static {v6}, Lcom/android/camera2/HardwareCapabilities;->access$100(I)Z
 
     move-result v6
@@ -172,7 +160,6 @@
 
     goto :goto_2
 
-    .line 13
     :cond_6
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -185,7 +172,6 @@
     :cond_7
     const/4 v0, 0x2
 
-    .line 14
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -196,7 +182,6 @@
     :goto_2
     return-object v5
 
-    .line 15
     :cond_9
     :goto_3
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
@@ -211,7 +196,6 @@
 
     return-object v5
 
-    .line 16
     :cond_a
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
@@ -221,7 +205,6 @@
 
     move-result v1
 
-    .line 17
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v4
@@ -236,7 +219,6 @@
 
     return-object v5
 
-    .line 18
     :cond_b
     invoke-static {v0}, Lcom/android/camera2/HardwareCapabilities;->access$100(I)Z
 
@@ -244,7 +226,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 19
     invoke-static {v1}, Lcom/android/camera2/HardwareCapabilities;->access$100(I)Z
 
     move-result v0
@@ -273,7 +254,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/HardwareCapabilities$5;->create()Ljava/lang/Integer;
 
     move-result-object v0

@@ -22,16 +22,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/ClassLoader;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->context:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->originClassLoader:Ljava/lang/ClassLoader;
 
-    .line 4
     iput p3, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->splitLoadMode:I
 
     return-void
@@ -51,7 +47,6 @@
 
     const-string v0, "Split:ClassNotFound"
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;
 
     move-result-object v1
@@ -60,7 +55,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -84,7 +78,6 @@
 
     const/4 v5, 0x2
 
-    .line 3
     :try_start_0
     invoke-virtual {v2, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->loadClassItself(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -96,7 +89,6 @@
 
     aput-object p1, v8, v4
 
-    .line 4
     invoke-virtual {v2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName()Ljava/lang/String;
 
     move-result-object v9
@@ -114,7 +106,6 @@
 
     aput-object p1, v5, v4
 
-    .line 5
     invoke-virtual {v2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName()Ljava/lang/String;
 
     move-result-object v2
@@ -136,14 +127,12 @@
 .method private isSplitEntryFragments(Ljava/lang/String;)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->context:Landroid/content/Context;
 
     invoke-interface {v0, v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManager;->getSplitEntryFragments(Landroid/content/Context;)Ljava/util/List;
@@ -152,14 +141,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -184,7 +171,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->findClassInSplits(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -193,7 +179,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;->getInstance()Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;
 
@@ -205,14 +190,12 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->isSplitEntryFragments(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 4
     :cond_1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
 
@@ -220,7 +203,6 @@
 
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;->loadInstalledSplits()V
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->findClassInSplits(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -239,7 +221,6 @@
 
     const-string p1, "Class %s is found in Splits after loading all installed splits."
 
-    .line 6
     invoke-static {v4, p1, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v1
@@ -253,7 +234,6 @@
 
     aput-object p1, v1, v2
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p1
@@ -284,7 +264,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;->getInstance()Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;
 
     move-result-object v0
@@ -295,14 +274,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->isSplitEntryFragments(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
 
@@ -310,7 +287,6 @@
 
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;->loadInstalledSplits()V
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->originClassLoader:Ljava/lang/ClassLoader;
 
@@ -335,7 +311,6 @@
 
     const/4 p1, 0x1
 
-    .line 5
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v2
@@ -370,21 +345,18 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->hasInstance()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->splitLoadMode:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->onClassNotFound(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p1
@@ -396,7 +368,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/DefaultClassNotFoundInterceptor;->onClassNotFound2(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p1

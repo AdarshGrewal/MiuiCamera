@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/faceunity/wrapper/faceunity$RotatedImage;
 
     invoke-direct {v0}, Lcom/faceunity/wrapper/faceunity$RotatedImage;-><init>()V
@@ -43,26 +42,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/faceunity/wrapper/faceunity$RotatedImage;->mData:[B
 
     const/4 v1, 0x0
 
-    .line 3
     iput v1, p0, Lcom/faceunity/wrapper/faceunity$RotatedImage;->mWidth:I
 
-    .line 4
     iput v1, p0, Lcom/faceunity/wrapper/faceunity$RotatedImage;->mHeight:I
 
-    .line 5
     iput-object v0, p0, Lcom/faceunity/wrapper/faceunity$RotatedImage;->mData1:[B
 
-    .line 6
     iput-object v0, p0, Lcom/faceunity/wrapper/faceunity$RotatedImage;->mData2:[B
 
     return-void

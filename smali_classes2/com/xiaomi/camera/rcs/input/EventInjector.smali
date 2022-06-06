@@ -27,7 +27,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/rcs/input/EventInjector;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->createTag(Ljava/lang/Class;)Ljava/lang/String;
@@ -38,7 +37,6 @@
 
     const/4 v0, 0x5
 
-    .line 2
     sput v0, Lcom/xiaomi/camera/rcs/input/EventInjector;->MINIMUM_COMMAND_LENGTH:I
 
     return-void
@@ -47,12 +45,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "input"
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -67,10 +63,8 @@
 .method public constructor <init>(Landroid/hardware/input/InputManager;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/input/EventInjector;->mInputManager:Landroid/hardware/input/InputManager;
 
     return-void
@@ -83,14 +77,12 @@
 
     new-array v1, v0, [Ljava/lang/Class;
 
-    .line 1
     const-class v2, Landroid/view/InputEvent;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    .line 2
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v4, 0x1
@@ -101,14 +93,12 @@
 
     aput-object p1, v2, v3
 
-    .line 3
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     aput-object p1, v2, v4
 
-    .line 4
     :try_start_0
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/input/EventInjector;->mInputManager:Landroid/hardware/input/InputManager;
 
@@ -122,10 +112,8 @@
 
     move-result-object p1
 
-    .line 5
     invoke-virtual {p1, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/input/EventInjector;->mInputManager:Landroid/hardware/input/InputManager;
 
     invoke-virtual {p1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -137,7 +125,6 @@
     :catch_0
     move-exception p1
 
-    .line 7
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -147,7 +134,6 @@
 .method private injectKeyEvent(Landroid/view/KeyEvent;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/rcs/input/EventInjector;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -166,7 +152,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectInputEvent(Landroid/view/InputEvent;)V
 
     return-void
@@ -199,17 +184,14 @@
 
     move/from16 v7, p7
 
-    .line 1
     invoke-static/range {v0 .. v13}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
 
     move-result-object v0
 
     move v1, p1
 
-    .line 2
     invoke-virtual {v0, p1}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 3
     sget-object v1, Lcom/xiaomi/camera/rcs/input/EventInjector;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -230,7 +212,6 @@
 
     move-object v1, p0
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectInputEvent(Landroid/view/InputEvent;)V
 
     return-void
@@ -253,12 +234,10 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
 
-    .line 2
     new-instance v13, Landroid/view/KeyEvent;
 
     const/4 v6, 0x0
@@ -293,7 +272,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 3
     new-instance v14, Landroid/view/KeyEvent;
 
     const/4 v6, 0x0
@@ -322,7 +300,6 @@
 
     invoke-direct {v0, v14}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectKeyEvent(Landroid/view/KeyEvent;)V
 
-    .line 4
     :cond_0
     new-instance v14, Landroid/view/KeyEvent;
 
@@ -358,7 +335,6 @@
 .method private sendMove(IFF)V
     .locals 8
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
@@ -375,7 +351,6 @@
 
     move v6, p3
 
-    .line 2
     invoke-direct/range {v0 .. v7}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
     return-void
@@ -393,7 +368,6 @@
     :cond_0
     move/from16 v0, p6
 
-    .line 1
     :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -413,7 +387,6 @@
 
     move/from16 v7, p3
 
-    .line 2
     invoke-direct/range {v1 .. v8}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
     int-to-long v1, v0
@@ -441,7 +414,6 @@
 
     move/from16 v5, p4
 
-    .line 3
     invoke-static {v4, v5, v3}, Lcom/xiaomi/camera/rcs/input/EventInjector;->lerp(FFF)F
 
     move-result v16
@@ -450,7 +422,6 @@
 
     move/from16 v7, p5
 
-    .line 4
     invoke-static {v6, v7, v3}, Lcom/xiaomi/camera/rcs/input/EventInjector;->lerp(FFF)F
 
     move-result v17
@@ -461,10 +432,8 @@
 
     move/from16 v12, p1
 
-    .line 5
     invoke-direct/range {v11 .. v18}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
-    .line 6
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v14
@@ -488,7 +457,6 @@
 
     move/from16 v17, p5
 
-    .line 7
     invoke-direct/range {v11 .. v18}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
     return-void
@@ -497,7 +465,6 @@
 .method private sendTap(IFF)V
     .locals 10
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
@@ -516,14 +483,12 @@
 
     move v6, p3
 
-    .line 2
     invoke-direct/range {v0 .. v7}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
     const/4 v2, 0x1
 
     const/4 v7, 0x0
 
-    .line 3
     invoke-direct/range {v0 .. v7}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectMotionEvent(IIJFFF)V
 
     return-void
@@ -532,7 +497,6 @@
 .method private sendText(ILjava/lang/String;)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0, p2}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
@@ -543,7 +507,6 @@
 
     move v2, v1
 
-    .line 2
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -553,7 +516,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->charAt(I)C
 
     move-result v2
@@ -564,18 +526,15 @@
 
     const/16 v2, 0x20
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->setCharAt(IC)V
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
     :cond_0
     move v2, p2
 
-    .line 6
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->charAt(I)C
 
@@ -592,7 +551,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -604,29 +562,23 @@
 
     const/4 v1, -0x1
 
-    .line 8
     invoke-static {v1}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
 
     move-result-object v1
 
-    .line 9
     invoke-virtual {v1, v0}, Landroid/view/KeyCharacterMap;->getEvents([C)[Landroid/view/KeyEvent;
 
     move-result-object v0
 
-    .line 10
     :goto_1
     array-length v1, v0
 
     if-ge p2, v1, :cond_4
 
-    .line 11
     aget-object v1, v0, p2
 
-    .line 12
     invoke-virtual {v1, p1}, Landroid/view/KeyEvent;->setSource(I)V
 
-    .line 13
     invoke-direct {p0, v1}, Lcom/xiaomi/camera/rcs/input/EventInjector;->injectKeyEvent(Landroid/view/KeyEvent;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -642,7 +594,6 @@
 .method public execute([Ljava/lang/String;)V
     .locals 7
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x3
@@ -666,12 +617,10 @@
     :cond_0
     const/4 v2, 0x1
 
-    .line 2
     aget-object v3, p1, v2
 
     const/4 v4, -0x1
 
-    .line 3
     :try_start_0
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
@@ -748,7 +697,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 4
     sget-object p1, Lcom/xiaomi/camera/rcs/input/EventInjector;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -769,7 +717,6 @@
 
     return-void
 
-    .line 5
     :cond_2
     array-length v0, p1
 
@@ -777,7 +724,6 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 6
     aget-object v0, p1, v6
 
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -792,7 +738,6 @@
 
     aget-object v2, p1, v4
 
-    .line 7
     invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
@@ -805,18 +750,15 @@
 
     move-result p1
 
-    .line 8
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/xiaomi/camera/rcs/input/EventInjector;->swipe(FFFF)V
 
     return-void
 
-    .line 9
     :cond_3
     array-length v0, p1
 
     if-ne v0, v4, :cond_7
 
-    .line 10
     aget-object v0, p1, v6
 
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -833,13 +775,11 @@
 
     return-void
 
-    .line 11
     :cond_4
     array-length v0, p1
 
     if-ne v0, v1, :cond_5
 
-    .line 12
     aget-object p1, p1, v6
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -850,13 +790,11 @@
 
     return-void
 
-    .line 13
     :cond_5
     array-length v0, p1
 
     if-ne v0, v4, :cond_7
 
-    .line 14
     aget-object v0, p1, v6
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -873,13 +811,11 @@
 
     return-void
 
-    .line 15
     :cond_6
     array-length v0, p1
 
     if-ne v0, v1, :cond_7
 
-    .line 16
     aget-object p1, p1, v6
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/camera/rcs/input/EventInjector;->text(Ljava/lang/String;)V
@@ -891,14 +827,12 @@
     :catch_0
     move-exception p1
 
-    .line 17
     sget-object v0, Lcom/xiaomi/camera/rcs/input/EventInjector;->TAG:Ljava/lang/String;
 
     const-string v1, "Invalid keycode"
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 18
     :cond_7
     sget-object p1, Lcom/xiaomi/camera/rcs/input/EventInjector;->TAG:Ljava/lang/String;
 
@@ -936,7 +870,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/camera/rcs/input/EventInjector;->keyEvent(IZ)V
 
     return-void
@@ -947,7 +880,6 @@
 
     const/16 v0, 0x101
 
-    .line 1
     invoke-direct {p0, v0, p1, p2}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendKeyEvent(IIZ)V
 
     return-void
@@ -960,7 +892,6 @@
 
     const v1, 0x10004
 
-    .line 1
     invoke-direct {p0, v1, v0, v0}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendTap(IFF)V
 
     return-void
@@ -971,7 +902,6 @@
 
     const v0, 0x10004
 
-    .line 1
     invoke-direct {p0, v0, p1, p2}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendMove(IFF)V
 
     return-void
@@ -992,7 +922,6 @@
 
     move v4, p4
 
-    .line 2
     invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/camera/rcs/input/EventInjector;->swipe(FFFFI)V
 
     return-void
@@ -1015,7 +944,6 @@
 
     move v6, p5
 
-    .line 1
     invoke-direct/range {v0 .. v6}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendSwipe(IFFFFI)V
 
     return-void
@@ -1026,7 +954,6 @@
 
     const v0, 0x100008
 
-    .line 1
     invoke-direct {p0, v0, p1, p2}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendTap(IFF)V
 
     return-void
@@ -1037,7 +964,6 @@
 
     const/16 v0, 0x101
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/camera/rcs/input/EventInjector;->sendText(ILjava/lang/String;)V
 
     return-void

@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,33 +53,28 @@
 
     add-int/lit8 p0, p0, -0x4b
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->clamp(I)I
 
     move-result p0
 
     add-int/lit16 p2, p0, 0x96
 
-    .line 2
     invoke-static {p2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->clamp(I)I
 
     move-result p2
 
     add-int/lit8 p1, p1, -0x4b
 
-    .line 3
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->clamp(I)I
 
     move-result p1
 
     add-int/lit16 p3, p1, 0x96
 
-    .line 4
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->clamp(I)I
 
     move-result p3
 
-    .line 5
     new-instance v0, Landroid/graphics/RectF;
 
     int-to-float p1, p1
@@ -93,7 +87,6 @@
 
     invoke-direct {v0, p1, p0, p3, p2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 6
     new-instance p0, Landroid/graphics/Matrix;
 
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
@@ -102,13 +95,10 @@
 
     const/high16 p2, -0x40800000    # -1.0f
 
-    .line 7
     invoke-virtual {p0, p1, p2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 8
     invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 9
     new-instance p0, Landroid/graphics/Rect;
 
     iget p1, v0, Landroid/graphics/RectF;->left:F
@@ -149,14 +139,12 @@
 
     float-to-int p1, p1
 
-    .line 1
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewFpsRange()Ljava/util/List;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -165,7 +153,6 @@
 
     move v3, v1
 
-    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -175,14 +162,12 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 4
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, [I
 
-    .line 5
     aget v6, v4, v5
 
     sub-int/2addr v6, p1
@@ -191,7 +176,6 @@
 
     move-result v6
 
-    .line 6
     aget v5, v2, v5
 
     sub-int/2addr v5, p1
@@ -210,7 +194,6 @@
     :cond_0
     if-ne v6, v5, :cond_1
 
-    .line 7
     aget v5, v2, v1
 
     aget v6, v4, v1
@@ -225,7 +208,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     aget p1, v2, v1
 
@@ -239,12 +221,10 @@
 .method public static choosePreviewSize(Landroid/hardware/Camera$Parameters;II)[I
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getPreferredPreviewSizeForVideo()Landroid/hardware/Camera$Size;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
 
     move-result-object v1
@@ -272,7 +252,6 @@
 
     check-cast v2, Landroid/hardware/Camera$Size;
 
-    .line 3
     iget v6, v2, Landroid/hardware/Camera$Size;->width:I
 
     if-ne v6, p1, :cond_0
@@ -281,7 +260,6 @@
 
     if-ne v2, p2, :cond_0
 
-    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/hardware/Camera$Parameters;->setPreviewSize(II)V
 
     new-array p0, v5, [I
@@ -292,7 +270,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->TAG:Ljava/lang/String;
 
@@ -320,7 +297,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     iget p1, v0, Landroid/hardware/Camera$Size;->width:I
 
     iget p2, v0, Landroid/hardware/Camera$Size;->height:I
@@ -329,7 +305,6 @@
 
     new-array p0, v5, [I
 
-    .line 7
     iget p1, v0, Landroid/hardware/Camera$Size;->width:I
 
     aput p1, p0, v4
@@ -343,7 +318,6 @@
     :cond_2
     new-array p0, v5, [I
 
-    .line 8
     fill-array-data p0, :array_0
 
     return-object p0
@@ -381,15 +355,12 @@
 .method public static getCameraOrientation(I)I
     .locals 1
 
-    .line 1
     new-instance v0, Landroid/hardware/Camera$CameraInfo;
 
     invoke-direct {v0}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
-    .line 2
     invoke-static {p0, v0}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
-    .line 3
     iget p0, v0, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
     return p0
@@ -404,7 +375,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
@@ -417,7 +387,6 @@
 
     int-to-float v1, v1
 
-    .line 2
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v2
@@ -428,7 +397,6 @@
 
     int-to-float v2, v2
 
-    .line 3
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object p0
@@ -452,7 +420,6 @@
     :catch_0
     move-exception p0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -461,12 +428,10 @@
 .method public static getFrontCameraOrientation()I
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/hardware/Camera$CameraInfo;
 
     invoke-direct {v0}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
-    .line 2
     invoke-static {}, Landroid/hardware/Camera;->getNumberOfCameras()I
 
     move-result v1
@@ -478,10 +443,8 @@
 
     if-ge v2, v1, :cond_1
 
-    .line 3
     invoke-static {v2, v0}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
-    .line 4
     iget v4, v0, Landroid/hardware/Camera$CameraInfo;->facing:I
 
     if-ne v4, v3, :cond_0
@@ -496,7 +459,6 @@
     :cond_1
     move v2, v3
 
-    .line 5
     :goto_1
     invoke-static {v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->getCameraOrientation(I)I
 
@@ -535,33 +497,27 @@
 
     mul-float/2addr p2, p3
 
-    .line 1
     :try_start_0
     invoke-static {p1, p2, p5, p6}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->calculateTapArea(FFII)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p0}, Landroid/hardware/Camera;->cancelAutoFocus()V
 
-    .line 3
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object p2
 
-    .line 4
     invoke-virtual {p2}, Landroid/hardware/Camera$Parameters;->getMaxNumFocusAreas()I
 
     move-result p3
 
     if-lez p3, :cond_1
 
-    .line 5
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
     new-instance p4, Landroid/hardware/Camera$Area;
 
     const/16 p5, 0x320
@@ -570,12 +526,10 @@
 
     invoke-interface {p3, p4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-virtual {p2, p3}, Landroid/hardware/Camera$Parameters;->setFocusAreas(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 8
     :cond_1
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils;->TAG:Ljava/lang/String;
 
@@ -583,30 +537,25 @@
 
     invoke-static {p1, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :goto_0
     invoke-virtual {p2}, Landroid/hardware/Camera$Parameters;->getFocusMode()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 10
     invoke-virtual {p2}, Landroid/hardware/Camera$Parameters;->getSupportedFocusModes()Ljava/util/List;
 
     move-result-object p3
 
-    .line 11
     invoke-interface {p3, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p4
 
     if-eqz p4, :cond_2
 
-    .line 12
     invoke-virtual {p2, v2}, Landroid/hardware/Camera$Parameters;->setFocusMode(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 13
     :cond_2
     invoke-interface {p3, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -614,12 +563,10 @@
 
     if-eqz p4, :cond_3
 
-    .line 14
     invoke-virtual {p2, v1}, Landroid/hardware/Camera$Parameters;->setFocusMode(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 15
     :cond_3
     invoke-interface {p3, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -627,15 +574,12 @@
 
     if-eqz p3, :cond_4
 
-    .line 16
     invoke-virtual {p2, v0}, Landroid/hardware/Camera$Parameters;->setFocusMode(Ljava/lang/String;)V
 
-    .line 17
     :cond_4
     :goto_1
     invoke-virtual {p0, p2}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 18
     new-instance p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils$1;
 
     invoke-direct {p2, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/CameraUtils$1;-><init>(Ljava/lang/String;)V
@@ -649,7 +593,6 @@
     :catch_0
     move-exception p0
 
-    .line 19
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_2
@@ -659,15 +602,12 @@
 .method public static setCameraDisplayOrientation(Landroid/app/Activity;ILandroid/hardware/Camera;)V
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/hardware/Camera$CameraInfo;
 
     invoke-direct {v0}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
-    .line 2
     invoke-static {p1, v0}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object p0
@@ -711,14 +651,12 @@
     :cond_2
     const/16 v1, 0x5a
 
-    .line 4
     :cond_3
     :goto_0
     iget p0, v0, Landroid/hardware/Camera$CameraInfo;->facing:I
 
     if-ne p0, p1, :cond_4
 
-    .line 5
     iget p0, v0, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
     add-int/2addr p0, v1
@@ -727,12 +665,10 @@
 
     rsub-int p0, p0, 0x168
 
-    .line 6
     rem-int/lit16 p0, p0, 0x168
 
     goto :goto_1
 
-    .line 7
     :cond_4
     iget p0, v0, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
@@ -742,7 +678,6 @@
 
     rem-int/lit16 p0, p0, 0x168
 
-    .line 8
     :goto_1
     invoke-virtual {p2, p0}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
@@ -756,20 +691,17 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getMinExposureCompensation()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    .line 3
     invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getMaxExposureCompensation()I
 
     move-result v2
@@ -784,10 +716,8 @@
 
     float-to-int p1, p1
 
-    .line 4
     invoke-virtual {v0, p1}, Landroid/hardware/Camera$Parameters;->setExposureCompensation(I)V
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
     return-void
@@ -796,21 +726,18 @@
 .method public static setFocusModes(Landroid/hardware/Camera$Parameters;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Landroid/hardware/Camera$Parameters;->getSupportedFocusModes()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "continuous-video"
 
-    .line 2
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v1}, Landroid/hardware/Camera$Parameters;->setFocusMode(Ljava/lang/String;)V
 
     :cond_0

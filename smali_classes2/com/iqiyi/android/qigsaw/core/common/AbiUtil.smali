@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->getSupportedAbis()Ljava/util/List;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     const/4 p0, 0x0
 
-    .line 2
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -65,7 +62,6 @@
 
     return-object p0
 
-    .line 3
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -84,7 +80,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4
     invoke-interface {p0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -93,7 +88,6 @@
 
     return-object v1
 
-    .line 5
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -117,7 +111,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -129,7 +122,6 @@
     :cond_0
     const-string v0, "arm64-v8a"
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -138,7 +130,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -156,14 +147,12 @@
     :cond_2
     const-string v0, "x86_64"
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 5
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -178,7 +167,6 @@
     :cond_4
     const-string v0, "x86"
 
-    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -187,7 +175,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 7
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -196,7 +183,6 @@
 
     return-object v0
 
-    .line 8
     :cond_5
     invoke-interface {p1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -209,14 +195,12 @@
     :cond_6
     const-string v0, "armeabi-v7a"
 
-    .line 9
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    .line 10
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -225,7 +209,6 @@
 
     return-object v0
 
-    .line 11
     :cond_7
     invoke-interface {p1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -235,7 +218,6 @@
 
     return-object v3
 
-    .line 12
     :cond_8
     invoke-virtual {p0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -243,7 +225,6 @@
 
     if-eqz p0, :cond_a
 
-    .line 13
     invoke-interface {p1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -252,20 +233,17 @@
 
     return-object v3
 
-    .line 14
     :cond_9
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->getSupportedAbis()Ljava/util/List;
 
     move-result-object p0
 
-    .line 15
     invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_a
 
-    .line 16
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -289,14 +267,12 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->abis:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 2
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -304,7 +280,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 3
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -322,7 +297,6 @@
 
     const/4 v1, 0x0
 
-    .line 4
     sget-object v2, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
     aput-object v2, v0, v1
@@ -339,7 +313,6 @@
 
     sput-object v0, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->abis:Ljava/util/List;
 
-    .line 5
     :goto_0
     sget-object v0, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->abis:Ljava/util/List;
 

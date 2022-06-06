@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IDMService;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMService;-><init>(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -45,7 +42,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/xiaomi/idm/api/IDMService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

@@ -22,13 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0}, Landroid/os/HandlerThread;->start()V
 
-    .line 3
     new-instance p1, Landroid/os/Handler;
 
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -45,7 +42,6 @@
 .method public static synthetic access$000(Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp$MediaCodecHandlerThread;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/miui/extravideo/interpolation/VideoInterpolatorAsyncImp$MediaCodecHandlerThread;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -56,10 +52,8 @@
 .method public run()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroid/os/HandlerThread;->run()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getName()Ljava/lang/String;
 
     move-result-object v0

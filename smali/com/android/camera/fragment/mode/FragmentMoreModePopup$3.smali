@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$3;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModePopup;
 
     iput-object p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$3;->val$finishCb:Ljava/lang/Runnable;
@@ -39,15 +38,12 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/animation/FolmeUtils$CustomTransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$3;->val$finishCb:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_0

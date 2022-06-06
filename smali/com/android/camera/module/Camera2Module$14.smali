@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->findBestWatermarkItem(I)V
+    value = Lcom/android/camera/module/Camera2Module;->dealTimerBurst(J)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,16 @@
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/module/Camera2Module;
 
-.field public final synthetic val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
+.field public final synthetic val$totalCount:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/Camera2Module;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
+.method public constructor <init>(Lcom/android/camera/module/Camera2Module;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$14;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    iput-object p2, p0, Lcom/android/camera/module/Camera2Module$14;->val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
+    iput p2, p0, Lcom/android/camera/module/Camera2Module$14;->val$totalCount:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,37 +41,21 @@
 .method public run()V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->getComponentRunningAIWatermark()Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getAIWatermarkEnable()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getIWatermarkEnable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$14;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    iget-object v1, p0, Lcom/android/camera/module/Camera2Module$14;->val$item:Lcom/android/camera/aiwatermark/data/WatermarkItem;
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$5300(Lcom/android/camera/module/Camera2Module;)V
 
-    invoke-static {v0, v1}, Lcom/android/camera/module/Camera2Module;->access$6300(Lcom/android/camera/module/Camera2Module;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
-    :cond_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/extra/DataItemLive;->getTimerBurstController()Lcom/android/camera/timerburst/TimerBurstController;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/android/camera/module/Camera2Module$14;->val$totalCount:I
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/timerburst/TimerBurstController;->decreaseCount(I)V
+
     return-void
 .end method

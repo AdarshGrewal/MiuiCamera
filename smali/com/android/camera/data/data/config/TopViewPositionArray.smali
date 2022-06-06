@@ -4,8 +4,6 @@
 
 
 # static fields
-.field public static final CONFIG_VIEW_COUNT:I = 0xd
-
 .field public static final VIEW_POSITION_ARRAY:[[I
 
 
@@ -33,7 +31,6 @@
 
     new-array v4, v3, [I
 
-    .line 1
     fill-array-data v4, :array_0
 
     aput-object v4, v1, v2
@@ -137,29 +134,25 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static fillNotUseViewPosition(Ljava/util/List;)Ljava/util/List;
+.method public static fillNotUseViewPosition(Ljava/util/List;)Lcom/android/camera/data/data/config/SupportedConfigs;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;",
+            "Lcom/android/camera/data/data/config/TopConfigItem;",
             ">;)",
-            "Ljava/util/List<",
-            "Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;",
-            ">;"
+            "Lcom/android/camera/data/data/config/SupportedConfigs;"
         }
     .end annotation
 
     if-eqz p0, :cond_5
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -168,22 +161,18 @@
 
     goto :goto_4
 
-    .line 2
     :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Lcom/android/camera/data/data/config/SupportedConfigs;
 
     const/16 v1, 0xd
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/android/camera/data/data/config/SupportedConfigs;-><init>(I)V
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/fragment/modeui/topconfig/TopConfigUtils;->getInvalidItemBuilder()Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem$Builder;
+    new-instance v2, Lcom/android/camera/data/data/config/TopConfigItem;
 
-    move-result-object v2
+    const/16 v3, 0xb0
 
-    invoke-virtual {v2}, Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem$Builder;->build()Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Lcom/android/camera/data/data/config/TopConfigItem;-><init>(I)V
 
     const/4 v3, 0x0
 
@@ -192,14 +181,12 @@
     :goto_0
     if-ge v4, v1, :cond_1
 
-    .line 4
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Lcom/android/camera/data/data/config/SupportedConfigs;->add(Lcom/android/camera/data/data/config/TopConfigItem;)V
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -216,13 +203,11 @@
     :cond_2
     move v1, v3
 
-    .line 6
     :goto_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 7
     sget-object v4, Lcom/android/camera/data/data/config/TopViewPositionArray;->VIEW_POSITION_ARRAY:[[I
 
     add-int/lit8 v5, v2, -0x1
@@ -232,22 +217,17 @@
     :goto_2
     if-ge v3, v2, :cond_4
 
-    .line 8
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;
+    check-cast v5, Lcom/android/camera/data/data/config/TopConfigItem;
 
-    .line 9
-    invoke-virtual {v5, v3}, Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;->setIndex(I)V
+    iput v3, v5, Lcom/android/camera/data/data/config/TopConfigItem;->index:I
 
     if-eqz v1, :cond_3
 
-    .line 10
-    invoke-virtual {v5}, Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;->getGravity()I
-
-    move-result v6
+    iget v6, v5, Lcom/android/camera/data/data/config/TopConfigItem;->gravity:I
 
     const/16 v7, 0x11
 
@@ -255,15 +235,19 @@
 
     const/4 v6, 0x6
 
+    iput v6, v5, Lcom/android/camera/data/data/config/TopConfigItem;->bindViewPosition:I
+
     goto :goto_3
 
-    .line 11
     :cond_3
     aget v6, v4, v3
 
-    .line 12
+    iput v6, v5, Lcom/android/camera/data/data/config/TopConfigItem;->bindViewPosition:I
+
     :goto_3
-    invoke-interface {v0, v6, v5}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    iget v6, v5, Lcom/android/camera/data/data/config/TopConfigItem;->bindViewPosition:I
+
+    invoke-virtual {v0, v6, v5}, Lcom/android/camera/data/data/config/SupportedConfigs;->set(ILcom/android/camera/data/data/config/TopConfigItem;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -272,12 +256,11 @@
     :cond_4
     return-object v0
 
-    .line 13
     :cond_5
     :goto_4
-    new-instance p0, Ljava/util/ArrayList;
+    new-instance p0, Lcom/android/camera/data/data/config/SupportedConfigs;
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p0}, Lcom/android/camera/data/data/config/SupportedConfigs;-><init>()V
 
     return-object p0
 .end method

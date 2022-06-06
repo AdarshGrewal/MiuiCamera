@@ -53,7 +53,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -64,7 +63,6 @@
 
     sput-object v0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mainThreadHandler:Landroid/os/Handler;
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlurStatic()Z
 
@@ -74,7 +72,6 @@
 
     const-string v0, "miuiblursdk"
 
-    .line 3
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -88,13 +85,11 @@
 
     const-string v2, "Failed to load miuiblursdk library"
 
-    .line 4
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :try_start_1
     const-string v0, "miuiblur"
 
-    .line 5
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -106,7 +101,6 @@
 
     const-string v2, "Failed to load miuiblur library"
 
-    .line 6
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -117,20 +111,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 2
     iput-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurEnabled:Z
 
-    .line 4
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -141,7 +131,6 @@
 
     iput v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurWidth:I
 
-    .line 5
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -152,7 +141,6 @@
 
     iput v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurHeight:I
 
-    .line 6
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -161,17 +149,14 @@
 
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 8
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurWidth:I
 
     iget v1, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurHeight:I
@@ -182,7 +167,6 @@
 
     iput-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
-    .line 10
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->initMethod()V
 
     :cond_0
@@ -192,7 +176,6 @@
 .method private drawBlurBack(Landroid/graphics/Canvas;)V
     .locals 5
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mMethodCallDrawGLFunction:Ljava/lang/reflect/Method;
 
@@ -200,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 2
     iget-object v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mMethodCallDrawGLFunction:Ljava/lang/reflect/Method;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -228,7 +210,6 @@
 
     const-string v1, "canvas function [callDrawGLFunction()] error"
 
-    .line 3
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -238,7 +219,6 @@
 .method private initMethod()V
     .locals 9
 
-    .line 1
     const-class v0, Ljava/lang/String;
 
     const-string v1, "android.view.HardwareCanvas"
@@ -258,7 +238,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 2
     :try_start_1
     const-class v1, Ljava/lang/Class;
 
@@ -274,12 +253,10 @@
 
     aput-object v8, v7, v5
 
-    .line 3
     invoke-virtual {v1, v2, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 4
     const-class v2, Ljava/lang/Class;
 
     const-string v7, "forName"
@@ -300,7 +277,6 @@
 
     aput-object v8, v7, v6
 
-    .line 5
     invoke-virtual {v0, v2, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -313,7 +289,6 @@
 
     new-array v3, v5, [Ljava/lang/Class;
 
-    .line 6
     sget-object v4, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     aput-object v4, v3, v6
@@ -330,7 +305,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -340,14 +314,12 @@
 
     const-string v0, "android.view.DisplayListCanvas"
 
-    .line 8
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     new-array v1, v5, [Ljava/lang/Class;
 
-    .line 9
     sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     aput-object v2, v1, v6
@@ -360,7 +332,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
     :try_end_1
@@ -372,7 +343,6 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 11
     :try_start_2
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -380,7 +350,6 @@
 
     new-array v1, v5, [Ljava/lang/Class;
 
-    .line 12
     sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     aput-object v2, v1, v6
@@ -393,20 +362,17 @@
 
     goto :goto_0
 
-    .line 13
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-ne v0, v2, :cond_3
 
-    .line 14
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     new-array v1, v5, [Ljava/lang/Class;
 
-    .line 15
     sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     aput-object v2, v1, v6
@@ -419,7 +385,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_3
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -427,7 +392,6 @@
 
     new-array v1, v5, [Ljava/lang/Class;
 
-    .line 17
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v2, v1, v6
@@ -449,7 +413,6 @@
 
     const-string v2, "canvas function [callDrawGLFunction()] error"
 
-    .line 18
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -459,14 +422,12 @@
 .method private invalidateOnMainThread()V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -479,13 +440,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     goto :goto_1
 
-    .line 4
     :cond_1
     :goto_0
     sget-object v0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mainThreadHandler:Landroid/os/Handler;
@@ -503,7 +462,6 @@
 .method public static isSupportBlurStatic()Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
@@ -558,21 +516,18 @@
 .method public addMixColor(I)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     const/4 v2, 0x4
 
     invoke-static {v0, v1, p1, v2}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nAddMixColor(JII)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -582,19 +537,16 @@
 .method public addMixColor(II)V
     .locals 2
 
-    .line 4
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p2, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nAddMixColor(JII)V
 
-    .line 6
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -604,19 +556,16 @@
 .method public clearMixColor()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nClearMixColor(J)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -630,10 +579,8 @@
 
     const-string v1, "draw"
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v0
@@ -650,12 +597,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->drawBlurBack(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -672,17 +617,14 @@
 .method public enableBlur(Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mBlurEnabled:Z
 
-    .line 3
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nEnableBlur(JZ)V
@@ -699,14 +641,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nDeleteNativeFunctor(J)J
@@ -716,10 +656,8 @@
 
     const-string v1, "finalize"
 
-    .line 3
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -736,7 +674,6 @@
 .method public isSupportBlur()Z
     .locals 2
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
@@ -756,14 +693,12 @@
 .method public needUpdateBounds(Z)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nNeedUpdateBounds(JZ)V
@@ -775,10 +710,8 @@
 .method public setAlpha(I)V
     .locals 3
 
-    .line 1
     iput p1, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mAlpha:I
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     int-to-float p1, p1
@@ -795,19 +728,16 @@
 .method public setBlurCornerRadii([F)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nSetBlurCornerRadii(J[F)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -817,19 +747,16 @@
 .method public setBlurMode(I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nSetBlurMode(JI)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -839,19 +766,16 @@
 .method public setBlurRatio(F)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nSetBlurRatio(JF)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0
@@ -865,7 +789,6 @@
 
     const-string v0, "nothing in setColorFilter"
 
-    .line 1
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -892,13 +815,11 @@
 
     goto/16 :goto_0
 
-    .line 1
     :pswitch_0
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#80a3a3a3"
 
-    .line 2
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -907,25 +828,21 @@
 
     const-string p1, "#66000000"
 
-    .line 3
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 4
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 5
     :pswitch_1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#52b4b4b4"
 
-    .line 6
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -934,25 +851,21 @@
 
     const-string p1, "#26000000"
 
-    .line 7
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 8
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 9
     :pswitch_2
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#85666666"
 
-    .line 10
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -961,25 +874,21 @@
 
     const-string p1, "#66ffffff"
 
-    .line 11
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 12
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 13
     :pswitch_3
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#61424242"
 
-    .line 14
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -988,25 +897,21 @@
 
     const-string p1, "#1effffff"
 
-    .line 15
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 16
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 17
     :pswitch_4
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#7f5c5c5c"
 
-    .line 18
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1015,25 +920,21 @@
 
     const-string p1, "#bf1f1f1f"
 
-    .line 19
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 20
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 21
     :pswitch_5
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#75737373"
 
-    .line 22
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1042,25 +943,21 @@
 
     const-string p1, "#8a262626"
 
-    .line 23
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 24
     invoke-virtual {p0, v0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 25
     :pswitch_6
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#618a8a8a"
 
-    .line 26
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1069,25 +966,21 @@
 
     const-string p1, "#4d424242"
 
-    .line 27
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 28
     invoke-virtual {p0, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto/16 :goto_0
 
-    .line 29
     :pswitch_7
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#4dadadad"
 
-    .line 30
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1096,25 +989,21 @@
 
     const-string p1, "#33616161"
 
-    .line 31
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 32
     invoke-virtual {p0, v2}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto :goto_0
 
-    .line 33
     :pswitch_8
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#a66b6b6b"
 
-    .line 34
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1123,25 +1012,21 @@
 
     const-string p1, "#ccf5f5f5"
 
-    .line 35
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 36
     invoke-virtual {p0, v4}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto :goto_0
 
-    .line 37
     :pswitch_9
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#8f606060"
 
-    .line 38
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1150,25 +1035,21 @@
 
     const-string p1, "#a3f2f2f2"
 
-    .line 39
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 40
     invoke-virtual {p0, v0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto :goto_0
 
-    .line 41
     :pswitch_a
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#84585858"
 
-    .line 42
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1177,25 +1058,21 @@
 
     const-string p1, "#40e3e3e3"
 
-    .line 43
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 44
     invoke-virtual {p0, v1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     goto :goto_0
 
-    .line 45
     :pswitch_b
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->clearMixColor()V
 
     const-string p1, "#7f4d4d4d"
 
-    .line 46
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
@@ -1204,14 +1081,12 @@
 
     const-string p1, "#26d9d9d9"
 
-    .line 47
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, v6, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->addMixColor(II)V
 
-    .line 48
     invoke-virtual {p0, v2}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->setBlurRatio(F)V
 
     :goto_0
@@ -1239,19 +1114,16 @@
 .method public setMixColor(II)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->isSupportBlur()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-wide v0, p0, Lcom/miui/blur/sdk/drawable/BlurDrawable;->mFunctor:J
 
     invoke-static {v0, v1, p2, p1}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->nSetMixColor(JII)V
 
-    .line 3
     invoke-direct {p0}, Lcom/miui/blur/sdk/drawable/BlurDrawable;->invalidateOnMainThread()V
 
     :cond_0

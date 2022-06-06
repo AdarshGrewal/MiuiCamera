@@ -22,7 +22,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 3
     sget v0, Lmiuix/popupwidget/R$layout;->miuix_appcompat_drop_down_popup_list:I
 
     invoke-direct {p0, p1, v0}, Lmiuix/popupwidget/widget/DropDownPopupWindow$ListController;-><init>(Landroid/content/Context;I)V
@@ -33,7 +32,6 @@
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 4
     invoke-direct {p0, p1, p2}, Lmiuix/popupwidget/widget/DropDownPopupWindow$ViewContentController;-><init>(Landroid/content/Context;I)V
 
     return-void
@@ -42,7 +40,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;)V
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/popupwidget/R$layout;->miuix_appcompat_drop_down_popup_list:I
 
     invoke-direct {p0, p1, v0}, Lmiuix/popupwidget/widget/DropDownPopupWindow$ViewContentController;-><init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;I)V
@@ -53,7 +50,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lmiuix/popupwidget/widget/DropDownPopupWindow$ViewContentController;-><init>(Lmiuix/popupwidget/widget/DropDownPopupWindow;I)V
 
     return-void
@@ -64,10 +60,8 @@
 .method public getListView()Landroid/widget/ListView;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/popupwidget/widget/DropDownPopupWindow$ViewContentController;->initContent()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/popupwidget/widget/DropDownPopupWindow$ListController;->mListView:Landroid/widget/ListView;
 
     return-object v0
@@ -78,7 +72,6 @@
 
     const v0, 0x102000a
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1

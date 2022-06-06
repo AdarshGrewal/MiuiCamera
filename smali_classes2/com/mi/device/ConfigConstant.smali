@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/mi/device/ConfigConstant$SuperMoonSupportType;,
         Lcom/mi/device/ConfigConstant$Logo;,
         Lcom/mi/device/ConfigConstant$CodecProfileLevel;,
         Lcom/mi/device/ConfigConstant$UltraPixel;,
@@ -19,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

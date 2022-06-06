@@ -21,14 +21,12 @@
 
     new-array v1, v0, [F
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/camera/effect/renders/SurfaceTextureRender;->VERTICES:[F
 
     new-array v0, v0, [F
 
-    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/camera/effect/renders/SurfaceTextureRender;->TEXTURES:[F
@@ -65,7 +63,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/ShaderRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -76,24 +73,20 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 2
     iget v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
     const v1, 0x84c0
 
-    .line 3
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/effect/renders/ShaderRender;->bindTexture(Lcom/android/gallery3d/ui/BasicTexture;I)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,14 +111,11 @@
 
     return-void
 
-    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/effect/renders/SurfaceTextureRender;->initAttributePointer()V
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/Render;->updateViewport()V
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -136,7 +126,6 @@
 
     move-result v1
 
-    .line 8
     iget-object v2, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {v2}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -147,7 +136,6 @@
 
     move-result v2
 
-    .line 9
     iget-boolean v3, p0, Lcom/android/camera/effect/renders/ShaderRender;->mBlendEnabled:Z
 
     const/4 v4, 0x0
@@ -183,7 +171,6 @@
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/renders/ShaderRender;->setBlendEnabled(Z)V
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -192,7 +179,6 @@
 
     invoke-virtual {p1}, Lcom/android/camera/effect/GLCanvasState;->pushState()V
 
-    .line 11
     iget-object p1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -209,7 +195,6 @@
 
     invoke-virtual {p1, v1, v3, v4}, Lcom/android/camera/effect/GLCanvasState;->translate(FFF)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -232,7 +217,6 @@
 
     invoke-virtual {p1, v1, p3, v3}, Lcom/android/camera/effect/GLCanvasState;->scale(FFF)V
 
-    .line 13
     iget p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformMVPMatrixH:I
 
     iget-object p3, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
@@ -247,17 +231,14 @@
 
     invoke-static {p1, v5, v0, p3, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 14
     iget p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformSTMatrixH:I
 
     invoke-static {p1, v5, v0, p2, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 15
     iget p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformTextureH:I
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 16
     iget p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformAlphaH:I
 
     iget-object p2, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
@@ -272,7 +253,6 @@
 
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 17
     iget p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformBlendAlphaH:I
 
     invoke-static {p1, v2}, Landroid/opengl/GLES20;->glUniform1f(IF)V
@@ -281,10 +261,8 @@
 
     const/4 p2, 0x4
 
-    .line 18
     invoke-static {p1, v0, p2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-interface {p1}, Lcom/android/gallery3d/ui/GLCanvas;->getState()Lcom/android/camera/effect/GLCanvasState;
@@ -299,7 +277,6 @@
 .method private initAttributePointer()V
     .locals 12
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttributePositionH:I
 
     iget-object v5, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
@@ -314,7 +291,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 2
     iget v6, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttributeTexCoorH:I
 
     iget-object v11, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
@@ -329,12 +305,10 @@
 
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttributePositionH:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttributeTexCoorH:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
@@ -347,7 +321,6 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/effect/draw_mode/DrawAttribute;->getTarget()I
 
     move-result v0
@@ -362,11 +335,9 @@
 
     return p1
 
-    .line 2
     :cond_0
     check-cast p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     iget-object v0, p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mExtTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     iget-object v1, p1, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;->mTextureTransform:[F
@@ -391,7 +362,6 @@
 .method public initShader()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->getVertexShaderString()Ljava/lang/String;
 
     move-result-object v0
@@ -408,10 +378,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uMVPMatrix"
@@ -422,7 +390,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformMVPMatrixH:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uSTMatrix"
@@ -433,7 +400,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformSTMatrixH:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "sTexture"
@@ -444,7 +410,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformTextureH:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uAlpha"
@@ -455,7 +420,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformAlphaH:I
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uMixAlpha"
@@ -466,7 +430,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mUniformBlendAlphaH:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string v1, "aPosition"
@@ -477,7 +440,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttributePositionH:I
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string v1, "aTexCoord"
@@ -490,7 +452,6 @@
 
     return-void
 
-    .line 10
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -518,7 +479,6 @@
 .method public initSupportAttriList()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttriSupportedList:Ljava/util/ArrayList;
 
     const/16 v1, 0x8
@@ -535,7 +495,6 @@
 .method public initVertexData()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/renders/SurfaceTextureRender;->VERTICES:[F
 
     array-length v0, v0
@@ -554,19 +513,16 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
-    .line 2
     sget-object v1, Lcom/android/camera/effect/renders/SurfaceTextureRender;->VERTICES:[F
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     sget-object v0, Lcom/android/camera/effect/renders/SurfaceTextureRender;->TEXTURES:[F
 
     array-length v0, v0
@@ -585,12 +541,10 @@
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
 
-    .line 5
     sget-object v2, Lcom/android/camera/effect/renders/SurfaceTextureRender;->TEXTURES:[F
 
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;

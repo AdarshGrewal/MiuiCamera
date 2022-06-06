@@ -35,10 +35,8 @@
 .method public constructor <init>(Ljava/lang/String;ZLcom/xiaomi/camera/device/callable/CameraListener;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p3, p4}, Lcom/xiaomi/camera/device/callable/CameraCallable;-><init>(Ljava/lang/String;Lcom/xiaomi/camera/device/callable/CallableListener;Landroid/os/Handler;)V
 
-    .line 2
     iput-boolean p2, p0, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->mImmediately:Z
 
     return-void
@@ -57,12 +55,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/device/callable/CameraCallable;->getCookieStore()Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/camera/device/CameraHandlerThread$CookieStore;->getCookies()Ljava/util/Set;
 
     move-result-object v0
@@ -86,17 +82,14 @@
 
     const/4 v2, 0x1
 
-    .line 3
     iput-boolean v2, v1, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;->mIsReleaseing:Z
 
-    .line 4
     iget-object v2, v1, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     if-nez v2, :cond_0
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {v2}, Lcom/android/camera2/Camera2Proxy;->getId()I
 
@@ -106,7 +99,6 @@
 
     move-result-object v2
 
-    .line 6
     iget-object v3, p0, Lcom/xiaomi/camera/device/callable/CameraCallable;->mCameraId:Ljava/lang/String;
 
     if-eqz v3, :cond_1
@@ -119,7 +111,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     sget-object v3, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->TAG:Ljava/lang/String;
 
@@ -139,12 +130,10 @@
 
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v1, v1, Lcom/xiaomi/camera/device/CameraHandlerThread$Cookie;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
     invoke-virtual {v1, p0}, Lcom/android/camera2/Camera2Proxy;->setCaptureBusyCallback(Lcom/android/camera2/Camera2Proxy$CaptureBusyCallback;)V
 
-    .line 9
     sget-object v1, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -165,7 +154,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_2
     new-instance v0, Lcom/xiaomi/camera/device/callable/CallableReturn;
 
@@ -179,7 +167,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -188,19 +175,10 @@
 .method public onCaptureCompleted(Z)V
     .locals 2
 
-    .line 1
     iget-boolean p1, p0, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->mImmediately:Z
 
     if-eqz p1, :cond_0
 
-    .line 2
-    sget-object p1, Lcom/xiaomi/camera/device/callable/ReleaseCameraCallable;->TAG:Ljava/lang/String;
-
-    const-string v0, "releaseCamera:close camera"
-
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3
     new-instance p1, Lcom/xiaomi/camera/device/callable/CloseCameraCallable;
 
     const/4 v0, 0x0
@@ -213,12 +191,10 @@
 
     invoke-static {p1}, Lcom/xiaomi/camera/device/CameraService;->addCameraCallable(Lcom/xiaomi/camera/device/callable/CameraCallable;)V
 
-    .line 4
     sget-boolean p1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->isParallelTagOpen:Z
 
     if-eqz p1, :cond_0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->getInstance()Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     move-result-object p1

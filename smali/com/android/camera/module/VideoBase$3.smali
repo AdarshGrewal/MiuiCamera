@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/VideoBase;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/VideoBase$3;->this$0:Lcom/android/camera/module/VideoBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,22 +37,18 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$3;->this$0:Lcom/android/camera/module/VideoBase;
 
     iget-object v1, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
     if-eqz v1, :cond_1
 
-    .line 2
     iget-boolean v0, v0, Lcom/android/camera/module/BaseModule;->mIsAutoHibernationSupported:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lcom/android/camera/Camera;->restoreWindowBrightness()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/module/VideoBase$3;->this$0:Lcom/android/camera/module/VideoBase;
 

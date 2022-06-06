@@ -35,7 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseResourceList;-><init>()V
 
     return-void
@@ -54,7 +53,6 @@
 .method public getCategoryID()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/tmmusic/TMMusicList;->categoryID:Ljava/lang/String;
 
     return-object v0
@@ -65,7 +63,6 @@
 
     const-string/jumbo v0, "stationItems"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
@@ -94,30 +91,26 @@
 
     const-string/jumbo v0, "stations"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object p1
 
     const-string v0, "categoryID"
 
-    .line 3
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/resource/tmmusic/TMMusicList;->categoryID:Ljava/lang/String;
 
-    const-string v0, "name"
+    const-string/jumbo v0, "name"
 
-    .line 4
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -130,7 +123,6 @@
 .method public bridge synthetic parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/BaseResourceItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/resource/tmmusic/TMMusicList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/tmmusic/TMMusicItem;
 
     move-result-object p1
@@ -141,12 +133,10 @@
 .method public parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/tmmusic/TMMusicItem;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/android/camera/resource/tmmusic/TMMusicItem;
 
     invoke-direct {v0}, Lcom/android/camera/resource/tmmusic/TMMusicItem;-><init>()V
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/resource/tmmusic/TMMusicItem;->parseSummaryData(Lorg/json/JSONObject;I)V
 
     return-object v0

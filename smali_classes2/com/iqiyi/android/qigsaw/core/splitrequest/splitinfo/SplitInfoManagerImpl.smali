@@ -20,7 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,14 +28,12 @@
 .method public static createInputStreamFromAssets(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
@@ -65,7 +62,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -85,7 +81,6 @@
 
     move-result-object p2
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,12 +99,10 @@
 
     invoke-static {v0, v2, v3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 4
     invoke-static {p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->parseSplitContentsForDefaultVersion(Landroid/content/Context;Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
@@ -120,7 +113,6 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
@@ -146,7 +138,6 @@
 
     const-string v1, "Failed to create default split info!"
 
-    .line 6
     invoke-static {v0, p1, v1, p2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p1, 0x0
@@ -161,7 +152,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -185,12 +175,10 @@
 
     invoke-static {v0, v2, v3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->parseSplitContentsForNewVersion(Ljava/io/File;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
@@ -201,7 +189,6 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -227,7 +214,6 @@
 
     const-string v2, "Failed to create updated split info!"
 
-    .line 5
     invoke-static {v0, p1, v2, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p1, 0x0
@@ -240,25 +226,21 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getSplitInfoVersionManager()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
 
     move-result-object v0
 
-    .line 2
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getSplitDetails()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object v1
 
     if-nez v1, :cond_5
 
-    .line 3
     invoke-interface {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;->getCurrentVersion()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     invoke-interface {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;->getDefaultVersion()Ljava/lang/String;
 
     move-result-object v2
@@ -269,7 +251,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -282,7 +263,6 @@
 
     if-le v5, v3, :cond_0
 
-    .line 6
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -308,7 +288,6 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 7
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -321,7 +300,6 @@
 
     if-le v5, v3, :cond_1
 
-    .line 8
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,17 +339,14 @@
 
     aput-object v2, v5, v6
 
-    .line 9
     invoke-static {v3, v4, v5}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 10
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 11
     invoke-direct {p0, p1, v2}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->createSplitDetailsForDefaultVersion(Landroid/content/Context;Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
@@ -381,7 +356,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     new-instance p1, Ljava/io/File;
 
@@ -409,7 +383,6 @@
 
     invoke-direct {p1, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 13
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->createSplitDetailsForNewVersion(Ljava/io/File;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
@@ -419,7 +392,6 @@
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 14
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getQigsawId()Ljava/lang/String;
 
     move-result-object p1
@@ -434,12 +406,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 15
     monitor-exit p0
 
     return-object v0
 
-    .line 16
     :cond_3
     :try_start_1
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->verifySplitInfoListing()Z
@@ -450,19 +420,16 @@
 
     if-nez p1, :cond_4
 
-    .line 17
     monitor-exit p0
 
     return-object v0
 
-    .line 18
     :cond_4
     :try_start_2
     iput-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mSplitDetails:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 19
     :cond_5
     monitor-exit p0
 
@@ -479,7 +446,6 @@
 .method private getSplitDetails()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mSplitDetails:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     return-object v0
@@ -488,7 +454,6 @@
 .method private getSplitInfoVersionManager()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mVersionManager:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
 
     return-object v0
@@ -503,7 +468,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->createInputStreamFromAssets(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p0
@@ -512,7 +476,6 @@
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->parseSplitsContent(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p0
@@ -531,14 +494,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/io/FileInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -575,34 +536,29 @@
 
     return-object v1
 
-    .line 1
     :cond_0
     new-instance v2, Ljava/util/LinkedHashMap;
 
     invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 2
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v0, "qigsawId"
 
-    .line 3
     invoke-virtual {v3, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v0, "appVersionName"
 
-    .line 4
     invoke-virtual {v3, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v4, "abiFilters"
 
-    .line 5
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
@@ -611,14 +567,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 6
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v6
 
     if-lez v6, :cond_2
 
-    .line 7
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
@@ -629,7 +583,6 @@
 
     move/from16 v7, v21
 
-    .line 8
     :goto_0
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -637,12 +590,10 @@
 
     if-ge v7, v8, :cond_1
 
-    .line 9
     invoke-virtual {v4, v7}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 10
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v7, v7, 0x1
@@ -660,21 +611,18 @@
     :goto_1
     const-string v4, "updateSplits"
 
-    .line 11
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    .line 12
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v6
 
     if-lez v6, :cond_4
 
-    .line 13
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
@@ -685,7 +633,6 @@
 
     move/from16 v7, v21
 
-    .line 14
     :goto_2
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -693,12 +640,10 @@
 
     if-ge v7, v8, :cond_3
 
-    .line 15
     invoke-virtual {v4, v7}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 16
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v7, v7, 0x1
@@ -716,21 +661,18 @@
     :goto_3
     const-string v4, "splitEntryFragments"
 
-    .line 17
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
 
     if-eqz v4, :cond_6
 
-    .line 18
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v6
 
     if-lez v6, :cond_6
 
-    .line 19
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
@@ -741,7 +683,6 @@
 
     move/from16 v7, v21
 
-    .line 20
     :goto_4
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -749,12 +690,10 @@
 
     if-ge v7, v8, :cond_5
 
-    .line 21
     invoke-virtual {v4, v7}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 22
     invoke-interface {v6, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v7, v7, 0x1
@@ -772,14 +711,12 @@
     :goto_5
     const-string v4, "splits"
 
-    .line 23
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v3
 
     move/from16 v4, v21
 
-    .line 24
     :goto_6
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -787,56 +724,48 @@
 
     if-ge v4, v6, :cond_12
 
-    .line 25
     invoke-virtual {v3, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v6
 
     const-string v7, "builtIn"
 
-    .line 26
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
 
     move-result v14
 
     const-string v7, "splitName"
 
-    .line 27
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
 
     const-string v7, "version"
 
-    .line 28
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
     const-string v7, "url"
 
-    .line 29
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     const-string v7, "md5"
 
-    .line 30
     invoke-virtual {v6, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     const-string v8, "size"
 
-    .line 31
     invoke-virtual {v6, v8}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v12
 
     const-string v1, "minSdkVersion"
 
-    .line 32
     invoke-virtual {v6, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v1
@@ -845,14 +774,12 @@
 
     const-string v3, "nativeLibraries"
 
-    .line 33
     invoke-virtual {v6, v3}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v3
 
     if-eqz v3, :cond_a
 
-    .line 34
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
     move-result v16
@@ -861,7 +788,6 @@
 
     move-object/from16 v25, v5
 
-    .line 35
     new-instance v5, Ljava/util/ArrayList;
 
     move/from16 v26, v4
@@ -872,7 +798,6 @@
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 36
     new-instance v4, Ljava/util/ArrayList;
 
     move-object/from16 v27, v2
@@ -887,7 +812,6 @@
 
     move/from16 v2, v21
 
-    .line 37
     :goto_7
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -895,7 +819,6 @@
 
     if-ge v2, v1, :cond_9
 
-    .line 38
     invoke-virtual {v3, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -904,31 +827,26 @@
 
     const-string v3, "abi"
 
-    .line 39
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 40
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v18, v4
 
     const-string v4, "jniLibs"
 
-    .line 41
     invoke-virtual {v1, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 42
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz v1, :cond_8
 
-    .line 43
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v19
@@ -941,7 +859,6 @@
 
     move/from16 v14, v21
 
-    .line 44
     :goto_8
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -949,40 +866,34 @@
 
     if-ge v14, v12, :cond_7
 
-    .line 45
     invoke-virtual {v1, v14}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v12
 
     const-string v13, "name"
 
-    .line 46
     invoke-virtual {v12, v13}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
     move-object/from16 v20, v1
 
-    .line 47
     invoke-virtual {v12, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     move-object/from16 v30, v11
 
-    .line 48
     invoke-virtual {v12, v8}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
     move-result-wide v11
 
     move-object/from16 v31, v7
 
-    .line 49
     new-instance v7, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;
 
     invoke-direct {v7, v13, v1, v11, v12}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo$Lib;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 50
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v14, v14, 0x1
@@ -1011,13 +922,11 @@
 
     move/from16 v19, v14
 
-    .line 51
     :goto_9
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
     invoke-direct {v1, v3, v4}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 52
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
@@ -1069,28 +978,24 @@
     :goto_a
     const-string v1, "dexNumber"
 
-    .line 53
     invoke-virtual {v6, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v2, "workProcesses"
 
-    .line 54
     invoke-virtual {v6, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
     if-eqz v2, :cond_c
 
-    .line 55
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
     if-lez v3, :cond_c
 
-    .line 56
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -1101,7 +1006,6 @@
 
     move/from16 v7, v21
 
-    .line 57
     :goto_b
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -1109,7 +1013,6 @@
 
     if-ge v7, v8, :cond_b
 
-    .line 58
     invoke-virtual {v2, v7}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v8
@@ -1131,21 +1034,18 @@
     :goto_c
     const-string v2, "dependencies"
 
-    .line 59
     invoke-virtual {v6, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
     if-eqz v2, :cond_e
 
-    .line 60
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v3
 
     if-lez v3, :cond_e
 
-    .line 61
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -1156,7 +1056,6 @@
 
     move/from16 v6, v21
 
-    .line 62
     :goto_d
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -1164,7 +1063,6 @@
 
     if-ge v6, v7, :cond_d
 
-    .line 63
     invoke-virtual {v2, v6}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -1183,7 +1081,6 @@
     :cond_e
     const/16 v18, 0x0
 
-    .line 64
     :goto_e
     invoke-static/range {v22 .. v22}, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->findBasePrimaryAbi(Ljava/util/List;)Ljava/lang/String;
 
@@ -1191,14 +1088,12 @@
 
     if-eqz v4, :cond_10
 
-    .line 65
     invoke-static {v2, v4}, Lcom/iqiyi/android/qigsaw/core/common/AbiUtil;->findSplitPrimaryAbi(Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_10
 
-    .line 66
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1216,7 +1111,6 @@
 
     check-cast v5, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;
 
-    .line 67
     invoke-virtual {v5}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo$LibInfo;->getAbi()Ljava/lang/String;
 
     move-result-object v6
@@ -1234,7 +1128,6 @@
     :cond_10
     const/16 v20, 0x0
 
-    .line 68
     :goto_f
     new-instance v2, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
@@ -1272,7 +1165,6 @@
 
     move-object/from16 v1, v27
 
-    .line 69
     invoke-virtual {v1, v4, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v4, v26, 0x1
@@ -1292,12 +1184,10 @@
 
     move-object/from16 v25, v5
 
-    .line 70
     new-instance v10, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoListing;
 
     invoke-direct {v10, v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoListing;-><init>(Ljava/util/LinkedHashMap;)V
 
-    .line 71
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-object v4, v1
@@ -1329,7 +1219,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -1339,12 +1228,10 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -1352,19 +1239,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
 
-    .line 6
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->closeQuietly(Ljava/lang/Object;)V
 
-    .line 7
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1377,7 +1260,6 @@
 .method public attach(Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mVersionManager:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
 
     return-void
@@ -1386,19 +1268,16 @@
 .method public createSplitDetailsForJsonFile(Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->createSplitDetailsForNewVersion(Ljava/io/File;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
@@ -1424,14 +1303,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mSplitDetails:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getSplitInfoListing()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoListing;
@@ -1457,14 +1334,12 @@
 .method public getBaseAppVersionName(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->mSplitDetails:Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getAppVersionName()Ljava/lang/String;
@@ -1482,12 +1357,10 @@
 .method public getCurrentSplitInfoVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getSplitInfoVersionManager()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;->getCurrentVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -1498,14 +1371,12 @@
 .method public getQigsawId(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getQigsawId()Ljava/lang/String;
 
     move-result-object p1
@@ -1531,14 +1402,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getSplitEntryFragments()Ljava/util/List;
 
     move-result-object p1
@@ -1554,14 +1423,12 @@
 .method public getSplitInfo(Landroid/content/Context;Ljava/lang/String;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
     .locals 2
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getSplitInfoListing()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoListing;
 
     move-result-object p1
@@ -1574,7 +1441,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1592,7 +1458,6 @@
 
     check-cast v0, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 4
     invoke-virtual {v0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
 
     move-result-object v1
@@ -1626,14 +1491,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 2
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getSplitInfoListing()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoListing;
 
     move-result-object p1
@@ -1646,7 +1509,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p2}, Ljava/util/Collection;->size()I
@@ -1655,7 +1517,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 4
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1674,7 +1535,6 @@
 
     check-cast v1, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;
 
-    .line 5
     invoke-virtual {v1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfo;->getSplitName()Ljava/lang/String;
 
     move-result-object v2
@@ -1685,7 +1545,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1712,14 +1571,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getOrCreateSplitDetails(Landroid/content/Context;)Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitDetails;->getUpdateSplits()Ljava/util/List;
 
     move-result-object p1
@@ -1735,14 +1592,12 @@
 .method public updateSplitInfoVersion(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Z
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoManagerImpl;->getSplitInfoVersionManager()Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;
 
     move-result-object v0
 
     if-eqz p2, :cond_0
 
-    .line 2
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1759,7 +1614,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1782,7 +1636,6 @@
 
     move-result-object p2
 
-    .line 4
     :cond_0
     invoke-interface {v0, p1, p2, p3}, Lcom/iqiyi/android/qigsaw/core/splitrequest/splitinfo/SplitInfoVersionManager;->updateVersion(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Z
 

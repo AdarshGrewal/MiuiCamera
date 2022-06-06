@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/widget/SeekBar$1;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/SeekBar$1$1;->this$1:Lmiuix/androidbasewidget/widget/SeekBar$1;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -46,19 +45,16 @@
 
     const-string p1, "targe"
 
-    .line 1
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getIntValue()I
 
     move-result p1
 
-    .line 3
     iget-object p2, p0, Lmiuix/androidbasewidget/widget/SeekBar$1$1;->this$1:Lmiuix/androidbasewidget/widget/SeekBar$1;
 
     iget-object p2, p2, Lmiuix/androidbasewidget/widget/SeekBar$1;->this$0:Lmiuix/androidbasewidget/widget/SeekBar;

@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,15 +36,12 @@
 .method private getSharedPreferences()Landroid/content/SharedPreferences;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudFeatureController;->mPreferences:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;->initPreferences()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudFeatureController;->mPreferences:Landroid/content/SharedPreferences;
 
@@ -55,12 +51,10 @@
 .method private initPreferences()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;->provideKey()Ljava/lang/String;
 
     move-result-object v1
@@ -81,7 +75,6 @@
 .method public editor()Landroid/content/SharedPreferences$Editor;
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -90,6 +83,85 @@
 
     move-result-object v0
 
+    return-object v0
+.end method
+
+.method public filterFeature(Lcom/android/camera/data/data/config/SupportedConfigs;)Lcom/android/camera/data/data/config/SupportedConfigs;
+    .locals 8
+
+    iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudFeatureController;->mReady:Z
+
+    if-nez v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lcom/android/camera/data/data/config/SupportedConfigs;
+
+    invoke-direct {v0}, Lcom/android/camera/data/data/config/SupportedConfigs;-><init>()V
+
+    invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;->getSharedPreferences()Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {p1}, Lcom/android/camera/data/data/config/SupportedConfigs;->getLength()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {p1, v2}, Lcom/android/camera/data/data/config/SupportedConfigs;->getConfig(I)I
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    :try_start_0
+    invoke-static {v3}, Lcom/android/camera/data/data/config/SupportedConfigFactory;->getConfigKey(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v1, v5, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    sget-object v5, Lcom/android/camera/data/cloud/DataCloudFeatureController;->TAG:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "unknown config "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v0, v3}, Lcom/android/camera/data/data/config/SupportedConfigs;->add(I)Lcom/android/camera/data/data/config/SupportedConfigs;
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-object v0
 .end method
 
@@ -104,7 +176,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudFeatureController;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -131,7 +202,6 @@
 .method public setReady(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/cloud/DataCloudFeatureController;->mReady:Z
 
     return-void

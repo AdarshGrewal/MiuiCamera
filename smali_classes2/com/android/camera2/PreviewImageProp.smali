@@ -33,15 +33,12 @@
 .method public constructor <init>(Landroid/media/Image;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/panorama/CaptureImage;-><init>(Landroid/media/Image;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     const/4 p1, 0x0
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     return-void
@@ -50,14 +47,12 @@
 .method private convert()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     if-eqz v0, :cond_1
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
 
     move-result v1
@@ -66,7 +61,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v1
@@ -79,7 +73,6 @@
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v3
@@ -92,17 +85,14 @@
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v5
 
-    .line 6
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v6
 
-    .line 7
     sget-object v7, Lcom/android/camera2/PreviewImageProp;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -119,7 +109,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v9, "x"
+    const-string/jumbo v9, "x"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -133,7 +123,6 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-virtual {v0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v9
@@ -150,28 +139,22 @@
 
     move-result-object v8
 
-    .line 9
     invoke-static {v7, v8}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int v7, v5, v6
 
-    .line 10
     new-array v7, v7, [B
 
     iput-object v7, p0, Lcom/android/camera2/PreviewImageProp;->mData:[B
 
-    .line 11
     invoke-virtual {v1, v7, v2, v5}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 12
     iget-object v1, p0, Lcom/android/camera2/PreviewImageProp;->mData:[B
 
     invoke-virtual {v3, v1, v5, v6}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 13
     iput v5, p0, Lcom/android/camera2/PreviewImageProp;->mYLength:I
 
-    .line 14
     invoke-virtual {v0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v1
@@ -184,7 +167,6 @@
 
     iput v1, p0, Lcom/android/camera2/PreviewImageProp;->mYStride:I
 
-    .line 15
     invoke-virtual {v0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v1
@@ -199,24 +181,20 @@
 
     const-string v1, "convert:"
 
-    const-string v2, "yes"
+    const-string/jumbo v2, "yes"
 
-    .line 16
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     :cond_0
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 18
     iput-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     const/4 v0, 0x1
 
-    .line 19
     iput-boolean v0, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     return-void
@@ -225,12 +203,10 @@
 .method public static removePadding(Lcom/android/camera2/PreviewImageProp;II)[B
     .locals 7
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/PreviewImageProp;->getData()[B
 
     move-result-object v0
 
-    .line 2
     array-length v1, v0
 
     int-to-double v1, v1
@@ -247,10 +223,9 @@
 
     if-gtz v1, :cond_0
 
-    .line 3
     sget-object p0, Lcom/android/camera2/PreviewImageProp;->TAG:Ljava/lang/String;
 
-    const-string p1, "removePadding: no padding found in data"
+    const-string/jumbo p1, "removePadding: no padding found in data"
 
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -259,7 +234,6 @@
     :cond_0
     double-to-int v1, v3
 
-    .line 4
     new-array v1, v1, [B
 
     const/4 v2, 0x0
@@ -273,7 +247,6 @@
     :goto_0
     if-ge v3, p2, :cond_2
 
-    .line 5
     invoke-static {v0, v4, v1, v5, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/lit8 v6, p2, -0x1
@@ -284,7 +257,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera2/PreviewImageProp;->getYStride()I
 
@@ -299,7 +271,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     :goto_2
     div-int/lit8 v3, p2, 0x2
@@ -312,16 +283,13 @@
 
     add-int/lit8 v3, p1, -0x1
 
-    .line 8
     invoke-static {v0, v4, v1, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_3
 
-    .line 9
     :cond_3
     invoke-static {v0, v4, v1, v5, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 10
     :goto_3
     invoke-virtual {p0}, Lcom/android/camera2/PreviewImageProp;->getUVStride()I
 
@@ -344,17 +312,14 @@
 .method public close()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     :cond_0
@@ -364,15 +329,12 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera2/PreviewImageProp;->convert()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mData:[B
 
@@ -382,7 +344,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     if-eqz v0, :cond_0
@@ -411,15 +372,12 @@
 .method public getUVStride()I
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera2/PreviewImageProp;->convert()V
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera2/PreviewImageProp;->mUVStride:I
 
@@ -429,7 +387,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/PreviewImageProp;->mImage:Landroid/media/Image;
 
     if-eqz v0, :cond_0
@@ -450,15 +407,12 @@
 .method public getYLength()I
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera2/PreviewImageProp;->convert()V
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera2/PreviewImageProp;->mYLength:I
 
@@ -468,15 +422,12 @@
 .method public getYStride()I
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/PreviewImageProp;->mReady:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera2/PreviewImageProp;->convert()V
 
-    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera2/PreviewImageProp;->mYStride:I
 

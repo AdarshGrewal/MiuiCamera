@@ -41,13 +41,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterInfos:Ljava/util/List;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/watermark/WaterMarkBitmap;->generateWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
 
     move-result-object p1
@@ -62,7 +59,6 @@
 .method public generateWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterInfos:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -77,7 +73,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterInfos:Ljava/util/List;
 
@@ -101,7 +96,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 3
     sget-object v2, Lcom/android/camera/watermark/WaterMarkBitmap;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -122,7 +116,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance v0, Lcom/android/camera/watermark/AgeGenderWaterMarkDrawable;
 
@@ -132,14 +125,12 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterMarkDrawable:Lcom/android/camera/watermark/BaseWaterMarkDrawable;
 
-    .line 5
     invoke-virtual {v0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 6
     :cond_2
     new-instance v0, Lcom/android/camera/watermark/MagicMirrorWaterMarkDrawable;
 
@@ -149,7 +140,6 @@
 
     iput-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterMarkDrawable:Lcom/android/camera/watermark/BaseWaterMarkDrawable;
 
-    .line 7
     invoke-virtual {v0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
 
     move-result-object v1
@@ -157,7 +147,6 @@
     :goto_0
     return-object v1
 
-    .line 8
     :cond_3
     :goto_1
     sget-object v0, Lcom/android/camera/watermark/WaterMarkBitmap;->TAG:Ljava/lang/String;
@@ -172,7 +161,6 @@
 .method public getWaterMarkData()Lcom/android/camera/watermark/WaterMarkData;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterMarkData:Lcom/android/camera/watermark/WaterMarkData;
 
     return-object v0
@@ -181,19 +169,16 @@
 .method public releaseBitmap()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/watermark/WaterMarkBitmap;->mWaterMarkDrawable:Lcom/android/camera/watermark/BaseWaterMarkDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/watermark/BaseWaterMarkDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0

@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/aftersales/AftersalesManager;
 
     const/4 v1, 0x0
@@ -37,7 +36,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +44,6 @@
 .method public static synthetic access$000()Lcom/android/camera/aftersales/AftersalesManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/aftersales/AftersalesManager$Holder;->manager:Lcom/android/camera/aftersales/AftersalesManager;
 
     return-object v0

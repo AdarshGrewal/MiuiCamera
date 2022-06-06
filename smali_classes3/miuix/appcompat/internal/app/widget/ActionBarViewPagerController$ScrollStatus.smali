@@ -36,12 +36,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mPosAtScroll:I
 
     return-void
@@ -50,7 +48,6 @@
 .method public synthetic constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$1;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;-><init>()V
 
     return-void
@@ -61,10 +58,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mScrollBegin:Z
 
-    .line 2
     iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mOffsetAtScroll:F
 
     cmpl-float p2, p2, v1
@@ -83,7 +78,6 @@
     :cond_1
     add-int/lit8 p2, p1, 0x1
 
-    .line 3
     :goto_0
     iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mFromPos:I
 
@@ -91,7 +85,6 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 4
     :cond_2
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mToPos:I
 
@@ -101,24 +94,20 @@
 .method private onScrollEnd()V
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mToPos:I
 
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mFromPos:I
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mPosAtScroll:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mOffsetAtScroll:F
 
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mScrollEnd:Z
 
     return-void
@@ -127,20 +116,16 @@
 .method private onScrollPositionChange(IF)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mPosAtScroll:I
 
-    .line 2
     iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mOffsetAtScroll:F
 
     const/4 p1, 0x1
 
-    .line 3
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mScrollBegin:Z
 
     const/4 p1, 0x0
 
-    .line 4
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mScrollEnd:Z
 
     return-void
@@ -157,29 +142,24 @@
 
     if-gez v0, :cond_0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->onScrollEnd()V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mPosAtScroll:I
 
     if-eq v0, p1, :cond_1
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->onScrollPositionChange(IF)V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->mScrollBegin:Z
 
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ScrollStatus;->onScrollBegin(IF)V
 
     :cond_2

@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->a:Lcom/arcsoft/supernight/SuperNightProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +42,14 @@
 
     new-array v0, p1, [Lcom/arcsoft/supernight/RawImage;
 
-    .line 2
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
     new-array v0, p1, [F
 
-    .line 3
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImagesEV:[F
 
     new-array p1, p1, [I
 
-    .line 4
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputFd:[I
 
     return-void

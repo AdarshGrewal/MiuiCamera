@@ -30,7 +30,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/MiscTextureManager;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->this$0:Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
     iput p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->val$src:I
@@ -39,12 +38,10 @@
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->val$src:I
 
     iput p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->mSrcRotation:I
 
-    .line 3
     iget p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->val$diff:I
 
     iput p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->mDiff:I
@@ -68,7 +65,6 @@
 
     const-string/jumbo p1, "rotate_tag"
 
-    .line 1
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
@@ -81,7 +77,6 @@
 
     div-float/2addr p1, p2
 
-    .line 2
     iget p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->mDiff:I
 
     int-to-float p2, p2
@@ -90,12 +85,10 @@
 
     float-to-int p1, p1
 
-    .line 3
     iget p2, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->mSrcRotation:I
 
     add-int/2addr p2, p1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->this$0:Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->access$000(Lcom/android/camera/dualvideo/render/MiscTextureManager;)[F
@@ -106,7 +99,6 @@
 
     invoke-static {p1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/MiscTextureManager$1;->this$0:Lcom/android/camera/dualvideo/render/MiscTextureManager;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/MiscTextureManager;->access$000(Lcom/android/camera/dualvideo/render/MiscTextureManager;)[F

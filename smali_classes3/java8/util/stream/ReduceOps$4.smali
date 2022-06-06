@@ -35,7 +35,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamShape;Ljava8/util/function/BiConsumer;Ljava8/util/function/BiConsumer;Ljava8/util/function/Supplier;)V
     .locals 0
 
-    .line 1
     iput-object p2, p0, Ljava8/util/stream/ReduceOps$4;->val$reducer:Ljava8/util/function/BiConsumer;
 
     iput-object p3, p0, Ljava8/util/stream/ReduceOps$4;->val$accumulator:Ljava8/util/function/BiConsumer;
@@ -52,7 +51,6 @@
 .method public makeSink()Ljava8/util/stream/ReduceOps$4ReducingSink;
     .locals 4
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$4ReducingSink;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$4;->val$seedFactory:Ljava8/util/function/Supplier;
@@ -69,7 +67,6 @@
 .method public bridge synthetic makeSink()Ljava8/util/stream/ReduceOps$AccumulatingSink;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$4;->makeSink()Ljava8/util/stream/ReduceOps$4ReducingSink;
 
     move-result-object v0

@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->init()V
 
     return-void
@@ -23,10 +21,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->init()V
 
     return-void
@@ -35,12 +31,10 @@
 .method private getAdditionalPadding()I
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v0
 
-    .line 2
     new-instance v1, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -51,18 +45,14 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
     const/4 v3, 0x1
 
-    .line 4
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 5
     invoke-virtual {v1, v2, v2}, Landroid/widget/TextView;->measure(II)V
 
-    .line 6
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v1
@@ -79,10 +69,8 @@
 
     float-to-int v2, v2
 
-    .line 7
     iput v2, p0, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->mPadding:I
 
-    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -115,7 +103,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :cond_0
     iget v0, p0, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->mPadding:I
 
@@ -127,7 +114,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setIncludeFontPadding(Z)V
 
     return-void
@@ -136,12 +122,10 @@
 .method private measureHeight(Ljava/lang/String;I)I
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v0
 
-    .line 2
     new-instance v1, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -152,16 +136,12 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {v1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 4
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5
     invoke-virtual {v1, p2, v2}, Landroid/widget/TextView;->measure(II)V
 
-    .line 6
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result p1
@@ -174,7 +154,6 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->mPadding:I
 
     const/16 v1, 0x18
@@ -185,7 +164,6 @@
 
     mul-int/lit8 v0, v0, 0x3
 
-    .line 2
     div-int/lit8 v0, v0, 0x4
 
     goto :goto_0
@@ -195,7 +173,6 @@
 
     mul-int/lit8 v0, v0, 0x1
 
-    .line 3
     div-int/lit8 v0, v0, 0x2
 
     :goto_0
@@ -203,10 +180,8 @@
 
     int-to-float v0, v0
 
-    .line 4
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 5
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -215,10 +190,8 @@
 .method public onMeasure(II)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->getAdditionalPadding()I
 
-    .line 2
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -227,7 +200,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p2
@@ -240,12 +212,10 @@
 
     move-result p2
 
-    .line 4
     iget v0, p0, Lcom/android/camera/aiwatermark/ui/WatermarkCustomTextView;->mPadding:I
 
     sub-int/2addr p2, v0
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingTop()I
 
     move-result v0
@@ -258,12 +228,10 @@
 
     add-int/2addr p2, v0
 
-    .line 6
     invoke-static {p2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
-    .line 7
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 

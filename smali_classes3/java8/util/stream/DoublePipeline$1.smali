@@ -32,7 +32,6 @@
 .method public constructor <init>(Ljava8/util/stream/DoublePipeline;Ljava8/util/stream/AbstractPipeline;Ljava8/util/stream/StreamShape;ILjava8/util/function/DoubleFunction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DoublePipeline$1;->this$0:Ljava8/util/stream/DoublePipeline;
 
     iput-object p5, p0, Ljava8/util/stream/DoublePipeline$1;->val$mapper:Ljava8/util/function/DoubleFunction;
@@ -57,7 +56,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava8/util/stream/DoublePipeline$1$1;
 
     invoke-direct {p1, p0, p2}, Ljava8/util/stream/DoublePipeline$1$1;-><init>(Ljava8/util/stream/DoublePipeline$1;Ljava8/util/stream/Sink;)V

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/miuixbasewidget/widget/FilterSortView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView;
 
     invoke-static {p2}, Lmiuix/miuixbasewidget/widget/FilterSortView;->access$500(Lmiuix/miuixbasewidget/widget/FilterSortView;)Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
@@ -53,7 +51,6 @@
 
     if-nez p2, :cond_0
 
-    .line 2
     new-instance p2, Lmiuix/animation/controller/AnimState;
 
     const-string v0, "target"
@@ -62,7 +59,6 @@
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getX()F
 
     move-result v1
@@ -75,7 +71,6 @@
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 4
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getY()F
 
     move-result v1
@@ -88,7 +83,6 @@
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
 
-    .line 5
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result v1
@@ -101,7 +95,6 @@
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->HEIGHT:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result v1
@@ -116,7 +109,6 @@
 
     new-array v0, v0, [Landroid/view/View;
 
-    .line 7
     iget-object v1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView;
 
     invoke-static {v1}, Lmiuix/miuixbasewidget/widget/FilterSortView;->access$500(Lmiuix/miuixbasewidget/widget/FilterSortView;)Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
@@ -145,7 +137,6 @@
 
     invoke-interface {v0, p2, v1}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 8
     iget-object p2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$1;->this$0:Lmiuix/miuixbasewidget/widget/FilterSortView;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getId()I

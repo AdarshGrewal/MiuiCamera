@@ -29,7 +29,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
     return-void
@@ -45,7 +44,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/util/BlockingIgnoringReceiver;->accept(Ljava/lang/Throwable;)V
@@ -56,10 +54,8 @@
 .method public accept(Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/util/BlockingIgnoringReceiver;->error:Ljava/lang/Throwable;
 
-    .line 3
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
@@ -68,7 +64,6 @@
 .method public run()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void

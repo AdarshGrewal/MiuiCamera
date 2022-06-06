@@ -23,12 +23,10 @@
 
     const-string v0, "https://i.mi.com/gallery/public/resource/download"
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/resource/SimpleNetworkJsonRequest;-><init>(Ljava/lang/String;)V
 
     const-string v0, "id"
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->addParam(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -39,15 +37,12 @@
 
     const-string v0, "https://i.mi.com/gallery/public/resource/download"
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/resource/SimpleNetworkJsonRequest;-><init>(Ljava/lang/String;)V
 
     const-string v0, "id"
 
-    .line 4
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->addParam(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iput-object p2, p0, Lcom/android/camera/multi/PluginInfoRequest;->resourceItem:Lcom/android/camera/resource/BaseResourceItem;
 
     return-void
@@ -66,14 +61,12 @@
 
     const-string v0, "data"
 
-    .line 2
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p1
 
     const-string/jumbo v0, "sha1Base16"
 
-    .line 3
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -82,14 +75,12 @@
 
     const-string/jumbo v0, "url"
 
-    .line 4
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p2, Lcom/android/camera/multi/PluginInfo;->url:Ljava/lang/String;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/multi/PluginInfoRequest;->resourceItem:Lcom/android/camera/resource/BaseResourceItem;
 
     iput-object p1, p2, Lcom/android/camera/multi/PluginInfo;->resourceItem:Lcom/android/camera/resource/BaseResourceItem;
@@ -106,7 +97,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p2, Lcom/android/camera/multi/PluginInfo;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/multi/PluginInfoRequest;->parseJson(Lorg/json/JSONObject;Lcom/android/camera/multi/PluginInfo;)Lcom/android/camera/multi/PluginInfo;

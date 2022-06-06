@@ -64,7 +64,6 @@
 .method public static constructor <clinit>()V
     .locals 17
 
-    .line 1
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v1, 0x0
@@ -75,7 +74,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->head:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 2
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v2, 0x1
@@ -86,7 +84,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->pupil:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 3
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v3, 0x2
@@ -97,7 +94,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 4
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v4, 0x3
@@ -108,7 +104,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->face:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 5
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v5, 0x4
@@ -119,7 +114,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->eye:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 6
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v6, 0x5
@@ -130,29 +124,26 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->ear:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 7
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v7, 0x6
 
-    const-string v8, "mouth"
+    const-string/jumbo v8, "mouth"
 
     invoke-direct {v0, v8, v7}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->mouth:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 8
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/4 v8, 0x7
 
-    const-string v9, "nose"
+    const-string/jumbo v9, "nose"
 
     invoke-direct {v0, v9, v8}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->nose:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 9
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v9, 0x8
@@ -163,7 +154,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->brow:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 10
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v10, 0x9
@@ -174,7 +164,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->liplash:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 11
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v11, 0xa
@@ -185,7 +174,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->beard:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 12
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v12, 0xb
@@ -196,7 +184,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->glasses:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 13
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v13, 0xc
@@ -207,7 +194,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->headwear:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 14
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v14, 0xd
@@ -218,7 +204,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->earring:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 15
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v15, 0xe
@@ -229,7 +214,6 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->eyelash:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 16
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v14, 0xf
@@ -240,12 +224,11 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->eyelid:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 17
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     const/16 v15, 0x10
 
-    const-string v14, "nevus"
+    const-string/jumbo v14, "nevus"
 
     invoke-direct {v0, v14, v15}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;-><init>(Ljava/lang/String;I)V
 
@@ -255,7 +238,6 @@
 
     new-array v14, v14, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
-    .line 18
     sget-object v16, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->head:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     aput-object v16, v14, v1
@@ -341,7 +323,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -350,7 +331,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -365,7 +345,6 @@
 .method public static values()[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->$VALUES:[Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;
 
     invoke-virtual {v0}, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ARItemType;->clone()Ljava/lang/Object;

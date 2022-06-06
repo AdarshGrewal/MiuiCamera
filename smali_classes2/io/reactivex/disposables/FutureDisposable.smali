@@ -36,10 +36,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    .line 2
     iput-boolean p2, p0, Lio/reactivex/disposables/FutureDisposable;->allowInterrupt:Z
 
     return-void
@@ -52,7 +50,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -61,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-boolean v1, p0, Lio/reactivex/disposables/FutureDisposable;->allowInterrupt:Z
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
@@ -73,7 +69,6 @@
 .method public isDisposed()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -82,7 +77,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
 
     move-result v0

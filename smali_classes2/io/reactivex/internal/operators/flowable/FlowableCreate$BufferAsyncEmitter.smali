@@ -56,17 +56,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;-><init>(Lorg/reactivestreams/Subscriber;)V
 
-    .line 2
     new-instance p1, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     invoke-direct {p1, p2}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    .line 3
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -81,7 +78,6 @@
 .method public drain()V
     .locals 14
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->wip:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -92,18 +88,15 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->actual:Lorg/reactivestreams/Subscriber;
 
-    .line 3
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     const/4 v2, 0x1
 
     move v3, v2
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
@@ -118,23 +111,19 @@
 
     if-eqz v10, :cond_7
 
-    .line 5
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->isCancelled()Z
 
     move-result v11
 
     if-eqz v11, :cond_2
 
-    .line 6
     invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
 
     return-void
 
-    .line 7
     :cond_2
     iget-boolean v11, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
-    .line 8
     invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->poll()Ljava/lang/Object;
 
     move-result-object v12
@@ -153,17 +142,14 @@
 
     if-eqz v13, :cond_5
 
-    .line 9
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->error:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_4
 
-    .line 10
     invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->error(Ljava/lang/Throwable;)Z
 
     goto :goto_2
 
-    .line 11
     :cond_4
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->complete()V
 
@@ -175,7 +161,6 @@
 
     goto :goto_3
 
-    .line 12
     :cond_6
     invoke-interface {v0, v12}, Lorg/reactivestreams/Subscriber;->onNext(Ljava/lang/Object;)V
 
@@ -189,23 +174,19 @@
     :goto_3
     if-nez v10, :cond_a
 
-    .line 13
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->isCancelled()Z
 
     move-result v4
 
     if-eqz v4, :cond_8
 
-    .line 14
     invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
 
     return-void
 
-    .line 15
     :cond_8
     iget-boolean v4, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
-    .line 16
     invoke-virtual {v1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->isEmpty()Z
 
     move-result v5
@@ -214,17 +195,14 @@
 
     if-eqz v5, :cond_a
 
-    .line 17
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->error:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_9
 
-    .line 18
     invoke-virtual {p0, v0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->error(Ljava/lang/Throwable;)Z
 
     goto :goto_4
 
-    .line 19
     :cond_9
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BaseEmitter;->complete()V
 
@@ -236,10 +214,8 @@
 
     if-eqz v4, :cond_b
 
-    .line 20
     invoke-static {p0, v8, v9}, Lio/reactivex/internal/util/BackpressureHelper;->produced(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
-    .line 21
     :cond_b
     iget-object v4, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->wip:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -259,10 +235,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
-    .line 2
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->drain()V
 
     return-void
@@ -276,7 +250,6 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
     if-nez v0, :cond_2
@@ -292,7 +265,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onNext called with null. Null values are generally not allowed in 2.x operators and sources."
@@ -303,13 +275,11 @@
 
     return-void
 
-    .line 3
     :cond_1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     invoke-virtual {v0, p1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->offer(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->drain()V
 
     :cond_2
@@ -320,7 +290,6 @@
 .method public onRequested()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->drain()V
 
     return-void
@@ -329,7 +298,6 @@
 .method public onUnsubscribed()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->wip:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -338,7 +306,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->queue:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     invoke-virtual {v0}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->clear()V
@@ -350,7 +317,6 @@
 .method public tryOnError(Ljava/lang/Throwable;)Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
     if-nez v0, :cond_2
@@ -366,23 +332,19 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 2
     new-instance p1, Ljava/lang/NullPointerException;
 
     const-string v0, "onError called with null. Null values are generally not allowed in 2.x operators and sources."
 
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 3
     :cond_1
     iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->error:Ljava/lang/Throwable;
 
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->done:Z
 
-    .line 5
     invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/FlowableCreate$BufferAsyncEmitter;->drain()V
 
     return p1

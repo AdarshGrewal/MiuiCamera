@@ -20,7 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,22 +28,18 @@
 .method public static a()V
     .locals 11
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Lcom/xiaomi/stat/d/p;->f(Landroid/content/Context;)J
 
     move-result-wide v1
 
-    .line 3
     invoke-static {v0}, Lcom/xiaomi/stat/d/p;->g(Landroid/content/Context;)J
 
     move-result-wide v3
 
-    .line 4
     invoke-static {v0}, Lcom/xiaomi/stat/d/p;->h(Landroid/content/Context;)J
 
     move-result-wide v5
@@ -63,14 +58,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
     sub-long/2addr v7, v3
 
-    .line 6
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v9
@@ -79,7 +72,6 @@
 
     sub-long/2addr v7, v9
 
-    .line 7
     invoke-static {v7, v8}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v7
@@ -90,13 +82,10 @@
 
     if-gtz v0, :cond_0
 
-    .line 8
     sput-wide v1, Lcom/xiaomi/stat/d/r;->d:J
 
-    .line 9
     sput-wide v3, Lcom/xiaomi/stat/d/r;->f:J
 
-    .line 10
     sput-wide v5, Lcom/xiaomi/stat/d/r;->e:J
 
     const/4 v0, 0x0
@@ -109,7 +98,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-static {}, Lcom/xiaomi/stat/b/d;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
@@ -120,7 +108,6 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 12
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -154,7 +141,6 @@
 
     return-void
 
-    .line 13
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -174,39 +160,32 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     sput-wide p0, Lcom/xiaomi/stat/d/r;->d:J
 
-    .line 15
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p0
 
     sput-wide p0, Lcom/xiaomi/stat/d/r;->e:J
 
-    .line 16
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
 
     sput-wide p0, Lcom/xiaomi/stat/d/r;->f:J
 
-    .line 17
     invoke-static {}, Lcom/xiaomi/stat/ak;->a()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 18
     sget-wide v0, Lcom/xiaomi/stat/d/r;->d:J
 
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->a(Landroid/content/Context;J)V
 
-    .line 19
     sget-wide v0, Lcom/xiaomi/stat/d/r;->f:J
 
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->b(Landroid/content/Context;J)V
 
-    .line 20
     sget-wide v0, Lcom/xiaomi/stat/d/r;->e:J
 
     invoke-static {p0, v0, v1}, Lcom/xiaomi/stat/d/p;->c(Landroid/content/Context;J)V
@@ -217,7 +196,6 @@
 .method public static a(JJ)Z
     .locals 2
 
-    .line 21
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v0
@@ -246,7 +224,6 @@
 .method public static b()J
     .locals 6
 
-    .line 1
     sget-wide v0, Lcom/xiaomi/stat/d/r;->d:J
 
     const-wide/16 v2, 0x0
@@ -263,7 +240,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -277,7 +253,6 @@
 
     return-wide v0
 
-    .line 3
     :cond_1
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -290,7 +265,6 @@
 .method public static b(J)Z
     .locals 11
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,12 +287,10 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 6
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v2
@@ -329,25 +301,20 @@
 
     const/16 v3, 0xb
 
-    .line 7
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xc
 
-    .line 8
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xd
 
-    .line 9
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
     const/16 v3, 0xe
 
-    .line 10
     invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 11
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v3
@@ -356,7 +323,6 @@
 
     add-long v7, v3, v5
 
-    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -389,7 +355,6 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

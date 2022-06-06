@@ -27,29 +27,22 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;III[I[F)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p2, p3, p4}, Lcom/android/camera/effect/renders/WaterMark;-><init>(III)V
 
     const/4 p2, 0x0
 
-    .line 2
     iput p2, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mCenterX:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mCenterY:I
 
-    .line 4
     iput p2, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mWidth:I
 
-    .line 5
     iput p2, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mHeight:I
 
     const/4 p3, 0x0
 
-    .line 6
     iput-object p3, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mRange:[I
 
-    .line 7
     iput-object p5, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mRange:[I
 
     const/4 p3, 0x1
@@ -64,7 +57,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -88,7 +80,6 @@
 
     iput p4, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mWidth:I
 
-    .line 9
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p4
@@ -113,7 +104,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_1
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -138,7 +128,6 @@
 
     iput p3, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mWidth:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p3
@@ -161,7 +150,6 @@
 
     iput p3, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mHeight:I
 
-    .line 12
     :goto_1
     new-instance p3, Lcom/android/gallery3d/ui/BitmapTexture;
 
@@ -169,10 +157,8 @@
 
     iput-object p3, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mImageTexture:Lcom/android/gallery3d/ui/BitmapTexture;
 
-    .line 13
     invoke-virtual {p3, p2}, Lcom/android/gallery3d/ui/UploadedTexture;->setOpaque(Z)V
 
-    .line 14
     invoke-direct {p0}, Lcom/android/camera/effect/renders/AIImageWaterMark;->calcCenterAxis()V
 
     return-void
@@ -181,7 +167,6 @@
 .method private calcCenterAxis()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mRange:[I
 
     const/4 v1, 0x0
@@ -200,7 +185,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     aget v1, v0, v1
 
     const/4 v3, 0x3
@@ -221,7 +205,6 @@
 .method public getCenterX()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mCenterX:I
 
     return v0
@@ -230,7 +213,6 @@
 .method public getCenterY()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mCenterY:I
 
     return v0
@@ -239,7 +221,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mHeight:I
 
     return v0
@@ -264,7 +245,6 @@
 .method public getTexture()Lcom/android/gallery3d/ui/BasicTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mImageTexture:Lcom/android/gallery3d/ui/BitmapTexture;
 
     return-object v0
@@ -273,7 +253,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/AIImageWaterMark;->mWidth:I
 
     return v0

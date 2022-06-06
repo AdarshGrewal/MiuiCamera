@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     :try_start_0
     new-instance v2, Lcom/xiaomi/compat/miui/PackageInstallCompat$1;
 
@@ -54,13 +52,11 @@
     :cond_1
     move p2, v1
 
-    .line 2
     :goto_0
     invoke-static {p0, p1, v2, p2}, Lmiui/content/pm/PreloadedAppPolicy;->installPreloadedDataApp(Landroid/content/Context;Ljava/lang/String;Landroid/content/pm/IPackageInstallObserver2;I)Z
 
     move-result p0
 
-    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +80,6 @@
     :catchall_0
     move-exception p0
 
-    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +96,6 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-interface {p4, p1, v1}, Lcom/xiaomi/compat/miui/PackageInstallCompat$Listener;->onPackageInstalled(Ljava/lang/String;Z)V
 
     return v1

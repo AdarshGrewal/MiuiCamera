@@ -25,7 +25,6 @@
 .method public static bridge synthetic copyInto(Ljava8/util/stream/Node$OfInt;[Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Integer;
 
     invoke-interface {p0, p1, p2}, Ljava8/util/stream/Node$OfInt;->copyInto([Ljava/lang/Integer;I)V
@@ -36,7 +35,6 @@
 .method public static bridge synthetic newArray(Ljava8/util/stream/Node$OfInt;I)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-interface {p0, p1}, Ljava8/util/stream/Node$OfInt;->newArray(I)[I
 
     move-result-object p0
@@ -47,7 +45,6 @@
 .method public static bridge synthetic truncate(Ljava8/util/stream/Node$OfInt;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-interface/range {p0 .. p5}, Ljava8/util/stream/Node$OfInt;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0
@@ -58,7 +55,6 @@
 .method public static bridge synthetic truncate(Ljava8/util/stream/Node$OfInt;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-interface/range {p0 .. p5}, Ljava8/util/stream/Node$OfInt;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfInt;
 
     move-result-object p0

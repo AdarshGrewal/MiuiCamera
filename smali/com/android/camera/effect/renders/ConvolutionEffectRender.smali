@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/PixelEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     return-void
@@ -35,10 +33,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uStep"
@@ -55,10 +51,8 @@
 .method public initShaderValue(Z)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->mUniformStepH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->mStepX:F
@@ -73,10 +67,8 @@
 .method public setPreviewSize(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
 
     iget p2, p0, Lcom/android/camera/effect/renders/Render;->mPreviewHeight:I
@@ -95,14 +87,12 @@
 
     div-float p1, v0, p1
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->mStepX:F
 
     int-to-float p1, p2
 
     div-float/2addr v0, p1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->mStepY:F
 
     return-void

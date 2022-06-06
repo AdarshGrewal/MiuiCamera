@@ -63,10 +63,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,27 +105,22 @@
 
     invoke-static {v3, v0, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 3
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceApk:Ljava/io/File;
 
-    .line 4
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->dexDir:Ljava/io/File;
 
-    .line 5
     invoke-static {p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getZipCrc(Ljava/io/File;)J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceCrc:J
 
-    .line 6
     new-instance p1, Ljava/io/File;
 
     const-string v0, "SplitMultiDex.lock"
 
     invoke-direct {p1, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 7
     new-instance p2, Ljava/io/RandomAccessFile;
 
     const-string v0, "rw"
@@ -136,7 +129,6 @@
 
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockRaf:Ljava/io/RandomAccessFile;
 
-    .line 8
     :try_start_0
     invoke-virtual {p2}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -148,7 +140,6 @@
     .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_4
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 9
     :try_start_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -172,7 +163,6 @@
 
     invoke-static {v3, p2, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 10
     iget-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockChannel:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {p2}, Ljava/nio/channels/FileChannel;->lock()Ljava/nio/channels/FileLock;
@@ -185,7 +175,6 @@
     .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 11
     :try_start_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -224,13 +213,11 @@
     :catch_2
     move-exception p1
 
-    .line 12
     :goto_0
     iget-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockChannel:Ljava/nio/channels/FileChannel;
 
     invoke-static {p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 13
     throw p1
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_5
@@ -250,20 +237,17 @@
     :catch_5
     move-exception p1
 
-    .line 14
     :goto_1
     iget-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockRaf:Ljava/io/RandomAccessFile;
 
     invoke-static {p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 15
     throw p1
 .end method
 
 .method private clearDexDir()V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->dexDir:Ljava/io/File;
 
     new-instance v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$1;
@@ -280,7 +264,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +294,6 @@
 
     goto :goto_2
 
-    .line 3
     :cond_0
     array-length v3, v0
 
@@ -320,10 +302,8 @@
     :goto_0
     if-ge v4, v3, :cond_2
 
-    .line 4
     aget-object v5, v0, v4
 
-    .line 5
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,14 +336,12 @@
 
     invoke-static {v1, v6, v7}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 6
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 7
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -388,7 +366,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -425,7 +402,6 @@
 .method public static closeQuietly(Ljava/io/Closeable;)V
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -440,7 +416,6 @@
 
     const-string v1, "Failed to close resource"
 
-    .line 2
     invoke-static {v0, v1, p0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -455,12 +430,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,7 +458,6 @@
 
     move-result-object p3
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -512,7 +484,6 @@
 
     invoke-static {v3, v0, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 4
     :try_start_0
     new-instance v0, Ljava/util/zip/ZipOutputStream;
 
@@ -528,7 +499,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5
     :try_start_1
     new-instance v2, Ljava/util/zip/ZipEntry;
 
@@ -536,21 +506,18 @@
 
     invoke-direct {v2, v4}, Ljava/util/zip/ZipEntry;-><init>(Ljava/lang/String;)V
 
-    .line 6
     invoke-virtual {p1}, Ljava/util/zip/ZipEntry;->getTime()J
 
     move-result-wide v4
 
     invoke-virtual {v2, v4, v5}, Ljava/util/zip/ZipEntry;->setTime(J)V
 
-    .line 7
     invoke-virtual {v0, v2}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
 
     const/16 p1, 0x4000
 
     new-array p1, p1, [B
 
-    .line 8
     :goto_0
     invoke-virtual {p0, p1}, Ljava/io/InputStream;->read([B)I
 
@@ -560,29 +527,24 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 9
     invoke-virtual {v0, p1, v1, v2}, Ljava/util/zip/ZipOutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-virtual {v0}, Ljava/util/zip/ZipOutputStream;->closeEntry()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
     :try_start_2
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 12
     invoke-virtual {p3}, Ljava/io/File;->setReadOnly()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 13
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +567,6 @@
 
     invoke-static {v3, p1, v0}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 14
     invoke-virtual {p3, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p1
@@ -614,15 +575,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 15
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 16
     invoke-virtual {p3}, Ljava/io/File;->delete()Z
 
     return-void
 
-    .line 17
     :cond_1
     :try_start_3
     new-instance p1, Ljava/io/IOException;
@@ -663,7 +621,6 @@
 
     throw p1
 
-    .line 18
     :cond_2
     new-instance p1, Ljava/io/IOException;
 
@@ -706,10 +663,8 @@
     :catchall_0
     move-exception p1
 
-    .line 19
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 20
     throw p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -717,13 +672,10 @@
     :catchall_1
     move-exception p1
 
-    .line 21
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 22
     invoke-virtual {p3}, Ljava/io/File;->delete()Z
 
-    .line 23
     throw p1
 .end method
 
@@ -734,7 +686,6 @@
 
     const/4 v1, 0x4
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -745,7 +696,6 @@
 .method public static getTimeStamp(Ljava/io/File;)J
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -770,7 +720,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ZipCrcUtil;->getZipCrc(Ljava/io/File;)J
 
     move-result-wide v0
@@ -790,12 +739,10 @@
 .method public static isModified(Landroid/content/Context;Ljava/io/File;JLjava/lang/String;)Z
     .locals 7
 
-    .line 1
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -894,10 +841,8 @@
 
     const-string v5, "loading existing secondary dex files"
 
-    .line 1
     invoke-static {v4, v5, v3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -918,12 +863,10 @@
 
     move-result-object v3
 
-    .line 3
     invoke-static/range {p1 .. p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
-    .line 4
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -944,7 +887,6 @@
 
     move-result v6
 
-    .line 5
     new-instance v7, Ljava/util/ArrayList;
 
     add-int/lit8 v8, v6, -0x1
@@ -956,7 +898,6 @@
     :goto_0
     if-gt v8, v6, :cond_2
 
-    .line 6
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -973,28 +914,24 @@
 
     move-result-object v9
 
-    .line 7
     new-instance v10, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;
 
     iget-object v11, v0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->dexDir:Ljava/io/File;
 
     invoke-direct {v10, v11, v9}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 8
     invoke-virtual {v10}, Ljava/io/File;->isFile()Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 9
     invoke-static {v10}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getZipCrc(Ljava/io/File;)J
 
     move-result-wide v11
 
     iput-wide v11, v10, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;->crc:J
 
-    .line 10
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1017,7 +954,6 @@
 
     move-result-wide v13
 
-    .line 11
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1040,7 +976,6 @@
 
     move-object v15, v3
 
-    .line 12
     invoke-virtual {v10}, Ljava/io/File;->lastModified()J
 
     move-result-wide v2
@@ -1053,14 +988,12 @@
 
     move/from16 v16, v6
 
-    .line 13
     iget-wide v5, v10, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;->crc:J
 
     cmp-long v5, v13, v5
 
     if-nez v5, :cond_0
 
-    .line 14
     invoke-interface {v7, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v8, v8, 0x1
@@ -1075,7 +1008,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_0
     new-instance v4, Ljava/io/IOException;
 
@@ -1129,7 +1061,6 @@
 
     throw v4
 
-    .line 16
     :cond_1
     new-instance v1, Ljava/io/IOException;
 
@@ -1166,7 +1097,6 @@
 
     const-string v2, "Existing secondary dex files loaded"
 
-    .line 17
     invoke-static {v4, v2, v1}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v7
@@ -1199,7 +1129,6 @@
 
     const-string v5, "Split:MultiDexExtractor"
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1220,15 +1149,12 @@
 
     move-result-object v6
 
-    .line 2
     invoke-direct/range {p0 .. p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->clearDexDir()V
 
-    .line 3
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     new-instance v8, Ljava/util/zip/ZipFile;
 
     iget-object v0, v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceApk:Ljava/io/File;
@@ -1237,7 +1163,6 @@
 
     const/4 v0, 0x2
 
-    .line 5
     :try_start_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1264,7 +1189,6 @@
     :goto_0
     if-eqz v10, :cond_4
 
-    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1281,17 +1205,14 @@
 
     move-result-object v0
 
-    .line 7
     new-instance v11, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;
 
     iget-object v12, v1, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->dexDir:Ljava/io/File;
 
     invoke-direct {v11, v12, v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 8
     invoke-interface {v7, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1325,12 +1246,10 @@
 
     add-int/lit8 v13, v0, 0x1
 
-    .line 10
     invoke-static {v8, v10, v11, v6}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->extract(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11
     :try_start_1
     invoke-static {v11}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getZipCrc(Ljava/io/File;)J
 
@@ -1348,7 +1267,6 @@
     :catch_0
     move-exception v0
 
-    .line 12
     :try_start_2
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1372,7 +1290,6 @@
 
     move v0, v12
 
-    .line 13
     :goto_2
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1436,17 +1353,14 @@
 
     if-nez v0, :cond_1
 
-    .line 14
     invoke-virtual {v11}, Ljava/io/File;->delete()Z
 
-    .line 15
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
 
     move-result v12
 
     if-eqz v12, :cond_1
 
-    .line 16
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1494,7 +1408,6 @@
 
     add-int/lit8 v9, v9, 0x1
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1515,7 +1428,6 @@
 
     goto/16 :goto_0
 
-    .line 18
     :cond_3
     new-instance v0, Ljava/io/IOException;
 
@@ -1553,7 +1465,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 19
     :cond_4
     :try_start_3
     invoke-virtual {v8}, Ljava/util/zip/ZipFile;->close()V
@@ -1567,7 +1478,6 @@
 
     move-object v2, v0
 
-    .line 20
     invoke-static {v5, v3, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_5
@@ -1578,7 +1488,6 @@
 
     move-object v2, v0
 
-    .line 21
     :try_start_4
     invoke-virtual {v8}, Ljava/util/zip/ZipFile;->close()V
     :try_end_4
@@ -1591,10 +1500,8 @@
 
     move-object v4, v0
 
-    .line 22
     invoke-static {v5, v3, v4}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 23
     :goto_6
     throw v2
 .end method
@@ -1613,17 +1520,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getMultiDexPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 2
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1640,7 +1544,6 @@
 
     invoke-interface {p0, v0, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1657,7 +1560,6 @@
 
     invoke-interface {p0, p2, p4, p5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1680,7 +1582,6 @@
 
     invoke-interface {p0, p2, p3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 6
     invoke-interface {p6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1694,14 +1595,12 @@
 
     if-eqz p4, :cond_0
 
-    .line 7
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p4
 
     check-cast p4, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor$ExtractedDex;
 
-    .line 8
     new-instance p5, Ljava/lang/StringBuilder;
 
     invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1722,7 +1621,6 @@
 
     invoke-interface {p0, p5, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 9
     new-instance p5, Ljava/lang/StringBuilder;
 
     invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1749,7 +1647,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -1766,17 +1663,14 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->cacheLock:Ljava/nio/channels/FileLock;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileLock;->release()V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockChannel:Ljava/nio/channels/FileChannel;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
 
-    .line 3
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->lockRaf:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
@@ -1805,7 +1699,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1848,7 +1741,6 @@
 
     invoke-static {v3, v0, v2}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->cacheLock:Ljava/nio/channels/FileLock;
 
     invoke-virtual {v0}, Ljava/nio/channels/FileLock;->isValid()Z
@@ -1859,7 +1751,6 @@
 
     if-nez p3, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceApk:Ljava/io/File;
 
     iget-wide v4, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceCrc:J
@@ -1870,7 +1761,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->loadExistingExtractions(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
@@ -1885,15 +1775,12 @@
 
     const-string v0, "Failed to reload existing extracted secondary dex files, falling back to fresh extraction"
 
-    .line 5
     invoke-static {v3, v0, p3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 6
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->performExtractions()Ljava/util/List;
 
     move-result-object p3
 
-    .line 7
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceApk:Ljava/io/File;
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getTimeStamp(Ljava/io/File;)J
@@ -1919,7 +1806,6 @@
 
     const-string v0, "Forced extraction must be performed."
 
-    .line 8
     invoke-static {v3, v0, p3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
@@ -1929,16 +1815,13 @@
 
     const-string v0, "Detected that extraction must be performed."
 
-    .line 9
     invoke-static {v3, v0, p3}, Lcom/iqiyi/android/qigsaw/core/common/SplitLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 10
     :goto_0
     invoke-direct {p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->performExtractions()Ljava/util/List;
 
     move-result-object p3
 
-    .line 11
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->sourceApk:Ljava/io/File;
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitMultiDexExtractor;->getTimeStamp(Ljava/io/File;)J
@@ -1958,7 +1841,6 @@
     :goto_1
     move-object p1, p3
 
-    .line 12
     :goto_2
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -1988,7 +1870,6 @@
 
     return-object p1
 
-    .line 13
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 

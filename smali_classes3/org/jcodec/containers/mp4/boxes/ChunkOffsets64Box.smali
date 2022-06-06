@@ -11,7 +11,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -20,7 +19,6 @@
 .method public static createChunkOffsets64Box([J)Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;
 
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->fourcc()Ljava/lang/String;
@@ -35,7 +33,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     return-object v0
@@ -54,10 +51,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     array-length v0, v0
@@ -66,7 +61,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
@@ -74,10 +68,8 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 4
     aget-wide v1, v1, v0
 
-    .line 5
     invoke-virtual {p1, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v0, v0, 0x1
@@ -91,7 +83,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     array-length v0, v0
@@ -106,7 +97,6 @@
 .method public getChunkOffsets()[J
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     return-object v0
@@ -115,15 +105,12 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 3
     new-array v1, v0, [J
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
@@ -133,7 +120,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 4
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
@@ -153,7 +139,6 @@
 .method public setChunkOffsets([J)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;->chunkOffsets:[J
 
     return-void

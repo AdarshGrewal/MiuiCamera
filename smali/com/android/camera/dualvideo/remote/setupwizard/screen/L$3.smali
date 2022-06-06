@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/screen/L$3;->this$0:Lcom/android/camera/dualvideo/remote/setupwizard/screen/L;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

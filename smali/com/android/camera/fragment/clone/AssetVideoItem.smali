@@ -19,7 +19,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/android/camera/videoplayer/Config;->SHOW_LOGS:Z
 
     sput-boolean v0, Lcom/android/camera/fragment/clone/AssetVideoItem;->SHOW_LOGS:Z
@@ -39,13 +38,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/clone/BaseVideoItem;-><init>(Lcom/android/camera/videoplayer/manager/VideoPlayerManager;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/clone/AssetVideoItem;->mAssetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
-    .line 3
     iput p3, p0, Lcom/android/camera/fragment/clone/AssetVideoItem;->mCoverResource:I
 
     return-void
@@ -76,17 +72,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/clone/AssetVideoItem;->mAssetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {p3, p1, p2, v0}, Lcom/android/camera/videoplayer/manager/VideoPlayerManager;->playNewVideo(Lcom/android/camera/videoplayer/meta/MetaData;Lcom/android/camera/videoplayer/ui/VideoPlayerView;Landroid/content/res/AssetFileDescriptor;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {p3}, Lcom/android/camera/videoplayer/manager/VideoPlayerManager;->stopAnyPlayback()V
 
@@ -97,7 +90,6 @@
 .method public stopPlayback(Lcom/android/camera/videoplayer/manager/VideoPlayerManager;)V
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Lcom/android/camera/videoplayer/manager/VideoPlayerManager;->stopAnyPlayback()V
 
     return-void
@@ -106,7 +98,6 @@
 .method public update(ILcom/android/camera/fragment/clone/VideoViewHolder;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;)V
     .locals 1
 
-    .line 1
     sget-boolean p3, Lcom/android/camera/fragment/clone/AssetVideoItem;->SHOW_LOGS:Z
 
     if-eqz p3, :cond_0
@@ -129,7 +120,6 @@
 
     invoke-static {p3, p1}, Lcom/android/camera/videoplayer/utils/Logger;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     iget-object p1, p2, Lcom/android/camera/fragment/clone/VideoViewHolder;->mCover:Landroid/widget/ImageView;
 

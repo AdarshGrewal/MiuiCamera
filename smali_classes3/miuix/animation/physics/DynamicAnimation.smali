@@ -97,64 +97,50 @@
         }
     .end annotation
 
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 16
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 17
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
-    .line 18
     iput-boolean v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 19
     iput-boolean v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
-    .line 20
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
-    .line 21
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
-    .line 22
     iput-wide v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
-    .line 23
     iput-wide v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartDelay:J
 
-    .line 24
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
-    .line 25
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
-    .line 26
     iput-object p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
-    .line 27
     iput-object p2, p0, Lmiuix/animation/physics/DynamicAnimation;->mProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 28
     sget-object p1, Lmiuix/animation/property/ViewProperty;->ROTATION:Lmiuix/animation/property/ViewProperty;
 
     if-eq p2, p1, :cond_4
@@ -169,7 +155,6 @@
 
     goto :goto_1
 
-    .line 29
     :cond_0
     sget-object p1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
@@ -177,12 +162,10 @@
 
     const/high16 p1, 0x3b800000    # 0.00390625f
 
-    .line 30
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
 
-    .line 31
     :cond_1
     sget-object p1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
@@ -197,7 +180,6 @@
     :cond_2
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 32
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
@@ -206,7 +188,6 @@
     :goto_0
     const p1, 0x3b03126f    # 0.002f
 
-    .line 33
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     goto :goto_2
@@ -215,7 +196,6 @@
     :goto_1
     const p1, 0x3dcccccd    # 0.1f
 
-    .line 34
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     :goto_2
@@ -225,51 +205,40 @@
 .method public constructor <init>(Lmiuix/animation/property/FloatValueHolder;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 3
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     const/4 v1, 0x0
 
-    .line 4
     iput-boolean v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 5
     iput-boolean v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
-    .line 6
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     neg-float v0, v0
 
-    .line 7
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     const-wide/16 v0, 0x0
 
-    .line 8
     iput-wide v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
-    .line 9
     iput-wide v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartDelay:J
 
-    .line 10
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
-    .line 11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -278,10 +247,8 @@
 
     const/4 v0, 0x0
 
-    .line 12
     iput-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mTarget:Ljava/lang/Object;
 
-    .line 13
     new-instance v0, Lmiuix/animation/physics/DynamicAnimation$1;
 
     const-string v1, "FloatValueHolder"
@@ -292,7 +259,6 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 14
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     return-void
@@ -303,10 +269,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
-    .line 2
     invoke-static {}, Lmiuix/animation/physics/AnimationHandler;->getInstance()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object v1
@@ -315,13 +279,10 @@
 
     const-wide/16 v1, 0x0
 
-    .line 3
     iput-wide v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
-    .line 4
     iput-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
 
-    .line 5
     :goto_0
     iget-object v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
@@ -331,7 +292,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 6
     iget-object v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -340,7 +300,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 7
     iget-object v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -360,7 +319,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
@@ -372,7 +330,6 @@
 .method private getPropertyValue()F
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mProperty:Lmiuix/animation/property/FloatProperty;
 
     iget-object v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mTarget:Ljava/lang/Object;
@@ -396,7 +353,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
@@ -405,7 +361,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -424,7 +379,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -434,14 +388,12 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_0
@@ -456,29 +408,24 @@
 .method private startAnimationInternal()V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
-    .line 3
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-direct {p0}, Lmiuix/animation/physics/DynamicAnimation;->getPropertyValue()F
 
     move-result v0
 
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
-    .line 5
     :cond_0
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
@@ -494,7 +441,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 6
     invoke-static {}, Lmiuix/animation/physics/AnimationHandler;->getInstance()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object v0
@@ -505,7 +451,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -532,7 +477,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -541,7 +485,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -560,14 +503,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -576,7 +517,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -584,7 +524,6 @@
     :cond_0
     return-object p0
 
-    .line 4
     :cond_1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -598,7 +537,6 @@
 .method public cancel()V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -609,20 +547,17 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-direct {p0, v0}, Lmiuix/animation/physics/DynamicAnimation;->endAnimationInternal(Z)V
 
     :cond_0
     return-void
 
-    .line 4
     :cond_1
     new-instance v0, Landroid/util/AndroidRuntimeException;
 
@@ -636,7 +571,6 @@
 .method public doAnimationFrame(J)Z
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
     const-wide/16 v2, 0x0
@@ -647,10 +581,8 @@
 
     if-nez v2, :cond_0
 
-    .line 2
     iput-wide p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
-    .line 3
     iget p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     invoke-virtual {p0, p1}, Lmiuix/animation/physics/DynamicAnimation;->setPropertyValue(F)V
@@ -660,15 +592,12 @@
     :cond_0
     sub-long v0, p1, v0
 
-    .line 4
     iput-wide p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mLastFrameTime:J
 
-    .line 5
     invoke-virtual {p0, v0, v1}, Lmiuix/animation/physics/DynamicAnimation;->updateValueAndVelocity(J)Z
 
     move-result p1
 
-    .line 6
     iget p2, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
@@ -679,7 +608,6 @@
 
     iput p2, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
-    .line 7
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     invoke-static {p2, v0}, Ljava/lang/Math;->max(FF)F
@@ -688,12 +616,10 @@
 
     iput p2, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
-    .line 8
     invoke-virtual {p0, p2}, Lmiuix/animation/physics/DynamicAnimation;->setPropertyValue(F)V
 
     if-eqz p1, :cond_1
 
-    .line 9
     invoke-direct {p0, v3}, Lmiuix/animation/physics/DynamicAnimation;->endAnimationInternal(Z)V
 
     :cond_1
@@ -706,7 +632,6 @@
 .method public getMinimumVisibleChange()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     return v0
@@ -715,7 +640,6 @@
 .method public getValueThreshold()F
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     const/high16 v1, 0x3f400000    # 0.75f
@@ -731,7 +655,6 @@
 .method public isRunning()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
     return v0
@@ -740,7 +663,6 @@
 .method public removeEndListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationEndListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Lmiuix/animation/physics/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
@@ -751,7 +673,6 @@
 .method public removeUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Lmiuix/animation/physics/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
@@ -767,7 +688,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     return-object p0
@@ -781,7 +701,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     return-object p0
@@ -801,19 +720,16 @@
 
     if-lez v0, :cond_0
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinVisibleChange:F
 
     const/high16 v0, 0x3f400000    # 0.75f
 
     mul-float/2addr p1, v0
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/animation/physics/DynamicAnimation;->setValueThreshold(F)V
 
     return-object p0
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -827,7 +743,6 @@
 .method public setPropertyValue(F)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mProperty:Lmiuix/animation/property/FloatProperty;
 
     iget-object v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mTarget:Ljava/lang/Object;
@@ -836,7 +751,6 @@
 
     const/4 p1, 0x0
 
-    .line 2
     :goto_0
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
@@ -846,7 +760,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -855,7 +768,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -875,7 +787,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
 
@@ -895,7 +806,6 @@
 
     move-wide p1, v0
 
-    .line 1
     :cond_0
     iput-wide p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartDelay:J
 
@@ -910,12 +820,10 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
 
     return-object p0
@@ -929,7 +837,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     return-object p0
@@ -941,7 +848,6 @@
 .method public start()V
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -952,18 +858,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lmiuix/animation/physics/DynamicAnimation;->startAnimationInternal()V
 
     :cond_0
     return-void
 
-    .line 4
     :cond_1
     new-instance v0, Landroid/util/AndroidRuntimeException;
 

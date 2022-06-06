@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/Session;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
 .method public getSessionId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingSession;->mSessionId:Ljava/lang/String;
 
     return-object v0
@@ -31,7 +29,6 @@
 .method public setSessionId(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/streaming/StreamingSession;->mSessionId:Ljava/lang/String;
 
     return-void

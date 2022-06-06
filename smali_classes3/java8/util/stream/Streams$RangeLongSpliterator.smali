@@ -35,16 +35,12 @@
 .method public constructor <init>(JJI)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-wide p1, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
-    .line 4
     iput-wide p3, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->upTo:J
 
-    .line 5
     iput p5, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->last:I
 
     return-void
@@ -53,7 +49,6 @@
 .method public constructor <init>(JJZ)V
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p5}, Ljava8/util/stream/Streams$RangeLongSpliterator;-><init>(JJI)V
 
     return-void
@@ -75,7 +70,6 @@
     :cond_0
     const-wide/16 v0, 0x8
 
-    .line 1
     :goto_0
     div-long/2addr p1, v0
 
@@ -95,7 +89,6 @@
 .method public estimateSize()J
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->upTo:J
 
     iget-wide v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
@@ -114,7 +107,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/LongConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Streams$RangeLongSpliterator;->forEachRemaining(Ljava8/util/function/LongConsumer;)V
@@ -134,7 +126,6 @@
         }
     .end annotation
 
-    .line 10
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->forEachRemaining(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -143,24 +134,18 @@
 .method public forEachRemaining(Ljava8/util/function/LongConsumer;)V
     .locals 7
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-wide v0, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
-    .line 4
     iget-wide v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->upTo:J
 
-    .line 5
     iget v4, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->last:I
 
-    .line 6
     iput-wide v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
     const/4 v5, 0x0
 
-    .line 7
     iput v5, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->last:I
 
     :goto_0
@@ -172,7 +157,6 @@
 
     add-long/2addr v5, v0
 
-    .line 8
     invoke-interface {p1, v0, v1}, Ljava8/util/function/LongConsumer;->accept(J)V
 
     move-wide v0, v5
@@ -182,7 +166,6 @@
     :cond_0
     if-lez v4, :cond_1
 
-    .line 9
     invoke-interface {p1, v0, v1}, Ljava8/util/function/LongConsumer;->accept(J)V
 
     :cond_1
@@ -209,7 +192,6 @@
 .method public getExactSizeIfKnown()J
     .locals 2
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Spliterators;->getExactSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v0
@@ -220,7 +202,6 @@
 .method public hasCharacteristics(I)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/Spliterators;->hasCharacteristics(Ljava8/util/Spliterator;I)Z
 
     move-result p1
@@ -231,7 +212,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/LongConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/Streams$RangeLongSpliterator;->tryAdvance(Ljava8/util/function/LongConsumer;)Z
@@ -253,7 +233,6 @@
         }
     .end annotation
 
-    .line 10
     invoke-static {p0, p1}, Ljava8/util/Spliterators$OfLong;->tryAdvance(Ljava8/util/Spliterator$OfLong;Ljava8/util/function/Consumer;)Z
 
     move-result p1
@@ -264,13 +243,10 @@
 .method public tryAdvance(Ljava8/util/function/LongConsumer;)Z
     .locals 6
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-wide v0, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
-    .line 4
     iget-wide v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->upTo:J
 
     cmp-long v2, v0, v2
@@ -283,15 +259,12 @@
 
     add-long/2addr v4, v0
 
-    .line 5
     iput-wide v4, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
-    .line 6
     invoke-interface {p1, v0, v1}, Ljava8/util/function/LongConsumer;->accept(J)V
 
     return v3
 
-    .line 7
     :cond_0
     iget v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->last:I
 
@@ -299,10 +272,8 @@
 
     if-lez v2, :cond_1
 
-    .line 8
     iput v4, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->last:I
 
-    .line 9
     invoke-interface {p1, v0, v1}, Ljava8/util/function/LongConsumer;->accept(J)V
 
     return v3
@@ -314,7 +285,6 @@
 .method public trySplit()Ljava8/util/Spliterator$OfLong;
     .locals 8
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/Streams$RangeLongSpliterator;->estimateSize()J
 
     move-result-wide v0
@@ -329,13 +299,11 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v7, Ljava8/util/stream/Streams$RangeLongSpliterator;
 
     iget-wide v2, p0, Ljava8/util/stream/Streams$RangeLongSpliterator;->from:J
 
-    .line 5
     invoke-direct {p0, v0, v1}, Ljava8/util/stream/Streams$RangeLongSpliterator;->splitPoint(J)J
 
     move-result-wide v0
@@ -359,7 +327,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Streams$RangeLongSpliterator;->trySplit()Ljava8/util/Spliterator$OfLong;
 
     move-result-object v0
@@ -370,7 +337,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/Streams$RangeLongSpliterator;->trySplit()Ljava8/util/Spliterator$OfLong;
 
     move-result-object v0

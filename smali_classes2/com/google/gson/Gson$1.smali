@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/google/gson/Gson;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/google/gson/Gson$1;->this$0:Lcom/google/gson/Gson;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/google/gson/Gson$1;->this$0:Lcom/google/gson/Gson;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/Gson;->fromJson(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;

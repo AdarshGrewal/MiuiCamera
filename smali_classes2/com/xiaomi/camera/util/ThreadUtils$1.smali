@@ -25,7 +25,6 @@
 .method public constructor <init>(Ljava/lang/Thread;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/util/ThreadUtils$1;->val$thread:Ljava/lang/Thread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/util/ThreadUtils$1;->val$thread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->join()V

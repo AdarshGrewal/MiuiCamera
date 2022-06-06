@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/RenderManager;Lcom/android/camera/dualvideo/render/AuxRenderSource;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->this$0:Lcom/android/camera/dualvideo/render/RenderManager;
 
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->val$source:Lcom/android/camera/dualvideo/render/AuxRenderSource;
@@ -42,7 +41,6 @@
 .method public onImageUpdated(Lcom/android/camera/dualvideo/util/RenderSourceType;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->val$source:Lcom/android/camera/dualvideo/render/AuxRenderSource;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/AuxRenderSource;->canDraw()Z
@@ -51,7 +49,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->this$0:Lcom/android/camera/dualvideo/render/RenderManager;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/RenderManager;->access$000(Lcom/android/camera/dualvideo/render/RenderManager;)Lcom/android/camera/dualvideo/render/RenderManager$DualVideoRenderListener;
@@ -67,7 +64,6 @@
 .method public onNewStreamAvailable(Lcom/android/camera/dualvideo/util/RenderSourceType;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/render/RenderManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -88,7 +84,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->this$0:Lcom/android/camera/dualvideo/render/RenderManager;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/RenderManager;->isDrawBlur()Z
@@ -97,12 +92,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->this$0:Lcom/android/camera/dualvideo/render/RenderManager;
 
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/RenderManager;->updateTextureId()V
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RenderManager$2;->this$0:Lcom/android/camera/dualvideo/render/RenderManager;
 
     const/4 v0, 0x0

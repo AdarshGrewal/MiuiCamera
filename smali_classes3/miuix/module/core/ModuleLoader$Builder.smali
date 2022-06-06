@@ -48,27 +48,22 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Context;)V
     .locals 1
 
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mDependencies:Ljava/util/Set;
 
-    .line 8
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mClasses:Ljava/util/Map;
 
-    .line 9
     iput-object p1, p0, Lmiuix/module/core/ModuleLoader$Builder;->mBaseContext:Landroid/content/Context;
 
-    .line 10
     iput-object p2, p0, Lmiuix/module/core/ModuleLoader$Builder;->mModuleContext:Landroid/content/Context;
 
     return-void
@@ -77,27 +72,22 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mDependencies:Ljava/util/Set;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mClasses:Ljava/util/Map;
 
-    .line 4
     iput-object p1, p0, Lmiuix/module/core/ModuleLoader$Builder;->mBaseContext:Landroid/content/Context;
 
-    .line 5
     iput-object p2, p0, Lmiuix/module/core/ModuleLoader$Builder;->mPackageName:Ljava/lang/String;
 
     return-void
@@ -108,12 +98,10 @@
 .method public build()Lmiuix/module/core/ModuleLoader;
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mModuleContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mBaseContext:Landroid/content/Context;
 
@@ -132,7 +120,6 @@
     :catch_0
     move-exception v0
 
-    .line 3
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -143,7 +130,6 @@
     :goto_0
     move-object v5, v0
 
-    .line 4
     new-instance v0, Lmiuix/module/core/ModuleLoader;
 
     iget-object v3, p0, Lmiuix/module/core/ModuleLoader$Builder;->mBaseContext:Landroid/content/Context;
@@ -156,7 +142,6 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 5
     invoke-interface {v1, v2}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -187,7 +172,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mClasses:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -198,7 +182,6 @@
 .method public require(Ljava/lang/String;)Lmiuix/module/core/ModuleLoader$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/module/core/ModuleLoader$Builder;->mDependencies:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z

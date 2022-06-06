@@ -15,7 +15,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lokhttp3/internal/Util;->ISO_8859_1:Ljava/nio/charset/Charset;
 
     invoke-direct {p0, p1, p2, v0}, Lokhttp3/Challenge;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
@@ -26,7 +25,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_2
@@ -35,18 +33,14 @@
 
     if-eqz p3, :cond_0
 
-    .line 3
     iput-object p1, p0, Lokhttp3/Challenge;->scheme:Ljava/lang/String;
 
-    .line 4
     iput-object p2, p0, Lokhttp3/Challenge;->realm:Ljava/lang/String;
 
-    .line 5
     iput-object p3, p0, Lokhttp3/Challenge;->charset:Ljava/nio/charset/Charset;
 
     return-void
 
-    .line 6
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -56,7 +50,6 @@
 
     throw p1
 
-    .line 7
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -66,7 +59,6 @@
 
     throw p1
 
-    .line 8
     :cond_2
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -82,7 +74,6 @@
 .method public charset()Ljava/nio/charset/Charset;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Challenge;->charset:Ljava/nio/charset/Charset;
 
     return-object v0
@@ -95,7 +86,6 @@
         .end annotation
     .end param
 
-    .line 1
     instance-of v0, p1, Lokhttp3/Challenge;
 
     if-eqz v0, :cond_0
@@ -106,7 +96,6 @@
 
     iget-object v1, p0, Lokhttp3/Challenge;->scheme:Ljava/lang/String;
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -117,7 +106,6 @@
 
     iget-object v1, p0, Lokhttp3/Challenge;->realm:Ljava/lang/String;
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -128,7 +116,6 @@
 
     iget-object v0, p0, Lokhttp3/Challenge;->charset:Ljava/nio/charset/Charset;
 
-    .line 4
     invoke-virtual {p1, v0}, Ljava/nio/charset/Charset;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -149,7 +136,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Challenge;->realm:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -162,7 +148,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 2
     iget-object v0, p0, Lokhttp3/Challenge;->scheme:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -173,7 +158,6 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 3
     iget-object v0, p0, Lokhttp3/Challenge;->charset:Ljava/nio/charset/Charset;
 
     invoke-virtual {v0}, Ljava/nio/charset/Charset;->hashCode()I
@@ -188,7 +172,6 @@
 .method public realm()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Challenge;->realm:Ljava/lang/String;
 
     return-object v0
@@ -197,7 +180,6 @@
 .method public scheme()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Challenge;->scheme:Ljava/lang/String;
 
     return-object v0
@@ -206,7 +188,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,7 +226,6 @@
 .method public withCharset(Ljava/nio/charset/Charset;)Lokhttp3/Challenge;
     .locals 3
 
-    .line 1
     new-instance v0, Lokhttp3/Challenge;
 
     iget-object v1, p0, Lokhttp3/Challenge;->scheme:Ljava/lang/String;

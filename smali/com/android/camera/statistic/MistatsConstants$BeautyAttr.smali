@@ -17,17 +17,13 @@
 # static fields
 .field public static final BEAUTY_BLUSHER:Ljava/lang/String; = "attr_click_blusher"
 
-.field public static final BEAUTY_BODY_SLIM_RATIO:Ljava/lang/String; = "attr_click_body_slim_ratio"
-
 .field public static final BEAUTY_CHIN:Ljava/lang/String; = "attr_click_chin"
 
 .field public static final BEAUTY_ENLARGE_EYE:Ljava/lang/String; = "attr_click_enlarge_eye"
 
 .field public static final BEAUTY_EYEBROW_DYE:Ljava/lang/String; = "attr_click_eyebrow_dye"
 
-.field public static final BEAUTY_HEAD_SLIM_RATIO:Ljava/lang/String; = "attr_click_head_slim_ratio"
-
-.field public static final BEAUTY_LEG_SLIM_RATIO:Ljava/lang/String; = "attr_click_leg_slim_ratio"
+.field public static final BEAUTY_JELLY_LIPS:Ljava/lang/String; = "attr_click_jelly_lips"
 
 .field public static final BEAUTY_LEVEL:Ljava/lang/String; = "attr_beauty_level"
 
@@ -41,8 +37,6 @@
 
 .field public static final BEAUTY_RISORIUS:Ljava/lang/String; = "attr_click_risorius"
 
-.field public static final BEAUTY_SHOULDER_SLIM_RATIO:Ljava/lang/String; = "attr_click_shoulder_slim_ratio"
-
 .field public static final BEAUTY_SKIN_COLOR:Ljava/lang/String; = "attr_click_skin_color"
 
 .field public static final BEAUTY_SKIN_SMOOTH:Ljava/lang/String; = "attr_click_skin_smooth"
@@ -55,8 +49,6 @@
 
 .field public static final BEAUTY_TYPE_FACE:Ljava/lang/String; = "beauty_face"
 
-.field public static final BEAUTY_WHOLE_BODY_SLIM_RATIO:Ljava/lang/String; = "attr_click_whole_body_slim_ratio"
-
 .field public static final EYE_LIGHT:Ljava/lang/String; = "attr_click_eye_sparkle"
 
 .field public static final HAIRLINE:Ljava/lang/String; = "attr_click_hairline"
@@ -68,8 +60,6 @@
 .field public static final KEY_BEAUTY_FACE:Ljava/lang/String; = "key_beauty_face"
 
 .field public static final KEY_BEAUTY_OLD:Ljava/lang/String; = "key_beauty_old"
-
-.field public static final MAKEUP:Ljava/lang/String; = "attr_click_makeup"
 
 .field public static final MAKEUP_FEMALE_BLUE:Ljava/lang/String; = "attr_click_female_blue"
 
@@ -101,8 +91,6 @@
 
 .field public static final PARAM_BEAUTY_MAKEUP_SWITCH:Ljava/lang/String; = "attr_beauty_makeup_switch"
 
-.field public static final PARAM_BEAUTY_MODE:Ljava/lang/String; = "attr_beauty_mode"
-
 .field public static final PARAM_BEAUTY_NECK:Ljava/lang/String; = "attr_neck"
 
 .field public static final PARAM_BEAUTY_NOSE:Ljava/lang/String; = "attr_nose"
@@ -128,8 +116,6 @@
 .field public static final PARAM_EYE_LIGHT:Ljava/lang/String; = "attr_eye_sparkle"
 
 .field public static final PARAM_HAIRLINE:Ljava/lang/String; = "attr_hairline"
-
-.field public static final PARAM_MAKEUP:Ljava/lang/String; = "attr_makeup"
 
 .field public static final PARAM_MAKEUP_FEMALE_BLUE:Ljava/lang/String; = "attr_female_blue"
 
@@ -203,10 +189,6 @@
 
 .field public static final VALUE_BEAUTY_FACE_RESET:Ljava/lang/String; = "attr_click_beauty_face_reset"
 
-.field public static final VALUE_BEAUTY_MODE_FEMALE:Ljava/lang/String; = "attr_beauty_mode_female"
-
-.field public static final VALUE_BEAUTY_MODE_MALE:Ljava/lang/String; = "attr_beauty_mode_male"
-
 .field public static final VALUE_BEAUTY_SHOW_BOTTOM_BUTTON:Ljava/lang/String; = "attr_click_beauty_show_bottom_button"
 
 .field public static final VALUE_BEAUTY_TOP_BUTTON:Ljava/lang/String; = "attr_click_beauty_top_button"
@@ -214,8 +196,6 @@
 .field public static final VALUE_BEAUTY_V1_BOTTOM_TAB:Ljava/lang/String; = "beauty_v1_bottom_tab"
 
 .field public static final VALUE_BOKEH_BOTTOM_TAB:Ljava/lang/String; = "attr_click_bokeh_bottom_tab"
-
-.field public static final VALUE_FILTER_TOP_BUTTON:Ljava/lang/String; = "attr_click_filter_top_button"
 
 .field public static final VALUE_MAKEUP_BOTTOM_TAB:Ljava/lang/String; = "attr_click_makeup_bottom_tab"
 

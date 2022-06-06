@@ -23,35 +23,30 @@
 
     new-array v1, v0, [F
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_NO_ROTATION:[F
 
     new-array v1, v0, [F
 
-    .line 2
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_90:[F
 
     new-array v1, v0, [F
 
-    .line 3
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_180:[F
 
     new-array v1, v0, [F
 
-    .line 4
     fill-array-data v1, :array_3
 
     sput-object v1, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_270:[F
 
     new-array v0, v0, [F
 
-    .line 5
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/miui/filtersdk/utils/TextureRotationUtil;->CUBE:[F
@@ -122,7 +117,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -131,7 +125,6 @@
 .method public static adjustSize(IZZLjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)V
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lcom/miui/filtersdk/utils/Rotation;->fromInt(I)Lcom/miui/filtersdk/utils/Rotation;
 
     move-result-object p0
@@ -140,13 +133,10 @@
 
     move-result-object p0
 
-    .line 2
     sget-object p1, Lcom/miui/filtersdk/utils/TextureRotationUtil;->CUBE:[F
 
-    .line 3
     invoke-virtual {p3}, Ljava/nio/FloatBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 4
     invoke-virtual {p3, p1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     move-result-object p1
@@ -155,10 +145,8 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 5
     invoke-virtual {p4}, Ljava/nio/FloatBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 6
     invoke-virtual {p4, p0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     move-result-object p0
@@ -188,7 +176,6 @@
 .method public static getRotation(Lcom/miui/filtersdk/utils/Rotation;ZZ)[F
     .locals 10
 
-    .line 1
     sget-object v0, Lcom/miui/filtersdk/utils/TextureRotationUtil$1;->$SwitchMap$com$miui$filtersdk$utils$Rotation:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -209,24 +196,20 @@
 
     if-eq p0, v0, :cond_0
 
-    .line 2
     sget-object p0, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_NO_ROTATION:[F
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object p0, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_270:[F
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object p0, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_180:[F
 
     goto :goto_0
 
-    .line 5
     :cond_2
     sget-object p0, Lcom/miui/filtersdk/utils/TextureRotationUtil;->TEXTURE_ROTATED_90:[F
 
@@ -247,10 +230,8 @@
 
     new-array p1, v3, [F
 
-    .line 6
     aget v9, p0, v8
 
-    .line 7
     invoke-static {v9}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result v9
@@ -263,7 +244,6 @@
 
     aget v9, p0, v1
 
-    .line 8
     invoke-static {v9}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result v9
@@ -276,7 +256,6 @@
 
     aget v9, p0, v7
 
-    .line 9
     invoke-static {v9}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result v9
@@ -289,7 +268,6 @@
 
     aget v9, p0, v5
 
-    .line 10
     invoke-static {v9}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result v9
@@ -307,14 +285,12 @@
 
     new-array p1, v3, [F
 
-    .line 11
     aget p2, p0, v8
 
     aput p2, p1, v8
 
     aget p2, p0, v2
 
-    .line 12
     invoke-static {p2}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result p2
@@ -327,7 +303,6 @@
 
     aget p2, p0, v0
 
-    .line 13
     invoke-static {p2}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result p2
@@ -340,7 +315,6 @@
 
     aget p2, p0, v6
 
-    .line 14
     invoke-static {p2}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result p2
@@ -353,7 +327,6 @@
 
     aget p0, p0, v4
 
-    .line 15
     invoke-static {p0}, Lcom/miui/filtersdk/utils/TextureRotationUtil;->flip(F)F
 
     move-result p0

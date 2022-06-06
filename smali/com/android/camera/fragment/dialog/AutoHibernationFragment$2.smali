@@ -24,7 +24,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/AutoHibernationFragment;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$2;->this$0:Lcom/android/camera/fragment/dialog/AutoHibernationFragment;
 
     iput-object p2, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$2;->val$view:Landroid/view/View;
@@ -39,10 +38,8 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/AutoHibernationFragment$2;->val$view:Landroid/view/View;
 
     invoke-static {p1}, Lcom/android/camera/animation/FolmeUtils;->clean(Landroid/view/View;)V

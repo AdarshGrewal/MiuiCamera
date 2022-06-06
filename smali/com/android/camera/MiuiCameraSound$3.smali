@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/MiuiCameraSound;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/MiuiCameraSound$3;->this$0:Lcom/android/camera/MiuiCameraSound;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-nez p3, :cond_1
 
-    .line 1
     iget-object p3, p0, Lcom/android/camera/MiuiCameraSound$3;->this$0:Lcom/android/camera/MiuiCameraSound;
 
     invoke-static {p3}, Lcom/android/camera/MiuiCameraSound;->access$100(Lcom/android/camera/MiuiCameraSound;)I
@@ -63,17 +61,14 @@
 
     move v1, p2
 
-    .line 2
     invoke-virtual/range {v0 .. v6}, Landroid/media/SoundPool;->play(IFFIIF)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/MiuiCameraSound$3;->this$0:Lcom/android/camera/MiuiCameraSound;
 
     const/4 p3, -0x1
 
     invoke-static {p1, p3}, Lcom/android/camera/MiuiCameraSound;->access$102(Lcom/android/camera/MiuiCameraSound;I)I
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/MiuiCameraSound$3;->this$0:Lcom/android/camera/MiuiCameraSound;
 
@@ -89,7 +84,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 

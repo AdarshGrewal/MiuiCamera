@@ -55,21 +55,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/recyclerview/widget/LinearLayoutManager;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mContext:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070600
+    const v0, 0x7f0705fc
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -79,14 +75,13 @@
 
     iput p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLastItemWidth:I
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070601
+    const v0, 0x7f0705fd
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -94,7 +89,6 @@
 
     iput p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mEmptyViewWidth:I
 
-    .line 6
     invoke-static {p1}, Lcom/android/camera/Util;->getScreenWidth(Landroid/content/Context;)I
 
     move-result p2
@@ -107,12 +101,11 @@
 
     iput p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mSelectedWidth:I
 
-    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f070602
+    const p2, 0x7f0705fe
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -128,7 +121,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mItemCount:I
 
     add-int/lit8 v0, v0, 0x2
@@ -143,7 +135,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     iget v1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mItemCount:I
 
     add-int/2addr v1, v0
@@ -165,7 +156,6 @@
 .method public getRatio()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mRatio:F
 
     return v0
@@ -174,7 +164,6 @@
 .method public getTotalWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mTotalWidth:I
 
     return v0
@@ -192,12 +181,10 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mRatio:F
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -218,7 +205,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -230,7 +216,6 @@
 
     if-eq v0, v4, :cond_4
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/fragment/music/MusicFrameAdapter;->getItemCount()I
 
     move-result v4
@@ -243,7 +228,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v4, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -253,14 +237,12 @@
 
     if-nez v4, :cond_2
 
-    .line 6
     new-instance v0, Landroid/util/Pair;
 
     invoke-direct {v0, v3, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 
-    .line 7
     :cond_2
     invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
@@ -274,21 +256,18 @@
 
     if-lez v0, :cond_3
 
-    .line 8
     iget v3, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mEmptyViewWidth:I
 
     add-int/2addr v2, v3
 
     sub-int/2addr v0, v5
 
-    .line 9
     iget v3, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mItemWidth:I
 
     mul-int/2addr v0, v3
 
     add-int/2addr v2, v0
 
-    .line 10
     :cond_3
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mSelectedWidth:I
 
@@ -300,7 +279,6 @@
 
     const/4 v4, 0x0
 
-    .line 11
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -323,7 +301,6 @@
 
     invoke-static {v4, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     new-instance v3, Landroid/util/Pair;
 
     int-to-float v2, v2
@@ -358,7 +335,6 @@
 
     return-object v3
 
-    .line 13
     :cond_4
     :goto_0
     new-instance v0, Landroid/util/Pair;
@@ -371,17 +347,14 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p2}, Lcom/android/camera/fragment/music/MusicFrameAdapter;->getItemViewType(I)I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 2
     check-cast p1, Lcom/android/camera/fragment/music/MusicFrameAdapter$AudioFrameHolder;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/music/MusicFrameAdapter;->getItemCount()I
 
     move-result v0
@@ -400,7 +373,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/music/MusicFrameAdapter$AudioFrameHolder;->setWidth(I)V
 
-    .line 4
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mRatio:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -417,7 +389,6 @@
 
     if-ne p2, v0, :cond_3
 
-    .line 5
     iget p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLastItemWidth:I
 
     iget-object v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mContext:Landroid/content/Context;
@@ -426,7 +397,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070602
+    const v1, 0x7f0705fe
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -443,7 +414,6 @@
     :cond_1
     const/4 p2, 0x0
 
-    .line 6
     :goto_1
     invoke-virtual {p1, p2}, Lcom/android/camera/fragment/music/MusicFrameAdapter$AudioFrameHolder;->setWidth(I)V
 
@@ -454,14 +424,12 @@
 
     if-ne v0, p2, :cond_3
 
-    .line 7
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    .line 8
     iget p2, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mEmptyViewWidth:I
 
     iput p2, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
@@ -478,7 +446,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 1
     new-instance p2, Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -487,7 +454,6 @@
 
     invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 2
     new-instance p1, Landroid/view/ViewGroup$LayoutParams;
 
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mEmptyViewWidth:I
@@ -498,14 +464,12 @@
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3
     new-instance p1, Lcom/android/camera/fragment/music/MusicFrameAdapter$EmptyHolder;
 
     invoke-direct {p1, p0, p2}, Lcom/android/camera/fragment/music/MusicFrameAdapter$EmptyHolder;-><init>(Lcom/android/camera/fragment/music/MusicFrameAdapter;Landroid/view/View;)V
 
     return-object p1
 
-    .line 4
     :cond_0
     new-instance p2, Lcom/android/camera/fragment/music/MusicFrameAdapter$AudioFrameHolder;
 
@@ -519,14 +483,12 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mRatio:F
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mSelectedWidth:I
 
     int-to-float v0, v0
@@ -537,19 +499,16 @@
 
     iput p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mTotalWidth:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mItemWidth:I
 
     div-int v1, p1, v0
 
-    .line 4
     rem-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLastItemWidth:I
 
     if-nez p1, :cond_0
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mLastItemWidth:I
 
     goto :goto_0
@@ -557,11 +516,9 @@
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
-    .line 6
     :goto_0
     iput v1, p0, Lcom/android/camera/fragment/music/MusicFrameAdapter;->mItemCount:I
 
-    .line 7
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void

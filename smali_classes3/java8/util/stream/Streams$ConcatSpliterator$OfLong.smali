@@ -34,7 +34,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Ljava8/util/stream/Streams$ConcatSpliterator$OfPrimitive;-><init>(Ljava8/util/Spliterator$OfPrimitive;Ljava8/util/Spliterator$OfPrimitive;Ljava8/util/stream/Streams$1;)V
 
     return-void
@@ -45,7 +44,6 @@
 .method public bridge synthetic forEachRemaining(Ljava8/util/function/LongConsumer;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Streams$ConcatSpliterator$OfPrimitive;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
@@ -54,7 +52,6 @@
 .method public bridge synthetic tryAdvance(Ljava8/util/function/LongConsumer;)Z
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Streams$ConcatSpliterator$OfPrimitive;->tryAdvance(Ljava/lang/Object;)Z
 
     move-result p1
@@ -65,7 +62,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfLong;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/Streams$ConcatSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

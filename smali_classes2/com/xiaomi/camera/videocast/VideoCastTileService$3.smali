@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/VideoCastTileService;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastTileService$3;->this$0:Lcom/xiaomi/camera/videocast/VideoCastTileService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void

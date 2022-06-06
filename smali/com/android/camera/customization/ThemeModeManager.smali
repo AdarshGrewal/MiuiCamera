@@ -32,7 +32,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/customization/ThemeModeManager;
 
     invoke-direct {v0}, Lcom/android/camera/customization/ThemeModeManager;-><init>()V
@@ -45,15 +44,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/customization/ThemeModeManager;->mCurrentThemeMode:I
 
-    .line 3
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v0
@@ -68,7 +64,6 @@
 .method public static getInstance()Lcom/android/camera/customization/ThemeModeManager;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/customization/ThemeModeManager;->INSTANCE:Lcom/android/camera/customization/ThemeModeManager;
 
     return-object v0
@@ -79,22 +74,19 @@
 .method public getCurrentThemeMode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/ThemeModeManager;->mCurrentThemeMode:I
 
     return v0
 .end method
 
-.method public requestChangeTheme(Lcom/android/camera/customization/FlashHalo$ThemeConfiguration;)V
+.method public requestChangeTheme(IZZZ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/ThemeModeManager;->mListener:Lcom/android/camera/customization/ThemeModeManager$ThemeModeInterface;
 
     if-eqz v0, :cond_0
 
-    .line 2
-    invoke-interface {v0, p1}, Lcom/android/camera/customization/ThemeModeManager$ThemeModeInterface;->requestChangeTheme(Lcom/android/camera/customization/FlashHalo$ThemeConfiguration;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/camera/customization/ThemeModeManager$ThemeModeInterface;->requestChangeTheme(IZZZ)V
 
     :cond_0
     return-void
@@ -103,7 +95,6 @@
 .method public setThemeChangeListener(Lcom/android/camera/customization/ThemeModeManager$ThemeModeInterface;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/customization/ThemeModeManager;->mListener:Lcom/android/camera/customization/ThemeModeManager$ThemeModeInterface;
 
     return-void
@@ -112,7 +103,6 @@
 .method public setThemeMode(I)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/customization/ThemeModeManager;->mCurrentThemeMode:I
 
     if-eq v0, p1, :cond_1
@@ -121,7 +111,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v0
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
@@ -142,7 +130,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/customization/ThemeResource;->initTheme(Ljava/lang/String;)V
 
-    .line 4
     :goto_0
     iput p1, p0, Lcom/android/camera/customization/ThemeModeManager;->mCurrentThemeMode:I
 

@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Lcom/android/camera/protocol/ModeProtocol$Expandable;
-.implements Lcom/android/camera/protocol/ModeProtocol$MenuSwitch;
 
 
 # annotations
@@ -55,4 +54,7 @@
 .end method
 
 .method public abstract resetBeauty()V
+.end method
+
+.method public abstract switchShineType(Ljava/lang/String;Z)V
 .end method

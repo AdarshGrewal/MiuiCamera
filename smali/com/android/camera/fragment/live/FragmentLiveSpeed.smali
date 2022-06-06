@@ -46,14 +46,12 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->sSpeedItemList:Ljava/util/List;
 
-    .line 2
     sget-object v0, Lcom/android/camera/CameraSettings;->sLiveSpeedTextList:[I
 
     array-length v1, v0
@@ -65,7 +63,6 @@
 
     aget v3, v0, v2
 
-    .line 3
     sget-object v4, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->sSpeedItemList:Ljava/util/List;
 
     new-instance v5, Lcom/android/camera/fragment/live/FragmentLiveSpeed$LiveSpeedItem;
@@ -85,7 +82,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/live/FragmentLiveBase;-><init>()V
 
     return-void
@@ -94,7 +90,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object p0
@@ -103,7 +98,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mAdapter:Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;
 
     return-object p0
@@ -112,7 +106,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/live/FragmentLiveSpeed;)Lcom/android/camera/fragment/EffectItemAdapter$EffectItemPadding;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->effectItemPadding:Lcom/android/camera/fragment/EffectItemAdapter$EffectItemPadding;
 
     return-object p0
@@ -131,7 +124,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d008c
+    const v0, 0x7f0d0089
 
     return v0
 .end method
@@ -147,7 +140,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->sSpeedItemList:Ljava/util/List;
 
     return-object v0
@@ -156,23 +148,19 @@
 .method public initView(Landroid/view/View;)V
     .locals 5
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mRootView:Landroid/view/View;
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-static {p1}, Lcom/android/camera/Util;->isLayoutRTL(Landroid/content/Context;)Z
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mRootView:Landroid/view/View;
 
-    const v0, 0x7f0a0221
+    const v0, 0x7f0a022e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -184,15 +172,12 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/CameraSettings;->getCurrentLiveSpeed()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 7
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -203,7 +188,6 @@
 
     iput p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSelectIndex:I
 
-    .line 8
     new-instance p1, Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -224,12 +208,10 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mAdapter:Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;
 
-    .line 9
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
     invoke-virtual {p1, v1}, Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;->setRotation(I)V
 
-    .line 10
     new-instance p1, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -242,17 +224,14 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
-    .line 11
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 12
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 13
     new-instance p1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemPadding;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -263,12 +242,10 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->effectItemPadding:Lcom/android/camera/fragment/EffectItemAdapter$EffectItemPadding;
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 15
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -281,28 +258,22 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 16
     new-instance p1, Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     invoke-direct {p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;-><init>()V
 
     const-wide/16 v0, 0xfa
 
-    .line 17
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
 
-    .line 18
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setMoveDuration(J)V
 
-    .line 19
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setAddDuration(J)V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 21
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mAdapter:Lcom/android/camera/fragment/live/FragmentLiveSpeed$SpeedItemAdapter;
@@ -321,7 +292,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 1
     sget-object v2, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->sSpeedItemList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -330,14 +300,12 @@
 
     if-ge p1, v2, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
 
     sget-object v3, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->sSpeedItemList:Ljava/util/List;
 
-    .line 3
     invoke-interface {v3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -348,12 +316,10 @@
 
     move-result v3
 
-    .line 4
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -376,7 +342,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -392,23 +357,19 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :goto_0
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8
     invoke-static {v0}, Lcom/android/camera/CameraSettings;->setCurrentLiveSpeed(Ljava/lang/String;)V
 
-    .line 9
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
 
     const/16 v1, 0xe8
 
-    .line 10
     invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
@@ -417,7 +378,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$LiveSpeedChanges;->setRecordSpeed(I)V
 
     :cond_1
@@ -435,17 +395,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz p2, :cond_0
 
     const/4 p2, 0x0
 
-    .line 3
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -455,16 +412,14 @@
 
     if-ge p2, v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/live/FragmentLiveSpeed;->mSpeedListView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a01e0
+    const v1, 0x7f0a01ec
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0

@@ -23,10 +23,8 @@
 .method public constructor <init>(Lcom/android/camera/CameraSize;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Lcom/android/camera/CameraSize;
 
     invoke-direct {v0, p1}, Lcom/android/camera/CameraSize;-><init>(Lcom/android/camera/CameraSize;)V
@@ -35,7 +33,6 @@
 
     const/4 p1, 0x0
 
-    .line 4
     iput p1, p0, Lcom/android/camera2/CaptureStartParam;->mSatCameraId:I
 
     return-void
@@ -44,7 +41,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/CameraSize;Lcom/android/camera2/CaptureStartParam$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera2/CaptureStartParam;-><init>(Lcom/android/camera/CameraSize;)V
 
     return-void
@@ -53,7 +49,6 @@
 .method public static synthetic access$102(Lcom/android/camera2/CaptureStartParam;Lcom/android/camera/CameraSize;)Lcom/android/camera/CameraSize;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/CaptureStartParam;->mPictureSize:Lcom/android/camera/CameraSize;
 
     return-object p1
@@ -62,7 +57,6 @@
 .method public static synthetic access$202(Lcom/android/camera2/CaptureStartParam;Lcom/android/camera2/QuickViewParam;)Lcom/android/camera2/QuickViewParam;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/CaptureStartParam;->mQuickViewParam:Lcom/android/camera2/QuickViewParam;
 
     return-object p1
@@ -71,7 +65,6 @@
 .method public static synthetic access$302(Lcom/android/camera2/CaptureStartParam;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera2/CaptureStartParam;->mSatCameraId:I
 
     return p1
@@ -82,7 +75,6 @@
 .method public getPictureSize()Lcom/android/camera/CameraSize;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam;->mPictureSize:Lcom/android/camera/CameraSize;
 
     return-object v0
@@ -91,7 +83,6 @@
 .method public getQuickViewParam()Lcom/android/camera2/QuickViewParam;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/CaptureStartParam;->mQuickViewParam:Lcom/android/camera2/QuickViewParam;
 
     return-object v0
@@ -100,7 +91,6 @@
 .method public getSatCameraId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/CaptureStartParam;->mSatCameraId:I
 
     return v0

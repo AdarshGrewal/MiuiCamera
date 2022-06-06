@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static accept(Ljava8/util/stream/Sink$OfLong;Ljava/lang/Long;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0

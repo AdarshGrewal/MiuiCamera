@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView$DefaultWindowSurfaceFactory;-><init>()V
 
     return-void
@@ -52,7 +50,6 @@
 
     aput v1, v0, v2
 
-    .line 1
     invoke-static {p1, p2, p3, v0, v2}, Landroid/opengl/EGL14;->eglCreateWindowSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Ljava/lang/Object;[II)Landroid/opengl/EGLSurface;
 
     move-result-object p1
@@ -64,7 +61,6 @@
     :catch_0
     move-exception p1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/weight/GLTextureView;->access$300()Ljava/lang/String;
 
     move-result-object p2
@@ -82,7 +78,6 @@
 .method public destroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)V
     .locals 0
 
-    .line 1
     invoke-static {p1, p2}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
     return-void

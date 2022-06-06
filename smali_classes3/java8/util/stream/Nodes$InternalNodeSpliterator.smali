@@ -88,10 +88,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     return-void
@@ -110,7 +108,6 @@
 .method public final estimateSize()J
     .locals 5
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     const-wide/16 v1, 0x0
@@ -119,20 +116,17 @@
 
     return-wide v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->lastNodeSpliterator:Ljava8/util/Spliterator;
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-interface {v0}, Ljava8/util/Spliterator;->estimateSize()J
 
     move-result-wide v0
 
     return-wide v0
 
-    .line 4
     :cond_1
     iget v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curChildIndex:I
 
@@ -145,7 +139,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 5
     iget-object v3, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     invoke-interface {v3, v0}, Ljava8/util/stream/Node;->getChild(I)Ljava8/util/stream/Node;
@@ -176,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     :cond_0
     invoke-interface {p1}, Ljava/util/Deque;->pollFirst()Ljava/lang/Object;
 
@@ -186,14 +178,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 2
     invoke-interface {v0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 3
     invoke-interface {v0}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v1
@@ -206,7 +196,6 @@
 
     return-object v0
 
-    .line 4
     :cond_1
     invoke-interface {v0}, Ljava8/util/stream/Node;->getChildCount()I
 
@@ -217,7 +206,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 5
     invoke-interface {v0, v1}, Ljava8/util/stream/Node;->getChild(I)Ljava8/util/stream/Node;
 
     move-result-object v2
@@ -244,14 +232,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
 
-    .line 2
     iget-object v1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     invoke-interface {v1}, Ljava8/util/stream/Node;->getChildCount()I
@@ -265,7 +251,6 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 3
     iget-object v2, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     invoke-interface {v2, v1}, Ljava8/util/stream/Node;->getChild(I)Ljava8/util/stream/Node;
@@ -285,7 +270,6 @@
 .method public final initTryAdvance()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     const/4 v1, 0x0
@@ -294,32 +278,27 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->tryAdvanceSpliterator:Ljava8/util/Spliterator;
 
     if-nez v0, :cond_3
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->lastNodeSpliterator:Ljava8/util/Spliterator;
 
     if-nez v0, :cond_2
 
-    .line 4
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->initStack()Ljava/util/Deque;
 
     move-result-object v0
 
     iput-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->tryAdvanceStack:Ljava/util/Deque;
 
-    .line 5
     invoke-virtual {p0, v0}, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->findNextLeafNode(Ljava/util/Deque;)Ljava8/util/stream/Node;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-interface {v0}, Ljava8/util/stream/Node;->spliterator()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -331,12 +310,10 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 7
     iput-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     return v1
 
-    .line 8
     :cond_2
     iput-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->tryAdvanceSpliterator:Ljava8/util/Spliterator;
 
@@ -355,7 +332,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     if-eqz v0, :cond_4
@@ -366,20 +342,17 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->lastNodeSpliterator:Ljava8/util/Spliterator;
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {v1}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0
 
     return-object v0
 
-    .line 4
     :cond_1
     iget v1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curChildIndex:I
 
@@ -391,7 +364,6 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     iget v1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curChildIndex:I
@@ -410,7 +382,6 @@
 
     return-object v0
 
-    .line 6
     :cond_2
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
@@ -422,14 +393,12 @@
 
     iput-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
-    .line 7
     invoke-interface {v0}, Ljava8/util/stream/Node;->getChildCount()I
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     invoke-interface {v0}, Ljava8/util/stream/Node;->spliterator()Ljava8/util/Spliterator;
@@ -438,7 +407,6 @@
 
     iput-object v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->lastNodeSpliterator:Ljava8/util/Spliterator;
 
-    .line 9
     invoke-interface {v0}, Ljava8/util/Spliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -448,10 +416,8 @@
     :cond_3
     const/4 v0, 0x0
 
-    .line 10
     iput v0, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curChildIndex:I
 
-    .line 11
     iget-object v1, p0, Ljava8/util/stream/Nodes$InternalNodeSpliterator;->curNode:Ljava8/util/stream/Node;
 
     const/4 v2, 0x0

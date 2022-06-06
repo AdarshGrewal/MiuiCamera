@@ -83,12 +83,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 26
     invoke-direct {p0}, Lcom/android/camera/effect/draw_mode/DrawAttribute;-><init>()V
 
     const/16 v0, 0xb
 
-    .line 27
     iput v0, p0, Lcom/android/camera/effect/draw_mode/DrawAttribute;->mTarget:I
 
     return-void
@@ -119,125 +117,100 @@
 
     move-object v0, p0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/effect/draw_mode/DrawAttribute;-><init>()V
 
     move-object v1, p1
 
-    .line 2
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mImage:Landroid/media/Image;
 
     move-object v1, p2
 
-    .line 3
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mPreviewSize:Landroid/util/Size;
 
     move-object v1, p3
 
-    .line 4
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mPictureSize:Landroid/util/Size;
 
     move v1, p4
 
-    .line 5
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mEffectIndex:I
 
     move v1, p5
 
-    .line 6
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mOrientation:I
 
     move v1, p6
 
-    .line 7
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mJpegRotation:I
 
     move v1, p7
 
-    .line 8
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mShootRotation:F
 
     move-wide v1, p8
 
-    .line 9
     iput-wide v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mDate:J
 
     move v1, p10
 
-    .line 10
     iput-boolean v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mMirror:Z
 
     move v1, p11
 
-    .line 11
     iput-boolean v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mApplyWaterMark:Z
 
     move v1, p12
 
-    .line 12
     iput-boolean v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mIsHeif:Z
 
     move-object/from16 v1, p13
 
-    .line 13
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mTiltShiftMode:Ljava/lang/String;
 
     move-object/from16 v1, p14
 
-    .line 14
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mTimeWatermark:Ljava/lang/String;
 
     move/from16 v1, p15
 
-    .line 15
     iput-boolean v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mHasDualWaterMark:Z
 
     move/from16 v1, p16
 
-    .line 16
     iput-boolean v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mHasFrontWaterMark:Z
 
     move-object/from16 v1, p17
 
-    .line 17
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mDeviceWatermarkParam:Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     move-object/from16 v1, p18
 
-    .line 18
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mAttribute:Lcom/android/camera/effect/EffectController$EffectRectAttribute;
 
     const/16 v1, 0xb
 
-    .line 19
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawAttribute;->mTarget:I
 
     move-object/from16 v1, p19
 
-    .line 20
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mWaterInfos:Ljava/util/List;
 
     const/4 v1, 0x0
 
-    .line 21
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mDataOfTheRegionUnderWatermarks:[B
 
-    .line 22
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mCoordinatesOfTheRegionUnderWatermarks:[I
 
     const/16 v1, 0x61
 
-    .line 23
     iput v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mJpegQuality:I
 
     move-object/from16 v1, p20
 
-    .line 24
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mMajorAIWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-object/from16 v1, p21
 
-    .line 25
     iput-object v1, v0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mMinorAIWatermarkItem:Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     return-void
@@ -248,13 +221,10 @@
 .method public init(Lcom/android/camera/effect/MiYuvImage;Landroid/util/Size;)Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mYuvImage:Lcom/android/camera/effect/MiYuvImage;
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mPreviewSize:Landroid/util/Size;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mPictureSize:Landroid/util/Size;
 
     return-object p0
@@ -263,7 +233,6 @@
 .method public isOutputSquare()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mOutputSize:Landroid/util/Size;
 
     if-eqz v0, :cond_0
@@ -294,10 +263,8 @@
 .method public updatePosition(II)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mX:I
 
-    .line 2
     iput p2, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mY:I
 
     return-void
@@ -306,7 +273,6 @@
 .method public updateZoom([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/effect/draw_mode/DrawYuvAttribute;->mTransform:[F
 
     return-void

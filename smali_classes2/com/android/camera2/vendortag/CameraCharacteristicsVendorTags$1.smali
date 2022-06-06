@@ -32,7 +32,6 @@
 .method public constructor <init>(Ljava/lang/Class;Ljava/util/function/Supplier;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/vendortag/CameraCharacteristicsVendorTags$1;->val$klass:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/android/camera2/vendortag/CameraCharacteristicsVendorTags$1;->val$nameSupplier:Ljava/util/function/Supplier;
@@ -54,7 +53,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/vendortag/CameraCharacteristicsVendorTags$1;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -71,7 +69,6 @@
 .method public bridge synthetic create()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/vendortag/CameraCharacteristicsVendorTags$1;->create()Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     move-result-object v0
@@ -82,7 +79,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/vendortag/CameraCharacteristicsVendorTags$1;->val$nameSupplier:Ljava/util/function/Supplier;
 
     invoke-interface {v0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;

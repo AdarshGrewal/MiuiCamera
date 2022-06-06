@@ -12,7 +12,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 
     const/16 v0, 0x1000
 
-    .line 7
     invoke-static {p0, p1, v0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/InputStream;Ljava/io/OutputStream;I)J
 
     move-result-wide p0
@@ -44,7 +42,6 @@
         }
     .end annotation
 
-    .line 8
     new-array p2, p2, [B
 
     const-wide/16 v0, 0x0
@@ -52,7 +49,6 @@
     :goto_0
     const/4 v2, -0x1
 
-    .line 9
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
@@ -61,7 +57,6 @@
 
     const/4 v2, 0x0
 
-    .line 10
     invoke-virtual {p1, p2, v2, v3}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v2, v3
@@ -79,7 +74,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 6
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -93,7 +87,6 @@
 .method public static a(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 4
     invoke-static {p0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -102,7 +95,6 @@
 .method public static a(Ljava/io/OutputStream;)V
     .locals 0
 
-    .line 5
     invoke-static {p0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -111,7 +103,6 @@
 .method public static a(Ljava/io/Reader;)V
     .locals 0
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -120,7 +111,6 @@
 .method public static a(Ljava/io/Writer;)V
     .locals 0
 
-    .line 3
     invoke-static {p0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/Closeable;)V
 
     return-void
@@ -131,7 +121,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
 
     :cond_0
@@ -146,15 +135,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 2
     invoke-static {p0, v0}, Lcom/xiaomi/stat/d/j;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;Lcom/xiaomi/asr/engine/ReEnrollmentAction$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;-><init>(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
 
     return-void
@@ -45,7 +43,6 @@
 .method private logText(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,10 +73,8 @@
 
     const-string v1, "Aborted re-enroll with backup audio"
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$200(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)I
@@ -90,19 +85,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     const/4 v1, 0x4
 
     invoke-static {v0, v1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$202(Lcom/xiaomi/asr/engine/ReEnrollmentAction;I)I
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/asr/engine/W2VPEngine;->release()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -114,7 +106,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$800(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
@@ -137,10 +128,8 @@
 
     const-string v1, "Committed re-enroll with backup audio"
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$200(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)I
@@ -151,7 +140,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$100(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Lcom/xiaomi/asr/engine/ReEnrollmentAction$ReEnrollmentActionListener;
@@ -170,7 +158,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -182,7 +169,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$100(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Lcom/xiaomi/asr/engine/ReEnrollmentAction$ReEnrollmentActionListener;
@@ -199,7 +185,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$ReEnrollmentActionListener;->onAudioQualityChecked(Ljava/lang/String;Z)V
 
-    .line 6
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
@@ -216,7 +201,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$800(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)V
@@ -251,7 +235,6 @@
 .method public onEnrollAudioBufferAvailable([BZ)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -276,7 +259,6 @@
 
     invoke-direct {p0, p2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 2
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,16 +295,13 @@
 
     move-result-object p2
 
-    .line 3
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -332,7 +311,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -346,12 +324,10 @@
 
     const-string p3, "Finshed re-enroll with backup audio"
 
-    .line 1
     invoke-static {p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_1
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$000(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/util/List;
@@ -364,7 +340,6 @@
 
     if-lez p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$600(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/lang/Runnable;
@@ -375,13 +350,11 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/xiaomi/asr/engine/W2VPEngine;->commitEnrollment()V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {}, Lcom/xiaomi/asr/engine/W2VPEngine;->abortEnrollment()V
 
@@ -392,7 +365,6 @@
 .method public onGenerateModel(ZLjava/lang/String;)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -415,7 +387,6 @@
 
     invoke-direct {p0, v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0, p1, p2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$300(Lcom/xiaomi/asr/engine/ReEnrollmentAction;ZLjava/lang/String;)V
@@ -428,12 +399,10 @@
 
     const-string v0, "onGrammarUpdated"
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$000(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/util/List;
@@ -442,7 +411,6 @@
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$000(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/util/List;
@@ -457,7 +425,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$600(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/lang/Runnable;
@@ -468,7 +435,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -489,12 +455,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/W2VPEngine;->version()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -507,12 +471,10 @@
 
     const-string v1, " "
 
-    .line 3
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -535,7 +497,6 @@
 
     invoke-direct {p0, v4}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 5
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -556,7 +517,6 @@
 
     invoke-direct {p0, v4}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 6
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -577,7 +537,6 @@
 
     invoke-direct {p0, v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -591,7 +550,6 @@
 
     invoke-interface {v0, p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$ReEnrollmentActionListener;->onEngineVersionChecked(Ljava/lang/String;)V
 
-    .line 8
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$200(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)I
@@ -600,7 +558,6 @@
 
     if-ne p1, v3, :cond_1
 
-    .line 9
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     const/4 v0, 0x3
@@ -609,7 +566,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -621,21 +577,18 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 11
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     const/4 v0, 0x6
 
     invoke-static {p1, v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$202(Lcom/xiaomi/asr/engine/ReEnrollmentAction;I)I
 
-    .line 12
     :cond_2
     :goto_0
     invoke-virtual {p0, v2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->onGrammarUpdated(Z)V
 
     goto :goto_1
 
-    .line 13
     :cond_3
     iget-object p1, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -658,10 +611,8 @@
 
     const-string v0, "onRelease"
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->logText(Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -686,7 +637,6 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$200(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)I
@@ -699,14 +649,12 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     const/4 v2, 0x2
 
     invoke-static {v0, v2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$202(Lcom/xiaomi/asr/engine/ReEnrollmentAction;I)I
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$400(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/lang/String;
@@ -717,7 +665,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
@@ -729,14 +676,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     const/4 v2, 0x5
 
     invoke-static {v0, v2}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$202(Lcom/xiaomi/asr/engine/ReEnrollmentAction;I)I
 
-    .line 8
     iget-object v0, p0, Lcom/xiaomi/asr/engine/ReEnrollmentAction$WVPCallback;->this$0:Lcom/xiaomi/asr/engine/ReEnrollmentAction;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/ReEnrollmentAction;->access$400(Lcom/xiaomi/asr/engine/ReEnrollmentAction;)Ljava/lang/String;

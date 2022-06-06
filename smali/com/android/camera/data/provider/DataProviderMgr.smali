@@ -19,10 +19,8 @@
 .method public constructor <init>(Lcom/android/camera/data/backup/DataBackUp;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/data/provider/DataProviderMgr$DataProviderImpl;
 
     invoke-direct {v0, p1}, Lcom/android/camera/data/provider/DataProviderMgr$DataProviderImpl;-><init>(Lcom/android/camera/data/backup/DataBackUp;)V
@@ -37,7 +35,6 @@
 .method public provider()Lcom/android/camera/data/provider/DataProvider;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/provider/DataProviderMgr;->mDataProvider:Lcom/android/camera/data/provider/DataProvider;
 
     return-object v0

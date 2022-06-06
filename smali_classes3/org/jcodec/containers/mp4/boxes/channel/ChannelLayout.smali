@@ -125,14 +125,12 @@
 .method public static constructor <clinit>()V
     .locals 12
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->_values:Ljava/util/List;
 
-    .line 2
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v1, 0x0
@@ -143,7 +141,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_UseChannelDescriptions:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 3
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v2, v1, [Lorg/jcodec/common/model/Label;
@@ -154,7 +151,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_UseChannelBitmap:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 4
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v2, 0x1
@@ -171,7 +167,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Mono:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 5
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v3, 0x2
@@ -192,7 +187,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Stereo:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 6
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v4, v3, [Lorg/jcodec/common/model/Label;
@@ -211,7 +205,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_StereoHeadphones:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 7
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v4, v3, [Lorg/jcodec/common/model/Label;
@@ -230,7 +223,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MatrixStereo:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 8
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v4, v3, [Lorg/jcodec/common/model/Label;
@@ -249,7 +241,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MidSide:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 9
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v4, v3, [Lorg/jcodec/common/model/Label;
@@ -268,7 +259,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_XY:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 10
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v4, v3, [Lorg/jcodec/common/model/Label;
@@ -287,7 +277,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Binaural:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 11
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v4, 0x4
@@ -318,7 +307,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Ambisonic_B_Format:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 12
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v5, v4, [Lorg/jcodec/common/model/Label;
@@ -345,7 +333,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Quadraphonic:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 13
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v5, 0x5
@@ -378,7 +365,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Pentagonal:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 14
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/4 v6, 0x6
@@ -415,7 +401,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Hexagonal:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 15
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/16 v8, 0x8
@@ -462,7 +447,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Octagonal:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 16
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -505,7 +489,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Cube:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 17
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v7, [Lorg/jcodec/common/model/Label;
@@ -528,7 +511,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_3_0_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 18
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v7, [Lorg/jcodec/common/model/Label;
@@ -551,7 +533,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_3_0_B:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 19
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v4, [Lorg/jcodec/common/model/Label;
@@ -578,7 +559,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_4_0_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 20
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v4, [Lorg/jcodec/common/model/Label;
@@ -605,7 +585,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_4_0_B:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 21
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -636,7 +615,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_0_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 22
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -667,7 +645,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_0_B:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 23
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -698,7 +675,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_0_C:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 24
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -729,7 +705,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_0_D:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 25
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -764,7 +739,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_1_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 26
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -799,7 +773,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_1_B:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 27
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -834,7 +807,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_1_C:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 28
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -869,7 +841,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_5_1_D:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 29
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v11, [Lorg/jcodec/common/model/Label;
@@ -908,7 +879,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_6_1_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 30
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -951,7 +921,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_7_1_A:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 31
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -994,7 +963,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_7_1_B:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 32
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -1037,7 +1005,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_MPEG_7_1_C:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 33
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -1080,7 +1047,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_Emagic_Default_7_1:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 34
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -1123,7 +1089,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_SMPTE_DTV:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 35
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v7, [Lorg/jcodec/common/model/Label;
@@ -1146,7 +1111,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_ITU_2_1:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 36
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v4, [Lorg/jcodec/common/model/Label;
@@ -1173,7 +1137,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_ITU_2_2:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 37
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v7, [Lorg/jcodec/common/model/Label;
@@ -1196,7 +1159,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_4:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 38
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v4, [Lorg/jcodec/common/model/Label;
@@ -1223,7 +1185,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_5:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 39
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -1254,7 +1215,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_6:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 40
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v4, [Lorg/jcodec/common/model/Label;
@@ -1281,7 +1241,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_10:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 41
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -1312,7 +1271,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_11:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 42
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v5, [Lorg/jcodec/common/model/Label;
@@ -1343,7 +1301,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_DVD_18:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 43
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -1378,7 +1335,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AudioUnit_6_0:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 44
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v11, [Lorg/jcodec/common/model/Label;
@@ -1417,7 +1373,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AudioUnit_7_0:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 45
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v6, [Lorg/jcodec/common/model/Label;
@@ -1452,7 +1407,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AAC_6_0:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 46
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v11, [Lorg/jcodec/common/model/Label;
@@ -1491,7 +1445,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AAC_6_1:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 47
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v11, [Lorg/jcodec/common/model/Label;
@@ -1530,7 +1483,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AAC_7_0:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 48
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v9, v8, [Lorg/jcodec/common/model/Label;
@@ -1573,7 +1525,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_AAC_Octagonal:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 49
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     const/16 v9, 0x10
@@ -1652,7 +1603,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_TMH_10_2_std:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 50
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v5, v5, [Lorg/jcodec/common/model/Label;
@@ -1679,7 +1629,6 @@
 
     sput-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->kCAFChannelLayoutTag_TMH_10_2_full:Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
-    .line 51
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
 
     new-array v1, v1, [Lorg/jcodec/common/model/Label;
@@ -1696,16 +1645,12 @@
 .method public constructor <init>(I[Lorg/jcodec/common/model/Label;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->code:I
 
-    .line 3
     iput-object p2, p0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->labels:[Lorg/jcodec/common/model/Label;
 
-    .line 4
     sget-object p1, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->_values:Ljava/util/List;
 
     invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1716,7 +1661,6 @@
 .method public static values()[Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;
     .locals 2
 
-    .line 1
     sget-object v0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->_values:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -1737,7 +1681,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->code:I
 
     return v0
@@ -1746,7 +1689,6 @@
 .method public getLabels()[Lorg/jcodec/common/model/Label;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/channel/ChannelLayout;->labels:[Lorg/jcodec/common/model/Label;
 
     return-object v0

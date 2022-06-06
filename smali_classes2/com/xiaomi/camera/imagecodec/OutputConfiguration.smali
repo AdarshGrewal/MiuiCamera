@@ -30,7 +30,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration$1;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/OutputConfiguration$1;-><init>()V
@@ -43,16 +42,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
-    .line 3
     iput p2, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mHeight:I
 
-    .line 4
     iput p3, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mFormat:I
 
     return-void
@@ -61,24 +56,20 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
-    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mHeight:I
 
-    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -107,7 +98,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     instance-of v1, p1, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;
 
@@ -117,11 +107,9 @@
 
     return v2
 
-    .line 2
     :cond_1
     check-cast p1, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;
 
-    .line 3
     iget v1, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
     iget v3, p1, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
@@ -152,7 +140,6 @@
 .method public getFormat()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mFormat:I
 
     return v0
@@ -161,7 +148,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mHeight:I
 
     return v0
@@ -170,7 +156,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
     return v0
@@ -183,7 +168,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     iget v1, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
     const/4 v2, 0x0
@@ -212,7 +196,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x3
@@ -221,7 +204,6 @@
 
     iget v2, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -252,7 +234,6 @@
 
     const-string v2, "OutputConfiguration(w:%d, h:%d, format:%d)"
 
-    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -263,17 +244,14 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mWidth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mHeight:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/OutputConfiguration;->mFormat:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

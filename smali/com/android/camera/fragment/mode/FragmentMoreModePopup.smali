@@ -35,20 +35,16 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;-><init>()V
 
     const/16 v0, 0xff
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
     const/4 v0, 0x0
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mNeedBgAlphaAnimation:Z
 
-    .line 4
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -61,7 +57,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;)Landroid/graphics/drawable/GradientDrawable;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     return-object p0
@@ -70,7 +65,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
     return p0
@@ -79,8 +73,7 @@
 .method private isFullScreen()Z
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v0
 
@@ -90,7 +83,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -116,8 +108,7 @@
 .method private needBgAlphaAnimation()Z
     .locals 3
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->needAlphaAnimation4PopMore()Z
+    invoke-static {}, Lcom/android/camera/Display;->needAlphaAnimation4PopMore()Z
 
     move-result v0
 
@@ -125,7 +116,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -138,7 +128,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -151,7 +140,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -175,19 +163,17 @@
 .method private updateLayout(Landroid/view/View;Z)V
     .locals 8
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0705c0
+    const v1, 0x7f0705bc
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v0
 
-    .line 2
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v1
 
@@ -197,18 +183,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
-    .line 4
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getCenterDisplayWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getCenterDisplayWidth()I
 
     move-result v4
 
@@ -216,7 +199,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0705ba
+    const v6, 0x7f0705b7
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -228,18 +211,16 @@
 
     iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f0705ae
+    const v5, 0x7f0705ab
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v4
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getComponentModuleList()Lcom/android/camera/data/data/global/ComponentModuleList;
 
     move-result-object v6
@@ -258,7 +239,6 @@
 
     mul-int/2addr v4, v6
 
-    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -267,12 +247,11 @@
 
     move-result v5
 
-    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x7f0705b4
+    const v7, 0x7f0705b1
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -288,13 +267,10 @@
 
     iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 10
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
-    .line 12
     invoke-virtual {v1, v3}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -305,24 +281,19 @@
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 13
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 14
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
     const/16 v0, 0x31
 
-    .line 15
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     goto :goto_0
 
-    .line 16
     :cond_0
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
-    .line 17
     invoke-virtual {v1, v3}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -333,19 +304,16 @@
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 18
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 19
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/camera/display/Display;->getNavigationBarHeight(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/android/camera/Display;->getNavigationBarHeight(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 20
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v3
@@ -360,16 +328,13 @@
 
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 21
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 22
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    .line 23
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object p1
@@ -385,7 +350,6 @@
 .method public catchDrag(II)Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -394,7 +358,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
@@ -402,26 +365,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getVisibility()I
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mListArea:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mListArea:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result p1
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -449,7 +408,6 @@
 .method public createLayoutManager(Landroid/content/Context;)Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
     .locals 4
 
-    .line 1
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getCountPerLine()I
@@ -468,7 +426,6 @@
 .method public createModeItemDecoration(Landroid/content/Context;Lcom/android/camera/fragment/mode/IMoreMode;)Lcom/android/camera/fragment/mode/ModeItemDecoration;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/mode/ModeItemDecoration;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getType()I
@@ -485,8 +442,7 @@
 
     const/4 v0, 0x0
 
-    .line 1
-    invoke-static {v0, v0}, Lcom/android/camera/display/Display;->getMoreModeTabCol(ZZ)I
+    invoke-static {v0, v0}, Lcom/android/camera/Display;->getMoreModeTabCol(ZZ)I
 
     move-result v0
 
@@ -504,7 +460,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d00a8
+    const v0, 0x7f0d00a6
 
     return v0
 .end method
@@ -512,9 +468,8 @@
 .method public getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    const v0, 0x7f0a02ac
+    const v0, 0x7f0a02bc
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -532,27 +487,26 @@
     return v0
 .end method
 
-.method public hide()V
+.method public hide()Z
     .locals 1
 
     const/4 v0, 0x5
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->onBackEvent(I)Z
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
 .method public initView(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->initView(Landroid/view/View;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0a02ab
+    const v1, 0x7f0a02bb
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -562,9 +516,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a012a
+    const v1, 0x7f0a0130
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -573,8 +526,7 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBar:Lcom/android/camera/ui/DragLayoutBar;
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v1
 
@@ -584,10 +536,8 @@
 
     const/4 v0, 0x0
 
-    .line 5
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->updateLayout(Landroid/view/View;Z)V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
@@ -612,7 +562,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object p1
@@ -621,32 +570,28 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->updateLayout(Landroid/view/View;Z)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object p2
 
-    const p3, 0x7f060303
+    const p3, 0x7f060301
 
     invoke-virtual {p2, p3}, Lcom/android/camera/customization/ThemeResource;->getColor(I)I
 
@@ -654,13 +599,11 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 6
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBar:Lcom/android/camera/ui/DragLayoutBar;
 
     if-eqz p1, :cond_2
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/ui/DragLayoutBar;->updateBgColor()V
 
     :cond_2
@@ -674,7 +617,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mDownloadingFeature:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -683,14 +625,12 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mDownloadingFeature:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->tryCancelDownload(Ljava/lang/String;Z)V
 
     return v0
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -706,14 +646,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$MoreModePopupController;->isExpanded()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$MoreModePopupController;->shrink(Z)Z
 
     move-result p1
@@ -729,18 +667,16 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a029c
+    const v1, 0x7f0a02ad
 
     if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
 
@@ -750,7 +686,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
@@ -763,7 +698,6 @@
 
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
@@ -780,7 +714,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->onClick(Landroid/view/View;)V
 
@@ -792,7 +725,6 @@
 .method public onDragDone(Z)V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -811,7 +743,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     if-eqz v0, :cond_4
@@ -822,7 +753,6 @@
 
     goto :goto_1
 
-    .line 3
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
@@ -834,7 +764,6 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 4
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     goto :goto_0
@@ -842,22 +771,18 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 5
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     const/16 p1, 0x8
 
-    .line 6
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 7
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 8
     :cond_2
     :goto_0
     iget-boolean p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
@@ -866,7 +791,6 @@
 
     const-string p1, "damn, check this flag."
 
-    .line 9
     invoke-static {v1, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
@@ -874,7 +798,6 @@
     :cond_3
     const/4 p1, 0x0
 
-    .line 10
     iput-boolean p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
 
     :cond_4
@@ -885,7 +808,6 @@
 .method public onDragProgress(IZ)V
     .locals 6
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
 
     const/4 v1, 0x0
@@ -896,7 +818,6 @@
 
     int-to-float p2, p1
 
-    .line 2
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v0
@@ -911,7 +832,6 @@
 
     if-gez p2, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object p1
@@ -931,7 +851,6 @@
 
     move p1, v1
 
-    .line 4
     :cond_1
     :goto_0
     iget-object p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
@@ -940,12 +859,10 @@
 
     if-eqz p2, :cond_4
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mRadiusArrays:[F
 
     if-eqz p2, :cond_3
 
-    .line 6
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object p2
@@ -960,7 +877,6 @@
 
     float-to-int p2, p2
 
-    .line 7
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -969,7 +885,6 @@
 
     add-int v2, p1, p2
 
-    .line 8
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -980,12 +895,10 @@
 
     div-float/2addr v2, p2
 
-    .line 9
     invoke-static {v0, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result p2
 
-    .line 10
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v2
@@ -1008,7 +921,6 @@
 
     float-to-int p2, v2
 
-    .line 11
     iget-object v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mRadiusArrays:[F
 
     const/4 v3, 0x1
@@ -1027,7 +939,6 @@
 
     aput p2, v2, v1
 
-    .line 12
     :cond_2
     iget-object p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
@@ -1035,13 +946,11 @@
 
     invoke-virtual {p2, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
 
-    .line 13
     :cond_3
     iget-boolean p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mNeedBgAlphaAnimation:Z
 
     if-eqz p2, :cond_4
 
-    .line 14
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object p2
@@ -1060,7 +969,6 @@
 
     move-result p2
 
-    .line 15
     iget v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
     int-to-float v1, v1
@@ -1083,12 +991,10 @@
 
     float-to-int p2, v1
 
-    .line 16
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v1, p2}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 17
     :cond_4
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
@@ -1110,7 +1016,6 @@
 
     int-to-float p1, p1
 
-    .line 18
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object p2
@@ -1125,12 +1030,10 @@
 
     move-result p1
 
-    .line 19
     iget-object p2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     if-eqz p2, :cond_5
 
-    .line 20
     invoke-virtual {p0, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p2
@@ -1168,7 +1071,6 @@
 .method public onDragStart(Z)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     if-eqz v0, :cond_b
@@ -1179,7 +1081,6 @@
 
     goto/16 :goto_4
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
@@ -1191,12 +1092,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0800d2
+    const v1, 0x7f0800d4
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1206,25 +1106,22 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 4
     invoke-virtual {v0}, Landroid/graphics/drawable/GradientDrawable;->getCornerRadii()[F
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mRadiusArrays:[F
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v1
 
-    const v2, 0x7f060303
+    const v2, 0x7f060301
 
     invoke-virtual {v1, v2}, Lcom/android/camera/customization/ThemeResource;->getColor(I)I
 
@@ -1232,27 +1129,23 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBar:Lcom/android/camera/ui/DragLayoutBar;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/DragLayoutBar;->updateBgColor()V
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 9
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->needBgAlphaAnimation()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mNeedBgAlphaAnimation:Z
 
-    .line 10
     invoke-direct {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->isFullScreen()Z
 
     move-result v0
@@ -1273,10 +1166,8 @@
 
     const/16 v0, 0x99
 
-    .line 11
     iput v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
-    .line 12
     iget-object v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz p1, :cond_3
@@ -1291,24 +1182,20 @@
     :cond_4
     const/16 v0, 0xff
 
-    .line 13
     iput v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
-    .line 14
     iget-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mNeedBgAlphaAnimation:Z
 
     if-eqz v0, :cond_5
 
     if-eqz p1, :cond_5
 
-    .line 15
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
     goto :goto_0
 
-    .line 16
     :cond_5
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
@@ -1316,7 +1203,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 17
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
@@ -1324,7 +1210,6 @@
 
     move-result-object v0
 
-    .line 18
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v2
@@ -1339,7 +1224,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 19
     iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->getAnimationComposite()Lcom/android/camera/animation/AnimationComposite;
@@ -1352,17 +1236,14 @@
 
     if-eq v3, v4, :cond_7
 
-    .line 20
     iget-boolean v3, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mIsSupportOrientation:Z
 
     if-eqz v3, :cond_6
 
-    .line 21
     iput v1, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
     goto :goto_1
 
-    .line 22
     :cond_6
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->getAnimationComposite()Lcom/android/camera/animation/AnimationComposite;
 
@@ -1379,7 +1260,6 @@
 
     move v2, v1
 
-    .line 23
     :goto_2
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -1387,7 +1267,6 @@
 
     if-ge v2, v3, :cond_7
 
-    .line 24
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -1409,7 +1288,6 @@
 
     if-eqz p1, :cond_9
 
-    .line 25
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mRadiusArrays:[F
 
     const/4 v3, 0x0
@@ -1420,7 +1298,6 @@
 
     const/4 v5, 0x3
 
-    .line 26
     aput v3, p1, v5
 
     aput v3, p1, v4
@@ -1429,14 +1306,11 @@
 
     aput v3, p1, v1
 
-    .line 27
     :cond_8
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 28
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 29
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     goto :goto_3
@@ -1444,10 +1318,8 @@
     :cond_9
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 30
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 31
     :cond_a
     :goto_3
     iput-boolean v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
@@ -1460,7 +1332,6 @@
 .method public onInterceptDrag()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     const/4 v1, 0x0
@@ -1473,7 +1344,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-boolean v2, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
 
@@ -1497,7 +1367,6 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
@@ -1510,7 +1379,6 @@
 
     move-result v0
 
-    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1539,12 +1407,10 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->onPause()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mOnDragging:Z
 
     return-void
@@ -1553,7 +1419,6 @@
 .method public onPromptExpand(Ljava/lang/Runnable;)V
     .locals 10
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -1562,7 +1427,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
@@ -1574,7 +1438,6 @@
 
     goto/16 :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1584,18 +1447,16 @@
 
     return-void
 
-    .line 4
     :cond_2
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-nez v1, :cond_3
 
-    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0800d3
+    const v2, 0x7f0800d5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1608,24 +1469,21 @@
     :cond_3
     const/16 v1, 0x99
 
-    .line 6
     iput v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mTargetAlpha:I
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0705bf
+    const v4, 0x7f0705bb
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1633,14 +1491,13 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-static {}, Lcom/android/camera/customization/ThemeResource;->getInstance()Lcom/android/camera/customization/ThemeResource;
 
     move-result-object v3
 
-    const v4, 0x7f060303
+    const v4, 0x7f060301
 
     invoke-virtual {v3, v4}, Lcom/android/camera/customization/ThemeResource;->getColor(I)I
 
@@ -1648,29 +1505,24 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     iget-object v3, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mBgDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v1, v3}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 12
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     const/4 v1, 0x0
 
-    .line 13
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
     const v0, 0x3f4ccccd    # 0.8f
 
-    .line 14
     new-instance v3, Lmiuix/animation/controller/AnimState;
 
     const-string v4, "expand_start"
@@ -1679,7 +1531,6 @@
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 15
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v5
@@ -1698,19 +1549,16 @@
 
     float-to-double v5, v0
 
-    .line 16
     invoke-virtual {v3, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 17
     invoke-virtual {v0, v3, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 18
     new-instance v3, Lmiuix/animation/controller/AnimState;
 
     const-string v4, "expand_end"
@@ -1721,7 +1569,6 @@
 
     const-wide/16 v5, 0x0
 
-    .line 19
     invoke-virtual {v3, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -1732,14 +1579,12 @@
 
     float-to-double v6, v5
 
-    .line 20
     invoke-virtual {v3, v4, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 21
     invoke-virtual {v3, v4, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -1748,7 +1593,6 @@
 
     new-array v6, v4, [Landroid/view/View;
 
-    .line 22
     iget-object v7, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     aput-object v7, v6, v2
@@ -1767,7 +1611,6 @@
 
     new-array v6, v4, [Lmiuix/animation/base/AnimConfig;
 
-    .line 23
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v7
@@ -1784,17 +1627,14 @@
 
     aput-object v9, v8, v2
 
-    .line 24
     invoke-virtual {v7, v8}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     aput-object p1, v6, v2
 
-    .line 25
     invoke-interface {v0, v3, v6}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 26
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -1807,7 +1647,6 @@
 
     aput v6, v3, v2
 
-    .line 27
     invoke-virtual {p1, v0, v3}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
@@ -1820,14 +1659,12 @@
 
     aput-object v3, v0, v2
 
-    .line 28
     invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 29
     invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -1858,7 +1695,6 @@
 .method public onPromptShrink(ZLjava/lang/Runnable;)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     if-eqz v0, :cond_4
@@ -1869,7 +1705,6 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_0
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1882,7 +1717,6 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 3
     new-instance p1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v1, "trans_start"
@@ -1893,7 +1727,6 @@
 
     const-wide/16 v2, 0x0
 
-    .line 4
     invoke-virtual {p1, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -1902,12 +1735,10 @@
 
     const-wide/high16 v4, -0x3fa7000000000000L    # -100.0
 
-    .line 5
     invoke-virtual {p1, v1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 6
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v4, "trans_end"
@@ -1918,14 +1749,12 @@
 
     const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
 
-    .line 7
     invoke-virtual {v1, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 8
     invoke-virtual {v1, v4, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -1934,7 +1763,6 @@
 
     new-array v3, v2, [Landroid/view/View;
 
-    .line 9
     iget-object v4, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
     const/4 v5, 0x0
@@ -1955,7 +1783,6 @@
 
     new-array v3, v2, [Lmiuix/animation/base/AnimConfig;
 
-    .line 10
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$DragAnimationConfig;
 
     move-result-object v4
@@ -1972,19 +1799,16 @@
 
     aput-object v6, v2, v5
 
-    .line 11
     invoke-virtual {v4, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p2
 
     aput-object p2, v3, v5
 
-    .line 12
     invoke-interface {p1, v1, v3}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     goto :goto_0
 
-    .line 13
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
 
@@ -1994,10 +1818,8 @@
 
     if-eqz p2, :cond_3
 
-    .line 14
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
-    .line 15
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mContainView:Landroid/widget/FrameLayout;
@@ -2008,7 +1830,6 @@
 
     const/4 p1, 0x4
 
-    .line 16
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     :cond_4
@@ -2019,7 +1840,6 @@
 .method public onResume()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
     return-void
@@ -2036,10 +1856,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->provideOrientationChanged(ILjava/util/List;I)V
 
-    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object p2
@@ -2062,7 +1880,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -2072,7 +1889,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -2096,15 +1912,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->provideRotateItem(Ljava/util/List;I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
@@ -2113,7 +1926,6 @@
 
     const/4 v1, 0x0
 
-    .line 4
     :goto_0
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2121,7 +1933,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 5
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -2132,7 +1943,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
@@ -2140,7 +1950,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->getModeAdapter()Lcom/android/camera/fragment/mode/ModeAdapter;
 
     move-result-object p1
@@ -2154,17 +1963,14 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const-string v0, "MoreModePopup"
 
     const-string/jumbo v1, "register"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -2173,102 +1979,64 @@
 .method public setSupportOrientation(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->mIsSupportOrientation:Z
 
     return-void
 .end method
 
 .method public showDragAnimation(II)Z
-    .locals 3
+    .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+    iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
 
-    move-result-object v0
-
-    const/16 v1, 0xa01
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$MoreModePopupController;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$MoreModePopupController;->isExpanded()Z
-
-    move-result v0
+    const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
     return v1
 
-    .line 3
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->mRootView:Landroid/view/View;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    return v2
-
-    .line 4
-    :cond_1
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->getModeList(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    return v2
+    return v1
 
-    .line 5
-    :cond_2
+    :cond_1
     invoke-static {v0, p1, p2}, Lcom/android/camera/Util;->isInViewRegion(Landroid/view/View;II)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    return v2
+    return v1
 
-    .line 6
-    :cond_3
+    :cond_2
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getVisibility()I
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_3
 
-    goto :goto_0
+    const/4 v1, 0x1
 
-    :cond_4
-    move v1, v2
-
-    :goto_0
+    :cond_3
     return v1
 .end method
 
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const-string v0, "MoreModePopup"
 
     const-string/jumbo v1, "unRegister"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void

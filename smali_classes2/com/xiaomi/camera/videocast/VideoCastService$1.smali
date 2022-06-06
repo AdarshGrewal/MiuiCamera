@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/VideoCastService;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$1;->this$0:Lcom/xiaomi/camera/videocast/VideoCastService;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/rcs/network/BluetoothListener$Callback$Stub;-><init>()V
@@ -35,7 +34,6 @@
 .method public onBluetoothOff()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->access$000()Ljava/lang/String;
 
     move-result-object v0

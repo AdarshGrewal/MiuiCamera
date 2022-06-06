@@ -44,6 +44,8 @@
 
 .field public static final KEY_FINGERPRINT_CAPTURE:Ljava/lang/String; = "fingerprint_capture"
 
+.field public static final KEY_FOCUS_SHOOT:Ljava/lang/String; = "camera_focus_shoot"
+
 .field public static final KEY_FRONT_MIRROR:Ljava/lang/String; = "front_mirror"
 
 .field public static final KEY_HEIC_FORMAT:Ljava/lang/String; = "camera_heic_format"
@@ -80,11 +82,9 @@
 
 .field public static final KEY_REFERENCE_LINE:Ljava/lang/String; = "camera_referenceline"
 
-.field public static final KEY_RETAIN_CAMERA_STATUS:Ljava/lang/String; = "retain_camera_status"
+.field public static final KEY_RETAIN_CAMERA_MODE:Ljava/lang/String; = "retain_camera_mode"
 
 .field public static final KEY_SCAN_QRCODE:Ljava/lang/String; = "scan_qrcode"
-
-.field public static final KEY_TAP_SHOOT:Ljava/lang/String; = "camera_tap_shoot"
 
 .field public static final KEY_TIME_WATERMARK:Ljava/lang/String; = "watermark"
 
@@ -123,7 +123,6 @@
 
     const-string/jumbo v2, "pref_version_key"
 
-    .line 1
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createIntEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -136,7 +135,6 @@
 
     const-string/jumbo v2, "pref_camera_recordlocation_key"
 
-    .line 2
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -149,7 +147,6 @@
 
     const-string/jumbo v2, "pref_camerasound_key"
 
-    .line 3
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -162,7 +159,6 @@
 
     const-string/jumbo v2, "pref_camera_proximity_lock_key"
 
-    .line 4
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -175,7 +171,6 @@
 
     const-string/jumbo v2, "pref_priority_storage"
 
-    .line 5
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -184,11 +179,10 @@
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "retain_camera_status"
+    const-string/jumbo v1, "retain_camera_mode"
 
-    const-string/jumbo v2, "pref_retain_camera_status_key"
+    const-string/jumbo v2, "pref_retain_camera_mode_key"
 
-    .line 6
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -201,7 +195,6 @@
 
     const-string/jumbo v2, "pref_camera_snap_key"
 
-    .line 7
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -214,7 +207,6 @@
 
     const-string/jumbo v2, "pref_capture_when_stable_key"
 
-    .line 8
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -227,7 +219,6 @@
 
     const-string/jumbo v2, "pref_time_watermark_key"
 
-    .line 9
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -240,7 +231,6 @@
 
     const-string/jumbo v2, "pref_dualcamera_watermark_key"
 
-    .line 10
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -253,7 +243,6 @@
 
     const-string/jumbo v2, "user_define_watermark_key"
 
-    .line 11
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -266,7 +255,6 @@
 
     const-string/jumbo v2, "pref_auto_chroma_flash_key"
 
-    .line 12
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -279,7 +267,6 @@
 
     const-string/jumbo v2, "pref_camera_referenceline_key"
 
-    .line 13
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -288,11 +275,10 @@
 
     aput-object v1, v0, v2
 
-    const-string v1, "camera_tap_shoot"
+    const-string v1, "camera_focus_shoot"
 
     const-string/jumbo v2, "pref_camera_focus_shoot_key"
 
-    .line 14
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -305,7 +291,6 @@
 
     const-string/jumbo v2, "pref_scan_qrcode_key"
 
-    .line 15
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -318,7 +303,6 @@
 
     const-string/jumbo v2, "pref_camera_asd_night_key"
 
-    .line 16
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -331,7 +315,6 @@
 
     const-string/jumbo v2, "pref_groupshot_with_primitive_picture_key"
 
-    .line 17
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -344,7 +327,6 @@
 
     const-string/jumbo v2, "pref_camera_long_press_shutter_key"
 
-    .line 18
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -357,7 +339,6 @@
 
     const-string/jumbo v2, "pref_camera_long_press_shutter_feature_key"
 
-    .line 19
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -370,7 +351,6 @@
 
     const-string/jumbo v2, "pref_front_mirror_boolean_key"
 
-    .line 20
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -383,7 +363,6 @@
 
     const-string/jumbo v2, "pref_camera_jpegquality_key"
 
-    .line 21
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -396,7 +375,6 @@
 
     const-string/jumbo v2, "pref_camera_heic_image_format_key"
 
-    .line 22
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -409,7 +387,6 @@
 
     const-string/jumbo v2, "pref_camera_lying_tip_switch_key"
 
-    .line 23
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -422,7 +399,6 @@
 
     const-string/jumbo v2, "pref_camera_movie_solid_key"
 
-    .line 24
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -435,7 +411,6 @@
 
     const-string/jumbo v2, "pref_video_encoder_key"
 
-    .line 25
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -448,7 +423,6 @@
 
     const-string/jumbo v2, "pref_video_time_lapse_frame_interval_key"
 
-    .line 26
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -461,7 +435,6 @@
 
     const-string/jumbo v2, "pref_camera_facedetection_key"
 
-    .line 27
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -474,7 +447,6 @@
 
     const-string/jumbo v2, "pref_fingerprint_capture_key"
 
-    .line 28
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createBoolEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -487,7 +459,6 @@
 
     const-string/jumbo v2, "pref_camera_volumekey_function_key"
 
-    .line 29
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -500,7 +471,6 @@
 
     const-string/jumbo v2, "pref_camera_antibanding_key"
 
-    .line 30
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -513,7 +483,6 @@
 
     const-string/jumbo v2, "pref_qc_camera_contrast_key"
 
-    .line 31
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -526,7 +495,6 @@
 
     const-string/jumbo v2, "pref_qc_camera_saturation_key"
 
-    .line 32
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -539,7 +507,6 @@
 
     const-string/jumbo v2, "pref_qc_camera_sharpness_key"
 
-    .line 33
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -552,7 +519,6 @@
 
     const-string/jumbo v2, "pref_camera_whitebalance_key"
 
-    .line 34
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -565,7 +531,6 @@
 
     const-string/jumbo v2, "pref_focus_position_key"
 
-    .line 35
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -578,7 +543,6 @@
 
     const-string/jumbo v2, "pref_qc_camera_exposuretime_key"
 
-    .line 36
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -591,7 +555,6 @@
 
     const-string/jumbo v2, "pref_qc_camera_iso_key"
 
-    .line 37
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createStringEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -604,7 +567,6 @@
 
     const-string/jumbo v2, "pref_qc_manual_whitebalance_k_value_key"
 
-    .line 38
     invoke-static {v1, v2}, Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;->createIntEntry(Ljava/lang/String;Ljava/lang/String;)Lmiui/cloud/backup/data/PrefsBackupHelper$PrefEntry;
 
     move-result-object v1
@@ -621,7 +583,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

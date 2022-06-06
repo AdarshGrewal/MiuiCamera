@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseResourceList;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
 
     const-string v0, "data"
 
-    .line 1
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object p1
@@ -67,12 +65,10 @@
 .method public parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/fragment/film/FilmItem;
     .locals 1
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/film/FilmItem;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/film/FilmItem;-><init>()V
 
-    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/film/FilmItem;->parseSummaryData(Lorg/json/JSONObject;I)V
 
     return-object v0
@@ -81,7 +77,6 @@
 .method public bridge synthetic parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/BaseResourceItem;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/film/FilmList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/fragment/film/FilmItem;
 
     move-result-object p1

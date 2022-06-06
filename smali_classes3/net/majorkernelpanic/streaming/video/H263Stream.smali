@@ -14,7 +14,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lnet/majorkernelpanic/streaming/video/H263Stream;-><init>(I)V
 
     return-void
@@ -23,20 +22,16 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lnet/majorkernelpanic/streaming/video/VideoStream;-><init>(I)V
 
     const/16 p1, 0x11
 
-    .line 3
     iput p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream;->mCameraImageFormat:I
 
     const/4 p1, 0x1
 
-    .line 4
     iput p1, p0, Lnet/majorkernelpanic/streaming/video/VideoStream;->mVideoEncoder:I
 
-    .line 5
     new-instance p1, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;
 
     invoke-direct {p1}, Lnet/majorkernelpanic/streaming/rtp/H263Packetizer;-><init>()V
@@ -59,16 +54,13 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     invoke-super {p0}, Lnet/majorkernelpanic/streaming/video/VideoStream;->configure()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-byte v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mMode:B
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/video/VideoStream;->mRequestedQuality:Lnet/majorkernelpanic/streaming/video/VideoQuality;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/video/VideoQuality;->copyOf(Lnet/majorkernelpanic/streaming/video/VideoQuality;)Lnet/majorkernelpanic/streaming/video/VideoQuality;
@@ -79,7 +71,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
@@ -95,7 +86,6 @@
 .method public getSessionDescription()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,21 +134,17 @@
 
     monitor-enter p0
 
-    .line 1
     :try_start_0
     iget-boolean v0, p0, Lnet/majorkernelpanic/streaming/MediaStream;->mStreaming:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lnet/majorkernelpanic/streaming/video/H263Stream;->configure()V
 
-    .line 3
     invoke-super {p0}, Lnet/majorkernelpanic/streaming/video/VideoStream;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
     monitor-exit p0
 

@@ -32,7 +32,6 @@
 .method public constructor <init>(JILjava8/util/function/IntUnaryOperator;ILjava8/util/function/IntPredicate;)V
     .locals 0
 
-    .line 1
     iput-object p4, p0, Ljava8/util/stream/IntStreams$2;->val$next:Ljava8/util/function/IntUnaryOperator;
 
     iput p5, p0, Ljava8/util/stream/IntStreams$2;->val$seed:I
@@ -49,7 +48,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/IntStreams$2;->forEachRemaining(Ljava8/util/function/IntConsumer;)V
@@ -60,10 +58,8 @@
 .method public forEachRemaining(Ljava8/util/function/IntConsumer;)V
     .locals 2
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/IntStreams$2;->finished:Z
 
     if-eqz v0, :cond_0
@@ -73,10 +69,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 4
     iput-boolean v0, p0, Ljava8/util/stream/IntStreams$2;->finished:Z
 
-    .line 5
     iget-boolean v0, p0, Ljava8/util/stream/IntStreams$2;->started:Z
 
     if-eqz v0, :cond_1
@@ -94,7 +88,6 @@
     :cond_1
     iget v0, p0, Ljava8/util/stream/IntStreams$2;->val$seed:I
 
-    .line 6
     :goto_0
     iget-object v1, p0, Ljava8/util/stream/IntStreams$2;->val$hasNext:Ljava8/util/function/IntPredicate;
 
@@ -104,10 +97,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 7
     invoke-interface {p1, v0}, Ljava8/util/function/IntConsumer;->accept(I)V
 
-    .line 8
     iget-object v1, p0, Ljava8/util/stream/IntStreams$2;->val$next:Ljava8/util/function/IntUnaryOperator;
 
     invoke-interface {v1, v0}, Ljava8/util/function/IntUnaryOperator;->applyAsInt(I)I
@@ -123,7 +114,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/IntStreams$2;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
@@ -136,10 +126,8 @@
 .method public tryAdvance(Ljava8/util/function/IntConsumer;)Z
     .locals 4
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-boolean v0, p0, Ljava8/util/stream/IntStreams$2;->finished:Z
 
     const/4 v1, 0x0
@@ -148,7 +136,6 @@
 
     return v1
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Ljava8/util/stream/IntStreams$2;->started:Z
 
@@ -156,7 +143,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/IntStreams$2;->val$next:Ljava8/util/function/IntUnaryOperator;
 
     iget v3, p0, Ljava8/util/stream/IntStreams$2;->prev:I
@@ -167,14 +153,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget v0, p0, Ljava8/util/stream/IntStreams$2;->val$seed:I
 
-    .line 7
     iput-boolean v2, p0, Ljava8/util/stream/IntStreams$2;->started:Z
 
-    .line 8
     :goto_0
     iget-object v3, p0, Ljava8/util/stream/IntStreams$2;->val$hasNext:Ljava8/util/function/IntPredicate;
 
@@ -184,12 +167,10 @@
 
     if-nez v3, :cond_2
 
-    .line 9
     iput-boolean v2, p0, Ljava8/util/stream/IntStreams$2;->finished:Z
 
     return v1
 
-    .line 10
     :cond_2
     iput v0, p0, Ljava8/util/stream/IntStreams$2;->prev:I
 

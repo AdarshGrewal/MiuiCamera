@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/subtitle/FragmentSubtitle;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/subtitle/FragmentSubtitle$1;->this$0:Lcom/android/camera/fragment/subtitle/FragmentSubtitle;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,17 +34,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 3
     :pswitch_0
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/FragmentSubtitle$1;->this$0:Lcom/android/camera/fragment/subtitle/FragmentSubtitle;
 
@@ -53,7 +49,6 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_1
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/FragmentSubtitle$1;->this$0:Lcom/android/camera/fragment/subtitle/FragmentSubtitle;
 
@@ -63,7 +58,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/FragmentSubtitle$1;->this$0:Lcom/android/camera/fragment/subtitle/FragmentSubtitle;
 
     invoke-static {p1}, Lcom/android/camera/fragment/subtitle/FragmentSubtitle;->access$100(Lcom/android/camera/fragment/subtitle/FragmentSubtitle;)Lcom/android/camera/fragment/subtitle/FragmentSubtitle$RecognitionListener;
@@ -76,7 +70,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120440
+    const v1, 0x7f12041e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -86,7 +80,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_2
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/FragmentSubtitle$1;->this$0:Lcom/android/camera/fragment/subtitle/FragmentSubtitle;
 

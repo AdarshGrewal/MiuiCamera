@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$2;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModePopup;
 
     invoke-direct {p0}, Lcom/android/camera/animation/FolmeUtils$CustomTransitionListener;-><init>()V
@@ -35,10 +34,8 @@
 .method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lcom/android/camera/animation/FolmeUtils$CustomTransitionListener;->onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +54,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$2;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModePopup;
 
     invoke-static {p1}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->access$000(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;)Landroid/graphics/drawable/GradientDrawable;
@@ -66,7 +62,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$2;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModePopup;
 
     invoke-static {p1}, Lcom/android/camera/fragment/mode/FragmentMoreModePopup;->access$000(Lcom/android/camera/fragment/mode/FragmentMoreModePopup;)Landroid/graphics/drawable/GradientDrawable;
@@ -87,7 +82,6 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/mode/FragmentMoreModePopup$2;->this$0:Lcom/android/camera/fragment/mode/FragmentMoreModePopup;
 

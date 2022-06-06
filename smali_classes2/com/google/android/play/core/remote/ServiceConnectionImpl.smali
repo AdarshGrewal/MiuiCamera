@@ -14,10 +14,8 @@
 .method public constructor <init>(Lcom/google/android/play/core/remote/RemoteManager;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     return-void
@@ -28,7 +26,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     iget-object v0, v0, Lcom/google/android/play/core/remote/RemoteManager;->mPlayCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
@@ -45,7 +42,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->info(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 2
     iget-object p1, p0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     new-instance v0, Lcom/google/android/play/core/remote/ServiceConnectedTask;
@@ -60,7 +56,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     iget-object v0, v0, Lcom/google/android/play/core/remote/RemoteManager;->mPlayCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->info(Ljava/lang/String;[Ljava/lang/Object;)I
 
-    .line 2
     iget-object p1, p0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     new-instance v0, Lcom/google/android/play/core/remote/ServiceDisconnectedTask;

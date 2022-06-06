@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public initView(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/Util;->alignPopupBottom(Landroid/view/View;)V
 
     return-void

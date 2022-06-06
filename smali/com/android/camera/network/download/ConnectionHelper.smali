@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,14 +51,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "http"
 
-    .line 2
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -76,7 +73,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -84,7 +80,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "not support scheme "
+    const-string/jumbo v1, "not support scheme "
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -98,7 +94,6 @@
 
     throw p0
 
-    .line 4
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -127,14 +122,12 @@
 
     const-string v0, "ConnectionManager"
 
-    .line 5
     invoke-static {p1}, Lcom/android/camera/network/download/ConnectionHelper;->verify(I)I
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 6
     new-instance p0, Lcom/android/camera/network/download/ConnectionHelper$Holder;
 
     invoke-direct {p0, p1}, Lcom/android/camera/network/download/ConnectionHelper$Holder;-><init>(I)V
@@ -145,15 +138,12 @@
     :try_start_0
     const-string/jumbo p1, "try open http connection"
 
-    .line 7
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance p1, Ljava/net/URL;
 
     invoke-direct {p1, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 9
     new-instance v1, Lcom/android/camera/network/download/ConnectionHelper$Holder;
 
     invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
@@ -179,11 +169,9 @@
 
     goto :goto_1
 
-    .line 10
     :goto_0
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 11
     new-instance p0, Lcom/android/camera/network/download/ConnectionHelper$Holder;
 
     const/4 p1, 0x4
@@ -192,7 +180,6 @@
 
     return-object p0
 
-    .line 12
     :goto_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -222,10 +209,8 @@
 
     const-string/jumbo v1, "refreshing network state"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/network/util/NetworkUtils;->isNetworkConnected()Z
 
     move-result v0
@@ -236,7 +221,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-static {}, Lcom/android/camera/fragment/CtaNoticeFragment$CTA;->canConnectNetwork()Z
 
@@ -251,7 +235,6 @@
     :cond_1
     if-ne p0, v1, :cond_2
 
-    .line 4
     invoke-static {}, Lcom/android/camera/network/util/NetworkUtils;->isActiveNetworkMetered()Z
 
     move-result p0

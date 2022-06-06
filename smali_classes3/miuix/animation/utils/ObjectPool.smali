@@ -36,7 +36,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -47,7 +46,6 @@
 
     sput-object v0, Lmiuix/animation/utils/ObjectPool;->sMainHandler:Landroid/os/Handler;
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -60,7 +58,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,7 +66,6 @@
 .method public static synthetic access$000(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/animation/utils/ObjectPool;->createObject(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -80,7 +76,6 @@
 .method public static synthetic access$100()Landroid/os/Handler;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/utils/ObjectPool;->sMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -102,12 +97,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, v0}, Lmiuix/animation/utils/ObjectPool;->getObjectCache(Ljava/lang/Class;Z)Lmiuix/animation/utils/ObjectPool$Cache;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p0, p1}, Lmiuix/animation/utils/ObjectPool$Cache;->acquireObject(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -128,13 +121,11 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 2
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -144,7 +135,6 @@
 
     aget-object v3, v0, v2
 
-    .line 3
     invoke-virtual {v3}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v4
@@ -162,10 +152,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {v3, v0}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 5
     invoke-virtual {v3, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -177,7 +165,6 @@
     :catch_0
     move-exception p1
 
-    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +200,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/animation/utils/ObjectPool;->sCacheMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -226,14 +212,12 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     new-instance p1, Lmiuix/animation/utils/ObjectPool$Cache;
 
     const/4 v0, 0x0
 
     invoke-direct {p1, v0}, Lmiuix/animation/utils/ObjectPool$Cache;-><init>(Lmiuix/animation/utils/ObjectPool$1;)V
 
-    .line 3
     sget-object v0, Lmiuix/animation/utils/ObjectPool;->sCacheMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -263,18 +247,15 @@
 
     return-void
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, p0, Lmiuix/animation/utils/ObjectPool$IPoolObject;
 
     if-eqz v1, :cond_1
 
-    .line 3
     move-object v1, p0
 
     check-cast v1, Lmiuix/animation/utils/ObjectPool$IPoolObject;
@@ -283,13 +264,11 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     instance-of v1, p0, Ljava/util/Collection;
 
     if-eqz v1, :cond_2
 
-    .line 5
     move-object v1, p0
 
     check-cast v1, Ljava/util/Collection;
@@ -298,13 +277,11 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     instance-of v1, p0, Ljava/util/Map;
 
     if-eqz v1, :cond_3
 
-    .line 7
     move-object v1, p0
 
     check-cast v1, Ljava/util/Map;
@@ -315,14 +292,12 @@
     :goto_0
     const/4 v1, 0x0
 
-    .line 8
     invoke-static {v0, v1}, Lmiuix/animation/utils/ObjectPool;->getObjectCache(Ljava/lang/Class;Z)Lmiuix/animation/utils/ObjectPool$Cache;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 9
     invoke-virtual {v0, p0}, Lmiuix/animation/utils/ObjectPool$Cache;->releaseObject(Ljava/lang/Object;)V
 
     :cond_4

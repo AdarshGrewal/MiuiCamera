@@ -34,10 +34,8 @@
 .method public constructor <init>(Lcom/android/camera2/Camera2Proxy$LivePhotoResultCallback;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -57,7 +55,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/loader/FunctionParseAsdLivePhoto;->mLivePhotoResultCallbackReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -70,7 +67,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-interface {v0}, Lcom/android/camera2/Camera2Proxy$LivePhotoResultCallback;->isLivePhotoStarted()Z
 
@@ -80,7 +76,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -90,7 +85,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 5
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AWB_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p1, v2}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -99,7 +93,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 6
     sget-object v3, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p1, v3}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -108,7 +101,6 @@
 
     check-cast v3, Ljava/lang/Long;
 
-    .line 7
     new-instance v4, Lcom/xiaomi/camera/liveshot/LivePhotoResult;
 
     invoke-direct {v4}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;-><init>()V
@@ -121,7 +113,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -134,7 +125,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_3
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -149,7 +139,6 @@
 
     goto :goto_2
 
-    .line 10
     :cond_4
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
@@ -158,21 +147,18 @@
     :goto_2
     invoke-virtual {v4, v1, v2}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->setTimeStamp(J)V
 
-    .line 11
     invoke-interface {v0}, Lcom/android/camera2/Camera2Proxy$LivePhotoResultCallback;->isGyroStable()Z
 
     move-result v1
 
     invoke-virtual {v4, v1}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->setGyroscropStable(Z)V
 
-    .line 12
     invoke-interface {v0}, Lcom/android/camera2/Camera2Proxy$LivePhotoResultCallback;->getFilterId()I
 
     move-result v1
 
     invoke-virtual {v4, v1}, Lcom/xiaomi/camera/liveshot/LivePhotoResult;->setFilterId(I)V
 
-    .line 13
     invoke-interface {v0, v4}, Lcom/android/camera2/Camera2Proxy$LivePhotoResultCallback;->onLivePhotoResultCallback(Lcom/xiaomi/camera/liveshot/LivePhotoResult;)V
 
     return-object p1
@@ -186,7 +172,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/loader/FunctionParseAsdLivePhoto;->apply(Landroid/hardware/camera2/CaptureResult;)Landroid/hardware/camera2/CaptureResult;

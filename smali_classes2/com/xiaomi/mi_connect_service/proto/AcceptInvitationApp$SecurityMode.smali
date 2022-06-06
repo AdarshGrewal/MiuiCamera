@@ -72,7 +72,6 @@
 .method public static constructor <clinit>()V
     .locals 8
 
-    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     const/4 v1, 0x0
@@ -83,7 +82,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_NONE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     const/4 v2, 0x1
@@ -94,7 +92,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_COMM:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     const/4 v3, 0x2
@@ -105,7 +102,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_TRANS:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     const/4 v4, 0x3
@@ -116,7 +112,6 @@
 
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_COMM_TRANS:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     const/4 v5, 0x4
@@ -133,7 +128,6 @@
 
     new-array v6, v6, [Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 6
     sget-object v7, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_NONE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     aput-object v7, v6, v1
@@ -154,7 +148,6 @@
 
     sput-object v6, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->$VALUES:[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode$1;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode$1;-><init>()V
@@ -172,10 +165,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->value:I
 
     return-void
@@ -202,25 +193,21 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_COMM_TRANS:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     return-object p0
 
-    .line 2
     :cond_1
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_TRANS:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     return-object p0
 
-    .line 3
     :cond_2
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_COMM:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     return-object p0
 
-    .line 4
     :cond_3
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->MC_MI_SEC_NONE:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
@@ -238,7 +225,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -247,7 +233,6 @@
 .method public static internalGetVerifier()Lcom/google/protobuf/Internal$EnumVerifier;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode$SecurityModeVerifier;->INSTANCE:Lcom/google/protobuf/Internal$EnumVerifier;
 
     return-object v0
@@ -258,7 +243,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->forNumber(I)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     move-result-object p0
@@ -269,7 +253,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -284,7 +267,6 @@
 .method public static values()[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->$VALUES:[Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->clone()Ljava/lang/Object;
@@ -301,17 +283,14 @@
 .method public final getNumber()I
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->UNRECOGNIZED:Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;
 
     if-eq p0, v0, :cond_0
 
-    .line 2
     iget v0, p0, Lcom/xiaomi/mi_connect_service/proto/AcceptInvitationApp$SecurityMode;->value:I
 
     return v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/load/resource/drawable/NonOwnedDrawableResource;->newInstance(Landroid/graphics/drawable/Drawable;)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object p1
@@ -61,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/drawable/UnitDrawableDecoder;->decode(Landroid/graphics/drawable/Drawable;IILcom/bumptech/glide/load/Options;)Lcom/bumptech/glide/load/engine/Resource;
@@ -87,7 +84,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/drawable/UnitDrawableDecoder;->handles(Landroid/graphics/drawable/Drawable;Lcom/bumptech/glide/load/Options;)Z

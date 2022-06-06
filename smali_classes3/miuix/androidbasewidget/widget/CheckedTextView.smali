@@ -27,7 +27,6 @@
 
     aput v2, v0, v1
 
-    .line 1
     sput-object v0, Lmiuix/androidbasewidget/widget/CheckedTextView;->CHECKED_STATE_SET:[I
 
     return-void
@@ -38,7 +37,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/androidbasewidget/widget/CheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -49,7 +47,6 @@
 
     const v0, 0x10103c8
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/androidbasewidget/widget/CheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -58,7 +55,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Lmiuix/androidbasewidget/widget/AppCompatCheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -67,14 +63,12 @@
 .method private drawCheckMark(Landroid/graphics/Canvas;)V
     .locals 9
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/CheckedTextView;->getCheckMarkDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 2
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -83,14 +77,12 @@
 
     move-result v1
 
-    .line 3
     invoke-static {p0}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getPaddingStart()I
 
     move-result v2
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getWidth()I
 
@@ -122,27 +113,22 @@
     :goto_0
     add-int/2addr v2, v3
 
-    .line 6
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getPaddingTop()I
 
     move-result v3
 
-    .line 7
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getPaddingTop()I
 
     move-result v4
 
-    .line 8
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getPaddingBottom()I
 
     move-result v5
 
-    .line 9
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v6
 
-    .line 10
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
@@ -151,7 +137,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 11
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getHeight()I
 
     move-result v4
@@ -166,7 +151,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_1
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getGravity()I
 
@@ -184,7 +168,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_2
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getHeight()I
 
@@ -194,7 +177,6 @@
 
     goto :goto_1
 
-    .line 14
     :cond_3
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getHeight()I
 
@@ -209,10 +191,8 @@
 
     add-int/2addr v6, v3
 
-    .line 15
     invoke-virtual {v0, v2, v3, v1, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 16
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_4
@@ -228,7 +208,6 @@
 
     sub-int/2addr p0, p1
 
-    .line 1
     div-int/lit8 p0, p0, 0x2
 
     add-int/2addr p0, p2
@@ -239,7 +218,6 @@
 .method private getCheckWidth()I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/androidbasewidget/widget/CheckedTextView;->getCheckMarkDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -250,7 +228,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
@@ -269,25 +246,20 @@
 .method public drawableStateChanged()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/appcompat/widget/AppCompatCheckedTextView;->drawableStateChanged()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getDrawableState()[I
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->invalidate()V
 
     :cond_0
@@ -297,7 +269,6 @@
 .method public getCheckMarkDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -306,15 +277,12 @@
 .method public jumpDrawablesToCurrentState()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/widget/CheckedTextView;->jumpDrawablesToCurrentState()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
     :cond_0
@@ -326,19 +294,16 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/CheckedTextView;->onCreateDrawableState(I)[I
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     sget-object v0, Lmiuix/androidbasewidget/widget/CheckedTextView;->CHECKED_STATE_SET:[I
 
     invoke-static {p1, v0}, Landroid/widget/CheckedTextView;->mergeDrawableStates([I[I)[I
@@ -350,10 +315,8 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/androidbasewidget/widget/CheckedTextView;->drawCheckMark(Landroid/graphics/Canvas;)V
 
-    .line 2
     invoke-super {p0, p1}, Landroid/widget/CheckedTextView;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -362,10 +325,8 @@
 .method public onMeasure(II)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/widget/CheckedTextView;->onMeasure(II)V
 
-    .line 2
     invoke-direct {p0}, Lmiuix/androidbasewidget/widget/CheckedTextView;->getCheckWidth()I
 
     move-result p2
@@ -374,7 +335,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -386,7 +346,6 @@
 
     return-void
 
-    .line 4
     :cond_1
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getMeasuredWidth()I
 
@@ -398,7 +357,6 @@
 
     if-ne v0, p2, :cond_2
 
-    .line 5
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -407,7 +365,6 @@
 
     move v1, p1
 
-    .line 6
     :cond_2
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getMeasuredHeight()I
 
@@ -421,17 +378,14 @@
 .method public setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Landroid/widget/CheckedTextView;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -439,10 +393,8 @@
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 4
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getVisibility()I
 
     move-result v0
@@ -461,26 +413,22 @@
     :goto_0
     invoke-virtual {p1, v0, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 6
     sget-object v0, Lmiuix/androidbasewidget/widget/CheckedTextView;->CHECKED_STATE_SET:[I
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 7
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Landroid/widget/CheckedTextView;->setMinHeight(I)V
 
-    .line 8
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getDrawableState()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 9
     :cond_2
     iput-object p1, p0, Lmiuix/androidbasewidget/widget/CheckedTextView;->mCheckMarkDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -490,7 +438,6 @@
 .method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/CheckedTextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0

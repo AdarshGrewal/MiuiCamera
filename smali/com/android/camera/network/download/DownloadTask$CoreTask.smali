@@ -34,12 +34,10 @@
 .method public constructor <init>(Lcom/android/camera/network/download/DownloadTask;Lcom/android/camera/network/download/Request;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->mRequest:Lcom/android/camera/network/download/Request;
 
     return-void
@@ -48,7 +46,6 @@
 .method public static synthetic access$100(Lcom/android/camera/network/download/DownloadTask$CoreTask;)Lcom/android/camera/network/download/Request;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->mRequest:Lcom/android/camera/network/download/Request;
 
     return-object p0
@@ -59,7 +56,6 @@
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 1
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->mRequest:Lcom/android/camera/network/download/Request;
@@ -78,7 +74,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Integer;
@@ -93,7 +88,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -110,7 +104,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -127,7 +120,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {p1}, Lcom/android/camera/network/download/DownloadTask;->access$300(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
@@ -136,7 +128,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {p1}, Lcom/android/camera/network/download/DownloadTask;->access$300(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
@@ -156,7 +147,6 @@
 .method public bridge synthetic onCancelled(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->onCancelled(Ljava/lang/Integer;)V
@@ -177,7 +167,6 @@
 
     const-string/jumbo v1, "process download finish %d"
 
-    .line 2
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -186,7 +175,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {v0}, Lcom/android/camera/network/download/DownloadTask;->access$300(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
@@ -195,7 +183,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {v0}, Lcom/android/camera/network/download/DownloadTask;->access$300(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnCompleteListener;
@@ -217,7 +204,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->onPostExecute(Ljava/lang/Integer;)V
@@ -228,7 +214,6 @@
 .method public varargs onProgressUpdate([Ljava/lang/Integer;)V
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {v0}, Lcom/android/camera/network/download/DownloadTask;->access$400(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
@@ -237,7 +222,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/network/download/DownloadTask$CoreTask;->this$0:Lcom/android/camera/network/download/DownloadTask;
 
     invoke-static {v0}, Lcom/android/camera/network/download/DownloadTask;->access$400(Lcom/android/camera/network/download/DownloadTask;)Lcom/android/camera/network/download/DownloadTask$OnProgressListener;
@@ -263,7 +247,6 @@
 .method public bridge synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/network/download/DownloadTask$CoreTask;->onProgressUpdate([Ljava/lang/Integer;)V
@@ -278,7 +261,6 @@
 
     new-array v0, v0, [Ljava/lang/Integer;
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1

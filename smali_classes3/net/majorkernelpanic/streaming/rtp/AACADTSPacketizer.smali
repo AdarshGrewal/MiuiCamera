@@ -20,12 +20,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;-><init>()V
 
     const/16 v0, 0x1f40
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->samplingRate:I
 
     return-void
@@ -44,7 +42,6 @@
     :goto_0
     if-ge v0, p3, :cond_1
 
-    .line 1
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     add-int v2, p2, v0
@@ -61,7 +58,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/io/IOException;
 
@@ -84,17 +80,14 @@
 
     const-string v1, "AAC ADTS packetizer started !"
 
-    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     const/16 v1, 0x8
 
     new-array v1, v1, [B
 
-    .line 3
     :cond_0
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
@@ -103,7 +96,6 @@
 
     if-nez v2, :cond_7
 
-    .line 4
     :cond_1
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
@@ -117,7 +109,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 5
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     invoke-virtual {v2}, Ljava/io/InputStream;->read()I
@@ -130,7 +121,6 @@
 
     aput-byte v2, v1, v4
 
-    .line 6
     aget-byte v2, v1, v4
 
     const/16 v5, 0xf0
@@ -143,10 +133,8 @@
 
     const/4 v5, 0x2
 
-    .line 7
     invoke-direct {p0, v1, v5, v2}, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->fill([BII)I
 
-    .line 8
     aget-byte v6, v1, v4
 
     and-int/2addr v6, v4
@@ -163,7 +151,6 @@
     :goto_0
     const/4 v6, 0x3
 
-    .line 9
     aget-byte v8, v1, v6
 
     and-int/2addr v8, v6
@@ -202,20 +189,16 @@
 
     const/4 v3, 0x6
 
-    .line 10
     aget-byte v3, v1, v3
 
-    .line 11
     div-int/lit16 v3, v2, 0x4f8
 
     if-nez v4, :cond_4
 
-    .line 12
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     invoke-virtual {v3, v1, v7, v5}, Ljava/io/InputStream;->read([BII)I
 
-    .line 13
     :cond_4
     sget-object v3, Lnet/majorkernelpanic/streaming/audio/AACStream;->AUDIO_SAMPLING_RATES:[I
 
@@ -229,10 +212,8 @@
 
     iput v3, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->samplingRate:I
 
-    .line 14
     aget-byte v4, v1, v5
 
-    .line 15
     iget-wide v4, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
 
     const-wide v8, 0xee6b280000L
@@ -250,7 +231,6 @@
     :goto_2
     if-ge v3, v2, :cond_0
 
-    .line 16
     iget-object v4, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v4}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->requestBuffer()[B
@@ -259,7 +239,6 @@
 
     iput-object v4, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
-    .line 17
     iget-object v4, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     iget-wide v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
@@ -276,7 +255,6 @@
 
     goto :goto_3
 
-    .line 18
     :cond_5
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
@@ -285,21 +263,18 @@
     :goto_3
     add-int/2addr v3, v4
 
-    .line 19
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v6, 0x18
 
     invoke-direct {p0, v5, v6, v4}, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->fill([BII)I
 
-    .line 20
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v6, 0x14
 
     aput-byte v7, v5, v6
 
-    .line 21
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v6, 0x15
@@ -308,7 +283,6 @@
 
     aput-byte v8, v5, v6
 
-    .line 22
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     const/16 v6, 0x16
@@ -319,7 +293,6 @@
 
     aput-byte v8, v5, v6
 
-    .line 23
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     shl-int/lit8 v6, v2, 0x3
@@ -330,7 +303,6 @@
 
     aput-byte v6, v5, v8
 
-    .line 24
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->buffer:[B
 
     aget-byte v6, v5, v8
@@ -343,7 +315,6 @@
 
     add-int/lit8 v4, v4, 0x18
 
-    .line 25
     invoke-virtual {p0, v4}, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->send(I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -355,7 +326,6 @@
     :catch_0
     move-exception v1
 
-    .line 26
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -388,14 +358,12 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     invoke-virtual {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
 
     :catch_1
     :cond_7
     const-string v1, "AAC ADTS packetizer stopped !"
 
-    .line 28
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -404,10 +372,8 @@
 .method public setSamplingRate(I)V
     .locals 3
 
-    .line 1
     iput p1, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->samplingRate:I
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     int-to-long v1, p1
@@ -420,19 +386,16 @@
 .method public start()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0
@@ -442,12 +405,10 @@
 .method public stop()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
@@ -455,13 +416,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :catch_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 4
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
@@ -472,7 +431,6 @@
     :catch_1
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AACADTSPacketizer;->t:Ljava/lang/Thread;
 
     :cond_0

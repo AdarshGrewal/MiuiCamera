@@ -41,7 +41,6 @@
 .method public static constructor <clinit>()V
     .locals 11
 
-    .line 1
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v1, 0x0
@@ -52,7 +51,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->SUCCESS:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 2
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v2, 0x1
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->PARSE_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 3
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v3, 0x2
@@ -78,7 +75,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->NET_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 4
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v4, 0x3
@@ -91,7 +87,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->HANDLE_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 5
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v5, 0x4
@@ -104,7 +99,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->BODY_EMPTY:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 6
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v6, 0x5
@@ -117,7 +111,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->DATA_BIND_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 7
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v7, 0x6
@@ -130,7 +123,6 @@
 
     sput-object v0, Lcom/android/camera/network/net/base/ErrorCode;->SERVER_ERROR:Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 8
     new-instance v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     const/4 v8, 0x7
@@ -147,7 +139,6 @@
 
     new-array v9, v9, [Lcom/android/camera/network/net/base/ErrorCode;
 
-    .line 9
     sget-object v10, Lcom/android/camera/network/net/base/ErrorCode;->SUCCESS:Lcom/android/camera/network/net/base/ErrorCode;
 
     aput-object v10, v9, v1
@@ -191,10 +182,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/android/camera/network/net/base/ErrorCode;->CODE:I
 
     return-void
@@ -203,7 +192,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/network/net/base/ErrorCode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/network/net/base/ErrorCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -218,7 +206,6 @@
 .method public static values()[Lcom/android/camera/network/net/base/ErrorCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/network/net/base/ErrorCode;->$VALUES:[Lcom/android/camera/network/net/base/ErrorCode;
 
     invoke-virtual {v0}, [Lcom/android/camera/network/net/base/ErrorCode;->clone()Ljava/lang/Object;

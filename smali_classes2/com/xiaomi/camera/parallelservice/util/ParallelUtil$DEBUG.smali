@@ -15,14 +15,13 @@
 
 
 # static fields
-.field public static final ENABLE:Z = false
+.field public static final ENABLE:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {v0}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$DEBUG;->doAssert(Z)V
 
     return-void
@@ -44,7 +42,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$DEBUG;->doAssert(ZLjava/lang/String;)V
 
     return-void

@@ -12,10 +12,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -33,14 +31,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     const/4 p0, 0x0
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/util/zip/GZIPInputStream;
 
@@ -48,7 +44,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->toByteArray(Ljava/io/InputStream;)[B
 
@@ -56,7 +51,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     return-object p0
@@ -87,14 +81,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     new-instance v2, Ljava/util/zip/GZIPOutputStream;
 
@@ -102,16 +94,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     invoke-virtual {v2, p0}, Ljava/util/zip/GZIPOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     invoke-static {v2}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -128,7 +117,6 @@
     :catchall_1
     move-exception p0
 
-    .line 6
     :goto_0
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 

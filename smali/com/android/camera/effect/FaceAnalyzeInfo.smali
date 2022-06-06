@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/effect/FaceAnalyzeInfo$1;
 
     invoke-direct {v0}, Lcom/android/camera/effect/FaceAnalyzeInfo$1;-><init>()V
@@ -47,7 +46,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,32 +54,26 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mFaceNum:I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mGender:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mAge:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mFaceScore:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mProp:[F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
@@ -102,7 +94,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x4
@@ -111,7 +102,6 @@
 
     iget v2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mFaceNum:I
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -158,7 +148,6 @@
 
     const-string v2, "face num: %d | gender: %d | age: %d | facescore: %d"
 
-    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -169,27 +158,22 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     iget p2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mFaceNum:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mGender:[F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mAge:[F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 4
     iget-object p2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mFaceScore:[F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 5
     iget-object p2, p0, Lcom/android/camera/effect/FaceAnalyzeInfo;->mProp:[F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V

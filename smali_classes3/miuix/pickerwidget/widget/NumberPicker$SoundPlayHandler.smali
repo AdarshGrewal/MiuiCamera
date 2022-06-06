@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;
 
     const/4 v1, 0x0
@@ -49,7 +48,6 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -60,10 +58,8 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_2
@@ -78,7 +74,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     sget-object v0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler;->sPlayerContainer:Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;
 
@@ -88,7 +83,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     sget-object p1, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler;->sPlayerContainer:Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;
 
@@ -96,7 +90,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_2
     sget-object v0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler;->sPlayerContainer:Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;
 
@@ -117,15 +110,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, p2, v0}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p2
 
-    .line 2
     iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
@@ -136,7 +126,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
@@ -153,7 +142,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, p1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1
@@ -168,7 +156,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
 
     return-void

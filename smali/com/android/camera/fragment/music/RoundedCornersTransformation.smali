@@ -31,7 +31,6 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;->ALL:Lcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;-><init>(IILcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;)V
@@ -42,21 +41,16 @@
 .method public constructor <init>(IILcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/BitmapTransformation;-><init>()V
 
-    .line 3
     iput p1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->radius:I
 
     mul-int/lit8 p1, p1, 0x2
 
-    .line 4
     iput p1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
 
-    .line 5
     iput p2, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
 
-    .line 6
     iput-object p3, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->cornerType:Lcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;
 
     return-void
@@ -65,7 +59,6 @@
 .method private drawBottomLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -92,7 +85,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -117,7 +109,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -140,7 +131,6 @@
 .method private drawBottomRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -163,7 +153,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -182,7 +171,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->radius:I
@@ -209,7 +197,6 @@
 .method private drawBottomRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -232,7 +219,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -257,7 +243,6 @@
 .method private drawDiagonalFromTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 6
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -286,7 +271,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -309,7 +293,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -332,7 +315,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -361,7 +343,6 @@
 .method private drawDiagonalFromTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -388,7 +369,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -415,7 +395,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -438,7 +417,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -463,7 +441,6 @@
 .method private drawLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -488,7 +465,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -511,7 +487,6 @@
 .method private drawOtherBottomLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -536,7 +511,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -559,7 +533,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -586,7 +559,6 @@
 .method private drawOtherBottomRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -611,7 +583,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -636,7 +607,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -661,7 +631,6 @@
 .method private drawOtherTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -684,7 +653,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -707,7 +675,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -736,7 +703,6 @@
 .method private drawOtherTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -761,7 +727,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -784,7 +749,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -811,7 +775,6 @@
 .method private drawRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -834,7 +797,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -859,7 +821,6 @@
 .method private drawRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
 
     int-to-float v1, v0
@@ -870,7 +831,6 @@
 
     sub-float/2addr p4, v0
 
-    .line 2
     sget-object v0, Lcom/android/camera/fragment/music/RoundedCornersTransformation$1;->$SwitchMap$com$android$camera$fragment$music$RoundedCornersTransformation$CornerType:[I
 
     iget-object v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->cornerType:Lcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;
@@ -883,7 +843,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -904,91 +863,76 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawDiagonalFromTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 5
     :pswitch_1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawDiagonalFromTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 6
     :pswitch_2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawOtherBottomRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 7
     :pswitch_3
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawOtherBottomLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 8
     :pswitch_4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawOtherTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 9
     :pswitch_5
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawOtherTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 10
     :pswitch_6
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 11
     :pswitch_7
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 12
     :pswitch_8
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawBottomRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 13
     :pswitch_9
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawTopRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 14
     :pswitch_a
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawBottomRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 15
     :pswitch_b
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawBottomLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 16
     :pswitch_c
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 17
     :pswitch_d
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     goto :goto_0
 
-    .line 18
     :pswitch_e
     new-instance v0, Landroid/graphics/RectF;
 
@@ -1036,7 +980,6 @@
 .method private drawTopLeftRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 6
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1065,7 +1008,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1086,7 +1028,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1109,7 +1050,6 @@
 .method private drawTopRightRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->diameter:I
@@ -1136,7 +1076,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1155,7 +1094,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->radius:I
@@ -1180,7 +1118,6 @@
 .method private drawTopRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1205,7 +1142,6 @@
 
     invoke-virtual {p1, v0, v2, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->margin:I
@@ -1230,7 +1166,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 1
     instance-of v0, p1, Lcom/android/camera/fragment/music/RoundedCornersTransformation;
 
     if-eqz v0, :cond_0
@@ -1275,7 +1210,6 @@
 .method public hashCode()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->radius:I
 
     mul-int/lit16 v0, v0, 0x2710
@@ -1312,7 +1246,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1347,7 +1280,6 @@
 
     iget-object v1, p0, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->cornerType:Lcom/android/camera/fragment/music/RoundedCornersTransformation$CornerType;
 
-    .line 2
     invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
@@ -1368,17 +1300,14 @@
 .method public transform(Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 1
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p3
 
-    .line 2
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p4
 
-    .line 3
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-interface {p1, p3, p4, v0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;->get(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -1387,23 +1316,18 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
 
-    .line 5
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 6
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    .line 7
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 8
     new-instance v0, Landroid/graphics/BitmapShader;
 
     sget-object v3, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
@@ -1416,7 +1340,6 @@
 
     int-to-float p3, p4
 
-    .line 9
     invoke-direct {p0, v1, v2, p2, p3}, Lcom/android/camera/fragment/music/RoundedCornersTransformation;->drawRoundRect(Landroid/graphics/Canvas;Landroid/graphics/Paint;FF)V
 
     return-object p1

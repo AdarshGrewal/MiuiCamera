@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0, p1}, Lcom/android/camera/IPreviewMetadataListener;->onSamplePreviewMetadata(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

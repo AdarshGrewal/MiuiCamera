@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,23 +24,18 @@
 
     if-eqz p1, :cond_9
 
-    .line 1
     new-instance v0, Lcom/adobe/xmp/impl/xpath/XMPPath;
 
     invoke-direct {v0}, Lcom/adobe/xmp/impl/xpath/XMPPath;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/adobe/xmp/impl/xpath/PathPosition;
 
     invoke-direct {v1}, Lcom/adobe/xmp/impl/xpath/PathPosition;-><init>()V
 
-    .line 3
     iput-object p1, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
-    .line 4
     invoke-static {p0, v1, v0}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->parseRootNode(Ljava/lang/String;Lcom/adobe/xmp/impl/xpath/PathPosition;Lcom/adobe/xmp/impl/xpath/XMPPath;)V
 
-    .line 5
     :goto_0
     iget p0, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -51,20 +45,16 @@
 
     if-ge p0, v2, :cond_8
 
-    .line 6
     iget p0, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     iput p0, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
-    .line 7
     invoke-static {p1, v1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->skipPathDelimiter(Ljava/lang/String;Lcom/adobe/xmp/impl/xpath/PathPosition;)V
 
-    .line 8
     iget p0, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     iput p0, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 9
     invoke-virtual {p1, p0}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -73,20 +63,17 @@
 
     if-eq p0, v2, :cond_0
 
-    .line 10
     invoke-static {v1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->parseStructSegment(Lcom/adobe/xmp/impl/xpath/PathPosition;)Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     move-result-object p0
 
     goto :goto_1
 
-    .line 11
     :cond_0
     invoke-static {v1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->parseIndexSegment(Lcom/adobe/xmp/impl/xpath/PathPosition;)Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     move-result-object p0
 
-    .line 12
     :goto_1
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getKind()I
 
@@ -106,7 +93,6 @@
 
     if-ne v2, v8, :cond_4
 
-    .line 13
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -119,7 +105,6 @@
 
     if-ne v2, v7, :cond_2
 
-    .line 14
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,7 +129,6 @@
 
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setName(Ljava/lang/String;)V
 
-    .line 15
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -159,7 +143,6 @@
 
     goto :goto_2
 
-    .line 16
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -167,7 +150,6 @@
 
     throw p0
 
-    .line 17
     :cond_2
     :goto_2
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
@@ -180,17 +162,14 @@
 
     if-ne v2, v6, :cond_3
 
-    .line 18
     iget v2, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
 
     add-int/2addr v2, v8
 
     iput v2, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
 
-    .line 19
     invoke-virtual {p0, v5}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setKind(I)V
 
-    .line 20
     :cond_3
     iget-object v2, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
@@ -206,7 +185,6 @@
 
     goto :goto_4
 
-    .line 21
     :cond_4
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getKind()I
 
@@ -216,7 +194,6 @@
 
     if-ne v2, v9, :cond_7
 
-    .line 22
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -227,7 +204,6 @@
 
     if-ne v2, v7, :cond_6
 
-    .line 23
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -252,7 +228,6 @@
 
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setName(Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -267,7 +242,6 @@
 
     goto :goto_3
 
-    .line 25
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -275,7 +249,6 @@
 
     throw p0
 
-    .line 26
     :cond_6
     :goto_3
     invoke-virtual {p0}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->getName()Ljava/lang/String;
@@ -288,7 +261,6 @@
 
     if-ne v2, v6, :cond_7
 
-    .line 27
     iget v2, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
 
     add-int/2addr v2, v8
@@ -297,10 +269,8 @@
 
     const/4 v2, 0x5
 
-    .line 28
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setKind(I)V
 
-    .line 29
     iget-object v2, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     iget v3, v1, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
@@ -313,7 +283,6 @@
 
     invoke-static {v2}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->verifyQualName(Ljava/lang/String;)V
 
-    .line 30
     :cond_7
     :goto_4
     invoke-virtual {v0, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
@@ -323,7 +292,6 @@
     :cond_8
     return-object v0
 
-    .line 31
     :cond_9
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -344,14 +312,12 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 2
     iget-object v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
@@ -380,7 +346,6 @@
 
     if-gt v0, v5, :cond_1
 
-    .line 3
     :goto_0
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -406,14 +371,12 @@
 
     iget v6, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 4
     invoke-virtual {v0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
     if-gt v0, v5, :cond_0
 
-    .line 5
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v0, v0, 0x1
@@ -422,7 +385,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance v0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
@@ -432,7 +394,6 @@
 
     goto/16 :goto_5
 
-    .line 7
     :cond_1
     :goto_1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
@@ -459,7 +420,6 @@
 
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -468,7 +428,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 9
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v0, v0, 0x1
@@ -477,7 +436,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_2
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -489,7 +447,6 @@
 
     if-ge v0, v1, :cond_c
 
-    .line 11
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
@@ -500,7 +457,6 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 12
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
@@ -519,7 +475,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 13
     new-instance v0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     const/4 v1, 0x4
@@ -528,7 +483,6 @@
 
     goto/16 :goto_5
 
-    .line 14
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -538,7 +492,6 @@
 
     throw p0
 
-    .line 15
     :cond_4
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
@@ -546,17 +499,14 @@
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
 
-    .line 16
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameEnd:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 17
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 18
     iget-object v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
@@ -573,7 +523,6 @@
 
     goto :goto_2
 
-    .line 19
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -583,7 +532,6 @@
 
     throw p0
 
-    .line 20
     :cond_6
     :goto_2
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
@@ -592,7 +540,6 @@
 
     iput v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 21
     :goto_3
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -604,7 +551,6 @@
 
     if-ge v1, v5, :cond_9
 
-    .line 22
     iget-object v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     iget v5, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
@@ -615,7 +561,6 @@
 
     if-ne v1, v0, :cond_8
 
-    .line 23
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v1, v1, 0x1
@@ -634,7 +579,6 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    .line 24
     invoke-virtual {v1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -643,7 +587,6 @@
 
     goto :goto_4
 
-    .line 25
     :cond_7
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -651,7 +594,6 @@
 
     iput v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 26
     :cond_8
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -661,7 +603,6 @@
 
     goto :goto_3
 
-    .line 27
     :cond_9
     :goto_4
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
@@ -674,21 +615,18 @@
 
     if-ge v0, v1, :cond_b
 
-    .line 28
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 29
     new-instance v0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     const/4 v1, 0x6
 
     invoke-direct {v0, v2, v1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
-    .line 30
     :goto_5
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -710,14 +648,12 @@
 
     if-ne v1, v3, :cond_a
 
-    .line 31
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
-    .line 32
     iget-object v2, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     iget p0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
@@ -730,7 +666,6 @@
 
     return-object v0
 
-    .line 33
     :cond_a
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -740,7 +675,6 @@
 
     throw p0
 
-    .line 34
     :cond_b
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -750,7 +684,6 @@
 
     throw p0
 
-    .line 35
     :cond_c
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -769,7 +702,6 @@
         }
     .end annotation
 
-    .line 1
     :goto_0
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -799,7 +731,6 @@
 
     if-gez v0, :cond_0
 
-    .line 2
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/2addr v0, v2
@@ -808,7 +739,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -816,7 +746,6 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 4
     iget-object p1, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -827,7 +756,6 @@
 
     move-result-object p1
 
-    .line 5
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v0
@@ -840,24 +768,20 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     new-instance v0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     invoke-direct {v0, p0, v1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
     invoke-virtual {p2, v0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
-    .line 7
     new-instance p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     invoke-direct {p0, p1, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
-    .line 8
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
     goto :goto_1
 
-    .line 9
     :cond_1
     new-instance p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
@@ -869,29 +793,24 @@
 
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
-    .line 10
     new-instance p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getNamespace()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 11
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getPropName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 12
     invoke-static {p1, v1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->verifyXPathRoot(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p0, p1, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
-    .line 13
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAlias(Z)V
 
-    .line 14
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
     move-result-object p1
@@ -902,10 +821,8 @@
 
     invoke-virtual {p0, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAliasForm(I)V
 
-    .line 15
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
-    .line 16
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
     move-result-object p0
@@ -916,7 +833,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 17
     new-instance p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     const/4 p1, 0x5
@@ -925,10 +841,8 @@
 
     invoke-direct {p0, v1, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
-    .line 18
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAlias(Z)V
 
-    .line 19
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
     move-result-object p1
@@ -939,12 +853,10 @@
 
     invoke-virtual {p0, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAliasForm(I)V
 
-    .line 20
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
     goto :goto_1
 
-    .line 21
     :cond_2
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
@@ -956,7 +868,6 @@
 
     if-eqz p0, :cond_3
 
-    .line 22
     new-instance p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     const/4 p1, 0x3
@@ -965,10 +876,8 @@
 
     invoke-direct {p0, v1, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;-><init>(Ljava/lang/String;I)V
 
-    .line 23
     invoke-virtual {p0, v2}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAlias(Z)V
 
-    .line 24
     invoke-interface {v0}, Lcom/adobe/xmp/properties/XMPAliasInfo;->getAliasForm()Lcom/adobe/xmp/options/AliasOptions;
 
     move-result-object p1
@@ -979,14 +888,12 @@
 
     invoke-virtual {p0, p1}, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->setAliasForm(I)V
 
-    .line 25
     invoke-virtual {p2, p0}, Lcom/adobe/xmp/impl/xpath/XMPPath;->add(Lcom/adobe/xmp/impl/xpath/XMPPathSegment;)V
 
     :cond_3
     :goto_1
     return-void
 
-    .line 26
     :cond_4
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1007,12 +914,10 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameStart:I
 
-    .line 2
     :goto_0
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
@@ -1042,7 +947,6 @@
 
     if-gez v0, :cond_0
 
-    .line 3
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     add-int/2addr v0, v2
@@ -1051,18 +955,15 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepEnd:I
 
     iput v0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->nameEnd:I
 
-    .line 5
     iget v1, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     if-eq v0, v1, :cond_1
 
-    .line 6
     new-instance v3, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;
 
     iget-object p0, p0, Lcom/adobe/xmp/impl/xpath/PathPosition;->path:Ljava/lang/String;
@@ -1075,7 +976,6 @@
 
     return-object v3
 
-    .line 7
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1096,7 +996,6 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
@@ -1109,14 +1008,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 2
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1125,7 +1022,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1135,7 +1031,6 @@
 
     throw p0
 
-    .line 5
     :cond_1
     :goto_0
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
@@ -1148,14 +1043,12 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 6
     iget v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p1, Lcom/adobe/xmp/impl/xpath/PathPosition;->stepBegin:I
 
-    .line 7
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1174,7 +1067,6 @@
 
     goto :goto_1
 
-    .line 8
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1199,7 +1091,6 @@
 
     const/16 v0, 0x3a
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1210,19 +1101,16 @@
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3
     invoke-static {p0}, Lcom/adobe/xmp/impl/Utils;->isXMLNameNS(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v0
@@ -1235,7 +1123,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1245,7 +1132,6 @@
 
     throw p0
 
-    .line 6
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1264,7 +1150,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/adobe/xmp/impl/Utils;->isXMLName(Ljava/lang/String;)Z
 
     move-result p0
@@ -1273,7 +1158,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1298,7 +1182,6 @@
 
     if-eqz p0, :cond_6
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1307,7 +1190,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -1328,7 +1210,6 @@
 
     const/16 v2, 0x2f
 
-    .line 3
     invoke-virtual {p1, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
@@ -1343,7 +1224,6 @@
 
     if-gez v2, :cond_4
 
-    .line 4
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v2
@@ -1356,17 +1236,14 @@
 
     const/16 v3, 0x3a
 
-    .line 5
     invoke-virtual {p1, v3}, Ljava/lang/String;->indexOf(I)I
 
     move-result v3
 
     if-gez v3, :cond_0
 
-    .line 6
     invoke-static {p1}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->verifySimpleXMLName(Ljava/lang/String;)V
 
-    .line 7
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1381,7 +1258,6 @@
 
     return-object p0
 
-    .line 8
     :cond_0
     invoke-virtual {p1, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1389,7 +1265,6 @@
 
     invoke-static {v2}, Lcom/adobe/xmp/impl/xpath/XMPPathParser;->verifySimpleXMLName(Ljava/lang/String;)V
 
-    .line 9
     invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1398,12 +1273,10 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 10
     invoke-virtual {p1, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 11
     invoke-static {}, Lcom/adobe/xmp/XMPMetaFactory;->getSchemaRegistry()Lcom/adobe/xmp/XMPSchemaRegistry;
 
     move-result-object v2
@@ -1414,7 +1287,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 12
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1423,7 +1295,6 @@
 
     return-object p1
 
-    .line 13
     :cond_1
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1433,7 +1304,6 @@
 
     throw p0
 
-    .line 14
     :cond_2
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1443,7 +1313,6 @@
 
     throw p0
 
-    .line 15
     :cond_3
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1453,7 +1322,6 @@
 
     throw p0
 
-    .line 16
     :cond_4
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1463,7 +1331,6 @@
 
     throw p0
 
-    .line 17
     :cond_5
     new-instance p0, Lcom/adobe/xmp/XMPException;
 
@@ -1473,7 +1340,6 @@
 
     throw p0
 
-    .line 18
     :cond_6
     new-instance p0, Lcom/adobe/xmp/XMPException;
 

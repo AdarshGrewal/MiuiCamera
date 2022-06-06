@@ -39,10 +39,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
@@ -59,7 +57,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera2/HardwareCapabilities$1;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera2/HardwareCapabilities$TypedValue;-><init>()V
 
     return-void
@@ -83,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/HardwareCapabilities$TypedValue;->mCachedValue:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -92,19 +88,16 @@
 
     check-cast v0, Ljava/util/Optional;
 
-    .line 2
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera2/HardwareCapabilities$TypedValue;->mCachedValue:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter v0
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/camera2/HardwareCapabilities$TypedValue;->mCachedValue:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -114,14 +107,12 @@
 
     check-cast v1, Ljava/util/Optional;
 
-    .line 5
     invoke-virtual {v1}, Ljava/util/Optional;->isPresent()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera2/HardwareCapabilities$TypedValue;->mCachedValue:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Lcom/android/camera2/HardwareCapabilities$TypedValue;->create()Ljava/lang/Object;
@@ -134,7 +125,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 7
     :cond_0
     monitor-exit v0
 
@@ -149,7 +139,6 @@
 
     throw v1
 
-    .line 8
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/HardwareCapabilities$TypedValue;->mCachedValue:Ljava/util/concurrent/atomic/AtomicReference;

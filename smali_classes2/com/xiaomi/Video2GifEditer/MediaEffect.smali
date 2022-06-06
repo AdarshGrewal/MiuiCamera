@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 .method public static CreateEffect(Lcom/xiaomi/Video2GifEditer/EffectType;)J
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
@@ -35,7 +33,6 @@
 
     move-result-wide v0
 
-    .line 2
     sget-object v2, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -69,7 +66,6 @@
 .method public static CreateSegmentEffect(Ljava/lang/String;)J
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -80,7 +76,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -107,13 +102,11 @@
 
     return-wide v0
 
-    .line 3
     :cond_0
     invoke-static {p0}, Lcom/xiaomi/Video2GifEditer/MediaEffect;->CreateSegmentEffectJni(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 4
     sget-object v2, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -141,10 +134,8 @@
 .method public static DestoryEffect(J)V
     .locals 3
 
-    .line 1
     invoke-static {p0, p1}, Lcom/xiaomi/Video2GifEditer/MediaEffect;->DestoryEffectJni(J)V
 
-    .line 2
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -172,14 +163,12 @@
 .method public static SetCoverCallback(JLcom/xiaomi/Video2GifEditer/EffectCoverNotifier;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     const-string v1, "set EffectCoverCallback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffect;->SetCoverCallbackJni(JLcom/xiaomi/Video2GifEditer/EffectCoverNotifier;)V
 
     return-void
@@ -191,14 +180,12 @@
 .method public static SetFilterCallback(JLcom/xiaomi/Video2GifEditer/EffectNotifier;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     const-string v1, "Register filter callback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {p0, p1, p2}, Lcom/xiaomi/Video2GifEditer/MediaEffect;->SetFilterCallbackJni(JLcom/xiaomi/Video2GifEditer/EffectNotifier;)V
 
     return-void
@@ -219,7 +206,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,14 +228,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 2
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -258,7 +242,6 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 4
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -280,7 +263,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 5
     sget-object v4, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -317,7 +299,6 @@
 
     mul-int/lit8 v4, v0, 0x2
 
-    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -326,7 +307,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 7
     invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -339,7 +319,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     sget-object p2, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
@@ -349,7 +328,6 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 9
     :cond_1
     invoke-static {p0, p1, v1}, Lcom/xiaomi/Video2GifEditer/MediaEffect;->SetParamsForAudioTrackJni(J[Ljava/lang/String;)Z
 
@@ -375,7 +353,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -404,14 +381,12 @@
 
     if-eqz p3, :cond_0
 
-    .line 2
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -420,7 +395,6 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 4
     invoke-interface {p3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -442,7 +416,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 5
     sget-object v4, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -479,7 +452,6 @@
 
     mul-int/lit8 v4, v0, 0x2
 
-    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -488,7 +460,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 7
     invoke-interface {p3, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -501,7 +472,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     sget-object p3, Lcom/xiaomi/Video2GifEditer/MediaEffect;->TAG:Ljava/lang/String;
 
@@ -511,7 +481,6 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
-    .line 9
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 

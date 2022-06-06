@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/LocationManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/LocationManager$1;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -35,12 +34,10 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/LocationManager$1;->this$0:Lcom/android/camera/LocationManager;
 
     invoke-static {v0}, Lcom/android/camera/LocationManager;->access$100(Lcom/android/camera/LocationManager;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/LocationManager$1;->this$0:Lcom/android/camera/LocationManager;
 
     const/4 v1, 0x0

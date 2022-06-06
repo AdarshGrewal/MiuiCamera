@@ -15,7 +15,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static createCoverBox([B)Lcom/android/camera/jcodec/MCoverBox;
     .locals 4
 
-    .line 1
     new-instance v0, Lcom/android/camera/jcodec/MCoverBox;
 
     const-string v1, "mcvr"
@@ -37,7 +35,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/camera/jcodec/MCoverBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lcom/android/camera/jcodec/MCoverBox;->data:[B
 
     return-object v0
@@ -56,7 +53,6 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MCoverBox;->data:[B
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
@@ -67,7 +63,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MCoverBox;->data:[B
 
     array-length v0, v0
@@ -80,7 +75,6 @@
 .method public getData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/jcodec/MCoverBox;->data:[B
 
     return-object v0
@@ -89,7 +83,6 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->readBuf(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p1

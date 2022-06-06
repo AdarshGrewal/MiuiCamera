@@ -27,20 +27,16 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     return-void
@@ -56,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
@@ -72,7 +67,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     return-wide v0
@@ -86,7 +80,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v2, 0x1
@@ -95,7 +88,6 @@
 
     iput-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -123,7 +115,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v2, 0x1
@@ -132,7 +123,6 @@
 
     iput-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -156,7 +146,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     iget-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v4, 0x2
@@ -165,7 +154,6 @@
 
     iput-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
@@ -178,14 +166,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     aget-byte v0, v1, v0
 
     and-int/lit16 v0, v0, 0xff
 
     int-to-char v0, v0
 
-    .line 4
     aget-byte v1, v1, v3
 
     shl-int/lit8 v1, v1, 0x8
@@ -210,7 +196,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0}, Ljava/io/IOException;-><init>()V
@@ -226,7 +211,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0}, Ljava/io/IOException;-><init>()V
@@ -242,14 +226,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->read([B)I
 
     move-result p1
 
-    .line 2
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     int-to-long v2, p1
@@ -269,14 +251,12 @@
         }
     .end annotation
 
-    .line 3
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
     move-result p1
 
-    .line 4
     iget-wide p2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     int-to-long v0, p1
@@ -300,7 +280,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     iget-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v4, 0x4
@@ -309,7 +288,6 @@
 
     iput-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
@@ -322,14 +300,12 @@
 
     const/4 v0, 0x3
 
-    .line 3
     aget-byte v0, v1, v0
 
     and-int/lit16 v0, v0, 0xff
 
     const/4 v2, 0x2
 
-    .line 4
     aget-byte v2, v1, v2
 
     shl-int/lit8 v2, v2, 0x8
@@ -342,7 +318,6 @@
 
     const/4 v2, 0x1
 
-    .line 5
     aget-byte v2, v1, v2
 
     shl-int/lit8 v2, v2, 0x10
@@ -353,7 +328,6 @@
 
     or-int/2addr v0, v2
 
-    .line 6
     aget-byte v1, v1, v3
 
     shl-int/lit8 v1, v1, 0x18
@@ -376,7 +350,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0}, Ljava/io/IOException;-><init>()V
@@ -396,7 +369,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     iget-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v4, 0x8
@@ -405,7 +377,6 @@
 
     iput-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
@@ -416,7 +387,6 @@
 
     const/4 v2, 0x7
 
-    .line 3
     aget-byte v2, v1, v2
 
     and-int/lit16 v2, v2, 0xff
@@ -425,7 +395,6 @@
 
     const/4 v4, 0x6
 
-    .line 4
     aget-byte v4, v1, v4
 
     shl-int/lit8 v0, v4, 0x8
@@ -440,7 +409,6 @@
 
     const/4 v0, 0x5
 
-    .line 5
     aget-byte v0, v1, v0
 
     shl-int/lit8 v0, v0, 0x10
@@ -455,7 +423,6 @@
 
     const/4 v0, 0x4
 
-    .line 6
     aget-byte v0, v1, v0
 
     shl-int/lit8 v0, v0, 0x18
@@ -470,7 +437,6 @@
 
     const/4 v0, 0x3
 
-    .line 7
     aget-byte v0, v1, v0
 
     int-to-long v4, v0
@@ -487,7 +453,6 @@
 
     const/4 v0, 0x2
 
-    .line 8
     aget-byte v0, v1, v0
 
     int-to-long v4, v0
@@ -504,7 +469,6 @@
 
     const/4 v0, 0x1
 
-    .line 9
     aget-byte v0, v1, v0
 
     int-to-long v4, v0
@@ -521,7 +485,6 @@
 
     const/4 v0, 0x0
 
-    .line 10
     aget-byte v0, v1, v0
 
     int-to-long v0, v0
@@ -557,7 +520,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     iget-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v4, 0x2
@@ -566,7 +528,6 @@
 
     iput-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
@@ -579,14 +540,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     aget-byte v0, v1, v0
 
     and-int/lit16 v0, v0, 0xff
 
     int-to-short v0, v0
 
-    .line 4
     aget-byte v1, v1, v3
 
     shl-int/lit8 v1, v1, 0x8
@@ -611,7 +570,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/IOException;
 
     invoke-direct {v0}, Ljava/io/IOException;-><init>()V
@@ -627,7 +585,6 @@
         }
     .end annotation
 
-    .line 1
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v2, 0x1
@@ -636,7 +593,6 @@
 
     iput-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
@@ -660,7 +616,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     iget-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     const-wide/16 v4, 0x2
@@ -669,7 +624,6 @@
 
     iput-wide v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
-    .line 2
     iget-object v2, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v2, v1}, Ljava/io/InputStream;->read([B)I
@@ -682,14 +636,12 @@
 
     const/4 v0, 0x1
 
-    .line 3
     aget-byte v0, v1, v0
 
     and-int/lit16 v0, v0, 0xff
 
     int-to-short v0, v0
 
-    .line 4
     aget-byte v1, v1, v3
 
     shl-int/lit8 v1, v1, 0x8
@@ -714,12 +666,10 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
@@ -730,12 +680,10 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iput-wide p1, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/io/IOException;
 
@@ -754,7 +702,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputFile:Ljava/io/InputStream;
 
     int-to-long v1, p1
@@ -765,7 +712,6 @@
 
     long-to-int p1, v0
 
-    .line 2
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputStream;->mInputPos:J
 
     int-to-long v2, p1

@@ -24,7 +24,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Ljava/lang/String;Ljava/util/concurrent/Semaphore;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     iput-object p3, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;->val$signal:Ljava/util/concurrent/Semaphore;
@@ -39,7 +38,6 @@
 .method public onLooperPrepared()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     new-instance v1, Landroid/os/Handler;
@@ -48,7 +46,6 @@
 
     invoke-static {v0, v1}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$102(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 2
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$1;->val$signal:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V

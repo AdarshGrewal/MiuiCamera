@@ -19,7 +19,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -28,7 +27,6 @@
 .method public static createTimeToSampleBox([Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;)Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -41,7 +39,6 @@
 
     invoke-direct {v0, v1}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     iput-object p0, v0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     return-object v0
@@ -60,10 +57,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     array-length v0, v0
@@ -72,7 +67,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
@@ -80,17 +74,14 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 4
     aget-object v1, v1, v0
 
-    .line 5
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;->getSampleCount()I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 6
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;->getSampleDuration()I
 
     move-result v1
@@ -108,7 +99,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     array-length v0, v0
@@ -123,7 +113,6 @@
 .method public getEntries()[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     return-object v0
@@ -132,15 +121,12 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 6
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
-    .line 3
     new-array v1, v0, [Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
@@ -150,7 +136,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 4
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     new-instance v3, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
@@ -178,7 +163,6 @@
 .method public setEntries([Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->entries:[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     return-void

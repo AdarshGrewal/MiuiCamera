@@ -43,45 +43,38 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_VALUE:Ljava/util/List;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 4
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_VALUE:Ljava/util/List;
 
     const-string v1, "8"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_VALUE:Ljava/util/List;
 
     const-string v1, "6"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_VALUE:Ljava/util/List;
 
     const-string v1, "5"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_VALUE:Ljava/util/List;
 
     const-string v1, "3001"
@@ -94,7 +87,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -103,7 +95,6 @@
 .method private getSupportMaxValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-eqz v0, :cond_2
@@ -118,7 +109,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -131,7 +121,6 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -144,7 +133,6 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -182,13 +170,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 2
     invoke-interface {p4}, Ljava/util/List;->clear()V
 
-    .line 3
     const-class v0, Landroid/media/MediaRecorder;
 
     const v1, 0x8004
@@ -197,7 +182,6 @@
 
     move-result-object p3
 
-    .line 4
     new-instance v0, Lcom/android/camera/CameraSize;
 
     const/16 v1, 0x500
@@ -214,30 +198,26 @@
 
     const/4 v0, 0x5
 
-    .line 5
     invoke-static {p2, v0}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f120882
+    const v1, 0x7f120835
 
     const-string v2, "5"
 
-    const v3, 0x7f080228
+    const v3, 0x7f080224
 
     invoke-direct {v0, v3, v3, v1, v2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-interface {p4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     :cond_0
     new-instance v0, Lcom/android/camera/CameraSize;
 
@@ -255,37 +235,32 @@
 
     const/4 v0, 0x6
 
-    .line 9
     invoke-static {p2, v0}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 10
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f12087c
+    const v1, 0x7f12082f
 
     const-string v2, "6"
 
-    const v3, 0x7f08021b
+    const v3, 0x7f080217
 
     invoke-direct {v0, v3, v3, v1, v2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-interface {p4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     :cond_1
     invoke-static {}, Lcom/android/camera/CameraSettings;->get4kProfile()I
 
     move-result v0
 
-    .line 13
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000oo()Z
 
     move-result v1
 
@@ -299,44 +274,38 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/CameraSize;-><init>(II)V
 
-    .line 14
     invoke-interface {p3, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 15
     invoke-static {p2, v0}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 16
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v1, 0x7f120880
+    const v1, 0x7f120833
 
     const-string v2, "8"
 
-    const v3, 0x7f080224
+    const v3, 0x7f080220
 
     invoke-direct {v0, v3, v3, v1, v2}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 17
     invoke-interface {p4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 18
     :cond_2
     invoke-static {}, Lcom/android/camera/CameraSettings;->get8kProfile()I
 
     move-result v0
 
-    .line 19
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o0000()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00000oo()Z
 
     move-result v1
 
@@ -350,34 +319,30 @@
 
     invoke-direct {v1, v2, v3}, Lcom/android/camera/CameraSize;-><init>(II)V
 
-    .line 20
     invoke-interface {p3, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-eqz p3, :cond_3
 
-    .line 21
     invoke-static {p2, v0}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 22
     new-instance p2, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const p3, 0x7f120883
+    const p3, 0x7f120836
 
     const-string v0, "3001"
 
-    const v1, 0x7f08022a
+    const v1, 0x7f080226
 
     invoke-direct {p2, v1, v1, p3, v0}, Lcom/android/camera/data/data/ComponentDataItem;-><init>(IIILjava/lang/String;)V
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 23
     invoke-interface {p4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -400,7 +365,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 1
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v1
@@ -409,7 +373,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -428,7 +391,6 @@
 
     check-cast v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    .line 3
     iget-object v2, v1, Lcom/android/camera/data/data/ComponentDataItem;->mValue:Ljava/lang/String;
 
     invoke-static {p1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -455,7 +417,6 @@
 .method public checkValueValid(ILjava/lang/String;)Z
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     invoke-direct {p0, p2, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->isContain(Ljava/lang/String;Ljava/util/List;)Z
@@ -468,7 +429,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     sget-object p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->TAG:Ljava/lang/String;
 
@@ -504,12 +464,10 @@
 .method public getComponentValue(I)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->getDefaultValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->getKey(I)Ljava/lang/String;
@@ -520,12 +478,10 @@
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 4
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -551,14 +507,12 @@
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 5
     invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->checkValueValid(ILjava/lang/String;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 6
     const-class p1, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -581,7 +535,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-direct {p0, v0}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->getSupportMaxValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -617,19 +570,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->TAG:Ljava/lang/String;
 
     const-string v1, "List is empty!"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -659,7 +609,6 @@
 .method public isForceQuality()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -682,7 +631,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
@@ -692,7 +640,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -727,7 +674,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
@@ -737,7 +683,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -772,7 +717,6 @@
 
     move v1, v0
 
-    .line 1
     :goto_0
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
@@ -782,7 +726,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2
     sget-object v2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -813,12 +756,10 @@
 .method public reInit(IILcom/android/camera2/CameraCapabilities;I)V
     .locals 6
 
-    .line 1
     new-instance p4, Ljava/util/ArrayList;
 
     invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -836,13 +777,10 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3
     iput-object v2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 4
     invoke-direct {p0, p4, p2, p3, v0}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->initItem(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Ljava/util/List;)V
 
-    .line 5
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -851,7 +789,6 @@
 
     if-nez p2, :cond_5
 
-    .line 6
     sget-object p2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     if-eqz p2, :cond_1
@@ -862,18 +799,15 @@
 
     if-nez p2, :cond_2
 
-    .line 7
     :cond_1
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v4
@@ -884,15 +818,12 @@
 
     move-result-object v4
 
-    .line 10
     invoke-direct {p0, p2, v5, v4, v3}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->initItem(Ljava/util/List;ILcom/android/camera2/CameraCapabilities;Ljava/util/List;)V
 
-    .line 11
     sget-object v3, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     invoke-virtual {p0, p2, v3}, Lcom/android/camera/data/data/ComponentData;->copyList(Ljava/util/List;Ljava/util/List;)V
 
-    .line 12
     :cond_2
     sget-object p2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
@@ -900,14 +831,12 @@
 
     invoke-virtual {p0, p2, v3}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
-    .line 13
     sget-object p2, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     invoke-virtual {p0, p2, p4}, Lcom/android/camera/data/data/ComponentData;->copyList(Ljava/util/List;Ljava/util/List;)V
 
     if-eq p1, v1, :cond_3
 
-    .line 14
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraId()I
 
     move-result p2
@@ -936,13 +865,11 @@
 
     if-eq p2, v3, :cond_3
 
-    .line 15
     invoke-virtual {p0, p4, v0}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     :cond_3
     if-ne p1, v1, :cond_5
 
-    .line 16
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraId()I
 
     move-result p2
@@ -957,7 +884,6 @@
 
     if-eq p2, v1, :cond_4
 
-    .line 17
     invoke-virtual {p3}, Lcom/android/camera2/CameraCapabilities;->getCameraId()I
 
     move-result p2
@@ -972,18 +898,15 @@
 
     if-eq p2, v1, :cond_4
 
-    .line 18
     invoke-virtual {p3, p1}, Lcom/android/camera2/CameraCapabilities;->isTeleMacro(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    .line 19
     :cond_4
     invoke-virtual {p0, p4, v0}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
-    .line 20
     :cond_5
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isAutoZoomEnabled(I)Z
 
@@ -993,21 +916,18 @@
 
     if-eqz p2, :cond_6
 
-    .line 21
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 22
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 23
     :cond_6
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isAiEnhancedVideoEnabled(I)Z
 
@@ -1015,22 +935,18 @@
 
     if-eqz p2, :cond_7
 
-    .line 24
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p2
 
-    invoke-virtual {p2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooOooO()[Ljava/lang/String;
+    invoke-virtual {p2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooOo()[Ljava/lang/String;
 
     move-result-object p2
 
-    .line 25
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 26
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 27
     :cond_7
     invoke-static {p3, p1}, Lcom/android/camera/CameraSettings;->isVhdrOn(Lcom/android/camera2/CameraCapabilities;I)Z
 
@@ -1042,21 +958,18 @@
 
     if-eqz p2, :cond_8
 
-    .line 28
     filled-new-array {v1, v0, p3}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 29
     filled-new-array {v1, v0, p3}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 30
     :cond_8
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isSuperEISEnabled(I)Z
 
@@ -1064,21 +977,18 @@
 
     if-eqz p2, :cond_9
 
-    .line 31
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 32
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 33
     :cond_9
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMasterFilterOn(I)Z
 
@@ -1086,7 +996,6 @@
 
     if-eqz p2, :cond_b
 
-    .line 34
     invoke-static {}, Lcom/android/camera/CameraSettings;->getVideoMasterFilter()I
 
     move-result p2
@@ -1095,14 +1004,12 @@
 
     if-ne p2, v3, :cond_a
 
-    .line 35
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 36
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
@@ -1111,7 +1018,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_a
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
@@ -1119,14 +1025,12 @@
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 38
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 39
     :cond_b
     :goto_0
     invoke-static {p1, v2}, Lcom/android/camera/CameraSettings;->isFaceBeautyOn(ILcom/android/camera/fragment/beauty/BeautyValues;)Z
@@ -1135,21 +1039,18 @@
 
     if-eqz p2, :cond_c
 
-    .line 40
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 41
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 42
     :cond_c
     invoke-static {}, Lcom/android/camera/CameraSettings;->isVideoBokehOn()Z
 
@@ -1157,21 +1058,18 @@
 
     if-eqz p2, :cond_d
 
-    .line 43
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p0, p4, p2}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 44
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 45
     :cond_d
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isProVideoLogOpen(I)Z
 
@@ -1179,21 +1077,18 @@
 
     if-eqz p1, :cond_e
 
-    .line 46
     filled-new-array {p3}, [Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p4, p1}, Lcom/android/camera/data/data/ComponentData;->filterSupprotedItems(Ljava/util/List;[Ljava/lang/String;)Ljava/util/List;
 
-    .line 47
     filled-new-array {p3}, [Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->mForceValue:[Ljava/lang/String;
 
-    .line 48
     :cond_e
     :goto_1
     invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -1208,15 +1103,12 @@
 .method public reset()V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->ALL_QUALITY_ITMES:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
@@ -1240,7 +1132,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 
     invoke-virtual {p0, v1}, Lcom/android/camera/data/data/config/ComponentConfigVideoSubQuality;->getKey(I)Ljava/lang/String;

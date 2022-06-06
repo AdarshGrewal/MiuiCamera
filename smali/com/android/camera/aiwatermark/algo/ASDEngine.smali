@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,7 @@
 .method public static final spots2ASDKey(I)Ljava/lang/String;
     .locals 2
 
-    const-string v0, "negative"
+    const-string/jumbo v0, "negative"
 
     if-eqz p0, :cond_8
 
@@ -71,7 +70,7 @@
     goto :goto_0
 
     :pswitch_2
-    const-string v0, "monkey"
+    const-string/jumbo v0, "monkey"
 
     goto :goto_0
 
@@ -91,7 +90,7 @@
     goto :goto_0
 
     :pswitch_6
-    const-string v0, "nightscape"
+    const-string/jumbo v0, "nightscape"
 
     goto :goto_0
 
@@ -156,7 +155,7 @@
     goto :goto_0
 
     :cond_7
-    const-string v0, "motorcycle"
+    const-string/jumbo v0, "motorcycle"
 
     :cond_8
     :goto_0

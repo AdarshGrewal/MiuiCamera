@@ -54,15 +54,12 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->this$0:Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->observer:Lio/reactivex/Observer;
 
-    .line 3
     iput-object p3, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->writeLocked:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
@@ -75,7 +72,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->this$0:Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
@@ -83,7 +79,6 @@
 
     invoke-virtual {v1, p1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
 
-    .line 3
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->this$0:Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->observer:Lio/reactivex/Observer;
@@ -96,14 +91,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->this$0:Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
     iget-object p1, p1, Lio/reactivex/internal/operators/observable/ObservableRefCount;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 5
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->writeLocked:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -113,14 +106,12 @@
     :catchall_0
     move-exception p1
 
-    .line 6
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->this$0:Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
     iget-object v1, v1, Lio/reactivex/internal/operators/observable/ObservableRefCount;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 7
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->writeLocked:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -136,7 +127,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/disposables/Disposable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableRefCount$DisposeConsumer;->accept(Lio/reactivex/disposables/Disposable;)V

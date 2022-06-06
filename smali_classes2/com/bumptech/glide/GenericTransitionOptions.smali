@@ -20,7 +20,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/TransitionOptions;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/GenericTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/GenericTransitionOptions;-><init>()V
@@ -66,7 +64,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Lcom/bumptech/glide/GenericTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/GenericTransitionOptions;-><init>()V
@@ -94,7 +91,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/GenericTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/GenericTransitionOptions;-><init>()V
@@ -120,7 +116,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/GenericTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/GenericTransitionOptions;-><init>()V

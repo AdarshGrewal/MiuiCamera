@@ -19,56 +19,46 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/android/zxing/Decoder;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
-    .line 3
     invoke-static {}, Lio/reactivex/subjects/PublishSubject;->create()Lio/reactivex/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/zxing/Decoder;->mSubjects:Lio/reactivex/subjects/PublishSubject;
 
-    .line 4
     new-instance v0, Lcom/google/zxing/MultiFormatReader;
 
     invoke-direct {v0}, Lcom/google/zxing/MultiFormatReader;-><init>()V
 
     iput-object v0, p0, Lcom/android/zxing/QrDecoder;->mMultiFormatReader:Lcom/google/zxing/MultiFormatReader;
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 6
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     sget-object v3, Lcom/android/zxing/DecodeFormats;->QR_CODE_FORMATS:Ljava/util/Vector;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 8
     sget-object v3, Lcom/google/zxing/DecodeHintType;->POSSIBLE_FORMATS:Lcom/google/zxing/DecodeHintType;
 
     invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     iget-object v2, p0, Lcom/android/zxing/QrDecoder;->mMultiFormatReader:Lcom/google/zxing/MultiFormatReader;
 
     invoke-virtual {v2, v0}, Lcom/google/zxing/MultiFormatReader;->setHints(Ljava/util/Map;)V
 
-    .line 10
     iget-object v0, p0, Lcom/android/zxing/Decoder;->mSubjects:Lio/reactivex/subjects/PublishSubject;
 
     sget-object v2, Lio/reactivex/BackpressureStrategy;->LATEST:Lio/reactivex/BackpressureStrategy;
@@ -77,7 +67,6 @@
 
     move-result-object v0
 
-    .line 11
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v2
@@ -86,16 +75,14 @@
 
     move-result-object v0
 
-    new-instance v2, LOooO00o/OooO0O0/OooO0o0/OooO0o;
+    new-instance v2, LOooO0O0/OooO0O0/OooO0o0/OooO0o;
 
-    invoke-direct {v2, p0}, LOooO00o/OooO0O0/OooO0o0/OooO0o;-><init>(Lcom/android/zxing/QrDecoder;)V
+    invoke-direct {v2, p0}, LOooO0O0/OooO0O0/OooO0o0/OooO0o;-><init>(Lcom/android/zxing/QrDecoder;)V
 
-    .line 12
     invoke-virtual {v0, v2}, Lio/reactivex/Flowable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object v0
 
-    .line 13
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v2
@@ -104,18 +91,16 @@
 
     move-result-object v0
 
-    new-instance v2, LOooO00o/OooO0O0/OooO0o0/OooO0o0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO0o0/OooO0oO;
 
-    invoke-direct {v2, p0}, LOooO00o/OooO0O0/OooO0o0/OooO0o0;-><init>(Lcom/android/zxing/QrDecoder;)V
+    invoke-direct {v2, p0}, LOooO0O0/OooO0O0/OooO0o0/OooO0oO;-><init>(Lcom/android/zxing/QrDecoder;)V
 
-    .line 14
     invoke-virtual {v0, v2}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/zxing/Decoder;->mDecodeDisposable:Lio/reactivex/disposables/Disposable;
 
-    .line 15
     iput-boolean v1, p0, Lcom/android/zxing/Decoder;->mEnable:Z
 
     return-void
@@ -129,7 +114,6 @@
         }
     .end annotation
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,14 +132,12 @@
 
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p0
 
     const/16 v0, 0xaf
 
-    .line 19
     invoke-virtual {p0, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p0
@@ -164,10 +146,8 @@
 
     if-eqz p0, :cond_0
 
-    .line 20
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->hideQrCodeTip()V
 
-    .line 21
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->reConfigAiTip()Z
 
     :cond_0
@@ -184,7 +164,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,7 +192,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/zxing/QrDecoder;->decode(Lcom/android/zxing/PreviewImage;)Ljava/lang/String;
 
     move-result-object p1
@@ -229,7 +207,6 @@
         }
     .end annotation
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +225,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -259,10 +235,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iput-boolean v2, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -271,11 +245,9 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iput-boolean v1, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
-    .line 8
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -289,25 +261,21 @@
 
     return-void
 
-    .line 9
     :cond_1
     iput-object p1, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
-    .line 10
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v0, 0xaf
 
-    .line 11
     invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;
 
-    .line 12
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -320,7 +288,6 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 13
     iget-boolean v2, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
     if-nez v2, :cond_3
@@ -331,13 +298,11 @@
 
     const-wide/16 v3, 0x0
 
-    .line 14
     invoke-interface {v0, v2, v1, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
 
     :cond_2
     if-eqz p1, :cond_4
 
-    .line 15
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;->showQrCodeTip()V
 
     goto :goto_1
@@ -345,7 +310,6 @@
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 16
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$BottomPopupTips;->hideQrCodeTip()V
 
     :cond_4
@@ -360,7 +324,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/zxing/PreviewImage;->getData()[B
 
     move-result-object v1
@@ -375,7 +338,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/zxing/PreviewImage;->getWidth()I
 
     move-result v1
@@ -390,35 +352,29 @@
 
     goto :goto_4
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/zxing/PreviewImage;->getData()[B
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/zxing/PreviewImage;->getWidth()I
 
     move-result v8
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/zxing/PreviewImage;->getHeight()I
 
     move-result v9
 
     mul-int p1, v8, v9
 
-    .line 6
     new-array v2, p1, [B
 
-    .line 7
     array-length v3, v1
 
     if-le v3, p1, :cond_1
 
     const/4 v3, 0x0
 
-    .line 8
     invoke-static {v1, v3, v2, v3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object v3, v2
@@ -428,7 +384,6 @@
     :cond_1
     move-object v3, v1
 
-    .line 9
     :goto_0
     new-instance p1, Lcom/android/zxing/YUVLuminanceSource;
 
@@ -444,7 +399,6 @@
 
     invoke-direct/range {v2 .. v9}, Lcom/android/zxing/YUVLuminanceSource;-><init>([BIIIIII)V
 
-    .line 10
     new-instance v1, Lcom/google/zxing/BinaryBitmap;
 
     new-instance v2, Lcom/google/zxing/common/HybridBinarizer;
@@ -453,7 +407,6 @@
 
     invoke-direct {v1, v2}, Lcom/google/zxing/BinaryBitmap;-><init>(Lcom/google/zxing/Binarizer;)V
 
-    .line 11
     :try_start_0
     iget-object p1, p0, Lcom/android/zxing/QrDecoder;->mMultiFormatReader:Lcom/google/zxing/MultiFormatReader;
 
@@ -463,7 +416,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 12
     invoke-virtual {p1}, Lcom/google/zxing/Result;->getText()Ljava/lang/String;
 
     move-result-object v0
@@ -471,7 +423,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_2
     :goto_1
     iget-object p1, p0, Lcom/android/zxing/QrDecoder;->mMultiFormatReader:Lcom/google/zxing/MultiFormatReader;
@@ -491,7 +442,6 @@
 
     const-string v1, "decode: failed...  "
 
-    .line 14
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -501,7 +451,6 @@
     :goto_2
     return-object v0
 
-    .line 15
     :goto_3
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mMultiFormatReader:Lcom/google/zxing/MultiFormatReader;
 
@@ -517,7 +466,6 @@
 .method public getScanResult()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
     return-object v0
@@ -532,12 +480,10 @@
 .method public onPreviewFrame(Lcom/android/zxing/PreviewImage;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/zxing/Decoder;->mSubjects:Lio/reactivex/subjects/PublishSubject;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lio/reactivex/subjects/PublishSubject;->onNext(Ljava/lang/Object;)V
 
     :cond_0
@@ -555,12 +501,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/android/zxing/QrDecoder;->mScanResult:Ljava/lang/String;
 
     return-void
@@ -571,17 +515,14 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
-    .line 2
     iget-object v1, p0, Lcom/android/zxing/Decoder;->mDecodingCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -604,7 +545,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
@@ -629,7 +569,6 @@
 
     move-result-object v0
 
-    .line 5
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v1
@@ -638,9 +577,8 @@
 
     move-result-object v0
 
-    sget-object v1, LOooO00o/OooO0O0/OooO0o0/OooO0oO;->OooO00o:LOooO00o/OooO0O0/OooO0o0/OooO0oO;
+    sget-object v1, LOooO0O0/OooO0O0/OooO0o0/OooO0o0;->OooO00o:LOooO0O0/OooO0O0/OooO0o0/OooO0o0;
 
-    .line 6
     invoke-virtual {v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
@@ -653,10 +591,8 @@
 .method public stopDecode()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/zxing/Decoder;->stopDecode()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mResetTimerDisposable:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
@@ -667,7 +603,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/zxing/QrDecoder;->mResetTimerDisposable:Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V

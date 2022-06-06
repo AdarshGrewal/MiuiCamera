@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$1;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$1;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$100(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
@@ -51,7 +49,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$1;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
@@ -63,7 +60,6 @@
 
     invoke-virtual {p2, v0, v0}, Landroid/widget/EditText;->setSelection(II)V
 
-    .line 3
     iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$1;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-static {p2, p1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$200(Lmiuix/pickerwidget/widget/NumberPicker;Landroid/view/View;)V

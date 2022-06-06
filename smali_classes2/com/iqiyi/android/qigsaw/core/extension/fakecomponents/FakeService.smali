@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -26,10 +25,8 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
-    .line 2
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
     move-result p1

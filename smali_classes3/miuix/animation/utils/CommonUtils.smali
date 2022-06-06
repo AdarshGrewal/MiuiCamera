@@ -35,7 +35,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/animation/ArgbEvaluator;
 
     invoke-direct {v0}, Landroid/animation/ArgbEvaluator;-><init>()V
@@ -48,7 +47,6 @@
 
     const/4 v1, 0x0
 
-    .line 2
     const-class v2, Ljava/lang/String;
 
     aput-object v2, v0, v1
@@ -121,7 +119,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -141,7 +138,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -158,14 +154,12 @@
 
     move-result-object v0
 
-    .line 2
     invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-interface {p1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -179,7 +173,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -190,7 +183,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,7 +219,6 @@
 
     const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    .line 1
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -263,7 +254,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -276,12 +266,10 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1, v0}, Lmiuix/animation/utils/ObjectPool;->acquire(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     :cond_0
@@ -291,7 +279,6 @@
 .method public static getRect(Lmiuix/animation/IAnimTarget;Landroid/graphics/RectF;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
     invoke-virtual {p0, v0}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
@@ -300,7 +287,6 @@
 
     iput v0, p1, Landroid/graphics/RectF;->left:F
 
-    .line 2
     sget-object v0, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
     invoke-virtual {p0, v0}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
@@ -309,7 +295,6 @@
 
     iput v0, p1, Landroid/graphics/RectF;->top:F
 
-    .line 3
     iget v0, p1, Landroid/graphics/RectF;->left:F
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
@@ -322,7 +307,6 @@
 
     iput v0, p1, Landroid/graphics/RectF;->right:F
 
-    .line 4
     iget v0, p1, Landroid/graphics/RectF;->top:F
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->HEIGHT:Lmiuix/animation/property/ViewProperty;
@@ -341,7 +325,6 @@
 .method public static getSize(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;)F
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
     if-ne p1, v0, :cond_0
@@ -350,7 +333,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget-object v0, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
@@ -360,7 +342,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object v0, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
 
@@ -383,7 +364,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_4
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
@@ -396,7 +376,6 @@
 .method public static getTouchSlop(Landroid/view/View;)F
     .locals 2
 
-    .line 1
     sget v0, Lmiuix/animation/utils/CommonUtils;->sTouchSlop:F
 
     const/4 v1, 0x0
@@ -407,7 +386,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -424,7 +402,6 @@
 
     sput p0, Lmiuix/animation/utils/CommonUtils;->sTouchSlop:F
 
-    .line 3
     :cond_0
     sget p0, Lmiuix/animation/utils/CommonUtils;->sTouchSlop:F
 
@@ -469,12 +446,10 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     array-length v1, p0
 
     if-lez v1, :cond_1
 
-    .line 2
     array-length v1, p0
 
     move v2, v0
@@ -484,7 +459,6 @@
 
     aget-object v3, p0, v2
 
-    .line 3
     invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -516,7 +490,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 1
     array-length p0, p0
 
     if-nez p0, :cond_0
@@ -546,7 +519,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/animation/utils/CommonUtils;->BUILT_IN:[Ljava/lang/Class;
 
     invoke-static {v0, p0}, Lmiuix/animation/utils/CommonUtils;->inArray([Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -573,26 +545,22 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 v1, 0x7b
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     if-eqz p0, :cond_1
 
-    .line 3
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 4
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -616,12 +584,10 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -640,14 +606,12 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_1
     const/16 p0, 0x7d
 
-    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return-object v0
@@ -656,19 +620,16 @@
 .method public static mapsToString([Ljava/util/Map;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 v1, 0x5b
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     array-length v2, p0
 
@@ -676,10 +637,8 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const/16 v2, 0x2e
@@ -700,7 +659,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -708,7 +666,6 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -738,7 +695,6 @@
 
     return-object p0
 
-    .line 1
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -758,21 +714,18 @@
 
     move-result-object v0
 
-    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
 
     invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 3
     array-length p0, p0
 
     array-length v1, p1
 
     invoke-static {p1, v2, v0, p0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 4
     check-cast v0, [Ljava/lang/Object;
 
     return-object v0
@@ -783,7 +736,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -807,7 +759,6 @@
 
     move-result-object p0
 
-    .line 2
     new-instance v1, Ljava/io/InputStreamReader;
 
     invoke-virtual {p0}, Ljava/lang/Process;->getInputStream()Ljava/io/InputStream;
@@ -819,7 +770,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3
     :try_start_1
     new-instance p0, Ljava/io/BufferedReader;
 
@@ -828,7 +778,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4
     :try_start_2
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -837,10 +786,8 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 5
     invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 6
     invoke-static {v1}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return-object v0
@@ -898,15 +845,12 @@
 
     const-string v3, "readProp failed"
 
-    .line 7
     invoke-static {v2, v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 8
     invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 9
     invoke-static {v1}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     const-string p0, ""
@@ -916,11 +860,9 @@
     :catchall_2
     move-exception v0
 
-    .line 10
     :goto_1
     invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 11
     invoke-static {v1}, Lmiuix/animation/utils/CommonUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     throw v0
@@ -933,7 +875,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     new-instance v0, Lmiuix/animation/utils/CommonUtils$OnPreDrawTask;
 
@@ -947,12 +888,10 @@
 .method public static toFloatValue(Ljava/lang/Object;)F
     .locals 3
 
-    .line 1
     instance-of v0, p0, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->floatValue()F
@@ -961,13 +900,11 @@
 
     return p0
 
-    .line 3
     :cond_0
     instance-of v0, p0, Ljava/lang/Float;
 
     if-eqz v0, :cond_1
 
-    .line 4
     check-cast p0, Ljava/lang/Float;
 
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
@@ -976,7 +913,6 @@
 
     return p0
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1002,20 +938,17 @@
 .method public static toIntArray([F)[I
     .locals 3
 
-    .line 1
     array-length v0, p0
 
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 3
     aget v2, p0, v1
 
     float-to-int v2, v2
@@ -1033,12 +966,10 @@
 .method public static toIntValue(Ljava/lang/Object;)I
     .locals 3
 
-    .line 1
     instance-of v0, p0, Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -1047,13 +978,11 @@
 
     return p0
 
-    .line 3
     :cond_0
     instance-of v0, p0, Ljava/lang/Float;
 
     if-eqz v0, :cond_1
 
-    .line 4
     check-cast p0, Ljava/lang/Float;
 
     invoke-virtual {p0}, Ljava/lang/Float;->intValue()I
@@ -1062,7 +991,6 @@
 
     return p0
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

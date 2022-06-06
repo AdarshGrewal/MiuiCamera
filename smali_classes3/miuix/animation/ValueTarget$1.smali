@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public createTarget(Ljava/lang/Object;)Lmiuix/animation/IAnimTarget;
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/animation/ValueTarget;
 
     const/4 v1, 0x0

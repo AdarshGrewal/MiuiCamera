@@ -21,17 +21,14 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/miui/filtersdk/filter/base/GPUImageFilter;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/effect/renders/WrapperRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;ILcom/miui/filtersdk/filter/base/GPUImageFilter;)V
 
-    .line 2
     new-instance p2, Lcom/android/camera/effect/renders/NoneEffectRender;
 
     invoke-direct {p2, p1}, Lcom/android/camera/effect/renders/NoneEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     iput-object p2, p0, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->mSimpleRender:Lcom/android/camera/effect/renders/NoneEffectRender;
 
-    .line 3
     invoke-virtual {p0, p4}, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->adjustSize(Z)V
 
     return-void
@@ -40,22 +37,18 @@
 .method private drawToFrameBuffer(ILandroid/graphics/Rect;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mParentFrameBufferId:I
 
     if-eqz v0, :cond_0
 
     const v1, 0x8d40
 
-    .line 2
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {v0, v0, v0, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->mSimpleRender:Lcom/android/camera/effect/renders/NoneEffectRender;
 
@@ -71,7 +64,6 @@
 
     const/16 v0, 0xb44
 
-    .line 1
     invoke-static {v0}, Landroid/opengl/GLES20;->glIsEnabled(I)Z
 
     move-result v0
@@ -84,42 +76,32 @@
 
     const/16 v4, 0xb45
 
-    .line 2
     invoke-static {v4, v2, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 3
     aget v4, v2, v3
 
     const/16 v5, 0xb46
 
-    .line 4
     invoke-static {v5, v2, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 5
     aget v5, v2, v3
 
     const v6, 0x84e0
 
-    .line 6
     invoke-static {v6, v2, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 7
     aget v6, v2, v3
 
     const v7, 0x8069
 
-    .line 8
     invoke-static {v7, v2, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 9
     aget v7, v2, v3
 
     const v8, 0x8ca6
 
-    .line 10
     invoke-static {v8, v2, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 11
     aget v2, v2, v3
 
     const/4 v8, 0x4
@@ -128,10 +110,8 @@
 
     const/16 v10, 0xba2
 
-    .line 12
     invoke-static {v10, v9, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
-    .line 13
     sget-object v10, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->TAG:Ljava/lang/String;
 
     sget-object v11, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -154,7 +134,6 @@
 
     new-array v12, v12, [Ljava/lang/Object;
 
-    .line 14
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -237,7 +216,6 @@
 
     aput-object v0, v12, v1
 
-    .line 15
     invoke-static {v11, p1, v12}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -258,7 +236,6 @@
 
     const/16 p1, 0x5a
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     iget-object v2, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
@@ -272,7 +249,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     iget-object v2, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     iget-object v3, p0, Lcom/android/camera/effect/renders/ShaderRender;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
@@ -286,7 +262,6 @@
 .method public drawTexture(ILandroid/graphics/Rect;)V
     .locals 3
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/effect/renders/WrapperRender;->mFilter:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     iget-object v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mVertexBuffer:Ljava/nio/FloatBuffer;
@@ -309,10 +284,8 @@
     :goto_0
     const/16 v0, 0xb44
 
-    .line 6
     invoke-static {v0}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 7
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->drawToFrameBuffer(ILandroid/graphics/Rect;)V
 
     return-void
@@ -321,7 +294,6 @@
 .method public drawTexture(Lcom/android/gallery3d/ui/BasicTexture;Landroid/graphics/Rect;)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/WrapperRender;->mFilter:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
@@ -340,7 +312,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getId()I
 
     move-result v0
@@ -348,10 +319,8 @@
     :cond_0
     const/16 p1, 0xb44
 
-    .line 3
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisable(I)V
 
-    .line 4
     invoke-direct {p0, v0, p2}, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->drawToFrameBuffer(ILandroid/graphics/Rect;)V
 
     return-void
@@ -360,14 +329,12 @@
 .method public setBuffer([BII)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/WrapperRender;->mFilter:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     instance-of v1, v0, Lcom/miui/filtersdk/filter/NewBeautificationFilter;
 
     if-eqz v1, :cond_0
 
-    .line 2
     check-cast v0, Lcom/miui/filtersdk/filter/NewBeautificationFilter;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/miui/filtersdk/filter/NewBeautificationFilter;->passPreviewFrameToTexture([BII)V
@@ -379,15 +346,12 @@
 .method public setPreviewSize(II)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->mSimpleRender:Lcom/android/camera/effect/renders/NoneEffectRender;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setPreviewSize(II)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/WrapperRender;->mFilter:Lcom/miui/filtersdk/filter/base/GPUImageFilter;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;->onDisplaySizeChanged(II)V
@@ -398,10 +362,8 @@
 .method public setViewportSize(II)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/WrapperRender;->setViewportSize(II)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/effect/renders/BeautificationWrapperRender;->mSimpleRender:Lcom/android/camera/effect/renders/NoneEffectRender;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/effect/renders/Render;->setViewportSize(II)V

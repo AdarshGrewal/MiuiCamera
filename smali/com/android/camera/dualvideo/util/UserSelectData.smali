@@ -19,16 +19,12 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/util/SelectIndex;Lcom/android/camera/dualvideo/render/LayoutType;Lcom/android/camera/dualvideo/render/LayoutType;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mSelectIndex:Lcom/android/camera/dualvideo/util/SelectIndex;
 
-    .line 3
     iput-object p2, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mRecordLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-void
@@ -37,7 +33,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/util/UserSelectData;)V
     .locals 2
 
-    .line 5
     iget-object v0, p1, Lcom/android/camera/dualvideo/util/UserSelectData;->mSelectIndex:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     iget-object v1, p1, Lcom/android/camera/dualvideo/util/UserSelectData;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
@@ -54,7 +49,6 @@
 .method public getCameraId()I
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/util/DualVideoConfigManager;->instance()Lcom/android/camera/dualvideo/util/DualVideoConfigManager;
 
     move-result-object v0
@@ -71,7 +65,6 @@
 .method public getSelectIndex()Lcom/android/camera/dualvideo/util/SelectIndex;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mSelectIndex:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     return-object v0
@@ -80,7 +73,6 @@
 .method public getmGridLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object v0
@@ -89,7 +81,6 @@
 .method public getmRecordLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mRecordLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-object v0
@@ -98,7 +89,6 @@
 .method public setGridWindowLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mGridLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-void
@@ -107,12 +97,10 @@
 .method public setSelectIndex(Lcom/android/camera/dualvideo/util/SelectIndex;)V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/util/SelectIndex;->INDEX_0:Lcom/android/camera/dualvideo/util/SelectIndex;
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +125,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iput-object p1, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mSelectIndex:Lcom/android/camera/dualvideo/util/SelectIndex;
 
@@ -147,7 +134,6 @@
 .method public setmRecordLayoutType(Lcom/android/camera/dualvideo/render/LayoutType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/util/UserSelectData;->mRecordLayoutType:Lcom/android/camera/dualvideo/render/LayoutType;
 
     return-void
@@ -156,7 +142,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

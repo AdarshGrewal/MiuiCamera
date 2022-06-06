@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$7;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$7;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$1300(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)Lmiuix/appcompat/app/ProgressDialog;
@@ -55,7 +53,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$7;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$1300(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)Lmiuix/appcompat/app/ProgressDialog;
@@ -64,7 +61,6 @@
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/music/FragmentLiveMusicPager$7;->this$0:Lcom/android/camera/fragment/music/FragmentLiveMusicPager;
 
     invoke-static {p1}, Lcom/android/camera/fragment/music/FragmentLiveMusicPager;->access$1400(Lcom/android/camera/fragment/music/FragmentLiveMusicPager;)Z

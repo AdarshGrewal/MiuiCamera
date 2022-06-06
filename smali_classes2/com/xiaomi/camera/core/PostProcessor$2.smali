@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/core/PostProcessor;Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/PostProcessor$2;->this$0:Lcom/xiaomi/camera/core/PostProcessor;
 
     iput-object p2, p0, Lcom/xiaomi/camera/core/PostProcessor$2;->val$timestamps:Ljava/util/List;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/PostProcessor$2;->val$timestamps:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -63,7 +61,6 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 2
     iget-object v2, p0, Lcom/xiaomi/camera/core/PostProcessor$2;->this$0:Lcom/xiaomi/camera/core/PostProcessor;
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
@@ -76,7 +73,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/ParallelTaskData;->getSavePath()Ljava/lang/String;
 
     move-result-object v1

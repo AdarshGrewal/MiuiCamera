@@ -28,7 +28,6 @@
 .method public constructor <init>(Lcom/xiaomi/idm/transfile/IDMTransFile;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/transfile/IDMTransFile$FileNode;->this$0:Lcom/xiaomi/idm/transfile/IDMTransFile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

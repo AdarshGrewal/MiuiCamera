@@ -28,21 +28,16 @@
 .method public constructor <init>(ILjava/lang/String;I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneViewItem;->selected:Z
 
-    .line 3
     iput p1, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneViewItem;->bgDrawable:I
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneViewItem;->videoPath:Ljava/lang/String;
 
-    .line 5
     iput p3, p0, Lcom/android/camera/fragment/clone/FragmentCloneGallery$CloneViewItem;->type:I
 
     return-void

@@ -39,10 +39,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -55,10 +53,8 @@
 .method public static create(I)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    .line 2
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     iput p0, v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->mHolderKey:I
@@ -71,7 +67,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     if-eqz v0, :cond_1
@@ -82,13 +77,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->destroyWorkspace()V
 
     const/4 p0, 0x0
 
-    .line 3
     sput-object p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     :cond_1
@@ -99,7 +92,6 @@
 .method private destroyWorkspace()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->protocolMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
@@ -110,20 +102,17 @@
 .method public static forceDestroy()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->destroyWorkspace()V
 
     const/4 v0, 0x0
 
-    .line 3
     sput-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     return-void
@@ -132,30 +121,25 @@
 .method public static getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     invoke-direct {v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;-><init>()V
 
     sput-object v1, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -170,7 +154,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
@@ -181,7 +164,6 @@
 .method public static isAlive(I)Z
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->sInstance:Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     if-eqz v0, :cond_0
@@ -213,7 +195,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -229,7 +210,6 @@
     :catch_0
     move-exception p1
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
@@ -237,7 +217,6 @@
     :catch_1
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/InstantiationException;->printStackTrace()V
 
     :goto_0
@@ -259,7 +238,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->protocolMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -281,14 +259,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v0
 
     if-ne v0, p2, :cond_0
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->protocolMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -304,7 +280,6 @@
 .method public getActiveProtocolSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->protocolMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -324,7 +299,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/protocol/ModeCoordinatorImpl;->protocolMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public initialValue()Ljava/lang/Boolean;
     .locals 1
 
-    .line 2
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object v0
@@ -46,7 +44,6 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/camera/rx/CameraSchedulers$1;->initialValue()Ljava/lang/Boolean;
 
     move-result-object v0

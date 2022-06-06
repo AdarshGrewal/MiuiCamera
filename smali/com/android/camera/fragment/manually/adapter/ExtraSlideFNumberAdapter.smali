@@ -22,7 +22,7 @@
 # instance fields
 .field public mCurrentValue:Ljava/lang/String;
 
-.field public mDataItemFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+.field public mDataItemFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
 .field public mEnable:Z
 
@@ -93,14 +93,12 @@
 
     const-string v24, "16"
 
-    .line 1
     filled-new-array/range {v0 .. v24}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->F_NUMBERS:[Ljava/lang/String;
 
-    .line 2
     array-length v0, v0
 
     sput v0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->ENTRY_COUNT_TOTAL:I
@@ -111,13 +109,10 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/android/camera/fragment/manually/ZoomValueListener;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/manually/adapter/AbstractZoomSliderAdapter;-><init>()V
 
-    .line 2
     iput-object p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mManuallyListener:Lcom/android/camera/fragment/manually/ZoomValueListener;
 
-    .line 3
     sget-object p3, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->F_NUMBERS:[Ljava/lang/String;
 
     invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -126,17 +121,14 @@
 
     iput-object p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mValidFNumbers:Ljava/util/List;
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mCurrentValue:Ljava/lang/String;
 
-    .line 5
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mDataItemFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    iput-object p2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mDataItemFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
-    .line 6
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->initStyle(Landroid/content/Context;)V
 
     return-void
@@ -145,18 +137,17 @@
 .method private isFlagPosition(I)Z
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->F_NUMBERS:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
-    iget-object v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mDataItemFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    iget-object v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mDataItemFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     invoke-static {}, Lcom/android/camera/CameraSettings;->isFrontCamera()Z
 
     move-result v2
 
-    invoke-virtual {v1, v2}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(Z)Ljava/lang/String;
+    invoke-virtual {v1, v2}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->OooO0O0(Z)Ljava/lang/String;
 
     move-result-object v1
 
@@ -193,12 +184,10 @@
 .method public draw(ILandroid/graphics/Canvas;ZIF)V
     .locals 8
 
-    .line 1
     invoke-super/range {p0 .. p5}, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->draw(ILandroid/graphics/Canvas;ZIF)V
 
     if-eqz p3, :cond_0
 
-    .line 2
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineStopPointWidth:I
 
     neg-int p3, p1
@@ -227,7 +216,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->isFlagPosition(I)Z
 
@@ -235,7 +223,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineStopPointWidth:I
 
     neg-int p3, p1
@@ -264,7 +251,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineWidth:I
 
@@ -299,7 +285,6 @@
 .method public getAlign(I)Landroid/graphics/Paint$Align;
     .locals 0
 
-    .line 1
     sget-object p1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     return-object p1
@@ -308,7 +293,6 @@
 .method public getCount()I
     .locals 1
 
-    .line 1
     sget v0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->ENTRY_COUNT_TOTAL:I
 
     return v0
@@ -325,7 +309,6 @@
 .method public bridge synthetic mapPositionToValue(F)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mapPositionToValue(F)Ljava/lang/String;
 
     move-result-object p1
@@ -336,12 +319,10 @@
 .method public mapPositionToValue(F)Ljava/lang/String;
     .locals 2
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->getCount()I
 
     move-result v0
@@ -354,7 +335,6 @@
 
     move-result p1
 
-    .line 4
     sget-object v0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->F_NUMBERS:[Ljava/lang/String;
 
     aget-object p1, v0, p1
@@ -365,7 +345,6 @@
 .method public bridge synthetic mapValueToPosition(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mapValueToPosition(Ljava/lang/String;)F
@@ -378,7 +357,6 @@
 .method public mapValueToPosition(Ljava/lang/String;)F
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mValidFNumbers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -393,14 +371,12 @@
 .method public measureWidth(I)F
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->isFlagPosition(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineStopPointWidth:I
 
     :goto_0
@@ -408,7 +384,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     iget p1, p0, Lcom/android/camera/ui/BaseHorizontalZoomView$HorizontalDrawAdapter;->mLineWidth:I
 
@@ -424,7 +399,6 @@
 .method public onPositionSelect(Landroid/view/View;IFI)V
     .locals 0
 
-    .line 1
     iget-boolean p1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mEnable:Z
 
     if-nez p1, :cond_0
@@ -444,7 +418,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->getCount()I
 
@@ -463,12 +436,10 @@
     :cond_2
     int-to-float p1, p2
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mapPositionToValue(F)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 4
     iget-object p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mCurrentValue:Ljava/lang/String;
 
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -477,24 +448,20 @@
 
     if-nez p3, :cond_4
 
-    .line 5
     iget-object p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mManuallyListener:Lcom/android/camera/fragment/manually/ZoomValueListener;
 
     if-eqz p3, :cond_3
 
     const/4 p4, 0x3
 
-    .line 6
     invoke-interface {p3, p1, p4}, Lcom/android/camera/fragment/manually/ZoomValueListener;->onManuallyDataChanged(Ljava/lang/String;I)V
 
-    .line 7
     iget-object p3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mManuallyListener:Lcom/android/camera/fragment/manually/ZoomValueListener;
 
     const/4 p4, 0x0
 
     invoke-interface {p3, p2, p4}, Lcom/android/camera/fragment/manually/ZoomValueListener;->onZoomItemSlideOn(IZ)V
 
-    .line 8
     :cond_3
     iput-object p1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mCurrentValue:Ljava/lang/String;
 
@@ -505,7 +472,6 @@
 .method public setEnable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraSlideFNumberAdapter;->mEnable:Z
 
     return-void

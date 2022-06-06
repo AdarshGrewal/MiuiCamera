@@ -32,10 +32,8 @@
 
     const/4 v0, 0x4
 
-    .line 1
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$TriggerClick;->newBuilder()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$TriggerClick$Builder;
 
     move-result-object p1
@@ -65,10 +63,8 @@
 
     const/4 v0, 0x4
 
-    .line 3
     invoke-direct {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMService$Action;-><init>(ILcom/xiaomi/idm/api/IDMService;)V
 
-    .line 4
     invoke-static {p2}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$TriggerClick;->parseFrom([B)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$TriggerClick;
 
     move-result-object p1
@@ -83,7 +79,6 @@
 .method public invoke()[B
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
@@ -98,7 +93,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -123,7 +117,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -134,7 +127,6 @@
 .method public toBytes()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/TestService$Actions$TriggerClick;->action:Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$TriggerClick;
 
     if-nez v0, :cond_0

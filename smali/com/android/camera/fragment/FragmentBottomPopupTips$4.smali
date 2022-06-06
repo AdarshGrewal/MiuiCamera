@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/FragmentBottomPopupTips;IILandroid/widget/FrameLayout$LayoutParams;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$4;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     iput p2, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$4;->val$startWidth:I
@@ -50,7 +49,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -61,7 +59,6 @@
 
     move-result p1
 
-    .line 2
     iget v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$4;->val$startWidth:I
 
     int-to-float v1, v0
@@ -78,12 +75,10 @@
 
     float-to-int p1, v1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$4;->val$layoutParams:Landroid/widget/FrameLayout$LayoutParams;
 
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentBottomPopupTips$4;->this$0:Lcom/android/camera/fragment/FragmentBottomPopupTips;
 
     invoke-static {p1}, Lcom/android/camera/fragment/FragmentBottomPopupTips;->access$700(Lcom/android/camera/fragment/FragmentBottomPopupTips;)Landroid/view/View;

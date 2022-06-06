@@ -63,7 +63,6 @@
 .method public static constructor <clinit>()V
     .locals 16
 
-    .line 1
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v1, 0x0
@@ -74,7 +73,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UNDEFINED:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 2
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v2, 0x1e
@@ -89,7 +87,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->MINI:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 3
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v5, 0x2
@@ -102,7 +99,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 4
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v7, 0x3
@@ -113,7 +109,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UP_FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 5
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v8, 0x4
@@ -126,7 +121,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->UP:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 6
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v10, 0x5
@@ -139,7 +133,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->DOWN:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 7
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v6, 0x6
@@ -154,7 +147,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->FULL:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 8
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/4 v13, 0x7
@@ -169,7 +161,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_0:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 9
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v6, 0x8
@@ -182,7 +173,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_1:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 10
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v13, 0x9
@@ -195,7 +185,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_2:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 11
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const-string v6, "PATCH_3"
@@ -206,7 +195,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_3:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 12
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const-string v6, "PATCH_4"
@@ -217,7 +205,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_4:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 13
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const-string v6, "PATCH_5"
@@ -228,7 +215,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_5:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 14
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const-string v6, "PATCH_6"
@@ -239,7 +225,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_6:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 15
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v6, 0xe
@@ -252,7 +237,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_7:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 16
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v12, 0xf
@@ -265,7 +249,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_8:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 17
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v6, 0x10
@@ -278,7 +261,6 @@
 
     sput-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_9:Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 18
     new-instance v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     const/16 v12, 0x11
@@ -293,7 +275,6 @@
 
     new-array v2, v2, [Lcom/android/camera/dualvideo/render/LayoutType;
 
-    .line 19
     sget-object v14, Lcom/android/camera/dualvideo/render/LayoutType;->UNDEFINED:Lcom/android/camera/dualvideo/render/LayoutType;
 
     aput-object v14, v2, v1
@@ -389,13 +370,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/android/camera/dualvideo/render/LayoutType;->mIndex:I
 
-    .line 3
     iput p4, p0, Lcom/android/camera/dualvideo/render/LayoutType;->mWeight:I
 
     return-void
@@ -404,7 +382,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -419,7 +396,6 @@
 .method public static values()[Lcom/android/camera/dualvideo/render/LayoutType;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/render/LayoutType;->$VALUES:[Lcom/android/camera/dualvideo/render/LayoutType;
 
     invoke-virtual {v0}, [Lcom/android/camera/dualvideo/render/LayoutType;->clone()Ljava/lang/Object;
@@ -436,7 +412,6 @@
 .method public getIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/LayoutType;->mIndex:I
 
     return v0
@@ -445,7 +420,6 @@
 .method public getWeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/LayoutType;->mWeight:I
 
     return v0
@@ -454,7 +428,6 @@
 .method public isGridWindowType()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/render/LayoutType;->mIndex:I
 
     sget-object v1, Lcom/android/camera/dualvideo/render/LayoutType;->PATCH_0:Lcom/android/camera/dualvideo/render/LayoutType;

@@ -37,14 +37,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x3
 
     new-array v0, v0, [I
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
 
     return-void
@@ -53,7 +51,6 @@
 .method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)Landroid/widget/RelativeLayout$LayoutParams;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
     return-object p0
@@ -62,7 +59,6 @@
 .method public static synthetic access$100(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)Landroid/view/View;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mTextureView:Landroid/view/View;
 
     return-object p0
@@ -71,7 +67,6 @@
 .method public static synthetic access$200(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)Landroid/widget/LinearLayout;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     return-object p0
@@ -82,14 +77,13 @@
 .method public getNavigationBarHeight(Landroid/content/Context;)I
     .locals 1
 
-    .line 1
-    invoke-static {p1}, Lcom/android/camera/display/Display;->checkDeviceHasNavigationBar(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/camera/Display;->checkDeviceHasNavigationBar(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/android/camera/display/Display;->getNavigationBarHeight(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/android/camera/Display;->getNavigationBarHeight(Landroid/content/Context;)I
 
     move-result p1
 
@@ -105,23 +99,18 @@
 .method public initView(Landroid/content/Context;Landroid/view/View;Landroid/widget/LinearLayout;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mContext:Landroid/content/Context;
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mTextureView:Landroid/view/View;
 
-    .line 3
     iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
-    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mContext:Landroid/content/Context;
 
     const-string/jumbo p2, "window"
@@ -132,36 +121,31 @@
 
     check-cast p1, Landroid/view/WindowManager;
 
-    .line 6
     new-instance p2, Landroid/util/DisplayMetrics;
 
     invoke-direct {p2}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 7
     invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p1
 
     invoke-virtual {p1, p2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->screenWidth:I
 
-    .line 9
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->screenHeight:I
 
-    .line 10
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
 
-    const p2, 0x7f0703e0
+    const p2, 0x7f0703df
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -169,18 +153,6 @@
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->widthSurfacePixel:I
 
-    .line 11
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
-
-    const p2, 0x7f0703db
-
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->heightSurfacePixel:I
-
-    .line 12
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
 
     const p2, 0x7f0703da
@@ -189,9 +161,18 @@
 
     move-result p1
 
+    iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->heightSurfacePixel:I
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
+
+    const p2, 0x7f0703d9
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->heightSurfacePixelBuffer:I
 
-    .line 13
     invoke-virtual {p0, p4}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resetViewsCorridinate(I)V
 
     return-void
@@ -200,7 +181,6 @@
 .method public resetEditLayoutViewPosition()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -211,10 +191,8 @@
 
     const/4 v1, 0x0
 
-    .line 2
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -237,7 +215,6 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -248,10 +225,8 @@
 .method public resetLayoutPosition(I)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resetEditLayoutViewPosition()V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resetTextureViewPosition(I)V
 
     return-void
@@ -260,12 +235,10 @@
 .method public resetTextureViewPosition(I)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->widthSurfacePixel:I
@@ -285,22 +258,19 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->widthSurfacePixel:I
 
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->heightSurfacePixel:I
 
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
 
-    const v0, 0x7f0703cc
+    const v0, 0x7f0703cb
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -308,14 +278,12 @@
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->navigationBackHeight:I
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resources:Landroid/content/res/Resources;
 
-    const v0, 0x7f0703d0
+    const v0, 0x7f0703cf
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 7
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->screenWidth:I
 
     div-int/2addr p1, v3
@@ -328,17 +296,14 @@
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->xCoordinateStartTexture:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->heightSurfacePixelBuffer:I
 
     add-int/2addr v0, p1
 
-    .line 9
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
 
     aput p1, v3, v2
 
-    .line 10
     aput v0, v3, v1
 
     goto :goto_0
@@ -350,7 +315,6 @@
 
     if-ne p1, v3, :cond_3
 
-    .line 11
     :cond_2
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -358,10 +322,8 @@
 
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 12
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 13
     iget p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->screenWidth:I
 
     div-int/2addr p1, v3
@@ -372,15 +334,12 @@
 
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->xCoordinateStartTexture:I
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
 
     aput p1, v0, v2
 
-    .line 15
     aput v2, v0, v1
 
-    .line 16
     :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->updateTextureViewPosition()V
@@ -391,10 +350,8 @@
 .method public resetViewsCorridinate(I)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resetTextureViewPosition(I)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->resetEditLayoutViewPosition()V
 
     return-void
@@ -403,7 +360,6 @@
 .method public translateYEditLayout()V
     .locals 10
 
-    .line 1
     new-instance v9, Landroid/view/animation/TranslateAnimation;
 
     const/4 v1, 0x1
@@ -428,17 +384,14 @@
 
     const-wide/16 v0, 0x1f4
 
-    .line 2
     invoke-virtual {v9, v0, v1}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    .line 3
     new-instance v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$3;-><init>(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)V
 
     invoke-virtual {v9, v0}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v9}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
@@ -453,7 +406,6 @@
 
     new-array v0, v0, [F
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
 
     const/4 v2, 0x1
@@ -474,14 +426,12 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$1;
 
     invoke-direct {v1, p0, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$1;-><init>(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;Landroid/animation/ValueAnimator;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 3
     new-instance v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$2;
 
     invoke-direct {v1, p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager$2;-><init>(Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;)V
@@ -490,10 +440,8 @@
 
     const-wide/16 v1, 0x1f4
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 5
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
@@ -502,7 +450,6 @@
 .method public updateEditLayoutViewPosition()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -513,10 +460,8 @@
 
     const/4 v1, 0x0
 
-    .line 2
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -539,7 +484,6 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mRlAllEditContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -550,10 +494,8 @@
 .method public updateLayoutPosition()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->updateTextureViewPosition()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->updateEditLayoutViewPosition()V
 
     return-void
@@ -568,11 +510,9 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->translateYTextureView()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->translateYEditLayout()V
 
     :goto_0
@@ -582,7 +522,6 @@
 .method public updateTextureViewPosition()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
@@ -593,7 +532,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->layoutParamsTextureView:Landroid/widget/RelativeLayout$LayoutParams;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mLocationTextureView:[I
@@ -604,7 +542,6 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiPageChangeAnimManager;->mTextureView:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V

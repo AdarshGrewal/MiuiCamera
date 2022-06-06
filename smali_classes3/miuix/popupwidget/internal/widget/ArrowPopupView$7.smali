@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$7;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$7;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -53,7 +51,6 @@
 
     invoke-static {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$1002(Lmiuix/popupwidget/internal/widget/ArrowPopupView;I)I
 
-    .line 2
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$7;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$1000(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)I
@@ -64,7 +61,6 @@
 
     move-result p1
 
-    .line 3
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$7;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$1100(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
@@ -91,7 +87,6 @@
 
     iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$7;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
-    .line 4
     invoke-static {v3}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$1100(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
 
     move-result-object v3
@@ -114,7 +109,6 @@
 
     add-int/2addr v4, p1
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/FrameLayout;->invalidate(IIII)V
 
     return-void

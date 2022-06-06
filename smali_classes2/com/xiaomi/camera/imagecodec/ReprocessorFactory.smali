@@ -27,7 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,13 +39,11 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->sDefaultReprocessorType:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     if-eqz v1, :cond_0
 
-    .line 2
     sget-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->sDefaultReprocessorType:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     invoke-static {v1}, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->getReprocessor(Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;)Lcom/xiaomi/camera/imagecodec/Reprocessor;
@@ -59,7 +56,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     :try_start_1
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -92,7 +88,6 @@
     :try_start_0
     const-string v1, "ReprocessorFactory"
 
-    .line 1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +104,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     sget-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$1;->$SwitchMap$com$xiaomi$camera$imagecodec$ReprocessorFactory$ReprocessorType:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
@@ -130,7 +124,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 3
     sget-object p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->sInstance:Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;
 
     invoke-virtual {p0}, Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;->get()Ljava/lang/Object;
@@ -145,7 +138,6 @@
 
     return-object p0
 
-    .line 4
     :cond_0
     :try_start_1
     sget-object p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;->sInstance:Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;
@@ -162,7 +154,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     :try_start_2
     sget-object p0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->sInstance:Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;
@@ -179,7 +170,6 @@
 
     return-object p0
 
-    .line 6
     :cond_2
     :try_start_3
     sget-object p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->sInstance:Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;
@@ -201,7 +191,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_3
     :try_start_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -227,13 +216,11 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     sget-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->VIRTUAL_CAMERA:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -245,7 +232,6 @@
 
     move-result p0
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->values()[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     move-result-object v2
@@ -272,13 +258,11 @@
 
     const-string v3, "Failed to find the preferred reprocessor, defaults to use VIRTUAL_CAMERA instead"
 
-    .line 4
     invoke-static {v2, v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
     const-string p0, "ReprocessorFactory"
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,17 +279,14 @@
 
     invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     sget-object p0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->sDefaultReprocessorType:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     if-nez p0, :cond_0
 
-    .line 7
     sput-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->sDefaultReprocessorType:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     goto :goto_2
 
-    .line 8
     :cond_0
     sget-object p0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory;->sDefaultReprocessorType:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
     :try_end_2
@@ -313,13 +294,11 @@
 
     if-ne p0, v1, :cond_1
 
-    .line 9
     :goto_2
     monitor-exit v0
 
     return-void
 
-    .line 10
     :cond_1
     :try_start_3
     new-instance p0, Ljava/lang/IllegalStateException;

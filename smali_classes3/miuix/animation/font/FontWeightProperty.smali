@@ -32,22 +32,18 @@
 
     const-string v0, "fontweight"
 
-    .line 1
     invoke-direct {p0, v0}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 2
     iput v0, p0, Lmiuix/animation/font/FontWeightProperty;->mCurWeight:F
 
-    .line 3
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
-    .line 4
     iput p2, p0, Lmiuix/animation/font/FontWeightProperty;->mFontType:I
 
     return-void
@@ -69,7 +65,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     const-class v2, Lmiuix/animation/font/FontWeightProperty;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -80,7 +75,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_1
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -90,11 +84,9 @@
 
     return v1
 
-    .line 3
     :cond_2
     check-cast p1, Lmiuix/animation/font/FontWeightProperty;
 
-    .line 4
     iget-object v2, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -103,7 +95,6 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 5
     iget-object p1, p1, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -114,7 +105,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 6
     invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -137,7 +127,6 @@
 .method public getScaledTextSize()F
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -148,7 +137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v1
@@ -157,7 +145,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
@@ -177,7 +164,6 @@
 .method public getSpecificValue(F)F
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -186,7 +172,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 2
     sget v1, Lmiuix/animation/font/VarFontUtils;->MIN_WGHT:I
 
     int-to-float v1, v1
@@ -197,7 +182,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -208,7 +192,6 @@
 
     float-to-int p1, p1
 
-    .line 4
     invoke-virtual {p0}, Lmiuix/animation/font/FontWeightProperty;->getScaledTextSize()F
 
     move-result v1
@@ -228,7 +211,6 @@
 .method public getTextView()Landroid/widget/TextView;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -243,7 +225,6 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
-    .line 2
     iget p1, p0, Lmiuix/animation/font/FontWeightProperty;->mCurWeight:F
 
     return p1
@@ -252,7 +233,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/font/FontWeightProperty;->getValue(Landroid/view/View;)F
@@ -265,7 +245,6 @@
 .method public hashCode()I
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -284,7 +263,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 2
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
@@ -306,7 +284,6 @@
     :cond_0
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 3
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
@@ -331,10 +308,8 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 0
 
-    .line 2
     iput p2, p0, Lmiuix/animation/font/FontWeightProperty;->mCurWeight:F
 
-    .line 3
     iget-object p1, p0, Lmiuix/animation/font/FontWeightProperty;->mTextViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -347,7 +322,6 @@
 
     float-to-int p2, p2
 
-    .line 4
     invoke-static {p1, p2}, Lmiuix/animation/font/VarFontUtils;->setVariationFont(Landroid/widget/TextView;I)V
 
     :cond_0
@@ -357,7 +331,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/font/FontWeightProperty;->setValue(Landroid/view/View;F)V

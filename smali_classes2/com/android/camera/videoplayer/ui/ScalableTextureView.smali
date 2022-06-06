@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final SHOW_LOGS:Z = false
+.field public static final SHOW_LOGS:Z
 
 .field public static final TAG:Ljava/lang/String;
 
@@ -47,7 +47,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -62,40 +61,30 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 3
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 4
     iput v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
-    .line 5
     iput v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
-    .line 6
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
-    .line 7
     iput v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     const/4 p1, 0x0
 
-    .line 8
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 9
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 10
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
@@ -108,40 +97,30 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 11
     invoke-direct {p0, p1, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 12
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 13
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 14
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
-    .line 15
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
-    .line 16
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
-    .line 17
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     const/4 p1, 0x0
 
-    .line 18
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 19
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 20
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
@@ -154,40 +133,30 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 21
     invoke-direct {p0, p1, p2, p3}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
-    .line 22
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 23
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 24
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
-    .line 25
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
-    .line 26
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
-    .line 27
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     const/4 p1, 0x0
 
-    .line 28
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 29
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 30
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
@@ -200,40 +169,30 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 31
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 p1, 0x0
 
-    .line 32
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 33
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 34
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
-    .line 35
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
-    .line 36
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
-    .line 37
     iput p2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     const/4 p1, 0x0
 
-    .line 38
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 39
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 40
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
@@ -246,12 +205,10 @@
 .method private updateMatrixScaleRotate()V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
@@ -270,7 +227,6 @@
 
     invoke-virtual {v0, v1, v3, v2, v4}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
@@ -281,7 +237,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
@@ -292,24 +247,20 @@
 .method private updateMatrixTranslate()V
     .locals 5
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     mul-float/2addr v0, v1
 
-    .line 2
     iget v2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
     mul-float/2addr v2, v1
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     iget v3, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
@@ -318,7 +269,6 @@
 
     invoke-virtual {v1, v0, v2, v3, v4}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
@@ -331,7 +281,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mTransformMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
@@ -344,20 +293,16 @@
 .method public centralizeContent()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredWidth()I
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredHeight()I
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->getScaledContentWidth()Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->getScaledContentHeight()Ljava/lang/Integer;
 
     move-result-object v0
@@ -366,13 +311,10 @@
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 6
     iput v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 7
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixScaleRotate()V
 
     return-void
@@ -381,7 +323,6 @@
 .method public getContentAspectRatio()F
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentWidth:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
@@ -390,7 +331,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -419,7 +359,6 @@
 .method public final getContentHeight()Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentHeight:Ljava/lang/Integer;
 
     return-object v0
@@ -428,7 +367,6 @@
 .method public getContentScale()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
     return v0
@@ -437,7 +375,6 @@
 .method public final getContentWidth()Ljava/lang/Integer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentWidth:Ljava/lang/Integer;
 
     return-object v0
@@ -446,7 +383,6 @@
 .method public final getContentX()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
     int-to-float v0, v0
@@ -457,7 +393,6 @@
 .method public final getContentY()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
     int-to-float v0, v0
@@ -468,7 +403,6 @@
 .method public getPivotX()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
     return v0
@@ -477,7 +411,6 @@
 .method public getPivotY()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     return v0
@@ -486,7 +419,6 @@
 .method public getRotation()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
     return v0
@@ -495,7 +427,6 @@
 .method public getScaledContentHeight()Ljava/lang/Integer;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
@@ -522,7 +453,6 @@
 .method public getScaledContentWidth()Ljava/lang/Integer;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
     iget v1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
@@ -549,10 +479,8 @@
 .method public onMeasure(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/TextureView;->onMeasure(II)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentWidth:Ljava/lang/Integer;
 
     if-eqz p1, :cond_0
@@ -561,7 +489,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateTextureViewSize()V
 
     :cond_0
@@ -571,7 +498,6 @@
 .method public final setContentHeight(I)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -584,10 +510,8 @@
 .method public setContentScale(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleMultiplier:F
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixScaleRotate()V
 
     return-void
@@ -596,7 +520,6 @@
 .method public final setContentWidth(I)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -611,7 +534,6 @@
 
     float-to-int p1, p1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredWidth()I
 
     move-result v0
@@ -632,7 +554,6 @@
 
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentX:I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixTranslate()V
 
     return-void
@@ -643,7 +564,6 @@
 
     float-to-int p1, p1
 
-    .line 1
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredHeight()I
 
     move-result v0
@@ -664,7 +584,6 @@
 
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentY:I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixTranslate()V
 
     return-void
@@ -673,7 +592,6 @@
 .method public setPivotX(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
     return-void
@@ -682,7 +600,6 @@
 .method public setPivotY(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
     return-void
@@ -691,10 +608,8 @@
 .method public setRotation(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentRotation:F
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixScaleRotate()V
 
     return-void
@@ -703,7 +618,6 @@
 .method public setScaleType(Lcom/android/camera/videoplayer/ui/ScalableTextureView$ScaleType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mScaleType:Lcom/android/camera/videoplayer/ui/ScalableTextureView$ScaleType;
 
     return-void
@@ -712,7 +626,6 @@
 .method public updateTextureViewSize()V
     .locals 13
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentWidth:Ljava/lang/Integer;
 
     if-eqz v0, :cond_d
@@ -721,21 +634,18 @@
 
     if-eqz v0, :cond_d
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredWidth()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/TextureView;->getMeasuredHeight()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentWidth:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -744,7 +654,6 @@
 
     int-to-float v2, v2
 
-    .line 5
     iget-object v3, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentHeight:Ljava/lang/Integer;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -753,7 +662,6 @@
 
     int-to-float v3, v3
 
-    .line 6
     sget-object v4, Lcom/android/camera/videoplayer/ui/ScalableTextureView$1;->$SwitchMap$com$android$camera$videoplayer$ui$ScalableTextureView$ScaleType:[I
 
     iget-object v5, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mScaleType:Lcom/android/camera/videoplayer/ui/ScalableTextureView$ScaleType;
@@ -880,7 +788,6 @@
     :goto_2
     move v2, v9
 
-    .line 7
     :goto_3
     sget-object v4, Lcom/android/camera/videoplayer/ui/ScalableTextureView$1;->$SwitchMap$com$android$camera$videoplayer$ui$ScalableTextureView$ScaleType:[I
 
@@ -906,7 +813,6 @@
 
     goto :goto_4
 
-    .line 8
     :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -950,14 +856,11 @@
 
     goto :goto_4
 
-    .line 9
     :cond_a
     iget v10, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 10
     iget v4, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
-    .line 11
     :goto_4
     sget-object v5, Lcom/android/camera/videoplayer/ui/ScalableTextureView$1;->$SwitchMap$com$android$camera$videoplayer$ui$ScalableTextureView$ScaleType:[I
 
@@ -977,7 +880,6 @@
 
     goto :goto_5
 
-    .line 12
     :cond_b
     iget-object v5, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentHeight:Ljava/lang/Integer;
 
@@ -1007,30 +909,24 @@
     :goto_5
     mul-float/2addr v2, v9
 
-    .line 13
     iput v2, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleX:F
 
     mul-float/2addr v9, v3
 
-    .line 14
     iput v9, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mContentScaleY:F
 
-    .line 15
     iput v10, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointX:F
 
-    .line 16
     iput v4, p0, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->mPivotPointY:F
 
-    .line 17
     invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/ScalableTextureView;->updateMatrixScaleRotate()V
 
     return-void
 
-    .line 18
     :cond_d
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v1, "null content size"
+    const-string/jumbo v1, "null content size"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 

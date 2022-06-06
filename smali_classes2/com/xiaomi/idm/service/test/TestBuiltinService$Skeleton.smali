@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/test/TestBuiltinService;-><init>()V
 
     return-void
@@ -43,13 +42,11 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/test/TestBuiltinService$Skeleton;->mSomeEventEnabled:Z
 
     goto :goto_0
 
-    .line 2
     :cond_1
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/test/TestBuiltinService$Skeleton;->mSomeEventEnabled:Z
 
@@ -63,22 +60,18 @@
 .method public notifySomeEvent(I)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/service/test/TestBuiltinService$Skeleton;->mSomeEventEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent;->newBuilder()Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent$Builder;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent$Builder;->setParam(I)Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent$Builder;
 
     move-result-object p1
 
-    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
@@ -87,7 +80,6 @@
 
     const/4 v0, 0x1
 
-    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/test/localetestservice/proto/EventsProto$SomeEvent;->toByteArray()[B
 
     move-result-object p1

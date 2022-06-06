@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +58,6 @@
 
     float-to-double v0, p1
 
-    .line 1
     invoke-static {v3, v4, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -80,7 +78,6 @@
 
     float-to-double v0, p1
 
-    .line 2
     invoke-static {v3, v4, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0

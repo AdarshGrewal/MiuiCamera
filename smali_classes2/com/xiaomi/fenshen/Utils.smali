@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +36,8 @@
 .method public static get(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/fenshen/Utils;->init()V
 
-    .line 2
     :try_start_0
     sget-object v0, Lcom/xiaomi/fenshen/Utils;->mGetMethod:Ljava/lang/reflect/Method;
 
@@ -67,7 +64,6 @@
     :catch_0
     move-exception p0
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -79,7 +75,6 @@
 .method public static init()V
     .locals 5
 
-    .line 1
     :try_start_0
     sget-object v0, Lcom/xiaomi/fenshen/Utils;->mClassType:Ljava/lang/Class;
 
@@ -87,7 +82,6 @@
 
     const-string v0, "android.os.SystemProperties"
 
-    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -102,7 +96,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     const-class v4, Ljava/lang/String;
 
     aput-object v4, v2, v3
@@ -120,7 +113,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

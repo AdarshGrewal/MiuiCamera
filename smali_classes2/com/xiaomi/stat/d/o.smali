@@ -16,7 +16,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,17 +31,14 @@
 
     const-string v0, "RSA"
 
-    .line 6
     invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
 
     move-result-object v0
 
-    .line 7
     new-instance v1, Ljava/security/spec/X509EncodedKeySpec;
 
     invoke-direct {v1, p0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
 
-    .line 8
     invoke-virtual {v0, v1}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
 
     move-result-object p0
@@ -55,7 +51,6 @@
 .method public static a([B[B)[B
     .locals 2
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/xiaomi/stat/d/o;->a([B)Ljava/security/interfaces/RSAPublicKey;
 
@@ -63,17 +58,14 @@
 
     const-string v0, "RSA/ECB/PKCS1Padding"
 
-    .line 2
     invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1, p0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 4
     invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object p0
@@ -89,7 +81,6 @@
 
     const-string v0, "RsaUtils encrypt exception:"
 
-    .line 5
     invoke-static {p1, v0, p0}, Lcom/xiaomi/stat/d/k;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0

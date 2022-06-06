@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static probe(Ljava/nio/ByteBuffer;)I
     .locals 9
 
-    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -27,7 +25,6 @@
 
     move v2, v1
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -37,7 +34,6 @@
 
     if-lt v3, v4, :cond_7
 
-    .line 3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
@@ -46,7 +42,6 @@
 
     move-result-wide v5
 
-    .line 4
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
@@ -57,7 +52,6 @@
 
     if-nez v7, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v5
@@ -75,7 +69,6 @@
 
     goto :goto_2
 
-    .line 6
     :cond_1
     :goto_1
     sget v7, Lorg/jcodec/common/Fourcc;->ftyp:I
@@ -133,7 +126,6 @@
 
     long-to-int v3, v5
 
-    .line 7
     invoke-static {p0, v3}, Lorg/jcodec/common/io/NIOUtils;->skip(Ljava/nio/ByteBuffer;I)I
 
     goto :goto_0
@@ -147,7 +139,6 @@
     :cond_8
     mul-int/lit8 v1, v1, 0x64
 
-    .line 8
     div-int v0, v1, v2
 
     :goto_3

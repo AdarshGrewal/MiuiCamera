@@ -13,7 +13,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -48,7 +47,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v0
@@ -77,12 +75,10 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v9, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v3, -0x1
@@ -91,7 +87,7 @@
 
     const/4 v5, -0x1
 
-    const v6, 0x7f12022d
+    const v6, 0x7f12021d
 
     const/4 v7, -0x1
 
@@ -103,7 +99,6 @@
 
     invoke-interface {v1, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v2, Lcom/android/camera/data/data/ComponentDataItem;
 
     const/4 v11, -0x1
@@ -112,7 +107,7 @@
 
     const/4 v13, -0x1
 
-    const v14, 0x7f12022c
+    const v14, 0x7f12021e
 
     const/4 v15, -0x1
 
@@ -124,14 +119,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 5
     iget-object v1, v0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     return-object v1
@@ -140,7 +133,6 @@
 .method public setBeautyMode(ILjava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/ComponentData;->isEmpty()Z
 
     move-result v0
@@ -149,7 +141,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mParentDataItem:Lcom/android/camera/data/data/DataItemBase;
 

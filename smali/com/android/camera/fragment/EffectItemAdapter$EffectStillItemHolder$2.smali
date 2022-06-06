@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder$2;->this$1:Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 .method public onAnimationEnd(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder$2;->this$1:Lcom/android/camera/fragment/EffectItemAdapter$EffectStillItemHolder;
 
     iget-object p1, p1, Lcom/android/camera/fragment/EffectItemAdapter$EffectItemHolder;->mSelectedIndicator:Landroid/widget/ImageView;

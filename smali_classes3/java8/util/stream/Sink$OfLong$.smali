@@ -23,7 +23,6 @@
 .method public static bridge synthetic accept(Ljava8/util/stream/Sink$OfLong;Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Long;
 
     invoke-interface {p0, p1}, Ljava8/util/stream/Sink$OfLong;->accept(Ljava/lang/Long;)V

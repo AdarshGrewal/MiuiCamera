@@ -17,7 +17,11 @@
 # static fields
 .field public static final CARTOON:Ljava/lang/String; = "mimoji_cartoon"
 
+.field public static final CATEGORY_AVATAR:Ljava/lang/String; = "avatar"
+
 .field public static final CATEGORY_BEAR:Ljava/lang/String; = "bear"
+
+.field public static final CATEGORY_BG:Ljava/lang/String; = "background"
 
 .field public static final CATEGORY_CARTOON:Ljava/lang/String; = "cartoon"
 
@@ -32,6 +36,8 @@
 .field public static final CATEGORY_RABBIT:Ljava/lang/String; = "rabbit"
 
 .field public static final CATEGORY_ROYAN:Ljava/lang/String; = "royan"
+
+.field public static final CATEGORY_TIMBRE:Ljava/lang/String; = "timbre"
 
 .field public static final GIF:Ljava/lang/String; = "gif"
 
@@ -58,12 +64,6 @@
 .field public static final KEY_MIMOJI_GIF_SAVE:Ljava/lang/String; = "key_mimoji_gif_save"
 
 .field public static final KEY_MIMOJI_NORMAL_SAVE:Ljava/lang/String; = "key_mimoji_normal_save"
-
-.field public static final KEY_MIMOJI_SHOW_CATEGORY_AVATAR_LIST:Ljava/lang/String; = "key_mimoji_show_avatar_list"
-
-.field public static final KEY_MIMOJI_SHOW_CATEGORY_BG_LIST:Ljava/lang/String; = "key_mimoji_show_background_list"
-
-.field public static final KEY_MIMOJI_SHOW_CATEGORY_TIMBRE_LIST:Ljava/lang/String; = "key_mimoji_show_timbre_list"
 
 .field public static final KEY_MIMOJI_SHOW_LIST:Ljava/lang/String; = "key_mimoji_show_list"
 
@@ -150,8 +150,6 @@
 .field public static final MIMOJI_SAVE_GIF:Ljava/lang/String; = "attr_mimoji_gif"
 
 .field public static final MIMOJI_STICKER_PACK:Ljava/lang/String; = "mimoji_sticker_pack"
-
-.field public static final MIMOJI_TAB:Ljava/lang/String; = "key_mimoji_tab"
 
 .field public static final MIMOJI_TRIGGER:Ljava/lang/String; = "attr_mimoji_extra_scene_trigger"
 

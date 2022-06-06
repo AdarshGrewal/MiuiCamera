@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Error;
 
     const-string v1, "no instances"
@@ -38,7 +36,6 @@
 .method public static composeWithExceptions(Ljava/lang/Runnable;Ljava/lang/Runnable;)Ljava/lang/Runnable;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$1;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Streams$1;-><init>(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
@@ -59,7 +56,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$2;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/Streams$2;-><init>(Ljava8/util/stream/BaseStream;Ljava8/util/stream/BaseStream;)V

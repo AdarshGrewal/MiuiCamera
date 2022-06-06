@@ -49,7 +49,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +57,6 @@
 .method public static LogD(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/animation/FolmeUtils;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -71,7 +69,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/animation/FolmeUtils;->animateDeparture(Landroid/view/View;Ljava/lang/Runnable;)V
 
     return-void
@@ -80,7 +77,6 @@
 .method public static animateDeparture(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 6
 
-    .line 2
     invoke-static {p0}, Lcom/android/camera/animation/FolmeUtils;->clean(Landroid/view/View;)V
 
     const/4 v0, 0x1
@@ -93,7 +89,6 @@
 
     aput-object p0, p1, v1
 
-    .line 3
     invoke-static {p1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -113,7 +108,6 @@
 
     aput-object p0, v2, v1
 
-    .line 4
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v2
@@ -153,14 +147,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lcom/android/camera/animation/FolmeUtils;->clean(Landroid/view/View;)V
 
     const/4 v0, 0x3
 
     const/16 v1, 0x3c
 
-    .line 2
     invoke-static {p0, v0, v1}, Lcom/android/camera/animation/FolmeUtils;->animationSlide(Landroid/view/View;II)V
 
     return-void
@@ -173,10 +165,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 2
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -187,7 +177,6 @@
 
     const-wide/high16 v2, 0x404e000000000000L    # 60.0
 
-    .line 3
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -196,12 +185,10 @@
 
     const-wide/16 v4, 0x0
 
-    .line 4
     invoke-virtual {v0, v1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 5
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     sget-object v6, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -210,7 +197,6 @@
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {v1, v6, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
@@ -219,12 +205,10 @@
 
     const-wide v7, 0x3fb99999a0000000L    # 0.10000000149011612
 
-    .line 7
     invoke-virtual {v1, v6, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 8
     new-instance v6, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v9, "start"
@@ -233,19 +217,16 @@
 
     sget-object v9, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 9
     invoke-virtual {v6, v9, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     invoke-virtual {v2, v3, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
 
-    .line 11
     new-instance v3, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v6, "to"
@@ -254,7 +235,6 @@
 
     sget-object v6, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 12
     invoke-virtual {v3, v6, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -263,7 +243,6 @@
 
     const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
 
-    .line 13
     invoke-virtual {v3, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -276,7 +255,6 @@
 
     aput-object p0, v5, v6
 
-    .line 14
     invoke-static {v5}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -287,7 +265,6 @@
 
     new-array v5, v6, [Lmiuix/animation/base/AnimConfig;
 
-    .line 15
     invoke-interface {p0, v0, v1, v5}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     move-result-object p0
@@ -306,21 +283,18 @@
 
     const/4 v5, -0x2
 
-    .line 16
     invoke-virtual {v1, v5, v4}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     const-wide/16 v4, 0x32
 
-    .line 17
     invoke-virtual {v1, v4, v5}, Lmiuix/animation/base/AnimConfig;->setDelay(J)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
     aput-object v1, v0, v6
 
-    .line 18
     invoke-interface {p0, v2, v3, v0}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -339,7 +313,6 @@
 
     const/16 v0, 0x8
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     const/4 v0, 0x1
@@ -350,7 +323,6 @@
 
     aput-object p0, v0, v1
 
-    .line 2
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -365,7 +337,6 @@
 
     new-array v0, v1, [Lmiuix/animation/base/AnimConfig;
 
-    .line 3
     invoke-interface {p0, v0}, Lmiuix/animation/IVisibleStyle;->hide([Lmiuix/animation/base/AnimConfig;)V
 
     return-object p0
@@ -378,7 +349,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p0, v0}, Lcom/android/camera/animation/FolmeUtils;->animateShow(Landroid/view/View;Ljava/lang/Runnable;)Lmiuix/animation/IVisibleStyle;
 
     move-result-object p0
@@ -393,7 +363,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     const/4 v1, 0x1
@@ -402,7 +371,6 @@
 
     aput-object p0, v2, v0
 
-    .line 3
     invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -419,7 +387,6 @@
 
     new-array v2, v1, [Lmiuix/animation/base/AnimConfig;
 
-    .line 4
     new-instance v3, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v3}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -445,7 +412,6 @@
     :cond_0
     new-array p1, v0, [Lmiuix/animation/base/AnimConfig;
 
-    .line 5
     invoke-interface {p0, p1}, Lmiuix/animation/IVisibleStyle;->show([Lmiuix/animation/base/AnimConfig;)V
 
     :goto_0
@@ -455,7 +421,6 @@
 .method public static animateShrink(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 14
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -466,19 +431,16 @@
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 2
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Lmiuix/animation/controller/AnimState;
 
     sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -489,19 +451,16 @@
 
     const-wide/16 v5, 0x0
 
-    .line 5
     invoke-virtual {v1, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {v1, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v1
 
-    .line 7
     new-instance v4, Lmiuix/animation/controller/AnimState;
 
     sget-object v7, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -510,12 +469,10 @@
 
     sget-object v7, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 8
     invoke-virtual {v4, v7, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v2
 
-    .line 9
     new-instance v3, Lmiuix/animation/controller/AnimState;
 
     sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -524,7 +481,6 @@
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     invoke-virtual {v3, v4, v5, v6}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v3
@@ -537,7 +493,6 @@
 
     aput-object p0, v5, v6
 
-    .line 11
     invoke-static {v5}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v5
@@ -560,21 +515,18 @@
 
     const/4 v11, -0x2
 
-    .line 12
     invoke-virtual {v8, v11, v10}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v8
 
     const-wide/16 v12, 0x3e8
 
-    .line 13
     invoke-virtual {v8, v12, v13}, Lmiuix/animation/base/AnimConfig;->setDelay(J)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v8
 
     aput-object v8, v7, v6
 
-    .line 14
     invoke-interface {v5, v0, v1, v7}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     move-result-object v0
@@ -589,12 +541,10 @@
 
     fill-array-data v7, :array_1
 
-    .line 15
     invoke-virtual {v5, v11, v7}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
 
-    .line 16
     invoke-virtual {v5, v12, v13}, Lmiuix/animation/base/AnimConfig;->setDelay(J)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
@@ -613,7 +563,6 @@
 
     aput-object p0, v1, v6
 
-    .line 17
     invoke-interface {v0, v2, v3, v1}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -636,7 +585,6 @@
 .method public static animationScale(Landroid/view/View;FF)V
     .locals 5
 
-    .line 1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "from"
@@ -647,19 +595,16 @@
 
     float-to-double v2, p1
 
-    .line 2
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     invoke-virtual {p1, v0, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 4
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v1, "to"
@@ -670,14 +615,12 @@
 
     float-to-double v2, p2
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {p2, v0, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
@@ -690,7 +633,6 @@
 
     aput-object p0, v1, v2
 
-    .line 7
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -713,7 +655,6 @@
 
     const/4 v4, -0x2
 
-    .line 8
     invoke-virtual {v1, v4, v3}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
@@ -758,7 +699,6 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -793,7 +733,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 2
     new-instance p1, Lmiuix/animation/controller/AnimState;
 
     sget-object v8, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -812,19 +751,16 @@
     :goto_2
     int-to-double v9, p2
 
-    .line 3
     invoke-virtual {p1, v8, v9, v10}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
     sget-object p2, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 4
     invoke-virtual {p1, p2, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 5
     new-instance p2, Lmiuix/animation/controller/AnimState;
 
     sget-object v3, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -833,21 +769,18 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 6
     invoke-virtual {p2, v3, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 7
     invoke-virtual {p2, v3, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
     goto :goto_4
 
-    .line 8
     :cond_5
     new-instance p1, Lmiuix/animation/controller/AnimState;
 
@@ -867,19 +800,16 @@
     :goto_3
     int-to-double v9, p2
 
-    .line 9
     invoke-virtual {p1, v8, v9, v10}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
     sget-object p2, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 10
     invoke-virtual {p1, p2, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 11
     new-instance p2, Lmiuix/animation/controller/AnimState;
 
     sget-object v3, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -888,14 +818,12 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 12
     invoke-virtual {p2, v3, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    .line 13
     invoke-virtual {p2, v3, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p2
@@ -903,14 +831,12 @@
     :goto_4
     const/4 v3, 0x0
 
-    .line 14
     invoke-virtual {p0, v3}, Landroid/view/View;->setAlpha(F)V
 
     new-array v3, v2, [Landroid/view/View;
 
     aput-object p0, v3, v1
 
-    .line 15
     invoke-static {v3}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p0
@@ -931,7 +857,6 @@
 
     fill-array-data v0, :array_0
 
-    .line 16
     invoke-virtual {v3, v4, v0}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v0
@@ -967,7 +892,6 @@
 
     aput-object p0, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     return-void
@@ -984,7 +908,6 @@
 
     aput-object p0, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -1011,7 +934,6 @@
 
     aput-object p0, v1, v2
 
-    .line 2
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
@@ -1050,7 +972,6 @@
 
     aput-object p0, v1, v2
 
-    .line 1
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
@@ -1097,14 +1018,12 @@
 
     aput-object v2, v1, v3
 
-    .line 1
     invoke-static {v1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
     const-string/jumbo v2, "popup_group"
 
-    .line 2
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v2
@@ -1121,7 +1040,6 @@
 
     div-float/2addr p0, v7
 
-    .line 3
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -1140,7 +1058,6 @@
 
     div-float/2addr p1, v7
 
-    .line 4
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
@@ -1153,7 +1070,6 @@
 
     div-float/2addr p2, v7
 
-    .line 5
     invoke-virtual {p1, p2}, Lmiuix/animation/base/AnimConfig;->setFromSpeed(F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
@@ -1164,7 +1080,6 @@
 
     const/4 v5, -0x2
 
-    .line 6
     invoke-virtual {p1, v5, p2}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
@@ -1177,14 +1092,12 @@
 
     aput-object v0, p2, v3
 
-    .line 7
     invoke-virtual {p1, p2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
     aput-object p1, v2, v4
 
-    .line 8
     invoke-interface {p0, v2}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     return-object v1
@@ -1207,7 +1120,6 @@
 
     aput-object p2, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p2
@@ -1218,28 +1130,24 @@
 
     const-string/jumbo v0, "show"
 
-    .line 2
     invoke-interface {p2, v0}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p2
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->BACKGROUND:Lmiuix/animation/property/ViewProperty;
 
-    .line 3
     invoke-interface {p2, v0, p1}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;I)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
     const-string p2, "hide"
 
-    .line 4
     invoke-interface {p1, p2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
     sget-object p2, Lmiuix/animation/property/ViewProperty;->BACKGROUND:Lmiuix/animation/property/ViewProperty;
 
-    .line 5
     invoke-interface {p1, p2, p0}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;I)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -1248,7 +1156,6 @@
 .method public static varargs touchButtonTint(I[Landroid/view/View;)V
     .locals 6
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1260,7 +1167,6 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1284,7 +1190,6 @@
 .method public static varargs touchDialogButtonTint([Landroid/view/View;)V
     .locals 6
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1296,12 +1201,11 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f060086
+    const v5, 0x7f060084
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1330,7 +1234,6 @@
 
     aput-object p0, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -1341,7 +1244,6 @@
 
     new-array v1, v1, [Lmiuix/animation/base/AnimConfig;
 
-    .line 2
     invoke-interface {v0, p0, v1}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1350,7 +1252,6 @@
 .method public static varargs touchScale([Landroid/view/View;)V
     .locals 6
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1366,7 +1267,6 @@
 
     const/4 v5, 0x0
 
-    .line 2
     invoke-static {v3, v4, v1, v5}, Lcom/android/camera/animation/FolmeUtils;->touchScaleTint(Landroid/view/View;FILmiuix/animation/base/AnimConfig;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1388,7 +1288,6 @@
 
     aput-object p0, v0, v1
 
-    .line 3
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -1403,19 +1302,16 @@
 
     aput-object v2, p3, v1
 
-    .line 4
     invoke-interface {v0, p1, p3}, Lmiuix/animation/ITouchStyle;->setScale(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
 
     move-result-object p1
 
-    .line 5
     invoke-interface {p1, p2}, Lmiuix/animation/ITouchStyle;->setTint(I)Lmiuix/animation/ITouchStyle;
 
     move-result-object p1
 
     new-array p2, v1, [Lmiuix/animation/base/AnimConfig;
 
-    .line 6
     invoke-interface {p1, p0, p2}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1424,7 +1320,6 @@
 .method public static varargs touchScaleTint([Landroid/view/View;)V
     .locals 6
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1440,7 +1335,6 @@
 
     const/4 v5, 0x0
 
-    .line 2
     invoke-static {v2, v3, v4, v5}, Lcom/android/camera/animation/FolmeUtils;->touchScaleTint(Landroid/view/View;FILmiuix/animation/base/AnimConfig;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -1460,7 +1354,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-static {p0, v0, v1, v2}, Lcom/android/camera/animation/FolmeUtils;->touchScaleTint(Landroid/view/View;FILmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1469,7 +1362,6 @@
 .method public static varargs touchTint([Landroid/view/View;)V
     .locals 3
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1479,7 +1371,6 @@
 
     aget-object v2, p0, v1
 
-    .line 2
     invoke-static {v2}, Lcom/android/camera/animation/FolmeUtils;->touchTint(Landroid/view/View;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -1501,7 +1392,6 @@
 
     aput-object p0, v1, v2
 
-    .line 1
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
@@ -1518,14 +1408,12 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-interface {v1, v3, v0}, Lmiuix/animation/ITouchStyle;->setScale(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
 
     move-result-object v0
 
     new-array v1, v2, [Lmiuix/animation/base/AnimConfig;
 
-    .line 3
     invoke-interface {v0, p0, v1}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
     return-void

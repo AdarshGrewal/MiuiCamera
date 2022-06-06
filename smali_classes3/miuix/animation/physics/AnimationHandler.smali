@@ -64,7 +64,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -77,24 +76,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mDelayedCallbackStartTime:Landroid/util/ArrayMap;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
-    .line 4
     new-instance v0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
 
     invoke-direct {v0, p0}, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;-><init>(Lmiuix/animation/physics/AnimationHandler;)V
@@ -103,12 +98,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 5
     iput-wide v0, p0, Lmiuix/animation/physics/AnimationHandler;->mCurrentFrameTime:J
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lmiuix/animation/physics/AnimationHandler;->mListDirty:Z
 
     return-void
@@ -117,7 +110,6 @@
 .method public static synthetic access$000(Lmiuix/animation/physics/AnimationHandler;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/animation/physics/AnimationHandler;->mCurrentFrameTime:J
 
     return-wide v0
@@ -126,7 +118,6 @@
 .method public static synthetic access$002(Lmiuix/animation/physics/AnimationHandler;J)J
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/animation/physics/AnimationHandler;->mCurrentFrameTime:J
 
     return-wide p1
@@ -135,7 +126,6 @@
 .method public static synthetic access$100(Lmiuix/animation/physics/AnimationHandler;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/animation/physics/AnimationHandler;->doAnimationFrame(J)V
 
     return-void
@@ -144,7 +134,6 @@
 .method public static synthetic access$200(Lmiuix/animation/physics/AnimationHandler;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     return-object p0
@@ -153,7 +142,6 @@
 .method public static synthetic access$300(Lmiuix/animation/physics/AnimationHandler;)Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/animation/physics/AnimationHandler;->getProvider()Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
     move-result-object p0
@@ -164,12 +152,10 @@
 .method private cleanUpList()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/animation/physics/AnimationHandler;->mListDirty:Z
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -181,7 +167,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 3
     iget-object v1, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -190,7 +175,6 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -203,7 +187,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lmiuix/animation/physics/AnimationHandler;->mListDirty:Z
 
     :cond_2
@@ -213,14 +196,12 @@
 .method private doAnimationFrame(J)V
     .locals 5
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     const/4 v2, 0x0
 
-    .line 2
     :goto_0
     iget-object v3, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
@@ -230,7 +211,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 3
     iget-object v3, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -243,7 +223,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     invoke-direct {p0, v3, v0, v1}, Lmiuix/animation/physics/AnimationHandler;->isCallbackDue(Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallback;J)Z
 
@@ -251,7 +230,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 5
     invoke-interface {v3, p1, p2}, Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallback;->doAnimationFrame(J)Z
 
     :cond_1
@@ -260,7 +238,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     invoke-direct {p0}, Lmiuix/animation/physics/AnimationHandler;->cleanUpList()V
 
@@ -270,7 +247,6 @@
 .method public static getFrameTime()J
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/animation/physics/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -283,7 +259,6 @@
 
     return-wide v0
 
-    .line 2
     :cond_0
     sget-object v0, Lmiuix/animation/physics/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
 
@@ -301,7 +276,6 @@
 .method public static getInstance()Lmiuix/animation/physics/AnimationHandler;
     .locals 2
 
-    .line 1
     sget-object v0, Lmiuix/animation/physics/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -310,7 +284,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lmiuix/animation/physics/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
 
     new-instance v1, Lmiuix/animation/physics/AnimationHandler;
@@ -319,7 +292,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     sget-object v0, Lmiuix/animation/physics/AnimationHandler;->sAnimatorHandler:Ljava/lang/ThreadLocal;
 
@@ -335,19 +307,16 @@
 .method private getProvider()Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mProvider:Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
     if-nez v0, :cond_1
 
-    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 3
     new-instance v0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
 
     iget-object v1, p0, Lmiuix/animation/physics/AnimationHandler;->mCallbackDispatcher:Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
@@ -358,7 +327,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider14;
 
@@ -368,7 +336,6 @@
 
     iput-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mProvider:Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
-    .line 5
     :cond_1
     :goto_0
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mProvider:Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
@@ -379,7 +346,6 @@
 .method private isCallbackDue(Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallback;J)Z
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mDelayedCallbackStartTime:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -394,7 +360,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -404,7 +369,6 @@
 
     if-gez p2, :cond_1
 
-    .line 3
     iget-object p2, p0, Lmiuix/animation/physics/AnimationHandler;->mDelayedCallbackStartTime:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -422,7 +386,6 @@
 .method public addAnimationFrameCallback(Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallback;J)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -431,14 +394,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/animation/physics/AnimationHandler;->getProvider()Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;->postFrameCallback()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
@@ -448,7 +409,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -460,7 +420,6 @@
 
     if-lez v0, :cond_2
 
-    .line 5
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mDelayedCallbackStartTime:Landroid/util/ArrayMap;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -482,12 +441,10 @@
 .method public removeCallback(Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallback;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mDelayedCallbackStartTime:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
@@ -496,7 +453,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler;->mAnimationCallbacks:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -505,7 +461,6 @@
 
     const/4 p1, 0x1
 
-    .line 4
     iput-boolean p1, p0, Lmiuix/animation/physics/AnimationHandler;->mListDirty:Z
 
     :cond_0
@@ -515,7 +470,6 @@
 .method public setProvider(Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler;->mProvider:Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
     return-void

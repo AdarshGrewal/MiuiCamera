@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmPreview;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
     iput p2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->val$touchSideWidth:I
@@ -42,7 +41,6 @@
 
     const/4 p1, -0x1
 
-    .line 2
     iput p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->nextItem:I
 
     return-void
@@ -53,7 +51,6 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -70,7 +67,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
@@ -90,13 +86,11 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     iget p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->nextItem:I
 
     if-ltz p1, :cond_2
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->access$200(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Landroidx/viewpager/widget/ViewPager;
@@ -107,7 +101,6 @@
 
     invoke-virtual {p1, p2}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->nextItem:I
 
     :cond_2
@@ -117,7 +110,6 @@
     :goto_0
     return v1
 
-    .line 6
     :cond_4
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
@@ -137,13 +129,11 @@
 
     goto :goto_2
 
-    .line 7
     :cond_5
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
 
-    .line 8
     iget p2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->val$touchSideWidth:I
 
     int-to-float v3, p2
@@ -152,7 +142,6 @@
 
     if-gez v3, :cond_6
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->access$200(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Landroidx/viewpager/widget/ViewPager;
@@ -167,12 +156,10 @@
 
     add-int/2addr p1, v0
 
-    .line 10
     iput p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->nextItem:I
 
     goto :goto_1
 
-    .line 11
     :cond_6
     iget v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->val$layoutWidth:I
 
@@ -186,7 +173,6 @@
 
     return v1
 
-    .line 12
     :cond_7
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
@@ -198,7 +184,6 @@
 
     move-result p1
 
-    .line 13
     iget-object p2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->this$0:Lcom/android/camera/fragment/film/FragmentFilmPreview;
 
     invoke-static {p2}, Lcom/android/camera/fragment/film/FragmentFilmPreview;->access$300(Lcom/android/camera/fragment/film/FragmentFilmPreview;)Lcom/android/camera/fragment/BaseFragmentPagerAdapter;
@@ -215,7 +200,6 @@
 
     add-int/2addr p1, v2
 
-    .line 14
     iput p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreview$2;->nextItem:I
 
     :cond_8

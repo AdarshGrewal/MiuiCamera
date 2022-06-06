@@ -34,7 +34,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamShape;Ljava8/util/function/LongBinaryOperator;J)V
     .locals 0
 
-    .line 1
     iput-object p2, p0, Ljava8/util/stream/ReduceOps$10;->val$operator:Ljava8/util/function/LongBinaryOperator;
 
     iput-wide p3, p0, Ljava8/util/stream/ReduceOps$10;->val$identity:J
@@ -49,7 +48,6 @@
 .method public makeSink()Ljava8/util/stream/ReduceOps$8ReducingSink;
     .locals 4
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$8ReducingSink;
 
     iget-wide v1, p0, Ljava8/util/stream/ReduceOps$10;->val$identity:J
@@ -64,7 +62,6 @@
 .method public bridge synthetic makeSink()Ljava8/util/stream/ReduceOps$AccumulatingSink;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$10;->makeSink()Ljava8/util/stream/ReduceOps$8ReducingSink;
 
     move-result-object v0

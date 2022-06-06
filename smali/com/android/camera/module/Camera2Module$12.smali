@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->tryRemoveCountDownMessage()V
+    value = Lcom/android/camera/module/Camera2Module;->onPreviewSessionSuccess(Landroid/hardware/camera2/CameraCaptureSession;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$12;->this$0:Lcom/android/camera/module/Camera2Module;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,23 +35,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "run: hide delay number in main thread"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/Camera2Module$12;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mTopAlert:Lcom/android/camera/protocol/ModeProtocol$TopAlert;
-
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideDelayNumber()V
+    invoke-static {v0}, Lcom/android/camera/module/Camera2Module;->access$4900(Lcom/android/camera/module/Camera2Module;)V
 
     return-void
 .end method

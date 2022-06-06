@@ -319,7 +319,6 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,92 +349,68 @@
 .method public constructor <init>(Landroid/graphics/Rect;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableWbGain:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableBlackLevel:Z
 
-    .line 4
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableAdrcGain:Z
 
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     const/16 v1, 0x5a
 
-    .line 6
     iput v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mFaceOrientation:I
 
-    .line 7
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BRIGHT_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 8
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BLACK_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 9
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->WB_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 10
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SHUTTER_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 11
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SENSOR_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 12
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ISP_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 13
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->LUX_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 14
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->EXP_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 15
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ADRC_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 16
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->TOTAL_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/4 v0, 0x0
 
-    .line 17
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
 
-    .line 18
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mInit:Z
 
-    .line 19
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mDumpFile:Z
 
-    .line 20
     new-instance v0, Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-direct {v0}, Lcom/arcsoft/supernight/SuperNightJni;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
-    .line 21
     invoke-virtual {p0}, Lcom/arcsoft/supernight/SuperNightProcess;->readDebugFileValue()V
 
-    .line 22
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     iget-boolean v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mDumpFile:Z
 
     invoke-virtual {v0, v1}, Lcom/arcsoft/supernight/SuperNightJni;->setDumpImageFile(Z)V
 
-    .line 23
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
-    .line 24
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,7 +439,6 @@
 
     invoke-static {v0, p1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -483,12 +457,10 @@
 
     invoke-static {v0, p1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     if-eqz p1, :cond_0
 
-    .line 27
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -514,7 +486,6 @@
 
     const-string v0, "--01/18--"
 
-    .line 28
     invoke-static {p1, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -525,7 +496,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_5
@@ -536,7 +506,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -548,7 +517,6 @@
 
     div-float/2addr v0, v1
 
-    .line 3
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
@@ -561,7 +529,6 @@
 
     div-float/2addr v1, v2
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -586,7 +553,6 @@
 
     invoke-static {v3, v2}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget v2, p1, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -597,7 +563,6 @@
 
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 6
     iget v4, p1, Landroid/graphics/Rect;->top:I
 
     int-to-float v4, v4
@@ -608,7 +573,6 @@
 
     iput v4, p1, Landroid/graphics/Rect;->top:I
 
-    .line 7
     iget-object v4, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     iget v5, v4, Landroid/graphics/Rect;->right:I
@@ -627,7 +591,6 @@
 
     iput v5, p1, Landroid/graphics/Rect;->right:I
 
-    .line 8
     iget p2, v4, Landroid/graphics/Rect;->bottom:I
 
     iget v0, p1, Landroid/graphics/Rect;->bottom:I
@@ -644,17 +607,14 @@
 
     iput p2, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 9
     rem-int/lit8 p2, v2, 0x2
 
     if-eqz p2, :cond_1
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 10
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 11
     :cond_1
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
@@ -664,10 +624,8 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 12
     iput p2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 13
     :cond_2
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
@@ -677,10 +635,8 @@
 
     add-int/lit8 p2, p2, -0x1
 
-    .line 14
     iput p2, p1, Landroid/graphics/Rect;->right:I
 
-    .line 15
     :cond_3
     iget p2, p1, Landroid/graphics/Rect;->bottom:I
 
@@ -690,10 +646,8 @@
 
     add-int/lit8 p2, p2, -0x1
 
-    .line 16
     iput p2, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 17
     :cond_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -727,7 +681,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 1
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     if-eqz v1, :cond_3
@@ -738,7 +691,6 @@
 
     goto/16 :goto_1
 
-    .line 2
     :cond_0
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -752,7 +704,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -774,12 +725,10 @@
     :cond_1
     if-eqz p1, :cond_3
 
-    .line 4
     array-length v2, p1
 
     if-lez v2, :cond_3
 
-    .line 5
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -792,7 +741,6 @@
 
     div-float/2addr v0, p2
 
-    .line 6
     iget-object p2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mArrayRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
@@ -805,7 +753,6 @@
 
     div-float/2addr p2, p3
 
-    .line 7
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -828,37 +775,31 @@
 
     invoke-static {v1, p3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     new-instance p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;
 
     invoke-direct {p3, p0}, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 9
     array-length v2, p1
 
     new-array v2, v2, [Landroid/graphics/Rect;
 
     iput-object v2, p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->faceRects:[Landroid/graphics/Rect;
 
-    .line 10
     array-length v2, p1
 
     iput v2, p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->faceNum:I
 
-    .line 11
     iget v2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mFaceOrientation:I
 
     iput v2, p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->faceOrientation:I
 
     const/4 v2, 0x0
 
-    .line 12
     :goto_0
     array-length v3, p1
 
     if-ge v2, v3, :cond_2
 
-    .line 13
     iget-object v3, p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->faceRects:[Landroid/graphics/Rect;
 
     new-instance v4, Landroid/graphics/Rect;
@@ -873,7 +814,6 @@
 
     aput-object v4, v3, v2
 
-    .line 14
     iget-object v3, p3, Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;->faceRects:[Landroid/graphics/Rect;
 
     aget-object v4, v3, v2
@@ -890,7 +830,6 @@
 
     iput v5, v4, Landroid/graphics/Rect;->left:I
 
-    .line 15
     aget-object v4, v3, v2
 
     aget-object v5, v3, v2
@@ -905,7 +844,6 @@
 
     iput v5, v4, Landroid/graphics/Rect;->top:I
 
-    .line 16
     aget-object v4, v3, v2
 
     aget-object v5, v3, v2
@@ -920,7 +858,6 @@
 
     iput v5, v4, Landroid/graphics/Rect;->right:I
 
-    .line 17
     aget-object v4, v3, v2
 
     aget-object v3, v3, v2
@@ -935,7 +872,6 @@
 
     iput v3, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 18
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -975,53 +911,44 @@
 .method private getRawImage(Landroid/media/Image;I)Lcom/arcsoft/supernight/RawImage;
     .locals 6
 
-    .line 1
     new-instance v0, Lcom/arcsoft/supernight/RawImage;
 
     invoke-direct {v0}, Lcom/arcsoft/supernight/RawImage;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v2
 
     iput v2, v0, Lcom/arcsoft/supernight/RawImage;->mWidth:I
 
-    .line 4
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v2
 
     iput v2, v0, Lcom/arcsoft/supernight/RawImage;->mHeight:I
 
-    .line 5
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p1
 
     const/4 v2, 0x0
 
-    .line 6
     aget-object v3, p1, v2
 
     invoke-virtual {v3}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    .line 7
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 8
     iput v2, v0, Lcom/arcsoft/supernight/RawImage;->mPitch1:I
 
     const/4 v4, 0x0
 
-    .line 9
     iput-object v4, v0, Lcom/arcsoft/supernight/RawImage;->mPlane1:Ljava/nio/ByteBuffer;
 
     const/16 v5, 0x23
@@ -1030,22 +957,18 @@
 
     const/16 p2, 0x802
 
-    .line 10
     iput p2, v0, Lcom/arcsoft/supernight/RawImage;->mPixelArrayFormat:I
 
     const/4 p2, 0x2
 
-    .line 11
     aget-object v1, p1, p2
 
     invoke-virtual {v1}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 13
     aget-object p2, p1, p2
 
     invoke-virtual {p2}, Landroid/media/Image$Plane;->getRowStride()I
@@ -1054,7 +977,6 @@
 
     iput p2, v0, Lcom/arcsoft/supernight/RawImage;->mPitch1:I
 
-    .line 14
     iput-object v1, v0, Lcom/arcsoft/supernight/RawImage;->mPlane1:Ljava/nio/ByteBuffer;
 
     goto :goto_0
@@ -1064,10 +986,8 @@
 
     if-ne v1, v5, :cond_1
 
-    .line 15
     iput p2, v0, Lcom/arcsoft/supernight/RawImage;->mPixelArrayFormat:I
 
-    .line 16
     :cond_1
     :goto_0
     aget-object p1, p1, v2
@@ -1078,19 +998,14 @@
 
     iput p1, v0, Lcom/arcsoft/supernight/RawImage;->mPitch0:I
 
-    .line 17
     iput v2, v0, Lcom/arcsoft/supernight/RawImage;->mPitch2:I
 
-    .line 18
     iput v2, v0, Lcom/arcsoft/supernight/RawImage;->mPitch3:I
 
-    .line 19
     iput-object v3, v0, Lcom/arcsoft/supernight/RawImage;->mPlane0:Ljava/nio/ByteBuffer;
 
-    .line 20
     iput-object v4, v0, Lcom/arcsoft/supernight/RawImage;->mPlane2:Ljava/nio/ByteBuffer;
 
-    .line 21
     iput-object v4, v0, Lcom/arcsoft/supernight/RawImage;->mPlane3:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -1099,7 +1014,6 @@
 .method private getVendorTagValue(Landroid/hardware/camera2/TotalCaptureResult;Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BRIGHT_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     const-string v1, "SuperNightProcess"
@@ -1112,7 +1026,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1121,19 +1034,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     array-length v5, v0
 
     if-lez v5, :cond_1
 
-    .line 4
     iget-boolean v5, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableBlackLevel:Z
 
     if-eqz v5, :cond_0
 
     move v5, v4
 
-    .line 5
     :goto_0
     iget-object v6, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->brightLevel:[I
 
@@ -1141,14 +1051,12 @@
 
     if-ge v5, v7, :cond_0
 
-    .line 6
     aget v7, v0, v4
 
     div-int/lit16 v7, v7, 0x400
 
     aput v7, v6, v5
 
-    .line 7
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1180,13 +1088,11 @@
     :cond_0
     move v5, v4
 
-    .line 8
     :goto_1
     array-length v6, v0
 
     if-ge v5, v6, :cond_1
 
-    .line 9
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1213,13 +1119,11 @@
 
     goto :goto_1
 
-    .line 10
     :cond_1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BLACK_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_3
 
-    .line 11
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1228,19 +1132,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 12
     array-length v5, v0
 
     if-lez v5, :cond_3
 
-    .line 13
     iget-boolean v5, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableBlackLevel:Z
 
     if-eqz v5, :cond_2
 
     move v5, v4
 
-    .line 14
     :goto_2
     iget-object v6, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->blackLevel:[I
 
@@ -1248,14 +1149,12 @@
 
     if-ge v5, v7, :cond_2
 
-    .line 15
     aget v7, v0, v4
 
     div-int/lit16 v7, v7, 0x400
 
     aput v7, v6, v5
 
-    .line 16
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1287,13 +1186,11 @@
     :cond_2
     move v5, v4
 
-    .line 17
     :goto_3
     array-length v6, v0
 
     if-ge v5, v6, :cond_3
 
-    .line 18
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1320,20 +1217,17 @@
 
     goto :goto_3
 
-    .line 19
     :cond_3
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->WB_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_5
 
-    .line 20
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [F
 
-    .line 21
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1352,17 +1246,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 22
     array-length v5, v0
 
     if-lez v5, :cond_5
 
-    .line 23
     iget-boolean v5, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableWbGain:Z
 
     if-eqz v5, :cond_4
 
-    .line 24
     iget-object v5, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fWbGain:[F
 
     aget v6, v0, v4
@@ -1371,21 +1262,18 @@
 
     const/4 v6, 0x1
 
-    .line 25
     aget v7, v0, v6
 
     aput v7, v5, v6
 
     const/4 v6, 0x2
 
-    .line 26
     aget v7, v0, v6
 
     aput v7, v5, v6
 
     const/4 v6, 0x3
 
-    .line 27
     aget v7, v0, v6
 
     aput v7, v5, v6
@@ -1393,13 +1281,11 @@
     :cond_4
     move v5, v4
 
-    .line 28
     :goto_4
     array-length v6, v0
 
     if-ge v5, v6, :cond_5
 
-    .line 29
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1426,13 +1312,11 @@
 
     goto :goto_4
 
-    .line 30
     :cond_5
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SHUTTER_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_6
 
-    .line 31
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1441,19 +1325,16 @@
 
     if-eqz v0, :cond_6
 
-    .line 32
     array-length v5, v0
 
     if-lez v5, :cond_6
 
-    .line 33
     aget-wide v5, v0, v4
 
     long-to-float v5, v5
 
     iput v5, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fShutter:F
 
-    .line 34
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1474,13 +1355,11 @@
 
     move v5, v4
 
-    .line 35
     :goto_5
     array-length v6, v0
 
     if-ge v5, v6, :cond_6
 
-    .line 36
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1507,7 +1386,6 @@
 
     goto :goto_5
 
-    .line 37
     :cond_6
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SENSOR_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -1515,7 +1393,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 38
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1524,12 +1401,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 39
     array-length v6, v0
 
     if-lez v6, :cond_7
 
-    .line 40
     aget v6, v0, v4
 
     int-to-float v6, v6
@@ -1538,7 +1413,6 @@
 
     iput v6, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fSensorGain:F
 
-    .line 41
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1559,13 +1433,11 @@
 
     move v6, v4
 
-    .line 42
     :goto_6
     array-length v7, v0
 
     if-ge v6, v7, :cond_7
 
-    .line 43
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1592,13 +1464,11 @@
 
     goto :goto_6
 
-    .line 44
     :cond_7
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ISP_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_8
 
-    .line 45
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1607,12 +1477,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 46
     array-length v6, v0
 
     if-lez v6, :cond_8
 
-    .line 47
     aget v6, v0, v4
 
     int-to-float v6, v6
@@ -1621,7 +1489,6 @@
 
     iput v6, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fISPGain:F
 
-    .line 48
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1642,13 +1509,11 @@
 
     move v5, v4
 
-    .line 49
     :goto_7
     array-length v6, v0
 
     if-ge v5, v6, :cond_8
 
-    .line 50
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1675,13 +1540,11 @@
 
     goto :goto_7
 
-    .line 51
     :cond_8
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->LUX_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_9
 
-    .line 52
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1690,19 +1553,16 @@
 
     if-eqz v0, :cond_9
 
-    .line 53
     array-length v5, v0
 
     if-lez v5, :cond_9
 
-    .line 54
     aget v5, v0, v4
 
     div-int/lit16 v5, v5, 0x2710
 
     iput v5, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->luxIndex:I
 
-    .line 55
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1723,13 +1583,11 @@
 
     move v5, v4
 
-    .line 56
     :goto_8
     array-length v6, v0
 
     if-ge v5, v6, :cond_9
 
-    .line 57
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1756,13 +1614,11 @@
 
     goto :goto_8
 
-    .line 58
     :cond_9
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->EXP_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_a
 
-    .line 59
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1771,17 +1627,14 @@
 
     if-eqz v0, :cond_a
 
-    .line 60
     array-length v5, v0
 
     if-lez v5, :cond_a
 
-    .line 61
     aget v5, v0, v4
 
     iput v5, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->expIndex:I
 
-    .line 62
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1802,13 +1655,11 @@
 
     move v5, v4
 
-    .line 63
     :goto_9
     array-length v6, v0
 
     if-ge v5, v6, :cond_a
 
-    .line 64
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1835,13 +1686,11 @@
 
     goto :goto_9
 
-    .line 65
     :cond_a
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ADRC_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_c
 
-    .line 66
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1850,17 +1699,14 @@
 
     if-eqz v0, :cond_c
 
-    .line 67
     array-length v5, v0
 
     if-lez v5, :cond_c
 
-    .line 68
     iget-boolean v5, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableAdrcGain:Z
 
     if-eqz v5, :cond_b
 
-    .line 69
     aget v5, v0, v4
 
     int-to-float v5, v5
@@ -1871,7 +1717,6 @@
 
     iput v5, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fAdrcGain:F
 
-    .line 70
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1893,13 +1738,11 @@
     :cond_b
     move v5, v4
 
-    .line 71
     :goto_a
     array-length v6, v0
 
     if-ge v5, v6, :cond_c
 
-    .line 72
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1926,13 +1769,11 @@
 
     goto :goto_a
 
-    .line 73
     :cond_c
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->TOTAL_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_d
 
-    .line 74
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1941,12 +1782,10 @@
 
     if-eqz p1, :cond_d
 
-    .line 75
     array-length v0, p1
 
     if-lez v0, :cond_d
 
-    .line 76
     aget v0, p1, v4
 
     int-to-float v0, v0
@@ -1957,7 +1796,6 @@
 
     iput v0, p2, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fTotalGain:F
 
-    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1976,13 +1814,11 @@
 
     invoke-static {v1, p2}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
     :goto_b
     array-length p2, p1
 
     if-ge v4, p2, :cond_d
 
-    .line 79
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2020,10 +1856,8 @@
 
     const-string v1, "setupSomeVendorTag"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BRIGHT_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     const/4 v2, 0x1
@@ -2068,7 +1902,6 @@
 
     return v2
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/camera2/TotalCaptureResult;->getKeys()Ljava/util/List;
 
@@ -2076,7 +1909,6 @@
 
     if-eqz p1, :cond_d
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2085,7 +1917,6 @@
 
     goto/16 :goto_1
 
-    .line 5
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2105,7 +1936,6 @@
 
     check-cast v1, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 6
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -2120,13 +1950,10 @@
 
     const-string v3, "BRIGHT_LEVEL_RESULT_KEY"
 
-    .line 7
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BRIGHT_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 9
     :cond_3
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2142,13 +1969,10 @@
 
     const-string v3, "BLACK_LEVEL_RESULT_KEY"
 
-    .line 10
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->BLACK_LEVEL_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 12
     :cond_4
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2164,13 +1988,10 @@
 
     const-string v3, "WB_GAIN_RESULT_KEY"
 
-    .line 13
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->WB_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 15
     :cond_5
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2186,13 +2007,10 @@
 
     const-string v3, "SHUTTER_RESULT_KEY"
 
-    .line 16
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SHUTTER_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 18
     :cond_6
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2208,13 +2026,10 @@
 
     const-string v3, "SENSOR_GAIN_RESULT_KEY"
 
-    .line 19
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->SENSOR_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 21
     :cond_7
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2230,13 +2045,10 @@
 
     const-string v3, "ISP_GAIN_RESULT_KEY"
 
-    .line 22
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ISP_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 24
     :cond_8
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2252,13 +2064,10 @@
 
     const-string v3, "LUX_INDEX_RESULT_KEY"
 
-    .line 25
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->LUX_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 27
     :cond_9
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2274,13 +2083,10 @@
 
     const-string v3, "EXP_INDEX_RESULT_KEY"
 
-    .line 28
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 29
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->EXP_INDEX_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 30
     :cond_a
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2296,13 +2102,10 @@
 
     const-string v3, "ADRC_GAIN_RESULT_KEY"
 
-    .line 31
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 32
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->ADRC_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 33
     :cond_b
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
@@ -2318,10 +2121,8 @@
 
     const-string v3, "TOTAL_GAIN_RESULT_KEY"
 
-    .line 34
     invoke-static {v0, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->TOTAL_GAIN_RESULT_KEY:Landroid/hardware/camera2/CaptureResult$Key;
 
     goto/16 :goto_0
@@ -2333,12 +2134,10 @@
     :goto_1
     const-string v1, "List<CaptureResult.Key<?>> is error"
 
-    .line 36
     invoke-static {v0, v1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_e
 
-    .line 37
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2400,14 +2199,12 @@
 
     const-string v4, "-- addAllInputInfoEx --"
 
-    .line 1
     invoke-static {v9, v4}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v10, -0x1
 
     if-eqz v0, :cond_10
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -2416,7 +2213,6 @@
 
     if-eqz v1, :cond_10
 
-    .line 3
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -2443,7 +2239,6 @@
 
     goto/16 :goto_6
 
-    .line 4
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2465,7 +2260,6 @@
 
     invoke-static {v9, v4}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -2476,7 +2270,6 @@
 
     const/4 v12, 0x0
 
-    .line 6
     :goto_0
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
@@ -2487,7 +2280,6 @@
 
     if-ge v6, v13, :cond_9
 
-    .line 7
     iget-boolean v11, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -2498,21 +2290,17 @@
     :try_start_1
     const-string v0, "is cancel 0"
 
-    .line 8
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
 
-    .line 10
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2525,7 +2313,6 @@
 
     goto/16 :goto_3
 
-    .line 12
     :cond_2
     :try_start_2
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2534,7 +2321,6 @@
 
     check-cast v11, Landroid/media/Image;
 
-    .line 13
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -2550,7 +2336,6 @@
     :cond_3
     const-string v13, "vendorTag"
 
-    .line 14
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -2567,7 +2352,6 @@
 
     invoke-static {v13, v5}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     invoke-direct {v7, v12}, Lcom/arcsoft/supernight/SuperNightProcess;->setupSomeVendorTag(Landroid/hardware/camera2/TotalCaptureResult;)Z
 
     move-result v5
@@ -2580,21 +2364,17 @@
     :try_start_3
     const-string v0, "setupSomeVendorTag is error!!"
 
-    .line 16
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 17
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_4
 
-    .line 18
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2602,46 +2382,36 @@
     :cond_4
     return v10
 
-    .line 20
     :cond_5
     :try_start_4
     new-instance v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v5, v7}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 21
     iput v6, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 22
     iput v4, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
-    .line 23
     iput v14, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 24
     invoke-virtual {v11}, Landroid/media/Image;->getWidth()I
 
     move-result v13
 
-    .line 25
     invoke-virtual {v11}, Landroid/media/Image;->getHeight()I
 
     move-result v14
 
-    .line 26
     new-instance v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;
 
     invoke-direct {v15, v7}, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
     const/4 v10, 0x0
 
-    .line 27
     iput v10, v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->rawType:I
 
-    .line 28
     invoke-direct {v7, v12, v15}, Lcom/arcsoft/supernight/SuperNightProcess;->getVendorTagValue(Landroid/hardware/camera2/TotalCaptureResult;Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;)V
 
-    .line 29
     sget-object v10, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v12, v10}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -2652,7 +2422,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 30
     iget-object v12, v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->evList:[I
 
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
@@ -2663,7 +2432,6 @@
 
     aput v17, v12, v16
 
-    .line 31
     iget-object v12, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImagesEV:[F
 
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
@@ -2674,7 +2442,6 @@
 
     aput v10, v12, v16
 
-    .line 32
     :cond_6
     iget-object v10, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
@@ -2686,7 +2453,6 @@
 
     aput-object v11, v10, v12
 
-    .line 33
     iget-object v10, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {v10, v15, v5}, Lcom/arcsoft/supernight/SuperNightJni;->addOneInputInfo(Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;)I
@@ -2705,21 +2471,17 @@
     :goto_1
     const-string v0, "TotalCaptureResult - > error invalid param"
 
-    .line 34
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 35
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_8
 
-    .line 36
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2732,7 +2494,6 @@
     :cond_9
     const/4 v0, 0x0
 
-    .line 38
     :try_start_5
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2751,7 +2512,6 @@
 
     check-cast v5, Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 39
     sget-object v6, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v5, v6}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -2762,19 +2522,16 @@
 
     if-eqz v6, :cond_a
 
-    .line 40
     invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
     if-nez v6, :cond_a
 
-    .line 41
     invoke-direct {v7, v5, v11, v12}, Lcom/arcsoft/supernight/SuperNightProcess;->getFaceInfo(Landroid/hardware/camera2/TotalCaptureResult;II)Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;
 
     move-result-object v0
 
-    .line 42
     :cond_b
     iget-boolean v1, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
 
@@ -2782,21 +2539,17 @@
 
     const-string v0, "is cancel 1"
 
-    .line 43
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 44
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_c
 
-    .line 45
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2806,7 +2559,6 @@
 
     return v1
 
-    .line 47
     :cond_d
     :try_start_6
     new-instance v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
@@ -2815,16 +2567,12 @@
 
     const/4 v1, 0x0
 
-    .line 48
     iput v1, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 49
     iput v4, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
-    .line 50
     iput v14, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 51
     iget-object v4, v5, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
     invoke-direct {v7, v3, v2}, Lcom/arcsoft/supernight/SuperNightProcess;->getRawImage(Landroid/media/Image;I)Lcom/arcsoft/supernight/RawImage;
@@ -2833,7 +2581,6 @@
 
     aput-object v2, v4, v1
 
-    .line 52
     iget-object v1, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     const/4 v4, 0x3
@@ -2853,7 +2600,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 53
     :try_start_7
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2884,16 +2630,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 54
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_e
 
-    .line 55
     :goto_2
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2914,7 +2657,6 @@
     :try_start_8
     const-string v1, "Error"
 
-    .line 57
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2937,7 +2679,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 58
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_e
@@ -2953,10 +2694,8 @@
 
     if-eqz v1, :cond_f
 
-    .line 59
     invoke-static {v9, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     iget-object v1, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -2968,20 +2707,16 @@
     :goto_6
     const-string v0, "addAllInputInfo - > error invalid param"
 
-    .line 61
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 62
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_11
 
     const-string v0, "mCountDownLatch.countDown() 1"
 
-    .line 63
     invoke-static {v9, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3022,7 +2757,6 @@
 
     if-eqz v0, :cond_11
 
-    .line 1
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3031,7 +2765,6 @@
 
     if-eqz v1, :cond_11
 
-    .line 2
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -3056,13 +2789,11 @@
 
     goto/16 :goto_6
 
-    .line 3
     :cond_0
     new-instance v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v2, v7}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3083,7 +2814,6 @@
 
     invoke-static {v10, v3}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -3098,7 +2828,6 @@
 
     move v11, v6
 
-    .line 6
     :goto_0
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
@@ -3107,7 +2836,6 @@
 
     if-ge v2, v12, :cond_a
 
-    .line 7
     iget-boolean v6, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -3115,15 +2843,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 8
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
 
-    .line 9
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3131,7 +2856,6 @@
     :cond_1
     return v9
 
-    .line 11
     :cond_2
     :try_start_1
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3140,14 +2864,12 @@
 
     check-cast v6, Landroid/media/Image;
 
-    .line 12
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 13
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -3177,7 +2899,6 @@
     :cond_3
     const-string v12, "vendorTag"
 
-    .line 14
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -3194,7 +2915,6 @@
 
     invoke-static {v12, v13}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     invoke-direct {v7, v11}, Lcom/arcsoft/supernight/SuperNightProcess;->setupSomeVendorTag(Landroid/hardware/camera2/TotalCaptureResult;)Z
 
     move-result v12
@@ -3207,21 +2927,17 @@
     :try_start_2
     const-string v0, "setupSomeVendorTag is error!!"
 
-    .line 16
     invoke-static {v10, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 17
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_4
 
-    .line 18
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3229,46 +2945,36 @@
     :cond_4
     return v9
 
-    .line 20
     :cond_5
     :try_start_3
     new-instance v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v12, v7}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 21
     iput v2, v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 22
     iput v3, v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
     const/4 v13, 0x2
 
-    .line 23
     iput v13, v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 24
     invoke-virtual {v6}, Landroid/media/Image;->getWidth()I
 
     move-result v13
 
-    .line 25
     invoke-virtual {v6}, Landroid/media/Image;->getHeight()I
 
     move-result v14
 
-    .line 26
     new-instance v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;
 
     invoke-direct {v15, v7}, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 27
     iput v4, v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->rawType:I
 
-    .line 28
     invoke-direct {v7, v11, v15}, Lcom/arcsoft/supernight/SuperNightProcess;->getVendorTagValue(Landroid/hardware/camera2/TotalCaptureResult;Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;)V
 
-    .line 29
     sget-object v9, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v11, v9}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3279,7 +2985,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 30
     iget-object v11, v15, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->evList:[I
 
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
@@ -3288,7 +2993,6 @@
 
     aput v16, v11, v4
 
-    .line 31
     iget-object v11, v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImagesEV:[F
 
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
@@ -3299,7 +3003,6 @@
 
     aput v9, v11, v4
 
-    .line 32
     :cond_6
     iget-object v9, v12, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
@@ -3311,7 +3014,6 @@
 
     aput-object v6, v9, v4
 
-    .line 33
     iget-object v6, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {v6, v15, v12}, Lcom/arcsoft/supernight/SuperNightJni;->addOneInputInfo(Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;)I
@@ -3335,21 +3037,17 @@
     :goto_1
     const-string v0, "TotalCaptureResult - > error invalid param"
 
-    .line 34
     invoke-static {v10, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 35
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_9
 
-    .line 36
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3362,7 +3060,6 @@
     :cond_a
     const/4 v0, 0x0
 
-    .line 38
     :try_start_4
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -3381,7 +3078,6 @@
 
     check-cast v2, Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 39
     sget-object v3, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v2, v3}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3392,14 +3088,12 @@
 
     if-eqz v3, :cond_b
 
-    .line 40
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     if-nez v3, :cond_b
 
-    .line 41
     invoke-direct {v7, v2, v6, v11}, Lcom/arcsoft/supernight/SuperNightProcess;->getFaceInfo(Landroid/hardware/camera2/TotalCaptureResult;II)Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;
 
     move-result-object v0
@@ -3407,7 +3101,6 @@
     :cond_c
     move-object v2, v0
 
-    .line 42
     iget-boolean v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
     :try_end_4
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_1
@@ -3415,15 +3108,12 @@
 
     if-eqz v0, :cond_e
 
-    .line 43
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_d
 
-    .line 44
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3433,7 +3123,6 @@
 
     return v1
 
-    .line 46
     :cond_e
     :try_start_5
     iget-object v1, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
@@ -3453,7 +3142,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 47
     :try_start_6
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3484,16 +3172,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 48
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_f
 
-    .line 49
     :goto_2
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3519,7 +3204,6 @@
     :try_start_7
     const-string v1, "Error"
 
-    .line 51
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3542,7 +3226,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 52
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_f
@@ -3558,10 +3241,8 @@
 
     if-eqz v1, :cond_10
 
-    .line 53
     invoke-static {v10, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     iget-object v1, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3573,20 +3254,16 @@
     :goto_6
     const-string v0, "addAllInputInfo - > error invalid param"
 
-    .line 55
     invoke-static {v10, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_12
 
     const-string v0, "mCountDownLatch.countDown() 3"
 
-    .line 57
     invoke-static {v10, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
     iget-object v0, v7, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3636,14 +3313,12 @@
 
     const-string v8, "-- addAllInputInfo by fd --"
 
-    .line 1
     invoke-static {v7, v8}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v8, -0x1
 
     if-eqz v0, :cond_11
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -3652,7 +3327,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 3
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -3667,7 +3341,6 @@
 
     if-lez v9, :cond_11
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -3698,7 +3371,6 @@
 
     goto/16 :goto_6
 
-    .line 5
     :cond_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -3720,7 +3392,6 @@
 
     invoke-static {v7, v9}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -3731,7 +3402,6 @@
 
     const/4 v13, 0x0
 
-    .line 7
     :goto_0
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
@@ -3740,7 +3410,6 @@
 
     if-ge v11, v14, :cond_a
 
-    .line 8
     iget-boolean v12, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -3751,21 +3420,17 @@
     :try_start_1
     const-string v0, "is cancel 0"
 
-    .line 9
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3778,7 +3443,6 @@
 
     goto/16 :goto_3
 
-    .line 13
     :cond_2
     :try_start_2
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3787,7 +3451,6 @@
 
     check-cast v12, Landroid/media/Image;
 
-    .line 14
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -3803,7 +3466,6 @@
     :cond_3
     const-string v14, "vendorTag"
 
-    .line 15
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -3820,7 +3482,6 @@
 
     invoke-static {v14, v10}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     invoke-direct {v1, v13}, Lcom/arcsoft/supernight/SuperNightProcess;->setupSomeVendorTag(Landroid/hardware/camera2/TotalCaptureResult;)Z
 
     move-result v10
@@ -3833,21 +3494,17 @@
     :try_start_3
     const-string v0, "setupSomeVendorTag is error!!"
 
-    .line 17
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 18
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_4
 
-    .line 19
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -3855,25 +3512,20 @@
     :cond_4
     return v8
 
-    .line 21
     :cond_5
     :try_start_4
     new-instance v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v10, v1}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 22
     iput v11, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 23
     iput v9, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
     const/4 v14, 0x2
 
-    .line 24
     iput v14, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 25
     invoke-virtual {v3, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v14
@@ -3885,7 +3537,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 26
     :try_start_5
     iget-object v15, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputFd:[I
 
@@ -3897,7 +3548,6 @@
 
     aput v14, v15, v16
 
-    .line 27
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -3929,32 +3579,26 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 28
     :cond_6
     :try_start_6
     invoke-virtual {v12}, Landroid/media/Image;->getWidth()I
 
     move-result v14
 
-    .line 29
     invoke-virtual {v12}, Landroid/media/Image;->getHeight()I
 
     move-result v15
 
-    .line 30
     new-instance v8, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;
 
     invoke-direct {v8, v1}, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
     const/4 v0, 0x0
 
-    .line 31
     iput v0, v8, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->rawType:I
 
-    .line 32
     invoke-direct {v1, v13, v8}, Lcom/arcsoft/supernight/SuperNightProcess;->getVendorTagValue(Landroid/hardware/camera2/TotalCaptureResult;Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;)V
 
-    .line 33
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v13, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -3965,7 +3609,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 34
     iget-object v13, v8, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->evList:[I
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -3976,7 +3619,6 @@
 
     aput v17, v13, v16
 
-    .line 35
     iget-object v13, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImagesEV:[F
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -3987,7 +3629,6 @@
 
     aput v0, v13, v16
 
-    .line 36
     :cond_7
     iget-object v0, v10, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
@@ -3999,7 +3640,6 @@
 
     aput-object v12, v0, v13
 
-    .line 37
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {v0, v8, v10}, Lcom/arcsoft/supernight/SuperNightJni;->addOneInputInfo(Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;)I
@@ -4020,21 +3660,17 @@
     :goto_1
     const-string v0, "TotalCaptureResult - > error invalid param"
 
-    .line 38
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/IllegalStateException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 39
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_9
 
-    .line 40
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4047,7 +3683,6 @@
     :cond_a
     const/4 v0, 0x0
 
-    .line 42
     :try_start_7
     invoke-virtual/range {p2 .. p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -4066,7 +3701,6 @@
 
     check-cast v3, Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 43
     sget-object v8, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {v3, v8}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -4077,19 +3711,16 @@
 
     if-eqz v8, :cond_b
 
-    .line 44
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
     move-result v8
 
     if-nez v8, :cond_b
 
-    .line 45
     invoke-direct {v1, v3, v12, v13}, Lcom/arcsoft/supernight/SuperNightProcess;->getFaceInfo(Landroid/hardware/camera2/TotalCaptureResult;II)Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;
 
     move-result-object v0
 
-    .line 46
     :cond_c
     iget-boolean v2, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
 
@@ -4097,21 +3728,17 @@
 
     const-string v0, "is cancel 1"
 
-    .line 47
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_7
     .catch Ljava/lang/IllegalStateException; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 48
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_d
 
-    .line 49
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4121,7 +3748,6 @@
 
     return v2
 
-    .line 51
     :cond_e
     :try_start_8
     new-instance v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
@@ -4130,18 +3756,14 @@
 
     const/4 v3, 0x0
 
-    .line 52
     iput v3, v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 53
     iput v9, v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
     const/4 v8, 0x2
 
-    .line 54
     iput v8, v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 55
     iget-object v8, v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
     invoke-direct {v1, v5, v4}, Lcom/arcsoft/supernight/SuperNightProcess;->getRawImage(Landroid/media/Image;I)Lcom/arcsoft/supernight/RawImage;
@@ -4150,12 +3772,10 @@
 
     aput-object v4, v8, v3
 
-    .line 56
     iget-object v4, v2, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputFd:[I
 
     aput p6, v4, v3
 
-    .line 57
     iget-object v3, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     const/4 v4, 0x3
@@ -4179,7 +3799,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_8 .. :try_end_8} :catch_1
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 58
     :try_start_9
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4210,16 +3829,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 59
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_f
 
-    .line 60
     :goto_2
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4240,7 +3856,6 @@
     :try_start_a
     const-string v2, "Error"
 
-    .line 62
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4263,7 +3878,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 63
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_f
@@ -4279,10 +3893,8 @@
 
     if-eqz v2, :cond_10
 
-    .line 64
     invoke-static {v7, v6}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     iget-object v2, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v2}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4294,20 +3906,16 @@
     :goto_6
     const-string v0, "addAllInputInfo - > error invalid param"
 
-    .line 66
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 67
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_12
 
     const-string v0, "mCountDownLatch.countDown() 1"
 
-    .line 68
     invoke-static {v7, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     iget-object v0, v1, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4331,7 +3939,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 1
     iget-object v3, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     if-eqz v3, :cond_7
@@ -4340,7 +3947,6 @@
 
     goto/16 :goto_3
 
-    .line 2
     :cond_0
     :try_start_0
     invoke-direct {p0, p2}, Lcom/arcsoft/supernight/SuperNightProcess;->setupSomeVendorTag(Landroid/hardware/camera2/TotalCaptureResult;)Z
@@ -4351,21 +3957,17 @@
 
     const-string p1, "setupSomeVendorTag is error!!"
 
-    .line 3
     invoke-static {v2, p1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-static {v2, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4373,38 +3975,30 @@
     :cond_1
     return v1
 
-    .line 7
     :cond_2
     :try_start_1
     new-instance v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v3, p0}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
-    .line 8
     iput p3, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 9
     iput p5, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
     const/4 p3, 0x2
 
-    .line 10
     iput p3, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 11
     new-instance p3, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;
 
     invoke-direct {p3, p0}, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
     const/4 p5, 0x0
 
-    .line 12
     iput p5, p3, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->rawType:I
 
-    .line 13
     invoke-direct {p0, p2, p3}, Lcom/arcsoft/supernight/SuperNightProcess;->getVendorTagValue(Landroid/hardware/camera2/TotalCaptureResult;Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;)V
 
-    .line 14
     sget-object v4, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-virtual {p2, v4}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -4415,7 +4009,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 15
     iget-object v5, p3, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->evList:[I
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -4424,7 +4017,6 @@
 
     aput v6, v5, p5
 
-    .line 16
     iget-object v5, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImagesEV:[F
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -4435,7 +4027,6 @@
 
     aput v6, v5, p5
 
-    .line 17
     :cond_3
     iget-object v5, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
@@ -4445,7 +4036,6 @@
 
     aput-object p1, v5, p5
 
-    .line 18
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {p1, p3, v3}, Lcom/arcsoft/supernight/SuperNightJni;->addOneInputInfo(Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;)I
@@ -4454,7 +4044,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 19
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -4465,23 +4054,19 @@
 
     if-nez p1, :cond_4
 
-    .line 20
     iput-object p2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mMetdata:Landroid/hardware/camera2/TotalCaptureResult;
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 21
     :cond_4
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz p1, :cond_5
 
-    .line 22
     :goto_0
     invoke-static {v2, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4496,13 +4081,11 @@
     :catch_0
     move-exception p1
 
-    .line 24
     :try_start_2
     invoke-virtual {p1}, Ljava/lang/IllegalStateException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 25
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz p1, :cond_5
@@ -4518,10 +4101,8 @@
 
     if-eqz p2, :cond_6
 
-    .line 26
     invoke-static {v2, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     iget-object p2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p2}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4533,7 +4114,6 @@
     :goto_3
     const-string p1, "addOneInputInfo - > error invalid param"
 
-    .line 28
     invoke-static {v2, p1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -4542,22 +4122,18 @@
 .method public cancelSuperNight()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
 
-    .line 3
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {v1}, Lcom/arcsoft/supernight/SuperNightJni;->cancelSuperNight()V
 
-    .line 4
     iget-boolean v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mInit:Z
 
     if-nez v1, :cond_0
@@ -4566,12 +4142,10 @@
 
     const-string v1, "mInit is false ,cancelSuperNight return!!!"
 
-    .line 5
     invoke-static {v0, v1}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
@@ -4579,7 +4153,6 @@
 
     iput-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 7
     :try_start_0
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
@@ -4590,7 +4163,6 @@
     :catch_0
     move-exception v0
 
-    .line 8
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :cond_1
@@ -4601,7 +4173,6 @@
 .method public init(IIII)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     if-nez v0, :cond_0
@@ -4610,11 +4181,9 @@
 
     return p1
 
-    .line 2
     :cond_0
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/arcsoft/supernight/SuperNightJni;->init(IIII)V
 
-    .line 3
     iget-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {p1}, Lcom/arcsoft/supernight/SuperNightJni;->preProcess()I
@@ -4623,15 +4192,12 @@
 
     const/4 p2, 0x0
 
-    .line 4
     iput-boolean p2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mIsCancel:Z
 
     const/4 p2, 0x1
 
-    .line 5
     iput-boolean p2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mInit:Z
 
-    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4656,7 +4222,6 @@
 .method public onProgress(II)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4699,44 +4264,36 @@
 
     goto/16 :goto_3
 
-    .line 1
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v1
 
-    .line 3
     iget-object v2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mMetdata:Landroid/hardware/camera2/TotalCaptureResult;
 
     invoke-direct {p0, v2, v0, v1}, Lcom/arcsoft/supernight/SuperNightProcess;->getFaceInfo(Landroid/hardware/camera2/TotalCaptureResult;II)Lcom/arcsoft/supernight/SuperNightProcess$FaceInfo;
 
     move-result-object v2
 
-    .line 4
     new-instance v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;
 
     invoke-direct {v3, p0}, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;-><init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->curIndex:I
 
-    .line 6
     iput p4, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->imgNum:I
 
     const/4 v1, 0x2
 
-    .line 7
     iput v1, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->cameraState:I
 
-    .line 8
     iget-object v1, v3, Lcom/arcsoft/supernight/SuperNightProcess$InputInfo;->inputImages:[Lcom/arcsoft/supernight/RawImage;
 
     invoke-direct {p0, p1, p2}, Lcom/arcsoft/supernight/SuperNightProcess;->getRawImage(Landroid/media/Image;I)Lcom/arcsoft/supernight/RawImage;
@@ -4745,7 +4302,6 @@
 
     aput-object v4, v1, v0
 
-    .line 9
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     const/4 v4, 0x3
@@ -4758,7 +4314,6 @@
 
     move-result v9
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4788,16 +4343,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
 
-    .line 12
     :goto_0
     invoke-static {v8, v7}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4812,13 +4364,11 @@
     :catch_0
     move-exception v0
 
-    .line 14
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
@@ -4834,10 +4384,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 16
     invoke-static {v8, v7}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -4853,14 +4401,12 @@
 .method public readDebugFileValue()V
     .locals 10
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/arcsoft/supernight/SuperNightProcess;->DEBUG_FILE:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -4877,24 +4423,20 @@
 
     const-string v0, "dump file return false 0"
 
-    .line 3
     invoke-static {v2, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 5
     new-instance v0, Ljava/io/InputStreamReader;
 
     invoke-direct {v0, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 6
     new-instance v3, Ljava/io/BufferedReader;
 
     invoke-direct {v3, v0}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
@@ -4903,7 +4445,6 @@
 
     move v5, v4
 
-    .line 7
     :cond_1
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -4912,7 +4453,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 8
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -4929,7 +4469,6 @@
 
     invoke-static {v2, v7}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -4945,7 +4484,6 @@
     :cond_2
     const-string v7, "dumpSNImage"
 
-    .line 10
     invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -4954,12 +4492,10 @@
 
     if-eqz v7, :cond_4
 
-    .line 11
     invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 12
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -4970,7 +4506,6 @@
 
     move-result-object v6
 
-    .line 13
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -4987,7 +4522,6 @@
 
     invoke-static {v2, v7}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
@@ -5010,19 +4544,16 @@
     :cond_4
     const-string v7, "debugSNLog"
 
-    .line 15
     invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 16
     invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 17
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -5033,7 +4564,6 @@
 
     move-result-object v6
 
-    .line 18
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -5050,7 +4580,6 @@
 
     invoke-static {v2, v7}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
@@ -5065,20 +4594,16 @@
     :goto_3
     sput-boolean v8, Lcom/arcsoft/supernight/LOG;->DEBUG:Z
 
-    .line 20
     sput-boolean v8, Lcom/arcsoft/supernight/TimeConsumingUtil;->DEBUG:Z
 
     goto :goto_2
 
-    .line 21
     :cond_6
     :goto_4
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
 
-    .line 22
     invoke-virtual {v0}, Ljava/io/InputStreamReader;->close()V
 
-    .line 23
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
@@ -5090,7 +4615,6 @@
     :catch_0
     move-exception v0
 
-    .line 24
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto :goto_5
@@ -5098,7 +4622,6 @@
     :catch_1
     move-exception v0
 
-    .line 25
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_5
@@ -5106,7 +4629,6 @@
     :catch_2
     move-exception v0
 
-    .line 26
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     :goto_5
@@ -5116,7 +4638,6 @@
 .method public setEnableAdrcGain(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableAdrcGain:Z
 
     return-void
@@ -5125,7 +4646,6 @@
 .method public setEnableBlackLevel(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableBlackLevel:Z
 
     return-void
@@ -5134,7 +4654,6 @@
 .method public setEnableWbGain(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mEnableWbGain:Z
 
     return-void
@@ -5143,7 +4662,6 @@
 .method public setFaceOrientation(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mFaceOrientation:I
 
     return-void
@@ -5152,7 +4670,6 @@
 .method public unInit()I
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     if-nez v0, :cond_0
@@ -5161,13 +4678,11 @@
 
     return v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/arcsoft/supernight/SuperNightJni;->postProcess()I
 
     move-result v0
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5186,14 +4701,12 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mSuperNightJni:Lcom/arcsoft/supernight/SuperNightJni;
 
     invoke-virtual {v0}, Lcom/arcsoft/supernight/SuperNightJni;->unInit()I
 
     move-result v0
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -5212,10 +4725,8 @@
 
     const/4 v2, 0x0
 
-    .line 6
     iput-object v2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mMetdata:Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 7
     iget-object v2, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v2, :cond_1
@@ -5232,10 +4743,8 @@
 
     const-string v2, "mCountDownLatch.countDown() 6"
 
-    .line 8
     invoke-static {v1, v2}, Lcom/arcsoft/supernight/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -5243,7 +4752,6 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 10
     iput-boolean v1, p0, Lcom/arcsoft/supernight/SuperNightProcess;->mInit:Z
 
     return v0

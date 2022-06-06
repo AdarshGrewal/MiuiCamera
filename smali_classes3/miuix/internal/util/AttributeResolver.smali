@@ -21,14 +21,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     sput-object v0, Lmiuix/internal/util/AttributeResolver;->TYPED_VALUE:Landroid/util/TypedValue;
 
-    .line 2
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -46,10 +44,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -62,7 +58,6 @@
 .method public static getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p0
@@ -77,12 +72,10 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 2
     sget-object p0, Lmiuix/internal/util/AttributeResolver;->TYPED_VALUE:Landroid/util/TypedValue;
 
     return-object p0
 
-    .line 3
     :cond_0
     sget-object p0, Lmiuix/internal/util/AttributeResolver;->TYPED_VALUE_THREAD_LOCAL:Ljava/lang/ThreadLocal;
 
@@ -94,12 +87,10 @@
 
     if-nez p0, :cond_1
 
-    .line 4
     new-instance p0, Landroid/util/TypedValue;
 
     invoke-direct {p0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 5
     sget-object v0, Lmiuix/internal/util/AttributeResolver;->TYPED_VALUE_THREAD_LOCAL:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -111,12 +102,10 @@
 .method public static innerResolveColor(Landroid/content/Context;I)Ljava/lang/Integer;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v1
@@ -129,12 +118,10 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     iget p1, v0, Landroid/util/TypedValue;->resourceId:I
 
     if-lez p1, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -151,7 +138,6 @@
 
     return-object p0
 
-    .line 5
     :cond_0
     iget p0, v0, Landroid/util/TypedValue;->type:I
 
@@ -163,7 +149,6 @@
 
     if-gt p0, p1, :cond_1
 
-    .line 6
     iget p0, v0, Landroid/util/TypedValue;->data:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -181,12 +166,10 @@
 .method public static resolve(Landroid/content/Context;I)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -199,7 +182,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     iget p0, v0, Landroid/util/TypedValue;->resourceId:I
 
     goto :goto_0
@@ -214,12 +196,10 @@
 .method public static resolveBoolean(Landroid/content/Context;IZ)Z
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -232,7 +212,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 3
     iget p0, v0, Landroid/util/TypedValue;->type:I
 
     const/16 p1, 0x12
@@ -260,21 +239,18 @@
 .method public static resolveColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/internal/util/AttributeResolver;->innerResolveColor(Landroid/content/Context;I)Ljava/lang/Integer;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -292,14 +268,12 @@
 .method public static resolveColor(Landroid/content/Context;II)I
     .locals 0
 
-    .line 4
     invoke-static {p0, p1}, Lmiuix/internal/util/AttributeResolver;->innerResolveColor(Landroid/content/Context;I)Ljava/lang/Integer;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -313,7 +287,6 @@
 .method public static resolveDimension(Landroid/content/Context;I)F
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -332,7 +305,6 @@
 .method public static resolveDimensionPixelSize(Landroid/content/Context;I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -351,12 +323,10 @@
 .method public static resolveDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v1
@@ -369,19 +339,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 3
     iget p1, v0, Landroid/util/TypedValue;->resourceId:I
 
     if-lez p1, :cond_1
 
-    .line 4
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt p1, v1, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -398,7 +365,6 @@
 
     return-object p0
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -412,7 +378,6 @@
 
     return-object p0
 
-    .line 7
     :cond_1
     iget p0, v0, Landroid/util/TypedValue;->type:I
 
@@ -424,7 +389,6 @@
 
     if-gt p0, p1, :cond_2
 
-    .line 8
     new-instance p0, Landroid/graphics/drawable/ColorDrawable;
 
     iget p1, v0, Landroid/util/TypedValue;->data:I
@@ -442,12 +406,10 @@
 .method public static resolveFloat(Landroid/content/Context;IF)F
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -460,14 +422,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     iget p0, v0, Landroid/util/TypedValue;->type:I
 
     const/4 p1, 0x4
 
     if-ne p0, p1, :cond_0
 
-    .line 4
     iget p0, v0, Landroid/util/TypedValue;->data:I
 
     int-to-float p2, p0
@@ -479,12 +439,10 @@
 .method public static resolveInt(Landroid/content/Context;II)I
     .locals 2
 
-    .line 1
     invoke-static {p0}, Lmiuix/internal/util/AttributeResolver;->getTypedValue(Landroid/content/Context;)Landroid/util/TypedValue;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -497,14 +455,12 @@
 
     if-eqz p0, :cond_0
 
-    .line 3
     iget p0, v0, Landroid/util/TypedValue;->type:I
 
     const/16 p1, 0x10
 
     if-ne p0, p1, :cond_0
 
-    .line 4
     iget p2, v0, Landroid/util/TypedValue;->data:I
 
     :cond_0

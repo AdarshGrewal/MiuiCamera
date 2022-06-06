@@ -44,17 +44,14 @@
 .method public constructor <init>(Ljava8/util/stream/DistinctOps$KeysAndNullSet;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->this$0:Ljava8/util/stream/DistinctOps$KeysAndNullSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->nullDelivered:Z
 
-    .line 3
     iget-object p1, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->this$0:Ljava8/util/stream/DistinctOps$KeysAndNullSet;
 
     iget-object p1, p1, Ljava8/util/stream/DistinctOps$KeysAndNullSet;->keys:Ljava/util/Set;
@@ -73,7 +70,6 @@
 .method public hasNext()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->nullDelivered:Z
 
     if-nez v0, :cond_0
@@ -82,7 +78,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->it:Ljava/util/Iterator;
 
@@ -101,21 +96,18 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->nullDelivered:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->nullDelivered:Z
 
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/DistinctOps$KeysAndNullSet$1;->it:Ljava/util/Iterator;
 
@@ -129,7 +121,6 @@
 .method public remove()V
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

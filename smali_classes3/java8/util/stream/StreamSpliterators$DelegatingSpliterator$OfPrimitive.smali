@@ -52,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;-><init>(Ljava8/util/function/Supplier;)V
 
     return-void
@@ -68,7 +67,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -88,7 +86,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->get()Ljava8/util/Spliterator;
 
     move-result-object v0
@@ -105,7 +102,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/StreamSpliterators$DelegatingSpliterator;->trySplit()Ljava8/util/Spliterator;
 
     move-result-object v0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/Camera2Module;->stopScreenLight()V
+    value = Lcom/android/camera/module/Camera2Module;->startScreenLight(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,20 @@
 # instance fields
 .field public final synthetic this$0:Lcom/android/camera/module/Camera2Module;
 
+.field public final synthetic val$brightness:I
+
+.field public final synthetic val$color:I
+
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/Camera2Module;)V
+.method public constructor <init>(Lcom/android/camera/module/Camera2Module;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
+
+    iput p2, p0, Lcom/android/camera/module/Camera2Module$23;->val$color:I
+
+    iput p3, p0, Lcom/android/camera/module/Camera2Module$23;->val$brightness:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,33 +43,8 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 2
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setAELock(Z)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
-
-    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
-
-    if-eqz v0, :cond_1
-
-    .line 4
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->restoreWindowBrightness()V
-
-    .line 5
-    :cond_1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -75,42 +57,39 @@
 
     check-cast v0, Lcom/android/camera/protocol/ModeProtocol$FullScreenProtocol;
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/module/Camera2Module;->access$000()Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    iget v1, p0, Lcom/android/camera/module/Camera2Module$23;->val$color:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1}, Lcom/android/camera/protocol/ModeProtocol$FullScreenProtocol;->setScreenLightColor(I)V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$FullScreenProtocol;->showScreenLight()Z
 
-    const-string/jumbo v3, "stopScreenLight: protocol = "
+    move-result v0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    const-string v3, ", mHandler = "
+    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mCamera2Device:Lcom/android/camera2/Camera2Proxy;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    iget-object v3, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
+    const/4 v1, 0x1
 
-    iget-object v3, v3, Lcom/android/camera/module/BaseModule;->mHandler:Landroid/os/Handler;
+    invoke-virtual {v0, v1}, Lcom/android/camera2/Camera2Proxy;->setAELock(Z)V
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/module/Camera2Module$23;->this$0:Lcom/android/camera/module/Camera2Module;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mActivity:Lcom/android/camera/Camera;
 
-    move-result-object v2
+    if-eqz v0, :cond_1
 
-    invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget v1, p0, Lcom/android/camera/module/Camera2Module$23;->val$brightness:I
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, v1}, Lcom/android/camera/Camera;->setWindowBrightness(I)V
 
-    .line 7
-    invoke-interface {v0}, Lcom/android/camera/protocol/ModeProtocol$FullScreenProtocol;->hideScreenLight()V
-
-    :cond_2
+    :cond_1
     return-void
 .end method

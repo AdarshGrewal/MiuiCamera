@@ -16,14 +16,6 @@
 .method public abstract getModule()Lcom/android/camera/module/Module;
 .end method
 
-.method public getModuleDevice()Lcom/android/camera/features/mode/IModuleDevice;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public abstract getModuleId()I
 .end method
 

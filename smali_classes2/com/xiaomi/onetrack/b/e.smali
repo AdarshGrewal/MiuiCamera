@@ -1,112 +1,64 @@
 .class public Lcom/xiaomi/onetrack/b/e;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
 
 
-# instance fields
-.field public final synthetic a:Lcom/xiaomi/onetrack/e/b;
+# static fields
+.field public static final a:Ljava/lang/String; = "one_track_cloud"
 
-.field public final synthetic b:Lcom/xiaomi/onetrack/b/b;
+.field public static final b:Ljava/lang/String; = "events_cloud"
+
+.field public static final c:Ljava/lang/String; = "_id"
+
+.field public static final d:Ljava/lang/String; = "app_id"
+
+.field public static final e:Ljava/lang/String; = "cloud_data"
+
+.field public static final f:Ljava/lang/String; = "data_hash"
+
+.field public static final g:Ljava/lang/String; = "timestamp"
+
+.field public static final h:Ljava/lang/String; = "CREATE TABLE events_cloud (_id  INTEGER PRIMARY KEY AUTOINCREMENT,app_id TEXT,cloud_data TEXT,timestamp INTEGER,data_hash TEXT)"
+
+.field public static final i:Ljava/lang/String; = "ConfigDatabaseHelper"
+
+.field public static final j:I = 0x1
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/onetrack/b/b;Lcom/xiaomi/onetrack/e/b;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    .line 1
-    iput-object p1, p0, Lcom/xiaomi/onetrack/b/e;->b:Lcom/xiaomi/onetrack/b/b;
+    const-string v0, "one_track_cloud"
 
-    iput-object p2, p0, Lcom/xiaomi/onetrack/b/e;->a:Lcom/xiaomi/onetrack/e/b;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x1
+
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
 
-    const-string v0, "EventManager"
+    const-string v0, "CREATE TABLE events_cloud (_id  INTEGER PRIMARY KEY AUTOINCREMENT,app_id TEXT,cloud_data TEXT,timestamp INTEGER,data_hash TEXT)"
 
-    .line 1
-    :try_start_0
-    iget-object v1, p0, Lcom/xiaomi/onetrack/b/e;->b:Lcom/xiaomi/onetrack/b/b;
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/xiaomi/onetrack/b/e;->a:Lcom/xiaomi/onetrack/e/b;
+    const-string p1, "ConfigDatabaseHelper"
 
-    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/b/b;->a(Lcom/xiaomi/onetrack/b/b;Lcom/xiaomi/onetrack/e/b;)V
+    const-string v0, "onCreate: "
 
-    .line 2
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    return-void
+.end method
 
-    const-string v2, "addEvent: "
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/xiaomi/onetrack/b/e;->a:Lcom/xiaomi/onetrack/e/b;
-
-    invoke-virtual {v2}, Lcom/xiaomi/onetrack/e/b;->d()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "data:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/xiaomi/onetrack/b/e;->a:Lcom/xiaomi/onetrack/e/b;
-
-    invoke-virtual {v2}, Lcom/xiaomi/onetrack/e/b;->f()Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    iget-object v1, p0, Lcom/xiaomi/onetrack/b/e;->a:Lcom/xiaomi/onetrack/e/b;
-
-    invoke-virtual {v1}, Lcom/xiaomi/onetrack/e/b;->e()I
-
-    move-result v1
-
-    .line 4
-    invoke-static {}, Lcom/xiaomi/onetrack/b/p;->a()Lcom/xiaomi/onetrack/b/p;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v1, v3}, Lcom/xiaomi/onetrack/b/p;->a(IZ)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v2, "EventManager.addEvent exception: "
-
-    .line 5
-    invoke-static {v0, v2, v1}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
     return-void
 .end method

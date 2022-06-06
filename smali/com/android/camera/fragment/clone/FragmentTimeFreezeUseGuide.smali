@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragmentUseGuide;-><init>()V
 
     return-void
@@ -34,13 +33,11 @@
 
     move-object/from16 v1, p1
 
-    .line 1
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v3
@@ -55,7 +52,6 @@
 
     const-string v4, "cn"
 
-    .line 3
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v5
@@ -80,7 +76,6 @@
     :goto_0
     const v8, 0x7f0808f0
 
-    .line 4
     new-instance v13, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
     invoke-virtual {v3, v4}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
@@ -89,9 +84,8 @@
 
     iget-object v7, v0, Lcom/android/camera/fragment/BaseFragmentUseGuide;->mVideoPlayerManager:Lcom/android/camera/videoplayer/manager/VideoPlayerManager;
 
-    const v4, 0x7f1202be
+    const v4, 0x7f1202a6
 
-    .line 5
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -112,9 +106,8 @@
 
     move-result-object v9
 
-    const v4, 0x7f120977
+    const v4, 0x7f120928
 
-    .line 6
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
@@ -125,7 +118,6 @@
 
     const v11, 0x7f10001e
 
-    .line 7
     invoke-virtual {v2, v11, v14}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
     move-result-object v11
@@ -144,18 +136,16 @@
 
     aput-object v11, v5, v15
 
-    const v11, 0x7f120971
+    const v11, 0x7f120922
 
-    .line 8
     invoke-virtual {v2, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
     aput-object v11, v5, v14
 
-    const v11, 0x7f120972
+    const v11, 0x7f120923
 
-    .line 9
     invoke-virtual {v2, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v11
@@ -170,7 +160,6 @@
 
     aput-object v11, v5, v17
 
-    .line 10
     invoke-static {v5}, Lcom/android/camera/fragment/clone/Utils;->mergeText([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
@@ -181,10 +170,8 @@
 
     invoke-direct/range {v5 .. v12}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 11
     invoke-interface {v1, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 12
     new-instance v5, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;
 
     const-string/jumbo v6, "time_freeze_use_samples.mp4"
@@ -197,9 +184,8 @@
 
     const v21, 0x7f0808f1
 
-    const v6, 0x7f1202c0
+    const v6, 0x7f1202a8
 
-    .line 13
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
@@ -216,52 +202,46 @@
 
     move-result-object v22
 
-    const v6, 0x7f1202c1
+    const v6, 0x7f1202a9
 
-    .line 14
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v23
 
     new-array v4, v4, [Ljava/lang/String;
 
-    const v6, 0x7f120973
+    const v6, 0x7f120924
 
-    .line 15
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v4, v15
 
-    const v6, 0x7f120974
+    const v6, 0x7f120925
 
-    .line 16
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v4, v14
 
-    const v6, 0x7f120975
+    const v6, 0x7f120926
 
-    .line 17
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v4, v16
 
-    const v6, 0x7f120976
+    const v6, 0x7f120927
 
-    .line 18
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v4, v17
 
-    .line 19
     invoke-static {v4}, Lcom/android/camera/fragment/clone/Utils;->mergeText([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v24
@@ -274,7 +254,6 @@
 
     invoke-direct/range {v18 .. v25}, Lcom/android/camera/fragment/clone/GuideAssetVideoItem;-><init>(Landroid/content/res/AssetFileDescriptor;Lcom/android/camera/videoplayer/manager/VideoPlayerManager;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 20
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -286,7 +265,6 @@
 
     const-string v2, "fill List exception."
 
-    .line 21
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
@@ -302,9 +280,8 @@
 .end method
 
 .method public onBackEvent(I)Z
-    .locals 2
+    .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -317,14 +294,9 @@
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;
 
-    const/4 v0, 0x0
+    const/16 v0, 0x26
 
-    new-array v0, v0, [I
-
-    const/16 v1, 0x26
-
-    .line 2
-    invoke-interface {p1, v1, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->delegateEvent(I[I)V
+    invoke-interface {p1, v0}, Lcom/android/camera/protocol/ModeProtocol$BaseDelegate;->delegateEvent(I)V
 
     const/4 p1, 0x1
 

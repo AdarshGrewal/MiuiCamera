@@ -31,23 +31,18 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
-    .line 3
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     const-wide/16 v0, 0x0
 
-    .line 4
     iput-wide v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
 
-    .line 5
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
@@ -56,7 +51,6 @@
 
     move-result v0
 
-    .line 6
     new-instance v1, Ljava/util/Random;
 
     invoke-direct {v1}, Ljava/util/Random;-><init>()V
@@ -69,14 +63,12 @@
 
     iput-wide v1, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->ts:J
 
-    .line 7
     new-instance v1, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-direct {v1}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;-><init>()V
 
     iput-object v1, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
-    .line 8
     invoke-virtual {v1, v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->setSSRC(I)V
 
     return-void
@@ -90,7 +82,6 @@
     :goto_0
     if-ge p1, p2, :cond_0
 
-    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,7 +119,6 @@
 .method public getRtpSocket()Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     return-object v0
@@ -137,7 +127,6 @@
 .method public getSSRC()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->getSSRC()I
@@ -155,7 +144,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v0, p1}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->commitBuffer(I)V
@@ -166,7 +154,6 @@
 .method public setDestination(Ljava/net/InetAddress;II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v0, p1, p2, p3}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->setDestination(Ljava/net/InetAddress;II)V
@@ -177,7 +164,6 @@
 .method public setInputStream(Ljava/io/InputStream;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->is:Ljava/io/InputStream;
 
     return-void
@@ -186,7 +172,6 @@
 .method public setSSRC(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v0, p1}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->setSSRC(I)V
@@ -202,7 +187,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtp/AbstractPacketizer;->socket:Lnet/majorkernelpanic/streaming/rtp/RtpSocket;
 
     invoke-virtual {v0, p1}, Lnet/majorkernelpanic/streaming/rtp/RtpSocket;->setTimeToLive(I)V

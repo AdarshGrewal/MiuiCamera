@@ -25,7 +25,6 @@
 .method public constructor <init>(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$200(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)I
@@ -47,13 +45,11 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$900(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)V
 
-    .line 3
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Landroid/os/Handler;
@@ -74,7 +70,6 @@
 
     goto :goto_0
 
-    .line 4
     :catch_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
@@ -86,10 +81,8 @@
 
     const-string v1, "Connection lost with the server..."
 
-    .line 5
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$300(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Lnet/majorkernelpanic/streaming/rtsp/RtspClient$Parameters;
@@ -100,7 +93,6 @@
 
     invoke-virtual {v0}, Lnet/majorkernelpanic/streaming/Session;->stop()V
 
-    .line 7
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/rtsp/RtspClient$4;->this$0:Lnet/majorkernelpanic/streaming/rtsp/RtspClient;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/rtsp/RtspClient;->access$100(Lnet/majorkernelpanic/streaming/rtsp/RtspClient;)Landroid/os/Handler;

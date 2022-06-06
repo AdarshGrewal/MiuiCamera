@@ -27,10 +27,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/FileCompat$KitKatFileCompatCommonImpl;->update()V
 
     return-void
@@ -45,12 +43,10 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v2
@@ -59,7 +55,6 @@
 
     move-result-object v2
 
-    .line 3
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,17 +73,14 @@
 
     invoke-static {v4, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_0
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -115,7 +107,6 @@
 .method public getSDPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/FileCompat$KitKatFileCompatCommonImpl;->sdPaths:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -124,7 +115,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     array-length v2, v0
 
@@ -135,7 +125,6 @@
 
     aget-object v4, v0, v3
 
-    .line 3
     invoke-virtual {p1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -188,7 +177,6 @@
 .method public isExternalSDFile(Ljava/lang/String;)Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/FileCompat$KitKatFileCompatCommonImpl;->sdPaths:[Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -197,7 +185,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     array-length v2, v0
 
@@ -208,7 +195,6 @@
 
     aget-object v4, v0, v3
 
-    .line 3
     invoke-virtual {p1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -231,7 +217,6 @@
 .method public update()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/FileCompat$KitKatFileCompatCommonImpl;->getExtSDCardPaths()[Ljava/lang/String;
 
     move-result-object v0
@@ -244,7 +229,6 @@
 .method public updateSDPath()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/FileCompat$KitKatFileCompatCommonImpl;->update()V
 
     return-void

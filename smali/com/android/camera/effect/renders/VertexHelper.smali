@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,7 +78,6 @@
 
     int-to-double v12, v2
 
-    .line 1
     invoke-static {v14, v15}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v16
@@ -98,7 +96,6 @@
 
     add-int/lit8 v10, v11, 0x1
 
-    .line 2
     invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v6
@@ -135,7 +132,6 @@
 
     int-to-double v14, v2
 
-    .line 3
     invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v16
@@ -150,7 +146,6 @@
 
     add-int/lit8 v10, v9, 0x1
 
-    .line 4
     invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v6
@@ -187,7 +182,6 @@
 
     int-to-double v13, v2
 
-    .line 5
     invoke-static {v11, v12}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v15
@@ -202,7 +196,6 @@
 
     add-int/lit8 v10, v1, 0x1
 
-    .line 6
     invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -237,7 +230,6 @@
 
     int-to-double v14, v2
 
-    .line 7
     invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v16
@@ -254,7 +246,6 @@
 
     add-int/lit8 v10, v13, 0x1
 
-    .line 8
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v6
@@ -276,7 +267,6 @@
 
     const/4 v1, 0x2
 
-    .line 9
     aget v1, v4, v1
 
     aput v1, v4, v0
@@ -285,7 +275,6 @@
 
     const/4 v1, 0x3
 
-    .line 10
     aget v1, v4, v1
 
     aput v1, v4, v0
@@ -295,7 +284,6 @@
     :goto_4
     if-ge v8, v3, :cond_4
 
-    .line 11
     aget v0, v4, v8
 
     div-float/2addr v0, v5
@@ -304,7 +292,6 @@
 
     add-int/lit8 v0, v8, 0x1
 
-    .line 12
     aget v1, v4, v0
 
     div-float v1, v1, v18

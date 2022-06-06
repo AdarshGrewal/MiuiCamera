@@ -17,10 +17,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
     return-void
@@ -29,13 +27,10 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
-    .line 5
     iput p2, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->kind:I
 
     return-void
@@ -46,7 +41,6 @@
 .method public getAliasForm()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->aliasForm:I
 
     return v0
@@ -55,7 +49,6 @@
 .method public getKind()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->kind:I
 
     return v0
@@ -64,7 +57,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +65,6 @@
 .method public isAlias()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->alias:Z
 
     return v0
@@ -82,7 +73,6 @@
 .method public setAlias(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->alias:Z
 
     return-void
@@ -91,7 +81,6 @@
 .method public setAliasForm(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->aliasForm:I
 
     return-void
@@ -100,7 +89,6 @@
 .method public setKind(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->kind:I
 
     return-void
@@ -109,7 +97,6 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
     return-void
@@ -118,23 +105,19 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->kind:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
     return-object v0
 
-    .line 3
     :pswitch_0
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 
     return-object v0
 
-    .line 4
     :pswitch_1
     iget-object v0, p0, Lcom/adobe/xmp/impl/xpath/XMPPathSegment;->name:Ljava/lang/String;
 

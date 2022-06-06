@@ -33,7 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
 .method public static checkExpression([F)Z
     .locals 7
 
-    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -98,7 +96,6 @@
 
     return p0
 
-    .line 1
     :cond_2
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/util/FaceCheckUtil;->checkRotation([F)Z
 
@@ -132,7 +129,6 @@
 
     return p0
 
-    .line 2
     :cond_1
     invoke-static {p3}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/util/FaceCheckUtil;->checkRotation([F)Z
 
@@ -144,7 +140,6 @@
 
     return p0
 
-    .line 3
     :cond_2
     invoke-static {p4, p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/util/FaceCheckUtil;->checkFaceRect([FII)Z
 
@@ -167,7 +162,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget v1, p0, v0
 
     const/4 v2, 0x2
@@ -182,7 +176,6 @@
 
     const/4 v3, 0x1
 
-    .line 2
     aget v4, p0, v3
 
     const/4 v5, 0x3
@@ -245,28 +238,24 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget v1, p0, v0
 
     float-to-double v1, v1
 
     const/4 v3, 0x1
 
-    .line 2
     aget v4, p0, v3
 
     float-to-double v4, v4
 
     const/4 v6, 0x2
 
-    .line 3
     aget v6, p0, v6
 
     float-to-double v6, v6
 
     const/4 v8, 0x3
 
-    .line 4
     aget v8, p0, v8
 
     float-to-double v8, v8
@@ -293,7 +282,6 @@
 
     sub-double v14, v20, v16
 
-    .line 5
     invoke-static {v12, v13, v14, v15}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v12
@@ -316,7 +304,6 @@
 
     mul-double v8, v8, v22
 
-    .line 6
     invoke-static {v8, v9}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v8
@@ -339,7 +326,6 @@
 
     sub-double v1, v20, v18
 
-    .line 7
     invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v1

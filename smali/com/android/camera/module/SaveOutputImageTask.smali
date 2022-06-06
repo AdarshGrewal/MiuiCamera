@@ -51,35 +51,26 @@
 .method public constructor <init>(Lcom/android/camera/storage/SaverCallback;JLandroid/location/Location;IIILjava/lang/String;Lcom/android/camera/groupshot/GroupShot;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mSaverCallbackWeakReference:Ljava/lang/ref/WeakReference;
 
-    .line 3
     iput-wide p2, p0, Lcom/android/camera/module/SaveOutputImageTask;->mTimeTaken:J
 
-    .line 4
     iput-object p4, p0, Lcom/android/camera/module/SaveOutputImageTask;->mLocation:Landroid/location/Location;
 
-    .line 5
     iput p5, p0, Lcom/android/camera/module/SaveOutputImageTask;->mWidth:I
 
-    .line 6
     iput p6, p0, Lcom/android/camera/module/SaveOutputImageTask;->mHeight:I
 
-    .line 7
     iput p7, p0, Lcom/android/camera/module/SaveOutputImageTask;->mOrientation:I
 
-    .line 8
     iput-object p8, p0, Lcom/android/camera/module/SaveOutputImageTask;->mTitle:Ljava/lang/String;
 
-    .line 9
     iput-object p9, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     return-void
@@ -88,19 +79,16 @@
 .method private finishGroupShot()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     invoke-virtual {v0}, Lcom/android/camera/groupshot/GroupShot;->clearImages()I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     invoke-virtual {v0}, Lcom/android/camera/groupshot/GroupShot;->finish()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     return-void
@@ -109,19 +97,16 @@
 .method private saveGroupShotImage(Ljava/lang/String;)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/storage/Storage;->isUseDocumentMode()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/groupshot/GroupShot;->getImageAndSaveJpeg(Ljava/lang/String;)I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mOrientation:I
 
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
@@ -141,7 +126,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 4
     :try_start_0
     invoke-static {p1, v0}, Lcom/android/camera/FileCompat;->getParcelFileDescriptor(Ljava/lang/String;Z)Landroid/os/ParcelFileDescriptor;
 
@@ -149,7 +133,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :try_start_1
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
@@ -163,7 +146,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6
     :try_start_2
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
@@ -174,7 +156,6 @@
     :catchall_0
     move-exception v1
 
-    .line 7
     :try_start_3
     throw v1
     :try_end_3
@@ -185,7 +166,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 8
     :try_start_4
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_4
@@ -208,7 +188,6 @@
     :catch_0
     move-exception v0
 
-    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -241,12 +220,10 @@
 
     const-string v0, "doInBackground start"
 
-    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
@@ -260,7 +237,6 @@
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    .line 4
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -275,7 +251,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v1
@@ -284,7 +259,6 @@
 
     return-object v0
 
-    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
@@ -296,7 +270,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 7
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -309,12 +282,10 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     invoke-virtual {v1}, Lcom/android/camera/groupshot/GroupShot;->setBestFace()I
 
-    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,7 +310,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mTitle:Ljava/lang/String;
 
     invoke-static {v1, v5}, Lcom/android/camera/storage/Storage;->generateFilepath4Image(Ljava/lang/String;Z)Ljava/lang/String;
@@ -348,11 +318,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 11
     :try_start_1
     invoke-direct {p0, v7}, Lcom/android/camera/module/SaveOutputImageTask;->saveGroupShotImage(Ljava/lang/String;)V
 
-    .line 12
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +351,6 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v1
@@ -392,7 +359,6 @@
 
     return-object v0
 
-    .line 14
     :cond_1
     sget-boolean v1, Lcom/android/camera/Util;->sIsDumpOrigJpg:Z
 
@@ -400,7 +366,6 @@
 
     const-string v1, ".jpg"
 
-    .line 15
     invoke-virtual {v7, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -409,14 +374,12 @@
 
     move-result-object v1
 
-    .line 16
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
-    .line 17
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,12 +394,10 @@
 
     move-result-object v1
 
-    .line 18
     iget-object v2, p0, Lcom/android/camera/module/SaveOutputImageTask;->mGroupShotInternal:Lcom/android/camera/groupshot/GroupShot;
 
     invoke-virtual {v2, v1}, Lcom/android/camera/groupshot/GroupShot;->saveInputImages(Ljava/lang/String;)I
 
-    .line 19
     :cond_2
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
@@ -448,7 +409,6 @@
 
     return-object v0
 
-    .line 20
     :cond_3
     invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
@@ -458,13 +418,11 @@
 
     return-object v0
 
-    .line 21
     :cond_4
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 22
     iget v8, p0, Lcom/android/camera/module/SaveOutputImageTask;->mOrientation:I
 
     iget-wide v9, p0, Lcom/android/camera/module/SaveOutputImageTask;->mTimeTaken:J
@@ -481,7 +439,6 @@
 
     move-result-object v2
 
-    .line 23
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -512,7 +469,6 @@
 
     invoke-static {p1, v3}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     iget-object v3, p0, Lcom/android/camera/module/SaveOutputImageTask;->mSaverCallbackWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -527,7 +483,6 @@
 
     goto :goto_0
 
-    .line 25
     :cond_5
     iget-object v0, p0, Lcom/android/camera/module/SaveOutputImageTask;->mTitle:Ljava/lang/String;
 
@@ -535,12 +490,10 @@
 
     invoke-interface {v3, v2, v0, v4}, Lcom/android/camera/storage/SaverCallback;->notifyNewMediaData(Landroid/net/Uri;Ljava/lang/String;I)V
 
-    .line 26
     invoke-static {v1, v2, v5}, Lcom/android/camera/Thumbnail;->createThumbnailFromUri(Landroid/content/Context;Landroid/net/Uri;Z)Lcom/android/camera/Thumbnail;
 
     move-result-object v0
 
-    .line 27
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -579,7 +532,6 @@
 
     move-object v7, v0
 
-    .line 28
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -603,7 +555,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 29
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -617,7 +568,6 @@
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/SaveOutputImageTask;->doInBackground([Ljava/lang/Void;)Lcom/android/camera/Thumbnail;
@@ -634,10 +584,8 @@
 
     const-string v1, "SaveOutputImageTask onCancelled"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/module/SaveOutputImageTask;->finishGroupShot()V
 
     return-void
@@ -650,10 +598,8 @@
 
     const-string v1, "SaveOutputImageTask onPostExecute"
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/module/SaveOutputImageTask;->mSaverCallbackWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -671,15 +617,12 @@
 
     const-string/jumbo p1, "onPostExecute thumbnail is null"
 
-    .line 4
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-interface {v1}, Lcom/android/camera/storage/SaverCallback;->postHideThumbnailProgressing()V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -699,10 +642,8 @@
 
     const/4 v2, 0x0
 
-    .line 7
     invoke-interface {v1, p1, v2}, Lcom/android/camera/storage/SaverCallback;->postUpdateThumbnail(Lcom/android/camera/Thumbnail;Z)V
 
-    .line 8
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -728,7 +669,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-direct {p0}, Lcom/android/camera/module/SaveOutputImageTask;->finishGroupShot()V
 
     return-void
@@ -737,7 +677,6 @@
 .method public bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/Thumbnail;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/SaveOutputImageTask;->onPostExecute(Lcom/android/camera/Thumbnail;)V
@@ -748,7 +687,6 @@
 .method public onPreExecute()V
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0

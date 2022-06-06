@@ -34,7 +34,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/Camera$ScreenSlideObserver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -49,10 +48,8 @@
 .method public constructor <init>(Landroid/os/Handler;Lcom/android/camera/Camera;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 2
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -75,10 +72,8 @@
 .method public onChange(Z)V
     .locals 5
 
-    .line 1
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/Camera$ScreenSlideObserver;->mWeakActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -91,7 +86,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
@@ -108,7 +102,6 @@
     :goto_0
     if-nez v1, :cond_1
 
-    .line 4
     sget-object p1, Lcom/android/camera/Camera$ScreenSlideObserver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v0, "onChange: activity or handler is abnormal, returning."
@@ -117,7 +110,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     invoke-static {p1}, Lcom/android/camera/Camera;->access$400(Lcom/android/camera/Camera;)Z
 
@@ -129,7 +121,6 @@
 
     if-nez v1, :cond_3
 
-    .line 6
     invoke-static {p1}, Lcom/android/camera/Util;->isScreenSlideOff(Landroid/content/Context;)Z
 
     move-result v1
@@ -143,7 +134,6 @@
     :cond_2
     const/16 v1, 0x2bc
 
-    .line 7
     :goto_1
     sget-object v2, Lcom/android/camera/Camera$ScreenSlideObserver;->TAG:Ljava/lang/String;
 
@@ -163,7 +153,6 @@
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance v2, Landroid/view/KeyEvent;
 
     invoke-direct {v2, v0, v1}, Landroid/view/KeyEvent;-><init>(II)V

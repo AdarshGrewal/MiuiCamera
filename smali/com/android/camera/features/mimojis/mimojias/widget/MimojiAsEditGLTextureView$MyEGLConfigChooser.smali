@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;)V
     .locals 8
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->this$0:Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,17 +39,119 @@
 
     new-array p1, p1, [I
 
-    .line 2
-    fill-array-data p1, :array_0
+    const/16 v0, 0x3024
+
+    const/4 v1, 0x0
+
+    aput v0, p1, v1
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+
+    move-result v0
+
+    const/4 v2, 0x5
+
+    const/16 v3, 0x8
+
+    if-eqz v0, :cond_0
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const/4 v4, 0x1
+
+    aput v0, p1, v4
+
+    const/4 v0, 0x2
+
+    const/16 v4, 0x3023
+
+    aput v4, p1, v0
+
+    const/4 v0, 0x3
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+
+    move-result v4
+
+    const/4 v5, 0x6
+
+    if-eqz v4, :cond_1
+
+    move v4, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v5
+
+    :goto_1
+    aput v4, p1, v0
+
+    const/16 v0, 0x3022
+
+    const/4 v4, 0x4
+
+    aput v0, p1, v4
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->Ooooo00()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move v0, v3
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v2
+
+    :goto_2
+    aput v0, p1, v2
+
+    const/16 v0, 0x3025
+
+    aput v0, p1, v5
+
+    const/4 v0, 0x7
+
+    aput v3, p1, v0
+
+    const/16 v0, 0x3021
+
+    aput v0, p1, v3
+
+    const/16 v0, 0x9
+
+    aput v1, p1, v0
+
+    const/16 v0, 0xa
+
+    const/16 v1, 0x3040
+
+    aput v1, p1, v0
+
+    const/16 v0, 0xb
+
+    aput v4, p1, v0
+
+    const/16 v0, 0xc
+
+    const/16 v1, 0x3038
+
+    aput v1, p1, v0
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->mConfigSpec:[I
 
-    const/16 p1, 0x8
+    new-array p1, v3, [I
 
-    new-array p1, p1, [I
-
-    .line 3
-    fill-array-data p1, :array_1
+    fill-array-data p1, :array_0
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->ATTR_ID:[I
 
@@ -70,7 +171,6 @@
 
     const-string v7, "CAVEAT"
 
-    .line 4
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
     move-result-object p1
@@ -80,23 +180,6 @@
     return-void
 
     :array_0
-    .array-data 4
-        0x3024
-        0x8
-        0x3023
-        0x8
-        0x3022
-        0x8
-        0x3025
-        0x8
-        0x3021
-        0x0
-        0x3040
-        0x4
-        0x3038
-    .end array-data
-
-    :array_1
     .array-data 4
         0x3024
         0x3023
@@ -112,7 +195,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$1;)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;-><init>(Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;)V
 
     return-void
@@ -125,7 +207,6 @@
 
     new-array v0, v0, [I
 
-    .line 9
     array-length v1, p3
 
     const/4 v2, 0x0
@@ -141,7 +222,6 @@
 
     if-ge v5, v1, :cond_4
 
-    .line 10
     aget-object v7, p3, v5
 
     const/16 v8, 0x3024
@@ -152,7 +232,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 11
     aget v7, v0, v2
 
     const/16 v8, 0x8
@@ -161,7 +240,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_0
     aget-object v7, p3, v5
 
@@ -171,23 +249,19 @@
 
     if-eqz v6, :cond_3
 
-    .line 13
     aget v6, v0, v2
 
     if-nez v6, :cond_1
 
     goto :goto_1
 
-    .line 14
     :cond_1
     aget v6, v0, v2
 
     if-ge v6, v4, :cond_2
 
-    .line 15
     aget v3, v0, v2
 
-    .line 16
     aget-object v4, p3, v5
 
     move-object v9, v4
@@ -202,7 +276,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     new-instance p2, Ljava/lang/RuntimeException;
 
@@ -214,7 +287,6 @@
 
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     invoke-interface {p1}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
     move-result p1
@@ -232,14 +304,11 @@
     :cond_4
     if-nez v3, :cond_5
 
-    .line 19
     aget-object v3, p3, v2
 
-    .line 20
     :cond_5
     invoke-interface {p1, p2, v3, v6, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
 
-    .line 21
     invoke-direct {p0, p1, p2, v3}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->logConfig(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)V
 
     return-object v3
@@ -252,7 +321,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -261,7 +329,6 @@
 
     move v3, v2
 
-    .line 2
     :goto_0
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->ATTR_ID:[I
 
@@ -269,12 +336,10 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 3
     aget v4, v4, v3
 
     invoke-interface {p1, p2, p3, v4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
 
-    .line 4
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->ATTR_NAME:[Ljava/lang/String;
 
     aget-object v4, v4, v3
@@ -293,7 +358,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView;->access$100()Ljava/lang/String;
 
@@ -331,7 +395,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->mConfigSpec:[I
 
     const/4 v4, 0x0
@@ -352,17 +415,14 @@
 
     const/4 v1, 0x0
 
-    .line 2
     aget v2, v0, v1
 
     if-lez v2, :cond_1
 
-    .line 3
     aget v5, v0, v1
 
     new-array v7, v5, [Ljavax/microedition/khronos/egl/EGLConfig;
 
-    .line 4
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->mConfigSpec:[I
 
     move-object v1, p1
@@ -379,14 +439,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-direct {p0, p1, p2, v7}, Lcom/android/camera/features/mimojis/mimojias/widget/MimojiAsEditGLTextureView$MyEGLConfigChooser;->chooseConfig(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
 
     move-result-object p1
 
     return-object p1
 
-    .line 6
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -394,7 +452,6 @@
 
     throw p1
 
-    .line 7
     :cond_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -404,7 +461,6 @@
 
     throw p1
 
-    .line 8
     :cond_2
     new-instance p1, Ljava/lang/RuntimeException;
 

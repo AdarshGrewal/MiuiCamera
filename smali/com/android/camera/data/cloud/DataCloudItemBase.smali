@@ -29,10 +29,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
@@ -45,15 +43,12 @@
 .method private getSharedPreferences()Landroid/content/SharedPreferences;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mPreferences:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudItemBase;->initPreferences()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mPreferences:Landroid/content/SharedPreferences;
 
@@ -63,12 +58,10 @@
 .method private initPreferences()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 2
     invoke-interface {p0}, Lcom/android/camera/data/cloud/DataCloud$CloudItem;->provideKey()Ljava/lang/String;
 
     move-result-object v1
@@ -89,7 +82,6 @@
 .method public editor()Landroid/content/SharedPreferences$Editor;
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/cloud/DataCloudItemBase;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -106,14 +98,12 @@
 .method public getCloudBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     if-nez v0, :cond_0
 
     return p2
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -140,14 +129,12 @@
 .method public getCloudFloat(Ljava/lang/String;F)F
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     if-nez v0, :cond_0
 
     return p2
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -161,7 +148,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
@@ -174,14 +160,12 @@
 .method public getCloudInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     if-nez v0, :cond_0
 
     return p2
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -195,7 +179,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -208,14 +191,12 @@
 .method public getCloudLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     if-nez v0, :cond_0
 
     return-wide p2
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -229,7 +210,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -242,14 +222,12 @@
 .method public getCloudString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     if-nez v0, :cond_0
 
     return-object p2
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
@@ -282,7 +260,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mValues:Landroidx/collection/SimpleArrayMap;
 
     return-object v0
@@ -291,7 +268,6 @@
 .method public setReady(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/cloud/DataCloudItemBase;->mReady:Z
 
     return-void

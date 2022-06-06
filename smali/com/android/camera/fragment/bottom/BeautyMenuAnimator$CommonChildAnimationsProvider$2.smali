@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider$2;->this$0:Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider;
 
     iput-object p2, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider$2;->val$childView:Landroid/view/View;
@@ -42,7 +41,6 @@
 .method public onAnimationCancel(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/animation/AnimationMonitor;->get()Lcom/android/camera/animation/AnimationMonitor;
 
     move-result-object v0
@@ -55,14 +53,12 @@
 .method public onAnimationEnd(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/bottom/BeautyMenuAnimator$CommonChildAnimationsProvider$2;->val$childView:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/animation/AnimationMonitor;->get()Lcom/android/camera/animation/AnimationMonitor;
 
     move-result-object v0
@@ -75,7 +71,6 @@
 .method public onAnimationStart(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/animation/AnimationMonitor;->get()Lcom/android/camera/animation/AnimationMonitor;
 
     move-result-object v0

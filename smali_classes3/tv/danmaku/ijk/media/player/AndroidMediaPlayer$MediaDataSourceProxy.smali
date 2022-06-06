@@ -22,10 +22,8 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/media/MediaDataSource;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$MediaDataSourceProxy;->mMediaDataSource:Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;
 
     return-void
@@ -41,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$MediaDataSourceProxy;->mMediaDataSource:Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;->close()V
@@ -57,7 +54,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$MediaDataSourceProxy;->mMediaDataSource:Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;
 
     invoke-interface {v0}, Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;->getSize()J
@@ -75,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$MediaDataSourceProxy;->mMediaDataSource:Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;
 
     move-wide v1, p1

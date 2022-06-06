@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder$1;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder$1$1;->this$1:Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$8;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$8;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     const/4 v1, 0x1

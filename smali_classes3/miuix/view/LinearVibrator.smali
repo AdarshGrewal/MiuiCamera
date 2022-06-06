@@ -26,7 +26,6 @@
 .method public static constructor <clinit>()V
     .locals 0
 
-    .line 1
     invoke-static {}, Lmiuix/view/LinearVibrator;->initialize()V
 
     return-void
@@ -35,17 +34,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroidx/collection/SparseArrayCompat;
 
     invoke-direct {v0}, Landroidx/collection/SparseArrayCompat;-><init>()V
 
     iput-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
-    .line 3
     invoke-direct {p0}, Lmiuix/view/LinearVibrator;->buildIds()V
 
     return-void
@@ -54,7 +50,6 @@
 .method private buildIds()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_NORMAL:I
@@ -67,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_LIGHT:I
@@ -80,7 +74,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_FLICK:I
@@ -93,7 +86,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
@@ -106,7 +98,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_HEAVY:I
@@ -119,7 +110,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 6
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_NORMAL:I
@@ -132,7 +122,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 7
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_LIGHT:I
@@ -145,7 +134,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 8
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_LONG_PRESS:I
@@ -158,7 +146,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 9
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_NORMAL:I
@@ -171,7 +158,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 10
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_LIGHT:I
@@ -184,7 +170,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 11
     sget v0, Lmiuix/view/PlatformConstants;->VERSION:I
 
     const/4 v1, 0x2
@@ -193,7 +178,6 @@
 
     return-void
 
-    .line 12
     :cond_0
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
@@ -207,7 +191,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 13
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SCROLL_EDGE:I
@@ -220,7 +203,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 14
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TRIGGER_DRAWER:I
@@ -233,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 15
     sget v0, Lmiuix/view/PlatformConstants;->VERSION:I
 
     const/4 v1, 0x3
@@ -242,7 +223,6 @@
 
     return-void
 
-    .line 16
     :cond_1
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
@@ -256,7 +236,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 17
     sget v0, Lmiuix/view/PlatformConstants;->VERSION:I
 
     const/4 v1, 0x4
@@ -265,7 +244,6 @@
 
     return-void
 
-    .line 18
     :cond_2
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
@@ -285,7 +263,6 @@
 .method public static initialize()V
     .locals 3
 
-    .line 1
     sget v0, Lmiuix/view/PlatformConstants;->VERSION:I
 
     const-string v1, "LinearVibrator"
@@ -296,12 +273,10 @@
 
     const-string v0, "MiuiHapticFeedbackConstants not found or not compatible for LinearVibrator."
 
-    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 3
     :cond_0
     :try_start_0
     invoke-static {}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate()Z
@@ -317,7 +292,6 @@
 
     const-string v2, "MIUI Haptic Implementation is not available"
 
-    .line 4
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -327,12 +301,10 @@
 
     const-string v0, "linear motor is not supported in this platform."
 
-    .line 5
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 6
     :cond_1
     new-instance v0, Lmiuix/view/LinearVibrator;
 
@@ -342,7 +314,6 @@
 
     const-string v0, "setup LinearVibrator success."
 
-    .line 7
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -353,7 +324,6 @@
 .method public obtainFeedBack(I)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
@@ -362,7 +332,6 @@
 
     if-ltz p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
@@ -386,7 +355,6 @@
 .method public performHapticFeedback(Landroid/view/View;I)Z
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {v0, p2}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
@@ -407,7 +375,6 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -438,7 +405,6 @@
 
     return v4
 
-    .line 3
     :cond_0
     iget-object p2, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
@@ -452,7 +418,6 @@
 
     move-result p2
 
-    .line 4
     invoke-static {p2}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0
@@ -461,7 +426,6 @@
 
     new-array p1, v1, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -486,7 +450,6 @@
 
     return v4
 
-    .line 6
     :cond_1
     invoke-virtual {p1, p2}, Landroid/view/View;->performHapticFeedback(I)Z
 
@@ -498,7 +461,6 @@
 .method public supportLinearMotor(I)Z
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
@@ -519,7 +481,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -550,7 +511,6 @@
 
     return v4
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/view/LinearVibrator;->mIds:Landroidx/collection/SparseArrayCompat;
 
@@ -564,7 +524,6 @@
 
     move-result p1
 
-    .line 4
     invoke-static {p1}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0
@@ -573,7 +532,6 @@
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 5
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -598,7 +556,6 @@
 
     return v4
 
-    .line 6
     :cond_1
     invoke-static {p1}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 

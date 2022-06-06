@@ -34,10 +34,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;-><init>()V
 
-    .line 2
     new-array p1, p1, [D
 
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfDouble;->array:[D
@@ -50,7 +48,6 @@
 .method public accept(D)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfDouble;->array:[D
 
     iget v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfPrimitive;->index:I
@@ -67,7 +64,6 @@
 .method public bridge synthetic forEach(Ljava/lang/Object;J)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/DoubleConsumer;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfDouble;->forEach(Ljava8/util/function/DoubleConsumer;J)V
@@ -87,7 +83,6 @@
 
     if-gez v1, :cond_0
 
-    .line 2
     iget-object v1, p0, Ljava8/util/stream/StreamSpliterators$ArrayBuffer$OfDouble;->array:[D
 
     aget-wide v1, v1, v0

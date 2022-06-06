@@ -25,7 +25,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/google/android/play/core/splitinstall/SplitRemoteImpl;
 
     invoke-direct {v0}, Lcom/google/android/play/core/splitinstall/SplitRemoteImpl;-><init>()V
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
 .method public asInterface(Landroid/os/IBinder;)Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceProxy;
     .locals 0
 
-    .line 2
     invoke-static {p1}, Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceHolder;->queryLocalInterface(Landroid/os/IBinder;)Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceProxy;
 
     move-result-object p1
@@ -60,7 +57,6 @@
 .method public bridge synthetic asInterface(Landroid/os/IBinder;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/splitinstall/SplitRemoteImpl;->asInterface(Landroid/os/IBinder;)Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceProxy;
 
     move-result-object p1

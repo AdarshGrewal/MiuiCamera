@@ -14,7 +14,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,17 +24,14 @@
 .method public image2bytes(Landroid/media/Image;)[B
     .locals 13
 
-    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getHeight()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v2
@@ -48,7 +44,6 @@
 
     move-result-object v2
 
-    .line 4
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v4
@@ -61,7 +56,6 @@
 
     move-result-object v4
 
-    .line 5
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v6
@@ -74,7 +68,6 @@
 
     move-result-object v6
 
-    .line 6
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v8
@@ -85,7 +78,6 @@
 
     move-result v8
 
-    .line 7
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p1
@@ -100,7 +92,6 @@
 
     mul-int/lit8 v10, v9, 0x3
 
-    .line 8
     div-int/2addr v10, v7
 
     new-array v10, v10, [B
@@ -114,26 +105,22 @@
 
     mul-int v12, v11, v8
 
-    .line 9
     invoke-virtual {v2, v12}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     mul-int v12, v11, v0
 
-    .line 10
     invoke-virtual {v2, v10, v12, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {v2, v10, v3, v9}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     :cond_1
     if-ge v0, p1, :cond_3
 
-    .line 12
     :goto_1
     div-int/lit8 v8, v1, 0x2
 
@@ -143,10 +130,8 @@
 
     mul-int v8, v3, p1
 
-    .line 13
     invoke-virtual {v6, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 14
     invoke-virtual {v6, v10, v9, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v9, v0
@@ -158,25 +143,21 @@
     :cond_2
     sub-int/2addr v0, v5
 
-    .line 15
     invoke-virtual {v6, v10, v9, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v9, v0
 
     goto :goto_2
 
-    .line 16
     :cond_3
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
-    .line 17
     invoke-virtual {v6, v10, v9, p1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v9, p1
 
-    .line 18
     :goto_2
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -186,16 +167,12 @@
 
     invoke-virtual {v4, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 19
     invoke-virtual {v4, v10, v9, v5}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 20
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 21
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 22
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     return-object v10

@@ -32,7 +32,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$MarshalerRect;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$MarshalerRect;-><init>(Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect;Landroid/hardware/camera2/utils/TypeReference;I)V
@@ -73,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     const-class p2, Lcom/android/camera2/vendortag/struct/MarshalQueryableChiRect$ChiRect;
 
     invoke-virtual {p1}, Landroid/hardware/camera2/utils/TypeReference;->getType()Ljava/lang/reflect/Type;

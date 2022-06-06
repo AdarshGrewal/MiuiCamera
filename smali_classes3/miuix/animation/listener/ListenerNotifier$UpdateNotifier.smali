@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method private notifySingleProperty(Ljava/lang/Object;Lmiuix/animation/listener/TransitionListener;Lmiuix/animation/listener/UpdateInfo;)V
     .locals 9
 
-    .line 1
     iget-object v0, p3, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     invoke-virtual {p3}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
@@ -41,12 +39,10 @@
 
     invoke-virtual {p2, p1, v0, v1, v2}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FZ)V
 
-    .line 2
     iget-boolean v0, p3, Lmiuix/animation/listener/UpdateInfo;->useInt:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p3, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
     move-object v5, v0
@@ -71,7 +67,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iget-object v5, p3, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
@@ -114,7 +109,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1
     invoke-interface {p3}, Ljava/util/Collection;->size()I
 
     move-result p4
@@ -123,7 +117,6 @@
 
     if-gt p4, v0, :cond_0
 
-    .line 2
     invoke-interface {p3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p4
@@ -141,12 +134,10 @@
 
     check-cast v0, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 3
     invoke-direct {p0, p1, p2, v0}, Lmiuix/animation/listener/ListenerNotifier$UpdateNotifier;->notifySingleProperty(Ljava/lang/Object;Lmiuix/animation/listener/TransitionListener;Lmiuix/animation/listener/UpdateInfo;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p2, p1, p3}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
 

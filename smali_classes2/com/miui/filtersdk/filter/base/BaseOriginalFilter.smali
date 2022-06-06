@@ -22,7 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/miui/filtersdk/filter/base/GPUImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -50,7 +48,6 @@
 .method public setDegree(I)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/miui/filtersdk/filter/base/BaseOriginalFilter;->isDegreeAdjustSupported()Z
 
     move-result v0
@@ -68,13 +65,11 @@
 
     move p1, v0
 
-    .line 2
     :cond_1
     iput p1, p0, Lcom/miui/filtersdk/filter/base/BaseOriginalFilter;->mDegree:I
 
     return-void
 
-    .line 3
     :cond_2
     new-instance p1, Ljava/lang/AssertionError;
 

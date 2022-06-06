@@ -22,10 +22,8 @@
 .method public constructor <init>(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;Landroid/os/Looper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,7 +34,6 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 8
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_4
@@ -49,19 +46,16 @@
 
     if-eqz v0, :cond_4
 
-    .line 2
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object p1
 
     const-string v0, "data_key_img"
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 4
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->a(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)Lcom/faceunity/pta_helper/gif/GifHardEncoder;
@@ -72,7 +66,6 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
@@ -90,7 +83,6 @@
 
     if-lez p1, :cond_2
 
-    .line 6
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->g(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)J
@@ -101,7 +93,6 @@
 
     if-nez p1, :cond_1
 
-    .line 7
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -114,7 +105,6 @@
 
     return-void
 
-    .line 8
     :cond_1
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
@@ -138,7 +128,6 @@
 
     return-void
 
-    .line 9
     :cond_2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -146,7 +135,6 @@
 
     div-long/2addr v6, v4
 
-    .line 10
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->g(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)J
@@ -157,7 +145,6 @@
 
     if-lez p1, :cond_3
 
-    .line 11
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->a(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)Lcom/faceunity/pta_helper/gif/GifHardEncoder;
@@ -176,7 +163,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->encodeFrame(JI)Z
 
-    .line 12
     :cond_3
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$a;->a:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,34 +34,28 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/movtool/InplaceMP4Editor;->getMoov(Lorg/jcodec/common/io/SeekableByteChannel;)Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
     move-result-object v0
 
-    .line 2
     invoke-static {v0}, Lorg/jcodec/common/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-direct {p0, p1, v0}, Lorg/jcodec/movtool/InplaceMP4Editor;->fetchBox(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/containers/mp4/MP4Util$Atom;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 4
     invoke-direct {p0, v1}, Lorg/jcodec/movtool/InplaceMP4Editor;->parseBox(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object v2
 
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/MovieBox;
 
-    .line 5
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
     const-string v4, "mvex"
 
-    .line 6
     invoke-static {v2, v4}, Lorg/jcodec/containers/mp4/BoxUtil;->containsBox(Lorg/jcodec/containers/mp4/boxes/NodeBox;Ljava/lang/String;)Z
 
     move-result v4
@@ -71,12 +64,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 7
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 8
     invoke-direct {p0, p1}, Lorg/jcodec/movtool/InplaceMP4Editor;->getFragments(Lorg/jcodec/common/io/SeekableByteChannel;)Ljava/util/List;
 
     move-result-object v6
@@ -98,29 +89,24 @@
 
     check-cast v7, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
-    .line 9
     invoke-direct {p0, p1, v7}, Lorg/jcodec/movtool/InplaceMP4Editor;->fetchBox(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/containers/mp4/MP4Util$Atom;)Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 10
     invoke-static {v7, v8}, Lorg/jcodec/common/Tuple;->pair(Ljava/lang/Object;Ljava/lang/Object;)Lorg/jcodec/common/Tuple$_2;
 
     move-result-object v7
 
     invoke-interface {v3, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-direct {p0, v8}, Lorg/jcodec/movtool/InplaceMP4Editor;->parseBox(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box;
 
     move-result-object v7
 
     check-cast v7, Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;
 
-    .line 12
     invoke-virtual {v7, v2}, Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;->setMovie(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
 
-    .line 13
     invoke-static {v8, v7}, Lorg/jcodec/common/Tuple;->pair(Ljava/lang/Object;Ljava/lang/Object;)Lorg/jcodec/common/Tuple$_2;
 
     move-result-object v7
@@ -129,7 +115,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_0
     invoke-static {v4}, Lorg/jcodec/common/Tuple;->_2_project1(Ljava/util/List;)Ljava/util/List;
 
@@ -147,7 +132,6 @@
 
     invoke-interface {p2, v2, p1}, Lorg/jcodec/movtool/MP4Edit;->applyToFragment(Lorg/jcodec/containers/mp4/boxes/MovieBox;[Lorg/jcodec/containers/mp4/boxes/MovieFragmentBox;)V
 
-    .line 15
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -165,7 +149,6 @@
 
     check-cast p2, Lorg/jcodec/common/Tuple$_2;
 
-    .line 16
     iget-object v4, p2, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     check-cast v4, Ljava/nio/ByteBuffer;
@@ -182,11 +165,9 @@
 
     return-object v5
 
-    .line 17
     :cond_2
     invoke-interface {p2, v2}, Lorg/jcodec/movtool/MP4Edit;->apply(Lorg/jcodec/containers/mp4/boxes/MovieBox;)V
 
-    .line 18
     :cond_3
     invoke-direct {p0, v1, v2}, Lorg/jcodec/movtool/InplaceMP4Editor;->rewriteBox(Ljava/nio/ByteBuffer;Lorg/jcodec/containers/mp4/boxes/Box;)Z
 
@@ -196,7 +177,6 @@
 
     return-object v5
 
-    .line 19
     :cond_4
     invoke-static {v0, v1}, Lorg/jcodec/common/Tuple;->pair(Ljava/lang/Object;Ljava/lang/Object;)Lorg/jcodec/common/Tuple$_2;
 
@@ -215,14 +195,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p2}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v0
 
     invoke-interface {p1, v0, v1}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 2
     invoke-virtual {p2}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object p2
@@ -259,12 +237,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lorg/jcodec/containers/mp4/MP4Util;->getRootAtoms(Lorg/jcodec/common/io/SeekableByteChannel;)Ljava/util/List;
 
     move-result-object p1
@@ -287,7 +263,6 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
-    .line 3
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v2
@@ -304,7 +279,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -321,7 +295,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/containers/mp4/MP4Util;->getRootAtoms(Lorg/jcodec/common/io/SeekableByteChannel;)Ljava/util/List;
 
     move-result-object p1
@@ -343,7 +316,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getHeader()Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v1
@@ -371,12 +343,10 @@
 .method private parseBox(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Box;
     .locals 2
 
-    .line 1
     invoke-static {p1}, Lorg/jcodec/containers/mp4/boxes/Header;->read(Ljava/nio/ByteBuffer;)Lorg/jcodec/containers/mp4/boxes/Header;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lorg/jcodec/containers/mp4/BoxFactory;->getDefault()Lorg/jcodec/containers/mp4/IBoxFactory;
 
     move-result-object v1
@@ -396,14 +366,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p2}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v0
 
     invoke-interface {p1, v0, v1}, Lorg/jcodec/common/io/SeekableByteChannel;->setPosition(J)Lorg/jcodec/common/io/SeekableByteChannel;
 
-    .line 2
     invoke-interface {p1, p3}, Ljava/nio/channels/ByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
     return-void
@@ -414,14 +382,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 2
     invoke-virtual {p2, p1}, Lorg/jcodec/containers/mp4/boxes/Box;->write(Ljava/nio/ByteBuffer;)V
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result p2
@@ -430,7 +395,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p2
@@ -441,7 +405,6 @@
 
     return v0
 
-    .line 5
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -471,10 +434,8 @@
 
     aput-byte v3, p2, v2
 
-    .line 6
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 7
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
     :try_end_0
@@ -498,7 +459,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->readableChannel(Ljava/io/File;)Lorg/jcodec/common/io/FileChannelWrapper;
 
@@ -506,13 +466,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2
     :try_start_1
     invoke-static {p2}, Lorg/jcodec/common/io/NIOUtils;->writableChannel(Ljava/io/File;)Lorg/jcodec/common/io/FileChannelWrapper;
 
     move-result-object v0
 
-    .line 3
     invoke-direct {p0, p1, p3}, Lorg/jcodec/movtool/InplaceMP4Editor;->doTheFix(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/movtool/MP4Edit;)Ljava/util/List;
 
     move-result-object p2
@@ -523,16 +481,13 @@
 
     const/4 p2, 0x0
 
-    .line 4
     :goto_0
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 5
     invoke-static {v0}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return p2
 
-    .line 6
     :cond_0
     :try_start_2
     new-instance p3, Lorg/jcodec/movtool/InplaceMP4Editor$1;
@@ -543,12 +498,10 @@
 
     move-result-object p2
 
-    .line 7
     invoke-static {p2}, Lorg/jcodec/common/Tuple;->asMap(Ljava/lang/Iterable;)Ljava/util/Map;
 
     move-result-object p2
 
-    .line 8
     invoke-static {p1}, Lorg/jcodec/containers/mp4/MP4Util;->getRootAtoms(Lorg/jcodec/common/io/SeekableByteChannel;)Ljava/util/List;
 
     move-result-object p3
@@ -570,7 +523,6 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
-    .line 9
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v2
@@ -587,12 +539,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 10
     invoke-interface {v0, v2}, Ljava/nio/channels/ByteChannel;->write(Ljava/nio/ByteBuffer;)I
 
     goto :goto_1
 
-    .line 11
     :cond_1
     invoke-virtual {v1, p1, v0}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->copy(Lorg/jcodec/common/io/SeekableByteChannel;Ljava/nio/channels/WritableByteChannel;)V
     :try_end_2
@@ -621,11 +571,9 @@
 
     move-object p1, v0
 
-    .line 12
     :goto_2
     invoke-static {v0}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 13
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     throw p2
@@ -639,7 +587,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->rwChannel(Ljava/io/File;)Lorg/jcodec/common/io/FileChannelWrapper;
 
@@ -647,7 +594,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2
     :try_start_1
     invoke-direct {p0, p1, p2}, Lorg/jcodec/movtool/InplaceMP4Editor;->doTheFix(Lorg/jcodec/common/io/SeekableByteChannel;Lorg/jcodec/movtool/MP4Edit;)Ljava/util/List;
 
@@ -659,13 +605,11 @@
 
     const/4 p2, 0x0
 
-    .line 3
     :goto_0
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     return p2
 
-    .line 4
     :cond_0
     :try_start_2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -685,7 +629,6 @@
 
     check-cast v0, Lorg/jcodec/common/Tuple$_2;
 
-    .line 5
     iget-object v1, v0, Lorg/jcodec/common/Tuple$_2;->v0:Ljava/lang/Object;
 
     check-cast v1, Lorg/jcodec/containers/mp4/MP4Util$Atom;
@@ -715,7 +658,6 @@
 
     const/4 p1, 0x0
 
-    .line 6
     :goto_2
     invoke-static {p1}, Lorg/jcodec/common/io/NIOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
@@ -730,7 +672,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -757,14 +698,12 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lorg/jcodec/movtool/InplaceMP4Editor;->copy(Ljava/io/File;Ljava/io/File;Lorg/jcodec/movtool/MP4Edit;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     const/4 p1, 0x1

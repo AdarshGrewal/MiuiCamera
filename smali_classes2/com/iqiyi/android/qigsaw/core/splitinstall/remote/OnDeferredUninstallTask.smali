@@ -28,10 +28,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;-><init>(Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;)V
 
-    .line 2
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/OnDeferredUninstallTask;->mModuleNames:Ljava/util/List;
 
     return-void
@@ -47,7 +45,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/OnDeferredUninstallTask;->mModuleNames:Ljava/util/List;
 
     invoke-virtual {p1, v0, p0}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor;->deferredUninstall(Ljava/util/List;Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/SplitInstallSupervisor$Callback;)V
@@ -58,10 +55,8 @@
 .method public onDeferredUninstall(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->onDeferredUninstall(Landroid/os/Bundle;)V
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/remote/DefaultTask;->mCallback:Lcom/iqiyi/android/qigsaw/core/splitinstall/protocol/ISplitInstallServiceCallback;
 
@@ -74,7 +69,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0

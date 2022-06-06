@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->values()[Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     move-result-object v0

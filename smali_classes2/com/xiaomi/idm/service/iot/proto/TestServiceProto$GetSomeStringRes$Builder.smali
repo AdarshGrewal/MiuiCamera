@@ -31,7 +31,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;->access$2900()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
 
     move-result-object v0
@@ -44,7 +43,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;-><init>()V
 
     return-void
@@ -55,10 +53,8 @@
 .method public clearSome1()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -71,10 +67,8 @@
 .method public clearSome2()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -87,10 +81,8 @@
 .method public clearSome3()Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -103,7 +95,6 @@
 .method public getSome1()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -118,7 +109,6 @@
 .method public getSome1Bytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -133,7 +123,6 @@
 .method public getSome2()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -148,7 +137,6 @@
 .method public getSome2Bytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -163,7 +151,6 @@
 .method public getSome3()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -178,7 +165,6 @@
 .method public getSome3Bytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -193,10 +179,8 @@
 .method public setSome1(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -209,10 +193,8 @@
 .method public setSome1Bytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -225,10 +207,8 @@
 .method public setSome2(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -241,10 +221,8 @@
 .method public setSome2Bytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -257,10 +235,8 @@
 .method public setSome3(Ljava/lang/String;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;
@@ -273,10 +249,8 @@
 .method public setSome3Bytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->copyOnWrite()V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/service/iot/proto/TestServiceProto$GetSomeStringRes;

@@ -35,7 +35,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/Pools$BasePool;-><init>(Lmiuix/core/util/Pools$Manager;I)V
 
     return-void
@@ -46,7 +45,6 @@
 .method public bridge synthetic acquire()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lmiuix/core/util/Pools$BasePool;->acquire()Ljava/lang/Object;
 
     move-result-object v0
@@ -57,7 +55,6 @@
 .method public bridge synthetic close()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Lmiuix/core/util/Pools$BasePool;->close()V
 
     return-void
@@ -75,7 +72,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2}, Lmiuix/core/util/Pools;->onSoftReferencePoolCreate(Ljava/lang/Class;I)Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;
 
     move-result-object p1
@@ -93,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;
 
     invoke-static {p1, p2}, Lmiuix/core/util/Pools;->onSoftReferencePoolClose(Lmiuix/core/util/Pools$SoftReferenceInstanceHolder;I)V
@@ -104,7 +99,6 @@
 .method public bridge synthetic getSize()I
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lmiuix/core/util/Pools$BasePool;->getSize()I
 
     move-result v0
@@ -115,7 +109,6 @@
 .method public bridge synthetic release(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/core/util/Pools$BasePool;->release(Ljava/lang/Object;)V
 
     return-void

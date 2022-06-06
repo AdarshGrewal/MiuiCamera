@@ -18,18 +18,14 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/util/RenderSourceType;Lcom/android/gallery3d/ui/ExtTexture;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mCanDraw:Z
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mSourceType:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
-    .line 4
     iput-object p2, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     return-void
@@ -46,7 +42,6 @@
 .method public canDraw()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mCanDraw:Z
 
     return v0
@@ -55,7 +50,6 @@
 .method public getSourceType()Lcom/android/camera/dualvideo/util/RenderSourceType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mSourceType:Lcom/android/camera/dualvideo/util/RenderSourceType;
 
     return-object v0
@@ -72,7 +66,6 @@
 .method public getTexture()Lcom/android/gallery3d/ui/ExtTexture;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     return-object v0
@@ -91,7 +84,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mCanDraw:Z
 
     return-void
@@ -108,12 +100,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mTexture:Lcom/android/gallery3d/ui/ExtTexture;
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mCanDraw:Z
 
     return-void
@@ -124,7 +114,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/dualvideo/render/MainRenderSource;->mCanDraw:Z
 
     return-void

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static attachThreadId(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +49,6 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -66,7 +63,6 @@
 .method public static err(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -81,7 +77,6 @@
 .method public static err(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 0
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -96,7 +91,6 @@
 .method public static inf(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -111,7 +105,6 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -126,7 +119,6 @@
 .method public static w(Ljava/lang/String;Ljava/lang/String;)I
     .locals 0
 
-    .line 1
     invoke-static {p1}, Lcom/android/camera/videoplayer/utils/Logger;->attachThreadId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1

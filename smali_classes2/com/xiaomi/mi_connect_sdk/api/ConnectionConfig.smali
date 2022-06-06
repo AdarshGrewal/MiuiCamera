@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 .method public getCommData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->commData:[B
 
     return-object v0
@@ -37,7 +35,6 @@
 .method public getEndPointId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->endPointId:I
 
     return v0
@@ -46,7 +43,6 @@
 .method public getRoleType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->roleType:I
 
     return v0
@@ -55,7 +51,6 @@
 .method public isEndPointTrusted()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->endPointTrusted:Z
 
     return v0
@@ -64,7 +59,6 @@
 .method public setCommData([B)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->commData:[B
 
     return-void
@@ -73,7 +67,6 @@
 .method public setEndPointId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->endPointId:I
 
     return-void
@@ -82,7 +75,6 @@
 .method public setEndPointTrusted(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->endPointTrusted:Z
 
     return-void
@@ -91,7 +83,6 @@
 .method public setRoleType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/ConnectionConfig;->roleType:I
 
     return-void

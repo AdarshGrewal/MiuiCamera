@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lokio/Okio;->appendingSink(Ljava/io/File;)Lokio/Sink;
 
@@ -47,7 +45,6 @@
 
     return-object p1
 
-    .line 2
     :catch_0
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -55,7 +52,6 @@
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 3
     invoke-static {p1}, Lokio/Okio;->appendingSink(Ljava/io/File;)Lokio/Sink;
 
     move-result-object p1
@@ -71,7 +67,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v0
@@ -86,7 +81,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -121,14 +115,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 2
     array-length p1, v0
 
     const/4 v1, 0x0
@@ -138,17 +130,14 @@
 
     aget-object v2, v0, v1
 
-    .line 3
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 4
     invoke-virtual {p0, v2}, Lokhttp3/internal/io/FileSystem$1;->deleteContents(Ljava/io/File;)V
 
-    .line 5
     :cond_0
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
@@ -160,7 +149,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     new-instance p1, Ljava/io/IOException;
 
@@ -185,7 +173,6 @@
     :cond_2
     return-void
 
-    .line 7
     :cond_3
     new-instance v0, Ljava/io/IOException;
 
@@ -211,7 +198,6 @@
 .method public exists(Ljava/io/File;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -227,10 +213,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p2}, Lokhttp3/internal/io/FileSystem$1;->delete(Ljava/io/File;)V
 
-    .line 2
     invoke-virtual {p1, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v0
@@ -239,7 +223,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -276,7 +259,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lokio/Okio;->sink(Ljava/io/File;)Lokio/Sink;
 
@@ -286,7 +268,6 @@
 
     return-object p1
 
-    .line 2
     :catch_0
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -294,7 +275,6 @@
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 3
     invoke-static {p1}, Lokio/Okio;->sink(Ljava/io/File;)Lokio/Sink;
 
     move-result-object p1
@@ -305,7 +285,6 @@
 .method public size(Ljava/io/File;)J
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v0
@@ -321,7 +300,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lokio/Okio;->source(Ljava/io/File;)Lokio/Source;
 
     move-result-object p1

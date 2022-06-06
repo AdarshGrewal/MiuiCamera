@@ -52,10 +52,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Ljava8/util/stream/ForEachOps$ForEachOp;->ordered:Z
 
     return-void
@@ -66,7 +64,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -75,7 +72,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -84,7 +80,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -113,7 +108,6 @@
 .method public bridge synthetic evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/ForEachOps$ForEachOp;->evaluateParallel(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Void;
 
     move-result-object p1
@@ -136,12 +130,10 @@
         }
     .end annotation
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/ForEachOps$ForEachOp;->ordered:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachOrderedTask;
 
     invoke-direct {v0, p1, p2, p0}, Ljava8/util/stream/ForEachOps$ForEachOrderedTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;Ljava8/util/stream/Sink;)V
@@ -150,7 +142,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava8/util/stream/ForEachOps$ForEachTask;
 
@@ -171,7 +162,6 @@
 .method public bridge synthetic evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/ForEachOps$ForEachOp;->evaluateSequential(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)Ljava/lang/Void;
 
     move-result-object p1
@@ -194,7 +184,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p1, p0, p2}, Ljava8/util/stream/PipelineHelper;->wrapAndCopyInto(Ljava8/util/stream/Sink;Ljava8/util/Spliterator;)Ljava8/util/stream/Sink;
 
     move-result-object p1
@@ -211,7 +200,6 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ForEachOps$ForEachOp;->get()Ljava/lang/Void;
 
     move-result-object v0
@@ -230,7 +218,6 @@
 .method public getOpFlags()I
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/ForEachOps$ForEachOp;->ordered:Z
 
     if-eqz v0, :cond_0
@@ -249,7 +236,6 @@
 .method public inputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;
 
     return-object v0

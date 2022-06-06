@@ -34,12 +34,10 @@
 .method public constructor <init>(Ljava8/util/stream/DoublePipeline$5;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DoublePipeline$5$1;->this$1:Ljava8/util/stream/DoublePipeline$5;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedDouble;-><init>(Ljava8/util/stream/Sink;)V
 
-    .line 2
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedDouble;->downstream:Ljava8/util/stream/Sink;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -60,7 +58,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Ljava8/util/stream/DoublePipeline$5$1;->this$1:Ljava8/util/stream/DoublePipeline$5;
 
@@ -76,13 +73,11 @@
 
     if-eqz p1, :cond_2
 
-    .line 2
     :try_start_1
     iget-boolean p2, p0, Ljava8/util/stream/DoublePipeline$5$1;->cancellationRequested:Z
 
     if-nez p2, :cond_0
 
-    .line 3
     invoke-interface {p1}, Ljava8/util/stream/DoubleStream;->sequential()Ljava8/util/stream/DoubleStream;
 
     move-result-object p2
@@ -93,7 +88,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-interface {p1}, Ljava8/util/stream/DoubleStream;->sequential()Ljava8/util/stream/DoubleStream;
 
@@ -103,7 +97,6 @@
 
     move-result-object p2
 
-    .line 5
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedDouble;->downstream:Ljava8/util/stream/Sink;
 
@@ -136,7 +129,6 @@
     :goto_0
     if-eqz p1, :cond_3
 
-    .line 6
     invoke-interface {p1}, Ljava8/util/stream/BaseStream;->close()V
 
     :cond_3
@@ -157,7 +149,6 @@
 .method public begin(J)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/Sink$ChainedDouble;->downstream:Ljava8/util/stream/Sink;
 
     const-wide/16 v0, -0x1
@@ -172,10 +163,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Ljava8/util/stream/DoublePipeline$5$1;->cancellationRequested:Z
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedDouble;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0}, Ljava8/util/stream/Sink;->cancellationRequested()Z

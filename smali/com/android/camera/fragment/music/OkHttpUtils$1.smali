@@ -29,7 +29,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;Ljava/lang/String;Lcom/android/camera/fragment/music/LiveMusicInfo;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$callback:Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;
 
     iput-object p2, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$savePath:Ljava/lang/String;
@@ -46,7 +45,6 @@
 .method public onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/music/OkHttpUtils;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -71,7 +69,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$callback:Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;
 
     invoke-interface {p1}, Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;->onFailed()V
@@ -82,7 +79,6 @@
 .method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/fragment/music/OkHttpUtils;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -91,7 +87,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
@@ -101,7 +96,6 @@
 
     move-result-object p1
 
-    .line 3
     new-instance p2, Ljava/io/PrintStream;
 
     iget-object v0, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$savePath:Ljava/lang/String;
@@ -110,15 +104,12 @@
 
     const/4 v0, 0x0
 
-    .line 4
     array-length v1, p1
 
     invoke-virtual {p2, p1, v0, v1}, Ljava/io/PrintStream;->write([BII)V
 
-    .line 5
     invoke-virtual {p2}, Ljava/io/PrintStream;->close()V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$callback:Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;
 
     iget-object p2, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$liveMusicInfo:Lcom/android/camera/fragment/music/LiveMusicInfo;
@@ -132,7 +123,6 @@
     :catch_0
     move-exception p1
 
-    .line 7
     invoke-static {}, Lcom/android/camera/fragment/music/OkHttpUtils;->access$000()Ljava/lang/String;
 
     move-result-object p2
@@ -157,24 +147,20 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     new-instance p1, Ljava/io/File;
 
     iget-object p2, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$savePath:Ljava/lang/String;
 
     invoke-direct {p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 9
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 10
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 11
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/music/OkHttpUtils$1;->val$callback:Lcom/android/camera/fragment/music/LiveMusicActivity$Mp3DownloadCallback;
 

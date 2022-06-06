@@ -29,7 +29,6 @@
 .method public constructor <init>(Landroid/content/Context;II)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger$1;->val$context:Landroid/content/Context;
 
     iput p2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger$1;->val$width:I
@@ -46,7 +45,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger$1;->val$context:Landroid/content/Context;
 
@@ -54,7 +52,6 @@
 
     move-result-object v0
 
-    .line 2
     iget v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger$1;->val$width:I
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger$1;->val$height:I

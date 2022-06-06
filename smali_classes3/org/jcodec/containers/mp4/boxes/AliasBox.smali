@@ -91,7 +91,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -100,7 +99,6 @@
 .method public static createSelfRef()Lorg/jcodec/containers/mp4/boxes/AliasBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/AliasBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -115,7 +113,6 @@
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->setFlags(I)V
 
     return-object v0
@@ -134,10 +131,8 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -146,7 +141,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->type:Ljava/lang/String;
 
@@ -160,66 +154,54 @@
 
     invoke-virtual {p1, v0, v2, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->recordSize:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 5
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->version:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 6
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->kind:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 7
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeName:Ljava/lang/String;
 
     const/16 v3, 0x1b
 
     invoke-static {p1, v0, v3}, Lorg/jcodec/common/io/NIOUtils;->writePascalStringL(Ljava/nio/ByteBuffer;Ljava/lang/String;I)V
 
-    .line 8
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeCreateDate:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 9
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeSignature:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 10
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeType:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 11
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->parentDirId:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 12
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileName:Ljava/lang/String;
 
     const/16 v3, 0x3f
 
     invoke-static {p1, v0, v3}, Lorg/jcodec/common/io/NIOUtils;->writePascalStringL(Ljava/nio/ByteBuffer;Ljava/lang/String;I)V
 
-    .line 13
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileNumber:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 14
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->createdLocalDate:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 15
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileTypeName:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
@@ -228,7 +210,6 @@
 
     invoke-virtual {p1, v0, v2, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 16
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->creatorName:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/jcodec/common/JCodecUtil2;->asciiString(Ljava/lang/String;)[B
@@ -237,22 +218,18 @@
 
     invoke-virtual {p1, v0, v2, v1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 17
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->nlvlFrom:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 18
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->nlvlTo:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 19
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeAttributes:I
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 20
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fsId:S
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
@@ -261,10 +238,8 @@
 
     new-array v0, v0, [B
 
-    .line 21
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 22
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -284,19 +259,16 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;
 
-    .line 23
     iget-short v3, v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;->type:S
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 24
     iget v3, v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;->len:I
 
     int-to-short v3, v3
 
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 25
     iget-object v1, v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;->data:[B
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
@@ -306,10 +278,8 @@
     :cond_1
     const/4 v0, -0x1
 
-    .line 26
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 27
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     return-void
@@ -318,7 +288,6 @@
 .method public estimateSize()I
     .locals 3
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -327,7 +296,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -347,7 +315,6 @@
 
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;
 
-    .line 3
     iget-object v2, v2, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;->data:[B
 
     array-length v2, v2
@@ -367,7 +334,6 @@
 .method public getExtra(I)Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -387,7 +353,6 @@
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;
 
-    .line 2
     iget-short v2, v1, Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;->type:S
 
     if-ne v2, p1, :cond_0
@@ -411,7 +376,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 
     return-object v0
@@ -420,7 +384,6 @@
 .method public getFileName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -429,7 +392,6 @@
 .method public getRecordSize()I
     .locals 1
 
-    .line 1
     iget-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->recordSize:S
 
     return v0
@@ -440,7 +402,6 @@
 
     const/16 v0, 0x12
 
-    .line 1
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/AliasBox;->getExtra(I)Lorg/jcodec/containers/mp4/boxes/AliasBox$ExtraField;
 
     move-result-object v0
@@ -451,7 +412,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -478,7 +438,6 @@
 .method public isSelfRef()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     const/4 v1, 0x1
@@ -499,10 +458,8 @@
 .method public parse(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -514,28 +471,24 @@
     :cond_0
     const/4 v0, 0x4
 
-    .line 3
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->type:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
 
     iput-short v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->recordSize:S
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
 
     iput-short v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->version:S
 
-    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
@@ -544,35 +497,30 @@
 
     const/16 v1, 0x1b
 
-    .line 7
     invoke-static {p1, v1}, Lorg/jcodec/common/io/NIOUtils;->readPascalStringL(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeName:Ljava/lang/String;
 
-    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeCreateDate:I
 
-    .line 9
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
 
     iput-short v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeSignature:S
 
-    .line 10
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
 
     iput-short v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeType:S
 
-    .line 11
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -581,63 +529,54 @@
 
     const/16 v1, 0x3f
 
-    .line 12
     invoke-static {p1, v1}, Lorg/jcodec/common/io/NIOUtils;->readPascalStringL(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileName:Ljava/lang/String;
 
-    .line 13
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileNumber:I
 
-    .line 14
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->createdLocalDate:I
 
-    .line 15
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->fileTypeName:Ljava/lang/String;
 
-    .line 16
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->readString(Ljava/nio/ByteBuffer;I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->creatorName:Ljava/lang/String;
 
-    .line 17
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->nlvlFrom:S
 
-    .line 18
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
 
     iput-short v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->nlvlTo:S
 
-    .line 19
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v0
 
     iput v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->volumeAttributes:I
 
-    .line 20
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v0
@@ -646,17 +585,14 @@
 
     const/16 v0, 0xa
 
-    .line 21
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->skip(Ljava/nio/ByteBuffer;I)I
 
-    .line 22
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 
-    .line 23
     :goto_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -668,7 +604,6 @@
 
     goto :goto_1
 
-    .line 24
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -678,7 +613,6 @@
 
     and-int/lit8 v2, v2, -0x2
 
-    .line 25
     invoke-static {p1, v2}, Lorg/jcodec/common/io/NIOUtils;->read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -692,7 +626,6 @@
     :goto_1
     return-void
 
-    .line 26
     :cond_2
     iget-object v3, p0, Lorg/jcodec/containers/mp4/boxes/AliasBox;->extra:Ljava/util/List;
 

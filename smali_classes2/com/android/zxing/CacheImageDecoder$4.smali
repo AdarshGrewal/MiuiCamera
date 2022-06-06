@@ -35,7 +35,6 @@
 .method public constructor <init>(Lcom/android/zxing/CacheImageDecoder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/CacheImageDecoder$4;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +54,6 @@
 
     const-string v0, "CacheImage"
 
-    .line 2
     iget-object v1, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mImageWrapper:Lcom/android/zxing/CacheImageDecoder$ImageWrapper;
 
     if-eqz v1, :cond_5
@@ -66,7 +64,6 @@
 
     goto/16 :goto_3
 
-    .line 3
     :cond_0
     invoke-static {v1}, Lcom/xiaomi/camera/base/ImageUtil;->getYUVFromPreviewImage(Landroid/media/Image;)[B
 
@@ -74,7 +71,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/android/zxing/CacheImageDecoder$4;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
@@ -90,7 +86,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     new-instance v8, Landroid/graphics/YuvImage;
 
     const/16 v4, 0x11
@@ -105,12 +100,10 @@
 
     invoke-direct/range {v2 .. v7}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
 
-    .line 6
     new-instance v2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 7
     new-instance v3, Landroid/graphics/Rect;
 
     iget v4, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mWidth:I
@@ -125,7 +118,6 @@
 
     invoke-virtual {v8, v3, v4, v2}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
 
-    .line 8
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v5
@@ -144,7 +136,6 @@
 
     invoke-interface/range {v4 .. v9}, Lcom/android/camera2/Camera2Proxy$AnchorPreviewCallback;->saveJpegAsThumbnail([BIIZZ)V
 
-    .line 9
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
 
     goto :goto_1
@@ -152,7 +143,6 @@
     :cond_1
     const-string v1, "only camera module could anchor frame"
 
-    .line 10
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -168,7 +158,6 @@
     :catch_0
     move-exception v1
 
-    .line 11
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -192,7 +181,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 12
     iget-object v0, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mImageWrapper:Lcom/android/zxing/CacheImageDecoder$ImageWrapper;
 
     if-eqz v0, :cond_4
@@ -212,10 +200,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 13
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
-    .line 14
     iget-object p1, p0, Lcom/android/zxing/CacheImageDecoder$4;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-static {p1}, Lcom/android/zxing/CacheImageDecoder;->access$100(Lcom/android/zxing/CacheImageDecoder;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -227,7 +213,6 @@
     :cond_2
     throw v0
 
-    .line 15
     :cond_3
     :goto_1
     iget-object v0, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mImageWrapper:Lcom/android/zxing/CacheImageDecoder$ImageWrapper;
@@ -238,11 +223,9 @@
 
     if-eqz v0, :cond_4
 
-    .line 16
     :goto_2
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
-    .line 17
     iget-object v0, p0, Lcom/android/zxing/CacheImageDecoder$4;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-static {v0}, Lcom/android/zxing/CacheImageDecoder;->access$100(Lcom/android/zxing/CacheImageDecoder;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -251,7 +234,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    .line 18
     :cond_4
     iget-wide v0, p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;->mTimestamp:J
 
@@ -265,7 +247,6 @@
     :goto_3
     const-wide/16 v0, 0x0
 
-    .line 19
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -281,7 +262,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lcom/android/zxing/CacheImageDecoder$FrameInfo;
 
     invoke-virtual {p0, p1}, Lcom/android/zxing/CacheImageDecoder$4;->apply(Lcom/android/zxing/CacheImageDecoder$FrameInfo;)Ljava/lang/Long;

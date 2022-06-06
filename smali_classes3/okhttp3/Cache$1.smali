@@ -25,7 +25,6 @@
 .method public constructor <init>(Lokhttp3/Cache;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0, p1}, Lokhttp3/Cache;->get(Lokhttp3/Request;)Lokhttp3/Response;
@@ -61,7 +59,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0, p1}, Lokhttp3/Cache;->put(Lokhttp3/Response;)Lokhttp3/internal/cache/CacheRequest;
@@ -79,7 +76,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0, p1}, Lokhttp3/Cache;->remove(Lokhttp3/Request;)V
@@ -90,7 +86,6 @@
 .method public trackConditionalCacheHit()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0}, Lokhttp3/Cache;->trackConditionalCacheHit()V
@@ -101,7 +96,6 @@
 .method public trackResponse(Lokhttp3/internal/cache/CacheStrategy;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0, p1}, Lokhttp3/Cache;->trackResponse(Lokhttp3/internal/cache/CacheStrategy;)V
@@ -112,7 +106,6 @@
 .method public update(Lokhttp3/Response;Lokhttp3/Response;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/Cache$1;->this$0:Lokhttp3/Cache;
 
     invoke-virtual {v0, p1, p2}, Lokhttp3/Cache;->update(Lokhttp3/Response;Lokhttp3/Response;)V

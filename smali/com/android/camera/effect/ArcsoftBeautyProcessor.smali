@@ -31,12 +31,10 @@
 .method public constructor <init>()V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;-><init>()V
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 2
     invoke-virtual {p0, v0}, Lcom/miui/filtersdk/beauty/IntelligentBeautyProcessor;->setExtraSpan(F)V
 
     const/4 v0, 0x6
@@ -47,7 +45,6 @@
 
     new-array v2, v1, [F
 
-    .line 3
     fill-array-data v2, :array_0
 
     const/4 v3, 0x0
@@ -148,7 +145,6 @@
 .method private dumpParams()V
     .locals 5
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->TAG:Ljava/lang/String;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -159,7 +155,6 @@
 
     iget v3, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mShrinkFaceRatio:I
 
-    .line 2
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -200,7 +195,6 @@
 
     const-string v3, "beautyParams: shrinkFace=%d largeEye=%d whiteSkin=%d smoothSkin=%d"
 
-    .line 3
     invoke-static {v1, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -213,19 +207,16 @@
 .method private getDegreeByValue(Lcom/miui/filtersdk/beauty/BeautyParameterType;F)I
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->getSupportedParamRange(Lcom/miui/filtersdk/beauty/BeautyParameterType;)[F
 
     move-result-object p1
 
-    .line 2
     array-length v0, p1
 
     const/4 v1, 0x2
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p1
@@ -235,7 +226,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     aget v0, p1, v0
 
     sub-float/2addr p2, v0
@@ -262,7 +252,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -272,13 +261,11 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 2
     :goto_0
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->getDegreeByValue(Lcom/miui/filtersdk/beauty/BeautyParameterType;F)I
 
     move-result p2
 
-    .line 3
     sget-object v0, Lcom/android/camera/effect/ArcsoftBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -305,25 +292,21 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     iput p2, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mSmoothStrength:I
 
     goto :goto_1
 
-    .line 5
     :cond_2
     iput p2, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
     goto :goto_1
 
-    .line 6
     :cond_3
     iput p2, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mShrinkFaceRatio:I
 
     goto :goto_1
 
-    .line 7
     :cond_4
     iput p2, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mEnlargeEyeRatio:I
 
@@ -364,16 +347,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mShrinkFaceRatio:I
 
-    .line 2
     iput v0, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mEnlargeEyeRatio:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mWhiteStrength:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->mSmoothStrength:I
 
     return-void
@@ -386,7 +365,6 @@
 
     new-array v0, v0, [Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
-    .line 1
     sget-object v1, Lcom/miui/filtersdk/beauty/BeautyParameterType;->ENLARGE_EYE_RATIO:Lcom/miui/filtersdk/beauty/BeautyParameterType;
 
     const/4 v2, 0x0
@@ -417,7 +395,6 @@
 .method public getSupportedParamRange(Lcom/miui/filtersdk/beauty/BeautyParameterType;)[F
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/ArcsoftBeautyProcessor$1;->$SwitchMap$com$miui$filtersdk$beauty$BeautyParameterType:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -451,7 +428,6 @@
     :cond_0
     new-array p1, v1, [F
 
-    .line 2
     fill-array-data p1, :array_0
 
     return-object p1
@@ -484,7 +460,6 @@
 .method public setBeautyParamDegree(Lcom/miui/filtersdk/beauty/BeautyParameterType;Ljava/lang/Float;)V
     .locals 0
 
-    .line 1
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -495,7 +470,6 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->updateBeautyParameter(Lcom/miui/filtersdk/beauty/BeautyParameterType;Ljava/lang/Float;)V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->dumpParams()V
 
     return-void
@@ -513,7 +487,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -535,7 +508,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -552,7 +524,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/effect/ArcsoftBeautyProcessor;->dumpParams()V
 

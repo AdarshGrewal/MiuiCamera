@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$1;->this$0:Lcom/android/camera/fragment/film/FragmentFilmDreamProcess;
 
     iput-object p2, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$1;->val$pendingItems:Ljava/util/List;
@@ -42,7 +41,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -53,7 +51,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmDreamProcess$1;->val$pendingItems:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -80,7 +77,6 @@
     :cond_0
     int-to-float v2, p1
 
-    .line 3
     invoke-static {v1, v2}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
     goto :goto_0

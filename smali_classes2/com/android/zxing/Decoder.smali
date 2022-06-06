@@ -37,25 +37,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xf
 
-    .line 2
     iput v0, p0, Lcom/android/zxing/Decoder;->mDecodeMaxCount:I
 
     const-wide/16 v0, 0x3e8
 
-    .line 3
     iput-wide v0, p0, Lcom/android/zxing/Decoder;->mDecodeAutoInterval:J
 
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/zxing/Decoder;->mEnable:Z
 
-    .line 5
     new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
@@ -81,7 +76,6 @@
 .method public needPreviewFrame()Z
     .locals 8
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/zxing/Decoder;->mEnable:Z
 
     const/4 v1, 0x0
@@ -90,7 +84,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
@@ -98,7 +91,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget v0, p0, Lcom/android/zxing/Decoder;->mDecodeMaxCount:I
 
@@ -118,13 +110,11 @@
 
     return v1
 
-    .line 4
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 5
     iget-wide v4, p0, Lcom/android/zxing/Decoder;->mLastDecodeTime:J
 
     sub-long v4, v2, v4
@@ -137,16 +127,13 @@
 
     return v1
 
-    .line 6
     :cond_3
     iput-wide v2, p0, Lcom/android/zxing/Decoder;->mLastDecodeTime:J
 
-    .line 7
     iget-object v0, p0, Lcom/android/zxing/Decoder;->mDecodingCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -190,7 +177,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/zxing/Decoder;->mEnable:Z
 
     return-void
@@ -202,7 +188,6 @@
 .method public setEnable(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/zxing/Decoder;->mEnable:Z
 
     return-void
@@ -218,10 +203,8 @@
 
     const-string v1, "Stop decode."
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/zxing/Decoder;->mDecodeDisposable:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
@@ -232,7 +215,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/zxing/Decoder;->mDecodeDisposable:Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
@@ -240,7 +222,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/zxing/Decoder;->mDecoding:Z
 
     return-void

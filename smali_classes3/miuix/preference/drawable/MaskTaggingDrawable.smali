@@ -33,18 +33,14 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/internal/graphics/drawable/TaggingDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerTop:Z
 
-    .line 3
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerBottom:Z
 
-    .line 4
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskEnabled:Z
 
     return-void
@@ -53,18 +49,14 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;[I)V
     .locals 0
 
-    .line 5
     invoke-direct {p0, p1, p2}, Lmiuix/internal/graphics/drawable/TaggingDrawable;-><init>(Landroid/graphics/drawable/Drawable;[I)V
 
     const/4 p1, 0x0
 
-    .line 6
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerTop:Z
 
-    .line 7
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerBottom:Z
 
-    .line 8
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskEnabled:Z
 
     return-void
@@ -73,7 +65,6 @@
 .method private drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/graphics/RectF;
 
     int-to-float v1, p2
@@ -88,7 +79,6 @@
 
     if-eqz p9, :cond_0
 
-    .line 2
     iget v1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingEnd:I
 
     goto :goto_0
@@ -99,7 +89,6 @@
     :goto_0
     if-eqz p9, :cond_1
 
-    .line 3
     iget p9, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingStart:I
 
     goto :goto_1
@@ -107,7 +96,6 @@
     :cond_1
     iget p9, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingEnd:I
 
-    .line 4
     :goto_1
     new-instance v2, Landroid/graphics/RectF;
 
@@ -121,7 +109,6 @@
 
     invoke-direct {v2, p2, p3, p4, p5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 5
     new-instance p2, Landroid/graphics/Path;
 
     invoke-direct {p2}, Landroid/graphics/Path;-><init>()V
@@ -130,7 +117,6 @@
 
     if-eqz p6, :cond_2
 
-    .line 6
     iget p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskRadius:I
 
     int-to-float p4, p4
@@ -143,7 +129,6 @@
     :goto_2
     if-eqz p7, :cond_3
 
-    .line 7
     iget p3, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskRadius:I
 
     int-to-float p3, p3
@@ -185,12 +170,10 @@
 
     aput p3, p5, p4
 
-    .line 8
     sget-object p3, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {p2, v2, p5, p3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 9
     iget-object p3, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
     const/16 p4, 0x1f
@@ -199,14 +182,12 @@
 
     move-result p3
 
-    .line 10
     iget-object p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, p4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
     if-eqz p8, :cond_4
 
-    .line 11
     iget-object p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
     new-instance p5, Landroid/graphics/PorterDuffXfermode;
@@ -219,7 +200,6 @@
 
     goto :goto_3
 
-    .line 12
     :cond_4
     iget-object p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
@@ -231,20 +211,17 @@
 
     invoke-virtual {p4, p5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 13
     :goto_3
     iget-object p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, p4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 14
     iget-object p2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
     const/4 p4, 0x0
 
     invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 15
     invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -255,10 +232,8 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 11
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskEnabled:Z
 
     if-eqz v0, :cond_1
@@ -275,13 +250,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v10
 
-    .line 4
     iget v2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mLeft:I
 
     iget v5, v10, Landroid/graphics/Rect;->top:I
@@ -306,7 +279,6 @@
 
     invoke-direct/range {v0 .. v9}, Lmiuix/preference/drawable/MaskTaggingDrawable;->drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
 
-    .line 5
     iget v2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mLeft:I
 
     iget v3, v10, Landroid/graphics/Rect;->bottom:I
@@ -323,7 +295,6 @@
 
     invoke-direct/range {v0 .. v9}, Lmiuix/preference/drawable/MaskTaggingDrawable;->drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
 
-    .line 6
     iget v2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mLeft:I
 
     iget v3, v10, Landroid/graphics/Rect;->top:I
@@ -349,7 +320,6 @@
 .method public getMaskEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskEnabled:Z
 
     return v0
@@ -358,22 +328,16 @@
 .method public setClipPaint(Landroid/graphics/Paint;IIIII)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mClipPaint:Landroid/graphics/Paint;
 
-    .line 2
     iput p2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingTop:I
 
-    .line 3
     iput p3, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingBottom:I
 
-    .line 4
     iput p4, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingStart:I
 
-    .line 5
     iput p5, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskPaddingEnd:I
 
-    .line 6
     iput p6, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskRadius:I
 
     return-void
@@ -382,13 +346,10 @@
 .method public setLeftRight(IIZ)V
     .locals 0
 
-    .line 1
     iput-boolean p3, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mRtl:Z
 
-    .line 2
     iput p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mLeft:I
 
-    .line 3
     iput p2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mRight:I
 
     return-void
@@ -397,7 +358,6 @@
 .method public setMaskEnabled(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mMaskEnabled:Z
 
     return-void
@@ -406,10 +366,8 @@
 .method public updateDrawCorner(ZZ)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerTop:Z
 
-    .line 2
     iput-boolean p2, p0, Lmiuix/preference/drawable/MaskTaggingDrawable;->mDrawCornerBottom:Z
 
     return-void

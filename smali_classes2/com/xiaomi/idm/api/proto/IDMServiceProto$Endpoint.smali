@@ -81,15 +81,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;-><init>()V
 
-    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
-    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -100,24 +97,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
-    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->idhash_:Ljava/lang/String;
 
-    .line 3
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->name_:Ljava/lang/String;
 
-    .line 4
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mac_:Ljava/lang/String;
 
-    .line 5
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->ip_:Ljava/lang/String;
 
-    .line 6
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->bdAddr_:Ljava/lang/String;
 
     return-void
@@ -126,7 +117,6 @@
 .method public static synthetic access$2100()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     return-object v0
@@ -135,7 +125,6 @@
 .method public static synthetic access$2200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setIdhash(Ljava/lang/String;)V
 
     return-void
@@ -144,7 +133,6 @@
 .method public static synthetic access$2300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearIdhash()V
 
     return-void
@@ -153,7 +141,6 @@
 .method public static synthetic access$2400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setIdhashBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -162,7 +149,6 @@
 .method public static synthetic access$2500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setName(Ljava/lang/String;)V
 
     return-void
@@ -171,7 +157,6 @@
 .method public static synthetic access$2600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearName()V
 
     return-void
@@ -180,7 +165,6 @@
 .method public static synthetic access$2700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setNameBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -189,7 +173,6 @@
 .method public static synthetic access$2800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setMac(Ljava/lang/String;)V
 
     return-void
@@ -198,7 +181,6 @@
 .method public static synthetic access$2900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearMac()V
 
     return-void
@@ -207,7 +189,6 @@
 .method public static synthetic access$3000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setMacBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -216,7 +197,6 @@
 .method public static synthetic access$3100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setIp(Ljava/lang/String;)V
 
     return-void
@@ -225,7 +205,6 @@
 .method public static synthetic access$3200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearIp()V
 
     return-void
@@ -234,7 +213,6 @@
 .method public static synthetic access$3300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setIpBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -243,7 +221,6 @@
 .method public static synthetic access$3400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setBdAddr(Ljava/lang/String;)V
 
     return-void
@@ -252,7 +229,6 @@
 .method public static synthetic access$3500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearBdAddr()V
 
     return-void
@@ -261,7 +237,6 @@
 .method public static synthetic access$3600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setBdAddrBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -270,7 +245,6 @@
 .method public static synthetic access$3700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setMcVersion(I)V
 
     return-void
@@ -279,7 +253,6 @@
 .method public static synthetic access$3800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearMcVersion()V
 
     return-void
@@ -288,7 +261,6 @@
 .method public static synthetic access$3900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->setVerifyStatus(I)V
 
     return-void
@@ -297,7 +269,6 @@
 .method public static synthetic access$4000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->clearVerifyStatus()V
 
     return-void
@@ -306,7 +277,6 @@
 .method private clearBdAddr()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v0
@@ -323,7 +293,6 @@
 .method private clearIdhash()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v0
@@ -340,7 +309,6 @@
 .method private clearIp()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v0
@@ -357,7 +325,6 @@
 .method private clearMac()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v0
@@ -376,7 +343,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mcVersion_:I
 
     return-void
@@ -385,7 +351,6 @@
 .method private clearName()V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v0
@@ -404,7 +369,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->verifyStatus_:I
 
     return-void
@@ -413,7 +377,6 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     return-object v0
@@ -422,7 +385,6 @@
 .method public static newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint$Builder;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->createBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -437,7 +399,6 @@
 .method public static newBuilder(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint$Builder;
     .locals 1
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->createBuilder(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -457,7 +418,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -477,7 +437,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -497,7 +456,6 @@
         }
     .end annotation
 
-    .line 3
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -517,7 +475,6 @@
         }
     .end annotation
 
-    .line 4
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -537,7 +494,6 @@
         }
     .end annotation
 
-    .line 9
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -557,7 +513,6 @@
         }
     .end annotation
 
-    .line 10
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -577,7 +532,6 @@
         }
     .end annotation
 
-    .line 7
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -597,7 +551,6 @@
         }
     .end annotation
 
-    .line 8
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -617,7 +570,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -637,7 +589,6 @@
         }
     .end annotation
 
-    .line 2
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -657,7 +608,6 @@
         }
     .end annotation
 
-    .line 5
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
@@ -677,7 +627,6 @@
         }
     .end annotation
 
-    .line 6
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
@@ -700,7 +649,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->getParserForType()Lcom/google/protobuf/Parser;
@@ -715,7 +663,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->bdAddr_:Ljava/lang/String;
 
     return-void
@@ -723,7 +670,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -732,10 +678,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -747,7 +691,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -756,7 +699,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->idhash_:Ljava/lang/String;
 
     return-void
@@ -764,7 +706,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -773,10 +714,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -788,7 +727,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -797,7 +735,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->ip_:Ljava/lang/String;
 
     return-void
@@ -805,7 +742,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -814,10 +750,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -829,7 +763,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
@@ -838,7 +771,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mac_:Ljava/lang/String;
 
     return-void
@@ -846,7 +778,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -855,10 +786,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -870,14 +799,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setMcVersion(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mcVersion_:I
 
     return-void
@@ -888,7 +815,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->name_:Ljava/lang/String;
 
     return-void
@@ -896,7 +822,6 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     throw p1
 .end method
 
@@ -905,10 +830,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -920,14 +843,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     throw p1
 .end method
 
 .method private setVerifyStatus(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->verifyStatus_:I
 
     return-void
@@ -938,7 +859,6 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 1
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->ordinal()I
@@ -953,7 +873,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 2
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -963,7 +882,6 @@
     :pswitch_0
     return-object p3
 
-    .line 3
     :pswitch_1
     invoke-static {p2}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -971,34 +889,28 @@
 
     return-object p1
 
-    .line 4
     :pswitch_2
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_1
 
-    .line 5
     const-class p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     monitor-enter p2
 
-    .line 6
     :try_start_0
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p1, :cond_0
 
-    .line 7
     new-instance p1, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p3, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     invoke-direct {p1, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    .line 8
     sput-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 9
     :cond_0
     monitor-exit p2
 
@@ -1017,7 +929,6 @@
     :goto_0
     return-object p1
 
-    .line 10
     :pswitch_3
     sget-object p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
@@ -1068,7 +979,6 @@
 
     aput-object p3, p1, p2
 
-    .line 11
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     const-string p3, "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0004\u0007\u0004"
@@ -1079,7 +989,6 @@
 
     return-object p1
 
-    .line 12
     :pswitch_5
     new-instance p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint$Builder;
 
@@ -1087,7 +996,6 @@
 
     return-object p1
 
-    .line 13
     :pswitch_6
     new-instance p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
@@ -1110,7 +1018,6 @@
 .method public getBdAddr()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->bdAddr_:Ljava/lang/String;
 
     return-object v0
@@ -1119,7 +1026,6 @@
 .method public getBdAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->bdAddr_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1132,7 +1038,6 @@
 .method public getIdhash()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->idhash_:Ljava/lang/String;
 
     return-object v0
@@ -1141,7 +1046,6 @@
 .method public getIdhashBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->idhash_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1154,7 +1058,6 @@
 .method public getIp()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->ip_:Ljava/lang/String;
 
     return-object v0
@@ -1163,7 +1066,6 @@
 .method public getIpBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->ip_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1176,7 +1078,6 @@
 .method public getMac()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mac_:Ljava/lang/String;
 
     return-object v0
@@ -1185,7 +1086,6 @@
 .method public getMacBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mac_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1198,7 +1098,6 @@
 .method public getMcVersion()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->mcVersion_:I
 
     return v0
@@ -1207,7 +1106,6 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->name_:Ljava/lang/String;
 
     return-object v0
@@ -1216,7 +1114,6 @@
 .method public getNameBytes()Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->name_:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1229,7 +1126,6 @@
 .method public getVerifyStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;->verifyStatus_:I
 
     return v0

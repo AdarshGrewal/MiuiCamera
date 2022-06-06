@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/camera/statistic/MistatsConstants$VideoBokehAttr;,
         Lcom/android/camera/statistic/MistatsConstants$PictureData;,
         Lcom/android/camera/statistic/MistatsConstants$FilmAttr;,
         Lcom/android/camera/statistic/MistatsConstants$ScannerAttr;,

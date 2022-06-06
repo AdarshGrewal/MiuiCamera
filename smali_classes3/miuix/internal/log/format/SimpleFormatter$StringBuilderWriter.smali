@@ -22,10 +22,8 @@
 .method public constructor <init>(Ljava/lang/StringBuilder;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/internal/log/format/SimpleFormatter$StringBuilderWriter;->iOut:Ljava/lang/StringBuilder;
 
     return-void
@@ -46,7 +44,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -113,7 +110,6 @@
         }
     .end annotation
 
-    .line 1
     array-length v0, p1
 
     invoke-static {v0, p2, p3}, Lmiuix/internal/log/format/SimpleFormatter$StringBuilderWriter;->checkOffsetAndCount(III)V
@@ -122,7 +118,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/internal/log/format/SimpleFormatter$StringBuilderWriter;->iOut:Ljava/lang/StringBuilder;
 

@@ -24,7 +24,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/util/pool/StateVerifier;-><init>(Lcom/bumptech/glide/util/pool/StateVerifier$1;)V
 
     return-void
@@ -35,7 +34,6 @@
 .method public setRecycled(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;->isReleased:Z
 
     return-void
@@ -44,14 +42,12 @@
 .method public throwIfRecycled()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;->isReleased:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

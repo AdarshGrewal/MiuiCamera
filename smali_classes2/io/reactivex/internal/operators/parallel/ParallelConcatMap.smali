@@ -60,15 +60,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/parallel/ParallelFlowable;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->source:Lio/reactivex/parallel/ParallelFlowable;
 
     const-string p1, "mapper"
 
-    .line 3
     invoke-static {p2, p1}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -77,12 +74,10 @@
 
     iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->mapper:Lio/reactivex/functions/Function;
 
-    .line 4
     iput p3, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->prefetch:I
 
     const-string p1, "errorMode"
 
-    .line 5
     invoke-static {p4, p1}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -99,7 +94,6 @@
 .method public parallelism()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->source:Lio/reactivex/parallel/ParallelFlowable;
 
     invoke-virtual {v0}, Lio/reactivex/parallel/ParallelFlowable;->parallelism()I
@@ -119,7 +113,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/parallel/ParallelFlowable;->validate([Lorg/reactivestreams/Subscriber;)Z
 
     move-result v0
@@ -128,11 +121,9 @@
 
     return-void
 
-    .line 2
     :cond_0
     array-length v0, p1
 
-    .line 3
     new-array v1, v0, [Lorg/reactivestreams/Subscriber;
 
     const/4 v2, 0x0
@@ -140,7 +131,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 4
     aget-object v3, p1, v2
 
     iget-object v4, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->mapper:Lio/reactivex/functions/Function;
@@ -159,7 +149,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelConcatMap;->source:Lio/reactivex/parallel/ParallelFlowable;
 

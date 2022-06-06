@@ -21,7 +21,6 @@
 
     const-wide/high16 v2, 0x401c000000000000L    # 7.0
 
-    .line 1
     invoke-static {v0, v1, v2, v3}, Lcom/facebook/rebound/SpringConfig;->fromOrigamiTensionAndFriction(DD)Lcom/facebook/rebound/SpringConfig;
 
     move-result-object v0
@@ -34,13 +33,10 @@
 .method public constructor <init>(DD)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcom/facebook/rebound/SpringConfig;->tension:D
 
-    .line 3
     iput-wide p3, p0, Lcom/facebook/rebound/SpringConfig;->friction:D
 
     return-void
@@ -49,12 +45,10 @@
 .method public static fromBouncinessAndSpeed(DD)Lcom/facebook/rebound/SpringConfig;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/facebook/rebound/BouncyConversion;
 
     invoke-direct {v0, p2, p3, p0, p1}, Lcom/facebook/rebound/BouncyConversion;-><init>(DD)V
 
-    .line 2
     invoke-virtual {v0}, Lcom/facebook/rebound/BouncyConversion;->getBouncyTension()D
 
     move-result-wide p0
@@ -73,7 +67,6 @@
 .method public static fromOrigamiTensionAndFriction(DD)Lcom/facebook/rebound/SpringConfig;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/facebook/rebound/SpringConfig;
 
     invoke-static {p0, p1}, Lcom/facebook/rebound/OrigamiValueConverter;->tensionFromOrigamiValue(D)D

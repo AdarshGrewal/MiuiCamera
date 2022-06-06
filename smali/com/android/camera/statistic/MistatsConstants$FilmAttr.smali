@@ -23,8 +23,6 @@
 
 .field public static final KEY_FILM_DREAM:Ljava/lang/String; = "key_film_dream"
 
-.field public static final KEY_FILM_USEGUIDE_CLICK:Ljava/lang/String; = "key_film_useguide_click"
-
 .field public static final KEY_TIME_FREEZE:Ljava/lang/String; = "key_film_time_freeze"
 
 .field public static final PARAM_DOLLY_ZOOM_EXCEPTION_ZOOM_VALUE:Ljava/lang/String; = "attr_operate_exception_zoom_value"
@@ -36,6 +34,8 @@
 .field public static final PARAM_FILM_CLICK_TEMPLATE_PREVIEW:Ljava/lang/String; = "attr_film_click_template_preview"
 
 .field public static final PARAM_FILM_TEMPLATE_NAME:Ljava/lang/String; = "attr_film_template_name"
+
+.field public static final PARAM_FILM_USEGUIDE_CLICK:Ljava/lang/String; = "attr_film_useguide_click"
 
 .field public static final PARAM_TIME_FREEZE_BEFORE_RECORDING:Ljava/lang/String; = "attr_time_freeze_before_recording"
 
@@ -74,8 +74,6 @@
 .field public static final VALUE_FILM_DREAM_CLICK_STOP_RECORD:Ljava/lang/String; = "value_film_dream_stop_record"
 
 .field public static final VALUE_FILM_PLAY:Ljava/lang/String; = "value_film_play"
-
-.field public static final VALUE_M_FILM_USER_GUIDE:Ljava/lang/String; = "value_m_film_user_guide"
 
 .field public static final VALUE_TIME_FREEZE_CLICK_EXIT_CONFIRM:Ljava/lang/String; = "value_time_freeze_exit_confirm"
 

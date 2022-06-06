@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-direct {p0}, Lcom/xiaomi/camera/util/State;-><init>()V
@@ -35,7 +34,6 @@
 .method public enter()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -44,9 +42,8 @@
 
     const-string v1, "entering SessionCreatingState state"
 
-    invoke-static {v0, v1}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$300(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/os/Handler;
@@ -73,7 +70,6 @@
 
     move-object/from16 v0, p1
 
-    .line 1
     iget v2, v0, Landroid/os/Message;->what:I
 
     const/4 v3, 0x1
@@ -104,7 +100,6 @@
 
     return v7
 
-    .line 2
     :cond_0
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -134,7 +129,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1100(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$CameraOpenedState;
@@ -145,7 +139,6 @@
 
     goto/16 :goto_3
 
-    .line 4
     :cond_1
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -155,7 +148,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 5
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v2}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -184,7 +176,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1900(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionClosingState;
@@ -195,7 +186,6 @@
 
     goto/16 :goto_3
 
-    .line 7
     :cond_2
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -225,7 +215,6 @@
 
     invoke-static {v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$2000(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatedState;
@@ -236,7 +225,6 @@
 
     goto/16 :goto_3
 
-    .line 9
     :cond_3
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -246,7 +234,6 @@
 
     monitor-enter v2
 
-    .line 10
     :try_start_0
     new-instance v5, Ljava/util/ArrayList;
 
@@ -266,7 +253,6 @@
 
     const/4 v6, 0x0
 
-    .line 11
     :try_start_1
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -276,12 +262,10 @@
 
     if-nez v0, :cond_4
 
-    .line 12
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0, v6}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1402(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;Ljava/util/Map;)Ljava/util/Map;
 
-    .line 13
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     iget-object v4, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
@@ -296,7 +280,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 14
     :try_start_2
     monitor-exit v2
     :try_end_2
@@ -304,12 +287,10 @@
 
     goto/16 :goto_3
 
-    .line 15
     :cond_4
     :try_start_3
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
-    .line 16
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$500(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/hardware/camera2/CameraDevice;
 
     move-result-object v0
@@ -318,12 +299,10 @@
 
     move-result-object v0
 
-    .line 17
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 18
     iget-object v8, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v8}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -350,7 +329,6 @@
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v8
@@ -360,14 +338,12 @@
     :goto_0
     if-ge v9, v8, :cond_6
 
-    .line 20
     invoke-interface {v5, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Landroid/view/Surface;
 
-    .line 21
     iget-object v12, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v12}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -382,14 +358,12 @@
 
     new-array v15, v15, [Ljava/lang/Object;
 
-    .line 22
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v16
 
     aput-object v16, v15, v7
 
-    .line 23
     invoke-static {v10}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
 
     move-result v16
@@ -400,7 +374,6 @@
 
     aput-object v16, v15, v3
 
-    .line 24
     invoke-static {v10}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
 
     move-result-object v16
@@ -411,19 +384,16 @@
 
     aput-object v16, v15, v4
 
-    .line 25
     invoke-static {v13, v14, v15}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v13
 
-    invoke-static {v12, v13}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v12, v13}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     new-instance v12, Landroid/hardware/camera2/params/OutputConfiguration;
 
     invoke-direct {v12, v10}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(Landroid/view/Surface;)V
 
-    .line 27
     sget v10, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v13, 0x1e
@@ -442,10 +412,8 @@
 
     if-eqz v10, :cond_5
 
-    .line 28
     iget-object v10, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
-    .line 29
     invoke-static {v10}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/util/Map;
 
     move-result-object v10
@@ -462,10 +430,8 @@
 
     move-result-object v10
 
-    .line 30
     invoke-static {v12, v10}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->setPhysicalCameraId(Landroid/hardware/camera2/params/OutputConfiguration;Ljava/lang/String;)V
 
-    .line 31
     :cond_5
     invoke-interface {v11, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -473,7 +439,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_6
     iget-object v4, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -483,10 +448,8 @@
 
     invoke-static {v0, v4}, Lcom/android/camera2/CaptureRequestBuilder;->applySessionParameters(Landroid/hardware/camera2/CaptureRequest$Builder;Lcom/android/camera2/CaptureSessionConfigurations;)V
 
-    .line 33
     iget-object v4, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
-    .line 34
     invoke-static {v4}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$500(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/hardware/camera2/CameraDevice;
 
     move-result-object v8
@@ -495,7 +458,6 @@
 
     const/4 v10, 0x0
 
-    .line 35
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->build()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v12
@@ -508,12 +470,10 @@
 
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
-    .line 36
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$300(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Landroid/os/Handler;
 
     move-result-object v14
 
-    .line 37
     invoke-static/range {v8 .. v14}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->createCaptureSessionWithSessionConfiguration(Landroid/hardware/camera2/CameraDevice;ILandroid/hardware/camera2/params/InputConfiguration;Ljava/util/List;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;Landroid/os/Handler;)V
     :try_end_3
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_3 .. :try_end_3} :catch_1
@@ -530,23 +490,19 @@
     :catch_1
     move-exception v0
 
-    .line 38
     :goto_1
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 39
     :goto_2
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0, v6}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1402(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;Ljava/util/Map;)Ljava/util/Map;
 
-    .line 40
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0, v5}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1602(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;Ljava/util/List;)Ljava/util/List;
 
-    .line 41
     iget-object v0, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v0}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -555,9 +511,8 @@
 
     const-string v4, "create CaptureSession X"
 
-    invoke-static {v0, v4}, LOooO00o/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, LOooO0O0/OooO0O0/OooO0OO/OooO00o;->OooO00o(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     monitor-exit v2
 
     goto :goto_3
@@ -571,7 +526,6 @@
 
     throw v0
 
-    .line 43
     :cond_7
     new-instance v2, Ljava/util/ArrayList;
 
@@ -585,7 +539,6 @@
 
     invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 44
     iget-object v4, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v4}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$1600(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/util/List;
@@ -598,12 +551,10 @@
 
     if-nez v2, :cond_9
 
-    .line 45
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-virtual {v2, v0}, Lcom/xiaomi/camera/util/StateMachine;->deferMessage(Landroid/os/Message;)V
 
-    .line 46
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-static {v2}, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;->access$400(Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;)Ljava/lang/String;
@@ -634,7 +585,6 @@
 
     goto :goto_3
 
-    .line 47
     :cond_8
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
@@ -664,7 +614,6 @@
 
     invoke-static {v2, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     iget-object v2, v1, Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager$SessionCreatingState;->this$0:Lcom/android/camera/module/loader/camera2/ParallelSnapshotManager;
 
     invoke-virtual {v2, v0}, Lcom/xiaomi/camera/util/StateMachine;->deferMessage(Landroid/os/Message;)V

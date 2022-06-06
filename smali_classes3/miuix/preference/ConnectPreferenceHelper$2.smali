@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/preference/ConnectPreferenceHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/ConnectPreferenceHelper$2;->this$0:Lmiuix/preference/ConnectPreferenceHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/ConnectPreferenceHelper$2;->this$0:Lmiuix/preference/ConnectPreferenceHelper;
 
     invoke-static {v0}, Lmiuix/preference/ConnectPreferenceHelper;->access$200(Lmiuix/preference/ConnectPreferenceHelper;)Landroid/widget/TextView;
@@ -47,7 +45,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/ConnectPreferenceHelper$2;->this$0:Lmiuix/preference/ConnectPreferenceHelper;
 
     invoke-static {v0}, Lmiuix/preference/ConnectPreferenceHelper;->access$200(Lmiuix/preference/ConnectPreferenceHelper;)Landroid/widget/TextView;

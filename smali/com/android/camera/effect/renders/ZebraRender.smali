@@ -43,42 +43,34 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     const p1, 0x3f7d70a4    # 0.99f
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverExposure:F
 
     const p1, 0x3c23d70a    # 0.01f
 
-    .line 3
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderExposure:F
 
     const p1, 0xcd5c60
 
-    .line 4
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverColor:I
 
     const p1, 0x6db2f4
 
-    .line 5
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderColor:I
 
     const/high16 p1, 0x41000000    # 8.0f
 
-    .line 6
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mWidth:F
 
     const/high16 p1, 0x41200000    # 10.0f
 
-    .line 7
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mGap:F
 
     const/high16 p1, 0x40000000    # 2.0f
 
-    .line 8
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOffset:F
 
     return-void
@@ -87,42 +79,34 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 9
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     const p1, 0x3f7d70a4    # 0.99f
 
-    .line 10
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverExposure:F
 
     const p1, 0x3c23d70a    # 0.01f
 
-    .line 11
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderExposure:F
 
     const p1, 0xcd5c60
 
-    .line 12
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverColor:I
 
     const p1, 0x6db2f4
 
-    .line 13
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderColor:I
 
     const/high16 p1, 0x41000000    # 8.0f
 
-    .line 14
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mWidth:F
 
     const/high16 p1, 0x41200000    # 10.0f
 
-    .line 15
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mGap:F
 
     const/high16 p1, 0x40000000    # 2.0f
 
-    .line 16
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOffset:F
 
     return-void
@@ -133,7 +117,6 @@
 .method public draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOffset:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -142,7 +125,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOffset:F
 
-    .line 2
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/PixelEffectRender;->draw(Lcom/android/camera/effect/draw_mode/DrawAttribute;)Z
 
     move-result p1
@@ -161,10 +143,8 @@
 .method public initShader()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShader()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uSize"
@@ -175,7 +155,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformSizeH:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uOverExposure"
@@ -186,7 +165,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformOverExposureH:I
 
-    .line 4
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uUnderExposure"
@@ -197,7 +175,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformUnderExposureH:I
 
-    .line 5
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uOverColor"
@@ -208,7 +185,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformOverColorH:I
 
-    .line 6
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uUnderColor"
@@ -219,7 +195,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformUnderColorH:I
 
-    .line 7
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uWidth"
@@ -230,7 +205,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformWidthH:I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uGap"
@@ -241,7 +215,6 @@
 
     iput v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformGapH:I
 
-    .line 9
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const-string/jumbo v1, "uOffset"
@@ -258,10 +231,8 @@
 .method public initShaderValue(Z)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->initShaderValue(Z)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformSizeH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/Render;->mPreviewWidth:I
@@ -274,21 +245,18 @@
 
     invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformOverExposureH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverExposure:F
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 4
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformUnderExposureH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderExposure:F
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 5
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformOverColorH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverColor:I
@@ -325,7 +293,6 @@
 
     invoke-static {p1, v0, v2, v3}, Landroid/opengl/GLES20;->glUniform3f(IFFF)V
 
-    .line 6
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformUnderColorH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderColor:I
@@ -360,21 +327,18 @@
 
     invoke-static {p1, v0, v2, v3}, Landroid/opengl/GLES20;->glUniform3f(IFFF)V
 
-    .line 7
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformWidthH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mWidth:F
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 8
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformGapH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mGap:F
 
     invoke-static {p1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 9
     iget p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUniformOffsetH:I
 
     iget v0, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOffset:F
@@ -387,10 +351,8 @@
 .method public setExposureThreshold(FF)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/effect/renders/ZebraRender;->mOverExposure:F
 
-    .line 2
     iput p2, p0, Lcom/android/camera/effect/renders/ZebraRender;->mUnderExposure:F
 
     return-void
@@ -399,7 +361,6 @@
 .method public setPreviewSize(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/effect/renders/ConvolutionEffectRender;->setPreviewSize(II)V
 
     return-void

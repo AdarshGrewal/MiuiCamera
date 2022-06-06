@@ -15,6 +15,10 @@
 
 
 # instance fields
+.field public lastConfirmTime:J
+
+.field public lastFaceResult:I
+
 .field public mActiveIndicator:I
 
 .field public mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
@@ -23,9 +27,17 @@
 
 .field public mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
+.field public mCenterHintIcon:Landroid/widget/ImageView;
+
+.field public mCenterHintText:Landroid/widget/TextView;
+
+.field public mCurrentMimojiFaceResult:I
+
 .field public mDisplayRectLeftMargin:I
 
 .field public mDisplayRectTopMargin:I
+
+.field public mDocumentView:Lcom/android/camera/ui/DocumentView;
 
 .field public mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
@@ -35,19 +47,41 @@
 
 .field public mHandler:Landroid/os/Handler;
 
+.field public mHistogramAnimator:Landroid/animation/ValueAnimator;
+
+.field public mIsHorizontal:Z
+
 .field public mIsIntentAction:Z
 
+.field public mIsMimojiFaceDetectTip:Z
+
 .field public mIsRecording:Z
+
+.field public mIsShowMainLyingDirectHint:Z
 
 .field public mIvIdPhotoBox:Landroid/widget/ImageView;
 
 .field public mLastCameraId:I
 
+.field public mLastFaceSuccess:Z
+
+.field public mLastTranslateY:I
+
 .field public mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+.field public mLightingView:Lcom/android/camera/ui/LightingView;
 
 .field public mListener:Lcom/android/camera/aiwatermark/DragListener;
 
 .field public mLocationDialog:Lmiuix/appcompat/app/AlertDialog;
+
+.field public mLyingDirectHint:Landroid/widget/TextView;
+
+.field public mMimojiDetectTipType:I
+
+.field public mMimojiFaceDetect:I
+
+.field public mMimojiLightingView:Lcom/android/camera/ui/LightingView;
 
 .field public mMoreModeMaskView:Landroid/view/View;
 
@@ -55,13 +89,13 @@
 
 .field public mOnClickListener:Landroid/view/View$OnClickListener;
 
+.field public mPreviewCenterHint:Landroid/view/ViewGroup;
+
 .field public mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
 .field public mPreviewPage:Landroid/view/ViewGroup;
 
 .field public mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
-
-.field public mRealDegree:I
 
 .field public mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -87,15 +121,21 @@
 
 .field public mWatermarkViewStub:Landroid/view/ViewStub;
 
+.field public mergeRectF:Landroid/graphics/RectF;
+
+.field public miFaceTipResId:I
+
+.field public miLightTipResId:I
+
+.field public mimojiTipResId:I
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -104,26 +144,24 @@
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastCameraId:I
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mListener:Lcom/android/camera/aiwatermark/DragListener;
 
     const/4 v1, 0x0
 
-    .line 5
-    iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
+    iput-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mListener:Lcom/android/camera/aiwatermark/DragListener;
 
-    .line 6
-    iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
+    const/4 v2, 0x0
 
-    .line 7
-    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLocationDialog:Lmiuix/appcompat/app/AlertDialog;
+    iput v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
-    .line 8
+    iput-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLocationDialog:Lmiuix/appcompat/app/AlertDialog;
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->miLightTipResId:I
+
     new-instance v0, Lcom/android/camera/fragment/FragmentMainContent$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/FragmentMainContent$2;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
@@ -132,8 +170,13 @@
 
     const/4 v0, 0x2
 
-    .line 9
     iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mActiveIndicator:I
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mergeRectF:Landroid/graphics/RectF;
 
     return-void
 .end method
@@ -141,40 +184,17 @@
 .method public static synthetic OooO00o(Landroid/widget/TextView;)V
     .locals 2
 
-    .line 15
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     const/4 v1, -0x2
 
-    .line 16
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 17
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 18
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public static synthetic OooO00o(Lcom/android/camera/module/BaseModule;)V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-
-    .line 27
-    invoke-virtual {p0, v0}, Lcom/android/camera/module/BaseModule;->updatePreferenceInWorkThread([I)V
 
     return-void
 .end method
@@ -184,8 +204,129 @@
 
     const v0, 0x7f120138
 
-    .line 19
     invoke-interface {p0, p1, v0}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertTopHint(II)V
+
+    return-void
+.end method
+
+.method private UpdateCoverTheme()V
+    .locals 3
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/camera/customization/FlashHalo;->getHaloEnable()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->getScreenLightBrightness()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x437f0000    # 255.0f
+
+    div-float/2addr v1, v2
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x2010
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, -0x40800000    # -1.0f
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x100
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(I)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(I)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(I)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(I)V
 
     return-void
 .end method
@@ -193,7 +334,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/FragmentMainContent;)Lcom/android/camera/ui/ShapeBackGroundView;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     return-object p0
@@ -202,7 +342,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/FragmentMainContent;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLocationDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p0
@@ -211,7 +350,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/FragmentMainContent;Landroid/view/View;Lcom/android/camera/aiwatermark/data/WatermarkItem;)Landroid/widget/TextView;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->findTextView(Landroid/view/View;Lcom/android/camera/aiwatermark/data/WatermarkItem;)Landroid/widget/TextView;
 
     move-result-object p0
@@ -222,7 +360,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/FragmentMainContent;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     return p0
@@ -231,16 +368,54 @@
 .method public static synthetic access$400(Lcom/android/camera/fragment/FragmentMainContent;ILandroid/graphics/Rect;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->updateWatermarkRotation(ILandroid/graphics/Rect;)V
 
     return-void
 .end method
 
-.method private adjustViewHeight()V
-    .locals 6
+.method public static synthetic access$500(Lcom/android/camera/fragment/FragmentMainContent;)I
+    .locals 0
 
-    .line 1
+    iget p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastFaceResult:I
+
+    return p0
+.end method
+
+.method public static synthetic access$600(Lcom/android/camera/fragment/FragmentMainContent;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    return p0
+.end method
+
+.method public static synthetic access$702(Lcom/android/camera/fragment/FragmentMainContent;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCurrentMimojiFaceResult:I
+
+    return p1
+.end method
+
+.method public static synthetic access$800(Lcom/android/camera/fragment/FragmentMainContent;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->mimojiFaceDetectSync(II)V
+
+    return-void
+.end method
+
+.method public static synthetic access$900(Lcom/android/camera/fragment/FragmentMainContent;)Landroid/view/ViewGroup;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    return-object p0
+.end method
+
+.method private adjustViewHeight()V
+    .locals 7
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -253,109 +428,115 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPage:Landroid/view/ViewGroup;
 
-    .line 3
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    .line 5
     invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 6
-    invoke-static {}, Lcom/android/camera/Util;->getCameraPreviewRect()Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    invoke-virtual {v3}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
-    .line 7
-    iget v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+    invoke-static {}, Lcom/android/camera/Util;->getCameraPreviewRect()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    iget v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v6
+
+    if-ne v5, v6, :cond_1
+
+    iget v5, v4, Landroid/graphics/Rect;->top:I
+
+    iget v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
+
+    if-ne v5, v6, :cond_1
+
+    iget v5, v4, Landroid/graphics/Rect;->left:I
+
+    iget v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectLeftMargin:I
+
+    if-eq v5, v6, :cond_2
+
+    :cond_1
+    iget v5, v4, Landroid/graphics/Rect;->top:I
+
+    iput v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
+
+    iget v5, v4, Landroid/graphics/Rect;->left:I
+
+    iput v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectLeftMargin:I
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
-    if-ne v4, v5, :cond_1
+    iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    iget v4, v3, Landroid/graphics/Rect;->top:I
+    iget v5, v4, Landroid/graphics/Rect;->top:I
 
-    iget v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
+    iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    if-ne v4, v5, :cond_1
+    iget v5, v4, Landroid/graphics/Rect;->left:I
 
-    iget v4, v3, Landroid/graphics/Rect;->left:I
+    iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    iget v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectLeftMargin:I
+    iput v5, v2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    if-eq v4, v5, :cond_2
+    iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    .line 8
-    :cond_1
-    iget v4, v3, Landroid/graphics/Rect;->top:I
+    invoke-virtual {v5, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iput v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
-
-    .line 9
-    iget v4, v3, Landroid/graphics/Rect;->left:I
-
-    iput v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectLeftMargin:I
-
-    .line 10
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
-
-    move-result v4
-
-    iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    .line 11
-    iget v4, v3, Landroid/graphics/Rect;->top:I
-
-    iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    .line 12
-    iget v4, v3, Landroid/graphics/Rect;->left:I
-
-    iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    .line 13
-    iput v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    .line 14
-    iget-object v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
-
-    invoke-virtual {v4, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 15
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
-    iget v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
+    mul-int/lit8 v2, v2, 0x4
 
-    add-int/2addr v2, v4
+    div-int/lit8 v2, v2, 0x3
+
+    iput v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDisplayRectTopMargin:I
+
+    add-int/2addr v2, v3
 
     iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 16
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 17
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
@@ -369,7 +550,6 @@
 .method private autoRelayoutUI(Ljava/lang/String;Landroid/widget/LinearLayout;Landroid/graphics/Rect;Z)V
     .locals 9
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -470,10 +650,9 @@
 
     if-eq p1, v1, :cond_3
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p4, 0x7f0a023a
+    const p4, 0x7f0a024b
 
     invoke-virtual {p1, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -481,7 +660,6 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p4
@@ -490,7 +668,6 @@
 
     move-result-object p4
 
-    .line 4
     invoke-virtual {p1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
@@ -499,12 +676,10 @@
 
     move-result p4
 
-    .line 5
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 6
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -523,16 +698,14 @@
 
     int-to-float v2, v2
 
-    .line 7
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const v6, 0x7f0a0239
+    const v6, 0x7f0a024a
 
     invoke-virtual {v3, v6}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 8
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
@@ -545,7 +718,6 @@
 
     float-to-double v7, p4
 
-    .line 9
     invoke-static {v7, v8}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v7
@@ -554,7 +726,6 @@
 
     iput p4, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 10
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -573,7 +744,6 @@
 
     iput p4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 11
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -597,10 +767,8 @@
     :cond_1
     float-to-int p4, v2
 
-    .line 12
     iput p4, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 13
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -619,10 +787,8 @@
 
     iput p4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 14
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 15
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p4
@@ -639,18 +805,15 @@
 
     iput p4, v6, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 16
     :goto_2
     invoke-virtual {v3, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 17
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p4
 
     check-cast p4, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 18
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -661,7 +824,6 @@
 
     move-result v2
 
-    .line 19
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -674,7 +836,6 @@
 
     move-result v3
 
-    .line 20
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -687,7 +848,6 @@
 
     move-result v5
 
-    .line 21
     iget-object v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -698,14 +858,12 @@
 
     move-result v0
 
-    .line 22
     iget v6, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     mul-int/2addr v0, v4
 
     add-int/2addr v6, v0
 
-    .line 23
     iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     mul-int/2addr v2, v4
@@ -716,13 +874,10 @@
 
     add-int/2addr v0, v5
 
-    .line 24
     iput v0, p4, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 25
     iput v6, p4, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 26
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -731,17 +886,14 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 27
     iget v1, p4, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 28
     iget v2, p4, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 29
     iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v2, v1
@@ -752,7 +904,6 @@
 
     if-le v2, v1, :cond_2
 
-    .line 30
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     move-result p3
@@ -763,13 +914,11 @@
 
     iput p3, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 31
     :cond_2
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 32
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
@@ -786,15 +935,12 @@
 
     invoke-virtual {p3, v1, v2, v3, v0}, Landroid/widget/FrameLayout;->layout(IIII)V
 
-    .line 33
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 34
     invoke-virtual {p2, p4}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 35
     iget p3, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     iget v0, p4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -809,12 +955,10 @@
 
     invoke-virtual {p2, p3, v0, v1, p4}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 36
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->requestLayout()V
 
     goto/16 :goto_7
 
-    .line 37
     :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
@@ -824,21 +968,19 @@
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 38
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 39
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
 
-    const v0, 0x7f07071c
+    const v0, 0x7f070718
 
     invoke-virtual {p4, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -846,14 +988,13 @@
 
     iput p4, p3, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 40
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
 
-    const v0, 0x7f070724
+    const v0, 0x7f070720
 
     invoke-virtual {p4, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -861,20 +1002,16 @@
 
     iput p4, p3, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 41
     iput p4, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 42
     iget p4, p3, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     iput p4, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 43
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4, p1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 44
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     iget v0, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
@@ -883,27 +1020,22 @@
 
     invoke-virtual {p4, v3, v3, v0, p1}, Landroid/widget/FrameLayout;->layout(IIII)V
 
-    .line 45
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 46
     invoke-virtual {p2, p3}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 47
     iget p1, p3, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iget p3, p3, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     invoke-virtual {p2, v3, v3, p1, p3}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 48
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->requestLayout()V
 
     goto/16 :goto_4
 
-    .line 49
     :cond_4
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -913,14 +1045,12 @@
 
     const p3, 0x7f0a0058
 
-    .line 50
     invoke-virtual {p2, p3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p3
 
     check-cast p3, Landroid/view/ViewGroup;
 
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -941,13 +1071,10 @@
 
     if-eqz p4, :cond_5
 
-    .line 52
     invoke-virtual {p3, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 53
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 54
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -965,13 +1092,10 @@
     :cond_5
     const/16 p4, 0x8
 
-    .line 55
     invoke-virtual {p3, p4}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 56
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 57
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -984,11 +1108,9 @@
 
     iput p3, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 58
     :goto_3
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 59
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -1001,7 +1123,6 @@
 
     iput p3, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 60
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1010,22 +1131,18 @@
 
     check-cast p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 61
     iget p4, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iput p4, p3, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 62
     iget p4, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     iput p4, p3, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 63
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4, p3}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 64
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     iget v0, p3, Landroid/widget/FrameLayout$LayoutParams;->width:I
@@ -1034,22 +1151,18 @@
 
     invoke-virtual {p4, v3, v3, v0, p3}, Landroid/widget/FrameLayout;->layout(IIII)V
 
-    .line 65
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 66
     invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 67
     iget p3, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iget p1, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     invoke-virtual {p2, v3, v3, p3, p1}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 68
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->requestLayout()V
 
     :goto_4
@@ -1057,11 +1170,10 @@
 
     goto/16 :goto_7
 
-    .line 69
     :cond_6
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p4, 0x7f0a0241
+    const p4, 0x7f0a0252
 
     invoke-virtual {p1, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1069,14 +1181,12 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 70
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p4
 
     check-cast p4, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 71
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -1085,7 +1195,6 @@
 
     move-result-object v1
 
-    .line 72
     invoke-virtual {p1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v2
@@ -1094,7 +1203,6 @@
 
     move-result v1
 
-    .line 73
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -1119,7 +1227,6 @@
 
     float-to-double v1, v1
 
-    .line 74
     invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v1
@@ -1128,7 +1235,6 @@
 
     iput v1, p4, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 75
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1145,11 +1251,9 @@
 
     goto :goto_5
 
-    .line 76
     :cond_7
     iput v2, p4, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 77
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1164,7 +1268,6 @@
 
     iput v1, p4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 78
     :goto_5
     iget v1, p4, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
@@ -1172,10 +1275,9 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/widget/TextView;->measure(II)V
 
-    .line 79
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0a0242
+    const v2, 0x7f0a0253
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1183,26 +1285,22 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 80
     invoke-virtual {v1}, Landroid/widget/TextView;->getWidth()I
 
     move-result v1
 
-    .line 81
     iget v2, p4, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 82
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 83
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1215,7 +1313,6 @@
 
     move-result v3
 
-    .line 84
     iget-object v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1230,10 +1327,8 @@
 
     add-int/2addr v3, v1
 
-    .line 85
     iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 86
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1244,7 +1339,6 @@
 
     move-result v0
 
-    .line 87
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1257,7 +1351,6 @@
 
     move-result v1
 
-    .line 88
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1270,7 +1363,6 @@
 
     move-result v3
 
-    .line 89
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1283,7 +1375,6 @@
 
     move-result v5
 
-    .line 90
     iget-object v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1302,7 +1393,6 @@
 
     add-int/2addr v0, v3
 
-    .line 91
     iget p4, p4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     add-int/2addr v0, p4
@@ -1313,7 +1403,6 @@
 
     iput v0, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 92
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1322,17 +1411,14 @@
 
     check-cast p4, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 93
     iget v0, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iput v0, p4, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 94
     iget v1, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     iput v1, p4, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 95
     iget v1, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v1, v0
@@ -1343,7 +1429,6 @@
 
     if-le v1, v0, :cond_8
 
-    .line 96
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     move-result p3
@@ -1354,13 +1439,11 @@
 
     iput p3, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 97
     :cond_8
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 98
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     iget v0, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
@@ -1377,15 +1460,12 @@
 
     invoke-virtual {p3, v0, v1, v3, p4}, Landroid/widget/FrameLayout;->layout(IIII)V
 
-    .line 99
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 100
     invoke-virtual {p2, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 101
     iget p3, v2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     iget p4, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -1400,16 +1480,14 @@
 
     invoke-virtual {p2, p3, p4, v0, v1}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 102
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->requestLayout()V
 
     goto/16 :goto_7
 
-    .line 103
     :cond_9
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p4, 0x7f0a023d
+    const p4, 0x7f0a024e
 
     invoke-virtual {p1, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1417,21 +1495,18 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 104
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a0115
+    const v0, 0x7f0a011c
 
     invoke-virtual {p4, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p4
 
-    .line 105
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 106
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -1440,7 +1515,6 @@
 
     move-result-object v1
 
-    .line 107
     invoke-virtual {p1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v2
@@ -1449,7 +1523,6 @@
 
     move-result v1
 
-    .line 108
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -1466,7 +1539,6 @@
 
     move-result v2
 
-    .line 109
     invoke-virtual {p4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
@@ -1481,7 +1553,6 @@
 
     float-to-double v1, v1
 
-    .line 110
     invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v1
@@ -1490,10 +1561,8 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 111
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 112
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1508,11 +1577,9 @@
 
     goto :goto_6
 
-    .line 113
     :cond_a
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 114
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1525,14 +1592,11 @@
 
     iput v1, v3, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 115
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 116
     :goto_6
     invoke-virtual {p4, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 117
     iget v1, v3, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     iget v2, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
@@ -1547,13 +1611,11 @@
 
     invoke-virtual {p4, v1, v2, v5, v3}, Landroid/view/View;->layout(IIII)V
 
-    .line 118
     invoke-virtual {p4}, Landroid/view/View;->requestLayout()V
 
-    .line 119
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a023e
+    const v1, 0x7f0a024f
 
     invoke-virtual {p4, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -1561,49 +1623,40 @@
 
     check-cast p4, Landroid/widget/TextView;
 
-    .line 120
     invoke-virtual {p4}, Landroid/widget/TextView;->getWidth()I
 
     move-result p4
 
-    .line 121
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     invoke-static {v1, p4}, Ljava/lang/Math;->max(II)I
 
     move-result p4
 
-    .line 122
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const v2, 0x7f0a023f
+    const v2, 0x7f0a0250
 
-    .line 123
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    .line 124
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 125
     iput p4, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     const/4 v3, -0x2
 
-    .line 126
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 127
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 128
     iget v3, v2, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     iget v5, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
@@ -1618,27 +1671,22 @@
 
     invoke-virtual {v1, v3, v5, v6, v2}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 129
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->requestLayout()V
 
-    .line 130
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     invoke-virtual {p1, v1, v0}, Landroid/widget/TextView;->measure(II)V
 
-    .line 131
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 132
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 133
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1649,10 +1697,8 @@
 
     move-result v1
 
-    .line 134
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 135
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1663,10 +1709,8 @@
 
     move-result v2
 
-    .line 136
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 137
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -1677,10 +1721,8 @@
 
     move-result v3
 
-    .line 138
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 139
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -1691,7 +1733,6 @@
 
     move-result v5
 
-    .line 140
     iget-object v6, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -1716,13 +1757,10 @@
 
     add-int/2addr v1, v6
 
-    .line 141
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 142
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 143
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
@@ -1735,7 +1773,6 @@
 
     iput p4, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 144
     iget-object p4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p4}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1744,17 +1781,14 @@
 
     check-cast p4, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 145
     iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     iput v1, p4, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 146
     iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     iput v2, p4, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 147
     iget v2, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v2, v1
@@ -1765,7 +1799,6 @@
 
     if-le v2, v1, :cond_b
 
-    .line 148
     invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
     move-result p3
@@ -1776,13 +1809,11 @@
 
     iput p3, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 149
     :cond_b
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 150
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     iget v1, p4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
@@ -1799,15 +1830,12 @@
 
     invoke-virtual {p3, v1, v2, v3, p4}, Landroid/widget/FrameLayout;->layout(IIII)V
 
-    .line 151
     iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 152
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 153
     iget p3, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     iget p4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -1822,13 +1850,11 @@
 
     invoke-virtual {p2, p3, p4, v1, v0}, Landroid/widget/LinearLayout;->layout(IIII)V
 
-    .line 154
     invoke-virtual {p2}, Landroid/widget/LinearLayout;->requestLayout()V
 
     :goto_7
     if-eqz p1, :cond_c
 
-    .line 155
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/FragmentMainContent;->reSizeTextView(Landroid/widget/TextView;)V
 
     :cond_c
@@ -1851,7 +1877,6 @@
 
     move-object/from16 v1, p3
 
-    .line 1
     invoke-direct/range {p0 .. p2}, Lcom/android/camera/fragment/FragmentMainContent;->needMoveUpWatermark(Lcom/android/camera/aiwatermark/data/WatermarkItem;I)Z
 
     move-result v2
@@ -1864,7 +1889,6 @@
 
     if-eqz v2, :cond_11
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v2
@@ -1881,14 +1905,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 3
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->isWatermarkPanelShow()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 4
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -1897,13 +1919,12 @@
 
     move-result-object v7
 
-    const v8, 0x7f070836
+    const v8, 0x7f070822
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v7
 
-    .line 5
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v8
@@ -1925,7 +1946,6 @@
     :cond_0
     move v7, v6
 
-    .line 6
     :goto_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -1941,14 +1961,12 @@
 
     if-eqz v8, :cond_7
 
-    .line 7
     invoke-interface {v8}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->isBeautyPanelShow()Z
 
     move-result v9
 
     if-eqz v9, :cond_7
 
-    .line 8
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v9
@@ -1963,7 +1981,6 @@
 
     const/4 v10, -0x1
 
-    .line 9
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
     move-result v11
@@ -1986,14 +2003,14 @@
 
     if-eq v11, v12, :cond_2
 
-    const/16 v6, 0x61f
+    const/16 v6, 0x625
 
     if-eq v11, v6, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const-string v6, "10"
+    const-string v6, "16"
 
     invoke-virtual {v9, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2057,7 +2074,6 @@
 
     if-eq v6, v13, :cond_6
 
-    .line 10
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v6
@@ -2070,7 +2086,6 @@
 
     move-result v6
 
-    .line 11
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -2089,7 +2104,6 @@
 
     goto :goto_3
 
-    .line 12
     :cond_6
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -2103,10 +2117,9 @@
 
     move-result v6
 
-    .line 13
     :cond_7
     :goto_3
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v9
 
@@ -2114,14 +2127,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 14
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->isWatermarkPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 15
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v0, v7
@@ -2133,14 +2144,12 @@
     :cond_8
     if-eqz v8, :cond_15
 
-    .line 16
     invoke-interface {v8}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->isBeautyPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_15
 
-    .line 17
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v0, v6
@@ -2156,8 +2165,7 @@
 
     if-eq v0, v3, :cond_c
 
-    .line 18
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result v0
 
@@ -2165,14 +2173,12 @@
 
     if-eqz v2, :cond_a
 
-    .line 19
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->isWatermarkPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 20
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v0, v7
@@ -2184,14 +2190,12 @@
     :cond_a
     if-eqz v8, :cond_15
 
-    .line 21
     invoke-interface {v8}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->isBeautyPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_15
 
-    .line 22
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v0, v6
@@ -2200,11 +2204,10 @@
 
     goto/16 :goto_4
 
-    .line 23
     :cond_b
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v2
 
@@ -2218,7 +2221,6 @@
 
     goto/16 :goto_4
 
-    .line 24
     :cond_c
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
 
@@ -2230,7 +2232,7 @@
 
     sub-int/2addr v0, v2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v2
 
@@ -2246,9 +2248,8 @@
 
     goto/16 :goto_4
 
-    .line 25
     :cond_d
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result v0
 
@@ -2256,14 +2257,12 @@
 
     if-eqz v2, :cond_e
 
-    .line 26
     invoke-interface {v2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->isWatermarkPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_e
 
-    .line 27
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v0, v7
@@ -2275,14 +2274,12 @@
     :cond_e
     if-eqz v8, :cond_15
 
-    .line 28
     invoke-interface {v8}, Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;->isBeautyPanelShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_15
 
-    .line 29
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v0, v6
@@ -2291,11 +2288,10 @@
 
     goto/16 :goto_4
 
-    .line 30
     :cond_f
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v2
 
@@ -2309,11 +2305,10 @@
 
     goto :goto_4
 
-    .line 31
     :cond_10
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v2
 
@@ -2329,7 +2324,6 @@
 
     goto :goto_4
 
-    .line 32
     :cond_11
     invoke-direct/range {p0 .. p2}, Lcom/android/camera/fragment/FragmentMainContent;->needMoveDownWatermark(Lcom/android/camera/aiwatermark/data/WatermarkItem;I)Z
 
@@ -2345,7 +2339,6 @@
 
     if-eq v0, v3, :cond_12
 
-    .line 33
     iget v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -2366,7 +2359,6 @@
 
     goto :goto_4
 
-    .line 34
     :cond_12
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -2384,7 +2376,6 @@
 
     goto :goto_4
 
-    .line 35
     :cond_13
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
 
@@ -2414,7 +2405,6 @@
 
     goto :goto_4
 
-    .line 36
     :cond_14
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
 
@@ -2447,20 +2437,154 @@
     return-object v1
 .end method
 
+.method private consumeResult(IZ)V
+    .locals 5
+
+    if-eqz p2, :cond_0
+
+    const/16 v0, 0x2bc
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x3e8
+
+    :goto_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    sub-long/2addr v1, v3
+
+    int-to-long v3, v0
+
+    cmp-long v0, v1, v3
+
+    if-gez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "faceResult:"
+
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_2
+
+    const/16 p2, 0xa1
+
+    invoke-direct {p0, p2, p1}, Lcom/android/camera/fragment/FragmentMainContent;->mimojiFaceDetectSync(II)V
+
+    return-void
+
+    :cond_2
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p2
+
+    const/16 v0, 0xac
+
+    invoke-virtual {p2, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastFaceResult:I
+
+    if-ne v0, p1, :cond_3
+
+    if-eqz p2, :cond_3
+
+    invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->isContainAlertLightingTip(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    return-void
+
+    :cond_3
+    iput p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastFaceResult:I
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_4
+
+    new-instance v1, Lcom/android/camera/fragment/FragmentMainContent$3;
+
+    invoke-direct {v1, p0, p2}, Lcom/android/camera/fragment/FragmentMainContent$3;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/protocol/ModeProtocol$TopAlert;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_4
+    const/4 p2, 0x6
+
+    if-ne p1, p2, :cond_5
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    const/4 p1, 0x0
+
+    :goto_1
+    iget-boolean p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    if-ne p2, p1, :cond_6
+
+    return-void
+
+    :cond_6
+    iput-boolean p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    if-eqz v0, :cond_7
+
+    new-instance p1, Lcom/android/camera/fragment/FragmentMainContent$4;
+
+    invoke-direct {p1, p0, v0}, Lcom/android/camera/fragment/FragmentMainContent$4;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/ui/LightingView;)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_7
+    return-void
+.end method
+
 .method private doAccessible(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo00O;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoOO;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo00O;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoOO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Landroid/view/View;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2471,7 +2595,6 @@
 .method private findTextView(Landroid/view/View;Lcom/android/camera/aiwatermark/data/WatermarkItem;)Landroid/widget/TextView;
     .locals 3
 
-    .line 1
     invoke-virtual {p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object p2
@@ -2543,9 +2666,8 @@
     goto :goto_2
 
     :cond_1
-    const p2, 0x7f0a0241
+    const p2, 0x7f0a0252
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2555,9 +2677,8 @@
     goto :goto_2
 
     :cond_2
-    const p2, 0x7f0a023d
+    const p2, 0x7f0a024e
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2567,9 +2688,8 @@
     goto :goto_2
 
     :cond_3
-    const p2, 0x7f0a023a
+    const p2, 0x7f0a024b
 
-    .line 4
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2592,21 +2712,18 @@
 .method private getAIWatermarkScaleSize()F
     .locals 4
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayWidth()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 2
-    invoke-static {v1}, Lcom/android/camera/display/Display;->getDisplayRect(I)Landroid/graphics/Rect;
+    invoke-static {v1}, Lcom/android/camera/Display;->getDisplayRect(I)Landroid/graphics/Rect;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
@@ -2624,7 +2741,6 @@
     :cond_0
     const/4 v1, 0x4
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2653,8 +2769,7 @@
 
     div-float/2addr v0, v1
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->getPixelDensity()F
+    invoke-static {}, Lcom/android/camera/Display;->getPixelDensity()F
 
     move-result v1
 
@@ -2663,52 +2778,9 @@
     return v0
 .end method
 
-.method private getBaseModule()Ljava/util/Optional;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Optional<",
-            "Lcom/android/camera/module/BaseModule;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ActivityBase;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 3
-    :cond_0
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->getCurrentModule()Lcom/android/camera/module/Module;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/module/BaseModule;
-
-    invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private getLayoutByKey(Landroid/widget/FrameLayout;Ljava/lang/String;)Landroid/widget/LinearLayout;
     .locals 1
 
-    .line 1
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -2828,9 +2900,8 @@
     :goto_1
     packed-switch p2, :pswitch_data_0
 
-    const p2, 0x7f0a03e6
+    const p2, 0x7f0a03fc
 
-    .line 2
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2840,9 +2911,8 @@
     goto :goto_2
 
     :pswitch_0
-    const p2, 0x7f0a0245
+    const p2, 0x7f0a0256
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2852,9 +2922,8 @@
     goto :goto_2
 
     :pswitch_1
-    const p2, 0x7f0a0240
+    const p2, 0x7f0a0251
 
-    .line 4
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2864,9 +2933,8 @@
     goto :goto_2
 
     :pswitch_2
-    const p2, 0x7f0a023b
+    const p2, 0x7f0a024c
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2876,9 +2944,8 @@
     goto :goto_2
 
     :pswitch_3
-    const p2, 0x7f0a0238
+    const p2, 0x7f0a0249
 
-    .line 6
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2888,9 +2955,8 @@
     goto :goto_2
 
     :pswitch_4
-    const p2, 0x7f0a0158
+    const p2, 0x7f0a015f
 
-    .line 7
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2900,9 +2966,8 @@
     goto :goto_2
 
     :pswitch_5
-    const p2, 0x7f0a0157
+    const p2, 0x7f0a015e
 
-    .line 8
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2912,9 +2977,8 @@
     goto :goto_2
 
     :pswitch_6
-    const p2, 0x7f0a0156
+    const p2, 0x7f0a015d
 
-    .line 9
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -2967,7 +3031,6 @@
 
     move v5, p5
 
-    .line 1
     invoke-direct/range {v0 .. v5}, Lcom/android/camera/fragment/FragmentMainContent;->getLayoutParamsForExtent(Landroid/widget/FrameLayout$LayoutParams;Landroid/graphics/Rect;Landroid/util/Size;II)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p1
@@ -2995,27 +3058,21 @@
 
     goto/16 :goto_0
 
-    .line 2
     :cond_1
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 3
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 4
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
-    .line 5
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_2
 
-    .line 6
     iget v0, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 7
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -3027,10 +3084,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 8
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 9
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_3
@@ -3038,10 +3093,8 @@
 
     if-eqz v1, :cond_4
 
-    .line 10
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 11
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     :cond_4
@@ -3049,10 +3102,8 @@
 
     if-eqz v1, :cond_5
 
-    .line 12
     iget p5, p3, Landroid/graphics/Rect;->right:I
 
-    .line 13
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result v1
@@ -3064,7 +3115,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 14
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
     iget v1, p3, Landroid/graphics/Rect;->right:I
@@ -3081,7 +3131,6 @@
 
     add-int/2addr p5, v1
 
-    .line 15
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_6
@@ -3089,7 +3138,6 @@
 
     if-eqz p2, :cond_7
 
-    .line 16
     iget p2, p3, Landroid/graphics/Rect;->top:I
 
     iget p3, p3, Landroid/graphics/Rect;->bottom:I
@@ -3106,24 +3154,19 @@
 
     add-int v0, p2, p3
 
-    .line 17
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 18
     :cond_7
     iput p5, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 19
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 20
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 21
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result p2
@@ -3132,27 +3175,21 @@
 
     goto/16 :goto_0
 
-    .line 22
     :cond_8
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 23
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 24
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 25
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_9
 
-    .line 26
     iget p5, p3, Landroid/graphics/Rect;->right:I
 
-    .line 27
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -3164,10 +3201,8 @@
 
     if-eqz v1, :cond_a
 
-    .line 28
     iget v0, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 29
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result v1
@@ -3179,10 +3214,8 @@
 
     if-eqz v1, :cond_b
 
-    .line 30
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 31
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     :cond_b
@@ -3190,10 +3223,8 @@
 
     if-eqz v1, :cond_c
 
-    .line 32
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 33
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_c
@@ -3201,7 +3232,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 34
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
     iget v1, p3, Landroid/graphics/Rect;->bottom:I
@@ -3218,7 +3248,6 @@
 
     add-int/2addr v0, v1
 
-    .line 35
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_d
@@ -3226,7 +3255,6 @@
 
     if-eqz p2, :cond_e
 
-    .line 36
     iget p2, p3, Landroid/graphics/Rect;->left:I
 
     iget p3, p3, Landroid/graphics/Rect;->right:I
@@ -3243,24 +3271,19 @@
 
     add-int p5, p2, p3
 
-    .line 37
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 38
     :cond_e
     iput p5, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 39
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 40
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 41
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result p2
@@ -3269,27 +3292,21 @@
 
     goto/16 :goto_0
 
-    .line 42
     :cond_f
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 43
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 44
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
-    .line 45
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_10
 
-    .line 46
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 47
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     :cond_10
@@ -3297,10 +3314,8 @@
 
     if-eqz v1, :cond_11
 
-    .line 48
     iget p5, p3, Landroid/graphics/Rect;->right:I
 
-    .line 49
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result v1
@@ -3312,10 +3327,8 @@
 
     if-eqz v1, :cond_12
 
-    .line 50
     iget v0, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 51
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -3327,10 +3340,8 @@
 
     if-eqz v1, :cond_13
 
-    .line 52
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 53
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_13
@@ -3338,7 +3349,6 @@
 
     if-eqz v1, :cond_14
 
-    .line 54
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
     iget v1, p3, Landroid/graphics/Rect;->right:I
@@ -3355,7 +3365,6 @@
 
     add-int/2addr p5, v1
 
-    .line 55
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_14
@@ -3363,7 +3372,6 @@
 
     if-eqz p2, :cond_15
 
-    .line 56
     iget p2, p3, Landroid/graphics/Rect;->top:I
 
     iget p3, p3, Landroid/graphics/Rect;->bottom:I
@@ -3380,24 +3388,19 @@
 
     add-int v0, p2, p3
 
-    .line 57
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 58
     :cond_15
     iput p5, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 59
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 60
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 61
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result p2
@@ -3406,27 +3409,21 @@
 
     goto :goto_0
 
-    .line 62
     :cond_16
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 63
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 64
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 65
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_17
 
-    .line 66
     iget p5, p3, Landroid/graphics/Rect;->left:I
 
-    .line 67
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     :cond_17
@@ -3434,10 +3431,8 @@
 
     if-eqz v1, :cond_18
 
-    .line 68
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
-    .line 69
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_18
@@ -3445,10 +3440,8 @@
 
     if-eqz v1, :cond_19
 
-    .line 70
     iget p5, p3, Landroid/graphics/Rect;->right:I
 
-    .line 71
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -3460,10 +3453,8 @@
 
     if-eqz v1, :cond_1a
 
-    .line 72
     iget v0, p3, Landroid/graphics/Rect;->bottom:I
 
-    .line 73
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result v1
@@ -3475,7 +3466,6 @@
 
     if-eqz v1, :cond_1b
 
-    .line 74
     iget v0, p3, Landroid/graphics/Rect;->top:I
 
     iget v1, p3, Landroid/graphics/Rect;->bottom:I
@@ -3492,7 +3482,6 @@
 
     add-int/2addr v0, v1
 
-    .line 75
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     :cond_1b
@@ -3500,7 +3489,6 @@
 
     if-eqz p2, :cond_1c
 
-    .line 76
     iget p2, p3, Landroid/graphics/Rect;->left:I
 
     iget p3, p3, Landroid/graphics/Rect;->right:I
@@ -3517,24 +3505,19 @@
 
     add-int p5, p2, p3
 
-    .line 77
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
-    .line 78
     :cond_1c
     iput p5, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 79
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 80
     invoke-virtual {p4}, Landroid/util/Size;->getWidth()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 81
     invoke-virtual {p4}, Landroid/util/Size;->getHeight()I
 
     move-result p2
@@ -3548,13 +3531,10 @@
 .method private getLayoutParamsForExtent(Landroid/widget/FrameLayout$LayoutParams;Landroid/graphics/Rect;Landroid/util/Size;II)Landroid/widget/FrameLayout$LayoutParams;
     .locals 4
 
-    .line 1
     iget v0, p2, Landroid/graphics/Rect;->left:I
 
-    .line 2
     iget v1, p2, Landroid/graphics/Rect;->top:I
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -3571,7 +3551,6 @@
 
     if-eqz p5, :cond_0
 
-    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3595,7 +3574,6 @@
     :cond_0
     if-ne p4, v3, :cond_1
 
-    .line 5
     iget p4, p2, Landroid/graphics/Rect;->top:I
 
     iget p5, p2, Landroid/graphics/Rect;->bottom:I
@@ -3614,7 +3592,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget p4, p2, Landroid/graphics/Rect;->bottom:I
 
@@ -3629,7 +3606,6 @@
     :goto_0
     move v1, p4
 
-    .line 7
     iget p4, p2, Landroid/graphics/Rect;->left:I
 
     iget p2, p2, Landroid/graphics/Rect;->right:I
@@ -3646,21 +3622,18 @@
 
     add-int v0, p4, p2
 
-    .line 8
     invoke-virtual {p3}, Landroid/util/Size;->getWidth()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 9
     invoke-virtual {p3}, Landroid/util/Size;->getHeight()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 10
     :goto_1
     invoke-virtual {p1}, Landroid/widget/FrameLayout$LayoutParams;->getLayoutDirection()I
 
@@ -3670,16 +3643,13 @@
 
     if-ne p2, p3, :cond_2
 
-    .line 11
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
     goto :goto_2
 
-    .line 12
     :cond_2
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 13
     :goto_2
     iput v1, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
@@ -3689,7 +3659,6 @@
 .method private getLocationText(Ljava/lang/String;Landroid/view/View;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -3757,9 +3726,8 @@
     goto :goto_2
 
     :cond_1
-    const p1, 0x7f0a0241
+    const p1, 0x7f0a0252
 
-    .line 2
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -3769,9 +3737,8 @@
     goto :goto_2
 
     :cond_2
-    const p1, 0x7f0a023d
+    const p1, 0x7f0a024e
 
-    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -3781,9 +3748,8 @@
     goto :goto_2
 
     :cond_3
-    const p1, 0x7f0a023a
+    const p1, 0x7f0a024b
 
-    .line 4
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -3793,7 +3759,6 @@
     :goto_2
     if-eqz p1, :cond_4
 
-    .line 5
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -3818,21 +3783,63 @@
     .end sparse-switch
 .end method
 
+.method private getMergeRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
+    .locals 4
+
+    iget v0, p1, Landroid/graphics/RectF;->left:F
+
+    iget v1, p2, Landroid/graphics/RectF;->left:F
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    iget v1, p1, Landroid/graphics/RectF;->right:F
+
+    iget v2, p2, Landroid/graphics/RectF;->right:F
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
+
+    move-result v1
+
+    iget v2, p1, Landroid/graphics/RectF;->top:F
+
+    iget v3, p2, Landroid/graphics/RectF;->top:F
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    iget p1, p1, Landroid/graphics/RectF;->bottom:F
+
+    iget p2, p2, Landroid/graphics/RectF;->bottom:F
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mergeRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {p2, v0, v2, v1, p1}, Landroid/graphics/RectF;->set(FFFF)V
+
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mergeRectF:Landroid/graphics/RectF;
+
+    return-object p1
+.end method
+
 .method private initAIWatermarkLayout()V
     .locals 4
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00ooOo0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
     if-eqz v0, :cond_1
@@ -3841,40 +3848,34 @@
 
     if-nez v0, :cond_1
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v0
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result v1
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f070724
+    const v3, 0x7f070720
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    .line 7
     invoke-direct {p0, v0, v1, v2}, Lcom/android/camera/fragment/FragmentMainContent;->initAIWatermarkViews(ZZF)V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
@@ -3884,7 +3885,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 9
     :goto_0
     iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
@@ -3901,7 +3901,6 @@
 .method private initAIWatermarkViews(ZZF)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3947,7 +3946,6 @@
 
     if-gez p1, :cond_5
 
-    .line 2
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
@@ -3961,7 +3959,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result p1
@@ -3983,16 +3980,13 @@
     :cond_3
     const/4 p2, 0x4
 
-    .line 4
     :goto_1
     invoke-virtual {p0, p2}, Lcom/android/camera/fragment/FragmentMainContent;->setWatermarkVisible(I)V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     if-eqz p1, :cond_5
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -4011,7 +4005,6 @@
 
     goto :goto_2
 
-    .line 7
     :cond_4
     new-instance p1, Lcom/android/camera/aiwatermark/DragListener;
 
@@ -4026,7 +4019,6 @@
     :goto_2
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mListener:Lcom/android/camera/aiwatermark/DragListener;
 
-    .line 8
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
@@ -4038,18 +4030,16 @@
 .method private initSuperMoonWatermarkLayout()V
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0oO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0OOO()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
     if-eqz v0, :cond_0
@@ -4058,14 +4048,12 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera/fragment/FragmentMainContent;->initWatermarkLayout(Landroid/view/ViewStub;)Landroid/widget/FrameLayout;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendViewStub:Landroid/view/ViewStub;
 
@@ -4075,14 +4063,12 @@
 
     if-nez v1, :cond_1
 
-    .line 5
     invoke-direct {p0, v0}, Lcom/android/camera/fragment/FragmentMainContent;->initWatermarkLayout(Landroid/view/ViewStub;)Landroid/widget/FrameLayout;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendLayout:Landroid/widget/FrameLayout;
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundViewStub:Landroid/view/ViewStub;
 
@@ -4092,7 +4078,6 @@
 
     if-nez v1, :cond_2
 
-    .line 7
     invoke-direct {p0, v0}, Lcom/android/camera/fragment/FragmentMainContent;->initWatermarkLayout(Landroid/view/ViewStub;)Landroid/widget/FrameLayout;
 
     move-result-object v0
@@ -4110,12 +4095,10 @@
 
     const-string v1, "initWatermarkLayout"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object p1
@@ -4138,14 +4121,12 @@
 
     new-array v0, v0, [I
 
-    .line 1
     iget v1, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     const/4 v2, 0x0
 
     aput v1, v0, v2
 
-    .line 2
     iget v1, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     const/4 v2, 0x1
@@ -4176,7 +4157,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget p4, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
@@ -4188,7 +4168,6 @@
 
     aput p4, v0, v3
 
-    .line 4
     iget p1, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
@@ -4201,7 +4180,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     iget p4, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
@@ -4213,7 +4191,6 @@
 
     aput p4, v0, v3
 
-    .line 6
     iget p1, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
@@ -4224,23 +4201,78 @@
 
     aput p1, v0, v2
 
-    .line 7
     :goto_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mListener:Lcom/android/camera/aiwatermark/DragListener;
 
     if-eqz p1, :cond_2
 
-    .line 8
     invoke-virtual {p1, p3, v0}, Lcom/android/camera/aiwatermark/DragListener;->reInit(Landroid/graphics/Rect;[I)V
 
     :cond_2
     return-object v0
 .end method
 
+.method private isMimojiFaceDetectTip()Z
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsMimojiFaceDetectTip:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsMimojiFaceDetectTip:Z
+
+    return v0
+.end method
+
+.method private isRectIntersect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+    .locals 2
+
+    iget v0, p2, Landroid/graphics/RectF;->right:F
+
+    iget v1, p1, Landroid/graphics/RectF;->left:F
+
+    cmpg-float v0, v0, v1
+
+    if-ltz v0, :cond_0
+
+    iget v0, p2, Landroid/graphics/RectF;->left:F
+
+    iget v1, p1, Landroid/graphics/RectF;->right:F
+
+    cmpl-float v0, v0, v1
+
+    if-gtz v0, :cond_0
+
+    iget v0, p2, Landroid/graphics/RectF;->bottom:F
+
+    iget v1, p1, Landroid/graphics/RectF;->top:F
+
+    cmpg-float v0, v0, v1
+
+    if-ltz v0, :cond_0
+
+    iget p2, p2, Landroid/graphics/RectF;->top:F
+
+    iget p1, p1, Landroid/graphics/RectF;->bottom:F
+
+    cmpl-float p1, p2, p1
+
+    if-gtz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
 .method private isReferenceLineEnabled()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -4256,12 +4288,247 @@
     return v0
 .end method
 
+.method private declared-synchronized mimojiFaceDetectSync(II)V
+    .locals 3
+
+    monitor-enter p0
+
+    const/16 v0, 0xa0
+
+    const/4 v1, -0x1
+
+    if-ne v0, p1, :cond_0
+
+    :try_start_0
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCurrentMimojiFaceResult:I
+
+    invoke-static {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->getTipsResId(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCurrentMimojiFaceResult:I
+
+    if-eqz v0, :cond_0
+
+    const-string p1, "FragmentMainContent"
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mimojiFaceDetectSync 0, mCurrentMimojiFaceResult = "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCurrentMimojiFaceResult:I
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mimoji tips resId = "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_1
+
+    :cond_0
+    const/16 v0, 0xa1
+
+    if-ne v0, p1, :cond_1
+
+    :try_start_1
+    invoke-static {p2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->getTipsResIdFace(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x6
+
+    if-eq p2, v0, :cond_1
+
+    const-string p1, "FragmentMainContent"
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mimojiFaceDetectSync 1, faceResult = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, ", miface tips resId = "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_1
+    :try_start_2
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiFaceDetect:I
+
+    if-ne p2, v0, :cond_2
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiDetectTipType:I
+
+    if-ne p1, v0, :cond_2
+
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->setMimojiFaceDetectTip()V
+
+    const-string v0, "FragmentMainContent"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "mimojiFaceDetectSync 2, faceResult = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string/jumbo p2, "type:"
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/android/camera/log/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_2
+    :try_start_3
+    iput p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiDetectTipType:I
+
+    iput p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiFaceDetect:I
+
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->setMimojiFaceDetectTip()V
+
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    const/16 v2, 0xb8
+
+    if-ne v0, v2, :cond_4
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    if-nez v0, :cond_3
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    if-ne v0, v1, :cond_3
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    :cond_4
+    :goto_0
+    const-string v0, "mimojiFaceDetectSync"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "face_detect_type:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ",result:"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ",is_face_location_ok:"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    monitor-exit p0
+
+    throw p1
+.end method
+
 .method private needMoveDownWatermark(Lcom/android/camera/aiwatermark/data/WatermarkItem;I)Z
     .locals 1
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocation()I
 
     move-result v0
@@ -4270,21 +4537,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->hasMove()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->isFoldDisplayType()Z
+    invoke-static {}, Lcom/android/camera/Display;->isFoldDisplayType()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result p1
 
@@ -4296,9 +4561,8 @@
 
     if-eq p2, p1, :cond_1
 
-    .line 4
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->getDisplayFoldState()Z
+    invoke-static {}, Lcom/android/camera/Display;->getDisplayFoldState()Z
 
     move-result p1
 
@@ -4324,7 +4588,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocation()I
 
     move-result p2
@@ -4333,15 +4596,13 @@
 
     if-eqz p2, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->hasMove()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result p2
 
@@ -4354,9 +4615,8 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 4
     :goto_0
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result v1
 
@@ -4364,7 +4624,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocation()I
 
     move-result v1
@@ -4373,7 +4632,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->hasMove()Z
 
     move-result p1
@@ -4392,7 +4650,6 @@
 .method private needReferenceLineMode()Z
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -4407,7 +4664,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
@@ -4441,14 +4697,23 @@
 .method private reSizeTextView(Landroid/widget/TextView;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo00o;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo000;
 
-    invoke-direct {v1, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo00o;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v1, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo000;-><init>(Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method private setMimojiFaceDetectTip()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsMimojiFaceDetectTip:Z
 
     return-void
 .end method
@@ -4458,7 +4723,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
@@ -4468,7 +4732,6 @@
 
     const-string/jumbo p2, "warning text is null please check"
 
-    .line 2
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -4480,7 +4743,6 @@
 
     if-eqz p2, :cond_5
 
-    .line 1
     array-length v0, p2
 
     if-nez v0, :cond_0
@@ -4490,7 +4752,6 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 2
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -4613,34 +4874,30 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const v0, 0x7f0a02b1
+    const v0, 0x7f0a02c1
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a00fd
+    const v1, 0x7f0a0104
 
-    .line 4
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a01be
+    const v2, 0x7f0a01c6
 
-    .line 5
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 6
     aget-object p3, p2, p3
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -4651,12 +4908,10 @@
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 7
     aget-object p3, p2, v4
 
     invoke-virtual {v1, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 8
     aget-object p2, p2, v3
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -4664,18 +4919,16 @@
     goto/16 :goto_1
 
     :pswitch_0
-    const v0, 0x7f0a0243
+    const v0, 0x7f0a0254
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a01f2
+    const v1, 0x7f0a01ff
 
-    .line 10
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -4684,29 +4937,24 @@
 
     const v5, 0x7f0a0057
 
-    .line 11
     invoke-virtual {p1, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 12
     aget-object p3, p2, p3
 
     invoke-direct {p0, v0, p3}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 13
     aget-object p3, p2, v4
 
     invoke-direct {p0, v1, p3}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 14
     array-length p3, p2
 
     if-lt p3, v2, :cond_4
 
-    .line 15
     aget-object p2, p2, v3
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
@@ -4714,30 +4962,26 @@
     goto/16 :goto_1
 
     :pswitch_1
-    const v0, 0x7f0a0241
+    const v0, 0x7f0a0252
 
-    .line 16
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0242
+    const v1, 0x7f0a0253
 
-    .line 17
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 18
     aget-object p3, p2, p3
 
     invoke-direct {p0, v0, p3}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 19
     aget-object p2, p2, v4
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
@@ -4745,44 +4989,38 @@
     goto/16 :goto_1
 
     :pswitch_2
-    const v0, 0x7f0a023c
+    const v0, 0x7f0a024d
 
-    .line 20
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a023e
+    const v1, 0x7f0a024f
 
-    .line 21
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a023d
+    const v2, 0x7f0a024e
 
-    .line 22
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 23
     aget-object p3, p2, p3
 
     invoke-direct {p0, v0, p3}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 24
     aget-object p3, p2, v4
 
     invoke-direct {p0, v1, p3}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 25
     aget-object p2, p2, v3
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
@@ -4790,36 +5028,31 @@
     goto/16 :goto_1
 
     :pswitch_3
-    const v0, 0x7f0a023a
+    const v0, 0x7f0a024b
 
-    .line 26
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 27
     aget-object p2, p2, p3
 
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->setText(Landroid/widget/TextView;Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {p1}, Landroid/widget/TextView;->invalidate()V
 
     goto/16 :goto_1
 
     :pswitch_4
-    const v0, 0x7f0a015b
+    const v0, 0x7f0a0162
 
-    .line 29
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 30
     aget-object p2, p2, p3
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -4827,25 +5060,22 @@
     goto :goto_1
 
     :pswitch_5
-    const v0, 0x7f0a0153
+    const v0, 0x7f0a015a
 
-    .line 31
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a015a
+    const v1, 0x7f0a0161
 
-    .line 32
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 33
     invoke-static {}, Lcom/android/camera/Util;->isGlobalVersion()Z
 
     move-result v1
@@ -4854,12 +5084,10 @@
 
     const-string/jumbo v1, "sans-serif-light"
 
-    .line 34
     invoke-static {v1, v4}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v1
 
-    .line 35
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -4874,19 +5102,15 @@
 
     mul-float/2addr v2, v3
 
-    .line 36
     invoke-virtual {v0, p3, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 37
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 38
     :cond_2
     aget-object p3, p2, p3
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 39
     aget-object p2, p2, v4
 
     sget-object p3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -4900,32 +5124,28 @@
     goto :goto_1
 
     :pswitch_6
-    const v0, 0x7f0a0154
+    const v0, 0x7f0a015b
 
-    .line 40
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0155
+    const v1, 0x7f0a015c
 
-    .line 41
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 42
     invoke-static {}, Lcom/android/camera/Util;->isGlobalVersion()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 43
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -4940,16 +5160,13 @@
 
     mul-float/2addr v1, v2
 
-    .line 44
     invoke-virtual {v0, p3, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 45
     :cond_3
     aget-object p3, p2, p3
 
     invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 46
     aget-object p2, p2, v4
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -4964,7 +5181,6 @@
 
     const-string p2, "There is no data to display"
 
-    .line 47
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -5010,19 +5226,16 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-interface {p1}, Lcom/android/camera/ui/FocusIndicator;->showFail()V
 
     goto :goto_0
 
-    .line 4
     :cond_1
     invoke-interface {p1}, Lcom/android/camera/ui/FocusIndicator;->showSuccess()V
 
     goto :goto_0
 
-    .line 5
     :cond_2
     invoke-interface {p1}, Lcom/android/camera/ui/FocusIndicator;->showStart()V
 
@@ -5033,7 +5246,6 @@
 .method private showWatermarkItem(Landroid/widget/FrameLayout;Z)V
     .locals 7
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -5061,7 +5273,6 @@
     :cond_0
     move v3, v2
 
-    .line 2
     :goto_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5095,9 +5306,8 @@
 
     if-eqz p1, :cond_2
 
-    const v4, 0x7f0a04e0
+    const v4, 0x7f0a04f3
 
-    .line 3
     invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
@@ -5109,64 +5319,56 @@
     :cond_1
     invoke-virtual {v4, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f0a0156
+    const v2, 0x7f0a015d
 
-    .line 4
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f0a0157
+    const v2, 0x7f0a015e
 
-    .line 5
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f0a0158
+    const v2, 0x7f0a015f
 
-    .line 6
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v2, 0x7f0a03e6
+    const v2, 0x7f0a03fc
 
-    .line 7
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    const v3, 0x7f0a0238
+    const v3, 0x7f0a0249
 
-    .line 8
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v4, 0x7f0a023b
+    const v4, 0x7f0a024c
 
-    .line 9
     invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    const v5, 0x7f0a0240
+    const v5, 0x7f0a0251
 
-    .line 10
     invoke-virtual {p1, v5}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
-    const v6, 0x7f0a0245
+    const v6, 0x7f0a0256
 
-    .line 11
     invoke-virtual {p1, v6}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -5193,7 +5395,6 @@
 
     aput-object p1, v6, v1
 
-    .line 12
     invoke-direct {p0, v0, p2, v6}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkItem(ZZ[Landroid/view/View;)V
 
     :cond_2
@@ -5203,7 +5404,6 @@
 .method private varargs showWatermarkItem(ZZ[Landroid/view/View;)V
     .locals 6
 
-    .line 13
     array-length v0, p3
 
     const/4 v1, 0x0
@@ -5234,7 +5434,6 @@
     :cond_1
     move v4, v5
 
-    .line 14
     :goto_2
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
@@ -5251,7 +5450,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v0
@@ -5260,7 +5458,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -5275,7 +5472,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 3
     invoke-virtual {p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -5286,7 +5482,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -5304,166 +5499,19 @@
 
     const/4 p2, 0x0
 
-    const v0, 0x7f120928
+    const v0, 0x7f1208d9
 
     const-wide/16 v1, 0xbb8
 
-    .line 5
     invoke-interface {p1, p2, v0, v1, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertAiDetectTipHint(IIJ)V
 
     :cond_1
     return-void
 .end method
 
-.method private updateCoverTheme(I)V
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    .line 2
-    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/camera/customization/FlashHalo;->getHaloEnable()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 3
-    invoke-static {v1}, Lcom/android/camera/Util;->setBrightnessRampRate(I)V
-
-    .line 4
-    invoke-static {}, Lcom/android/camera/CameraSettings;->getScreenLightBrightness()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    const/high16 v2, 0x437f0000    # 255.0f
-
-    div-float/2addr v1, v2
-
-    .line 5
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    .line 6
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    .line 7
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x2010
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v1, -0x40800000    # -1.0f
-
-    .line 8
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    .line 9
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    .line 10
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x100
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    .line 11
-    :goto_0
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/FlashHaloView;->updateThemeStyle(II)V
-
-    .line 12
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(II)V
-
-    .line 13
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(II)V
-
-    .line 14
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(II)V
-
-    .line 15
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->updateThemeStyle(II)V
-
-    return-void
-.end method
-
 .method private updateHaloCover()V
-    .locals 5
+    .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -5474,7 +5522,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -5499,26 +5556,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
     invoke-virtual {v2, v1, v1}, Lcom/android/camera/ui/FlashHaloView;->show(ZZ)V
 
-    const/4 v2, -0x1
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->UpdateCoverTheme()V
 
-    .line 4
-    invoke-direct {p0, v2}, Lcom/android/camera/fragment/FragmentMainContent;->updateCoverTheme(I)V
-
-    goto :goto_0
-
-    .line 5
     :cond_0
-    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateSystemUIVisibility()V
-
-    :goto_0
     if-nez v0, :cond_1
 
-    .line 6
     invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
 
     move-result-object v2
@@ -5529,7 +5575,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -5542,21 +5587,10 @@
 
     move-result-object v2
 
-    .line 8
-    invoke-static {}, Lcom/android/camera/CameraSettings;->getScreenLightBrightness()I
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    move-result v3
-
-    int-to-float v3, v3
-
-    const/high16 v4, 0x437f0000    # 255.0f
-
-    div-float/2addr v3, v4
-
-    .line 9
     iput v3, v2, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
 
-    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v3
@@ -5570,7 +5604,6 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 11
     invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
 
     move-result-object v0
@@ -5581,14 +5614,28 @@
 
     if-eqz v0, :cond_2
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    const-string v2, "halo"
+    invoke-virtual {v0}, Lcom/android/camera/ui/FlashHaloView;->getShow()Z
 
-    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
+    move-result v0
 
-    .line 13
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lcom/android/camera/ui/FlashHaloView;->setShow(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
+
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
@@ -5597,10 +5644,7 @@
 
     if-nez v0, :cond_2
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
-
-    const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/FlashHaloView;->show(ZZ)V
 
@@ -5611,7 +5655,6 @@
 .method private updateHaloViewSize()V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentMaskHeight()I
@@ -5638,7 +5681,6 @@
     :goto_0
     move v3, v0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentMaskHeight()I
@@ -5665,7 +5707,6 @@
     :goto_1
     move v5, v0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -5674,7 +5715,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
@@ -5721,7 +5761,6 @@
 
     goto :goto_2
 
-    .line 5
     :cond_2
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
@@ -5746,7 +5785,6 @@
 
     const-string/jumbo v1, "updateWatermarkItemRotation E"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_5
@@ -5760,10 +5798,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p6, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setHasMove(Z)V
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5794,12 +5830,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocation()I
 
     move-result v4
 
-    .line 5
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -5808,7 +5842,6 @@
 
     check-cast v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -5821,7 +5854,6 @@
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v2
@@ -5830,7 +5862,6 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 8
     new-instance v1, Landroid/util/Size;
 
     iget v2, p4, Landroid/graphics/Rect;->right:I
@@ -5849,7 +5880,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     new-instance v2, Landroid/util/Size;
 
@@ -5881,7 +5911,6 @@
 
     move-object v1, v2
 
-    .line 10
     :goto_0
     iget v7, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
@@ -5895,56 +5924,46 @@
 
     move-result-object v2
 
-    .line 11
     invoke-direct {p0, v2, v1, p4, p3}, Lcom/android/camera/fragment/FragmentMainContent;->initWatermarkLocation(Landroid/widget/FrameLayout$LayoutParams;Landroid/util/Size;Landroid/graphics/Rect;I)[I
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {p5}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isFixedLocation()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 13
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v3
 
     invoke-virtual {p5, v1, p4, v3}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->updateLocation([ILandroid/graphics/Rect;I)V
 
-    .line 14
     invoke-virtual {p6, v1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setCaptureCoordinate([I)V
 
     goto :goto_1
 
-    .line 15
     :cond_2
     invoke-direct {p0, p6, p3, v2}, Lcom/android/camera/fragment/FragmentMainContent;->calculateLP(Lcom/android/camera/aiwatermark/data/WatermarkItem;ILandroid/widget/FrameLayout$LayoutParams;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v2
 
-    .line 16
     :goto_1
     invoke-virtual {p2, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 17
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 18
     invoke-direct {p0, p2, p1}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkItem(Landroid/widget/FrameLayout;Z)V
 
-    const p4, 0x7f0a04e0
+    const p4, 0x7f0a04f3
 
-    .line 19
     invoke-virtual {p2, p4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p4
 
     check-cast p4, Landroid/widget/ImageView;
 
-    .line 20
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p5
@@ -5957,21 +5976,16 @@
 
     move-result-object p5
 
-    .line 21
     invoke-static {p5, p3}, Lcom/android/camera/Util;->rotate(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object p3
 
-    .line 22
     invoke-virtual {p4, p3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 23
     invoke-virtual {p4, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 24
     invoke-direct {p0, p6, p2}, Lcom/android/camera/fragment/FragmentMainContent;->updateTextBitmap(Lcom/android/camera/aiwatermark/data/WatermarkItem;Landroid/view/View;)V
 
-    .line 25
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getText()Ljava/lang/String;
 
     move-result-object p3
@@ -5980,7 +5994,6 @@
 
     goto :goto_2
 
-    .line 26
     :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -6010,23 +6023,19 @@
     goto :goto_3
 
     :cond_4
-    const p1, 0x7f120465
+    const p1, 0x7f120443
 
-    .line 27
     :goto_3
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 28
     invoke-virtual {p4, p1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 29
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/FragmentMainContent;->doAccessible(Landroid/view/View;)V
 
     const-string/jumbo p1, "updateWatermarkItemRotation X"
 
-    .line 30
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
@@ -6034,69 +6043,9 @@
     return-void
 .end method
 
-.method private updateSystemUIVisibility()V
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/customization/FlashHalo;->getHaloEnable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x2010
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x100
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    :goto_0
-    return-void
-.end method
-
 .method private updateTextBitmap(Lcom/android/camera/aiwatermark/data/WatermarkItem;Landroid/view/View;)V
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/LocationManager;->instance()Lcom/android/camera/LocationManager;
 
     move-result-object v0
@@ -6105,7 +6054,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v1
@@ -6235,7 +6183,6 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
-    .line 3
     invoke-virtual {p0, v5}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
 
     :goto_2
@@ -6243,7 +6190,6 @@
 
     goto :goto_3
 
-    .line 4
     :pswitch_0
     invoke-virtual {p0, v5}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
 
@@ -6252,15 +6198,12 @@
     :pswitch_1
     if-nez v0, :cond_1
 
-    .line 5
     invoke-virtual {p0, v4}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
 
-    .line 6
     invoke-virtual {p2, v3}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 7
     :cond_1
     invoke-virtual {p0, v5}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
 
@@ -6269,15 +6212,12 @@
     :pswitch_2
     if-nez v0, :cond_2
 
-    .line 8
     invoke-virtual {p0, v4}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
 
-    .line 9
     invoke-virtual {p2, v3}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 10
     :cond_2
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocationList()Ljava/util/ArrayList;
 
@@ -6289,27 +6229,24 @@
 
     if-eqz v0, :cond_3
 
-    .line 11
     invoke-virtual {p2, v3}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 12
     :cond_3
-    invoke-virtual {p0, v5}, Lcom/android/camera/fragment/FragmentMainContent;->updateTopAlert(Z)V
-
-    .line 13
     :goto_3
     :pswitch_3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOooO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOo0O;
 
-    invoke-direct {v1, p0, p1, v4, p2}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOooO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/aiwatermark/data/WatermarkItem;ZLandroid/view/View;)V
+    invoke-direct {v1, p0, p1, v4, p2}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOo0O;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/aiwatermark/data/WatermarkItem;ZLandroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -6343,7 +6280,6 @@
 
     const-string/jumbo v1, "updateTextWatermarkItemRotation E"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_4
@@ -6357,10 +6293,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     invoke-virtual {p6, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setHasMove(Z)V
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6391,17 +6325,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5
     invoke-direct {p0, p2, v1}, Lcom/android/camera/fragment/FragmentMainContent;->getLayoutByKey(Landroid/widget/FrameLayout;Ljava/lang/String;)Landroid/widget/LinearLayout;
 
     move-result-object v2
 
-    .line 6
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -6418,19 +6349,14 @@
 
     move-result-object v3
 
-    .line 7
     invoke-direct {p0, v2, v3, v1}, Lcom/android/camera/fragment/FragmentMainContent;->setWatermarkText(Landroid/view/ViewGroup;[Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     invoke-direct {p0, p2, p1}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkItem(Landroid/widget/FrameLayout;Z)V
 
-    .line 9
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 10
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 11
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->isLocationWatermark()Z
 
     move-result p1
@@ -6445,7 +6371,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 12
     :cond_1
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->hasAltitude()Z
 
@@ -6453,7 +6378,6 @@
 
     invoke-direct {p0, v1, v2, p4, p1}, Lcom/android/camera/fragment/FragmentMainContent;->autoRelayoutUI(Ljava/lang/String;Landroid/widget/LinearLayout;Landroid/graphics/Rect;Z)V
 
-    .line 13
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6475,7 +6399,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 14
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6498,7 +6421,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     new-instance p1, Landroid/util/Size;
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getWidth()I
@@ -6511,7 +6433,6 @@
 
     invoke-direct {p1, v1, v3}, Landroid/util/Size;-><init>(II)V
 
-    .line 16
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -6520,12 +6441,10 @@
 
     check-cast v4, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 17
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getLocation()I
 
     move-result v5
 
-    .line 18
     iget v8, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     move-object v3, p0
@@ -6538,65 +6457,52 @@
 
     move-result-object v1
 
-    .line 19
     invoke-direct {p0, v1, p1, p4, p3}, Lcom/android/camera/fragment/FragmentMainContent;->initWatermarkLocation(Landroid/widget/FrameLayout$LayoutParams;Landroid/util/Size;Landroid/graphics/Rect;I)[I
 
     move-result-object p1
 
-    .line 20
     invoke-virtual {p5}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isFixedLocation()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 21
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getType()I
 
     move-result v3
 
     invoke-virtual {p5, p1, p4, v3}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->updateLocation([ILandroid/graphics/Rect;I)V
 
-    .line 22
     invoke-virtual {p6, p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->setCaptureCoordinate([I)V
 
     goto :goto_0
 
-    .line 23
     :cond_3
     invoke-direct {p0, p6, p3, v1}, Lcom/android/camera/fragment/FragmentMainContent;->calculateLP(Lcom/android/camera/aiwatermark/data/WatermarkItem;ILandroid/widget/FrameLayout$LayoutParams;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1
 
-    .line 24
     :goto_0
     invoke-virtual {p2, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 25
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 26
     invoke-virtual {p6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getTimeWatermarkString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 27
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     int-to-float p1, p3
 
-    .line 28
     invoke-virtual {v2, p1}, Landroid/widget/LinearLayout;->setRotation(F)V
 
-    .line 29
     invoke-direct {p0, p6, v2}, Lcom/android/camera/fragment/FragmentMainContent;->updateTextBitmap(Lcom/android/camera/aiwatermark/data/WatermarkItem;Landroid/view/View;)V
 
-    .line 30
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/FragmentMainContent;->doAccessible(Landroid/view/View;)V
 
     const-string/jumbo p1, "updateTextWatermarkItemRotation X"
 
-    .line 31
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
@@ -6611,10 +6517,8 @@
 
     const-string/jumbo v1, "updateWatermarkItemBackground E"
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundViewStub:Landroid/view/ViewStub;
 
     if-eqz v1, :cond_6
@@ -6625,13 +6529,11 @@
 
     goto/16 :goto_3
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMinorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v2
@@ -6642,7 +6544,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-virtual {v1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v5
@@ -6656,7 +6557,6 @@
     :cond_1
     if-eqz v2, :cond_3
 
-    .line 6
     invoke-virtual {v2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -6675,19 +6575,17 @@
     :cond_3
     move v2, v4
 
-    .line 7
     :goto_0
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
     move-result p1
 
-    const v3, 0x7f0a04de
+    const v3, 0x7f0a04f1
 
     if-eqz p1, :cond_5
 
     if-eqz v2, :cond_5
 
-    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6708,7 +6606,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -6717,7 +6614,6 @@
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 10
     invoke-virtual {v1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v1
@@ -6730,7 +6626,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -6741,7 +6636,6 @@
 
     move-result v1
 
-    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -6754,7 +6648,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -6768,19 +6661,17 @@
 
     move v1, v4
 
-    .line 14
     :goto_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    const v6, 0x7f0800e0
+    const v6, 0x7f0800e2
 
     invoke-static {v5, v6}, Lcom/android/camera/Util;->getBitmapSize(Landroid/content/Context;I)Landroid/util/Size;
 
     move-result-object v5
 
-    .line 15
     iget v6, p2, Landroid/graphics/Rect;->left:I
 
     int-to-float v6, v6
@@ -6797,7 +6688,6 @@
 
     iput v1, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 16
     iget p2, p2, Landroid/graphics/Rect;->top:I
 
     int-to-float p2, p2
@@ -6812,7 +6702,6 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 17
     invoke-virtual {v5}, Landroid/util/Size;->getWidth()I
 
     move-result p2
@@ -6827,7 +6716,6 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 18
     invoke-virtual {v5}, Landroid/util/Size;->getHeight()I
 
     move-result p2
@@ -6842,7 +6730,6 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 19
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -6861,22 +6748,18 @@
 
     invoke-static {v0, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 21
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 22
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 23
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -6887,7 +6770,6 @@
 
     goto :goto_2
 
-    .line 24
     :cond_5
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
@@ -6895,7 +6777,6 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 25
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -6907,7 +6788,6 @@
     :goto_2
     const-string/jumbo p1, "updateWatermarkItemBackground X"
 
-    .line 26
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
@@ -6918,7 +6798,6 @@
 .method private updateWatermarkRotation(ILandroid/graphics/Rect;)V
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6937,7 +6816,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -6950,7 +6828,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
@@ -6958,14 +6835,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 4
     invoke-virtual {v6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->isTextWatermark()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
@@ -6982,7 +6857,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
@@ -6998,7 +6872,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/camera/fragment/FragmentMainContent;->updateImageWatermarkItemRotation(Landroid/view/ViewStub;Landroid/widget/FrameLayout;ILandroid/graphics/Rect;Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
-    .line 7
     :cond_2
     :goto_0
     invoke-virtual {p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMinorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -7007,14 +6880,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 8
     invoke-virtual {v6}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->isTextWatermark()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendViewStub:Landroid/view/ViewStub;
 
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendLayout:Landroid/widget/FrameLayout;
@@ -7031,7 +6902,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_3
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendViewStub:Landroid/view/ViewStub;
 
@@ -7057,17 +6927,14 @@
 .method public synthetic OooO00o()V
     .locals 1
 
-    .line 24
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewReferenceLine()V
 
-    .line 25
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewGradienter()V
 
-    .line 26
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewCenterMark()V
@@ -7075,77 +6942,9 @@
     return-void
 .end method
 
-.method public synthetic OooO00o(IILandroid/animation/ValueAnimator;)V
-    .locals 3
-
-    .line 32
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {v0}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
-
-    move-result v0
-
-    .line 33
-    invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/Float;
-
-    invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
-
-    move-result p3
-
-    .line 34
-    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    int-to-float v2, v0
-
-    sub-int/2addr p1, v0
-
-    int-to-float p1, p1
-
-    mul-float/2addr p1, p3
-
-    add-float/2addr v2, p1
-
-    float-to-int p1, v2
-
-    invoke-virtual {v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->setCurrentWidth(I)V
-
-    .line 35
-    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
-
-    if-ne v0, p2, :cond_0
-
-    .line 36
-    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/android/camera/customization/FlashHalo;->getHaloVisible()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 37
-    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2, p2}, Lcom/android/camera/ui/FlashHaloView;->show(ZZ)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public synthetic OooO00o(Landroid/view/View;)V
     .locals 1
 
-    .line 13
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -7154,7 +6953,6 @@
 
     const/16 v0, 0x80
 
-    .line 14
     invoke-virtual {p1, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
@@ -7164,7 +6962,6 @@
 .method public synthetic OooO00o(Landroid/view/View;Landroid/view/View;)V
     .locals 2
 
-    .line 9
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p2
@@ -7179,7 +6976,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 10
     invoke-interface {p2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->isWatermarkPanelShow()Z
 
     move-result v0
@@ -7190,14 +6986,12 @@
 
     const/4 v1, 0x6
 
-    .line 11
     invoke-interface {p2, v0, v1}, Lcom/android/camera/protocol/ModeProtocol$Expandable;->dismiss(II)Z
 
-    .line 12
     :cond_0
-    new-instance p2, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoO0;
+    new-instance p2, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo00O;
 
-    invoke-direct {p2, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoO0;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Landroid/view/View;)V
+    invoke-direct {p2, p0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/Oooo00O;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Landroid/view/View;)V
 
     const-wide/16 v0, 0x64
 
@@ -7209,19 +7003,16 @@
 .method public synthetic OooO00o(Lcom/android/camera/aiwatermark/data/WatermarkItem;Z)V
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/FragmentMainContent;->updateWatermarkSample(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
     if-eqz p2, :cond_4
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     if-eqz p2, :cond_4
 
     const/4 p2, 0x0
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -7287,11 +7078,10 @@
 
     goto :goto_1
 
-    .line 4
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p2, 0x7f0a0241
+    const p2, 0x7f0a0252
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -7303,11 +7093,10 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p2, 0x7f0a023d
+    const p2, 0x7f0a024e
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -7319,11 +7108,10 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    const p2, 0x7f0a023a
+    const p2, 0x7f0a024b
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -7336,7 +7124,6 @@
     :goto_1
     if-eqz p2, :cond_4
 
-    .line 7
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -7351,7 +7138,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 8
     invoke-interface {p1, p2}, Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;->startDottedLineAnimation(Landroid/view/View;)V
 
     :cond_4
@@ -7370,7 +7156,6 @@
 .method public synthetic OooO00o(Lcom/android/camera/aiwatermark/data/WatermarkItem;ZLandroid/view/View;)V
     .locals 1
 
-    .line 20
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->isTextWatermark()Z
 
     move-result v0
@@ -7387,12 +7172,10 @@
     :goto_0
     const/4 p2, 0x0
 
-    .line 21
     invoke-virtual {p1, p3, p2}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->updateViewBitmap(Landroid/view/View;I)V
 
     goto :goto_1
 
-    .line 22
     :cond_1
     iget p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
@@ -7407,7 +7190,6 @@
 .method public synthetic OooO00o(Z)V
     .locals 1
 
-    .line 23
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIvIdPhotoBox:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
@@ -7428,14 +7210,12 @@
 .method public synthetic OooO00o(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 28
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 29
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
@@ -7448,7 +7228,6 @@
 
     check-cast p1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 30
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p2
@@ -7463,7 +7242,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 31
     invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->hideExtraMenu()V
 
     const/4 p1, 0x1
@@ -7476,26 +7254,238 @@
     return p1
 .end method
 
-.method public synthetic OooO0O0()V
-    .locals 2
+.method public synthetic OooO0O0(Z)V
+    .locals 5
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    const/16 v1, 0xac
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
+
+    iget v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiDetectTipType:I
+
+    const/4 v2, 0x1
+
+    packed-switch v1, :pswitch_data_0
+
+    goto :goto_0
+
+    :pswitch_0
+    const/4 v1, 0x7
+
+    invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->getTipsResIdFace(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->miLightTipResId:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v3, -0x1
+
+    if-eq v1, v3, :cond_2
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {v0, v2, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->isMimojiFaceDetectTip()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     return-void
+
+    :cond_0
+    iget v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiFaceDetect:I
+
+    invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->getTipsResIdFace(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    if-eqz v0, :cond_2
+
+    if-lez v1, :cond_2
+
+    invoke-interface {v0, v2, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    goto :goto_0
+
+    :pswitch_2
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->isMimojiFaceDetectTip()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    return-void
+
+    :cond_1
+    iget v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCurrentMimojiFaceResult:I
+
+    invoke-static {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->getTipsResId(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    if-eqz v0, :cond_2
+
+    if-lez v1, :cond_2
+
+    invoke-interface {v0, v2, v1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    :cond_2
+    :goto_0
+    iget-boolean v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_3
+
+    if-nez p1, :cond_3
+
+    move p1, v2
+
+    goto :goto_1
+
+    :cond_3
+    move p1, v3
+
+    :goto_1
+    if-eqz p1, :cond_4
+
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/LightingView;->getIsFocusingSuccess()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/LightingView;->triggerAnimateSuccess()V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/LightingView;->getIsFocusingSuccess()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/LightingView;->triggerAnimateStart()V
+
+    :cond_5
+    :goto_2
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object v1
+
+    const/16 v4, 0xf6
+
+    invoke-virtual {v1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;
+
+    if-eqz v1, :cond_9
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v1, p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;->setDetectSuccess(Z)V
+
+    if-eqz p1, :cond_8
+
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMimojiPanelState()I
+
+    move-result v1
+
+    const v4, 0x7f1204ba
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->isInMimojiCreate()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    invoke-interface {v0, v3, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    goto :goto_4
+
+    :cond_7
+    :goto_3
+    invoke-interface {v0, v2, v4}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    goto :goto_4
+
+    :cond_8
+    iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->miFaceTipResId:I
+
+    if-gez p1, :cond_9
+
+    iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mimojiTipResId:I
+
+    if-gez p1, :cond_9
+
+    const p1, 0x7f1204b9
+
+    invoke-interface {v0, v2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->alertMimojiFaceDetect(ZI)V
+
+    :cond_9
+    :goto_4
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0xa0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public animBlackCover()V
-    .locals 11
+    .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateHaloViewSize()V
 
-    .line 2
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateHaloCover()V
+
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -7508,66 +7498,32 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v1}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
 
     move-result v1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     if-eq v0, v1, :cond_0
 
-    .line 4
-    invoke-static {v3}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    .line 5
-    invoke-static {v3}, Lcom/android/camera/Util;->getDisplayRect(I)Landroid/graphics/Rect;
+    invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(ILjava/util/List;Z)V
 
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
-
-    move-result v4
-
-    int-to-double v5, v1
-
-    int-to-double v7, v4
-
-    .line 6
-    invoke-static {}, Lcom/android/camera/Util;->getCinematicAspectRatio()D
-
-    move-result-wide v9
-
-    div-double/2addr v7, v9
-
-    sub-double/2addr v5, v7
-
-    const-wide/high16 v7, 0x4000000000000000L    # 2.0
-
-    div-double/2addr v5, v7
-
-    double-to-int v1, v5
-
-    .line 7
-    iget-object v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
-
-    new-instance v5, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoOO;
-
-    invoke-direct {v5, p0, v0, v1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoOO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;II)V
-
-    invoke-virtual {v4, v2, v5}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(Ljava/util/List;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 8
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -7589,7 +7545,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -7602,9 +7557,8 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(ILjava/util/List;Z)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(ILjava/util/List;Z)V
 
-    .line 10
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -7626,7 +7580,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -7639,9 +7592,8 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
 
-    .line 12
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -7663,7 +7615,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -7676,7 +7627,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
 
     :cond_3
     return-void
@@ -7685,12 +7636,10 @@
 .method public checkTouchRegionContainSplitFocusExposure(Landroid/view/MotionEvent;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->checkTouchRegionContainSplitFocusExposure(Landroid/view/MotionEvent;)V
 
     :cond_0
@@ -7700,15 +7649,10 @@
 .method public clearFocusView(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
-    if-eqz v0, :cond_0
-
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->clear(I)V
 
-    :cond_0
     return-void
 .end method
 
@@ -7725,17 +7669,15 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
-    const-string v0, "not allowed call in this method"
+    const-string/jumbo v0, "not allowed call in this method"
 
     invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    .line 2
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -7748,7 +7690,6 @@
 .method public destroyEffectCropView()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->onDestroy()V
@@ -7756,126 +7697,9 @@
     return-void
 .end method
 
-.method public disableFrontFlashAndHalo(Z)V
-    .locals 6
-
-    .line 1
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemConfig()Lcom/android/camera/data/data/config/DataItemConfig;
-
-    move-result-object v0
-
-    .line 2
-    invoke-virtual {v0}, Lcom/android/camera/data/data/config/DataItemConfig;->getComponentFlash()Lcom/android/camera/data/data/config/ComponentConfigFlash;
-
-    move-result-object v0
-
-    .line 3
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/config/ComponentConfigFlash;->getComponentRealValue(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 4
-    iget v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastCameraId:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    const-string v1, "2"
-
-    .line 5
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 6
-    iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    const-string v0, "0"
-
-    invoke-static {p1, v0}, Lcom/android/camera/CameraSettings;->setFlashMode(ILjava/lang/String;)V
-
-    .line 7
-    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->getBaseModule()Ljava/util/Optional;
-
-    move-result-object p1
-
-    sget-object v0, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo0;
-
-    invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    .line 8
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object p1
-
-    const/16 v0, 0xac
-
-    .line 9
-    invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
-
-    if-eqz p1, :cond_1
-
-    .line 10
-    invoke-interface {p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->isExtraMenuShowing()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 11
-    invoke-interface {p1, v2}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->reInitAlert(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    .line 12
-    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    .line 13
-    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/customization/FlashHalo;->reConfigScreenHaloRequest(IZZZZ)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
 .method public feedData(Lcom/android/camera2/autozoom/AutoZoomCaptureResult;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera2/autozoom/AutoZoomView;->feedData(Lcom/android/camera2/autozoom/AutoZoomCaptureResult;)V
@@ -7886,7 +7710,6 @@
 .method public getActiveIndicator()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mActiveIndicator:I
 
     return v0
@@ -7903,7 +7726,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FaceView;->getFaceWaterMarkInfos()Ljava/util/List;
@@ -7916,7 +7738,6 @@
 .method public getFaces()[Lcom/android/camera2/CameraHardwareFace;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FaceView;->getFaces()[Lcom/android/camera2/CameraHardwareFace;
@@ -7933,7 +7754,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -7958,14 +7778,12 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     return-object p1
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -7979,7 +7797,6 @@
 .method public getFocusRectInPreviewFrame()Landroid/graphics/RectF;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ObjectView;->getFocusRectInPreviewFrame()Landroid/graphics/RectF;
@@ -7992,7 +7809,6 @@
 .method public getFocusX()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->getFocusX()I
@@ -8005,7 +7821,6 @@
 .method public getFocusY()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->getFocusY()I
@@ -8026,7 +7841,7 @@
 .method public getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d008f
+    const v0, 0x7f0d008e
 
     return v0
 .end method
@@ -8034,12 +7849,10 @@
 .method public getReferenceLine()Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/ui/V6PreviewFrame;->getReferenceLine()Landroid/view/View;
 
     move-result-object v0
@@ -8055,7 +7868,6 @@
 .method public getViewRects(Lcom/android/camera/CameraSize;)[Landroid/graphics/RectF;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FaceView;->getViewRects(Lcom/android/camera/CameraSize;)[Landroid/graphics/RectF;
@@ -8068,15 +7880,26 @@
 .method public hideFaceAnimator()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     if-eqz v0, :cond_0
 
     const-wide/16 v1, 0x12c
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/FaceView;->attemptHideFaceRect(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public hideOrShowDocument(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/DocumentView;->hideOrShowPath(Z)V
 
     :cond_0
     return-void
@@ -8085,17 +7908,15 @@
 .method public hideReferenceGradienter()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOooO;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOooO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -8106,7 +7927,6 @@
 .method public hideReviewViews()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     iget-object v0, v0, Lcom/android/camera/ui/V6PreviewPanel;->mVideoReviewImage:Landroid/widget/ImageView;
@@ -8117,14 +7937,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     iget-object v0, v0, Lcom/android/camera/ui/V6PreviewPanel;->mVideoReviewImage:Landroid/widget/ImageView;
 
     invoke-static {v0}, Lcom/android/camera/Util;->fadeOut(Landroid/view/View;)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
@@ -8135,10 +7953,32 @@
     return-void
 .end method
 
+.method public hideShineHalo()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public initEffectCropView()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->onCreate()V
@@ -8149,14 +7989,12 @@
 .method public initView(Landroid/view/View;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->getAIWatermarkScaleSize()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkScaleSize:F
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8179,9 +8017,8 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    const v0, 0x7f0a01fa
+    const v0, 0x7f0a0207
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8190,9 +8027,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    const v0, 0x7f0a0348
+    const v0, 0x7f0a035c
 
-    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8201,9 +8037,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    const v0, 0x7f0a0403
+    const v0, 0x7f0a0419
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8214,7 +8049,6 @@
 
     const v0, 0x7f0a0095
 
-    .line 6
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8223,9 +8057,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    const v0, 0x7f0a0374
+    const v0, 0x7f0a0389
 
-    .line 7
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8234,18 +8067,16 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    const v0, 0x7f0a02b5
+    const v0, 0x7f0a02c5
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMoreModeMaskView:Landroid/view/View;
 
-    const v0, 0x7f0a0452
+    const v0, 0x7f0a0464
 
-    .line 9
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8254,9 +8085,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPage:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a0453
+    const v1, 0x7f0a0465
 
-    .line 10
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8265,9 +8095,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a044f
+    const v1, 0x7f0a0461
 
-    .line 11
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8276,10 +8105,43 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a044c
+    const v1, 0x7f0a00b3
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    const v1, 0x7f0a00b2
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintIcon:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    const v1, 0x7f0a00b4
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintText:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
+
+    const v1, 0x7f0a045e
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -8289,10 +8151,9 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a044d
+    const v1, 0x7f0a045f
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -8302,10 +8163,21 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a044e
+    const v1, 0x7f0a0120
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/DocumentView;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
+
+    const v1, 0x7f0a0460
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -8315,9 +8187,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
-    const v0, 0x7f0a0450
+    const v0, 0x7f0a0462
 
-    .line 15
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8326,7 +8197,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIvIdPhotoBox:Landroid/widget/ImageView;
 
-    .line 16
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     const v1, 0x7f0a007c
@@ -8339,10 +8209,38 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
-    .line 17
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/DataItemRunning;->getComponentRunningLighting()Lcom/android/camera/data/data/runing/ComponentRunningLighting;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningLighting;->getPortraitLightVersion()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a02d6
+    const v1, 0x7f0a0210
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/V6RelativeLayout;->findChildrenById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/LightingView;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
+
+    const v1, 0x7f0a02e6
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -8352,10 +8250,9 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    const v1, 0x7f0a0406
+    const v1, 0x7f0a041d
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -8365,7 +8262,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
 
-    .line 19
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     const v1, 0x7f0a0048
@@ -8378,9 +8274,30 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
 
-    const v0, 0x7f0a04e2
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
-    .line 20
+    const v1, 0x7f0a0291
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/V6RelativeLayout;->findChildrenById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/LightingView;
+
+    iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    const v1, 0x3f970a3d    # 1.18f
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/LightingView;->setCircleRatio(F)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    const v1, 0x3f8f5c29    # 1.12f
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/LightingView;->setCircleHeightRatio(F)V
+
+    const v0, 0x7f0a04f5
+
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8389,9 +8306,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkViewStub:Landroid/view/ViewStub;
 
-    const v0, 0x7f0a04da
+    const v0, 0x7f0a04ed
 
-    .line 21
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -8400,9 +8316,8 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendViewStub:Landroid/view/ViewStub;
 
-    const v0, 0x7f0a04d8
+    const v0, 0x7f0a04eb
 
-    .line 22
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -8411,116 +8326,111 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundViewStub:Landroid/view/ViewStub;
 
-    .line 23
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz p1, :cond_1
+
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/ui/LightingView;->setRotation(I)V
+
+    :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->adjustViewHeight()V
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->initWidthHeight(II)V
 
-    .line 25
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/4 v0, 0x3
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->setGravity(I)V
 
-    .line 26
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->initWidthHeight(II)V
 
-    .line 27
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/4 v0, 0x5
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->setGravity(I)V
 
-    .line 28
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->initWidthHeight(II)V
 
-    .line 29
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/16 v0, 0x30
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->setGravity(I)V
 
-    .line 30
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->initWidthHeight(II)V
 
-    .line 31
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/16 v0, 0x50
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->setGravity(I)V
 
-    .line 32
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundWidth()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundWidth()I
 
     move-result v0
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getAppBoundHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getAppBoundHeight()I
 
     move-result v1
 
     invoke-virtual {p1, v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->initWidthHeight(II)V
 
-    .line 33
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateHaloViewSize()V
 
-    .line 34
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateHaloCover()V
 
-    .line 35
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
-    .line 36
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     new-instance v0, Lcom/android/camera/fragment/FragmentMainContent$1;
@@ -8529,8 +8439,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 37
-    :cond_0
+    :cond_2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p1
@@ -8541,7 +8450,6 @@
 
     iput-boolean p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsIntentAction:Z
 
-    .line 38
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/4 v0, 0x0
@@ -8556,39 +8464,30 @@
 .method public initializeFocusView(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
-    if-eqz v0, :cond_0
-
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->initialize(Lcom/android/camera/ui/FocusView$ExposureViewListener;)V
 
-    :cond_0
     return-void
 .end method
 
 .method public initializeObjectTrack(Landroid/graphics/RectF;Z)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ObjectView;->clear()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/ui/ObjectView;->initializeTrackView(Landroid/graphics/RectF;Z)Z
@@ -8601,7 +8500,6 @@
 .method public initializeObjectView(Landroid/graphics/RectF;Z)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/ui/ObjectView;->initializeTrackView(Landroid/graphics/RectF;Z)Z
@@ -8614,7 +8512,6 @@
 .method public isAdjustingObjectView()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ObjectView;->isAdjusting()Z
@@ -8627,7 +8524,6 @@
 .method public isAutoZoomActive()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewActive()Z
@@ -8640,7 +8536,6 @@
 .method public isAutoZoomEnabled()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewEnabled()Z
@@ -8653,7 +8548,6 @@
 .method public isAutoZoomViewEnabled()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewEnabled()Z
@@ -8666,7 +8560,6 @@
 .method public isEffectViewMoved()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->isMoved()Z
@@ -8679,7 +8572,6 @@
 .method public isEffectViewVisible()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->isVisible()Z
@@ -8694,7 +8586,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/FocusView;->isEvAdjustedTime()Z
@@ -8703,7 +8594,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
@@ -8725,7 +8615,6 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -8734,6 +8623,14 @@
     move-result p1
 
     return p1
+.end method
+
+.method public isFaceLocationOK()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    return v0
 .end method
 
 .method public isFaceStable(I)Z
@@ -8747,7 +8644,6 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -8761,7 +8657,6 @@
 .method public isFocusViewMoving()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->isFocusViewMoving()Z
@@ -8774,7 +8669,6 @@
 .method public isFocusViewVisible()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->isVisible()Z
@@ -8799,7 +8693,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
@@ -8814,7 +8707,6 @@
     :cond_1
     return v0
 
-    .line 2
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -8841,7 +8733,6 @@
 
     return p1
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -8855,7 +8746,6 @@
 .method public isObjectTrackFailed()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ObjectView;->isTrackFailed()Z
@@ -8868,7 +8758,6 @@
 .method public isShowReviewViews()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     iget-object v0, v0, Lcom/android/camera/ui/V6PreviewPanel;->mVideoReviewImage:Landroid/widget/ImageView;
@@ -8893,12 +8782,10 @@
 .method public isSplitFocusExposureDown()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->isSplitFocusExposureDown()Z
 
     move-result v0
@@ -8911,10 +8798,344 @@
     return v0
 .end method
 
+.method public lightingCancel()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->triggerAnimateExit()V
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/FaceView;->setLightingOn(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/AfRegionsView;->setLightingOn(Z)V
+
+    return-void
+.end method
+
+.method public lightingDetectFace([Lcom/android/camera2/CameraHardwareFace;Z)V
+    .locals 7
+
+    if-eqz p2, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    const/4 v1, 0x5
+
+    if-eqz p1, :cond_a
+
+    array-length v2, p1
+
+    if-eqz v2, :cond_a
+
+    array-length v2, p1
+
+    const/4 v3, 0x1
+
+    if-le v2, v3, :cond_2
+
+    goto/16 :goto_4
+
+    :cond_2
+    iget-wide v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_3
+
+    return-void
+
+    :cond_3
+    iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
+
+    const/4 v3, 0x0
+
+    aget-object p1, p1, v3
+
+    iget-object p1, p1, Lcom/android/camera2/CameraHardwareFace;->rect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->getFaceViewRectF()Landroid/graphics/RectF;
+
+    move-result-object v3
+
+    invoke-virtual {v2, p1, v3}, Lcom/android/camera/ui/FaceView;->transToViewRect(Landroid/graphics/Rect;Landroid/graphics/RectF;)V
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->getFaceViewRectF()Landroid/graphics/RectF;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->getFocusRectF()Landroid/graphics/RectF;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/FragmentMainContent;->isRectIntersect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/FragmentMainContent;->getMergeRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+
+    move-result p1
+
+    mul-float/2addr v2, p1
+
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mergeRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result p1
+
+    iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mergeRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    mul-float/2addr p1, v3
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+
+    move-result v0
+
+    mul-float/2addr v3, v0
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    if-eqz p2, :cond_4
+
+    move v5, v4
+
+    goto :goto_1
+
+    :cond_4
+    move v5, v0
+
+    :goto_1
+    if-eqz p2, :cond_5
+
+    const/high16 v0, 0x3fc00000    # 1.5f
+
+    :cond_5
+    const v6, 0x3e4ccccd    # 0.2f
+
+    mul-float/2addr v6, v3
+
+    mul-float/2addr v6, v5
+
+    mul-float/2addr v3, v4
+
+    mul-float/2addr v3, v0
+
+    mul-float/2addr v4, v2
+
+    cmpg-float v0, p1, v4
+
+    if-gez v0, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    cmpg-float v0, p1, v6
+
+    if-gez v0, :cond_7
+
+    const/4 p1, 0x4
+
+    :goto_2
+    move v1, p1
+
+    goto :goto_3
+
+    :cond_7
+    cmpg-float p1, p1, v3
+
+    if-gez p1, :cond_8
+
+    cmpg-float p1, v2, v3
+
+    if-gez p1, :cond_8
+
+    const/4 p1, 0x6
+
+    goto :goto_2
+
+    :cond_8
+    const/4 p1, 0x3
+
+    goto :goto_2
+
+    :cond_9
+    :goto_3
+    invoke-direct {p0, v1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->consumeResult(IZ)V
+
+    return-void
+
+    :cond_a
+    :goto_4
+    invoke-direct {p0, v1, p2}, Lcom/android/camera/fragment/FragmentMainContent;->consumeResult(IZ)V
+
+    return-void
+.end method
+
+.method public lightingFocused()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->triggerAnimateSuccess()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public lightingStart()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    invoke-static {v1}, Lcom/android/camera/CameraSettings;->isCinematicAspectRatioEnabled(I)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/LightingView;->setCinematicAspectRatio(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->triggerAnimateStart()V
+
+    :cond_0
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastFaceResult:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/FaceView;->setLightingOn(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/AfRegionsView;->setLightingOn(Z)V
+
+    return-void
+.end method
+
+.method public mimojiEnd()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->triggerAnimateExit()V
+
+    return-void
+.end method
+
+.method public mimojiFaceDetect(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    new-instance v1, Lcom/android/camera/fragment/FragmentMainContent$5;
+
+    invoke-direct {v1, p0, p1}, Lcom/android/camera/fragment/FragmentMainContent$5;-><init>(Lcom/android/camera/fragment/FragmentMainContent;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public mimojiStart()V
+    .locals 2
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastFaceResult:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->lastConfirmTime:J
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/FaceView;->setLightingOn(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/AfRegionsView;->setLightingOn(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->triggerAnimateStart()V
+
+    return-void
+.end method
+
 .method public moveWatermarkLayout(II)V
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -8923,12 +9144,10 @@
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     if-eqz v2, :cond_c
@@ -8941,13 +9160,11 @@
 
     goto/16 :goto_1
 
-    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v0
 
-    .line 5
     iget v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     invoke-direct {p0, v0, v2}, Lcom/android/camera/fragment/FragmentMainContent;->needMoveUpWatermark(Lcom/android/camera/aiwatermark/data/WatermarkItem;I)Z
@@ -8956,14 +9173,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -8988,7 +9203,6 @@
 
     goto/16 :goto_0
 
-    .line 8
     :cond_1
     iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
@@ -8998,7 +9212,6 @@
 
     if-eq p1, v3, :cond_3
 
-    .line 9
     iget p1, v1, Landroid/graphics/Rect;->bottom:I
 
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
@@ -9011,27 +9224,24 @@
 
     if-ltz p1, :cond_2
 
-    .line 10
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 11
     :cond_2
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result p1
 
     if-nez p1, :cond_b
 
-    .line 12
     iget p1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p2
 
@@ -9041,22 +9251,20 @@
 
     goto/16 :goto_0
 
-    .line 13
     :cond_3
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 14
     iget p1, v1, Landroid/graphics/Rect;->right:I
 
     iget p2, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     sub-int/2addr p1, p2
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p2
 
@@ -9066,16 +9274,14 @@
 
     goto/16 :goto_0
 
-    .line 15
     :cond_4
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 16
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p1
 
@@ -9083,16 +9289,14 @@
 
     goto/16 :goto_0
 
-    .line 17
     :cond_5
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 18
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p1
 
@@ -9100,7 +9304,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_6
     iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
@@ -9110,27 +9313,24 @@
 
     if-eq p1, v3, :cond_8
 
-    .line 20
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_7
 
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplay16_10()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplay16_10()Z
 
     move-result p1
 
     if-nez p1, :cond_7
 
-    .line 21
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p1
 
     add-int/2addr p2, p1
 
-    .line 22
     :cond_7
     iget p1, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -9146,7 +9346,6 @@
 
     if-ltz p1, :cond_b
 
-    .line 23
     iget p2, v1, Landroid/graphics/Rect;->bottom:I
 
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
@@ -9159,27 +9358,24 @@
 
     if-gt p1, p2, :cond_b
 
-    .line 24
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     goto :goto_0
 
-    .line 25
     :cond_8
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 26
     iget p1, v1, Landroid/graphics/Rect;->right:I
 
     iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     sub-int/2addr p1, v1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result v1
 
@@ -9191,16 +9387,14 @@
 
     goto :goto_0
 
-    .line 27
     :cond_9
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 28
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p1
 
@@ -9210,16 +9404,14 @@
 
     goto :goto_0
 
-    .line 29
     :cond_a
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
-    .line 30
-    invoke-static {}, Lcom/android/camera/display/Display;->getBottomHeight()I
+    invoke-static {}, Lcom/android/camera/Display;->getBottomHeight()I
 
     move-result p1
 
@@ -9227,19 +9419,16 @@
 
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 31
     :cond_b
     :goto_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 32
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 33
     new-instance p1, Lcom/android/camera/animation/type/AlphaInOnSubscribe;
 
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
@@ -9264,7 +9453,6 @@
 
     move-result-object p1
 
-    .line 34
     invoke-virtual {p1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
     :cond_c
@@ -9283,10 +9471,8 @@
 .method public notifyAfterFrameAvailable(I)V
     .locals 2
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->notifyAfterFrameAvailable(I)V
 
-    .line 2
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v0, 0xfe
@@ -9297,27 +9483,23 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMoreModeMaskView:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/V6PreviewFrame;->updateReferenceLineAccordSquare()V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p1
@@ -9326,19 +9508,16 @@
 
     move-result p1
 
-    .line 7
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    .line 8
     invoke-virtual {v0, p1, v1}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getCapabilitiesByBogusCameraId(II)Lcom/android/camera2/CameraCapabilities;
 
     move-result-object p1
 
-    .line 9
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -9355,85 +9534,65 @@
 
     if-nez p1, :cond_2
 
-    .line 10
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateReferenceGradienterSwitched()V
 
-    .line 11
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateCenterMarkSwitched()V
 
-    .line 12
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/FocusView;->reInit()V
 
-    .line 13
-    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
-
-    if-eqz p1, :cond_3
-
-    .line 14
-    invoke-virtual {p1}, Lcom/android/camera/trackfocus/TrackFocusView;->clear()V
-
-    .line 15
-    :cond_3
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v0, 0xb9
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_3
 
     const/16 v0, 0xd2
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, v0, :cond_3
 
     const/16 v0, 0xd5
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v0, :cond_4
 
-    .line 16
-    :cond_4
+    :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v0}, Lcom/android/camera/ui/FocusView;->setEvAdjust(ZZ)V
 
-    .line 17
-    :cond_5
+    :cond_4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/V6EffectCropView;->updateVisible()V
 
-    .line 18
     invoke-static {}, Lcom/android/camera/CameraSettings;->getFocusMode()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/FragmentMainContent;->updateFocusMode(Ljava/lang/String;)V
 
-    .line 19
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v0, 0xcc
 
-    if-eq p1, v0, :cond_6
+    if-eq p1, v0, :cond_5
 
-    .line 20
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->animBlackCover()V
 
-    :cond_6
+    :cond_5
     return-void
 .end method
 
 .method public notifyDataChanged(II)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->notifyDataChanged(II)V
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p2
@@ -9442,18 +9601,14 @@
 
     move-result p2
 
-    .line 3
     iget-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsIntentAction:Z
 
     if-eq p2, v0, :cond_0
 
-    .line 4
     iput-boolean p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsIntentAction:Z
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->hideReviewViews()V
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -9469,7 +9624,6 @@
 
     if-eq p2, v0, :cond_3
 
-    .line 7
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p2
@@ -9480,19 +9634,16 @@
 
     iput p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastCameraId:I
 
-    .line 8
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
-    .line 9
     iget p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastCameraId:I
 
     if-ne p2, v1, :cond_2
 
-    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
@@ -9503,7 +9654,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 11
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     const v0, 0x7f1200a5
@@ -9514,7 +9664,6 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/RelativeLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 12
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -9525,7 +9674,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_1
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
@@ -9537,7 +9685,6 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/RelativeLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 14
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -9548,7 +9695,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_2
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
@@ -9560,7 +9706,6 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/RelativeLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 16
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -9569,7 +9714,6 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 17
     :cond_3
     :goto_0
     iget p2, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
@@ -9580,14 +9724,12 @@
 
     if-ne p2, v0, :cond_4
 
-    .line 18
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-static {p2, v2}, Landroidx/core/view/ViewCompat;->setImportantForAccessibility(Landroid/view/View;I)V
 
     goto :goto_1
 
-    .line 19
     :cond_4
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
@@ -9602,13 +9744,11 @@
 
     goto :goto_2
 
-    .line 20
     :cond_5
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->adjustViewHeight()V
 
     goto :goto_2
 
-    .line 21
     :cond_6
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->adjustViewHeight()V
 
@@ -9617,7 +9757,7 @@
 .end method
 
 .method public notifyThemeChanged(ILjava/util/List;I)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -9627,7 +9767,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
     if-nez p1, :cond_0
@@ -9641,51 +9780,86 @@
 
     if-ne p3, p2, :cond_1
 
+    move p3, p2
+
     goto :goto_0
 
     :cond_1
-    move p2, p1
+    move p3, p1
 
-    .line 2
     :goto_0
     invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
 
-    move-result-object p3
+    move-result-object v0
 
-    invoke-virtual {p3}, Lcom/android/camera/customization/FlashHalo;->getHaloVisible()Z
+    invoke-virtual {v0}, Lcom/android/camera/customization/FlashHalo;->getHaloVisible()Z
 
-    move-result p3
+    move-result v0
 
-    if-eqz p3, :cond_2
+    if-eqz v0, :cond_2
 
-    .line 3
-    iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    invoke-virtual {p3}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
+    invoke-virtual {v0}, Lcom/android/camera/ui/FlashHaloView;->getShow()Z
 
-    move-result p3
+    move-result v0
 
-    if-nez p3, :cond_3
+    if-nez v0, :cond_3
 
-    .line 4
-    iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    invoke-virtual {p3, p2, p1}, Lcom/android/camera/ui/FlashHaloView;->show(ZZ)V
+    invoke-virtual {v0, p2}, Lcom/android/camera/ui/FlashHaloView;->setShow(Z)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
+
+    invoke-virtual {p2}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-virtual {p2, p3, p1}, Lcom/android/camera/ui/FlashHaloView;->show(ZZ)V
 
     goto :goto_1
 
-    .line 5
     :cond_2
-    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
 
-    invoke-virtual {p1, p2}, Lcom/android/camera/ui/FlashHaloView;->hide(Z)V
+    invoke-virtual {p2}, Lcom/android/camera/ui/FlashHaloView;->getShow()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-virtual {p2, p1}, Lcom/android/camera/ui/FlashHaloView;->setShow(Z)V
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-virtual {p2, p3}, Lcom/android/camera/ui/FlashHaloView;->hide(Z)V
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
     :cond_3
     :goto_1
-    const/4 p1, -0x1
-
-    .line 6
-    invoke-direct {p0, p1}, Lcom/android/camera/fragment/FragmentMainContent;->updateCoverTheme(I)V
+    invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->UpdateCoverTheme()V
 
     return-void
 .end method
@@ -9693,7 +9867,6 @@
 .method public onAutoZoomStarted()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewEnabled()Z
@@ -9702,21 +9875,18 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->setViewEnable(Z)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->setViewActive(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->clear(I)V
@@ -9728,7 +9898,6 @@
 .method public onAutoZoomStopped()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewEnabled()Z
@@ -9737,19 +9906,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->setViewEnable(Z)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->setViewActive(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     const/4 v1, 0x4
@@ -9771,10 +9937,8 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -9795,7 +9959,6 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v0, 0xcd
@@ -9806,25 +9969,22 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 4
     :cond_0
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayFat()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayFat()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lcom/android/camera/display/Display;->fitDisplayThin()Z
+    invoke-static {}, Lcom/android/camera/Display;->fitDisplayThin()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->initAIWatermarkLayout()V
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->initSuperMoonWatermarkLayout()V
 
     :cond_2
@@ -9834,7 +9994,6 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -9843,10 +10002,8 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->destroyEffectCropView()V
 
     return-void
@@ -9855,7 +10012,6 @@
 .method public onEffectViewTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -9868,34 +10024,28 @@
 .method public onPause()V
     .locals 3
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
-
-    const/16 v1, 0x8
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
-    .line 5
-    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLastFaceSuccess:Z
 
-    .line 6
-    invoke-virtual {p0, v1}, Lcom/android/camera/fragment/FragmentMainContent;->setWatermarkVisible(I)V
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
+
+    if-eqz v1, :cond_0
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
 
     return-void
 .end method
@@ -9903,26 +10053,22 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo000;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOo0;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooo000;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOo0;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -9930,23 +10076,27 @@
 .end method
 
 .method public onStop()V
-    .locals 0
+    .locals 1
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
 
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/LightingView;->clear()V
+
+    :cond_0
     return-void
 .end method
 
 .method public onStopObjectTrack()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ObjectView;->clear()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     const/16 v1, 0x8
@@ -9959,7 +10109,6 @@
 .method public onTrackingStarted(Landroid/graphics/RectF;)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v0
@@ -9974,7 +10123,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0, p1}, Lcom/android/camera/protocol/ModeProtocol$AutoZoomModuleProtocol;->startTracking(Landroid/graphics/RectF;)V
 
     :cond_0
@@ -9984,7 +10132,6 @@
 .method public onTrackingStopped(I)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {p1}, Lcom/android/camera2/autozoom/AutoZoomView;->isViewActive()Z
@@ -9993,14 +10140,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/autozoom/AutoZoomView;->setViewActive(Z)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/autozoom/AutoZoomView;->clear(I)V
@@ -10012,7 +10157,6 @@
 .method public onViewTouchEvent(ILandroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Landroid/view/View;->getId()I
@@ -10021,7 +10165,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/ui/FocusView;->onViewTouchEvent(Landroid/view/MotionEvent;)Z
@@ -10030,7 +10173,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
@@ -10040,7 +10182,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/ui/V6EffectCropView;->onViewTouchEvent(Landroid/view/MotionEvent;)Z
@@ -10049,7 +10190,6 @@
 
     return p1
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
@@ -10059,7 +10199,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/autozoom/AutoZoomView;->onViewTouchEvent(Landroid/view/MotionEvent;)Z
@@ -10077,7 +10216,6 @@
 .method public performHapticFeedback(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout;->performHapticFeedback(I)Z
@@ -10088,39 +10226,34 @@
 .method public processingFinish()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->processingFinish()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
 
     return-void
 .end method
 
-.method public processingStart()V
-    .locals 2
+.method public processingStart(Ljava/lang/String;)V
+    .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne p1, v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
-    iput-boolean v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
+    iput-boolean v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mIsRecording:Z
 
-    .line 3
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->processingStart()V
+    invoke-virtual {p1}, Lcom/android/camera/ui/FocusView;->processingStart()V
 
     return-void
 .end method
@@ -10136,48 +10269,30 @@
         }
     .end annotation
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    .line 2
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
-    const/4 v1, 0x3
-
-    if-eq p3, v1, :cond_0
-
-    const/4 v1, 0x2
-
-    if-ne p3, v1, :cond_1
-
-    .line 3
-    :cond_0
-    invoke-direct {p0, p3}, Lcom/android/camera/fragment/FragmentMainContent;->updateCoverTheme(I)V
-
-    :cond_1
     const/16 p3, 0xfe
 
     const/4 v1, 0x1
 
-    if-ne p1, p3, :cond_2
+    if-ne p1, p3, :cond_0
 
     move v2, v1
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
     const/4 v2, -0x1
 
-    .line 4
     :goto_0
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMoreModeMaskView:Landroid/view/View;
 
     invoke-virtual {p0, v2, p2, v3}, Lcom/android/camera/fragment/BaseFragment;->animateViews(ILjava/util/List;Landroid/view/View;)V
 
-    .line 5
     invoke-virtual {p0, v1}, Lcom/android/camera/fragment/FragmentMainContent;->setIdPhotoBoxVisible(Z)V
 
-    .line 6
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v2
@@ -10194,92 +10309,84 @@
 
     const/4 v4, 0x0
 
-    if-eq p1, v3, :cond_5
+    if-eq p1, v3, :cond_3
 
     const/16 v3, 0xbc
 
-    if-eq p1, v3, :cond_4
+    if-eq p1, v3, :cond_2
 
     const/16 v3, 0xcd
 
-    if-eq p1, v3, :cond_3
+    if-eq p1, v3, :cond_1
 
     goto :goto_2
 
-    .line 7
-    :cond_3
+    :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->initAIWatermarkLayout()V
 
-    .line 8
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_4
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_4
 
     goto :goto_1
 
-    .line 9
-    :cond_4
+    :cond_2
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->initSuperMoonWatermarkLayout()V
 
     goto :goto_2
 
-    .line 10
-    :cond_5
+    :cond_3
     invoke-static {p1}, Lcom/android/camera/CameraSettings;->isMacroModeEnabled(I)Z
 
     move-result v3
 
-    .line 11
     invoke-static {}, Lcom/android/camera/CameraSettings;->isAIWatermarkOn()Z
 
     move-result v5
 
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_4
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_4
 
     :goto_1
     move v3, v1
 
     goto :goto_3
 
-    :cond_6
+    :cond_4
     :goto_2
     move v3, v4
 
     :goto_3
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_5
 
     move v3, v4
 
     goto :goto_4
 
-    :cond_7
+    :cond_5
     const/4 v3, 0x4
 
-    .line 12
     :goto_4
     invoke-virtual {p0, v3}, Lcom/android/camera/fragment/FragmentMainContent;->setWatermarkVisible(I)V
 
-    .line 13
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_7
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_6
 
     const/4 v2, 0x0
 
     goto :goto_5
 
-    .line 14
-    :cond_8
+    :cond_6
     new-instance v2, Lcom/android/camera/aiwatermark/DragListener;
 
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
@@ -10293,58 +10400,62 @@
     :goto_5
     iput-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mListener:Lcom/android/camera/aiwatermark/DragListener;
 
-    .line 15
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 16
-    :cond_9
+    :cond_7
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewReferenceLine()V
 
-    .line 17
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewGradienter()V
 
-    .line 18
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/V6PreviewFrame;->hidePreviewCenterMark()V
 
-    .line 19
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/FaceView;->clear()V
 
-    .line 20
+    iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {v2}, Lcom/android/camera/ui/DocumentView;->clear()V
+
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/FaceView;->clearFaceFlags()V
 
-    .line 21
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/FocusView;->clear()V
 
-    .line 22
+    iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v2}, Lcom/android/camera/ui/LightingView;->clear()V
+
+    :cond_8
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/AfRegionsView;->clear()V
 
-    .line 23
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
 
     invoke-virtual {v2}, Lcom/android/camera/trackfocus/TrackFocusView;->clear()V
 
-    .line 24
+    iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    invoke-virtual {v2}, Lcom/android/camera/ui/LightingView;->clear()V
+
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v2}, Lcom/android/camera/ui/FocusView;->releaseListener()V
 
-    .line 25
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v2
@@ -10353,12 +10464,10 @@
 
     move-result-object v2
 
-    .line 26
     invoke-virtual {v2}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->getLeftMaskWidth()I
 
     move-result v3
 
-    .line 27
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -10367,17 +10476,15 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_9
 
-    .line 28
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     if-eq v5, v3, :cond_e
 
-    .line 29
-    :cond_a
+    :cond_9
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10386,7 +10493,21 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 30
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    if-lez v5, :cond_a
+
+    iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    invoke-virtual {v5}, Lcom/android/camera/ui/FlashHaloView;->onFilmMaskShowing()V
+
+    :cond_a
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
@@ -10407,7 +10528,6 @@
 
     if-ne p1, p3, :cond_e
 
-    .line 31
     :cond_c
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLeftCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10423,13 +10543,11 @@
     :goto_7
     invoke-virtual {v5, v3, p2, v6}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(ILjava/util/List;Z)V
 
-    .line 32
     :cond_e
     invoke-virtual {v2}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->getRightMaskWidth()I
 
     move-result v3
 
-    .line 33
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -10440,14 +10558,12 @@
 
     if-eqz v5, :cond_f
 
-    .line 34
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     if-eq v5, v3, :cond_13
 
-    .line 35
     :cond_f
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10457,7 +10573,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 36
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentWidth()I
@@ -10478,7 +10593,6 @@
 
     if-ne p1, p3, :cond_13
 
-    .line 37
     :cond_11
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRightCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10494,13 +10608,11 @@
     :goto_9
     invoke-virtual {v5, v3, p2, v6}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificWidth(ILjava/util/List;Z)V
 
-    .line 38
     :cond_13
     invoke-virtual {v2}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->getTopMaskTargetHeight()I
 
     move-result v3
 
-    .line 39
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -10511,14 +10623,12 @@
 
     if-eqz v5, :cond_14
 
-    .line 40
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     if-eq v5, v3, :cond_18
 
-    .line 41
     :cond_14
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10528,7 +10638,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 42
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v5}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentMaskHeight()I
@@ -10549,7 +10658,6 @@
 
     if-ne p1, p3, :cond_18
 
-    .line 43
     :cond_16
     iget-object v5, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTopCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10565,13 +10673,11 @@
     :goto_b
     invoke-virtual {v5, v3, p2, v6}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
 
-    .line 44
     :cond_18
     invoke-virtual {v2}, Lcom/android/camera/ui/drawable/snap/PaintConditionReferred;->getBottomMaskTargetHeight()I
 
     move-result v2
 
-    .line 45
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
@@ -10582,14 +10688,12 @@
 
     if-eqz v3, :cond_19
 
-    .line 46
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     if-eq v3, v2, :cond_1e
 
-    .line 47
     :cond_19
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10605,7 +10709,6 @@
 
     if-ne v0, v3, :cond_1a
 
-    .line 48
     invoke-static {}, Lcom/android/camera/CameraSettings;->getDualVideoConfig()Lcom/android/camera/data/data/runing/ComponentRunningDualVideo;
 
     move-result-object v0
@@ -10616,14 +10719,12 @@
 
     if-nez v0, :cond_1a
 
-    .line 49
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {p1, v2, p2, v4}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
 
     return-void
 
-    .line 50
     :cond_1a
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10645,7 +10746,6 @@
 
     if-ne p1, p3, :cond_1e
 
-    .line 51
     :cond_1c
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mBottomCover:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -10659,7 +10759,6 @@
     :goto_d
     invoke-virtual {p1, v2, p2, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->setMaskSpecificHeight(ILjava/util/List;Z)V
 
-    .line 52
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->updateHaloViewSize()V
 
     :cond_1e
@@ -10677,27 +10776,22 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideOrientationChanged(ILjava/util/List;I)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, p3, v0}, Lcom/android/camera/ui/FocusView;->setOrientation(IZ)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
-    iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
+    iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     if-eq p1, p3, :cond_1
 
-    .line 5
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object p1
@@ -10712,24 +10806,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 6
     iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iput p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
-    .line 8
     :goto_0
-    iput p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
-
     const/4 p1, 0x2
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 9
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -10756,7 +10844,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
@@ -10780,11 +10867,9 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
 
-    .line 2
-    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     const-string v1, "FragmentMainContent"
 
@@ -10792,7 +10877,6 @@
 
     if-eq v0, p2, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -10807,24 +10891,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iput v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     goto :goto_0
 
-    .line 5
     :cond_0
     iput p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
-    .line 6
     :goto_0
-    iput p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
-
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 7
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -10849,7 +10927,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
@@ -10863,10 +10940,8 @@
     :cond_1
     const-string/jumbo v0, "provideRotateItem: mWatermarkDegree == newDegree"
 
-    .line 9
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     :goto_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -10876,26 +10951,28 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/camera/ui/FaceView;->setOrientation(IZ)V
 
-    .line 11
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
 
     invoke-virtual {v0, p2, v2}, Lcom/android/camera/ui/AfRegionsView;->setOrientation(IZ)V
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
 
     if-eqz v0, :cond_2
 
-    .line 13
     invoke-virtual {v0, p2, v2}, Lcom/android/camera/trackfocus/TrackFocusView;->setOrientation(IZ)V
 
-    .line 14
     :cond_2
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mLightingView:Lcom/android/camera/ui/LightingView;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p2, v2}, Lcom/android/camera/ui/LightingView;->setOrientation(IZ)V
+
+    :cond_3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0, p2, v2}, Lcom/android/camera/ui/FocusView;->setOrientation(IZ)V
 
-    .line 15
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -10906,7 +10983,6 @@
 .method public reShowFaceRect()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FaceView;->reShowFaceRect()V
@@ -10917,20 +10993,16 @@
 .method public register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xa6
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
     const/16 v0, 0xd6
 
-    .line 3
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->attachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 4
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     return-void
@@ -10939,7 +11011,6 @@
 .method public removeTiltShiftMask()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->removeTiltShiftMask()V
@@ -10950,35 +11021,14 @@
 .method public setActiveIndicator(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mActiveIndicator:I
 
     return-void
 .end method
 
 .method public setAfRegionView([Landroid/hardware/camera2/params/MeteringRectangle;Landroid/graphics/Rect;FZ)V
-    .locals 2
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
-
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoo;
-
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoo;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 3
-    :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/camera/ui/AfRegionsView;->setAfRegionRect([Landroid/hardware/camera2/params/MeteringRectangle;Landroid/graphics/Rect;FZ)V
@@ -10989,7 +11039,6 @@
 .method public setCameraDisplayOrientation(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     if-eqz v0, :cond_0
@@ -10998,31 +11047,139 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FaceView;->setCameraDisplayOrientation(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAfRegionsView:Lcom/android/camera/ui/AfRegionsView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/AfRegionsView;->setCameraDisplayOrientation(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->setCameraDisplayOrientation(I)V
 
     :cond_1
     return-void
 .end method
 
+.method public setCenterHint(ILjava/lang/String;Ljava/lang/String;I)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    if-nez p1, :cond_4
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintText:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    const/4 v0, 0x0
+
+    const-string v1, ""
+
+    const/16 v2, 0x8
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintText:Landroid/widget/TextView;
+
+    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintText:Landroid/widget/TextView;
+
+    invoke-virtual {p2, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_1
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/bumptech/glide/Glide;->with(Landroidx/fragment/app/FragmentActivity;)Lcom/bumptech/glide/RequestManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p3}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
+
+    move-result-object p2
+
+    iget-object p3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {p2, p3}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mCenterHintIcon:Landroid/widget/ImageView;
+
+    invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :goto_3
+    if-lez p4, :cond_4
+
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
+
+    new-instance p3, Lcom/android/camera/fragment/FragmentMainContent$6;
+
+    invoke-direct {p3, p0}, Lcom/android/camera/fragment/FragmentMainContent$6;-><init>(Lcom/android/camera/fragment/FragmentMainContent;)V
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v1
+
+    int-to-long v3, p4
+
+    add-long/2addr v1, v3
+
+    invoke-virtual {p2, p3, v0, v1, v2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+
+    :cond_4
+    iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewCenterHint:Landroid/view/ViewGroup;
+
+    invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
+
+    return-void
+.end method
+
 .method public setDisplaySize(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/ui/ObjectView;->setDisplaySize(II)V
@@ -11035,14 +11192,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/V6EffectCropView;->show()V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
@@ -11055,12 +11210,10 @@
 .method public setEvAdjustVisible(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->setEVVisible(Z)V
 
     :cond_0
@@ -11070,7 +11223,6 @@
 .method public setEvAdjustable(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0, p1, p1}, Lcom/android/camera/ui/FocusView;->setEvAdjust(ZZ)V
@@ -11089,15 +11241,13 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v1, 0xa6
 
-    if-eq p1, v1, :cond_3
+    if-eq p1, v1, :cond_2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p1
@@ -11106,22 +11256,17 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_2
 
-    goto :goto_0
-
-    .line 3
-    :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/FragmentMainContent;->isFocusViewVisible()Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    return v0
+    goto :goto_0
 
-    .line 4
-    :cond_2
+    :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p1, p2, p3, p4}, Lcom/android/camera/ui/FaceView;->setFaces([Lcom/android/camera2/CameraHardwareFace;Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
@@ -11130,13 +11275,12 @@
 
     return p1
 
-    :cond_3
+    :cond_2
     :goto_0
     const-string p1, "FragmentMainContent"
 
-    const-string/jumbo p2, "panorama mode or isIntentIDPhoto, return false"
+    const-string/jumbo p2, "panorama mode or isIntentIDPhoto or isFocusViewVisible, return false"
 
-    .line 5
     invoke-static {p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -11145,12 +11289,10 @@
 .method public setFocusViewPosition(III)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/ui/FocusView;->setPosition(III)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/FaceView;->forceHideRect()V
@@ -11161,7 +11303,6 @@
 .method public setFocusViewType(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->setFocusType(Z)V
@@ -11172,7 +11313,6 @@
 .method public setIdPhotoBoxVisible(Z)V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -11192,28 +11332,38 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 2
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoo0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoo0;
 
-    invoke-direct {v1, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOoo0;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Z)V
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoo0;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
+.method public setMimojiDetectTipType(I)V
+    .locals 1
+
+    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiDetectTipType:I
+
+    if-eq p1, v0, :cond_0
+
+    iput p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiDetectTipType:I
+
+    :cond_0
+    return-void
+.end method
+
 .method public setObjectViewListener(Lcom/android/camera/ui/ObjectView$ObjectViewListener;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mObjectView:Lcom/android/camera/ui/ObjectView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/ObjectView;->setObjectViewListener(Lcom/android/camera/ui/ObjectView$ObjectViewListener;)V
 
     :cond_0
@@ -11221,23 +11371,41 @@
 .end method
 
 .method public setPreviewAspectRatio(F)V
-    .locals 0
+    .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->adjustViewHeight()V
 
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Lcom/android/camera/Util;->getCameraPreviewRect()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result p1
+
+    invoke-virtual {v0, v1, p1}, Lcom/android/camera/ui/DocumentView;->setDisplaySize(II)V
+
+    :cond_0
     return-void
 .end method
 
 .method public setPreviewSize(II)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v1, Landroid/util/Size;
 
     invoke-direct {v1, p1, p2}, Landroid/util/Size;-><init>(II)V
@@ -11245,13 +11413,19 @@
     invoke-virtual {v0, v1}, Lcom/android/camera2/autozoom/AutoZoomView;->setPreviewSize(Landroid/util/Size;)V
 
     :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1, p2}, Lcom/android/camera/ui/DocumentView;->setPreviewSize(II)V
+
+    :cond_1
     return-void
 .end method
 
 .method public setShowGenderAndAge(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FaceView;->setShowGenderAndAge(Z)V
@@ -11262,7 +11436,6 @@
 .method public setShowMagicMirror(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FaceView;->setShowMagicMirror(Z)V
@@ -11273,12 +11446,10 @@
 .method public setSkipDrawFace(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FaceView;->setSkipDraw(Z)V
 
     :cond_0
@@ -11288,7 +11459,6 @@
 .method public setVideoCastLayoutType(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mAutoZoomOverlay:Lcom/android/camera2/autozoom/AutoZoomView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera2/autozoom/AutoZoomView;->setVideoCastLayoutType(I)V
@@ -11299,7 +11469,6 @@
 .method public setWatermarkVisible(I)V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v0
@@ -11308,12 +11477,10 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     if-eqz v1, :cond_0
@@ -11324,7 +11491,6 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -11341,7 +11507,6 @@
     :cond_1
     move v2, v1
 
-    .line 5
     :goto_0
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendLayout:Landroid/widget/FrameLayout;
 
@@ -11353,7 +11518,6 @@
 
     if-eq v3, v2, :cond_2
 
-    .line 6
     iget-object v3, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -11366,7 +11530,6 @@
     :cond_3
     move p1, v1
 
-    .line 7
     :goto_1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
@@ -11378,7 +11541,6 @@
 
     if-eq v0, p1, :cond_4
 
-    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkBackgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -11400,7 +11562,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
@@ -11408,7 +11569,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -11423,14 +11583,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     iget-object v0, v0, Lcom/android/camera/ui/V6PreviewPanel;->mVideoReviewImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
     iget-object p1, p1, Lcom/android/camera/ui/V6PreviewPanel;->mVideoReviewImage:Landroid/widget/ImageView;
@@ -11439,7 +11597,6 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewPanel:Lcom/android/camera/ui/V6PreviewPanel;
 
@@ -11450,10 +11607,44 @@
     return-void
 .end method
 
+.method public showShineHalo()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcom/android/camera/customization/FlashHalo;->getInstance()Lcom/android/camera/customization/FlashHalo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/customization/FlashHalo;->getHaloVisible()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mShineHalo:Lcom/android/camera/ui/FlashHaloView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public startEvShowAgainAnimation()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/FocusView;->startEvShowAgainAnimation()V
@@ -11464,20 +11655,16 @@
 .method public unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;)V
 
     const/16 v0, 0xa6
 
-    .line 2
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
-    .line 3
     invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;)V
 
     const/16 v0, 0xd6
 
-    .line 4
     invoke-interface {p1, v0, p0}, Lcom/android/camera/protocol/ModeProtocol$ModeCoordinator;->detachProtocol(ILcom/android/camera/protocol/ModeProtocol$BaseProtocol;)V
 
     return-void
@@ -11486,17 +11673,14 @@
 .method public updateCenterMarkSwitched()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/CameraSettings;->isCenterMarkOn()Z
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {v1, v0}, Lcom/android/camera/ui/V6PreviewFrame;->updateCenterMarkSwitched(Z)V
@@ -11508,14 +11692,12 @@
 .method public updateContentDescription()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     const v1, 0x7f12006e
@@ -11526,14 +11708,12 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -11546,10 +11726,75 @@
     return-void
 .end method
 
+.method public updateDocument(Landroid/util/Pair;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/Pair<",
+            "Lcom/xiaomi/ocr/sdk/imgprocess/DocumentProcess$QuadStatus;",
+            "[F>;)V"
+        }
+    .end annotation
+
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    const/16 v1, 0x8
+
+    const/16 v2, 0xba
+
+    if-ne v0, v2, :cond_2
+
+    if-eqz p1, :cond_2
+
+    iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v0, [F
+
+    array-length v0, v0
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/DocumentView;->updateDocument(Landroid/util/Pair;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {p1}, Lcom/android/camera/ui/DocumentView;->clear()V
+
+    iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mDocumentView:Lcom/android/camera/ui/DocumentView;
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
 .method public updateEffectViewVisible()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/V6EffectCropView;->updateVisible()V
@@ -11560,7 +11805,6 @@
 .method public updateEffectViewVisible(I)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mEffectCropView:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/V6EffectCropView;->updateVisible(I)V
@@ -11573,12 +11817,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p2}, Lcom/android/camera/ui/FaceView;->clear()V
 
-    .line 2
     :cond_0
     iget-object p2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -11596,12 +11838,10 @@
 
     if-lez p5, :cond_2
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p1, p5}, Lcom/android/camera/ui/FaceView;->setCameraDisplayOrientation(I)V
 
-    .line 4
     :cond_2
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
@@ -11609,7 +11849,6 @@
 
     if-eqz p4, :cond_3
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFaceView:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p1}, Lcom/android/camera/ui/FaceView;->resume()V
@@ -11621,7 +11860,6 @@
 .method public updateFocusMode(Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mFocusView:Lcom/android/camera/ui/FocusView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/FocusView;->updateFocusMode(Ljava/lang/String;)V
@@ -11629,22 +11867,33 @@
     return-void
 .end method
 
+.method public updateMimojiFaceDetectResultTip(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mMimojiLightingView:Lcom/android/camera/ui/LightingView;
+
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoO;
+
+    invoke-direct {v1, p0, p1}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoO;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Z)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
 .method public updateReferenceGradienterSwitched()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->isReferenceLineEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -11661,7 +11910,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object v0
@@ -11672,7 +11920,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/FragmentMainContent;->needReferenceLineMode()Z
 
     move-result v0
@@ -11686,13 +11933,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 6
     :goto_0
     invoke-static {}, Lcom/android/camera/CameraSettings;->isGradienterOn()Z
 
     move-result v1
 
-    .line 7
     iget-object v2, p0, Lcom/android/camera/fragment/FragmentMainContent;->mPreviewFrame:Lcom/android/camera/ui/V6PreviewFrame;
 
     invoke-static {}, Lcom/android/camera/module/ModuleManager;->isSquareModule()Z
@@ -11712,7 +11957,6 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -11733,21 +11977,18 @@
 
     invoke-static {v2, v4, v1}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object v1
 
     const/16 v4, 0xac
 
-    .line 3
     invoke-virtual {v1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera/protocol/ModeProtocol$TopAlert;
 
-    .line 4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
     move-result-object v4
@@ -11756,7 +11997,6 @@
 
     move-result-object v4
 
-    .line 5
     invoke-virtual {v4}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v4
@@ -11765,7 +12005,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 6
     invoke-virtual {v4}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -11852,13 +12091,12 @@
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 7
     :goto_1
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOooo;
 
-    invoke-direct {v0, v1, v3}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOo;-><init>(Lcom/android/camera/protocol/ModeProtocol$TopAlert;I)V
+    invoke-direct {v0, v1, v3}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOooo;-><init>(Lcom/android/camera/protocol/ModeProtocol$TopAlert;I)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -11877,12 +12115,10 @@
 .method public updateTrackFocusResult(Lcom/android/camera/trackfocus/TrackResult;Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mTrackFocusView:Lcom/android/camera/trackfocus/TrackFocusView;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/trackfocus/TrackFocusView;->setTrackResult(Lcom/android/camera/trackfocus/TrackResult;Landroid/graphics/Rect;)V
 
     :cond_0
@@ -11902,7 +12138,6 @@
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -11919,7 +12154,6 @@
 
     invoke-static {v2, v4, v3}, Lcom/android/camera/log/Log;->k(ILjava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemRunning()Lcom/android/camera/data/data/runing/DataItemRunning;
 
@@ -11929,29 +12163,24 @@
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v3
 
     invoke-direct {p0, p1, v3}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkTipsIfNeeded(Lcom/android/camera/aiwatermark/data/WatermarkItem;Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
-    .line 4
     invoke-virtual {v2, p1}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->updateWatermarkItem(Lcom/android/camera/aiwatermark/data/WatermarkItem;)V
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getDisplayRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 6
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isDualWatermark()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    .line 7
     iget-object v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMajorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -11970,7 +12199,6 @@
     :goto_0
     invoke-direct {p0, v4, v5}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkItem(Landroid/widget/FrameLayout;Z)V
 
-    .line 8
     iget-object v4, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkExtendLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->getMinorWatermarkItem()Lcom/android/camera/aiwatermark/data/WatermarkItem;
@@ -11987,10 +12215,8 @@
     :goto_1
     invoke-direct {p0, v4, v0}, Lcom/android/camera/fragment/FragmentMainContent;->showWatermarkItem(Landroid/widget/FrameLayout;Z)V
 
-    .line 9
     invoke-direct {p0, v2, v3}, Lcom/android/camera/fragment/FragmentMainContent;->updateWatermarkItemBackground(Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;Landroid/graphics/Rect;)V
 
-    .line 10
     :cond_3
     invoke-virtual {v2}, Lcom/android/camera/data/data/runing/ComponentRunningAIWatermark;->isFixedOrientation()Z
 
@@ -11998,37 +12224,24 @@
 
     if-eqz v0, :cond_4
 
-    .line 11
     iput v1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
-    goto :goto_2
-
-    .line 12
     :cond_4
-    iget v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mRealDegree:I
-
-    iput v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
-
-    :goto_2
     if-nez p1, :cond_5
 
     return-void
 
-    .line 13
     :cond_5
     invoke-virtual {p1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->clearCaptureCoordinate()V
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkLayout:Landroid/widget/FrameLayout;
 
     if-eqz p1, :cond_6
 
-    .line 15
     iget p1, p0, Lcom/android/camera/fragment/FragmentMainContent;->mWatermarkDegree:I
 
     invoke-direct {p0, p1, v3}, Lcom/android/camera/fragment/FragmentMainContent;->updateWatermarkRotation(ILandroid/graphics/Rect;)V
 
-    .line 16
     invoke-virtual {p0, v1}, Lcom/android/camera/fragment/FragmentMainContent;->setWatermarkVisible(I)V
 
     :cond_6
@@ -12042,25 +12255,22 @@
 
     const-string/jumbo v1, "updateWatermarkSample"
 
-    .line 17
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-nez p1, :cond_0
 
     const-string/jumbo p1, "updateWatermarkSample item is null"
 
-    .line 18
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/FragmentMainContent;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOooo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoo;
 
-    invoke-direct {v1, p0, p1, p2}, LOooO00o/OooO0O0/OooO00o/OoooO0/OooOooo;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/aiwatermark/data/WatermarkItem;Z)V
+    invoke-direct {v1, p0, p1, p2}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooOoo;-><init>(Lcom/android/camera/fragment/FragmentMainContent;Lcom/android/camera/aiwatermark/data/WatermarkItem;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

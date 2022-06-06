@@ -7,10 +7,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "No instances!"
@@ -32,12 +30,10 @@
         }
     .end annotation
 
-    .line 14
     new-instance v0, Lio/reactivex/internal/util/BlockingIgnoringReceiver;
 
     invoke-direct {v0}, Lio/reactivex/internal/util/BlockingIgnoringReceiver;-><init>()V
 
-    .line 15
     new-instance v1, Lio/reactivex/internal/subscribers/LambdaSubscriber;
 
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
@@ -48,20 +44,16 @@
 
     invoke-direct {v1, v2, v0, v0, v3}, Lio/reactivex/internal/subscribers/LambdaSubscriber;-><init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Consumer;)V
 
-    .line 16
     invoke-interface {p0, v1}, Lorg/reactivestreams/Publisher;->subscribe(Lorg/reactivestreams/Subscriber;)V
 
-    .line 17
     invoke-static {v0, v1}, Lio/reactivex/internal/util/BlockingHelper;->awaitForComplete(Ljava/util/concurrent/CountDownLatch;Lio/reactivex/disposables/Disposable;)V
 
-    .line 18
     iget-object p0, v0, Lio/reactivex/internal/util/BlockingIgnoringReceiver;->error:Ljava/lang/Throwable;
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 19
     :cond_0
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -92,20 +84,16 @@
 
     const-string v0, "onNext is null"
 
-    .line 20
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onError is null"
 
-    .line 21
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 22
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 23
     new-instance v0, Lio/reactivex/internal/subscribers/LambdaSubscriber;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->REQUEST_MAX:Lio/reactivex/functions/Consumer;
@@ -131,20 +119,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    .line 2
     new-instance v1, Lio/reactivex/internal/subscribers/BlockingSubscriber;
 
     invoke-direct {v1, v0}, Lio/reactivex/internal/subscribers/BlockingSubscriber;-><init>(Ljava/util/Queue;)V
 
-    .line 3
     invoke-interface {p0, v1}, Lorg/reactivestreams/Publisher;->subscribe(Lorg/reactivestreams/Subscriber;)V
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-virtual {v1}, Lio/reactivex/internal/subscribers/BlockingSubscriber;->isCancelled()Z
@@ -155,7 +139,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->poll()Ljava/lang/Object;
 
@@ -163,7 +146,6 @@
 
     if-nez v2, :cond_3
 
-    .line 6
     invoke-virtual {v1}, Lio/reactivex/internal/subscribers/BlockingSubscriber;->isCancelled()Z
 
     move-result v2
@@ -172,16 +154,13 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-static {}, Lio/reactivex/internal/util/BlockingHelper;->verifyNonBlocking()V
 
-    .line 8
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 9
     :cond_3
     invoke-virtual {v1}, Lio/reactivex/internal/subscribers/BlockingSubscriber;->isCancelled()Z
 
@@ -191,13 +170,11 @@
 
     goto :goto_0
 
-    .line 10
     :cond_4
     sget-object v3, Lio/reactivex/internal/subscribers/BlockingSubscriber;->TERMINATED:Ljava/lang/Object;
 
     if-eq p0, v3, :cond_5
 
-    .line 11
     invoke-static {v2, p1}, Lio/reactivex/internal/util/NotificationLite;->acceptFull(Ljava/lang/Object;Lorg/reactivestreams/Subscriber;)Z
 
     move-result v2
@@ -211,10 +188,8 @@
     :catch_0
     move-exception p0
 
-    .line 12
     invoke-virtual {v1}, Lio/reactivex/internal/subscribers/BlockingSubscriber;->cancel()V
 
-    .line 13
     invoke-interface {p1, p0}, Lorg/reactivestreams/Subscriber;->onError(Ljava/lang/Throwable;)V
 
     :cond_5

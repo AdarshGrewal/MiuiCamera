@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
 .method public static buildFromJson(Ljava/lang/String;)Lcom/xiaomi/idm/account/TokenInfo;
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
@@ -41,7 +39,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     invoke-virtual {p0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +57,6 @@
 
     const-string v0, "ServiceTokenInfo"
 
-    .line 3
     :try_start_0
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
@@ -68,7 +64,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object p0
@@ -84,7 +79,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     invoke-virtual {p0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -107,7 +101,6 @@
 .method public final getToken()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/account/TokenInfo;->token:Ljava/lang/String;
 
     return-object v0
@@ -116,12 +109,10 @@
 .method public toJson()Lorg/json/JSONObject;
     .locals 4
 
-    .line 1
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/xiaomi/idm/account/TokenInfo;->getKeyId()Ljava/lang/String;
 
@@ -140,7 +131,6 @@
     :catch_0
     move-exception v1
 
-    .line 3
     invoke-virtual {v1}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v2

@@ -31,7 +31,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lmiuix/internal/util/TaggingDrawableUtil;->STATES_TAGS:[I
@@ -46,7 +45,6 @@
 
     aput v2, v1, v3
 
-    .line 2
     sput-object v1, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_SINGLE:[I
 
     new-array v1, v0, [I
@@ -55,7 +53,6 @@
 
     aput v2, v1, v3
 
-    .line 3
     sput-object v1, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_FIRST:[I
 
     new-array v1, v0, [I
@@ -64,7 +61,6 @@
 
     aput v2, v1, v3
 
-    .line 4
     sput-object v1, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_MIDDLE:[I
 
     new-array v0, v0, [I
@@ -73,7 +69,6 @@
 
     aput v1, v0, v3
 
-    .line 5
     sput-object v0, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_LAST:[I
 
     return-void
@@ -92,7 +87,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -101,7 +95,6 @@
 .method public static getDimen(Landroid/content/Context;I)I
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -122,13 +115,11 @@
 
     goto :goto_1
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 2
     instance-of v1, v0, Landroid/graphics/drawable/StateListDrawable;
 
     if-eqz v1, :cond_1
@@ -139,37 +130,31 @@
 
     sget-object v2, Lmiuix/internal/util/TaggingDrawableUtil;->STATES_TAGS:[I
 
-    .line 3
     invoke-static {v1, v2}, Lmiuix/internal/graphics/drawable/TaggingDrawable;->containsTagState(Landroid/graphics/drawable/StateListDrawable;[I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 4
     new-instance v1, Lmiuix/internal/graphics/drawable/TaggingDrawable;
 
     invoke-direct {v1, v0}, Lmiuix/internal/graphics/drawable/TaggingDrawable;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5
     invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     move-object v0, v1
 
-    .line 6
     :cond_1
     instance-of p0, v0, Lmiuix/internal/graphics/drawable/TaggingDrawable;
 
     if-eqz p0, :cond_5
 
-    .line 7
     check-cast v0, Lmiuix/internal/graphics/drawable/TaggingDrawable;
 
     const/4 p0, 0x1
 
     if-ne p2, p0, :cond_2
 
-    .line 8
     sget-object p0, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_SINGLE:[I
 
     goto :goto_0
@@ -177,7 +162,6 @@
     :cond_2
     if-nez p1, :cond_3
 
-    .line 9
     sget-object p0, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_FIRST:[I
 
     goto :goto_0
@@ -187,16 +171,13 @@
 
     if-ne p1, p2, :cond_4
 
-    .line 10
     sget-object p0, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_LAST:[I
 
     goto :goto_0
 
-    .line 11
     :cond_4
     sget-object p0, Lmiuix/internal/util/TaggingDrawableUtil;->STATE_SET_MIDDLE:[I
 
-    .line 12
     :goto_0
     invoke-virtual {v0, p0}, Lmiuix/internal/graphics/drawable/TaggingDrawable;->setTaggingState([I)Z
 
@@ -208,10 +189,8 @@
 .method public static updateItemBackground(Landroid/view/View;II)V
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Lmiuix/internal/util/TaggingDrawableUtil;->updateBackgroundState(Landroid/view/View;II)V
 
-    .line 2
     invoke-static {p0, p1, p2}, Lmiuix/internal/util/TaggingDrawableUtil;->updateItemPadding(Landroid/view/View;II)V
 
     return-void
@@ -226,26 +205,21 @@
 
     goto :goto_2
 
-    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
 
     move-result v2
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     const/4 v3, 0x1
@@ -254,12 +228,10 @@
 
     if-ne p2, v3, :cond_2
 
-    .line 6
     sget p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSingle:I
 
     if-ne p1, v4, :cond_1
 
-    .line 7
     sget p1, Lmiuix/appcompat/R$dimen;->miuix_appcompat_drop_down_menu_padding_single_item:I
 
     invoke-static {v0, p1}, Lmiuix/internal/util/TaggingDrawableUtil;->getDimen(Landroid/content/Context;I)I
@@ -268,7 +240,6 @@
 
     sput p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSingle:I
 
-    .line 8
     :cond_1
     sget p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSingle:I
 
@@ -277,13 +248,11 @@
 
     goto :goto_1
 
-    .line 9
     :cond_2
     sget v5, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSmall:I
 
     if-ne v5, v4, :cond_3
 
-    .line 10
     sget v5, Lmiuix/appcompat/R$dimen;->miuix_appcompat_drop_down_menu_padding_small:I
 
     invoke-static {v0, v5}, Lmiuix/internal/util/TaggingDrawableUtil;->getDimen(Landroid/content/Context;I)I
@@ -292,13 +261,11 @@
 
     sput v5, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSmall:I
 
-    .line 11
     :cond_3
     sget v5, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingLarge:I
 
     if-ne v5, v4, :cond_4
 
-    .line 12
     sget v4, Lmiuix/appcompat/R$dimen;->miuix_appcompat_drop_down_menu_padding_large:I
 
     invoke-static {v0, v4}, Lmiuix/internal/util/TaggingDrawableUtil;->getDimen(Landroid/content/Context;I)I
@@ -310,10 +277,8 @@
     :cond_4
     if-nez p1, :cond_5
 
-    .line 13
     sget p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingLarge:I
 
-    .line 14
     sget p2, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSmall:I
 
     goto :goto_1
@@ -323,21 +288,17 @@
 
     if-ne p1, p2, :cond_6
 
-    .line 15
     sget p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSmall:I
 
-    .line 16
     sget p2, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingLarge:I
 
     goto :goto_1
 
-    .line 17
     :cond_6
     sget p1, Lmiuix/internal/util/TaggingDrawableUtil;->mPaddingSmall:I
 
     goto :goto_0
 
-    .line 18
     :goto_1
     invoke-virtual {p0, v1, p1, v2, p2}, Landroid/view/View;->setPaddingRelative(IIII)V
 

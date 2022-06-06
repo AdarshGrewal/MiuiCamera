@@ -31,16 +31,12 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/text/TextPaint;Landroid/graphics/Paint$FontMetricsInt;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p4, p5}, Lcom/android/gallery3d/ui/CanvasTexture;-><init>(II)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/gallery3d/ui/StringTexture;->mText:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/android/gallery3d/ui/StringTexture;->mPaint:Landroid/text/TextPaint;
 
-    .line 4
     iput-object p3, p0, Lcom/android/gallery3d/ui/StringTexture;->mMetrics:Landroid/graphics/Paint$FontMetricsInt;
 
     return-void
@@ -49,20 +45,16 @@
 .method public static getDefaultPaint(FII)Landroid/text/TextPaint;
     .locals 3
 
-    .line 1
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    .line 2
     invoke-virtual {v0, p0}, Landroid/text/TextPaint;->setTextSize(F)V
 
     const/4 p0, 0x1
 
-    .line 3
     invoke-virtual {v0, p0}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    .line 4
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
 
     const/high16 p1, -0x1000000
@@ -71,7 +63,6 @@
 
     if-ne p2, p0, :cond_0
 
-    .line 5
     invoke-static {}, Lcom/android/camera/Util;->getMiuiTypeface()Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -80,10 +71,8 @@
 
     const/high16 p0, 0x40a00000    # 5.0f
 
-    .line 6
     invoke-virtual {v0, v1, p0, p0, p1}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    .line 7
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setLetterSpacing(F)V
 
     goto :goto_0
@@ -95,7 +84,6 @@
 
     if-ne p2, p0, :cond_1
 
-    .line 8
     invoke-static {}, Lcom/android/camera/Util;->getMiuiTypeface()Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -106,10 +94,8 @@
 
     const/high16 p1, 0x2e000000
 
-    .line 9
     invoke-virtual {v0, v1, v2, p0, p1}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    .line 10
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setLetterSpacing(F)V
 
     goto :goto_0
@@ -117,7 +103,6 @@
     :cond_1
     const/high16 p0, 0x40000000    # 2.0f
 
-    .line 11
     invoke-virtual {v0, p0, v2, v2, p1}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
     :goto_0
@@ -139,7 +124,6 @@
 
     move v4, p4
 
-    .line 5
     invoke-static/range {v0 .. v5}, Lcom/android/gallery3d/ui/StringTexture;->newInstance(Ljava/lang/String;FIFZI)Lcom/android/gallery3d/ui/StringTexture;
 
     move-result-object p0
@@ -150,7 +134,6 @@
 .method public static newInstance(Ljava/lang/String;FIFZI)Lcom/android/gallery3d/ui/StringTexture;
     .locals 0
 
-    .line 6
     invoke-static {p1, p2, p5}, Lcom/android/gallery3d/ui/StringTexture;->getDefaultPaint(FII)Landroid/text/TextPaint;
 
     move-result-object p1
@@ -159,7 +142,6 @@
 
     const/4 p2, 0x1
 
-    .line 7
     invoke-static {p2}, Landroid/graphics/Typeface;->defaultFromStyle(I)Landroid/graphics/Typeface;
 
     move-result-object p2
@@ -173,19 +155,16 @@
 
     if-lez p2, :cond_1
 
-    .line 8
     sget-object p2, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-static {p0, p1, p3, p2}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    .line 9
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 10
     :cond_1
     invoke-static {p0, p1, p5}, Lcom/android/gallery3d/ui/StringTexture;->newInstance(Ljava/lang/String;Landroid/text/TextPaint;I)Lcom/android/gallery3d/ui/StringTexture;
 
@@ -197,31 +176,27 @@
 .method public static newInstance(Ljava/lang/String;FII)Lcom/android/gallery3d/ui/StringTexture;
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00OO0oo()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00OO000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {p1}, Lcom/android/camera/effect/renders/CustomTextWaterMark;->getTextPaintGen2(F)Landroid/text/TextPaint;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {p1, p2, p3}, Lcom/android/gallery3d/ui/StringTexture;->getDefaultPaint(FII)Landroid/text/TextPaint;
 
     move-result-object p1
 
-    .line 4
     :goto_0
     invoke-static {p0, p1, p3}, Lcom/android/gallery3d/ui/StringTexture;->newInstance(Ljava/lang/String;Landroid/text/TextPaint;I)Lcom/android/gallery3d/ui/StringTexture;
 
@@ -233,12 +208,10 @@
 .method public static newInstance(Ljava/lang/String;Landroid/text/TextPaint;I)Lcom/android/gallery3d/ui/StringTexture;
     .locals 6
 
-    .line 11
     invoke-virtual {p1}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v3
 
-    .line 12
     invoke-virtual {p1, p0}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
     move-result v0
@@ -265,7 +238,6 @@
     :goto_0
     add-int/2addr v0, p2
 
-    .line 13
     iget p2, v3, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     iget v2, v3, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
@@ -291,7 +263,6 @@
     :cond_2
     move v5, p2
 
-    .line 14
     :goto_2
     new-instance p2, Lcom/android/gallery3d/ui/StringTexture;
 
@@ -311,7 +282,6 @@
 .method public onDraw(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/android/gallery3d/ui/StringTexture;->mMetrics:Landroid/graphics/Paint$FontMetricsInt;
 
     iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
@@ -324,7 +294,6 @@
 
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2
     iget-object p2, p0, Lcom/android/gallery3d/ui/StringTexture;->mText:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/gallery3d/ui/StringTexture;->mPaint:Landroid/text/TextPaint;

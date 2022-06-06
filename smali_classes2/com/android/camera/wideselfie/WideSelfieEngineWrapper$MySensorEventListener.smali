@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/wideselfie/WideSelfieEngineWrapper$MySensorEventListener;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 4
 
-    .line 1
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     if-eqz v0, :cond_1
@@ -58,7 +55,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
@@ -68,7 +64,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 3
     invoke-static {}, Lcom/arcsoft/camera/wideselfie/WideSelfieEngine;->getSingleInstance()Lcom/arcsoft/camera/wideselfie/WideSelfieEngine;
 
     move-result-object v0
@@ -79,12 +74,10 @@
 
     iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
-    .line 4
     invoke-virtual {p1}, Landroid/hardware/Sensor;->getType()I
 
     move-result p1
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3, p1}, Lcom/arcsoft/camera/wideselfie/WideSelfieEngine;->setSensorData([FJI)V
 
     :cond_1

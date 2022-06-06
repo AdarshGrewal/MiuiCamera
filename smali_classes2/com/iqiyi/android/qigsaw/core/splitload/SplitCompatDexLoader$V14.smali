@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1, p2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatDexLoader$V14;->load(Ljava/lang/ClassLoader;Ljava/util/List;Ljava/io/File;)V
 
     return-void
@@ -68,17 +66,14 @@
 
     const-string v0, "pathList"
 
-    .line 1
     invoke-static {p0, v0}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -121,7 +116,6 @@
 
     new-array v1, v0, [Ljava/lang/Class;
 
-    .line 1
     const-class v2, Ljava/util/ArrayList;
 
     const/4 v3, 0x0
@@ -136,7 +130,6 @@
 
     const-string v2, "makeDexElements"
 
-    .line 2
     invoke-static {p0, v2, v1}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findMethod(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -147,7 +140,6 @@
 
     aput-object p2, v0, v4
 
-    .line 3
     invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

@@ -24,7 +24,6 @@
 
     const-string v0, "urn:aiot-spec-v3:service:handoff:00000001:1"
 
-    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/xiaomi/idm/service/handoff/HandoffService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -33,7 +32,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/service/handoff/HandoffService;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -48,14 +46,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     iget-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     or-int/2addr p1, p2
 
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
-    .line 2
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Skeleton;->mHandoffEventEnabled:Z
 
     goto :goto_0
@@ -65,10 +61,8 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 3
     iput-boolean p2, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Skeleton;->mHandoffEventEnabled:Z
 
-    .line 4
     iget-boolean p1, p0, Lcom/xiaomi/idm/api/IDMService;->mEventEnable:Z
 
     or-int/2addr p1, p2
@@ -85,12 +79,10 @@
 .method public notifyHandoffEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[B)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/service/handoff/HandoffService$Skeleton;->mHandoffEventEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent;->newBuilder()Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent$Builder;
 
     move-result-object v0
@@ -123,7 +115,6 @@
 
     const/4 p2, 0x1
 
-    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/service/handoff/proto/HandoffServiceProto$HandoffEvent;->toByteArray()[B
 
     move-result-object p1

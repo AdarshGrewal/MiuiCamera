@@ -13,13 +13,10 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
-    .line 3
     iput-wide p3, p0, Lcom/android/gallery3d/exif/Rational;->mDenominator:J
 
     return-void
@@ -28,15 +25,12 @@
 .method public constructor <init>(Lcom/android/gallery3d/exif/Rational;)V
     .locals 2
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iget-wide v0, p1, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
     iput-wide v0, p0, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
-    .line 6
     iget-wide v0, p1, Lcom/android/gallery3d/exif/Rational;->mDenominator:J
 
     iput-wide v0, p0, Lcom/android/gallery3d/exif/Rational;->mDenominator:J
@@ -62,16 +56,13 @@
 
     return v1
 
-    .line 1
     :cond_1
     instance-of v2, p1, Lcom/android/gallery3d/exif/Rational;
 
     if-eqz v2, :cond_2
 
-    .line 2
     check-cast p1, Lcom/android/gallery3d/exif/Rational;
 
-    .line 3
     iget-wide v2, p0, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
     iget-wide v4, p1, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
@@ -97,7 +88,6 @@
 .method public getDenominator()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/gallery3d/exif/Rational;->mDenominator:J
 
     return-wide v0
@@ -106,7 +96,6 @@
 .method public getNumerator()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
     return-wide v0
@@ -115,7 +104,6 @@
 .method public toDouble()D
     .locals 4
 
-    .line 1
     iget-wide v0, p0, Lcom/android/gallery3d/exif/Rational;->mNumerator:J
 
     long-to-double v0, v0
@@ -132,7 +120,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

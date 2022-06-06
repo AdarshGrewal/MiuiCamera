@@ -20,7 +20,6 @@
 .method public constructor <init>(IILjava/nio/ByteBuffer;Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/pic/b;->a:I
 
     iput p2, p0, Lcom/faceunity/pta_helper/pic/b;->b:I
@@ -39,7 +38,6 @@
 .method public final run()V
     .locals 10
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/pic/b;->a:I
 
     iget v1, p0, Lcom/faceunity/pta_helper/pic/b;->b:I
@@ -50,12 +48,10 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/faceunity/pta_helper/pic/b;->c:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    .line 3
     new-instance v8, Landroid/graphics/Matrix;
 
     invoke-direct {v8}, Landroid/graphics/Matrix;-><init>()V
@@ -64,10 +60,8 @@
 
     const/high16 v2, -0x40800000    # -1.0f
 
-    .line 4
     invoke-virtual {v8, v1, v2}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 5
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
@@ -88,15 +82,12 @@
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 7
     iget-object v0, p0, Lcom/faceunity/pta_helper/pic/b;->d:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-interface {v0, v1}, Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;->onEncoderPictureListener(Landroid/graphics/Bitmap;)V
 
     :cond_0

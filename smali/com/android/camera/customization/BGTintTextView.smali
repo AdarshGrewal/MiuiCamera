@@ -15,15 +15,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/customization/BGTintTextView;->init()V
 
     return-void
@@ -32,15 +29,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/customization/BGTintTextView;->init()V
 
     return-void
@@ -49,15 +43,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
-    .line 8
     iput-object p1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
 
-    .line 9
     invoke-direct {p0}, Lcom/android/camera/customization/BGTintTextView;->init()V
 
     return-void
@@ -66,15 +57,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 10
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     const/4 p1, 0x0
 
-    .line 11
     iput-object p1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
 
-    .line 12
     invoke-direct {p0}, Lcom/android/camera/customization/BGTintTextView;->init()V
 
     return-void
@@ -87,10 +75,8 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {p0, v0, v1}, Landroidx/core/view/ViewCompat;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -99,10 +85,8 @@
 
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/customization/BGTintTextView;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
@@ -115,7 +99,6 @@
 
     const/4 v0, 0x6
 
-    .line 5
     iput v0, p0, Lcom/android/camera/customization/BGTintTextView;->mRadius:I
 
     return-void
@@ -126,7 +109,6 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/BGTintTextView;->mPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
@@ -151,7 +133,6 @@
 
     const/4 v4, 0x0
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
     move-result v0
@@ -174,12 +155,10 @@
 
     move-result v0
 
-    .line 3
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
     const/4 v2, 0x0
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
     move-result v1
@@ -204,7 +183,6 @@
 
     invoke-virtual/range {v1 .. v8}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 5
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -213,14 +191,12 @@
 .method public setBGColor(I)V
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/customization/BGTintTextView;->mBGColor:Ljava/lang/Integer;
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->invalidate()V
 
     return-void

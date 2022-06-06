@@ -50,10 +50,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     return-void
@@ -71,7 +69,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I
@@ -99,7 +96,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -119,7 +115,6 @@
 
     add-int/lit8 v2, p2, 0x1
 
-    .line 2
     aput-object v1, p1, p2
 
     move p2, v2
@@ -133,7 +128,6 @@
 .method public count()J
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I
@@ -155,10 +149,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -176,7 +168,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-interface {p1, v1}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -195,7 +186,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChild()Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -206,7 +196,6 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getChildCount()I
 
     move-result v0
@@ -217,7 +206,6 @@
 .method public getShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/Nodes;->getShape()Ljava8/util/stream/StreamShape;
 
     move-result-object v0
@@ -235,7 +223,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-static {v0}, Ljava8/util/Spliterators;->spliterator(Ljava/util/Collection;)Ljava8/util/Spliterator;
@@ -252,7 +239,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget-object v1, p0, Ljava8/util/stream/Nodes$CollectionNode;->c:Ljava/util/Collection;
 
     invoke-interface {v1}, Ljava/util/Collection;->size()I
@@ -294,7 +280,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes;->truncate(Ljava8/util/stream/Node;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
 
     move-result-object p1

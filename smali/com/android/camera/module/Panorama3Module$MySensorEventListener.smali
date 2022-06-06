@@ -33,10 +33,8 @@
 .method public constructor <init>(Lcom/android/camera/module/Panorama3Module$SensorListener;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -57,7 +55,6 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/Panorama3Module$MySensorEventListener;->mRefSensorListener:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -70,7 +67,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-interface {v0, p1}, Lcom/android/camera/module/Panorama3Module$SensorListener;->onSensorChanged(Landroid/hardware/SensorEvent;)V
 

@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Lcom/android/camera/protocol/ModeProtocol$Expandable;
-.implements Lcom/android/camera/protocol/ModeProtocol$MenuSwitch;
 
 
 # annotations
@@ -20,3 +19,8 @@
 
 # static fields
 .field public static final TYPE_TAG:I = 0x2a2
+
+
+# virtual methods
+.method public abstract switchType(Ljava/lang/String;Z)V
+.end method

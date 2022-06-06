@@ -37,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
 .method public static calcDualCameraWatermarkLocation(IIIIFFF)[I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -79,7 +77,6 @@
 
     mul-float/2addr p5, p0
 
-    .line 2
     invoke-static {p5}, Ljava/lang/Math;->round(F)I
 
     move-result p3
@@ -88,7 +85,6 @@
 
     mul-float/2addr p6, p0
 
-    .line 3
     invoke-static {p6}, Ljava/lang/Math;->round(F)I
 
     move-result p0
@@ -121,12 +117,10 @@
 .method private checkPostFrameBuffer(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPostFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getWidth()I
 
     move-result v0
@@ -135,23 +129,19 @@
 
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPostFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
-    .line 3
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getHeight()I
 
     move-result v0
 
     if-eq v0, p2, :cond_2
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPostFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->release()V
 
-    .line 6
     :cond_1
     new-instance v0, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
@@ -166,12 +156,10 @@
 .method private checkPreFrameBuffer(II)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getWidth()I
 
     move-result v0
@@ -180,23 +168,19 @@
 
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
-    .line 3
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getHeight()I
 
     move-result v0
 
     if-eq v0, p2, :cond_2
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->release()V
 
-    .line 6
     :cond_1
     new-instance v0, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
@@ -279,7 +263,6 @@
 
     aput p4, v0, v4
 
-    .line 2
     div-int/lit8 p4, p1, 0x2
 
     aput p4, v0, v3
@@ -288,7 +271,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_2
     div-int/lit8 p3, p1, 0x2
 
@@ -359,7 +341,6 @@
     :cond_5
     aput v5, v0, v5
 
-    .line 4
     div-int/lit8 p3, p2, 0x2
 
     aput p3, v0, v4
@@ -405,7 +386,6 @@
     :cond_7
     if-eqz p4, :cond_8
 
-    .line 5
     div-int/lit8 p3, p1, 0x2
 
     aput p3, v0, v5
@@ -429,7 +409,6 @@
 
     aput v5, v0, v4
 
-    .line 6
     div-int/lit8 p3, p1, 0x2
 
     aput p3, v0, v3
@@ -524,7 +503,6 @@
 
     aput p3, v0, v3
 
-    .line 7
     div-int/lit8 p3, p2, 0x2
 
     aput p3, v0, v2
@@ -534,7 +512,6 @@
 
     move p4, v5
 
-    .line 8
     :goto_5
     aget p5, v0, v5
 
@@ -544,7 +521,6 @@
 
     aput p5, v0, v5
 
-    .line 9
     aget p5, v0, v4
 
     div-int/2addr p5, v3
@@ -553,7 +529,6 @@
 
     aput p5, v0, v4
 
-    .line 10
     aget p5, v0, v3
 
     const/4 p6, 0x4
@@ -564,7 +539,6 @@
 
     aput p5, v0, v3
 
-    .line 11
     aget p5, v0, v2
 
     div-int/2addr p5, p6
@@ -575,7 +549,6 @@
 
     if-ne p3, v4, :cond_c
 
-    .line 12
     aget p3, v0, v5
 
     aget p5, v0, v3
@@ -584,7 +557,6 @@
 
     if-eq p3, p1, :cond_c
 
-    .line 13
     aget p3, v0, v5
 
     sub-int/2addr p1, p3
@@ -609,7 +581,6 @@
 
     if-ne p4, v4, :cond_d
 
-    .line 14
     aget p3, v0, v4
 
     aget p4, v0, v2
@@ -618,7 +589,6 @@
 
     if-eq p3, p2, :cond_d
 
-    .line 15
     aget p3, v0, v4
 
     sub-int/2addr p2, p3
@@ -645,12 +615,10 @@
 .method private initEGL(Landroid/opengl/EGLContext;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mEglCore:Lcom/miui/extravideo/watermark/gles/EglCore;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/miui/extravideo/watermark/gles/EglCore;
 
     const/4 v1, 0x2
@@ -659,13 +627,11 @@
 
     iput-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mEglCore:Lcom/miui/extravideo/watermark/gles/EglCore;
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     if-nez p1, :cond_1
 
-    .line 4
     new-instance p1, Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mEglCore:Lcom/miui/extravideo/watermark/gles/EglCore;
@@ -687,7 +653,6 @@
 
     add-int/lit16 p3, p3, 0x10e
 
-    .line 1
     rem-int/lit16 v3, p3, 0x168
 
     const v6, 0x3de147ae    # 0.11f
@@ -712,18 +677,14 @@
 .method public init(IILandroid/graphics/Bitmap;[FI)V
     .locals 9
 
-    .line 1
     iput p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mParentW:I
 
-    .line 2
     iput p2, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mParentH:I
 
-    .line 3
     iput p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkRotation:I
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->initEGL(Landroid/opengl/EGLContext;)V
 
     const/4 v5, 0x1
@@ -738,7 +699,6 @@
 
     move v4, p5
 
-    .line 5
     invoke-virtual/range {v1 .. v6}, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->getWatermarkRange(IIIZZ)[I
 
     move-result-object p5
@@ -747,24 +707,20 @@
 
     const/4 v0, 0x2
 
-    .line 6
     aget v1, p5, v0
 
     iput v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     const/4 v1, 0x3
 
-    .line 7
     aget p5, p5, v1
 
     iput p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
 
-    .line 8
     iget-object p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     invoke-virtual {p5}, Lcom/miui/extravideo/watermark/gles/EglSurfaceBase;->makeCurrent()V
 
-    .line 9
     new-instance p5, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     iget v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
@@ -775,7 +731,6 @@
 
     iput-object p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
-    .line 10
     new-instance p5, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     iget v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
@@ -786,21 +741,18 @@
 
     iput-object p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPostFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
-    .line 11
     new-instance p5, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;
 
     invoke-direct {p5}, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;-><init>()V
 
     iput-object p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mYuvToRgbRender:Lcom/miui/extravideo/watermark/render/YuvToRgbRender;
 
-    .line 12
     new-instance p5, Lcom/miui/extravideo/watermark/render/RgbToYuvRender;
 
     invoke-direct {p5}, Lcom/miui/extravideo/watermark/render/RgbToYuvRender;-><init>()V
 
     iput-object p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRgbToYuvRender:Lcom/miui/extravideo/watermark/render/RgbToYuvRender;
 
-    .line 13
     iget p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkRotation:I
 
     add-int/lit16 v1, p5, 0x168
@@ -834,7 +786,6 @@
 
     move v2, p2
 
-    .line 14
     :goto_1
     invoke-virtual {p3}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -858,7 +809,6 @@
 
     move-result-object p4
 
-    .line 15
     aget p5, p4, p1
 
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkRange:[I
@@ -871,7 +821,6 @@
 
     aput p5, p4, p1
 
-    .line 16
     aget p1, p4, p2
 
     const/4 p5, 0x5
@@ -882,7 +831,6 @@
 
     aput p1, p4, p2
 
-    .line 17
     new-instance p1, Lcom/miui/extravideo/watermark/render/WatermarkTextureRenderExt;
 
     iget p5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
@@ -912,14 +860,12 @@
 
     const/4 p1, -0x1
 
-    .line 18
     invoke-static {p3, p1, p2}, Lcom/miui/extravideo/watermark/gles/OpenGlUtils;->loadTexture(Landroid/graphics/Bitmap;IZ)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkBitmapTexId:I
 
-    .line 19
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     invoke-virtual {p1}, Lcom/miui/extravideo/watermark/gles/EglSurfaceBase;->makeNothingCurrent()V
@@ -930,19 +876,16 @@
 .method public process([B)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/EglSurfaceBase;->makeCurrent()V
 
-    .line 2
     iget v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     iget v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
 
     invoke-direct {p0, v0, v1}, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->checkPreFrameBuffer(II)V
 
-    .line 3
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getFrameBufferId()I
@@ -953,7 +896,6 @@
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 4
     iget v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     iget v2, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
@@ -966,15 +908,12 @@
 
     const/4 v2, 0x0
 
-    .line 5
     invoke-static {v2, v2, v2, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v4, 0x4100
 
-    .line 6
     invoke-static {v4}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 7
     iget-object v5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mYuvToRgbRender:Lcom/miui/extravideo/watermark/render/YuvToRgbRender;
 
     iget v6, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mParentW:I
@@ -985,7 +924,6 @@
 
     invoke-virtual {v5, p1, v6, v7, v8}, Lcom/miui/extravideo/watermark/render/YuvToRgbRender;->draw([BII[I)V
 
-    .line 8
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkTextureRenderExt:Lcom/miui/extravideo/watermark/render/WatermarkTextureRenderExt;
 
     iget v5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkBitmapTexId:I
@@ -994,17 +932,14 @@
 
     invoke-virtual {p1, v5, v6}, Lcom/miui/extravideo/watermark/render/WatermarkTextureRenderExt;->draw(II)V
 
-    .line 9
     invoke-static {v1, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 10
     iget p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     iget v5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
 
     invoke-direct {p0, p1, v5}, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->checkPostFrameBuffer(II)V
 
-    .line 11
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPostFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
 
     invoke-virtual {p1}, Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;->getFrameBufferId()I
@@ -1013,20 +948,16 @@
 
     invoke-static {v1, p1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 12
     iget p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     iget v5, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
 
     invoke-static {v3, v3, p1, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 13
     invoke-static {v2, v2, v2, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 14
     invoke-static {v4}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 15
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRgbToYuvRender:Lcom/miui/extravideo/watermark/render/RgbToYuvRender;
 
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mPreFrameBuffer:Lcom/miui/extravideo/watermark/gles/GLFrameBuffer;
@@ -1041,7 +972,6 @@
 
     invoke-virtual {p1, v0, v2, v4}, Lcom/miui/extravideo/watermark/render/RgbToYuvRender;->draw(III)V
 
-    .line 16
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkRange:[I
 
     const/4 v0, 0x1
@@ -1058,7 +988,6 @@
 
     add-int/2addr v2, v3
 
-    .line 17
     aget v5, p1, v0
 
     shr-int/lit8 v0, v5, 0x1
@@ -1071,17 +1000,14 @@
 
     add-int/2addr v0, v3
 
-    .line 18
     iget p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkW:I
 
     iget v4, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mWatermarkH:I
 
     invoke-static {p1, v4, v2, v0}, Lcom/miui/extravideo/watermark/render/YuvTextureJNI;->merge(IIII)V
 
-    .line 19
     invoke-static {v1, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 20
     iget-object p1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     invoke-virtual {p1}, Lcom/miui/extravideo/watermark/gles/EglSurfaceBase;->makeNothingCurrent()V
@@ -1092,29 +1018,23 @@
 .method public release()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/PbufferSurface;->release()V
 
-    .line 3
     iput-object v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mRenderSurface:Lcom/miui/extravideo/watermark/gles/PbufferSurface;
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mEglCore:Lcom/miui/extravideo/watermark/gles/EglCore;
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {v0}, Lcom/miui/extravideo/watermark/gles/EglCore;->release()V
 
-    .line 6
     iput-object v1, p0, Lcom/miui/extravideo/watermark/WatermarkRenderPipeline;->mEglCore:Lcom/miui/extravideo/watermark/gles/EglCore;
 
     :cond_1

@@ -20,14 +20,12 @@
     :try_start_0
     const-string v3, "miui.util.HapticFeedbackUtil"
 
-    .line 1
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
     const-string v4, "miui.view.MiuiHapticFeedbackConstants"
 
-    .line 2
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -36,7 +34,6 @@
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 3
     sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v7, v6, v2
@@ -49,14 +46,12 @@
 
     const-string v3, "FLAG_MIUI_HAPTIC_VERSION"
 
-    .line 4
     invoke-virtual {v4, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v3
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
     if-eqz v3, :cond_0
@@ -75,10 +70,8 @@
 
     const-string v4, "error when getting FLAG_MIUI_HAPTIC_VERSION."
 
-    .line 5
     invoke-static {v0, v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 6
     invoke-static {}, Lmiuix/view/PlatformConstants;->checkVersion()I
 
     move-result v3
@@ -93,26 +86,18 @@
     :catch_2
     move-exception v3
 
-    goto :goto_0
-
-    :catch_3
-    move-exception v3
-
     :goto_0
     const-string v4, "MIUI Haptic Implementation not found."
 
-    .line 7
     invoke-static {v0, v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v3, -0x1
 
-    .line 8
     :goto_1
     sput v3, Lmiuix/view/PlatformConstants;->VERSION:I
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 9
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -133,7 +118,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -144,7 +128,6 @@
 
     const v0, 0x1000000e
 
-    .line 1
     invoke-static {v0}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0
@@ -158,7 +141,6 @@
     :cond_0
     const v0, 0x1000000d
 
-    .line 2
     invoke-static {v0}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0
@@ -172,7 +154,6 @@
     :cond_1
     const v0, 0x1000000c
 
-    .line 3
     invoke-static {v0}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0
@@ -186,7 +167,6 @@
     :cond_2
     const v0, 0x10000009
 
-    .line 4
     invoke-static {v0}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate(I)Z
 
     move-result v0

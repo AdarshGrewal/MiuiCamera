@@ -61,10 +61,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
-    .line 1
     invoke-direct {p0, p1}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -73,22 +71,18 @@
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
-    .line 4
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 5
     invoke-static {p1}, Lmiuix/appcompat/internal/view/ActionBarPolicy;->get(Landroid/content/Context;)Lmiuix/appcompat/internal/view/ActionBarPolicy;
 
     move-result-object v0
 
-    .line 6
     sget-object v1, Lmiuix/appcompat/R$styleable;->ActionBar:[I
 
     const/4 v2, 0x0
@@ -101,14 +95,12 @@
 
     move-result-object p1
 
-    .line 7
     sget v1, Lmiuix/appcompat/R$styleable;->ActionBar_tabIndicator:I
 
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 8
     sget v3, Lmiuix/appcompat/R$styleable;->ActionBar_translucentTabIndicator:I
 
     const/4 v4, 0x1
@@ -119,22 +111,18 @@
 
     iput-boolean v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTranslucentIndicator:Z
 
-    .line 9
     invoke-direct {p0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->getTabIndicatorBitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorBitmap:Landroid/graphics/Bitmap;
 
-    .line 10
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 11
     iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTranslucentIndicator:Z
 
     if-eqz p1, :cond_0
 
-    .line 12
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
@@ -145,18 +133,15 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 13
     :cond_0
     invoke-virtual {p0, v2}, Landroid/widget/HorizontalScrollView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 14
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/ActionBarPolicy;->getStackedTabMaxWidth()I
 
     move-result p1
 
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mStackedTabMaxWidth:I
 
-    .line 15
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mInflater:Landroid/view/LayoutInflater;
 
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->getTabBarLayoutRes()I
@@ -171,7 +156,6 @@
 
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
-    .line 16
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -186,7 +170,6 @@
 .method public static synthetic access$300(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
     move-result-object p0
@@ -197,7 +180,6 @@
 .method private createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mInflater:Landroid/view/LayoutInflater;
 
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->getTabViewLayoutRes()I
@@ -214,17 +196,14 @@
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
-    .line 2
     invoke-virtual {v0, p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->attach(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Landroidx/appcompat/app/ActionBar$Tab;Z)V
 
     const/4 p1, 0x0
 
     if-eqz p2, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 4
     new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 p2, -0x1
@@ -240,28 +219,23 @@
     :cond_0
     const/4 p2, 0x1
 
-    .line 5
     invoke-virtual {v0, p2}, Landroid/widget/LinearLayout;->setFocusable(Z)V
 
-    .line 6
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabClickListener:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;
 
     if-nez p2, :cond_1
 
-    .line 7
     new-instance p2, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;
 
     invoke-direct {p2, p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;-><init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$1;)V
 
     iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabClickListener:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;
 
-    .line 8
     :cond_1
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabClickListener:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 9
     :goto_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
@@ -271,14 +245,12 @@
 
     if-eqz p1, :cond_2
 
-    .line 10
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 11
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->getTabViewMarginHorizontal()I
 
     move-result p2
@@ -298,13 +270,11 @@
 
     return-object p1
 
-    .line 1
     :cond_0
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTranslucentIndicator:Z
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -321,7 +291,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -337,13 +306,11 @@
 
     move-result-object v0
 
-    .line 4
     :goto_0
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 5
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -356,7 +323,6 @@
 
     invoke-virtual {p1, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 6
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     return-object v0
@@ -365,7 +331,6 @@
 .method private isCollapsed()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz v0, :cond_0
@@ -390,7 +355,6 @@
 .method private performExpand()Z
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->isCollapsed()Z
 
     move-result v0
@@ -401,13 +365,11 @@
 
     return v1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->removeView(Landroid/view/View;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
@@ -418,7 +380,6 @@
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/HorizontalScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 4
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v0}, Landroid/widget/Spinner;->getSelectedItemPosition()I
@@ -437,22 +398,18 @@
 
     const/4 v0, 0x0
 
-    .line 9
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
     move-result-object p1
 
-    .line 10
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
 
-    .line 11
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz p2, :cond_0
 
-    .line 12
     invoke-virtual {p2}, Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object p2
@@ -466,10 +423,8 @@
 
     const/4 p2, 0x1
 
-    .line 13
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->setSelected(Z)V
 
-    .line 14
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -480,13 +435,11 @@
 
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
-    .line 15
     :cond_1
     iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     if-eqz p1, :cond_2
 
-    .line 16
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     :cond_2
@@ -498,22 +451,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->createTabView(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
@@ -527,10 +476,8 @@
 
     const/4 p2, 0x1
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->setSelected(Z)V
 
-    .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -541,13 +488,11 @@
 
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
-    .line 7
     :cond_1
     iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     if-eqz p1, :cond_2
 
-    .line 8
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     :cond_2
@@ -557,22 +502,18 @@
 .method public animateToTab(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSelector:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 4
     :cond_0
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$1;
 
@@ -580,7 +521,6 @@
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSelector:Ljava/lang/Runnable;
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->post(Ljava/lang/Runnable;)Z
 
     return-void
@@ -589,15 +529,12 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .line 1
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget v1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorPosition:F
 
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getHeight()I
@@ -631,7 +568,6 @@
 .method public getTabIndicatorPosition()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorPosition:F
 
     return v0
@@ -649,15 +585,12 @@
 .method public onAttachedToWindow()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/widget/HorizontalScrollView;->onAttachedToWindow()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSelector:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
@@ -667,7 +600,6 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -676,14 +608,12 @@
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->getTabContainerHeight()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setContentHeight(I)V
 
-    .line 3
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/ActionBarPolicy;->getStackedTabMaxWidth()I
 
     move-result p1
@@ -696,15 +626,12 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/widget/HorizontalScrollView;->onDetachedFromWindow()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSelector:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/widget/HorizontalScrollView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_0
@@ -723,10 +650,8 @@
         }
     .end annotation
 
-    .line 1
     check-cast p2, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
-    .line 2
     invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->getTab()Landroidx/appcompat/app/ActionBar$Tab;
 
     move-result-object p1
@@ -739,10 +664,8 @@
 .method public onLayout(ZIIII)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Landroid/widget/HorizontalScrollView;->onLayout(ZIIII)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     iget p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
@@ -753,7 +676,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabIndicatorPosition(I)V
@@ -765,7 +687,6 @@
 .method public onMeasure(II)V
     .locals 5
 
-    .line 1
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -783,11 +704,9 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 2
     :goto_0
     invoke-virtual {p0, v3}, Landroid/widget/HorizontalScrollView;->setFillViewport(Z)V
 
-    .line 3
     iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -807,7 +726,6 @@
 
     if-le v4, v0, :cond_2
 
-    .line 4
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -824,7 +742,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -840,7 +757,6 @@
 
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mMaxTabWidth:I
 
-    .line 6
     :goto_1
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mMaxTabWidth:I
 
@@ -857,10 +773,8 @@
     :cond_3
     const/4 v0, -0x1
 
-    .line 7
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mMaxTabWidth:I
 
-    .line 8
     :goto_2
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mContentHeight:I
 
@@ -868,21 +782,17 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 9
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
-    .line 10
     :cond_4
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 11
     invoke-super {p0, p1, p2}, Landroid/widget/HorizontalScrollView;->onMeasure(II)V
 
-    .line 12
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getMeasuredWidth()I
 
     move-result p1
@@ -891,7 +801,6 @@
 
     if-eq v0, p1, :cond_5
 
-    .line 13
     iget p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabSelected(I)V
@@ -909,7 +818,6 @@
 .method public onPageScrolled(IFZZ)V
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabIndicatorPosition(IF)V
 
     return-void
@@ -918,7 +826,6 @@
 .method public onPageSelected(I)V
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -931,14 +838,11 @@
 
     const/4 v1, 0x4
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->sendAccessibilityEvent(I)V
 
-    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabIndicatorPosition(I)V
 
-    .line 4
     iget v1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
     const/4 v2, -0x1
@@ -947,7 +851,6 @@
 
     sub-int/2addr v1, p1
 
-    .line 5
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -956,7 +859,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 6
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     iget v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
@@ -967,14 +869,12 @@
 
     check-cast v1, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
-    .line 7
     invoke-virtual {v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->getTextView()Landroid/widget/TextView;
 
     move-result-object v1
 
     check-cast v1, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;
 
-    .line 8
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->getTextView()Landroid/widget/TextView;
 
     move-result-object v0
@@ -985,7 +885,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 9
     invoke-static {p0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v3
@@ -994,7 +893,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 10
     iget v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
     if-ge p1, v3, :cond_1
@@ -1006,20 +904,16 @@
 
     goto :goto_0
 
-    .line 11
     :cond_2
     iget v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
     if-le p1, v3, :cond_1
 
-    .line 12
     :goto_0
     invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->startScrollAnimation(Z)V
 
-    .line 13
     invoke-virtual {v0, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabTextView;->startScrollAnimation(Z)V
 
-    .line 14
     :cond_3
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mLastSelectedPosition:I
 
@@ -1029,17 +923,14 @@
 .method public removeAllTabs()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object v0
@@ -1048,13 +939,11 @@
 
     invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     if-eqz v0, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     :cond_1
@@ -1064,17 +953,14 @@
 .method public removeTabAt(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->removeViewAt(I)V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object p1
@@ -1083,13 +969,11 @@
 
     invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 4
     :cond_0
     iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     :cond_1
@@ -1099,14 +983,12 @@
 .method public scrollToTab(I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -1127,7 +1009,6 @@
 
     const/4 p1, 0x0
 
-    .line 3
     invoke-virtual {p0, v0, p1}, Landroid/widget/HorizontalScrollView;->scrollTo(II)V
 
     return-void
@@ -1136,7 +1017,6 @@
 .method public setAllowCollapse(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     return-void
@@ -1145,7 +1025,6 @@
 .method public setBadgeVisibility(IZ)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -1158,7 +1037,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
@@ -1178,7 +1056,6 @@
 
     const/4 p2, 0x0
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
@@ -1186,7 +1063,6 @@
     :cond_1
     const/16 p2, 0x8
 
-    .line 4
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_2
@@ -1197,10 +1073,8 @@
 .method public setContentHeight(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mContentHeight:I
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     return-void
@@ -1211,7 +1085,6 @@
 
     const/4 p1, 0x1
 
-    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/HorizontalScrollView;->setHorizontalFadingEdgeEnabled(Z)V
 
     return-void
@@ -1220,7 +1093,6 @@
 .method public setTabIconWithPosition(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -1233,7 +1105,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
@@ -1249,10 +1120,8 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    .line 4
     invoke-virtual {p1, p3, p4, p5, p6}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
@@ -1264,7 +1133,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabIndicatorPosition(IF)V
 
     return-void
@@ -1273,19 +1141,16 @@
 .method public setTabIndicatorPosition(IF)V
     .locals 3
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     add-int/lit8 p1, p1, 0x1
@@ -1296,7 +1161,6 @@
 
     if-nez p1, :cond_0
 
-    .line 5
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result p1
@@ -1305,7 +1169,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -1323,7 +1186,6 @@
 
     div-float/2addr p1, v1
 
-    .line 7
     :goto_0
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
@@ -1353,7 +1215,6 @@
 
     iput v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabIndicatorPosition:F
 
-    .line 8
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->invalidate()V
 
     :cond_1
@@ -1365,7 +1226,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setTabSelected(IZ)V
 
     return-void
@@ -1374,10 +1234,8 @@
 .method public setTabSelected(IZ)V
     .locals 5
 
-    .line 2
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mSelectedTabIndex:I
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -1391,7 +1249,6 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    .line 4
     iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -1407,7 +1264,6 @@
     :cond_0
     move v4, v1
 
-    .line 5
     :goto_1
     invoke-virtual {v3, v4}, Landroid/view/View;->setSelected(Z)V
 
@@ -1415,12 +1271,10 @@
 
     if-eqz p2, :cond_1
 
-    .line 6
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->animateToTab(I)V
 
     goto :goto_2
 
-    .line 7
     :cond_1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->scrollToTab(I)V
 
@@ -1439,7 +1293,6 @@
 
     if-ltz p1, :cond_1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -1452,7 +1305,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
@@ -1468,7 +1320,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1491,7 +1342,6 @@
 .method public updateTab(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -1502,12 +1352,10 @@
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->update()V
 
-    .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabSpinner:Landroid/widget/Spinner;
 
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/widget/Spinner;->getAdapter()Landroid/widget/SpinnerAdapter;
 
     move-result-object p1
@@ -1516,13 +1364,11 @@
 
     invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 4
     :cond_0
     iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mAllowCollapse:Z
 
     if-eqz p1, :cond_1
 
-    .line 5
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->requestLayout()V
 
     :cond_1

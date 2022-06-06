@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/AudioMonitorPlayer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     const-string v0, "MiuiAudioMonitor"
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
@@ -54,15 +52,12 @@
 
     const-string v1, "STAR PLAY AUDIO ..."
 
-    .line 2
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/16 v1, -0x13
 
-    .line 3
     invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-static {v1}, Lcom/android/camera/AudioMonitorPlayer;->access$100(Lcom/android/camera/AudioMonitorPlayer;)Landroid/media/AudioTrack;
@@ -71,7 +66,6 @@
 
     if-nez v1, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     new-instance v10, Landroid/media/AudioTrack;
@@ -86,7 +80,6 @@
 
     iget-object v3, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
-    .line 6
     invoke-static {v3}, Lcom/android/camera/AudioMonitorPlayer;->access$000(Lcom/android/camera/AudioMonitorPlayer;)I
 
     move-result v8
@@ -97,10 +90,8 @@
 
     invoke-direct/range {v3 .. v9}, Landroid/media/AudioTrack;-><init>(IIIIII)V
 
-    .line 7
     invoke-static {v1, v10}, Lcom/android/camera/AudioMonitorPlayer;->access$102(Lcom/android/camera/AudioMonitorPlayer;Landroid/media/AudioTrack;)Landroid/media/AudioTrack;
 
-    .line 8
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
@@ -111,7 +102,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 9
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-static {v1}, Lcom/android/camera/AudioMonitorPlayer;->access$100(Lcom/android/camera/AudioMonitorPlayer;)Landroid/media/AudioTrack;
@@ -120,7 +110,6 @@
 
     invoke-virtual {v1}, Landroid/media/AudioTrack;->play()V
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-static {v1}, Lcom/android/camera/AudioMonitorPlayer;->access$100(Lcom/android/camera/AudioMonitorPlayer;)Landroid/media/AudioTrack;
@@ -150,7 +139,6 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    .line 11
     iget-object v4, p0, Lcom/android/camera/AudioMonitorPlayer$1;->this$0:Lcom/android/camera/AudioMonitorPlayer;
 
     invoke-static {v4}, Lcom/android/camera/AudioMonitorPlayer;->access$000(Lcom/android/camera/AudioMonitorPlayer;)I
@@ -174,7 +162,6 @@
 
     const-string v2, "exception when play audio :"
 
-    .line 12
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2

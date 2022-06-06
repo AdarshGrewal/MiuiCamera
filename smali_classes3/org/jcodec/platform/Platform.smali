@@ -28,21 +28,18 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
-    .line 2
     const-class v1, Ljava/lang/Void;
 
     sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Byte;
@@ -51,7 +48,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Short;
@@ -60,7 +56,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Character;
@@ -69,7 +64,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Integer;
@@ -78,7 +72,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Long;
@@ -87,7 +80,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Float;
@@ -96,7 +88,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     sget-object v0, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     const-class v1, Ljava/lang/Double;
@@ -111,7 +102,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -120,7 +110,6 @@
 .method public static arrayToString([Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -131,27 +120,23 @@
 .method public static classes([Ljava/lang/Object;)[Ljava/lang/Class;
     .locals 4
 
-    .line 1
     array-length v0, p0
 
     new-array v0, v0, [Ljava/lang/Class;
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 4
     sget-object v3, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -160,7 +145,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 5
     sget-object v3, Lorg/jcodec/platform/Platform;->boxed2primitive:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,7 +157,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_0
     aput-object v2, v0, v1
 
@@ -189,7 +172,6 @@
 .method public static copyOfRangeI([III)[I
     .locals 0
 
-    .line 1
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->copyOfRange([III)[I
 
     move-result-object p0
@@ -200,7 +182,6 @@
 .method public static deleteFile(Ljava/io/File;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result p0
@@ -214,7 +195,6 @@
     :try_start_0
     const-string v0, "iso8859-1"
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -232,7 +212,6 @@
 .method public static getBytesForCharset(Ljava/lang/String;Ljava/lang/String;)[B
     .locals 0
 
-    .line 1
     invoke-static {p1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object p1
@@ -260,7 +239,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
@@ -275,7 +253,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -288,7 +265,6 @@
 
     const/4 p0, 0x0
 
-    .line 3
     invoke-virtual {v3, p0, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -300,7 +276,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance p2, Ljava/lang/NoSuchMethodException;
 
@@ -329,7 +304,6 @@
     :catch_0
     move-exception p0
 
-    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -342,7 +316,6 @@
 
     if-eq p0, p1, :cond_1
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -351,7 +324,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -380,7 +352,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-static {p1}, Lorg/jcodec/platform/Platform;->classes([Ljava/lang/Object;)[Ljava/lang/Class;
 
@@ -401,7 +372,6 @@
     :catch_0
     move-exception p0
 
-    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -412,7 +382,6 @@
 .method public static stringFromBytes([B)Ljava/lang/String;
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
@@ -433,7 +402,6 @@
 .method public static stringFromCharset([BLjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/String;
 
     invoke-static {p1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -448,7 +416,6 @@
 .method public static stringFromCharset4([BIILjava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/lang/String;
 
     invoke-static {p3}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;

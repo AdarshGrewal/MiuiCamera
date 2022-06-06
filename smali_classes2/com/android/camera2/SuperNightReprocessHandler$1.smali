@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera2/SuperNightReprocessHandler;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
@@ -35,15 +34,13 @@
 .method public onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
     .locals 0
 
-    .line 1
     invoke-super/range {p0 .. p5}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureBufferLost:<JPEG>: frameNumber = "
+    const-string/jumbo p2, "onCaptureBufferLost:<JPEG>: frameNumber = "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -57,7 +54,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -72,7 +68,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -81,7 +76,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/MiCamera2;->setAWBLock(Z)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
@@ -103,12 +97,11 @@
 .method public onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 0
 
-    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureCompleted:<JPEG>: "
+    const-string/jumbo p2, "onCaptureCompleted:<JPEG>: "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,7 +119,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -139,7 +131,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -150,7 +141,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/MiCamera2;->setAWBLock(Z)V
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
@@ -174,15 +164,13 @@
 .method public onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
 
-    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "onCaptureFailed:<JPEG>: reason = "
+    const-string/jumbo p2, "onCaptureFailed:<JPEG>: reason = "
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +188,6 @@
 
     invoke-static {p2, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -215,7 +202,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
     invoke-static {p1}, Lcom/android/camera2/SuperNightReprocessHandler;->access$000(Lcom/android/camera2/SuperNightReprocessHandler;)Lcom/android/camera2/MiCamera2;
@@ -224,7 +210,6 @@
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/MiCamera2;->setAWBLock(Z)V
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/SuperNightReprocessHandler$1;->this$0:Lcom/android/camera2/SuperNightReprocessHandler;
 
@@ -246,12 +231,11 @@
 .method public onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onCaptureStarted:<JPEG>: "
+    const-string/jumbo v1, "onCaptureStarted:<JPEG>: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -265,7 +249,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-super/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
 
     return-void

@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/StreamShape;->values()[Ljava8/util/stream/StreamShape;
 
     move-result-object v0

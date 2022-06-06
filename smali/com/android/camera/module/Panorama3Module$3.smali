@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/Panorama3Module;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/Panorama3Module$3;->this$0:Lcom/android/camera/module/Panorama3Module;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "PanoramaThread"

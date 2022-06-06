@@ -48,17 +48,14 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
-    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     return-void
@@ -67,21 +64,18 @@
 .method public static getMaxDisplayLength(Landroid/content/Context;)I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->maxDisplayLength:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
 
     const-string v0, "window"
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 3
     invoke-static {p0}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -92,15 +86,12 @@
 
     move-result-object p0
 
-    .line 4
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 6
     iget p0, v0, Landroid/graphics/Point;->x:I
 
     iget v0, v0, Landroid/graphics/Point;->y:I
@@ -115,7 +106,6 @@
 
     sput-object p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->maxDisplayLength:Ljava/lang/Integer;
 
-    .line 7
     :cond_0
     sget-object p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->maxDisplayLength:Ljava/lang/Integer;
 
@@ -135,7 +125,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget-boolean v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->waitForLayout:Z
 
@@ -160,7 +149,6 @@
 
     return p1
 
-    .line 2
     :cond_2
     iget-object p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
@@ -178,7 +166,6 @@
 
     const-string p2, "CustomViewTarget"
 
-    .line 3
     invoke-static {p2, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
@@ -187,10 +174,8 @@
 
     const-string p1, "Glide treats LayoutParams.WRAP_CONTENT as a request for an image the size of this device\'s screen dimensions. If you want to load the original image and are ok with the corresponding memory cost and OOMs (depending on the input size), use .override(Target.SIZE_ORIGINAL). Otherwise, use LayoutParams.MATCH_PARENT, set layout_width and layout_height to fixed dimension, or use .override() with fixed dimensions."
 
-    .line 4
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     :cond_3
     iget-object p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
@@ -211,7 +196,6 @@
 .method private getTargetHeight()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
@@ -226,7 +210,6 @@
 
     add-int/2addr v0, v1
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -235,7 +218,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     goto :goto_0
@@ -243,7 +225,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     :goto_0
     iget-object v2, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
@@ -261,7 +242,6 @@
 .method private getTargetWidth()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
@@ -276,7 +256,6 @@
 
     add-int/2addr v0, v1
 
-    .line 2
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -285,7 +264,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     goto :goto_0
@@ -293,7 +271,6 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 4
     :goto_0
     iget-object v2, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
@@ -335,7 +312,6 @@
 .method private isViewStateAndSizeValid(II)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->isDimensionValid(I)Z
 
     move-result p1
@@ -362,7 +338,6 @@
 .method private notifyCbs(II)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
@@ -386,7 +361,6 @@
 
     check-cast v1, Lcom/bumptech/glide/request/target/SizeReadyCallback;
 
-    .line 2
     invoke-interface {v1, p1, p2}, Lcom/bumptech/glide/request/target/SizeReadyCallback;->onSizeReady(II)V
 
     goto :goto_0
@@ -400,7 +374,6 @@
 .method public checkCurrentDimens()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -411,18 +384,15 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->getTargetWidth()I
 
     move-result v0
 
-    .line 3
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->getTargetHeight()I
 
     move-result v1
 
-    .line 4
     invoke-direct {p0, v0, v1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->isViewStateAndSizeValid(II)Z
 
     move-result v2
@@ -431,11 +401,9 @@
 
     return-void
 
-    .line 5
     :cond_1
     invoke-direct {p0, v0, v1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->notifyCbs(II)V
 
-    .line 6
     invoke-virtual {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->clearCallbacksAndListener()V
 
     return-void
@@ -444,21 +412,18 @@
 .method public clearCallbacksAndListener()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->layoutListener:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
@@ -466,10 +431,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->layoutListener:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 
-    .line 5
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -480,29 +443,24 @@
 .method public getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->getTargetWidth()I
 
     move-result v0
 
-    .line 2
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->getTargetHeight()I
 
     move-result v1
 
-    .line 3
     invoke-direct {p0, v0, v1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->isViewStateAndSizeValid(II)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4
     invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/request/target/SizeReadyCallback;->onSizeReady(II)V
 
     return-void
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
@@ -512,32 +470,27 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     :cond_1
     iget-object p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->layoutListener:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 
     if-nez p1, :cond_2
 
-    .line 8
     iget-object p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->view:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
-    .line 9
     new-instance v0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 
     invoke-direct {v0, p0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;-><init>(Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;)V
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->layoutListener:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer$SizeDeterminerLayoutListener;
 
-    .line 10
     invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     :cond_2
@@ -547,7 +500,6 @@
 .method public removeCallback(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->cbs:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

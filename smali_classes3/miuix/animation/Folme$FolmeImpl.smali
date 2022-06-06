@@ -31,15 +31,12 @@
 .method public varargs constructor <init>([Lmiuix/animation/IAnimTarget;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
 
     const/4 p1, 0x0
 
-    .line 4
     invoke-static {p1}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void
@@ -48,7 +45,6 @@
 .method public synthetic constructor <init>([Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/Folme$FolmeImpl;-><init>([Lmiuix/animation/IAnimTarget;)V
 
     return-void
@@ -59,30 +55,24 @@
 .method public clean()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
     if-eqz v0, :cond_1
 
-    .line 4
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
     :cond_2
@@ -92,7 +82,6 @@
 .method public end()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     const/4 v1, 0x0
@@ -101,10 +90,8 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 2
     invoke-interface {v0, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
@@ -112,10 +99,8 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    .line 4
     invoke-interface {v0, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
@@ -123,7 +108,6 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 6
     invoke-interface {v0, v1}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
     :cond_2
@@ -133,12 +117,10 @@
 .method public state()Lmiuix/animation/IStateStyle;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
 
     invoke-static {v0}, Lmiuix/animation/controller/StateComposer;->composeStyle([Lmiuix/animation/IAnimTarget;)Lmiuix/animation/controller/IFolmeStateStyle;
@@ -147,7 +129,6 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
@@ -157,30 +138,24 @@
 .method public touch()Lmiuix/animation/ITouchStyle;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeTouch;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
 
     invoke-direct {v0, v1}, Lmiuix/animation/controller/FolmeTouch;-><init>([Lmiuix/animation/IAnimTarget;)V
 
-    .line 3
     new-instance v1, Lmiuix/animation/controller/FolmeFont;
 
     invoke-direct {v1}, Lmiuix/animation/controller/FolmeFont;-><init>()V
 
-    .line 4
     invoke-virtual {v0, v1}, Lmiuix/animation/controller/FolmeTouch;->setFontStyle(Lmiuix/animation/controller/FolmeFont;)V
 
-    .line 5
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
@@ -190,12 +165,10 @@
 .method public visible()Lmiuix/animation/IVisibleStyle;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeVisible;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
@@ -204,7 +177,6 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 

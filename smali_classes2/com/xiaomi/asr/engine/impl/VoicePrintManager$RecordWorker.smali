@@ -32,15 +32,12 @@
 .method public constructor <init>(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2
     iput p2, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mMaxTime:I
 
-    .line 3
     new-instance p1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p1}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -57,12 +54,10 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mCancel:Z
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mRecordWorking:Z
 
     return-void
@@ -73,7 +68,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mRecordWorking:Z
 
     return-void
@@ -86,7 +80,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -97,12 +90,10 @@
 
     const/4 v6, 0x2
 
-    .line 2
     invoke-static {v4, v5, v6}, Landroid/media/AudioRecord;->getMinBufferSize(III)I
 
     move-result v12
 
-    .line 3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,7 +124,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     new-instance v4, Landroid/media/AudioRecord;
 
     iget-object v6, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
@@ -152,10 +142,8 @@
 
     invoke-direct/range {v7 .. v12}, Landroid/media/AudioRecord;-><init>(IIIII)V
 
-    .line 5
     invoke-virtual {v4}, Landroid/media/AudioRecord;->startRecording()V
 
-    .line 6
     iget-object v6, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -164,7 +152,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 7
     iget-object v6, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v6}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -173,7 +160,6 @@
 
     invoke-interface {v6}, Lcom/xiaomi/asr/engine/WVPListener;->onStartAudio()V
 
-    .line 8
     :cond_0
     :goto_0
     iget-boolean v6, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mRecordWorking:Z
@@ -184,14 +170,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 9
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v9
 
     sub-long/2addr v9, v2
 
-    .line 10
     iget v6, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mMaxTime:I
 
     int-to-long v11, v6
@@ -202,7 +186,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_1
     invoke-virtual {v4, v1, v8, v0}, Landroid/media/AudioRecord;->read([BII)I
 
@@ -210,7 +193,6 @@
 
     if-lez v6, :cond_3
 
-    .line 12
     iget-object v9, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v9}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$400(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/jni/VoicePrintInterface;
@@ -235,7 +217,6 @@
 
     goto :goto_2
 
-    .line 13
     :cond_2
     :try_start_0
     iget-object v8, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mCacheData:Ljava/io/ByteArrayOutputStream;
@@ -249,10 +230,8 @@
     :catch_0
     move-exception v8
 
-    .line 14
     invoke-virtual {v8}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 15
     :goto_1
     iget-object v8, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
@@ -262,7 +241,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 16
     iget-object v8, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v8}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -286,7 +264,6 @@
     :cond_3
     if-gez v6, :cond_0
 
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,7 +280,6 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -312,7 +288,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 19
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -321,15 +296,12 @@
 
     invoke-interface {v0}, Lcom/xiaomi/asr/engine/WVPListener;->onConflictAudio()V
 
-    .line 20
     :cond_4
     :goto_2
     invoke-virtual {v4}, Landroid/media/AudioRecord;->stop()V
 
-    .line 21
     invoke-virtual {v4}, Landroid/media/AudioRecord;->release()V
 
-    .line 22
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -338,7 +310,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 23
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -347,13 +318,11 @@
 
     invoke-interface {v0}, Lcom/xiaomi/asr/engine/WVPListener;->onStopAudio()V
 
-    .line 24
     :cond_5
     iget-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mCancel:Z
 
     if-eqz v0, :cond_7
 
-    .line 25
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -362,7 +331,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 26
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -374,7 +342,6 @@
     :cond_6
     return-void
 
-    .line 27
     :cond_7
     iget v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mRegisterState:I
 
@@ -382,7 +349,6 @@
 
     if-nez v0, :cond_a
 
-    .line 28
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$600(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)I
@@ -393,12 +359,10 @@
 
     if-lt v0, v2, :cond_8
 
-    .line 29
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0, v8}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$602(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;I)I
 
-    .line 30
     :cond_8
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
@@ -430,7 +394,6 @@
 
     aput-object v3, v0, v2
 
-    .line 31
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$600(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)I
@@ -441,7 +404,6 @@
 
     invoke-static {v0, v2}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$602(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;I)I
 
-    .line 32
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -450,7 +412,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 33
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -459,7 +420,6 @@
 
     invoke-interface {v0, v7, v8, v1, v8}, Lcom/xiaomi/asr/engine/WVPListener;->onEnrollmentComplete(ZZFI)V
 
-    .line 34
     :cond_9
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
@@ -469,7 +429,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 35
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -486,7 +445,6 @@
 
     goto :goto_3
 
-    .line 36
     :cond_a
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
@@ -496,7 +454,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 37
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -507,7 +464,6 @@
 
     invoke-interface {v0, v8, v8, v1, v2}, Lcom/xiaomi/asr/engine/WVPListener;->onEnrollmentComplete(ZZFI)V
 
-    .line 38
     :cond_b
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
@@ -517,7 +473,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 39
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->this$0:Lcom/xiaomi/asr/engine/impl/VoicePrintManager;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/VoicePrintManager;->access$200(Lcom/xiaomi/asr/engine/impl/VoicePrintManager;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -542,15 +497,12 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mRecordWorking:Z
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/impl/VoicePrintManager$RecordWorker;->mCancel:Z
 
-    .line 3
     invoke-super {p0}, Ljava/lang/Thread;->start()V
 
     return-void

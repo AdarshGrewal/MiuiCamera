@@ -19,10 +19,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/panorama/PanoramaState;->clearListener()V
 
     return-void
@@ -33,7 +31,6 @@
 .method public clearListener()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/panorama/PanoramaState$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/panorama/PanoramaState$1;-><init>(Lcom/android/camera/panorama/PanoramaState;)V
@@ -46,7 +43,6 @@
 .method public onSaveImage(Lcom/android/camera/panorama/CaptureImage;)Z
     .locals 0
 
-    .line 1
     invoke-virtual {p1}, Lcom/android/camera/panorama/CaptureImage;->close()V
 
     const/4 p1, 0x1
@@ -57,7 +53,6 @@
 .method public setPanoramaStateEventListener(Lcom/android/camera/panorama/PanoramaState$IPanoramaStateEventListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/panorama/PanoramaState;->listener:Lcom/android/camera/panorama/PanoramaState$IPanoramaStateEventListener;
 
     return-void

@@ -21,15 +21,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->position:I
 
-    .line 3
     sget-object v0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->NUMERIC:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     iput-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -42,7 +39,6 @@
 .method public getPosition()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->position:I
 
     return v0
@@ -51,7 +47,6 @@
 .method public incrementPosition(I)V
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->position:I
 
     add-int/2addr v0, p1
@@ -64,7 +59,6 @@
 .method public isAlpha()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     sget-object v1, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->ALPHA:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -84,7 +78,6 @@
 .method public isIsoIec646()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     sget-object v1, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->ISO_IEC_646:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -104,7 +97,6 @@
 .method public isNumeric()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     sget-object v1, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->NUMERIC:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -124,7 +116,6 @@
 .method public setAlpha()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->ALPHA:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     iput-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -135,7 +126,6 @@
 .method public setIsoIec646()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->ISO_IEC_646:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     iput-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -146,7 +136,6 @@
 .method public setNumeric()V
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;->NUMERIC:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
 
     iput-object v0, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->encoding:Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState$State;
@@ -157,7 +146,6 @@
 .method public setPosition(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/google/zxing/oned/rss/expanded/decoders/CurrentParsingState;->position:I
 
     return-void

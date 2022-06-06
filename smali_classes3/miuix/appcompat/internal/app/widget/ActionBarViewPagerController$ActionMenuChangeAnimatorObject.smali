@@ -26,7 +26,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +38,8 @@
 .method public reset(IZ)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->mPosition:I
 
-    .line 2
     iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->mShowActionMenu:Z
 
     return-void
@@ -51,7 +48,6 @@
 .method public setValue(F)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;->access$300(Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;)Ljava/util/ArrayList;
@@ -60,7 +56,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;->access$300(Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController;)Ljava/util/ArrayList;
@@ -85,12 +80,10 @@
 
     check-cast v1, Lmiuix/appcompat/app/ActionBar$FragmentViewPagerChangeListener;
 
-    .line 3
     instance-of v2, v1, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarViewPagerController$ActionMenuChangeAnimatorObject;->mPosition:I
 
     const/high16 v3, 0x3f800000    # 1.0f

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder$1;->this$0:Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;
 
     iput p2, p0, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder$1;->val$position:I
@@ -42,7 +41,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object p1, p0, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder$1;->this$0:Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder;
 
@@ -62,7 +60,6 @@
 
     goto :goto_0
 
-    .line 2
     :catch_0
     const-class p1, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/AutoSelectViewHolder$1;
 

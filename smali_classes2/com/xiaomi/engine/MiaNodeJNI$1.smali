@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/engine/MiaNodeJNI;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/engine/MiaNodeJNI$1;->this$0:Lcom/xiaomi/engine/MiaNodeJNI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/engine/MiaNodeJNI$1;->this$0:Lcom/xiaomi/engine/MiaNodeJNI;
 
     invoke-static {}, Lcom/xiaomi/engine/MiaNodeJNI;->access$100()I

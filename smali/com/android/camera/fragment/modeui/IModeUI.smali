@@ -2,20 +2,20 @@
 .super Ljava/lang/Object;
 .source "IModeUI.java"
 
+# interfaces
+.implements Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
 
 # virtual methods
-.method public abstract getExtraTopConfigItems()Ljava/util/List;
+.method public abstract getExtraTopConfigItem()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;",
+            "Lcom/android/camera/data/data/config/TopConfigItem;",
             ">;"
         }
     .end annotation
-.end method
-
-.method public abstract getFragmentInfo()Landroid/util/SparseIntArray;
 .end method
 
 .method public abstract getPanelEntranceItems()Ljava/util/List;
@@ -29,12 +29,12 @@
     .end annotation
 .end method
 
-.method public abstract getTopConfigItems()Ljava/util/List;
+.method public abstract getTopConfigItem()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/android/camera/fragment/modeui/topconfig/TopConfigItem;",
+            "Lcom/android/camera/data/data/config/TopConfigItem;",
             ">;"
         }
     .end annotation

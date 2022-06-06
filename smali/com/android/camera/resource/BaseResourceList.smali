@@ -57,10 +57,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -75,21 +73,18 @@
 .method public addItem(Lorg/json/JSONObject;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/resource/BaseResourceList;->parseSingleItem(Lorg/json/JSONObject;I)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -101,7 +96,6 @@
 .method public compareAndMarkDeparted(Lcom/android/camera/resource/BaseResourceList;)V
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->version:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/android/camera/resource/BaseResourceList;->version:Ljava/lang/String;
@@ -112,7 +106,6 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
 
     :cond_0
@@ -122,7 +115,6 @@
 .method public bridge synthetic compareAndMarkDeparted(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Lcom/android/camera/resource/BaseResourceList;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/BaseResourceList;->compareAndMarkDeparted(Lcom/android/camera/resource/BaseResourceList;)V
@@ -133,14 +125,12 @@
 .method public createResourcesList(Lorg/json/JSONObject;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/BaseResourceList;->getItemJsonArray(Lorg/json/JSONObject;)Lorg/json/JSONArray;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    .line 2
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
     move-result v0
@@ -152,7 +142,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -160,7 +149,6 @@
 
     if-gt v0, v1, :cond_2
 
-    .line 4
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -169,7 +157,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/camera/resource/BaseResourceList;->addItem(Lorg/json/JSONObject;)V
 
@@ -191,7 +178,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -209,7 +195,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -231,7 +216,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -251,7 +235,6 @@
 
     check-cast v1, Lcom/android/camera/resource/BaseResourceItem;
 
-    .line 2
     iget-object v2, v1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -284,7 +267,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     return-object v0
@@ -296,7 +278,6 @@
 .method public getSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseResourceList;->mResourceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -309,7 +290,6 @@
 .method public isDeparted()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/resource/BaseResourceList;->departed:Z
 
     return v0
@@ -333,7 +313,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/resource/BaseResourceList;->departed:Z
 
     return-void

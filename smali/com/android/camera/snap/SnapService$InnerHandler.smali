@@ -30,10 +30,8 @@
 .method public constructor <init>(Lcom/android/camera/snap/SnapService;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -48,7 +46,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/snap/SnapService$InnerHandler;->mService:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -63,7 +60,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -73,7 +69,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/android/camera/snap/SnapService;->access$000()Ljava/lang/String;
 
@@ -83,10 +78,8 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-static {v0}, Lcom/android/camera/snap/SnapService;->access$100(Lcom/android/camera/snap/SnapService;)V
 
-    .line 5
     invoke-virtual {v0}, Landroid/app/Service;->stopSelf()V
 
     :cond_2

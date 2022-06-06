@@ -51,7 +51,6 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    .line 1
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -60,26 +59,22 @@
 
     const-wide/16 v2, 0xf
 
-    .line 2
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 3
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 4
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
     move-result-object v0
@@ -92,10 +87,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
-    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->setUrl(Ljava/lang/String;)V
 
     return-void
@@ -104,7 +97,6 @@
 .method private addHeaders(Lokhttp3/Request$Builder;)V
     .locals 3
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mHeaders:Ljava/util/Map;
 
     if-eqz v0, :cond_1
@@ -117,7 +109,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mHeaders:Ljava/util/Map;
 
@@ -142,7 +133,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 6
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -167,7 +157,6 @@
 .method private appendUrlParams()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_2
@@ -182,14 +171,12 @@
 
     if-nez v0, :cond_2
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     const/16 v2, 0x3f
@@ -204,7 +191,6 @@
 
     if-lez v1, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -223,10 +209,8 @@
 
     if-nez v1, :cond_0
 
-    .line 5
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
@@ -242,7 +226,6 @@
 
     return-object v0
 
-    .line 7
     :cond_1
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -260,7 +243,6 @@
 
     return-object v0
 
-    .line 8
     :cond_2
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
@@ -282,12 +264,10 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
     :try_start_0
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -310,7 +290,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -325,10 +304,8 @@
 
     const/16 v2, 0x3d
 
-    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -343,12 +320,10 @@
 
     const/16 v1, 0x26
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -361,7 +336,6 @@
     :catch_0
     move-exception p1
 
-    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -388,19 +362,16 @@
 .method public final addHeaders(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mHeaders:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mHeaders:Ljava/util/Map;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mHeaders:Ljava/util/Map;
 
@@ -412,19 +383,16 @@
 .method public addParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
@@ -467,7 +435,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lokhttp3/Request$Builder;
 
     invoke-direct {v0}, Lokhttp3/Request$Builder;-><init>()V
@@ -484,24 +451,20 @@
 
     move-result-object v0
 
-    .line 2
     invoke-direct {p0, v0}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->addHeaders(Lokhttp3/Request$Builder;)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->generatePostBody()Lokhttp3/RequestBody;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {v0, v1}, Lokhttp3/Request$Builder;->post(Lokhttp3/RequestBody;)Lokhttp3/Request$Builder;
 
@@ -511,7 +474,6 @@
 
     move-result-object v0
 
-    .line 6
     :goto_0
     sget-object v1, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->CLIENT:Lokhttp3/OkHttpClient;
 
@@ -531,7 +493,6 @@
 .method public setUrl(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     return-void

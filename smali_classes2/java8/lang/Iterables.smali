@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,13 +26,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -49,7 +45,6 @@
 
     move-result-object v0
 
-    .line 4
     invoke-interface {p1, v0}, Ljava8/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -72,20 +67,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 4
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -94,7 +85,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -105,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 v0, 0x1
@@ -130,22 +119,18 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Ljava/util/Collection;
 
-    .line 3
     invoke-static {p0}, Ljava8/util/Spliterators;->spliterator(Ljava/util/Collection;)Ljava8/util/Spliterator;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 

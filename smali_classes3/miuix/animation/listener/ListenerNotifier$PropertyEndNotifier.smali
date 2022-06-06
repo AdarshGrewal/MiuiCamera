@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -63,7 +61,6 @@
 
     check-cast p4, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 2
     iget-boolean v0, p4, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
     if-eqz v0, :cond_0
@@ -74,14 +71,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lmiuix/animation/internal/AnimInfo;->justEnd:Z
 
-    .line 4
     iget-object v0, p4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-byte v0, v0, Lmiuix/animation/internal/AnimInfo;->op:B
@@ -90,12 +85,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 5
     invoke-virtual {p2, p1, p4}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {p2, p1, p4}, Lmiuix/animation/listener/TransitionListener;->onCancel(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
 

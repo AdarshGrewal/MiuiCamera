@@ -20,14 +20,12 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/jcodec/common/JCodecUtil;->demuxers:Ljava/util/Map;
 
-    .line 2
     sget-object v1, Lorg/jcodec/common/Format;->MOV:Lorg/jcodec/common/Format;
 
     const-class v2, Lorg/jcodec/containers/mp4/demuxer/MP4Demuxer;
@@ -40,7 +38,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,25 +46,21 @@
 .method public static asciiString(Ljava/lang/String;)[B
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p0
 
-    .line 2
     array-length v0, p0
 
     new-array v0, v0, [B
 
     const/4 v1, 0x0
 
-    .line 3
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
-    .line 4
     aget-char v2, p0, v1
 
     int-to-byte v2, v2
@@ -92,7 +85,6 @@
 
     const v0, 0x32000
 
-    .line 1
     invoke-static {p0, v0}, Lorg/jcodec/common/io/NIOUtils;->fetchFromFileL(Ljava/io/File;I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -107,7 +99,6 @@
 .method public static detectFormatBuffer(Ljava/nio/ByteBuffer;)Lorg/jcodec/common/Format;
     .locals 6
 
-    .line 1
     sget-object v0, Lorg/jcodec/common/JCodecUtil;->demuxers:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -136,7 +127,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v4
@@ -153,7 +143,6 @@
 
     if-le v4, v1, :cond_0
 
-    .line 3
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -192,7 +181,6 @@
 
     aput-object p0, v2, v0
 
-    .line 1
     invoke-static {p1, v1, v2}, Lorg/jcodec/platform/Platform;->invokeStaticMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

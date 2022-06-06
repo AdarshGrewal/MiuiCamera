@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
 .method public onActivityPaused(Landroid/app/Activity;)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {v0}, Lcom/xiaomi/stat/e;->j(Lcom/xiaomi/stat/e;)I
 
-    .line 2
     iget v0, p0, Lcom/xiaomi/stat/r;->b:I
 
     invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
@@ -56,7 +53,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -70,14 +66,12 @@
 
     sub-long/2addr v0, v2
 
-    .line 4
     iget-object v2, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {v2}, Lcom/xiaomi/stat/e;->l(Lcom/xiaomi/stat/e;)J
 
     move-result-wide v7
 
-    .line 5
     iget-object v3, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -92,7 +86,6 @@
 
     invoke-static/range {v3 .. v8}, Lcom/xiaomi/stat/e;->a(Lcom/xiaomi/stat/e;Ljava/lang/String;JJ)V
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->i(Lcom/xiaomi/stat/e;)V
@@ -103,19 +96,16 @@
 .method public onActivityResumed(Landroid/app/Activity;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {v0}, Lcom/xiaomi/stat/e;->h(Lcom/xiaomi/stat/e;)I
 
-    .line 2
     invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p1
 
     iput p1, p0, Lcom/xiaomi/stat/r;->b:I
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -124,7 +114,6 @@
 
     invoke-static {p1, v0, v1}, Lcom/xiaomi/stat/e;->b(Lcom/xiaomi/stat/e;J)J
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->i(Lcom/xiaomi/stat/e;)V
@@ -141,7 +130,6 @@
 .method public onActivityStarted(Landroid/app/Activity;)V
     .locals 2
 
-    .line 1
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->e(Lcom/xiaomi/stat/e;)I
@@ -150,7 +138,6 @@
 
     if-nez p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -159,19 +146,16 @@
 
     invoke-static {p1, v0, v1}, Lcom/xiaomi/stat/e;->a(Lcom/xiaomi/stat/e;J)J
 
-    .line 3
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/xiaomi/stat/e;->a(Lcom/xiaomi/stat/e;I)I
 
-    .line 4
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1, v0}, Lcom/xiaomi/stat/e;->b(Lcom/xiaomi/stat/e;I)I
 
-    .line 5
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->f(Lcom/xiaomi/stat/e;)Ljava/util/concurrent/Executor;
@@ -184,7 +168,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 6
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
@@ -196,12 +179,10 @@
 .method public onActivityStopped(Landroid/app/Activity;)V
     .locals 9
 
-    .line 1
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->m(Lcom/xiaomi/stat/e;)I
 
-    .line 2
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->e(Lcom/xiaomi/stat/e;)I
@@ -210,7 +191,6 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -223,12 +203,10 @@
 
     sub-long/2addr v0, v2
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/stat/d/r;->b()J
 
     move-result-wide v7
 
-    .line 5
     iget-object v2, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {v2}, Lcom/xiaomi/stat/e;->o(Lcom/xiaomi/stat/e;)I
@@ -245,7 +223,6 @@
 
     invoke-static/range {v2 .. v8}, Lcom/xiaomi/stat/e;->a(Lcom/xiaomi/stat/e;IIJJ)V
 
-    .line 6
     iget-object p1, p0, Lcom/xiaomi/stat/r;->a:Lcom/xiaomi/stat/e;
 
     invoke-static {p1}, Lcom/xiaomi/stat/e;->f(Lcom/xiaomi/stat/e;)Ljava/util/concurrent/Executor;

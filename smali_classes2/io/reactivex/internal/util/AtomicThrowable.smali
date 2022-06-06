@@ -21,7 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
 .method public addThrowable(Ljava/lang/Throwable;)Z
     .locals 0
 
-    .line 1
     invoke-static {p0, p1}, Lio/reactivex/internal/util/ExceptionHelper;->addThrowable(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Throwable;)Z
 
     move-result p1
@@ -43,7 +41,6 @@
 .method public isTerminated()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -66,7 +63,6 @@
 .method public terminate()Ljava/lang/Throwable;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->terminate(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
 
     move-result-object v0

@@ -45,22 +45,18 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 7
     iput-object p1, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     return-void
 
-    .line 8
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -84,15 +80,12 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     array-length v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -101,7 +94,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -117,15 +109,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/load/MultiTransformation;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p1, Lcom/bumptech/glide/load/MultiTransformation;
 
-    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
@@ -145,7 +134,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->hashCode()I
@@ -168,7 +156,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -190,14 +177,12 @@
 
     check-cast v2, Lcom/bumptech/glide/load/Transformation;
 
-    .line 2
     invoke-interface {v2, p1, v1, p3, p4}, Lcom/bumptech/glide/load/Transformation;->transform(Landroid/content/Context;Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object v2
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -210,7 +195,6 @@
 
     if-nez v3, :cond_0
 
-    .line 4
     invoke-interface {v1}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
     :cond_0
@@ -225,7 +209,6 @@
 .method public updateDiskCacheKey(Ljava/security/MessageDigest;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -245,7 +228,6 @@
 
     check-cast v1, Lcom/bumptech/glide/load/Transformation;
 
-    .line 2
     invoke-interface {v1, p1}, Lcom/bumptech/glide/load/Key;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
     goto :goto_0

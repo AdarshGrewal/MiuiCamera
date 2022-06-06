@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/module/CloneModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/CloneModule$2;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-direct {p0}, Lcom/android/camera/SensorStateManager$SensorStateAdapter;-><init>()V
@@ -35,7 +34,6 @@
 .method public isWorking()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$2;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/BaseModule;->isAlive()Z
@@ -72,7 +70,6 @@
 .method public onDeviceBecomeStable()V
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/module/CloneModule;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -87,7 +84,6 @@
 .method public onDeviceKeepMoving(D)V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$2;->this$0:Lcom/android/camera/module/CloneModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mMainProtocol:Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;
@@ -106,7 +102,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -131,7 +126,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;
 
     if-eqz v0, :cond_0
@@ -142,7 +136,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$2;->this$0:Lcom/android/camera/module/CloneModule;
 
     invoke-virtual {v0}, Lcom/android/camera/module/CloneModule;->isRecording()Z
@@ -151,7 +144,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/module/CloneModule$2;->this$0:Lcom/android/camera/module/CloneModule;
 
     iget-object v0, v0, Lcom/android/camera/module/BaseModule;->mFocusManager:Lcom/android/camera/module/loader/camera2/FocusManager2;

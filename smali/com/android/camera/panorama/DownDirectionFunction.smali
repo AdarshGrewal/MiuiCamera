@@ -7,12 +7,10 @@
 .method public constructor <init>(IIIIFI)V
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p6}, Lcom/android/camera/panorama/DirectionFunction;-><init>(IIIIFI)V
 
     const/4 p1, 0x3
 
-    .line 2
     iput p1, p0, Lcom/android/camera/panorama/DirectionFunction;->mDirection:I
 
     return-void
@@ -31,7 +29,6 @@
 .method public getPreviewSize()Landroid/util/Size;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/panorama/DirectionFunction;->getVerticalPreviewSize()Landroid/util/Size;
 
     move-result-object v0

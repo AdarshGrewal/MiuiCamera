@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/animation/AnimationComposite;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/animation/AnimationComposite$1;->this$0:Lcom/android/camera/animation/AnimationComposite;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/AnimationComposite$1;->this$0:Lcom/android/camera/animation/AnimationComposite;
 
     invoke-static {v0, p1}, Lcom/android/camera/animation/AnimationComposite;->access$002(Lcom/android/camera/animation/AnimationComposite;Lio/reactivex/ObservableEmitter;)Lio/reactivex/ObservableEmitter;

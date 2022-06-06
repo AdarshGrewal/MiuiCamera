@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/zxing/CacheImageDecoder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/zxing/CacheImageDecoder$1;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onPreviewFrame(Landroid/media/Image;Lcom/android/camera2/Camera2Proxy;I)Z
     .locals 0
 
-    .line 1
     iget-object p2, p0, Lcom/android/zxing/CacheImageDecoder$1;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-virtual {p2}, Lcom/android/zxing/CacheImageDecoder;->isNeedImage()Z
@@ -47,7 +45,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 2
     iget-object p2, p0, Lcom/android/zxing/CacheImageDecoder$1;->this$0:Lcom/android/zxing/CacheImageDecoder;
 
     invoke-virtual {p2, p1}, Lcom/android/zxing/CacheImageDecoder;->onPreviewFrame(Landroid/media/Image;)V

@@ -17,7 +17,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     const/16 v1, 0x1f40
@@ -34,15 +33,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->samplingRate:I
 
-    .line 3
     iput v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->bitRate:I
 
     return-void
@@ -51,21 +47,16 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->samplingRate:I
 
-    .line 6
     iput v0, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->bitRate:I
 
-    .line 7
     iput p1, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->samplingRate:I
 
-    .line 8
     iput p2, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->bitRate:I
 
     return-void
@@ -74,7 +65,6 @@
 .method public static copyOf(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
     .locals 2
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->samplingRate:I
@@ -89,7 +79,6 @@
 .method public static parseQuality(Ljava/lang/String;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
     .locals 2
 
-    .line 1
     sget-object v0, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->DEFAULT_AUDIO_QUALITY:Lnet/majorkernelpanic/streaming/audio/AudioQuality;
 
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->copyOf(Lnet/majorkernelpanic/streaming/audio/AudioQuality;)Lnet/majorkernelpanic/streaming/audio/AudioQuality;
@@ -100,14 +89,12 @@
 
     const-string v1, "-"
 
-    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     aget-object v1, p0, v1
 
@@ -121,7 +108,6 @@
 
     const/4 v1, 0x1
 
-    .line 4
     aget-object p0, p0, v1
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -148,7 +134,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     iget v1, p1, Lnet/majorkernelpanic/streaming/audio/AudioQuality;->samplingRate:I
 

@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createTrakBox()Lorg/jcodec/containers/mp4/boxes/TrakBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/TrakBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -43,14 +41,12 @@
 .method public static getEditedDuration(Lorg/jcodec/containers/mp4/boxes/TrakBox;)J
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getEdits()Ljava/util/List;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getDuration()J
 
     move-result-wide v0
@@ -60,7 +56,6 @@
     :cond_0
     const-wide/16 v1, 0x0
 
-    .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -78,7 +73,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/Edit;
 
-    .line 4
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/Edit;->getDuration()J
 
     move-result-wide v3
@@ -96,7 +90,6 @@
 .method public fixMediaTimescale(I)V
     .locals 10
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;
 
     const-string v1, "mdia.mdhd"
@@ -111,17 +104,14 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;->getTimescale()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {v0, p1}, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;->setTimescale(I)V
 
     int-to-long v2, p1
 
-    .line 4
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;->getDuration()J
 
     move-result-wide v4
@@ -134,14 +124,12 @@
 
     invoke-virtual {v0, v4, v5}, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;->setDuration(J)V
 
-    .line 5
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getEdits()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -159,7 +147,6 @@
 
     check-cast v4, Lorg/jcodec/containers/mp4/boxes/Edit;
 
-    .line 7
     invoke-virtual {v4}, Lorg/jcodec/containers/mp4/boxes/Edit;->getMediaTime()J
 
     move-result-wide v8
@@ -172,7 +159,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
 
@@ -188,23 +174,19 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
 
-    .line 9
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;->getEntries()[Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
-    .line 10
     :goto_1
     array-length v3, v0
 
     if-ge v2, v3, :cond_1
 
-    .line 11
     aget-object v3, v0, v2
 
-    .line 12
     invoke-virtual {v3}, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox$TimeToSampleEntry;->getSampleDuration()I
 
     move-result v4
@@ -226,7 +208,6 @@
 .method public getCo64()Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsets64Box;
 
     const-string v1, "mdia.minf.stbl.co64"
@@ -247,7 +228,6 @@
 .method public getCtts()Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/CompositionOffsetsBox;
 
     const-string v1, "mdia.minf.stbl.ctts"
@@ -268,7 +248,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getTrackHeader()Lorg/jcodec/containers/mp4/boxes/TrackHeaderBox;
 
     move-result-object v0
@@ -291,7 +270,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/EditListBox;
 
     const-string v1, "edts.elst"
@@ -312,7 +290,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/EditListBox;->getEdits()Ljava/util/List;
 
@@ -324,7 +301,6 @@
 .method public getFrameCount()I
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
     const-string v1, "mdia.minf.stbl.stsz"
@@ -339,7 +315,6 @@
 
     check-cast v0, Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;->getDefaultSize()I
 
     move-result v1
@@ -366,7 +341,6 @@
 .method public getHandlerType()Ljava/lang/String;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/HandlerBox;
 
     const-string v1, "mdia.hdlr"
@@ -387,7 +361,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/HandlerBox;->getComponentSubType()Ljava/lang/String;
 
@@ -399,7 +372,6 @@
 .method public getMdia()Lorg/jcodec/containers/mp4/boxes/MediaBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MediaBox;
 
     const-string v1, "mdia"
@@ -416,7 +388,6 @@
 .method public getMediaDuration()J
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;
 
     const-string v1, "mdia.mdhd"
@@ -441,7 +412,6 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/NameBox;
 
     const-string v1, "udta.name"
@@ -462,7 +432,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/NameBox;->getName()Ljava/lang/String;
 
@@ -475,7 +444,6 @@
 .method public getSampleEntries()[Lorg/jcodec/containers/mp4/boxes/SampleEntry;
     .locals 6
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SampleEntry;
 
     const-string v1, "mdia"
@@ -504,7 +472,6 @@
 .method public getStco()Lorg/jcodec/containers/mp4/boxes/ChunkOffsetsBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/ChunkOffsetsBox;
 
     const-string v1, "mdia.minf.stbl.stco"
@@ -525,7 +492,6 @@
 .method public getStsc()Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SampleToChunkBox;
 
     const-string v1, "mdia.minf.stbl.stsc"
@@ -546,7 +512,6 @@
 .method public getStsd()Lorg/jcodec/containers/mp4/boxes/SampleDescriptionBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SampleDescriptionBox;
 
     const-string v1, "mdia.minf.stbl.stsd"
@@ -567,7 +532,6 @@
 .method public getStss()Lorg/jcodec/containers/mp4/boxes/SyncSamplesBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SyncSamplesBox;
 
     const-string v1, "mdia.minf.stbl.stss"
@@ -588,7 +552,6 @@
 .method public getStsz()Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/SampleSizesBox;
 
     const-string v1, "mdia.minf.stbl.stsz"
@@ -609,7 +572,6 @@
 .method public getStts()Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TimeToSampleBox;
 
     const-string v1, "mdia.minf.stbl.stts"
@@ -630,7 +592,6 @@
 .method public getTimescale()I
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;
 
     const-string v1, "mdia.mdhd"
@@ -655,7 +616,6 @@
 .method public getTrackHeader()Lorg/jcodec/containers/mp4/boxes/TrackHeaderBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/TrackHeaderBox;
 
     const-string v1, "tkhd"
@@ -672,7 +632,6 @@
 .method public hasDataRef()Z
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getMdia()Lorg/jcodec/containers/mp4/boxes/MediaBox;
 
     move-result-object v0
@@ -691,7 +650,6 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/DataInfoBox;->getDref()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
@@ -701,7 +659,6 @@
 
     return v1
 
-    .line 3
     :cond_1
     iget-object v0, v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
@@ -724,7 +681,6 @@
 
     check-cast v3, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 4
     check-cast v3, Lorg/jcodec/containers/mp4/boxes/FullBox;
 
     invoke-virtual {v3}, Lorg/jcodec/containers/mp4/boxes/FullBox;->getFlags()I
@@ -754,7 +710,6 @@
 .method public isAudio()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getHandlerType()Ljava/lang/String;
 
     move-result-object v0
@@ -771,7 +726,6 @@
 .method public isPureRef()Z
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getMdia()Lorg/jcodec/containers/mp4/boxes/MediaBox;
 
     move-result-object v0
@@ -780,7 +734,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MediaInfoBox;->getDinf()Lorg/jcodec/containers/mp4/boxes/DataInfoBox;
 
     move-result-object v0
@@ -791,7 +744,6 @@
 
     return v1
 
-    .line 3
     :cond_0
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/DataInfoBox;->getDref()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
@@ -801,7 +753,6 @@
 
     return v1
 
-    .line 4
     :cond_1
     iget-object v0, v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
@@ -824,7 +775,6 @@
 
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/Box;
 
-    .line 5
     check-cast v2, Lorg/jcodec/containers/mp4/boxes/FullBox;
 
     invoke-virtual {v2}, Lorg/jcodec/containers/mp4/boxes/FullBox;->getFlags()I
@@ -844,7 +794,6 @@
 .method public isTimecode()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getHandlerType()Ljava/lang/String;
 
     move-result-object v0
@@ -861,7 +810,6 @@
 .method public isVideo()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getHandlerType()Ljava/lang/String;
 
     move-result-object v0
@@ -878,7 +826,6 @@
 .method public rescale(JJ)J
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getTimescale()I
 
     move-result v0
@@ -895,7 +842,6 @@
 .method public setDataRef(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getMdia()Lorg/jcodec/containers/mp4/boxes/MediaBox;
 
     move-result-object v0
@@ -904,48 +850,39 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/MediaInfoBox;->getDinf()Lorg/jcodec/containers/mp4/boxes/DataInfoBox;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/DataInfoBox;->createDataInfoBox()Lorg/jcodec/containers/mp4/boxes/DataInfoBox;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 5
     :cond_0
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/DataInfoBox;->getDref()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
     move-result-object v0
 
-    .line 6
     invoke-static {p1}, Lorg/jcodec/containers/mp4/boxes/UrlBox;->createUrlBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/UrlBox;
 
     move-result-object p1
 
     if-nez v0, :cond_1
 
-    .line 7
     invoke-static {}, Lorg/jcodec/containers/mp4/boxes/DataRefBox;->createDataRefBox()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {v1, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 9
     invoke-virtual {v0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
     goto :goto_1
 
-    .line 10
     :cond_1
     iget-object v0, v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;->boxes:Ljava/util/List;
 
@@ -953,7 +890,6 @@
 
     move-result-object v0
 
-    .line 11
     :cond_2
     :goto_0
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
@@ -962,14 +898,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 12
     invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/jcodec/containers/mp4/boxes/FullBox;
 
-    .line 13
     invoke-virtual {v1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->getFlags()I
 
     move-result v1
@@ -978,7 +912,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 14
     invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -991,7 +924,6 @@
 .method public setDuration(J)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getTrackHeader()Lorg/jcodec/containers/mp4/boxes/TrackHeaderBox;
 
     move-result-object v0
@@ -1012,7 +944,6 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     const-string v1, "edts"
@@ -1025,7 +956,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     new-instance v2, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -1034,27 +964,23 @@
 
     invoke-direct {v0, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 3
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
     :cond_0
     const-string v1, "elst"
 
-    .line 4
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->removeChildren([Ljava/lang/String;)V
 
-    .line 5
     invoke-static {p1}, Lorg/jcodec/containers/mp4/boxes/EditListBox;->createEditListBox(Ljava/util/List;)Lorg/jcodec/containers/mp4/boxes/EditListBox;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
-    .line 6
     invoke-virtual {p0}, Lorg/jcodec/containers/mp4/boxes/TrakBox;->getTrackHeader()Lorg/jcodec/containers/mp4/boxes/TrackHeaderBox;
 
     move-result-object p1
@@ -1071,7 +997,6 @@
 .method public setName(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     const-string v1, "udta"
@@ -1084,7 +1009,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/NodeBox;
 
     new-instance v2, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -1093,20 +1017,17 @@
 
     invoke-direct {v0, v2}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 3
     invoke-virtual {p0, v0}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->add(Lorg/jcodec/containers/mp4/boxes/Box;)V
 
     :cond_0
     const-string v1, "name"
 
-    .line 4
     filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;->removeChildren([Ljava/lang/String;)V
 
-    .line 5
     invoke-static {p1}, Lorg/jcodec/containers/mp4/boxes/NameBox;->createNameBox(Ljava/lang/String;)Lorg/jcodec/containers/mp4/boxes/NameBox;
 
     move-result-object p1
@@ -1119,7 +1040,6 @@
 .method public setTimescale(I)V
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/MediaHeaderBox;
 
     const-string v1, "mdia.mdhd"

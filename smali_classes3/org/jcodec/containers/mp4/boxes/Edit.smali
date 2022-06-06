@@ -15,16 +15,12 @@
 .method public constructor <init>(JJF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->duration:J
 
-    .line 3
     iput-wide p3, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->mediaTime:J
 
-    .line 4
     iput p5, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->rate:F
 
     return-void
@@ -33,7 +29,6 @@
 .method public static createEdit(Lorg/jcodec/containers/mp4/boxes/Edit;)Lorg/jcodec/containers/mp4/boxes/Edit;
     .locals 7
 
-    .line 1
     new-instance v6, Lorg/jcodec/containers/mp4/boxes/Edit;
 
     iget-wide v1, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->duration:J
@@ -54,7 +49,6 @@
 .method public getDuration()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->duration:J
 
     return-wide v0
@@ -63,7 +57,6 @@
 .method public getMediaTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->mediaTime:J
 
     return-wide v0
@@ -72,7 +65,6 @@
 .method public getRate()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->rate:F
 
     return v0
@@ -81,7 +73,6 @@
 .method public setDuration(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->duration:J
 
     return-void
@@ -90,7 +81,6 @@
 .method public setMediaTime(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->mediaTime:J
 
     return-void
@@ -99,7 +89,6 @@
 .method public shift(J)V
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/Edit;->mediaTime:J
 
     add-long/2addr v0, p1

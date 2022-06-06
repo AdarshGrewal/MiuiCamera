@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/PreviewMetadata;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/PreviewMetadata$2;->this$0:Lcom/android/camera/PreviewMetadata;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +60,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/PreviewMetadata$2;->this$0:Lcom/android/camera/PreviewMetadata;
 
     invoke-static {v0}, Lcom/android/camera/PreviewMetadata;->access$100(Lcom/android/camera/PreviewMetadata;)Ljava/util/List;

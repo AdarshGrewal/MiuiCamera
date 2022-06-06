@@ -33,7 +33,6 @@
 
     new-array v1, v0, [I
 
-    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->TAB_NAME:[I
@@ -44,12 +43,11 @@
 
     new-array v2, v1, [Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
-    .line 2
     new-instance v3, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     sget-object v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->hair:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v5, 0x7f12051e
+    const v5, 0x7f1204ed
 
     invoke-direct {v3, v4, v5}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -67,7 +65,7 @@
 
     sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->face:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f120514
+    const v7, 0x7f1204e3
 
     invoke-direct {v5, v6, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -77,7 +75,7 @@
 
     sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->ear:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f120503
+    const v7, 0x7f1204d2
 
     invoke-direct {v5, v6, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -87,7 +85,7 @@
 
     sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->earring:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f120504
+    const v7, 0x7f1204d3
 
     invoke-direct {v5, v6, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -103,7 +101,7 @@
 
     sget-object v7, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->eye:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v8, 0x7f12050d
+    const v8, 0x7f1204dc
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -113,7 +111,7 @@
 
     sget-object v7, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->eyelash:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v8, 0x7f120512
+    const v8, 0x7f1204e1
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -123,7 +121,7 @@
 
     sget-object v7, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->eyelid:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v8, 0x7f120513
+    const v8, 0x7f1204e2
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -137,7 +135,7 @@
 
     sget-object v7, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->brow:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v8, 0x7f12050f
+    const v8, 0x7f1204de
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -151,7 +149,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->nose:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f12052d
+    const v7, 0x7f1204fc
 
     invoke-direct {v3, v5, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -161,7 +159,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->mouth:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f12052a
+    const v7, 0x7f1204f9
 
     invoke-direct {v3, v5, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -177,7 +175,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->beard:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v7, 0x7f12052b
+    const v7, 0x7f1204fa
 
     invoke-direct {v3, v5, v7}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -193,7 +191,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->freckle:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v6, 0x7f120516
+    const v6, 0x7f1204e5
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -203,7 +201,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->nevus:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v6, 0x7f120529
+    const v6, 0x7f1204f8
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -219,7 +217,7 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->glasses:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v6, 0x7f120511
+    const v6, 0x7f1204e0
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -235,7 +233,7 @@
 
     sget-object v3, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->headwear:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    const v5, 0x7f12052f
+    const v5, 0x7f1204fe
 
     invoke-direct {v2, v3, v5}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;I)V
 
@@ -251,25 +249,23 @@
 
     :array_0
     .array-data 4
-        0x7f12051e
-        0x7f120514
-        0x7f12050d
-        0x7f12050f
-        0x7f12052d
-        0x7f12052b
-        0x7f120516
-        0x7f120511
-        0x7f12052f
+        0x7f1204ed
+        0x7f1204e3
+        0x7f1204dc
+        0x7f1204de
+        0x7f1204fc
+        0x7f1204fa
+        0x7f1204e5
+        0x7f1204e0
+        0x7f1204fe
     .end array-data
 .end method
 
 .method public constructor <init>([Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/commen/widget/autoselectview/SelectItemBean;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mTypes:[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     return-void
@@ -291,7 +287,6 @@
 
     if-eqz p1, :cond_4
 
-    .line 1
     const-class v2, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -302,11 +297,9 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     check-cast p1, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->getTypes()[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     move-result-object v2
@@ -323,7 +316,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->getTypes()[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
@@ -341,7 +333,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->getTypes()[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
@@ -375,7 +366,6 @@
 .method public getIcon()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mIcon:Ljava/lang/String;
 
     return-object v0
@@ -384,7 +374,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mPath:Ljava/lang/String;
 
     return-object v0
@@ -393,7 +382,6 @@
 .method public getTypes()[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mTypes:[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     return-object v0
@@ -406,7 +394,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mIcon:Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -425,7 +412,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mTypes:[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -440,7 +426,6 @@
 .method public setIcon(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mIcon:Ljava/lang/String;
 
     return-void
@@ -449,7 +434,6 @@
 .method public setPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mPath:Ljava/lang/String;
 
     return-void
@@ -458,7 +442,6 @@
 .method public setTypes([Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType;->mTypes:[Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiFuType$MimojiEditItemType;
 
     return-void

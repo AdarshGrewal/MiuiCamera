@@ -52,7 +52,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/Nodes$AbstractConcNode;-><init>(Ljava8/util/stream/Node;Ljava8/util/stream/Node;)V
 
     return-void
@@ -70,7 +69,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfPrimitive;->asArray(Ljava8/util/stream/Node$OfPrimitive;Ljava8/util/function/IntFunction;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -86,7 +84,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$AbstractConcNode;->count()J
 
     move-result-wide v0
@@ -99,19 +96,16 @@
 
     long-to-int v0, v0
 
-    .line 2
     invoke-interface {p0, v0}, Ljava8/util/stream/Node$OfPrimitive;->newArray(I)Ljava/lang/Object;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {p0, v0, v1}, Ljava8/util/stream/Nodes$ConcNode$OfPrimitive;->copyInto(Ljava/lang/Object;I)V
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -130,14 +124,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->left:Ljava8/util/stream/Node;
 
     check-cast v0, Ljava8/util/stream/Node$OfPrimitive;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/stream/Node$OfPrimitive;->copyInto(Ljava/lang/Object;I)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->right:Ljava8/util/stream/Node;
 
     check-cast v0, Ljava8/util/stream/Node$OfPrimitive;
@@ -167,14 +159,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->left:Ljava8/util/stream/Node;
 
     check-cast v0, Ljava8/util/stream/Node$OfPrimitive;
 
     invoke-interface {v0, p1}, Ljava8/util/stream/Node$OfPrimitive;->forEach(Ljava/lang/Object;)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Nodes$AbstractConcNode;->right:Ljava8/util/stream/Node;
 
     check-cast v0, Ljava8/util/stream/Node$OfPrimitive;
@@ -187,7 +177,6 @@
 .method public bridge synthetic getChild(I)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ljava8/util/stream/Nodes$AbstractConcNode;->getChild(I)Ljava8/util/stream/Node;
 
     move-result-object p1
@@ -200,7 +189,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$AbstractConcNode;->count()J
 
     move-result-wide v0
@@ -221,7 +209,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
@@ -251,7 +238,6 @@
     :cond_0
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3

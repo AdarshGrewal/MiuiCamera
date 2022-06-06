@@ -22,7 +22,6 @@
 .method public constructor <init>(Lokhttp3/internal/cache/DiskLruCache$Editor;Lokio/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor$1;->this$1:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     invoke-direct {p0, p2}, Lokhttp3/internal/cache/FaultHidingSink;-><init>(Lokio/Sink;)V
@@ -35,20 +34,17 @@
 .method public onException(Ljava/io/IOException;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lokhttp3/internal/cache/DiskLruCache$Editor$1;->this$1:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     iget-object p1, p1, Lokhttp3/internal/cache/DiskLruCache$Editor;->this$0:Lokhttp3/internal/cache/DiskLruCache;
 
     monitor-enter p1
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/cache/DiskLruCache$Editor$1;->this$1:Lokhttp3/internal/cache/DiskLruCache$Editor;
 
     invoke-virtual {v0}, Lokhttp3/internal/cache/DiskLruCache$Editor;->detach()V
 
-    .line 3
     monitor-exit p1
 
     return-void

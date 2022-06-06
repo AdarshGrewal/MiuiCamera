@@ -19,7 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p0, v0}, Lio/reactivex/observables/ConnectableObservable;->autoConnect(I)Lio/reactivex/Observable;
 
     move-result-object v0
@@ -57,7 +55,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -85,17 +82,14 @@
 
     if-gtz p1, :cond_0
 
-    .line 3
     invoke-virtual {p0, p2}, Lio/reactivex/observables/ConnectableObservable;->connect(Lio/reactivex/functions/Consumer;)V
 
-    .line 4
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/observables/ConnectableObservable;)Lio/reactivex/observables/ConnectableObservable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 5
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableAutoConnect;
 
@@ -111,15 +105,12 @@
 .method public final connect()Lio/reactivex/disposables/Disposable;
     .locals 1
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/util/ConnectConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/util/ConnectConsumer;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/observables/ConnectableObservable;->connect(Lio/reactivex/functions/Consumer;)V
 
-    .line 3
     iget-object v0, v0, Lio/reactivex/internal/util/ConnectConsumer;->disposable:Lio/reactivex/disposables/Disposable;
 
     return-object v0
@@ -147,7 +138,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableRefCount;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/observable/ObservableRefCount;-><init>(Lio/reactivex/observables/ConnectableObservable;)V

@@ -12,7 +12,7 @@
 
 .field public static final IS_DEBUG_TEST:Z
 
-.field public static final SUPPORT_PLUGIN_VERSION:Ljava/lang/String; = "20210811121717256/"
+.field public static final SUPPORT_PLUGIN_VERSION:Ljava/lang/String; = "20210520151740274/"
 
 .field public static final TAG:Ljava/lang/String;
 
@@ -48,8 +48,6 @@
 
 .field public mMimojiListUpdateListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MimojiListUpdateListener;
 
-.field public final mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
 .field public mProgressEmitter:Lio/reactivex/ObservableEmitter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -74,6 +72,8 @@
 
 .field public final mainHandler:Landroid/os/Handler;
 
+.field public mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
 .field public networkDownloadRequest:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -93,15 +93,13 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/camera/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->IS_DEBUG_TEST:Z
 
-    .line 2
-    sget-boolean v0, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->Ooooooo:Z
+    sget-boolean v0, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OoooooO:Z
 
     if-eqz v0, :cond_0
 
@@ -115,7 +113,6 @@
     :goto_0
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->BRANCH_SUFFIX:Ljava/lang/String;
 
-    .line 3
     sget-boolean v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->IS_DEBUG_TEST:Z
 
     if-eqz v1, :cond_1
@@ -125,7 +122,6 @@
     :cond_1
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->URL_SUFFIX:Ljava/lang/String;
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +134,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "20210811121717256/"
+    const-string v1, "20210520151740274/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,30 +144,14 @@
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->BASE_URL:Ljava/lang/String;
 
-    .line 5
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "MIMOJI_"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-class v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
-    .line 6
     new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
@@ -184,10 +164,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -198,20 +176,15 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mainHandler:Landroid/os/Handler;
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
+    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
     move-result-object v0
 
-    const-class v1, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
+    invoke-virtual {v0}, Lcom/android/camera/data/data/extra/DataItemLive;->getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
-
-    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     return-void
 .end method
@@ -221,7 +194,6 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-interface {p0, v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;->firstProgressShow(Z)V
 
     return-void
@@ -235,7 +207,6 @@
         }
     .end annotation
 
-    .line 16
     sget-object p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
     const-string v0, "downloadItem error: "
@@ -253,7 +224,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -276,10 +246,8 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 3
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object p0
@@ -298,7 +266,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
 
     :cond_0
@@ -313,7 +280,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object p0
@@ -332,7 +298,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
 
     :cond_0
@@ -342,14 +307,13 @@
 .method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
 
     return-object p0
 .end method
 
 .method private configureLocaList(Lcom/android/camera/resource/BaseResourceItem;)V
-    .locals 11
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;,
@@ -357,15 +321,13 @@
         }
     .end annotation
 
-    .line 1
-    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -377,103 +339,89 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5
     iget-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
-    sget-object v4, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v4, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-static {v3, v4, v1, v1}, Lcom/android/camera/module/impl/component/FileUtils;->copyFileIfNeed(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     const-wide/16 v3, 0x0
 
-    .line 6
     invoke-static {v3, v4}, Lcom/android/camera/CameraSettings;->setMimojiDownloadTime(J)V
 
-    .line 7
     :cond_0
     invoke-static {v2}, Lcom/android/camera/module/impl/component/FileUtils;->readStringFromFile(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 8
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v1, "config_version"
 
-    .line 9
     invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "data"
 
-    .line 10
     invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4
 
-    .line 11
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
     move-result v5
 
     const/4 v6, 0x0
 
-    move v7, v6
-
     :goto_0
-    if-ge v7, v5, :cond_2
+    if-ge v6, v5, :cond_2
 
-    .line 12
-    invoke-virtual {v4, v7}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v4, v6}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
-    move-result-object v8
+    move-result-object v7
 
-    const-string v9, "id"
+    const-string v8, "id"
 
-    invoke-virtual {v8, v9}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
-    iget-object v9, p1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
+    iget-object v8, p1, Lcom/android/camera/resource/BaseResourceItem;->id:Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_1
+    if-eqz v7, :cond_1
 
-    .line 13
-    invoke-virtual {v4, v7}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v4, v6}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
-    move-result-object v8
+    move-result-object v7
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    const-string v10, "downloadState"
+    const-string v9, "downloadState"
 
-    invoke-virtual {v8, v10, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v7, v9, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_1
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 14
     :cond_2
     new-instance v4, Ljava/io/File;
 
@@ -481,13 +429,13 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v7, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
+    iget-object v6, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v7, "controller_config.bundle"
+    const-string v6, "controller_config.bundle"
 
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -495,61 +443,57 @@
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 15
     new-instance v5, Ljava/io/File;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
+    iget-object v7, p1, Lcom/android/camera/resource/BaseResourceItem;->baseArchivesFolder:Ljava/lang/String;
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "controller_config_for_icon_scene.bundle"
+    const-string v7, "controller_config_for_icon_scene.bundle"
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-direct {v5, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 16
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
-    move-result v7
+    move-result v6
 
-    if-eqz v7, :cond_3
+    if-eqz v6, :cond_3
 
-    iget-object v7, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->itemVersion:Ljava/lang/String;
+    iget-object v6, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->itemVersion:Ljava/lang/String;
 
-    invoke-virtual {v7, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-virtual {v6, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v3
 
     if-lez v3, :cond_3
 
-    .line 17
-    iget-object p1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;->itemVersion:Ljava/lang/String;
+    iget-object p1, p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;->itemVersion:Ljava/lang/String;
 
     invoke-virtual {v2, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 18
     new-instance p1, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -565,14 +509,13 @@
 
     invoke-static {v4, p1}, Lcom/android/camera/module/impl/component/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)V
 
-    .line 19
     new-instance p1, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -588,14 +531,12 @@
 
     invoke-static {v5, p1}, Lcom/android/camera/module/impl/component/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)V
 
-    .line 20
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
     move-result-object p1
 
     const/16 v1, 0xf6
 
-    .line 21
     invoke-virtual {p1, v1}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object p1
@@ -604,16 +545,13 @@
 
     if-eqz p1, :cond_3
 
-    .line 22
-    invoke-interface {p1, v6}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;->refeshMaterialConfig(Z)V
+    invoke-interface {p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;->updateConfig()V
 
-    .line 23
     :cond_3
     new-instance p1, Ljava/io/FileOutputStream;
 
     invoke-direct {p1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -624,16 +562,14 @@
 
     invoke-virtual {p1, v0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 25
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
 
     return-void
 .end method
 
-.method private exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+.method private exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -642,17 +578,14 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
     const-string p2, "CANCEL"
 
-    .line 4
     invoke-virtual {v0, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -679,7 +612,7 @@
     const/4 p2, 0x1
 
     :goto_1
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)V
 
     return-void
 .end method
@@ -687,30 +620,25 @@
 .method public static getInstance()Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->singleton:Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->singleton:Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
     if-nez v1, :cond_0
 
-    .line 4
     new-instance v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
     invoke-direct {v1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;-><init>()V
 
     sput-object v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->singleton:Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -725,7 +653,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->singleton:Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;
@@ -736,14 +663,12 @@
 .method private loadMimojiList(I)Z
     .locals 2
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/impl/data/MimojiViewModel;
 
     const/16 v1, 0x64
 
     if-ne p1, v1, :cond_1
 
-    .line 2
     :try_start_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
@@ -761,25 +686,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Lcom/android/camera/resource/BaseResourceList;->isDeparted()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->initCloudMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->onInstalled(I)V
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
@@ -797,12 +718,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->initCloudMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->onInstalled(I)V
     :try_end_0
@@ -816,7 +735,6 @@
     :catch_0
     move-exception p1
 
-    .line 9
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p1, 0x0
@@ -824,15 +742,14 @@
     return p1
 .end method
 
-.method private resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Z)V
+.method private resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mainHandler:Landroid/os/Handler;
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0o0;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0;
 
-    invoke-direct {v1, p0, p2, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0o0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;ZLcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v1, p0, p2, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;ZLcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -840,7 +757,7 @@
 .end method
 
 .method private updateLocalHumanJson(Ljava/lang/String;Ljava/io/File;)V
-    .locals 30
+    .locals 26
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;,
@@ -850,7 +767,6 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-virtual/range {p2 .. p2}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -859,7 +775,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-static/range {p2 .. p2}, Lcom/android/camera/module/impl/component/FileUtils;->readStringFromFile(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v1
@@ -868,7 +783,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
@@ -878,7 +792,6 @@
 
     const/4 v5, 0x1
 
-    .line 4
     :goto_0
     new-instance v6, Lorg/json/JSONObject;
 
@@ -886,12 +799,10 @@
 
     const-string/jumbo v1, "version"
 
-    .line 5
     invoke-virtual {v6, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 6
     new-instance v8, Ljava/io/File;
 
     move-object/from16 v9, p1
@@ -902,267 +813,224 @@
 
     move-result-object v8
 
-    .line 7
     new-instance v9, Lorg/json/JSONObject;
 
     invoke-direct {v9, v8}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 8
     invoke-virtual {v9, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v10, "material_version"
 
-    .line 9
     invoke-virtual {v9, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     const-string v12, "material_size"
 
-    .line 10
     invoke-virtual {v9, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    const-string v14, "config_version"
-
-    .line 11
-    invoke-virtual {v9, v14}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v15
-
-    .line 12
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v16
+    move-result v14
 
-    if-nez v16, :cond_c
+    if-nez v14, :cond_c
 
-    const-string v3, "data"
+    const-string v14, "data"
 
-    .line 13
-    invoke-virtual {v9, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v9, v14}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v9
 
-    .line 14
-    invoke-virtual {v6, v3}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v6, v14}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v3
+    move-result-object v14
 
-    .line 15
     invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
-    move-result v4
+    move-result v15
 
-    move-object/from16 p1, v14
+    new-instance v3, Ljava/util/ArrayList;
 
-    .line 16
-    new-instance v14, Ljava/util/ArrayList;
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
+    new-instance v4, Ljava/util/ArrayList;
 
-    move-object/from16 v18, v15
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 17
-    new-instance v15, Ljava/util/ArrayList;
+    move-object/from16 p1, v12
 
-    invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
-
-    const/16 v19, 0x2
-
-    move-object/from16 v20, v12
-
-    move/from16 v12, v19
-
-    move-object/from16 v19, v13
-
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
     :goto_1
-    if-ge v13, v4, :cond_a
+    if-ge v12, v15, :cond_a
 
-    .line 18
-    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+    invoke-virtual {v14}, Lorg/json/JSONArray;->length()I
 
-    move-result v21
+    move-result v17
 
-    move-object/from16 v22, v10
+    move-object/from16 v18, v13
 
-    .line 19
-    invoke-virtual {v9, v13}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v9, v12}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v13
+
+    move-object/from16 v19, v10
+
+    const-string v10, "itemVersion"
+
+    invoke-virtual {v13, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    move-object/from16 v23, v11
+    invoke-virtual {v10, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    const-string v11, "itemVersion"
+    move-result v10
 
-    .line 20
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-object/from16 v20, v7
 
-    move-result-object v11
+    if-lez v10, :cond_1
 
-    .line 21
-    invoke-virtual {v11, v7}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v11
-
-    move-object/from16 v24, v7
-
-    if-lez v11, :cond_1
-
-    const/4 v11, 0x1
+    const/4 v10, 0x1
 
     goto :goto_2
 
     :cond_1
-    const/4 v11, 0x0
+    const/4 v10, 0x0
 
     :goto_2
     const-string v7, "id"
 
-    move-object/from16 v25, v1
+    move-object/from16 v21, v11
 
-    .line 22
-    invoke-virtual {v10, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v13, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-interface {v3, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const/4 v11, 0x1
+
+    add-int/lit8 v17, v17, -0x1
+
+    move-object/from16 v22, v1
+
+    move/from16 v11, v17
+
+    const/16 v17, 0x0
+
+    :goto_3
+    const/4 v1, 0x2
+
+    if-lt v11, v1, :cond_5
+
+    invoke-virtual {v14, v11}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    invoke-interface {v14, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-object/from16 v23, v6
 
-    const/4 v1, 0x1
+    const-string/jumbo v6, "placeholder"
 
-    add-int/lit8 v21, v21, -0x1
-
-    move/from16 v1, v21
-
-    const/16 v21, 0x0
-
-    :goto_3
-    if-lt v1, v12, :cond_5
-
-    move-object/from16 v26, v6
-
-    .line 23
-    invoke-virtual {v3, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    move-object/from16 v27, v8
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-string/jumbo v8, "placeholder"
+    move-result v6
 
-    .line 24
-    invoke-virtual {v6, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/16 v16, 0x1
 
-    move-result-object v8
+    xor-int/lit8 v6, v6, 0x1
 
-    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-object/from16 v24, v8
+
+    const-string v8, "downloadState"
+
+    invoke-virtual {v1, v8}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v8
 
-    const/16 v17, 0x1
+    move-object/from16 v25, v2
 
-    xor-int/lit8 v8, v8, 0x1
+    invoke-virtual {v1, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-object/from16 v28, v2
+    move-result-object v2
 
-    const-string v2, "downloadState"
-
-    .line 25
-    invoke-virtual {v6, v2}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    .line 26
-    invoke-virtual {v6, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v13, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    move-object/from16 v29, v9
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 27
-    invoke-virtual {v10, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v9
+    if-eqz v10, :cond_2
 
-    invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    add-int/lit8 v0, v11, 0x1
 
-    move-result v9
-
-    if-eqz v11, :cond_2
-
-    add-int/lit8 v0, v1, 0x1
-
-    .line 28
-    invoke-virtual {v3, v0, v6}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v14, v0, v1}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_4
 
     :cond_2
-    if-eqz v9, :cond_3
+    if-eqz v0, :cond_3
 
-    move/from16 v21, v17
+    move/from16 v17, v16
 
     :cond_3
-    add-int/lit8 v6, v4, -0x1
+    add-int/lit8 v0, v15, -0x1
 
-    if-ne v13, v6, :cond_4
+    if-ne v12, v0, :cond_4
 
-    if-eqz v8, :cond_4
+    if-eqz v6, :cond_4
 
-    if-nez v2, :cond_4
+    if-nez v8, :cond_4
 
-    .line 29
-    invoke-interface {v14, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v3, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 30
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-interface {v15, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_4
     :goto_4
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v11, v11, -0x1
 
     move-object/from16 v0, p0
 
-    move-object/from16 v6, v26
+    move-object/from16 v6, v23
 
-    move-object/from16 v8, v27
+    move-object/from16 v8, v24
 
-    move-object/from16 v2, v28
-
-    move-object/from16 v9, v29
+    move-object/from16 v2, v25
 
     goto :goto_3
 
     :cond_5
-    move-object/from16 v28, v2
+    move-object/from16 v25, v2
 
-    move-object/from16 v26, v6
+    move-object/from16 v23, v6
 
-    move-object/from16 v27, v8
+    move-object/from16 v24, v8
 
-    move-object/from16 v29, v9
+    const/16 v16, 0x1
 
-    const/16 v17, 0x1
+    add-int/lit8 v0, v15, -0x1
 
-    add-int/lit8 v0, v4, -0x1
+    if-ne v12, v0, :cond_6
 
-    if-ne v13, v0, :cond_6
-
-    .line 31
-    invoke-interface {v15}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
@@ -1170,16 +1038,14 @@
 
     const/4 v0, 0x0
 
-    .line 32
     :goto_5
-    invoke-interface {v15}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-ge v0, v1, :cond_6
 
-    .line 33
-    invoke-interface {v15, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1189,87 +1055,78 @@
 
     move-result v1
 
-    invoke-virtual {v3, v1}, Lorg/json/JSONArray;->remove(I)Ljava/lang/Object;
+    invoke-virtual {v14, v1}, Lorg/json/JSONArray;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
-    .line 34
     :cond_6
-    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+    invoke-virtual {v14}, Lorg/json/JSONArray;->length()I
 
     move-result v0
 
-    if-eqz v21, :cond_7
+    if-eqz v17, :cond_7
 
     goto :goto_6
 
     :cond_7
-    if-eqz v11, :cond_9
+    if-eqz v10, :cond_8
 
-    add-int/lit8 v0, v12, 0x1
+    add-int/lit8 v0, v12, 0x2
 
-    .line 35
-    invoke-virtual {v3, v12, v10}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v14, v0, v13}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
 
-    move v12, v0
+    goto :goto_6
 
     :cond_8
-    :goto_6
-    move-object/from16 v1, v29
+    if-eqz v5, :cond_9
 
-    goto :goto_7
+    invoke-virtual {v9, v12}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v14, v0, v1}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
 
     :cond_9
-    if-eqz v5, :cond_8
-
-    move-object/from16 v1, v29
-
-    .line 36
-    invoke-virtual {v1, v13}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v0, v2}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
-
-    :goto_7
-    add-int/lit8 v13, v13, 0x1
+    :goto_6
+    add-int/lit8 v12, v12, 0x1
 
     move-object/from16 v0, p0
 
-    move-object v9, v1
+    move-object/from16 v13, v18
 
-    move-object/from16 v10, v22
+    move-object/from16 v10, v19
 
-    move-object/from16 v11, v23
+    move-object/from16 v7, v20
 
-    move-object/from16 v7, v24
+    move-object/from16 v11, v21
 
-    move-object/from16 v1, v25
+    move-object/from16 v1, v22
 
-    move-object/from16 v6, v26
+    move-object/from16 v6, v23
 
-    move-object/from16 v8, v27
+    move-object/from16 v8, v24
 
-    move-object/from16 v2, v28
+    move-object/from16 v2, v25
 
     goto/16 :goto_1
 
     :cond_a
-    move-object/from16 v25, v1
+    move-object/from16 v22, v1
 
-    move-object/from16 v28, v2
+    move-object/from16 v25, v2
 
-    move-object/from16 v26, v6
+    move-object/from16 v23, v6
 
-    move-object/from16 v27, v8
+    move-object/from16 v24, v8
 
-    move-object/from16 v22, v10
+    move-object/from16 v19, v10
 
-    move-object/from16 v23, v11
+    move-object/from16 v21, v11
 
-    .line 37
+    move-object/from16 v18, v13
+
     invoke-virtual/range {p2 .. p2}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -1278,59 +1135,46 @@
 
     move-object/from16 v0, p0
 
-    .line 38
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
-    sget-object v2, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v2, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
-    move-object/from16 v3, v28
+    move-object/from16 v3, v25
 
     invoke-static {v1, v2, v3, v3}, Lcom/android/camera/module/impl/component/FileUtils;->copyFileIfNeed(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_b
     move-object/from16 v0, p0
 
-    :goto_8
-    move-object/from16 v3, v25
-
-    move-object/from16 v1, v26
-
-    move-object/from16 v2, v27
-
-    .line 39
-    invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
+    :goto_7
     move-object/from16 v3, v22
 
-    move-object/from16 v2, v23
+    move-object/from16 v1, v23
 
-    .line 40
+    move-object/from16 v2, v24
+
     invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    move-object/from16 v2, v19
+    move-object/from16 v3, v19
 
-    move-object/from16 v3, v20
+    move-object/from16 v2, v21
 
-    .line 41
     invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     move-object/from16 v3, p1
 
     move-object/from16 v2, v18
 
-    .line 42
     invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 43
     new-instance v2, Ljava/io/FileOutputStream;
 
     move-object/from16 v3, p2
 
     invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 44
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1341,7 +1185,6 @@
 
     invoke-virtual {v2, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 45
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
     :cond_c
@@ -1358,7 +1201,6 @@
         }
     .end annotation
 
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->configureLocaList(Lcom/android/camera/resource/BaseResourceItem;)V
 
     return-object p1
@@ -1376,12 +1218,10 @@
 
     if-ne p4, p1, :cond_0
 
-    .line 5
     invoke-direct {p0, p2, p3}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->updateLocalHumanJson(Ljava/lang/String;Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance p4, Ljava/io/File;
 
@@ -1389,14 +1229,11 @@
 
     invoke-static {p4, p3}, Lcom/android/camera/module/impl/component/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)V
 
-    .line 7
     :goto_0
     invoke-static {p2}, Lcom/android/camera/module/impl/component/FileUtils;->deleteFile(Ljava/lang/String;)Z
 
-    .line 8
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->onInstalled(I)V
 
-    .line 9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -1414,15 +1251,12 @@
         }
     .end annotation
 
-    .line 10
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->onInstalled(I)V
 
     const-wide/16 v0, 0x0
 
-    .line 11
     invoke-static {v0, v1}, Lcom/android/camera/CameraSettings;->setMimojiDownloadTime(J)V
 
-    .line 12
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -1431,13 +1265,12 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
 .end method
 
-.method public synthetic OooO00o(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Lio/reactivex/ObservableEmitter;)V
+.method public synthetic OooO00o(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Lio/reactivex/ObservableEmitter;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1445,7 +1278,6 @@
         }
     .end annotation
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mWeakContext:Ljava/lang/ref/WeakReference;
@@ -1463,60 +1295,7 @@
     return-void
 .end method
 
-.method public synthetic OooO00o(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Integer;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .line 31
-    sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
-
-    const-string v0, "download ok: "
-
-    invoke-static {p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 32
-    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
-
-    move-result-object p2
-
-    const/16 v0, 0xf6
-
-    .line 33
-    invoke-virtual {p2, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;
-
-    if-eqz p2, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 34
-    invoke-interface {p2, v0}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;->refeshMaterialConfig(Z)V
-
-    .line 35
-    :cond_0
-    iget-boolean p2, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->isCancelDownload:Z
-
-    if-nez p2, :cond_1
-
-    iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
-
-    if-eqz p2, :cond_1
-
-    .line 36
-    invoke-virtual {p2, p1}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;->onCompleted(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public synthetic OooO00o(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+.method public synthetic OooO00o(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1524,8 +1303,7 @@
         }
     .end annotation
 
-    .line 25
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1538,15 +1316,12 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p1, Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;->materialVersion:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->onMaterialUpdate(Ljava/lang/String;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mCurrentMimojiList:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->initCloudMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
 
     return-void
@@ -1560,9 +1335,53 @@
         }
     .end annotation
 
-    .line 17
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mProgressEmitter:Lio/reactivex/ObservableEmitter;
 
+    return-void
+.end method
+
+.method public synthetic OooO00o(Ljava/lang/Integer;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
+
+    const-string v0, "download ok: "
+
+    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
+
+    move-result-object p1
+
+    const/16 v0, 0xf6
+
+    invoke-virtual {p1, v0}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiControl;->updateConfig()V
+
+    :cond_0
+    iget-boolean p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->isCancelDownload:Z
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;->onCompleted()V
+
+    :cond_1
     return-void
 .end method
 
@@ -1574,14 +1393,12 @@
         }
     .end annotation
 
-    .line 18
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
 
     const/16 v1, 0x64
 
     if-eqz v0, :cond_0
 
-    .line 19
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -1594,7 +1411,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;->onProgress(I)V
 
-    .line 20
     :cond_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
@@ -1612,9 +1428,8 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     iget-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->isCancelDownload:Z
 
     if-nez v0, :cond_1
@@ -1625,19 +1440,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 22
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/iqiyi/android/qigsaw/core/common/FileUtil;->deleteDir(Ljava/io/File;)Z
 
-    .line 23
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->initializeOffine(Landroid/content/Context;)V
 
-    .line 24
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mCompleteEmitter:Lio/reactivex/ObservableEmitter;
 
     invoke-interface {p1, p2}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
@@ -1654,35 +1466,30 @@
         }
     .end annotation
 
-    .line 26
     new-instance p2, Ljava/io/File;
 
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
 
     invoke-direct {p2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 27
     invoke-virtual {p2}, Ljava/io/File;->exists()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 28
-    sget-object p2, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
+    sget-object p2, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
 
     invoke-static {p2}, Lcom/android/camera/module/impl/component/FileUtils;->deleteSubFiles(Ljava/lang/String;)Z
 
     :cond_0
     const/4 p2, 0x0
 
-    .line 29
     iput-boolean p2, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->isCancelDownload:Z
 
     const p2, 0x8000
 
-    .line 30
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MATERIAL_PATH:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mProgressEmitter:Lio/reactivex/ObservableEmitter;
 
@@ -1691,40 +1498,16 @@
     return-void
 .end method
 
-.method public synthetic OooO00o(ZLcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+.method public synthetic OooO00o(ZLcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
     .locals 1
 
-    .line 37
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
 
     if-eqz v0, :cond_0
 
-    .line 38
     invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;->onError(Z)V
 
-    .line 39
     :cond_0
-    iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
-
-    if-nez p1, :cond_1
-
-    .line 40
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
-
-    move-result-object p1
-
-    const-class v0, Lcom/android/camera/data/observeable/VMResource;
-
-    invoke-virtual {p1, v0}, Lcom/android/camera/data/observeable/DataItemObservable;->get(Ljava/lang/Class;)Lcom/android/camera/data/observeable/VMBase;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/android/camera/data/observeable/VMResource;
-
-    iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
-
-    .line 41
-    :cond_1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     const/4 v0, 0x4
@@ -1735,7 +1518,6 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/data/observeable/VMResource;->updateItemState(Lcom/android/camera/resource/BaseResourceItem;Ljava/lang/Integer;)V
 
-    .line 42
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     const/4 v0, 0x0
@@ -1749,7 +1531,7 @@
     return-void
 .end method
 
-.method public synthetic OooO0O0(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+.method public synthetic OooO0O0(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1757,8 +1539,7 @@
         }
     .end annotation
 
-    .line 10
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1771,33 +1552,34 @@
         }
     .end annotation
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mCurrentMimojiList:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
 
-    .line 6
     invoke-virtual {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->initCloudMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
 
     return-void
 .end method
 
 .method public synthetic OooO0O0(Lcom/android/camera/resource/BaseResourceItem;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    .line 7
-    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 8
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mItemDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiInfo()Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 9
-    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;->onItemDownloadComplete(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mItemDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1, v0}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;->onItemDownloadComplete(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
     :cond_0
     return-void
@@ -1811,13 +1593,12 @@
         }
     .end annotation
 
-    .line 11
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mCompleteEmitter:Lio/reactivex/ObservableEmitter;
 
     return-void
 .end method
 
-.method public synthetic OooO0OO(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+.method public synthetic OooO0OO(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1825,8 +1606,7 @@
         }
     .end annotation
 
-    .line 3
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->exceptionProcess(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1836,22 +1616,18 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->isCancelDownload:Z
 
-    .line 2
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->networkDownloadRequest:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     if-eqz v1, :cond_0
 
-    .line 3
-    invoke-virtual {v1}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->onDisposeCall()V
+    invoke-virtual {v1}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->onDispose()V
 
-    .line 4
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->getCurrentMimojiList()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getCurrentMimojiList()Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
 
     move-result-object v1
 
@@ -1861,10 +1637,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast v1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 5
-    invoke-direct {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;Z)V
+    invoke-direct {p0, v1, v0}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->resetAddItemState(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;Z)V
 
     return-void
 .end method
@@ -1889,21 +1664,18 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p1, p2, p3, p4}, Lcom/android/camera/Util;->verifySdcardZipWithProgress(Ljava/lang/String;Ljava/lang/String;ILio/reactivex/ObservableEmitter;)V
 
     return-void
 .end method
 
-.method public downloadItem(Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+.method public downloadItem(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -1918,7 +1690,6 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mWeakContext:Ljava/lang/ref/WeakReference;
 
@@ -1930,11 +1701,10 @@
 
     return-void
 
-    .line 4
     :cond_1
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0OO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0Oo;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0OO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0Oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
     invoke-static {v0}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
@@ -1944,21 +1714,18 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 5
     invoke-virtual {p1, v0, v1, v2}, Lio/reactivex/Observable;->sample(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOo0;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO00o;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOo0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO00o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
-    .line 6
     invoke-virtual {p1, v0}, Lio/reactivex/Observable;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    .line 7
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -1967,18 +1734,16 @@
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOo;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO00o;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO00o;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0OO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0OO;
 
-    .line 8
     invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    .line 9
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -1989,12 +1754,10 @@
 .method public downloadMaterial(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
     .locals 6
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -2012,14 +1775,12 @@
     :cond_0
     const-string v0, "add_state"
 
-    .line 3
     invoke-virtual {p1, v0}, Lcom/android/camera/resource/BaseResourceList;->getItemById(Ljava/lang/String;)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast p1, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mVMResource:Lcom/android/camera/data/observeable/VMResource;
 
     const/4 v1, 0x7
@@ -2030,12 +1791,11 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/camera/data/observeable/VMResource;->updateItemState(Lcom/android/camera/resource/BaseResourceItem;Ljava/lang/Integer;)V
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v1, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2051,7 +1811,6 @@
 
     move-result-object v0
 
-    .line 6
     new-instance v3, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad$1;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2074,10 +1833,9 @@
 
     iput-object v3, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->networkDownloadRequest:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
-    .line 7
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOo;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOo00;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOo00;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
     invoke-static {v1}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
@@ -2087,32 +1845,28 @@
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 8
     invoke-virtual {v1, v2, v3, v4}, Lio/reactivex/Observable;->sample(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v1
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOO;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0o;
 
-    invoke-direct {v2, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Ljava/lang/String;)V
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0o;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0oo;
 
-    invoke-direct {v3, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v3, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
-    .line 9
     invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->networkDownloadRequest:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-virtual {v2, v0}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
-    .line 11
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v3
@@ -2121,29 +1875,26 @@
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOOo;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0oO;
 
-    invoke-direct {v3, p0, v0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Ljava/lang/String;)V
+    invoke-direct {v3, p0, v0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0oO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Ljava/lang/String;)V
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0oO;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOOo;
 
-    invoke-direct {v0, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0oO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v0, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOOo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
-    .line 12
     invoke-virtual {v2, v3, v0}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    .line 13
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOo0;
 
-    invoke-direct {v2, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v2, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOo0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
     invoke-static {v2}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object v2
 
-    .line 14
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v3
@@ -2152,30 +1903,26 @@
 
     move-result-object v2
 
-    new-instance v3, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0o;
+    new-instance v3, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOO;
 
-    invoke-direct {v3, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v3, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
-    new-instance v4, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO;
+    new-instance v4, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0O0;
 
-    invoke-direct {v4, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;)V
+    invoke-direct {v4, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0O0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;)V
 
-    .line 15
     invoke-virtual {v2, v3, v4}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    .line 16
     sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v2, v0}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
 
-    .line 17
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
 
-    .line 18
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -2186,7 +1933,6 @@
 .method public getMimojiListVersion()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mCurrentMimojiList:Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;
 
     if-nez v0, :cond_0
@@ -2195,7 +1941,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, v0, Lcom/android/camera/resource/BaseResourceList;->version:Ljava/lang/String;
 
@@ -2207,7 +1952,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     sget-object p1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
     const-string v0, "mimojiList is null: "
@@ -2216,9 +1960,8 @@
 
     return-void
 
-    .line 2
     :cond_0
-    invoke-static {}, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->simpleVerificationMaterial()Z
+    invoke-static {}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->simpleVerificationMaterial()Z
 
     move-result v0
 
@@ -2226,70 +1969,58 @@
 
     if-nez v0, :cond_1
 
-    .line 3
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/extra/DataItemLive;->setMaterialDownloadState(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMaterialDownloadState(Z)V
 
     :cond_1
     const-string v0, "add_state"
 
-    .line 4
     invoke-virtual {p1, v0}, Lcom/android/camera/resource/BaseResourceList;->getItemById(Ljava/lang/String;)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    .line 5
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
+    iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/camera/data/data/extra/DataItemLive;->getMaterialDownloadState()Z
+    invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMaterialDownloadState()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 6
     invoke-virtual {p1, v0}, Lcom/android/camera/resource/BaseResourceList;->getItemById(Ljava/lang/String;)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-virtual {p1, v0}, Lcom/android/camera/resource/BaseResourceList;->getItemById(Ljava/lang/String;)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/AvatarItem;
+    check-cast v0, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiItem;
 
     const/4 v2, 0x7
 
     invoke-virtual {v0, v2}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
-    .line 8
     :cond_3
     :goto_0
-    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMimojiProcessing:Lcom/android/camera/features/mimojis/commen/MimojiProcessing;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/commen/MimojiProcessing;->setCurrentMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setCurrentMimojiList(Lcom/android/camera/features/mimojis/mimojifu/bean/MimojiList;)V
 
-    .line 9
     invoke-virtual {p1}, Lcom/android/camera/resource/BaseResourceList;->getSize()I
 
     move-result v0
 
-    .line 10
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -2299,7 +2030,6 @@
     :goto_1
     if-ge v1, v0, :cond_4
 
-    .line 11
     invoke-virtual {p1, v1}, Lcom/android/camera/resource/BaseResourceList;->getItem(I)Lcom/android/camera/resource/BaseResourceItem;
 
     move-result-object v3
@@ -2310,7 +2040,6 @@
 
     goto :goto_1
 
-    .line 12
     :cond_4
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -2326,12 +2055,10 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/camera/data/data/extra/DataItemLive;->setMimojiVersion(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMimojiListUpdateListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MimojiListUpdateListener;
 
     if-eqz p1, :cond_5
 
-    .line 14
     invoke-virtual {p1, v2}, Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MimojiListUpdateListener;->onMimojiListUpdate(Ljava/util/List;)V
 
     :cond_5
@@ -2341,14 +2068,12 @@
 .method public onInstalled(I)V
     .locals 2
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/impl/data/MimojiViewModel;
 
     const/16 v1, 0x64
 
     if-ne p1, v1, :cond_0
 
-    .line 2
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object p1
@@ -2363,7 +2088,6 @@
 
     move-result-object p1
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -2372,7 +2096,6 @@
 
     move-result-object p1
 
-    .line 4
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -2381,20 +2104,18 @@
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0Oo;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOOO;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0Oo;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0O0;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooO0O0;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO;
 
-    .line 5
     invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
@@ -2410,7 +2131,6 @@
 
     move-result-object p1
 
-    .line 7
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -2419,7 +2139,6 @@
 
     move-result-object p1
 
-    .line 8
     invoke-static {}, Lio/reactivex/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -2428,18 +2147,16 @@
 
     move-result-object p1
 
-    new-instance v0, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0O;
+    new-instance v0, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0O;
 
-    invoke-direct {v0, p0}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOO0O;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
+    invoke-direct {v0, p0}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0O;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;)V
 
-    sget-object v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOoo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOoo;
+    sget-object v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0o0;->OooO00o:LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooO0o0;
 
-    .line 9
     invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    .line 10
     :goto_0
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
@@ -2451,25 +2168,23 @@
 .method public onMaterialUpdate(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-virtual {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->getMaterialVersion()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
-    invoke-virtual {v0}, Lcom/android/camera/data/data/extra/DataItemLive;->getMaterialVersion()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    move-result v1
+    invoke-virtual {v1, v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMaterialDownloadState(Z)V
 
-    .line 3
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/extra/DataItemLive;->setMaterialDownloadState(Z)V
+    iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
-    .line 4
-    invoke-virtual {v0, p1}, Lcom/android/camera/data/data/extra/DataItemLive;->setMaterialVersion(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->setMaterialVersion(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2477,7 +2192,6 @@
 .method public pullNewList(I)V
     .locals 8
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
@@ -2488,14 +2202,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "pullNewList: network is unavailable"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->loadMimojiList(I)Z
 
     return-void
@@ -2505,7 +2217,6 @@
 
     if-ne v0, p1, :cond_1
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2522,12 +2233,11 @@
 
     move-result-object v0
 
-    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MIMOJI_DIR:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MIMOJI_DIR:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2537,12 +2247,11 @@
 
     move-result-object v2
 
-    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v4, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2554,7 +2263,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2572,12 +2280,11 @@
 
     move-result-object v0
 
-    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->MIMOJI_DIR:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->MIMOJI_DIR:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2587,12 +2294,11 @@
 
     move-result-object v2
 
-    .line 9
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v4, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2602,25 +2308,21 @@
 
     move-result-object v1
 
-    .line 10
     :goto_0
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 11
     sget-boolean v1, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->IS_DEBUG_TEST:Z
 
     if-nez v1, :cond_2
 
-    .line 12
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -2637,19 +2339,16 @@
 
     if-gez v1, :cond_2
 
-    .line 14
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "pullNewList:file exists "
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->loadMimojiList(I)Z
 
     return-void
 
-    .line 16
     :cond_2
     invoke-static {}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getInstance()Lcom/android/camera/protocol/ModeCoordinatorImpl;
 
@@ -2657,7 +2356,6 @@
 
     const/16 v4, 0xf8
 
-    .line 17
     invoke-virtual {v1, v4}, Lcom/android/camera/protocol/ModeCoordinatorImpl;->getAttachProtocol(I)Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
 
     move-result-object v1
@@ -2666,39 +2364,35 @@
 
     if-eqz v1, :cond_3
 
-    .line 18
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mainHandler:Landroid/os/Handler;
 
-    new-instance v5, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOo00;
+    new-instance v5, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOoo;
 
-    invoke-direct {v5, v1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOo00;-><init>(Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;)V
+    invoke-direct {v5, v1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOoo;-><init>(Lcom/android/camera/features/mimojis/mvp/base/protocol/MimojiModeProtocol$MimojiBottomList;)V
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 19
     :cond_3
     new-instance v1, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-direct {v1, v0, v2}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     invoke-virtual {v1, v2}, Lcom/android/camera/resource/BaseObservableRequest;->startObservable(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOOO;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0o;
 
-    invoke-direct {v1, p0, p1, v2, v3}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOOO;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;ILjava/lang/String;Ljava/io/File;)V
+    invoke-direct {v1, p0, p1, v2, v3}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOO0o;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;ILjava/lang/String;Ljava/io/File;)V
 
-    new-instance v2, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOO0;
+    new-instance v2, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOO0;
 
-    invoke-direct {v2, p0, p1}, LOooO00o/OooO0O0/OooO00o/OoooO00/OooO0O0/OooO0OO/OooO0OO/OooOOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;I)V
+    invoke-direct {v2, p0, p1}, LOooO0O0/OooO0O0/OooO00o/Oooo/OooO0O0/OooO0OO/OooO0OO/OooOOO0;-><init>(Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;I)V
 
     invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    .line 21
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mDisposable:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
@@ -2709,14 +2403,12 @@
 .method public setContext(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mApplicationContext:Landroid/content/Context;
 
-    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -2729,7 +2421,6 @@
 .method public setItemDownloadListener(Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mItemDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$ItemDownloadListener;
 
     return-void
@@ -2738,7 +2429,6 @@
 .method public setMaterialDownloadListener(Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMaterialDownloadListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MaterialDownloadListener;
 
     return-void
@@ -2747,7 +2437,6 @@
 .method public setUpdateListener(Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MimojiListUpdateListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/widget/NetworkMaterialDownLoad;->mMimojiListUpdateListener:Lcom/android/camera/features/mimojis/commen/fragment/bottomlist/FragmentMimojiBottomList$MimojiListUpdateListener;
 
     return-void

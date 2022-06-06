@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopConfig;III)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     iput p2, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->val$backgroundOriginHeight:I
@@ -50,7 +49,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -61,7 +59,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$300(Lcom/android/camera/fragment/top/FragmentTopConfig;)Landroid/view/ViewGroup;
@@ -74,7 +71,6 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v1}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$600(Lcom/android/camera/fragment/top/FragmentTopConfig;)I
@@ -107,7 +103,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v1}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$300(Lcom/android/camera/fragment/top/FragmentTopConfig;)Landroid/view/ViewGroup;
@@ -116,7 +111,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$400(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/ui/ShapeBackGroundView;
@@ -129,7 +123,6 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v1}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$800(Lcom/android/camera/fragment/top/FragmentTopConfig;)I
@@ -162,7 +155,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 7
     iget-object v1, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 
     invoke-static {v1}, Lcom/android/camera/fragment/top/FragmentTopConfig;->access$400(Lcom/android/camera/fragment/top/FragmentTopConfig;)Lcom/android/camera/ui/ShapeBackGroundView;
@@ -171,7 +163,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 8
     iget v0, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->val$backgroundOriginHeight:I
 
     int-to-float v0, v0
@@ -203,7 +194,6 @@
     :cond_0
     move v1, v0
 
-    .line 9
     :goto_0
     iget-object v2, p0, Lcom/android/camera/fragment/top/FragmentTopConfig$4;->this$0:Lcom/android/camera/fragment/top/FragmentTopConfig;
 

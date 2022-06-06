@@ -26,7 +26,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/android/camera/module/Module;",
+            "Lcom/android/camera/module/BaseModule;",
             ">;"
         }
     .end annotation
@@ -40,15 +40,13 @@
         value = {
             "(",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/android/camera/module/Module;",
+            "Lcom/android/camera/module/BaseModule;",
             ">;)V"
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/FuncPreviewMetadata;->mModuleReference:Ljava/lang/ref/WeakReference;
 
     return-void
@@ -87,7 +85,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p0, p1}, Lcom/android/camera/IPreviewMetadataListener;->onPreviewMetadata(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onComposeStateChange(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$200(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)I
@@ -47,12 +45,10 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$202(Lcom/android/camera/fragment/dialog/FragmentLiveReview;I)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
@@ -62,7 +58,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$300(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Lio/reactivex/ObservableEmitter;
@@ -82,7 +77,6 @@
 .method public onPlayStateChange(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$000(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)I
@@ -91,12 +85,10 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0, p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$002(Lcom/android/camera/fragment/dialog/FragmentLiveReview;I)I
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
@@ -106,7 +98,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$1;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$100(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Lio/reactivex/ObservableEmitter;

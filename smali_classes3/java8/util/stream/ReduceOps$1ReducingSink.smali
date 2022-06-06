@@ -45,7 +45,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$1ReducingSink;->val$seed:Ljava/lang/Object;
 
     iput-object p2, p0, Ljava8/util/stream/ReduceOps$1ReducingSink;->val$reducer:Ljava8/util/function/BiFunction;
@@ -62,7 +61,6 @@
 .method public accept(D)V
     .locals 0
 
-    .line 4
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -71,7 +69,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -80,7 +77,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -94,7 +90,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$1ReducingSink;->val$reducer:Ljava8/util/function/BiFunction;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$Box;->state:Ljava/lang/Object;
@@ -111,7 +106,6 @@
 .method public begin(J)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ljava8/util/stream/ReduceOps$1ReducingSink;->val$seed:Ljava/lang/Object;
 
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$Box;->state:Ljava/lang/Object;
@@ -130,7 +124,6 @@
 .method public combine(Ljava8/util/stream/ReduceOps$1ReducingSink;)V
     .locals 2
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$1ReducingSink;->val$combiner:Ljava8/util/function/BinaryOperator;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$Box;->state:Ljava/lang/Object;
@@ -149,7 +142,6 @@
 .method public bridge synthetic combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/stream/ReduceOps$1ReducingSink;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$1ReducingSink;->combine(Ljava8/util/stream/ReduceOps$1ReducingSink;)V

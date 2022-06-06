@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -46,25 +45,18 @@
 .method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/graphics/Point;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->index:I
 
-    .line 3
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->direction:I
 
-    .line 4
     iput-object p3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->leftKey:Ljava/lang/String;
 
-    .line 5
     iput-object p4, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->rightKey:Ljava/lang/String;
 
-    .line 6
     iput-object p5, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->upKey:Ljava/lang/String;
 
-    .line 7
     iput-object p6, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuMeshPoint;->downKey:Ljava/lang/String;
 
     return-void

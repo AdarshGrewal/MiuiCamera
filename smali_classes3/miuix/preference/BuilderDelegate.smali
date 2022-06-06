@@ -11,10 +11,8 @@
 .method public constructor <init>(Landroid/content/Context;ILmiuix/appcompat/app/AlertDialog$Builder;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    .line 3
     iput-object p3, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     return-void
@@ -25,7 +23,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0, p2}, Lmiuix/preference/BuilderDelegate;-><init>(Landroid/content/Context;ILmiuix/appcompat/app/AlertDialog$Builder;)V
 
     return-void
@@ -36,7 +33,6 @@
 .method public setAdapter(Landroid/widget/ListAdapter;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setAdapter(Landroid/widget/ListAdapter;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -47,7 +43,6 @@
 .method public setCancelable(Z)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -58,7 +53,6 @@
 .method public setCursor(Landroid/database/Cursor;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCursor(Landroid/database/Cursor;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -69,7 +63,6 @@
 .method public setCustomTitle(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCustomTitle(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -80,7 +73,6 @@
 .method public setIcon(I)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setIcon(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -91,7 +83,6 @@
 .method public setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -102,7 +93,6 @@
 .method public setIconAttribute(I)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setIconAttribute(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -113,7 +103,6 @@
 .method public setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setItems(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -124,7 +113,6 @@
 .method public setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -135,7 +123,6 @@
 .method public setMessage(I)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -146,7 +133,6 @@
 .method public setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -157,7 +143,6 @@
 .method public setMultiChoiceItems(I[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMultiChoiceItems(I[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -168,7 +153,6 @@
 .method public setMultiChoiceItems(Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnMultiChoiceClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMultiChoiceItems(Landroid/database/Cursor;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnMultiChoiceClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -179,7 +163,6 @@
 .method public setMultiChoiceItems([Ljava/lang/CharSequence;[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMultiChoiceItems([Ljava/lang/CharSequence;[ZLandroid/content/DialogInterface$OnMultiChoiceClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -190,7 +173,6 @@
 .method public setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -201,7 +183,6 @@
 .method public setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -212,7 +193,6 @@
 .method public setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -223,7 +203,6 @@
 .method public setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -234,7 +213,6 @@
 .method public setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -245,7 +223,6 @@
 .method public setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -256,7 +233,6 @@
 .method public setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -267,7 +243,6 @@
 .method public setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -278,7 +253,6 @@
 .method public setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -289,7 +263,6 @@
 .method public setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -300,7 +273,6 @@
 .method public setSingleChoiceItems(IILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems(IILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -311,7 +283,6 @@
 .method public setSingleChoiceItems(Landroid/database/Cursor;ILjava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lmiuix/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/database/Cursor;ILjava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -322,7 +293,6 @@
 .method public setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 4
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -333,7 +303,6 @@
 .method public setSingleChoiceItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -344,7 +313,6 @@
 .method public setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -355,7 +323,6 @@
 .method public setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -366,7 +333,6 @@
 .method public setView(I)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setView(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -377,7 +343,6 @@
 .method public setView(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/BuilderDelegate;->mMiuixBuilder:Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setView(Landroid/view/View;)Lmiuix/appcompat/app/AlertDialog$Builder;

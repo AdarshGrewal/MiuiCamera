@@ -72,10 +72,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;
 
-    .line 2
     const-class v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->toString()Ljava/lang/String;
@@ -90,10 +88,8 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     const/4 v1, 0x1
@@ -102,10 +98,8 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
-    .line 3
     iput v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraId:I
 
-    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -114,29 +108,24 @@
 
     const/16 v0, 0x780
 
-    .line 5
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraWidth:I
 
     const/16 v0, 0x438
 
-    .line 6
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraHeight:I
 
-    .line 7
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$1;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mStateCallback:Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    .line 8
     new-instance v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$2;-><init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)V
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->sessionStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
-    .line 9
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -149,7 +138,6 @@
 .method public static synthetic access$000(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)Ljava/util/concurrent/Semaphore;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
     return-object p0
@@ -158,7 +146,6 @@
 .method public static synthetic access$102(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;Landroid/hardware/camera2/CameraDevice;)Landroid/hardware/camera2/CameraDevice;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
     return-object p1
@@ -167,7 +154,6 @@
 .method public static synthetic access$200(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->createCaptureSession()V
 
     return-void
@@ -176,7 +162,6 @@
 .method public static synthetic access$302(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;Landroid/hardware/camera2/CameraCaptureSession;)Landroid/hardware/camera2/CameraCaptureSession;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
     return-object p1
@@ -185,7 +170,6 @@
 .method public static synthetic access$400(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)Landroid/hardware/camera2/CaptureRequest;
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->createCaptureRequest()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object p0
@@ -196,7 +180,6 @@
 .method public static synthetic access$500(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;)Landroid/os/Handler;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundHandler:Landroid/os/Handler;
 
     return-object p0
@@ -205,7 +188,6 @@
 .method public static synthetic access$600()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -214,7 +196,6 @@
 .method private createCaptureRequest()Landroid/hardware/camera2/CaptureRequest;
     .locals 5
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
     const/4 v1, 0x0
@@ -226,18 +207,15 @@
     :cond_0
     const/4 v2, 0x1
 
-    .line 2
     :try_start_0
     invoke-virtual {v0, v2}, Landroid/hardware/camera2/CameraDevice;->createCaptureRequest(I)Landroid/hardware/camera2/CaptureRequest$Builder;
 
     move-result-object v0
 
-    .line 3
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0, v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->addTarget(Landroid/view/Surface;)V
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {v2}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
@@ -246,7 +224,6 @@
 
     invoke-virtual {v0, v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->addTarget(Landroid/view/Surface;)V
 
-    .line 5
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->build()Landroid/hardware/camera2/CaptureRequest;
 
     move-result-object v0
@@ -258,7 +235,6 @@
     :catch_0
     move-exception v0
 
-    .line 6
     sget-object v2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -287,7 +263,6 @@
 .method private createCaptureSession()V
     .locals 4
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
@@ -299,28 +274,23 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v1, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v1}, Landroid/view/Surface;->release()V
 
-    .line 6
     :cond_1
     new-instance v1, Landroid/graphics/SurfaceTexture;
 
@@ -330,14 +300,12 @@
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 7
     iget v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraWidth:I
 
     iget v3, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraHeight:I
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 8
     new-instance v1, Landroid/view/Surface;
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
@@ -346,10 +314,8 @@
 
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
 
-    .line 9
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 10
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {v1}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
@@ -358,7 +324,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->sessionStateCallback:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
@@ -378,7 +343,6 @@
     :catch_0
     move-exception v0
 
-    .line 12
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -410,10 +374,8 @@
 .method public changeCamera()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->releaseCamera()V
 
-    .line 2
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraId:I
 
     const/4 v1, 0x1
@@ -425,7 +387,6 @@
     :cond_0
     iput v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraId:I
 
-    .line 3
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraWidth:I
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraHeight:I
@@ -438,87 +399,70 @@
 .method public closeCamera()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCaptureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraDevice;->close()V
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraDevice:Landroid/hardware/camera2/CameraDevice;
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
     if-eqz v0, :cond_2
 
-    .line 9
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {v0}, Landroid/media/ImageReader;->close()V
 
-    .line 10
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
-    .line 11
     :cond_2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_3
 
-    .line 12
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 13
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 14
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 15
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurface:Landroid/view/Surface;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     :cond_3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 17
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     const-string v1, "closeCamera"
@@ -535,7 +479,6 @@
     :catch_0
     move-exception v0
 
-    .line 18
     :try_start_1
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -547,7 +490,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 19
     :goto_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
@@ -559,7 +501,6 @@
 .method public getCameraHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraHeight:I
 
     return v0
@@ -568,12 +509,10 @@
 .method public getCameraNV21Byte()[B
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
@@ -584,7 +523,6 @@
     :catchall_0
     move-exception v1
 
-    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -595,7 +533,6 @@
 .method public getCameraOrientation()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOrientation:I
 
     return v0
@@ -604,7 +541,6 @@
 .method public getCameraWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraWidth:I
 
     return v0
@@ -613,7 +549,6 @@
 .method public isCameraFront()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraId:I
 
     const/4 v1, 0x1
@@ -634,29 +569,24 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-virtual/range {p1 .. p1}, Landroid/media/ImageReader;->acquireLatestImage()Landroid/media/Image;
 
     move-result-object v1
 
-    .line 2
     invoke-virtual {v1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v1}, Landroid/media/Image;->getWidth()I
 
     move-result v3
 
-    .line 4
     invoke-virtual {v1}, Landroid/media/Image;->getHeight()I
 
     move-result v4
 
     const/4 v5, 0x0
 
-    .line 5
     aget-object v6, v2, v5
 
     invoke-virtual {v6}, Landroid/media/Image$Plane;->getRowStride()I
@@ -665,7 +595,6 @@
 
     const/4 v7, 0x1
 
-    .line 6
     aget-object v8, v2, v7
 
     invoke-virtual {v8}, Landroid/media/Image$Plane;->getRowStride()I
@@ -674,52 +603,44 @@
 
     const/4 v9, 0x2
 
-    .line 7
     aget-object v10, v2, v9
 
     invoke-virtual {v10}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v10
 
-    .line 8
     aget-object v11, v2, v5
 
     invoke-virtual {v11}, Landroid/media/Image$Plane;->getPixelStride()I
 
-    .line 9
     aget-object v11, v2, v7
 
     invoke-virtual {v11}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v11
 
-    .line 10
     aget-object v12, v2, v9
 
     invoke-virtual {v12}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v12
 
-    .line 11
     aget-object v13, v2, v5
 
     invoke-virtual {v13}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v13
 
-    .line 12
     invoke-virtual {v13}, Ljava/nio/ByteBuffer;->capacity()I
 
     invoke-virtual {v13}, Ljava/nio/ByteBuffer;->position()I
 
-    .line 13
     aget-object v14, v2, v7
 
     invoke-virtual {v14}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v14
 
-    .line 14
     invoke-virtual {v14}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v15
@@ -730,14 +651,12 @@
 
     sub-int v15, v15, v16
 
-    .line 15
     aget-object v2, v2, v9
 
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
-    .line 16
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v16
@@ -748,7 +667,6 @@
 
     sub-int v7, v16, v17
 
-    .line 17
     iget-object v5, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     if-eqz v5, :cond_0
@@ -777,7 +695,6 @@
 
     mul-int/lit8 v1, v1, 0x3
 
-    .line 18
     div-int/2addr v1, v9
 
     new-array v1, v1, [B
@@ -787,7 +704,6 @@
     :cond_1
     if-ne v6, v3, :cond_3
 
-    .line 19
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     mul-int v5, v3, v4
@@ -811,10 +727,8 @@
 
     if-ge v5, v9, :cond_2
 
-    .line 20
     invoke-virtual {v13, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 21
     iget-object v9, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     invoke-virtual {v13, v9, v5, v3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
@@ -830,14 +744,12 @@
 
     if-ne v12, v1, :cond_4
 
-    .line 22
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     mul-int/2addr v3, v4
 
     invoke-virtual {v14, v1, v3, v15}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 23
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     div-int/lit8 v4, v3, 0x4
@@ -859,7 +771,6 @@
 
     if-ne v8, v3, :cond_5
 
-    .line 24
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     mul-int/2addr v3, v4
@@ -875,7 +786,6 @@
 
     const/4 v6, 0x0
 
-    .line 25
     :goto_3
     div-int/lit8 v8, v4, 0x2
 
@@ -883,14 +793,12 @@
 
     add-int/2addr v1, v10
 
-    .line 26
     invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     add-int/lit8 v8, v8, -0x1
 
     if-ne v6, v8, :cond_6
 
-    .line 27
     iget-object v8, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
     mul-int v9, v3, v4
@@ -903,7 +811,6 @@
 
     goto :goto_4
 
-    .line 28
     :cond_6
     iget-object v8, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
@@ -924,16 +831,13 @@
     :goto_5
     const/4 v5, 0x0
 
-    .line 29
     :goto_6
     invoke-virtual/range {v18 .. v18}, Landroid/media/Image;->close()V
 
-    .line 30
     iget-object v1, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->cameraListener:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;
 
     if-eqz v1, :cond_8
 
-    .line 31
     invoke-interface {v1, v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;->onPreviewFrame(I)V
 
     :cond_8
@@ -943,7 +847,6 @@
 .method public openCamera()V
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraWidth:I
 
     iget v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraHeight:I
@@ -958,10 +861,8 @@
 
     const-string v0, ""
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->startBackgroundThread()V
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->activityWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -988,7 +889,6 @@
 
     goto/16 :goto_0
 
-    .line 4
     :cond_0
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
@@ -1014,7 +914,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
     if-nez v1, :cond_1
@@ -1023,19 +922,16 @@
 
     const/4 v2, 0x1
 
-    .line 6
     invoke-static {p1, p2, v1, v2}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mImageReader:Landroid/media/ImageReader;
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, p0, p2}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
 
-    .line 8
     :cond_1
     iget-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->activityWeakReference:Ljava/lang/ref/WeakReference;
 
@@ -1053,7 +949,6 @@
 
     check-cast p1, Landroid/hardware/camera2/CameraManager;
 
-    .line 9
     :try_start_0
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOpenCloseLock:Ljava/util/concurrent/Semaphore;
 
@@ -1067,7 +962,6 @@
 
     if-eqz p2, :cond_3
 
-    .line 10
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1086,7 +980,6 @@
 
     move-result-object p2
 
-    .line 11
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_ORIENTATION:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-virtual {p2, v1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -1101,12 +994,10 @@
 
     iput p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraOrientation:I
 
-    .line 12
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->cameraListener:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;
 
     if-eqz p2, :cond_2
 
-    .line 13
     iget-object p2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->cameraListener:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;
 
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->isCameraFront()Z
@@ -1117,7 +1008,6 @@
 
     invoke-interface {p2, v1, v2}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;->onCameraChange(ZI)V
 
-    .line 14
     :cond_2
     sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
@@ -1139,7 +1029,6 @@
 
     invoke-static {p2, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/utils/LogUtil;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1162,7 +1051,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1178,7 +1066,6 @@
     :catch_0
     move-exception p1
 
-    .line 17
     new-instance p2, Ljava/lang/RuntimeException;
 
     const-string v0, "Interrupted while trying to lock camera opening."
@@ -1190,7 +1077,6 @@
     :catch_1
     move-exception p1
 
-    .line 18
     sget-object p2, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1223,10 +1109,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     iput v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraId:I
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->openCamera()V
 
     return-void
@@ -1235,7 +1119,6 @@
 .method public releaseCamera()V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraLock:Ljava/lang/Object;
 
@@ -1243,19 +1126,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
     :try_start_1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->closeCamera()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->stopBackgroundThread()V
 
     const/4 v1, 0x0
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraNV21Byte:[B
 
-    .line 5
     monitor-exit v0
 
     goto :goto_0
@@ -1275,7 +1154,6 @@
     :catch_0
     move-exception v0
 
-    .line 6
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->TAG:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1291,7 +1169,6 @@
 .method public setCameraListener(Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->cameraListener:Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper$CameraListener;
 
     return-void
@@ -1300,7 +1177,6 @@
 .method public setCameraTextureId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mCameraTextureId:I
 
     return-void
@@ -1309,7 +1185,6 @@
 .method public startBackgroundThread()V
     .locals 2
 
-    .line 1
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "CameraBackground"
@@ -1318,10 +1193,8 @@
 
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundThread:Landroid/os/HandlerThread;
 
-    .line 2
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 3
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundThread:Landroid/os/HandlerThread;
@@ -1340,18 +1213,15 @@
 .method public stopBackgroundThread()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundThread:Landroid/os/HandlerThread;
 
@@ -1359,10 +1229,8 @@
 
     const/4 v0, 0x0
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundThread:Landroid/os/HandlerThread;
 
-    .line 5
     iput-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mBackgroundHandler:Landroid/os/Handler;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1372,7 +1240,6 @@
     :catch_0
     move-exception v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :goto_0
@@ -1382,12 +1249,10 @@
 .method public updateTexImage([F)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/pta_art/util/camera2/Camera2Helper;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0, p1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V

@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +17,6 @@
 .method public getAuth()[B
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/faceunity/fuauth_helper/a/a;->a()[B
 
     move-result-object v0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;->this$0:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;-><init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
 
     return-void
@@ -47,19 +45,16 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .line 1
     move-object v0, p1
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
-    .line 2
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->getTab()Landroidx/appcompat/app/ActionBar$Tab;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/appcompat/app/ActionBar$Tab;->select()V
 
-    .line 3
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;->this$0:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     iget-object v0, v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
@@ -75,7 +70,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 4
     iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabClickListener;->this$0:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     iget-object v3, v3, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
@@ -93,7 +87,6 @@
     :cond_0
     move v4, v1
 
-    .line 5
     :goto_1
     invoke-virtual {v3, v4}, Landroid/view/View;->setSelected(Z)V
 

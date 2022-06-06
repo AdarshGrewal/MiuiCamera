@@ -27,12 +27,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
-    .line 2
     iput v0, p0, Ljava8/util/stream/AbstractSpinedBuffer;->initialChunkPower:I
 
     return-void
@@ -41,7 +39,6 @@
 .method public constructor <init>(I)V
     .locals 3
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-ltz p1, :cond_0
@@ -50,14 +47,12 @@
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 4
     invoke-static {p1}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
 
     move-result p1
 
     rsub-int/lit8 p1, p1, 0x20
 
-    .line 5
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -66,7 +61,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iget v1, p0, Ljava8/util/stream/AbstractSpinedBuffer;->initialChunkPower:I
 
@@ -112,14 +105,12 @@
 
     const/16 p1, 0x1e
 
-    .line 2
     invoke-static {v1, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     goto :goto_1
 
-    .line 3
     :cond_1
     :goto_0
     iget p1, p0, Ljava8/util/stream/AbstractSpinedBuffer;->initialChunkPower:I
@@ -136,7 +127,6 @@
 .method public count()J
     .locals 4
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/AbstractSpinedBuffer;->spineIndex:I
 
     if-nez v0, :cond_0
@@ -165,7 +155,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Ljava8/util/stream/AbstractSpinedBuffer;->spineIndex:I
 
     if-nez v0, :cond_0

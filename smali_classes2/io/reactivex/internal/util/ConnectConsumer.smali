@@ -25,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
         }
     .end annotation
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/util/ConnectConsumer;->disposable:Lio/reactivex/disposables/Disposable;
 
     return-void
@@ -55,7 +53,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Lio/reactivex/disposables/Disposable;
 
     invoke-virtual {p0, p1}, Lio/reactivex/internal/util/ConnectConsumer;->accept(Lio/reactivex/disposables/Disposable;)V

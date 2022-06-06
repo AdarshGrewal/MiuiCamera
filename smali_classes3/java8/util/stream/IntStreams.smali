@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static builder()Ljava8/util/stream/IntStream$Builder;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$IntStreamBuilderImpl;
 
     invoke-direct {v0}, Ljava8/util/stream/Streams$IntStreamBuilderImpl;-><init>()V
@@ -27,16 +25,12 @@
 .method public static concat(Ljava8/util/stream/IntStream;Ljava8/util/stream/IntStream;)Ljava8/util/stream/IntStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Streams$ConcatSpliterator$OfInt;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/IntStream;->spliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v1
@@ -47,7 +41,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava8/util/stream/Streams$ConcatSpliterator$OfInt;-><init>(Ljava8/util/Spliterator$OfInt;Ljava8/util/Spliterator$OfInt;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result v1
@@ -76,7 +69,6 @@
 
     move-result-object v0
 
-    .line 6
     invoke-static {p0, p1}, Ljava8/util/stream/Streams;->composedClose(Ljava8/util/stream/BaseStream;Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0
@@ -93,16 +85,12 @@
 .method public static dropWhile(Ljava8/util/stream/IntStream;Ljava8/util/function/IntPredicate;)Ljava8/util/stream/IntStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Dropping;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/IntStream;->spliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v1
@@ -111,17 +99,14 @@
 
     invoke-direct {v0, v1, v2, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Dropping;-><init>(Ljava8/util/Spliterator$OfInt;ZLjava8/util/function/IntPredicate;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result p1
 
-    .line 6
     invoke-static {v0, p1}, Ljava8/util/stream/StreamSupport;->intStream(Ljava8/util/Spliterator$OfInt;Z)Ljava8/util/stream/IntStream;
 
     move-result-object p1
 
-    .line 7
     invoke-static {p0}, Ljava8/util/stream/StreamSupport;->closeHandler(Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0
@@ -138,7 +123,6 @@
 .method public static empty()Ljava8/util/stream/IntStream;
     .locals 2
 
-    .line 1
     invoke-static {}, Ljava8/util/Spliterators;->emptyIntSpliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -155,10 +139,8 @@
 .method public static generate(Ljava8/util/function/IntSupplier;)Ljava8/util/stream/IntStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/StreamSpliterators$InfiniteSupplyingSpliterator$OfInt;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -177,13 +159,10 @@
 .method public static iterate(ILjava8/util/function/IntPredicate;Ljava8/util/function/IntUnaryOperator;)Ljava8/util/stream/IntStream;
     .locals 8
 
-    .line 4
     invoke-static {p2}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     new-instance v7, Ljava8/util/stream/IntStreams$2;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -202,7 +181,6 @@
 
     const/4 p0, 0x0
 
-    .line 7
     invoke-static {v7, p0}, Ljava8/util/stream/StreamSupport;->intStream(Ljava8/util/Spliterator$OfInt;Z)Ljava8/util/stream/IntStream;
 
     move-result-object p0
@@ -213,10 +191,8 @@
 .method public static iterate(ILjava8/util/function/IntUnaryOperator;)Ljava8/util/stream/IntStream;
     .locals 7
 
-    .line 1
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     new-instance v6, Ljava8/util/stream/IntStreams$1;
 
     const-wide v1, 0x7fffffffffffffffL
@@ -233,7 +209,6 @@
 
     const/4 p0, 0x0
 
-    .line 3
     invoke-static {v6, p0}, Ljava8/util/stream/StreamSupport;->intStream(Ljava8/util/Spliterator$OfInt;Z)Ljava8/util/stream/IntStream;
 
     move-result-object p0
@@ -244,7 +219,6 @@
 .method public static of(I)Ljava8/util/stream/IntStream;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Streams$IntStreamBuilderImpl;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Streams$IntStreamBuilderImpl;-><init>(I)V
@@ -261,7 +235,6 @@
 .method public static varargs of([I)Ljava8/util/stream/IntStream;
     .locals 0
 
-    .line 2
     invoke-static {p0}, Ljava8/util/J8Arrays;->stream([I)Ljava8/util/stream/IntStream;
 
     move-result-object p0
@@ -274,14 +247,12 @@
 
     if-lt p0, p1, :cond_0
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/IntStreams;->empty()Ljava8/util/stream/IntStream;
 
     move-result-object p0
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava8/util/stream/Streams$RangeIntSpliterator;
 
@@ -301,14 +272,12 @@
 
     if-le p0, p1, :cond_0
 
-    .line 1
     invoke-static {}, Ljava8/util/stream/IntStreams;->empty()Ljava8/util/stream/IntStream;
 
     move-result-object p0
 
     return-object p0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava8/util/stream/Streams$RangeIntSpliterator;
 
@@ -328,16 +297,12 @@
 .method public static takeWhile(Ljava8/util/stream/IntStream;Ljava8/util/function/IntPredicate;)Ljava8/util/stream/IntStream;
     .locals 3
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;
 
-    .line 4
     invoke-interface {p0}, Ljava8/util/stream/IntStream;->spliterator()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v1
@@ -346,17 +311,14 @@
 
     invoke-direct {v0, v1, v2, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;-><init>(Ljava8/util/Spliterator$OfInt;ZLjava8/util/function/IntPredicate;)V
 
-    .line 5
     invoke-interface {p0}, Ljava8/util/stream/BaseStream;->isParallel()Z
 
     move-result p1
 
-    .line 6
     invoke-static {v0, p1}, Ljava8/util/stream/StreamSupport;->intStream(Ljava8/util/Spliterator$OfInt;Z)Ljava8/util/stream/IntStream;
 
     move-result-object p1
 
-    .line 7
     invoke-static {p0}, Ljava8/util/stream/StreamSupport;->closeHandler(Ljava8/util/stream/BaseStream;)Ljava/lang/Runnable;
 
     move-result-object p0

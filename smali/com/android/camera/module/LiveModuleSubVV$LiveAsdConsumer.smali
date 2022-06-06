@@ -34,7 +34,6 @@
 .method public constructor <init>(Lcom/android/camera/module/LiveModuleSubVV;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/LiveModuleSubVV$LiveAsdConsumer;->this$0:Lcom/android/camera/module/LiveModuleSubVV;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 .method public synthetic constructor <init>(Lcom/android/camera/module/LiveModuleSubVV;Lcom/android/camera/module/LiveModuleSubVV$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/module/LiveModuleSubVV$LiveAsdConsumer;-><init>(Lcom/android/camera/module/LiveModuleSubVV;)V
 
     return-void
@@ -61,7 +59,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/LiveModuleSubVV$LiveAsdConsumer;->this$0:Lcom/android/camera/module/LiveModuleSubVV;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -81,7 +78,6 @@
         }
     .end annotation
 
-    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/module/LiveModuleSubVV$LiveAsdConsumer;->accept(Ljava/lang/Integer;)V

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/compat/miui/PackageInstallCompat$Listener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/compat/miui/PackageInstallCompat$1;->val$listener:Lcom/xiaomi/compat/miui/PackageInstallCompat$Listener;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver2$Stub;-><init>()V
@@ -40,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,7 +69,6 @@
 
     invoke-static {p4, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p3, p0, Lcom/xiaomi/compat/miui/PackageInstallCompat$1;->val$listener:Lcom/xiaomi/compat/miui/PackageInstallCompat$Listener;
 
     if-eqz p3, :cond_1
@@ -85,7 +82,6 @@
     :cond_0
     const/4 p4, 0x0
 
-    .line 3
     :goto_0
     invoke-interface {p3, p1, p4}, Lcom/xiaomi/compat/miui/PackageInstallCompat$Listener;->onPackageInstalled(Ljava/lang/String;Z)V
 

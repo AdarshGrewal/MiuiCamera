@@ -29,7 +29,6 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;Ljava/util/List;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$1;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$1;->val$resources:Landroid/content/res/Resources;
@@ -46,14 +45,12 @@
 .method public run()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader;->access$200()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader$1;->val$context:Landroid/content/Context;
 
@@ -65,7 +62,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     :try_start_1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitCompatResourcesLoader;->access$200()Ljava/lang/Object;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 4
     monitor-exit v0
 
     return-void
@@ -81,7 +76,6 @@
     :catchall_0
     move-exception v1
 
-    .line 5
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -91,7 +85,6 @@
     :catchall_1
     move-exception v1
 
-    .line 6
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1

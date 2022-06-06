@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static sLoadedLibrary:Z = false
+.field public static sLoadedLibrary:Z
 
 
 # direct methods
@@ -28,7 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public static synthetic access$000()Z
     .locals 1
 
-    .line 1
     sget-boolean v0, Lcom/faceunity/wrapper/faceunity$LoadConfig;->sLoadedLibrary:Z
 
     return v0
@@ -46,7 +44,6 @@
 .method public static loadLibrary(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     sget-boolean v0, Lcom/faceunity/wrapper/faceunity$LoadConfig;->sLoadedLibrary:Z
 
     if-nez v0, :cond_1
@@ -55,7 +52,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -63,21 +59,18 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
 
-    .line 4
     new-instance v0, Ljava/io/File;
 
     const-string v1, "libCNamaSDK.so"
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -86,7 +79,6 @@
 
     const/4 p0, 0x1
 
-    .line 6
     sput-boolean p0, Lcom/faceunity/wrapper/faceunity$LoadConfig;->sLoadedLibrary:Z
 
     :cond_1

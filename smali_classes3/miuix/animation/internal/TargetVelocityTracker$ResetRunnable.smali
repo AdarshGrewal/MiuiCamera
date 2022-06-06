@@ -37,10 +37,8 @@
 .method public constructor <init>(Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mMonitorInfo:Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;
 
     return-void
@@ -51,12 +49,10 @@
 .method public post(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;)V
     .locals 2
 
-    .line 1
     iget-object v0, p1, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2
     iget-object v0, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mTargetRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -67,7 +63,6 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -75,11 +70,9 @@
 
     iput-object v0, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mTargetRef:Ljava/lang/ref/WeakReference;
 
-    .line 4
     :cond_1
     iput-object p2, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mProperty:Lmiuix/animation/property/FloatProperty;
 
-    .line 5
     iget-object p1, p1, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     const-wide/16 v0, 0x258
@@ -92,7 +85,6 @@
 .method public run()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mTargetRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -109,7 +101,6 @@
 
     const/4 v2, 0x0
 
-    .line 2
     iget-object v3, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mProperty:Lmiuix/animation/property/FloatProperty;
 
     aput-object v3, v1, v2
@@ -120,14 +111,12 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mProperty:Lmiuix/animation/property/FloatProperty;
 
     const-wide/16 v2, 0x0
 
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/IAnimTarget;->setVelocity(Lmiuix/animation/property/FloatProperty;D)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;->mMonitorInfo:Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;
 

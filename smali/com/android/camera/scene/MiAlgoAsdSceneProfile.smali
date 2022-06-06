@@ -67,34 +67,29 @@
 
     const/16 v1, 0x3e8
 
-    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->generateCompatAiASDType(II)I
 
     move-result v1
 
     sput v1, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->COMPAT_FOOD:I
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
-    .line 3
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    .line 4
     iput v2, v1, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 5
     iget-object v3, v1, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
-    const v4, 0x7f1208b3
+    const v4, 0x7f120864
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -102,23 +97,19 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v1
 
-    .line 8
     iput v0, v1, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 9
     iget-object v0, v1, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
-    const v3, 0x7f1208b5
+    const v3, 0x7f120866
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -126,70 +117,57 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 10
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 11
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    .line 12
     iput v1, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 13
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 14
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/4 v3, 0x4
 
-    .line 15
     iput v3, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 16
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 17
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/4 v3, 0x6
 
-    .line 18
     iput v3, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 19
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 20
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/4 v3, 0x7
 
-    .line 21
     iput v3, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 22
     iget-object v3, v0, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
-    const v4, 0x7f1208b2
+    const v4, 0x7f120863
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -197,44 +175,37 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 23
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
-    .line 25
     sget v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->COMPAT_FOOD:I
 
     iput v3, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 26
     sget-object v3, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 27
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/16 v3, 0x9
 
-    .line 28
     iput v3, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 29
     iget-object v3, v0, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
     sget-boolean v4, Lcom/android/camera/HybridZoomingSystem;->IS_3_OR_MORE_SAT:Z
 
-    const v5, 0x7f12099f
+    const v5, 0x7f120950
 
-    const v6, 0x7f12099e
+    const v6, 0x7f12094f
 
     if-eqz v4, :cond_0
 
@@ -252,7 +223,6 @@
 
     invoke-virtual {v3, v2, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 30
     iget-object v2, v0, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
     sget-boolean v3, Lcom/android/camera/HybridZoomingSystem;->IS_3_OR_MORE_SAT:Z
@@ -271,22 +241,18 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 31
     sget-object v1, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 32
     invoke-static {}, Lcom/android/camera/scene/MiScene;->create()Lcom/android/camera/scene/MiScene;
 
     move-result-object v0
 
     const/16 v1, 0x8
 
-    .line 33
     iput v1, v0, Lcom/android/camera/scene/MiScene;->type:I
 
-    .line 34
     sget-object v1, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -297,7 +263,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -306,12 +271,10 @@
 .method public static clearInitASDScenes()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -331,12 +294,10 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {v1, v2}, Lcom/android/camera/scene/MiScene;->setEnable(Z)V
 
     const/4 v2, 0x0
 
-    .line 4
     invoke-virtual {v1, v2}, Lcom/android/camera/scene/MiScene;->isChange(F)Z
 
     goto :goto_0
@@ -364,7 +325,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v1, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
@@ -385,12 +345,10 @@
 
     check-cast v2, Lcom/android/camera/scene/MiScene;
 
-    .line 2
     iget v3, v2, Lcom/android/camera/scene/MiScene;->type:I
 
     if-ne v3, p0, :cond_1
 
-    .line 3
     iget-object v2, v2, Lcom/android/camera/scene/MiScene;->valueArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -401,14 +359,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 4
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
 
-    .line 5
     :cond_2
     sget-object p0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
@@ -432,7 +388,6 @@
 
     return p0
 
-    .line 6
     :cond_3
     :goto_0
     sget-object p0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
@@ -461,7 +416,6 @@
 .method public static isAlreadyTip()Z
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -481,7 +435,6 @@
 
     check-cast v1, Lcom/android/camera/scene/MiScene;
 
-    .line 2
     invoke-virtual {v1}, Lcom/android/camera/scene/MiScene;->isEnable()Z
 
     move-result v1
@@ -522,12 +475,10 @@
 .method public static isSceneChange(II)Z
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -545,14 +496,12 @@
 
     check-cast v1, Lcom/android/camera/scene/MiScene;
 
-    .line 3
     iget v2, v1, Lcom/android/camera/scene/MiScene;->type:I
 
     if-ne v2, p0, :cond_0
 
     int-to-float p0, p1
 
-    .line 4
     invoke-virtual {v1, p0}, Lcom/android/camera/scene/MiScene;->isChange(F)Z
 
     move-result p0
@@ -568,12 +517,10 @@
 .method public static isTipEnable(I)Z
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -591,12 +538,10 @@
 
     check-cast v1, Lcom/android/camera/scene/MiScene;
 
-    .line 3
     iget v2, v1, Lcom/android/camera/scene/MiScene;->type:I
 
     if-ne v2, p0, :cond_0
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/scene/MiScene;->isEnable()Z
 
     move-result p0
@@ -612,12 +557,10 @@
 .method public static setTipEnable(IZ)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/scene/MiAlgoAsdSceneProfile;->sSceneList:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -635,12 +578,10 @@
 
     check-cast v1, Lcom/android/camera/scene/MiScene;
 
-    .line 3
     iget v2, v1, Lcom/android/camera/scene/MiScene;->type:I
 
     if-ne v2, p0, :cond_0
 
-    .line 4
     invoke-virtual {v1, p1}, Lcom/android/camera/scene/MiScene;->setEnable(Z)V
 
     :cond_1

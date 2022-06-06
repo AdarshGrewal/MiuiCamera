@@ -17,7 +17,6 @@
 .method public constructor <init>([Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/c/d;->a:[Ljava/lang/String;
 
     iput-object p2, p0, Lcom/xiaomi/stat/c/d;->b:Ljava/lang/String;
@@ -34,12 +33,10 @@
 .method public onBindingDied(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 1
     const-class p1, Lcom/xiaomi/stat/c/i;
 
     monitor-enter p1
 
-    .line 2
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->notify()V
     :try_end_0
@@ -53,7 +50,6 @@
 
     goto :goto_1
 
-    .line 3
     :catch_0
     :goto_0
     :try_start_1
@@ -72,7 +68,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b/d;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
@@ -89,7 +84,6 @@
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
 
-    .line 1
     const-class v0, Lcom/xiaomi/stat/c/i;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -110,10 +104,8 @@
 
     invoke-static {v1, p1}, Lcom/xiaomi/stat/d/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     monitor-enter v0
 
-    .line 3
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
     :try_end_0
@@ -127,7 +119,6 @@
 
     goto :goto_1
 
-    .line 4
     :catch_0
     :goto_0
     :try_start_1

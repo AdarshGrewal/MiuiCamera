@@ -237,10 +237,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -259,18 +257,15 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     new-instance v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;
 
     invoke-direct {v0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;-><init>()V
 
-    .line 2
     iput-object p0, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mMediaMeta:Landroid/os/Bundle;
 
     const-string p0, "format"
 
-    .line 3
     invoke-virtual {v0, p0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -279,7 +274,6 @@
 
     const-string p0, "duration_us"
 
-    .line 4
     invoke-virtual {v0, p0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
@@ -288,7 +282,6 @@
 
     const-string p0, "start_us"
 
-    .line 5
     invoke-virtual {v0, p0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
@@ -297,7 +290,6 @@
 
     const-string p0, "bitrate"
 
-    .line 6
     invoke-virtual {v0, p0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getLong(Ljava/lang/String;)J
 
     move-result-wide v1
@@ -308,26 +300,22 @@
 
     const/4 v2, -0x1
 
-    .line 7
     invoke-virtual {v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
     const-string v4, "audio"
 
-    .line 8
     invoke-virtual {v0, v4, v2}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
     const-string v6, "timedtext"
 
-    .line 9
     invoke-virtual {v0, v6, v2}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getInt(Ljava/lang/String;I)I
 
     const-string v6, "streams"
 
-    .line 10
     invoke-virtual {v0, v6}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v6
@@ -336,7 +324,6 @@
 
     return-object v0
 
-    .line 11
     :cond_1
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -361,18 +348,15 @@
 
     goto :goto_0
 
-    .line 12
     :cond_2
     new-instance v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
     invoke-direct {v8, v2}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;-><init>(I)V
 
-    .line 13
     iput-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mMeta:Landroid/os/Bundle;
 
     const-string v7, "type"
 
-    .line 14
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -381,14 +365,12 @@
 
     const-string v7, "language"
 
-    .line 15
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mLanguage:Ljava/lang/String;
 
-    .line 16
     iget-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -402,7 +384,6 @@
     :cond_3
     const-string v7, "codec_name"
 
-    .line 17
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -411,7 +392,6 @@
 
     const-string v7, "codec_profile"
 
-    .line 18
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -420,14 +400,12 @@
 
     const-string v7, "codec_long_name"
 
-    .line 19
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mCodecLongName:Ljava/lang/String;
 
-    .line 20
     invoke-virtual {v8, p0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -436,7 +414,6 @@
 
     iput-wide v9, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mBitrate:J
 
-    .line 21
     iget-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
     invoke-virtual {v7, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -447,7 +424,6 @@
 
     const-string v7, "width"
 
-    .line 22
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -456,7 +432,6 @@
 
     const-string v7, "height"
 
-    .line 23
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -465,7 +440,6 @@
 
     const-string v7, "fps_num"
 
-    .line 24
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -474,7 +448,6 @@
 
     const-string v7, "fps_den"
 
-    .line 25
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -483,7 +456,6 @@
 
     const-string v7, "tbr_num"
 
-    .line 26
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -492,7 +464,6 @@
 
     const-string v7, "tbr_den"
 
-    .line 27
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -501,7 +472,6 @@
 
     const-string v7, "sar_num"
 
-    .line 28
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -510,7 +480,6 @@
 
     const-string v7, "sar_den"
 
-    .line 29
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -519,12 +488,10 @@
 
     if-ne v3, v2, :cond_5
 
-    .line 30
     iput-object v8, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mVideoStream:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
     goto :goto_1
 
-    .line 31
     :cond_4
     iget-object v7, v8, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
@@ -536,7 +503,6 @@
 
     const-string v7, "sample_rate"
 
-    .line 32
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getInt(Ljava/lang/String;)I
 
     move-result v7
@@ -545,7 +511,6 @@
 
     const-string v7, "channel_layout"
 
-    .line 33
     invoke-virtual {v8, v7}, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->getLong(Ljava/lang/String;)J
 
     move-result-wide v9
@@ -554,10 +519,8 @@
 
     if-ne v5, v2, :cond_5
 
-    .line 34
     iput-object v8, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mAudioStream:Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
-    .line 35
     :cond_5
     :goto_1
     iget-object v7, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mStreams:Ljava/util/ArrayList;
@@ -575,7 +538,6 @@
 .method public getDurationInline()Ljava/lang/String;
     .locals 8
 
-    .line 1
     iget-wide v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mDurationUS:J
 
     const-wide/16 v2, 0x1388
@@ -584,24 +546,18 @@
 
     const-wide/32 v2, 0xf4240
 
-    .line 2
     div-long/2addr v0, v2
 
     const-wide/16 v2, 0x3c
 
-    .line 3
     div-long v4, v0, v2
 
-    .line 4
     rem-long/2addr v0, v2
 
-    .line 5
     div-long v6, v4, v2
 
-    .line 6
     rem-long/2addr v4, v2
 
-    .line 7
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v3, 0x3
@@ -646,7 +602,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getInt(Ljava/lang/String;I)I
 
     move-result p1
@@ -657,12 +612,10 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 2
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -671,7 +624,6 @@
 
     return p2
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -691,7 +643,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -702,12 +653,10 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 2
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -716,7 +665,6 @@
 
     return-wide p2
 
-    .line 4
     :cond_0
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -744,7 +692,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mMediaMeta:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -757,7 +704,6 @@
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mMediaMeta:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;

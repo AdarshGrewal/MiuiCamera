@@ -41,15 +41,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, -0x3f79999a    # -4.2f
 
-    .line 2
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
 
-    .line 3
     new-instance v0, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;
 
     invoke-direct {v0}, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;-><init>()V
@@ -58,7 +55,6 @@
 
     const/high16 v0, 0x447a0000    # 1000.0f
 
-    .line 4
     iput v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->MILLISECONDS_PER_SECOND:F
 
     return-void
@@ -67,7 +63,6 @@
 .method public static synthetic access$000(Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
 
     return p0
@@ -76,7 +71,6 @@
 .method public static synthetic access$100(Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;)F
     .locals 0
 
-    .line 1
     iget p0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mVelocityThreshold:F
 
     return p0
@@ -87,7 +81,6 @@
 .method public getAcceleration(FF)F
     .locals 0
 
-    .line 1
     iget p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
 
     mul-float/2addr p2, p1
@@ -98,7 +91,6 @@
 .method public getFrictionScalar()F
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
 
     const v1, -0x3f79999a    # -4.2f
@@ -111,7 +103,6 @@
 .method public isAtEquilibrium(FF)Z
     .locals 0
 
-    .line 1
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -140,14 +131,12 @@
 
     mul-float/2addr p1, v0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mFriction:F
 
     float-to-double v0, p1
 
     const-wide v2, 0x4005bf0a8b145769L    # Math.E
 
-    .line 2
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -168,7 +157,6 @@
 
     mul-float/2addr p1, v0
 
-    .line 1
     iput p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mVelocityThreshold:F
 
     return-void
@@ -179,12 +167,10 @@
 
     const-wide/16 v0, 0x10
 
-    .line 1
     invoke-static {p3, p4, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p3
 
-    .line 2
     iget-wide v0, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mDragRate:D
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
@@ -203,7 +189,6 @@
 
     move-result-wide v0
 
-    .line 3
     iget-object p4, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mMassState:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;
 
     float-to-double v2, p2
@@ -218,24 +203,20 @@
 
     add-float/2addr p1, p3
 
-    .line 4
     iput p1, p4, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;->mValue:F
 
-    .line 5
     invoke-virtual {p0, p1, p2}, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->isAtEquilibrium(FF)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 6
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mMassState:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;
 
     const/4 p2, 0x0
 
     iput p2, p1, Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;->mVelocity:F
 
-    .line 7
     :cond_0
     iget-object p1, p0, Lmiuix/overscroller/internal/dynamicanimation/animation/FlingAnimation$DragForce;->mMassState:Lmiuix/overscroller/internal/dynamicanimation/animation/DynamicAnimation$MassState;
 

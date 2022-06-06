@@ -31,7 +31,6 @@
 .method public constructor <init>(Lcom/android/camera/network/imageloader/LruImageCache;I)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/imageloader/LruImageCache$1;->this$0:Lcom/android/camera/network/imageloader/LruImageCache;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -44,7 +43,6 @@
 .method public bridge synthetic sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Landroid/graphics/Bitmap;
@@ -59,7 +57,6 @@
 .method public sizeOf(Ljava/lang/String;Landroid/graphics/Bitmap;)I
     .locals 0
 
-    .line 2
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getRowBytes()I
 
     move-result p1

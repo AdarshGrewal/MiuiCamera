@@ -64,25 +64,18 @@
 .method public constructor <init>(IZIZZ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mStreamNum:I
 
-    .line 3
     iput-boolean p2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mRequireTuningData:Z
 
-    .line 4
     iput p3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSatFusionType:I
 
-    .line 5
     iput-boolean p4, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mHasCaptureData:Z
 
-    .line 6
     iput-boolean p5, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsHdrSrShot:Z
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -95,7 +88,6 @@
 .method public static synthetic access$000(Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mFirstTimestamp:J
 
     return-wide v0
@@ -118,7 +110,6 @@
 
     if-eq p5, v3, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1, p3, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
     goto :goto_0
@@ -126,7 +117,6 @@
     :cond_0
     if-ne p2, v3, :cond_1
 
-    .line 2
     invoke-virtual {p0, p1, v1, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
     goto :goto_0
@@ -134,12 +124,10 @@
     :cond_1
     if-ne p3, v2, :cond_2
 
-    .line 3
     invoke-virtual {p0, p1, v2, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-virtual {p0, p1, v0, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
@@ -150,7 +138,6 @@
 
     if-ne p2, p5, :cond_4
 
-    .line 5
     invoke-virtual {p0, p1, v1, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
     goto :goto_0
@@ -158,12 +145,10 @@
     :cond_4
     if-ne p3, v2, :cond_5
 
-    .line 6
     invoke-virtual {p0, p1, v2, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
     goto :goto_0
 
-    .line 7
     :cond_5
     invoke-virtual {p0, p1, v0, p4}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImage(Landroid/media/Image;IZ)V
 
@@ -174,107 +159,68 @@
 
 # virtual methods
 .method public close()V
-    .locals 3
+    .locals 2
 
-    .line 1
-    invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getHalPoolInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
+    iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
+
+    iput-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
+
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
+
+    iput-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
+
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
+
+    iput-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
+
+    :cond_2
+    iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 2
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    .line 3
-    invoke-virtual {v1}, Landroid/media/Image;->close()V
-
-    .line 4
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->releaseImage(Landroid/media/Image;)V
-
-    .line 5
-    iput-object v2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
-
-    .line 6
-    :cond_0
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
-
-    if-eqz v1, :cond_1
-
-    .line 7
-    invoke-virtual {v1}, Landroid/media/Image;->close()V
-
-    .line 8
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->releaseImage(Landroid/media/Image;)V
-
-    .line 9
-    iput-object v2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
-
-    .line 10
-    :cond_1
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
-
-    if-eqz v1, :cond_2
-
-    .line 11
-    invoke-virtual {v1}, Landroid/media/Image;->close()V
-
-    .line 12
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->releaseImage(Landroid/media/Image;)V
-
-    .line 13
-    iput-object v2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
-
-    .line 14
-    :cond_2
-    iget-object v1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
+    move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 15
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 16
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v1, Lcom/xiaomi/camera/core/PendingImageInfo;
 
-    move-result v2
+    invoke-virtual {v1}, Lcom/xiaomi/camera/core/PendingImageInfo;->getImage()Landroid/media/Image;
 
-    if-eqz v2, :cond_4
+    move-result-object v1
 
-    .line 17
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object v2
+    invoke-virtual {v1}, Landroid/media/Image;->close()V
 
-    check-cast v2, Lcom/xiaomi/camera/core/PendingImageInfo;
-
-    .line 18
-    invoke-virtual {v2}, Lcom/xiaomi/camera/core/PendingImageInfo;->getImage()Landroid/media/Image;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    .line 19
-    invoke-virtual {v2}, Landroid/media/Image;->close()V
-
-    .line 20
-    invoke-virtual {v0, v2}, Lcom/xiaomi/camera/imagecodec/ImagePool;->releaseImage(Landroid/media/Image;)V
-
-    .line 21
     :cond_3
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
@@ -285,7 +231,6 @@
 .method public getCaptureId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mCaptureId:Ljava/lang/String;
 
     return-object v0
@@ -294,7 +239,6 @@
 .method public getFirstTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mFirstTimestamp:J
 
     return-wide v0
@@ -303,7 +247,6 @@
 .method public getMainImage()Landroid/media/Image;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
 
     return-object v0
@@ -320,7 +263,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
 
     return-object v0
@@ -329,7 +271,6 @@
 .method public getResult()Lcom/xiaomi/protocol/ICustomCaptureResult;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     return-object v0
@@ -338,7 +279,6 @@
 .method public getSatFusionType()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSatFusionType:I
 
     return v0
@@ -347,7 +287,6 @@
 .method public getStartTime()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mStartTime:J
 
     return-wide v0
@@ -356,7 +295,6 @@
 .method public getStreamNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mStreamNum:I
 
     return v0
@@ -365,7 +303,6 @@
 .method public getSubImage()Landroid/media/Image;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
 
     return-object v0
@@ -374,7 +311,6 @@
 .method public getTimestamp()J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTimestamp:J
 
     return-wide v0
@@ -383,7 +319,6 @@
 .method public getTuningImage()Landroid/media/Image;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
 
     return-object v0
@@ -392,17 +327,14 @@
 .method public handlePendingImage()V
     .locals 10
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -410,14 +342,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/xiaomi/camera/core/PendingImageInfo;
 
-    .line 5
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object v2
@@ -430,7 +360,6 @@
 
     const/4 v5, 0x0
 
-    .line 6
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->getSatFusionType()I
 
     move-result v6
@@ -479,14 +408,12 @@
 
     const-string v5, "handle pending image: fusionType = %d, cameraType = %d, imageType = %d, isPool = %b"
 
-    .line 7
     invoke-static {v3, v5, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PendingImageInfo;->getImage()Landroid/media/Image;
 
     move-result-object v5
@@ -499,7 +426,6 @@
 
     move-result v7
 
-    .line 9
     invoke-virtual {v1}, Lcom/xiaomi/camera/core/PendingImageInfo;->isPoolImage()Z
 
     move-result v8
@@ -510,10 +436,8 @@
 
     move-object v4, p0
 
-    .line 10
     invoke-direct/range {v4 .. v9}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImageInner(Landroid/media/Image;IIZI)V
 
-    .line 11
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -525,7 +449,6 @@
 .method public isDataReady()Z
     .locals 6
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mRequireTuningData:Z
 
     const/4 v1, 0x0
@@ -552,12 +475,10 @@
     :goto_1
     const/4 v3, 0x2
 
-    .line 2
     iget v4, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mStreamNum:I
 
     if-ne v3, v4, :cond_3
 
-    .line 3
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object v3
@@ -600,7 +521,6 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isHasCaptureData()Z
 
     move-result v5
@@ -611,10 +531,8 @@
 
     move-result-object v4
 
-    .line 5
     invoke-static {v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     if-eqz v3, :cond_2
@@ -629,7 +547,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isHasCaptureData()Z
 
     move-result v0
@@ -644,7 +561,6 @@
     :cond_3
     if-ne v2, v4, :cond_4
 
-    .line 8
     iget-object v3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     if-eqz v3, :cond_4
@@ -670,7 +586,6 @@
 .method public isFirstResult()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsFirstResult:Z
 
     return v0
@@ -679,7 +594,6 @@
 .method public isHasCaptureData()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mHasCaptureData:Z
 
     return v0
@@ -688,7 +602,6 @@
 .method public isHdrSrShot()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsHdrSrShot:Z
 
     return v0
@@ -697,7 +610,6 @@
 .method public isMainImageFromPool()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsMainImageFromPool:Z
 
     return v0
@@ -706,7 +618,6 @@
 .method public isRequireTuningData()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mRequireTuningData:Z
 
     return v0
@@ -715,7 +626,6 @@
 .method public isSubImageFromPool()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsSubImageFromPool:Z
 
     return v0
@@ -724,7 +634,6 @@
 .method public isTuningImageFromPool()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsTuningImageFromPool:Z
 
     return v0
@@ -733,7 +642,6 @@
 .method public setCaptureId(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mCaptureId:Ljava/lang/String;
 
     return-void
@@ -742,20 +650,16 @@
 .method public setCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;Z)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
-    .line 2
     iput-boolean p2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsFirstResult:Z
 
-    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isHasCaptureData()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->handlePendingImage()V
 
     :cond_0
@@ -765,7 +669,6 @@
 .method public setFirstTimestamp(J)V
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mFirstTimestamp:J
 
     return-void
@@ -774,12 +677,10 @@
 .method public setHasCaptureData(Z)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mHasCaptureData:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mHasCaptureData:Z
 
     :cond_0
@@ -789,14 +690,12 @@
 .method public setImage(Landroid/media/Image;IIZ)V
     .locals 7
 
-    .line 16
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->isHasCaptureData()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 17
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->getSatFusionType()I
 
     move-result v6
@@ -813,12 +712,10 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->setImageInner(Landroid/media/Image;IIZI)V
 
-    .line 18
     invoke-virtual {p0}, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->handlePendingImage()V
 
     goto :goto_0
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
 
@@ -826,14 +723,12 @@
 
     if-nez v0, :cond_1
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
 
-    .line 21
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mPendingImageInfoList:Ljava/util/List;
 
@@ -843,7 +738,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 22
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -856,7 +750,6 @@
 
     const/4 v3, 0x0
 
-    .line 23
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -879,7 +772,6 @@
 
     const-string p2, "add pending image: cameraType = %d, imageType = %d, isPool = %b"
 
-    .line 24
     invoke-static {v0, p2, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -895,15 +787,12 @@
 
     if-nez p2, :cond_0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mMainImage:Landroid/media/Image;
 
-    .line 2
     iput-boolean p3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsMainImageFromPool:Z
 
     if-eqz p1, :cond_3
 
-    .line 3
     :try_start_0
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
@@ -918,7 +807,6 @@
     :catch_0
     move-exception p2
 
-    .line 4
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object p3
@@ -948,13 +836,10 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 5
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSubImage:Landroid/media/Image;
 
-    .line 6
     iput-boolean p3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsSubImageFromPool:Z
 
-    .line 7
     iget-wide p2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTimestamp:J
 
     cmp-long p2, v1, p2
@@ -963,7 +848,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 8
     :try_start_1
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
@@ -978,7 +862,6 @@
     :catch_1
     move-exception p2
 
-    .line 9
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object p3
@@ -1006,13 +889,10 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 10
     iput-object p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTuningImage:Landroid/media/Image;
 
-    .line 11
     iput-boolean p3, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsTuningImageFromPool:Z
 
-    .line 12
     iget-wide p2, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mTimestamp:J
 
     cmp-long p2, v1, p2
@@ -1021,7 +901,6 @@
 
     if-eqz p1, :cond_3
 
-    .line 13
     :try_start_2
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
@@ -1036,7 +915,6 @@
     :catch_2
     move-exception p2
 
-    .line 14
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
     move-result-object p3
@@ -1059,7 +937,6 @@
 
     goto :goto_0
 
-    .line 15
     :cond_2
     invoke-static {}, Lcom/xiaomi/camera/core/CaptureData;->access$100()Ljava/lang/String;
 
@@ -1089,7 +966,6 @@
 .method public setIsHdrSrShot(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mIsHdrSrShot:Z
 
     return-void
@@ -1098,7 +974,6 @@
 .method public setRequireTuningData(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mRequireTuningData:Z
 
     return-void
@@ -1107,7 +982,6 @@
 .method public setSatFusionType(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mSatFusionType:I
 
     return-void
@@ -1116,7 +990,6 @@
 .method public setStreamNum(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/xiaomi/camera/core/CaptureData$CaptureDataBean;->mStreamNum:I
 
     return-void
@@ -1125,7 +998,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1142,7 +1014,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {v1}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getTimeStamp()J
 

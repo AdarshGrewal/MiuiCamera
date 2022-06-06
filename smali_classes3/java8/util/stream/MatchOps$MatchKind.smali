@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 6
 
-    .line 1
     new-instance v0, Ljava8/util/stream/MatchOps$MatchKind;
 
     const/4 v1, 0x1
@@ -55,7 +54,6 @@
 
     sput-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ANY:Ljava8/util/stream/MatchOps$MatchKind;
 
-    .line 2
     new-instance v0, Ljava8/util/stream/MatchOps$MatchKind;
 
     const-string v3, "ALL"
@@ -64,7 +62,6 @@
 
     sput-object v0, Ljava8/util/stream/MatchOps$MatchKind;->ALL:Ljava8/util/stream/MatchOps$MatchKind;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/MatchOps$MatchKind;
 
     const/4 v3, 0x2
@@ -79,7 +76,6 @@
 
     new-array v4, v4, [Ljava8/util/stream/MatchOps$MatchKind;
 
-    .line 4
     sget-object v5, Ljava8/util/stream/MatchOps$MatchKind;->ANY:Ljava8/util/stream/MatchOps$MatchKind;
 
     aput-object v5, v4, v2
@@ -103,13 +99,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput-boolean p3, p0, Ljava8/util/stream/MatchOps$MatchKind;->stopOnPredicateMatches:Z
 
-    .line 3
     iput-boolean p4, p0, Ljava8/util/stream/MatchOps$MatchKind;->shortCircuitResult:Z
 
     return-void
@@ -118,7 +111,6 @@
 .method public static synthetic access$000(Ljava8/util/stream/MatchOps$MatchKind;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Ljava8/util/stream/MatchOps$MatchKind;->stopOnPredicateMatches:Z
 
     return p0
@@ -127,7 +119,6 @@
 .method public static synthetic access$100(Ljava8/util/stream/MatchOps$MatchKind;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Ljava8/util/stream/MatchOps$MatchKind;->shortCircuitResult:Z
 
     return p0
@@ -136,7 +127,6 @@
 .method public static valueOf(Ljava/lang/String;)Ljava8/util/stream/MatchOps$MatchKind;
     .locals 1
 
-    .line 1
     const-class v0, Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -151,7 +141,6 @@
 .method public static values()[Ljava8/util/stream/MatchOps$MatchKind;
     .locals 1
 
-    .line 1
     sget-object v0, Ljava8/util/stream/MatchOps$MatchKind;->$VALUES:[Ljava8/util/stream/MatchOps$MatchKind;
 
     invoke-virtual {v0}, [Ljava8/util/stream/MatchOps$MatchKind;->clone()Ljava/lang/Object;

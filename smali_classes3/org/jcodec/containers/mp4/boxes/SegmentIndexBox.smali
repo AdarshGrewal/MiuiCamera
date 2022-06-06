@@ -31,7 +31,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -40,7 +39,6 @@
 .method public static createSegmentIndexBox()Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -69,36 +67,30 @@
 .method public doWrite(Ljava/nio/ByteBuffer;)V
     .locals 11
 
-    .line 1
     invoke-super {p0, p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->doWrite(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_ID:J
 
     long-to-int v0, v0
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->timescale:J
 
     long-to-int v0, v0
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget-byte v0, p0, Lorg/jcodec/containers/mp4/boxes/FullBox;->version:B
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->earliest_presentation_time:J
 
     long-to-int v0, v0
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 6
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->first_offset:J
 
     long-to-int v0, v0
@@ -107,18 +99,15 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->earliest_presentation_time:J
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 8
     iget-wide v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->first_offset:J
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 9
     :goto_0
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reserved:I
 
@@ -126,7 +115,6 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 10
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_count:I
 
     int-to-short v0, v0
@@ -137,18 +125,15 @@
 
     move v1, v0
 
-    .line 11
     :goto_1
     iget v2, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_count:I
 
     if-ge v1, v2, :cond_2
 
-    .line 12
     iget-object v2, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->references:[Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
 
     aget-object v2, v2, v1
 
-    .line 13
     iget-boolean v3, v2, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->reference_type:Z
 
     shl-int/lit8 v3, v3, 0x1f
@@ -161,12 +146,10 @@
 
     long-to-int v3, v3
 
-    .line 14
     iget-wide v4, v2, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->subsegment_duration:J
 
     long-to-int v4, v4
 
-    .line 15
     iget-boolean v5, v2, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->starts_with_SAP:Z
 
     if-eqz v5, :cond_1
@@ -178,7 +161,6 @@
     :cond_1
     move v5, v0
 
-    .line 16
     :goto_2
     iget v6, v2, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->SAP_type:I
 
@@ -190,7 +172,6 @@
 
     int-to-long v5, v5
 
-    .line 17
     iget-wide v7, v2, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->SAP_delta_time:J
 
     const-wide/32 v9, 0xfffffff
@@ -201,13 +182,10 @@
 
     long-to-int v2, v5
 
-    .line 18
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 19
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 20
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v1, v1, 0x1
@@ -221,7 +199,6 @@
 .method public estimateSize()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_count:I
 
     mul-int/lit8 v0, v0, 0xc
@@ -236,10 +213,8 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-super/range {p0 .. p1}, Lorg/jcodec/containers/mp4/boxes/FullBox;->parse(Ljava/nio/ByteBuffer;)V
 
-    .line 2
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -250,7 +225,6 @@
 
     iput-wide v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_ID:J
 
-    .line 3
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -261,12 +235,10 @@
 
     iput-wide v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->timescale:J
 
-    .line 4
     iget-byte v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->version:B
 
     if-nez v1, :cond_0
 
-    .line 5
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -277,7 +249,6 @@
 
     iput-wide v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->earliest_presentation_time:J
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -290,7 +261,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getLong()J
 
@@ -298,14 +268,12 @@
 
     iput-wide v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->earliest_presentation_time:J
 
-    .line 8
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v1
 
     iput-wide v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->first_offset:J
 
-    .line 9
     :goto_0
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -313,7 +281,6 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reserved:I
 
-    .line 10
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
@@ -324,7 +291,6 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_count:I
 
-    .line 11
     new-array v1, v1, [Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
 
     iput-object v1, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->references:[Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
@@ -333,13 +299,11 @@
 
     move v2, v1
 
-    .line 12
     :goto_1
     iget v3, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->reference_count:I
 
     if-ge v2, v3, :cond_3
 
-    .line 13
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v3
@@ -348,7 +312,6 @@
 
     move-result-wide v3
 
-    .line 14
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v5
@@ -357,7 +320,6 @@
 
     move-result-wide v5
 
-    .line 15
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v7
@@ -366,7 +328,6 @@
 
     move-result-wide v7
 
-    .line 16
     new-instance v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
 
     invoke-direct {v9}, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;-><init>()V
@@ -392,7 +353,6 @@
     :cond_1
     move v11, v1
 
-    .line 17
     :goto_2
     iput-boolean v11, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->reference_type:Z
 
@@ -400,10 +360,8 @@
 
     and-long/2addr v3, v15
 
-    .line 18
     iput-wide v3, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->referenced_size:J
 
-    .line 19
     iput-wide v5, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->subsegment_duration:J
 
     ushr-long v3, v7, v10
@@ -419,7 +377,6 @@
     :cond_2
     move v12, v1
 
-    .line 20
     :goto_3
     iput-boolean v12, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->starts_with_SAP:Z
 
@@ -433,17 +390,14 @@
 
     long-to-int v3, v3
 
-    .line 21
     iput v3, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->SAP_type:I
 
     const-wide/32 v3, 0xfffffff
 
     and-long/2addr v3, v7
 
-    .line 22
     iput-wide v3, v9, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;->SAP_delta_time:J
 
-    .line 23
     iget-object v3, v0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->references:[Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
 
     aput-object v9, v3, v2
@@ -459,7 +413,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,7 +471,6 @@
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox;->references:[Lorg/jcodec/containers/mp4/boxes/SegmentIndexBox$Reference;
 
-    .line 2
     invoke-static {v1}, Lorg/jcodec/platform/Platform;->arrayToString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

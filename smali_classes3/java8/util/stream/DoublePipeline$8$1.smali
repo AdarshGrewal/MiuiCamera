@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljava8/util/stream/DoublePipeline$8;Ljava8/util/stream/Sink;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/DoublePipeline$8$1;->this$1:Ljava8/util/stream/DoublePipeline$8;
 
     invoke-direct {p0, p2}, Ljava8/util/stream/Sink$ChainedDouble;-><init>(Ljava8/util/stream/Sink;)V
@@ -43,14 +42,12 @@
 .method public accept(D)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/DoublePipeline$8$1;->this$1:Ljava8/util/stream/DoublePipeline$8;
 
     iget-object v0, v0, Ljava8/util/stream/DoublePipeline$8;->val$action:Ljava8/util/function/DoubleConsumer;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/function/DoubleConsumer;->accept(D)V
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/Sink$ChainedDouble;->downstream:Ljava8/util/stream/Sink;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/stream/Sink;->accept(D)V

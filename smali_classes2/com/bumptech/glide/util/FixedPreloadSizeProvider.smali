@@ -27,7 +27,6 @@
 .method public constructor <init>(II)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
@@ -42,7 +41,6 @@
 
     aput p2, v0, p1
 
-    .line 2
     iput-object v0, p0, Lcom/bumptech/glide/util/FixedPreloadSizeProvider;->size:[I
 
     return-void
@@ -58,7 +56,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/bumptech/glide/util/FixedPreloadSizeProvider;->size:[I
 
     return-object p1

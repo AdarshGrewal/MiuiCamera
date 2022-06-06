@@ -31,7 +31,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -57,19 +56,14 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/liveshot/writer/SampleWriter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mMediaMuxer:Landroid/media/MediaMuxer;
 
-    .line 3
     iput-object p2, p0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
-    .line 4
     iput p3, p0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioTrackId:I
 
-    .line 5
     iput-object p4, p0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     return-void
@@ -82,21 +76,18 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v2, "writeAudioSamples: E"
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mVideoFirstKeyFrameArrivedNotifier:Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;
 
     const-wide/16 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Lcom/xiaomi/camera/liveshot/writer/SampleWriter$StatusNotifier;->getStatus()Ljava/lang/Object;
 
     move-result-object v1
@@ -112,7 +103,6 @@
     :cond_0
     move-wide v4, v2
 
-    .line 4
     :goto_0
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
@@ -127,12 +117,10 @@
     :cond_1
     add-long/2addr v6, v4
 
-    .line 5
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-wide v4, v1, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->tail:J
 
-    .line 6
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -161,7 +149,6 @@
 
     invoke-static {v1, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -197,14 +184,12 @@
     :goto_1
     if-nez v10, :cond_7
 
-    .line 8
     sget-object v12, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v13, "writeAudioSamples: take: E"
 
     invoke-static {v12, v13}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :try_start_0
     iget-object v12, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
@@ -218,20 +203,16 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10
     sget-object v10, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v13, "writeAudioSamples: take: X"
 
     invoke-static {v10, v13}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object v10, v12, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->data:Ljava/nio/ByteBuffer;
 
-    .line 12
     iget-object v12, v12, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Sample;->info:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 13
     iget-wide v13, v12, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     cmp-long v15, v13, v6
@@ -250,7 +231,6 @@
 
     if-nez v11, :cond_2
 
-    .line 14
     iget-object v2, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     iget-wide v8, v2, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->head:J
@@ -259,7 +239,6 @@
 
     iput-wide v8, v2, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->offset:J
 
-    .line 15
     sget-object v2, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -282,7 +261,6 @@
 
     move/from16 v11, v16
 
-    .line 16
     :cond_2
     iget-wide v8, v12, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -290,17 +268,14 @@
 
     if-ltz v8, :cond_3
 
-    .line 17
     sget-object v8, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v9, "writeAudioSamples: stop writing as reaching the ending timestamp"
 
     invoke-static {v8, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     iput v1, v12, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    .line 19
     :cond_3
     iget-wide v8, v12, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -308,17 +283,14 @@
 
     iput-wide v8, v12, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 20
     iget-object v8, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     iget v9, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioTrackId:I
 
     invoke-virtual {v8, v9, v10, v12}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 21
     iget-wide v8, v12, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 22
     sget-object v13, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -348,7 +320,6 @@
     :cond_4
     move-wide/from16 v17, v4
 
-    .line 23
     :goto_2
     invoke-virtual {v10}, Ljava/nio/ByteBuffer;->limit()I
 
@@ -378,7 +349,6 @@
     :catch_0
     move-wide/from16 v17, v4
 
-    .line 24
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     const-string v4, "writeAudioSamples: take: meet interrupted exception"
@@ -390,7 +360,6 @@
 
     goto/16 :goto_1
 
-    .line 25
     :cond_7
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
@@ -410,7 +379,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     sget-object v1, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -433,7 +401,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
     iget-object v1, v0, Lcom/xiaomi/camera/liveshot/writer/AudioSampleWriter;->mAudioSnapshot:Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;
 
     invoke-virtual {v1}, Lcom/xiaomi/camera/liveshot/encoder/CircularMediaEncoder$Snapshot;->clear()V

@@ -25,19 +25,14 @@
 .method public constructor <init>(FFFI)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera2/vendortag/struct/AWBFrameControl;->mRGain:F
 
-    .line 3
     iput p2, p0, Lcom/android/camera2/vendortag/struct/AWBFrameControl;->mGGain:F
 
-    .line 4
     iput p3, p0, Lcom/android/camera2/vendortag/struct/AWBFrameControl;->mBGain:F
 
-    .line 5
     iput p4, p0, Lcom/android/camera2/vendortag/struct/AWBFrameControl;->mColorTemperature:I
 
     return-void
@@ -48,7 +43,6 @@
 .method public getColorTemperature()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/vendortag/struct/AWBFrameControl;->mColorTemperature:I
 
     return v0

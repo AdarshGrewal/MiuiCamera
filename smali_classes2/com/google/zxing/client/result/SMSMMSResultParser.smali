@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/zxing/client/result/ResultParser;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
 
     const/16 v0, 0x3b
 
-    .line 1
     invoke-virtual {p2, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -40,10 +38,8 @@
 
     if-gez v0, :cond_0
 
-    .line 2
     invoke-interface {p0, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 3
     invoke-interface {p1, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -51,7 +47,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 4
     invoke-virtual {p2, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
@@ -60,14 +55,12 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 5
     invoke-virtual {p2, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
     const-string p2, "via="
 
-    .line 6
     invoke-virtual {p0, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p2
@@ -76,12 +69,10 @@
 
     const/4 p2, 0x4
 
-    .line 7
     invoke-virtual {p0, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 8
     :cond_1
     invoke-interface {p1, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -93,7 +84,6 @@
 .method public bridge synthetic parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/ParsedResult;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/result/SMSMMSResultParser;->parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/SMSParsedResult;
 
     move-result-object p1
@@ -104,14 +94,12 @@
 .method public parse(Lcom/google/zxing/Result;)Lcom/google/zxing/client/result/SMSParsedResult;
     .locals 7
 
-    .line 2
     invoke-static {p1}, Lcom/google/zxing/client/result/ResultParser;->getMassagedText(Lcom/google/zxing/Result;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "sms:"
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -130,7 +118,6 @@
 
     const-string v0, "mms:"
 
-    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -147,7 +134,6 @@
 
     return-object v1
 
-    .line 5
     :cond_0
     invoke-static {p1}, Lcom/google/zxing/client/result/ResultParser;->parseNameValuePairs(Ljava/lang/String;)Ljava/util/Map;
 
@@ -159,7 +145,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v4
@@ -168,7 +153,6 @@
 
     const-string v1, "subject"
 
-    .line 7
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -177,7 +161,6 @@
 
     const-string v2, "body"
 
-    .line 8
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -196,7 +179,6 @@
 
     const/4 v5, 0x4
 
-    .line 9
     invoke-virtual {p1, v4, v5}, Ljava/lang/String;->indexOf(II)I
 
     move-result v4
@@ -207,7 +189,6 @@
 
     goto :goto_1
 
-    .line 10
     :cond_2
     invoke-virtual {p1, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -215,7 +196,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_3
     :goto_1
     invoke-virtual {p1, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -225,12 +205,10 @@
     :goto_2
     const/4 v2, -0x1
 
-    .line 12
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 13
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, v3}, Ljava/util/ArrayList;-><init>(I)V
@@ -240,26 +218,22 @@
 
     add-int/lit8 v6, v2, 0x1
 
-    .line 14
     invoke-virtual {p1, v3, v6}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
 
     if-le v3, v2, :cond_4
 
-    .line 15
     invoke-virtual {p1, v6, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 16
     invoke-static {v4, v5, v2}, Lcom/google/zxing/client/result/SMSMMSResultParser;->addNumberVia(Ljava/util/Collection;Ljava/util/Collection;Ljava/lang/String;)V
 
     move v2, v3
 
     goto :goto_3
 
-    .line 17
     :cond_4
     invoke-virtual {p1, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -267,7 +241,6 @@
 
     invoke-static {v4, v5, p1}, Lcom/google/zxing/client/result/SMSMMSResultParser;->addNumberVia(Ljava/util/Collection;Ljava/util/Collection;Ljava/lang/String;)V
 
-    .line 18
     new-instance p1, Lcom/google/zxing/client/result/SMSParsedResult;
 
     sget-object v2, Lcom/google/zxing/client/result/ResultParser;->EMPTY_STR_ARRAY:[Ljava/lang/String;
@@ -280,7 +253,6 @@
 
     sget-object v3, Lcom/google/zxing/client/result/ResultParser;->EMPTY_STR_ARRAY:[Ljava/lang/String;
 
-    .line 19
     invoke-interface {v5, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v3

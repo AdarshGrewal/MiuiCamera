@@ -40,10 +40,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;-><init>(Ljava/util/List;)V
 
-    .line 2
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
@@ -58,7 +56,6 @@
 .method private checkAllSelectedState()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -67,7 +64,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v1
@@ -89,7 +85,6 @@
 
     check-cast v2, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;
 
-    .line 3
     invoke-virtual {v2}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;->isSelected()Z
 
     move-result v2
@@ -98,7 +93,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     :cond_1
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mIsAllSelected:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -108,17 +102,14 @@
 
     if-eq v1, v0, :cond_2
 
-    .line 5
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mIsAllSelected:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 6
     iget-object v1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->onAllSelectStateChangeListener:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$OnAllSelectStateChangeListener;
 
     if-eqz v1, :cond_2
 
-    .line 7
     invoke-interface {v1, v0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$OnAllSelectStateChangeListener;->onAllSelectStateChange(Z)V
 
     :cond_2
@@ -130,14 +121,12 @@
 .method public clearState()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -161,16 +150,13 @@
 
     const/4 v2, 0x0
 
-    .line 3
     invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;->setSelected(Z)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->checkAllSelectedState()V
 
     :cond_1
@@ -180,7 +166,6 @@
 .method public getIsAllSelected()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mIsAllSelected:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -193,10 +178,8 @@
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mRootView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
@@ -215,7 +198,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -224,7 +206,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d009b
+    const v0, 0x7f0d009a
 
     const/4 v1, 0x0
 
@@ -232,7 +214,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance p2, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$EmoticonViewViewHolder;
 
     invoke-direct {p2, p1}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$EmoticonViewViewHolder;-><init>(Landroid/view/View;)V
@@ -243,12 +224,10 @@
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mRootView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
@@ -257,14 +236,12 @@
 .method public selectAll()V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -288,16 +265,13 @@
 
     const/4 v2, 0x1
 
-    .line 3
     invoke-virtual {v1, v2}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;->setSelected(Z)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->checkAllSelectedState()V
 
     :cond_1
@@ -307,7 +281,6 @@
 .method public setOnAllSelectStateChangeListener(Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$OnAllSelectStateChangeListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->onAllSelectStateChangeListener:Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter$OnAllSelectStateChangeListener;
 
     return-void
@@ -316,7 +289,6 @@
 .method public setSelectState(Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;I)V
     .locals 3
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -329,20 +301,16 @@
 
     if-ge p2, v0, :cond_2
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/features/mimojis/commen/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0, p2, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
-    .line 4
     invoke-direct {p0}, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->checkAllSelectedState()V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojias/fragment/edit/MimojiAsEmoticonAdapter;->mRootView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p2}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -353,7 +321,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 6
     iget-object v0, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -373,21 +340,19 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f120465
+    const v1, 0x7f120443
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/features/mimojis/mimojias/bean/MimojiEmoticonInfo;->isSelected()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 8
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -422,13 +387,11 @@
 
     goto :goto_1
 
-    .line 9
     :cond_1
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 10
     :goto_1
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
@@ -436,7 +399,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 11
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/16 p2, 0x80

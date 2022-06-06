@@ -37,19 +37,16 @@
 .method public constructor <init>(IIIII)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x78
 
     if-lt p4, v0, :cond_0
 
-    .line 2
     iput p4, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsMax:I
 
-    const-string p4, "width must be positive"
+    const-string/jumbo p4, "width must be positive"
 
-    .line 3
     invoke-static {p1, p4}, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
@@ -58,7 +55,6 @@
 
     const-string p1, "height must be positive"
 
-    .line 4
     invoke-static {p2, p1}, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
@@ -67,14 +63,12 @@
 
     const-string p1, "fpsMin must be positive"
 
-    .line 5
     invoke-static {p3, p1}, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsMin:I
 
-    .line 6
     new-instance p1, Landroid/util/Size;
 
     iget p2, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mWidth:I
@@ -87,14 +81,12 @@
 
     const-string p1, "batchSizeMax must be positive"
 
-    .line 7
     invoke-static {p5, p1}, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mBatchSizeMax:I
 
-    .line 8
     new-instance p1, Landroid/util/Range;
 
     iget p2, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsMin:I
@@ -115,7 +107,6 @@
 
     return-void
 
-    .line 9
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -133,7 +124,6 @@
 
     return p0
 
-    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -155,19 +145,16 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     array-length v0, p0
 
     if-eqz v0, :cond_2
 
-    .line 2
     array-length v0, p0
 
     mul-int/lit8 v1, p1, 0x5
 
     if-lt v0, v1, :cond_1
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
@@ -181,30 +168,24 @@
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 4
     aget v5, p0, v2
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 5
     aget v6, p0, v3
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 6
     aget v7, p0, v2
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 7
     aget v8, p0, v3
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 8
     aget v9, p0, v2
 
-    .line 9
     new-instance v2, Lcom/android/camera2/MiHighSpeedVideoConfiguration;
 
     move-object v4, v2
@@ -222,7 +203,6 @@
     :cond_0
     return-object v0
 
-    .line 10
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -246,7 +226,6 @@
 
     throw p1
 
-    .line 11
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -262,7 +241,6 @@
 .method public getBatchSizeMax()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mBatchSizeMax:I
 
     return v0
@@ -271,7 +249,6 @@
 .method public getFpsMax()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsMax:I
 
     return v0
@@ -280,7 +257,6 @@
 .method public getFpsMin()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsMin:I
 
     return v0
@@ -297,7 +273,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mFpsRange:Landroid/util/Range;
 
     return-object v0
@@ -306,7 +281,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mHeight:I
 
     return v0
@@ -315,7 +289,6 @@
 .method public getSize()Landroid/util/Size;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mSize:Landroid/util/Size;
 
     return-object v0
@@ -324,7 +297,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiHighSpeedVideoConfiguration;->mWidth:I
 
     return v0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$1;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +37,12 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$1;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$002(Lmiuix/popupwidget/internal/widget/ArrowPopupView;Landroid/view/animation/Animation;)Landroid/view/animation/Animation;
 
-    .line 2
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$1;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$100(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Z
@@ -54,7 +51,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$1;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$200(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V

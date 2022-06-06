@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$PlayTask$LocalHandler;-><init>()V
 
     return-void
@@ -38,7 +36,6 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-eqz v0, :cond_1
@@ -47,17 +44,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$PlayerFeedback;
 
-    .line 3
     invoke-interface {p1, v1}, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$PlayerFeedback;->playbackStopped(I)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -79,7 +73,6 @@
 
     throw p1
 
-    .line 5
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -87,7 +80,6 @@
 
     const/4 v0, 0x0
 
-    .line 6
     invoke-interface {p1, v0}, Lcom/xiaomi/magicvideoskymediacodec/MoviePlayer$PlayerFeedback;->playbackStopped(I)V
 
     :goto_0

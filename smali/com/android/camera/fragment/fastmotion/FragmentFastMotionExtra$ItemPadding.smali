@@ -22,10 +22,8 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastMotionExtra$ItemPadding;->mPadding:I
 
     return-void
@@ -36,7 +34,6 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 1
     iget p2, p0, Lcom/android/camera/fragment/fastmotion/FragmentFastMotionExtra$ItemPadding;->mPadding:I
 
     const/4 p3, 0x0

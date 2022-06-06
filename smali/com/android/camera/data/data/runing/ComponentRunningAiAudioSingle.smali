@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -32,7 +31,6 @@
 
     const-string v1, "OFF"
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void
@@ -81,7 +79,7 @@
 .method public getResText()I
     .locals 1
 
-    const v0, 0x7f120856
+    const v0, 0x7f120809
 
     return v0
 .end method
@@ -89,7 +87,6 @@
 .method public isSwitchOn(I)Z
     .locals 2
 
-    .line 1
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
@@ -111,7 +108,6 @@
 
     return v1
 
-    .line 2
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioSingle;->mIsNormalIntent:Z
 
@@ -119,7 +115,6 @@
 
     return v1
 
-    .line 3
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -137,7 +132,6 @@
 .method public reInit(IZ)V
     .locals 0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioSingle;->mIsNormalIntent:Z
 
     return-void
@@ -155,7 +149,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1
     sget-object p2, Lcom/android/camera/data/data/runing/ComponentRunningAiAudioSingle;->VALUE_ON:Ljava/lang/String;
 
     goto :goto_0

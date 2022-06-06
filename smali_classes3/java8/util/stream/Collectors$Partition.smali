@@ -58,13 +58,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Collectors$Partition;->forTrue:Ljava/lang/Object;
 
-    .line 3
     iput-object p2, p0, Ljava8/util/stream/Collectors$Partition;->forFalse:Ljava/lang/Object;
 
     return-void
@@ -75,7 +72,6 @@
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     instance-of p1, p1, Ljava/lang/Boolean;
 
     return p1
@@ -93,7 +89,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/Collectors$Partition$1;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Collectors$Partition$1;-><init>(Ljava8/util/stream/Collectors$Partition;)V
@@ -111,14 +106,12 @@
         }
     .end annotation
 
-    .line 1
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_1
 
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1

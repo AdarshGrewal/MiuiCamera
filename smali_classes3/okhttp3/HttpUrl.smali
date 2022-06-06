@@ -85,7 +85,6 @@
 
     new-array v0, v0, [C
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lokhttp3/HttpUrl;->HEX_DIGITS:[C
@@ -116,15 +115,12 @@
 .method public constructor <init>(Lokhttp3/HttpUrl$Builder;)V
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->scheme:Ljava/lang/String;
 
     iput-object v0, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
 
-    .line 3
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->encodedUsername:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -135,7 +131,6 @@
 
     iput-object v0, p0, Lokhttp3/HttpUrl;->username:Ljava/lang/String;
 
-    .line 4
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->encodedPassword:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lokhttp3/HttpUrl;->percentDecode(Ljava/lang/String;Z)Ljava/lang/String;
@@ -144,19 +139,16 @@
 
     iput-object v0, p0, Lokhttp3/HttpUrl;->password:Ljava/lang/String;
 
-    .line 5
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->host:Ljava/lang/String;
 
     iput-object v0, p0, Lokhttp3/HttpUrl;->host:Ljava/lang/String;
 
-    .line 6
     invoke-virtual {p1}, Lokhttp3/HttpUrl$Builder;->effectivePort()I
 
     move-result v0
 
     iput v0, p0, Lokhttp3/HttpUrl;->port:I
 
-    .line 7
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->encodedPathSegments:Ljava/util/List;
 
     invoke-direct {p0, v0, v1}, Lokhttp3/HttpUrl;->percentDecode(Ljava/util/List;Z)Ljava/util/List;
@@ -165,7 +157,6 @@
 
     iput-object v0, p0, Lokhttp3/HttpUrl;->pathSegments:Ljava/util/List;
 
-    .line 8
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->encodedQueryNamesAndValues:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -174,7 +165,6 @@
 
     const/4 v3, 0x1
 
-    .line 9
     invoke-direct {p0, v0, v3}, Lokhttp3/HttpUrl;->percentDecode(Ljava/util/List;Z)Ljava/util/List;
 
     move-result-object v0
@@ -184,25 +174,20 @@
     :cond_0
     move-object v0, v2
 
-    .line 10
     :goto_0
     iput-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
-    .line 11
     iget-object v0, p1, Lokhttp3/HttpUrl$Builder;->encodedFragment:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 12
     invoke-static {v0, v1}, Lokhttp3/HttpUrl;->percentDecode(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 13
     :cond_1
     iput-object v2, p0, Lokhttp3/HttpUrl;->fragment:Ljava/lang/String;
 
-    .line 14
     invoke-virtual {p1}, Lokhttp3/HttpUrl$Builder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -224,7 +209,6 @@
     :goto_0
     if-ge v2, v3, :cond_5
 
-    .line 1
     invoke-virtual {p0, v2}, Ljava/lang/String;->codePointAt(I)I
 
     move-result v0
@@ -246,7 +230,6 @@
     :cond_0
     move-object v4, p3
 
-    .line 2
     invoke-virtual {p3, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v5
@@ -263,7 +246,6 @@
 
     if-eqz p5, :cond_1
 
-    .line 3
     invoke-static {p0, v2, p2}, Lokhttp3/HttpUrl;->percentEncoded(Ljava/lang/String;II)Z
 
     move-result v5
@@ -279,7 +261,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_2
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
 
@@ -292,7 +273,6 @@
     :cond_3
     move-object v4, p3
 
-    .line 5
     :cond_4
     :goto_1
     new-instance v10, Lokio/Buffer;
@@ -301,7 +281,6 @@
 
     move v0, p1
 
-    .line 6
     invoke-virtual {v10, p0, p1, v2}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;II)Lokio/Buffer;
 
     move-object v0, v10
@@ -322,10 +301,8 @@
 
     move-object/from16 v9, p8
 
-    .line 7
     invoke-static/range {v0 .. v9}, Lokhttp3/HttpUrl;->canonicalize(Lokio/Buffer;Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;)V
 
-    .line 8
     invoke-virtual {v10}, Lokio/Buffer;->readUtf8()Ljava/lang/String;
 
     move-result-object v0
@@ -335,7 +312,6 @@
     :cond_5
     move v0, p1
 
-    .line 9
     invoke-virtual {p0, p1, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
@@ -346,7 +322,6 @@
 .method public static canonicalize(Ljava/lang/String;Ljava/lang/String;ZZZZ)Ljava/lang/String;
     .locals 9
 
-    .line 27
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -367,7 +342,6 @@
 
     move v7, p5
 
-    .line 28
     invoke-static/range {v0 .. v8}, Lokhttp3/HttpUrl;->canonicalize(Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;)Ljava/lang/String;
 
     move-result-object p0
@@ -378,7 +352,6 @@
 .method public static canonicalize(Ljava/lang/String;Ljava/lang/String;ZZZZLjava/nio/charset/Charset;)Ljava/lang/String;
     .locals 9
 
-    .line 25
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -399,7 +372,6 @@
 
     move-object v8, p6
 
-    .line 26
     invoke-static/range {v0 .. v8}, Lokhttp3/HttpUrl;->canonicalize(Ljava/lang/String;IILjava/lang/String;ZZZZLjava/nio/charset/Charset;)Ljava/lang/String;
 
     move-result-object p0
@@ -415,7 +387,6 @@
     :goto_0
     if-ge p2, p3, :cond_a
 
-    .line 10
     invoke-virtual {p1, p2}, Ljava/lang/String;->codePointAt(I)I
 
     move-result v1
@@ -456,7 +427,6 @@
     :cond_1
     const-string v2, "%2B"
 
-    .line 11
     :goto_1
     invoke-virtual {p0, v2}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;)Lokio/Buffer;
 
@@ -479,7 +449,6 @@
 
     if-nez p8, :cond_5
 
-    .line 12
     :cond_3
     invoke-virtual {p4, v1}, Ljava/lang/String;->indexOf(I)I
 
@@ -495,7 +464,6 @@
 
     if-eqz p6, :cond_4
 
-    .line 13
     invoke-static {p1, p2, p3}, Lokhttp3/HttpUrl;->percentEncoded(Ljava/lang/String;II)Z
 
     move-result v2
@@ -504,7 +472,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_4
     invoke-virtual {p0, v1}, Lokio/Buffer;->writeUtf8CodePoint(I)Lokio/Buffer;
 
@@ -514,7 +481,6 @@
     :goto_2
     if-nez v0, :cond_6
 
-    .line 15
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -522,7 +488,6 @@
     :cond_6
     if-eqz p9, :cond_8
 
-    .line 16
     sget-object v2, Lokhttp3/internal/Util;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p9, v2}, Ljava/nio/charset/Charset;->equals(Ljava/lang/Object;)Z
@@ -533,7 +498,6 @@
 
     goto :goto_3
 
-    .line 17
     :cond_7
     invoke-static {v1}, Ljava/lang/Character;->charCount(I)I
 
@@ -545,12 +509,10 @@
 
     goto :goto_4
 
-    .line 18
     :cond_8
     :goto_3
     invoke-virtual {v0, v1}, Lokio/Buffer;->writeUtf8CodePoint(I)Lokio/Buffer;
 
-    .line 19
     :goto_4
     invoke-virtual {v0}, Lokio/Buffer;->exhausted()Z
 
@@ -558,17 +520,14 @@
 
     if-nez v2, :cond_9
 
-    .line 20
     invoke-virtual {v0}, Lokio/Buffer;->readByte()B
 
     move-result v2
 
     and-int/lit16 v2, v2, 0xff
 
-    .line 21
     invoke-virtual {p0, v3}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
-    .line 22
     sget-object v4, Lokhttp3/HttpUrl;->HEX_DIGITS:[C
 
     shr-int/lit8 v5, v2, 0x4
@@ -579,7 +538,6 @@
 
     invoke-virtual {p0, v4}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
-    .line 23
     sget-object v4, Lokhttp3/HttpUrl;->HEX_DIGITS:[C
 
     and-int/lit8 v2, v2, 0xf
@@ -590,7 +548,6 @@
 
     goto :goto_4
 
-    .line 24
     :cond_9
     :goto_5
     invoke-static {v1}, Ljava/lang/Character;->charCount(I)I
@@ -610,7 +567,6 @@
 
     const-string v0, "http"
 
-    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -624,7 +580,6 @@
     :cond_0
     const-string v0, "https"
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -646,7 +601,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Ljava/net/URI;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -663,7 +617,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -684,19 +637,16 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lokhttp3/HttpUrl$Builder;
 
     invoke-direct {v0}, Lokhttp3/HttpUrl$Builder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1, p0}, Lokhttp3/HttpUrl$Builder;->parse(Lokhttp3/HttpUrl;Ljava/lang/String;)Lokhttp3/HttpUrl$Builder$ParseResult;
 
     move-result-object v1
 
-    .line 3
     sget-object v2, Lokhttp3/HttpUrl$1;->$SwitchMap$okhttp3$HttpUrl$Builder$ParseResult:[I
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
@@ -713,7 +663,6 @@
 
     if-eq v2, v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/net/MalformedURLException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -740,7 +689,6 @@
 
     throw v0
 
-    .line 5
     :cond_0
     new-instance v0, Ljava/net/UnknownHostException;
 
@@ -762,7 +710,6 @@
 
     throw v0
 
-    .line 6
     :cond_1
     invoke-virtual {v0}, Lokhttp3/HttpUrl$Builder;->build()Lokhttp3/HttpUrl;
 
@@ -783,7 +730,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -793,7 +739,6 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -802,7 +747,6 @@
 
     add-int/lit8 v3, v1, 0x1
 
-    .line 3
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -813,10 +757,8 @@
 
     const/16 v4, 0x26
 
-    .line 4
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 5
     :cond_0
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -824,10 +766,8 @@
 
     const/16 v2, 0x3d
 
-    .line 6
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 7
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
@@ -844,19 +784,16 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     new-instance v0, Lokhttp3/HttpUrl$Builder;
 
     invoke-direct {v0}, Lokhttp3/HttpUrl$Builder;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-virtual {v0, v1, p0}, Lokhttp3/HttpUrl$Builder;->parse(Lokhttp3/HttpUrl;Ljava/lang/String;)Lokhttp3/HttpUrl$Builder$ParseResult;
 
     move-result-object p0
 
-    .line 3
     sget-object v2, Lokhttp3/HttpUrl$Builder$ParseResult;->SUCCESS:Lokhttp3/HttpUrl$Builder$ParseResult;
 
     if-ne p0, v2, :cond_0
@@ -881,7 +818,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -893,10 +829,8 @@
 
     const/16 v2, 0x2f
 
-    .line 2
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -921,7 +855,6 @@
     :goto_0
     if-ge v0, p2, :cond_2
 
-    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -943,27 +876,22 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     :goto_1
     new-instance v1, Lokio/Buffer;
 
     invoke-direct {v1}, Lokio/Buffer;-><init>()V
 
-    .line 9
     invoke-virtual {v1, p0, p1, v0}, Lokio/Buffer;->writeUtf8(Ljava/lang/String;II)Lokio/Buffer;
 
-    .line 10
     invoke-static {v1, p0, v0, p2, p3}, Lokhttp3/HttpUrl;->percentDecode(Lokio/Buffer;Ljava/lang/String;IIZ)V
 
-    .line 11
     invoke-virtual {v1}, Lokio/Buffer;->readUtf8()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 12
     :cond_2
     invoke-virtual {p0, p1, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -975,7 +903,6 @@
 .method public static percentDecode(Ljava/lang/String;Z)Ljava/lang/String;
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1003,12 +930,10 @@
         }
     .end annotation
 
-    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
@@ -1018,7 +943,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 4
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1027,7 +951,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 5
     invoke-static {v3, p2}, Lokhttp3/HttpUrl;->percentDecode(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v3
@@ -1044,7 +967,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -1059,7 +981,6 @@
     :goto_0
     if-ge p2, p3, :cond_2
 
-    .line 13
     invoke-virtual {p1, p2}, Ljava/lang/String;->codePointAt(I)I
 
     move-result v0
@@ -1074,7 +995,6 @@
 
     add-int/lit8 v2, p2, 0x1
 
-    .line 14
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -1083,7 +1003,6 @@
 
     move-result v2
 
-    .line 15
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -1102,7 +1021,6 @@
 
     add-int/2addr p2, v3
 
-    .line 16
     invoke-virtual {p0, p2}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
     move p2, v1
@@ -1118,16 +1036,13 @@
 
     const/16 v1, 0x20
 
-    .line 17
     invoke-virtual {p0, v1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
     goto :goto_1
 
-    .line 18
     :cond_1
     invoke-virtual {p0, v0}, Lokio/Buffer;->writeUtf8CodePoint(I)Lokio/Buffer;
 
-    .line 19
     :goto_1
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
 
@@ -1150,7 +1065,6 @@
 
     if-ge v0, p2, :cond_0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result p2
@@ -1161,7 +1075,6 @@
 
     add-int/2addr p1, v1
 
-    .line 2
     invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
@@ -1174,7 +1087,6 @@
 
     if-eq p1, p2, :cond_0
 
-    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
@@ -1207,14 +1119,12 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -1224,7 +1134,6 @@
 
     const/16 v2, 0x26
 
-    .line 3
     invoke-virtual {p0, v2, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v2
@@ -1233,7 +1142,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1241,7 +1149,6 @@
     :cond_0
     const/16 v4, 0x3d
 
-    .line 5
     invoke-virtual {p0, v4, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v4
@@ -1252,7 +1159,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-virtual {p0, v1, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1262,7 +1168,6 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    .line 7
     invoke-virtual {p0, v4, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -1271,7 +1176,6 @@
 
     goto :goto_2
 
-    .line 8
     :cond_2
     :goto_1
     invoke-virtual {p0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1282,7 +1186,6 @@
 
     const/4 v1, 0x0
 
-    .line 9
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_2
@@ -1301,7 +1204,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->fragment:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -1310,7 +1212,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
@@ -1322,7 +1223,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 3
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -1335,7 +1235,6 @@
 .method public encodedPassword()Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->password:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -1348,7 +1247,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
@@ -1368,7 +1266,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 3
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     const/16 v2, 0x40
@@ -1377,7 +1274,6 @@
 
     move-result v1
 
-    .line 4
     iget-object v2, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1390,7 +1286,6 @@
 .method public encodedPath()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     iget-object v1, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
@@ -1407,7 +1302,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -1420,7 +1314,6 @@
 
     move-result v1
 
-    .line 3
     iget-object v2, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1441,7 +1334,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     iget-object v1, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
@@ -1458,7 +1350,6 @@
 
     move-result v0
 
-    .line 2
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -1471,7 +1362,6 @@
 
     move-result v1
 
-    .line 3
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -1481,14 +1371,12 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 4
     iget-object v4, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-static {v4, v0, v1, v2}, Lokhttp3/internal/Util;->delimiterOffset(Ljava/lang/String;IIC)I
 
     move-result v4
 
-    .line 5
     iget-object v5, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v5, v0, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1510,7 +1398,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -1519,7 +1406,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
@@ -1531,7 +1417,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 3
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     add-int/lit8 v2, v0, 0x1
@@ -1546,7 +1431,6 @@
 
     move-result v1
 
-    .line 4
     iget-object v2, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1559,7 +1443,6 @@
 .method public encodedUsername()Ljava/lang/String;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->username:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -1572,7 +1455,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
 
@@ -1582,7 +1464,6 @@
 
     add-int/lit8 v0, v0, 0x3
 
-    .line 3
     iget-object v1, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -1595,7 +1476,6 @@
 
     move-result v1
 
-    .line 4
     iget-object v2, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1612,7 +1492,6 @@
         .end annotation
     .end param
 
-    .line 1
     instance-of v0, p1, Lokhttp3/HttpUrl;
 
     if-eqz v0, :cond_0
@@ -1645,7 +1524,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->fragment:Ljava/lang/String;
 
     return-object v0
@@ -1654,7 +1532,6 @@
 .method public hashCode()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1667,7 +1544,6 @@
 .method public host()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->host:Ljava/lang/String;
 
     return-object v0
@@ -1676,7 +1552,6 @@
 .method public isHttps()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
 
     const-string v1, "https"
@@ -1691,36 +1566,30 @@
 .method public newBuilder()Lokhttp3/HttpUrl$Builder;
     .locals 3
 
-    .line 1
     new-instance v0, Lokhttp3/HttpUrl$Builder;
 
     invoke-direct {v0}, Lokhttp3/HttpUrl$Builder;-><init>()V
 
-    .line 2
     iget-object v1, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
 
     iput-object v1, v0, Lokhttp3/HttpUrl$Builder;->scheme:Ljava/lang/String;
 
-    .line 3
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->encodedUsername()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lokhttp3/HttpUrl$Builder;->encodedUsername:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->encodedPassword()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lokhttp3/HttpUrl$Builder;->encodedPassword:Ljava/lang/String;
 
-    .line 5
     iget-object v1, p0, Lokhttp3/HttpUrl;->host:Ljava/lang/String;
 
     iput-object v1, v0, Lokhttp3/HttpUrl$Builder;->host:Ljava/lang/String;
 
-    .line 6
     iget v1, p0, Lokhttp3/HttpUrl;->port:I
 
     iget-object v2, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
@@ -1741,12 +1610,10 @@
     :goto_0
     iput v1, v0, Lokhttp3/HttpUrl$Builder;->port:I
 
-    .line 7
     iget-object v1, v0, Lokhttp3/HttpUrl$Builder;->encodedPathSegments:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 8
     iget-object v1, v0, Lokhttp3/HttpUrl$Builder;->encodedPathSegments:Ljava/util/List;
 
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->encodedPathSegments()Ljava/util/List;
@@ -1755,14 +1622,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 9
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->encodedQuery()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lokhttp3/HttpUrl$Builder;->encodedQuery(Ljava/lang/String;)Lokhttp3/HttpUrl$Builder;
 
-    .line 10
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->encodedFragment()Ljava/lang/String;
 
     move-result-object v1
@@ -1777,17 +1642,14 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 11
     new-instance v0, Lokhttp3/HttpUrl$Builder;
 
     invoke-direct {v0}, Lokhttp3/HttpUrl$Builder;-><init>()V
 
-    .line 12
     invoke-virtual {v0, p0, p1}, Lokhttp3/HttpUrl$Builder;->parse(Lokhttp3/HttpUrl;Ljava/lang/String;)Lokhttp3/HttpUrl$Builder$ParseResult;
 
     move-result-object p1
 
-    .line 13
     sget-object v1, Lokhttp3/HttpUrl$Builder$ParseResult;->SUCCESS:Lokhttp3/HttpUrl$Builder$ParseResult;
 
     if-ne p1, v1, :cond_0
@@ -1804,7 +1666,6 @@
 .method public password()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->password:Ljava/lang/String;
 
     return-object v0
@@ -1821,7 +1682,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->pathSegments:Ljava/util/List;
 
     return-object v0
@@ -1830,7 +1690,6 @@
 .method public pathSize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->pathSegments:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1843,7 +1702,6 @@
 .method public port()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lokhttp3/HttpUrl;->port:I
 
     return v0
@@ -1854,7 +1712,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -1863,18 +1720,15 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     iget-object v1, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-static {v0, v1}, Lokhttp3/HttpUrl;->namesAndValuesToQueryString(Ljava/lang/StringBuilder;Ljava/util/List;)V
 
-    .line 4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1887,7 +1741,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -1899,7 +1752,6 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1907,7 +1759,6 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 3
     iget-object v3, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1920,7 +1771,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 4
     iget-object p1, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     add-int/lit8 v2, v2, 0x1
@@ -1945,14 +1795,12 @@
 .method public queryParameterName(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
     mul-int/lit8 p1, p1, 0x2
 
-    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -1961,7 +1809,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -1981,7 +1828,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -1992,7 +1838,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/LinkedHashSet;
 
@@ -2000,7 +1845,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iget-object v2, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -2010,7 +1854,6 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 4
     iget-object v3, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2023,7 +1866,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -2035,7 +1877,6 @@
 .method public queryParameterValue(I)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -2044,7 +1885,6 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -2053,7 +1893,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -2075,7 +1914,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -2086,7 +1924,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -2094,7 +1931,6 @@
 
     const/4 v1, 0x0
 
-    .line 3
     iget-object v2, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -2104,7 +1940,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 4
     iget-object v3, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2117,7 +1952,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 5
     iget-object v3, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     add-int/lit8 v4, v1, 0x1
@@ -2133,7 +1967,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -2145,7 +1978,6 @@
 .method public querySize()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->queryNamesAndValues:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -2170,29 +2002,24 @@
 
     const-string v0, "/..."
 
-    .line 1
     invoke-virtual {p0, v0}, Lokhttp3/HttpUrl;->newBuilder(Ljava/lang/String;)Lokhttp3/HttpUrl$Builder;
 
     move-result-object v0
 
     const-string v1, ""
 
-    .line 2
     invoke-virtual {v0, v1}, Lokhttp3/HttpUrl$Builder;->username(Ljava/lang/String;)Lokhttp3/HttpUrl$Builder;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0, v1}, Lokhttp3/HttpUrl$Builder;->password(Ljava/lang/String;)Lokhttp3/HttpUrl$Builder;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Lokhttp3/HttpUrl$Builder;->build()Lokhttp3/HttpUrl;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lokhttp3/HttpUrl;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -2205,14 +2032,12 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lokhttp3/HttpUrl;->newBuilder(Ljava/lang/String;)Lokhttp3/HttpUrl$Builder;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {p1}, Lokhttp3/HttpUrl$Builder;->build()Lokhttp3/HttpUrl;
 
     move-result-object p1
@@ -2229,7 +2054,6 @@
 .method public scheme()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->scheme:Ljava/lang/String;
 
     return-object v0
@@ -2238,7 +2062,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->url:Ljava/lang/String;
 
     return-object v0
@@ -2249,7 +2072,6 @@
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->host:Ljava/lang/String;
 
     invoke-static {v0}, Lokhttp3/internal/Util;->verifyAsIpAddress(Ljava/lang/String;)Z
@@ -2262,7 +2084,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-static {}, Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;->get()Lokhttp3/internal/publicsuffix/PublicSuffixDatabase;
 
@@ -2280,7 +2101,6 @@
 .method public uri()Ljava/net/URI;
     .locals 4
 
-    .line 1
     invoke-virtual {p0}, Lokhttp3/HttpUrl;->newBuilder()Lokhttp3/HttpUrl$Builder;
 
     move-result-object v0
@@ -2293,7 +2113,6 @@
 
     move-result-object v0
 
-    .line 2
     :try_start_0
     new-instance v1, Ljava/net/URI;
 
@@ -2311,12 +2130,10 @@
 
     const-string v3, ""
 
-    .line 3
     invoke-virtual {v0, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     invoke-static {v0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
 
     move-result-object v0
@@ -2325,7 +2142,6 @@
 
     return-object v0
 
-    .line 5
     :catch_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2337,7 +2153,6 @@
 .method public url()Ljava/net/URL;
     .locals 2
 
-    .line 1
     :try_start_0
     new-instance v0, Ljava/net/URL;
 
@@ -2352,7 +2167,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2363,7 +2177,6 @@
 .method public username()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lokhttp3/HttpUrl;->username:Ljava/lang/String;
 
     return-object v0

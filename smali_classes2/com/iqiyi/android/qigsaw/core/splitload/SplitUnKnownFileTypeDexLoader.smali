@@ -11,7 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
         }
     .end annotation
 
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -46,12 +44,10 @@
 
     if-eqz p1, :cond_4
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -72,14 +68,12 @@
 
     const-string v2, ".so"
 
-    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 5
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -88,7 +82,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -98,19 +91,16 @@
 
     const-string p1, "pathList"
 
-    .line 7
     invoke-static {p0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/HiddenApiReflection;->findField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p1
 
-    .line 8
     invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     const-string p1, "dalvik.system.DexPathList"
 
-    .line 9
     invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p1
@@ -119,7 +109,6 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
-    .line 10
     const-class v3, Ljava/io/File;
 
     const/4 v4, 0x0
@@ -138,7 +127,6 @@
 
     move-result-object p1
 
-    .line 11
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -147,7 +135,6 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 12
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -174,7 +161,6 @@
 
     aput-object p2, v7, v5
 
-    .line 13
     invoke-virtual {p1, v6, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -185,7 +171,6 @@
 
     const-string v7, "dalvik.system.DexPathList$Element"
 
-    .line 14
     invoke-static {v7}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v7
@@ -197,7 +182,6 @@
     :try_start_1
     new-array v10, v8, [Ljava/lang/Class;
 
-    .line 15
     const-class v11, Ljava/io/File;
 
     aput-object v11, v10, v4
@@ -222,7 +206,6 @@
 
     aput-object v3, v8, v4
 
-    .line 16
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v11
@@ -245,7 +228,6 @@
     :try_start_2
     new-array v8, v9, [Ljava/lang/Class;
 
-    .line 17
     const-class v10, Ljava/io/File;
 
     aput-object v10, v8, v4
@@ -270,7 +252,6 @@
 
     aput-object v6, v10, v1
 
-    .line 18
     invoke-virtual {v8, v10}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -282,7 +263,6 @@
     :catch_1
     new-array v8, v9, [Ljava/lang/Class;
 
-    .line 19
     const-class v10, Ljava/io/File;
 
     aput-object v10, v8, v4
@@ -299,7 +279,6 @@
 
     move-result-object v7
 
-    .line 20
     :try_start_3
     new-instance v8, Ljava/util/zip/ZipFile;
 
@@ -313,14 +292,12 @@
 
     aput-object v6, v9, v1
 
-    .line 21
     invoke-virtual {v7, v9}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 22
     :goto_2
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -329,7 +306,6 @@
     :catch_2
     move-exception v6
 
-    .line 23
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -359,18 +335,15 @@
     :catchall_0
     move-exception v3
 
-    .line 24
     instance-of v6, v3, Ljava/io/IOException;
 
     if-eqz v6, :cond_2
 
     goto/16 :goto_1
 
-    .line 25
     :cond_2
     throw v3
 
-    .line 26
     :cond_3
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -378,7 +351,6 @@
 
     if-nez p1, :cond_4
 
-    .line 27
     invoke-interface {v2}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object p1

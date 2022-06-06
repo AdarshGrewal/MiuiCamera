@@ -26,7 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
 .method public add(Lmiuix/animation/internal/AnimStats;)V
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->animCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->animCount:I
@@ -46,7 +44,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->animCount:I
 
-    .line 2
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->startCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->startCount:I
@@ -55,7 +52,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->startCount:I
 
-    .line 3
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->initCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->initCount:I
@@ -64,7 +60,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->initCount:I
 
-    .line 4
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->failCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->failCount:I
@@ -73,7 +68,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->failCount:I
 
-    .line 5
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->updateCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->updateCount:I
@@ -82,7 +76,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->updateCount:I
 
-    .line 6
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
@@ -91,7 +84,6 @@
 
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    .line 7
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->endCount:I
 
     iget p1, p1, Lmiuix/animation/internal/AnimStats;->endCount:I
@@ -108,25 +100,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->animCount:I
 
-    .line 2
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->startCount:I
 
-    .line 3
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->initCount:I
 
-    .line 4
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->failCount:I
 
-    .line 5
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->updateCount:I
 
-    .line 6
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    .line 7
     iput v0, p0, Lmiuix/animation/internal/AnimStats;->endCount:I
 
     return-void
@@ -135,7 +120,6 @@
 .method public isRunning()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/animation/internal/AnimStats;->isStarted()Z
 
     move-result v0
@@ -174,7 +158,6 @@
 .method public isStarted()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/animation/internal/AnimStats;->initCount:I
 
     if-lez v0, :cond_0
@@ -193,7 +176,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

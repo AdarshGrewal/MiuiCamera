@@ -1,9 +1,6 @@
 .class public Lcom/android/camera/ActivityBase$5;
-.super Ljava/lang/Object;
+.super Lio/reactivex/Single;
 .source "ActivityBase.java"
-
-# interfaces
-.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -18,8 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/Single<",
         "Ljava/util/HashMap;",
         ">;"
     }
@@ -34,39 +30,126 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/ActivityBase$5;->this$0:Lcom/android/camera/ActivityBase;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
+.method public subscribeActual(Lio/reactivex/SingleObserver;)V
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/lang/Exception;
+            "(",
+            "Lio/reactivex/SingleObserver<",
+            "-",
+            "Ljava/util/HashMap;",
+            ">;)V"
         }
     .end annotation
 
-    .line 1
-    check-cast p1, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase$5;->accept(Ljava/util/HashMap;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    const/4 v1, 0x0
+
+    const-string v2, "cat /dev/cpuset/camera-daemon/cpus"
+
+    invoke-static {v2, v1}, Lcom/android/camera/Util;->execCommand(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
 
     return-void
-.end method
 
-.method public accept(Ljava/util/HashMap;)V
-    .locals 1
+    :cond_0
+    const-string v3, "cpus"
 
-    .line 2
-    iget-object v0, p0, Lcom/android/camera/ActivityBase$5;->this$0:Lcom/android/camera/ActivityBase;
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lcom/android/camera/ActivityBase;->access$202(Lcom/android/camera/ActivityBase;Ljava/util/HashMap;)Ljava/util/HashMap;
+    const-string v2, "cat $(dirname $(grep -nir \"xo_therm\" /sys/class/thermal/thermal_zone*/type))/temp"
+
+    invoke-static {v2, v1}, Lcom/android/camera/Util;->execCommand(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    return-void
+
+    :cond_1
+    const-string/jumbo v3, "temperature"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v2, 0x1
+
+    const-string v3, "cat /proc/meminfo|grep -E \'MemFree|MemAvailable\'"
+
+    invoke-static {v3, v2}, Lcom/android/camera/Util;->execCommand(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-nez v3, :cond_2
+
+    return-void
+
+    :cond_2
+    const-string v4, "\r\n"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    array-length v4, v3
+
+    const/4 v5, 0x2
+
+    if-eq v4, v5, :cond_3
+
+    return-void
+
+    :cond_3
+    array-length v4, v3
+
+    move v5, v1
+
+    :goto_0
+    if-ge v5, v4, :cond_4
+
+    aget-object v6, v3, v5
+
+    const-string v7, ":"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    aget-object v7, v6, v1
+
+    aget-object v6, v6, v2
+
+    const-string v8, "\\D"
+
+    const-string v9, ""
+
+    invoke-virtual {v6, v8, v9}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->onSuccess(Ljava/lang/Object;)V
 
     return-void
 .end method

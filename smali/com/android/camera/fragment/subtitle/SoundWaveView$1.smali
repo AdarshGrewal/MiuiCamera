@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/subtitle/SoundWaveView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/subtitle/SoundWaveView$1;->this$0:Lcom/android/camera/fragment/subtitle/SoundWaveView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,17 +34,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x64
 
     if-ne p1, v0, :cond_1
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/SoundWaveView$1;->this$0:Lcom/android/camera/fragment/subtitle/SoundWaveView;
 
     invoke-static {p1}, Lcom/android/camera/fragment/subtitle/SoundWaveView;->access$000(Lcom/android/camera/fragment/subtitle/SoundWaveView;)Z
@@ -76,7 +72,6 @@
 
     if-gtz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/SoundWaveView$1;->this$0:Lcom/android/camera/fragment/subtitle/SoundWaveView;
 
     invoke-static {p1}, Lcom/android/camera/fragment/subtitle/SoundWaveView;->access$300(Lcom/android/camera/fragment/subtitle/SoundWaveView;)Landroid/os/Handler;
@@ -89,13 +84,11 @@
 
     return-void
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/SoundWaveView$1;->this$0:Lcom/android/camera/fragment/subtitle/SoundWaveView;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 6
     iget-object p1, p0, Lcom/android/camera/fragment/subtitle/SoundWaveView$1;->this$0:Lcom/android/camera/fragment/subtitle/SoundWaveView;
 
     invoke-static {p1}, Lcom/android/camera/fragment/subtitle/SoundWaveView;->access$300(Lcom/android/camera/fragment/subtitle/SoundWaveView;)Landroid/os/Handler;

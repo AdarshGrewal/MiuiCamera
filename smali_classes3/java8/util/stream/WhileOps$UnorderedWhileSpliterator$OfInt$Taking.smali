@@ -18,7 +18,6 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfInt;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;-><init>(Ljava8/util/Spliterator$OfInt;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;)V
 
     return-void
@@ -27,7 +26,6 @@
 .method public constructor <init>(Ljava8/util/Spliterator$OfInt;ZLjava8/util/function/IntPredicate;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;-><init>(Ljava8/util/Spliterator$OfInt;ZLjava8/util/function/IntPredicate;)V
 
     return-void
@@ -38,7 +36,6 @@
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-super {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;->forEachRemaining(Ljava8/util/function/IntConsumer;)V
@@ -49,7 +46,6 @@
 .method public makeSpliterator(Ljava8/util/Spliterator$OfInt;)Ljava8/util/Spliterator$OfInt;
     .locals 1
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;
 
     invoke-direct {v0, p1, p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;-><init>(Ljava8/util/Spliterator$OfInt;Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;)V
@@ -60,7 +56,6 @@
 .method public bridge synthetic makeSpliterator(Ljava8/util/Spliterator;)Ljava8/util/Spliterator;
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/Spliterator$OfInt;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;->makeSpliterator(Ljava8/util/Spliterator$OfInt;)Ljava8/util/Spliterator$OfInt;
@@ -73,7 +68,6 @@
 .method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 1
     check-cast p1, Ljava8/util/function/IntConsumer;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
@@ -86,14 +80,12 @@
 .method public tryAdvance(Ljava8/util/function/IntConsumer;)Z
     .locals 3
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->takeOrDrop:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->checkCancelOnCount()Z
 
     move-result v0
@@ -104,7 +96,6 @@
 
     check-cast v0, Ljava8/util/Spliterator$OfInt;
 
-    .line 4
     invoke-interface {v0, p0}, Ljava8/util/Spliterator$OfInt;->tryAdvance(Ljava8/util/function/IntConsumer;)Z
 
     move-result v0
@@ -115,14 +106,12 @@
 
     iget v2, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;->t:I
 
-    .line 5
     invoke-interface {v0, v2}, Ljava8/util/function/IntPredicate;->test(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt;->t:I
 
     invoke-interface {p1, v0}, Ljava8/util/function/IntConsumer;->accept(I)V
@@ -135,12 +124,10 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 7
     iput-boolean p1, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->takeOrDrop:Z
 
     if-nez v0, :cond_2
 
-    .line 8
     iget-object v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->cancel:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
@@ -152,7 +139,6 @@
 .method public trySplit()Ljava8/util/Spliterator$OfInt;
     .locals 1
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator;->cancel:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -179,7 +165,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;->trySplit()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0
@@ -190,7 +175,6 @@
 .method public bridge synthetic trySplit()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/WhileOps$UnorderedWhileSpliterator$OfInt$Taking;->trySplit()Ljava8/util/Spliterator$OfInt;
 
     move-result-object v0

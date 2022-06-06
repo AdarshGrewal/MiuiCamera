@@ -45,30 +45,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Lcom/adobe/xmp/options/Options;-><init>()V
 
     const/16 v0, 0x800
 
-    .line 2
     iput v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->padding:I
 
     const-string v0, "\n"
 
-    .line 3
     iput-object v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->newline:Ljava/lang/String;
 
     const-string v0, "  "
 
-    .line 4
     iput-object v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->indent:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 5
     iput v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->baseIndent:I
 
-    .line 6
     iput-boolean v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->omitVersionAttribute:Z
 
     return-void
@@ -82,30 +76,24 @@
         }
     .end annotation
 
-    .line 7
     invoke-direct {p0, p1}, Lcom/adobe/xmp/options/Options;-><init>(I)V
 
     const/16 p1, 0x800
 
-    .line 8
     iput p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->padding:I
 
     const-string p1, "\n"
 
-    .line 9
     iput-object p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->newline:Ljava/lang/String;
 
     const-string p1, "  "
 
-    .line 10
     iput-object p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->indent:Ljava/lang/String;
 
     const/4 p1, 0x0
 
-    .line 11
     iput p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->baseIndent:I
 
-    .line 12
     iput-boolean p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->omitVersionAttribute:Z
 
     return-void
@@ -121,7 +109,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     new-instance v0, Lcom/adobe/xmp/options/SerializeOptions;
 
@@ -131,22 +118,18 @@
 
     invoke-direct {v0, v1}, Lcom/adobe/xmp/options/SerializeOptions;-><init>(I)V
 
-    .line 2
     iget v1, p0, Lcom/adobe/xmp/options/SerializeOptions;->baseIndent:I
 
     invoke-virtual {v0, v1}, Lcom/adobe/xmp/options/SerializeOptions;->setBaseIndent(I)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 3
     iget-object v1, p0, Lcom/adobe/xmp/options/SerializeOptions;->indent:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/adobe/xmp/options/SerializeOptions;->setIndent(Ljava/lang/String;)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 4
     iget-object v1, p0, Lcom/adobe/xmp/options/SerializeOptions;->newline:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/adobe/xmp/options/SerializeOptions;->setNewline(Ljava/lang/String;)Lcom/adobe/xmp/options/SerializeOptions;
 
-    .line 5
     iget v1, p0, Lcom/adobe/xmp/options/SerializeOptions;->padding:I
 
     invoke-virtual {v0, v1}, Lcom/adobe/xmp/options/SerializeOptions;->setPadding(I)Lcom/adobe/xmp/options/SerializeOptions;
@@ -226,7 +209,6 @@
 .method public getBaseIndent()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->baseIndent:I
 
     return v0
@@ -235,7 +217,6 @@
 .method public getEncodeUTF16BE()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/options/Options;->getOptions()I
 
     move-result v0
@@ -260,7 +241,6 @@
 .method public getEncodeUTF16LE()Z
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/options/Options;->getOptions()I
 
     move-result v0
@@ -285,7 +265,6 @@
 .method public getEncoding()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/adobe/xmp/options/SerializeOptions;->getEncodeUTF16BE()Z
 
     move-result v0
@@ -296,7 +275,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/adobe/xmp/options/SerializeOptions;->getEncodeUTF16LE()Z
 
@@ -319,7 +297,6 @@
 
     const/16 v0, 0x200
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -332,7 +309,6 @@
 
     const/16 v0, 0x100
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -343,7 +319,6 @@
 .method public getIndent()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->indent:Ljava/lang/String;
 
     return-object v0
@@ -352,7 +327,6 @@
 .method public getNewline()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->newline:Ljava/lang/String;
 
     return-object v0
@@ -363,7 +337,6 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -374,7 +347,6 @@
 .method public getOmitVersionAttribute()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->omitVersionAttribute:Z
 
     return v0
@@ -383,7 +355,6 @@
 .method public getPadding()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/adobe/xmp/options/SerializeOptions;->padding:I
 
     return v0
@@ -394,7 +365,6 @@
 
     const/16 v0, 0x20
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -407,7 +377,6 @@
 
     const/16 v0, 0x1000
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -420,7 +389,6 @@
 
     const/16 v0, 0x40
 
-    .line 1
     invoke-virtual {p0, v0}, Lcom/adobe/xmp/options/Options;->getOption(I)Z
 
     move-result v0
@@ -439,7 +407,6 @@
 .method public setBaseIndent(I)Lcom/adobe/xmp/options/SerializeOptions;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->baseIndent:I
 
     return-object p0
@@ -452,12 +419,10 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     const/4 v0, 0x2
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -470,10 +435,8 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
-    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -484,7 +447,6 @@
 
     const/16 v0, 0x200
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -495,7 +457,6 @@
 
     const/16 v0, 0x100
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -504,7 +465,6 @@
 .method public setIndent(Ljava/lang/String;)Lcom/adobe/xmp/options/SerializeOptions;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->indent:Ljava/lang/String;
 
     return-object p0
@@ -513,7 +473,6 @@
 .method public setNewline(Ljava/lang/String;)Lcom/adobe/xmp/options/SerializeOptions;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->newline:Ljava/lang/String;
 
     return-object p0
@@ -524,7 +483,6 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -533,7 +491,6 @@
 .method public setPadding(I)Lcom/adobe/xmp/options/SerializeOptions;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/adobe/xmp/options/SerializeOptions;->padding:I
 
     return-object p0
@@ -544,7 +501,6 @@
 
     const/16 v0, 0x20
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -555,7 +511,6 @@
 
     const/16 v0, 0x1000
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0
@@ -566,7 +521,6 @@
 
     const/16 v0, 0x40
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/adobe/xmp/options/Options;->setOption(IZ)V
 
     return-object p0

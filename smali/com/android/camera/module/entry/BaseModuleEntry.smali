@@ -9,24 +9,21 @@
 # instance fields
 .field public mContext:Landroid/content/Context;
 
-.field public mFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+.field public mFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mContext:Landroid/content/Context;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -35,17 +32,15 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     iput-object p1, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mContext:Landroid/content/Context;
 
-    .line 5
     :goto_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mFeature:LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    iput-object p1, p0, Lcom/android/camera/module/entry/BaseModuleEntry;->mFeature:LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     return-void
 .end method
@@ -55,23 +50,20 @@
 .method public final createComponentDataItem([II)Lcom/android/camera/data/data/ComponentDataItem;
     .locals 6
 
-    .line 1
     array-length v0, p1
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_5
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->oo000o()Ljava/lang/String;
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0OoOo0()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v1
@@ -132,16 +124,13 @@
     :cond_3
     const/4 v0, 0x2
 
-    .line 4
     aget v3, p1, v0
 
     goto :goto_2
 
-    .line 5
     :cond_4
     aget v3, p1, v5
 
-    .line 6
     :goto_2
     new-instance v0, Lcom/android/camera/data/data/ComponentDataItem;
 
@@ -159,7 +148,6 @@
 
     return-object v0
 
-    .line 7
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

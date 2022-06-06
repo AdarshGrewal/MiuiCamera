@@ -42,7 +42,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->createTag(Ljava/lang/Class;)Ljava/lang/String;
@@ -57,10 +56,8 @@
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -73,15 +70,12 @@
 
     const/4 v0, -0x1
 
-    .line 3
     iput v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mSelectedRemoteDeviceId:I
 
     if-eqz p1, :cond_0
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
-    .line 5
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -90,7 +84,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -104,7 +97,6 @@
 .method private showDialog(I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -119,7 +111,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -132,12 +123,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
@@ -149,19 +138,15 @@
 
     return-void
 
-    .line 5
     :cond_1
     new-instance v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-direct {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;-><init>()V
 
-    .line 6
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->setAlertDialogTitle(I)V
 
-    .line 7
     invoke-virtual {v0, p0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->setSetupWizard(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -180,7 +165,6 @@
 .method public dismiss()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -195,7 +179,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -208,7 +191,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
@@ -220,7 +202,6 @@
 .method public getActivity()Lcom/android/camera/ActivityBase;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     return-object v0
@@ -237,7 +218,6 @@
 
     return-object v0
 
-    .line 1
     :cond_0
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mRemoteDeviceList:Ljava/util/List;
 
@@ -249,7 +229,6 @@
 
     return-object v0
 
-    .line 2
     :cond_1
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mRemoteDeviceList:Ljava/util/List;
 
@@ -272,7 +251,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 3
     iget v3, v2, Lcom/android/camera/dualvideo/remote/RemoteDevice;->id:I
 
     if-ne v3, p1, :cond_2
@@ -294,7 +272,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mRemoteDeviceList:Ljava/util/List;
 
     return-object v0
@@ -303,7 +280,6 @@
 .method public getSelectedRemoteDeviceId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mSelectedRemoteDeviceId:I
 
     return v0
@@ -312,7 +288,6 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->values()[Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;
 
     move-result-object v0
@@ -326,14 +301,12 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget v4, v3, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->type:I
 
     iget v5, p1, Landroid/os/Message;->what:I
 
     if-ne v4, v5, :cond_0
 
-    .line 3
     invoke-virtual {p0, v3}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->onTimeReached(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
 
     goto :goto_1
@@ -353,7 +326,6 @@
 .method public onAvailabilityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -368,7 +340,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -381,7 +352,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->onAvailabilityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
@@ -393,7 +363,6 @@
 .method public onConnectivityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -408,7 +377,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -421,7 +389,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->onConnectivityStateChanged(Lcom/android/camera/dualvideo/remote/RemoteDevice;)V
@@ -433,7 +400,6 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mRemoteDeviceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -450,7 +416,6 @@
 .method public onTimeReached(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -465,7 +430,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -478,7 +442,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->onTimeReached(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
@@ -490,7 +453,6 @@
 .method public setSelectedRemoteDeviceId(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mSelectedRemoteDeviceId:I
 
     return-void
@@ -499,9 +461,8 @@
 .method public showHomeDialog()V
     .locals 1
 
-    const v0, 0x7f1208c2
+    const v0, 0x7f120873
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->showDialog(I)V
 
     return-void
@@ -510,7 +471,6 @@
 .method public showListView()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -525,7 +485,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -540,10 +499,8 @@
 
     const/4 v1, -0x1
 
-    .line 3
     invoke-virtual {p0, v1}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->setSelectedRemoteDeviceId(I)V
 
-    .line 4
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->showListView()V
@@ -555,9 +512,8 @@
 .method public showLostDialog()V
     .locals 1
 
-    const v0, 0x7f1208bd
+    const v0, 0x7f12086e
 
-    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->showDialog(I)V
 
     return-void
@@ -566,7 +522,6 @@
 .method public showScanView()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mActivity:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -581,7 +536,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     const-class v1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -594,12 +548,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mRemoteDeviceList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 4
     check-cast v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;
 
     invoke-virtual {v0}, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizardFragment;->showScanView()V
@@ -611,7 +563,6 @@
 .method public startTimer(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
     .locals 4
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -630,14 +581,12 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mTimerThreadHandler:Landroid/os/Handler;
 
     iget v1, p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->type:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mTimerThreadHandler:Landroid/os/Handler;
 
     iget v1, p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->type:I
@@ -652,7 +601,6 @@
 .method public stopTimer(Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -671,7 +619,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard;->mTimerThreadHandler:Landroid/os/Handler;
 
     iget p1, p1, Lcom/android/camera/dualvideo/remote/setupwizard/SetupWizard$Timer;->type:I

@@ -15,7 +15,6 @@
 .method public constructor <init>(Lcom/xiaomi/stat/e;Lcom/xiaomi/stat/NetAvailableEvent;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/stat/n;->b:Lcom/xiaomi/stat/e;
 
     iput-object p2, p0, Lcom/xiaomi/stat/n;->a:Lcom/xiaomi/stat/NetAvailableEvent;
@@ -30,7 +29,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/stat/b;->a()Z
 
     move-result v0
@@ -39,7 +37,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/stat/n;->b:Lcom/xiaomi/stat/e;
 
@@ -53,7 +50,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     invoke-static {}, Lcom/xiaomi/stat/b;->y()Z
 
@@ -63,7 +59,6 @@
 
     return-void
 
-    .line 4
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/stat/n;->b:Lcom/xiaomi/stat/e;
 

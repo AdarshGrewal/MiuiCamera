@@ -10,7 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
 .method public addListener(Lcom/bumptech/glide/manager/LifecycleListener;)V
     .locals 0
 
-    .line 1
     invoke-interface {p1}, Lcom/bumptech/glide/manager/LifecycleListener;->onStart()V
 
     return-void

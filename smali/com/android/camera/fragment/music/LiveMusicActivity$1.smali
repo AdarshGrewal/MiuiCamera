@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/music/LiveMusicActivity;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/music/LiveMusicActivity$1;->this$0:Lcom/android/camera/fragment/music/LiveMusicActivity;
 
     iput-object p2, p0, Lcom/android/camera/fragment/music/LiveMusicActivity$1;->val$tabs:Ljava/util/ArrayList;
@@ -54,7 +53,6 @@
 .method public onPageSelected(I)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/music/LiveMusicActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -35,7 +35,6 @@
 .method public constructor <init>(Lorg/jcodec/movtool/InplaceMP4Editor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lorg/jcodec/movtool/InplaceMP4Editor$1;->this$0:Lorg/jcodec/movtool/InplaceMP4Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
 .method public map(Lorg/jcodec/containers/mp4/MP4Util$Atom;)Ljava/lang/Long;
     .locals 2
 
-    .line 2
     invoke-virtual {p1}, Lorg/jcodec/containers/mp4/MP4Util$Atom;->getOffset()J
 
     move-result-wide v0
@@ -63,7 +61,6 @@
 .method public bridge synthetic map(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     check-cast p1, Lorg/jcodec/containers/mp4/MP4Util$Atom;
 
     invoke-virtual {p0, p1}, Lorg/jcodec/movtool/InplaceMP4Editor$1;->map(Lorg/jcodec/containers/mp4/MP4Util$Atom;)Ljava/lang/Long;

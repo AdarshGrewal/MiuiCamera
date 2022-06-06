@@ -48,7 +48,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -59,7 +58,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2, v0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -68,10 +66,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
-    .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -92,7 +88,6 @@
 
     float-to-int v1, v1
 
-    .line 5
     iput v1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowXOffset:I
 
     const v1, 0x40ae6666    # 5.45f
@@ -101,13 +96,10 @@
 
     float-to-int v0, v0
 
-    .line 6
     iput v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowYOffset:I
 
-    .line 7
     iput v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowRadius:I
 
-    .line 8
     sget-object v0, Lmiuix/miuixbasewidget/R$styleable;->FloatingActionButton:[I
 
     sget v1, Lmiuix/miuixbasewidget/R$style;->Widget_FloatingActionButton:I
@@ -116,7 +108,6 @@
 
     move-result-object p2
 
-    .line 9
     sget p3, Lmiuix/miuixbasewidget/R$styleable;->FloatingActionButton_fabShadowEnabled:I
 
     const/4 v0, 0x1
@@ -127,7 +118,6 @@
 
     iput-boolean p3, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mIsShadowEnabled:Z
 
-    .line 10
     sget p3, Lmiuix/miuixbasewidget/R$styleable;->FloatingActionButton_fabColor:I
 
     invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
@@ -136,10 +126,8 @@
 
     iput-boolean p3, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
-    .line 11
     sget p3, Lmiuix/miuixbasewidget/R$styleable;->FloatingActionButton_fabColor:I
 
-    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -150,17 +138,14 @@
 
     move-result p1
 
-    .line 13
     invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p1
 
     iput p1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mFabColor:I
 
-    .line 14
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 15
     new-instance p1, Lmiuix/miuixbasewidget/widget/FloatingActionButton$EmptyHolder;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
@@ -181,10 +166,8 @@
 
     iput-object p1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mEmptyHolder:Lmiuix/miuixbasewidget/widget/FloatingActionButton$EmptyHolder;
 
-    .line 16
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->initBackground()V
 
-    .line 17
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->updatePadding()V
 
     new-array p1, v0, [Landroid/view/View;
@@ -193,7 +176,6 @@
 
     aput-object p0, p1, p2
 
-    .line 18
     invoke-static {p1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -216,12 +198,10 @@
 .method private computeShadowColor(I)I
     .locals 3
 
-    .line 1
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
-    .line 2
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
@@ -234,14 +214,12 @@
 
     move-result v1
 
-    .line 3
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
 
     const/16 v2, 0x19
 
-    .line 4
     invoke-static {v2, v0, v1, p1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p1
@@ -252,7 +230,6 @@
 .method private createFabBackground()Landroid/graphics/drawable/Drawable;
     .locals 8
 
-    .line 1
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v1, Lmiuix/miuixbasewidget/widget/FloatingActionButton$OvalShapeWithPadding;
@@ -261,7 +238,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 2
     iget-boolean v1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mIsShadowEnabled:Z
 
     const/4 v2, 0x1
@@ -270,14 +246,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 3
     iget v1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mFabColor:I
 
     invoke-direct {p0, v1}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->computeShadowColor(I)I
 
     move-result v1
 
-    .line 4
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x1c
@@ -291,7 +265,6 @@
     :cond_0
     move v4, v2
 
-    .line 5
     :goto_0
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
@@ -299,7 +272,6 @@
 
     invoke-virtual {p0, v4, v5}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 6
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v4
@@ -318,7 +290,6 @@
 
     invoke-virtual {v4, v5, v6, v7, v1}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 7
     :cond_1
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
@@ -328,7 +299,6 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 8
     new-instance v1, Landroid/graphics/drawable/LayerDrawable;
 
     new-array v4, v3, [Landroid/graphics/drawable/Drawable;
@@ -343,7 +313,6 @@
 
     invoke-direct {v1, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 9
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v4, Lmiuix/miuixbasewidget/widget/FloatingActionButton$OvalShapeWithPadding;
@@ -352,7 +321,6 @@
 
     invoke-direct {v0, v4}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 10
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v4
@@ -361,7 +329,6 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 11
     new-instance v4, Landroid/graphics/drawable/LayerDrawable;
 
     new-array v3, v3, [Landroid/graphics/drawable/Drawable;
@@ -372,22 +339,18 @@
 
     invoke-direct {v4, v3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 12
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 13
     sget-object v2, Landroid/widget/ImageView;->PRESSED_ENABLED_STATE_SET:[I
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 14
     sget-object v2, Landroid/widget/ImageView;->ENABLED_SELECTED_STATE_SET:[I
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 15
     sget-object v2, Landroid/widget/ImageView;->EMPTY_STATE_SET:[I
 
     invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
@@ -398,12 +361,10 @@
 .method private getDefaultBackground()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mDefaultBackground:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -422,17 +383,14 @@
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->createFabBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mDefaultBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mDefaultBackground:Landroid/graphics/drawable/Drawable;
 
@@ -442,19 +400,16 @@
 .method private initBackground()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->createFabBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -463,7 +418,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->getDefaultBackground()Landroid/graphics/drawable/Drawable;
 
@@ -476,7 +430,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 5
     iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     :goto_0
@@ -486,22 +439,18 @@
 .method private initEmptyHolder()V
     .locals 5
 
-    .line 1
     invoke-virtual {p0}, Landroid/widget/ImageView;->getPaddingLeft()I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Landroid/widget/ImageView;->getPaddingTop()I
 
     move-result v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/widget/ImageView;->getPaddingRight()I
 
     move-result v2
 
-    .line 4
     invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v3
@@ -512,7 +461,6 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    .line 5
     iget-object v2, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mEmptyHolder:Lmiuix/miuixbasewidget/widget/FloatingActionButton$EmptyHolder;
 
     mul-int/lit8 v3, v3, 0x2
@@ -529,7 +477,6 @@
 .method private updatePadding()V
     .locals 6
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mIsShadowEnabled:Z
 
     const/4 v1, 0x0
@@ -540,7 +487,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowRadius:I
 
     iget v2, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowXOffset:I
@@ -551,7 +497,6 @@
 
     move-result v0
 
-    .line 3
     iget v2, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowRadius:I
 
     iget v3, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowYOffset:I
@@ -562,7 +507,6 @@
 
     move-result v2
 
-    .line 4
     iget v3, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowRadius:I
 
     iget v4, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowXOffset:I
@@ -573,7 +517,6 @@
 
     move-result v3
 
-    .line 5
     iget v4, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowRadius:I
 
     iget v5, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mShadowYOffset:I
@@ -584,12 +527,10 @@
 
     move-result v1
 
-    .line 6
     invoke-virtual {p0, v0, v2, v3, v1}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {p0, v1, v1, v1, v1}, Landroid/widget/ImageView;->setPadding(IIII)V
 
@@ -602,10 +543,8 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->initEmptyHolder()V
 
-    .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -614,12 +553,10 @@
 .method public performClick()Z
     .locals 1
 
-    .line 1
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_LIGHT:I
 
     invoke-static {p0, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    .line 2
     invoke-super {p0}, Landroid/widget/ImageView;->performClick()Z
 
     move-result v0
@@ -632,21 +569,17 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     if-nez p1, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->getDefaultBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->updatePadding()V
 
     return-void
@@ -655,7 +588,6 @@
 .method public setBackgroundColor(I)V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     if-eqz v0, :cond_0
@@ -664,24 +596,20 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 2
     :cond_0
     iput p1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mFabColor:I
 
-    .line 3
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->createFabBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 4
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->updatePadding()V
 
     :cond_1
     const/4 p1, 0x1
 
-    .line 5
     iput-boolean p1, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     return-void
@@ -692,12 +620,10 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->mHasFabColor:Z
 
     if-nez p1, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->getDefaultBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -706,11 +632,9 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 4
     :goto_0
     invoke-direct {p0}, Lmiuix/miuixbasewidget/widget/FloatingActionButton;->updatePadding()V
 

@@ -24,17 +24,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v0}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;->monitor:Lmiuix/animation/utils/VelocityMonitor;
 
-    .line 3
     new-instance v0, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;-><init>(Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;)V
@@ -47,7 +44,6 @@
 .method public synthetic constructor <init>(Lmiuix/animation/internal/TargetVelocityTracker$1;)V
     .locals 0
 
-    .line 4
     invoke-direct {p0}, Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;-><init>()V
 
     return-void

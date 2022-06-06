@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionComplete;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Lmiuix/springback/trigger/TriggerState;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lmiuix/springback/trigger/CustomTrigger;Lmiuix/springback/trigger/CustomTrigger$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/CustomTrigger$ActionComplete;-><init>(Lmiuix/springback/trigger/CustomTrigger;)V
 
     return-void
@@ -44,12 +42,10 @@
 .method public handleScrollStateChange(II)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1, p2}, Lmiuix/springback/trigger/TriggerState;->handleScrollStateChange(II)V
 
     if-nez p2, :cond_0
 
-    .line 2
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$ActionComplete;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     iget-object p2, p1, Lmiuix/springback/trigger/CustomTrigger;->mIdle:Lmiuix/springback/trigger/CustomTrigger$Idle;

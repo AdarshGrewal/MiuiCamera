@@ -13,13 +13,10 @@
 .method public constructor <init>(Landroid/view/View;FF)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;-><init>(Landroid/view/View;)V
 
-    .line 2
     iput p2, p0, Lcom/android/camera/animation/folme/FolmeScaleOnSubScribe;->mOriginScale:F
 
-    .line 3
     iput p3, p0, Lcom/android/camera/animation/folme/FolmeScaleOnSubScribe;->mTargetScale:F
 
     return-void
@@ -34,7 +31,6 @@
 
     new-array p1, p1, [Landroid/view/View;
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -62,10 +58,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->subscribe(Lio/reactivex/CompletableEmitter;)V
 
-    .line 2
     new-instance p1, Lmiuix/animation/controller/AnimState;
 
     const-string v0, "Scale from"
@@ -78,7 +72,6 @@
 
     float-to-double v1, v1
 
-    .line 3
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -89,12 +82,10 @@
 
     float-to-double v1, v1
 
-    .line 4
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 5
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "Scale to"
@@ -107,7 +98,6 @@
 
     float-to-double v2, v2
 
-    .line 6
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -118,7 +108,6 @@
 
     float-to-double v2, v2
 
-    .line 7
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -127,7 +116,6 @@
 
     new-array v2, v1, [Landroid/view/View;
 
-    .line 8
     iget-object v3, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     const/4 v4, 0x0

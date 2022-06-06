@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static create(Landroid/content/Context;)Lcom/google/android/play/core/splitinstall/SplitInstallManager;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;
 
     new-instance v1, Lcom/google/android/play/core/splitinstall/SplitInstallService;

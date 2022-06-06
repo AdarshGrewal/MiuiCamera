@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -47,7 +46,6 @@
 
     const/16 p1, 0xa2
 
-    .line 1
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -117,23 +115,22 @@
 .method public getResText()I
     .locals 1
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00O0OoO()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00O0O0O()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120920
+    const v0, 0x7f1208d1
 
     return v0
 
     :cond_0
-    const v0, 0x7f1204af
+    const v0, 0x7f12047f
 
     return v0
 .end method
@@ -141,7 +138,6 @@
 .method public isSwitchOn(I)Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
@@ -166,7 +162,6 @@
 
     const-string v0, "OFF"
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void
@@ -177,7 +172,6 @@
 
     const-string v0, "ON"
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void

@@ -29,7 +29,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lmiuix/net/ConnectivityHelper$1;
 
     invoke-direct {v0}, Lmiuix/net/ConnectivityHelper$1;-><init>()V
@@ -42,12 +41,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "connectivity"
 
-    .line 3
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -62,7 +59,6 @@
 .method public synthetic constructor <init>(Landroid/content/Context;Lmiuix/net/ConnectivityHelper$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/net/ConnectivityHelper;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -71,7 +67,6 @@
 .method public static getInstance(Landroid/content/Context;)Lmiuix/net/ConnectivityHelper;
     .locals 1
 
-    .line 1
     sget-object v0, Lmiuix/net/ConnectivityHelper;->INSTANCE:Lmiuix/core/util/SoftReferenceSingleton;
 
     invoke-virtual {v0, p0}, Lmiuix/core/util/SoftReferenceSingleton;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -88,7 +83,6 @@
 .method public getManager()Landroid/net/ConnectivityManager;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/net/ConnectivityHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     return-object v0
@@ -97,7 +91,6 @@
 .method public isNetworkConnected()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/net/ConnectivityHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -106,7 +99,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
@@ -127,7 +119,6 @@
 .method public isUnmeteredNetworkConnected()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/net/ConnectivityHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -136,7 +127,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
@@ -145,7 +135,6 @@
 
     iget-object v0, p0, Lmiuix/net/ConnectivityHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
-    .line 3
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
 
     move-result v0
@@ -166,7 +155,6 @@
 .method public isWifiConnected()Z
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lmiuix/net/ConnectivityHelper;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -177,14 +165,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v0

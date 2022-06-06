@@ -25,7 +25,6 @@
 .method public constructor <init>(Lokhttp3/ConnectionPool;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lokhttp3/ConnectionPool$1;->this$0:Lokhttp3/ConnectionPool;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 6
 
-    .line 1
     :cond_0
     :goto_0
     iget-object v0, p0, Lokhttp3/ConnectionPool$1;->this$0:Lokhttp3/ConnectionPool;
@@ -68,19 +66,16 @@
 
     const-wide/32 v2, 0xf4240
 
-    .line 2
     div-long v4, v0, v2
 
     mul-long/2addr v2, v4
 
     sub-long/2addr v0, v2
 
-    .line 3
     iget-object v2, p0, Lokhttp3/ConnectionPool$1;->this$0:Lokhttp3/ConnectionPool;
 
     monitor-enter v2
 
-    .line 4
     :try_start_0
     iget-object v3, p0, Lokhttp3/ConnectionPool$1;->this$0:Lokhttp3/ConnectionPool;
 
@@ -98,7 +93,6 @@
 
     goto :goto_2
 
-    .line 5
     :catch_0
     :goto_1
     :try_start_1

@@ -11,7 +11,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/config/DataItemConfig;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -28,15 +27,13 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
-    const v2, 0x7f1206dd
+    const v2, 0x7f1206a1
 
     const/4 v3, -0x1
 
@@ -46,7 +43,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3
     new-instance v1, Lcom/android/camera/data/data/ComponentDataItem;
 
     const-string v4, "manual"
@@ -63,7 +59,6 @@
 .method public disableUpdate()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/config/ComponentManuallyFocus;->mIsFixedFocus:Z
 
     return v0
@@ -72,7 +67,7 @@
 .method public getContentDescriptionString()I
     .locals 1
 
-    const v0, 0x7f1205d6
+    const v0, 0x7f1205a0
 
     return v0
 .end method
@@ -88,7 +83,7 @@
 .method public getDefaultValueDisplayString(I)I
     .locals 0
 
-    const p1, 0x7f1206dd
+    const p1, 0x7f1206a1
 
     return p1
 .end method
@@ -96,7 +91,7 @@
 .method public getDisplayTitleString()I
     .locals 1
 
-    const v0, 0x7f120831
+    const v0, 0x7f1207ee
 
     return v0
 .end method
@@ -112,19 +107,16 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/data/data/config/ComponentManuallyFocus;->initItems()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/ComponentData;->mItems:Ljava/util/List;
 
@@ -160,12 +152,10 @@
 .method public getValueDisplayString(I)I
     .locals 1
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -178,7 +168,7 @@
 
     if-ne p1, v0, :cond_0
 
-    const p1, 0x7f1206dd
+    const p1, 0x7f1206a1
 
     return p1
 
@@ -191,12 +181,10 @@
 .method public getValueSelectedDrawable(I)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -222,7 +210,7 @@
 
     if-ltz p1, :cond_1
 
-    const p1, 0x7f0802aa
+    const p1, 0x7f0802a6
 
     return p1
 
@@ -233,12 +221,12 @@
 
     if-ltz p1, :cond_2
 
-    const p1, 0x7f0802ad
+    const p1, 0x7f0802a9
 
     return p1
 
     :cond_2
-    const p1, 0x7f0802a7
+    const p1, 0x7f0802a3
 
     return p1
 .end method
@@ -246,12 +234,10 @@
 .method public getValueSelectedShadowDrawable(I)I
     .locals 4
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -277,7 +263,7 @@
 
     if-ltz p1, :cond_1
 
-    const p1, 0x7f0802ac
+    const p1, 0x7f0802a8
 
     return p1
 
@@ -288,12 +274,12 @@
 
     if-ltz p1, :cond_2
 
-    const p1, 0x7f0802ae
+    const p1, 0x7f0802aa
 
     return p1
 
     :cond_2
-    const p1, 0x7f0802a9
+    const p1, 0x7f0802a5
 
     return p1
 .end method
@@ -301,7 +287,6 @@
 .method public setFixedFocusLens(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/config/ComponentManuallyFocus;->mIsFixedFocus:Z
 
     return-void

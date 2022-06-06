@@ -73,16 +73,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2, p3}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->op:Ljava8/util/stream/AbstractPipeline;
 
-    .line 3
     iput-object p4, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->generator:Ljava8/util/function/IntFunction;
 
-    .line 4
     sget-object p1, Ljava8/util/stream/StreamOpFlag;->ORDERED:Ljava8/util/stream/StreamOpFlag;
 
     invoke-virtual {p2}, Ljava8/util/stream/PipelineHelper;->getStreamAndOpFlags()I
@@ -110,20 +106,16 @@
         }
     .end annotation
 
-    .line 5
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/AbstractTask;Ljava8/util/Spliterator;)V
 
-    .line 6
     iget-object p2, p1, Ljava8/util/stream/WhileOps$DropWhileTask;->op:Ljava8/util/stream/AbstractPipeline;
 
     iput-object p2, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->op:Ljava8/util/stream/AbstractPipeline;
 
-    .line 7
     iget-object p2, p1, Ljava8/util/stream/WhileOps$DropWhileTask;->generator:Ljava8/util/function/IntFunction;
 
     iput-object p2, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->generator:Ljava8/util/function/IntFunction;
 
-    .line 8
     iget-boolean p1, p1, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
 
     iput-boolean p1, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
@@ -143,14 +135,12 @@
         }
     .end annotation
 
-    .line 1
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
 
     if-eqz v0, :cond_0
 
     iget-wide v2, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->index:J
 
-    .line 2
     invoke-interface {p1}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v4
@@ -177,7 +167,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     move-object v1, v0
@@ -192,7 +181,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v0, Ljava8/util/stream/WhileOps$DropWhileTask;
@@ -205,7 +193,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v1, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
@@ -217,7 +204,6 @@
 
     if-nez v1, :cond_1
 
-    .line 4
     check-cast v0, Ljava8/util/stream/WhileOps$DropWhileTask;
 
     invoke-virtual {v0}, Ljava8/util/stream/AbstractTask;->getLocalResult()Ljava/lang/Object;
@@ -228,7 +214,6 @@
 
     return-object v0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->op:Ljava8/util/stream/AbstractPipeline;
 
@@ -240,7 +225,6 @@
 
     check-cast v1, Ljava8/util/stream/WhileOps$DropWhileTask;
 
-    .line 6
     invoke-virtual {v1}, Ljava8/util/stream/AbstractTask;->getLocalResult()Ljava/lang/Object;
 
     move-result-object v1
@@ -257,7 +241,6 @@
 
     check-cast v2, Ljava8/util/stream/Node;
 
-    .line 7
     invoke-static {v0, v1, v2}, Ljava8/util/stream/Nodes;->conc(Ljava8/util/stream/StreamShape;Ljava8/util/stream/Node;Ljava8/util/stream/Node;)Ljava8/util/stream/Node;
 
     move-result-object v0
@@ -270,7 +253,6 @@
 .method public bridge synthetic doLeaf()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/WhileOps$DropWhileTask;->doLeaf()Ljava8/util/stream/Node;
 
     move-result-object v0
@@ -288,7 +270,6 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isRoot()Z
 
     move-result v0
@@ -299,7 +280,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-boolean v2, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
 
     if-eqz v2, :cond_0
@@ -320,7 +300,6 @@
 
     iget-object v3, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
-    .line 4
     invoke-virtual {v2, v3}, Ljava8/util/stream/AbstractPipeline;->exactOutputSizeIfKnown(Ljava8/util/Spliterator;)J
 
     move-result-wide v2
@@ -330,7 +309,6 @@
     :cond_0
     const-wide/16 v2, -0x1
 
-    .line 5
     :goto_0
     iget-object v4, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
@@ -340,12 +318,10 @@
 
     move-result-object v2
 
-    .line 6
     iget-object v3, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->op:Ljava8/util/stream/AbstractPipeline;
 
     check-cast v3, Ljava8/util/stream/WhileOps$DropWhileOp;
 
-    .line 7
     iget-boolean v4, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
 
     if-eqz v4, :cond_1
@@ -362,26 +338,22 @@
 
     move-result-object v0
 
-    .line 8
     iget-object v1, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iget-object v3, p0, Ljava8/util/stream/AbstractTask;->spliterator:Ljava8/util/Spliterator;
 
     invoke-virtual {v1, v0, v3}, Ljava8/util/stream/PipelineHelper;->wrapAndCopyInto(Ljava8/util/stream/Sink;Ljava8/util/Spliterator;)Ljava8/util/stream/Sink;
 
-    .line 9
     invoke-interface {v2}, Ljava8/util/stream/Node$Builder;->build()Ljava8/util/stream/Node;
 
     move-result-object v1
 
-    .line 10
     invoke-interface {v1}, Ljava8/util/stream/Node;->count()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->thisNodeSize:J
 
-    .line 11
     invoke-interface {v0}, Ljava8/util/stream/WhileOps$DropWhileSink;->getDropCount()J
 
     move-result-wide v2
@@ -394,7 +366,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/WhileOps$DropWhileTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/WhileOps$DropWhileTask;
 
     move-result-object p1
@@ -414,7 +385,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/WhileOps$DropWhileTask;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/WhileOps$DropWhileTask;-><init>(Ljava8/util/stream/WhileOps$DropWhileTask;Ljava8/util/Spliterator;)V
@@ -432,19 +402,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isLeaf()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 2
     iget-boolean v0, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->isOrdered:Z
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     move-object v1, v0
@@ -455,7 +422,6 @@
 
     iput-wide v1, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->index:J
 
-    .line 4
     check-cast v0, Ljava8/util/stream/WhileOps$DropWhileTask;
 
     iget-wide v3, v0, Ljava8/util/stream/WhileOps$DropWhileTask;->thisNodeSize:J
@@ -464,7 +430,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v0, Ljava8/util/stream/WhileOps$DropWhileTask;
@@ -475,7 +440,6 @@
 
     iput-wide v1, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->index:J
 
-    .line 6
     :cond_0
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
@@ -493,12 +457,10 @@
 
     iput-wide v0, p0, Ljava8/util/stream/WhileOps$DropWhileTask;->thisNodeSize:J
 
-    .line 7
     invoke-direct {p0}, Ljava8/util/stream/WhileOps$DropWhileTask;->merge()Ljava8/util/stream/Node;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isRoot()Z
 
     move-result v1
@@ -512,7 +474,6 @@
     :cond_1
     invoke-virtual {p0, v0}, Ljava8/util/stream/AbstractTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 9
     :cond_2
     invoke-super {p0, p1}, Ljava8/util/stream/AbstractTask;->onCompletion(Ljava8/util/concurrent/CountedCompleter;)V
 

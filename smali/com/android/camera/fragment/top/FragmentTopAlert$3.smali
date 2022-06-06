@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$3;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$3;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$100(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/android/camera/AudioMapMove;
@@ -53,7 +51,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$3;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$100(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/android/camera/AudioMapMove;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$3;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$200(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/airbnb/lottie/LottieAnimationView;
@@ -73,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/top/FragmentTopAlert$3;->this$0:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-static {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->access$300(Lcom/android/camera/fragment/top/FragmentTopAlert;)Lcom/android/camera/VolumeControlPanel;

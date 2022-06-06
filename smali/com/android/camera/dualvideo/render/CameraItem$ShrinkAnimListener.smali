@@ -26,12 +26,10 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/CameraItem;)V
     .locals 1
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
@@ -44,7 +42,6 @@
 
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->mAttri:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     new-instance p1, Landroid/graphics/Rect;
 
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->mAttri:Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
@@ -63,7 +60,6 @@
 .method public animatePreview(F)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->srcRenderArea:Landroid/graphics/Rect;
 
     const/high16 v1, 0x447a0000    # 1000.0f
@@ -82,7 +78,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     sget-object v1, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
@@ -93,7 +88,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     new-instance v2, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
@@ -123,7 +117,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->access$900(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -138,7 +131,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/CameraItem;->access$900(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -151,7 +143,6 @@
 
     iget-boolean p2, p2, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->animatePreview(F)V
 
     if-eqz p2, :cond_0
@@ -162,14 +153,12 @@
 
     if-nez p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->access$702(Lcom/android/camera/dualvideo/render/CameraItem;Z)Z
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$ShrinkAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1, p2}, Lcom/android/camera/dualvideo/render/CameraItem;->access$1002(Lcom/android/camera/dualvideo/render/CameraItem;Z)Z

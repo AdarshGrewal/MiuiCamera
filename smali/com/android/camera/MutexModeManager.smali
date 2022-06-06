@@ -48,15 +48,12 @@
 .method public constructor <init>(Lcom/android/camera/MutexModeManager$MutexCallBack;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/MutexModeManager;->mMutexCallBack:Lcom/android/camera/MutexModeManager$MutexCallBack;
 
     return-void
@@ -69,7 +66,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera/MutexModeManager;->mMutexCallBack:Lcom/android/camera/MutexModeManager$MutexCallBack;
 
@@ -77,7 +73,6 @@
 
     return-void
 
-    .line 2
     :cond_1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
@@ -85,11 +80,9 @@
 
     return-void
 
-    .line 3
     :cond_2
     iput p1, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/MutexModeManager;->mMutexCallBack:Lcom/android/camera/MutexModeManager$MutexCallBack;
 
     invoke-interface {v0, p1}, Lcom/android/camera/MutexModeManager$MutexCallBack;->enterMutexMode(I)V
@@ -104,7 +97,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera/MutexModeManager;->mMutexCallBack:Lcom/android/camera/MutexModeManager$MutexCallBack;
 
@@ -115,10 +107,8 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/MutexModeManager;->mMutexCallBack:Lcom/android/camera/MutexModeManager$MutexCallBack;
 
     invoke-interface {v0, p1}, Lcom/android/camera/MutexModeManager$MutexCallBack;->exitMutexMode(I)V
@@ -126,59 +116,41 @@
     return-void
 .end method
 
-.method private declared-synchronized switchMutexMode(II)V
-    .locals 3
+.method private switchMutexMode(II)V
+    .locals 2
 
-    monitor-enter p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :try_start_0
-    const-string v0, "MutexModeManager"
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "switchMutexMode from "
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "switchMutexMode from "
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, " to "
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, " to "
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "MutexModeManager"
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eq p1, p2, :cond_0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/MutexModeManager;->exit(I)V
 
-    .line 3
     invoke-direct {p0, p2}, Lcom/android/camera/MutexModeManager;->enter(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
-    monitor-exit p0
-
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
 
@@ -188,7 +160,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/MutexModeManager;->mIsMandatory:Z
 
     return-void
@@ -197,7 +168,6 @@
 .method public getAlgorithmName()Ljava/lang/String;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x1
@@ -239,7 +209,6 @@
 .method public getMutexMode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     return v0
@@ -248,7 +217,6 @@
 .method public getSuffix()Ljava/lang/String;
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x4
@@ -259,9 +227,8 @@
 
     return-object v0
 
-    .line 2
     :cond_0
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO0O0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO0O0()Z
 
     move-result v0
 
@@ -280,7 +247,6 @@
     :cond_1
     return-object v1
 
-    .line 3
     :cond_2
     :goto_0
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
@@ -322,7 +288,6 @@
 .method public inMandatoryMode()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/MutexModeManager;->mIsMandatory:Z
 
     return v0
@@ -331,7 +296,6 @@
 .method public isAoHdr()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x2
@@ -352,7 +316,6 @@
 .method public isBurstShoot()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x6
@@ -373,7 +336,6 @@
 .method public isGroupShot()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/16 v1, 0x8
@@ -394,7 +356,6 @@
 .method public isHandNight()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x3
@@ -415,7 +376,6 @@
 .method public isHdr()Z
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x1
@@ -447,8 +407,7 @@
 .method public isHdrSupportTorch(Z)Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000oO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000Ooo()Z
 
     move-result v0
 
@@ -474,7 +433,6 @@
 .method public isMorphoHdr()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x1
@@ -493,7 +451,6 @@
 .method public isNeedComposed()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     if-eqz v0, :cond_0
@@ -524,7 +481,6 @@
 .method public isNormal()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     if-nez v0, :cond_0
@@ -543,7 +499,6 @@
 .method public isRAW()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x4
@@ -564,7 +519,6 @@
 .method public isSceneHdr()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/4 v1, 0x5
@@ -585,7 +539,6 @@
 .method public isSuperResolution()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     const/16 v1, 0x9
@@ -606,7 +559,6 @@
 .method public isSupportedFlashOn()Z
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     if-eqz v0, :cond_1
@@ -641,8 +593,7 @@
 .method public isSupportedTorch()Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00000oO()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o0000Ooo()Z
 
     move-result v0
 
@@ -693,10 +644,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/MutexModeManager;->mIsMandatory:Z
 
-    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -721,7 +670,6 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget v1, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     invoke-direct {p0, v1, v0}, Lcom/android/camera/MutexModeManager;->switchMutexMode(II)V
@@ -732,7 +680,6 @@
 .method public setMutexMode(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -765,10 +712,8 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/MutexModeManager;->mIsMandatory:Z
 
-    .line 3
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/MutexModeManager;->switchMutexMode(II)V
@@ -779,7 +724,6 @@
 .method public setMutexModeMandatory(I)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -812,10 +756,8 @@
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/MutexModeManager;->mIsMandatory:Z
 
-    .line 3
     iget v0, p0, Lcom/android/camera/MutexModeManager;->mCurrentMutexMode:I
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera/MutexModeManager;->switchMutexMode(II)V

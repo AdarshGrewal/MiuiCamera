@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$4;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/FragmentLiveReview$4;->this$0:Lcom/android/camera/fragment/dialog/FragmentLiveReview;
 
     invoke-static {p1}, Lcom/android/camera/fragment/dialog/FragmentLiveReview;->access$1900(Lcom/android/camera/fragment/dialog/FragmentLiveReview;)Z

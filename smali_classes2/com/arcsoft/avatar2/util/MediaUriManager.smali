@@ -32,20 +32,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
-    .line 3
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->a:Landroid/content/Context;
 
-    .line 4
     new-instance p1, Landroid/media/MediaScannerConnection;
 
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->a:Landroid/content/Context;
@@ -62,10 +58,8 @@
 .method public addPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->e:Ljava/lang/String;
 
-    .line 2
     iget-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->b:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {p1}, Landroid/media/MediaScannerConnection;->connect()V
@@ -80,7 +74,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
@@ -102,7 +95,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -111,7 +103,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
@@ -125,7 +116,6 @@
 .method public getCurrentMediaUri()Landroid/net/Uri;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -138,7 +128,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
@@ -164,7 +153,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
     return-object v0
@@ -173,7 +161,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
     if-eqz v0, :cond_1
@@ -202,7 +189,6 @@
 .method public onMediaScannerConnected()V
     .locals 3
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->b:Landroid/media/MediaScannerConnection;
 
@@ -219,7 +205,6 @@
     :catch_0
     move-exception v0
 
-    .line 2
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteFullException;->printStackTrace()V
 
     :goto_0
@@ -229,7 +214,6 @@
 .method public onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 1
 
-    .line 1
     :try_start_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
@@ -241,7 +225,6 @@
 
     if-le p1, v0, :cond_0
 
-    .line 2
     iget-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
@@ -254,7 +237,6 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 3
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->d:Ljava/util/List;
 
@@ -264,7 +246,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     iget-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->b:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {p1}, Landroid/media/MediaScannerConnection;->disconnect()V
@@ -284,7 +265,6 @@
 .method public release()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->b:Landroid/media/MediaScannerConnection;
 
     if-eqz v0, :cond_0
@@ -295,7 +275,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/util/MediaUriManager;->b:Landroid/media/MediaScannerConnection;
 
     invoke-virtual {v0}, Landroid/media/MediaScannerConnection;->disconnect()V

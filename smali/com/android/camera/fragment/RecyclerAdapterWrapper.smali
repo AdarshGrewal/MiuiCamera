@@ -74,29 +74,24 @@
         }
     .end annotation
 
-    .line 1
     const-class v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
-    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
-    .line 4
     iput-object p1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -105,12 +100,10 @@
 
     move-result-object p1
 
-    .line 6
     instance-of v1, p1, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v1, :cond_1
 
-    .line 7
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
     invoke-interface {p1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
@@ -121,29 +114,24 @@
 
     aget-object p1, p1, v1
 
-    .line 8
     instance-of v1, p1, Ljava/lang/Class;
 
     if-eqz v1, :cond_0
 
-    .line 9
     check-cast p1, Ljava/lang/Class;
 
     iput-object p1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 10
     :cond_0
     iput-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 11
     :cond_1
     iput-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
-    .line 12
     :goto_0
     iget-object p1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -165,7 +153,6 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -194,7 +181,6 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 1
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -223,14 +209,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -246,14 +230,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -267,7 +249,6 @@
 .method public detach()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->o:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
     if-eqz v0, :cond_0
@@ -276,7 +257,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->unregisterAdapterDataObserver(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
     :cond_0
@@ -286,7 +266,6 @@
 .method public getFooter(I)Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -315,7 +294,6 @@
 .method public getFooterCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -328,7 +306,6 @@
 .method public getHeader(I)Landroid/view/View;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -357,7 +334,6 @@
 .method public getHeaderCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -370,7 +346,6 @@
 .method public getItemCount()I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -399,7 +374,6 @@
 .method public getItemViewType(I)I
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -412,7 +386,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
@@ -430,7 +403,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
@@ -450,7 +422,6 @@
     :cond_1
     add-int/lit16 p1, p1, -0x7d0
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -478,7 +449,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     return-object v0
@@ -489,7 +459,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -498,7 +467,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -514,7 +482,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -523,7 +490,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -537,7 +503,6 @@
 .method public onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -548,7 +513,6 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -559,7 +523,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
@@ -577,7 +540,6 @@
 
     if-ge p2, v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
@@ -598,7 +560,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 1
 
-    .line 1
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->isHeader(I)Z
 
     move-result v0
@@ -607,12 +568,10 @@
 
     add-int/lit16 p2, p2, 0x3e8
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -621,14 +580,12 @@
 
     check-cast p1, Landroid/view/View;
 
-    .line 4
     new-instance p2, Lcom/android/camera/fragment/RecyclerAdapterWrapper$2;
 
     invoke-direct {p2, p0, p1}, Lcom/android/camera/fragment/RecyclerAdapterWrapper$2;-><init>(Lcom/android/camera/fragment/RecyclerAdapterWrapper;Landroid/view/View;)V
 
     return-object p2
 
-    .line 5
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->isFooter(I)Z
 
@@ -638,12 +595,10 @@
 
     add-int/lit16 p2, p2, 0x7d0
 
-    .line 6
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
 
-    .line 7
     iget-object p2, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -652,14 +607,12 @@
 
     check-cast p1, Landroid/view/View;
 
-    .line 8
     new-instance p2, Lcom/android/camera/fragment/RecyclerAdapterWrapper$3;
 
     invoke-direct {p2, p0, p1}, Lcom/android/camera/fragment/RecyclerAdapterWrapper$3;-><init>(Lcom/android/camera/fragment/RecyclerAdapterWrapper;Landroid/view/View;)V
 
     return-object p2
 
-    .line 9
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -673,7 +626,6 @@
 .method public onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -684,7 +636,6 @@
 .method public onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -693,7 +644,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
@@ -710,7 +660,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
@@ -722,7 +671,6 @@
 .method public onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -731,7 +679,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
@@ -751,7 +698,6 @@
 .method public onViewDetachedFromWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -760,7 +706,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
@@ -780,7 +725,6 @@
 .method public onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -789,7 +733,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBase:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     iget-object v1, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mBaseHolderClass:Ljava/lang/Class;
@@ -809,7 +752,6 @@
 .method public removeAllFooter()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -820,7 +762,6 @@
 .method public removeAllHeader()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -833,14 +774,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mFooters:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -856,14 +795,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/RecyclerAdapterWrapper;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    .line 2
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -60,13 +60,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava8/util/concurrent/CountedCompleter;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
-    .line 3
     iput p2, p0, Ljava8/util/stream/Nodes$ToArrayTask;->offset:I
 
     return-void
@@ -80,13 +77,10 @@
         }
     .end annotation
 
-    .line 4
     invoke-direct {p0, p1}, Ljava8/util/concurrent/CountedCompleter;-><init>(Ljava8/util/concurrent/CountedCompleter;)V
 
-    .line 5
     iput-object p2, p0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
-    .line 6
     iput p3, p0, Ljava8/util/stream/Nodes$ToArrayTask;->offset:I
 
     return-void
@@ -99,7 +93,6 @@
 
     move-object v0, p0
 
-    .line 1
     :goto_0
     iget-object v1, v0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
@@ -109,15 +102,12 @@
 
     if-nez v1, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Ljava8/util/stream/Nodes$ToArrayTask;->copyNodeToArray()V
 
-    .line 3
     invoke-virtual {v0}, Ljava8/util/concurrent/CountedCompleter;->propagateCompletion()V
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v1, v0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
@@ -133,7 +123,6 @@
 
     move v2, v1
 
-    .line 5
     :goto_1
     iget-object v3, v0, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
@@ -145,7 +134,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 6
     iget v3, v0, Ljava8/util/stream/Nodes$ToArrayTask;->offset:I
 
     add-int/2addr v3, v2
@@ -156,7 +144,6 @@
 
     int-to-long v4, v2
 
-    .line 7
     iget-object v2, v3, Ljava8/util/stream/Nodes$ToArrayTask;->node:Ljava8/util/stream/Node;
 
     invoke-interface {v2}, Ljava8/util/stream/Node;->count()J
@@ -167,14 +154,12 @@
 
     long-to-int v2, v4
 
-    .line 8
     invoke-virtual {v3}, Ljava8/util/concurrent/ForkJoinTask;->fork()Ljava8/util/concurrent/ForkJoinTask;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 9
     :cond_1
     iget v3, v0, Ljava8/util/stream/Nodes$ToArrayTask;->offset:I
 

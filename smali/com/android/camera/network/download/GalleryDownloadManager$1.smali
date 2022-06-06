@@ -27,12 +27,10 @@
 .method public constructor <init>(Lcom/android/camera/network/download/GalleryDownloadManager;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/network/download/GalleryDownloadManager$1;->this$0:Lcom/android/camera/network/download/GalleryDownloadManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -47,7 +45,6 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -29,7 +29,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
 .method public static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -47,7 +45,6 @@
 .method public static deleteRecordByPath(Ljava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -56,7 +53,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     invoke-static {}, Lcom/android/camera/db/DbRepository;->dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
 
@@ -70,7 +66,6 @@
 
     return-void
 
-    .line 3
     :cond_1
     sget-object v0, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
@@ -94,19 +89,16 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/db/element/SaveTask;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 5
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/db/element/SaveTask;->getMediaStoreId()Ljava/lang/Long;
 
     move-result-object p0
@@ -115,12 +107,10 @@
 
     move-result-wide v1
 
-    .line 7
     invoke-static {v0, v1, v2}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$ParallelProvider;->deleteInProvider(Landroid/content/Context;J)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     invoke-static {}, Lcom/android/camera/db/DbRepository;->dbItemSaveTask()Lcom/android/camera/db/item/DbItemSaveTask;
 
@@ -137,7 +127,6 @@
 
     const-string v0, "content://com.xiaomi.camera.parallelservice.provider.SpecialTypesProvider/processing"
 
-    .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -152,7 +141,6 @@
 .method public static insertImageToParallelService(Landroid/content/Context;JLjava/lang/String;)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -177,12 +165,10 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 3
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -193,10 +179,8 @@
 
     const-string p1, "media_path"
 
-    .line 4
     invoke-virtual {v0, p1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -212,7 +196,6 @@
 
     move-result-object p0
 
-    .line 6
     sget-object p1, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -239,7 +222,6 @@
 
     goto :goto_0
 
-    .line 7
     :catch_0
     sget-object p0, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
@@ -251,10 +233,9 @@
     return-void
 .end method
 
-.method public static markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;)V
+.method public static markTaskFinish(Landroid/content/Context;Lcom/android/camera/db/element/SaveTask;Z)V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -287,16 +268,24 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Lcom/android/camera/db/element/SaveTask;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/xiaomi/camera/parallelservice/util/ParallelExifUtil;->updateExif(Ljava/lang/String;)V
+
+    :cond_0
     invoke-virtual {p1}, Lcom/android/camera/db/element/SaveTask;->getMediaStoreId()Ljava/lang/Long;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    invoke-static {p0, v0, v1}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$ParallelProvider;->deleteInProvider(Landroid/content/Context;J)V
+    invoke-static {p0, p1, p2}, Lcom/xiaomi/camera/parallelservice/util/ParallelUtil$ParallelProvider;->deleteInProvider(Landroid/content/Context;J)V
 
     return-void
 .end method

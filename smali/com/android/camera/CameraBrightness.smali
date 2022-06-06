@@ -55,36 +55,28 @@
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/CameraBrightness;->mBrightness:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/CameraBrightness;->mBrightnessMode:I
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/CameraBrightness;->mScreenAutoBrightnessRatio:F
 
-    .line 5
     iput-object p1, p0, Lcom/android/camera/CameraBrightness;->mCurrentActivity:Landroid/app/Activity;
 
     const/4 p1, 0x1
 
-    .line 6
     iput-boolean p1, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
     const/4 p1, 0x0
 
-    .line 7
     iput-boolean p1, p0, Lcom/android/camera/CameraBrightness;->mFirstFocusChanged:Z
 
-    .line 8
     invoke-static {}, Lcom/android/camera/CameraAppImpl;->getAndroidContext()Landroid/content/Context;
 
     move-result-object p1
@@ -105,21 +97,18 @@
 .method private adjustBrightness()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/CameraBrightness;->mCurrentActivity:Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->OooO00o()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->OooO00o()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/CameraBrightness;->cancelLastTask()V
 
-    .line 3
     new-instance v0, Lcom/android/camera/CameraBrightness$CameraBrightnessTask;
 
     iget-object v2, p0, Lcom/android/camera/CameraBrightness;->mCurrentActivity:Landroid/app/Activity;
@@ -153,19 +142,16 @@
 .method private cancelLastTask()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/CameraBrightness;->mCameraBrightnessTask:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 2
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/CameraBrightness;->mCameraBrightnessTask:Landroid/os/AsyncTask;
 
     :cond_0
@@ -177,13 +163,11 @@
 .method public adjustBrightnessInAutoMode(F)V
     .locals 2
 
-    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/android/camera/CameraBrightness;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-static {v0, p1}, Lcom/android/camera/lib/compatibility/util/CompatibilityUtils;->setTemporaryAutoBrightnessAdjustment(Landroid/hardware/display/DisplayManager;F)V
 
-    .line 2
     iput p1, p0, Lcom/android/camera/CameraBrightness;->mScreenAutoBrightnessRatio:F
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
@@ -193,7 +177,6 @@
     :catch_0
     move-exception p1
 
-    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +202,6 @@
 .method public getCurrentBrightness()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CameraBrightness;->mBrightness:I
 
     return v0
@@ -228,7 +210,6 @@
 .method public getCurrentBrightnessAuto()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CameraBrightness;->mScreenAutoBrightnessRatio:F
 
     return v0
@@ -237,7 +218,6 @@
 .method public getCurrentBrightnessManual()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CameraBrightness;->mBrightness:I
 
     return v0
@@ -246,7 +226,6 @@
 .method public getPreviousBrightnessMode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/CameraBrightness;->mBrightnessMode:I
 
     return v0
@@ -255,7 +234,6 @@
 .method public onPause()V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -278,23 +256,18 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mFirstFocusChanged:Z
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mPaused:Z
 
-    .line 4
     iget-boolean v1, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
     if-nez v1, :cond_0
 
-    .line 5
     iput-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/CameraBrightness;->adjustBrightness()V
 
     :cond_0
@@ -306,25 +279,20 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mPaused:Z
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/camera/CameraBrightness;->mScreenAutoBrightnessRatio:F
 
     const-string v0, "CameraBrightness"
 
     const-string/jumbo v1, "onResume adjustBrightness"
 
-    .line 4
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/CameraBrightness;->adjustBrightness()V
 
     return-void
@@ -333,7 +301,6 @@
 .method public onWindowFocusChanged(Z)V
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -360,7 +327,6 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mFirstFocusChanged:Z
 
     const/4 v1, 0x1
@@ -369,12 +335,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 3
     iput-boolean v1, p0, Lcom/android/camera/CameraBrightness;->mFirstFocusChanged:Z
 
     return-void
 
-    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
@@ -382,10 +346,8 @@
 
     xor-int/2addr p1, v1
 
-    .line 5
     iput-boolean p1, p0, Lcom/android/camera/CameraBrightness;->mUseDefaultValue:Z
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/CameraBrightness;->adjustBrightness()V
 
     :cond_1
@@ -395,7 +357,6 @@
 .method public setBrightness(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/CameraBrightness;->mBrightness:I
 
     return-void
@@ -404,7 +365,6 @@
 .method public setPreviousBrightnessMode(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/CameraBrightness;->mBrightnessMode:I
 
     return-void

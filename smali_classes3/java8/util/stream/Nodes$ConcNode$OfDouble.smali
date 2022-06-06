@@ -34,7 +34,6 @@
 .method public constructor <init>(Ljava8/util/stream/Node$OfDouble;Ljava8/util/stream/Node$OfDouble;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/Nodes$ConcNode$OfPrimitive;-><init>(Ljava8/util/stream/Node$OfPrimitive;Ljava8/util/stream/Node$OfPrimitive;)V
 
     return-void
@@ -45,7 +44,6 @@
 .method public copyInto([Ljava/lang/Double;I)V
     .locals 0
 
-    .line 2
     invoke-static {p0, p1, p2}, Ljava8/util/stream/Nodes$OfDouble;->copyInto(Ljava8/util/stream/Node$OfDouble;[Ljava/lang/Double;I)V
 
     return-void
@@ -54,7 +52,6 @@
 .method public bridge synthetic copyInto([Ljava/lang/Object;I)V
     .locals 0
 
-    .line 1
     check-cast p1, [Ljava/lang/Double;
 
     invoke-virtual {p0, p1, p2}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->copyInto([Ljava/lang/Double;I)V
@@ -74,7 +71,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfDouble;->forEach(Ljava8/util/stream/Node$OfDouble;Ljava8/util/function/Consumer;)V
 
     return-void
@@ -83,7 +79,6 @@
 .method public bridge synthetic newArray(I)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->newArray(I)[D
 
     move-result-object p1
@@ -94,7 +89,6 @@
 .method public newArray(I)[D
     .locals 0
 
-    .line 2
     invoke-static {p0, p1}, Ljava8/util/stream/Nodes$OfDouble;->newArray(Ljava8/util/stream/Node$OfDouble;I)[D
 
     move-result-object p1
@@ -105,7 +99,6 @@
 .method public spliterator()Ljava8/util/Spliterator$OfDouble;
     .locals 1
 
-    .line 3
     new-instance v0, Ljava8/util/stream/Nodes$InternalNodeSpliterator$OfDouble;
 
     invoke-direct {v0, p0}, Ljava8/util/stream/Nodes$InternalNodeSpliterator$OfDouble;-><init>(Ljava8/util/stream/Node$OfDouble;)V
@@ -116,7 +109,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator$OfPrimitive;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -127,7 +119,6 @@
 .method public bridge synthetic spliterator()Ljava8/util/Spliterator;
     .locals 1
 
-    .line 2
     invoke-virtual {p0}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->spliterator()Ljava8/util/Spliterator$OfDouble;
 
     move-result-object v0
@@ -148,7 +139,6 @@
         }
     .end annotation
 
-    .line 3
     invoke-static/range {p0 .. p5}, Ljava8/util/stream/Nodes$OfDouble;->truncate(Ljava8/util/stream/Node$OfDouble;JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -159,7 +149,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfPrimitive;
     .locals 0
 
-    .line 1
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1
@@ -170,7 +159,6 @@
 .method public bridge synthetic truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node;
     .locals 0
 
-    .line 2
     invoke-virtual/range {p0 .. p5}, Ljava8/util/stream/Nodes$ConcNode$OfDouble;->truncate(JJLjava8/util/function/IntFunction;)Ljava8/util/stream/Node$OfDouble;
 
     move-result-object p1

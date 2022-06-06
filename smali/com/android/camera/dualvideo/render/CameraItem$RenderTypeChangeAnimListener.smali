@@ -26,12 +26,10 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/CameraItem;Lcom/android/camera/dualvideo/render/RegionHelper;)V
     .locals 2
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
-    .line 2
     sget-object v0, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
 
     invoke-virtual {p1, v0}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderAttri(Lcom/android/camera/dualvideo/render/ContentType;)Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;
@@ -40,7 +38,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v0, v0, Lcom/android/camera/effect/draw_mode/DrawRectShapeAttributeBase;->mDrawRect:Landroid/graphics/Rect;
@@ -49,7 +46,6 @@
 
     iput-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->srcRenderArea:Landroid/graphics/Rect;
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->getRenderLayoutType()Lcom/android/camera/dualvideo/render/LayoutType;
 
     move-result-object p1
@@ -68,7 +64,6 @@
 .method public animatePreview(F)V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->srcRenderArea:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->dstRenderArea:Landroid/graphics/Rect;
@@ -81,7 +76,6 @@
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     sget-object v1, Lcom/android/camera/dualvideo/render/ContentType;->CONTENT_PREVIEW:Lcom/android/camera/dualvideo/render/ContentType;
@@ -92,7 +86,6 @@
 
     check-cast v0, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
 
-    .line 3
     iget-object v1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-virtual {v1}, Lcom/android/camera/dualvideo/render/CameraItem;->getFaceType()Lcom/android/camera/dualvideo/render/FaceType;
@@ -111,7 +104,6 @@
 
     move-result-object v1
 
-    .line 4
     iget-object v2, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     new-instance v3, Lcom/android/camera/effect/draw_mode/DrawExtTexAttribute;
@@ -139,7 +131,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/CameraItem;->access$1100(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -154,7 +145,6 @@
 
     move-result p1
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     invoke-static {v0}, Lcom/android/camera/dualvideo/render/CameraItem;->access$1100(Lcom/android/camera/dualvideo/render/CameraItem;)Ljava/lang/String;
@@ -167,12 +157,10 @@
 
     iget-boolean p2, p2, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
-    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->animatePreview(F)V
 
     if-eqz p2, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/CameraItem$RenderTypeChangeAnimListener;->this$0:Lcom/android/camera/dualvideo/render/CameraItem;
 
     const/4 p2, 0x0

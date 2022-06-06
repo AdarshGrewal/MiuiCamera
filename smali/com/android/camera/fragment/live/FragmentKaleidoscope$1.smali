@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/live/FragmentKaleidoscope;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$1;->this$0:Lcom/android/camera/fragment/live/FragmentKaleidoscope;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/live/FragmentKaleidoscope$1;->this$0:Lcom/android/camera/fragment/live/FragmentKaleidoscope;
 
     invoke-virtual {p1, p3, p2}, Lcom/android/camera/fragment/live/FragmentKaleidoscope;->onItemSelected(ILandroid/view/View;)V

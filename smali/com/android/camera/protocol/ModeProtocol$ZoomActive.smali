@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "ModeProtocol.java"
 
-# interfaces
-.implements Lcom/android/camera/protocol/ModeProtocol$BaseProtocol;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -15,10 +12,6 @@
     accessFlags = 0x609
     name = "ZoomActive"
 .end annotation
-
-
-# static fields
-.field public static final TYPE_TAG:I = 0xb1
 
 
 # virtual methods

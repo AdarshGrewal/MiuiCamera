@@ -37,17 +37,14 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/Box;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
-    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->spsList:Ljava/util/List;
 
-    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -72,24 +69,20 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 2
     iget v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->profile:I
 
     int-to-byte v1, v1
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 3
     iget v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->profileCompat:I
 
     int-to-byte v1, v1
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->level:I
 
     int-to-byte v1, v1
@@ -98,10 +91,8 @@
 
     const/4 v1, -0x1
 
-    .line 5
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 6
     iget-object v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->spsList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -114,7 +105,6 @@
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 7
     iget-object v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->spsList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -134,7 +124,6 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 8
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v3
@@ -147,15 +136,12 @@
 
     const/16 v3, 0x67
 
-    .line 9
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 10
     invoke-static {p1, v2}, Lorg/jcodec/common/io/NIOUtils;->write(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 11
     :cond_0
     iget-object v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->ppsList:Ljava/util/List;
 
@@ -167,7 +153,6 @@
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 12
     iget-object v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->ppsList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -187,7 +172,6 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 13
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v3
@@ -202,10 +186,8 @@
 
     const/16 v3, 0x68
 
-    .line 14
     invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 15
     invoke-static {p1, v2}, Lorg/jcodec/common/io/NIOUtils;->write(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
 
     goto :goto_1
@@ -217,7 +199,6 @@
 .method public estimateSize()I
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->spsList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -239,7 +220,6 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 2
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -250,7 +230,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->ppsList:Ljava/util/List;
 
@@ -271,7 +250,6 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
-    .line 4
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -291,10 +269,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p1, v0}, Lorg/jcodec/common/io/NIOUtils;->skip(Ljava/nio/ByteBuffer;I)I
 
-    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -303,7 +279,6 @@
 
     iput v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->profile:I
 
-    .line 3
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -312,7 +287,6 @@
 
     iput v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->profileCompat:I
 
-    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -321,7 +295,6 @@
 
     iput v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->level:I
 
-    .line 5
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -332,10 +305,8 @@
 
     add-int/2addr v1, v0
 
-    .line 6
     iput v1, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->nalLengthSize:I
 
-    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -349,14 +320,12 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
-    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
 
     const/16 v5, 0x27
 
-    .line 9
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v6
@@ -375,7 +344,6 @@
     :goto_1
     invoke-static {v5}, Lorg/jcodec/common/Preconditions;->checkState(Z)V
 
-    .line 10
     iget-object v5, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->spsList:Ljava/util/List;
 
     sub-int/2addr v4, v0
@@ -390,7 +358,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
@@ -403,14 +370,12 @@
     :goto_2
     if-ge v3, v1, :cond_3
 
-    .line 12
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
 
     const/16 v5, 0x28
 
-    .line 13
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v6
@@ -429,7 +394,6 @@
     :goto_3
     invoke-static {v5}, Lorg/jcodec/common/Preconditions;->checkState(Z)V
 
-    .line 14
     iget-object v5, p0, Lorg/jcodec/codecs/h264/mp4/AvcCBox;->ppsList:Ljava/util/List;
 
     sub-int/2addr v4, v0

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$6;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +34,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$6;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$400(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Lcom/android/camera/ui/CameraSnapView;
@@ -44,7 +42,6 @@
 
     invoke-virtual {p1}, Lcom/android/camera/ui/CameraSnapView;->addSegmentNow()V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$6;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$500(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Lcom/android/camera/fragment/bottom/action/Pickers;
@@ -59,7 +56,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/android/camera/fragment/bottom/action/Pickers;->loadByType(Ljava/util/List;ZI)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction$6;->this$0:Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;
 
     invoke-static {p1}, Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;->access$600(Lcom/android/camera/fragment/bottom/action/FragmentBottomAction;)Landroid/animation/ValueAnimator;

@@ -22,7 +22,6 @@
 .method public constructor <init>(Lmiuix/springback/trigger/CustomTrigger;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$Idle;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 
     invoke-direct {p0}, Lmiuix/springback/trigger/TriggerState;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lmiuix/springback/trigger/CustomTrigger;Lmiuix/springback/trigger/CustomTrigger$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lmiuix/springback/trigger/CustomTrigger$Idle;-><init>(Lmiuix/springback/trigger/CustomTrigger;)V
 
     return-void
@@ -54,7 +52,6 @@
 
     if-ne p2, p1, :cond_1
 
-    .line 1
     :cond_0
     iget-object p1, p0, Lmiuix/springback/trigger/CustomTrigger$Idle;->this$0:Lmiuix/springback/trigger/CustomTrigger;
 

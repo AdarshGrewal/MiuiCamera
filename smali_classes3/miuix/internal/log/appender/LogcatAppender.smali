@@ -22,10 +22,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lmiuix/internal/log/appender/LogcatAppender$1;
 
     invoke-direct {v0, p0}, Lmiuix/internal/log/appender/LogcatAppender$1;-><init>(Lmiuix/internal/log/appender/LogcatAppender;)V
@@ -40,7 +38,6 @@
 .method public append(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 1
     sget-object p1, Lmiuix/internal/log/appender/LogcatAppender$2;->$SwitchMap$miuix$internal$log$Level:[I
 
     invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
@@ -56,12 +53,10 @@
     :pswitch_0
     if-nez p7, :cond_0
 
-    .line 2
     invoke-static {p2, p6}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-static {p2, p6, p7}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -70,12 +65,10 @@
     :pswitch_1
     if-nez p7, :cond_1
 
-    .line 4
     invoke-static {p2, p6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-static {p2, p6, p7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -84,12 +77,10 @@
     :pswitch_2
     if-nez p7, :cond_2
 
-    .line 6
     invoke-static {p2, p6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 7
     :cond_2
     invoke-static {p2, p6, p7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -98,12 +89,10 @@
     :pswitch_3
     if-nez p7, :cond_3
 
-    .line 8
     invoke-static {p2, p6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 9
     :cond_3
     invoke-static {p2, p6, p7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -112,12 +101,10 @@
     :pswitch_4
     if-nez p7, :cond_4
 
-    .line 10
     invoke-static {p2, p6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 11
     :cond_4
     invoke-static {p2, p6, p7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -126,12 +113,10 @@
     :pswitch_5
     if-nez p7, :cond_5
 
-    .line 12
     invoke-static {p2, p6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 13
     :cond_5
     invoke-static {p2, p6, p7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -154,7 +139,6 @@
 
     move-object v8, p0
 
-    .line 14
     iget-object v0, v8, Lmiuix/internal/log/appender/LogcatAppender;->mThreadCache:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -167,15 +151,12 @@
 
     const/4 v0, 0x0
 
-    .line 15
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
     move-object/from16 v0, p6
 
-    .line 16
     invoke-interface {v0, v9}, Lmiuix/internal/log/message/Message;->format(Ljava/lang/Appendable;)V
 
-    .line 17
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
@@ -196,7 +177,6 @@
 
     invoke-virtual/range {v0 .. v7}, Lmiuix/internal/log/appender/LogcatAppender;->append(Ljava/lang/String;Ljava/lang/String;JLmiuix/internal/log/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 18
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -205,10 +185,8 @@
 
     if-le v0, v1, :cond_0
 
-    .line 19
     invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 20
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->trimToSize()V
 
     :cond_0

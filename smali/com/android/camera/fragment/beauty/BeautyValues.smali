@@ -74,7 +74,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/beauty/BeautyValues$1;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/beauty/BeautyValues$1;-><init>()V
@@ -87,12 +86,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
 
     return-void
@@ -101,176 +98,150 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
-    .line 30
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
 
-    .line 31
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
-    .line 32
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00Oo0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00O0O()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 33
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
-    .line 34
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
-    .line 35
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
-    .line 36
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
-    .line 37
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
-    .line 38
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
-    .line 39
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
-    .line 40
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
-    .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
-    .line 42
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
-    .line 43
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
-    .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
-    .line 48
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
-    .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -279,7 +250,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -287,21 +257,18 @@
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
-    .line 57
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -315,132 +282,106 @@
 .method public constructor <init>(Lcom/android/camera/fragment/beauty/BeautyValues;)V
     .locals 1
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
-    .line 4
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
 
     if-eqz p1, :cond_0
 
-    .line 5
     iget-object v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
-    .line 6
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
-    .line 7
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
-    .line 8
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
-    .line 9
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
-    .line 10
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
-    .line 11
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
-    .line 12
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
-    .line 13
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
-    .line 14
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
-    .line 15
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
-    .line 16
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
-    .line 17
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
-    .line 18
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
-    .line 19
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
-    .line 20
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
-    .line 21
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
-    .line 22
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
-    .line 23
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
-    .line 24
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
-    .line 25
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
-    .line 26
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
-    .line 27
     iget v0, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
-    .line 28
     iget p1, p1, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupLevel:I
 
     iput p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupLevel:I
@@ -462,7 +403,6 @@
 .method public getBeautyLevel()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
     return-object v0
@@ -471,7 +411,6 @@
 .method public getValueByType(Ljava/lang/String;)I
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -491,7 +430,7 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x12
+    const/16 p1, 0xf
 
     goto/16 :goto_1
 
@@ -504,7 +443,7 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x14
+    const/16 p1, 0x11
 
     goto/16 :goto_1
 
@@ -522,19 +461,6 @@
     goto/16 :goto_1
 
     :sswitch_3
-    const-string/jumbo v0, "pref_beautify_pupil_line_ratio_key"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/16 p1, 0xf
-
-    goto/16 :goto_1
-
-    :sswitch_4
     const-string/jumbo v0, "pref_beautify_makeup_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -547,20 +473,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_5
-    const-string/jumbo v0, "pref_beautify_blusher_ratio_key"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/16 p1, 0x11
-
-    goto/16 :goto_1
-
-    :sswitch_6
+    :sswitch_4
     const-string/jumbo v0, "pref_beautify_skin_color_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -573,7 +486,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_7
+    :sswitch_5
     const-string/jumbo v0, "pref_beautify_enlarge_eye_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -586,7 +499,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_8
+    :sswitch_6
     const-string/jumbo v0, "pref_beautify_nose_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -599,7 +512,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_9
+    :sswitch_7
     const-string/jumbo v0, "pref_beautify_skin_smooth_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -612,7 +525,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_a
+    :sswitch_8
     const-string/jumbo v0, "pref_beautify_slim_face_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -625,7 +538,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_b
+    :sswitch_9
     const-string/jumbo v0, "pref_beautify_makeups_type_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -634,11 +547,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x18
+    const/16 p1, 0x15
 
     goto/16 :goto_1
 
-    :sswitch_c
+    :sswitch_a
     const-string/jumbo v0, "pref_beautify_whiten_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -651,7 +564,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_d
+    :sswitch_b
     const-string v0, "MODE"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -660,11 +573,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x1a
+    const/16 p1, 0x17
 
     goto/16 :goto_1
 
-    :sswitch_e
+    :sswitch_c
     const-string/jumbo v0, "pref_beautify_risorius_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -677,7 +590,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_f
+    :sswitch_d
     const-string v0, "key_beauty_leg_slim_ratio"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -686,11 +599,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x15
+    const/16 p1, 0x12
 
     goto/16 :goto_1
 
-    :sswitch_10
+    :sswitch_e
     const-string/jumbo v0, "pref_beautify_chin_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -703,7 +616,7 @@
 
     goto/16 :goto_1
 
-    :sswitch_11
+    :sswitch_f
     const-string/jumbo v0, "pref_beautify_lips_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -714,9 +627,9 @@
 
     const/4 p1, 0x6
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :sswitch_12
+    :sswitch_10
     const-string/jumbo v0, "pref_beautify_neck_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -729,7 +642,7 @@
 
     goto :goto_1
 
-    :sswitch_13
+    :sswitch_11
     const-string/jumbo v0, "pref_beautify_makeups_level_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -738,11 +651,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x19
+    const/16 p1, 0x16
 
     goto :goto_1
 
-    :sswitch_14
+    :sswitch_12
     const-string/jumbo v0, "pref_beautify_slim_nose_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -755,7 +668,7 @@
 
     goto :goto_1
 
-    :sswitch_15
+    :sswitch_13
     const-string/jumbo v0, "pref_beautify_smile_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -768,7 +681,7 @@
 
     goto :goto_1
 
-    :sswitch_16
+    :sswitch_14
     const-string/jumbo v0, "pref_beauty_whole_body_slim_ratio"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -777,11 +690,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x16
+    const/16 p1, 0x13
 
     goto :goto_1
 
-    :sswitch_17
+    :sswitch_15
     const-string/jumbo v0, "pref_beauty_butt_slim_ratio"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -790,24 +703,11 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x17
+    const/16 p1, 0x14
 
     goto :goto_1
 
-    :sswitch_18
-    const-string/jumbo v0, "pref_beautify_jelly_lips_ratio_key"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/16 p1, 0x10
-
-    goto :goto_1
-
-    :sswitch_19
+    :sswitch_16
     const-string/jumbo v0, "pref_beautify_solid_ratio_key"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -820,7 +720,7 @@
 
     goto :goto_1
 
-    :sswitch_1a
+    :sswitch_17
     const-string/jumbo v0, "pref_beauty_body_slim_ratio"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -829,7 +729,7 @@
 
     if-eqz p1, :cond_0
 
-    const/16 p1, 0x13
+    const/16 p1, 0x10
 
     goto :goto_1
 
@@ -842,178 +742,149 @@
 
     return v1
 
-    .line 2
     :pswitch_0
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
 
     return p1
 
-    .line 3
     :pswitch_1
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupLevel:I
 
     return p1
 
-    .line 4
     :pswitch_2
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
     return p1
 
-    .line 5
     :pswitch_3
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
     return p1
 
-    .line 6
     :pswitch_4
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
     return p1
 
-    .line 7
     :pswitch_5
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
     return p1
 
-    .line 8
     :pswitch_6
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
     return p1
 
-    .line 9
     :pswitch_7
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
     return p1
 
-    .line 10
     :pswitch_8
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
     return p1
 
-    .line 11
     :pswitch_9
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
     return p1
 
-    .line 12
     :pswitch_a
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
     return p1
 
-    .line 13
     :pswitch_b
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
     return p1
 
-    .line 14
     :pswitch_c
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
     return p1
 
-    .line 15
     :pswitch_d
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
     return p1
 
-    .line 16
     :pswitch_e
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
     return p1
 
-    .line 17
     :pswitch_f
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
     return p1
 
-    .line 18
     :pswitch_10
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
     return p1
 
-    .line 19
     :pswitch_11
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
     return p1
 
-    .line 20
     :pswitch_12
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
     return p1
 
-    .line 21
     :pswitch_13
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
     return p1
 
-    .line 22
     :pswitch_14
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     return p1
 
-    .line 23
     :pswitch_15
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
     return p1
 
-    .line 24
     :pswitch_16
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
     return p1
 
-    .line 25
     :pswitch_17
     iget p1, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
     return p1
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
-        -0x676e6ee1 -> :sswitch_1a
-        -0x5eed1fcd -> :sswitch_19
-        -0x5e6b0daf -> :sswitch_18
-        -0x5a8387f2 -> :sswitch_17
-        -0x4b3d8c29 -> :sswitch_16
-        -0x423823b0 -> :sswitch_15
-        -0x3579d363 -> :sswitch_14
-        -0x32af50b5 -> :sswitch_13
-        -0x1403c3d1 -> :sswitch_12
-        -0x12884130 -> :sswitch_11
-        -0x102a61a6 -> :sswitch_10
-        -0x8bc7263 -> :sswitch_f
-        -0x25d6108 -> :sswitch_e
-        0x2431a3 -> :sswitch_d
-        0x2b95f4b5 -> :sswitch_c
-        0x341866d3 -> :sswitch_b
-        0x35532ea7 -> :sswitch_a
-        0x36aaa8f8 -> :sswitch_9
-        0x3ad8a2a3 -> :sswitch_8
-        0x3e8271ec -> :sswitch_7
-        0x3f0b1471 -> :sswitch_6
-        0x5514d1b5 -> :sswitch_5
-        0x55d54f59 -> :sswitch_4
-        0x6202ad75 -> :sswitch_3
+        -0x676e6ee1 -> :sswitch_17
+        -0x5eed1fcd -> :sswitch_16
+        -0x5a8387f2 -> :sswitch_15
+        -0x4b3d8c29 -> :sswitch_14
+        -0x423823b0 -> :sswitch_13
+        -0x3579d363 -> :sswitch_12
+        -0x32af50b5 -> :sswitch_11
+        -0x1403c3d1 -> :sswitch_10
+        -0x12884130 -> :sswitch_f
+        -0x102a61a6 -> :sswitch_e
+        -0x8bc7263 -> :sswitch_d
+        -0x25d6108 -> :sswitch_c
+        0x2431a3 -> :sswitch_b
+        0x2b95f4b5 -> :sswitch_a
+        0x341866d3 -> :sswitch_9
+        0x35532ea7 -> :sswitch_8
+        0x36aaa8f8 -> :sswitch_7
+        0x3ad8a2a3 -> :sswitch_6
+        0x3e8271ec -> :sswitch_5
+        0x3f0b1471 -> :sswitch_4
+        0x55d54f59 -> :sswitch_3
         0x62f067e6 -> :sswitch_2
         0x65e369e1 -> :sswitch_1
         0x73f08a21 -> :sswitch_0
@@ -1036,9 +907,6 @@
         :pswitch_b
         :pswitch_a
         :pswitch_9
-        :pswitch_9
-        :pswitch_9
-        :pswitch_9
         :pswitch_8
         :pswitch_7
         :pswitch_6
@@ -1054,7 +922,6 @@
 .method public isBeautyBodyOn()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
     if-gtz v0, :cond_1
@@ -1097,7 +964,6 @@
 .method public isBeautyLevelOn()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
     const-string v1, "i:0"
@@ -1114,7 +980,6 @@
 .method public isBeautyModelOn()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
     if-gtz v0, :cond_4
@@ -1198,7 +1063,6 @@
 .method public isFaceBeautyOn()Z
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->isBeautyLevelOn()Z
 
     move-result v0
@@ -1241,7 +1105,6 @@
 .method public isSmoothLevelOn()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     if-lez v0, :cond_0
@@ -1260,22 +1123,16 @@
 .method public resetAll()V
     .locals 0
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetBeautyLevel()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetSmoothLevel()V
 
-    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetBeautyModelLegacy()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetBeautyModel()V
 
-    .line 5
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetBeautyBody()V
 
-    .line 6
     invoke-virtual {p0}, Lcom/android/camera/fragment/beauty/BeautyValues;->resetBeautyMode()V
 
     return-void
@@ -1286,22 +1143,16 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
-    .line 6
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
     return-void
@@ -1312,7 +1163,6 @@
 
     const-string v0, "i:0"
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
     return-void
@@ -1323,7 +1173,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
 
     return-void
@@ -1334,49 +1183,34 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
-    .line 5
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
-    .line 6
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
-    .line 7
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
-    .line 8
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
-    .line 9
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
-    .line 10
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
-    .line 11
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
-    .line 12
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
-    .line 13
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
-    .line 14
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
-    .line 15
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupLevel:I
 
     return-void
@@ -1387,16 +1221,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
-    .line 3
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
-    .line 4
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
     return-void
@@ -1407,7 +1237,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput v0, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     return-void
@@ -1416,8 +1245,7 @@
 .method public toString()Ljava/lang/String;
     .locals 9
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00Oo0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00O0O()Z
 
     move-result v0
 
@@ -1435,7 +1263,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1446,7 +1273,6 @@
 
     iget v6, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
-    .line 3
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1479,18 +1305,16 @@
 
     const-string v2, "beauty level: %s | sc: %d | sf: %d | ss: %d | ee: %d "
 
-    .line 4
     invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 5
     :cond_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    const/16 v7, 0x18
+    const/16 v7, 0x17
 
     new-array v7, v7, [Ljava/lang/Object;
 
@@ -1500,7 +1324,6 @@
 
     iget v6, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
-    .line 6
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -1573,7 +1396,6 @@
 
     iget v2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
-    .line 7
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1654,7 +1476,6 @@
 
     iget v2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
-    .line 8
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1711,19 +1532,8 @@
 
     aput-object v2, v7, v1
 
-    const/16 v1, 0x17
+    const-string v1, "3d beauty level: %s | ss: %d |sf: %d | ee: %d | ns: %d | rs: %d | lp: %d | cn: %d | nk: %d | se: %d | sn: %d | hl: %d | solid: %d | whiten: %d | makeup: %d| headSlim: %d | bodySlim: %d | shoulderSlim: %d | legSlim: %d | wholeBodySlim: %d | buttSlim: %d | makeupType: %d | makeupLevel: %d"
 
-    iget v2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyModeType:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v7, v1
-
-    const-string v1, "3d beauty level: %s | ss: %d |sf: %d | ee: %d | ns: %d | rs: %d | lp: %d | cn: %d | nk: %d | se: %d | sn: %d | hl: %d | solid: %d | whiten: %d | makeup: %d| headSlim: %d | bodySlim: %d | shoulderSlim: %d | legSlim: %d | wholeBodySlim: %d | buttSlim: %d | makeupType: %d | makeupLevel: %d | beautyMode: %d"
-
-    .line 9
     invoke-static {v0, v1, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1734,147 +1544,119 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLevel:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 2
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0OO;->o00Oo0()Z
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0OO;->o00O0O()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 3
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 4
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 5
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 6
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNose:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 7
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyRisorius:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 8
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLips:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 9
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyChin:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 10
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyNeck:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 11
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySmile:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 12
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimNose:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 13
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHairLine:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 14
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySolid:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 15
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWhiten:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 16
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeup:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 17
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyHeadSlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 18
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyBodySlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 19
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyShoulderSlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 20
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyLegSlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 21
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyWholeBodySlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 22
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyButtSlim:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 23
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 24
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyMakeupLevel:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 25
     :cond_0
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinColor:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 26
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySlimFace:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 27
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautySkinSmooth:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 28
     iget p2, p0, Lcom/android/camera/fragment/beauty/BeautyValues;->mBeautyEnlargeEye:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

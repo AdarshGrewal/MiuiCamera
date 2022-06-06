@@ -11,7 +11,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/camera/rcs/network/NetworkDiagnostics;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->createTag(Ljava/lang/Class;)Ljava/lang/String;
@@ -26,7 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,14 +33,12 @@
 .method public static isBluetoothEnabled()Z
     .locals 2
 
-    .line 1
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
 
     move-result v0
@@ -56,7 +52,6 @@
 
     return v0
 
-    .line 3
     :cond_1
     :goto_0
     sget-object v0, Lcom/xiaomi/camera/rcs/network/NetworkDiagnostics;->TAG:Ljava/lang/String;
@@ -75,7 +70,6 @@
 
     const-string v0, "wifi"
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -84,7 +78,6 @@
 
     if-eqz p0, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
     move-result p0
@@ -98,7 +91,6 @@
 
     return p0
 
-    .line 3
     :cond_1
     :goto_0
     sget-object p0, Lcom/xiaomi/camera/rcs/network/NetworkDiagnostics;->TAG:Ljava/lang/String;

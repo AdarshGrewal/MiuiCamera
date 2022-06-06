@@ -31,7 +31,6 @@
 
     const/16 v1, 0x80
 
-    .line 1
     invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -54,7 +53,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,10 +87,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableAmb;
 
     const/4 v1, 0x0
@@ -133,15 +129,12 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -155,7 +148,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
@@ -164,7 +156,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableAmb;
 
@@ -182,7 +173,6 @@
 .method public static bufferSize()I
     .locals 1
 
-    .line 1
     sget v0, Lio/reactivex/Flowable;->BUFFER_SIZE:I
 
     return v0
@@ -219,7 +209,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -264,7 +253,6 @@
         value = "none"
     .end annotation
 
-    .line 9
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -311,20 +299,16 @@
 
     const-string v0, "sources is null"
 
-    .line 10
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 11
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 12
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 13
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCombineLatest;
 
     const/4 v1, 0x0
@@ -373,15 +357,12 @@
 
     const-string v0, "source1 is null"
 
-    .line 14
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 15
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 16
     invoke-static {p2}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/BiFunction;)Lio/reactivex/functions/Function;
 
     move-result-object p2
@@ -398,7 +379,6 @@
 
     aput-object p1, v0, p0
 
-    .line 17
     invoke-static {p2, v0}, Lio/reactivex/Flowable;->combineLatest(Lio/reactivex/functions/Function;[Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -445,20 +425,16 @@
 
     const-string v0, "source1 is null"
 
-    .line 18
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 19
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 20
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 21
     invoke-static {p3}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function3;)Lio/reactivex/functions/Function;
 
     move-result-object p3
@@ -529,25 +505,20 @@
 
     const-string v0, "source1 is null"
 
-    .line 22
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 23
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 24
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 25
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 26
     invoke-static {p4}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function4;)Lio/reactivex/functions/Function;
 
     move-result-object p4
@@ -626,30 +597,24 @@
 
     const-string v0, "source1 is null"
 
-    .line 27
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 28
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 29
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 30
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 31
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 32
     invoke-static {p5}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function5;)Lio/reactivex/functions/Function;
 
     move-result-object p5
@@ -736,35 +701,28 @@
 
     const-string v0, "source1 is null"
 
-    .line 33
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 34
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 35
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 36
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 37
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 38
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 39
     invoke-static {p6}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function6;)Lio/reactivex/functions/Function;
 
     move-result-object p6
@@ -859,40 +817,32 @@
 
     const-string v0, "source1 is null"
 
-    .line 40
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 41
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 42
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 43
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 44
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 45
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 46
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 47
     invoke-static {p7}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function7;)Lio/reactivex/functions/Function;
 
     move-result-object p7
@@ -995,45 +945,36 @@
 
     const-string v0, "source1 is null"
 
-    .line 48
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 49
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 50
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 51
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 52
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 53
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 54
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source8 is null"
 
-    .line 55
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 56
     invoke-static {p8}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function8;)Lio/reactivex/functions/Function;
 
     move-result-object p8
@@ -1144,50 +1085,40 @@
 
     const-string v0, "source1 is null"
 
-    .line 57
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 58
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 59
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 60
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 61
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 62
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 63
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source8 is null"
 
-    .line 64
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source9 is null"
 
-    .line 65
     invoke-static {p8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 66
     invoke-static {p9}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function9;)Lio/reactivex/functions/Function;
 
     move-result-object p9
@@ -1270,7 +1201,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -1315,15 +1245,12 @@
 
     const-string v0, "sources is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 5
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1333,15 +1260,12 @@
     :cond_0
     const-string v0, "combiner is null"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 7
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCombineLatest;
 
     const/4 v1, 0x0
@@ -1386,7 +1310,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {p2, p0, p1}, Lio/reactivex/Flowable;->combineLatestDelayError([Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;I)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1425,7 +1348,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -1470,7 +1392,6 @@
         value = "none"
     .end annotation
 
-    .line 10
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -1517,20 +1438,16 @@
 
     const-string v0, "sources is null"
 
-    .line 11
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 12
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 13
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 14
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCombineLatest;
 
     const/4 v1, 0x1
@@ -1575,7 +1492,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -1620,32 +1536,26 @@
 
     const-string v0, "sources is null"
 
-    .line 4
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 6
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 7
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 8
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 9
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCombineLatest;
 
@@ -1689,10 +1599,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1739,7 +1647,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -1778,7 +1685,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1823,12 +1729,10 @@
 
     const-string v0, "source1 is null"
 
-    .line 5
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -1843,7 +1747,6 @@
 
     aput-object p1, v0, p0
 
-    .line 7
     invoke-static {v0}, Lio/reactivex/Flowable;->concatArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1882,17 +1785,14 @@
 
     const-string v0, "source1 is null"
 
-    .line 8
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 9
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 10
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x3
@@ -1911,7 +1811,6 @@
 
     aput-object p2, v0, p0
 
-    .line 11
     invoke-static {v0}, Lio/reactivex/Flowable;->concatArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -1952,22 +1851,18 @@
 
     const-string v0, "source1 is null"
 
-    .line 12
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 13
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 14
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 15
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x4
@@ -1990,7 +1885,6 @@
 
     aput-object p3, v0, p0
 
-    .line 16
     invoke-static {v0}, Lio/reactivex/Flowable;->concatArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -2023,19 +1917,16 @@
         value = "none"
     .end annotation
 
-    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 3
     :cond_0
     array-length v0, p0
 
@@ -2045,7 +1936,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4
     aget-object p0, p0, v2
 
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
@@ -2054,7 +1944,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatArray;
 
@@ -2092,19 +1981,16 @@
         value = "none"
     .end annotation
 
-    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 3
     :cond_0
     array-length v0, p0
 
@@ -2114,7 +2000,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
@@ -2123,7 +2008,6 @@
 
     return-object p0
 
-    .line 5
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatArray;
 
@@ -2163,20 +2047,16 @@
 
     const-string v0, "sources is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMapEager;
 
     new-instance v2, Lio/reactivex/internal/operators/flowable/FlowableFromArray;
@@ -2229,7 +2109,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -2274,10 +2153,8 @@
 
     const-string v0, "sources is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -2320,7 +2197,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -2361,7 +2237,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -2404,7 +2279,6 @@
         value = "none"
     .end annotation
 
-    .line 6
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -2449,20 +2323,16 @@
 
     const-string v0, "sources is null"
 
-    .line 7
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 9
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 10
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMapEager;
 
     new-instance v2, Lio/reactivex/internal/operators/flowable/FlowableFromIterable;
@@ -2517,7 +2387,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -2562,20 +2431,16 @@
 
     const-string v0, "sources is null"
 
-    .line 2
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMapEagerPublisher;
 
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
@@ -2630,15 +2495,12 @@
 
     const-string v0, "source is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "mode is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCreate;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCreate;-><init>(Lio/reactivex/FlowableOnSubscribe;Lio/reactivex/BackpressureStrategy;)V
@@ -2679,10 +2541,8 @@
 
     const-string v0, "supplier is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDefer;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableDefer;-><init>(Ljava/util/concurrent/Callable;)V
@@ -2726,25 +2586,20 @@
 
     const-string v0, "onNext is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onError is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onAfterTerminate is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDoOnEach;
 
     move-object v1, v0
@@ -2791,7 +2646,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/operators/flowable/FlowableEmpty;->INSTANCE:Lio/reactivex/Flowable;
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
@@ -2828,10 +2682,8 @@
 
     const-string v0, "throwable is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p0}, Lio/reactivex/internal/functions/Functions;->justCallable(Ljava/lang/Object;)Ljava/util/concurrent/Callable;
 
     move-result-object p0
@@ -2872,10 +2724,8 @@
 
     const-string v0, "errorSupplier is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableError;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableError;-><init>(Ljava/util/concurrent/Callable;)V
@@ -2912,22 +2762,18 @@
 
     const-string v0, "items is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 
-    .line 4
     :cond_0
     array-length v0, p0
 
@@ -2937,7 +2783,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Flowable;->just(Ljava/lang/Object;)Lio/reactivex/Flowable;
@@ -2946,7 +2791,6 @@
 
     return-object p0
 
-    .line 6
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromArray;
 
@@ -2986,10 +2830,8 @@
 
     const-string v0, "supplier is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromCallable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableFromCallable;-><init>(Ljava/util/concurrent/Callable;)V
@@ -3028,10 +2870,8 @@
 
     const-string v0, "future is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromFuture;
 
     const-wide/16 v1, 0x0
@@ -3076,15 +2916,12 @@
 
     const-string v0, "future is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromFuture;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableFromFuture;-><init>(Ljava/util/concurrent/Future;JLjava/util/concurrent/TimeUnit;)V
@@ -3126,10 +2963,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 6
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p0, p1, p2, p3}, Lio/reactivex/Flowable;->fromFuture(Ljava/util/concurrent/Future;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3170,10 +3005,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 9
     invoke-static {p0}, Lio/reactivex/Flowable;->fromFuture(Ljava/util/concurrent/Future;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3212,10 +3045,8 @@
 
     const-string v0, "source is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromIterable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableFromIterable;-><init>(Ljava/lang/Iterable;)V
@@ -3252,12 +3083,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     instance-of v0, p0, Lio/reactivex/Flowable;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Lio/reactivex/Flowable;
 
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
@@ -3269,10 +3098,8 @@
     :cond_0
     const-string v0, "publisher is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromPublisher;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableFromPublisher;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -3312,25 +3139,20 @@
 
     const-string v0, "generator is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->nullSupplier()Ljava/util/concurrent/Callable;
 
     move-result-object v0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->simpleGenerator(Lio/reactivex/functions/Consumer;)Lio/reactivex/functions/BiFunction;
 
     move-result-object p0
 
-    .line 4
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    .line 5
     invoke-static {v0, p0, v1}, Lio/reactivex/Flowable;->generate(Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiFunction;Lio/reactivex/functions/Consumer;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3371,20 +3193,16 @@
 
     const-string v0, "generator is null"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->simpleBiGenerator(Lio/reactivex/functions/BiConsumer;)Lio/reactivex/functions/BiFunction;
 
     move-result-object p1
 
-    .line 8
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    .line 9
     invoke-static {p0, p1, v0}, Lio/reactivex/Flowable;->generate(Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiFunction;Lio/reactivex/functions/Consumer;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3427,10 +3245,8 @@
 
     const-string v0, "generator is null"
 
-    .line 10
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->simpleBiGenerator(Lio/reactivex/functions/BiConsumer;)Lio/reactivex/functions/BiFunction;
 
     move-result-object p1
@@ -3473,7 +3289,6 @@
         value = "none"
     .end annotation
 
-    .line 12
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -3520,20 +3335,16 @@
 
     const-string v0, "initialState is null"
 
-    .line 13
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "generator is null"
 
-    .line 14
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "disposeState is null"
 
-    .line 15
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 16
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableGenerate;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableGenerate;-><init>(Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiFunction;Lio/reactivex/functions/Consumer;)V
@@ -3569,7 +3380,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -3614,15 +3424,12 @@
 
     const-string v0, "unit is null"
 
-    .line 2
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableInterval;
 
     const-wide/16 v1, 0x0
@@ -3676,7 +3483,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 5
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -3727,7 +3533,6 @@
 
     move-object v5, p3
 
-    .line 6
     invoke-static/range {v0 .. v5}, Lio/reactivex/Flowable;->interval(JJLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3759,7 +3564,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v9
@@ -3822,7 +3626,6 @@
 
     if-nez v6, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -3850,7 +3653,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3864,15 +3666,12 @@
     :goto_0
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {v9, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 5
     invoke-static {v10, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v11, Lio/reactivex/internal/operators/flowable/FlowableIntervalRange;
 
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
@@ -3907,7 +3706,6 @@
 
     return-object v0
 
-    .line 7
     :cond_3
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -3955,10 +3753,8 @@
 
     const-string v0, "item is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableJust;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableJust;-><init>(Ljava/lang/Object;)V
@@ -3995,12 +3791,10 @@
 
     const-string v0, "The first item is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -4015,7 +3809,6 @@
 
     aput-object p1, v0, p0
 
-    .line 5
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4048,17 +3841,14 @@
 
     const-string v0, "The first item is null"
 
-    .line 6
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 7
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 8
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x3
@@ -4077,7 +3867,6 @@
 
     aput-object p2, v0, p0
 
-    .line 9
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4110,22 +3899,18 @@
 
     const-string v0, "The first item is null"
 
-    .line 10
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 11
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 12
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 13
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x4
@@ -4148,7 +3933,6 @@
 
     aput-object p3, v0, p0
 
-    .line 14
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4181,27 +3965,22 @@
 
     const-string v0, "The first item is null"
 
-    .line 15
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 16
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 17
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 18
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 19
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x5
@@ -4228,7 +4007,6 @@
 
     aput-object p4, v0, p0
 
-    .line 20
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4261,32 +4039,26 @@
 
     const-string v0, "The first item is null"
 
-    .line 21
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 22
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 23
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 24
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 25
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The sixth item is null"
 
-    .line 26
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x6
@@ -4317,7 +4089,6 @@
 
     aput-object p5, v0, p0
 
-    .line 27
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4350,37 +4121,30 @@
 
     const-string v0, "The first item is null"
 
-    .line 28
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 29
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 30
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 31
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 32
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The sixth item is null"
 
-    .line 33
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The seventh item is null"
 
-    .line 34
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x7
@@ -4415,7 +4179,6 @@
 
     aput-object p6, v0, p0
 
-    .line 35
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4448,42 +4211,34 @@
 
     const-string v0, "The first item is null"
 
-    .line 36
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 37
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 38
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 39
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 40
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The sixth item is null"
 
-    .line 41
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The seventh item is null"
 
-    .line 42
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The eighth item is null"
 
-    .line 43
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/16 v0, 0x8
@@ -4522,7 +4277,6 @@
 
     aput-object p7, v0, p0
 
-    .line 44
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4555,47 +4309,38 @@
 
     const-string v0, "The first item is null"
 
-    .line 45
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 46
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 47
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 48
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 49
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The sixth item is null"
 
-    .line 50
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The seventh item is null"
 
-    .line 51
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The eighth item is null"
 
-    .line 52
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The ninth is null"
 
-    .line 53
     invoke-static {p8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/16 v0, 0x9
@@ -4638,7 +4383,6 @@
 
     aput-object p8, v0, p0
 
-    .line 54
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4671,52 +4415,42 @@
 
     const-string v0, "The first item is null"
 
-    .line 55
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The second item is null"
 
-    .line 56
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The third item is null"
 
-    .line 57
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fourth item is null"
 
-    .line 58
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The fifth item is null"
 
-    .line 59
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The sixth item is null"
 
-    .line 60
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The seventh item is null"
 
-    .line 61
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The eighth item is null"
 
-    .line 62
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The ninth item is null"
 
-    .line 63
     invoke-static {p8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "The tenth item is null"
 
-    .line 64
     invoke-static {p9, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/16 v0, 0xa
@@ -4763,7 +4497,6 @@
 
     aput-object p9, v0, p0
 
-    .line 65
     invoke-static {v0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4798,7 +4531,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4841,7 +4573,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4884,7 +4615,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4929,7 +4659,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -4968,7 +4697,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5013,12 +4741,10 @@
 
     const-string v0, "source1 is null"
 
-    .line 6
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 7
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -5033,7 +4759,6 @@
 
     aput-object p1, v1, p0
 
-    .line 8
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5080,17 +4805,14 @@
 
     const-string v0, "source1 is null"
 
-    .line 9
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 10
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 11
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x3
@@ -5109,7 +4831,6 @@
 
     aput-object p2, v1, p0
 
-    .line 12
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5158,22 +4879,18 @@
 
     const-string v0, "source1 is null"
 
-    .line 13
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 14
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 15
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 16
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x4
@@ -5196,7 +4913,6 @@
 
     aput-object p3, v1, p0
 
-    .line 17
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5237,7 +4953,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p2}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p2
@@ -5280,7 +4995,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -5323,7 +5037,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p2}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p2
@@ -5366,7 +5079,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -5413,7 +5125,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5458,7 +5169,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5503,7 +5213,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5548,7 +5257,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -5587,7 +5295,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5634,12 +5341,10 @@
 
     const-string v0, "source1 is null"
 
-    .line 6
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 7
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -5654,7 +5359,6 @@
 
     aput-object p1, v1, p0
 
-    .line 8
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -5701,17 +5405,14 @@
 
     const-string v0, "source1 is null"
 
-    .line 9
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 10
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 11
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x3
@@ -5730,7 +5431,6 @@
 
     aput-object p2, v1, p1
 
-    .line 12
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -5779,22 +5479,18 @@
 
     const-string v0, "source1 is null"
 
-    .line 13
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 14
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 15
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 16
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x4
@@ -5817,7 +5513,6 @@
 
     aput-object p3, v1, p1
 
-    .line 17
     invoke-static {v1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -5856,7 +5551,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/operators/flowable/FlowableNever;->INSTANCE:Lio/reactivex/Flowable;
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
@@ -5892,7 +5586,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5904,7 +5597,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -5930,7 +5622,6 @@
 
     if-gtz v0, :cond_2
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRange;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableRange;-><init>(II)V
@@ -5941,7 +5632,6 @@
 
     return-object p0
 
-    .line 4
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -5951,7 +5641,6 @@
 
     throw p0
 
-    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6004,7 +5693,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6018,7 +5706,6 @@
 
     if-nez v4, :cond_1
 
-    .line 2
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -6044,7 +5731,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6054,7 +5740,6 @@
 
     throw p0
 
-    .line 4
     :cond_3
     :goto_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRangeLong;
@@ -6067,7 +5752,6 @@
 
     return-object p0
 
-    .line 5
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6118,7 +5802,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/ObjectHelper;->equalsPredicate()Lio/reactivex/functions/BiPredicate;
 
     move-result-object v0
@@ -6162,7 +5845,6 @@
         value = "none"
     .end annotation
 
-    .line 8
     invoke-static {}, Lio/reactivex/internal/functions/ObjectHelper;->equalsPredicate()Lio/reactivex/functions/BiPredicate;
 
     move-result-object v0
@@ -6204,7 +5886,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -6248,25 +5929,20 @@
 
     const-string v0, "source1 is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "isEqual is null"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 6
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 7
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSequenceEqualSingle;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableSequenceEqualSingle;-><init>(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/BiPredicate;I)V
@@ -6305,7 +5981,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6348,7 +6023,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6391,7 +6065,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -6430,7 +6103,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6463,15 +6135,12 @@
 
     const-string v0, "timeUnit is null"
 
-    .line 1
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 2
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTimeoutTimed;
 
     move-object v1, v0
@@ -6519,10 +6188,8 @@
 
     const-string v0, "itemTimeoutIndicator is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTimeout;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableTimeout;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Lorg/reactivestreams/Publisher;)V
@@ -6558,7 +6225,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -6597,15 +6263,12 @@
 
     const-string v0, "unit is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTimer;
 
     const-wide/16 v1, 0x0
@@ -6650,15 +6313,12 @@
 
     const-string v0, "onSubscribe is null"
 
-    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Lio/reactivex/Flowable;
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFromPublisher;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableFromPublisher;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -6669,7 +6329,6 @@
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6715,7 +6374,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-static {p0, p1, p2, v0}, Lio/reactivex/Flowable;->using(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Consumer;Z)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6758,20 +6416,16 @@
 
     const-string v0, "resourceSupplier is null"
 
-    .line 2
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "sourceSupplier is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "disposer is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableUsing;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableUsing;-><init>(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Consumer;Z)V
@@ -6818,15 +6472,12 @@
 
     const-string v0, "zipper is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "sources is null"
 
-    .line 2
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableZip;
 
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
@@ -6887,10 +6538,8 @@
 
     const-string v0, "zipper is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p0}, Lio/reactivex/Flowable;->fromPublisher(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -6945,15 +6594,12 @@
 
     const-string v0, "source1 is null"
 
-    .line 6
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 7
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     invoke-static {p2}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/BiFunction;)Lio/reactivex/functions/Function;
 
     move-result-object p2
@@ -7016,15 +6662,12 @@
 
     const-string v0, "source1 is null"
 
-    .line 9
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 10
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p2}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/BiFunction;)Lio/reactivex/functions/Function;
 
     move-result-object p2
@@ -7087,15 +6730,12 @@
 
     const-string v0, "source1 is null"
 
-    .line 12
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 13
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 14
     invoke-static {p2}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/BiFunction;)Lio/reactivex/functions/Function;
 
     move-result-object p2
@@ -7158,20 +6798,16 @@
 
     const-string v0, "source1 is null"
 
-    .line 15
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 16
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 17
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 18
     invoke-static {p3}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function3;)Lio/reactivex/functions/Function;
 
     move-result-object p3
@@ -7246,25 +6882,20 @@
 
     const-string v0, "source1 is null"
 
-    .line 19
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 20
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 21
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 22
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 23
     invoke-static {p4}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function4;)Lio/reactivex/functions/Function;
 
     move-result-object p4
@@ -7347,30 +6978,24 @@
 
     const-string v0, "source1 is null"
 
-    .line 24
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 25
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 26
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 27
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 28
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 29
     invoke-static {p5}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function5;)Lio/reactivex/functions/Function;
 
     move-result-object p5
@@ -7461,35 +7086,28 @@
 
     const-string v0, "source1 is null"
 
-    .line 30
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 31
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 32
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 33
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 34
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 35
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 36
     invoke-static {p6}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function6;)Lio/reactivex/functions/Function;
 
     move-result-object p6
@@ -7588,40 +7206,32 @@
 
     const-string v0, "source1 is null"
 
-    .line 37
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 38
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 39
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 40
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 41
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 42
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 43
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 44
     invoke-static {p7}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function7;)Lio/reactivex/functions/Function;
 
     move-result-object p7
@@ -7728,45 +7338,36 @@
 
     const-string v0, "source1 is null"
 
-    .line 45
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 46
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 47
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 48
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 49
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 50
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 51
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source8 is null"
 
-    .line 52
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 53
     invoke-static {p8}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function8;)Lio/reactivex/functions/Function;
 
     move-result-object p8
@@ -7881,50 +7482,40 @@
 
     const-string v0, "source1 is null"
 
-    .line 54
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 55
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 56
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 57
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source5 is null"
 
-    .line 58
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source6 is null"
 
-    .line 59
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source7 is null"
 
-    .line 60
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source8 is null"
 
-    .line 61
     invoke-static {p7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source9 is null"
 
-    .line 62
     invoke-static {p8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 63
     invoke-static {p9}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function9;)Lio/reactivex/functions/Function;
 
     move-result-object p9
@@ -8011,12 +7602,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     array-length v0, p3
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -8026,15 +7615,12 @@
     :cond_0
     const-string v0, "zipper is null"
 
-    .line 3
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableZip;
 
     const/4 v3, 0x0
@@ -8093,20 +7679,16 @@
 
     const-string v0, "zipper is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "sources is null"
 
-    .line 2
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableZip;
 
     const/4 v2, 0x0
@@ -8158,10 +7740,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableAllSingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableAllSingle;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -8198,7 +7778,6 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -8213,7 +7792,6 @@
 
     aput-object p1, v0, v1
 
-    .line 2
     invoke-static {v0}, Lio/reactivex/Flowable;->ambArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -8247,10 +7825,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableAnySingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableAnySingle;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -8287,7 +7863,6 @@
 
     const-string v0, "converter is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -8320,15 +7895,12 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/subscribers/BlockingFirstSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/internal/subscribers/BlockingFirstSubscriber;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
-    .line 3
     invoke-virtual {v0}, Lio/reactivex/internal/subscribers/BlockingBaseSubscriber;->blockingGet()Ljava/lang/Object;
 
     move-result-object v0
@@ -8337,7 +7909,6 @@
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -8365,15 +7936,12 @@
         value = "none"
     .end annotation
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/subscribers/BlockingFirstSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/internal/subscribers/BlockingFirstSubscriber;-><init>()V
 
-    .line 6
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
-    .line 7
     invoke-virtual {v0}, Lio/reactivex/internal/subscribers/BlockingBaseSubscriber;->blockingGet()Ljava/lang/Object;
 
     move-result-object v0
@@ -8404,7 +7972,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Flowable;->blockingIterable()Ljava/lang/Iterable;
 
     move-result-object v0
@@ -8413,7 +7980,6 @@
 
     move-result-object v0
 
-    .line 2
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -8421,7 +7987,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     :try_start_0
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -8436,15 +8001,12 @@
     :catchall_0
     move-exception p1
 
-    .line 4
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 5
     check-cast v0, Lio/reactivex/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->dispose()V
 
-    .line 6
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -8476,7 +8038,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -8511,10 +8072,8 @@
 
     const-string v0, "bufferSize"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/BlockingFlowableIterable;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/BlockingFlowableIterable;-><init>(Lio/reactivex/Flowable;I)V
@@ -8541,15 +8100,12 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/subscribers/BlockingLastSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/internal/subscribers/BlockingLastSubscriber;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
-    .line 3
     invoke-virtual {v0}, Lio/reactivex/internal/subscribers/BlockingBaseSubscriber;->blockingGet()Ljava/lang/Object;
 
     move-result-object v0
@@ -8558,7 +8114,6 @@
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -8586,15 +8141,12 @@
         value = "none"
     .end annotation
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/subscribers/BlockingLastSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/internal/subscribers/BlockingLastSubscriber;-><init>()V
 
-    .line 6
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
-    .line 7
     invoke-virtual {v0}, Lio/reactivex/internal/subscribers/BlockingBaseSubscriber;->blockingGet()Ljava/lang/Object;
 
     move-result-object v0
@@ -8628,7 +8180,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/BlockingFlowableLatest;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/BlockingFlowableLatest;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -8657,7 +8208,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/BlockingFlowableMostRecent;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/BlockingFlowableMostRecent;-><init>(Lio/reactivex/Flowable;Ljava/lang/Object;)V
@@ -8686,7 +8236,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/BlockingFlowableNext;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/BlockingFlowableNext;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -8713,7 +8262,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Flowable;->singleOrError()Lio/reactivex/Single;
 
     move-result-object v0
@@ -8744,7 +8292,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->single(Ljava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -8766,7 +8313,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableBlockingSubscribe;->subscribe(Lorg/reactivestreams/Publisher;)V
 
     return-void
@@ -8790,7 +8336,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     sget-object v0, Lio/reactivex/internal/functions/Functions;->ON_ERROR_MISSING:Lio/reactivex/functions/Consumer;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
@@ -8822,7 +8367,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     sget-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
     invoke-static {p0, p1, p2, v0}, Lio/reactivex/internal/operators/flowable/FlowableBlockingSubscribe;->subscribe(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)V
@@ -8854,7 +8398,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableBlockingSubscribe;->subscribe(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)V
 
     return-void
@@ -8878,7 +8421,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableBlockingSubscribe;->subscribe(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Subscriber;)V
 
     return-void
@@ -8906,7 +8448,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p1}, Lio/reactivex/Flowable;->buffer(II)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -8936,7 +8477,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -8975,20 +8515,16 @@
 
     const-string v0, "count"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "skip"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "bufferSupplier is null"
 
-    .line 5
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBuffer;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableBuffer;-><init>(Lio/reactivex/Flowable;IILjava/util/concurrent/Callable;)V
@@ -9025,7 +8561,6 @@
         value = "none"
     .end annotation
 
-    .line 7
     invoke-virtual {p0, p1, p1, p2}, Lio/reactivex/Flowable;->buffer(IILjava/util/concurrent/Callable;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -9057,7 +8592,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 8
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v6
@@ -9106,7 +8640,6 @@
         value = "custom"
     .end annotation
 
-    .line 9
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v7
@@ -9159,24 +8692,20 @@
 
     move-object/from16 v7, p5
 
-    .line 10
     invoke-static {v7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
     move-object/from16 v8, p6
 
-    .line 11
     invoke-static {v8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSupplier is null"
 
     move-object/from16 v9, p7
 
-    .line 12
     invoke-static {v9, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 13
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBufferTimed;
 
     const v10, 0x7fffffff
@@ -9224,7 +8753,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 14
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -9268,7 +8796,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 15
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -9313,7 +8840,6 @@
         value = "custom"
     .end annotation
 
-    .line 22
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v6
@@ -9362,7 +8888,6 @@
         value = "custom"
     .end annotation
 
-    .line 16
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v6
@@ -9418,31 +8943,26 @@
 
     move-object v7, p3
 
-    .line 17
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
     move-object/from16 v8, p4
 
-    .line 18
     invoke-static {v8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSupplier is null"
 
     move-object/from16 v9, p6
 
-    .line 19
     invoke-static {v9, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "count"
 
     move/from16 v10, p5
 
-    .line 20
     invoke-static {v10, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 21
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBufferTimed;
 
     move-object v1, v0
@@ -9496,7 +9016,6 @@
         value = "none"
     .end annotation
 
-    .line 23
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -9545,20 +9064,16 @@
 
     const-string v0, "openingIndicator is null"
 
-    .line 24
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "closingIndicator is null"
 
-    .line 25
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSupplier is null"
 
-    .line 26
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 27
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBufferBoundary;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableBufferBoundary;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)V
@@ -9598,7 +9113,6 @@
         value = "none"
     .end annotation
 
-    .line 34
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -9643,15 +9157,12 @@
 
     const-string v0, "boundaryIndicatorSupplier is null"
 
-    .line 35
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSupplier is null"
 
-    .line 36
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 37
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBufferBoundarySupplier;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableBufferBoundarySupplier;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;Ljava/util/concurrent/Callable;)V
@@ -9689,7 +9200,6 @@
         value = "none"
     .end annotation
 
-    .line 28
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -9729,10 +9239,8 @@
 
     const-string v0, "initialCapacity"
 
-    .line 29
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 30
     invoke-static {p2}, Lio/reactivex/internal/functions/Functions;->createArrayList(I)Ljava/util/concurrent/Callable;
 
     move-result-object p2
@@ -9775,15 +9283,12 @@
 
     const-string v0, "boundaryIndicator is null"
 
-    .line 31
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSupplier is null"
 
-    .line 32
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 33
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableBufferExactBoundary;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableBufferExactBoundary;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;Ljava/util/concurrent/Callable;)V
@@ -9818,7 +9323,6 @@
 
     const/16 v0, 0x10
 
-    .line 1
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->cacheWithInitialCapacity(I)Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -9849,10 +9353,8 @@
 
     const-string v0, "initialCapacity"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCache;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableCache;-><init>(Lio/reactivex/Flowable;I)V
@@ -9891,10 +9393,8 @@
 
     const-string v0, "clazz is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->castFunction(Ljava/lang/Class;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -9935,15 +9435,12 @@
 
     const-string v0, "initialItemSupplier is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "collector is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCollectSingle;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableCollectSingle;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiConsumer;)V
@@ -9982,10 +9479,8 @@
 
     const-string v0, "initialItem is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->justCallable(Ljava/lang/Object;)Ljava/util/concurrent/Callable;
 
     move-result-object p1
@@ -10024,7 +9519,6 @@
 
     const-string v0, "composer is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -10071,7 +9565,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lio/reactivex/Flowable;->concatMap(Lio/reactivex/functions/Function;I)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -10108,20 +9601,16 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "prefetch"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     instance-of v0, p0, Lio/reactivex/internal/fuseable/ScalarCallable;
 
     if-eqz v0, :cond_1
 
-    .line 5
     move-object p2, p0
 
     check-cast p2, Lio/reactivex/internal/fuseable/ScalarCallable;
@@ -10132,14 +9621,12 @@
 
     if-nez p2, :cond_0
 
-    .line 6
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 7
     :cond_0
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableScalarXMap;->scalarXMap(Ljava/lang/Object;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
@@ -10147,7 +9634,6 @@
 
     return-object p1
 
-    .line 8
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap;
 
@@ -10193,7 +9679,6 @@
 
     const/4 v1, 0x1
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Lio/reactivex/Flowable;->concatMapDelayError(Lio/reactivex/functions/Function;IZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -10230,20 +9715,16 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "prefetch"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     instance-of v0, p0, Lio/reactivex/internal/fuseable/ScalarCallable;
 
     if-eqz v0, :cond_1
 
-    .line 5
     move-object p2, p0
 
     check-cast p2, Lio/reactivex/internal/fuseable/ScalarCallable;
@@ -10254,14 +9735,12 @@
 
     if-nez p2, :cond_0
 
-    .line 6
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 7
     :cond_0
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableScalarXMap;->scalarXMap(Ljava/lang/Object;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
@@ -10269,7 +9748,6 @@
 
     return-object p1
 
-    .line 8
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap;
 
@@ -10319,7 +9797,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -10364,20 +9841,16 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMapEager;
 
     sget-object v6, Lio/reactivex/internal/util/ErrorMode;->IMMEDIATE:Lio/reactivex/internal/util/ErrorMode;
@@ -10430,20 +9903,16 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMapEager;
 
     if-eqz p4, :cond_0
@@ -10504,7 +9973,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -10549,7 +10017,6 @@
 
     const/4 v0, 0x2
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lio/reactivex/Flowable;->concatMapIterable(Lio/reactivex/functions/Function;I)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -10586,15 +10053,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "prefetch"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;I)V
@@ -10631,10 +10095,8 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0, p1}, Lio/reactivex/Flowable;->concat(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -10668,10 +10130,8 @@
 
     const-string v0, "item is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->equalsWith(Ljava/lang/Object;)Lio/reactivex/functions/Predicate;
 
     move-result-object p1
@@ -10705,7 +10165,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableCountSingle;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableCountSingle;-><init>(Lio/reactivex/Flowable;)V
@@ -10740,7 +10199,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -10778,15 +10236,12 @@
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 5
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDebounceTimed;
 
     move-object v1, v0
@@ -10837,10 +10292,8 @@
 
     const-string v0, "debounceIndicator is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDebounce;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableDebounce;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;)V
@@ -10875,10 +10328,8 @@
 
     const-string v0, "item is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/Flowable;->just(Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -10913,7 +10364,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -10967,7 +10417,6 @@
 
     move-object v4, p4
 
-    .line 5
     invoke-virtual/range {v0 .. v5}, Lio/reactivex/Flowable;->delay(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Z)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -11001,15 +10450,12 @@
 
     const-string v0, "unit is null"
 
-    .line 6
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 7
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDelay;
 
     const-wide/16 v1, 0x0
@@ -11060,7 +10506,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -11109,10 +10554,8 @@
 
     const-string v0, "itemDelayIndicator is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->itemDelay(Lio/reactivex/functions/Function;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -11155,7 +10598,6 @@
         value = "none"
     .end annotation
 
-    .line 9
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->delaySubscription(Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -11190,7 +10632,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -11226,7 +10667,6 @@
         value = "custom"
     .end annotation
 
-    .line 4
     invoke-static {p1, p2, p3, p4}, Lio/reactivex/Flowable;->timer(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -11265,10 +10705,8 @@
 
     const-string v0, "subscriptionIndicator is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDelaySubscriptionOther;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableDelaySubscriptionOther;-><init>(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;)V
@@ -11303,7 +10741,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDematerialize;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableDematerialize;-><init>(Lio/reactivex/Flowable;)V
@@ -11336,7 +10773,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
 
     move-result-object v0
@@ -11377,7 +10813,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->createHashSet()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -11420,15 +10855,12 @@
 
     const-string v0, "keySelector is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "collectionSupplier is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDistinct;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableDistinct;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)V
@@ -11461,7 +10893,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
 
     move-result-object v0
@@ -11498,10 +10929,8 @@
 
     const-string v0, "comparer is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDistinctUntilChanged;
 
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
@@ -11544,10 +10973,8 @@
 
     const-string v0, "keySelector is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDistinctUntilChanged;
 
     invoke-static {}, Lio/reactivex/internal/functions/ObjectHelper;->equalsPredicate()Lio/reactivex/functions/BiPredicate;
@@ -11588,10 +11015,8 @@
 
     const-string v0, "onAfterNext is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDoAfterNext;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableDoAfterNext;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Consumer;)V
@@ -11626,7 +11051,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -11669,10 +11093,8 @@
 
     const-string v0, "onFinally is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDoFinally;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableDoFinally;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Action;)V
@@ -11707,7 +11129,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -11744,7 +11165,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -11789,27 +11209,22 @@
 
     const-string v0, "consumer is null"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->notificationOnNext(Lio/reactivex/functions/Consumer;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    .line 8
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->notificationOnError(Lio/reactivex/functions/Consumer;)Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    .line 9
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->notificationOnComplete(Lio/reactivex/functions/Consumer;)Lio/reactivex/functions/Action;
 
     move-result-object p1
 
     sget-object v2, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
-    .line 10
     invoke-direct {p0, v0, v1, p1, v2}, Lio/reactivex/Flowable;->doOnEach(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Action;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -11842,27 +11257,22 @@
 
     const-string v0, "subscriber is null"
 
-    .line 11
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->subscriberOnNext(Lorg/reactivestreams/Subscriber;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    .line 13
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->subscriberOnError(Lorg/reactivestreams/Subscriber;)Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    .line 14
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->subscriberOnComplete(Lorg/reactivestreams/Subscriber;)Lio/reactivex/functions/Action;
 
     move-result-object p1
 
     sget-object v2, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
-    .line 15
     invoke-direct {p0, v0, v1, p1, v2}, Lio/reactivex/Flowable;->doOnEach(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Action;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -11895,7 +11305,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -11939,20 +11348,16 @@
 
     const-string v0, "onSubscribe is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onRequest is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onCancel is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDoOnLifecycle;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableDoOnLifecycle;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/LongConsumer;Lio/reactivex/functions/Action;)V
@@ -11987,7 +11392,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -12024,7 +11428,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -12063,7 +11466,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_LONG_CONSUMER:Lio/reactivex/functions/LongConsumer;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
@@ -12098,7 +11500,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -12143,7 +11544,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableElementAtMaybe;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableElementAtMaybe;-><init>(Lio/reactivex/Flowable;J)V
@@ -12154,7 +11554,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -12206,10 +11605,8 @@
 
     const-string v0, "defaultItem is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableElementAtSingle;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableElementAtSingle;-><init>(Lio/reactivex/Flowable;JLjava/lang/Object;)V
@@ -12220,7 +11617,6 @@
 
     return-object p1
 
-    .line 5
     :cond_0
     new-instance p3, Ljava/lang/IndexOutOfBoundsException;
 
@@ -12270,7 +11666,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableElementAtSingle;
 
     const/4 v1, 0x0
@@ -12283,7 +11678,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -12331,10 +11725,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFilter;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableFilter;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -12369,7 +11761,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1, p1}, Lio/reactivex/Flowable;->elementAt(JLjava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -12400,7 +11791,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lio/reactivex/Flowable;->elementAt(J)Lio/reactivex/Maybe;
 
     move-result-object v0
@@ -12431,7 +11821,6 @@
 
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lio/reactivex/Flowable;->elementAtOrError(J)Lio/reactivex/Single;
 
     move-result-object v0
@@ -12466,7 +11855,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -12511,7 +11899,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -12556,7 +11943,6 @@
         value = "none"
     .end annotation
 
-    .line 21
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v4
@@ -12611,7 +11997,6 @@
         value = "none"
     .end annotation
 
-    .line 29
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v5
@@ -12664,7 +12049,6 @@
         value = "none"
     .end annotation
 
-    .line 22
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v4
@@ -12719,7 +12103,6 @@
         value = "none"
     .end annotation
 
-    .line 23
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v5
@@ -12774,25 +12157,20 @@
 
     const-string v0, "mapper is null"
 
-    .line 24
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 25
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 26
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "bufferSize"
 
-    .line 27
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 28
     invoke-static {p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->flatMapWithCombiner(Lio/reactivex/functions/Function;Lio/reactivex/functions/BiFunction;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -12843,20 +12221,16 @@
 
     const-string v0, "onNextMapper is null"
 
-    .line 13
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onErrorMapper is null"
 
-    .line 14
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onCompleteSupplier is null"
 
-    .line 15
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 16
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableMapNotification;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableMapNotification;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)V
@@ -12906,20 +12280,16 @@
 
     const-string v0, "onNextMapper is null"
 
-    .line 17
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onErrorMapper is null"
 
-    .line 18
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onCompleteSupplier is null"
 
-    .line 19
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 20
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableMapNotification;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableMapNotification;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;)V
@@ -12958,7 +12328,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -13001,7 +12370,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -13042,25 +12410,20 @@
 
     const-string v0, "mapper is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 6
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "bufferSize"
 
-    .line 7
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 8
     instance-of v0, p0, Lio/reactivex/internal/fuseable/ScalarCallable;
 
     if-eqz v0, :cond_1
 
-    .line 9
     move-object p2, p0
 
     check-cast p2, Lio/reactivex/internal/fuseable/ScalarCallable;
@@ -13071,14 +12434,12 @@
 
     if-nez p2, :cond_0
 
-    .line 10
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 11
     :cond_0
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableScalarXMap;->scalarXMap(Ljava/lang/Object;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
@@ -13086,7 +12447,6 @@
 
     return-object p1
 
-    .line 12
     :cond_1
     new-instance v6, Lio/reactivex/internal/operators/flowable/FlowableFlatMap;
 
@@ -13139,7 +12499,6 @@
 
     const v1, 0x7fffffff
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Lio/reactivex/Flowable;->flatMapCompletable(Lio/reactivex/functions/Function;ZI)Lio/reactivex/Completable;
 
     move-result-object p1
@@ -13173,15 +12532,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFlatMapCompletableCompletable;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapCompletableCompletable;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;ZI)V
@@ -13220,7 +12576,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -13261,15 +12616,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 3
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableFlattenIterable;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;I)V
@@ -13314,15 +12666,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "resultSelector is null"
 
-    .line 6
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 7
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->flatMapIntoIterable(Lio/reactivex/functions/Function;)Lio/reactivex/functions/Function;
 
     move-result-object v2
@@ -13381,15 +12730,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "resultSelector is null"
 
-    .line 9
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 10
     invoke-static {p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->flatMapIntoIterable(Lio/reactivex/functions/Function;)Lio/reactivex/functions/Function;
 
     move-result-object v2
@@ -13444,7 +12790,6 @@
 
     const v1, 0x7fffffff
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Lio/reactivex/Flowable;->flatMapMaybe(Lio/reactivex/functions/Function;ZI)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -13481,15 +12826,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFlatMapMaybe;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapMaybe;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;ZI)V
@@ -13532,7 +12874,6 @@
 
     const v1, 0x7fffffff
 
-    .line 1
     invoke-virtual {p0, p1, v0, v1}, Lio/reactivex/Flowable;->flatMapSingle(Lio/reactivex/functions/Function;ZI)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -13569,15 +12910,12 @@
 
     const-string v0, "mapper is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "maxConcurrency"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableFlatMapSingle;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapSingle;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;ZI)V
@@ -13611,7 +12949,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
@@ -13641,7 +12978,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/functions/Functions;->ON_ERROR_MISSING:Lio/reactivex/functions/Consumer;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
@@ -13679,7 +13015,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     sget-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
     invoke-virtual {p0, p1, p2, v0}, Lio/reactivex/Flowable;->forEachWhile(Lio/reactivex/functions/Predicate;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)Lio/reactivex/disposables/Disposable;
@@ -13719,25 +13054,20 @@
 
     const-string v0, "onNext is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onError is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 5
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/subscribers/ForEachWhileSubscriber;
 
     invoke-direct {v0, p1, p2, p3}, Lio/reactivex/internal/subscribers/ForEachWhileSubscriber;-><init>(Lio/reactivex/functions/Predicate;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)V
 
-    .line 7
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
     return-object v0
@@ -13769,7 +13099,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
 
     move-result-object v0
@@ -13817,7 +13146,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -13861,7 +13189,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -13905,20 +13232,16 @@
 
     const-string v0, "keySelector is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueSelector is null"
 
-    .line 6
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 7
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableGroupBy;
 
     move-object v1, v0
@@ -13968,7 +13291,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
 
     move-result-object v0
@@ -14031,25 +13353,20 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "leftEnd is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "rightEnd is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "resultSelector is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableGroupJoin;
 
     move-object v1, v0
@@ -14094,7 +13411,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableHide;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableHide;-><init>(Lio/reactivex/Flowable;)V
@@ -14119,7 +13435,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableIgnoreElementsCompletable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableIgnoreElementsCompletable;-><init>(Lio/reactivex/Flowable;)V
@@ -14153,7 +13468,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->alwaysFalse()Lio/reactivex/functions/Predicate;
 
     move-result-object v0
@@ -14210,25 +13524,20 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "leftEnd is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "rightEnd is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "resultSelector is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableJoin;
 
     move-object v1, v0
@@ -14275,10 +13584,8 @@
 
     const-string v0, "defaultItem"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableLastSingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableLastSingle;-><init>(Lorg/reactivestreams/Publisher;Ljava/lang/Object;)V
@@ -14311,7 +13618,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableLastMaybe;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableLastMaybe;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -14344,7 +13650,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableLastSingle;
 
     const/4 v1, 0x0
@@ -14385,10 +13690,8 @@
 
     const-string v0, "lifter is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableLift;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableLift;-><init>(Lio/reactivex/Flowable;Lio/reactivex/FlowableOperator;)V
@@ -14427,7 +13730,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableLimit;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableLimit;-><init>(Lio/reactivex/Flowable;J)V
@@ -14438,7 +13740,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -14488,10 +13789,8 @@
 
     const-string v0, "mapper is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableMap;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableMap;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;)V
@@ -14525,7 +13824,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableMaterialize;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableMaterialize;-><init>(Lio/reactivex/Flowable;)V
@@ -14562,10 +13860,8 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p0, p1}, Lio/reactivex/Flowable;->merge(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -14596,7 +13892,6 @@
         value = "custom"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -14633,7 +13928,6 @@
         value = "custom"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -14670,15 +13964,12 @@
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 4
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableObserveOn;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableObserveOn;-><init>(Lio/reactivex/Flowable;Lio/reactivex/Scheduler;ZI)V
@@ -14717,10 +14008,8 @@
 
     const-string v0, "clazz is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->isInstanceOf(Ljava/lang/Class;)Lio/reactivex/functions/Predicate;
 
     move-result-object v0
@@ -14757,7 +14046,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -14796,7 +14084,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0, p1, v0, v0}, Lio/reactivex/Flowable;->onBackpressureBuffer(IZZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -14829,7 +14116,6 @@
 
     const/4 v0, 0x0
 
-    .line 10
     invoke-virtual {p0, p1, v0, v0, p2}, Lio/reactivex/Flowable;->onBackpressureBuffer(IZZLio/reactivex/functions/Action;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -14860,7 +14146,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-virtual {p0, p1, p2, v0}, Lio/reactivex/Flowable;->onBackpressureBuffer(IZZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -14891,10 +14176,8 @@
 
     const-string v0, "bufferSize"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureBuffer;
 
     sget-object v6, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
@@ -14943,15 +14226,12 @@
 
     const-string v0, "onOverflow is null"
 
-    .line 7
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "capacity"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 9
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureBuffer;
 
     move-object v1, v0
@@ -15001,15 +14281,12 @@
 
     const-string v0, "strategy is null"
 
-    .line 11
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "capacity"
 
-    .line 12
     invoke-static {p1, p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
-    .line 13
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureBufferStrategy;
 
     move-object v1, v0
@@ -15052,7 +14329,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -15087,7 +14363,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;-><init>(Lio/reactivex/Flowable;)V
@@ -15124,10 +14399,8 @@
 
     const-string v0, "onDrop is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Consumer;)V
@@ -15160,7 +14433,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureLatest;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureLatest;-><init>(Lio/reactivex/Flowable;)V
@@ -15201,10 +14473,8 @@
 
     const-string v0, "resumeFunction is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnErrorNext;
 
     const/4 v1, 0x0
@@ -15243,10 +14513,8 @@
 
     const-string v0, "next is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->justFunction(Ljava/lang/Object;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -15285,10 +14553,8 @@
 
     const-string v0, "valueSupplier is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnErrorReturn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableOnErrorReturn;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;)V
@@ -15323,10 +14589,8 @@
 
     const-string v0, "item is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->justFunction(Ljava/lang/Object;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -15363,10 +14627,8 @@
 
     const-string v0, "next is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableOnErrorNext;
 
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->justFunction(Ljava/lang/Object;)Lio/reactivex/functions/Function;
@@ -15405,7 +14667,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableDetach;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableDetach;-><init>(Lio/reactivex/Flowable;)V
@@ -15438,7 +14699,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/parallel/ParallelFlowable;->from(Lorg/reactivestreams/Publisher;)Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object v0
@@ -15469,10 +14729,8 @@
 
     const-string v0, "parallelism"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 3
     invoke-static {p0, p1}, Lio/reactivex/parallel/ParallelFlowable;->from(Lorg/reactivestreams/Publisher;I)Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object p1
@@ -15503,15 +14761,12 @@
 
     const-string v0, "parallelism"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "prefetch"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p1, p2}, Lio/reactivex/parallel/ParallelFlowable;->from(Lorg/reactivestreams/Publisher;II)Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object p1
@@ -15548,7 +14803,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -15591,15 +14845,12 @@
 
     const-string v0, "selector is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "prefetch"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowablePublishMulticast;
 
     const/4 v1, 0x0
@@ -15634,7 +14885,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -15669,10 +14919,8 @@
 
     const-string v0, "bufferSize"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 7
     invoke-static {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowablePublish;->create(Lio/reactivex/Flowable;I)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p1
@@ -15701,7 +14949,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Lio/reactivex/internal/schedulers/ImmediateThinScheduler;->INSTANCE:Lio/reactivex/Scheduler;
 
     const/4 v1, 0x1
@@ -15738,10 +14985,8 @@
 
     const-string v0, "reducer is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReduceMaybe;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReduceMaybe;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/BiFunction;)V
@@ -15780,15 +15025,12 @@
 
     const-string v0, "seed is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "reducer is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReduceSeedSingle;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableReduceSeedSingle;-><init>(Lorg/reactivestreams/Publisher;Ljava/lang/Object;Lio/reactivex/functions/BiFunction;)V
@@ -15829,15 +15071,12 @@
 
     const-string v0, "seedSupplier is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "reducer is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableReduceWithSingle;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableReduceWithSingle;-><init>(Lorg/reactivestreams/Publisher;Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiFunction;)V
@@ -15872,7 +15111,6 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lio/reactivex/Flowable;->repeat(J)Lio/reactivex/Flowable;
 
     move-result-object v0
@@ -15909,14 +15147,12 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRepeat;
 
@@ -15928,7 +15164,6 @@
 
     return-object p1
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -15976,10 +15211,8 @@
 
     const-string v0, "stop is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRepeatUntil;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableRepeatUntil;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/BooleanSupplier;)V
@@ -16021,10 +15254,8 @@
 
     const-string v0, "handler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRepeatWhen;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableRepeatWhen;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;)V
@@ -16067,10 +15298,8 @@
 
     const-string v0, "selector is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;)Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -16113,15 +15342,12 @@
 
     const-string v0, "selector is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 6
     invoke-static {p0, p2}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;I)Ljava/util/concurrent/Callable;
 
     move-result-object p2
@@ -16164,7 +15390,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 7
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v6
@@ -16220,22 +15445,18 @@
 
     const-string v0, "selector is null"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "unit is null"
 
-    .line 9
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 10
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "scheduler is null"
 
-    .line 11
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v0, p0
@@ -16248,12 +15469,10 @@
 
     move-object v5, p6
 
-    .line 12
     invoke-static/range {v0 .. v5}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;IJLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Ljava/util/concurrent/Callable;
 
     move-result-object p2
 
-    .line 13
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->multicastSelector(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -16294,30 +15513,24 @@
 
     const-string v0, "selector is null"
 
-    .line 14
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 15
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 16
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 17
     invoke-static {p0, p2}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;I)Ljava/util/concurrent/Callable;
 
     move-result-object p2
 
-    .line 18
     invoke-static {p1, p3}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayFunction(Lio/reactivex/functions/Function;Lio/reactivex/Scheduler;)Lio/reactivex/functions/Function;
 
     move-result-object p1
 
-    .line 19
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->multicastSelector(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -16356,7 +15569,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 20
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -16410,20 +15622,16 @@
 
     const-string v0, "selector is null"
 
-    .line 21
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "unit is null"
 
-    .line 22
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 23
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 24
     invoke-static {p0, p2, p3, p4, p5}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Ljava/util/concurrent/Callable;
 
     move-result-object p2
@@ -16468,25 +15676,20 @@
 
     const-string v0, "selector is null"
 
-    .line 25
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 26
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 27
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayCallable(Lio/reactivex/Flowable;)Ljava/util/concurrent/Callable;
 
     move-result-object v0
 
-    .line 28
     invoke-static {p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper;->replayFunction(Lio/reactivex/functions/Function;Lio/reactivex/Scheduler;)Lio/reactivex/functions/Function;
 
     move-result-object p1
 
-    .line 29
     invoke-static {v0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->multicastSelector(Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -16515,7 +15718,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->createFrom(Lio/reactivex/Flowable;)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object v0
@@ -16546,10 +15748,8 @@
 
     const-string v0, "bufferSize"
 
-    .line 30
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 31
     invoke-static {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->create(Lio/reactivex/Flowable;I)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p1
@@ -16580,7 +15780,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 32
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -16626,20 +15825,16 @@
 
     const-string v0, "bufferSize"
 
-    .line 33
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v1, "unit is null"
 
-    .line 34
     invoke-static {p4, v1}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v1, "scheduler is null"
 
-    .line 35
     invoke-static {p5, v1}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 36
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     move-object v0, p0
@@ -16652,7 +15847,6 @@
 
     move v5, p1
 
-    .line 37
     invoke-static/range {v0 .. v5}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->create(Lio/reactivex/Flowable;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;I)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p1
@@ -16685,10 +15879,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 38
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 39
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->replay(I)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p1
@@ -16723,7 +15915,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 40
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -16761,15 +15952,12 @@
 
     const-string v0, "unit is null"
 
-    .line 41
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 42
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 43
     invoke-static {p0, p1, p2, p3, p4}, Lio/reactivex/internal/operators/flowable/FlowableReplay;->create(Lio/reactivex/Flowable;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object p1
@@ -16802,10 +15990,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 44
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 45
     invoke-virtual {p0}, Lio/reactivex/Flowable;->replay()Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object v0
@@ -16838,7 +16024,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->alwaysTrue()Lio/reactivex/functions/Predicate;
 
     move-result-object v0
@@ -16873,7 +16058,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->alwaysTrue()Lio/reactivex/functions/Predicate;
 
     move-result-object v0
@@ -16918,10 +16102,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 5
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRetryPredicate;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableRetryPredicate;-><init>(Lio/reactivex/Flowable;JLio/reactivex/functions/Predicate;)V
@@ -16932,7 +16114,6 @@
 
     return-object p1
 
-    .line 7
     :cond_0
     new-instance p3, Ljava/lang/IllegalArgumentException;
 
@@ -16984,10 +16165,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRetryBiPredicate;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableRetryBiPredicate;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/BiPredicate;)V
@@ -17026,7 +16205,6 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 8
     invoke-virtual {p0, v0, v1, p1}, Lio/reactivex/Flowable;->retry(JLio/reactivex/functions/Predicate;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -17059,10 +16237,8 @@
 
     const-string v0, "stop is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->predicateReverseFor(Lio/reactivex/functions/BooleanSupplier;)Lio/reactivex/functions/Predicate;
 
     move-result-object p1
@@ -17106,10 +16282,8 @@
 
     const-string v0, "handler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRetryWhen;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableRetryWhen;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;)V
@@ -17141,22 +16315,18 @@
 
     const-string v0, "s is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p1, Lio/reactivex/subscribers/SafeSubscriber;
 
     if-eqz v0, :cond_0
 
-    .line 3
     check-cast p1, Lio/reactivex/subscribers/SafeSubscriber;
 
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
     goto :goto_0
 
-    .line 4
     :cond_0
     new-instance v0, Lio/reactivex/subscribers/SafeSubscriber;
 
@@ -17191,7 +16361,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -17229,15 +16398,12 @@
 
     const-string v0, "unit is null"
 
-    .line 3
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 4
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSampleTimed;
 
     const/4 v7, 0x0
@@ -17287,15 +16453,12 @@
 
     const-string v0, "unit is null"
 
-    .line 6
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 7
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSampleTimed;
 
     move-object v1, v0
@@ -17342,7 +16505,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -17389,10 +16551,8 @@
 
     const-string v0, "sampler is null"
 
-    .line 9
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 10
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSamplePublisher;
 
     const/4 v1, 0x0
@@ -17433,10 +16593,8 @@
 
     const-string v0, "sampler is null"
 
-    .line 11
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 12
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSamplePublisher;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableSamplePublisher;-><init>(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;Z)V
@@ -17473,10 +16631,8 @@
 
     const-string v0, "accumulator is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableScan;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableScan;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/BiFunction;)V
@@ -17515,10 +16671,8 @@
 
     const-string v0, "seed is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->justCallable(Ljava/lang/Object;)Ljava/util/concurrent/Callable;
 
     move-result-object p1
@@ -17559,15 +16713,12 @@
 
     const-string v0, "seedSupplier is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "accumulator is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableScanSeed;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableScanSeed;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;Lio/reactivex/functions/BiFunction;)V
@@ -17600,7 +16751,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSerialized;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableSerialized;-><init>(Lio/reactivex/Flowable;)V
@@ -17633,7 +16783,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Flowable;->publish()Lio/reactivex/flowables/ConnectableFlowable;
 
     move-result-object v0
@@ -17668,10 +16817,8 @@
 
     const-string v0, "defaultItem is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSingleSingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableSingleSingle;-><init>(Lio/reactivex/Flowable;Ljava/lang/Object;)V
@@ -17704,7 +16851,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSingleMaybe;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableSingleMaybe;-><init>(Lio/reactivex/Flowable;)V
@@ -17737,7 +16883,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSingleSingle;
 
     const/4 v1, 0x0
@@ -17778,14 +16923,12 @@
 
     if-gtz v0, :cond_0
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSkip;
 
@@ -17821,7 +16964,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {p1, p2, p3}, Lio/reactivex/Flowable;->timer(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -17857,7 +16999,6 @@
         value = "custom"
     .end annotation
 
-    .line 4
     invoke-static {p1, p2, p3, p4}, Lio/reactivex/Flowable;->timer(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -17894,14 +17035,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSkipLast;
 
@@ -17913,7 +17052,6 @@
 
     return-object p1
 
-    .line 3
     :cond_1
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -17959,7 +17097,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -18007,7 +17144,6 @@
         value = "custom"
     .end annotation
 
-    .line 6
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
@@ -18053,7 +17189,6 @@
         value = "custom"
     .end annotation
 
-    .line 7
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
@@ -18101,22 +17236,18 @@
 
     const-string v0, "unit is null"
 
-    .line 8
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 9
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 10
     invoke-static {p6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     shl-int/lit8 v7, p6, 0x1
 
-    .line 11
     new-instance p6, Lio/reactivex/internal/operators/flowable/FlowableSkipLastTimed;
 
     move-object v1, p6
@@ -18163,7 +17294,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -18214,10 +17344,8 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSkipUntil;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableSkipUntil;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;)V
@@ -18254,10 +17382,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSkipWhile;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableSkipWhile;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -18290,7 +17416,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lio/reactivex/Flowable;->toList()Lio/reactivex/Single;
 
     move-result-object v0
@@ -18347,10 +17472,8 @@
 
     const-string v0, "sortFunction"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/Flowable;->toList()Lio/reactivex/Single;
 
     move-result-object v0
@@ -18405,7 +17528,6 @@
 
     new-array v0, v0, [Lorg/reactivestreams/Publisher;
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/Flowable;->fromIterable(Ljava/lang/Iterable;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -18448,14 +17570,12 @@
 
     const-string v0, "item is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Lorg/reactivestreams/Publisher;
 
-    .line 5
     invoke-static {p1}, Lio/reactivex/Flowable;->just(Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -18500,7 +17620,6 @@
 
     const-string v0, "other is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -18515,7 +17634,6 @@
 
     aput-object p0, v0, p1
 
-    .line 3
     invoke-static {v0}, Lio/reactivex/Flowable;->concatArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -18544,19 +17662,16 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {p1}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
 
     move-result-object p1
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 3
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -18576,7 +17691,6 @@
 
     aput-object p0, v0, p1
 
-    .line 4
     invoke-static {v0}, Lio/reactivex/Flowable;->concatArray([Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -18594,7 +17708,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->emptyConsumer()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
@@ -18634,7 +17747,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     sget-object v0, Lio/reactivex/internal/functions/Functions;->ON_ERROR_MISSING:Lio/reactivex/functions/Consumer;
 
     sget-object v1, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
@@ -18674,7 +17786,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     sget-object v0, Lio/reactivex/internal/functions/Functions;->EMPTY_ACTION:Lio/reactivex/functions/Action;
 
     sget-object v1, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;->INSTANCE:Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;
@@ -18714,7 +17825,6 @@
         value = "none"
     .end annotation
 
-    .line 4
     sget-object v0, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;->INSTANCE:Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
@@ -18757,30 +17867,24 @@
 
     const-string v0, "onNext is null"
 
-    .line 5
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onError is null"
 
-    .line 6
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onComplete is null"
 
-    .line 7
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "onSubscribe is null"
 
-    .line 8
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 9
     new-instance v0, Lio/reactivex/internal/subscribers/LambdaSubscriber;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lio/reactivex/internal/subscribers/LambdaSubscriber;-><init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;Lio/reactivex/functions/Consumer;)V
 
-    .line 10
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
     return-object v0
@@ -18806,10 +17910,8 @@
 
     const-string v0, "s is null"
 
-    .line 15
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 16
     :try_start_0
     invoke-static {p0, p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSubscribe(Lio/reactivex/Flowable;Lorg/reactivestreams/Subscriber;)Lorg/reactivestreams/Subscriber;
 
@@ -18817,10 +17919,8 @@
 
     const-string v0, "Plugin returned null Subscriber"
 
-    .line 17
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 18
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->subscribeActual(Lorg/reactivestreams/Subscriber;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
@@ -18831,29 +17931,23 @@
     :catchall_0
     move-exception p1
 
-    .line 19
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 20
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onError(Ljava/lang/Throwable;)V
 
-    .line 21
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Actually not, but can\'t throw other exceptions due to RS"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 22
     invoke-virtual {v0, p1}, Ljava/lang/NullPointerException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 23
     throw v0
 
     :catch_0
     move-exception p1
 
-    .line 24
     throw p1
 .end method
 
@@ -18875,12 +17969,10 @@
         value = "none"
     .end annotation
 
-    .line 11
     instance-of v0, p1, Lio/reactivex/FlowableSubscriber;
 
     if-eqz v0, :cond_0
 
-    .line 12
     check-cast p1, Lio/reactivex/FlowableSubscriber;
 
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
@@ -18890,10 +17982,8 @@
     :cond_0
     const-string v0, "s is null"
 
-    .line 13
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 14
     new-instance v0, Lio/reactivex/internal/subscribers/StrictSubscriber;
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/subscribers/StrictSubscriber;-><init>(Lorg/reactivestreams/Subscriber;)V
@@ -18939,10 +18029,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Lio/reactivex/internal/operators/flowable/FlowableCreate;
 
     xor-int/lit8 v0, v0, 0x1
@@ -18979,10 +18067,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSubscribeOn;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableSubscribeOn;-><init>(Lio/reactivex/Flowable;Lio/reactivex/Scheduler;Z)V
@@ -19015,7 +18101,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/Flowable;->subscribe(Lorg/reactivestreams/Subscriber;)V
 
     return-object p1
@@ -19046,10 +18131,8 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSwitchIfEmpty;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableSwitchIfEmpty;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;)V
@@ -19088,7 +18171,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -19129,7 +18211,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     invoke-virtual {p0, p1, p2, v0}, Lio/reactivex/Flowable;->switchMap0(Lio/reactivex/functions/Function;IZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -19155,20 +18236,16 @@
 
     const-string v0, "mapper is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 3
     instance-of v0, p0, Lio/reactivex/internal/fuseable/ScalarCallable;
 
     if-eqz v0, :cond_1
 
-    .line 4
     move-object p2, p0
 
     check-cast p2, Lio/reactivex/internal/fuseable/ScalarCallable;
@@ -19179,14 +18256,12 @@
 
     if-nez p2, :cond_0
 
-    .line 5
     invoke-static {}, Lio/reactivex/Flowable;->empty()Lio/reactivex/Flowable;
 
     move-result-object p1
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-static {p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableScalarXMap;->scalarXMap(Ljava/lang/Object;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
@@ -19194,7 +18269,6 @@
 
     return-object p1
 
-    .line 7
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSwitchMap;
 
@@ -19234,7 +18308,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -19275,7 +18348,6 @@
 
     const/4 v0, 0x1
 
-    .line 2
     invoke-virtual {p0, p1, p2, v0}, Lio/reactivex/Flowable;->switchMap0(Lio/reactivex/functions/Function;IZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -19310,7 +18382,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTake;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableTake;-><init>(Lio/reactivex/Flowable;J)V
@@ -19321,7 +18392,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -19367,7 +18437,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 3
     invoke-static {p1, p2, p3}, Lio/reactivex/Flowable;->timer(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -19403,7 +18472,6 @@
         value = "custom"
     .end annotation
 
-    .line 4
     invoke-static {p1, p2, p3, p4}, Lio/reactivex/Flowable;->timer(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -19440,7 +18508,6 @@
 
     if-nez p1, :cond_0
 
-    .line 1
     new-instance p1, Lio/reactivex/internal/operators/flowable/FlowableIgnoreElements;
 
     invoke-direct {p1, p0}, Lio/reactivex/internal/operators/flowable/FlowableIgnoreElements;-><init>(Lio/reactivex/Flowable;)V
@@ -19456,7 +18523,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2
     new-instance p1, Lio/reactivex/internal/operators/flowable/FlowableTakeLastOne;
 
     invoke-direct {p1, p0}, Lio/reactivex/internal/operators/flowable/FlowableTakeLastOne;-><init>(Lio/reactivex/Flowable;)V
@@ -19467,7 +18533,6 @@
 
     return-object p1
 
-    .line 3
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTakeLast;
 
@@ -19479,7 +18544,6 @@
 
     return-object p1
 
-    .line 4
     :cond_2
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -19525,7 +18589,6 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v6
@@ -19575,7 +18638,6 @@
         value = "custom"
     .end annotation
 
-    .line 6
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v8
@@ -19629,21 +18691,18 @@
 
     move-object/from16 v6, p5
 
-    .line 7
     invoke-static {v6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
     move-object/from16 v7, p6
 
-    .line 8
     invoke-static {v7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
     move/from16 v8, p8
 
-    .line 9
     invoke-static {v8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-wide/16 v0, 0x0
@@ -19652,7 +18711,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 10
     new-instance v10, Lio/reactivex/internal/operators/flowable/FlowableTakeLastTimed;
 
     move-object v0, v10
@@ -19679,7 +18737,6 @@
 
     return-object v0
 
-    .line 11
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -19725,7 +18782,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 12
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -19773,7 +18829,6 @@
         value = "custom"
     .end annotation
 
-    .line 14
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
@@ -19819,7 +18874,6 @@
         value = "custom"
     .end annotation
 
-    .line 15
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
@@ -19879,7 +18933,6 @@
 
     move v8, p6
 
-    .line 16
     invoke-virtual/range {v0 .. v8}, Lio/reactivex/Flowable;->takeLast(JJLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;ZI)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -19910,7 +18963,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 13
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -19959,10 +19011,8 @@
 
     const-string v0, "stopPredicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTakeUntilPredicate;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableTakeUntilPredicate;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -20001,10 +19051,8 @@
 
     const-string v0, "other is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTakeUntil;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableTakeUntil;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;)V
@@ -20041,10 +19089,8 @@
 
     const-string v0, "predicate is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTakeWhile;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableTakeWhile;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Predicate;)V
@@ -20077,12 +19123,10 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/subscribers/TestSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/subscribers/TestSubscriber;-><init>()V
 
-    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
     return-object v0
@@ -20109,12 +19153,10 @@
         value = "none"
     .end annotation
 
-    .line 3
     new-instance v0, Lio/reactivex/subscribers/TestSubscriber;
 
     invoke-direct {v0, p1, p2}, Lio/reactivex/subscribers/TestSubscriber;-><init>(J)V
 
-    .line 4
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
     return-object v0
@@ -20141,17 +19183,14 @@
         value = "none"
     .end annotation
 
-    .line 5
     new-instance v0, Lio/reactivex/subscribers/TestSubscriber;
 
     invoke-direct {v0, p1, p2}, Lio/reactivex/subscribers/TestSubscriber;-><init>(J)V
 
     if-eqz p3, :cond_0
 
-    .line 6
     invoke-virtual {v0}, Lio/reactivex/subscribers/TestSubscriber;->cancel()V
 
-    .line 7
     :cond_0
     invoke-virtual {p0, v0}, Lio/reactivex/Flowable;->subscribe(Lio/reactivex/FlowableSubscriber;)V
 
@@ -20181,7 +19220,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -20219,15 +19257,12 @@
 
     const-string v0, "unit is null"
 
-    .line 2
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 3
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableThrottleFirstTimed;
 
     move-object v1, v0
@@ -20272,7 +19307,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lio/reactivex/Flowable;->sample(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20304,7 +19338,6 @@
         value = "custom"
     .end annotation
 
-    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Lio/reactivex/Flowable;->sample(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20335,7 +19368,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lio/reactivex/Flowable;->debounce(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20367,7 +19399,6 @@
         value = "custom"
     .end annotation
 
-    .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Lio/reactivex/Flowable;->debounce(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20397,7 +19428,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
@@ -20435,7 +19465,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p0, v0, p1}, Lio/reactivex/Flowable;->timeInterval(Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
@@ -20469,7 +19498,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -20508,15 +19536,12 @@
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableTimeInterval;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableTimeInterval;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
@@ -20551,7 +19576,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 4
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v5
@@ -20605,7 +19629,6 @@
 
     move-object v5, p4
 
-    .line 9
     invoke-direct/range {v0 .. v5}, Lio/reactivex/Flowable;->timeout0(JLjava/util/concurrent/TimeUnit;Lorg/reactivestreams/Publisher;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20640,7 +19663,6 @@
 
     const-string v0, "other is null"
 
-    .line 7
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-object v0, p0
@@ -20653,7 +19675,6 @@
 
     move-object v5, p4
 
-    .line 8
     invoke-direct/range {v0 .. v5}, Lio/reactivex/Flowable;->timeout0(JLjava/util/concurrent/TimeUnit;Lorg/reactivestreams/Publisher;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20687,10 +19708,8 @@
 
     const-string v0, "other is null"
 
-    .line 5
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v6
@@ -20739,7 +19758,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0, p1, v0}, Lio/reactivex/Flowable;->timeout0(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20778,12 +19796,10 @@
 
     const-string v0, "other is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-direct {p0, v0, p1, p2}, Lio/reactivex/Flowable;->timeout0(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20824,12 +19840,10 @@
 
     const-string v0, "firstTimeoutIndicator is null"
 
-    .line 10
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    .line 11
     invoke-direct {p0, p1, p2, v0}, Lio/reactivex/Flowable;->timeout0(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20872,15 +19886,12 @@
 
     const-string v0, "firstTimeoutSelector is null"
 
-    .line 12
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "other is null"
 
-    .line 13
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 14
     invoke-direct {p0, p1, p2, p3}, Lio/reactivex/Flowable;->timeout0(Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;Lorg/reactivestreams/Publisher;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -20910,7 +19921,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
@@ -20948,7 +19958,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {p0, v0, p1}, Lio/reactivex/Flowable;->timestamp(Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Flowable;
@@ -20982,7 +19991,6 @@
         value = "none"
     .end annotation
 
-    .line 3
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v0
@@ -21021,15 +20029,12 @@
 
     const-string v0, "unit is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p1, p2}, Lio/reactivex/internal/functions/Functions;->timestampWith(Ljava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -21069,7 +20074,6 @@
     :try_start_0
     const-string v0, "converter is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -21087,10 +20091,8 @@
     :catchall_0
     move-exception p1
 
-    .line 2
     invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
-    .line 3
     invoke-static {p1}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -21119,7 +20121,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/subscribers/FutureSubscriber;
 
     invoke-direct {v0}, Lio/reactivex/internal/subscribers/FutureSubscriber;-><init>()V
@@ -21155,7 +20156,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableToListSingle;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableToListSingle;-><init>(Lio/reactivex/Flowable;)V
@@ -21191,10 +20191,8 @@
 
     const-string v0, "capacityHint"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableToListSingle;
 
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->createArrayList(I)Ljava/util/concurrent/Callable;
@@ -21237,10 +20235,8 @@
 
     const-string v0, "collectionSupplier is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableToListSingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableToListSingle;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;)V
@@ -21280,10 +20276,8 @@
 
     const-string v0, "keySelector is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/util/HashMapSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -21331,15 +20325,12 @@
 
     const-string v0, "keySelector is null"
 
-    .line 3
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueSelector is null"
 
-    .line 4
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {}, Lio/reactivex/internal/util/HashMapSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
@@ -21391,15 +20382,12 @@
 
     const-string v0, "keySelector is null"
 
-    .line 6
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueSelector is null"
 
-    .line 7
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 8
     invoke-static {p1, p2}, Lio/reactivex/internal/functions/Functions;->toMapKeyValueSelector(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;)Lio/reactivex/functions/BiConsumer;
 
     move-result-object p1
@@ -21439,22 +20427,18 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->identity()Lio/reactivex/functions/Function;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lio/reactivex/internal/util/HashMapSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v1
 
-    .line 3
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asFunction()Lio/reactivex/functions/Function;
 
     move-result-object v2
 
-    .line 4
     invoke-virtual {p0, p1, v0, v1, v2}, Lio/reactivex/Flowable;->toMultimap(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -21494,17 +20478,14 @@
         value = "none"
     .end annotation
 
-    .line 5
     invoke-static {}, Lio/reactivex/internal/util/HashMapSupplier;->asCallable()Ljava/util/concurrent/Callable;
 
     move-result-object v0
 
-    .line 6
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asFunction()Lio/reactivex/functions/Function;
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {p0, p1, p2, v0, v1}, Lio/reactivex/Flowable;->toMultimap(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Ljava/util/concurrent/Callable;Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
@@ -21549,7 +20530,6 @@
         value = "none"
     .end annotation
 
-    .line 13
     invoke-static {}, Lio/reactivex/internal/util/ArrayListSupplier;->asFunction()Lio/reactivex/functions/Function;
 
     move-result-object v0
@@ -21605,25 +20585,20 @@
 
     const-string v0, "keySelector is null"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "valueSelector is null"
 
-    .line 9
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "mapSupplier is null"
 
-    .line 10
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "collectionFactory is null"
 
-    .line 11
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p1, p2, p4}, Lio/reactivex/internal/functions/Functions;->toMultimapKeyValueSelector(Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;Lio/reactivex/functions/Function;)Lio/reactivex/functions/BiConsumer;
 
     move-result-object p1
@@ -21656,7 +20631,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableFromPublisher;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/observable/ObservableFromPublisher;-><init>(Lorg/reactivestreams/Publisher;)V
@@ -21690,7 +20664,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->naturalComparator()Ljava/util/Comparator;
 
     move-result-object v0
@@ -21724,7 +20697,6 @@
         value = "none"
     .end annotation
 
-    .line 6
     invoke-static {}, Lio/reactivex/internal/functions/Functions;->naturalComparator()Ljava/util/Comparator;
 
     move-result-object v0
@@ -21762,10 +20734,8 @@
 
     const-string v0, "comparator is null"
 
-    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     invoke-virtual {p0}, Lio/reactivex/Flowable;->toList()Lio/reactivex/Single;
 
     move-result-object v0
@@ -21807,10 +20777,8 @@
 
     const-string v0, "comparator is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     invoke-virtual {p0, p2}, Lio/reactivex/Flowable;->toList(I)Lio/reactivex/Single;
 
     move-result-object p2
@@ -21851,10 +20819,8 @@
 
     const-string v0, "scheduler is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 2
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableUnsubscribeOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableUnsubscribeOn;-><init>(Lio/reactivex/Flowable;Lio/reactivex/Scheduler;)V
@@ -21888,7 +20854,6 @@
         value = "none"
     .end annotation
 
-    .line 1
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v5
@@ -21928,7 +20893,6 @@
         value = "none"
     .end annotation
 
-    .line 2
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v5
@@ -21970,20 +20934,16 @@
 
     const-string v0, "skip"
 
-    .line 3
     invoke-static {p3, p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
     const-string v0, "count"
 
-    .line 4
     invoke-static {p1, p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
     const-string v0, "bufferSize"
 
-    .line 5
     invoke-static {p5, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 6
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindow;
 
     move-object v1, v0
@@ -22029,7 +20989,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 7
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v6
@@ -22078,7 +21037,6 @@
         value = "custom"
     .end annotation
 
-    .line 8
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v7
@@ -22129,38 +21087,32 @@
 
     move/from16 v11, p7
 
-    .line 9
     invoke-static {v11, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "timespan"
 
     move-wide v3, p1
 
-    .line 10
     invoke-static {p1, p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
     const-string v0, "timeskip"
 
     move-wide/from16 v5, p3
 
-    .line 11
     invoke-static {v5, v6, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
     const-string v0, "scheduler is null"
 
     move-object/from16 v8, p6
 
-    .line 12
     invoke-static {v8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "unit is null"
 
     move-object/from16 v7, p5
 
-    .line 13
     invoke-static {v7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 14
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindowTimed;
 
     const-wide v9, 0x7fffffffffffffffL
@@ -22204,7 +21156,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 15
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -22250,7 +21201,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 16
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -22296,7 +21246,6 @@
         value = "io.reactivex:computation"
     .end annotation
 
-    .line 17
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->computation()Lio/reactivex/Scheduler;
 
     move-result-object v4
@@ -22355,7 +21304,6 @@
 
     move-object v4, p4
 
-    .line 18
     invoke-virtual/range {v0 .. v7}, Lio/reactivex/Flowable;->window(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;JZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -22400,7 +21348,6 @@
 
     move-wide v5, p5
 
-    .line 19
     invoke-virtual/range {v0 .. v7}, Lio/reactivex/Flowable;->window(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;JZ)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -22433,7 +21380,6 @@
         value = "custom"
     .end annotation
 
-    .line 20
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v8
@@ -22486,31 +21432,26 @@
 
     move/from16 v11, p8
 
-    .line 21
     invoke-static {v11, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
     const-string v0, "scheduler is null"
 
     move-object/from16 v8, p4
 
-    .line 22
     invoke-static {v8, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "unit is null"
 
     move-object/from16 v7, p3
 
-    .line 23
     invoke-static {v7, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "count"
 
     move-wide/from16 v9, p5
 
-    .line 24
     invoke-static {v9, v10, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(JLjava/lang/String;)J
 
-    .line 25
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindowTimed;
 
     move-object v1, v0
@@ -22560,7 +21501,6 @@
         value = "none"
     .end annotation
 
-    .line 35
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -22602,15 +21542,12 @@
 
     const-string v0, "boundaryIndicatorSupplier is null"
 
-    .line 36
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 37
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 38
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundarySupplier;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundarySupplier;-><init>(Lio/reactivex/Flowable;Ljava/util/concurrent/Callable;I)V
@@ -22648,7 +21585,6 @@
         value = "none"
     .end annotation
 
-    .line 26
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -22688,15 +21624,12 @@
 
     const-string v0, "boundaryIndicator is null"
 
-    .line 27
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 28
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 29
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundary;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundary;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;I)V
@@ -22740,7 +21673,6 @@
         value = "none"
     .end annotation
 
-    .line 30
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v0
@@ -22786,20 +21718,16 @@
 
     const-string v0, "openingIndicator is null"
 
-    .line 31
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "closingIndicator is null"
 
-    .line 32
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "bufferSize"
 
-    .line 33
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->verifyPositive(ILjava/lang/String;)I
 
-    .line 34
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundarySelector;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableWindowBoundarySelector;-><init>(Lio/reactivex/Flowable;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;I)V
@@ -22844,15 +21772,12 @@
 
     const-string v0, "others is null"
 
-    .line 22
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 23
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 24
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFromMany;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFromMany;-><init>(Lio/reactivex/Flowable;Ljava/lang/Iterable;Lio/reactivex/functions/Function;)V
@@ -22895,15 +21820,12 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFrom;
 
     invoke-direct {v0, p0, p2, p1}, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFrom;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/BiFunction;Lorg/reactivestreams/Publisher;)V
@@ -22950,15 +21872,12 @@
 
     const-string v0, "source1 is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 5
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p3}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function3;)Lio/reactivex/functions/Function;
 
     move-result-object p3
@@ -22975,7 +21894,6 @@
 
     aput-object p2, v0, p1
 
-    .line 7
     invoke-virtual {p0, v0, p3}, Lio/reactivex/Flowable;->withLatestFrom([Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -23022,20 +21940,16 @@
 
     const-string v0, "source1 is null"
 
-    .line 8
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 9
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 10
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {p4}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function4;)Lio/reactivex/functions/Function;
 
     move-result-object p4
@@ -23056,7 +21970,6 @@
 
     aput-object p3, v0, p1
 
-    .line 12
     invoke-virtual {p0, v0, p4}, Lio/reactivex/Flowable;->withLatestFrom([Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -23107,25 +22020,20 @@
 
     const-string v0, "source1 is null"
 
-    .line 13
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source2 is null"
 
-    .line 14
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source3 is null"
 
-    .line 15
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "source4 is null"
 
-    .line 16
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 17
     invoke-static {p5}, Lio/reactivex/internal/functions/Functions;->toFunction(Lio/reactivex/functions/Function5;)Lio/reactivex/functions/Function;
 
     move-result-object p5
@@ -23150,7 +22058,6 @@
 
     aput-object p4, v0, p1
 
-    .line 18
     invoke-virtual {p0, v0, p5}, Lio/reactivex/Flowable;->withLatestFrom([Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -23189,15 +22096,12 @@
 
     const-string v0, "others is null"
 
-    .line 19
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "combiner is null"
 
-    .line 20
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 21
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFromMany;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableWithLatestFromMany;-><init>(Lio/reactivex/Flowable;[Lorg/reactivestreams/Publisher;Lio/reactivex/functions/Function;)V
@@ -23240,15 +22144,12 @@
 
     const-string v0, "other is null"
 
-    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "zipper is null"
 
-    .line 2
     invoke-static {p2, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableZipIterable;
 
     invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/flowable/FlowableZipIterable;-><init>(Lio/reactivex/Flowable;Ljava/lang/Iterable;Lio/reactivex/functions/BiFunction;)V
@@ -23291,10 +22192,8 @@
 
     const-string v0, "other is null"
 
-    .line 4
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p0, p1, p2}, Lio/reactivex/Flowable;->zip(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -23331,7 +22230,6 @@
         value = "none"
     .end annotation
 
-    .line 6
     invoke-static {p0, p1, p2, p3}, Lio/reactivex/Flowable;->zip(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/BiFunction;Z)Lio/reactivex/Flowable;
 
     move-result-object p1
@@ -23368,7 +22266,6 @@
         value = "none"
     .end annotation
 
-    .line 7
     invoke-static {p0, p1, p2, p3, p4}, Lio/reactivex/Flowable;->zip(Lorg/reactivestreams/Publisher;Lorg/reactivestreams/Publisher;Lio/reactivex/functions/BiFunction;ZI)Lio/reactivex/Flowable;
 
     move-result-object p1

@@ -66,7 +66,6 @@
 .method public static constructor <clinit>()V
     .locals 16
 
-    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v1, 0x0
@@ -81,7 +80,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INVITE_CONNECTION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 2
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v2, 0x1
@@ -96,7 +94,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->ABORT_INVITATION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 3
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v3, 0x2
@@ -111,7 +108,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->ACCEPT_INVITATION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 4
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v4, 0x3
@@ -126,7 +122,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->DENY_INVITATION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 5
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v5, 0x4
@@ -141,7 +136,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->RECEIVE_INVITATION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 6
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v6, 0x5
@@ -156,7 +150,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->WLAN_SERVER_STARTED:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 7
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v7, 0x6
@@ -171,7 +164,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->WLAN_SERVER_STOPPED:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 8
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/4 v8, 0x7
@@ -186,7 +178,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INVITE_CONNECTION_ERROR:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 9
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/16 v9, 0x8
@@ -201,7 +192,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INVITE_CONNECTION_TIMEOUT:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 10
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/16 v10, 0x9
@@ -216,7 +206,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->ABORT_INVITATION_ERROR:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 11
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/16 v11, 0xa
@@ -231,7 +220,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INVITE_BUSY:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 12
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/16 v12, 0xb
@@ -246,7 +234,6 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->NOT_IN_INVITING:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 13
     new-instance v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     const/16 v13, 0xc
@@ -265,7 +252,6 @@
 
     new-array v12, v12, [Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
-    .line 14
     sget-object v14, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INVITE_CONNECTION_SUCCESS:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     aput-object v14, v12, v1
@@ -333,13 +319,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2
     iput p3, p0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->code:I
 
-    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->msg:Ljava/lang/String;
 
     return-void
@@ -348,7 +331,6 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
     .locals 5
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->values()[Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     move-result-object v0
@@ -362,7 +344,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2
     iget v4, v3, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->code:I
 
     if-ne v4, p0, :cond_0
@@ -374,7 +355,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->INV_UNKNOWN:Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
@@ -384,7 +364,6 @@
 .method public static getResponseMsg(I)Ljava/lang/String;
     .locals 6
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->values()[Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     move-result-object v0
@@ -400,12 +379,10 @@
 
     aget-object v4, v0, v3
 
-    .line 2
     iget v5, v4, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->code:I
 
     if-ne v5, p0, :cond_0
 
-    .line 3
     iget-object p0, v4, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->msg:Ljava/lang/String;
 
     return-object p0
@@ -415,7 +392,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -441,7 +417,6 @@
 
     invoke-static {v2, v0, v1}, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -466,7 +441,6 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
     .locals 1
 
-    .line 1
     const-class v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -481,7 +455,6 @@
 .method public static values()[Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->$VALUES:[Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->clone()Ljava/lang/Object;
@@ -498,7 +471,6 @@
 .method public getCode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->code:I
 
     return v0
@@ -507,7 +479,6 @@
 .method public getMsg()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/ResponseCode$InvitationCode;->msg:Ljava/lang/String;
 
     return-object v0

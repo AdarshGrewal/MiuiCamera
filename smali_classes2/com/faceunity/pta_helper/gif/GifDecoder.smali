@@ -23,7 +23,6 @@
 
     const-string v0, "FUP2AHelper"
 
-    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -32,28 +31,22 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->a:I
 
-    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->b:I
 
     new-array v1, v0, [Landroid/graphics/Bitmap;
 
-    .line 4
     iput-object v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->c:[Landroid/graphics/Bitmap;
 
     new-array v1, v0, [I
 
-    .line 5
     iput-object v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->d:[I
 
-    .line 6
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->f:Z
 
     return-void
@@ -62,7 +55,6 @@
 .method public static synthetic a(Lcom/faceunity/pta_helper/gif/GifDecoder;JJ)Lcom/faceunity/pta_helper/gif/GifImage;
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeBitmapIteratornext(JJ)Lcom/faceunity/pta_helper/gif/GifImage;
 
     move-result-object p0
@@ -75,7 +67,6 @@
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->f:Z
 
     return v0
@@ -84,7 +75,6 @@
 .method public static synthetic a(Lcom/faceunity/pta_helper/gif/GifDecoder;J)Z
     .locals 0
 
-    .line 3
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeBitmapIteratorHasNext(J)Z
 
     move-result p0
@@ -95,7 +85,6 @@
 .method public static synthetic b(Lcom/faceunity/pta_helper/gif/GifDecoder;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeClose(J)V
 
     return-void
@@ -139,7 +128,6 @@
 .method public delay(I)I
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->e:I
 
     if-nez v0, :cond_0
@@ -148,7 +136,6 @@
 
     return p1
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->d:[I
 
@@ -162,7 +149,6 @@
 .method public frame(I)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->e:I
 
     if-nez v0, :cond_0
@@ -171,7 +157,6 @@
 
     return-object p1
 
-    .line 2
     :cond_0
     iget-object v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->c:[Landroid/graphics/Bitmap;
 
@@ -185,7 +170,6 @@
 .method public frameNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->e:I
 
     return v0
@@ -194,7 +178,6 @@
 .method public height()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->b:I
 
     return v0
@@ -203,12 +186,10 @@
 .method public load(Ljava/lang/String;)Z
     .locals 4
 
-    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeInit()J
 
     move-result-wide v0
 
-    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeLoad(JLjava/lang/String;)Z
 
     move-result p1
@@ -217,12 +198,10 @@
 
     if-nez p1, :cond_0
 
-    .line 3
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeClose(J)V
 
     return v2
 
-    .line 4
     :cond_0
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetWidth(J)I
 
@@ -230,37 +209,31 @@
 
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->a:I
 
-    .line 5
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetHeight(J)I
 
     move-result p1
 
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->b:I
 
-    .line 6
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetFrameCount(J)I
 
     move-result p1
 
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->e:I
 
-    .line 7
     new-array v3, p1, [Landroid/graphics/Bitmap;
 
     iput-object v3, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->c:[Landroid/graphics/Bitmap;
 
-    .line 8
     new-array p1, p1, [I
 
     iput-object p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->d:[I
 
-    .line 9
     :goto_0
     iget p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->e:I
 
     if-ge v2, p1, :cond_1
 
-    .line 10
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->c:[Landroid/graphics/Bitmap;
 
     invoke-direct {p0, v0, v1, v2}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetFrame(JI)Landroid/graphics/Bitmap;
@@ -269,7 +242,6 @@
 
     aput-object v3, p1, v2
 
-    .line 11
     iget-object p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->d:[I
 
     invoke-direct {p0, v0, v1, v2}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetDelay(JI)I
@@ -282,7 +254,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeClose(J)V
 
@@ -294,7 +265,6 @@
 .method public loadUsingIterator(Ljava/lang/String;)Lcom/faceunity/pta_helper/gif/GifImageIterator;
     .locals 8
 
-    .line 1
     iget-boolean v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->f:Z
 
     const/4 v1, 0x0
@@ -303,13 +273,11 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeInit()J
 
     move-result-wide v6
 
-    .line 3
     invoke-direct {p0, v6, v7, p1}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeLoadUsingIterator(JLjava/lang/String;)J
 
     move-result-wide v4
@@ -320,12 +288,10 @@
 
     if-nez p1, :cond_1
 
-    .line 4
     invoke-direct {p0, v6, v7}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeClose(J)V
 
     return-object v1
 
-    .line 5
     :cond_1
     invoke-direct {p0, v6, v7}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetWidth(J)I
 
@@ -333,7 +299,6 @@
 
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->a:I
 
-    .line 6
     invoke-direct {p0, v6, v7}, Lcom/faceunity/pta_helper/gif/GifDecoder;->nativeGetHeight(J)I
 
     move-result p1
@@ -342,10 +307,8 @@
 
     const/4 p1, 0x1
 
-    .line 7
     iput-boolean p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->f:Z
 
-    .line 8
     new-instance p1, Lcom/faceunity/pta_helper/gif/a;
 
     move-object v2, p1
@@ -360,7 +323,6 @@
 .method public width()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder;->a:I
 
     return v0

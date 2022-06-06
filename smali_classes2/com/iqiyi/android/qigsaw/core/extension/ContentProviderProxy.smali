@@ -23,7 +23,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-virtual {p1, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -68,7 +65,6 @@
 
     check-cast p1, Landroid/content/ContentProvider;
 
-    .line 3
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -77,7 +73,6 @@
 
     invoke-virtual {p1, v0, v3}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
 
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +95,6 @@
 
     return-object p1
 
-    .line 5
     :cond_1
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
@@ -138,7 +132,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-direct {p0, p1}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->createRealContentProvider(Ljava/lang/ClassLoader;)Landroid/content/ContentProvider;
 
@@ -172,7 +165,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     new-instance v0, Lcom/iqiyi/android/qigsaw/core/extension/AABExtensionException;
 
@@ -199,7 +191,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -208,7 +199,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->applyBatch(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
@@ -217,7 +207,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/content/ContentProvider;->applyBatch(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;
 
@@ -229,7 +218,6 @@
 .method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -240,36 +228,30 @@
 
     const-string v1, "_Decorated_"
 
-    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 3
     aget-object v1, v0, v1
 
     iput-object v1, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProviderClassName:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    .line 4
     aget-object v0, v0, v1
 
     iput-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
-    .line 5
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
 
-    .line 6
     new-instance p1, Landroid/content/pm/ProviderInfo;
 
     invoke-direct {p1, p2}, Landroid/content/pm/ProviderInfo;-><init>(Landroid/content/pm/ProviderInfo;)V
 
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->providerInfo:Landroid/content/pm/ProviderInfo;
 
-    .line 7
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;->getInstance()Lcom/iqiyi/android/qigsaw/core/extension/AABExtension;
 
     move-result-object p1
@@ -284,7 +266,6 @@
 .method public bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -293,7 +274,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentProvider;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
@@ -302,7 +282,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
 
@@ -314,7 +293,6 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -323,7 +301,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -332,7 +309,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/ContentProvider;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
@@ -344,14 +320,12 @@
 .method public canonicalize(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->getRealContentProvider()Landroid/content/ContentProvider;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->canonicalize(Landroid/net/Uri;)Landroid/net/Uri;
@@ -360,7 +334,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/content/ContentProvider;->canonicalize(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -375,7 +348,6 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -384,7 +356,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
@@ -402,7 +373,6 @@
 .method public getRealContentProvider()Landroid/content/ContentProvider;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     return-object v0
@@ -411,7 +381,6 @@
 .method public getStreamTypes(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -420,7 +389,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentProvider;->getStreamTypes(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
@@ -429,7 +397,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->getStreamTypes(Landroid/net/Uri;Ljava/lang/String;)[Ljava/lang/String;
 
@@ -441,7 +408,6 @@
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -450,7 +416,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->getType(Landroid/net/Uri;)Ljava/lang/String;
@@ -468,7 +433,6 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -477,7 +441,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentProvider;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
@@ -495,10 +458,8 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/content/ContentProvider;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -507,7 +468,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -527,15 +487,12 @@
 .method public onLowMemory()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroid/content/ContentProvider;->onLowMemory()V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0}, Landroid/content/ContentProvider;->onLowMemory()V
 
     :cond_0
@@ -545,15 +502,12 @@
 .method public onTrimMemory(I)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/content/ContentProvider;->onTrimMemory(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->onTrimMemory(I)V
 
     :cond_0
@@ -568,7 +522,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -577,7 +530,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
@@ -586,7 +538,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
@@ -603,7 +554,6 @@
         }
     .end annotation
 
-    .line 4
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -612,7 +562,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
@@ -621,7 +570,6 @@
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/ContentProvider;->openAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
 
@@ -638,7 +586,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -647,7 +594,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
@@ -656,7 +602,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
@@ -673,7 +618,6 @@
         }
     .end annotation
 
-    .line 4
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -682,7 +626,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
@@ -691,7 +634,6 @@
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/ContentProvider;->openFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
 
@@ -723,7 +665,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -732,7 +673,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     move-object v2, p1
@@ -751,7 +691,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super/range {p0 .. p5}, Landroid/content/ContentProvider;->openPipeHelper(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/Object;Landroid/content/ContentProvider$PipeDataWriter;)Landroid/os/ParcelFileDescriptor;
 
@@ -768,7 +707,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -777,7 +715,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
@@ -786,7 +723,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/ContentProvider;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
 
@@ -803,7 +739,6 @@
         }
     .end annotation
 
-    .line 4
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -812,7 +747,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/ContentProvider;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
@@ -821,7 +755,6 @@
 
     return-object p1
 
-    .line 6
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/content/ContentProvider;->openTypedAssetFile(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/content/res/AssetFileDescriptor;
 
@@ -833,7 +766,6 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -842,7 +774,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
@@ -851,7 +782,6 @@
 
     return-object p1
 
-    .line 5
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
@@ -863,7 +793,6 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -872,7 +801,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     move-object v2, p1
@@ -900,7 +828,6 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
     .locals 8
 
-    .line 6
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -909,7 +836,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     move-object v2, p1
@@ -930,7 +856,6 @@
 
     return-object p1
 
-    .line 8
     :cond_0
     invoke-super/range {p0 .. p6}, Landroid/content/ContentProvider;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
@@ -942,7 +867,6 @@
 .method public refresh(Landroid/net/Uri;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -951,7 +875,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/ContentProvider;->refresh(Landroid/net/Uri;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Z
@@ -960,7 +883,6 @@
 
     return p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/ContentProvider;->refresh(Landroid/net/Uri;Landroid/os/Bundle;Landroid/os/CancellationSignal;)Z
 
@@ -972,7 +894,6 @@
 .method public uncanonicalize(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -981,7 +902,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1}, Landroid/content/ContentProvider;->uncanonicalize(Landroid/net/Uri;)Landroid/net/Uri;
@@ -990,7 +910,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     invoke-super {p0, p1}, Landroid/content/ContentProvider;->uncanonicalize(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -1002,7 +921,6 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->splitName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->checkRealContentProviderInstallStatus(Ljava/lang/String;)Z
@@ -1011,7 +929,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/extension/ContentProviderProxy;->realContentProvider:Landroid/content/ContentProvider;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/ContentProvider;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I

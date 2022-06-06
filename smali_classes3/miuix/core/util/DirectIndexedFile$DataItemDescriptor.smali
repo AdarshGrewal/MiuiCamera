@@ -44,7 +44,6 @@
 
     new-array v0, v0, [B
 
-    .line 1
     sput-object v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
     return-void
@@ -53,22 +52,16 @@
 .method public constructor <init>(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;BBBJ)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
-    .line 4
     iput-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mIndexSize:B
 
-    .line 5
     iput-byte p3, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
-    .line 6
     iput-byte p4, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
-    .line 7
     iput-wide p5, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffset:J
 
     return-void
@@ -77,7 +70,6 @@
 .method public synthetic constructor <init>(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;BBBJLmiuix/core/util/DirectIndexedFile$1;)V
     .locals 0
 
-    .line 1
     invoke-direct/range {p0 .. p6}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;-><init>(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;BBBJ)V
 
     return-void
@@ -91,7 +83,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->read(Ljava/io/DataInput;)Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-result-object p0
@@ -102,7 +93,6 @@
 .method public static synthetic access$1200(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;)B
     .locals 0
 
-    .line 1
     iget-byte p0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mIndexSize:B
 
     return p0
@@ -111,7 +101,6 @@
 .method public static synthetic access$1202(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;B)B
     .locals 0
 
-    .line 1
     iput-byte p1, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mIndexSize:B
 
     return p1
@@ -120,7 +109,6 @@
 .method public static synthetic access$1400(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffset:J
 
     return-wide v0
@@ -129,7 +117,6 @@
 .method public static synthetic access$1402(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;J)J
     .locals 0
 
-    .line 1
     iput-wide p1, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffset:J
 
     return-wide p1
@@ -143,7 +130,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->readDataItems(Lmiuix/core/util/DirectIndexedFile$InputFile;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -154,7 +140,6 @@
 .method public static synthetic access$1700(Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;)Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     return-object p0
@@ -168,7 +153,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0, p1}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->readAccordingToSize(Ljava/io/DataInput;I)J
 
     move-result-wide p0
@@ -184,7 +168,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->readSingleDataItem(Lmiuix/core/util/DirectIndexedFile$InputFile;I)Ljava/lang/Object;
 
     move-result-object p0
@@ -195,7 +178,6 @@
 .method public static synthetic access$3000(I)B
     .locals 0
 
-    .line 1
     invoke-static {p0}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->getSizeOf(I)B
 
     move-result p0
@@ -211,7 +193,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->write(Ljava/io/DataOutput;)I
 
     move-result p0
@@ -227,7 +208,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeDataItems(Ljava/io/DataOutput;Ljava/util/List;)I
 
     move-result p0
@@ -238,12 +218,10 @@
 .method public static aquireBuffer(I)[B
     .locals 2
 
-    .line 1
     const-class v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
@@ -255,22 +233,18 @@
 
     if-ge v1, p0, :cond_1
 
-    .line 3
     :cond_0
     new-array p0, p0, [B
 
     sput-object p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
-    .line 4
     :cond_1
     sget-object p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
     const/4 v1, 0x0
 
-    .line 5
     sput-object v1, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
-    .line 6
     monitor-exit v0
 
     return-object p0
@@ -278,7 +252,6 @@
     :catchall_0
     move-exception p0
 
-    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -343,7 +316,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;->values()[Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     move-result-object v0
@@ -354,27 +326,22 @@
 
     aget-object v3, v0, v1
 
-    .line 2
     invoke-interface {p0}, Ljava/io/DataInput;->readByte()B
 
     move-result v4
 
-    .line 3
     invoke-interface {p0}, Ljava/io/DataInput;->readByte()B
 
     move-result v5
 
-    .line 4
     invoke-interface {p0}, Ljava/io/DataInput;->readByte()B
 
     move-result v6
 
-    .line 5
     invoke-interface {p0}, Ljava/io/DataInput;->readLong()J
 
     move-result-wide v7
 
-    .line 6
     new-instance p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     move-object v2, p0
@@ -408,14 +375,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     invoke-interface {p0}, Ljava/io/DataInput;->readLong()J
 
     move-result-wide p0
 
     goto :goto_1
 
-    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -437,7 +402,6 @@
 
     throw p0
 
-    .line 3
     :cond_1
     invoke-interface {p0}, Ljava/io/DataInput;->readInt()I
 
@@ -445,7 +409,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_2
     invoke-interface {p0}, Ljava/io/DataInput;->readShort()S
 
@@ -453,7 +416,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_3
     invoke-interface {p0}, Ljava/io/DataInput;->readByte()B
 
@@ -474,7 +436,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
@@ -498,7 +459,6 @@
     :pswitch_0
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 2
     invoke-interface {p1}, Ljava/io/DataInput;->readLong()J
 
     move-result-wide v3
@@ -514,7 +474,6 @@
     :pswitch_1
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 3
     invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
     move-result p1
@@ -530,7 +489,6 @@
     :pswitch_2
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 4
     invoke-interface {p1}, Ljava/io/DataInput;->readShort()S
 
     move-result p1
@@ -546,7 +504,6 @@
     :pswitch_3
     new-array v0, v1, [Ljava/lang/Object;
 
-    .line 5
     invoke-interface {p1}, Ljava/io/DataInput;->readByte()B
 
     move-result p1
@@ -559,7 +516,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_4
     invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
@@ -567,7 +523,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 7
     invoke-direct {p0, p1, v2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->readSingleDataItem(Lmiuix/core/util/DirectIndexedFile$InputFile;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -599,14 +554,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-interface {p1}, Lmiuix/core/util/DirectIndexedFile$InputFile;->getFilePointer()J
 
     move-result-wide v0
 
     if-eqz p2, :cond_0
 
-    .line 2
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
     mul-int/2addr v2, p2
@@ -617,7 +570,6 @@
 
     invoke-interface {p1, v2, v3}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 3
     :cond_0
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
@@ -629,7 +581,6 @@
 
     invoke-interface {p1, v0, v1}, Lmiuix/core/util/DirectIndexedFile$InputFile;->seek(J)V
 
-    .line 4
     sget-object p2, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
@@ -668,7 +619,6 @@
 
     goto :goto_3
 
-    .line 5
     :cond_1
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -683,7 +633,6 @@
     :goto_0
     if-ge v2, p2, :cond_6
 
-    .line 6
     invoke-interface {p1}, Ljava/io/DataInput;->readLong()J
 
     move-result-wide v3
@@ -694,7 +643,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_2
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -709,7 +657,6 @@
     :goto_1
     if-ge v2, p2, :cond_6
 
-    .line 8
     invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
     move-result v3
@@ -720,7 +667,6 @@
 
     goto :goto_1
 
-    .line 9
     :cond_3
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -735,7 +681,6 @@
     :goto_2
     if-ge v2, p2, :cond_6
 
-    .line 10
     invoke-interface {p1}, Ljava/io/DataInput;->readShort()S
 
     move-result v3
@@ -746,7 +691,6 @@
 
     goto :goto_2
 
-    .line 11
     :cond_4
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -758,14 +702,12 @@
 
     new-array p2, p2, [B
 
-    .line 12
     invoke-interface {p1, p2}, Ljava/io/DataInput;->readFully([B)V
 
     move-object v1, p2
 
     goto :goto_3
 
-    .line 13
     :cond_5
     iget-byte p2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -775,22 +717,18 @@
 
     long-to-int p2, v0
 
-    .line 14
     invoke-static {p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->aquireBuffer(I)[B
 
     move-result-object v0
 
-    .line 15
     invoke-interface {p1, v0, v2, p2}, Ljava/io/DataInput;->readFully([BII)V
 
-    .line 16
     new-instance p1, Ljava/lang/String;
 
     invoke-direct {p1, v0, v2, p2}, Ljava/lang/String;-><init>([BII)V
 
     move-object v1, p1
 
-    .line 17
     :cond_6
     :goto_3
     invoke-static {v0}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->releaseBuffer([B)V
@@ -801,14 +739,12 @@
 .method public static releaseBuffer([B)V
     .locals 3
 
-    .line 1
     const-class v0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;
 
     monitor-enter v0
 
     if-eqz p0, :cond_1
 
-    .line 2
     :try_start_0
     sget-object v1, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
@@ -822,11 +758,9 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3
     :cond_0
     sput-object p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->sBuffer:[B
 
-    .line 4
     :cond_1
     monitor-exit v0
 
@@ -852,7 +786,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
@@ -861,22 +794,18 @@
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
 
-    .line 2
     iget-byte v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mIndexSize:B
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
 
-    .line 3
     iget-byte v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
 
-    .line 4
     iget-byte v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
 
-    .line 5
     iget-wide v0, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffset:J
 
     invoke-interface {p1, v0, v1}, Ljava/io/DataOutput;->writeLong(J)V
@@ -911,12 +840,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1
     invoke-interface {p0, p2, p3}, Ljava/io/DataOutput;->writeLong(J)V
 
     goto :goto_0
 
-    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -941,7 +868,6 @@
     :cond_1
     long-to-int p1, p2
 
-    .line 3
     invoke-interface {p0, p1}, Ljava/io/DataOutput;->writeInt(I)V
 
     goto :goto_0
@@ -949,7 +875,6 @@
     :cond_2
     long-to-int p1, p2
 
-    .line 4
     invoke-interface {p0, p1}, Ljava/io/DataOutput;->writeShort(I)V
 
     goto :goto_0
@@ -957,7 +882,6 @@
     :cond_3
     long-to-int p1, p2
 
-    .line 5
     invoke-interface {p0, p1}, Ljava/io/DataOutput;->writeByte(I)V
 
     :goto_0
@@ -982,7 +906,6 @@
         }
     .end annotation
 
-    .line 1
     sget-object v0, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v1, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
@@ -1010,7 +933,6 @@
     :pswitch_0
     if-eqz p1, :cond_d
 
-    .line 2
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1028,7 +950,6 @@
     :pswitch_1
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1049,7 +970,6 @@
     :pswitch_2
     if-eqz p1, :cond_1
 
-    .line 4
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1070,7 +990,6 @@
     :pswitch_3
     if-eqz p1, :cond_2
 
-    .line 5
     invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1091,14 +1010,12 @@
     :pswitch_4
     if-eqz p1, :cond_3
 
-    .line 6
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 7
     :cond_3
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeOffsets(Ljava/io/DataOutput;Ljava/util/List;)I
 
@@ -1106,7 +1023,6 @@
 
     add-int/2addr v3, v0
 
-    .line 8
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1122,12 +1038,10 @@
 
     move-result-object v0
 
-    .line 9
     check-cast v0, [J
 
     if-eqz p1, :cond_4
 
-    .line 10
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     array-length v5, v0
@@ -1136,7 +1050,6 @@
 
     invoke-static {p1, v2, v5, v6}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 11
     array-length v2, v0
 
     move v5, v4
@@ -1146,14 +1059,12 @@
 
     aget-wide v6, v0, v5
 
-    .line 12
     invoke-interface {p1, v6, v7}, Ljava/io/DataOutput;->writeLong(J)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 13
     :cond_4
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1170,14 +1081,12 @@
     :pswitch_5
     if-eqz p1, :cond_5
 
-    .line 14
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 15
     :cond_5
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeOffsets(Ljava/io/DataOutput;Ljava/util/List;)I
 
@@ -1185,7 +1094,6 @@
 
     add-int/2addr v0, v3
 
-    .line 16
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1203,12 +1111,10 @@
 
     move-result-object v0
 
-    .line 17
     check-cast v0, [I
 
     if-eqz p1, :cond_6
 
-    .line 18
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     array-length v5, v0
@@ -1217,7 +1123,6 @@
 
     invoke-static {p1, v2, v5, v6}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 19
     array-length v2, v0
 
     move v5, v4
@@ -1227,14 +1132,12 @@
 
     aget v6, v0, v5
 
-    .line 20
     invoke-interface {p1, v6}, Ljava/io/DataOutput;->writeInt(I)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 21
     :cond_6
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1251,14 +1154,12 @@
     :pswitch_6
     if-eqz p1, :cond_7
 
-    .line 22
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 23
     :cond_7
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeOffsets(Ljava/io/DataOutput;Ljava/util/List;)I
 
@@ -1266,7 +1167,6 @@
 
     add-int/2addr v3, v0
 
-    .line 24
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1284,12 +1184,10 @@
 
     move-result-object v0
 
-    .line 25
     check-cast v0, [S
 
     if-eqz p1, :cond_8
 
-    .line 26
     iget-byte v3, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     array-length v5, v0
@@ -1298,7 +1196,6 @@
 
     invoke-static {p1, v3, v5, v6}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 27
     array-length v3, v0
 
     move v5, v4
@@ -1308,14 +1205,12 @@
 
     aget-short v6, v0, v5
 
-    .line 28
     invoke-interface {p1, v6}, Ljava/io/DataOutput;->writeShort(I)V
 
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_5
 
-    .line 29
     :cond_8
     iget-byte v3, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1332,14 +1227,12 @@
     :pswitch_7
     if-eqz p1, :cond_9
 
-    .line 30
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 31
     :cond_9
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeOffsets(Ljava/io/DataOutput;Ljava/util/List;)I
 
@@ -1347,7 +1240,6 @@
 
     add-int/2addr v3, v0
 
-    .line 32
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1365,12 +1257,10 @@
 
     move-result-object v0
 
-    .line 33
     check-cast v0, [B
 
     if-eqz p1, :cond_a
 
-    .line 34
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     array-length v3, v0
@@ -1379,10 +1269,8 @@
 
     invoke-static {p1, v2, v3, v4}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 35
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->write([B)V
 
-    .line 36
     :cond_a
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1397,14 +1285,12 @@
     :pswitch_8
     if-eqz p1, :cond_b
 
-    .line 37
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
     invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
 
-    .line 38
     :cond_b
     invoke-direct {p0, p1, p2}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeOffsets(Ljava/io/DataOutput;Ljava/util/List;)I
 
@@ -1412,7 +1298,6 @@
 
     add-int/2addr v3, v0
 
-    .line 39
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1430,17 +1315,14 @@
 
     move-result-object v0
 
-    .line 40
     check-cast v0, Ljava/lang/String;
 
-    .line 41
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
     if-eqz p1, :cond_c
 
-    .line 42
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
     array-length v3, v0
@@ -1449,7 +1331,6 @@
 
     invoke-static {p1, v2, v5, v6}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 43
     array-length v2, v0
 
     move v3, v4
@@ -1459,14 +1340,12 @@
 
     aget-byte v5, v0, v3
 
-    .line 44
     invoke-interface {p1, v5}, Ljava/io/DataOutput;->writeByte(I)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_8
 
-    .line 45
     :cond_c
     iget-byte v2, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1526,7 +1405,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     iget-byte v5, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
     if-eqz v5, :cond_0
@@ -1535,7 +1413,6 @@
 
     if-nez v5, :cond_8
 
-    .line 2
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -1543,7 +1420,6 @@
 
     mul-int/2addr v5, v4
 
-    .line 3
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -1564,7 +1440,6 @@
 
     move-result-object v9
 
-    .line 4
     sget-object v10, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v11, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
@@ -1589,7 +1464,6 @@
 
     goto :goto_3
 
-    .line 5
     :cond_2
     check-cast v9, [J
 
@@ -1599,7 +1473,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_3
     check-cast v9, [I
 
@@ -1609,7 +1482,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_4
     check-cast v9, [S
 
@@ -1622,7 +1494,6 @@
 
     goto :goto_3
 
-    .line 8
     :cond_5
     check-cast v9, [B
 
@@ -1630,7 +1501,6 @@
 
     goto :goto_2
 
-    .line 9
     :cond_6
     check-cast v9, Ljava/lang/String;
 
@@ -1650,7 +1520,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_7
     invoke-static {v8}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->getSizeOf(I)B
 
@@ -1658,7 +1527,6 @@
 
     iput-byte v6, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
-    .line 11
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v7
@@ -1667,14 +1535,12 @@
 
     add-int/2addr v5, v6
 
-    .line 12
     invoke-static {v5}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->getSizeOf(I)B
 
     move-result v5
 
     iput-byte v5, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
-    .line 13
     :cond_8
     iget-byte v5, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
@@ -1686,7 +1552,6 @@
 
     if-eqz p1, :cond_e
 
-    .line 14
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -1704,14 +1569,12 @@
 
     move-result-object v7
 
-    .line 15
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mOffsetSize:B
 
     int-to-long v9, v6
 
     invoke-static {p1, v8, v9, v10}, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->writeAccordingToSize(Ljava/io/DataOutput;IJ)V
 
-    .line 16
     sget-object v8, Lmiuix/core/util/DirectIndexedFile$1;->$SwitchMap$miuix$core$util$DirectIndexedFile$DataItemDescriptor$Type:[I
 
     iget-object v9, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mType:Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor$Type;
@@ -1734,7 +1597,6 @@
 
     goto :goto_4
 
-    .line 17
     :cond_9
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1746,7 +1608,6 @@
 
     goto :goto_5
 
-    .line 18
     :cond_a
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1758,7 +1619,6 @@
 
     goto :goto_5
 
-    .line 19
     :cond_b
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1770,7 +1630,6 @@
 
     goto :goto_5
 
-    .line 20
     :cond_c
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 
@@ -1780,7 +1639,6 @@
 
     goto :goto_5
 
-    .line 21
     :cond_d
     iget-byte v8, p0, Lmiuix/core/util/DirectIndexedFile$DataItemDescriptor;->mLengthSize:B
 

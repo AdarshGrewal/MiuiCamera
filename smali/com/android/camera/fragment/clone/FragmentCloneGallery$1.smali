@@ -22,7 +22,6 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/fenshen/FenShenCam$Mode;->values()[Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     move-result-object v0

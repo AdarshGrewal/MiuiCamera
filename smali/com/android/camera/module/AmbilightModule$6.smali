@@ -1,11 +1,14 @@
 .class public Lcom/android/camera/module/AmbilightModule$6;
-.super Landroid/os/CountDownTimer;
+.super Ljava/lang/Object;
 .source "AmbilightModule.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/AmbilightModule;->updateRecordingTime()V
+    value = Lcom/android/camera/module/AmbilightModule;->onShutterAnimationEnd()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,53 +22,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/module/AmbilightModule;JJ)V
+.method public constructor <init>(Lcom/android/camera/module/AmbilightModule;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/AmbilightModule$6;->this$0:Lcom/android/camera/module/AmbilightModule;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFinish()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onTick(J)V
+.method public run()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/android/camera/module/AmbilightModule$6;->this$0:Lcom/android/camera/module/AmbilightModule;
 
-    .line 1
-    invoke-static {p1, p2, v0}, Lcom/android/camera/Util;->millisecondToTimeString(JZ)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/camera/module/AmbilightModule;->access$1400(Lcom/android/camera/module/AmbilightModule;)V
 
-    move-result-object p1
-
-    .line 2
-    iget-object p2, p0, Lcom/android/camera/module/AmbilightModule$6;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    invoke-static {p2}, Lcom/android/camera/module/AmbilightModule;->access$200(Lcom/android/camera/module/AmbilightModule;)Lcom/android/camera/protocol/ModeProtocol$TopAlert;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    .line 3
-    iget-object p2, p0, Lcom/android/camera/module/AmbilightModule$6;->this$0:Lcom/android/camera/module/AmbilightModule;
-
-    invoke-static {p2}, Lcom/android/camera/module/AmbilightModule;->access$200(Lcom/android/camera/module/AmbilightModule;)Lcom/android/camera/protocol/ModeProtocol$TopAlert;
-
-    move-result-object p2
-
-    invoke-interface {p2, p1}, Lcom/android/camera/protocol/ModeProtocol$TopAlert;->updateRecordingTime(Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method

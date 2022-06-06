@@ -24,15 +24,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->start:I
 
-    .line 3
     iput v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->length:I
 
     return-void
@@ -41,21 +38,16 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 5
     iput v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->start:I
 
-    .line 6
     iput v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->length:I
 
-    .line 7
     iput p1, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->start:I
 
-    .line 8
     iput p2, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->length:I
 
     return-void
@@ -66,7 +58,6 @@
 .method public getEndIndex()I
     .locals 2
 
-    .line 1
     iget v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->start:I
 
     iget v1, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->length:I
@@ -79,7 +70,6 @@
 .method public isValid()Z
     .locals 1
 
-    .line 1
     iget v0, p0, Lmiuix/core/util/Utf8TextUtils$CharRange;->start:I
 
     if-ltz v0, :cond_0

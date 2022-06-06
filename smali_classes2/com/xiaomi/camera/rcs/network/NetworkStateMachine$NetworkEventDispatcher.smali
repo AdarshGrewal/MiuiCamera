@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;-><init>(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)V
 
     return-void
@@ -47,12 +45,10 @@
 .method public onAdvertingResult(II)V
     .locals 4
 
-    .line 1
     invoke-static {p2}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -71,7 +67,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -82,10 +77,8 @@
 
     move-result-object v0
 
-    .line 4
     invoke-static {v1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -96,7 +89,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     sget-object v0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$1;->$SwitchMap$com$xiaomi$mi_connect_sdk$api$ResultCode:[I
 
@@ -126,7 +118,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     const/16 v1, 0x300
@@ -135,7 +126,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -143,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 9
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
@@ -154,7 +143,6 @@
 
     monitor-enter v0
 
-    .line 10
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -182,12 +170,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 11
     invoke-interface {v2, p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onAdvertingResult(II)V
 
     goto :goto_1
 
-    .line 12
     :cond_4
     monitor-exit v0
 
@@ -206,7 +192,6 @@
 .method public onConnectionInitiated(IILjava/lang/String;[B[B)V
     .locals 9
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -239,7 +224,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -250,7 +234,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -258,7 +241,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(II)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -267,7 +249,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -307,12 +288,10 @@
 
     move-object v8, p5
 
-    .line 6
     invoke-interface/range {v3 .. v8}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onConnectionInitiated(IILjava/lang/String;[B[B)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 
@@ -331,12 +310,10 @@
 .method public onConnectionResult(IILjava/lang/String;I)V
     .locals 4
 
-    .line 1
     invoke-static {p4}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -367,7 +344,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -378,10 +354,8 @@
 
     move-result-object v0
 
-    .line 4
     invoke-static {v1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -392,7 +366,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     sget-object v0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$1;->$SwitchMap$com$xiaomi$mi_connect_sdk$api$ResultCode:[I
 
@@ -410,7 +383,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     const/16 v1, 0x500
@@ -419,7 +391,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -427,7 +398,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(II)V
 
-    .line 9
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -437,7 +407,6 @@
 
     monitor-enter v0
 
-    .line 10
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -465,12 +434,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 11
     invoke-interface {v2, p1, p2, p3, p4}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onConnectionResult(IILjava/lang/String;I)V
 
     goto :goto_1
 
-    .line 12
     :cond_3
     monitor-exit v0
 
@@ -489,7 +456,6 @@
 .method public onDisconnection(II)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -516,7 +482,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -527,7 +492,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -535,7 +499,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -544,7 +507,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -572,12 +534,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-interface {v2, p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onDisconnection(II)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 
@@ -596,12 +556,10 @@
 .method public onDiscoveryResult(II)V
     .locals 4
 
-    .line 1
     invoke-static {p2}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -620,7 +578,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -631,10 +588,8 @@
 
     move-result-object v0
 
-    .line 4
     invoke-static {v1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -645,7 +600,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     sget-object v0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$1;->$SwitchMap$com$xiaomi$mi_connect_sdk$api$ResultCode:[I
 
@@ -675,7 +629,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 7
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     const/16 v1, 0x200
@@ -684,7 +637,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -692,7 +644,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 9
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
@@ -703,7 +654,6 @@
 
     monitor-enter v0
 
-    .line 10
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -731,12 +681,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 11
     invoke-interface {v2, p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onDiscoveryResult(II)V
 
     goto :goto_1
 
-    .line 12
     :cond_4
     monitor-exit v0
 
@@ -755,7 +703,6 @@
 .method public onEndpointFound(IILjava/lang/String;[B)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -798,7 +745,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -809,7 +755,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -817,7 +762,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(II)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -826,7 +770,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -854,12 +797,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-interface {v2, p1, p2, p3, p4}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onEndpointFound(IILjava/lang/String;[B)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 
@@ -878,7 +819,6 @@
 .method public onEndpointLost(IILjava/lang/String;)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -911,7 +851,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -922,7 +861,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -930,7 +868,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -939,7 +876,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -967,12 +903,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-interface {v2, p1, p2, p3}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onEndpointLost(IILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 
@@ -991,7 +925,6 @@
 .method public onPayloadReceived(II[B)V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -1025,7 +958,6 @@
     :cond_0
     array-length v2, p3
 
-    .line 2
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1037,10 +969,8 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -1051,7 +981,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1061,7 +990,6 @@
 
     monitor-enter v0
 
-    .line 6
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1089,12 +1017,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 7
     invoke-interface {v2, p1, p2, p3}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onPayloadReceived(II[B)V
 
     goto :goto_1
 
-    .line 8
     :cond_3
     monitor-exit v0
 
@@ -1113,12 +1039,10 @@
 .method public onPayloadSentResult(III)V
     .locals 4
 
-    .line 1
     invoke-static {p3}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -1143,7 +1067,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -1154,10 +1077,8 @@
 
     move-result-object v0
 
-    .line 4
     invoke-static {v1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -1168,7 +1089,6 @@
 
     return-void
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1178,7 +1098,6 @@
 
     monitor-enter v0
 
-    .line 7
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1206,12 +1125,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 8
     invoke-interface {v2, p1, p2, p3}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onPayloadSentResult(III)V
 
     goto :goto_0
 
-    .line 9
     :cond_2
     monitor-exit v0
 
@@ -1230,7 +1147,6 @@
 .method public onServiceBind()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -1239,7 +1155,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -1250,7 +1165,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1258,7 +1172,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -1267,7 +1180,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1295,12 +1207,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-interface {v2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceBind()V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 
@@ -1319,12 +1229,10 @@
 .method public onServiceError(I)V
     .locals 4
 
-    .line 1
     invoke-static {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->fromInt(I)Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v1
@@ -1345,7 +1253,6 @@
 
     invoke-static {v1, v0}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -1356,7 +1263,6 @@
 
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1364,7 +1270,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -1373,7 +1278,6 @@
 
     monitor-enter v0
 
-    .line 6
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1401,12 +1305,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 7
     invoke-interface {v2, p1}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
     goto :goto_0
 
-    .line 8
     :cond_2
     monitor-exit v0
 
@@ -1425,7 +1327,6 @@
 .method public onServiceUnbind()V
     .locals 3
 
-    .line 1
     invoke-static {}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -1434,7 +1335,6 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/rcs/util/RCSDebug;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$200(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Z
@@ -1445,7 +1345,6 @@
 
     return-void
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1453,7 +1352,6 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/camera/util/StateMachine;->sendMessage(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
     invoke-static {v0}, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;->access$300(Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;)Ljava/util/LinkedList;
@@ -1462,7 +1360,6 @@
 
     monitor-enter v0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/rcs/network/NetworkStateMachine$NetworkEventDispatcher;->this$0:Lcom/xiaomi/camera/rcs/network/NetworkStateMachine;
 
@@ -1490,12 +1387,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 6
     invoke-interface {v2}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceUnbind()V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     monitor-exit v0
 

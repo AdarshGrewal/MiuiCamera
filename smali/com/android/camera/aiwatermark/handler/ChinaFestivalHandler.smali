@@ -17,10 +17,8 @@
 .method public constructor <init>(Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/aiwatermark/handler/FestivalHandler;-><init>(Z)V
 
-    .line 2
     new-instance p1, Lcom/android/camera/aiwatermark/data/FestivalWatermark;
 
     invoke-direct {p1}, Lcom/android/camera/aiwatermark/data/FestivalWatermark;-><init>()V
@@ -33,14 +31,12 @@
 .method private findFestivalWatermark(Ljava/lang/String;)Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/aiwatermark/handler/AbstractHandler;->mData:Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;
 
     invoke-virtual {v0}, Lcom/android/camera/aiwatermark/data/AbstractWatermarkData;->getForAI()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -63,7 +59,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -81,7 +76,6 @@
 
     check-cast v1, Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
-    .line 4
     invoke-virtual {v1}, Lcom/android/camera/aiwatermark/data/WatermarkItem;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -103,7 +97,6 @@
 .method private getChinaDate()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,7 +121,6 @@
 .method private getDate()Ljava/lang/String;
     .locals 1
 
-    .line 1
     invoke-static {}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->getDate()Ljava/lang/String;
 
     move-result-object v0
@@ -141,7 +133,6 @@
 .method public findWatermark()Lcom/android/camera/aiwatermark/data/WatermarkItem;
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/android/camera/aiwatermark/algo/ChinaDateConvertor;->isChineseEve()Z
 
     move-result v0
@@ -152,13 +143,11 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->getChinaDate()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     :goto_0
     sget-object v1, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->TAG:Ljava/lang/String;
 
@@ -178,7 +167,6 @@
 
     invoke-static {v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     invoke-direct {p0, v0}, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->findFestivalWatermark(Ljava/lang/String;)Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v0
@@ -187,13 +175,11 @@
 
     return-object v0
 
-    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->getDate()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->findFestivalWatermark(Ljava/lang/String;)Lcom/android/camera/aiwatermark/data/WatermarkItem;
 
     move-result-object v0
@@ -202,7 +188,6 @@
 
     return-object v0
 
-    .line 7
     :cond_2
     sget-object v0, Lcom/android/camera/aiwatermark/handler/ChinaFestivalHandler;->TAG:Ljava/lang/String;
 

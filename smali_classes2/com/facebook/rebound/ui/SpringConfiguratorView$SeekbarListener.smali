@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +35,6 @@
 .method public synthetic constructor <init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;Lcom/facebook/rebound/ui/SpringConfiguratorView$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;-><init>(Lcom/facebook/rebound/ui/SpringConfiguratorView;)V
 
     return-void
@@ -47,7 +45,6 @@
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 7
 
-    .line 1
     iget-object p3, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {p3}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$700(Lcom/facebook/rebound/ui/SpringConfiguratorView;)Landroid/widget/SeekBar;
@@ -70,7 +67,6 @@
 
     add-float/2addr p3, v0
 
-    .line 2
     iget-object v2, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {v2}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$400(Lcom/facebook/rebound/ui/SpringConfiguratorView;)Lcom/facebook/rebound/SpringConfig;
@@ -85,7 +81,6 @@
 
     iput-wide v5, v2, Lcom/facebook/rebound/SpringConfig;->tension:D
 
-    .line 3
     invoke-static {}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$800()Ljava/text/DecimalFormat;
 
     move-result-object p3
@@ -94,7 +89,6 @@
 
     move-result-object p3
 
-    .line 4
     iget-object v2, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {v2}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$900(Lcom/facebook/rebound/ui/SpringConfiguratorView;)Landroid/widget/TextView;
@@ -117,7 +111,6 @@
 
     invoke-virtual {v2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5
     :cond_0
     iget-object p3, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
@@ -137,7 +130,6 @@
 
     add-float/2addr p1, v0
 
-    .line 6
     iget-object p2, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {p2}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$400(Lcom/facebook/rebound/ui/SpringConfiguratorView;)Lcom/facebook/rebound/SpringConfig;
@@ -152,7 +144,6 @@
 
     iput-wide v2, p2, Lcom/facebook/rebound/SpringConfig;->friction:D
 
-    .line 7
     invoke-static {}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$800()Ljava/text/DecimalFormat;
 
     move-result-object p1
@@ -161,7 +152,6 @@
 
     move-result-object p1
 
-    .line 8
     iget-object p2, p0, Lcom/facebook/rebound/ui/SpringConfiguratorView$SeekbarListener;->this$0:Lcom/facebook/rebound/ui/SpringConfiguratorView;
 
     invoke-static {p2}, Lcom/facebook/rebound/ui/SpringConfiguratorView;->access$1100(Lcom/facebook/rebound/ui/SpringConfiguratorView;)Landroid/widget/TextView;

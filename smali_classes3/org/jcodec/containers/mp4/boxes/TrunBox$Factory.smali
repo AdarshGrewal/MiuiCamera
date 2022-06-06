@@ -22,10 +22,8 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/TrunBox;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     return-void
@@ -38,13 +36,11 @@
 
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     iput-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     return-object v1
@@ -60,7 +56,6 @@
 .method public dataOffset(J)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -71,7 +66,6 @@
 
     long-to-int p1, p1
 
-    .line 2
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$002(Lorg/jcodec/containers/mp4/boxes/TrunBox;I)I
 
     return-object p0
@@ -80,7 +74,6 @@
 .method public firstSampleFlags(I)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->isSampleFlagsAvailable()Z
@@ -89,7 +82,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -98,12 +90,10 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
-    .line 3
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$102(Lorg/jcodec/containers/mp4/boxes/TrunBox;I)I
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -117,7 +107,6 @@
 .method public sampleCompositionOffset([I)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     array-length v0, p1
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
@@ -128,7 +117,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -137,12 +125,10 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
-    .line 3
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$602(Lorg/jcodec/containers/mp4/boxes/TrunBox;[I)[I
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -156,7 +142,6 @@
 .method public sampleDuration([I)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     array-length v0, p1
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
@@ -167,7 +152,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -176,12 +160,10 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
-    .line 3
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$302(Lorg/jcodec/containers/mp4/boxes/TrunBox;[I)[I
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -195,7 +177,6 @@
 .method public sampleFlags([I)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     array-length v0, p1
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
@@ -206,7 +187,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     invoke-virtual {v0}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->isFirstSampleFlagsAvailable()Z
@@ -215,7 +195,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -224,12 +203,10 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
-    .line 4
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$502(Lorg/jcodec/containers/mp4/boxes/TrunBox;[I)[I
 
     return-object p0
 
-    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -239,7 +216,6 @@
 
     throw p1
 
-    .line 6
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -253,7 +229,6 @@
 .method public sampleSize([I)Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;
     .locals 2
 
-    .line 1
     array-length v0, p1
 
     iget-object v1, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
@@ -264,7 +239,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lorg/jcodec/containers/mp4/boxes/TrunBox$Factory;->box:Lorg/jcodec/containers/mp4/boxes/TrunBox;
 
     iget v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
@@ -273,12 +247,10 @@
 
     iput v1, v0, Lorg/jcodec/containers/mp4/boxes/FullBox;->flags:I
 
-    .line 3
     invoke-static {v0, p1}, Lorg/jcodec/containers/mp4/boxes/TrunBox;->access$402(Lorg/jcodec/containers/mp4/boxes/TrunBox;[I)[I
 
     return-object p0
 
-    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -27,14 +27,12 @@
 .method public constructor <init>(Lcom/android/camera/storage/ImageSaver;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/storage/ImageSaver$ThumbnailUpdater;->this$0:Lcom/android/camera/storage/ImageSaver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaver$ThumbnailUpdater;->mNeedAnimation:Z
 
     return-void
@@ -45,7 +43,6 @@
 .method public run()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaver$ThumbnailUpdater;->this$0:Lcom/android/camera/storage/ImageSaver;
 
     invoke-static {v0}, Lcom/android/camera/storage/ImageSaver;->access$000(Lcom/android/camera/storage/ImageSaver;)Ljava/lang/ref/WeakReference;
@@ -60,14 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-interface {v0}, Lcom/android/camera/storage/ImageSaver$ImageSaverCallback;->getScreenHint()Lcom/android/camera/ui/ScreenHint;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/camera/ui/ScreenHint;->updateHint()V
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/storage/ImageSaver$ThumbnailUpdater;->this$0:Lcom/android/camera/storage/ImageSaver;
 
@@ -81,7 +76,6 @@
 .method public setNeedAnimation(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/storage/ImageSaver$ThumbnailUpdater;->mNeedAnimation:Z
 
     return-void

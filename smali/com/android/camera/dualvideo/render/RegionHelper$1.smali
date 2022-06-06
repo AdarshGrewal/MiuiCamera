@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/dualvideo/render/RegionHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper$1;->this$0:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -46,7 +45,6 @@
 
     const-string/jumbo p1, "xSpeed_tag"
 
-    .line 1
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
@@ -55,12 +53,10 @@
 
     move-result p1
 
-    .line 2
     iget-object p2, p0, Lcom/android/camera/dualvideo/render/RegionHelper$1;->this$0:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-static {p2, p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->access$002(Lcom/android/camera/dualvideo/render/RegionHelper;I)I
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/dualvideo/render/RegionHelper$1;->this$0:Lcom/android/camera/dualvideo/render/RegionHelper;
 
     invoke-static {p1}, Lcom/android/camera/dualvideo/render/RegionHelper;->access$100(Lcom/android/camera/dualvideo/render/RegionHelper;)Lcom/android/camera/dualvideo/render/RegionHelper$UpdatedListener;

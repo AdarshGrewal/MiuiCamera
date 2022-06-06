@@ -49,23 +49,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->gct:[I
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
-    .line 4
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -74,7 +69,6 @@
 
     const/4 v0, -0x1
 
-    .line 6
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
 
     return-void
@@ -85,7 +79,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->height:I
 
     return v0
@@ -94,7 +87,6 @@
 .method public getNumFrames()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
     return v0
@@ -103,7 +95,6 @@
 .method public getStatus()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
     return v0
@@ -112,7 +103,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
 
     return v0

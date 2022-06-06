@@ -28,25 +28,20 @@
 .method public varargs constructor <init>(I[F)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [D
 
-    .line 2
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
-    .line 3
     iput p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
-    .line 4
     iput-object p2, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    .line 5
     iget-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
     invoke-static {p0, p1}, Lmiuix/animation/utils/EaseManager$EaseStyle;->setParameters(Lmiuix/animation/utils/EaseManager$EaseStyle;[D)V
@@ -71,7 +66,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     iget v0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
@@ -82,7 +76,6 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2
     iget-object p0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
     invoke-interface {v0, p0, p1}, Lmiuix/animation/physics/PhysicsOperator;->getParameters([F[D)V
@@ -92,7 +85,6 @@
     :cond_1
     const-wide/16 v0, 0x0
 
-    .line 3
     invoke-static {p1, v0, v1}, Ljava/util/Arrays;->fill([DD)V
 
     :goto_1
@@ -110,7 +102,6 @@
 
     return v0
 
-    .line 1
     :cond_0
     instance-of v1, p1, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
@@ -120,11 +111,9 @@
 
     return v2
 
-    .line 2
     :cond_1
     check-cast p1, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 3
     iget v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
     iget v3, p1, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -135,7 +124,6 @@
 
     iget-object p1, p1, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    .line 4
     invoke-static {v1, p1}, Ljava/util/Arrays;->equals([F[F)Z
 
     move-result p1
@@ -158,7 +146,6 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1
     iget v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -175,7 +162,6 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 2
     iget-object v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
@@ -190,10 +176,8 @@
 .method public varargs setFactors([F)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    .line 2
     iget-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
     invoke-static {p0, p1}, Lmiuix/animation/utils/EaseManager$EaseStyle;->setParameters(Lmiuix/animation/utils/EaseManager$EaseStyle;[D)V
@@ -204,7 +188,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,7 +206,6 @@
 
     iget-object v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
     move-result-object v1
@@ -236,7 +218,6 @@
 
     iget-object v1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
-    .line 3
     invoke-static {v1}, Ljava/util/Arrays;->toString([D)Ljava/lang/String;
 
     move-result-object v1

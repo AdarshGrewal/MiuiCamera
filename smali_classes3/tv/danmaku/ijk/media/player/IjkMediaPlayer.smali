@@ -185,7 +185,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$1;
 
     invoke-direct {v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$1;-><init>()V
@@ -194,10 +193,8 @@
 
     const/4 v0, 0x0
 
-    .line 2
     sput-boolean v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsLibLoaded:Z
 
-    .line 3
     sput-boolean v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsNativeInitialized:Z
 
     return-void
@@ -206,7 +203,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->sLocalLibLoader:Ltv/danmaku/ijk/media/player/IjkLibLoader;
 
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;-><init>(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
@@ -217,15 +213,12 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
     .locals 1
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/AbstractMediaPlayer;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 4
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->initPlayer(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
 
     return-void
@@ -357,7 +350,6 @@
 .method public static synthetic access$000(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;)J
     .locals 2
 
-    .line 1
     iget-wide v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mNativeMediaPlayer:J
 
     return-wide v0
@@ -366,7 +358,6 @@
 .method public static synthetic access$100()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -375,7 +366,6 @@
 .method public static synthetic access$200(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
     return-void
@@ -384,7 +374,6 @@
 .method public static synthetic access$300(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoWidth:I
 
     return p0
@@ -393,7 +382,6 @@
 .method public static synthetic access$302(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoWidth:I
 
     return p1
@@ -402,7 +390,6 @@
 .method public static synthetic access$400(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoHeight:I
 
     return p0
@@ -411,7 +398,6 @@
 .method public static synthetic access$402(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoHeight:I
 
     return p1
@@ -420,7 +406,6 @@
 .method public static synthetic access$500(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarNum:I
 
     return p0
@@ -429,7 +414,6 @@
 .method public static synthetic access$502(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarNum:I
 
     return p1
@@ -438,7 +422,6 @@
 .method public static synthetic access$600(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarDen:I
 
     return p0
@@ -447,7 +430,6 @@
 .method public static synthetic access$602(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;I)I
     .locals 0
 
-    .line 1
     iput p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarDen:I
 
     return p1
@@ -456,7 +438,6 @@
 .method public static getColorFormatName(I)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-static {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getColorFormatName(I)Ljava/lang/String;
 
     move-result-object p0
@@ -467,26 +448,21 @@
 .method public static initNativeOnce()V
     .locals 2
 
-    .line 1
     const-class v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-boolean v1, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsNativeInitialized:Z
 
     if-nez v1, :cond_0
 
-    .line 3
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->native_init()V
 
     const/4 v1, 0x1
 
-    .line 4
     sput-boolean v1, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsNativeInitialized:Z
 
-    .line 5
     :cond_0
     monitor-exit v0
 
@@ -505,20 +481,16 @@
 .method private initPlayer(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
     .locals 1
 
-    .line 1
     invoke-static {p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->loadLibrariesOnce(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
 
-    .line 2
     invoke-static {}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->initNativeOnce()V
 
-    .line 3
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 4
     new-instance v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
     invoke-direct {v0, p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;-><init>(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;Landroid/os/Looper;)V
@@ -527,7 +499,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -535,7 +506,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 6
     new-instance v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
     invoke-direct {v0, p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;-><init>(Ltv/danmaku/ijk/media/player/IjkMediaPlayer;Landroid/os/Looper;)V
@@ -547,10 +517,8 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 7
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mEventHandler:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
-    .line 8
     :goto_0
     new-instance p1, Ljava/lang/ref/WeakReference;
 
@@ -564,12 +532,10 @@
 .method public static loadLibrariesOnce(Ltv/danmaku/ijk/media/player/IjkLibLoader;)V
     .locals 2
 
-    .line 1
     const-class v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;
 
     monitor-enter v0
 
-    .line 2
     :try_start_0
     sget-boolean v1, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsLibLoaded:Z
 
@@ -577,31 +543,25 @@
 
     if-nez p0, :cond_0
 
-    .line 3
     sget-object p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->sLocalLibLoader:Ltv/danmaku/ijk/media/player/IjkLibLoader;
 
     :cond_0
     const-string v1, "ijkffmpeg"
 
-    .line 4
     invoke-interface {p0, v1}, Ltv/danmaku/ijk/media/player/IjkLibLoader;->loadLibrary(Ljava/lang/String;)V
 
     const-string v1, "ijksdl"
 
-    .line 5
     invoke-interface {p0, v1}, Ltv/danmaku/ijk/media/player/IjkLibLoader;->loadLibrary(Ljava/lang/String;)V
 
     const-string v1, "ijkplayer"
 
-    .line 6
     invoke-interface {p0, v1}, Ltv/danmaku/ijk/media/player/IjkLibLoader;->loadLibrary(Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
-    .line 7
     sput-boolean p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mIsLibLoaded:Z
 
-    .line 8
     :cond_1
     monitor-exit v0
 
@@ -644,7 +604,6 @@
 .method public static onNativeInvoke(Ljava/lang/Object;ILandroid/os/Bundle;)Z
     .locals 5
 
-    .line 1
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -665,15 +624,12 @@
 
     if-eqz p0, :cond_6
 
-    .line 2
     instance-of v0, p0, Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_6
 
-    .line 3
     check-cast p0, Ljava/lang/ref/WeakReference;
 
-    .line 4
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -682,12 +638,10 @@
 
     if-eqz p0, :cond_5
 
-    .line 5
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnNativeInvokeListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnNativeInvokeListener;
 
     if-eqz v0, :cond_0
 
-    .line 6
     invoke-interface {v0, p1, p2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnNativeInvokeListener;->onNativeInvoke(ILandroid/os/Bundle;)Z
 
     move-result v0
@@ -703,7 +657,6 @@
 
     return v4
 
-    .line 7
     :cond_1
     iget-object p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnControlMessageListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnControlMessageListener;
 
@@ -716,14 +669,12 @@
 
     const-string v0, "segment_index"
 
-    .line 8
     invoke-virtual {p2, v0, p1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
     if-ltz p1, :cond_4
 
-    .line 9
     invoke-interface {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnControlMessageListener;->onControlResolveSegmentUrl(I)Ljava/lang/String;
 
     move-result-object p0
@@ -732,12 +683,10 @@
 
     const-string p1, "url"
 
-    .line 10
     invoke-virtual {p2, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 11
     :cond_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -751,7 +700,6 @@
 
     throw p0
 
-    .line 12
     :cond_4
     new-instance p0, Ljava/security/InvalidParameterException;
 
@@ -761,7 +709,6 @@
 
     throw p0
 
-    .line 13
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -771,7 +718,6 @@
 
     throw p0
 
-    .line 14
     :cond_6
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -789,18 +735,15 @@
 
     if-eqz p0, :cond_3
 
-    .line 1
     instance-of v1, p0, Ljava/lang/ref/WeakReference;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     check-cast p0, Ljava/lang/ref/WeakReference;
 
-    .line 3
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -811,16 +754,13 @@
 
     return-object v0
 
-    .line 4
     :cond_1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnMediaCodecSelectListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnMediaCodecSelectListener;
 
     if-nez v0, :cond_2
 
-    .line 5
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$DefaultMediaCodecSelector;->sInstance:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$DefaultMediaCodecSelector;
 
-    .line 6
     :cond_2
     invoke-interface {v0, p0, p1, p2, p3}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnMediaCodecSelectListener;->onMediaCodecSelect(Ltv/danmaku/ijk/media/player/IMediaPlayer;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -840,7 +780,6 @@
 
     return-void
 
-    .line 1
     :cond_0
     check-cast p0, Ljava/lang/ref/WeakReference;
 
@@ -863,21 +802,17 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 2
     invoke-virtual {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->start()V
 
-    .line 3
     :cond_2
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mEventHandler:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
     if-eqz v0, :cond_3
 
-    .line 4
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 5
     iget-object p0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mEventHandler:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -896,7 +831,6 @@
         }
     .end annotation
 
-    .line 43
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->setDataSource(Ljava/io/FileDescriptor;)V
 
     return-void
@@ -905,21 +839,18 @@
 .method private stayAwake(Z)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
@@ -929,7 +860,6 @@
     :cond_0
     if-nez p1, :cond_1
 
-    .line 4
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -938,17 +868,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 6
     :cond_1
     :goto_0
     iput-boolean p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mStayAwake:Z
 
-    .line 7
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->updateSurfaceScreenOn()V
 
     return-void
@@ -957,12 +884,10 @@
 .method private updateSurfaceScreenOn()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-eqz v0, :cond_1
 
-    .line 2
     iget-boolean v1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mScreenOnWhilePlaying:Z
 
     if-eqz v1, :cond_0
@@ -1002,7 +927,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -1010,17 +934,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->native_async_rpc(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 4
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -1046,7 +967,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setStreamSelected(IZ)V
 
     return-void
@@ -1060,10 +980,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->native_finalize()V
 
     return-void
@@ -1076,7 +994,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1091,7 +1008,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1106,7 +1022,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1121,7 +1036,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1136,7 +1050,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1151,7 +1064,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1169,7 +1081,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1184,7 +1095,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1199,7 +1109,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1214,7 +1123,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1229,7 +1137,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1243,7 +1150,6 @@
 .method public getDataSource()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mDataSource:Ljava/lang/String;
 
     return-object v0
@@ -1256,7 +1162,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyFloat(IF)F
 
     move-result v0
@@ -1274,7 +1179,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1285,22 +1189,18 @@
 .method public getMediaInfo()Ltv/danmaku/ijk/media/player/MediaInfo;
     .locals 8
 
-    .line 1
     new-instance v0, Ltv/danmaku/ijk/media/player/MediaInfo;
 
     invoke-direct {v0}, Ltv/danmaku/ijk/media/player/MediaInfo;-><init>()V
 
     const-string v1, "ijkplayer"
 
-    .line 2
     iput-object v1, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mMediaPlayerName:Ljava/lang/String;
 
-    .line 3
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getVideoCodecInfo()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -1317,93 +1217,76 @@
 
     if-nez v2, :cond_1
 
-    .line 5
     invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     array-length v2, v1
 
     if-lt v2, v4, :cond_0
 
-    .line 7
     aget-object v2, v1, v6
 
     iput-object v2, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mVideoDecoder:Ljava/lang/String;
 
-    .line 8
     aget-object v1, v1, v7
 
     iput-object v1, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mVideoDecoderImpl:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 9
     :cond_0
     array-length v2, v1
 
     if-lt v2, v7, :cond_1
 
-    .line 10
     aget-object v1, v1, v6
 
     iput-object v1, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mVideoDecoder:Ljava/lang/String;
 
-    .line 11
     iput-object v3, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mVideoDecoderImpl:Ljava/lang/String;
 
-    .line 12
     :cond_1
     :goto_0
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getAudioCodecInfo()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 13
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 14
     invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 15
     array-length v2, v1
 
     if-lt v2, v4, :cond_2
 
-    .line 16
     aget-object v2, v1, v6
 
     iput-object v2, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mAudioDecoder:Ljava/lang/String;
 
-    .line 17
     aget-object v1, v1, v7
 
     iput-object v1, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mAudioDecoderImpl:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 18
     :cond_2
     array-length v2, v1
 
     if-lt v2, v7, :cond_3
 
-    .line 19
     aget-object v1, v1, v6
 
     iput-object v1, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mAudioDecoder:Ljava/lang/String;
 
-    .line 20
     iput-object v3, v0, Ltv/danmaku/ijk/media/player/MediaInfo;->mAudioDecoderImpl:Ljava/lang/String;
 
-    .line 21
     :cond_3
     :goto_1
     :try_start_0
@@ -1424,7 +1307,6 @@
     :catchall_0
     move-exception v1
 
-    .line 22
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_2
@@ -1434,7 +1316,6 @@
 .method public getMediaMeta()Landroid/os/Bundle;
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getMediaMeta()Landroid/os/Bundle;
 
     move-result-object v0
@@ -1449,7 +1330,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1481,7 +1361,6 @@
     :cond_0
     const/16 p1, 0x4e2b
 
-    .line 1
     invoke-direct {p0, p1, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1494,7 +1373,6 @@
     :cond_1
     const/16 p1, 0x4e22
 
-    .line 2
     invoke-direct {p0, p1, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1504,7 +1382,6 @@
     :cond_2
     const/16 p1, 0x4e21
 
-    .line 3
     invoke-direct {p0, p1, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1519,7 +1396,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyFloat(IF)F
 
     move-result p1
@@ -1534,7 +1410,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1545,7 +1420,6 @@
 .method public bridge synthetic getTrackInfo()[Ltv/danmaku/ijk/media/player/misc/ITrackInfo;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->getTrackInfo()[Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;
 
     move-result-object v0
@@ -1556,7 +1430,6 @@
 .method public getTrackInfo()[Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;
     .locals 6
 
-    .line 2
     invoke-virtual {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->getMediaMeta()Landroid/os/Bundle;
 
     move-result-object v0
@@ -1567,7 +1440,6 @@
 
     return-object v1
 
-    .line 3
     :cond_0
     invoke-static {v0}, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->parse(Landroid/os/Bundle;)Ltv/danmaku/ijk/media/player/IjkMediaMeta;
 
@@ -1575,20 +1447,17 @@
 
     if-eqz v0, :cond_6
 
-    .line 4
     iget-object v2, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mStreams:Ljava/util/ArrayList;
 
     if-nez v2, :cond_1
 
     goto :goto_2
 
-    .line 5
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
     iget-object v0, v0, Ltv/danmaku/ijk/media/player/IjkMediaMeta;->mStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1608,12 +1477,10 @@
 
     check-cast v2, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;
 
-    .line 7
     new-instance v3, Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;
 
     invoke-direct {v3, v2}, Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;-><init>(Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;)V
 
-    .line 8
     iget-object v4, v2, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
     const-string v5, "video"
@@ -1626,12 +1493,10 @@
 
     const/4 v2, 0x1
 
-    .line 9
     invoke-virtual {v3, v2}, Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;->setTrackType(I)V
 
     goto :goto_1
 
-    .line 10
     :cond_2
     iget-object v4, v2, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
@@ -1645,12 +1510,10 @@
 
     const/4 v2, 0x2
 
-    .line 11
     invoke-virtual {v3, v2}, Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;->setTrackType(I)V
 
     goto :goto_1
 
-    .line 12
     :cond_3
     iget-object v2, v2, Ltv/danmaku/ijk/media/player/IjkMediaMeta$IjkStreamMeta;->mType:Ljava/lang/String;
 
@@ -1664,17 +1527,14 @@
 
     const/4 v2, 0x3
 
-    .line 13
     invoke-virtual {v3, v2}, Ltv/danmaku/ijk/media/player/misc/IjkTrackInfo;->setTrackType(I)V
 
-    .line 14
     :cond_4
     :goto_1
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 15
     :cond_5
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1702,7 +1562,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1717,7 +1576,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1732,7 +1590,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1747,7 +1604,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1762,7 +1618,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyFloat(IF)F
 
     move-result v0
@@ -1777,7 +1632,6 @@
 
     const-wide/16 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyLong(IJ)J
 
     move-result-wide v0
@@ -1790,7 +1644,6 @@
 .method public getVideoHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoHeight:I
 
     return v0
@@ -1803,7 +1656,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getPropertyFloat(IF)F
 
     move-result v0
@@ -1814,7 +1666,6 @@
 .method public getVideoSarDen()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarDen:I
 
     return v0
@@ -1823,7 +1674,6 @@
 .method public getVideoSarNum()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoSarNum:I
 
     return v0
@@ -1832,7 +1682,6 @@
 .method public getVideoWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoWidth:I
 
     return v0
@@ -1845,7 +1694,6 @@
 
     const-wide/16 v1, 0x1
 
-    .line 1
     invoke-direct {p0, v0, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setPropertyLong(IJ)V
 
     return-void
@@ -1854,7 +1702,6 @@
 .method public isLooping()Z
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_getLoopCount()I
 
     move-result v0
@@ -1893,10 +1740,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_pause()V
 
     return-void
@@ -1910,7 +1755,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_prepareAsync()V
 
     return-void
@@ -1921,16 +1765,12 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->updateSurfaceScreenOn()V
 
-    .line 3
     invoke-virtual {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->resetListeners()V
 
-    .line 4
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_release()V
 
     return-void
@@ -1941,23 +1781,18 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_reset()V
 
-    .line 3
     iget-object v1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mEventHandler:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$EventHandler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 4
     iput v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoWidth:I
 
-    .line 5
     iput v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mVideoHeight:I
 
     return-void
@@ -1966,12 +1801,10 @@
 .method public resetListeners()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ltv/danmaku/ijk/media/player/AbstractMediaPlayer;->resetListeners()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnMediaCodecSelectListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnMediaCodecSelectListener;
 
     return-void
@@ -1990,7 +1823,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, p1, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setStreamSelected(IZ)V
 
     return-void
@@ -2006,7 +1838,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setAndroidIOCallback(Ltv/danmaku/ijk/media/player/misc/IAndroidIO;)V
 
     return-void
@@ -2025,7 +1856,6 @@
 
     const/16 p1, 0x4ef2
 
-    .line 1
     invoke-direct {p0, p1, v0, v1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setPropertyLong(IJ)V
 
     return-void
@@ -2044,7 +1874,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, p2, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;Ljava/util/Map;)V
 
     return-void
@@ -2073,21 +1902,18 @@
         }
     .end annotation
 
-    .line 2
     invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "file"
 
-    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     invoke-virtual {p2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object p1
@@ -2099,14 +1925,12 @@
     :cond_0
     const-string v1, "content"
 
-    .line 5
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 6
     invoke-virtual {p2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v0
@@ -2119,12 +1943,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     invoke-static {p2}, Landroid/media/RingtoneManager;->getDefaultType(Landroid/net/Uri;)I
 
     move-result p2
 
-    .line 8
     invoke-static {p1, p2}, Landroid/media/RingtoneManager;->getActualDefaultRingtoneUri(Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object p2
@@ -2133,7 +1955,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     new-instance p1, Ljava/io/FileNotFoundException;
 
@@ -2147,7 +1968,6 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 10
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2155,7 +1975,6 @@
 
     const-string v1, "r"
 
-    .line 11
     invoke-virtual {p1, p2, v1}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v0
@@ -2168,13 +1987,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 12
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     :cond_3
     return-void
 
-    .line 13
     :cond_4
     :try_start_1
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getDeclaredLength()J
@@ -2187,7 +2004,6 @@
 
     if-gez p1, :cond_5
 
-    .line 14
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object p1
@@ -2196,7 +2012,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_5
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
@@ -2221,7 +2036,6 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    .line 16
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     :cond_6
@@ -2248,7 +2062,6 @@
     :goto_2
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->close()V
 
-    .line 17
     :cond_8
     sget-object p1, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->TAG:Ljava/lang/String;
 
@@ -2256,7 +2069,6 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -2276,14 +2088,12 @@
         }
     .end annotation
 
-    .line 33
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xc
 
     if-ge v0, v1, :cond_0
 
-    .line 34
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2297,10 +2107,8 @@
 
     const/4 v1, 0x1
 
-    .line 35
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 36
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result p1
@@ -2308,7 +2116,6 @@
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setDataSourceFd(I)V
 
     goto :goto_0
@@ -2316,7 +2123,6 @@
     :catch_0
     move-exception p1
 
-    .line 38
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2326,20 +2132,17 @@
     :catch_1
     move-exception p1
 
-    .line 39
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0
 
-    .line 40
     :cond_0
     invoke-static {p1}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 
-    .line 41
     :try_start_1
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFd()I
 
@@ -2349,7 +2152,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 42
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
 
     :goto_0
@@ -2374,12 +2176,10 @@
         }
     .end annotation
 
-    .line 19
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mDataSource:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 20
     invoke-direct {p0, p1, v0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setDataSource(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
@@ -2409,19 +2209,16 @@
 
     if-eqz p2, :cond_1
 
-    .line 21
     invoke-interface {p2}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 23
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -2443,7 +2240,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 24
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -2454,24 +2250,20 @@
 
     const-string v2, ":"
 
-    .line 25
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 26
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 27
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 28
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -2483,10 +2275,8 @@
     :cond_0
     const-string v1, "\r\n"
 
-    .line 29
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 30
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2501,12 +2291,10 @@
 
     const-string v3, "async,cache,crypto,file,http,https,ijkhttphook,ijkinject,ijklivehook,ijklongurl,ijksegment,ijktcphook,pipe,rtp,tcp,tls,udp,ijkurlhook,data"
 
-    .line 31
     invoke-virtual {p0, v2, v1, v3}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->setOption(ILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 32
     :cond_1
     invoke-virtual {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->setDataSource(Ljava/lang/String;)V
 
@@ -2523,7 +2311,6 @@
         }
     .end annotation
 
-    .line 44
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setDataSource(Ltv/danmaku/ijk/media/player/misc/IMediaDataSource;)V
 
     return-void
@@ -2532,12 +2319,10 @@
 .method public setDisplay(Landroid/view/SurfaceHolder;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object p1
@@ -2547,11 +2332,9 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3
     :goto_0
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setVideoSurface(Landroid/view/Surface;)V
 
-    .line 4
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->updateSurfaceScreenOn()V
 
     return-void
@@ -2580,10 +2363,8 @@
 
     const-string v3, "loop"
 
-    .line 1
     invoke-virtual {p0, v0, v3, v1, v2}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->setOption(ILjava/lang/String;J)V
 
-    .line 2
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setLoopCount(I)V
 
     return-void
@@ -2592,7 +2373,6 @@
 .method public setOnControlMessageListener(Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnControlMessageListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnControlMessageListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnControlMessageListener;
 
     return-void
@@ -2601,7 +2381,6 @@
 .method public setOnMediaCodecSelectListener(Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnMediaCodecSelectListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnMediaCodecSelectListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnMediaCodecSelectListener;
 
     return-void
@@ -2610,7 +2389,6 @@
 .method public setOnNativeInvokeListener(Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnNativeInvokeListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mOnNativeInvokeListener:Ltv/danmaku/ijk/media/player/IjkMediaPlayer$OnNativeInvokeListener;
 
     return-void
@@ -2619,7 +2397,6 @@
 .method public setOption(ILjava/lang/String;J)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setOption(ILjava/lang/String;J)V
 
     return-void
@@ -2628,7 +2405,6 @@
 .method public setOption(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setOption(ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -2637,30 +2413,25 @@
 .method public setScreenOnWhilePlaying(Z)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mScreenOnWhilePlaying:Z
 
     if-eq v0, p1, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "setScreenOnWhilePlaying(true) is ineffective without a SurfaceHolder"
 
     invoke-static {v0, v1}, Ltv/danmaku/ijk/media/player/pragma/DebugLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     :cond_0
     iput-boolean p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mScreenOnWhilePlaying:Z
 
-    .line 5
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->updateSurfaceScreenOn()V
 
     :cond_1
@@ -2672,7 +2443,6 @@
 
     const/16 v0, 0x2713
 
-    .line 1
     invoke-direct {p0, v0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setPropertyFloat(IF)V
 
     return-void
@@ -2681,14 +2451,12 @@
 .method public setSurface(Landroid/view/Surface;)V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mScreenOnWhilePlaying:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 2
     sget-object v0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v1, "setScreenOnWhilePlaying(true) is ineffective for Surface"
@@ -2698,13 +2466,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 4
     invoke-direct {p0, p1}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_setVideoSurface(Landroid/view/Surface;)V
 
-    .line 5
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->updateSurfaceScreenOn()V
 
     return-void
@@ -2716,14 +2481,12 @@
 .method public setWakeMode(Landroid/content/Context;I)V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 2
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v0
@@ -2732,7 +2495,6 @@
 
     const/4 v0, 0x1
 
-    .line 3
     iget-object v2, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -2745,7 +2507,6 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 4
     iput-object v2, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     goto :goto_1
@@ -2756,7 +2517,6 @@
     :goto_1
     const-string v2, "power"
 
-    .line 5
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -2767,27 +2527,22 @@
 
     or-int/2addr p2, v2
 
-    .line 6
     const-class v2, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;
 
-    .line 7
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {p1, p2, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 9
     invoke-virtual {p1, v1}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
     if-eqz v0, :cond_2
 
-    .line 10
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->acquire()V
@@ -2806,10 +2561,8 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_start()V
 
     return-void
@@ -2825,10 +2578,8 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, v0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->stayAwake(Z)V
 
-    .line 2
     invoke-direct {p0}, Ltv/danmaku/ijk/media/player/IjkMediaPlayer;->_stop()V
 
     return-void

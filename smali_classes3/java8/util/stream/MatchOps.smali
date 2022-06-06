@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
 .method public static synthetic lambda$makeDouble$118(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/DoublePredicate;)Ljava8/util/stream/MatchOps$BooleanTerminalSink;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/MatchOps$4MatchSink;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/MatchOps$4MatchSink;-><init>(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/DoublePredicate;)V
@@ -38,7 +36,6 @@
 .method public static synthetic lambda$makeInt$116(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/IntPredicate;)Ljava8/util/stream/MatchOps$BooleanTerminalSink;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/MatchOps$2MatchSink;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/MatchOps$2MatchSink;-><init>(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/IntPredicate;)V
@@ -49,7 +46,6 @@
 .method public static synthetic lambda$makeLong$117(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/LongPredicate;)Ljava8/util/stream/MatchOps$BooleanTerminalSink;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/MatchOps$3MatchSink;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/MatchOps$3MatchSink;-><init>(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/LongPredicate;)V
@@ -60,7 +56,6 @@
 .method public static synthetic lambda$makeRef$115(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/Predicate;)Ljava8/util/stream/MatchOps$BooleanTerminalSink;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava8/util/stream/MatchOps$1MatchSink;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/MatchOps$1MatchSink;-><init>(Ljava8/util/stream/MatchOps$MatchKind;Ljava8/util/function/Predicate;)V
@@ -83,13 +78,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/MatchOps$MatchOp;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->DOUBLE_VALUE:Ljava8/util/stream/StreamShape;
@@ -118,13 +110,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/MatchOps$MatchOp;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->INT_VALUE:Ljava8/util/stream/StreamShape;
@@ -153,13 +142,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/MatchOps$MatchOp;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->LONG_VALUE:Ljava8/util/stream/StreamShape;
@@ -191,13 +177,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {p0}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p1}, Ljava8/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava8/util/stream/MatchOps$MatchOp;
 
     sget-object v1, Ljava8/util/stream/StreamShape;->REFERENCE:Ljava8/util/stream/StreamShape;

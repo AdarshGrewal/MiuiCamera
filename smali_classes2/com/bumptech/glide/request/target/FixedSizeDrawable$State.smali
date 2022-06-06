@@ -26,16 +26,12 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable$ConstantState;II)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->wrapped:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 4
     iput p2, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->width:I
 
-    .line 5
     iput p3, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->height:I
 
     return-void
@@ -44,7 +40,6 @@
 .method public constructor <init>(Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;)V
     .locals 2
 
-    .line 1
     iget-object v0, p1, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->wrapped:Landroid/graphics/drawable/Drawable$ConstantState;
 
     iget v1, p1, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->width:I
@@ -69,7 +64,6 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1
     new-instance v0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;
 
     iget-object v1, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->wrapped:Landroid/graphics/drawable/Drawable$ConstantState;
@@ -86,7 +80,6 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 2
     new-instance v0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;
 
     iget-object v1, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->wrapped:Landroid/graphics/drawable/Drawable$ConstantState;

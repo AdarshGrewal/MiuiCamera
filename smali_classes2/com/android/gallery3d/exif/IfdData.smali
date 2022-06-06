@@ -32,7 +32,6 @@
 
     new-array v0, v0, [I
 
-    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/gallery3d/exif/IfdData;->sIfds:[I
@@ -54,10 +53,8 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -66,10 +63,8 @@
 
     const/4 v0, 0x0
 
-    .line 3
     iput v0, p0, Lcom/android/gallery3d/exif/IfdData;->mOffsetToNextIfd:I
 
-    .line 4
     iput p1, p0, Lcom/android/gallery3d/exif/IfdData;->mIfdId:I
 
     return-void
@@ -78,7 +73,6 @@
 .method public static getIfds()[I
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/gallery3d/exif/IfdData;->sIfds:[I
 
     return-object v0
@@ -89,7 +83,6 @@
 .method public checkCollision(S)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -129,16 +122,13 @@
 
     return v1
 
-    .line 1
     :cond_1
     instance-of v2, p1, Lcom/android/gallery3d/exif/IfdData;
 
     if-eqz v2, :cond_5
 
-    .line 2
     check-cast p1, Lcom/android/gallery3d/exif/IfdData;
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/gallery3d/exif/IfdData;->getId()I
 
     move-result v2
@@ -157,12 +147,10 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/gallery3d/exif/IfdData;->getAllTags()[Lcom/android/gallery3d/exif/ExifTag;
 
     move-result-object p1
 
-    .line 5
     array-length v2, p1
 
     move v3, v1
@@ -172,7 +160,6 @@
 
     aget-object v4, p1, v3
 
-    .line 6
     invoke-virtual {v4}, Lcom/android/gallery3d/exif/ExifTag;->getTagId()S
 
     move-result v5
@@ -185,7 +172,6 @@
 
     goto :goto_1
 
-    .line 7
     :cond_2
     iget-object v5, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
@@ -203,7 +189,6 @@
 
     check-cast v5, Lcom/android/gallery3d/exif/ExifTag;
 
-    .line 8
     invoke-virtual {v4, v5}, Lcom/android/gallery3d/exif/ExifTag;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -228,7 +213,6 @@
 .method public getAllTags()[Lcom/android/gallery3d/exif/ExifTag;
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -255,7 +239,6 @@
 .method public getId()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/exif/IfdData;->mIfdId:I
 
     return v0
@@ -264,7 +247,6 @@
 .method public getOffsetToNextIfd()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/exif/IfdData;->mOffsetToNextIfd:I
 
     return v0
@@ -273,7 +255,6 @@
 .method public getTag(S)Lcom/android/gallery3d/exif/ExifTag;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -292,7 +273,6 @@
 .method public getTagCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
@@ -305,7 +285,6 @@
 .method public removeTag(S)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
@@ -320,7 +299,6 @@
 .method public setOffsetToNextIfd(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/gallery3d/exif/IfdData;->mOffsetToNextIfd:I
 
     return-void
@@ -329,12 +307,10 @@
 .method public setTag(Lcom/android/gallery3d/exif/ExifTag;)Lcom/android/gallery3d/exif/ExifTag;
     .locals 2
 
-    .line 1
     iget v0, p0, Lcom/android/gallery3d/exif/IfdData;->mIfdId:I
 
     invoke-virtual {p1, v0}, Lcom/android/gallery3d/exif/ExifTag;->setIfd(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/android/gallery3d/exif/IfdData;->mExifTags:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/android/gallery3d/exif/ExifTag;->getTagId()S

@@ -22,10 +22,8 @@
 .method public constructor <init>(ZZZLjava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;-><init>(ZZZLjava/lang/String;)V
@@ -40,7 +38,6 @@
 .method public build()Lcom/android/camera/effect/renders/DeviceWatermarkParam;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->mParameter:Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     return-object v0
@@ -49,7 +46,6 @@
 .method public setCinematicAspectRatio(Z)Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->mParameter:Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->access$002(Lcom/android/camera/effect/renders/DeviceWatermarkParam;Z)Z
@@ -60,7 +56,6 @@
 .method public setCustomText(Ljava/lang/String;)Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->mParameter:Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->access$202(Lcom/android/camera/effect/renders/DeviceWatermarkParam;Ljava/lang/String;)Ljava/lang/String;
@@ -71,7 +66,6 @@
 .method public setLTR(Z)Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/DeviceWatermarkParam$Builder;->mParameter:Lcom/android/camera/effect/renders/DeviceWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera/effect/renders/DeviceWatermarkParam;->access$102(Lcom/android/camera/effect/renders/DeviceWatermarkParam;Z)Z

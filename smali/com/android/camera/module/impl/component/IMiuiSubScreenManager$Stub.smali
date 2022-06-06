@@ -31,12 +31,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "android.os.IPowerManager"
 
-    .line 2
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -51,7 +49,6 @@
 
     return-object p0
 
-    .line 1
     :cond_0
     new-instance v0, Lcom/android/camera/module/impl/component/IMiuiSubScreenManager$Stub$Proxy;
 

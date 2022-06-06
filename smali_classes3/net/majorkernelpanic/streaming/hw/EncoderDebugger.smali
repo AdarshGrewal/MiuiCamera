@@ -73,24 +73,18 @@
 .method public constructor <init>(Landroid/content/SharedPreferences;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
-    .line 3
     iput p2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
-    .line 4
     iput p3, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
 
     mul-int/2addr p2, p3
 
-    .line 5
     iput p2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
-    .line 6
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->reset()V
 
     return-void
@@ -103,7 +97,6 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     new-instance v1, Ljava/lang/Thread;
 
@@ -113,12 +106,10 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 2
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit v0
 
     return-void
@@ -141,10 +132,8 @@
     :cond_0
     const-string p1, "EncoderDebugger"
 
-    .line 1
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
@@ -155,7 +144,6 @@
 .method private checkPaddingNeeded()I
     .locals 9
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     mul-int/lit8 v0, v0, 0x3
@@ -177,7 +165,6 @@
     :goto_0
     if-ge v4, v1, :cond_4
 
-    .line 2
     iget-object v6, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     aget-object v6, v6, v4
@@ -189,7 +176,6 @@
     :goto_1
     if-ge v6, v0, :cond_0
 
-    .line 3
     iget-object v7, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     aget-object v7, v7, v4
@@ -217,17 +203,14 @@
 
     shl-int/lit8 v6, v6, 0x6
 
-    .line 4
     aput v6, v2, v4
 
-    .line 5
     aget v6, v2, v4
 
     if-le v6, v5, :cond_1
 
     aget v5, v2, v4
 
-    .line 6
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -252,7 +235,6 @@
     :cond_2
     const-string v6, "No padding needed."
 
-    .line 7
     invoke-static {v7, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -272,7 +254,6 @@
 .method private checkTestNeeded()Z
     .locals 7
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -297,7 +278,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     const/4 v2, 0x1
@@ -306,7 +286,6 @@
 
     return v2
 
-    .line 3
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -332,7 +311,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 4
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -355,7 +333,6 @@
 
     move-result v1
 
-    .line 5
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -378,7 +355,6 @@
 
     move-result v0
 
-    .line 6
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-gt v3, v1, :cond_2
@@ -411,7 +387,6 @@
 
     if-ge v1, v3, :cond_6
 
-    .line 1
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     aget-object v3, v3, v1
@@ -422,7 +397,6 @@
 
     if-nez p1, :cond_2
 
-    .line 2
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     :goto_1
@@ -434,7 +408,6 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 3
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
 
     aget-byte v5, v5, v4
@@ -467,7 +440,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_2
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
@@ -480,7 +452,6 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 5
     iget-object v5, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
 
     aget-byte v5, v5, v4
@@ -546,13 +517,11 @@
 
     move v3, v0
 
-    .line 1
     :goto_1
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     if-ge v3, v4, :cond_3
 
-    .line 2
     iget-object v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
 
     aget-byte v5, v4, v3
@@ -571,7 +540,6 @@
 
     add-int/lit8 v7, v3, 0x1
 
-    .line 3
     aget-byte v4, v4, v7
 
     and-int/lit16 v4, v4, 0xff
@@ -600,7 +568,6 @@
 
     if-le v4, v6, :cond_2
 
-    .line 4
     iget-object v3, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     const/4 v4, 0x0
@@ -647,10 +614,8 @@
 
     new-array v2, v1, [B
 
-    .line 1
     fill-array-data v2, :array_0
 
-    .line 2
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     array-length v3, v3
@@ -671,29 +636,24 @@
 
     new-array v4, v1, [B
 
-    .line 3
     fill-array-data v4, :array_1
 
     invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 4
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     new-array v1, v1, [B
 
-    .line 5
     fill-array-data v1, :array_2
 
     invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 6
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
     invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 7
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoderName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/media/MediaCodec;->createByCodecName(Ljava/lang/String;)Landroid/media/MediaCodec;
@@ -702,7 +662,6 @@
 
     iput-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
-    .line 8
     iget v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     iget v4, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
@@ -715,17 +674,14 @@
 
     const-string v4, "csd-0"
 
-    .line 9
     invoke-virtual {v1, v4, v3}, Landroid/media/MediaFormat;->setByteBuffer(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 10
     iget v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoderColorFormat:I
 
     const-string v4, "color-format"
 
     invoke-virtual {v1, v4, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 11
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     const/4 v4, 0x0
@@ -734,19 +690,16 @@
 
     invoke-virtual {v3, v1, v4, v4, v5}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
-    .line 12
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->start()V
 
-    .line 13
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 14
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     const-wide/32 v4, 0xc350
@@ -761,24 +714,20 @@
 
     if-ltz v7, :cond_0
 
-    .line 15
     aget-object v6, v1, v7
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 16
     aget-object v6, v1, v7
 
     invoke-virtual {v6, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 17
     aget-object v6, v1, v7
 
     iget-object v8, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     invoke-virtual {v6, v8}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 18
     iget-object v6, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     const/4 v8, 0x0
@@ -799,11 +748,9 @@
 
     goto :goto_0
 
-    .line 19
     :cond_0
     invoke-static {v13, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20
     :goto_0
     iget-object v6, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
@@ -813,24 +760,20 @@
 
     if-ltz v15, :cond_1
 
-    .line 21
     aget-object v3, v1, v15
 
     invoke-virtual {v3}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 22
     aget-object v3, v1, v15
 
     invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 23
     aget-object v2, v1, v15
 
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 24
     iget-object v14, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     const/16 v16, 0x0
@@ -851,7 +794,6 @@
 
     goto :goto_1
 
-    .line 25
     :cond_1
     invoke-static {v13, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -893,7 +835,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/media/MediaCodec;->createByCodecName(Ljava/lang/String;)Landroid/media/MediaCodec;
@@ -902,7 +843,6 @@
 
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
-    .line 2
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     iget v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
@@ -917,17 +857,14 @@
 
     const v2, 0xf4240
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
     const-string v1, "frame-rate"
 
     const/16 v2, 0x14
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 5
     iget v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderColorFormat:I
 
     const-string v2, "color-format"
@@ -938,17 +875,14 @@
 
     const-string v2, "i-frame-interval"
 
-    .line 6
     invoke-virtual {v0, v2, v1}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 7
     iget-object v2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v0, v3, v3, v1}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
-    .line 8
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
@@ -959,7 +893,6 @@
 .method private convertToNV21(I)V
     .locals 13
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     mul-int/lit8 v0, v0, 0x3
@@ -968,15 +901,12 @@
 
     new-array v0, v0, [B
 
-    .line 2
     iget v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     iget v2, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
 
-    .line 3
     iget v3, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoderColorFormat:I
 
-    .line 4
     iget-object v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecOutputFormat:Landroid/media/MediaFormat;
 
     if-eqz v4, :cond_2
@@ -985,19 +915,16 @@
 
     const-string v5, "slice-height"
 
-    .line 5
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 6
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 7
     iget v5, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
 
     if-ge v2, v5, :cond_0
@@ -1007,19 +934,16 @@
     :cond_0
     const-string v5, "stride"
 
-    .line 8
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 9
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 10
     iget v5, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     if-ge v1, v5, :cond_1
@@ -1029,7 +953,6 @@
     :cond_1
     const-string v5, "color-format"
 
-    .line 11
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
@@ -1042,7 +965,6 @@
 
     if-lez v6, :cond_2
 
-    .line 12
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v3
@@ -1074,13 +996,11 @@
     :goto_0
     move v4, v5
 
-    .line 13
     :goto_1
     iget v7, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     if-ge v4, v7, :cond_5
 
-    .line 14
     iget v7, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     rem-int v8, v4, v7
@@ -1091,7 +1011,6 @@
 
     add-int/2addr v4, v7
 
-    .line 15
     :cond_4
     iget-object v7, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
@@ -1110,7 +1029,6 @@
 
     move v3, v5
 
-    .line 16
     :goto_2
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
@@ -1118,7 +1036,6 @@
 
     if-ge v5, v4, :cond_9
 
-    .line 17
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     rem-int v7, v3, v4
@@ -1133,7 +1050,6 @@
 
     add-int/2addr v3, v4
 
-    .line 18
     :cond_6
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
@@ -1159,7 +1075,6 @@
 
     add-int/2addr v4, v7
 
-    .line 19
     aget-object v7, v9, p1
 
     add-int/2addr v11, v6
@@ -1177,7 +1092,6 @@
     :cond_7
     move v3, v5
 
-    .line 20
     :goto_3
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
@@ -1185,7 +1099,6 @@
 
     if-ge v5, v4, :cond_9
 
-    .line 21
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     rem-int v7, v3, v4
@@ -1200,7 +1113,6 @@
 
     add-int/2addr v3, v4
 
-    .line 22
     :cond_8
     iget v4, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
@@ -1224,7 +1136,6 @@
 
     add-int/2addr v4, v7
 
-    .line 23
     aget-object v7, v9, p1
 
     mul-int/lit8 v11, v11, 0x5
@@ -1243,7 +1154,6 @@
 
     goto :goto_3
 
-    .line 24
     :cond_9
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
@@ -1264,7 +1174,6 @@
 .method private createTestImage()V
     .locals 4
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     mul-int/lit8 v0, v0, 0x3
@@ -1277,13 +1186,11 @@
 
     const/4 v0, 0x0
 
-    .line 2
     :goto_0
     iget v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
 
     if-ge v0, v1, :cond_0
 
-    .line 3
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
 
     rem-int/lit16 v2, v0, 0xc7
@@ -1298,7 +1205,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_0
     :goto_1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSize:I
@@ -1309,7 +1215,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
 
     rem-int/lit16 v2, v1, 0xc8
@@ -1324,7 +1229,6 @@
 
     add-int/lit8 v3, v1, 0x63
 
-    .line 6
     rem-int/lit16 v3, v3, 0xc8
 
     add-int/lit8 v3, v3, 0x28
@@ -1348,13 +1252,11 @@
 
     monitor-enter v0
 
-    .line 1
     :try_start_0
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 2
     invoke-static {p0, p1, p2}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->debug(Landroid/content/SharedPreferences;II)Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;
 
     move-result-object p0
@@ -1380,18 +1282,15 @@
 
     monitor-enter v0
 
-    .line 3
     :try_start_0
     new-instance v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;
 
     invoke-direct {v1, p0, p1, p2}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;-><init>(Landroid/content/SharedPreferences;II)V
 
-    .line 4
     invoke-direct {v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->debug()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit v0
 
     return-object v1
@@ -1409,7 +1308,6 @@
 
     move-object/from16 v1, p0
 
-    .line 6
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->checkTestNeeded()Z
 
     move-result v0
@@ -1422,7 +1320,6 @@
 
     if-nez v0, :cond_1
 
-    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1445,7 +1342,6 @@
 
     move-result-object v0
 
-    .line 8
     iget-object v5, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1472,7 +1368,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 9
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
@@ -1481,7 +1376,6 @@
 
     invoke-virtual {v2, v3, v5}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setSize(II)V
 
-    .line 10
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
@@ -1508,7 +1402,6 @@
 
     invoke-virtual {v2, v3}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setSliceHeigth(I)V
 
-    .line 11
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
@@ -1535,7 +1428,6 @@
 
     invoke-virtual {v2, v3}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setStride(I)V
 
-    .line 12
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
@@ -1562,7 +1454,6 @@
 
     invoke-virtual {v2, v3}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setYPadding(I)V
 
-    .line 13
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
@@ -1589,7 +1480,6 @@
 
     invoke-virtual {v2, v3}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setPlanar(Z)V
 
-    .line 14
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v3, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
@@ -1616,7 +1506,6 @@
 
     invoke-virtual {v2, v3}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setColorPanesReversed(Z)V
 
-    .line 15
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1643,7 +1532,6 @@
 
     iput-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderName:Ljava/lang/String;
 
-    .line 16
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1668,7 +1556,6 @@
 
     iput v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderColorFormat:I
 
-    .line 17
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1693,7 +1580,6 @@
 
     iput-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mB64PPS:Ljava/lang/String;
 
-    .line 18
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1720,7 +1606,6 @@
 
     return-void
 
-    .line 19
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -1752,7 +1637,6 @@
 
     throw v0
 
-    .line 20
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1782,12 +1666,10 @@
 
     const-string v0, "video/avc"
 
-    .line 21
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/hw/CodecManager;->findEncodersForMimeType(Ljava/lang/String;)[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     move-result-object v6
 
-    .line 22
     invoke-static {v0}, Lnet/majorkernelpanic/streaming/hw/CodecManager;->findDecodersForMimeType(Ljava/lang/String;)[Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;
 
     move-result-object v7
@@ -1796,13 +1678,11 @@
 
     move v8, v0
 
-    .line 23
     :goto_0
     array-length v9, v6
 
     if-ge v0, v9, :cond_3
 
-    .line 24
     aget-object v9, v6, v0
 
     iget-boolean v9, v9, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->isHardwareAccelerated:Z
@@ -1811,7 +1691,6 @@
 
     goto :goto_1
 
-    .line 25
     :cond_2
     aget-object v9, v6, v0
 
@@ -1833,13 +1712,11 @@
 
     move v0, v9
 
-    .line 26
     :goto_2
     array-length v11, v6
 
     if-ge v10, v11, :cond_d
 
-    .line 27
     aget-object v11, v6, v10
 
     iget-boolean v11, v11, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->isHardwareAccelerated:Z
@@ -1856,7 +1733,6 @@
     :cond_5
     move v11, v4
 
-    .line 28
     :goto_3
     aget-object v12, v6, v10
 
@@ -1866,17 +1742,14 @@
 
     if-ge v11, v12, :cond_4
 
-    .line 29
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->reset()V
 
-    .line 30
     aget-object v12, v6, v10
 
     iget-object v12, v12, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->name:Ljava/lang/String;
 
     iput-object v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderName:Ljava/lang/String;
 
-    .line 31
     aget-object v12, v6, v10
 
     iget-object v12, v12, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->formats:[Ljava/lang/Integer;
@@ -1889,7 +1762,6 @@
 
     iput v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderColorFormat:I
 
-    .line 32
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -1944,7 +1816,6 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
@@ -1953,36 +1824,30 @@
 
     invoke-virtual {v0, v12, v15}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setSize(II)V
 
-    .line 34
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mHeight:I
 
     invoke-virtual {v0, v12}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setSliceHeigth(I)V
 
-    .line 35
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mWidth:I
 
     invoke-virtual {v0, v12}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setStride(I)V
 
-    .line 36
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     invoke-virtual {v0, v4}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setYPadding(I)V
 
-    .line 37
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderColorFormat:I
 
     invoke-virtual {v0, v12}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setEncoderColorFormat(I)V
 
-    .line 38
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->createTestImage()V
 
-    .line 39
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v12, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
@@ -1993,14 +1858,11 @@
 
     iput-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mData:[B
 
-    .line 40
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->configureEncoder()V
 
-    .line 41
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->searchSPSandPPS()J
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2027,14 +1889,12 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->encode()J
 
     move v0, v4
 
     move v12, v0
 
-    .line 44
     :goto_4
     array-length v15, v7
 
@@ -2044,7 +1904,6 @@
 
     move v15, v0
 
-    .line 45
     :goto_5
     aget-object v0, v7, v12
 
@@ -2056,14 +1915,12 @@
 
     if-nez v15, :cond_6
 
-    .line 46
     aget-object v0, v7, v12
 
     iget-object v0, v0, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->name:Ljava/lang/String;
 
     iput-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoderName:Ljava/lang/String;
 
-    .line 47
     aget-object v0, v7, v12
 
     iget-object v0, v0, Lnet/majorkernelpanic/streaming/hw/CodecManager$Codec;->formats:[Ljava/lang/Integer;
@@ -2079,18 +1936,15 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 48
     :try_start_1
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->configureDecoder()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 49
     :try_start_2
     invoke-direct {v1, v9}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->decode(Z)J
 
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2118,7 +1972,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 51
     :try_start_3
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseDecoder()V
     :try_end_3
@@ -2148,7 +2001,6 @@
     :catch_1
     move-exception v0
 
-    .line 52
     :try_start_4
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2173,12 +2025,10 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 54
     :try_start_6
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseDecoder()V
 
@@ -2202,7 +2052,6 @@
     :catch_2
     move-object/from16 v16, v2
 
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2237,7 +2086,6 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseDecoder()V
 
     goto :goto_8
@@ -2263,10 +2111,8 @@
 
     if-eqz v0, :cond_c
 
-    .line 57
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->compareLumaPanes()Z
 
-    .line 58
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->checkPaddingNeeded()I
 
     move-result v0
@@ -2277,7 +2123,6 @@
 
     if-ge v0, v2, :cond_8
 
-    .line 59
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2294,15 +2139,12 @@
 
     invoke-static {v5, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     invoke-virtual {v2, v0}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setYPadding(I)V
 
-    .line 61
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->createTestImage()V
 
-    .line 62
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     iget-object v2, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mInitialImage:[B
@@ -2313,12 +2155,10 @@
 
     iput-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mData:[B
 
-    .line 63
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->encodeDecode()V
 
     goto :goto_9
 
-    .line 64
     :cond_8
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2328,14 +2168,12 @@
 
     throw v0
 
-    .line 65
     :cond_9
     :goto_9
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->createTestImage()V
 
     const/4 v2, 0x0
 
-    .line 66
     invoke-direct {v1, v2}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->compareChromaPanes(Z)Z
 
     move-result v0
@@ -2347,7 +2185,6 @@
 
     const/4 v2, 0x1
 
-    .line 67
     :try_start_7
     invoke-direct {v1, v2}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->compareChromaPanes(Z)Z
 
@@ -2355,7 +2192,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 68
     iget-object v0, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     invoke-virtual {v0, v2}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;->setColorPanesReversed(Z)V
@@ -2366,12 +2202,10 @@
     :try_start_8
     const-string v0, "U and V pane are reversed"
 
-    .line 69
     invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_a
 
-    .line 70
     :cond_a
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2388,11 +2222,9 @@
     :goto_a
     const/4 v2, 0x1
 
-    .line 71
     :try_start_9
     invoke-direct {v1, v2}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->saveTestResult(Z)V
 
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2428,7 +2260,6 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_4
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 73
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseEncoder()V
 
     return-void
@@ -2444,7 +2275,6 @@
     :cond_c
     const/4 v2, 0x1
 
-    .line 74
     :try_start_a
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2474,26 +2304,22 @@
 
     move v2, v9
 
-    .line 75
     :goto_c
     :try_start_b
     new-instance v4, Ljava/io/StringWriter;
 
     invoke-direct {v4}, Ljava/io/StringWriter;-><init>()V
 
-    .line 76
     new-instance v9, Ljava/io/PrintWriter;
 
     invoke-direct {v9, v4}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     invoke-virtual {v0, v9}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 77
     invoke-virtual {v4}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 78
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2518,10 +2344,8 @@
 
     move-result-object v9
 
-    .line 79
     invoke-static {v5, v9, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 80
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -2544,12 +2368,10 @@
 
     iput-object v4, v1, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mErrorLog:Ljava/lang/String;
 
-    .line 81
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 82
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseEncoder()V
 
     add-int/lit8 v11, v11, 0x1
@@ -2580,11 +2402,9 @@
 
     goto/16 :goto_2
 
-    .line 83
     :cond_d
     invoke-direct {v1, v4}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->saveTestResult(Z)V
 
-    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2609,7 +2429,6 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2642,26 +2461,22 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
 
     move-result-wide v1
 
-    .line 2
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v3}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    .line 3
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v4}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    .line 4
     new-instance v5, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v5}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
@@ -2689,7 +2504,6 @@
 
     if-ge v9, v12, :cond_9
 
-    .line 5
     iget-object v12, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v12, v14, v15}, Landroid/media/MediaCodec;->dequeueInputBuffer(J)I
@@ -2698,21 +2512,18 @@
 
     if-ltz v17, :cond_8
 
-    .line 6
     aget-object v12, v3, v17
 
     invoke-virtual {v12}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v12
 
-    .line 7
     iget-object v14, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     aget-object v14, v14, v9
 
     array-length v14, v14
 
-    .line 8
     aget-object v15, v3, v17
 
     invoke-virtual {v15}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -2727,7 +2538,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 9
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     aget-object v2, v2, v9
@@ -2763,7 +2573,6 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 10
     :goto_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2785,7 +2594,6 @@
 
     invoke-direct {v0, v2, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 11
     aget-object v1, v3, v17
 
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
@@ -2807,7 +2615,6 @@
 
     if-eqz p1, :cond_5
 
-    .line 12
     iget-object v7, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     aget-object v7, v7, v9
@@ -2829,7 +2636,6 @@
     :cond_4
     const/4 v8, 0x0
 
-    .line 13
     :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2851,7 +2657,6 @@
 
     invoke-direct {v0, v8, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 14
     aget-object v1, v3, v17
 
     const/4 v2, 0x4
@@ -2862,7 +2667,6 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 15
     aget-object v1, v3, v17
 
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
@@ -2882,7 +2686,6 @@
     :cond_5
     if-nez p1, :cond_7
 
-    .line 16
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     aget-object v2, v2, v9
@@ -2904,7 +2707,6 @@
     :cond_6
     const/4 v7, 0x0
 
-    .line 17
     :goto_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -2926,7 +2728,6 @@
 
     invoke-direct {v0, v7, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 18
     aget-object v1, v3, v17
 
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
@@ -2943,7 +2744,6 @@
 
     invoke-virtual {v1, v6, v7, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 19
     :cond_7
     :goto_4
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
@@ -2973,7 +2773,6 @@
 
     const-string v1, "No buffer available !"
 
-    .line 20
     invoke-static {v13, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_5
@@ -2983,7 +2782,6 @@
 
     move-wide/from16 v25, v7
 
-    .line 21
     :goto_5
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
@@ -2997,7 +2795,6 @@
 
     if-ne v1, v2, :cond_b
 
-    .line 22
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -3017,7 +2814,6 @@
 
     if-ne v1, v2, :cond_c
 
-    .line 23
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getOutputFormat()Landroid/media/MediaFormat;
@@ -3035,22 +2831,18 @@
 
     if-le v10, v2, :cond_e
 
-    .line 24
     iget v2, v5, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 25
     iget-object v6, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     new-array v7, v2, [B
 
     aput-object v7, v6, v11
 
-    .line 26
     aget-object v6, v4, v1
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 27
     aget-object v6, v4, v1
 
     iget-object v7, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
@@ -3061,19 +2853,16 @@
 
     invoke-virtual {v6, v7, v8, v2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 28
     invoke-direct {v0, v11}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->convertToNV21(I)V
 
     const/16 v2, 0x21
 
     if-lt v11, v2, :cond_d
 
-    .line 29
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     invoke-direct {v0, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->flushMediaCodec(Landroid/media/MediaCodec;)V
 
-    .line 30
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3109,7 +2898,6 @@
     :cond_d
     add-int/lit8 v11, v11, 0x1
 
-    .line 31
     :cond_e
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
@@ -3119,7 +2907,6 @@
 
     add-int/lit8 v10, v10, 0x1
 
-    .line 32
     :goto_7
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
 
@@ -3131,7 +2918,6 @@
 
     goto/16 :goto_0
 
-    .line 33
     :cond_f
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3157,24 +2943,20 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
 
     move-result-wide v1
 
-    .line 2
     new-instance v3, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v3}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 3
     iget-object v4, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v4}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    .line 4
     iget-object v5, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v5}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -3194,7 +2976,6 @@
 
     if-gez v10, :cond_5
 
-    .line 5
     iget-object v10, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     const-wide/32 v11, 0xc350
@@ -3205,7 +2986,6 @@
 
     if-ltz v14, :cond_1
 
-    .line 6
     aget-object v10, v4, v14
 
     invoke-virtual {v10}, Ljava/nio/ByteBuffer;->capacity()I
@@ -3230,12 +3010,10 @@
 
     invoke-direct {v0, v10, v13}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 7
     aget-object v10, v4, v14
 
     invoke-virtual {v10}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 8
     aget-object v10, v4, v14
 
     iget-object v13, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mData:[B
@@ -3244,7 +3022,6 @@
 
     invoke-virtual {v10, v13, v6, v15}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 9
     iget-object v13, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     const/4 v15, 0x0
@@ -3270,10 +3047,8 @@
 
     const-string v13, "No buffer available !"
 
-    .line 10
     invoke-static {v10, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :goto_2
     iget-object v10, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
@@ -3285,7 +3060,6 @@
 
     if-ne v10, v11, :cond_2
 
-    .line 12
     iget-object v5, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v5}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -3297,7 +3071,6 @@
     :cond_2
     if-ltz v10, :cond_4
 
-    .line 13
     iget-object v11, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     iget v12, v3, Landroid/media/MediaCodec$BufferInfo;->size:I
@@ -3306,12 +3079,10 @@
 
     aput-object v12, v11, v9
 
-    .line 14
     aget-object v11, v5, v10
 
     invoke-virtual {v11}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 15
     aget-object v11, v5, v10
 
     iget-object v12, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
@@ -3324,7 +3095,6 @@
 
     invoke-virtual {v11, v9, v6, v12}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 16
     iget-object v9, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v9, v10, v6}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
@@ -3333,7 +3103,6 @@
 
     if-lt v13, v9, :cond_3
 
-    .line 17
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-direct {v0, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->flushMediaCodec(Landroid/media/MediaCodec;)V
@@ -3343,7 +3112,6 @@
     :cond_3
     move v9, v13
 
-    .line 18
     :cond_4
     :goto_3
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
@@ -3354,7 +3122,6 @@
 
     goto/16 :goto_0
 
-    .line 19
     :cond_5
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -3373,21 +3140,17 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->encode()J
 
-    .line 2
     :try_start_0
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->configureDecoder()V
 
     const/4 v0, 0x1
 
-    .line 3
     invoke-direct {p0, v0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->decode(Z)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     invoke-direct {p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->releaseDecoder()V
 
     return-void
@@ -3403,7 +3166,6 @@
 .method private flushMediaCodec(Landroid/media/MediaCodec;)V
     .locals 4
 
-    .line 1
     new-instance v0, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
@@ -3420,14 +3182,12 @@
 
     const-wide/32 v2, 0xc350
 
-    .line 2
     invoke-virtual {p1, v0, v2, v3}, Landroid/media/MediaCodec;->dequeueOutputBuffer(Landroid/media/MediaCodec$BufferInfo;J)I
 
     move-result v2
 
     if-ltz v2, :cond_0
 
-    .line 3
     invoke-virtual {p1, v2, v1}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
     goto :goto_0
@@ -3441,7 +3201,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     aget-byte v1, p1, v0
 
     const/4 v2, 0x1
@@ -3473,18 +3232,15 @@
 .method private releaseDecoder()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :catch_0
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecoder:Landroid/media/MediaCodec;
@@ -3501,18 +3257,15 @@
 .method private releaseEncoder()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     if-eqz v0, :cond_0
 
-    .line 2
     :try_start_0
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :catch_0
     :try_start_1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
@@ -3529,7 +3282,6 @@
 .method private reset()V
     .locals 1
 
-    .line 1
     new-instance v0, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     invoke-direct {v0}, Lnet/majorkernelpanic/streaming/hw/NV21Convertor;-><init>()V
@@ -3540,27 +3292,22 @@
 
     new-array v0, v0, [[B
 
-    .line 2
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mVideo:[[B
 
     const/16 v0, 0x22
 
     new-array v0, v0, [[B
 
-    .line 3
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mDecodedVideo:[[B
 
     const-string v0, ""
 
-    .line 4
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mErrorLog:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 5
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
-    .line 6
     iput-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     return-void
@@ -3569,7 +3316,6 @@
 .method private saveTestResult(Z)V
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3594,14 +3340,12 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3624,7 +3368,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3645,7 +3388,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3666,7 +3408,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3691,7 +3432,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3716,7 +3456,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3741,7 +3480,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3766,7 +3504,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 10
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3791,7 +3528,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3812,7 +3548,6 @@
 
     invoke-interface {v1, p1, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 12
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3833,7 +3568,6 @@
 
     invoke-interface {v1, p1, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 13
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3852,7 +3586,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 14
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3873,7 +3606,6 @@
 
     invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 15
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3894,7 +3626,6 @@
 
     invoke-interface {v1, p1, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 16
     :cond_0
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -3906,21 +3637,18 @@
 
     move-object/from16 v0, p0
 
-    .line 1
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 2
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v2}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
-    .line 3
     new-instance v3, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v3}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
@@ -3929,7 +3657,6 @@
 
     new-array v5, v4, [B
 
-    .line 4
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
 
     move-result-wide v6
@@ -3949,7 +3676,6 @@
 
     if-gez v13, :cond_c
 
-    .line 5
     iget-object v13, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     if-eqz v13, :cond_0
@@ -3958,7 +3684,6 @@
 
     if-nez v13, :cond_c
 
-    .line 6
     :cond_0
     iget-object v13, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
@@ -3972,7 +3697,6 @@
 
     if-ltz v18, :cond_2
 
-    .line 7
     aget-object v13, v1, v18
 
     invoke-virtual {v13}, Ljava/nio/ByteBuffer;->capacity()I
@@ -3997,12 +3721,10 @@
 
     invoke-direct {v0, v13, v15}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 8
     aget-object v13, v1, v18
 
     invoke-virtual {v13}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 9
     aget-object v13, v1, v18
 
     iget-object v15, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mData:[B
@@ -4011,7 +3733,6 @@
 
     invoke-virtual {v13, v15, v14, v8}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 10
     iget-object v8, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     const/16 v19, 0x0
@@ -4039,10 +3760,8 @@
 
     const-string v13, "No buffer available !"
 
-    .line 11
     invoke-static {v8, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     :goto_2
     iget-object v8, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
@@ -4054,7 +3773,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 13
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v1}, Landroid/media/MediaCodec;->getOutputFormat()Landroid/media/MediaFormat;
@@ -4063,19 +3781,16 @@
 
     const-string v2, "csd-0"
 
-    .line 14
     invoke-virtual {v1, v2}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
     const-string v3, "csd-1"
 
-    .line 15
     invoke-virtual {v1, v3}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 16
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v3
@@ -4088,17 +3803,14 @@
 
     iput-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
-    .line 17
     invoke-virtual {v2, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 18
     iget-object v3, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     array-length v4, v3
 
     invoke-virtual {v2, v3, v14, v4}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 19
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v2
@@ -4109,10 +3821,8 @@
 
     iput-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
-    .line 20
     invoke-virtual {v1, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 21
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
     array-length v3, v2
@@ -4128,7 +3838,6 @@
 
     if-ne v4, v8, :cond_4
 
-    .line 22
     iget-object v2, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v2}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -4140,14 +3849,12 @@
     :cond_4
     if-ltz v4, :cond_b
 
-    .line 23
     iget v8, v3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
     const/16 v13, 0x80
 
     if-ge v8, v13, :cond_9
 
-    .line 24
     aget-object v9, v2, v4
 
     move-object/from16 v15, v16
@@ -4156,7 +3863,6 @@
 
     if-lez v8, :cond_a
 
-    .line 25
     aget-byte v9, v15, v14
 
     if-nez v9, :cond_a
@@ -4185,7 +3891,6 @@
     :goto_4
     add-int/lit8 v9, v11, 0x0
 
-    .line 26
     aget-byte v9, v15, v9
 
     if-nez v9, :cond_5
@@ -4231,7 +3936,6 @@
 
     move v11, v8
 
-    .line 27
     :cond_7
     aget-byte v9, v15, v12
 
@@ -4243,12 +3947,10 @@
 
     sub-int v5, v11, v12
 
-    .line 28
     new-array v9, v5, [B
 
     iput-object v9, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
-    .line 29
     invoke-static {v15, v12, v9, v14, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_6
@@ -4256,12 +3958,10 @@
     :cond_8
     sub-int v5, v11, v12
 
-    .line 30
     new-array v9, v5, [B
 
     iput-object v9, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
-    .line 31
     invoke-static {v15, v12, v9, v14, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     :goto_6
@@ -4276,7 +3976,6 @@
     :cond_9
     move-object/from16 v15, v16
 
-    .line 32
     :cond_a
     iget-object v5, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoder:Landroid/media/MediaCodec;
 
@@ -4290,7 +3989,6 @@
 
     const/16 v13, 0x80
 
-    .line 33
     :goto_8
     invoke-direct/range {p0 .. p0}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->timestamp()J
 
@@ -4308,7 +4006,6 @@
     :goto_9
     const/4 v2, 0x1
 
-    .line 34
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
     if-eqz v1, :cond_d
@@ -4329,7 +4026,6 @@
 
     invoke-direct {v0, v15, v1}, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->check(ZLjava/lang/String;)V
 
-    .line 35
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mPPS:[B
 
     array-length v2, v1
@@ -4342,7 +4038,6 @@
 
     iput-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mB64PPS:Ljava/lang/String;
 
-    .line 36
     iget-object v1, v0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mSPS:[B
 
     array-length v2, v1
@@ -4359,7 +4054,6 @@
 .method private timestamp()J
     .locals 4
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -4376,7 +4070,6 @@
 .method public getB64PPS()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mB64PPS:Ljava/lang/String;
 
     return-object v0
@@ -4385,7 +4078,6 @@
 .method public getB64SPS()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mB64SPS:Ljava/lang/String;
 
     return-object v0
@@ -4394,7 +4086,6 @@
 .method public getEncoderColorFormat()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderColorFormat:I
 
     return v0
@@ -4403,7 +4094,6 @@
 .method public getEncoderName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mEncoderName:Ljava/lang/String;
 
     return-object v0
@@ -4412,7 +4102,6 @@
 .method public getErrorLog()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mErrorLog:Ljava/lang/String;
 
     return-object v0
@@ -4421,7 +4110,6 @@
 .method public getNV21Convertor()Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lnet/majorkernelpanic/streaming/hw/EncoderDebugger;->mNV21:Lnet/majorkernelpanic/streaming/hw/NV21Convertor;
 
     return-object v0

@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/module/impl/component/MiLivePlayer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public OnReceiveFailed()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$000(Lcom/android/camera/module/impl/component/MiLivePlayer;)Ljava/lang/String;
@@ -49,21 +47,18 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     const/4 v1, -0x1
 
     invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$200(Lcom/android/camera/module/impl/component/MiLivePlayer;I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$200(Lcom/android/camera/module/impl/component/MiLivePlayer;I)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$300(Lcom/android/camera/module/impl/component/MiLivePlayer;)V
@@ -74,7 +69,6 @@
 .method public OnReceiveFinish()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$000(Lcom/android/camera/module/impl/component/MiLivePlayer;)Ljava/lang/String;
@@ -85,14 +79,12 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     const/4 v1, 0x3
 
     invoke-static {v0, v1}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$200(Lcom/android/camera/module/impl/component/MiLivePlayer;I)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/module/impl/component/MiLivePlayer$2;->this$0:Lcom/android/camera/module/impl/component/MiLivePlayer;
 
     invoke-static {v0}, Lcom/android/camera/module/impl/component/MiLivePlayer;->access$300(Lcom/android/camera/module/impl/component/MiLivePlayer;)V

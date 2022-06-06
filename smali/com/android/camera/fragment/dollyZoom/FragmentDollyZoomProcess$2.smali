@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess$2;->this$0:Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public onPageSelect(I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess$2;->this$0:Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess;
 
     invoke-static {v0}, Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess;->access$300(Lcom/android/camera/fragment/dollyZoom/FragmentDollyZoomProcess;)Lcom/android/camera/fragment/vv/page/PageIndicatorView;

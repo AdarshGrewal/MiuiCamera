@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment$2;->this$0:Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
 
     const-string p2, "exit"
 
-    .line 1
     invoke-static {p1, p2}, Lcom/android/camera/statistic/CameraStatUtils;->trackVideoCastClick(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment$2;->this$0:Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -56,7 +53,6 @@
 
     invoke-static {p1, p2}, Lcom/xiaomi/camera/videocast/VideoCastService;->forceDisconnect(Landroid/content/Context;Landroid/os/Bundle;)V
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment$2;->this$0:Lcom/android/camera/fragment/dialog/VideoCastExitDialogFragment;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;

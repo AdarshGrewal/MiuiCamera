@@ -24,7 +24,6 @@
 
     const-string v0, "No further exceptions"
 
-    .line 1
     invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
     return-void

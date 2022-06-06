@@ -55,7 +55,6 @@
 
     const-string/jumbo v0, "vertex_normal.txt"
 
-    .line 1
     invoke-static {v0}, Lcom/android/camera/effect/ShaderUtil;->loadFromAssetsFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -68,20 +67,16 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;)V
     .locals 1
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/effect/renders/Render;-><init>(Lcom/android/gallery3d/ui/GLCanvas;)V
 
     const/4 p1, 0x0
 
-    .line 2
     iput p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const/4 p1, 0x1
 
-    .line 3
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mBlendEnabled:Z
 
-    .line 4
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -92,25 +87,20 @@
 
     new-array v0, p1, [F
 
-    .line 5
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
 
     new-array p1, p1, [F
 
-    .line 6
     fill-array-data p1, :array_1
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mSnapshotEffectRect:[F
 
-    .line 7
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initShader()V
 
-    .line 8
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initVertexData()V
 
-    .line 9
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initSupportAttriList()V
 
     return-void
@@ -137,20 +127,16 @@
 .method public constructor <init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
     .locals 0
 
-    .line 10
     invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/Render;-><init>(Lcom/android/gallery3d/ui/GLCanvas;I)V
 
     const/4 p1, 0x0
 
-    .line 11
     iput p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     const/4 p1, 0x1
 
-    .line 12
     iput-boolean p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mBlendEnabled:Z
 
-    .line 13
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -161,25 +147,20 @@
 
     new-array p2, p1, [F
 
-    .line 14
     fill-array-data p2, :array_0
 
     iput-object p2, p0, Lcom/android/camera/effect/renders/ShaderRender;->mPreviewEffectRect:[F
 
     new-array p1, p1, [F
 
-    .line 15
     fill-array-data p1, :array_1
 
     iput-object p1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mSnapshotEffectRect:[F
 
-    .line 16
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initShader()V
 
-    .line 17
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initVertexData()V
 
-    .line 18
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->initSupportAttriList()V
 
     return-void
@@ -206,7 +187,6 @@
 .method public static allocateByteBuffer(I)Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 1
     invoke-static {p0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -247,17 +227,14 @@
 .method public bindTexture(II)Z
     .locals 1
 
-    .line 5
     invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 p2, 0xde1
 
     const/4 v0, 0x0
 
-    .line 6
     invoke-static {p2, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 7
     invoke-static {p2, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     const/4 p1, 0x1
@@ -268,7 +245,6 @@
 .method public bindTexture(Lcom/android/gallery3d/ui/BasicTexture;I)Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     invoke-virtual {p1, v0}, Lcom/android/gallery3d/ui/BasicTexture;->onBind(Lcom/android/gallery3d/ui/GLCanvas;)Z
@@ -281,18 +257,15 @@
 
     return v1
 
-    .line 2
     :cond_0
     invoke-static {p2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 3
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getTarget()I
 
     move-result p2
 
     invoke-static {p2, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 4
     invoke-virtual {p1}, Lcom/android/gallery3d/ui/BasicTexture;->getTarget()I
 
     move-result p2
@@ -311,7 +284,6 @@
 .method public destroy()V
     .locals 3
 
-    .line 1
     iget v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     if-eqz v0, :cond_0
@@ -320,7 +292,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -347,7 +318,6 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/effect/renders/Render;->mGLCanvas:Lcom/android/gallery3d/ui/GLCanvas;
 
     iget v1, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
@@ -356,7 +326,6 @@
 
     const/4 v0, 0x0
 
-    .line 4
     iput v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mProgram:I
 
     :cond_0
@@ -374,10 +343,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/effect/renders/ShaderRender;->destroy()V
 
-    .line 2
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -389,7 +356,6 @@
 .method public getVertexShaderString()Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/effect/renders/ShaderRender;->VERTEX:Ljava/lang/String;
 
     return-object v0
@@ -407,7 +373,6 @@
 .method public isAttriSupported(I)Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/effect/renders/ShaderRender;->mAttriSupportedList:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -426,7 +391,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/effect/renders/ShaderRender;->setBlendEnabled(ZZ)V
 
     return-void
@@ -439,7 +403,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnable(I)V
 
     if-eqz p2, :cond_0
@@ -454,12 +417,10 @@
     :goto_0
     const/16 p2, 0x303
 
-    .line 3
     invoke-static {p1, p2}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
     goto :goto_1
 
-    .line 4
     :cond_1
     invoke-static {v0}, Landroid/opengl/GLES20;->glDisable(I)V
 

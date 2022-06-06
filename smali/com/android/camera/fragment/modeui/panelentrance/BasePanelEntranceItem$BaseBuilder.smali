@@ -47,20 +47,16 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mKey:I
 
     const/4 v0, 0x1
 
-    .line 3
     iput-boolean v0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mSupportRotation:Z
 
-    .line 4
     iput p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mKey:I
 
     return-void
@@ -69,7 +65,6 @@
 .method public static synthetic access$000(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mSupportedCallback:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
 
     return-object p0
@@ -78,7 +73,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Landroid/view/View$OnClickListener;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-object p0
@@ -87,7 +81,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mKey:I
 
     return p0
@@ -96,7 +89,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mRes:I
 
     return p0
@@ -105,7 +97,6 @@
 .method public static synthetic access$400(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mBgUpdater:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
 
     return-object p0
@@ -114,7 +105,6 @@
 .method public static synthetic access$500(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)I
     .locals 0
 
-    .line 1
     iget p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mDesc:I
 
     return p0
@@ -123,7 +113,6 @@
 .method public static synthetic access$600(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mIsActivated:Z
 
     return p0
@@ -132,7 +121,6 @@
 .method public static synthetic access$700(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mSupportRotation:Z
 
     return p0
@@ -141,7 +129,6 @@
 .method public static synthetic access$800(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)Z
     .locals 0
 
-    .line 1
     iget-boolean p0, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mHideSelf:Z
 
     return p0
@@ -152,7 +139,6 @@
 .method public build()Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;
 
     invoke-direct {v0, p0}, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem;-><init>(Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;)V
@@ -168,7 +154,6 @@
         }
     .end annotation
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mIsActivated:Z
 
     return-object p0
@@ -184,7 +169,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mBgUpdater:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BackgroundUpdater;
 
     return-object p0
@@ -198,7 +182,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mDesc:I
 
     return-object p0
@@ -212,7 +195,6 @@
         }
     .end annotation
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mHideSelf:Z
 
     return-object p0
@@ -228,7 +210,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-object p0
@@ -242,7 +223,6 @@
         }
     .end annotation
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mRes:I
 
     return-object p0
@@ -256,7 +236,6 @@
         }
     .end annotation
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mSupportRotation:Z
 
     return-object p0
@@ -272,7 +251,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$BaseBuilder;->mSupportedCallback:Lcom/android/camera/fragment/modeui/panelentrance/BasePanelEntranceItem$SupportedCallback;
 
     return-object p0

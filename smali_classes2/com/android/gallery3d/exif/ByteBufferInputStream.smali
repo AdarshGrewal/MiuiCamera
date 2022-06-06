@@ -11,10 +11,8 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
     return-void
@@ -25,7 +23,6 @@
 .method public read()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -38,7 +35,6 @@
 
     return v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
@@ -54,7 +50,6 @@
 .method public read([BII)I
     .locals 1
 
-    .line 3
     iget-object v0, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -67,7 +62,6 @@
 
     return p1
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
@@ -79,7 +73,6 @@
 
     move-result p3
 
-    .line 5
     iget-object v0, p0, Lcom/android/gallery3d/exif/ByteBufferInputStream;->mBuf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;

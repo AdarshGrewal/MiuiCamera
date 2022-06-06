@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/customization/PreferenceCustomSound;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/customization/PreferenceCustomSound$1;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
@@ -35,7 +34,6 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/PreferenceCustomSound$1;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;
 
     invoke-static {v0}, Lcom/android/camera/customization/PreferenceCustomSound;->access$100(Lcom/android/camera/customization/PreferenceCustomSound;)Ljava/util/List;
@@ -52,7 +50,6 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/customization/PreferenceCustomSound$1;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -65,7 +62,6 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 2
 
-    .line 1
     iget-object p2, p0, Lcom/android/camera/customization/PreferenceCustomSound$1;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;
 
     invoke-virtual {p2}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
@@ -76,7 +72,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0d0175
+    const v0, 0x7f0d0174
 
     const/4 v1, 0x0
 
@@ -84,7 +80,6 @@
 
     move-result-object p1
 
-    .line 2
     new-instance p2, Lcom/android/camera/customization/PreferenceCustomSound$MyViewHolder;
 
     iget-object v0, p0, Lcom/android/camera/customization/PreferenceCustomSound$1;->this$0:Lcom/android/camera/customization/PreferenceCustomSound;

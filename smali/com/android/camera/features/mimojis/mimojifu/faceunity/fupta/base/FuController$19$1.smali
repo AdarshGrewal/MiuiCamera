@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
 .method public run()V
     .locals 7
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -47,7 +45,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/BaseFuController;->enterScene(I)V
 
-    .line 2
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$23;->$SwitchMap$com$android$camera$features$mimojis$mimojifu$faceunity$fupta$base$entity$LabelCollection$ItemType:[I
 
     iget-object v2, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
@@ -75,7 +72,6 @@
     :pswitch_0
     new-array v2, v1, [I
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v0, v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -90,7 +86,6 @@
 
     new-array v0, v1, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
-    .line 4
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v4, v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -105,7 +100,6 @@
 
     new-array v1, v1, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
-    .line 5
     sget-object v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->glass_frame_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     aput-object v4, v1, v3
@@ -117,7 +111,6 @@
 
     new-array v2, v0, [I
 
-    .line 6
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v4, v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -136,7 +129,6 @@
 
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;->glasses:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;
 
-    .line 7
     invoke-static {v4, v5}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$1600(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ItemType;)I
 
     move-result v4
@@ -145,7 +137,6 @@
 
     new-array v4, v0, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
-    .line 8
     iget-object v5, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v5, v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -164,7 +155,6 @@
 
     sget-object v6, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->glass_frame_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
-    .line 9
     invoke-static {v5, v6}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$1700(Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;)Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuColor;
 
     move-result-object v5
@@ -173,7 +163,6 @@
 
     new-array v0, v0, [Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
-    .line 10
     sget-object v5, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;->hair_color:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/entity/LabelCollection$ColorType;
 
     aput-object v5, v0, v3
@@ -189,7 +178,6 @@
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 11
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$000()Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
 
     move-result-object v4
@@ -200,7 +188,6 @@
 
     invoke-static {v4, v2}, Lcom/faceunity/wrapper/faceunity;->fuBindItems(I[I)I
 
-    .line 12
     invoke-static {}, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;->access$200()Ljava/lang/String;
 
     move-result-object v4
@@ -232,13 +219,11 @@
 
     move v2, v3
 
-    .line 13
     :goto_1
     array-length v4, v0
 
     if-ge v2, v4, :cond_1
 
-    .line 14
     iget-object v4, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 
     iget-object v4, v4, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;->this$0:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController;
@@ -253,7 +238,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19$1;->this$1:Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/base/FuController$19;
 

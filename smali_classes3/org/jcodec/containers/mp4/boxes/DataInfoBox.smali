@@ -7,7 +7,6 @@
 .method public constructor <init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lorg/jcodec/containers/mp4/boxes/NodeBox;-><init>(Lorg/jcodec/containers/mp4/boxes/Header;)V
 
     return-void
@@ -16,7 +15,6 @@
 .method public static createDataInfoBox()Lorg/jcodec/containers/mp4/boxes/DataInfoBox;
     .locals 3
 
-    .line 1
     new-instance v0, Lorg/jcodec/containers/mp4/boxes/DataInfoBox;
 
     new-instance v1, Lorg/jcodec/containers/mp4/boxes/Header;
@@ -45,7 +43,6 @@
 .method public getDref()Lorg/jcodec/containers/mp4/boxes/DataRefBox;
     .locals 2
 
-    .line 1
     const-class v0, Lorg/jcodec/containers/mp4/boxes/DataRefBox;
 
     const-string v1, "dref"

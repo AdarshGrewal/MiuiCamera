@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/zoommap/RegionHelper;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$2;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -44,7 +43,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$2;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     const-string v0, "TARGET_Y_TAG"
@@ -59,7 +57,6 @@
 
     invoke-static {p1, p2}, Lcom/android/camera/zoommap/RegionHelper;->access$202(Lcom/android/camera/zoommap/RegionHelper;I)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/zoommap/RegionHelper$2;->this$0:Lcom/android/camera/zoommap/RegionHelper;
 
     invoke-static {p1}, Lcom/android/camera/zoommap/RegionHelper;->access$100(Lcom/android/camera/zoommap/RegionHelper;)Landroid/view/View;

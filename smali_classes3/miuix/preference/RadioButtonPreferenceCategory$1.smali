@@ -25,7 +25,6 @@
 .method public constructor <init>(Lmiuix/preference/RadioButtonPreferenceCategory;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +37,16 @@
 .method public notifyPreferenceChangeInternal(Landroidx/preference/Preference;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-static {v0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->access$100(Lmiuix/preference/RadioButtonPreferenceCategory;Landroidx/preference/Preference;)Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     move-result-object p1
 
-    .line 2
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-static {v0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->access$200(Lmiuix/preference/RadioButtonPreferenceCategory;Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
 
-    .line 3
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-static {v0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->access$300(Lmiuix/preference/RadioButtonPreferenceCategory;Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
@@ -61,12 +57,10 @@
 .method public onPreferenceChangeInternal(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    .line 1
     move-object v0, p1
 
     check-cast v0, Landroid/widget/Checkable;
 
-    .line 2
     iget-object v1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-virtual {v1}, Landroidx/preference/Preference;->getOnPreferenceClickListener()Landroidx/preference/Preference$OnPreferenceClickListener;
@@ -75,17 +69,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v2, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-static {v2, p1, p2}, Lmiuix/preference/RadioButtonPreferenceCategory;->access$000(Lmiuix/preference/RadioButtonPreferenceCategory;Landroidx/preference/Preference;Ljava/lang/Object;)V
 
-    .line 4
     iget-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$1;->this$0:Lmiuix/preference/RadioButtonPreferenceCategory;
 
     invoke-interface {v1, p1}, Landroidx/preference/Preference$OnPreferenceClickListener;->onPreferenceClick(Landroidx/preference/Preference;)Z
 
-    .line 5
     :cond_0
     invoke-interface {v0}, Landroid/widget/Checkable;->isChecked()Z
 

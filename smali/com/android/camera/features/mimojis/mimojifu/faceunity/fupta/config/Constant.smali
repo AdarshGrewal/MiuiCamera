@@ -41,7 +41,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +49,6 @@
 .method public static getAnimojiPath()[Ljava/lang/String;
     .locals 1
 
-    .line 1
     sget-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/config/Constant;->animojiPath:[Ljava/lang/String;
 
     return-object v0
@@ -59,7 +57,6 @@
 .method public static setFilePath(Ljava/lang/String;)V
     .locals 4
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,7 +85,6 @@
 
     sput-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/config/Constant;->filePath:Ljava/lang/String;
 
-    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,12 +103,11 @@
 
     sput-object p0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/config/Constant;->versionPath:Ljava/lang/String;
 
-    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v0, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -134,7 +129,6 @@
 
     new-array v0, p0, [Ljava/lang/String;
 
-    .line 4
     sput-object v0, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/config/Constant;->animojiPath:[Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -142,14 +136,13 @@
     :goto_0
     if-ge v0, p0, :cond_0
 
-    .line 5
     sget-object v1, Lcom/android/camera/features/mimojis/mimojifu/faceunity/fupta/config/Constant;->animojiPath:[Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/android/camera/features/mimojis/commen/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
+    sget-object v3, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiHelper;->TEMPLATE_PATH:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

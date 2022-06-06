@@ -23,7 +23,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/AudioManagerAudioDeviceCallback;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -38,7 +37,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Landroid/media/AudioDeviceCallback;-><init>()V
 
     return-void
@@ -47,7 +45,6 @@
 .method private onAudioDevicesAddedOrRemoved([Landroid/media/AudioDeviceInfo;Z)V
     .locals 9
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/AudioManagerAudioDeviceCallback;->mListener:Lcom/android/camera/AudioManagerAudioDeviceCallback$OnAudioDeviceChangeListener;
 
     if-nez v0, :cond_0
@@ -61,7 +58,6 @@
 
     if-nez p2, :cond_2
 
-    .line 2
     invoke-static {}, Lcom/android/camera/Util;->isWiredHeadsetOn()Z
 
     move-result v2
@@ -79,7 +75,6 @@
     :goto_0
     move v2, v0
 
-    .line 3
     :goto_1
     array-length v3, p1
 
@@ -90,7 +85,6 @@
 
     aget-object v5, p1, v4
 
-    .line 4
     sget-object v6, Lcom/android/camera/AudioManagerAudioDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -111,7 +105,6 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
     invoke-virtual {v5}, Landroid/media/AudioDeviceInfo;->getType()I
 
     move-result v8
@@ -134,10 +127,8 @@
 
     move-result-object v7
 
-    .line 6
     invoke-static {v6, v7}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-static {v5}, Lcom/android/camera/Util;->isWiredAudioHeadset(Landroid/media/AudioDeviceInfo;)Z
 
     move-result v5
@@ -156,7 +147,6 @@
     :cond_4
     move v0, v1
 
-    .line 8
     :goto_3
     sget-object p1, Lcom/android/camera/AudioManagerAudioDeviceCallback;->TAG:Ljava/lang/String;
 
@@ -178,7 +168,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/AudioManagerAudioDeviceCallback;->mListener:Lcom/android/camera/AudioManagerAudioDeviceCallback$OnAudioDeviceChangeListener;
 
     invoke-interface {p1}, Lcom/android/camera/AudioManagerAudioDeviceCallback$OnAudioDeviceChangeListener;->onAudioDeviceChanged()V
@@ -194,7 +183,6 @@
 
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/AudioManagerAudioDeviceCallback;->onAudioDevicesAddedOrRemoved([Landroid/media/AudioDeviceInfo;Z)V
 
     return-void
@@ -205,7 +193,6 @@
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, v0}, Lcom/android/camera/AudioManagerAudioDeviceCallback;->onAudioDevicesAddedOrRemoved([Landroid/media/AudioDeviceInfo;Z)V
 
     return-void
@@ -214,7 +201,6 @@
 .method public setOnAudioDeviceChangeListener(Lcom/android/camera/AudioManagerAudioDeviceCallback$OnAudioDeviceChangeListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/AudioManagerAudioDeviceCallback;->mListener:Lcom/android/camera/AudioManagerAudioDeviceCallback$OnAudioDeviceChangeListener;
 
     return-void

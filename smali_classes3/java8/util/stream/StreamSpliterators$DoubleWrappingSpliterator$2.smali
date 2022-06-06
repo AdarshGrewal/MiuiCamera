@@ -27,7 +27,6 @@
 .method public constructor <init>(Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;Ljava8/util/function/DoubleConsumer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;->this$0:Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator;
 
     iput-object p2, p0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;->val$consumer:Ljava8/util/function/DoubleConsumer;
@@ -42,7 +41,6 @@
 .method public accept(D)V
     .locals 1
 
-    .line 4
     iget-object v0, p0, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;->val$consumer:Ljava8/util/function/DoubleConsumer;
 
     invoke-interface {v0, p1, p2}, Ljava8/util/function/DoubleConsumer;->accept(D)V
@@ -53,7 +51,6 @@
 .method public accept(I)V
     .locals 0
 
-    .line 2
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -62,7 +59,6 @@
 .method public accept(J)V
     .locals 0
 
-    .line 3
     invoke-static {}, Ljava8/util/stream/SinkDefaults;->reject()V
 
     return-void
@@ -71,7 +67,6 @@
 .method public accept(Ljava/lang/Double;)V
     .locals 2
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -84,7 +79,6 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p0, p1}, Ljava8/util/stream/StreamSpliterators$DoubleWrappingSpliterator$2;->accept(Ljava/lang/Double;)V

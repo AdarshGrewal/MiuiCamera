@@ -7,7 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
 
     add-double/2addr p0, v2
 
-    .line 1
     :cond_1
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(DD)D
 
@@ -53,14 +51,12 @@
 .method public static createByteBuffer([B)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .line 1
     array-length v0, p0
 
     invoke-static {v0}, Lcom/android/camera/panorama/NativeMemoryAllocator;->allocateBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
@@ -69,13 +65,10 @@
 
     const/4 v1, 0x0
 
-    .line 3
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 4
     invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 5
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object v0
@@ -84,17 +77,14 @@
 .method public static createName(Ljava/lang/String;J)Ljava/lang/String;
     .locals 1
 
-    .line 1
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 2
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     invoke-direct {p1, p0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object p0
@@ -139,7 +129,6 @@
 
     add-int/2addr v10, v7
 
-    .line 1
     aget-byte v10, p1, v10
 
     and-int/lit16 v10, v10, 0xff
@@ -157,7 +146,6 @@
 
     add-int/lit8 v8, v6, 0x1
 
-    .line 2
     aget-byte v6, p1, v6
 
     and-int/lit16 v6, v6, 0xff
@@ -166,7 +154,6 @@
 
     add-int/lit8 v6, v8, 0x1
 
-    .line 3
     aget-byte v8, p1, v8
 
     and-int/lit16 v8, v8, 0xff
@@ -259,7 +246,6 @@
 
     or-int/2addr v10, v11
 
-    .line 4
     aput v10, p0, v5
 
     add-int/lit8 v7, v7, 0x4

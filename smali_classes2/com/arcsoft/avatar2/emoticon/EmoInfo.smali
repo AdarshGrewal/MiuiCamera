@@ -65,63 +65,48 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->b:Z
 
     const-string v0, ""
 
-    .line 3
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->c:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    .line 4
     iput v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->f:I
 
     const/4 v2, 0x0
 
-    .line 5
     iput v2, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->g:F
 
-    .line 6
     iput v2, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->h:F
 
-    .line 7
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->i:Z
 
-    .line 8
     iput-boolean v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->j:Z
 
     const/4 v1, 0x0
 
-    .line 9
     iput-object v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->k:Ljava/nio/ByteBuffer;
 
-    .line 10
     iput-object v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->l:[B
 
-    .line 11
     iput-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->m:Ljava/lang/String;
 
-    .line 12
     iput-object v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->o:Landroid/util/Size;
 
     const/16 v0, 0x19
 
-    .line 13
     iput v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->p:I
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 14
     iput v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->q:F
 
-    .line 15
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -144,7 +129,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->n:Ljava/util/ArrayList;
 
     return-object v0
@@ -153,7 +137,6 @@
 .method public getEmoImageSize()Landroid/util/Size;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->o:Landroid/util/Size;
 
     return-object v0
@@ -162,7 +145,6 @@
 .method public getEmoMaxCount()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->f:I
 
     return v0
@@ -171,7 +153,6 @@
 .method public getEmoName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->c:Ljava/lang/String;
 
     return-object v0
@@ -180,7 +161,6 @@
 .method public getFileDescriptor()Ljava/io/FileDescriptor;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->e:Ljava/io/FileDescriptor;
 
     return-object v0
@@ -189,7 +169,6 @@
 .method public getFilePath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->m:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +177,6 @@
 .method public getScaleLevel()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->q:F
 
     return v0
@@ -207,7 +185,6 @@
 .method public getSelect()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->b:Z
 
     return v0
@@ -216,7 +193,6 @@
 .method public getThumbBgGroundPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->s:Ljava/lang/String;
 
     return-object v0
@@ -225,7 +201,6 @@
 .method public getThumbForGroundPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->r:Ljava/lang/String;
 
     return-object v0
@@ -234,7 +209,6 @@
 .method public getThumbFrameIndex()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->p:I
 
     return v0
@@ -243,7 +217,6 @@
 .method public getThumbnail()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->k:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -252,7 +225,6 @@
 .method public getThumbnailData()[B
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->l:[B
 
     return-object v0
@@ -261,7 +233,6 @@
 .method public getTranslationX()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->g:F
 
     return v0
@@ -270,7 +241,6 @@
 .method public getTranslationY()F
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->h:F
 
     return v0
@@ -279,7 +249,6 @@
 .method public getVideoPath()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->d:Ljava/lang/String;
 
     return-object v0
@@ -288,7 +257,6 @@
 .method public isMultipleBG()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->j:Z
 
     return v0
@@ -297,7 +265,6 @@
 .method public isNeedFaceColor()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->i:Z
 
     return v0
@@ -306,7 +273,6 @@
 .method public needFaceColor(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->i:Z
 
     return-void
@@ -323,7 +289,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->n:Ljava/util/ArrayList;
 
     return-void
@@ -332,7 +297,6 @@
 .method public setEmoImageSize(Landroid/util/Size;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->o:Landroid/util/Size;
 
     return-void
@@ -341,7 +305,6 @@
 .method public setEmoMaxCount(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->f:I
 
     return-void
@@ -350,7 +313,6 @@
 .method public setEmoName(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->c:Ljava/lang/String;
 
     return-void
@@ -359,7 +321,6 @@
 .method public setFileDescriptor(Ljava/io/FileDescriptor;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->e:Ljava/io/FileDescriptor;
 
     return-void
@@ -368,7 +329,6 @@
 .method public setFilePath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->m:Ljava/lang/String;
 
     return-void
@@ -377,7 +337,6 @@
 .method public setMultipleBG(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->j:Z
 
     return-void
@@ -386,7 +345,6 @@
 .method public setScaleLevel(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->q:F
 
     return-void
@@ -395,7 +353,6 @@
 .method public setSelect(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->b:Z
 
     return-void
@@ -404,7 +361,6 @@
 .method public setThumbBgGroundPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->s:Ljava/lang/String;
 
     return-void
@@ -413,7 +369,6 @@
 .method public setThumbForGroundPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->r:Ljava/lang/String;
 
     return-void
@@ -422,7 +377,6 @@
 .method public setThumbFrameIndex(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->p:I
 
     return-void
@@ -431,7 +385,6 @@
 .method public setThumbnail(Ljava/nio/ByteBuffer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->k:Ljava/nio/ByteBuffer;
 
     return-void
@@ -440,7 +393,6 @@
 .method public setThumbnailData([B)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->l:[B
 
     return-void
@@ -449,7 +401,6 @@
 .method public setTranslationX(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->g:F
 
     return-void
@@ -458,7 +409,6 @@
 .method public setTranslationY(F)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->h:F
 
     return-void
@@ -467,7 +417,6 @@
 .method public setVideoPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->d:Ljava/lang/String;
 
     return-void
@@ -476,7 +425,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -505,7 +453,6 @@
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lcom/arcsoft/avatar2/emoticon/EmoInfo;->n:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -527,7 +474,6 @@
 
     check-cast v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;
 
-    .line 3
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -562,7 +508,6 @@
 
     iget-object v4, v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
-    .line 4
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getTongueStatus()I
 
     move-result v4
@@ -591,7 +536,6 @@
 
     iget-object v4, v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
-    .line 5
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getOrientationLeftEyes()[F
 
     move-result-object v4
@@ -608,7 +552,6 @@
 
     iget-object v4, v2, Lcom/arcsoft/avatar2/emoticon/EmoInfo$EmoExtraInfo;->processInfo:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
-    .line 6
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getOrientationRightEyes()[F
 
     move-result-object v4
@@ -641,7 +584,6 @@
 
     goto/16 :goto_0
 
-    .line 7
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 

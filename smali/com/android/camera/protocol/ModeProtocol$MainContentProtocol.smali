@@ -30,9 +30,6 @@
 .method public abstract checkTouchRegionContainSplitFocusExposure(Landroid/view/MotionEvent;)V
 .end method
 
-.method public abstract disableFrontFlashAndHalo(Z)V
-.end method
-
 .method public abstract getFaceWaterMarkInfos()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -59,6 +56,12 @@
 .method public abstract hideReviewViews()V
 .end method
 
+.method public abstract hideShineHalo()V
+.end method
+
+.method public abstract isFaceLocationOK()Z
+.end method
+
 .method public abstract isFocusViewMoving()Z
 .end method
 
@@ -80,10 +83,16 @@
 .method public abstract processingFinish()V
 .end method
 
-.method public abstract processingStart()V
+.method public abstract processingStart(Ljava/lang/String;)V
+.end method
+
+.method public abstract setCenterHint(ILjava/lang/String;Ljava/lang/String;I)V
 .end method
 
 .method public abstract setIdPhotoBoxVisible(Z)V
+.end method
+
+.method public abstract setMimojiDetectTipType(I)V
 .end method
 
 .method public abstract setPreviewAspectRatio(F)V
@@ -95,6 +104,9 @@
 .method public abstract showReviewViews(Landroid/graphics/Bitmap;)V
 .end method
 
+.method public abstract showShineHalo()V
+.end method
+
 .method public abstract updateCenterMarkSwitched()V
 .end method
 
@@ -102,6 +114,9 @@
 .end method
 
 .method public abstract updateFocusMode(Ljava/lang/String;)V
+.end method
+
+.method public abstract updateMimojiFaceDetectResultTip(Z)V
 .end method
 
 .method public abstract updateReferenceGradienterSwitched()V

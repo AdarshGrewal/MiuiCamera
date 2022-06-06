@@ -58,10 +58,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p2, p3}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$ReduceTask;->op:Ljava8/util/stream/ReduceOps$ReduceOp;
 
     return-void
@@ -79,10 +77,8 @@
         }
     .end annotation
 
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava8/util/stream/AbstractTask;-><init>(Ljava8/util/stream/AbstractTask;Ljava8/util/Spliterator;)V
 
-    .line 4
     iget-object p1, p1, Ljava8/util/stream/ReduceOps$ReduceTask;->op:Ljava8/util/stream/ReduceOps$ReduceOp;
 
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$ReduceTask;->op:Ljava8/util/stream/ReduceOps$ReduceOp;
@@ -95,7 +91,6 @@
 .method public bridge synthetic doLeaf()Ljava/lang/Object;
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$ReduceTask;->doLeaf()Ljava8/util/stream/ReduceOps$AccumulatingSink;
 
     move-result-object v0
@@ -111,7 +106,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->helper:Ljava8/util/stream/PipelineHelper;
 
     iget-object v1, p0, Ljava8/util/stream/ReduceOps$ReduceTask;->op:Ljava8/util/stream/ReduceOps$ReduceOp;
@@ -134,7 +128,6 @@
 .method public bridge synthetic makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/AbstractTask;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Ljava8/util/stream/ReduceOps$ReduceTask;->makeChild(Ljava8/util/Spliterator;)Ljava8/util/stream/ReduceOps$ReduceTask;
 
     move-result-object p1
@@ -154,7 +147,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Ljava8/util/stream/ReduceOps$ReduceTask;
 
     invoke-direct {v0, p0, p1}, Ljava8/util/stream/ReduceOps$ReduceTask;-><init>(Ljava8/util/stream/ReduceOps$ReduceTask;Ljava8/util/Spliterator;)V
@@ -172,14 +164,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/AbstractTask;->isLeaf()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Ljava8/util/stream/AbstractTask;->leftChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v0, Ljava8/util/stream/ReduceOps$ReduceTask;
@@ -190,7 +180,6 @@
 
     check-cast v0, Ljava8/util/stream/ReduceOps$AccumulatingSink;
 
-    .line 3
     iget-object v1, p0, Ljava8/util/stream/AbstractTask;->rightChild:Ljava8/util/stream/AbstractTask;
 
     check-cast v1, Ljava8/util/stream/ReduceOps$ReduceTask;
@@ -203,10 +192,8 @@
 
     invoke-interface {v0, v1}, Ljava8/util/stream/ReduceOps$AccumulatingSink;->combine(Ljava8/util/stream/ReduceOps$AccumulatingSink;)V
 
-    .line 4
     invoke-virtual {p0, v0}, Ljava8/util/stream/AbstractTask;->setLocalResult(Ljava/lang/Object;)V
 
-    .line 5
     :cond_0
     invoke-super {p0, p1}, Ljava8/util/stream/AbstractTask;->onCompletion(Ljava8/util/concurrent/CountedCompleter;)V
 

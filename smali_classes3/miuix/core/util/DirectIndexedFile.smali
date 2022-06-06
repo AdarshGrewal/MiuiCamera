@@ -34,10 +34,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/InstantiationException;
 
     const-string v1, "Cannot instantiate utility class"
@@ -50,7 +48,6 @@
 .method public static build(I)Lmiuix/core/util/DirectIndexedFile$Builder;
     .locals 2
 
-    .line 1
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$Builder;
 
     const/4 v1, 0x0
@@ -68,7 +65,6 @@
         }
     .end annotation
 
-    .line 2
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$Reader;
 
     const/4 v1, 0x0
@@ -86,7 +82,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Lmiuix/core/util/DirectIndexedFile$Reader;
 
     const/4 v1, 0x0

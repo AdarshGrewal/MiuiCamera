@@ -33,13 +33,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/DeferredDownloadCallback;->splitInfoList:Ljava/util/List;
 
-    .line 3
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitinstall/DeferredDownloadCallback;->splitInstaller:Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitInstaller;
 
     return-void
@@ -62,7 +59,6 @@
 .method public onCompleted()V
     .locals 4
 
-    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitinstall/SplitBackgroundExecutor;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0

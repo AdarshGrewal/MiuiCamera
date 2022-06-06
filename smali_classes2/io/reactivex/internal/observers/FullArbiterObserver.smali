@@ -43,10 +43,8 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->arbiter:Lio/reactivex/internal/disposables/ObserverFullArbiter;
 
     return-void
@@ -57,7 +55,6 @@
 .method public onComplete()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->arbiter:Lio/reactivex/internal/disposables/ObserverFullArbiter;
 
     iget-object v1, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->s:Lio/reactivex/disposables/Disposable;
@@ -70,7 +67,6 @@
 .method public onError(Ljava/lang/Throwable;)V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->arbiter:Lio/reactivex/internal/disposables/ObserverFullArbiter;
 
     iget-object v1, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->s:Lio/reactivex/disposables/Disposable;
@@ -88,7 +84,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->arbiter:Lio/reactivex/internal/disposables/ObserverFullArbiter;
 
     iget-object v1, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->s:Lio/reactivex/disposables/Disposable;
@@ -101,7 +96,6 @@
 .method public onSubscribe(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->s:Lio/reactivex/disposables/Disposable;
 
     invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->validate(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
@@ -110,10 +104,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iput-object p1, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->s:Lio/reactivex/disposables/Disposable;
 
-    .line 3
     iget-object v0, p0, Lio/reactivex/internal/observers/FullArbiterObserver;->arbiter:Lio/reactivex/internal/disposables/ObserverFullArbiter;
 
     invoke-virtual {v0, p1}, Lio/reactivex/internal/disposables/ObserverFullArbiter;->setDisposable(Lio/reactivex/disposables/Disposable;)Z

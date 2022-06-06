@@ -15,7 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 
     new-array v1, v0, [B
 
-    .line 1
     :try_start_0
     invoke-static {}, Lcom/xiaomi/camera/base/RsaUtil;->getPublicKey()Ljava/security/PublicKey;
 
@@ -36,20 +34,16 @@
 
     const-string v3, "RSA/ECB/PKCS1Padding"
 
-    .line 2
     invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    .line 3
     invoke-virtual {v3, v4, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 4
     array-length v2, p0
 
-    .line 5
     new-instance v5, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v5}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -67,20 +61,17 @@
 
     if-le v8, v9, :cond_0
 
-    .line 6
     invoke-virtual {v3, p0, v6, v9}, Ljavax/crypto/Cipher;->doFinal([BII)[B
 
     move-result-object v6
 
     goto :goto_1
 
-    .line 7
     :cond_0
     invoke-virtual {v3, p0, v6, v8}, Ljavax/crypto/Cipher;->doFinal([BII)[B
 
     move-result-object v6
 
-    .line 8
     :goto_1
     array-length v8, v6
 
@@ -92,13 +83,11 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_2
@@ -110,7 +99,6 @@
     :catch_0
     move-exception p0
 
-    .line 11
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
@@ -118,7 +106,6 @@
     :catch_1
     move-exception p0
 
-    .line 12
     invoke-virtual {p0}, Ljavax/crypto/NoSuchPaddingException;->printStackTrace()V
 
     goto :goto_2
@@ -126,7 +113,6 @@
     :catch_2
     move-exception p0
 
-    .line 13
     invoke-virtual {p0}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     :goto_2
@@ -139,14 +125,12 @@
     :try_start_0
     const-string v0, "RSA"
 
-    .line 1
     invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
 
     move-result-object v0
 
     const-string v1, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDI9k5fmdE2SlFjyaRSkr3wh93Q\nXwL/5Lpc9Xll9NPtOXliyu0x4ZgmWeLv9IWXRV2Bkh3Rce2YkVZZ8hgJT9SKfhnL\nVHINpNwP4abHpIusZCTE387nN+nNYjzdkqXPKo6KPDxKdQadp+PqFKjdjPkIL2xV\n6jhxOpf6TQsCAWfBuwIDAQAB"
 
-    .line 2
     invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
@@ -157,7 +141,6 @@
 
     move-result-object v1
 
-    .line 3
     new-instance v2, Ljava/security/spec/X509EncodedKeySpec;
 
     invoke-direct {v2, v1}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
@@ -174,7 +157,6 @@
     :catch_0
     move-exception v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/security/spec/InvalidKeySpecException;->printStackTrace()V
 
     goto :goto_0
@@ -182,7 +164,6 @@
     :catch_1
     move-exception v0
 
-    .line 5
     invoke-virtual {v0}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     :goto_0

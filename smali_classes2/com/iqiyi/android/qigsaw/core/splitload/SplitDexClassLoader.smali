@@ -53,7 +53,6 @@
 
     goto :goto_0
 
-    .line 1
     :cond_0
     sget-object v0, Ljava/io/File;->pathSeparator:Ljava/lang/String;
 
@@ -64,10 +63,8 @@
     :goto_0
     invoke-direct {p0, v0, p3, p4, p6}, Ldalvik/system/BaseDexClassLoader;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 2
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName:Ljava/lang/String;
 
-    .line 3
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitApplicationLoaders;
 
     move-result-object p1
@@ -78,7 +75,6 @@
 
     iput-object p1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->dependenciesLoaders:Ljava/util/Set;
 
-    .line 4
     invoke-static {p0, p2, p3}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitUnKnownFileTypeDexLoader;->loadDex(Ljava/lang/ClassLoader;Ljava/util/List;Ljava/io/File;)V
 
     return-void
@@ -108,12 +104,10 @@
         }
     .end annotation
 
-    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2
     new-instance v9, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
     if-nez p3, :cond_0
@@ -122,7 +116,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     invoke-virtual {p3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -133,7 +126,6 @@
 
     const-class p3, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     invoke-virtual {p3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v8
@@ -156,7 +148,6 @@
 
     const/4 p2, 0x0
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p3
@@ -202,7 +193,6 @@
         }
     .end annotation
 
-    .line 1
     :try_start_0
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findClass(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -215,12 +205,10 @@
     :catch_0
     move-exception v0
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->dependenciesLoaders:Ljava/util/Set;
 
     if-eqz v1, :cond_0
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -238,7 +226,6 @@
 
     check-cast v2, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     :try_start_1
     invoke-virtual {v2, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->loadClassItself(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -259,7 +246,6 @@
 
     const/4 v4, 0x1
 
-    .line 5
     invoke-virtual {v2}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName()Ljava/lang/String;
 
     move-result-object v2
@@ -274,7 +260,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     throw v0
 .end method
@@ -282,19 +267,16 @@
 .method public findLibrary(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findLibrary(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->dependenciesLoaders:Ljava/util/Set;
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -312,7 +294,6 @@
 
     check-cast v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     invoke-virtual {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->findLibrary(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -322,7 +303,6 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 5
     invoke-virtual {p0}, Ldalvik/system/BaseDexClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v1
@@ -331,7 +311,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 6
     invoke-virtual {p0}, Ldalvik/system/BaseDexClassLoader;->getParent()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -349,7 +328,6 @@
 .method public findLibraryItself(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findLibrary(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -360,19 +338,16 @@
 .method public findResource(Ljava/lang/String;)Ljava/net/URL;
     .locals 3
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findResource(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->dependenciesLoaders:Ljava/util/Set;
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -390,7 +365,6 @@
 
     check-cast v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     invoke-virtual {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->findResourceItself(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v0
@@ -404,7 +378,6 @@
 .method public findResourceItself(Ljava/lang/String;)Ljava/net/URL;
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findResource(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object p1
@@ -425,19 +398,16 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findResources(Ljava/lang/String;)Ljava/util/Enumeration;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2
     iget-object v1, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->dependenciesLoaders:Ljava/util/Set;
 
     if-eqz v1, :cond_1
 
-    .line 3
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -455,7 +425,6 @@
 
     check-cast v0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;
 
-    .line 4
     invoke-virtual {v0, p1}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->findResourcesItself(Ljava/lang/String;)Ljava/util/Enumeration;
 
     move-result-object v0
@@ -479,7 +448,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findResources(Ljava/lang/String;)Ljava/util/Enumeration;
 
     move-result-object p1
@@ -505,7 +473,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findLoadedClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -514,7 +481,6 @@
 
     return-object v0
 
-    .line 2
     :cond_0
     invoke-super {p0, p1}, Ldalvik/system/BaseDexClassLoader;->findClass(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -526,7 +492,6 @@
 .method public moduleName()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/iqiyi/android/qigsaw/core/splitload/SplitDexClassLoader;->moduleName:Ljava/lang/String;
 
     return-object v0

@@ -11,12 +11,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;-><init>(Landroid/view/View;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 2
     iput p1, p0, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->srcAlpha:F
 
     return-void
@@ -33,12 +31,10 @@
 
     aput-object p0, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     const/16 v0, 0x8
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
@@ -55,7 +51,6 @@
 
     aput-object p0, v1, v2
 
-    .line 1
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
@@ -72,17 +67,14 @@
 
     aput-object p0, v0, v2
 
-    .line 2
     invoke-static {v0}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
-    .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
     const/4 v0, 0x4
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
@@ -101,7 +93,6 @@
 
     aput-object p1, v0, v1
 
-    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object p1
@@ -118,10 +109,8 @@
 .method public onAnimationEnd()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->onAnimationEnd()V
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     iget-boolean v1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mTargetGone:Z
@@ -144,7 +133,6 @@
 .method public setStartAlpha(F)Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->srcAlpha:F
 
     return-object p0
@@ -158,15 +146,12 @@
         }
     .end annotation
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->subscribe(Lio/reactivex/CompletableEmitter;)V
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->clean(Landroid/view/View;)V
 
-    .line 3
     iget p1, p0, Lcom/android/camera/animation/folme/FolmeAlphaOutOnSubscribe;->srcAlpha:F
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -179,12 +164,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
     iget-object p1, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5
     new-instance p1, Lmiuix/animation/controller/AnimState;
 
     const-string/jumbo v2, "start alpha"
@@ -201,7 +184,6 @@
 
     move-result-object p1
 
-    .line 6
     new-instance v2, Lmiuix/animation/controller/AnimState;
 
     const-string v3, "end alpha"
@@ -218,7 +200,6 @@
 
     new-array v3, v0, [Landroid/view/View;
 
-    .line 7
     iget-object v4, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     aput-object v4, v3, v1
@@ -253,20 +234,17 @@
 
     aput v7, v6, v1
 
-    .line 8
     invoke-virtual {v4, v5, v6}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v4
 
     aput-object v4, v3, v1
 
-    .line 9
     invoke-interface {p1, v2, v3}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     :cond_0
     new-array p1, v0, [Landroid/view/View;
 
-    .line 10
     iget-object v2, p0, Lcom/android/camera/animation/folme/FolmeBaseOnSubScribe;->mAniView:Landroid/view/View;
 
     aput-object v2, p1, v1

@@ -27,7 +27,6 @@
 .method public constructor <init>(Lcom/android/camera/features/mimojis/mvp/data/source/remote/TasksRemoteDataSource;Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mimojis/mvp/data/source/remote/TasksRemoteDataSource$1;->this$0:Lcom/android/camera/features/mimojis/mvp/data/source/remote/TasksRemoteDataSource;
 
     iput-object p2, p0, Lcom/android/camera/features/mimojis/mvp/data/source/remote/TasksRemoteDataSource$1;->val$callback:Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;
@@ -42,7 +41,6 @@
 .method public run()V
     .locals 3
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/features/mimojis/mvp/data/source/remote/TasksRemoteDataSource$1;->val$callback:Lcom/android/camera/features/mimojis/mvp/data/source/TasksDataSource$LoadTasksCallback;
 
     new-instance v1, Ljava/util/ArrayList;

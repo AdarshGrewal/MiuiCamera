@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/xiaomi/camera/rcs/network/BluetoothListener;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;->this$0:Lcom/xiaomi/camera/rcs/network/BluetoothListener;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -33,7 +32,6 @@
 .method public synthetic constructor <init>(Lcom/xiaomi/camera/rcs/network/BluetoothListener;Lcom/xiaomi/camera/rcs/network/BluetoothListener$1;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;-><init>(Lcom/xiaomi/camera/rcs/network/BluetoothListener;)V
 
     return-void
@@ -48,7 +46,6 @@
 
     const/high16 v0, -0x80000000
 
-    .line 1
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
@@ -57,7 +54,6 @@
 
     goto :goto_0
 
-    .line 2
     :pswitch_0
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;->this$0:Lcom/xiaomi/camera/rcs/network/BluetoothListener;
 
@@ -69,7 +65,6 @@
 
     goto :goto_0
 
-    .line 3
     :pswitch_1
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;->this$0:Lcom/xiaomi/camera/rcs/network/BluetoothListener;
 
@@ -81,7 +76,6 @@
 
     goto :goto_0
 
-    .line 4
     :pswitch_2
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;->this$0:Lcom/xiaomi/camera/rcs/network/BluetoothListener;
 
@@ -93,7 +87,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_3
     iget-object p1, p0, Lcom/xiaomi/camera/rcs/network/BluetoothListener$BluetoothReceiver;->this$0:Lcom/xiaomi/camera/rcs/network/BluetoothListener;
 

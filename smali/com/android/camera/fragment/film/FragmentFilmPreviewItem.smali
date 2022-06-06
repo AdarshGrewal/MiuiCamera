@@ -38,7 +38,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseViewPagerFragment;-><init>()V
 
     return-void
@@ -55,14 +54,12 @@
 
     float-to-double p1, p1
 
-    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide p1
 
     double-to-int p1, p1
 
-    .line 2
     sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v0, 0x1
@@ -93,18 +90,16 @@
 .method private initView(Landroid/view/View;)V
     .locals 3
 
-    const v0, 0x7f0a04a9
+    const v0, 0x7f0a04bc
 
-    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0a04a7
+    const v1, 0x7f0a04ba
 
-    .line 2
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -113,9 +108,8 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mCollapsing:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a04ab
+    const v1, 0x7f0a04be
 
-    .line 3
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -124,12 +118,10 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mPreviewStart:Landroid/widget/ImageView;
 
-    .line 4
     invoke-virtual {v1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a04b4
+    const v1, 0x7f0a04c7
 
-    .line 5
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -138,16 +130,14 @@
 
     iput-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
-    const v1, 0x7f0a04a8
+    const v1, 0x7f0a04bb
 
-    .line 6
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 7
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIndex:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -156,7 +146,6 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 8
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mCollapsing:Landroid/widget/ImageView;
 
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIndex:I
@@ -167,12 +156,10 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
-    .line 9
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mCollapsing:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 10
     iget p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageWidth:I
 
     if-lez p1, :cond_0
@@ -181,24 +168,20 @@
 
     if-lez p1, :cond_0
 
-    .line 11
     invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 12
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageWidth:I
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 13
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageHeight:I
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 14
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {p1}, Landroid/view/TextureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -207,17 +190,14 @@
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 15
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageWidth:I
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 16
     iget v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageHeight:I
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 17
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
 
@@ -225,26 +205,22 @@
 
     invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->setTransitionName(Landroid/view/View;Ljava/lang/String;)V
 
-    .line 18
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const/4 v2, 0x4
 
     invoke-virtual {p1, v2}, Landroid/view/TextureView;->setVisibility(I)V
 
-    .line 19
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {p1, p0}, Landroid/view/TextureView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 20
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const/4 v2, 0x1
 
     invoke-virtual {p1, v2}, Lcom/android/camera/ui/TextureVideoView;->setLoop(Z)V
 
-    .line 21
     new-instance p1, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {p1}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V
@@ -253,17 +229,14 @@
 
     const/4 v2, 0x0
 
-    .line 22
     invoke-virtual {p1, v2}, Lcom/bumptech/glide/request/BaseRequestOptions;->skipMemoryCache(Z)Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 23
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mGlideOptions:Lcom/bumptech/glide/request/RequestOptions;
 
     sget-object v2, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->NONE:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     invoke-virtual {p1, v2}, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/BaseRequestOptions;
 
-    .line 24
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -276,22 +249,18 @@
 
     iget-object v2, v2, Lcom/android/camera/fragment/film/FilmItem;->coverPath:Ljava/lang/String;
 
-    .line 25
     invoke-virtual {p1, v2}, Lcom/bumptech/glide/RequestManager;->load(Ljava/lang/String;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p1
 
     iget-object v2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mGlideOptions:Lcom/bumptech/glide/request/RequestOptions;
 
-    .line 26
     invoke-virtual {p1, v2}, Lcom/bumptech/glide/RequestBuilder;->apply(Lcom/bumptech/glide/request/BaseRequestOptions;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p1
 
-    .line 27
     invoke-virtual {p1, v0}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
-    .line 28
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/film/FilmItem;->getName()Ljava/lang/String;
@@ -306,7 +275,6 @@
 .method private pausePlay()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
     if-nez v0, :cond_0
@@ -316,10 +284,8 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/TextureVideoView;->pause()V
@@ -330,7 +296,6 @@
 .method private resumePlay()V
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
     if-eqz v0, :cond_0
@@ -340,10 +305,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/TextureVideoView;->resume()V
@@ -354,7 +317,6 @@
 .method private startPlay()V
     .locals 3
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
     if-eqz v0, :cond_0
@@ -364,10 +326,8 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
@@ -376,14 +336,12 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/TextureVideoView;->setVideoPath(Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/TextureView;->setVisibility(I)V
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const-wide/16 v1, 0x0
@@ -396,7 +354,6 @@
 .method private stopPlay()V
     .locals 2
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
     if-nez v0, :cond_0
@@ -406,15 +363,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIsPlaying:Z
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/TextureVideoView;->stop()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mTextureVideoView:Lcom/android/camera/ui/TextureVideoView;
 
     const/4 v1, 0x4
@@ -429,22 +383,19 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v1, 0x7f0a04a7
+    const v1, 0x7f0a04ba
 
     if-eq v0, v1, :cond_0
 
     goto :goto_0
 
-    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->stopPlay()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mClickListener:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
@@ -456,16 +407,14 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d00c1
+    const p3, 0x7f0d00c2
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->initView(Landroid/view/View;)V
 
     return-object p1
@@ -474,10 +423,8 @@
 .method public onPause()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->stopPlay()V
 
     return-void
@@ -486,10 +433,8 @@
 .method public onResume()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
 
-    .line 2
     iget-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mVisible:Z
 
     if-eqz v0, :cond_0
@@ -506,7 +451,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->startPlay()V
 
     :cond_0
@@ -516,18 +460,14 @@
 .method public onViewCreatedAndJumpOut()V
     .locals 2
 
-    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseViewPagerFragment;->onViewCreatedAndJumpOut()V
 
     const/4 v0, 0x0
 
-    .line 2
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mVisible:Z
 
-    .line 3
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->stopPlay()V
 
-    .line 4
     iget-object v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mCollapsing:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
@@ -540,31 +480,25 @@
 .method public onViewCreatedAndVisibleToUser(Z)V
     .locals 1
 
-    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseViewPagerFragment;->onViewCreatedAndVisibleToUser(Z)V
 
     const/4 p1, 0x1
 
-    .line 2
     iput-boolean p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mVisible:Z
 
-    .line 3
     iget-boolean p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFirstPreviewItem:Z
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 4
     iput-boolean v0, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFirstPreviewItem:Z
 
-    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mCollapsing:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->startPlay()V
 
     return-void
@@ -573,24 +507,18 @@
 .method public setData(ILcom/android/camera/fragment/film/FilmItem;IILandroid/view/View$OnClickListener;I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mIndex:I
 
-    .line 2
     iput-object p2, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
 
-    .line 3
     iput p3, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageWidth:I
 
-    .line 4
     iput p4, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mImageHeight:I
 
-    .line 5
     iput-object p5, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mClickListener:Landroid/view/View$OnClickListener;
 
     sub-int p2, p1, p6
 
-    .line 6
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result p2
@@ -615,7 +543,6 @@
 
     move p3, p4
 
-    .line 7
     :cond_1
     iput-boolean p3, p0, Lcom/android/camera/fragment/film/FragmentFilmPreviewItem;->mFirstPreviewItem:Z
 

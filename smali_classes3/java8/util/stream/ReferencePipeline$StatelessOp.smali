@@ -39,7 +39,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0, p1, p3}, Ljava8/util/stream/ReferencePipeline;-><init>(Ljava8/util/stream/AbstractPipeline;I)V
 
     return-void
@@ -58,7 +57,6 @@
 .method public bridge synthetic unordered()Ljava8/util/stream/BaseStream;
     .locals 1
 
-    .line 1
     invoke-super {p0}, Ljava8/util/stream/ReferencePipeline;->unordered()Ljava8/util/stream/Stream;
 
     move-result-object v0

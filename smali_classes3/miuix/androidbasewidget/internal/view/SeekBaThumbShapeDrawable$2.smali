@@ -30,7 +30,6 @@
 .method public constructor <init>(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$2;->this$0:Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +42,6 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;
 
     invoke-virtual {p0, p1}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$2;->getValue(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)F
@@ -56,7 +54,6 @@
 .method public getValue(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;)F
     .locals 0
 
-    .line 2
     invoke-virtual {p1}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->getScale()F
 
     move-result p1
@@ -67,7 +64,6 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 1
     check-cast p1, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable$2;->setValue(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;F)V
@@ -78,7 +74,6 @@
 .method public setValue(Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;F)V
     .locals 0
 
-    .line 2
     invoke-virtual {p1, p2}, Lmiuix/androidbasewidget/internal/view/SeekBaThumbShapeDrawable;->setScale(F)V
 
     return-void

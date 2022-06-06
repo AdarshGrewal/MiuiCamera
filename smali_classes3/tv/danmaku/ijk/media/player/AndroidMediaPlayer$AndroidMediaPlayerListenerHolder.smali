@@ -42,12 +42,10 @@
 .method public constructor <init>(Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -62,7 +60,6 @@
 .method public onBufferingUpdate(Landroid/media/MediaPlayer;I)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -75,7 +72,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
@@ -87,7 +83,6 @@
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -100,7 +95,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
@@ -112,7 +106,6 @@
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -123,7 +116,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
     invoke-virtual {p1, p2, p3}, Ltv/danmaku/ijk/media/player/AbstractMediaPlayer;->notifyOnError(II)Z
@@ -146,7 +138,6 @@
 .method public onInfo(Landroid/media/MediaPlayer;II)Z
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -157,7 +148,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
     invoke-virtual {p1, p2, p3}, Ltv/danmaku/ijk/media/player/AbstractMediaPlayer;->notifyOnInfo(II)Z
@@ -180,7 +170,6 @@
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -193,7 +182,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
@@ -205,7 +193,6 @@
 .method public onSeekComplete(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -218,7 +205,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
@@ -230,7 +216,6 @@
 .method public onTimedText(Landroid/media/MediaPlayer;Landroid/media/TimedText;)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -248,7 +233,6 @@
 
     if-eqz p2, :cond_1
 
-    .line 2
     new-instance p1, Ltv/danmaku/ijk/media/player/IjkTimedText;
 
     invoke-virtual {p2}, Landroid/media/TimedText;->getBounds()Landroid/graphics/Rect;
@@ -261,7 +245,6 @@
 
     invoke-direct {p1, v0, p2}, Ltv/danmaku/ijk/media/player/IjkTimedText;-><init>(Landroid/graphics/Rect;Ljava/lang/String;)V
 
-    .line 3
     :cond_1
     iget-object p2, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 
@@ -273,7 +256,6 @@
 .method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
     .locals 1
 
-    .line 1
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->mWeakMediaPlayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -286,7 +268,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     iget-object p1, p0, Ltv/danmaku/ijk/media/player/AndroidMediaPlayer$AndroidMediaPlayerListenerHolder;->this$0:Ltv/danmaku/ijk/media/player/AndroidMediaPlayer;
 

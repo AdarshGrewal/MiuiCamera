@@ -27,7 +27,6 @@
 .method public constructor <init>(ZLmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lmiuix/appcompat/widget/DialogAnimHelper$2;->val$isLandscape:Z
 
     iput-object p2, p0, Lmiuix/appcompat/widget/DialogAnimHelper$2;->val$listener:Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;
@@ -48,13 +47,10 @@
 
     sub-int/2addr p5, p2
 
-    .line 1
     invoke-static {p1, p5}, Lmiuix/appcompat/widget/DialogAnimHelper;->access$000(Landroid/view/View;I)V
 
-    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 3
     iget-boolean p3, p0, Lmiuix/appcompat/widget/DialogAnimHelper$2;->val$isLandscape:Z
 
     iget-object p4, p0, Lmiuix/appcompat/widget/DialogAnimHelper$2;->val$listener:Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;

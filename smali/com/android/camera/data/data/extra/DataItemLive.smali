@@ -26,10 +26,6 @@
 
 .field public static final KEY:Ljava/lang/String; = "camera_settings_live"
 
-.field public static final MATERIAL_DOWNLOAD_STATE:Ljava/lang/String; = "material_download_state"
-
-.field public static final MATERIAL_VERSION:Ljava/lang/String; = "material_version"
-
 
 # instance fields
 .field public mAmbilightModeIndex:I
@@ -43,16 +39,6 @@
 .field public mCurrentActivityHashCode:I
 
 .field public mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
-
-.field public mIMiModeState:Ljava/util/Stack;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Stack<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public mIsShowMiLiveMenu:Z
 
@@ -69,6 +55,8 @@
         }
     .end annotation
 .end field
+
+.field public mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
 .field public mRecordSegmentTimeInfo:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -103,15 +91,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/data/data/DataItemBase;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2
     iput v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mCurrentActivityHashCode:I
 
-    .line 3
     sget v1, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -122,47 +107,32 @@
 
     const-string v1, "0"
 
-    .line 4
     iput-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mKaleidoscope:Ljava/lang/String;
 
-    .line 5
     iput v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mAmbilightModeIndex:I
 
     const/4 v0, 0x0
 
-    .line 6
     iput-boolean v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimeFreezeFilmRatioEnabled:Z
 
-    .line 7
     iput-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSky:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 8
     iput-boolean v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mIsShowMiLiveMenu:Z
 
-    .line 9
-    new-instance v0, Ljava/util/Stack;
-
-    invoke-direct {v0}, Ljava/util/Stack;-><init>()V
-
-    iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mIMiModeState:Ljava/util/Stack;
-
-    .line 10
     new-instance v0, Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;-><init>(Lcom/android/camera/data/data/extra/DataItemLive;)V
 
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveVideoQuality:Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;
 
-    .line 11
     new-instance v0, Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;-><init>(Lcom/android/camera/data/data/extra/DataItemLive;)V
 
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveReferenceLine:Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;
 
-    .line 12
     new-instance v0, Lcom/android/camera/data/data/config/ComponentLiveDuration;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/data/config/ComponentLiveDuration;-><init>(Lcom/android/camera/data/data/extra/DataItemLive;)V
@@ -179,37 +149,35 @@
 
     const/4 v0, 0x0
 
-    .line 1
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
-    .line 2
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mRecordSegmentTimeInfo:Ljava/util/List;
 
-    .line 3
-    iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     if-eqz v1, :cond_0
 
-    .line 4
-    invoke-interface {v1}, Ljava/util/List;->clear()V
+    invoke-virtual {v1}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;->reset()V
 
-    .line 5
-    iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
-
-    .line 6
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
 
     if-eqz v1, :cond_1
 
-    .line 7
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 8
+    iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Ljava/util/List;->clear()V
+
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
 
-    .line 9
-    :cond_1
+    :cond_2
     sget v0, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -220,28 +188,23 @@
 
     const-string v0, "0"
 
-    .line 10
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mKaleidoscope:Ljava/lang/String;
 
     const/4 v0, -0x1
 
-    .line 11
     iput v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mAmbilightModeIndex:I
 
     const/4 v0, 0x0
 
-    .line 12
     iput-boolean v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimeFreezeFilmRatioEnabled:Z
 
-    .line 13
     iget-object v1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimerBurstController:Lcom/android/camera/timerburst/TimerBurstController;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 14
     invoke-virtual {v1, v0}, Lcom/android/camera/timerburst/TimerBurstController;->setInTimerBurstShotting(Z)V
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -256,7 +219,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -276,7 +238,6 @@
 
     check-cast v1, Lcom/android/camera/module/impl/component/ILive$ILiveSegmentData;
 
-    .line 2
     invoke-virtual {p1, v1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -292,7 +253,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -303,7 +263,6 @@
 .method public getAmbilightMode()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mAmbilightModeIndex:I
 
     return v0
@@ -312,7 +271,6 @@
 .method public getComponentLiveDuration()Lcom/android/camera/data/data/config/ComponentLiveDuration;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveDuration:Lcom/android/camera/data/data/config/ComponentLiveDuration;
 
     return-object v0
@@ -321,7 +279,6 @@
 .method public getComponentLiveVideoQuality()Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveVideoQuality:Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;
 
     return-object v0
@@ -330,7 +287,6 @@
 .method public getCurrentFilmItem()Lcom/android/camera/fragment/film/FilmItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
 
     return-object v0
@@ -339,7 +295,6 @@
 .method public getCurrentVVItem()Lcom/android/camera/fragment/vv/VVItem;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     return-object v0
@@ -348,11 +303,10 @@
 .method public getIsMultiCamera()Z
     .locals 2
 
-    const-string v0, "multi_camera"
+    const-string/jumbo v0, "multi_camera"
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -363,7 +317,6 @@
 .method public getKaleidoscope()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mKaleidoscope:Ljava/lang/String;
 
     return-object v0
@@ -376,7 +329,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -391,7 +343,6 @@
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -399,40 +350,9 @@
     return v0
 .end method
 
-.method public getMaterialDownloadState()Z
-    .locals 2
-
-    const-string v0, "material_download_state"
-
-    const/4 v1, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getMaterialVersion()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "material_version"
-
-    const-string v1, ""
-
-    .line 1
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getMiLiveFilterId()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveFilterId:Ljava/lang/String;
 
     return-object v0
@@ -449,8 +369,26 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getMimojiStatusManager()Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    invoke-direct {v0}, Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;-><init>()V
+
+    iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMimojiStatusManager:Lcom/android/camera/features/mimojis/mimojias/widget/helper/MimojiStatusManager;
 
     return-object v0
 .end method
@@ -466,7 +404,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mRecordSegmentTimeInfo:Ljava/util/List;
 
     return-object v0
@@ -475,7 +412,6 @@
 .method public getTimeFreezeFilmRatioEnabled()Z
     .locals 1
 
-    .line 1
     iget-boolean v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimeFreezeFilmRatioEnabled:Z
 
     return v0
@@ -484,19 +420,16 @@
 .method public getTimerBurstController()Lcom/android/camera/timerburst/TimerBurstController;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimerBurstController:Lcom/android/camera/timerburst/TimerBurstController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/timerburst/TimerBurstController;
 
     invoke-direct {v0}, Lcom/android/camera/timerburst/TimerBurstController;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimerBurstController:Lcom/android/camera/timerburst/TimerBurstController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimerBurstController:Lcom/android/camera/timerburst/TimerBurstController;
 
@@ -510,7 +443,6 @@
 
     const-string v1, ""
 
-    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/android/camera/data/data/DataItemBase;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -521,7 +453,6 @@
 .method public getVideoSky()Ljava/lang/String;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSky:Ljava/lang/String;
 
     return-object v0
@@ -538,7 +469,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
 
     return-object v0
@@ -547,7 +477,6 @@
 .method public getmComponentLiveReferenceLine()Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveReferenceLine:Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;
 
     return-object v0
@@ -572,17 +501,14 @@
 .method public reInitComponent(IILcom/android/camera2/CameraCapabilities;)V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveVideoQuality:Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/data/data/extra/ComponentLiveVideoQuality;->reInit(IILcom/android/camera2/CameraCapabilities;)V
 
-    .line 2
     iget-object p3, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveReferenceLine:Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;
 
     invoke-virtual {p3, p1, p2}, Lcom/android/camera/data/data/extra/ComponentLiveReferenceLine;->reInit(II)V
 
-    .line 3
     iget-object p2, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mComponentLiveDuration:Lcom/android/camera/data/data/config/ComponentLiveDuration;
 
     invoke-virtual {p2, p1}, Lcom/android/camera/data/data/config/ComponentLiveDuration;->reInit(I)Ljava/util/List;
@@ -593,7 +519,6 @@
 .method public resetAll()V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
@@ -604,8 +529,13 @@
 
     invoke-interface {v0}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
 
-    .line 2
     invoke-virtual {p0}, Lcom/android/camera/data/data/extra/DataItemLive;->clearAll()V
+
+    return-void
+.end method
+
+.method public resetMimojiIfNeed(I)V
+    .locals 0
 
     return-void
 .end method
@@ -613,7 +543,6 @@
 .method public setActivation(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
@@ -632,7 +561,6 @@
 .method public setAmbilightMode(I)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mAmbilightModeIndex:I
 
     return-void
@@ -641,7 +569,6 @@
 .method public setCurrentFilmItem(Lcom/android/camera/fragment/film/FilmItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mFilmItem:Lcom/android/camera/fragment/film/FilmItem;
 
     return-void
@@ -650,7 +577,6 @@
 .method public setCurrentVVItem(Lcom/android/camera/fragment/vv/VVItem;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVVItem:Lcom/android/camera/fragment/vv/VVItem;
 
     return-void
@@ -659,9 +585,8 @@
 .method public setIsMultiCamera(Z)V
     .locals 1
 
-    const-string v0, "multi_camera"
+    const-string/jumbo v0, "multi_camera"
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/DataItemBase;->putBoolean(Ljava/lang/String;Z)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     return-void
@@ -670,7 +595,6 @@
 .method public setKaleidoscope(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mKaleidoscope:Ljava/lang/String;
 
     return-void
@@ -681,7 +605,6 @@
 
     const-string v0, "key_live_filter"
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/DataItemBase;->putInt(Ljava/lang/String;I)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     return-void
@@ -692,46 +615,7 @@
 
     const-string v0, "live_start_orientation"
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/DataItemBase;->putInt(Ljava/lang/String;I)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    return-void
-.end method
-
-.method public setMaterialDownloadState(Z)V
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    move-result-object v0
-
-    const-string v1, "material_download_state"
-
-    invoke-interface {v0, v1, p1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putBoolean(Ljava/lang/String;Z)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
-
-    return-void
-.end method
-
-.method public setMaterialVersion(Ljava/lang/String;)V
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    move-result-object v0
-
-    const-string v1, "material_version"
-
-    invoke-interface {v0, v1, p1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->putString(Ljava/lang/String;Ljava/lang/String;)Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/android/camera/data/provider/DataProvider$ProviderEditor;->apply()V
 
     return-void
 .end method
@@ -739,7 +623,6 @@
 .method public setMiLiveFilterId(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveFilterId:Ljava/lang/String;
 
     return-void
@@ -756,7 +639,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mMiLiveSegmentData:Ljava/util/List;
 
     return-void
@@ -765,7 +647,6 @@
 .method public setMimojiVersion(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
@@ -790,7 +671,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mRecordSegmentTimeInfo:Ljava/util/List;
 
     return-void
@@ -799,7 +679,6 @@
 .method public setTimeFreezeFilmRatioEnabled(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimeFreezeFilmRatioEnabled:Z
 
     return-void
@@ -808,7 +687,6 @@
 .method public setTimerBurstController(Lcom/android/camera/timerburst/TimerBurstController;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mTimerBurstController:Lcom/android/camera/timerburst/TimerBurstController;
 
     return-void
@@ -817,7 +695,6 @@
 .method public setVVVersion(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lcom/android/camera/data/data/DataItemBase;->editor()Lcom/android/camera/data/provider/DataProvider$ProviderEditor;
 
     move-result-object v0
@@ -836,7 +713,6 @@
 .method public setVideoSky(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSky:Ljava/lang/String;
 
     return-void
@@ -853,7 +729,6 @@
         }
     .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/data/data/extra/DataItemLive;->mVideoSkySegmentData:Ljava/util/List;
 
     return-void

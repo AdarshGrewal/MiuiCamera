@@ -25,10 +25,8 @@
 .method public constructor <init>(Landroid/util/Size;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lcom/android/camera/Thumbnail$Resizer;->size:Landroid/util/Size;
 
     return-void
@@ -37,7 +35,6 @@
 .method public synthetic constructor <init>(Landroid/util/Size;Lcom/android/camera/Thumbnail$1;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/Thumbnail$Resizer;-><init>(Landroid/util/Size;)V
 
     return-void
@@ -50,10 +47,8 @@
 
     const/4 p3, 0x1
 
-    .line 1
     invoke-virtual {p1, p3}, Landroid/graphics/ImageDecoder;->setAllocator(I)V
 
-    .line 2
     invoke-virtual {p2}, Landroid/graphics/ImageDecoder$ImageInfo;->getSize()Landroid/util/Size;
 
     move-result-object v0
@@ -70,7 +65,6 @@
 
     div-int/2addr v0, v1
 
-    .line 3
     invoke-virtual {p2}, Landroid/graphics/ImageDecoder$ImageInfo;->getSize()Landroid/util/Size;
 
     move-result-object p2
@@ -87,14 +81,12 @@
 
     div-int/2addr p2, v1
 
-    .line 4
     invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
     if-le p2, p3, :cond_0
 
-    .line 5
     invoke-virtual {p1, p2}, Landroid/graphics/ImageDecoder;->setTargetSampleSize(I)V
 
     :cond_0

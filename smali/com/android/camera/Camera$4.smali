@@ -25,7 +25,6 @@
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/Camera$4;->this$0:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/Camera$4;->this$0:Lcom/android/camera/Camera;
 
     new-instance v0, Landroid/os/Messenger;

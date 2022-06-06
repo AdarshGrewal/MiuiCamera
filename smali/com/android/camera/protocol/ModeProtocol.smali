@@ -11,6 +11,7 @@
         Lcom/android/camera/protocol/ModeProtocol$DisplayGuide;,
         Lcom/android/camera/protocol/ModeProtocol$DisplayFoldStatus;,
         Lcom/android/camera/protocol/ModeProtocol$MultiFeatureManager;,
+        Lcom/android/camera/protocol/ModeProtocol$ModeListManager;,
         Lcom/android/camera/protocol/ModeProtocol$MagneticSensorDetect;,
         Lcom/android/camera/protocol/ModeProtocol$BluetoothHeadset;,
         Lcom/android/camera/protocol/ModeProtocol$KeyEvent;,
@@ -28,9 +29,9 @@
         Lcom/android/camera/protocol/ModeProtocol$FullScreenProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$WatermarkProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$MiBeautyProtocol;,
-        Lcom/android/camera/protocol/ModeProtocol$MenuSwitch;,
         Lcom/android/camera/protocol/ModeProtocol$TopConfigProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$MakeupProtocol;,
+        Lcom/android/camera/protocol/ModeProtocol$StickerProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$AutoHibernation;,
         Lcom/android/camera/protocol/ModeProtocol$FastmotionProAdjust;,
         Lcom/android/camera/protocol/ModeProtocol$ManuallyAdjust;,
@@ -48,7 +49,9 @@
         Lcom/android/camera/protocol/ModeProtocol$DualVideoRenderProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$ModuleContent;,
         Lcom/android/camera/protocol/ModeProtocol$SubtitleRecording;,
-        Lcom/android/camera/protocol/ModeProtocol$CameraSwitcher;,
+        Lcom/android/camera/protocol/ModeProtocol$BeautyRecording;,
+        Lcom/android/camera/protocol/ModeProtocol$HandleBeautyRecording;,
+        Lcom/android/camera/protocol/ModeProtocol$HandlerSwitcher;,
         Lcom/android/camera/protocol/ModeProtocol$FilterProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$BackStack;,
         Lcom/android/camera/protocol/ModeProtocol$HandleBackTrace;,
@@ -58,7 +61,6 @@
         Lcom/android/camera/protocol/ModeProtocol$MainContentProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$ZoomActive;,
         Lcom/android/camera/protocol/ModeProtocol$SnapShotIndicator;,
-        Lcom/android/camera/protocol/ModeProtocol$DocViewProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$IndicatorProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$ShowType;,
         Lcom/android/camera/protocol/ModeProtocol$IndicatorType;,
@@ -69,12 +71,10 @@
         Lcom/android/camera/protocol/ModeProtocol$ChangeGainProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$PlayVideoProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$TopAlertEvent;,
-        Lcom/android/camera/protocol/ModeProtocol$LightingProtocol;,
         Lcom/android/camera/protocol/ModeProtocol$PortraitLighting;,
         Lcom/android/camera/protocol/ModeProtocol$ActionProcessing;,
         Lcom/android/camera/protocol/ModeProtocol$MoreModePopupController;,
         Lcom/android/camera/protocol/ModeProtocol$ModeChangeController;,
-        Lcom/android/camera/protocol/ModeProtocol$ModeSelector;,
         Lcom/android/camera/protocol/ModeProtocol$CameraActionTrack;,
         Lcom/android/camera/protocol/ModeProtocol$CameraModuleSpecial;,
         Lcom/android/camera/protocol/ModeProtocol$FilmDreamProcess;,
@@ -156,13 +156,15 @@
 
 .field public static final EVENT_LIVE_SPEED:I = 0xd
 
+.field public static final EVENT_LIVE_STICKER:I = 0xc
+
 .field public static final EVENT_MAGIC_VIDEO_SKY:I = 0x29
+
+.field public static final EVENT_MAKEUP:I = 0x3
 
 .field public static final EVENT_MANUAL_PICTURE_STYLE:I = 0x28
 
 .field public static final EVENT_MASTER_FILTER:I = 0x25
-
-.field public static final EVENT_MENU:I = 0x3
 
 .field public static final EVENT_MIMOJI:I = 0xe
 
@@ -173,8 +175,6 @@
 .field public static final EVENT_MODE_MORE_NORMAL:I = 0x1e
 
 .field public static final EVENT_MODE_MORE_POPUP:I = 0x1f
-
-.field public static final EVENT_MODE_SELECT:I = 0x1
 
 .field public static final EVENT_PORTAIT_LIGHTING:I = 0x21
 
@@ -189,8 +189,6 @@
 .field public static final EVENT_TIMEFREEZE_USE_GUIDE:I = 0x26
 
 .field public static final EVENT_VV:I = 0xf
-
-.field public static final EVENT_ZOOM_VIEW:I = 0x4
 
 .field public static final INDICATOR_FACE_VIEW:I = 0x1
 
@@ -234,8 +232,6 @@
 
 .field public static final PROTOCOL_CAMERA_MODULE_SPEC:I = 0xc3
 
-.field public static final PROTOCOL_CAMERA_SWITCHER:I = 0xb7
-
 .field public static final PROTOCOL_CHANGE_GAIN:I = 0x3a7
 
 .field public static final PROTOCOL_CLONE_ACTION:I = 0x1a3
@@ -251,8 +247,6 @@
 .field public static final PROTOCOL_DISPLAY_FOLD_STATUS:I = 0x3aa
 
 .field public static final PROTOCOL_DISPLAY_GUIDE:I = 0x3b2
-
-.field public static final PROTOCOL_DOC_VIEW:I = 0xa04
 
 .field public static final PROTOCOL_DOLLY_ZOOM_ACTION:I = 0x2a5
 
@@ -278,6 +272,8 @@
 
 .field public static final PROTOCOL_FILM_FREAM_PROCESS:I = 0x3a3
 
+.field public static final PROTOCOL_FILTER_SWITCHER:I = 0xb7
+
 .field public static final PROTOCOL_FRONT_BEAUTY:I = 0xc2
 
 .field public static final PROTOCOL_GALLERY_CONNECTION:I = 0x3a9
@@ -287,8 +283,6 @@
 .field public static final PROTOCOL_KALEIDOSCOPE:I = 0xec
 
 .field public static final PROTOCOL_KEY_EVENT:I = 0xef
-
-.field public static final PROTOCOL_LIGHTING_VIEW:I = 0xa03
 
 .field public static final PROTOCOL_LIVE_BEAUTY:I = 0xf4
 
@@ -331,8 +325,6 @@
 
 .field public static final PROTOCOL_MIMOJI_BOTTOM_LIST:I = 0xf8
 
-.field public static final PROTOCOL_MIMOJI_CONFIG:I = 0xed
-
 .field public static final PROTOCOL_MIMOJI_CONTROL:I = 0xf6
 
 .field public static final PROTOCOL_MIMOJI_CONTROL_EDITOR:I = 0xf7
@@ -343,13 +335,11 @@
 
 .field public static final PROTOCOL_MIMOJI_EMOTICON:I = 0xfa
 
-.field public static final PROTOCOL_MIMOJI_FACE_DETECT:I = 0x3b4
-
 .field public static final PROTOCOL_MIMOJI_FULL_SCREEN:I = 0xf9
 
 .field public static final PROTOCOL_MIMOJI_GIF_EDITOR:I = 0xfb
 
-.field public static final PROTOCOL_MIMOJI_ORIENTATIION:I = 0x3b3
+.field public static final PROTOCOL_MIMOJI_GIF_RECORD:I = 0xed
 
 .field public static final PROTOCOL_MIMOJI_VIDEO_EDITOR:I = 0xfc
 
@@ -360,8 +350,6 @@
 .field public static final PROTOCOL_MODE_CHANGE_CONTROLLER:I = 0xb3
 
 .field public static final PROTOCOL_MODE_LIST_MANAGER:I = 0xa00
-
-.field public static final PROTOCOL_MODE_SELECTOR:I = 0xa3
 
 .field public static final PROTOCOL_MODULE_CONTENT:I = 0x1af
 
@@ -379,7 +367,7 @@
 
 .field public static final PROTOCOL_PLAY_VIDEO:I = 0xa7
 
-.field public static final PROTOCOL_PORTRAIT_LIGHTING:I = 0xa02
+.field public static final PROTOCOL_PORTRAIT_LIGHTING:I = 0x2a0
 
 .field public static final PROTOCOL_PRESENTATION_DISPLAY:I = 0x3b1
 
@@ -424,8 +412,6 @@
 .field public static final PROTOCOL_WIDE_SELFIE:I = 0xd8
 
 .field public static final PROTOCOL_ZOOM_CHANGED:I = 0xaa
-
-.field public static final PROTOCOL_ZOOM_VIEW:I = 0xb1
 
 .field public static final SHOW_FAIL:I = 0x3
 

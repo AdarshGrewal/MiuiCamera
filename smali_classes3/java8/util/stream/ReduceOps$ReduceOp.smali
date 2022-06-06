@@ -40,10 +40,8 @@
 .method public constructor <init>(Ljava8/util/stream/StreamShape;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljava8/util/stream/ReduceOps$ReduceOp;->inputShape:Ljava8/util/stream/StreamShape;
 
     return-void
@@ -65,7 +63,6 @@
         }
     .end annotation
 
-    .line 1
     new-instance v0, Ljava8/util/stream/ReduceOps$ReduceTask;
 
     invoke-direct {v0, p0, p1, p2}, Ljava8/util/stream/ReduceOps$ReduceTask;-><init>(Ljava8/util/stream/ReduceOps$ReduceOp;Ljava8/util/stream/PipelineHelper;Ljava8/util/Spliterator;)V
@@ -97,7 +94,6 @@
         }
     .end annotation
 
-    .line 1
     invoke-virtual {p0}, Ljava8/util/stream/ReduceOps$ReduceOp;->makeSink()Ljava8/util/stream/ReduceOps$AccumulatingSink;
 
     move-result-object v0
@@ -126,7 +122,6 @@
 .method public inputShape()Ljava8/util/stream/StreamShape;
     .locals 1
 
-    .line 1
     iget-object v0, p0, Ljava8/util/stream/ReduceOps$ReduceOp;->inputShape:Ljava8/util/stream/StreamShape;
 
     return-object v0

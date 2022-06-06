@@ -62,7 +62,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     const-class v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -77,7 +76,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
@@ -86,7 +84,6 @@
 .method public static synthetic OooO00o()V
     .locals 2
 
-    .line 2
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "mDeleteDialog onClick negative"
@@ -99,7 +96,6 @@
 .method public static synthetic access$100(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)Landroid/view/ActionMode;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEditActionMode:Landroid/view/ActionMode;
 
     return-object p0
@@ -108,7 +104,6 @@
 .method public static synthetic access$102(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;Landroid/view/ActionMode;)Landroid/view/ActionMode;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEditActionMode:Landroid/view/ActionMode;
 
     return-object p1
@@ -117,7 +112,6 @@
 .method public static synthetic access$200(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteMenuItem:Landroid/view/MenuItem;
 
     return-object p0
@@ -126,7 +120,6 @@
 .method public static synthetic access$202(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;Landroid/view/MenuItem;)Landroid/view/MenuItem;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteMenuItem:Landroid/view/MenuItem;
 
     return-object p1
@@ -135,7 +128,6 @@
 .method public static synthetic access$300(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;ZZ)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->setEditMode(ZZ)V
 
     return-void
@@ -144,7 +136,6 @@
 .method public static synthetic access$400(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->onSelectAllClick()V
 
     return-void
@@ -153,7 +144,6 @@
 .method public static synthetic access$500(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->onDeleteClick()V
 
     return-void
@@ -162,7 +152,6 @@
 .method public static synthetic access$600(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
     .locals 0
 
-    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     return-object p0
@@ -171,7 +160,6 @@
 .method public static synthetic access$700(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)Z
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->showEmptyView()Z
 
     move-result p0
@@ -182,7 +170,6 @@
 .method public static synthetic access$802(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p1
@@ -191,14 +178,12 @@
 .method private exit()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "exit"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
@@ -207,20 +192,16 @@
 .method private finishActionMode()V
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEditActionMode:Landroid/view/ActionMode;
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
 
     const/4 v0, 0x0
 
-    .line 3
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEditActionMode:Landroid/view/ActionMode;
 
-    .line 4
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteMenuItem:Landroid/view/MenuItem;
 
     :cond_0
@@ -230,7 +211,6 @@
 .method private inEditMode()Z
     .locals 1
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     if-nez v0, :cond_0
@@ -251,7 +231,6 @@
 .method private initActionBar()V
     .locals 2
 
-    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v0
@@ -261,9 +240,8 @@
     return-void
 
     :cond_0
-    const v1, 0x7f120495
+    const v1, 0x7f120473
 
-    .line 2
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/ActionBar;->setTitle(I)V
 
     return-void
@@ -272,9 +250,8 @@
 .method private initView()V
     .locals 11
 
-    const v0, 0x7f0a04ca
+    const v0, 0x7f0a04dd
 
-    .line 1
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -283,26 +260,22 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
-    const v0, 0x7f0a04cf
+    const v0, 0x7f0a04e2
 
-    .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEmptyView:Landroid/view/View;
 
-    .line 3
     new-instance v0, Lcom/android/camera/fragment/vv/VVWorkspace;
 
     invoke-direct {v0}, Lcom/android/camera/fragment/vv/VVWorkspace;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->vvWorkspace:Lcom/android/camera/fragment/vv/VVWorkspace;
 
-    .line 4
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspace;->restoreWorkspace()Z
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->showEmptyView()Z
 
     move-result v0
@@ -311,44 +284,37 @@
 
     return-void
 
-    .line 6
     :cond_0
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f080687
+    const v1, 0x7f080685
 
-    .line 7
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 8
-    new-instance v1, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOo00;
+    new-instance v1, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOo00;
 
-    invoke-direct {v1, p0}, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOo00;-><init>(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
+    invoke-direct {v1, p0}, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOo00;-><init>(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 9
     invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lmiuix/appcompat/app/ActionBar;->setEndView(Landroid/view/View;)V
 
-    .line 10
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07080c
+    const v1, 0x7f0707f8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 11
     invoke-static {p0}, Lcom/android/camera/Util;->isFullScreenNavBarHidden(Landroid/content/Context;)Z
 
-    .line 12
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -367,7 +333,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
-    .line 13
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->vvWorkspace:Lcom/android/camera/fragment/vv/VVWorkspace;
@@ -384,7 +349,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mPlayerItemList:Ljava/util/List;
 
-    .line 14
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->vvWorkspace:Lcom/android/camera/fragment/vv/VVWorkspace;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/ProcessingWorkspace;->getList()Ljava/util/List;
@@ -408,7 +372,6 @@
 
     check-cast v1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    .line 15
     iget-object v2, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
     iget-object v3, v1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mTemplateId:Ljava/lang/String;
@@ -419,7 +382,6 @@
 
     check-cast v2, Lcom/android/camera/fragment/vv/VVItem;
 
-    .line 16
     iget-object v3, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mPlayerItemList:Ljava/util/List;
 
     new-instance v4, Lcom/android/camera/fragment/vv/VVWorkspacePlayerItem;
@@ -430,7 +392,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_1
     new-instance v0, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
@@ -454,7 +415,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
-    .line 18
     new-instance v0, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     const-string/jumbo v1, "vv_workspace"
@@ -465,39 +425,34 @@
 
     const/4 v1, 0x1
 
-    .line 19
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 20
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mLayoutManager:Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 21
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070815
+    const v1, 0x7f070801
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 22
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f070817
+    const v2, 0x7f070803
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 23
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -506,17 +461,14 @@
 
     move-result v2
 
-    .line 24
     new-instance v3, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$FragmentVVWorkspaceItemDecoration;
 
     invoke-direct {v3, v0, v1, v2}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$FragmentVVWorkspaceItemDecoration;-><init>(III)V
 
-    .line 25
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 26
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mRecyclerView:Lmiuix/recyclerview/widget/RecyclerView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
@@ -529,14 +481,12 @@
 .method private intoActionMode()V
     .locals 2
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "intoActionMode"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     new-instance v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$ActionModeCallback;
 
     const/4 v1, 0x0
@@ -551,7 +501,6 @@
 .method private onDeleteClick()V
     .locals 13
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onClick: vv_delete_layout"
@@ -560,10 +509,8 @@
 
     const-string/jumbo v0, "value_vv_click_workspace_delete"
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVWorkspaceClick(Ljava/lang/String;)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -598,9 +545,8 @@
 
     move-result-object v6
 
-    const v0, 0x7f120483
+    const v0, 0x7f120461
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v7
@@ -609,14 +555,13 @@
 
     invoke-direct {v8, p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$1;-><init>(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
 
-    const v0, 0x7f1204d4
+    const v0, 0x7f1204a3
 
-    .line 5
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
-    sget-object v12, LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOOoo;->OooO00o:LOooO00o/OooO0O0/OooO00o/OoooO0/Oooooo/OooOOoo;
+    sget-object v12, LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOOoo;->OooO00o:LOooO0O0/OooO0O0/OooO00o/OoooO00/OooooO0/OooOOoo;
 
     const/4 v5, 0x0
 
@@ -626,14 +571,12 @@
 
     move-object v4, p0
 
-    .line 6
     invoke-static/range {v4 .. v12}, Lcom/android/camera/RotateDialogController;->showSystemAlertDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 7
     new-instance v1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$2;
 
     invoke-direct {v1, p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity$2;-><init>(Lcom/android/camera/fragment/vv/VVWorkspaceActivity;)V
@@ -646,7 +589,6 @@
 .method private onSelectAllClick()V
     .locals 3
 
-    .line 1
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -671,24 +613,20 @@
 
     const-string/jumbo v0, "value_vv_click_workspace_select_all"
 
-    .line 2
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVWorkspaceClick(Ljava/lang/String;)V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->isSelectedAll()Z
 
     move-result v0
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-virtual {v1, v0}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->selected(Z)V
 
-    .line 5
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->updateSelectedCount()V
 
     return-void
@@ -697,12 +635,10 @@
 .method private restoreOuterAudio()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/AudioController;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -713,7 +649,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
@@ -721,7 +656,6 @@
 
     const/4 v0, 0x1
 
-    .line 4
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setVolumeControlStream(I)V
 
     return-void
@@ -730,7 +664,6 @@
 .method private setEditMode(ZZ)V
     .locals 2
 
-    .line 1
     sget-object p1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -749,39 +682,33 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-virtual {p1, p2}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->setEditMode(Z)V
 
     if-nez p2, :cond_0
 
-    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->selected(Z)V
 
-    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-virtual {p1}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->stopAll()V
 
-    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     if-eqz p2, :cond_1
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->intoActionMode()V
 
     goto :goto_0
 
-    .line 7
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->finishActionMode()V
 
@@ -792,7 +719,6 @@
 .method private showEmptyView()Z
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->vvWorkspace:Lcom/android/camera/fragment/vv/VVWorkspace;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/ProcessingWorkspace;->isEmpty()Z
@@ -803,12 +729,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEmptyView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 3
     invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object v0
@@ -828,12 +752,10 @@
 .method private silenceOuterAudio()V
     .locals 2
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lcom/android/camera/module/AudioController;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -844,7 +766,6 @@
 
     iput-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAudioController:Lcom/android/camera/module/AudioController;
 
@@ -856,14 +777,12 @@
 .method private updateSelectedCount()V
     .locals 4
 
-    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->getSelectedCount()I
 
     move-result v0
 
-    .line 2
     sget-object v1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -891,7 +810,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteMenuItem:Landroid/view/MenuItem;
 
@@ -903,21 +821,13 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 4
     iget-object v1, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mEditActionMode:Landroid/view/ActionMode;
 
-    if-nez v0, :cond_2
-
-    return-void
-
-    .line 6
-    :cond_2
     check-cast v0, Lmiuix/view/EditActionMode;
 
     const v1, 0x102001a
@@ -926,21 +836,19 @@
 
     iget-object v3, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
-    .line 7
     invoke-virtual {v3}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->isSelectedAll()Z
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
-    const v3, 0x7f08068d
+    const v3, 0x7f08068b
 
     goto :goto_1
 
-    :cond_3
-    const v3, 0x7f080693
+    :cond_2
+    const v3, 0x7f080691
 
-    .line 8
     :goto_1
     invoke-interface {v0, v1, v2, v3}, Lmiuix/view/EditActionMode;->setButton(ILjava/lang/CharSequence;I)V
 
@@ -954,7 +862,6 @@
 
     const/4 p1, 0x1
 
-    .line 1
     invoke-direct {p0, p1, p1}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->setEditMode(ZZ)V
 
     return-void
@@ -963,7 +870,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -972,7 +878,6 @@
 
     goto/16 :goto_0
 
-    .line 2
     :sswitch_0
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
@@ -982,17 +887,14 @@
 
     const-string/jumbo v0, "value_vv_click_workspace_continue"
 
-    .line 3
     invoke-static {v0}, Lcom/android/camera/statistic/CameraStatUtils;->trackVVWorkspaceClick(Ljava/lang/String;)V
 
-    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;
 
-    .line 5
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mVVList:Lcom/android/camera/fragment/vv/VVList;
 
     iget-object v1, p1, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->mTemplateId:Ljava/lang/String;
@@ -1005,14 +907,12 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     sget-object v0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "createFromRawInfo"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     invoke-virtual {p1}, Lcom/android/camera/fragment/vv/VVWorkspaceItem;->getRawInfoPath()Ljava/lang/String;
 
     move-result-object v0
@@ -1023,7 +923,6 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     sget-object p1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
     const-string v0, "create failed"
@@ -1032,7 +931,6 @@
 
     return-void
 
-    .line 9
     :cond_0
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemLive()Lcom/android/camera/data/data/extra/DataItemLive;
 
@@ -1040,7 +938,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/camera/data/data/extra/DataItemLive;->setCurrentVVItem(Lcom/android/camera/fragment/vv/VVItem;)V
 
-    .line 10
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemObservable()Lcom/android/camera/data/observeable/DataItemObservable;
 
     move-result-object v0
@@ -1053,13 +950,10 @@
 
     check-cast v0, Lcom/android/camera/data/observeable/VMProcessing;
 
-    .line 11
     invoke-virtual {v0}, Lcom/android/camera/data/observeable/VMProcessing;->reset()V
 
-    .line 12
     invoke-virtual {v0, p1}, Lcom/android/camera/data/observeable/VMProcessing;->setCurrentWorkspaceItem(Lcom/android/camera/fragment/vv/VVWorkspaceItem;)V
 
-    .line 13
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
     move-result-object p1
@@ -1068,12 +962,10 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/data/data/global/DataItemGlobal;->setCurrentMode(I)V
 
-    .line 14
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
-    .line 15
     :sswitch_1
     sget-object p1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
@@ -1081,12 +973,10 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->updateSelectedCount()V
 
     goto :goto_0
 
-    .line 17
     :sswitch_2
     sget-object p1, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->TAG:Ljava/lang/String;
 
@@ -1094,7 +984,6 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/log/Log;->u(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->inEditMode()Z
 
     move-result p1
@@ -1105,12 +994,10 @@
 
     const/4 v0, 0x0
 
-    .line 19
     invoke-direct {p0, p1, v0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->setEditMode(ZZ)V
 
     goto :goto_0
 
-    .line 20
     :cond_1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->exit()V
 
@@ -1119,25 +1006,22 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0a04cb -> :sswitch_2
-        0x7f0a04cd -> :sswitch_1
-        0x7f0a04d4 -> :sswitch_0
-        0x7f0a04d6 -> :sswitch_1
+        0x7f0a04de -> :sswitch_2
+        0x7f0a04e0 -> :sswitch_1
+        0x7f0a04e7 -> :sswitch_0
+        0x7f0a04e9 -> :sswitch_1
     .end sparse-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d00c6
+    const p1, 0x7f0d00c7
 
-    .line 2
     invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->setContentView(I)V
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
@@ -1150,14 +1034,11 @@
 
     const/4 p1, 0x1
 
-    .line 4
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
-    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->initActionBar()V
 
-    .line 6
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->initView()V
 
     return-void
@@ -1166,7 +1047,6 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onDestroy()V
 
     return-void
@@ -1181,7 +1061,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->inEditMode()Z
 
     move-result p1
@@ -1190,12 +1069,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 2
     invoke-direct {p0, p2, v0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->setEditMode(ZZ)V
 
     return p2
 
-    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->exit()V
 
@@ -1215,7 +1092,6 @@
     :cond_2
     return v0
 
-    .line 4
     :cond_3
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -1228,30 +1104,23 @@
 .method public onPause()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    .line 2
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->restoreOuterAudio()V
 
-    .line 3
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mDeleteDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->mAdapter:Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;
 
     if-eqz v0, :cond_1
 
-    .line 6
     invoke-virtual {v0}, Lcom/android/camera/fragment/vv/VVWorkspaceAdapter;->stopAll()V
 
-    .line 7
     :cond_1
     invoke-static {}, Lcom/android/camera/data/DataRepository;->dataItemGlobal()Lcom/android/camera/data/data/global/DataItemGlobal;
 
@@ -1265,7 +1134,6 @@
 .method public onPlay()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/vv/VVWorkspaceActivity;->silenceOuterAudio()V
 
     return-void
@@ -1274,17 +1142,14 @@
 .method public onStop()V
     .locals 1
 
-    .line 1
     invoke-super {p0}, Lmiuix/appcompat/app/AppCompatActivity;->onStop()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     :cond_0

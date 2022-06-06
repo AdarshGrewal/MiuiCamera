@@ -25,10 +25,8 @@
 .method public constructor <init>(Ljava/io/RandomAccessFile;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     return-void
@@ -44,7 +42,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
@@ -60,7 +57,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->getFilePointer()J
@@ -78,7 +74,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readBoolean()Z
@@ -96,7 +91,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readByte()B
@@ -114,7 +108,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readChar()C
@@ -132,7 +125,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readDouble()D
@@ -150,7 +142,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readFloat()F
@@ -168,7 +159,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0, p1}, Ljava/io/RandomAccessFile;->readFully([B)V
@@ -184,7 +174,6 @@
         }
     .end annotation
 
-    .line 2
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/RandomAccessFile;->readFully([BII)V
@@ -200,7 +189,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readInt()I
@@ -218,7 +206,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
@@ -236,7 +223,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readLong()J
@@ -254,7 +240,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readShort()S
@@ -272,7 +257,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readUTF()Ljava/lang/String;
@@ -290,7 +274,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readUnsignedByte()I
@@ -308,7 +291,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->readUnsignedShort()I
@@ -326,7 +308,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/RandomAccessFile;->seek(J)V
@@ -342,7 +323,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lmiuix/core/util/DirectIndexedFile$DataInputRandom;->mFile:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0, p1}, Ljava/io/RandomAccessFile;->skipBytes(I)I

@@ -17,7 +17,6 @@
 .method public constructor <init>(Lcom/android/camera/data/data/runing/DataItemRunning;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/data/data/ComponentData;-><init>(Lcom/android/camera/data/data/DataItemBase;)V
 
     return-void
@@ -32,12 +31,10 @@
 
     const/16 v1, 0xa2
 
-    .line 1
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     const/16 v1, 0xd6
 
-    .line 2
     invoke-virtual {p0, v1, v0}, Lcom/android/camera/data/data/ComponentData;->setComponentValue(ILjava/lang/String;)V
 
     return-void
@@ -48,7 +45,6 @@
 
     const/4 p1, 0x0
 
-    .line 1
     invoke-static {p1}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -91,7 +87,6 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,7 +117,7 @@
 .method public getResText()I
     .locals 1
 
-    const v0, 0x7f12088b
+    const v0, 0x7f12083e
 
     return v0
 .end method
@@ -130,12 +125,11 @@
 .method public isSwitchOn(I)Z
     .locals 2
 
-    .line 1
-    invoke-static {}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o0O0oooO()LOooO00o/OooO0Oo/OooO00o/OooO0O0;
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o0O0oO0()LOooO0O0/OooO0Oo/OooO00o/OooO0O0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, LOooO00o/OooO0Oo/OooO00o/OooO0O0;->o00o0o0o()Z
+    invoke-virtual {v0}, LOooO0O0/OooO0Oo/OooO00o/OooO0O0;->o00o0O0O()Z
 
     move-result v0
 
@@ -156,7 +150,6 @@
 
     return v1
 
-    .line 2
     :cond_1
     iget-boolean v0, p0, Lcom/android/camera/data/data/runing/ComponentRunningSubtitle;->mIsNormalIntent:Z
 
@@ -164,7 +157,6 @@
 
     return v1
 
-    .line 3
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/camera/data/data/ComponentData;->getComponentValue(I)Ljava/lang/String;
 
@@ -182,7 +174,6 @@
 .method public reInit(IZ)V
     .locals 0
 
-    .line 1
     iput-boolean p2, p0, Lcom/android/camera/data/data/runing/ComponentRunningSubtitle;->mIsNormalIntent:Z
 
     return-void
@@ -191,7 +182,6 @@
 .method public reInitIntentType(Z)V
     .locals 0
 
-    .line 1
     iput-boolean p1, p0, Lcom/android/camera/data/data/runing/ComponentRunningSubtitle;->mIsNormalIntent:Z
 
     return-void
@@ -217,7 +207,6 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1
     sget-object p2, Lcom/android/camera/data/data/runing/ComponentRunningSubtitle;->VALUE_ON:Ljava/lang/String;
 
     goto :goto_0

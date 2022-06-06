@@ -21,15 +21,12 @@
 .method public constructor <init>(III)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p3, p0, Lcom/android/camera2/MiCustomFpsRange;->mFpsMax:I
 
-    const-string p3, "width must be positive"
+    const-string/jumbo p3, "width must be positive"
 
-    .line 3
     invoke-static {p1, p3}, Lcom/android/camera2/MiCustomFpsRange;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
@@ -38,7 +35,6 @@
 
     const-string p1, "height must be positive"
 
-    .line 4
     invoke-static {p2, p1}, Lcom/android/camera2/MiCustomFpsRange;->checkArgumentPositive(ILjava/lang/String;)I
 
     move-result p1
@@ -55,7 +51,6 @@
 
     return p0
 
-    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -77,24 +72,20 @@
 
     if-eqz p0, :cond_2
 
-    .line 1
     array-length v0, p0
 
     if-eqz v0, :cond_2
 
-    .line 2
     array-length v0, p0
 
     rem-int/lit8 v0, v0, 0x3
 
     if-gtz v0, :cond_1
 
-    .line 3
     array-length v0, p0
 
     div-int/lit8 v0, v0, 0x3
 
-    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
@@ -108,20 +99,16 @@
 
     add-int/lit8 v4, v3, 0x1
 
-    .line 5
     aget v3, p0, v3
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 6
     aget v4, p0, v4
 
     add-int/lit8 v6, v5, 0x1
 
-    .line 7
     aget v5, p0, v5
 
-    .line 8
     new-instance v7, Lcom/android/camera2/MiCustomFpsRange;
 
     invoke-direct {v7, v3, v4, v5}, Lcom/android/camera2/MiCustomFpsRange;-><init>(III)V
@@ -137,7 +124,6 @@
     :cond_0
     return-object v1
 
-    .line 9
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -161,7 +147,6 @@
 
     throw v0
 
-    .line 10
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -177,7 +162,6 @@
 .method public getFpsMax()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCustomFpsRange;->mFpsMax:I
 
     return v0
@@ -186,7 +170,6 @@
 .method public getHeight()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCustomFpsRange;->mHeight:I
 
     return v0
@@ -195,7 +178,6 @@
 .method public getWidth()I
     .locals 1
 
-    .line 1
     iget v0, p0, Lcom/android/camera2/MiCustomFpsRange;->mWidth:I
 
     return v0
@@ -204,7 +186,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

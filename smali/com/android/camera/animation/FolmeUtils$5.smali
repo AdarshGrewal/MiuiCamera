@@ -22,7 +22,6 @@
 .method public constructor <init>(Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;)V
     .locals 0
 
-    .line 1
     iput-object p2, p0, Lcom/android/camera/animation/FolmeUtils$5;->val$listener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     invoke-direct {p0, p1}, Lcom/android/camera/animation/FolmeUtils$CustomTransitionListener;-><init>(Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;)V
@@ -35,7 +34,6 @@
 .method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
     .locals 0
 
-    .line 1
     iget-object p1, p0, Lcom/android/camera/animation/FolmeUtils$5;->val$listener:Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;
 
     if-eqz p1, :cond_0
@@ -44,7 +42,6 @@
 
     mul-float/2addr p3, p2
 
-    .line 2
     invoke-interface {p1, p3}, Lcom/android/camera/animation/FolmeUtils$IPhyAnimatorListener;->onUpdate(F)V
 
     :cond_0
